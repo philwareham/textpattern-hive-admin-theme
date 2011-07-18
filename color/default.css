@@ -1,0 +1,266 @@
+/* Hive theme for Textpattern CMS (v1.3) */
+
+
+
+/* ------------------- DEFAULT COLORSCHEME ------------------- */
+
+
+/* General */
+body{
+	color:#333;
+	background:#fff;
+	-webkit-tap-highlight-color:rgba(255,192,16,.5);
+}
+a{
+	color:#7d98a5;
+}
+a:hover{
+	color:#4e5f68;
+}
+:focus{
+    -webkit-box-shadow:0 0 5px #ffc010;
+    box-shadow:0 0 5px #ffc010;
+}
+#article-main .author{
+	color:#999;
+}
+
+
+/* Messages */
+#messagepane,
+.not-ok,
+#plugin_container td.modified{
+	color:#c00;
+}
+
+
+/* Twisties */
+.lever,
+#supporting_content legend{
+	color:#333;
+	background:#c7d3d8;
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#c7d3d8),color-stop(1,#b0bbc0));
+	background:-moz-linear-gradient(top,#c7d3d8,#b0bbc0);
+	background:linear-gradient(top,#c7d3d8,#b0bbc0);
+}
+.lever:hover{
+	background:#d2dce0;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#d2dce0),color-stop(1,#c0c9cd));
+	background:-moz-linear-gradient(top,#d2dce0,#c0c9cd);
+	background:linear-gradient(top,#d2dce0,#c0c9cd);
+}
+.lever a{
+	color:#333;
+}
+
+
+/* Forms */
+input[type="text"],
+input[type="password"],
+input[type="file"],
+textarea,
+select,
+#preview-plugin,
+#preview-help{
+	background:#f9fafc;
+	border:1px solid #d4d4d4;
+	border-top:1px solid #a3a3a3;
+	color:#333;
+}
+
+
+/* Buttons */
+input[type="submit"],
+input[type="button"],
+a.article-view,
+.action-create a,
+a.navlink,
+a.navlink-active,
+.navlink a,
+.navlink-active a,
+#list_banned_ips a,
+#page-rss_db_bk h3 a,
+#insert-link{
+	color:#333 !important;
+	text-shadow:1px 1px #fbd978;
+	border:solid 1px #e1a61a;
+	background:#ffda44;
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#ffda44),color-stop(1,#fabc2b));
+	background:-moz-linear-gradient(#ffda44,#fabc2b);
+	background:linear-gradient(#ffda44,#fabc2b);
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+a:hover.article-view,
+.action-create a:hover,
+a:hover.navlink,
+a:hover.navlink-active,
+.navlink a:hover,
+.navlink-active a:hover,
+#list_banned_ips a:hover,
+#page-rss_db_bk h3 a:hover,
+#insert-link:hover{
+	background:#fcdd62;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fcdd62),color-stop(1,#fec94c));
+	background:-moz-linear-gradient(#fcdd62,#fec94c);
+	background:linear-gradient(#fcdd62,#fec94c);
+}
+input[type="submit"]:active,
+input[type="button"]:active,
+a:active.article-view,
+.action-create a:active,
+a:active.navlink,
+a:active.navlink-active,
+.navlink a:active,
+.navlink-active a:active,
+#list_banned_ips a:active,
+#page-rss_db_bk h3 a:active,
+#insert-link:active{
+	background:#fec94c;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fec94c),color-stop(1,#fcdd62));
+	background:-moz-linear-gradient(#fec94c,#fcdd62);
+	background:linear-gradient(#fec94c,#fcdd62);
+}
+
+
+/* Light tint backgrounds */
+#configuration_content .plain-list,
+#tagbuild_links .plain-list,
+#page-login .login-pane,
+#page-logout .login-pane,
+.category-list div,
+#list .even,
+#configuration_content,
+#tagbuild_links,
+#supporting_content,
+#content_switcher,
+#supporting_content p,
+#section_container .section,
+#page-arc_admin_twitter #list tr:nth-of-type(2n),
+#page-bot_privs_tab #list tr:nth-of-type(2n){
+	background:#f0f2f6;
+}
+
+
+/* Tables */
+#list tfoot{
+	border-top:1px solid #f0f2f6;
+}
+#list th a:hover{
+	color:#ffc010;
+}
+#list thead .desc{
+	background:#555 url(default/twisty-arrow-list.gif) no-repeat right -31px;
+}
+#list thead .asc{
+	background:#555 url(default/twisty-arrow-list.gif) no-repeat right -4px;
+}
+#list .odd{
+	background:#fff;
+}
+
+
+/* Navigation */
+#txp-nav{
+	background:#c7d3d8;
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#c7d3d8),color-stop(1,#b0bbc0));
+	background:-moz-linear-gradient(top,#c7d3d8,#b0bbc0);
+	background:linear-gradient(top,#c7d3d8,#b0bbc0);
+}
+#txp-nav .primary{
+	border:solid 1px #e1a61a;
+	background:#ffda44;
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#ffda44),color-stop(1,#fabc2b));
+	background:-moz-linear-gradient(top,#ffda44,#fabc2b);
+	background:linear-gradient(top,#ffda44,#fabc2b);
+}
+#txp-nav .primary:hover{
+    background:#fcdd62;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#fcdd62),color-stop(1,#fec94c));
+	background:-moz-linear-gradient(top,#fcdd62,#fec94c);
+	background:linear-gradient(top,#fcdd62,#fec94c);
+}
+#txp-nav a{
+    color:#333 !important;
+    text-shadow:1px 1px #fbd978;
+}
+#txp-nav li:hover a{
+	background:url(default/indicator.gif) no-repeat 50% bottom;
+}
+#txp-nav ul{
+	background:#fef5d2;
+}
+#txp-nav ul li:hover{
+	background:#feefb0;
+}
+#txp-nav ul li.active{
+	background:#fee580;
+}
+#txp-nav ul a{
+    color:#333 !important;
+}
+
+
+/* Write page */
+#configuration_content > div,
+#supporting_content > div,
+#tagbuild_links > div,
+#content_switcher form > div,
+#supporting_content fieldset,
+#tagbuild_links h2,
+#content_switcher h2{
+	border-bottom:2px solid #fff;
+}
+
+
+/* Sections page */
+#section_container .section{
+	border-top:2px solid #fff;
+}
+#section_container #list .label,
+#section_container #list .actions,
+#section_container #list .section > td:last-child{
+	background:#fff;
+}
+
+
+/* Forms page */
+.lever a.pophelp{
+	background:#e5eaec;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#e5eaec),color-stop(1,#cad1d4));
+	background:-moz-linear-gradient(top,#e5eaec,#cad1d4);
+	background:linear-gradient(top,#e5eaec,#cad1d4);
+}
+
+
+/* Pages page */
+#tagbuild_links h2,
+#content_switcher h2{
+	color:#fff;
+	background:#555;
+}
+
+
+/* Tabs */
+.tabs a{
+	color:#333;
+}
+.tabs .tabup a{
+	background:#ffda44;
+}
+.tabs .tabup a:hover{
+	background:#fcdd62;
+}
+.tabs .tabdown2 a{
+	background:#c7d3d8;
+}
+.tabs .tabdown2 a:hover{
+	background:#d2dce0;
+}
+
+
+/* rss_admin_db_manager */
+#page-rss_db_man #list tr[style="background-color: #eee;"],
+#page-rss_db_bk #list tr[style="background-color: #eee;"]{
+	background:#f0f2f6 !important;
+}

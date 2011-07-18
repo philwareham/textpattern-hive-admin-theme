@@ -1,0 +1,266 @@
+/* Hive theme for Textpattern CMS (v1.3) */
+
+
+
+/* -------------------- GREEN COLORSCHEME -------------------- */
+
+
+/* General */
+body{
+	color:#333;
+	background:#fff;
+	-webkit-tap-highlight-color:rgba(167,194,15,.5);
+}
+a{
+	color:#90a80b;
+}
+a:hover{
+	color:#596505;
+}
+:focus{
+    -webkit-box-shadow:0 0 5px #a7c20f;
+    box-shadow:0 0 5px #a7c20f;
+}
+#article-main .author{
+	color:#999;
+}
+
+
+/* Messages */
+#messagepane,
+.not-ok,
+#plugin_container td.modified{
+	color:#c00;
+}
+
+
+/* Twisties */
+.lever,
+#supporting_content legend{
+	color:#333;
+	background:#dcdcdc;
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#dcdcdc),color-stop(1,#ccc));
+	background:-moz-linear-gradient(top,#dcdcdc,#ccc);
+	background:linear-gradient(top,#dcdcdc,#ccc);
+}
+.lever:hover{
+	background:#e8e8e8;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#e8e8e8),color-stop(1,#dcdcdc));
+	background:-moz-linear-gradient(top,#e8e8e8,#dcdcdc);
+	background:linear-gradient(top,#e8e8e8,#dcdcdc);
+}
+.lever a{
+	color:#333;
+}
+
+
+/* Forms */
+input[type="text"],
+input[type="password"],
+input[type="file"],
+textarea,
+select,
+#preview-plugin,
+#preview-help{
+	background:#fff;
+	border:1px solid #d4d4d4;
+	border-top:1px solid #a3a3a3;
+	color:#333;
+}
+
+
+/* Buttons */
+input[type="submit"],
+input[type="button"],
+a.article-view,
+.action-create a,
+a.navlink,
+a.navlink-active,
+.navlink a,
+.navlink-active a,
+#list_banned_ips a,
+#page-rss_db_bk h3 a,
+#insert-link{
+	color:#fff !important;
+	text-shadow:-1px -1px #829c0b;
+	border:solid 1px #829c0b;
+	background:#a7c20f;
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#a7c20f),color-stop(1,#829c0b));
+	background:-moz-linear-gradient(#a7c20f,#829c0b);
+	background:linear-gradient(#a7c20f,#829c0b);
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+a:hover.article-view,
+.action-create a:hover,
+a:hover.navlink,
+a:hover.navlink-active,
+.navlink a:hover,
+.navlink-active a:hover,
+#list_banned_ips a:hover,
+#page-rss_db_bk h3 a:hover,
+#insert-link:hover{
+	background:#b9ce3f;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#b9ce3f),color-stop(1,#9db241));
+	background:-moz-linear-gradient(#b9ce3f,#9db241);
+	background:linear-gradient(#b9ce3f,#9db241);
+}
+input[type="submit"]:active,
+input[type="button"]:active,
+a:active.article-view,
+.action-create a:active,
+a:active.navlink,
+a:active.navlink-active,
+.navlink a:active,
+.navlink-active a:active,
+#list_banned_ips a:active,
+#page-rss_db_bk h3 a:active,
+#insert-link:active{
+	background:#829c0b;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#829c0b),color-stop(1,#a7c20f));
+	background:-moz-linear-gradient(#829c0b,#a7c20f);
+	background:linear-gradient(#829c0b,#a7c20f);
+}
+
+
+/* Light tint backgrounds */
+#configuration_content .plain-list,
+#tagbuild_links .plain-list,
+#page-login .login-pane,
+#page-logout .login-pane,
+.category-list div,
+#list .even,
+#configuration_content,
+#tagbuild_links,
+#supporting_content,
+#content_switcher,
+#supporting_content p,
+#section_container .section,
+#page-arc_admin_twitter #list tr:nth-of-type(2n),
+#page-bot_privs_tab #list tr:nth-of-type(2n){
+	background:#f9f9f9;
+}
+
+
+/* Tables */
+#list tfoot{
+	border-top:1px solid #f0f2f6;
+}
+#list th a:hover{
+	color:#90a80b;
+}
+#list thead .desc{
+	background:#555 url(green/twisty-arrow-list.gif) no-repeat right -31px;
+}
+#list thead .asc{
+	background:#555 url(green/twisty-arrow-list.gif) no-repeat right -4px;
+}
+#list .odd{
+	background:#fff;
+}
+
+
+/* Navigation */
+#txp-nav{
+	background:#666;
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#666),color-stop(1,#333));
+	background:-moz-linear-gradient(top,#666,#333);
+	background:linear-gradient(top,#666,#333);
+}
+#txp-nav .primary{
+	border:solid 1px #829c0b;
+	background:#a7c20f;
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#a7c20f),color-stop(1,#829c0b));
+	background:-moz-linear-gradient(top,#a7c20f,#829c0b);
+	background:linear-gradient(top,#a7c20f,#829c0b);
+}
+#txp-nav .primary:hover{
+    background:#b9ce3f;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#b9ce3f),color-stop(1,#9db241));
+	background:-moz-linear-gradient(top,#b9ce3f,#9db241);
+	background:linear-gradient(top,#b9ce3f,#9db241);
+}
+#txp-nav a{
+    color:#fff !important;
+    text-shadow:-1px -1px #829c0b;
+}
+#txp-nav li:hover a{
+	background:url(green/indicator.gif) no-repeat 50% bottom;
+}
+#txp-nav ul{
+	background:#f1f4e3;
+}
+#txp-nav ul li:hover{
+	background:#e7ebda;
+}
+#txp-nav ul li.active{
+	background:#dee2d1;
+}
+#txp-nav ul a{
+    color:#333 !important;
+}
+
+
+/* Write page */
+#configuration_content > div,
+#supporting_content > div,
+#tagbuild_links > div,
+#content_switcher form > div,
+#supporting_content fieldset,
+#tagbuild_links h2,
+#content_switcher h2{
+	border-bottom:2px solid #f9f9f9;
+}
+
+
+/* Sections page */
+#section_container .section{
+	border-top:2px solid #f9f9f9;
+}
+#section_container #list .label,
+#section_container #list .actions,
+#section_container #list .section > td:last-child{
+	background:#fff;
+}
+
+
+/* Forms page */
+.lever a.pophelp{
+	background:#dde6ed;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#dde6ed),color-stop(1,#d2d9e0));
+	background:-moz-linear-gradient(top,#dde6ed,#d2d9e0);
+	background:linear-gradient(top,#dde6ed,#d2d9e0);
+}
+
+
+/* Pages page */
+#tagbuild_links h2,
+#content_switcher h2{
+	color:#fff;
+	background:#555;
+}
+
+
+/* Tabs */
+.tabs a{
+	color:#333;
+}
+.tabs .tabup a{
+	background:#f1f4e3;
+}
+.tabs .tabup a:hover{
+	background:#e7ebda;
+}
+.tabs .tabdown2 a{
+	background:#dee2d1;
+}
+.tabs .tabdown2 a:hover{
+	background:#e7ebda;
+}
+
+
+/* rss_admin_db_manager */
+#page-rss_db_man #list tr[style="background-color: #eee;"],
+#page-rss_db_bk #list tr[style="background-color: #eee;"]{
+	background:#f9f9f9 !important;
+}
