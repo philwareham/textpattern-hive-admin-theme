@@ -26,9 +26,8 @@
 /* Use body as wrapper */
 html{
     overflow-y:scroll;
-    -webkit-overflow-scrolling:touch;
     -webkit-text-size-adjust:100%;
-    -ms-text-size-adjust:100%;
+        -ms-text-size-adjust:100%;
 }
 body{
     font:11px/17px Verdana, Arial, FreeSans, sans-serif;
@@ -45,16 +44,18 @@ body{
 a{
     text-decoration:none;
     -webkit-transition:color .2s ease-in-out;
-    -moz-transition:color .2s ease-in-out;
-    -o-transition:color .2s ease-in-out;
-    transition:color .2s ease-in-out;
+       -moz-transition:color .2s ease-in-out;
+        -ms-transition:color .2s ease-in-out;
+         -o-transition:color .2s ease-in-out;
+            transition:color .2s ease-in-out;
 }
 :focus{
     outline:0;
     -webkit-transition:all .2s ease-in-out;
-    -moz-transition:all .2s ease-in-out;
-    -o-transition:all .2s ease-in-out;
-    transition:all .2s ease-in-out;
+       -moz-transition:all .2s ease-in-out;
+        -ms-transition:all .2s ease-in-out;
+         -o-transition:all .2s ease-in-out;
+            transition:all .2s ease-in-out;
 }
 
 
@@ -161,8 +162,8 @@ textarea{
     font:12px/17px Cousine, Consolas, monospace;
     padding:4px;
     -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
+       -moz-box-sizing:border-box;
+            box-sizing:border-box;
 }
 input[type="text"],
 input[type="password"]{
@@ -247,7 +248,7 @@ a.navlink-active,
     text-align:center;
     border-radius:5px;
     -webkit-box-shadow:0 1px 2px rgba(0,0,0,.2);
-    box-shadow:0 1px 2px rgba(0,0,0,.2);
+            box-shadow:0 1px 2px rgba(0,0,0,.2);
 }
 a.article-view{
     float:right;
@@ -304,7 +305,7 @@ input[name="form_preview"]{
     border:solid 1px #d2d2d2;
     border-radius:5px;
     -webkit-box-shadow:0 1px 2px rgba(0,0,0,.2);
-    box-shadow:0 1px 2px rgba(0,0,0,.2);
+            box-shadow:0 1px 2px rgba(0,0,0,.2);
     background:#dadada;
     background:-webkit-gradient(linear,left top,left bottom,from(#e6e6e6),to(#dadada)); /* Safari 4+, Chrome */
     background:-webkit-linear-gradient(top,#e6e6e6,#dadada); /* Safari 5.1+, Chrome 10+ */
@@ -458,9 +459,10 @@ thead a:active{
     background:url(textpattern.png) left bottom;
     opacity:0;
     -webkit-transition:opacity .2s ease-in-out;
-    -moz-transition:opacity .2s ease-in-out;
-    -o-transition:opacity .2s ease-in-out;
-    transition:opacity .2s ease-in-out;
+       -moz-transition:opacity .2s ease-in-out;
+        -ms-transition:opacity .2s ease-in-out;
+         -o-transition:opacity .2s ease-in-out;
+            transition:opacity .2s ease-in-out;
 }
 #mothership a:hover{
     opacity:1;
@@ -519,7 +521,7 @@ thead a:active{
     border-top:none;
     border-radius:0 5px 5px 5px;
     -webkit-box-shadow:3px 3px 3px rgba(0,0,0,.2);
-    box-shadow:3px 3px 3px rgba(0,0,0,.2);
+            box-shadow:3px 3px 3px rgba(0,0,0,.2);
 }
 #txp-nav :hover .dropdown{
     left:-1px;
@@ -701,8 +703,8 @@ table#edit{
     padding:7px 10px;
     width:100%;
     -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
+       -moz-box-sizing:border-box;
+            box-sizing:border-box;
     *margin-left:-7px; /* ie7 hack for box-sizing workaround */
 }
 #supporting_content p{
@@ -737,8 +739,8 @@ table#edit{
     color:#fff;
     background:#555;
     -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
+       -moz-box-sizing:border-box;
+            box-sizing:border-box;
     *margin-left:-17px; /* ie7 hack for box-sizing workaround */
 }
 #more_group .date .label,
@@ -805,7 +807,7 @@ table#edit{
 }
 #page-image #txp-body img{
     -webkit-box-shadow:1px 1px 5px rgba(0,0,0,.2);
-    box-shadow:1px 1px 5px rgba(0,0,0,.2);
+            box-shadow:1px 1px 5px rgba(0,0,0,.2);
 }
 
 
@@ -1135,8 +1137,8 @@ table#edit{
     overflow:auto;
     width:100%;
     -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
+       -moz-box-sizing:border-box;
+            box-sizing:border-box;
     *padding:0; /* ie7 hack for box-sizing workaround */
 }
 #plugin-code{
@@ -1432,8 +1434,6 @@ body{
 #page-discuss #list .parent,
 #page-discuss #list .multi-edit,
 #page-discuss #list tfoot,
-
-
 #page-discuss table.edit-pane tr:last-child,
 #page-discuss table.edit-pane tr:nth-last-child(2) td:first-child,
 #page-discuss table#edit-discuss tr:nth-child(9){
