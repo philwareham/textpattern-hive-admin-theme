@@ -29,7 +29,7 @@ class hive_theme extends classic_theme
       foreach ($this->menu as $tab)
       {
         $class = ($tab['active']) ? 'active' : 'inactive';
-        $out[] = "<li class='primary'><a class='primary-link' href='?event={$tab['event']}'>{$tab['label']}</a>";
+        $out[] = "<li class='primary'><a class='primary-link' href='#'>{$tab['label']}</a>";
         if (!empty($tab['items']))
         {
           $out[] = '<ul class="dropdown">';

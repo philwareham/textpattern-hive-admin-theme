@@ -16,7 +16,11 @@ VERSION HISTORY
    
 4. For better accessibility, allow zoom on touch devices.
 
-5. 
+5. Had to revert back to making the top navigation not links again, as it was reported
+   that Android devices were firing off the link immediately instead of focussing on
+   the dropdown. Bah!
+
+6. 
 
 ---
 
