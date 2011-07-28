@@ -143,8 +143,7 @@ code {
 
 /* Forms */
 
-/* hand cursor on clickable input elements */
-
+/* hand cursor on clickable input elements (except disabled ones) */
 label,
 input[type="button"],
 input[type="submit"],
@@ -159,10 +158,15 @@ input[disabled] {
     cursor:default;
 }
 
-/* webkit browsers add a 2px margin outside the chrome of form elements */
-
-button,input,select,textarea {
+/* improves appearance and consistency in all browsers */
+button,
+.button,
+input,
+select,
+textarea {
     margin:0;
+    vertical-align:baseline;
+    *vertical-align:middle; /* improves appearance and consistency in IE7 */
 }
 
 fieldset {
@@ -200,6 +204,8 @@ input[type="password"] {
 }
 
 textarea {
+    overflow:auto; /* removes default vertical scrollbar in IE7-IE9 */
+    vertical-align:top; /* improves readability and alignment in all browsers */
     *padding:4px 0; /* ie7 hack for box-sizing workaround */
 }
 
@@ -261,6 +267,13 @@ input[type="checkbox"] {
 
 /* Buttons */
 
+/* fix firefox button height discrepancy: http://christophzillgens.com/en/articles/equal-height-input-and-button-elements-in-firefox-and-safari */
+input::-moz-focus-inner,
+button::-moz-focus-inner{
+    border:0;
+    padding:0;
+}
+
 input[type="submit"],
 input[type="button"],
 a.article-view,
@@ -275,6 +288,8 @@ a.navlink-active,
     cursor:pointer;
     font:11px/17px Verdana, Arial, FreeSans, sans-serif;
     padding:0 5px .1em;
+    width:auto;
+    overflow:visible;
     display:inline-block;
     zoom:1; /* zoom and *display = ie6, ie7 hack for display:inline-block */
     *display:inline;
@@ -365,6 +380,10 @@ input[name="form_preview"] {
 
 
 /* Lists */
+
+.plain-list {
+    list-style:none;
+}
 
 #configuration_content .plain-list {
     padding:0 0 10px;

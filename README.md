@@ -42,7 +42,7 @@ and change to:
 In this theme, the 3 preview tabs on article write/article edit forms have been removed
 to save screen estate. They were arguable pretty useless anyway so they were dropped,
 we have never used them in all our time with Textpattern. If you really do want to
-enable these tabs again then comment out the following line near the middle of the
+enable these tabs again then comment out the following line ~934 of the
 theme's 'textpattern.css' file (you'll have to add some custom styling to them though):
 
     #article-tabs{display:none;}

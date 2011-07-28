@@ -4,9 +4,10 @@ VERSION HISTORY
 
 1.3: TBC
 
-1. The theme is now passable on small screen sizes (such as an iPhone). This works by
-   generally hiding features that would not render well on that size screen (such as
-   lists) - a kind of admin area 'lite' version if you will.
+1. Initial work to make theme passable on small screen sizes (such as an iPhone).
+   This works by generally hiding features that would not render well on that size
+   screen (such as lists) - a kind of admin area 'lite' version if you will. More work
+   to improve this will follow in future releases.
 
 2. Now uses Cousine font from Google Font API for monospaced text. Solves font
    inconsistencies across multiple devices.
@@ -20,9 +21,10 @@ VERSION HISTORY
    that Android devices were firing off the link immediately instead of focussing on
    the dropdown. Bah!
 
-6. Add CSS support for IE10 (gradients and transitions).
+6. Add CSS gradient and transition support for IE10. Add CSS gradient support for
+   IE6-IE9 (via MS filter). Add CSS gradient support for Opera 11.10.
 
-7. Add CSS support for Opera 11.10 (gradients).
+7. More rendering fixups for various browsers as recommended in Normalize CSS.
 
 8. 
 
