@@ -26,9 +26,9 @@
 /* Use body as wrapper */
 
 html {
-    overflow-y:scroll;
-    -webkit-text-size-adjust:100%;
-        -ms-text-size-adjust:100%;
+    overflow-y:scroll; /* always force scrollbar padding so we don't get 'jumping' */
+    -webkit-text-size-adjust:100%; /* prevents iOS text size adjust after orientation change, without disabling user zoom: http://www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+        -ms-text-size-adjust:100%; /* as above, for Windows Phone */
 }
 
 body {
