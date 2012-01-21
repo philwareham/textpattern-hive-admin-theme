@@ -12,7 +12,6 @@ class hive_theme extends classic_theme
     {
         $out[] = '<link href="'.$this->url.'textpattern.css" rel="stylesheet" type="text/css"/>';
         $out[] = '<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1">';
-        $out[] = '<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cousine">';
         $out[] = '<!--[if (gte IE 6)&(lte IE 8)]><script type="text/javascript" src="'.$this->url.'selectivizr.min.js"></script><![endif]-->';
         return join(n, $out);
     }
