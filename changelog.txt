@@ -2,7 +2,24 @@ VERSION HISTORY
 
 ---
 
-1.3: TBC
+2.0b1: ?????
+
+1. Complete rewrite of CSS files - simplified many rules, used Normalize and Formalize
+   as a baseline for reset.css.
+
+2. Now uses Sass (http://sass-lang.com) for speedier development/reduced code.
+
+3. Redrawn all images - now with retina (higher resolution display) versions included.
+
+4. Colour schemes improved - default theme is less 'candyfied'.
+
+5. New, lightweight navigation bar, fixed to top of screen.
+
+6. 
+
+---
+
+1.3: UNREALEASED
 
 1. Initial work to make theme passable on small screen sizes (such as an iPhone).
    This works by generally hiding features that would not render well on that size
@@ -25,8 +42,6 @@ VERSION HISTORY
    IE6-IE9 (via MS filter). Add CSS gradient support for Opera 11.10.
 
 7. More rendering fixups for various browsers as recommended in Normalize CSS.
-
-8. 
 
 ---
 
