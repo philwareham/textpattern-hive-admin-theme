@@ -32,9 +32,10 @@ html {
 }
 
 body {
-    font:11px/17px Verdana, Arial, FreeSans, sans-serif;
-    max-width:1248px;
-    margin:0 auto;
+    font-size: .8125em; /* 13px / 16px */
+    line-height: 1.53846153846154; /* 20px / 13px */
+    max-width: 1248px;
+    margin: 0 auto;
 }
 
 
@@ -45,21 +46,10 @@ body {
 /* Links and focus */
 
 a {
-    text-decoration:none;
-    -webkit-transition:color .2s ease-in-out;
-       -moz-transition:color .2s ease-in-out;
-        -ms-transition:color .2s ease-in-out;
-         -o-transition:color .2s ease-in-out;
-            transition:color .2s ease-in-out;
+  text-decoration: none;
 }
-
-:focus {
-    outline:0;
-    -webkit-transition:all .2s ease-in-out;
-       -moz-transition:all .2s ease-in-out;
-        -ms-transition:all .2s ease-in-out;
-         -o-transition:all .2s ease-in-out;
-            transition:all .2s ease-in-out;
+a:hover {
+  text-decoration: underline;
 }
 
 
@@ -72,31 +62,13 @@ h4,
 h5,
 h6 {
     margin:0 0 10px;
-    font-size:14px;
-    line-height:20px;
+    font-size:1em;
     font-weight:normal;
-}
-
-p {
-    margin:0 0 10px;
-}
-
-em,
-dfn {
-    font-style: italic;
-}
-
-dfn {
-    font-weight:bold;
-}
-
-pre {
-    margin:0 0 10px;
 }
 
 pre,
 code {
-    font:12px/17px Cousine, Consolas, monospace;
+    font-family: Cousine, Consolas, monospace;
 }
 
 
@@ -117,19 +89,18 @@ code {
 /* Twisties */
 
 .lever {
-    margin:0;
-    font-size:11px;
-    line-height:31px;
-    height:31px;
-    position:relative;
+    margin: 0;
+    height: 2em;
+    line-height: 2em;
+    position: relative;
 }
 
 .lever a {
-    padding:0 0 0 20px;
-    float:left;
-    display:block;
-    width:92.5%;
-    background:url(twisty-arrow.gif) no-repeat 7px 0;
+    padding: 0 0 0 1.5em;
+    float: left;
+    display: block;
+    width: 92.5%;
+    background: url("img/twisty-arrow.gif") no-repeat .5em 0;
 }
 
 .expanded a {
@@ -143,35 +114,8 @@ code {
 
 /* Forms */
 
-/* hand cursor on clickable input elements (except disabled ones) */
-label,
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-input[type="image"],
-button,
-.checkbox {
-    cursor:pointer;
-}
-
-input[disabled] {
-    cursor:default;
-}
-
-/* improves appearance and consistency in all browsers */
-button,
-.button,
-input,
-select,
-textarea {
-    margin:0;
-    vertical-align:baseline;
-    *vertical-align:middle; /* improves appearance and consistency in IE7 */
-}
-
 fieldset {
-    border:0;
-    padding:0 0 10px;
+    border: 0;
 }
 
 label,
@@ -184,35 +128,9 @@ label,
     padding-bottom:5px;
 }
 
-input[type="text"],
-input[type="password"],
-textarea {
-    position:relative;
-    top:-2px;
-    font:12px/17px Cousine, Consolas, monospace;
-    padding:4px;
-    -webkit-box-sizing:border-box;
-       -moz-box-sizing:border-box;
-            box-sizing:border-box;
-}
-
-input[type="text"],
-input[type="password"] {
-    height:28px;
-    *padding:4px 0; /* ie7 hack for box-sizing workaround */
-    *height:20px; /* ie7 hack for box-sizing workaround */
-}
-
-textarea {
-    overflow:auto; /* removes default vertical scrollbar in IE7-IE9 */
-    vertical-align:top; /* improves readability and alignment in all browsers */
-    *padding:4px 0; /* ie7 hack for box-sizing workaround */
-}
-
 input[type="file"] {
     position:relative;
     top:-2px;
-    font:12px/17px Cousine, Consolas, monospace;
     padding:4px;
     *padding:4px 0; /* ie7 hack for box-sizing workaround */
 }
@@ -267,13 +185,6 @@ input[type="checkbox"] {
 
 /* Buttons */
 
-/* fix firefox button height discrepancy: http://christophzillgens.com/en/articles/equal-height-input-and-button-elements-in-firefox-and-safari */
-input::-moz-focus-inner,
-button::-moz-focus-inner{
-    border:0;
-    padding:0;
-}
-
 input[type="submit"],
 input[type="button"],
 a.article-view,
@@ -286,7 +197,6 @@ a.navlink-active,
 #page-rss_db_bk h3 a,
 #insert-link {
     cursor:pointer;
-    font:11px/17px Verdana, Arial, FreeSans, sans-serif;
     padding:0 5px .1em;
     width:auto;
     overflow:visible;
@@ -353,7 +263,6 @@ input[name="form_preview"] {
 }
 
 .navlink-disabled {
-    font:10px/15px Verdana, Arial, FreeSans, sans-serif;
     padding:.1em 1em;
     display:inline-block;
     zoom:1; /* zoom and *display = ie6, ie7 hack for display:inline-block */
@@ -440,7 +349,6 @@ th,td {
 
 #list th h2 {
     margin:0;
-    font-size:11px;
 }
 
 #list td {
@@ -550,7 +458,7 @@ thead a:active {
     width:160px;
     height:42px;
     margin:0 15px 5px 0;
-    background:url(textpattern.png) left top;
+    background: url("img/textpattern.png") left top;
 }
 
 #mothership a {
@@ -558,7 +466,7 @@ thead a:active {
     width:160px;
     height:42px;
     text-indent:-9999px;
-    background:url(textpattern.png) left bottom;
+    background: url("img/textpattern.png") left bottom;
     opacity:0;
     -webkit-transition:opacity .2s ease-in-out;
        -moz-transition:opacity .2s ease-in-out;
@@ -645,7 +553,6 @@ thead a:active {
 
 #txp-nav ul li {
     float:none;
-    font-size:11px;
     border:0;
     border-radius:0;
     background:none;
@@ -683,7 +590,7 @@ thead a:active {
     height:32px;
     padding:0;
     text-indent:-9999px;
-    background:url(close.png);
+    background: url("img/close.png");
     display:none;
 }
 
@@ -710,16 +617,6 @@ thead a:active {
 
 .nav-tertiary a {
     margin-bottom:10px;
-}
-
-#textile_help .textile {
-    font-size:12px;
-    font-family:Cousine, Consolas, monospace;
-}
-
-#textile_help .textile a {
-    font-size:11px;
-    font-family:Verdana, Arial, FreeSans, sans-serif;
 }
 
 .txp-navigation {
@@ -770,7 +667,6 @@ table#edit {
 }
 
 .login-pane tr:first-child p {
-    font-size:14px;
     margin:10px 0;
 }
 
@@ -1034,7 +930,6 @@ table#edit {
 /* Sections page */
 
 #section_container h2 a {
-    font-size:11px;
     position:relative;
     top:-1px;
 }
@@ -1117,7 +1012,6 @@ table#edit {
     margin:0;
     padding:5px 10px;
     display:block;
-    font-size:11px;
 }
 
 #content_switcher p {
@@ -1153,7 +1047,6 @@ table#edit {
 
 .lever a.pophelp {
     padding:0 5px;
-    font-size:11px;
     position:absolute;
     top:0;
     right:0;
@@ -1256,7 +1149,6 @@ table#edit {
     display:block;
     color:#fff;
     background:#555;
-    font-size:11px;
 }
 
 #prefs_container input[type="text"] {
@@ -1381,7 +1273,6 @@ table#edit {
 
 #preview-plugin,
 #preview-help {
-    font:12px/17px Cousine, Consolas, monospace;
     max-height:316px;
     padding:4px;
     margin-bottom:20px;
@@ -1552,7 +1443,7 @@ body{
 
 #mothership a {
     width:62px;
-    background:url(txp.png) left top;
+    background: url("img/txp.png") left top;
     opacity:1;
 }
 

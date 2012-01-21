@@ -8,26 +8,21 @@
 /* General */
 
 body {
-    color:#333;
-    background:#fff;
-    -webkit-tap-highlight-color:rgba(255,192,16,.5);
+    color: #333;
+    background: #fff;
 }
 
 a {
-    color:#7d98a5;
+    -webkit-tap-highlight-color: rgba(0, 102, 255, 0.5);
+    color: #1a428b;
 }
 
 a:hover {
-    color:#4e5f68;
-}
-
-:focus {
-    -webkit-box-shadow:0 0 5px #ffc010;
-            box-shadow:0 0 5px #ffc010;
+    color: #0066ff;
 }
 
 #article-main .author {
-    color:#999;
+    color: #999;
 }
 
 
@@ -172,14 +167,14 @@ a:active.navlink-active,
 #section_container .section,
 #page-arc_admin_twitter #list tr:nth-of-type(2n),
 #page-bot_privs_tab #list tr:nth-of-type(2n) {
-    background:#f0f2f6;
+    background: #f7f7f7;
 }
 
 
 /* Tables */
 
 #list tfoot {
-    border-top:1px solid #f0f2f6;
+    border-top:1px solid #f7f7f7;
 }
 
 #list th a:hover {
@@ -337,5 +332,5 @@ a:active.navlink-active,
 
 #page-rss_db_man #list tr[style="background-color: #eee;"],
 #page-rss_db_bk #list tr[style="background-color: #eee;"] {
-    background:#f0f2f6 !important;
+    background:#f7f7f7 !important;
 }
