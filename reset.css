@@ -1,31 +1,12 @@
 /* combined and abridged version of Normalize and Formalize */
 /* Normalize original authors: Nicolas Gallagher and Jonathan Neal - http://necolas.github.com/normalize.css/ */
 /* Formalize original author: Nathan Smith - http://formalize.me/ */
-/* =============================================================================
-   HTML5 display definitions
-   ========================================================================== */
-/* corrects block display not defined in IE6-9, Firefox3 */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section {
-  display: block;
-}
 
-/* addresses styling for 'hidden' attribute not present in IE7-9, Firefox3, Safari4 */
-[hidden] {
-  display: none;
-}
 
 /* =============================================================================
    Base
    ========================================================================== */
+
 /* 1. corrects text resizing oddly in IE7 when body font-size is set using em units
    2. keeps page centred in all browsers regardless of content height
    3. prevents iOS text size adjust after orientation change, without disabling user zoom
@@ -44,11 +25,15 @@ html {
 /* addresses margins handled incorrectly in IE7 */
 body {
   margin: 0;
+  font-size: .8125em; /* 13px / 16px */
+  line-height: 1.53846153846154; /* 20px / 13px */
 }
+
 
 /* =============================================================================
    Links
    ========================================================================== */
+
 a:focus {
   outline: thin dotted #0066ff;
 }
@@ -56,11 +41,14 @@ a:hover, a:active {
   outline: 0;
 }
 
+
 /* =============================================================================
    Typography
    ========================================================================== */
+
 /* addresses styling not present in IE7-9, Safari5, Chrome */
 abbr[title],
+acronym[title],
 dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
@@ -73,7 +61,7 @@ strong {
 }
 
 blockquote {
-  margin: 18px 20px;
+  margin: 1.53846153846154em; /* 20px / 13px */
 }
 
 /* addresses styling not present in Safari5, Chrome */
@@ -118,13 +106,15 @@ sub {
   bottom: -0.25em;
 }
 
+
 /* =============================================================================
    Lists
    ========================================================================== */
+
 ul,
 ol {
   margin-left: 0;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 1.53846153846154em; /* 20px / 13px */
 }
 
 /* remove margins from nested lists */
@@ -134,7 +124,7 @@ ol ol {
 }
 
 dd {
-  margin: 0 0 0 20px;
+  margin: 0 0 0 1.53846153846154em; /* 20px / 13px */
 }
 
 dt {
@@ -147,9 +137,11 @@ nav ol {
   list-style-image: none;
 }
 
+
 /* =============================================================================
    Embedded content
    ========================================================================== */
+
 /* 1. Removes border when inside 'a' element in IE7-9, Firefox3
    2. improves image quality when scaled in IE7
       code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
@@ -165,17 +157,11 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* =============================================================================
-   Figures
-   ========================================================================== */
-/* addresses margin not present in IE7-9, Safari5, Opera11 */
-figure {
-  margin: 0;
-}
 
 /* =============================================================================
    Tables
    ========================================================================== */
+
 /* remove most spacing between table cells */
 table {
   border-collapse: collapse;
@@ -189,9 +175,11 @@ td {
   text-align: left;
 }
 
+
 /* =============================================================================
    Forms
    ========================================================================== */
+
 /* corrects margin displayed oddly in IE7 */
 form {
   margin: 0;
@@ -278,7 +266,7 @@ input[type="button"]:hover,
 #txp-logout a:hover,
 #article-navigation a:hover,
 .prev-next a:hover,
-[role="main"] .action-create a:hover {
+.action-create a:hover {
   border: 1px solid;
   border-color: #c5c5c5 #c5c5c5 #acacac;
   background-color: #c5c5c5;
@@ -308,7 +296,7 @@ input[type="button"]:active,
 #txp-logout a:active,
 #article-navigation a:active,
 .prev-next a:active,
-[role="main"] .action-create a:active {
+.action-create a:active {
   border: 1px solid;
   border-color: #f8f8f8 #f8f8f8 #dfdfdf;
   background-color: #f8f8f8;
@@ -340,19 +328,8 @@ button {
 
 textarea,
 select,
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
 input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"] {
+input[type="text"] {
   -webkit-appearance: none;
   border-radius: 0;
   -webkit-box-sizing: border-box;
@@ -364,8 +341,9 @@ input[type="week"] {
   -ms-background-clip: padding-box;
   -o-background-clip: padding-box;
   background-clip: padding-box;
-  font-size: 1em;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.53846153846154; /* 20px / 13px */
   text-align: left;
   color: #333333;
   background-color: white;
@@ -404,14 +382,15 @@ textarea:focus,
 #txp-logout a:focus,
 #article-navigation a:focus,
 .prev-next a:focus,
-[role="main"] .action-create a:focus {
+.action-create a:focus {
   -webkit-box-shadow: 0 0 7px #0066ff;
   box-shadow: 0 0 7px #0066ff;
   /* Opera */
   z-index: 1;
 }
 
-input[type="file"]:focus, input[type="file"]:active,
+input[type="file"]:focus,
+input[type="file"]:active,
 input[type="radio"]:focus,
 input[type="radio"]:active,
 input[type="checkbox"]:focus,
@@ -422,19 +401,8 @@ input[type="checkbox"]:active {
 
 select[disabled],
 textarea[disabled],
-input[type="date"][disabled],
-input[type="datetime"][disabled],
-input[type="datetime-local"][disabled],
-input[type="email"][disabled],
-input[type="month"][disabled],
-input[type="number"][disabled],
 input[type="password"][disabled],
-input[type="search"][disabled],
-input[type="tel"][disabled],
-input[type="text"][disabled],
-input[type="time"][disabled],
-input[type="url"][disabled],
-input[type="week"][disabled] {
+input[type="text"][disabled] {
   background-color: #eee;
 }
 
@@ -455,7 +423,7 @@ textarea[disabled] {
 }
 
 textarea {
-  min-height: 60px;
+  min-height: 4.61538461538462em; /* 60px / 13px */
   resize: vertical;
   width: 100%;
   /* removes default vertical scrollbar in IE7-9 */
@@ -520,8 +488,8 @@ input[type="radio"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
-  *height: 13px;
-  *width: 13px;
+  *height: 1em;
+  *width: 1em;
 }
 
 /* suppress red glow that Firefox adds to form fields by default, even when user is still typing
