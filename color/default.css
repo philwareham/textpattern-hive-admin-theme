@@ -39,30 +39,28 @@ a:hover {
 
 .lever,
 #supporting_content legend {
-    color:#333;
-    background:#c7d3d8;
-	background:-webkit-gradient(linear,left top,left bottom,from(#c7d3d8),to(#b0bbc0)); /* Safari 4+, Chrome */
-	background:-webkit-linear-gradient(top,#c7d3d8,#b0bbc0); /* Safari 5.1+, Chrome 10+ */
-	background:   -moz-linear-gradient(top,#c7d3d8,#b0bbc0); /* Firefox 3.6 */
-	background:    -ms-linear-gradient(top,#c7d3d8,#b0bbc0); /* IE10 */
-	background:     -o-linear-gradient(top,#c7d3d8,#b0bbc0); /* Opera 11.10+ */
-	background:        linear-gradient(top,#c7d3d8,#b0bbc0);
-		filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#c7d3d8',EndColorStr='#b0bbc0'); /* IE7-IE9 */
-}
-
-.lever:hover {
-    background:#d2dce0;
-	background:-webkit-gradient(linear,left top,left bottom,from(#d2dce0),to(#c0c9cd)); /* Safari 4+, Chrome */
-	background:-webkit-linear-gradient(top,#d2dce0,#c0c9cd); /* Safari 5.1+, Chrome 10+ */
-	background:   -moz-linear-gradient(top,#d2dce0,#c0c9cd); /* Firefox 3.6 */
-	background:    -ms-linear-gradient(top,#d2dce0,#c0c9cd); /* IE10 */
-	background:     -o-linear-gradient(top,#d2dce0,#c0c9cd); /* Opera 11.10+ */
-	background:        linear-gradient(top,#d2dce0,#c0c9cd);
-		filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#d2dce0',EndColorStr='#c0c9cd'); /* IE7-IE9 */
-}
-
-.lever a {
-    color:#333;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  border: 1px solid;
+  border-color: #dddddd #dddddd #c4c4c4;
+  background-color: #dddddd;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#eeeeee, #dddddd);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#eeeeee, #dddddd);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#eeeeee, #dddddd);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#eeeeee, #dddddd);
+  /* IE7-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee',EndColorStr='#dddddd');
 }
 
 

@@ -59,9 +59,8 @@ h3,
 h4,
 h5,
 h6 {
-    margin:0 0 10px;
+    margin:0 0 1em;
     font-size:1em;
-    font-weight:normal;
 }
 
 
@@ -82,6 +81,7 @@ h6 {
 /* Twisties */
 
 .lever {
+    font-weight: bold;
     margin: 0;
     height: 2em;
     line-height: 2em;
@@ -89,7 +89,8 @@ h6 {
 }
 
 .lever a {
-    padding: 0 0 0 1.5em;
+    color:#333;
+    padding: 0 1em 0 1.53846153846154em;
     float: left;
     display: block;
     width: 92.5%;
@@ -109,6 +110,17 @@ h6 {
 
 fieldset {
     border: 0;
+}
+
+legend {
+    padding: 0 1em;
+    font-weight: bold;
+    height: 2em;
+    line-height: 2em;
+}
+
+.lever a:hover {
+    text-decoration: none;
 }
 
 label,
@@ -186,7 +198,7 @@ a.article-view {
 
 #page-login input[type="submit"],
 #page-logout input[type="submit"] {
-    margin-bottom:10px;
+    margin-bottom:1em;
 }
 
 .txp-control-panel input[type="submit"] {
@@ -198,7 +210,7 @@ a.article-view {
 }
 
 input[name="form_preview"] {
-    margin-bottom:10px;
+    margin-bottom:1em;
 }
 
 .actions input[type="submit"],
@@ -242,7 +254,7 @@ input[name="form_preview"] {
 }
 
 #configuration_content .plain-list {
-    padding:0 0 10px;
+    padding:0 0 1em;
 }
 
 #tagbuild_links .plain-list {
@@ -254,7 +266,7 @@ input[name="form_preview"] {
 }
 
 #supporting_content .plain-list {
-    padding:10px 10px 5px;
+    padding:1em 1em 5px;
 }
 
 .form-list {
@@ -339,7 +351,7 @@ thead a:active {
 #page-page #content_switcher #list td,
 #page-css #content_switcher #list td {
     position:relative;
-    padding:0 10px 5px;
+    padding:0 1em 5px;
 }
 
 #list tfoot .detail-toggle {
@@ -395,20 +407,20 @@ thead a:active {
     min-width:728px;
     min-height:47px;
     margin-bottom:11px;
-    padding:5px 20px 0;
+    padding:0 20px;
     border-bottom:1px solid #d4d4d4;
 }
 
 #mothership {
-    float:left;
-    display:block;
+    float: left;
+    display: block;
     width: 148px;
     height: 36px;
-    margin:0 15px 5px 0;
+    margin:0 1em 0 0;
 }
 
 #mothership a {
-    display:block;
+    display: block;
     width: 148px;
     height: 36px;
     text-indent:-9999px;
@@ -416,8 +428,8 @@ thead a:active {
 }
 
 #txp-head h1 {
-    float:left;
-    margin:11px 0 5px;
+    float: left;
+    line-height: 36px;
 }
 
 
@@ -427,8 +439,6 @@ thead a:active {
     float:right;
     width:54.4%;
     min-height:34px;
-    padding-top:13px;
-    border-radius:5px 5px 0 0;
     position:relative;
     z-index:100;
 }
@@ -539,7 +549,7 @@ thead a:active {
 }
 
 .edit-pane td {
-    padding:4px 10px;
+    padding:4px 1em;
     text-align:left !important;
 }
 
@@ -548,17 +558,17 @@ thead a:active {
 }
 
 .edit-title {
-    margin-bottom:10px;
+    margin-bottom:1em;
 }
 
 .nav-tertiary a {
-    margin-bottom:10px;
+    margin-bottom:1em;
 }
 
 .txp-navigation {
     width:100%;
-    margin:10px -20px;
-    padding:10px 20px;
+    margin:1em -20px;
+    padding:1em 20px;
     border-top:1px solid #d4d4d4;
 }
 
@@ -572,7 +582,7 @@ thead a:active {
 
 .txp-control-panel {
     text-align:center;
-    padding-bottom:10px;
+    padding-bottom:1em;
 }
 
 
@@ -603,7 +613,7 @@ table#edit {
 }
 
 .login-pane tr:first-child p {
-    margin:10px 0;
+    margin:1em 0;
 }
 
 .login-pane tr:last-child p {
@@ -611,7 +621,7 @@ table#edit {
 }
 
 .login-pane td {
-    padding:4px 10px;
+    padding:4px 1em;
     text-align:left !important;
 }
 
@@ -636,8 +646,8 @@ table#edit {
 }
 
 .category-list div {
-    padding:10px 10px 1px 10px !important;
-    margin:0 10px;
+    padding:1em 1em 1px 1em !important;
+    margin:0 1em;
 }
 
 #categories_article {
@@ -685,17 +695,15 @@ table#edit {
 
 #supporting_content legend {
     margin:0;
-    padding:7px 10px;
     width:100%;
-    -webkit-box-sizing:border-box;
-       -moz-box-sizing:border-box;
-            box-sizing:border-box;
-    *margin-left:-7px; /* ie7 hack for box-sizing workaround */
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 #supporting_content p {
     margin:0;
-    padding:5px 10px;
+    padding:5px 1em;
 }
 
 #supporting_content .action-create a {
@@ -707,12 +715,12 @@ table#edit {
 }
 
 #supporting_content .publish {
-    margin:10px;
+    margin: 1em;
 }
 
 #more_group fieldset {
     border:0;
-    margin-bottom:10px;
+    margin-bottom: 1em;
 }
 
 #more_group p {
@@ -727,14 +735,12 @@ table#edit {
 
 #more_group legend {
     margin:0;
-    padding:5px 10px;
     display:block;
     color:#fff;
     background:#555;
-    -webkit-box-sizing:border-box;
-       -moz-box-sizing:border-box;
-            box-sizing:border-box;
-    *margin-left:-17px; /* ie7 hack for box-sizing workaround */
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 #more_group .date .label,
@@ -929,30 +935,30 @@ table#edit {
 
 #page_form #html {
     height:537px;
-    margin:-3px 0 10px;
+    margin:-3px 0 1em;
 }
 
 #page_form label {
     display:block;
     width:250px;
-    margin-top:10px;
+    margin-top:1em;
 }
 
 #page_form input[type="text"] {
     width:250px;
-    margin-left:-10px;
+    margin-left:-1em;
 }
 
 #tagbuild_links h2,
 #content_switcher h2 {
     margin:0;
-    padding:5px 10px;
+    padding:5px 1em;
     display:block;
 }
 
 #content_switcher p {
     text-align:left;
-    padding:10px;
+    padding: 1em;
     margin:0;
 }
 
@@ -969,7 +975,7 @@ table#edit {
 
 #form_form #form {
     height:537px;
-    margin:-3px 0 10px;
+    margin:-3px 0 1em;
 }
 
 #form_form input[type="text"] {
@@ -982,14 +988,14 @@ table#edit {
 }
 
 .lever a.pophelp {
-    padding:0 5px;
-    position:absolute;
-    top:0;
-    right:0;
-    z-index:5;
-    width:10px;
-    height:31px;
-    line-height:31px;
+    padding: 0 1em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    width: .6em;
+    height: 2em;
+    line-height: 2em;
 }
 
 #form_form input[type="submit"].smallbox { /* Removes preview button on froms page, will anyone miss it? */
@@ -1002,7 +1008,7 @@ table#edit {
 
 #form_form p {
     float:left;
-    margin-right:10px;
+    margin-right: 1em;
 }
 
 #form_form p:last-child {
@@ -1025,18 +1031,18 @@ table#edit {
 
 #style_form #css {
     height:537px;
-    margin:-3px 0 10px;
+    margin:-3px 0 1em;
 }
 
 #style_form label {
     display:block;
     width:250px;
-    margin-top:10px;
+    margin-top:1em;
 }
 
 #style_form input[type="text"] {
     width:250px;
-    margin-left:-10px;
+    margin-left:-1em;
 }
 
 
@@ -1054,7 +1060,7 @@ table#edit {
 #diagnostics textarea {
     width:100% !important;
     height:316px !important;
-    margin-bottom:10px;
+    margin-bottom: 1em;
 }
 
 
@@ -1081,7 +1087,7 @@ table#edit {
 
 .pref-heading{
     margin:0;
-    padding:4px 10px;
+    padding: 4px 1em;
     display:block;
     color:#fff;
     background:#555;
@@ -1099,7 +1105,7 @@ table#edit {
 }
 
 #prefs_container input[type="submit"] {
-    margin-top:10px;
+    margin-top: 1em;
 }
 
 #prefs_control{
@@ -1112,7 +1118,7 @@ table#edit {
 }
 
 #language_container tr[style="font-weight:bold"] td {
-    padding:6px 10px !important;
+    padding: 6px 1em !important;
     color:#fff;
     background:#555;
     font-weight:normal !important;
@@ -1127,7 +1133,7 @@ table#edit {
 #prefs_container .even td,
 #language_container .odd td,
 #language_container .even td {
-    padding:6px 10px !important;
+    padding: 6px 1em !important;
 }
 
 #language_container .odd td strong,
@@ -1224,7 +1230,7 @@ table#edit {
     width:100%;
     height:316px;
     overflow:auto;
-    margin-bottom:10px;
+    margin-bottom: 1em;
 }
 
 #plugin_container .edit-pane {
@@ -1274,12 +1280,12 @@ table#edit {
 #tag-event {
     background:#fff;
     width:auto;
-    padding:10px;
+    padding: 1em;
 }
 
 #tag-event th,
 #tag-event td {
-    padding:5px;
+    padding: .5em;
     text-align:left;
 }
 
@@ -1373,8 +1379,7 @@ body{
 
 #mothership {
     width: 56px;
-    background:none;
-    margin-right:10px;
+    margin-right: 1em;
 }
 
 #mothership a {
@@ -1541,7 +1546,7 @@ body{
 
 #page-discuss #list {
     border:1px solid #d4d4d4;
-    margin-bottom:10px;
+    margin-bottom: 1em;
 }
 
 #page-discuss #list .created,
