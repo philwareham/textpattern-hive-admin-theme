@@ -1,10 +1,13 @@
-/* Hive theme custom CSS for Textpattern CMS (v1.3) */
+// note: this file is for use with Sass - http://sass-lang.com, don't use it as your live site stylesheet!
+
+// import Sass partials
+@import "variables", "mixins";
 
 
 
 /* ----------------------- COLORSCHEME ----------------------- */
-/* Options available: "color/default.css" "color/green.css" "color/blue.css" */
-@import url("color/default.css"); 
+/* Options available: "colour-default.css" "colour-green.css" "colour-blue.css" */
+@import url("colour-default.css"); 
 
 
 
@@ -43,106 +46,106 @@
 /* glz_custom_fields */
 
 .glz_text_area_field textarea {
-    width:100% !important;
+    width: 100% !important;
 }
 
 
 /* rss_admin_db_manager */
 
 #page-rss_db_man #dbinfo {
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 #page-rss_db_man #dbinfo th,
 #page-rss_db_man #dbinfo td {
-    color:#333 !important;
-    padding:0 3px !important;
+    color: #333 !important;
+    padding: 0 3px !important;
 }
 
 #page-rss_sql_run textarea {
-    width:100% !important;
-    height:316px !important;
-    overflow:auto;
-    margin-bottom:10px;
+    width: 100% !important;
+    height: 316px !important;
+    overflow: auto;
+    margin-bottom: 10px;
 }
 
 #page-rss_sql_run input[type="submit"] {
-    margin-right:10px;
+    margin-right: 10px;
 }
 
 
 /* bot_privs */
 
 #page-bot_privs_tab #list tr:first-child {
-    color:#fff;
-    background:#555;
+    color: #fff;
+    background: #555;
 }
 
 #page-bot_privs_tab #list td {
-    width:11%;
+    width: 11%;
 }
 
 #page-bot_privs_tab #list td:first-child {
-    width:34%;
+    width: 34%;
 }
 
 
 /* wet_quicklink */
 
 #quicklink {
-    z-index:50;
-    padding:10px 0 0 !important;
-    border-radius:5px;
-    -webkit-box-shadow:3px 3px 3px rgba(0,0,0,.2);
-            box-shadow:3px 3px 3px rgba(0,0,0,.2);
+    z-index: 50;
+    padding: 10px 0 0 !important;
+    @include border-radius;
+    -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.2);
+            box-shadow: 3px 3px 3px rgba(0,0,0,.2);
 }
 
 #quicklink #ql-menu {
-    padding:0 10px !important;
+    padding: 0 10px !important;
 }
 
 #quicklink #list {
-    padding:0 !important;
-    margin-top:5px !important;
+    padding: 0 !important;
+    margin-top: 5px !important;
 }
 
 #quicklink th {
-    padding:4px 2px 4px 10px !important;
+    padding: 4px 2px 4px 10px !important;
 }
 
 #quicklink td {
-    padding:4px 10px !important;
+    padding: 4px 10px !important;
 }
 
 #ql-search {
-    width:220px;
-    margin-left:5px;
+    width: 220px;
+    margin-left: 5px;
 }
 
 #ql-close {
-    height:inherit !important;
-    width:inherit !important;
+    height: inherit !important;
+    width: inherit !important;
 }
 
 h3.plain #insert-link {
-    margin-left:10px;
-    margin-top:8px;
+    margin-left: 10px;
+    margin-top: 8px;
 }
 
 
 /* arc_twitter */
 
 #arc_twitter .plain {
-    padding:0;
-    margin:0 !important;
+    padding: 0;
+    margin: 0 !important;
 }
 
 #arc_twitter_options {
-    padding:0;
+    padding: 0;
 }
 
 #arc_twitter_options .edit {
-    width:100%;
+    width: 100%;
 }
 
 
@@ -150,19 +153,19 @@ h3.plain #insert-link {
 
 #rah_external_output_container input[type="text"],
 #rah_external_output_container select {
-    width:250px !important;
+    width: 250px !important;
 }
 
 
 /* tru_tags (thanks by Stuart Butcher) */
 
 .tru_tags_admin_tags {
-    display:block;
-    margin-top:12px;
-    padding:4px;
-    border:1px solid #d2d2d2;
-    border-top:1px solid #a3a3a3;
-    background-color:#fff;
-    height:150px;  /* set this to whatever you want */
-    overflow:auto; /* this will cause a scrollbar to appear */
+    display: block;
+    margin-top: 12px;
+    padding: 4px;
+    border: 1px solid #d2d2d2;
+    border-top: 1px solid #a3a3a3;
+    background-color: #fff;
+    height: 150px;  /* set this to whatever you want */
+    overflow: auto; /* this will cause a scrollbar to appear */
 }

@@ -1,4 +1,7 @@
-/* Hive theme for Textpattern CMS (v1.3) */
+// note: this file is for use with Sass - http://sass-lang.com, don't use it as your live site stylesheet!
+
+// import Sass partials
+@import "variables", "mixins";
 
 
 
@@ -172,15 +175,15 @@ a:active.navlink-active,
 }
 
 #list thead .desc {
-    background:#333 url(blue/twisty-arrow-list.gif) no-repeat right -31px;
+    background: #333 url("../img/colour-blue/twisty-arrow-list.gif") no-repeat right -31px;
 }
 
 #list thead .asc {
-    background:#333 url(blue/twisty-arrow-list.gif) no-repeat right -4px;
+    background: #333 url("../img/colour-blue//twisty-arrow-list.gif") no-repeat right -4px;
 }
 
 #list .odd {
-    background:#fff;
+    background: #fff;
 }
 
 
@@ -226,7 +229,7 @@ a:active.navlink-active,
 }
 
 #txp-nav li:hover a {
-    background:url(blue/indicator.gif) no-repeat 50% bottom;
+    background: url("../img/colour-blue/indicator.gif") no-repeat 50% bottom;
 }
 
 #txp-nav ul {

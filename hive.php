@@ -10,7 +10,7 @@ class hive_theme extends classic_theme
 
     function html_head()
     {
-        $out[] = '<link href="'.$this->url.'textpattern.css" rel="stylesheet" type="text/css"/>';
+        $out[] = '<link href="'.$this->url.'css/textpattern.css" rel="stylesheet" type="text/css"/>';
         $out[] = '<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1">';
         $out[] = '<script type="text/javascript" src="'.$this->url.'js/jquery.formalize.min.js"></script>';
         $out[] = '<!--[if lt IE 9]><script type="text/javascript" src="'.$this->url.'js/selectivizr.min.js"></script><![endif]-->';

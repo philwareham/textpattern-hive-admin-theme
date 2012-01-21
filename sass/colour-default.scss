@@ -1,4 +1,7 @@
-/* Hive theme for Textpattern CMS (v1.3) */
+// note: this file is for use with Sass - http://sass-lang.com, don't use it as your live site stylesheet!
+
+// import Sass partials
+@import "variables", "mixins";
 
 
 
@@ -8,21 +11,21 @@
 /* General */
 
 body {
-    color: #333;
-    background: #fff;
+    color: $color-text;
+    background: $color-background;
 }
 
 a {
     -webkit-tap-highlight-color: rgba(0, 102, 255, 0.5);
-    color: #1a428b;
+    color: $color-link;
 }
 
 a:hover {
-    color: #0066ff;
+    color: $color-link-hover;
 }
 
 #article-main .author {
-    color: #999;
+    color: $color-text-footnote;
 }
 
 
@@ -31,7 +34,7 @@ a:hover {
 #messagepane,
 .not-ok,
 #plugin_container td.modified {
-    color:#c00;
+    color: $color-error;
 }
 
 
@@ -39,28 +42,9 @@ a:hover {
 
 .lever,
 #supporting_content legend {
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
-  -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
-  box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
-  border: 1px solid;
-  border-color: #dddddd #dddddd #c4c4c4;
-  background-color: #dddddd;
-  /* Konqueror */
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
-  /* Safari4+, Chrome */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
-  /* Safari5.1+, Chrome10+ */
-  background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
-  /* Firefox3.6 */
-  background-image: -moz-linear-gradient(#eeeeee, #dddddd);
-  /* IE10 */
-  background-image: -ms-linear-gradient(#eeeeee, #dddddd);
-  /* Opera11.10+ */
-  background-image: -o-linear-gradient(#eeeeee, #dddddd);
-  /* CSS3 Compliant */
-  background-image: linear-gradient(#eeeeee, #dddddd);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee',EndColorStr='#dddddd');
+    @include text-shadow-light;
+    @include box-shadow(rgba(255, 255, 255, .25) 0 1px 0 0 inset);
+    @include gradient-bar;
 }
 
 
@@ -77,7 +61,7 @@ a.navlink-active,
 #list_banned_ips a,
 #page-rss_db_bk h3 a,
 #insert-link {
-    color:#333 !important;
+    color: $color-text !important;
     text-shadow:1px 1px #fbd978;
     border:solid 1px #e1a61a;
     background:#ffda44;
@@ -164,15 +148,15 @@ a:active.navlink-active,
 }
 
 #list thead .desc {
-    background:#555 url(default/twisty-arrow-list.gif) no-repeat right -31px;
+    background: #555 url("../img/colour-default/twisty-arrow-list.gif") no-repeat right -31px;
 }
 
 #list thead .asc {
-    background:#555 url(default/twisty-arrow-list.gif) no-repeat right -4px;
+    background: #555 url("../img/colour-default/twisty-arrow-list.gif") no-repeat right -4px;
 }
 
 #list .odd {
-    background:#fff;
+    background: #fff;
 }
 
 
@@ -213,12 +197,12 @@ a:active.navlink-active,
 }
 
 #txp-nav a {
-    color:#333 !important;
+    color: $color-text !important;
     text-shadow:1px 1px #fbd978;
 }
 
 #txp-nav li:hover a {
-    background:url(default/indicator.gif) no-repeat 50% bottom;
+    background: url("../img/colour-default/indicator.gif") no-repeat 50% bottom;
 }
 
 #txp-nav ul {
@@ -234,7 +218,7 @@ a:active.navlink-active,
 }
 
 #txp-nav ul a {
-    color:#333 !important;
+    color: $color-text !important;
 }
 
 
@@ -290,7 +274,7 @@ a:active.navlink-active,
 /* Tabs */
 
 .tabs a {
-    color:#333;
+    color: $color-text;
 }
 
 .tabs .tabup a {

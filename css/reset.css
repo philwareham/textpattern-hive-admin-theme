@@ -1,12 +1,10 @@
+/* Hive theme for Textpattern CMS (v2.0b1) */
 /* combined and abridged version of Normalize and Formalize */
 /* Normalize original authors: Nicolas Gallagher and Jonathan Neal - http://necolas.github.com/normalize.css/ */
 /* Formalize original author: Nathan Smith - http://formalize.me/ */
-
-
 /* =============================================================================
    Base
    ========================================================================== */
-
 /* 1. corrects text resizing oddly in IE7 when body font-size is set using em units
    2. keeps page centred in all browsers regardless of content height
    3. prevents iOS text size adjust after orientation change, without disabling user zoom
@@ -25,15 +23,11 @@ html {
 /* addresses margins handled incorrectly in IE7 */
 body {
   margin: 0;
-  font-size: .8125em; /* 13px / 16px */
-  line-height: 1.53846153846154; /* 20px / 13px */
 }
-
 
 /* =============================================================================
    Links
    ========================================================================== */
-
 a:focus {
   outline: thin dotted #0066ff;
 }
@@ -41,11 +35,9 @@ a:hover, a:active {
   outline: 0;
 }
 
-
 /* =============================================================================
    Typography
    ========================================================================== */
-
 /* addresses styling not present in IE7-9, Safari5, Chrome */
 abbr[title],
 acronym[title],
@@ -61,7 +53,7 @@ strong {
 }
 
 blockquote {
-  margin: 1.53846153846154em; /* 20px / 13px */
+  margin: 1em 2em;
 }
 
 /* addresses styling not present in Safari5, Chrome */
@@ -106,15 +98,14 @@ sub {
   bottom: -0.25em;
 }
 
-
 /* =============================================================================
    Lists
    ========================================================================== */
-
 ul,
 ol {
   margin-left: 0;
-  padding: 0 0 0 1.53846153846154em; /* 20px / 13px */
+  padding: 0 0 0 1.38461538461538em;
+  /* 18px / 13px */
 }
 
 /* remove margins from nested lists */
@@ -124,18 +115,17 @@ ol ol {
 }
 
 dd {
-  margin: 0 0 0 1.53846153846154em; /* 20px / 13px */
+  margin: 0 0 0 1.38461538461538em;
+  /* 20px / 13px */
 }
 
 dt {
   font-weight: bold;
 }
 
-
 /* =============================================================================
    Embedded content
    ========================================================================== */
-
 /* 1. Removes border when inside 'a' element in IE7-9, Firefox3
    2. improves image quality when scaled in IE7
       code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
@@ -151,11 +141,9 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-
 /* =============================================================================
    Tables
    ========================================================================== */
-
 /* remove most spacing between table cells */
 table {
   border-collapse: collapse;
@@ -169,11 +157,9 @@ td {
   text-align: left;
 }
 
-
 /* =============================================================================
    Forms
    ========================================================================== */
-
 /* corrects margin displayed oddly in IE7 */
 form {
   margin: 0;
@@ -183,13 +169,13 @@ form {
    2. Corrects text not wrapping in FF3 
    3. Corrects alignment displayed oddly in IE7 */
 legend {
-  border: 0;
   /* 1 */
+  border: 0;
   padding: 0;
-  white-space: normal;
   /* 2 */
-  *margin-left: -7px;
+  white-space: normal;
   /* 3 */
+  *margin-left: -7px;
 }
 
 /* added via JS to <textarea> and class="input_full" (applies only to IE7, other browsers don't need it) */
@@ -198,30 +184,28 @@ legend {
   padding-right: 8px;
 }
 
-input[type="search"]::-webkit-search-decoration {
-  display: none;
-}
-
 button,
 input[type="reset"],
 input[type="submit"],
 input[type="button"],
 #txp-logout a {
   -webkit-appearance: none;
+  -moz-border-radius: 5px;
   border-radius: 5px;
-  -khtml-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -khtml-background-clip: padding-box;
   -moz-background-clip: padding;
   -ms-background-clip: padding-box;
   -o-background-clip: padding-box;
   background-clip: padding-box;
   cursor: pointer;
   color: #333333;
-  font-size: 1em;
+  font-size: .92307692307692em;
+  line-height: 1.33333333333333;
   text-decoration: none;
   outline: 0;
   margin: 0;
-  padding: 3px 9px;
+  padding: 3px 0.692;
   -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
   box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
@@ -257,10 +241,7 @@ button:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover,
-#txp-logout a:hover,
-#article-navigation a:hover,
-.prev-next a:hover,
-.action-create a:hover {
+#txp-logout a:hover {
   border: 1px solid;
   border-color: #c5c5c5 #c5c5c5 #acacac;
   background-color: #c5c5c5;
@@ -287,10 +268,7 @@ button:active,
 input[type="reset"]:active,
 input[type="submit"]:active,
 input[type="button"]:active,
-#txp-logout a:active,
-#article-navigation a:active,
-.prev-next a:active,
-.action-create a:active {
+#txp-logout a:active {
   border: 1px solid;
   border-color: #f8f8f8 #f8f8f8 #dfdfdf;
   background-color: #f8f8f8;
@@ -325,19 +303,20 @@ select,
 input[type="password"],
 input[type="text"] {
   -webkit-appearance: none;
+  -moz-border-radius: 0;
   border-radius: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -khtml-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -khtml-background-clip: padding-box;
   -moz-background-clip: padding;
   -ms-background-clip: padding-box;
   -o-background-clip: padding-box;
   background-clip: padding-box;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  line-height: 1.53846153846154; /* 20px / 13px */
+  line-height: 1.38461538461538;
   text-align: left;
   color: #333333;
   background-color: white;
@@ -353,38 +332,18 @@ input[type="text"] {
   *height: auto;
 }
 
-/* separate rule for Firefox. separate rule for IE, too. cannot stack with WebKit's. */
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: #999999;
-}
-
-input:-moz-placeholder,
-textarea:-moz-placeholder {
-  color: #999999;
-}
-
-input.placeholder_text,
-textarea.placeholder_text {
-  color: #999999;
-}
-
 button:focus,
 input:focus,
 select:focus,
 textarea:focus,
-#txp-logout a:focus,
-#article-navigation a:focus,
-.prev-next a:focus,
-.action-create a:focus {
+#txp-logout a:focus {
   -webkit-box-shadow: 0 0 7px #0066ff;
   box-shadow: 0 0 7px #0066ff;
   /* Opera */
   z-index: 1;
 }
 
-input[type="file"]:focus,
-input[type="file"]:active,
+input[type="file"]:focus, input[type="file"]:active,
 input[type="radio"]:focus,
 input[type="radio"]:active,
 input[type="checkbox"]:focus,
@@ -417,7 +376,8 @@ textarea[disabled] {
 }
 
 textarea {
-  min-height: 4.61538461538462em; /* 60px / 13px */
+  min-height: 4.61538461538462em;
+  /* 60px / 13px */
   resize: vertical;
   width: 100%;
   /* removes default vertical scrollbar in IE7-9 */
@@ -447,7 +407,6 @@ optgroup {
 }
 
 /* tweaks for Safari, Chrome */
-
 @media (-webkit-min-device-pixel-ratio: 0) {
   select[size],
   select[multiple],
@@ -462,15 +421,14 @@ optgroup {
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
-    background-image: url("img/select_arrow.gif");
+    background-image: url("../img/select_arrow.gif");
   }
 }
-
 @media (-webkit-min-device-pixel-ratio: 0) and (-webkit-min-device-pixel-ratio: 2) {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url("img/retina/select_arrow@2x.gif") !important;
+    background-image: url("../img/retina/select_arrow@2x.gif") !important;
     -webkit-background-size: 13px 4px;
   }
 }

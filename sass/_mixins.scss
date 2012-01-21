@@ -1,0 +1,112 @@
+// note: this file is for use with Sass - http://sass-lang.com, don't use it as your live site stylesheet!
+
+// clearfix - http://nicolasgallagher.com/micro-clearfix-hack/
+
+@mixin clearfix {
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    *zoom: 1;
+}
+
+// Higher resolution images for retina displays
+        
+@mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
+    $file_name: $hdfile + '.' + $hdtype;
+    $retina_name: $hdfile + '@2x.' + $hdtype;
+    background-image: url('../img/' + $file_name);
+    @media (-webkit-min-device-pixel-ratio: 2) {
+        background-image: url('../img/retina/' + $retina_name) !important;
+        -webkit-background-size: $hdwidth $hdheight;
+    }
+}
+
+// rounded corners
+
+@mixin border-radius($border-radius) {
+    -moz-border-radius: $border-radius; // Firefox3.6, Camino2.1
+         border-radius: $border-radius;
+}
+
+// drop shadows
+
+@mixin box-shadow($shadow: 0 1px 2px rgba(0, 0, 0, .2)) {
+    -webkit-box-shadow: $shadow;
+            box-shadow: $shadow;
+}
+
+// text shadows
+
+@mixin text-shadow-light {
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, .4);
+}
+@mixin text-shadow-dark {
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, .25);
+}
+
+// standard gradients
+
+@mixin gradient($color-gradient-from, $color-gradient-to) {
+    background: {
+        color: $color-gradient-to;
+        /* Konqueror */
+        image:  -khtml-gradient(linear, left top, left bottom, from($color-gradient-from), to($color-gradient-to));
+        /* Safari4+, Chrome */
+        image: -webkit-gradient(linear, left top, left bottom, from($color-gradient-from), to($color-gradient-to));
+        /* Safari5.1+, Chrome10+ */
+        image: -webkit-linear-gradient($color-gradient-from, $color-gradient-to);
+        /* Firefox3.6 */
+        image:    -moz-linear-gradient($color-gradient-from, $color-gradient-to);
+        /* IE10 */
+        image:     -ms-linear-gradient($color-gradient-from, $color-gradient-to);
+        /* Opera11.10+ */
+        image:      -o-linear-gradient($color-gradient-from, $color-gradient-to);
+        /* CSS3 Compliant */
+        image:         linear-gradient($color-gradient-from, $color-gradient-to);
+    }
+    /* IE7-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$color-gradient-from}',EndColorStr='#{$color-gradient-to}');
+    /* hack to remove any border-radius in IE9 so we can keep filter gradients */
+    border-radius: 0 \0;
+}
+
+// extra styling to gradients for buttons and alerts
+
+@mixin gradient-bar($color-gradient-from, $color-gradient-to) {
+    border: 1px solid;
+    border-color: $color-gradient-to $color-gradient-to darken($color-gradient-to, 10%);
+    @include gradient($color-gradient-from, $color-gradient-to);
+}
+
+// css transitions
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+       -moz-transition: $transition;
+        -ms-transition: $transition;
+         -o-transition: $transition;
+            transition: $transition;
+}
+
+// box sizing
+
+@mixin box-sizing($box-sizing: border-box) {
+	-webkit-box-sizing: $box-sizing;
+	   -moz-box-sizing: $box-sizing;
+			box-sizing: $box-sizing;
+}
+
+// background clip
+
+@mixin background-clip {
+    -webkit-background-clip: padding;
+     -khtml-background-clip: padding-box;
+       -moz-background-clip: padding;
+        -ms-background-clip: padding-box;
+         -o-background-clip: padding-box;
+            background-clip: padding-box;
+}

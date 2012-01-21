@@ -1,57 +1,52 @@
-/* Hive theme for Textpattern CMS (v1.3) */
+// note: this file is for use with Sass - http://sass-lang.com, don't use it as your live site stylesheet!
+
+// import Sass partials
+@import "variables", "mixins";
+
+/* import rules to make base rendering consistent for all browsers */
+@import url("reset.css");
 
 
 
-/* -------------------------- RESET -------------------------- */
-/* External @import since we need it to load before all other CSS rules */
-@import url("reset.css"); 
 
-
-
-/* ----------------- IMPORT CUSTOM CSS FILE ------------------ */
+/* =============================================================================
+   IMPORT CUSTOM CSS FILE
+   ========================================================================== */
 /* See the 'readme.txt' for instructions on how to use this file */
 @import url("custom.css");
 
 
 
-/* -------------------------- SETUP -------------------------- */
 
+/* =============================================================================
+   Clearfix
+   ========================================================================== */
 
-/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations. nicolasgallagher.com/micro-clearfix-hack/ */
-.clearfix:before,.clearfix:after{content:"";display:table;}
-.clearfix:after{clear:both;}
-.clearfix{zoom:1;}
-
-
-/* Use body as wrapper */
-
-html {
-    overflow-y:scroll; /* always force scrollbar padding so we don't get 'jumping' */
-    -webkit-text-size-adjust:100%; /* prevents iOS text size adjust after orientation change, without disabling user zoom: http://www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
-        -ms-text-size-adjust:100%; /* as above, for Windows Phone */
-}
-
-body {
-    max-width: 1248px;
-    margin: 0 auto;
+.clearfix {
+    @include clearfix;
 }
 
 
-
-/* -------------------- STYLE FORMATTING --------------------- */
-
-
-/* Links and focus */
+/* =============================================================================
+   Links
+   ========================================================================== */
 
 a {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 
-/* Typography */
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+body {
+    font-size: $basefont;
+    line-height: $baseline;
+}
 
 h1,
 h2,
@@ -64,7 +59,9 @@ h6 {
 }
 
 
-/* Messages */
+/* =============================================================================
+   Messages
+   ========================================================================== */
 
 #messagepane {
     position:absolute;
@@ -78,7 +75,9 @@ h6 {
 }
 
 
-/* Twisties */
+/* =============================================================================
+   Twistees
+   ========================================================================== */
 
 .lever {
     font-weight: bold;
@@ -89,12 +88,12 @@ h6 {
 }
 
 .lever a {
-    color:#333;
+    color: $color-text;
     padding: 0 1em 0 1.53846153846154em;
     float: left;
     display: block;
     width: 92.5%;
-    background: url("img/twisty-arrow.gif") no-repeat .5em 0;
+    background: url("../img/twisty-arrow.gif") no-repeat .5em 0;
 }
 
 .expanded a {
@@ -106,7 +105,9 @@ h6 {
 }
 
 
-/* Forms */
+/* =============================================================================
+   Forms
+   ========================================================================== */
 
 fieldset {
     border: 0;
@@ -172,7 +173,9 @@ input[type="checkbox"] {
 }
 
 
-/* Buttons */
+/* =============================================================================
+   Buttons
+   ========================================================================== */
 
 input[type="submit"],
 input[type="button"],
@@ -232,7 +235,7 @@ input[name="form_preview"] {
     text-align:center;
     color:#fff;
     border:solid 1px #d2d2d2;
-    border-radius:5px;
+    @include border-radius;
     -webkit-box-shadow:0 1px 2px rgba(0,0,0,.2);
             box-shadow:0 1px 2px rgba(0,0,0,.2);
     background:#dadada;
@@ -247,7 +250,9 @@ input[name="form_preview"] {
 }
 
 
-/* Lists */
+/* =============================================================================
+   Lists
+   ========================================================================== */
 
 .plain-list {
     list-style:none;
@@ -278,22 +283,19 @@ input[name="form_preview"] {
 }
 
 
-/* Tables */
-
-th,td {
-    vertical-align:top;
-}
+/* =============================================================================
+   Tables
+   ========================================================================== */
 
 #list {
-    width:100% !important;
+    width: 100% !important;
 }
 
 #list tr.spam {
-    background:#fa8f98;
+    background: #fa8f98;
 }
 
 #list th {
-    text-align:left;
     color:#fff;
     background:#555;
     padding:6px 16px 6px 4px;
@@ -371,6 +373,12 @@ thead a:active {
 
 /* -------------------- LAYOUT FORMATTING -------------------- */
 
+/* Use body as wrapper */
+
+body {
+    max-width: 1248px;
+    margin: 0 auto;
+}
 
 /* Containers */
 
@@ -424,7 +432,7 @@ thead a:active {
     width: 148px;
     height: 36px;
     text-indent:-9999px;
-    background: url("img/textpattern-color.png");
+    background: url("../img/textpattern-color.png");
 }
 
 #txp-head h1 {
@@ -453,7 +461,7 @@ thead a:active {
     position:relative;
     margin-right:2px;
     border-bottom:none;
-    border-radius:5px 5px 0 0;
+    @include border-radius($border-radius $border-radius 0 0);
 }
 
 #txp-nav #txp-logout {
@@ -484,7 +492,7 @@ thead a:active {
     min-width:166px;
     border:solid 1px #d4d4d4;
     border-top:none;
-    border-radius:0 5px 5px 5px;
+    @include border-radius(0 $border-radius $border-radius $border-radius);
     -webkit-box-shadow:3px 3px 3px rgba(0,0,0,.2);
             box-shadow:3px 3px 3px rgba(0,0,0,.2);
 }
@@ -494,32 +502,32 @@ thead a:active {
 }
 
 #txp-nav ul {
-    border-radius:0 5px 5px 5px;
+    @include border-radius(0 $border-radius $border-radius $border-radius);
 }
 
 #txp-nav ul li {
-    float:none;
-    border:0;
-    border-radius:0;
-    background:none;
-    margin-right:0;
+    float: none;
+    border: 0;
+    @include border-radius(0);
+    background: none;
+    margin-right: 0;
 }
 
 #txp-nav div ul li:first-child {
-    border-radius:0 5px 0 0;
+    @include border-radius(0 $border-radius 0 0);
 }
 
 #txp-nav div ul li:last-child {
-    border-radius:0 0 5px 5px;
+    @include border-radius(0 0 $border-radius $border-radius);
 }
 
 #txp-nav ul a {
-    display:block;
-    padding:.5em 9px;
-    text-decoration:none;
-    font-weight:normal;
-    text-shadow:none;
-    background:none !important;
+    display: block;
+    padding: .5em 9px;
+    text-decoration: none;
+    font-weight: normal;
+    text-shadow: none;
+    background: none !important;
 }
 
 /* Add a close button only for touch devices */
@@ -536,7 +544,7 @@ thead a:active {
     height:32px;
     padding:0;
     text-indent:-9999px;
-    background: url("img/close.png");
+    background: url("../img/close.png");
     display:none;
 }
 
@@ -667,38 +675,35 @@ table#edit {
 
 #article-col-1,
 #article-col-2 {
-    width:25%;
-   
- min-width:182px;
+    width: 25%;
+    min-width: 182px;
 }
 #article-main {
-    width:50%;
+    width: 50%;
 }
 
 #configuration_content,
 #tagbuild_links {
-    margin-right:20px
+    margin-right: 20px;
 }
 
 #supporting_content,
 #content_switcher {
-    margin-left:20px
+    margin-left: 20px;
 }
 
 #configuration_content > div.empty {
-    display:none;
+    display: none;
 }
 
 #supporting_content fieldset {
-    padding:0;
+    padding: 0;
 }
 
 #supporting_content legend {
-    margin:0;
-    width:100%;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    @include box-sizing;
 }
 
 #supporting_content p {
@@ -738,9 +743,7 @@ table#edit {
     display:block;
     color:#fff;
     background:#555;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    @include box-sizing;
 }
 
 #more_group .date .label,
@@ -1220,9 +1223,7 @@ table#edit {
     margin-bottom:20px;
     overflow:auto;
     width:100%;
-    -webkit-box-sizing:border-box;
-       -moz-box-sizing:border-box;
-            box-sizing:border-box;
+    @include box-sizing;
     *padding:0; /* ie7 hack for box-sizing workaround */
 }
 
@@ -1384,7 +1385,7 @@ body{
 
 #mothership a {
     width: 56px;
-    background: url("img/txp-color.png") left top;
+    background: url("../img/txp-color.png") left top;
 }
 
 
