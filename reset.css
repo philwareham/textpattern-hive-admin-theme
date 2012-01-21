@@ -500,7 +500,7 @@ optgroup {
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
-    background-image: url("../img/select_arrow.gif");
+    background-image: url("img/select_arrow.gif");
   }
 }
 
@@ -508,7 +508,7 @@ optgroup {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url("../img/retina/select_arrow@2x.gif") !important;
+    background-image: url("img/retina/select_arrow@2x.gif") !important;
     -webkit-background-size: 13px 4px;
   }
 }
