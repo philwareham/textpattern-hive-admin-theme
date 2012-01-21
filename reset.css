@@ -1,24 +1,542 @@
-/* Hive theme custom CSS for Textpattern CMS (v1.3) */
+/* combined and abridged version of Normalize and Formalize */
+/* Normalize original authors: Nicolas Gallagher and Jonathan Neal - http://necolas.github.com/normalize.css/ */
+/* Formalize original author: Nathan Smith - http://formalize.me/ */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/* corrects block display not defined in IE6-9, Firefox3 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
 
+/* addresses styling for 'hidden' attribute not present in IE7-9, Firefox3, Safari4 */
+[hidden] {
+  display: none;
+}
 
+/* =============================================================================
+   Base
+   ========================================================================== */
+/* 1. corrects text resizing oddly in IE7 when body font-size is set using em units
+   2. keeps page centred in all browsers regardless of content height
+   3. prevents iOS text size adjust after orientation change, without disabling user zoom
+      www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+html {
+  /* 1 */
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  /* 2 */
+  overflow-y: scroll;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
 
-/* Reset styles */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
-body{line-height:1;}
-blockquote,q{quotes:none;}
-blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
-a{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:transparent;}
-a:active{outline:0;}
-b,strong{font-weight:bold;}
-ins{background:#ff9;color:#000;text-decoration:none;}
-mark{background:#ff9;color:#000;font-style:italic;font-weight:bold;}
-del{text-decoration:line-through;}
-abbr[title],dfn[title]{border-bottom:1px dotted #999;cursor:help;}
-table{border-collapse:collapse;border-spacing:0;}
-table button,table input{*overflow:auto;}
-input[type="checkbox"],input[type="radio"]{box-sizing:border-box;}
-hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
-img{vertical-align:middle;-ms-interpolation-mode:bicubic;}
-sub,sup{font-size:75%;line-height:0;position:relative;}
-sup{top:-.5em;}
-sub{bottom:-.25em;}
+/* addresses margins handled incorrectly in IE7 */
+body {
+  margin: 0;
+}
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+a:focus {
+  outline: thin dotted #0066ff;
+}
+a:hover, a:active {
+  outline: 0;
+}
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/* addresses styling not present in IE7-9, Safari5, Chrome */
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* addresses style set to 'bolder' in Firefox3-4, Safari4-5, Chrome */
+b,
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  margin: 18px 20px;
+}
+
+/* addresses styling not present in Safari5, Chrome */
+dfn {
+  font-style: italic;
+}
+
+/* corrects font family set oddly in Safari4-5, Chrome - en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* improves readability of pre-formatted text in all browsers */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* removes predefined text color */
+mark {
+  color: #333333;
+}
+
+/* prevents sub and sup affecting line-height in all browsers - gist.github.com/413930 */
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+ul,
+ol {
+  margin-left: 0;
+  padding: 0 0 0 20px;
+}
+
+/* remove margins from nested lists */
+ul ul,
+ol ol {
+  margin: 0;
+}
+
+dd {
+  margin: 0 0 0 20px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/* 1. Removes border when inside 'a' element in IE7-9, Firefox3
+   2. improves image quality when scaled in IE7
+      code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+img {
+  /* 1 */
+  border: 0;
+  /* 2 */
+  -ms-interpolation-mode: bicubic;
+}
+
+/* corrects overflow displayed oddly in IE9 */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/* addresses margin not present in IE7-9, Safari5, Opera11 */
+figure {
+  margin: 0;
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/* remove most spacing between table cells */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* make table cells align top and left by default */
+th,
+td {
+  vertical-align: top;
+  text-align: left;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/* corrects margin displayed oddly in IE7 */
+form {
+  margin: 0;
+}
+
+/* 1. Corrects color not being inherited in IE7-9
+   2. Corrects text not wrapping in FF3 
+   3. Corrects alignment displayed oddly in IE7 */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/* added via JS to <textarea> and class="input_full" (applies only to IE7, other browsers don't need it) */
+.input_full_wrap {
+  display: block;
+  padding-right: 8px;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"],
+#txp-logout a {
+  -webkit-appearance: none;
+  border-radius: 5px;
+  -khtml-background-clip: padding-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  -ms-background-clip: padding-box;
+  -o-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: pointer;
+  color: #333333;
+  font-size: 1em;
+  text-decoration: none;
+  outline: 0;
+  margin: 0;
+  padding: 3px 9px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  width: auto;
+  vertical-align: top;
+  border: 1px solid;
+  border-color: #bbbbbb #bbbbbb #a2a2a2;
+  background-color: #bbbbbb;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#bbbbbb));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#bbbbbb));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#eeeeee, #bbbbbb);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#eeeeee, #bbbbbb);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#eeeeee, #bbbbbb);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#eeeeee, #bbbbbb);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#eeeeee, #bbbbbb);
+  /* IE7-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee',EndColorStr='#bbbbbb');
+  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
+  border-radius: 0 \0;
+  /* IE7 */
+  *padding-top: 2px;
+  *padding-bottom: 0;
+  *overflow: visible;
+}
+button:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+#txp-logout a:hover,
+#article-navigation a:hover,
+.prev-next a:hover,
+[role="main"] .action-create a:hover {
+  border: 1px solid;
+  border-color: #c5c5c5 #c5c5c5 #acacac;
+  background-color: #c5c5c5;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#f8f8f8), to(#c5c5c5));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#c5c5c5));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#f8f8f8, #c5c5c5);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#f8f8f8, #c5c5c5);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#f8f8f8, #c5c5c5);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#f8f8f8, #c5c5c5);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#f8f8f8, #c5c5c5);
+  /* IE7-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f8f8f8',EndColorStr='#c5c5c5');
+  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
+  border-radius: 0 \0;
+}
+button:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+#txp-logout a:active,
+#article-navigation a:active,
+.prev-next a:active,
+[role="main"] .action-create a:active {
+  border: 1px solid;
+  border-color: #f8f8f8 #f8f8f8 #dfdfdf;
+  background-color: #f8f8f8;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#c5c5c5), to(#f8f8f8));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c5c5c5), to(#f8f8f8));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#c5c5c5, #f8f8f8);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#c5c5c5, #f8f8f8);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#c5c5c5, #f8f8f8);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#c5c5c5, #f8f8f8);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#c5c5c5, #f8f8f8);
+  /* IE7-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#c5c5c5',EndColorStr='#f8f8f8');
+  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
+  border-radius: 0 \0;
+}
+
+/* IE7 button fixes */
+button {
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -khtml-background-clip: padding-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  -ms-background-clip: padding-box;
+  -o-background-clip: padding-box;
+  background-clip: padding-box;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: #333333;
+  background-color: white;
+  margin: 0;
+  border: 1px solid #cccccc;
+  padding: 2px 6px;
+  outline: 0;
+  height: 24px;
+  vertical-align: top;
+  /* IE7 */
+  *padding-top: 2px;
+  *padding-bottom: 1px;
+  *height: auto;
+}
+
+/* separate rule for Firefox. separate rule for IE, too. cannot stack with WebKit's. */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #999999;
+}
+
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #999999;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+#txp-logout a:focus,
+#article-navigation a:focus,
+.prev-next a:focus,
+[role="main"] .action-create a:focus {
+  -webkit-box-shadow: 0 0 7px #0066ff;
+  box-shadow: 0 0 7px #0066ff;
+  /* Opera */
+  z-index: 1;
+}
+
+input[type="file"]:focus, input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+select[disabled],
+textarea[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+  background-color: #eee;
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled] {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  user-select: none;
+  color: #999999;
+  cursor: default;
+}
+
+textarea {
+  min-height: 60px;
+  resize: vertical;
+  width: 100%;
+  /* removes default vertical scrollbar in IE7-9 */
+  overflow: auto;
+  /* improves readability and alignment in all browsers */
+  vertical-align: top;
+}
+
+textarea,
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+select[size="0"],
+select[size="1"] {
+  height: 1.8em;
+  /* IE7 */
+  *height: auto;
+}
+
+optgroup {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #333333;
+}
+
+/* tweaks for Safari, Chrome */
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  select[size],
+  select[multiple],
+  select[multiple][size] {
+    background-image: none;
+    padding-right: 3px;
+  }
+
+  select,
+  select[size="0"],
+  select[size="1"] {
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+    background-image: url("../img/select_arrow.gif");
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) and (-webkit-min-device-pixel-ratio: 2) {
+  select,
+  select[size="0"],
+  select[size="1"] {
+    background-image: url("../img/retina/select_arrow@2x.gif") !important;
+    -webkit-background-size: 13px 4px;
+  }
+}
+
+/* addresses box sizing set to content-box and excess padding in IE7-9 */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+
+/* suppress red glow that Firefox adds to form fields by default, even when user is still typing
+    and kill phantom spacing and dotted border that appears in Firefox */
+input:invalid,
+button:invalid,
+select:invalid,
+textarea:invalid {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner,
+select::-moz-focus-inner,
+textarea::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
