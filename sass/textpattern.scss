@@ -377,7 +377,7 @@ body {
     position: relative;
     color: $color-text;
     background: $color-background;
-    padding: ($logo-large-height + 2px) 0 0;
+    padding: 3em 0 0;
     min-width: 320px;
 }
 
@@ -425,7 +425,7 @@ body {
     left: 0;
     right: 0;
     z-index: 10000;
-    height: $logo-large-height;
+    height: 3em;
     padding: 0 2em;
     @include box-shadow;
     @include gradient-bar(#ffda44, #fabc2b);
@@ -433,13 +433,13 @@ body {
         float: left;
         margin: 0;
         padding-left: $logo-large-width;
-        line-height: $logo-large-height;
-        background: no-repeat left top;
+        line-height: 3em;
+        background: no-repeat left 50%;
         max-width: 25%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        @include hires-graphic($logo-large-filename, $logo-large-filetype, $logo-large-width, $logo-large-height);
+        @include hires-graphic($logo-large-filename, $logo-large-filetype, $logo-large-width, 3em);
         a {
             margin-right: 1em;
             margin-left: 1em;
@@ -454,7 +454,7 @@ body {
 
 #txp-logout {
     position: absolute;
-    top: -8px;
+    top: -.5em;
     right: 2em;
     a {
         display: block;
@@ -473,6 +473,12 @@ body {
         /* Hide select version of navigation for larger screens */
         display: none;
     }
+    a {
+        color: #333;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 #txp-nav ul {
@@ -480,105 +486,101 @@ body {
     padding-left: 0;
 }
 
-#txp-nav {
-    ul.data-dropdown {
-        display: block;
-        float: left;
-        position: relative;
-        left: 0;
-        margin: 0;
+.data-dropdown {
+    display: block;
+    float: left;
+    position: relative;
+    left: 0;
+    margin: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: block;
+    float: left;
+    border-right: 1px solid #fabc2b;
+    background-color: rgba(#fff, .2);
+    &:first-child {
+        border-left: 1px solid #fabc2b;
     }
-    li.dropdown {
-        position: relative;
+    a.dropdown-toggle {
         display: block;
-        float: left;
-        border-right: 1px solid #fabc2b;
+        float: none;
+        padding: 0 1em;
+        line-height: 3em;
+        text-decoration: none;
+        color: darken($color-text, 20%);
+        @include text-shadow-light;
+    }
+    &:hover a.dropdown-toggle {
+        background: rgba(#fff, .2) url("../img/indicator.gif") no-repeat 50% bottom;
+    }
+}
+
+.dropdown.active {
+    a.dropdown-toggle {
         background-color: rgba(#fff, .2);
-        &:first-child {
-            border-left: 1px solid #fabc2b;
-        }
-        a {
-            display: block;
-            float: none;
-            padding: 9px 1em;
-            text-decoration: none;
-            color: darken($color-text, 20%);
-            @include text-shadow-light;
-            &:hover {
-                text-decoration: none;
-            }
-        }
     }
 }
 
-#txp-nav .data-dropdown li:hover a {
-    background: url("../img/indicator.gif") no-repeat 50% bottom;
-}
-
-#txp-nav .dropdown-menu {
+.dropdown-menu {
     float: left;
     position: absolute;
     top: 3em;
     left: -9999px;
-    z-index: 10;
+    z-index: 10001;
     min-width: 166px;
     border: solid 1px #d4d4d4;
     border-top: none;
     background: #fef5d2;
     @include border-radius(0 $border-radius $border-radius $border-radius);
-    -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.2);
-            box-shadow: 3px 3px 3px rgba(0,0,0,.2);
+    @include box-shadow(2px 2px 2px rgba(#000, .2));
+    li {
+        float: none;
+        border: 0;
+        @include border-radius(0);
+        background: none;
+        margin-right: 0;
+        &:first-child {
+            @include border-radius(0 $border-radius 0 0);
+        }
+        &:last-child {
+            @include border-radius(0 0 $border-radius $border-radius);
+        }
+        &:hover {
+            background: #feefb0;
+        }
+        .active {
+            background: #fee580;
+        }
+    }
+    a {
+        display: block;
+        padding: .5em 1em;
+    }
 }
 
-#txp-nav .data-dropdown li:hover .dropdown-menu {
-    left: -1px;
+.data-dropdown li:hover .dropdown-menu {
+    left: 0;
 }
 
-#txp-nav ul {
-    @include border-radius(0 $border-radius $border-radius $border-radius);
-}
-
-#txp-nav ul li {
-    float: none;
-    border: 0;
-    @include border-radius(0);
-    background: none;
-    margin-right: 0;
-}
-
-#txp-nav div ul li:first-child {
-    @include border-radius(0 $border-radius 0 0);
-}
-
-#txp-nav div ul li:last-child {
-    @include border-radius(0 0 $border-radius $border-radius);
-}
-
-#txp-nav ul a {
-    display: block;
-    padding: .5em 9px;
-    text-decoration: none;
-    font-weight: normal;
-    text-shadow: none;
-    background: none !important;
-}
 
 /* Add a close button only for touch devices */
 
-#txp-nav #touch-menu-close {
-    position:absolute;
-    top:31px;
-    left:-32px;
-    z-index:2500;
+#touch-menu-close {
+    position: absolute;
+    top: 4px;
+    left: -32px;
+    z-index: 10002;
 }
 
-#txp-nav #touch-menu-close a {
-    width:32px;
-    height:32px;
-    padding:0;
-    text-indent:-9999px;
-    background: url("../img/close.png");
-    display:none;
+#touch-menu-close a {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    text-indent: -9999px;
+    @include hires-graphic(close, png, 32px, 32px);
+    display: none;
 }
 
 

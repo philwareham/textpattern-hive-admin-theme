@@ -1,4 +1,4 @@
-/* Hive theme for Textpattern CMS (v2.0b1) */
+/* Hive theme for Textpattern CMS (v2.0a1) */
 /* import rules to make base rendering consistent for all browsers */
 @import url("reset.css");
 /* =============================================================================
@@ -395,7 +395,7 @@ body {
   position: relative;
   color: #333333;
   background: white;
-  padding: 38px 0 0;
+  padding: 3em 0 0;
   min-width: 320px;
 }
 
@@ -440,7 +440,7 @@ body {
   left: 0;
   right: 0;
   z-index: 10000;
-  height: 36px;
+  height: 3em;
   padding: 0 2em;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -470,8 +470,8 @@ body {
   float: left;
   margin: 0;
   padding-left: 148px;
-  line-height: 36px;
-  background: no-repeat left top;
+  line-height: 3em;
+  background: no-repeat left 50%;
   max-width: 25%;
   white-space: nowrap;
   overflow: hidden;
@@ -481,7 +481,7 @@ body {
 @media (-webkit-min-device-pixel-ratio: 2) {
   #txp-head h1 {
     background-image: url("../img/retina/textpattern-lrg@2x.png") !important;
-    -webkit-background-size: 148px 36px;
+    -webkit-background-size: 148px 3em;
   }
 }
 #txp-head h1 a {
@@ -496,7 +496,7 @@ body {
 
 #txp-logout {
   position: absolute;
-  top: -8px;
+  top: -0.5em;
   right: 2em;
 }
 #txp-logout a {
@@ -514,71 +514,69 @@ body {
   /* Hide select version of navigation for larger screens */
   display: none;
 }
+#txp-nav a {
+  color: #333;
+}
+#txp-nav a:hover {
+  text-decoration: none;
+}
 
 #txp-nav ul {
   list-style: none;
   padding-left: 0;
 }
 
-#txp-nav ul.data-dropdown {
+.data-dropdown {
   display: block;
   float: left;
   position: relative;
   left: 0;
   margin: 0;
 }
-#txp-nav li.dropdown {
+
+.dropdown {
   position: relative;
   display: block;
   float: left;
   border-right: 1px solid #fabc2b;
   background-color: rgba(255, 255, 255, 0.2);
 }
-#txp-nav li.dropdown:first-child {
+.dropdown:first-child {
   border-left: 1px solid #fabc2b;
 }
-#txp-nav li.dropdown a {
+.dropdown a.dropdown-toggle {
   display: block;
   float: none;
-  padding: 9px 1em;
+  padding: 0 1em;
+  line-height: 3em;
   text-decoration: none;
   color: black;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
 }
-#txp-nav li.dropdown a:hover {
-  text-decoration: none;
+.dropdown:hover a.dropdown-toggle {
+  background: rgba(255, 255, 255, 0.2) url("../img/indicator.gif") no-repeat 50% bottom;
 }
 
-#txp-nav .data-dropdown li:hover a {
-  background: url("../img/indicator.gif") no-repeat 50% bottom;
+.dropdown.active a.dropdown-toggle {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-#txp-nav .dropdown-menu {
+.dropdown-menu {
   float: left;
   position: absolute;
   top: 3em;
   left: -9999px;
-  z-index: 10;
+  z-index: 10001;
   min-width: 166px;
   border: solid 1px #d4d4d4;
   border-top: none;
   background: #fef5d2;
   -moz-border-radius: 0 5px 5px 5px;
   border-radius: 0 5px 5px 5px;
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
-
-#txp-nav .data-dropdown li:hover .dropdown-menu {
-  left: -1px;
-}
-
-#txp-nav ul {
-  -moz-border-radius: 0 5px 5px 5px;
-  border-radius: 0 5px 5px 5px;
-}
-
-#txp-nav ul li {
+.dropdown-menu li {
   float: none;
   border: 0;
   -moz-border-radius: 0;
@@ -586,41 +584,50 @@ body {
   background: none;
   margin-right: 0;
 }
-
-#txp-nav div ul li:first-child {
+.dropdown-menu li:first-child {
   -moz-border-radius: 0 5px 0 0;
   border-radius: 0 5px 0 0;
 }
-
-#txp-nav div ul li:last-child {
+.dropdown-menu li:last-child {
   -moz-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
 }
-
-#txp-nav ul a {
+.dropdown-menu li:hover {
+  background: #feefb0;
+}
+.dropdown-menu li .active {
+  background: #fee580;
+}
+.dropdown-menu a {
   display: block;
-  padding: .5em 9px;
-  text-decoration: none;
-  font-weight: normal;
-  text-shadow: none;
-  background: none !important;
+  padding: .5em 1em;
+}
+
+.data-dropdown li:hover .dropdown-menu {
+  left: 0;
 }
 
 /* Add a close button only for touch devices */
-#txp-nav #touch-menu-close {
+#touch-menu-close {
   position: absolute;
-  top: 31px;
+  top: 4px;
   left: -32px;
-  z-index: 2500;
+  z-index: 10002;
 }
 
-#txp-nav #touch-menu-close a {
+#touch-menu-close a {
   width: 32px;
   height: 32px;
   padding: 0;
   text-indent: -9999px;
-  background: url("../img/close.png");
+  background-image: url("../img/close.png");
   display: none;
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  #touch-menu-close a {
+    background-image: url("../img/retina/close@2x.png") !important;
+    -webkit-background-size: 32px 32px;
+  }
 }
 
 /* =============================================================================
