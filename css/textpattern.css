@@ -42,8 +42,9 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 1em;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
+  margin: 0 0 1em;
 }
 
 small,
@@ -107,6 +108,11 @@ legend {
 }
 
 .lever {
+  font-weight: bold;
+  margin: 0;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
   box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
@@ -133,21 +139,11 @@ legend {
   border-radius: 0 \0;
 }
 
-.lever {
-  font-weight: bold;
-  margin: 0;
-  height: 2em;
-  line-height: 2em;
-  position: relative;
-}
-
 .lever a {
   color: #333333;
-  padding: 0 1em 0 1.53846153846154em;
-  float: left;
+  padding: 0 2em 0 1em;
   display: block;
-  width: 92.5%;
-  background: url("../img/twisty-arrow.gif") no-repeat 0.5em 0;
+  background: url("../img/twisty-arrow.gif") no-repeat right 0;
 }
 
 .lever a:hover {
@@ -155,7 +151,7 @@ legend {
 }
 
 .expanded a {
-  background-position: 5px -28px;
+  background-position: right -26px;
 }
 
 .toggle {
@@ -556,7 +552,14 @@ body {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
 }
 .dropdown:hover a.dropdown-toggle {
-  background: rgba(255, 255, 255, 0.2) url("../img/indicator.gif") no-repeat 50% bottom;
+  background: rgba(255, 255, 255, 0.2) no-repeat 50% bottom;
+  background-image: url("../img/indicator.gif");
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .dropdown:hover a.dropdown-toggle {
+    background-image: url("../img/retina/indicator@2x.gif") !important;
+    -webkit-background-size: 44px 104px;
+  }
 }
 
 .dropdown.active a.dropdown-toggle {

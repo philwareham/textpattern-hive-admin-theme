@@ -52,8 +52,9 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0 0 1em;
+    font-family: $font-heading;
     font-size: 1em;
+    margin: 0 0 1em;
 }
 
 small,
@@ -98,26 +99,21 @@ legend {
 }
 
 .lever {
-    @include text-shadow-light;
-    @include box-shadow(rgba(#fff, .25) 0 1px 0 0 inset);
-    @include gradient-bar;
-}
-
-.lever {
     font-weight: bold;
     margin: 0;
     height: 2em;
     line-height: 2em;
     position: relative;
+    @include text-shadow-light;
+    @include box-shadow(rgba(#fff, .25) 0 1px 0 0 inset);
+    @include gradient-bar;
 }
 
 .lever a {
     color: $color-text;
-    padding: 0 1em 0 1.53846153846154em;
-    float: left;
+    padding: 0 2em 0 1em;
     display: block;
-    width: 92.5%;
-    background: url("../img/twisty-arrow.gif") no-repeat .5em 0;
+    background: url("../img/twisty-arrow.gif") no-repeat right 0;
 }
 
 .lever a:hover {
@@ -125,7 +121,7 @@ legend {
 }
 
 .expanded a {
-    background-position: 5px -28px;
+    background-position: right -26px;
 }
 
 .toggle {
@@ -515,7 +511,8 @@ body {
         @include text-shadow-light;
     }
     &:hover a.dropdown-toggle {
-        background: rgba(#fff, .2) url("../img/indicator.gif") no-repeat 50% bottom;
+        background: rgba(#fff, .2) no-repeat 50% bottom;
+        @include hires-graphic(indicator, gif, 44px, 104px);
     }
 }
 
