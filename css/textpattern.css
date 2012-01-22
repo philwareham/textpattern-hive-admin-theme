@@ -24,20 +24,18 @@
    Links
    ========================================================================== */
 a {
+  -webkit-tap-highlight-color: rgba(0, 102, 255, 0.5);
+  color: #1a428b;
   text-decoration: none;
 }
 a:hover {
+  color: #0066ff;
   text-decoration: underline;
 }
 
 /* =============================================================================
    Typography
    ========================================================================== */
-body {
-  font-size: 0.813em;
-  line-height: 1.385;
-}
-
 h1,
 h2,
 h3,
@@ -46,6 +44,13 @@ h5,
 h6 {
   margin: 0 0 1em;
   font-size: 1em;
+}
+
+small,
+sub,
+sup,
+.pagejump {
+  font-size: 0.846em;
 }
 
 /* =============================================================================
@@ -65,6 +70,69 @@ h6 {
 /* =============================================================================
    Twistees
    ========================================================================== */
+legend {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 1px 1em 0;
+  font-weight: bold;
+  line-height: 2em;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #c4c4c4;
+  background-color: #dddddd;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#eeeeee, #dddddd);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#eeeeee, #dddddd);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#eeeeee, #dddddd);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#eeeeee, #dddddd);
+  /* IE7-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee',EndColorStr='#dddddd');
+  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
+  border-radius: 0 \0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.lever {
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #c4c4c4;
+  background-color: #dddddd;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#eeeeee, #dddddd);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#eeeeee, #dddddd);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#eeeeee, #dddddd);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#eeeeee, #dddddd);
+  /* IE7-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee',EndColorStr='#dddddd');
+  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
+  border-radius: 0 \0;
+}
+
 .lever {
   font-weight: bold;
   margin: 0;
@@ -82,6 +150,10 @@ h6 {
   background: url("../img/twisty-arrow.gif") no-repeat 0.5em 0;
 }
 
+.lever a:hover {
+  text-decoration: none;
+}
+
 .expanded a {
   background-position: 5px -28px;
 }
@@ -94,18 +166,23 @@ h6 {
    Forms
    ========================================================================== */
 fieldset {
-  border: 0;
+  position: relative;
+  margin: -1em 0 1em 0;
+  border: 1px solid #e3e3e3;
+  padding: 1em 0 0 0;
+  background-color: #f7f7f7;
 }
 
-legend {
-  padding: 0 1em;
-  font-weight: bold;
-  height: 2em;
-  line-height: 2em;
+fieldset > * {
+  margin-right: 1em;
+  margin-left: 1em;
 }
 
-.lever a:hover {
-  text-decoration: none;
+fieldset > legend {
+  position: relative;
+  top: 1em;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 label,
@@ -113,8 +190,8 @@ label,
 .category-edit,
 .section-edit {
   display: inline-block;
-  zoom: 1;
-  /* zoom and *display ie7 hack for display:inline-block */
+  /* IE 7 */
+  *zoom: 1;
   *display: inline;
 }
 
@@ -223,30 +300,7 @@ input[name="form_preview"] {
    ========================================================================== */
 .plain-list {
   list-style: none;
-}
-
-#configuration_content .plain-list {
-  padding: 0 0 1em;
-}
-
-#tagbuild_links .plain-list {
-  padding: 0 0 5px;
-}
-
-#tagbuild_links .plain-list li {
-  padding-bottom: 5px;
-}
-
-#supporting_content .plain-list {
-  padding: 1em 1em 5px;
-}
-
-.form-list {
-  padding-bottom: 5px;
-}
-
-.form-list li {
-  padding-bottom: 5px;
+  margin-left: 0;
 }
 
 /* =============================================================================
@@ -334,11 +388,22 @@ thead a:active {
   margin-right: 36px;
 }
 
-/* -------------------- LAYOUT FORMATTING -------------------- */
-/* Use body as wrapper */
+/* =============================================================================
+   Layout
+   ========================================================================== */
 body {
-  max-width: 1248px;
-  margin: 0 auto;
+  position: relative;
+  color: #333333;
+  background: white;
+  padding: 38px 0 0;
+  min-width: 320px;
+}
+
+#txp-body {
+  min-width: 728px;
+  padding: 2em 2em 0;
+  position: relative;
+  z-index: 1;
 }
 
 /* Containers */
@@ -366,81 +431,129 @@ body {
   padding: 4px;
 }
 
-/* Header */
+/* =============================================================================
+   Header
+   ========================================================================== */
 #txp-head {
-  position: relative;
-  z-index: 1000;
-  min-width: 728px;
-  min-height: 47px;
-  margin-bottom: 11px;
-  padding: 0 20px;
-  border-bottom: 1px solid #d4d4d4;
-}
-
-#mothership {
-  float: left;
-  display: block;
-  width: 148px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
   height: 36px;
-  margin: 0 1em 0 0;
+  padding: 0 2em;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #fabc2b;
+  border-bottom: 1px solid #eca706;
+  background-color: #fabc2b;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ffda44), to(#fabc2b));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffda44), to(#fabc2b));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#ffda44, #fabc2b);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#ffda44, #fabc2b);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#ffda44, #fabc2b);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#ffda44, #fabc2b);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#ffda44, #fabc2b);
+  /* IE7-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffda44',EndColorStr='#fabc2b');
+  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
+  border-radius: 0 \0;
 }
-
-#mothership a {
-  display: block;
-  width: 148px;
-  height: 36px;
-  text-indent: -9999px;
-  background: url("../img/textpattern-color.png");
-}
-
 #txp-head h1 {
   float: left;
+  margin: 0;
+  padding-left: 148px;
   line-height: 36px;
+  background: no-repeat left top;
+  max-width: 25%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-image: url("../img/textpattern-lrg.png");
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  #txp-head h1 {
+    background-image: url("../img/retina/textpattern-lrg@2x.png") !important;
+    -webkit-background-size: 148px 36px;
+  }
+}
+#txp-head h1 a {
+  margin-right: 1em;
+  margin-left: 1em;
+  color: #333333;
+}
+#txp-head h1 a:hover {
+  color: #4d4d4d;
+  text-decoration: none;
 }
 
-/* Navigation */
+#txp-logout {
+  position: absolute;
+  top: -8px;
+  right: 2em;
+}
+#txp-logout a {
+  display: block;
+}
+
+/* =============================================================================
+   Navigation
+   ========================================================================== */
 #txp-nav {
-  float: right;
-  width: 54.4%;
-  min-height: 34px;
-  position: relative;
-  z-index: 100;
+  float: left;
+  overflow: visible;
+}
+#txp-nav select {
+  /* Hide select version of navigation for larger screens */
+  display: none;
 }
 
-#txp-nav,
 #txp-nav ul {
   list-style: none;
+  padding-left: 0;
 }
 
-#txp-nav .primary {
-  float: left;
-  position: relative;
-  margin-right: 2px;
-  border-bottom: none;
-  -moz-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
-}
-
-#txp-nav #txp-logout {
-  float: right;
-  margin-right: 0;
-  font-weight: bold;
-}
-
-#txp-nav .primary-link {
+#txp-nav ul.data-dropdown {
   display: block;
   float: left;
   position: relative;
-  padding: .8em 9px;
+  left: 0;
+  margin: 0;
+}
+#txp-nav li.dropdown {
+  position: relative;
+  display: block;
+  float: left;
+  border-right: 1px solid #fabc2b;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#txp-nav li.dropdown:first-child {
+  border-left: 1px solid #fabc2b;
+}
+#txp-nav li.dropdown a {
+  display: block;
+  float: none;
+  padding: 9px 1em;
   text-decoration: none;
-  font-weight: bold;
+  color: black;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+}
+#txp-nav li.dropdown a:hover {
+  text-decoration: none;
 }
 
-#txp-nav #txp-logout:hover .primary-link {
-  background: none;
+#txp-nav .data-dropdown li:hover a {
+  background: url("../img/indicator.gif") no-repeat 50% bottom;
 }
 
-#txp-nav .dropdown {
+#txp-nav .dropdown-menu {
   float: left;
   position: absolute;
   top: 3em;
@@ -449,13 +562,14 @@ body {
   min-width: 166px;
   border: solid 1px #d4d4d4;
   border-top: none;
+  background: #fef5d2;
   -moz-border-radius: 0 5px 5px 5px;
   border-radius: 0 5px 5px 5px;
   -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
-#txp-nav :hover .dropdown {
+#txp-nav .data-dropdown li:hover .dropdown-menu {
   left: -1px;
 }
 
@@ -509,7 +623,19 @@ body {
   display: none;
 }
 
-/* Miscellaneous/shared layout stuff */
+/* =============================================================================
+   Footer
+   ========================================================================== */
+#txp-foot p {
+  margin-top: 0;
+}
+#txp-foot .pagejump {
+  float: right;
+}
+
+/* =============================================================================
+   Miscellaneous/shared layout
+   ========================================================================== */
 .edit-pane {
   width: 448px !important;
   margin: 0 auto;
@@ -550,14 +676,6 @@ body {
 .txp-control-panel {
   text-align: center;
   padding-bottom: 1em;
-}
-
-/* Body */
-#txp-body {
-  min-width: 728px;
-  padding: 29px 20px 3em;
-  position: relative;
-  z-index: 1;
 }
 
 table#edit {
@@ -648,23 +766,6 @@ table#edit {
   display: none;
 }
 
-#supporting_content fieldset {
-  padding: 0;
-}
-
-#supporting_content legend {
-  margin: 0;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-#supporting_content p {
-  margin: 0;
-  padding: 5px 1em;
-}
-
 #supporting_content .action-create a {
   margin-top: 6px;
 }
@@ -677,35 +778,9 @@ table#edit {
   margin: 1em;
 }
 
-#more_group fieldset {
-  border: 0;
-  margin-bottom: 1em;
-}
-
-#more_group p {
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-}
-
-#more_group .date {
-  padding-bottom: 0;
-}
-
-#more_group legend {
-  margin: 0;
-  display: block;
-  color: #fff;
-  background: #555;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 #more_group .date .label,
 #more_group .time .label {
   display: block;
-  padding-bottom: 5px;
 }
 
 #more_group .date input,
@@ -741,6 +816,22 @@ table#edit {
 }
 
 /* Images page */
+#page-image img {
+  border: solid 1px #cccccc;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 4px;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#page-image a img:hover {
+  border: solid 1px #0066ff;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 102, 255, 0.4);
+  box-shadow: 0 1px 2px rgba(0, 102, 255, 0.4);
+}
+
 #page-image .edit-pane {
   width: 448px !important;
 }
@@ -776,11 +867,6 @@ table#edit {
 
 #page-image #caption {
   width: 412px;
-}
-
-#page-image #txp-body img {
-  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Files page */
@@ -1283,8 +1369,8 @@ table#edit {
   }
 
   #mothership a {
-    width: 56px;
-    background: url("../img/txp-color.png") left top;
+    width: 24px;
+    background: url("../img/textpattern-sml.png") left top;
   }
 
   /* Navigation */

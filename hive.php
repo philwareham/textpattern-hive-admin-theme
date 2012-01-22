@@ -14,6 +14,7 @@ class hive_theme extends classic_theme
         $out[] = '<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1">';
         $out[] = '<script type="text/javascript" src="'.$this->url.'js/jquery.formalize.min.js"></script>';
         $out[] = '<!--[if lt IE 9]><script type="text/javascript" src="'.$this->url.'js/selectivizr.min.js"></script><![endif]-->';
+        $out[] = '<script type="text/javascript" src="'.$this->url.'js/scripts.js"></script>';
 
         return join(n, $out);
     }
@@ -21,19 +22,20 @@ class hive_theme extends classic_theme
     function header()
     {
         global $txp_user;
-        $out[] = '<div id="txp-head" class="clearfix">';
-        $out[] = '<p id="mothership"><a href="http://textpattern.com" target="_blank">Textpattern</a></p>'; // Textpattern logo - delete this whole line if not required
-        $out[] = '<h1><a href="'.hu.'" title="'.gTxt('tab_view_site').'" target="_blank">'.$GLOBALS["prefs"]["sitename"].'</a></h1>';
+        $out[] = '<div id="txp-head">';
+        $out[] = '<h1><a href="'.hu.'" title="'.gTxt('tab_view_site').'" rel="external">'.$GLOBALS["prefs"]["sitename"].'</a></h1>';
         if ($txp_user)
         {
-            $out[] = '<ul id="txp-nav" class="clearfix">';
+            $out[] = '<p id="txp-logout"><a href="index.php?logout=1" onclick="return verify(\''.gTxt('are_you_sure').'\')">'.gTxt('logout').'</a></p>';
+            $out[] = '<div id="txp-nav">';
+            $out[] = '<ul class="data-dropdown">';
             foreach ($this->menu as $tab)
             {
-                $class = ($tab['active']) ? 'active' : 'inactive';
-                $out[] = "<li class='primary'><a class='primary-link' href='#'>{$tab['label']}</a>";
+                $class = ($tab['active']) ? ' active' : ' inactive';
+                $out[] = "<li class='dropdown{$class}'><a class='primary-link' href='#'>{$tab['label']}</a>";
                 if (!empty($tab['items']))
                 {
-                    $out[] = '<ul class="dropdown">';
+                    $out[] = '<ul class="dropdown-menu">';
                     foreach ($tab['items'] as $item)
                     {
                         $class = ($item['active']) ? 'active' : 'inactive';
@@ -44,8 +46,8 @@ class hive_theme extends classic_theme
                 $out[] = '</li>';
             }
             $out[] = '<li id="touch-menu-close"><a href="#">Close menu</a></li>';
-            $out[] = '<li id="txp-logout" class="primary"><a class="primary-link" href="index.php?logout=1" onclick="return verify(\''.gTxt('are_you_sure').'\')">'.gTxt('logout').'</a></li>';
             $out[] = '</ul>';
+            $out[] = '</div>';
         }
         $out[] = '</div>';
         $out[] = '<div id="txp-body">';
@@ -57,6 +59,10 @@ class hive_theme extends classic_theme
     function footer()
     {
         $out[] = '</div>';
+        $out[] = '<div id="txp-foot">';
+        $out[] = '<p class="pagejump"><a href="#">&#8593; Back to top</a></p>';
+        $out[] = '<p><small><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v'.txp_version.')</small></p>';
+        $out[] = '</div>';
         $out[] = '</div>';
         return join(n, $out);
     }
@@ -67,7 +73,7 @@ class hive_theme extends classic_theme
         return array(
             'author'      => 'Phil Wareham',
             'author_uri'  => 'http://twitter.com/philwareham',
-            'version'     => '1.3',
+            'version'     => '2.0b1',
             'description' => 'Textpattern Hive Theme',
             'help'        => 'http://textgarden.org/administration-themes/261/hive',
         );

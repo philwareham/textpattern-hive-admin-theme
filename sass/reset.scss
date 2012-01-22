@@ -30,6 +30,8 @@ html {
 /* addresses margins handled incorrectly in IE7 */
 body {
     margin: 0;
+    font-size: $basefont;
+    line-height: $baseline;
 }
 
 
@@ -117,7 +119,7 @@ sub {
 ul,
 ol {
     margin-left: 0;
-    padding: 0 0 0 1.38461538461538em; /* 18px / 13px */
+    padding: 0 0 0 1em;
 }
 
 /* remove margins from nested lists */
@@ -127,7 +129,7 @@ ol ol {
 }
 
 dd {
-    margin: 0 0 0 1.38461538461538em; /* 20px / 13px */
+    margin: 0 0 0 1em; /* 20px / 13px */
 }
 
 dt {
@@ -205,32 +207,46 @@ button,
 input[type="reset"],
 input[type="submit"],
 input[type="button"],
-#txp-logout a {
+#txp-logout a,
+a.article-view,
+.action-create a,
+a.navlink,
+a.navlink-active,
+.navlink a,
+.navlink-active a,
+#list_banned_ips a,
+#page-rss_db_bk h3 a,
+#insert-link {
     -webkit-appearance: none;
     @include border-radius;
     @include background-clip;
     cursor: pointer;
     color: $color-text;
+    font-family: $font-body;
     font-size: .92307692307692em;  // 12px / 13px
-    line-height: 1.33333333333333; // 16px / 12px
+    line-height: 1.33333333333333em; // 16px / 12px
     text-decoration: none;
     outline: 0;
     margin: 0;
-    padding: 3px ($baseline / 2);
+    padding: 3px .75em;
     @include box-shadow(rgba(255, 255, 255, .25) 0 1px 0 0 inset);
     @include text-shadow-light;
     width: auto;
     vertical-align: top;
-    @include gradient-bar(#eee, #bbb);
+    border: 1px solid #bbb;
+    border-bottom-color: #a2a2a2;
+    @include gradient(#eee, #bbb);
     /* IE7 */
     *padding-top: 2px;
     *padding-bottom: 0;
     *overflow: visible;
     &:hover {
-        @include gradient-bar(lighten(#eee, 4%), lighten(#bbb, 4%));
+        color: $color-text;
+        text-decoration: none;
+        @include gradient(lighten(#eee, 4%), lighten(#bbb, 4%));
     }
     &:active {
-        @include gradient-bar(lighten(#bbb, 4%), lighten(#eee, 4%));
+        @include gradient(lighten(#bbb, 4%), lighten(#eee, 4%));
     }
 }
 

@@ -77,8 +77,8 @@
 // extra styling to gradients for buttons and alerts
 
 @mixin gradient-bar($color-gradient-from, $color-gradient-to) {
-    border: 1px solid;
-    border-color: $color-gradient-to $color-gradient-to darken($color-gradient-to, 10%);
+    border-top: 1px solid $color-gradient-to;
+    border-bottom: 1px solid darken($color-gradient-to, 10%);
     @include gradient($color-gradient-from, $color-gradient-to);
 }
 

@@ -23,6 +23,8 @@ html {
 /* addresses margins handled incorrectly in IE7 */
 body {
   margin: 0;
+  font-size: 0.813em;
+  line-height: 1.385;
 }
 
 /* =============================================================================
@@ -104,8 +106,7 @@ sub {
 ul,
 ol {
   margin-left: 0;
-  padding: 0 0 0 1.38461538461538em;
-  /* 18px / 13px */
+  padding: 0 0 0 1em;
 }
 
 /* remove margins from nested lists */
@@ -115,7 +116,7 @@ ol ol {
 }
 
 dd {
-  margin: 0 0 0 1.38461538461538em;
+  margin: 0 0 0 1em;
   /* 20px / 13px */
 }
 
@@ -188,7 +189,16 @@ button,
 input[type="reset"],
 input[type="submit"],
 input[type="button"],
-#txp-logout a {
+#txp-logout a,
+a.article-view,
+.action-create a,
+a.navlink,
+a.navlink-active,
+.navlink a,
+.navlink-active a,
+#list_banned_ips a,
+#page-rss_db_bk h3 a,
+#insert-link {
   -webkit-appearance: none;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -200,19 +210,20 @@ input[type="button"],
   background-clip: padding-box;
   cursor: pointer;
   color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: .92307692307692em;
-  line-height: 1.33333333333333;
+  line-height: 1.33333333333333em;
   text-decoration: none;
   outline: 0;
   margin: 0;
-  padding: 3px 0.692;
+  padding: 3px .75em;
   -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
   box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   width: auto;
   vertical-align: top;
-  border: 1px solid;
-  border-color: #bbbbbb #bbbbbb #a2a2a2;
+  border: 1px solid #bbb;
+  border-bottom-color: #a2a2a2;
   background-color: #bbbbbb;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#bbbbbb));
@@ -241,9 +252,18 @@ button:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover,
-#txp-logout a:hover {
-  border: 1px solid;
-  border-color: #c5c5c5 #c5c5c5 #acacac;
+#txp-logout a:hover,
+a.article-view:hover,
+.action-create a:hover,
+a.navlink:hover,
+a.navlink-active:hover,
+.navlink a:hover,
+.navlink-active a:hover,
+#list_banned_ips a:hover,
+#page-rss_db_bk h3 a:hover,
+#insert-link:hover {
+  color: #333333;
+  text-decoration: none;
   background-color: #c5c5c5;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#f8f8f8), to(#c5c5c5));
@@ -268,9 +288,16 @@ button:active,
 input[type="reset"]:active,
 input[type="submit"]:active,
 input[type="button"]:active,
-#txp-logout a:active {
-  border: 1px solid;
-  border-color: #f8f8f8 #f8f8f8 #dfdfdf;
+#txp-logout a:active,
+a.article-view:active,
+.action-create a:active,
+a.navlink:active,
+a.navlink-active:active,
+.navlink a:active,
+.navlink-active a:active,
+#list_banned_ips a:active,
+#page-rss_db_bk h3 a:active,
+#insert-link:active {
   background-color: #f8f8f8;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#c5c5c5), to(#f8f8f8));

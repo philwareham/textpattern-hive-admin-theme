@@ -32,8 +32,11 @@
    ========================================================================== */
 
 a {
+    -webkit-tap-highlight-color: rgba($color-link-hover,.5);
+    color: $color-link;
     text-decoration: none;
     &:hover {
+        color: $color-link-hover;
         text-decoration: underline;
     }
 }
@@ -43,19 +46,21 @@ a {
    Typography
    ========================================================================== */
 
-body {
-    font-size: $basefont;
-    line-height: $baseline;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    margin:0 0 1em;
-    font-size:1em;
+    margin: 0 0 1em;
+    font-size: 1em;
+}
+
+small,
+sub,
+sup,
+.pagejump {
+    font-size: $smallfont;
 }
 
 
@@ -64,20 +69,39 @@ h6 {
    ========================================================================== */
 
 #messagepane {
-    position:absolute;
-    top:0;
-    left:50%;
-    z-index:1;
-    width:768px;
-    margin-left:-384px;
-    font-weight:bold;
-    text-align:center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    width: 768px;
+    margin-left: -384px;
+    font-weight: bold;
+    text-align: center;
 }
 
 
 /* =============================================================================
    Twistees
    ========================================================================== */
+
+legend {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 1px 1em 0;
+    font-weight: bold;
+    line-height: 2em;
+    @include text-shadow-light;
+    @include box-shadow(rgba(#fff, .25) 0 1px 0 0 inset);
+    @include gradient-bar;
+    @include box-sizing;
+}
+
+.lever {
+    @include text-shadow-light;
+    @include box-shadow(rgba(#fff, .25) 0 1px 0 0 inset);
+    @include gradient-bar;
+}
 
 .lever {
     font-weight: bold;
@@ -96,8 +120,12 @@ h6 {
     background: url("../img/twisty-arrow.gif") no-repeat .5em 0;
 }
 
+.lever a:hover {
+    text-decoration: none;
+}
+
 .expanded a {
-    background-position:5px -28px;
+    background-position: 5px -28px;
 }
 
 .toggle {
@@ -110,27 +138,34 @@ h6 {
    ========================================================================== */
 
 fieldset {
-    border: 0;
+    position: relative;
+    margin: -1em 0 1em 0;
+    border: 1px solid lighten($color-border, 9%);
+    padding: 1em 0 0 0;
+    background-color: #f7f7f7;
 }
 
-legend {
-    padding: 0 1em;
-    font-weight: bold;
-    height: 2em;
-    line-height: 2em;
+fieldset > * {
+    margin-right: 1em;
+    margin-left: 1em;
 }
 
-.lever a:hover {
-    text-decoration: none;
+fieldset > legend {
+    position: relative;
+    top: 1em;
+    margin-right: 0;
+    margin-left: 0;
 }
+
 
 label,
 .pophelp,
 .category-edit,
 .section-edit {
-    display:inline-block;
-    zoom:1; /* zoom and *display ie7 hack for display:inline-block */
-    *display:inline;
+    display: inline-block;
+    /* IE 7 */
+    *zoom: 1;
+    *display: inline;
 }
 
 input[type="radio"],
@@ -150,7 +185,7 @@ input[type="checkbox"] {
 .login-pane input[type="text"],
 .login-pane input[type="password"],
 .categories div input[type="text"] {
-    width:100%;
+    width: 100%;
 }
 
 .txp-control-panel input[type="text"],
@@ -159,37 +194,23 @@ input[type="checkbox"] {
 .edit-pane input[type="text"],
 .edit-pane input[type="password"],
 .edit-pane textarea {
-    width:250px;
+    width: 250px;
 }
 
 #article-main .title input {
-    width:80%;
+    width: 80%;
 }
 
 #content_switcher input[type="checkbox"],
 #content_switcher #list input[type="submit"] {
-    margin:0;
-    float:right;
+    margin: 0;
+    float: right;
 }
 
 
 /* =============================================================================
    Buttons
    ========================================================================== */
-
-input[type="submit"],
-input[type="button"],
-a.article-view,
-.action-create a,
-a.navlink,
-a.navlink-active,
-.navlink a,
-.navlink-active a,
-#list_banned_ips a,
-#page-rss_db_bk h3 a,
-#insert-link {
-
-}
 
 a.article-view {
     float:right;
@@ -255,31 +276,8 @@ input[name="form_preview"] {
    ========================================================================== */
 
 .plain-list {
-    list-style:none;
-}
-
-#configuration_content .plain-list {
-    padding:0 0 1em;
-}
-
-#tagbuild_links .plain-list {
-    padding:0 0 5px;
-}
-
-#tagbuild_links .plain-list li {
-    padding-bottom:5px;
-}
-
-#supporting_content .plain-list {
-    padding:1em 1em 5px;
-}
-
-.form-list {
-    padding-bottom:5px;
-}
-
-.form-list li {
-    padding-bottom:5px;
+    list-style: none;
+    margin-left: 0;
 }
 
 
@@ -346,159 +344,194 @@ thead a:active {
 
 #page-page #content_switcher #list,
 #page-css #content_switcher #list {
-    margin:0;
-    float:none;
+    margin: 0;
+    float: none;
 }
 
 #page-page #content_switcher #list td,
 #page-css #content_switcher #list td {
     position:relative;
-    padding:0 1em 5px;
+    padding: 0 1em 5px;
 }
 
 #list tfoot .detail-toggle {
-    width:20%;
+    width: 20%;
 }
 
 #list tfoot .multi-edit {
     text-align:right;
-    width:100% !important;
+    width: 100% !important;
 }
 
 #list tfoot #js {
-    margin-right:36px;
+    margin-right: 36px;
 }
 
 
 
-/* -------------------- LAYOUT FORMATTING -------------------- */
-
-/* Use body as wrapper */
+/* =============================================================================
+   Layout
+   ========================================================================== */
 
 body {
-    max-width: 1248px;
-    margin: 0 auto;
+    position: relative;
+    color: $color-text;
+    background: $color-background;
+    padding: ($logo-large-height + 2px) 0 0;
+    min-width: 320px;
+}
+
+#txp-body {
+    min-width: 728px;
+    padding: 2em 2em 0;
+    position: relative;
+    z-index: 1;
 }
 
 /* Containers */
 
 #page_container td {
-    padding:0;
+    padding: 0;
 }
 
 #form_container td[style] {
-    padding:0 !important;
+    padding: 0 !important;
 }
 
 #import_container td {
-    padding:4px;
+    padding: 4px;
 }
 
 #page_container td {
-    padding:0;
+    padding: 0;
 }
 
 #form_container td[style] {
-    padding:0 !important;
+    padding: 0 !important;
 }
 
 #import_container td {
-    padding:4px;
+    padding: 4px;
 }
 
 
-/* Header */
+/* =============================================================================
+   Header
+   ========================================================================== */
 
 #txp-head {
-    position:relative;
-    z-index:1000;
-    min-width:728px;
-    min-height:47px;
-    margin-bottom:11px;
-    padding:0 20px;
-    border-bottom:1px solid #d4d4d4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    height: $logo-large-height;
+    padding: 0 2em;
+    @include box-shadow;
+    @include gradient-bar(#ffda44, #fabc2b);
+    h1 {
+        float: left;
+        margin: 0;
+        padding-left: $logo-large-width;
+        line-height: $logo-large-height;
+        background: no-repeat left top;
+        max-width: 25%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include hires-graphic($logo-large-filename, $logo-large-filetype, $logo-large-width, $logo-large-height);
+        a {
+            margin-right: 1em;
+            margin-left: 1em;
+            color: $color-text;
+            &:hover {
+                color: lighten($color-text, 10%);
+                text-decoration: none;
+            }
+        }
+    }
 }
 
-#mothership {
-    float: left;
-    display: block;
-    width: 148px;
-    height: 36px;
-    margin:0 1em 0 0;
-}
-
-#mothership a {
-    display: block;
-    width: 148px;
-    height: 36px;
-    text-indent:-9999px;
-    background: url("../img/textpattern-color.png");
-}
-
-#txp-head h1 {
-    float: left;
-    line-height: 36px;
+#txp-logout {
+    position: absolute;
+    top: -8px;
+    right: 2em;
+    a {
+        display: block;
+    }
 }
 
 
-/* Navigation */
+/* =============================================================================
+   Navigation
+   ========================================================================== */
 
 #txp-nav {
-    float:right;
-    width:54.4%;
-    min-height:34px;
-    position:relative;
-    z-index:100;
+    float: left;
+    overflow: visible;
+    select {
+        /* Hide select version of navigation for larger screens */
+        display: none;
+    }
 }
 
-#txp-nav,
 #txp-nav ul {
-    list-style:none;
+    list-style: none;
+    padding-left: 0;
 }
 
-#txp-nav .primary {
-    float:left;
-    position:relative;
-    margin-right:2px;
-    border-bottom:none;
-    @include border-radius($border-radius $border-radius 0 0);
+#txp-nav {
+    ul.data-dropdown {
+        display: block;
+        float: left;
+        position: relative;
+        left: 0;
+        margin: 0;
+    }
+    li.dropdown {
+        position: relative;
+        display: block;
+        float: left;
+        border-right: 1px solid #fabc2b;
+        background-color: rgba(#fff, .2);
+        &:first-child {
+            border-left: 1px solid #fabc2b;
+        }
+        a {
+            display: block;
+            float: none;
+            padding: 9px 1em;
+            text-decoration: none;
+            color: darken($color-text, 20%);
+            @include text-shadow-light;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
 }
 
-#txp-nav #txp-logout {
-    float:right;
-    margin-right:0;
-    font-weight:bold;
+#txp-nav .data-dropdown li:hover a {
+    background: url("../img/indicator.gif") no-repeat 50% bottom;
 }
 
-#txp-nav .primary-link {
-    display:block;
-    float:left;
-    position:relative;
-    padding:.8em 9px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-#txp-nav #txp-logout:hover .primary-link {
-    background:none;
-}
-
-#txp-nav .dropdown {
-    float:left;
-    position:absolute;
-    top:3em;
-    left:-9999px;
-    z-index:10;
-    min-width:166px;
-    border:solid 1px #d4d4d4;
-    border-top:none;
+#txp-nav .dropdown-menu {
+    float: left;
+    position: absolute;
+    top: 3em;
+    left: -9999px;
+    z-index: 10;
+    min-width: 166px;
+    border: solid 1px #d4d4d4;
+    border-top: none;
+    background: #fef5d2;
     @include border-radius(0 $border-radius $border-radius $border-radius);
-    -webkit-box-shadow:3px 3px 3px rgba(0,0,0,.2);
-            box-shadow:3px 3px 3px rgba(0,0,0,.2);
+    -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.2);
+            box-shadow: 3px 3px 3px rgba(0,0,0,.2);
 }
 
-#txp-nav :hover .dropdown {
-    left:-1px;
+#txp-nav .data-dropdown li:hover .dropdown-menu {
+    left: -1px;
 }
 
 #txp-nav ul {
@@ -549,7 +582,23 @@ body {
 }
 
 
-/* Miscellaneous/shared layout stuff */
+/* =============================================================================
+   Footer
+   ========================================================================== */
+
+#txp-foot {
+    p {
+        margin-top: 0;
+    }
+    .pagejump {
+        float: right;
+    }
+}
+
+
+/* =============================================================================
+   Miscellaneous/shared layout
+   ========================================================================== */
 
 .edit-pane {
     width:448px !important;
@@ -591,16 +640,6 @@ body {
 .txp-control-panel {
     text-align:center;
     padding-bottom:1em;
-}
-
-
-/* Body */
-
-#txp-body {
-    min-width:728px;
-    padding:29px 20px 3em;
-    position:relative;
-    z-index:1;
 }
 
 table#edit {
@@ -696,21 +735,6 @@ table#edit {
     display: none;
 }
 
-#supporting_content fieldset {
-    padding: 0;
-}
-
-#supporting_content legend {
-    margin: 0;
-    width: 100%;
-    @include box-sizing;
-}
-
-#supporting_content p {
-    margin:0;
-    padding:5px 1em;
-}
-
 #supporting_content .action-create a {
     margin-top:6px
 }
@@ -723,33 +747,9 @@ table#edit {
     margin: 1em;
 }
 
-#more_group fieldset {
-    border:0;
-    margin-bottom: 1em;
-}
-
-#more_group p {
-    padding-left:0;
-    padding-right:0;
-    padding-bottom:0;
-}
-
-#more_group .date {
-    padding-bottom:0;
-}
-
-#more_group legend {
-    margin:0;
-    display:block;
-    color:#fff;
-    background:#555;
-    @include box-sizing;
-}
-
 #more_group .date .label,
 #more_group .time .label {
-    display:block;
-    padding-bottom:5px;
+    display: block;
 }
 
 #more_group .date input,
@@ -788,21 +788,34 @@ table#edit {
 
 /* Images page */
 
+#page-image img {
+    border: solid 1px $color-border;
+    @include border-radius;
+    padding: 4px;
+    background: #fff;
+    @include box-shadow;
+}
+
+#page-image a img:hover {
+    border: solid 1px $color-link-hover;
+    @include box-shadow(0 1px 2px rgba($color-link-hover, .4));
+}
+
 #page-image .edit-pane {
-    width:448px !important;
+    width: 448px !important;
 }
 
 #page-image img.fullsize {
-    margin-bottom:18px;
+    margin-bottom: 18px;
 }
 
 #page-image #width,
 #page-image #height {
-    width:3.5em;
+    width: 3.5em;
 }
 
 #page-image .edit-pane table td {
-    padding:0 5px 0 0;
+    padding: 0 5px 0 0;
 }
 
 #thumbnail_alter {
@@ -818,16 +831,11 @@ table#edit {
 }
 
 #page-image .edit-pane select {
-    width:250px;
+    width: 250px;
 }
 
 #page-image #caption {
-    width:412px;
-}
-
-#page-image #txp-body img {
-    -webkit-box-shadow:1px 1px 5px rgba(0,0,0,.2);
-            box-shadow:1px 1px 5px rgba(0,0,0,.2);
+    width: 412px;
 }
 
 
@@ -1384,8 +1392,8 @@ body{
 }
 
 #mothership a {
-    width: 56px;
-    background: url("../img/txp-color.png") left top;
+    width: 24px;
+    background: url("../img/textpattern-sml.png") left top;
 }
 
 
