@@ -565,25 +565,6 @@ body {
 }
 
 
-/* Add a close button only for touch devices */
-
-#touch-menu-close {
-    position: absolute;
-    top: 4px;
-    left: -32px;
-    z-index: 10002;
-}
-
-#touch-menu-close a {
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    text-indent: -9999px;
-    @include hires-graphic(close, png, 32px, 32px);
-    display: none;
-}
-
-
 /* =============================================================================
    Footer
    ========================================================================== */

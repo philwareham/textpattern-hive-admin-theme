@@ -607,29 +607,6 @@ body {
   left: 0;
 }
 
-/* Add a close button only for touch devices */
-#touch-menu-close {
-  position: absolute;
-  top: 4px;
-  left: -32px;
-  z-index: 10002;
-}
-
-#touch-menu-close a {
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  text-indent: -9999px;
-  background-image: url("../img/close.png");
-  display: none;
-}
-@media (-webkit-min-device-pixel-ratio: 2) {
-  #touch-menu-close a {
-    background-image: url("../img/retina/close@2x.png") !important;
-    -webkit-background-size: 32px 32px;
-  }
-}
-
 /* =============================================================================
    Footer
    ========================================================================== */

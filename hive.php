@@ -45,7 +45,6 @@ class hive_theme extends classic_theme
                 }
                 $out[] = '</li>';
             }
-            $out[] = '<li id="touch-menu-close"><a href="#">Close menu</a></li>';
             $out[] = '</ul>';
             $out[] = '</div>';
         }
