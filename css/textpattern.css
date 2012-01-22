@@ -608,7 +608,8 @@ body {
   padding: .5em 1em;
 }
 
-.data-dropdown li:hover .dropdown-menu {
+.data-dropdown li:hover .dropdown-menu,
+.data-dropdown li:focus .dropdown-menu {
   left: 0;
 }
 

@@ -559,7 +559,8 @@ body {
     }
 }
 
-.data-dropdown li:hover .dropdown-menu {
+.data-dropdown li:hover .dropdown-menu,
+.data-dropdown li:focus .dropdown-menu {
     left: 0;
 }
 
