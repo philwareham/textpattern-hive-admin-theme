@@ -14,8 +14,6 @@ h2. Usage instructions
 
 If you want to remove the Textpattern logo branding and link from the header, simply delete line 25 of @hive.php@.
 
-Within the @custom.css@ file you can choose between any of the supplied colour schemes, simply amend the URL in line ??? to whichever colour option you desire.
-
 Also within the @custom.css@ file, there are options to hide certain sections/fields from displaying in the admin pages. To use any of the options uncomment their lines (remove the @/*@ and @*/@ from the line of CSS you want to activate).
 
 For example, to completely hide the keywords field from your admin-side, find this line in the @custom.css@ file:
