@@ -155,7 +155,7 @@ legend {
 }
 
 .toggle {
-  padding: 1em;
+  padding: 0 1em;
 }
 
 /* =============================================================================
@@ -296,7 +296,6 @@ input[name="form_preview"] {
    ========================================================================== */
 .plain-list {
   list-style: none;
-  margin-left: 0;
 }
 
 /* =============================================================================
@@ -752,6 +751,12 @@ table#edit {
   margin-left: 20px;
 }
 
+#configuration_content > div {
+  border: 1px solid #e3e3e3;
+  background: #f7f7f7;
+  margin-bottom: 1em;
+}
+
 #configuration_content > div.empty {
   display: none;
 }
@@ -791,8 +796,8 @@ table#edit {
 }
 
 .recent li {
-  list-style: decimal;
-  margin-left: 16px;
+  list-style: decimal-leading-zero;
+  margin-left: 1em;
 }
 
 /* Hide article_tabs column (as it's useless IMHO) */
