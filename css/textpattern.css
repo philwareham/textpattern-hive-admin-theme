@@ -396,14 +396,14 @@ body {
   color: #333333;
   background: white;
   padding: 3em 0 0;
-  min-width: 320px;
+  min-width: 74em;
 }
 
 #txp-body {
-  min-width: 728px;
   padding: 2em 2em 0;
   position: relative;
-  z-index: 1;
+  max-width: 110em;
+  margin: 0 auto;
 }
 
 /* Containers */
@@ -439,6 +439,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  min-width: 70em;
   z-index: 10000;
   height: 3em;
   padding: 0 2em;
@@ -506,13 +507,14 @@ body {
 /* =============================================================================
    Navigation
    ========================================================================== */
+/* Hide <select> version of navigation for standard (non-touch) screens */
+#txp-nav-select {
+  display: none;
+}
+
 #txp-nav {
   float: left;
   overflow: visible;
-}
-#txp-nav select {
-  /* Hide select version of navigation for larger screens */
-  display: none;
 }
 #txp-nav a {
   color: #333;
@@ -1299,9 +1301,14 @@ table#edit {
 
 /* ---------------- TARGET ALL MOBILE DEVICES ---------------- */
 @media only screen and (max-device-width:1024px) {
-  /* Add a close button only for touch devices */
-  #txp-nav li.primary:hover ~ #touch-menu-close a {
+  /* Show <select> version of navigation on touch screens */
+  #txp-nav-select {
     display: block;
+  }
+
+  /* Hide dropdown menu version on touch screens */
+  #txp-nav {
+    display: none;
   }
 }
 /* --------------------- TARGET TABLETS ---------------------- */

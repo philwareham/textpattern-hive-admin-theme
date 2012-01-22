@@ -47,6 +47,22 @@ class hive_theme extends classic_theme
             }
             $out[] = '</ul>';
             $out[] = '</div>';
+            $out[] = '<select id="txp-nav-select">';
+            foreach ($this->menu as $tab)
+            {
+                $out[] = "<optgroup label='{$tab['label']}'>";
+                if (!empty($tab['items']))
+                {
+                    foreach ($tab['items'] as $item)
+                    {
+                        $select = ($item['active']) ? ' selected="selected"' : '';
+                        $out[] = "<option value='?event={$item['event']}'{$select}>{$item['label']}</option>";
+                    }
+                }
+                $out[] = '</optgroup>';
+            }
+            $out[] = '<optgroup label="Content">';
+            $out[] = '</select>';
         }
         $out[] = '</div>';
         $out[] = '<div id="txp-body">';
