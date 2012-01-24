@@ -229,7 +229,7 @@ a.navlink-active,
     outline: 0;
     margin: 0;
     padding: 3px .75em;
-    @include box-shadow(rgba(255, 255, 255, .25) 0 1px 0 0 inset);
+    @include box-shadow(rgba(#fff, .25) 0 1px 0 0 inset);
     @include text-shadow-light;
     width: auto;
     vertical-align: top;
