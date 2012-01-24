@@ -324,6 +324,7 @@ textarea[disabled] {
 
 textarea {
     min-height: 4.61538461538462em; /* 60px / 13px */
+    -moz-resize: vertical; // Firefox 4+
     resize: vertical;
     width: 100%;
     /* removes default vertical scrollbar in IE7-9 */
