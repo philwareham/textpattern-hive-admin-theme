@@ -65,7 +65,6 @@ class hive_theme extends classic_theme
             $out[] = '</select>';
         }
         $out[] = '</div>';
-        $out[] = '<div id="txp-body">';
         $out[] = '<p id="messagepane">'.$this->announce($this->message).'</p>';
         return join(n, $out);
     }
@@ -74,8 +73,7 @@ class hive_theme extends classic_theme
     {
         $out[] = '<div id="txp-foot">';
         $out[] = '<p class="pagejump"><a href="#">&#8593; Back to top</a></p>';
-        $out[] = '<p><small><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v'.txp_version.')</small></p>';
-        $out[] = '</div>';
+        $out[] = '<p><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v'.txp_version.')</p>';
         $out[] = '</div>';
         return join(n, $out);
     }
