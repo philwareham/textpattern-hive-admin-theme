@@ -85,6 +85,15 @@ sup,
   font-size: 0.846em;
 }
 
+pre,
+code,
+kbd,
+samp,
+.code,
+#diagnostics textarea {
+  font-family: Cousine, Menlo, Consolas, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
+}
+
 /* =============================================================================
    Messages
    ========================================================================== */
@@ -646,9 +655,6 @@ body {
 /* =============================================================================
    Footer
    ========================================================================== */
-#txp-foot p {
-  margin-top: 0;
-}
 #txp-foot .pagejump {
   float: right;
 }
@@ -1111,7 +1117,6 @@ table#edit {
 
 #diagnostics textarea {
   width: 100% !important;
-  height: 316px !important;
   margin-bottom: 1em;
 }
 

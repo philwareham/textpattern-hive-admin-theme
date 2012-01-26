@@ -73,6 +73,15 @@ sup,
     font-size: $smallfont;
 }
 
+pre,
+code,
+kbd,
+samp,
+.code,
+#diagnostics textarea {
+    font-family: $font-mono;
+}
+
 
 /* =============================================================================
    Messages
@@ -577,9 +586,6 @@ body {
    ========================================================================== */
 
 #txp-foot {
-    p {
-        margin-top: 0;
-    }
     .pagejump {
         float: right;
     }
@@ -1066,7 +1072,6 @@ table#edit {
 
 #diagnostics textarea {
     width:100% !important;
-    height:316px !important;
     margin-bottom: 1em;
 }
 
