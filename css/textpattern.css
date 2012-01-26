@@ -98,14 +98,102 @@ samp,
    Messages
    ========================================================================== */
 #messagepane {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: 1;
-  width: 768px;
-  margin-left: -384px;
-  font-weight: bold;
+  margin: 1em 0;
   text-align: center;
+}
+
+.not-ok,
+td.modified {
+  color: #9d261d;
+}
+
+/* alert boxes */
+#messagepane span {
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: .5em 1em;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  text-align: center;
+  max-width: 42em;
+  display: inline-block;
+  /* IE 7 */
+  *zoom: 1;
+  *display: inline;
+}
+#messagepane span.warning {
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  border-top: 1px solid #ffc233;
+  border-bottom: 1px solid #ffb300;
+  background-color: #ffc233;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ffe199), to(#ffc233));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffe199), to(#ffc233));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#ffe199, #ffc233);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#ffe199, #ffc233);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#ffe199, #ffc233);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#ffe199, #ffc233);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#ffe199, #ffc233);
+  /* IE7-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffe199',EndColorStr='#ffc233');
+  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
+  border-radius: 0 \0;
+}
+#messagepane span.success {
+  color: white;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25);
+  border-top: 1px solid #46a546;
+  border-bottom: 1px solid #378137;
+  background-color: #46a546;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#86cb86), to(#46a546));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#86cb86), to(#46a546));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#86cb86, #46a546);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#86cb86, #46a546);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#86cb86, #46a546);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#86cb86, #46a546);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#86cb86, #46a546);
+  /* IE7-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#86cb86',EndColorStr='#46a546');
+  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
+  border-radius: 0 \0;
+}
+#messagepane span.error {
+  color: white;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25);
+  border-top: 1px solid #9d261d;
+  border-bottom: 1px solid #721c15;
+  background-color: #9d261d;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#dc4e44), to(#9d261d));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dc4e44), to(#9d261d));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#dc4e44, #9d261d);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#dc4e44, #9d261d);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#dc4e44, #9d261d);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#dc4e44, #9d261d);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#dc4e44, #9d261d);
+  /* IE7-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#dc4e44',EndColorStr='#9d261d');
+  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
+  border-radius: 0 \0;
 }
 
 /* =============================================================================
@@ -430,7 +518,7 @@ body {
   position: relative;
   color: #333333;
   background: white;
-  padding: 5em 2em 0;
+  padding: 4em 2em 0;
   min-width: 74em;
 }
 
@@ -1367,13 +1455,6 @@ table#edit {
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   body {
     max-width: 320px;
-  }
-
-  /* Messages */
-  #messagepane {
-    left: 0;
-    width: 320px;
-    margin-left: 0;
   }
 
   /* Forms */
