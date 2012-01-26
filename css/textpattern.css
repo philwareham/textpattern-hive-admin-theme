@@ -868,6 +868,10 @@ table#edit {
   width: 50%;
 }
 
+#main_content > div:first-of-type > p:first-of-type {
+  margin-top: 0;
+}
+
 #configuration_content,
 #tagbuild_links {
   margin-right: 20px;
