@@ -11,7 +11,7 @@ class hive_theme extends classic_theme
     function html_head()
     {
         $out[] = '<link href="'.$this->url.'css/textpattern.css" rel="stylesheet" type="text/css"/>';
-        $out[] = '<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1">';
+        $out[] = '<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1"/>';
         $out[] = '<script type="text/javascript" src="'.$this->url.'js/jquery.formalize.min.js"></script>';
         $out[] = '<!--[if lt IE 9]><script type="text/javascript" src="'.$this->url.'js/selectivizr.min.js"></script><![endif]-->';
         $out[] = '<script type="text/javascript" src="'.$this->url.'js/scripts.js"></script>';
@@ -67,13 +67,11 @@ class hive_theme extends classic_theme
         $out[] = '</div>';
         $out[] = '<div id="txp-body">';
         $out[] = '<p id="messagepane">'.$this->announce($this->message).'</p>';
-        $out[] = '<div id="txp-content">';
         return join(n, $out);
     }
 
     function footer()
     {
-        $out[] = '</div>';
         $out[] = '<div id="txp-foot">';
         $out[] = '<p class="pagejump"><a href="#">&#8593; Back to top</a></p>';
         $out[] = '<p><small><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v'.txp_version.')</small></p>';
@@ -88,7 +86,7 @@ class hive_theme extends classic_theme
         return array(
             'author'      => 'Phil Wareham',
             'author_uri'  => 'http://twitter.com/philwareham',
-            'version'     => '2.0b1',
+            'version'     => '2.0a1',
             'description' => 'Textpattern Hive Theme',
             'help'        => 'http://textgarden.org/administration-themes/261/hive',
         );
