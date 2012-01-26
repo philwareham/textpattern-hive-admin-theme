@@ -72,8 +72,8 @@ class hive_theme extends theme
     function footer()
     {
         $out[] = '<div id="txp-foot">';
+        $out[] = '<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v'.txp_version.')</p>';
         $out[] = '<p class="pagejump"><a href="#">&#8593; Back to top</a></p>';
-        $out[] = '<p><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v'.txp_version.')</p>';
         $out[] = '</div>';
         return join(n, $out);
     }

@@ -40,14 +40,14 @@
 /* =============================================================================
    Clearfix
    ========================================================================== */
-.clearfix {
+.clearfix, #txp-foot {
   *zoom: 1;
 }
-.clearfix:before, .clearfix:after {
+.clearfix:before, #txp-foot:before, .clearfix:after, #txp-foot:after {
   content: "";
   display: table;
 }
-.clearfix:after {
+.clearfix:after, #txp-foot:after {
   clear: both;
 }
 
@@ -741,7 +741,11 @@ body {
 /* =============================================================================
    Footer
    ========================================================================== */
-#txp-foot .pagejump {
+.mothership {
+  float: left;
+}
+
+.pagejump {
   float: right;
 }
 
@@ -1470,16 +1474,6 @@ table#edit {
   #txp-head {
     width: 280px;
     min-width: 280px;
-  }
-
-  #mothership {
-    width: 56px;
-    margin-right: 1em;
-  }
-
-  #mothership a {
-    width: 24px;
-    background: url("../img/textpattern-sml.png") left top;
   }
 
   /* Navigation */

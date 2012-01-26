@@ -613,9 +613,15 @@ body {
    ========================================================================== */
 
 #txp-foot {
-    .pagejump {
-        float: right;
-    }
+    @extend .clearfix;
+}
+
+.mothership {
+    float: left;
+}
+
+.pagejump {
+    float: right;
 }
 
 
@@ -1398,18 +1404,8 @@ body{
 /* Header */
 
 #txp-head {
-    width:280px;
-    min-width:280px;
-}
-
-#mothership {
-    width: 56px;
-    margin-right: 1em;
-}
-
-#mothership a {
-    width: 24px;
-    background: url("../img/textpattern-sml.png") left top;
+    width: 280px;
+    min-width: 280px;
 }
 
 
