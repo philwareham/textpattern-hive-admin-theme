@@ -4,14 +4,14 @@ if (!defined('txpinterface')) die('txpinterface is undefined.');
 
 theme::based_on('classic');
 
-class hive_theme extends classic_theme
+class hive_theme extends theme
 
 {
 
     function html_head()
     {
-        $out[] = '<link href="'.$this->url.'css/textpattern.css" rel="stylesheet" type="text/css"/>';
-        $out[] = '<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1"/>';
+        $out[] = '<link href="'.$this->url.'css/textpattern.css" rel="stylesheet" type="text/css" />';
+        $out[] = '<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1" />';
         $out[] = '<script type="text/javascript" src="'.$this->url.'js/jquery.formalize.min.js"></script>';
         $out[] = '<!--[if lt IE 9]><script type="text/javascript" src="'.$this->url.'js/selectivizr.min.js"></script><![endif]-->';
         $out[] = '<script type="text/javascript" src="'.$this->url.'js/scripts.js"></script>';
@@ -89,6 +89,43 @@ class hive_theme extends classic_theme
             'help'        => 'http://textgarden.org/administration-themes/261/hive',
         );
     }
+
+	function announce($thing)
+	{
+ 		// $thing[0]: message text
+ 		// $thing[1]: message type, defaults to "success" unless empty or a different flag is set
+
+		if ($thing === '') return '';
+
+		if (!is_array($thing) || !isset($thing[1]))
+ 		{
+ 			$thing = array($thing, 0);
+ 		}
+
+ 		switch ($thing[1])
+ 		{
+ 			case E_ERROR:
+ 				$class = 'error';
+ 				break;
+ 			case E_WARNING:
+ 				$class = 'warning';
+ 				break;
+ 			default:
+ 				$class = 'success';
+ 				break;
+ 		}
+ 		$html = "<span id='message' class='$class'>".gTxt($thing[0]).'</span>';
+ 		// Try to inject $html into the message pane no matter when announce()'s output is printed
+ 		$js = addslashes($html);
+ 		$js = <<< EOS
+ 		$(document).ready( function(){
+	 		$("#messagepane").html("{$js}");
+			$('#messagepane #message.error').fadeOut(800).fadeIn(800);
+			$('#messagepane #message.warning').fadeOut(800).fadeIn(800);
+		} )
+EOS;
+ 		return script_js(str_replace('</', '<\/', $js), $html);
+	}
 
 }
 
