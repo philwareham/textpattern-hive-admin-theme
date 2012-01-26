@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Txp &#8250; My Site &#8250; Diagnostics</title>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="textpattern.js"></script>
+    <link href="theme/remora/textpattern.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        <!--
+        $(document).ready( function() {
+        $("#nav li").hover( function() { $(this).addClass("sfhover"); }, function() { $(this).removeClass("sfhover"); } );
+        });
+        // -->
+    </script>
+</head>
+<body id="page-diag" class="admin">
+
+    <div id="masthead">
+        <ul id="nav">
+            <li class='primary tabdown inactive'><a href='?event=article'>Content</a>
+                <ul>
+                    <li class='secondary tabdown2 inactive'><a href='?event=category'>Categories</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=article'>Write</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=list'>Articles</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=image'>Images</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=file'>Files</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=link'>Links</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=discuss'>Comments</a></li>
+                </ul>
+            </li>
+            <li class='primary tabdown inactive'><a href='?event=page'>Presentation</a>
+                <ul>
+                    <li class='secondary tabdown2 inactive'><a href='?event=section'>Sections</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=page'>Pages</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=form'>Forms</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=css'>Style</a></li>
+                </ul>
+            </li>
+            <li class='primary tabup active'><a href='?event=admin'>Admin</a>
+                <ul>
+                    <li class='secondary tabup active'><a href='?event=diag'>Diagnostics</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=prefs'>Preferences</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=admin'>Users</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=log'>Visitor Logs</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=plugin'>Plugins</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=import'>Import</a></li>
+                </ul>
+            </li>
+            <li id="view-site" class="primary tabdown inactive"><a href="http://www.textpattern.dev/" target="_blank">View Site</a></li>
+            <li id="logout" class="primary tabdown inactive"><a href="index.php?logout=1" onclick="return verify('Are you sure?')">Logout</a></li>
+        </ul>
+    </div>
+
+    <div id="messagepane"></div>
+
+    <div id="diag_container" class="txp-container txp-list">
+
+        <div id="pre_flight_check">
+            <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list" width="510px">
+                <thead>
+                    <tr>
+                        <td><h2>Pre-flight check</h2></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="not-ok">/Users/username/Sites/SVN/TextPattern CMS/textpattern/setup/ still exists&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
+                    </tr>
+                    <tr>
+                        <td class="not-ok">Some Textpattern files have been modified: <br />
+                        /Users/username/Sites/SVN/TextPattern CMS/textpattern/jquery.js&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="diagnostics">
+            <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
+                <thead>
+                    <tr>
+                        <td><h2>Diagnostic info</h2></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <textarea cols="78" rows="18" readonly="readonly" style="width: 500px; height: 300px;">Diagnostic information would go here...</textarea><br />
+                            <form method="post" action="index.php">
+                                Detail:
+                                <select name="step" class="list" onchange="submit(this.form);">
+                                    <option value="low" selected="selected">Low</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div id="end_page">
+        <a href="http://textpattern.com/" id="mothership"><img src="theme/classic/carver.gif" width="60" height="48" border="0" alt="" /></a>
+        <p>Textpattern &#183; 4.4.1</p>
+    </div>
+
+</body>
+</html>

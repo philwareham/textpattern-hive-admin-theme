@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Txp &#8250; My Site &#8250; Import content from other publishing tools</title>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="textpattern.js"></script>
+    <link href="theme/remora/textpattern.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        <!--
+        $(document).ready( function() {
+        $("#nav li").hover( function() { $(this).addClass("sfhover"); }, function() { $(this).removeClass("sfhover"); } );
+        });
+        // -->
+    </script>
+</head>
+<body id="page-import" class="admin">
+
+    <div id="masthead">
+        <ul id="nav">
+            <li class='primary tabdown inactive'><a href='?event=article'>Content</a>
+                <ul>
+                    <li class='secondary tabdown2 inactive'><a href='?event=category'>Categories</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=article'>Write</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=list'>Articles</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=image'>Images</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=file'>Files</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=link'>Links</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=discuss'>Comments</a></li>
+                </ul>
+            </li>
+            <li class='primary tabdown inactive'><a href='?event=page'>Presentation</a>
+                <ul>
+                    <li class='secondary tabdown2 inactive'><a href='?event=section'>Sections</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=page'>Pages</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=form'>Forms</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=css'>Style</a></li>
+                </ul>
+            </li>
+            <li class='primary tabup active'><a href='?event=admin'>Admin</a>
+                <ul>
+                    <li class='secondary tabdown2 inactive'><a href='?event=diag'>Diagnostics</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=prefs'>Preferences</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=admin'>Users</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=log'>Visitor Logs</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=plugin'>Plugins</a></li>
+                    <li class='secondary tabup active'><a href='?event=import'>Import</a></li>
+                </ul>
+            </li>
+            <li id="view-site" class="primary tabdown inactive"><a href="http://www.textpattern.dev/" target="_blank">View Site</a></li>
+            <li id="logout" class="primary tabdown inactive"><a href="index.php?logout=1" onclick="return verify('Are you sure?')">Logout</a></li>
+        </ul>
+    </div>
+
+    <div id="messagepane"></div>
+
+    <div id="import_container" class="txp-container txp-edit">
+
+        <form method="post" action="index.php" id="import">
+            <table cellpadding="3" cellspacing="0" border="0" id="edit" align="center">
+                <tr>
+                    <td align="left" valign="top" colspan="2"><h3>Import content from other publishing tools</h3></td>
+                </tr>
+                <tr class="import-from">
+                    <td class="noline" style="text-align: right; vertical-align: middle;"><label for="from">Import from <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
+                    <td class="from">
+                        <select name="import_tool" onchange="showHideFields(this.value);">
+                            <option value=""></option>
+                            <option value="mt">Movable Type (File)</option>
+                            <option value="mtdb">Movable Type (MySQL DB)</option>
+                            <option value="blogger">Blogger</option>
+                            <option value="b2">b2</option>
+                            <option value="wp">WordPress</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="import-section">
+                    <td class="noline" style="text-align: right; vertical-align: middle;"><label for="section">Section to import into <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
+                    <td class="section">
+                        <select name="Section" class="list">
+                            <option value="" selected="selected"></option>
+                            <option value="about">about</option>
+                            <option value="articles">articles</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="import-status">
+                    <td class="noline" style="text-align: right; vertical-align: middle;"><label for="status">Default article status <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
+                    <td class="status">
+                        <select name="type">
+                            <option value="4">Live</option>
+                            <option value="1">Draft</option>
+                            <option value="2">Hidden</option>
+                            <option value="3">Pending</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="import-comment">
+                    <td class="noline" style="text-align: right; vertical-align: middle;"><label for="comment-invite">Default comments invite <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
+                    <td class="comment-invite"><input type="text" value="Comments" name="comments_invite" class="edit" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table id="databased" style="display: none; border: none;">
+                            <tr>
+                                <td align="left" valign="top" colspan="2"><h3>Database Data</h3></td>
+                            </tr>
+                            <tr class="import-database">
+                                <td class="noline" style="text-align: right; vertical-align: middle;"><label for="database">Database name <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
+                                <td class="database"><input type="text" value="" name="importdb" class="edit" /></td>
+                            </tr>
+                            <tr class="import-login">
+                                <td class="noline" style="text-align: right; vertical-align: middle;"><label for="login">Mysql user <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
+                                <td class="login"><input type="text" value="" name="importdblogin" class="edit" /></td>
+                            </tr>
+                            <tr class="import-password">
+                                <td class="noline" style="text-align: right; vertical-align: middle;"><label for="password">Mysql password <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
+                                <td class="password"><input type="text" value="" name="importdbpass" class="edit" /></td>
+                            </tr>
+                            <tr class="import-host">
+                                <td class="noline" style="text-align: right; vertical-align: middle;"><label for="host">Mysql host <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
+                                <td class="host"><input type="text" value="" name="importdbhost" class="edit" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table id="mtblogid" style="display: none;  border: none;">
+                            <tr class="import-blog-id">
+                                <td class="noline" style="text-align: right; vertical-align: middle;"><label for="blog-id">Weblog ID <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
+                                <td class="blog-id"><input type="text" value="" name="blog_id" class="edit" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table id="wponly" style="display: none;  border: none;">
+                            <tr class="import-wp-prefix">
+                                <td class="noline" style="text-align: right; vertical-align: middle;"><label for="wp-prefix">Tables prefix (if any) <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
+                                <td class="wp-prefix"><input type="text" value="wp_" name="wpdbprefix" class="edit" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <p style="text-align:center"><input type="submit" value="Continue" name="choose" class="publish" /></p>
+        </form>
+
+    </div>
+
+    <div id="end_page">
+        <a href="http://textpattern.com/" id="mothership"><img src="theme/classic/carver.gif" width="60" height="48" border="0" alt="" /></a>
+        <p>Textpattern &#183; 4.4.1</p>
+    </div>
+
+</body>
+</html>

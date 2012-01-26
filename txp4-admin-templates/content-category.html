@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Txp &#8250; My Site &#8250; Categories</title>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="textpattern.js"></script>
+    <link href="theme/remora/textpattern.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        <!--
+        $(document).ready( function() {
+        $("#nav li").hover( function() { $(this).addClass("sfhover"); }, function() { $(this).removeClass("sfhover"); } );
+        });
+        // -->
+    </script>
+</head>
+<body id="page-category" class="content">
+
+    <div id="masthead">
+        <ul id="nav">
+            <li class='primary tabup active'><a href='?event=article'>Content</a>
+                <ul>
+                    <li class='secondary tabup active'><a href='?event=category'>Categories</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=article'>Write</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=list'>Articles</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=image'>Images</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=file'>Files</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=link'>Links</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=discuss'>Comments</a></li>
+                </ul>
+            </li>
+            <li class='primary tabdown inactive'><a href='?event=page'>Presentation</a>
+                <ul>
+                    <li class='secondary tabdown2 inactive'><a href='?event=section'>Sections</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=page'>Pages</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=form'>Forms</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=css'>Style</a></li>
+                </ul>
+            </li>
+            <li class='primary tabdown inactive'><a href='?event=admin'>Admin</a>
+                <ul>
+                    <li class='secondary tabdown2 inactive'><a href='?event=diag'>Diagnostics</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=prefs'>Preferences</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=admin'>Users</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=log'>Visitor Logs</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=plugin'>Plugins</a></li>
+                    <li class='secondary tabdown2 inactive'><a href='?event=import'>Import</a></li>
+                </ul>
+            </li>
+            <li id="view-site" class="primary tabdown inactive"><a href="http://www.textpattern.dev/" target="_blank">View Site</a></li>
+            <li id="logout" class="primary tabdown inactive"><a href="index.php?logout=1" onclick="return verify('Are you sure?')">Logout</a></li>
+        </ul>
+    </div>
+
+    <div id="messagepane"></div>
+
+    <div id="category_container" class="txp-container txp-list">
+
+        <table class="category-list" cellspacing="20" align="center">
+            <tr>
+                <td style="vertical-align:top;text-align:left;padding:8px" class="categories article">
+                    <div id="categories_article">
+
+                        <h3>Article Categories&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=article_category&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a></h3>
+
+                        <form method="post" action="index.php" class="action-create article">
+                            <input type="text" value="" name="title" size="20" class="edit" /><input type="submit" value="Create" class="smallerbox" />
+                        </form>
+
+                        <form method="post" action="index.php" id="category_article_form" style="margin-top:1em" onsubmit="return verify('Are you sure?')">
+                            <p class="odd level-0"><input type="checkbox" name="selected[]" value="5" class="checkbox" />&#160;<a href="#">Hope for the Future</a>&#160;<small>(<a href="#">1</a>)</small></p>
+                            <p class="even level-1"><input type="checkbox" name="selected[]" value="14" class="checkbox" />&#160;&#160;&#160;&#160;&#160;<a href="#">test category nested 1-1</a>&#160;<small>(0)</small></p>
+                            <p class="odd level-2"><input type="checkbox" name="selected[]" value="16" class="checkbox" />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<a href="#">test category nested 2-1</a>&#160;<small>(0)</small></p>
+                            <p class="even level-3"><input type="checkbox" name="selected[]" value="17" class="checkbox" />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<a href="#">test category nested 3-1</a>&#160;<small>(0)</small></p>
+                            <p class="odd level-1"><input type="checkbox" name="selected[]" value="15" class="checkbox" />&#160;&#160;&#160;&#160;&#160;<a href="#">test category nested 1-2</a>&#160;<small>(0)</small></p>
+                            <p class="even level-1"><input type="checkbox" name="selected[]" value="18" class="checkbox" />&#160;&#160;&#160;&#160;&#160;<a href="#">test category nested 1-3</a>&#160;<small>(0)</small></p>
+                            <p class="odd level-0"><input type="checkbox" name="selected[]" value="6" class="checkbox" />&#160;<a href="#">Meaningful Labor</a>&#160;<small>(<a href="#">1</a>)</small></p>
+                            <p class="even level-0"><input type="checkbox" name="selected[]" value="7" class="checkbox" />&#160;<a href="#">Reciprocal Affection</a>&#160;<small>(0)</small></p>
+                            <p id="multi_edit_article" class="multi-edit"><label for="withselected_article" class="small">With selected:</label>&#160;<select id="withselected_article" name="edit_method" class="list">
+                                <option value="" selected="selected"></option>
+                                <option value="delete">Delete</option>
+                            </select>&#160;<input type="submit" value="Go" class="smallerbox" /></p>
+                        </form>
+                    </div>
+                </td>
+                <td style="vertical-align:top;text-align:left;padding:8px" class="categories link">
+                    <div id="categories_link">
+
+                        <h3>Link Categories&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=link_category&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a></h3>
+
+                        <form method="post" action="index.php" class="action-create link">
+                            <input type="text" value="" name="title" size="20" class="edit" /><input type="submit" value="Create" class="smallerbox" />
+                        </form>
+
+                        <form method="post" action="index.php" id="category_link_form" style="margin-top:1em" onsubmit="return verify('Are you sure?')">
+                            <p class="odd level-0"><input type="checkbox" name="selected[]" value="8" class="checkbox" />&#160;<a href="#">Textpattern</a>&#160;<small>(<a href="#">3</a>)</small></p>
+                            <p id="multi_edit_link" class="multi-edit"><label for="withselected_link" class="small">With selected:</label>&#160;<select id="withselected_link" name="edit_method" class="list">
+                                <option value="" selected="selected"></option>
+                                <option value="delete">Delete</option>
+                            </select>&#160;<input type="submit" value="Go" class="smallerbox" /></p>
+                        </form>
+                    </div>
+                </td>
+                <td style="vertical-align:top;text-align:left;padding:8px" class="categories image">
+                    <div id="categories_image">
+
+                        <h3>Image Categories&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=image_category&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a></h3>
+
+                        <form method="post" action="index.php" class="action-create image">
+                            <input type="text" value="" name="title" size="20" class="edit" /><input type="submit" value="Create" class="smallerbox" />
+                        </form>
+
+                        <form method="post" action="index.php" id="category_image_form" style="margin-top:1em" onsubmit="return verify('Are you sure?')">
+                            <p class="odd level-0"><input type="checkbox" name="selected[]" value="9" class="checkbox" />&#160;<a href="#">Site Design</a>&#160;<small>(<a href="#">2</a>)</small></p>
+                            <p id="multi_edit_image" class="multi-edit"><label for="withselected_image" class="small">With selected:</label>&#160;<select id="withselected_image" name="edit_method" class="list">
+                                <option value="" selected="selected"></option>
+                                <option value="delete">Delete</option>
+                            </select>&#160;<input type="submit" value="Go" class="smallerbox" /></p>
+                        </form>
+                    </div>
+                </td>
+                <td style="vertical-align:top;text-align:left;padding:8px" class="categories file">
+                    <div id="categories_file">
+
+                        <h3>File Categories&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=file_category&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a></h3>
+
+                        <form method="post" action="index.php" class="action-create file">
+                            <input type="text" value="" name="title" size="20" class="edit" /><input type="submit" value="Create" class="smallerbox" />
+                        </form>
+
+                        <p>None exist.</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div id="end_page">
+        <a href="http://textpattern.com/" id="mothership"><img src="theme/classic/carver.gif" width="60" height="48" border="0" alt="" /></a>
+        <p>Textpattern &#183; 4.4.1</p>
+    </div>
+
+</body>
+</html>
