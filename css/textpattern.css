@@ -81,7 +81,7 @@ h6 {
 small,
 sub,
 sup,
-.pagejump {
+#txp-foot {
   font-size: 0.846em;
 }
 
@@ -430,12 +430,11 @@ body {
   position: relative;
   color: #333333;
   background: white;
-  padding: 3em 0 0;
+  padding: 5em 2em 0;
   min-width: 74em;
 }
 
-#txp-body {
-  padding: 2em 2em 0;
+.txp-container {
   position: relative;
   max-width: 110em;
   margin: 0 auto;
@@ -1368,12 +1367,6 @@ table#edit {
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   body {
     max-width: 320px;
-  }
-
-  /* Body */
-  #txp-body {
-    width: 280px;
-    min-width: 280px;
   }
 
   /* Messages */
