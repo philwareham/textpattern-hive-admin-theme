@@ -65,7 +65,7 @@ class hive_theme extends theme
             $out[] = '</select>';
         }
         $out[] = '</div>';
-        $out[] = '<p id="messagepane">'.$this->announce($this->message).'</p>';
+        $out[] = '<div id="messagepane">'.$this->announce($this->message).'</div>';
         return join(n, $out);
     }
 
@@ -91,41 +91,41 @@ class hive_theme extends theme
     }
 
 	function announce($thing)
-	{
- 		// $thing[0]: message text
- 		// $thing[1]: message type, defaults to "success" unless empty or a different flag is set
+    {
+        // $thing[0]: message text
+        // $thing[1]: message type, defaults to "success" unless empty or a different flag is set
 
-		if ($thing === '') return '';
+        if ($thing === '') return '';
 
-		if (!is_array($thing) || !isset($thing[1]))
- 		{
- 			$thing = array($thing, 0);
- 		}
+        if (!is_array($thing) || !isset($thing[1]))
+        {
+            $thing = array($thing, 0);
+        }
 
- 		switch ($thing[1])
- 		{
- 			case E_ERROR:
- 				$class = 'error';
- 				break;
- 			case E_WARNING:
- 				$class = 'warning';
- 				break;
- 			default:
- 				$class = 'success';
- 				break;
- 		}
- 		$html = "<span id='message' class='$class'>".gTxt($thing[0]).'</span>';
- 		// Try to inject $html into the message pane no matter when announce()'s output is printed
- 		$js = addslashes($html);
- 		$js = <<< EOS
- 		$(document).ready( function(){
-	 		$("#messagepane").html("{$js}");
-			$('#messagepane #message.error').fadeOut(800).fadeIn(800);
-			$('#messagepane #message.warning').fadeOut(800).fadeIn(800);
-		} )
+        switch ($thing[1])
+        {
+            case E_ERROR:
+                $class = 'error';
+                break;
+            case E_WARNING:
+                $class = 'warning';
+                break;
+            default:
+                $class = 'success';
+                break;
+        }
+        $html = "<span id='message' class='$class'>".gTxt($thing[0]).'</span>';
+        // Try to inject $html into the message pane no matter when announce()'s output is printed
+        $js = addslashes($html);
+        $js = <<< EOS
+$(document).ready( function(){
+    $("#messagepane").html("{$js}");
+    $('#messagepane #message.error').fadeOut(800).fadeIn(800);
+    $('#messagepane #message.warning').fadeOut(800).fadeIn(800);
+})
 EOS;
- 		return script_js(str_replace('</', '<\/', $js), $html);
-	}
+        return script_js(str_replace('</', '<\/', $js), $html);
+    }
 
 }
 
