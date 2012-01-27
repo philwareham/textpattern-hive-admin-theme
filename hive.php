@@ -12,6 +12,7 @@ class hive_theme extends theme
     {
         $out[] = '<link href="'.$this->url.'css/textpattern.css" rel="stylesheet" type="text/css" />';
         $out[] = '<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1" />';
+        $out[] = '<meta name="generator" content="Textpattern CMS" />';
         $out[] = '<script type="text/javascript" src="'.$this->url.'js/jquery.formalize.min.js"></script>';
         $out[] = '<!--[if lt IE 9]><script type="text/javascript" src="'.$this->url.'js/selectivizr.min.js"></script><![endif]-->';
         $out[] = '<script type="text/javascript" src="'.$this->url.'js/scripts.js"></script>';
