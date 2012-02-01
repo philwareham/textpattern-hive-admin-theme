@@ -15,10 +15,10 @@
 
 // SVG images with fallback for older browsers (via Modernizr)
         
-@mixin svg-graphic($svgfilename, $imgfilename, $imgtype, $imgwidth, $imgheight) {
+@mixin svg-graphic($imgfilename, $imgtype, $imgwidth, $imgheight) {
     background-image: url('../img/' + $imgfilename + '.' + $imgtype);
     .svg & {
-        background-image: url('../img/svg/' + $svgfilename + '.svg');
+        background-image: url('../img/svg/' + $imgfilename + '.svg');
         -webkit-background-size: $imgwidth $imgheight;
            -moz-background-size: $imgwidth $imgheight;
              -o-background-size: $imgwidth $imgheight;
