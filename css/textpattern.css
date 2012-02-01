@@ -1478,8 +1478,18 @@ table#edit {
 
   /* Header */
   #txp-head {
-    width: 280px;
-    min-width: 280px;
+    padding: 0 1em;
+  }
+  #txp-head h1 {
+    padding-left: 24px;
+    background-image: url("../img/textpattern-sml.png");
+  }
+  .svg #txp-head h1 {
+    background-image: url("../img/svg/textpattern-sml.svg");
+    -webkit-background-size: 24px 24px;
+    -moz-background-size: 24px 24px;
+    -o-background-size: 24px 24px;
+    background-size: 24px 24px;
   }
 
   /* Navigation */

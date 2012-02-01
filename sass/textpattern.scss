@@ -480,7 +480,7 @@ body {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        @include svg-graphic(textpattern-lrg, textpattern-lrg, png, $logo-large-width, 30px);
+        @include svg-graphic(textpattern-lrg, png, $logo-large-width, 30px);
         a {
             margin-right: 1em;
             margin-left: 1em;
@@ -1410,8 +1410,11 @@ body{
 /* Header */
 
 #txp-head {
-    width: 280px;
-    min-width: 280px;
+    padding: 0 1em;
+    h1 {
+        padding-left: $logo-small-width;
+        @include svg-graphic(textpattern-sml, png, $logo-small-width, 24px);
+    }
 }
 
 
