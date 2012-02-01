@@ -475,12 +475,12 @@ body {
         margin: 0;
         padding-left: $logo-large-width;
         line-height: 3em;
-        background: no-repeat left 50%;
+        background: no-repeat left 48%;
         max-width: 25%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        @include hires-graphic($logo-large-filename, $logo-large-filetype, $logo-large-width, 3em);
+        @include svg-graphic(textpattern-lrg, textpattern-lrg, png, $logo-large-width, 30px);
         a {
             margin-right: 1em;
             margin-left: 1em;

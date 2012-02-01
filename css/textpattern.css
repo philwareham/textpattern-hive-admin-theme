@@ -594,18 +594,19 @@ body {
   margin: 0;
   padding-left: 148px;
   line-height: 3em;
-  background: no-repeat left 50%;
+  background: no-repeat left 48%;
   max-width: 25%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   background-image: url("../img/textpattern-lrg.png");
 }
-@media (-webkit-min-device-pixel-ratio: 2) {
-  #txp-head h1 {
-    background-image: url("../img/retina/textpattern-lrg@2x.png") !important;
-    -webkit-background-size: 148px 3em;
-  }
+.svg #txp-head h1 {
+  background-image: url("../img/svg/textpattern-lrg.svg");
+  -webkit-background-size: 148px 30px;
+  -moz-background-size: 148px 30px;
+  -o-background-size: 148px 30px;
+  background-size: 148px 30px;
 }
 #txp-head h1 a {
   margin-right: 1em;

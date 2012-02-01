@@ -13,7 +13,20 @@
     *zoom: 1;
 }
 
-// Higher resolution images for retina displays
+// SVG images with fallback for older browsers (via Modernizr)
+        
+@mixin svg-graphic($svgfilename, $imgfilename, $imgtype, $imgwidth, $imgheight) {
+    background-image: url('../img/' + $imgfilename + '.' + $imgtype);
+    .svg & {
+        background-image: url('../img/svg/' + $svgfilename + '.svg');
+        -webkit-background-size: $imgwidth $imgheight;
+           -moz-background-size: $imgwidth $imgheight;
+             -o-background-size: $imgwidth $imgheight;
+                background-size: $imgwidth $imgheight;
+    }
+}
+
+// Higher resolution images for retina displays TEMPORARY - WILL BE REPLACED BY SVG
         
 @mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
     $file_name: $hdfile + '.' + $hdtype;
