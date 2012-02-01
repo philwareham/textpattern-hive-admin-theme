@@ -1390,20 +1390,9 @@ body {
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 
 
-body{
-    max-width: 320px;
-}
-
-
-/* Forms */
-
-.txp-control-panel input[type="text"],
-.txp-control-panel input[type="password"],
-.txp-control-panel textarea,
-.edit-pane input[type="text"],
-.edit-pane input[type="password"],
-.edit-pane textarea {
-    width:280px;
+body {
+    min-width: 294px;
+    padding: 4em 1em 0;
 }
 
 
@@ -1439,6 +1428,18 @@ body{
 #txp-nav #touch-menu-close {
     top:18px;
     left:-20px;
+}
+
+
+/* Forms */
+
+.txp-control-panel input[type="text"],
+.txp-control-panel input[type="password"],
+.txp-control-panel textarea,
+.edit-pane input[type="text"],
+.edit-pane input[type="password"],
+.edit-pane textarea {
+    width:280px;
 }
 
 
