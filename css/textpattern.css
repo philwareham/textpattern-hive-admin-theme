@@ -664,6 +664,9 @@ body {
   display: block;
   float: left;
   border-right: 1px solid #fabc2b;
+  background-color: #fcdc7f;
+}
+.rgba .dropdown {
   background-color: rgba(255, 255, 255, 0.2);
 }
 .dropdown:first-child {
@@ -679,8 +682,13 @@ body {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
 }
 .dropdown:hover a.dropdown-toggle {
-  background: rgba(255, 255, 255, 0.2) no-repeat 50% bottom;
+  background-color: #fcdc7f;
+  background-repeat: no-repeat;
+  background-position: 50% bottom;
   background-image: url("../img/indicator.gif");
+}
+.rgba .dropdown:hover a.dropdown-toggle {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 @media (-webkit-min-device-pixel-ratio: 2) {
   .dropdown:hover a.dropdown-toggle {
@@ -690,6 +698,9 @@ body {
 }
 
 .dropdown.active a.dropdown-toggle {
+  background-color: #fcdc7f;
+}
+.rgba .dropdown.active a.dropdown-toggle {
   background-color: rgba(255, 255, 255, 0.2);
 }
 

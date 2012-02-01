@@ -541,7 +541,10 @@ body {
     display: block;
     float: left;
     border-right: 1px solid #fabc2b;
-    background-color: rgba(#fff, .2);
+    background-color: #fcdc7f;
+    .rgba & {
+        background-color: rgba(#fff, .2);
+    }
     &:first-child {
         border-left: 1px solid #fabc2b;
     }
@@ -555,14 +558,22 @@ body {
         @include text-shadow-light;
     }
     &:hover a.dropdown-toggle {
-        background: rgba(#fff, .2) no-repeat 50% bottom;
+        background-color: #fcdc7f;
+        .rgba & {
+            background-color: rgba(#fff, .2);
+        }
+        background-repeat: no-repeat;
+        background-position: 50% bottom;
         @include hires-graphic(indicator, gif, 44px, 104px);
     }
 }
 
 .dropdown.active {
     a.dropdown-toggle {
-        background-color: rgba(#fff, .2);
+        background-color: #fcdc7f;
+        .rgba & {
+            background-color: rgba(#fff, .2);
+        }
     }
 }
 
