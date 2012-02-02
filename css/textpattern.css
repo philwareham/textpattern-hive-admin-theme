@@ -68,14 +68,21 @@ a:hover {
    Typography
    ========================================================================== */
 h1,
-h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
   margin: 0 0 1em;
+}
+
+h2 {
+  font-size: 1.23076923076923em;
+  margin: 0 0 .8125em;
+}
+h2 .pophelp {
+  font-size: .8125em;
+  font-weight: normal;
 }
 
 small,
@@ -449,10 +456,6 @@ input[name="form_preview"] {
 #list th a {
   color: #fff;
   display: block;
-}
-
-#list th h2 {
-  margin: 0;
 }
 
 #list td {
@@ -897,6 +900,7 @@ table#edit {
 
 #configuration_content > div {
   border: 1px solid #e3e3e3;
+  border-top: 0;
   background: #f7f7f7;
   margin-bottom: 1em;
 }
@@ -1044,11 +1048,6 @@ table#edit {
 }
 
 /* Sections page */
-#section_container h2 a {
-  position: relative;
-  top: -1px;
-}
-
 #section_container #list td {
   padding: 0;
 }
@@ -1118,13 +1117,6 @@ table#edit {
 #page_form input[type="text"] {
   width: 250px;
   margin-left: -1em;
-}
-
-#tagbuild_links h2,
-#content_switcher h2 {
-  margin: 0;
-  padding: 5px 1em;
-  display: block;
 }
 
 #content_switcher p {
