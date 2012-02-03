@@ -1455,18 +1455,6 @@ table#edit {
   padding: .9em;
 }
 
-/* ---------------- TARGET ALL MOBILE DEVICES ---------------- */
-@media only screen and (max-device-width:1024px) {
-  /* Show <select> version of navigation on touch screens */
-  #txp-nav-select {
-    display: block;
-  }
-
-  /* Hide dropdown menu version on touch screens */
-  #txp-nav {
-    display: none;
-  }
-}
 /* =============================================================================
    Additional layout for screen media < 768px
    ========================================================================== */
