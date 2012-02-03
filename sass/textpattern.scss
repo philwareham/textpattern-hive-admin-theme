@@ -336,6 +336,7 @@ input[name="form_preview"] {
 
 #list {
     width: 100% !important;
+    overflow-x: auto;
 }
 
 #list tr.spam {
@@ -423,7 +424,6 @@ body {
     color: $color-text;
     background: $color-background;
     padding: 4em 2em 0;
-    min-width: 74em;
 }
 
 .txp-container {
@@ -467,7 +467,6 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    min-width: 70em;
     z-index: 10000;
     height: 3em;
     padding: 0 2em;
@@ -511,6 +510,7 @@ body {
    ========================================================================== */
 
 /* Hide <select> version of navigation on non-touch devices */
+/* Also happens via media-queries when screen width is < 768px regardless of touch ability */
 #txp-nav-select {
     display: none;
     .touch & {
@@ -1384,26 +1384,19 @@ table#edit {
 
 
 
-/* --------------------- TARGET TABLETS ---------------------- */
 
-@media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait) {
-
-
-body {
-    width: 768px;
-}
-
-
-}
-
-
-
-/* --------------------- TARGET PHONES ----------------------- */
+/* =============================================================================
+   Additional layout for screen media < 768px
+   ========================================================================== */
 /* Turn off features to accommodate a really small screen size */
 
-/* @media only screen and (max-device-width:767px) { */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
 
+@media only screen and (max-width: 767px) {
+
+
+/* =============================================================================
+   Layout
+   ========================================================================== */
 
 body {
     min-width: 294px;
@@ -1411,7 +1404,9 @@ body {
 }
 
 
-/* Header */
+/* =============================================================================
+   Header
+   ========================================================================== */
 
 #txp-head {
     padding: 0 1em;
@@ -1419,6 +1414,21 @@ body {
         padding-left: $logo-small-width;
         @include svg-graphic(textpattern-sml, png, $logo-small-width, 24px);
     }
+}
+
+
+/* =============================================================================
+   Navigation
+   ========================================================================== */
+
+/* Show <select> version of navigation on small screen widths */
+#txp-nav-select {
+    display: inherit;
+}
+
+/* Hide <ul> version of navigation on small screen widths */
+#txp-nav {
+    display: none;
 }
 
 
