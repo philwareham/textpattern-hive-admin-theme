@@ -633,8 +633,16 @@ body {
 /* =============================================================================
    Navigation
    ========================================================================== */
-/* Hide <select> version of navigation for standard (non-touch) screens */
+/* Hide <select> version of navigation on non-touch devices */
 #txp-nav-select {
+  display: none;
+}
+.touch #txp-nav-select {
+  display: inherit;
+}
+
+/* Hide <ul> version of navigation on touch devices */
+.touch #txp-nav {
   display: none;
 }
 
@@ -752,6 +760,10 @@ body {
 .data-dropdown li:hover .dropdown-menu,
 .data-dropdown li:focus .dropdown-menu {
   left: 0;
+}
+
+#txp-nav-select {
+  margin-top: .61538461538462em;
 }
 
 /* =============================================================================
@@ -1484,28 +1496,6 @@ table#edit {
     -moz-background-size: 24px 24px;
     -o-background-size: 24px 24px;
     background-size: 24px 24px;
-  }
-
-  /* Navigation */
-  #txp-nav {
-    clear: both;
-    float: none;
-    padding-top: 0;
-    width: 280px;
-  }
-
-  #txp-nav .primary {
-    display: none;
-  }
-
-  #txp-nav .primary:first-child,
-  #txp-nav .primary:last-child {
-    display: block;
-  }
-
-  #txp-nav #touch-menu-close {
-    top: 18px;
-    left: -20px;
   }
 
   /* Forms */
