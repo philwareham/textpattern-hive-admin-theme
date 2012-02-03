@@ -26,16 +26,16 @@
   border-top: 1px solid #f7f7f7;
 }
 
-#list th a:hover {
-  color: #ffc010;
-}
-
 #list thead .desc {
-  background: #555555 url("../img/twisty-arrow-list.gif") no-repeat right -31px;
+  background-image: url("../img/twisty-arrow-list.gif");
+  background-repeat: no-repeat;
+  background-position: right -31px;
 }
 
 #list thead .asc {
-  background: #555555 url("../img/twisty-arrow-list.gif") no-repeat right -4px;
+  background-image: url("../img/twisty-arrow-list.gif");
+  background-repeat: no-repeat;
+  background-position: right -4px;
 }
 
 #list .odd {

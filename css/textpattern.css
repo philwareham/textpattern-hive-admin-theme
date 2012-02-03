@@ -443,7 +443,7 @@ input[name="form_preview"] {
 #list {
   width: 100% !important;
   overflow: auto;
-  /* IE7 fix */
+  /* IE7 */
   *overflow-y: scroll;
   *overflow-x: hidden;
 }
@@ -452,21 +452,42 @@ input[name="form_preview"] {
   background: #fa8f98;
 }
 
-#list th {
-  color: #fff;
-  background: #555;
-  padding: 6px 16px 6px 4px;
-  border-right: 1px solid #999;
-  font-weight: normal;
+#list th, #list td {
+  padding: .25em 1em;
 }
 
-#list th a {
-  color: #fff;
+#list thead th {
+  position: relative;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #c4c4c4;
+  background-color: #dddddd;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#eeeeee, #dddddd);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#eeeeee, #dddddd);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#eeeeee, #dddddd);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#eeeeee, #dddddd);
+  /* IE7-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee',EndColorStr='#dddddd');
+  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
+  border-radius: 0 \0;
+}
+#list thead th a {
   display: block;
+  color: #333333;
+  margin-right: 12px;
 }
-
-#list td {
-  padding: 6px 4px;
+#list thead th a:hover {
+  color: #333333;
+  text-decoration: none;
 }
 
 #list .id {
@@ -476,15 +497,6 @@ input[name="form_preview"] {
 #list .multi-edit {
   width: 16px !important;
   padding: 6px 4px;
-}
-
-thead a {
-  color: #fff;
-}
-
-thead a:hover,
-thead a:active {
-  color: #fff;
 }
 
 #content_switcher #list .odd,
@@ -1590,7 +1602,6 @@ table#edit {
   #page-list #list .expires,
   #page-list #list .section,
   #page-list #list .category,
-  #page-list #list .status,
   #page-list #list .author,
   #page-list #list .comments,
   #page-list #list .multi-edit,

@@ -341,7 +341,7 @@ input[name="form_preview"] {
 #list {
     width: 100% !important;
     overflow: auto;
-    /* IE7 fix */
+    /* IE7 */
     *overflow-y: scroll; 
     *overflow-x: hidden;
 }
@@ -350,39 +350,40 @@ input[name="form_preview"] {
     background: #fa8f98;
 }
 
-#list th {
-    color:#fff;
-    background:#555;
-    padding:6px 16px 6px 4px;
-    border-right:1px solid #999;
-    font-weight:normal;
+
+
+#list {
+    th, td {
+        padding: .25em 1em;
+    }
 }
 
-#list th a {
-    color:#fff;
-    display:block;
+
+#list thead {
+    th {
+        position: relative;
+        @include gradient-bar;
+        a {
+            display: block;
+            color: $color-text;
+            margin-right: 12px;
+            &:hover {
+                color: $color-text;
+                text-decoration: none;
+            }
+        }
+    }
 }
 
-#list td {
-    padding:6px 4px;
-}
+
 
 #list .id {
-    width:7%;
+    width: 7%;
 }
 
 #list .multi-edit {
-    width:16px !important;
-    padding:6px 4px;
-}
-
-thead a {
-    color:#fff;
-}
-
-thead a:hover,
-thead a:active {
-    color:#fff;
+    width: 16px !important;
+    padding: 6px 4px;
 }
 
 #content_switcher #list .odd,
@@ -1513,7 +1514,6 @@ body {
     .expires,
     .section,
     .category,
-    .status,
     .author,
     .comments,
     .multi-edit,
