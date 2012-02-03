@@ -371,14 +371,6 @@ input[type="checkbox"] {
 /* =============================================================================
    Buttons
    ========================================================================== */
-a.article-view {
-  float: right;
-}
-
-.id a.article-view {
-  float: none;
-}
-
 #page-login input[type="submit"],
 #page-logout input[type="submit"] {
   margin-bottom: 1em;
@@ -462,6 +454,9 @@ input[name="form_preview"] {
 }
 #list .date {
   width: 14%;
+}
+#list .section {
+  width: 12%;
 }
 
 #list thead th {
@@ -924,6 +919,10 @@ table#edit {
 
 #article-main {
   width: 50%;
+}
+
+#article-main .article-view {
+  float: right;
 }
 
 #main_content > div:first-of-type > p:first-of-type {
