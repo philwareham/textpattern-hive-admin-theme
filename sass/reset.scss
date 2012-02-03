@@ -233,7 +233,6 @@ a.navlink-active,
     @include box-shadow(rgba(#fff, .25) 0 1px 0 0 inset);
     @include text-shadow-light;
     width: auto;
-    vertical-align: top;
     border: 1px solid #bbb;
     border-bottom-color: #a2a2a2;
     @include gradient(#eee, #bbb);
@@ -275,7 +274,6 @@ input[type="text"] {
     padding: 2px 5px;
     outline: 0;
     height: 24px;
-    vertical-align: top;
     @include box-sizing;
     /* IE7 box-sizing workaround */
     *padding-right: 0;
