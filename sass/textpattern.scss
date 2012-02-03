@@ -1368,7 +1368,6 @@ table#edit {
 /* =============================================================================
    Additional layout for screen media < 768px
    ========================================================================== */
-/* Turn off features to accommodate a really small screen size */
 
 
 @media only screen and (max-width: 767px) {
@@ -1440,7 +1439,7 @@ body {
 }
 
 .login-pane tr:nth-of-type(4) {
-    display:none;
+    display: none;
 }
 
 
@@ -1466,29 +1465,34 @@ body {
 
 /* Write page */
 
+#page-article #edit {
+    th,
+    td,
+    tr {
+        display: block;
+    }
+}
+
 #article-col-1,
 #article-col-2,
 #article-main {
     float: left;
-    display: block;
     width: 100%;
 }
 
 #configuration_content,
-#tagbuild_links {
-    margin:0;
-}
-
+#tagbuild_links,
 #supporting_content,
 #content_switcher {
-    margin:0;
+    margin: 0;
 }
 
+/* Turn off features to optimise small screen size */
 #textile_group,
 #recent_group,
 #page-article .action-create,
 #page-article .article-nav {
-    display:none;
+    display: none;
 }
 
 
@@ -1499,6 +1503,7 @@ body {
     margin-bottom:20px;
 }
 
+/* Turn off features to optimise small screen size */
 #page-list #list .id,
 #page-list #list .created,
 #page-list #list .modified,
@@ -1522,6 +1527,7 @@ body {
     margin-bottom:20px;
 }
 
+/* Turn off features to optimise small screen size */
 #page-link #list .id,
 #page-link #list .actions,
 #page-link #list .description,
@@ -1545,6 +1551,7 @@ body {
     margin-bottom: 1em;
 }
 
+/* Turn off features to optimise small screen size */
 #page-discuss #list .created,
 #page-discuss #list .name,
 #page-discuss #list .email,
