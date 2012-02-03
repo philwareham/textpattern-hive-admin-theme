@@ -240,6 +240,9 @@ legend {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  /* IE7 box-sizing workaround */
+  *padding-right: 0;
+  *padding-left: 0;
 }
 
 .lever {
@@ -1382,8 +1385,9 @@ table#edit {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  *padding: 0;
-  /* ie7 hack for box-sizing workaround */
+  /* IE7 box-sizing workaround */
+  *padding-right: 0;
+  *padding-left: 0;
 }
 
 #plugin-code {

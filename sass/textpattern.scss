@@ -150,6 +150,9 @@ legend {
     @include box-shadow(rgba(#fff, .25) 0 1px 0 0 inset);
     @include gradient-bar;
     @include box-sizing;
+    /* IE7 box-sizing workaround */
+    *padding-right: 0;
+    *padding-left: 0;
 }
 
 .lever {
@@ -1287,7 +1290,9 @@ table#edit {
     overflow:auto;
     width:100%;
     @include box-sizing;
-    *padding:0; /* ie7 hack for box-sizing workaround */
+    /* IE7 box-sizing workaround */
+    *padding-right: 0;
+    *padding-left: 0;
 }
 
 #plugin-code {

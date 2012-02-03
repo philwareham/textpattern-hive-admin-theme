@@ -333,9 +333,6 @@ input[type="text"] {
   -webkit-appearance: none;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-background-clip: padding;
   -khtml-background-clip: padding-box;
   -moz-background-clip: padding;
@@ -354,7 +351,13 @@ input[type="text"] {
   outline: 0;
   height: 24px;
   vertical-align: top;
-  /* IE7 */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* IE7 box-sizing workaround */
+  *padding-right: 0;
+  *padding-left: 0;
+  /* IE7 vertical alignment fix */
   *padding-top: 2px;
   *padding-bottom: 1px;
   *height: auto;
@@ -465,10 +468,10 @@ optgroup {
 /* addresses box sizing set to content-box and excess padding in IE7-9 */
 input[type="checkbox"],
 input[type="radio"] {
+  padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0;
   *height: 1em;
   *width: 1em;
 }
