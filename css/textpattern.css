@@ -396,9 +396,6 @@ input[name="form_preview"] {
 .navlink-disabled {
   padding: .1em 1em;
   display: inline-block;
-  zoom: 1;
-  /* zoom and *display = ie6, ie7 hack for display:inline-block */
-  *display: inline;
   vertical-align: baseline;
   margin: 0 3px 0 0;
   outline: 0;
@@ -424,6 +421,9 @@ input[name="form_preview"] {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#e6e6e6',EndColorStr='#dadada');
   /* IE7-IE9 */
   cursor: default;
+  /* IE 7 */
+  *zoom: 1;
+  *display: inline;
 }
 
 /* =============================================================================
@@ -889,7 +889,6 @@ table#edit {
 #article-col-1,
 #article-col-2 {
   width: 25%;
-  min-width: 182px;
 }
 
 #article-main {
@@ -1499,16 +1498,6 @@ table#edit {
     display: none;
   }
 
-  /* Forms */
-  .txp-control-panel input[type="text"],
-  .txp-control-panel input[type="password"],
-  .txp-control-panel textarea,
-  .edit-pane input[type="text"],
-  .edit-pane input[type="password"],
-  .edit-pane textarea {
-    width: 280px;
-  }
-
   /* Miscellaneous/shared layout stuff */
   .edit-pane {
     width: 280px !important;
@@ -1559,13 +1548,9 @@ table#edit {
   #article-col-1,
   #article-col-2,
   #article-main {
-    width: 280px;
     float: left;
-    zoom: 1;
-  }
-
-  #article-main {
-    margin: 20px 0;
+    display: block;
+    width: 100%;
   }
 
   #configuration_content,
