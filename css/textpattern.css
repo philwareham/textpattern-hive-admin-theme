@@ -442,7 +442,10 @@ input[name="form_preview"] {
    ========================================================================== */
 #list {
   width: 100% !important;
-  overflow-x: auto;
+  overflow: auto;
+  /* IE7 fix */
+  *overflow-y: scroll;
+  *overflow-x: hidden;
 }
 
 #list tr.spam {
@@ -1367,10 +1370,6 @@ table#edit {
   height: 5em;
 }
 
-#plugin_container td.status {
-  font-weight: bold;
-}
-
 #plugin_preview {
   width: 100% !important;
 }
@@ -1580,20 +1579,17 @@ table#edit {
     display: none;
   }
 
-  /* Articles page */
+  /* Hide table cells to optimise screen estate */
   #page-list #list {
     border: 1px solid #d4d4d4;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
   }
-
-  /* Turn off features to optimise small screen size */
   #page-list #list .id,
   #page-list #list .created,
   #page-list #list .modified,
   #page-list #list .expires,
   #page-list #list .section,
-  #page-list #list .category1,
-  #page-list #list .category1,
+  #page-list #list .category,
   #page-list #list .status,
   #page-list #list .author,
   #page-list #list .comments,
@@ -1603,12 +1599,11 @@ table#edit {
   }
 
   /* Links page */
+  /* Hide table cells to optimise screen estate */
   #page-link #list {
     border: 1px solid #d4d4d4;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
   }
-
-  /* Turn off features to optimise small screen size */
   #page-link #list .id,
   #page-link #list .actions,
   #page-link #list .description,
@@ -1621,16 +1616,11 @@ table#edit {
   }
 
   /* Comments page */
-  #list_banned_ips {
-    text-align: left !important;
-  }
-
+  /* Hide table cells to optimise screen estate */
   #page-discuss #list {
     border: 1px solid #d4d4d4;
     margin-bottom: 1em;
   }
-
-  /* Turn off features to optimise small screen size */
   #page-discuss #list .created,
   #page-discuss #list .name,
   #page-discuss #list .email,
@@ -1639,7 +1629,10 @@ table#edit {
   #page-discuss #list .status,
   #page-discuss #list .parent,
   #page-discuss #list .multi-edit,
-  #page-discuss #list tfoot,
+  #page-discuss #list tfoot {
+    display: none !important;
+  }
+
   #page-discuss table.edit-pane tr:last-child,
   #page-discuss table.edit-pane tr:nth-last-child(2) td:first-child,
   #page-discuss table#edit-discuss tr:nth-child(9) {
