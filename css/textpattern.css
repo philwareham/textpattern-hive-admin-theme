@@ -388,10 +388,6 @@ a.article-view {
   margin-left: 9px;
 }
 
-#list tfoot .multi-edit input[type="submit"] {
-  margin: 0;
-}
-
 input[name="form_preview"] {
   margin-bottom: 1em;
 }
@@ -442,6 +438,7 @@ input[name="form_preview"] {
    ========================================================================== */
 #list {
   width: 100% !important;
+  margin-bottom: 1em;
   overflow: auto;
   /* IE7 */
   *overflow-y: scroll;
@@ -453,11 +450,23 @@ input[name="form_preview"] {
 }
 
 #list th, #list td {
-  padding: .25em 1em;
+  padding: .38461538461538em 1em;
+}
+#list tr {
+  border: 1px solid #e3e3e3;
+}
+#list ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+#list .date {
+  width: 14%;
 }
 
 #list thead th {
   position: relative;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #c4c4c4;
   background-color: #dddddd;
@@ -490,13 +499,17 @@ input[name="form_preview"] {
   text-decoration: none;
 }
 
+#list tfoot th, #list tfoot td {
+  vertical-align: middle;
+}
+
 #list .id {
   width: 7%;
 }
 
-#list .multi-edit {
-  width: 16px !important;
-  padding: 6px 4px;
+#list th.multi-edit,
+#list td.multi-edit {
+  width: 12px !important;
 }
 
 #content_switcher #list .odd,
@@ -1470,9 +1483,9 @@ table#edit {
 }
 
 /* =============================================================================
-   Additional layout for screen media < 768px
+   Additional layout for screen media < 920px
    ========================================================================== */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 919px) {
   /* =============================================================================
      Layout
      ========================================================================== */
@@ -1592,10 +1605,6 @@ table#edit {
   }
 
   /* Hide table cells to optimise screen estate */
-  #page-list #list {
-    border: 1px solid #d4d4d4;
-    margin-bottom: 1em;
-  }
   #page-list #list .id,
   #page-list #list .created,
   #page-list #list .modified,
@@ -1611,10 +1620,6 @@ table#edit {
 
   /* Links page */
   /* Hide table cells to optimise screen estate */
-  #page-link #list {
-    border: 1px solid #d4d4d4;
-    margin-bottom: 1em;
-  }
   #page-link #list .id,
   #page-link #list .actions,
   #page-link #list .description,
@@ -1628,10 +1633,6 @@ table#edit {
 
   /* Comments page */
   /* Hide table cells to optimise screen estate */
-  #page-discuss #list {
-    border: 1px solid #d4d4d4;
-    margin-bottom: 1em;
-  }
   #page-discuss #list .created,
   #page-discuss #list .name,
   #page-discuss #list .email,
