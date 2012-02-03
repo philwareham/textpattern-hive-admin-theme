@@ -40,14 +40,14 @@
 /* =============================================================================
    Clearfix
    ========================================================================== */
-.clearfix, #txp-foot {
+.clearfix, #txp-foot, .txp-navigation {
   *zoom: 1;
 }
-.clearfix:before, #txp-foot:before, .clearfix:after, #txp-foot:after {
+.clearfix:before, #txp-foot:before, .txp-navigation:before, .clearfix:after, #txp-foot:after, .txp-navigation:after {
   content: "";
   display: table;
 }
-.clearfix:after, #txp-foot:after {
+.clearfix:after, #txp-foot:after, .txp-navigation:after {
   clear: both;
 }
 
@@ -828,17 +828,19 @@ body {
 
 .txp-navigation {
   width: 100%;
-  margin: 1em -20px;
-  padding: 1em 20px;
+  margin: 2em -2em 0;
+  padding: 0 2em;
   border-top: 1px solid #d4d4d4;
 }
 
 .pageby {
   float: left;
+  margin: .61538461538462em 0 0;
 }
 
 .prev-next {
   float: right;
+  margin-bottom: 0;
 }
 
 .txp-control-panel {
