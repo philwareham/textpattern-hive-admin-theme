@@ -69,7 +69,6 @@ h2 {
     margin: 0 0 .8125em;
     .pophelp {
         font-size: .8125em; // 13px
-        font-weight: normal;
     }
 }
 
@@ -87,6 +86,10 @@ samp,
 .code,
 #diagnostics textarea {
     font-family: $font-mono;
+}
+
+.pophelp {
+    font-weight: normal;
 }
 
 
@@ -195,7 +198,7 @@ fieldset {
     margin: -1em 0 1em 0;
     border: 1px solid lighten($color-border, 9%);
     padding: 1em 0 0 0;
-    background-color: #f7f7f7;
+    background: $color-background-box;
 }
 
 fieldset > * {
@@ -208,17 +211,6 @@ fieldset > legend {
     top: 1em;
     margin-right: 0;
     margin-left: 0;
-}
-
-
-label,
-.pophelp,
-.category-edit,
-.section-edit {
-    display: inline-block;
-    /* IE 7 */
-    *zoom: 1;
-    *display: inline;
 }
 
 input[type="radio"],
@@ -237,7 +229,7 @@ input[type="checkbox"] {
 #comment-invite,
 .login-pane input[type="text"],
 .login-pane input[type="password"],
-.categories div input[type="text"] {
+.category-list div input[type="text"] {
     width: 100%;
 }
 
@@ -339,19 +331,23 @@ input[name="form_preview"] {
     background: #fa8f98;
 }
 
-
-
 #list {
     th, td {
         padding: .38461538461538em 1em;
     }
     tr {
         border: 1px solid #e3e3e3;
+        &.even {
+            background: $color-background-box;
+        }
     }
     ul {
         list-style: none;
         padding-left: 0;
         margin: 0;
+    }
+    .id {
+        width: 7%;
     }
     .date {
         width: 14%;
@@ -386,10 +382,6 @@ input[name="form_preview"] {
     th, td {
         vertical-align: middle;
     }
-}
-
-#list .id {
-    width: 7%;
 }
 
 #content_switcher #list .odd,
@@ -434,9 +426,10 @@ input[name="form_preview"] {
 
 body {
     position: relative;
+    padding: 4em 2em .5em;
+    min-width: 908px;
     color: $color-text;
     background: $color-background;
-    padding: 4em 2em 0;
 }
 
 .txp-container {
@@ -481,8 +474,9 @@ body {
     left: 0;
     right: 0;
     z-index: 10000;
-    height: 3em;
     padding: 0 2em;
+    height: 3em;
+    min-width: 908px;
     @include box-shadow;
     @include gradient-bar(#ffda44, #fabc2b);
     h1 {
@@ -609,7 +603,7 @@ body {
     z-index: 10001;
     min-width: 166px;
     border: solid 1px #d4d4d4;
-    border-top: none;
+    border-top: 0;
     background: #fef5d2;
     @include border-radius(0 $border-radius $border-radius $border-radius);
     @include box-shadow(2px 2px 2px rgba(#000, .2));
@@ -693,10 +687,7 @@ body {
 
 .txp-navigation {
     @extend .clearfix;
-    width: 100%;
-    margin: 2em -2em 0;
-    padding: 0 2em;
-    border-top: 1px solid #d4d4d4;
+    margin-bottom: .5em;
 }
 
 .pageby {
@@ -721,31 +712,30 @@ table#edit {
 
 /* Login page */
 
-#page-login .login-pane,
-#page-logout .login-pane {
-    width:360px;
-    margin:0 auto;
+#login_form {
+    margin: 0 auto;
+    padding: .5em 0;
+    width: 400px;
+    background: $color-background-box;
 }
 
 .login-pane p {
-    margin:0;
+    margin: 0;
 }
 
 .login-pane tr:first-child p {
-    margin:1em 0;
-}
-
-.login-pane tr:last-child p {
-    margin:0 0 6px;
+    margin: .375em 0;
+    font-size: 1.23076923076923em; // 16px
+    font-weight: bold;
 }
 
 .login-pane td {
-    padding:4px 1em;
-    text-align:left !important;
+    padding: .38461538461538em 1em;
+    text-align: left !important; // override inline CSS
 }
 
 .login-pane .noline label {
-    font-weight:bold;
+    font-weight: bold;
 }
 
 
@@ -756,29 +746,33 @@ table#edit {
 }
 
 .category-list {
-    width:100%;
+    width: 100%;
 }
 
 .category-list td {
-    padding:0 !important;
-    width:25%;
+    padding: 0 !important; // override inline CSS
+    width: 25%;
 }
 
 .category-list div {
-    padding:1em 1em 1px 1em !important;
-    margin:0 1em;
+    margin: 0 .5em 1em;
+    padding: 1em 1em 1px;
+    background: $color-background-box;
+    select {
+        margin-left: -.38461538461538em;
+    }
 }
 
 #categories_article {
-    margin-left:0;
+    margin-left: 0; // remove left margin from first .category-list div
 }
 
 #categories_file {
-    margin-right:0;
+    margin-right: 0; // remove right margin from last .category-list div
 }
 
 .category-list .small {
-    display:block;
+    display: block;
 }
 
 
@@ -814,7 +808,7 @@ table#edit {
 #configuration_content > div {
     border: 1px solid lighten($color-border, 9%);
     border-top: 0;
-    background: #f7f7f7;
+    background: $color-background-box;
     margin-bottom: 1em;
 }
 
@@ -1383,11 +1377,11 @@ table#edit {
 
 
 /* =============================================================================
-   Additional layout for screen media < 920px
+   Additional layout for screen media < 769px
    ========================================================================== */
 
 
-@media only screen and (max-width: 919px) {
+@media only screen and (max-width: 768px) {
 
 
 /* =============================================================================
@@ -1395,8 +1389,8 @@ table#edit {
    ========================================================================== */
 
 body {
-    min-width: 294px;
     padding: 4em 1em 0;
+    min-width: 294px;
 }
 
 
@@ -1406,6 +1400,7 @@ body {
 
 #txp-head {
     padding: 0 1em;
+    min-width: 294px;
     h1 {
         padding-left: $logo-small-width;
         @include svg-graphic(textpattern-sml, png, $logo-small-width, 24px);
@@ -1452,35 +1447,15 @@ body {
 }
 
 
-/* Login page */
-
-#page-login .login-pane,
-#page-logout .login-pane {
-    width:280px;
-}
-
-.login-pane tr:nth-of-type(4) {
-    display: none;
-}
-
-
 /* Categories page */
 
 .category-list td {
-    float:left;
-    width:280px;
+    float: left;
+    width: 100%;
 }
 
 .category-list div {
-    margin:0 0 20px 0;
-}
-
-#categories_file {
-    margin:0;
-}
-
-.category-list .small {
-    display:block;
+    margin: 0 0 1em 0;
 }
 
 
@@ -1570,6 +1545,25 @@ body {
 #page-discuss table.edit-pane tr:nth-last-child(2) td:first-child,
 #page-discuss table#edit-discuss tr:nth-child(9) {
     display: none !important;
+}
+
+
+}
+
+
+
+
+/* =============================================================================
+   Additional layout for screen media < 480px
+   ========================================================================== */
+
+
+@media only screen and (max-width: 479px) {
+
+
+#login_form {
+    width: 100%;
+    max-width: 400px;
 }
 
 

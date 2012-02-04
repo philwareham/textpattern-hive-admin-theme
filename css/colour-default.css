@@ -8,16 +8,10 @@
 /* Light tint backgrounds */
 #configuration_content .plain-list,
 #tagbuild_links .plain-list,
-#page-login .login-pane,
-#page-logout .login-pane,
-.category-list div,
-#list .even,
 #tagbuild_links,
 #content_switcher,
 #supporting_content p,
-#section_container .section,
-#page-arc_admin_twitter #list tr:nth-of-type(2n),
-#page-bot_privs_tab #list tr:nth-of-type(2n) {
+#section_container .section {
   background: #f7f7f7;
 }
 

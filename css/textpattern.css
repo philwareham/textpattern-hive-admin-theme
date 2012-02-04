@@ -82,7 +82,6 @@ h2 {
 }
 h2 .pophelp {
   font-size: .8125em;
-  font-weight: normal;
 }
 
 small,
@@ -99,6 +98,10 @@ samp,
 .code,
 #diagnostics textarea {
   font-family: Cousine, Menlo, Consolas, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
+}
+
+.pophelp {
+  font-weight: normal;
 }
 
 /* =============================================================================
@@ -304,7 +307,7 @@ fieldset {
   margin: -1em 0 1em 0;
   border: 1px solid #e3e3e3;
   padding: 1em 0 0 0;
-  background-color: #f7f7f7;
+  background: #f7f7f7;
 }
 
 fieldset > * {
@@ -317,16 +320,6 @@ fieldset > legend {
   top: 1em;
   margin-right: 0;
   margin-left: 0;
-}
-
-label,
-.pophelp,
-.category-edit,
-.section-edit {
-  display: inline-block;
-  /* IE 7 */
-  *zoom: 1;
-  *display: inline;
 }
 
 input[type="radio"],
@@ -345,7 +338,7 @@ input[type="checkbox"] {
 #comment-invite,
 .login-pane input[type="text"],
 .login-pane input[type="password"],
-.categories div input[type="text"] {
+.category-list div input[type="text"] {
   width: 100%;
 }
 
@@ -447,10 +440,16 @@ input[name="form_preview"] {
 #list tr {
   border: 1px solid #e3e3e3;
 }
+#list tr.even {
+  background: #f7f7f7;
+}
 #list ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
+}
+#list .id {
+  width: 7%;
 }
 #list .date {
   width: 14%;
@@ -502,10 +501,6 @@ input[name="form_preview"] {
   vertical-align: middle;
 }
 
-#list .id {
-  width: 7%;
-}
-
 #content_switcher #list .odd,
 #content_switcher #list .even {
   background: none;
@@ -545,9 +540,10 @@ input[name="form_preview"] {
    ========================================================================== */
 body {
   position: relative;
+  padding: 4em 2em .5em;
+  min-width: 908px;
   color: #333333;
   background: white;
-  padding: 4em 2em 0;
 }
 
 .txp-container {
@@ -589,8 +585,9 @@ body {
   left: 0;
   right: 0;
   z-index: 10000;
-  height: 3em;
   padding: 0 2em;
+  height: 3em;
+  min-width: 908px;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-top: 1px solid #fabc2b;
@@ -747,7 +744,7 @@ body {
   z-index: 10001;
   min-width: 166px;
   border: solid 1px #d4d4d4;
-  border-top: none;
+  border-top: 0;
   background: #fef5d2;
   -moz-border-radius: 0 5px 5px 5px;
   border-radius: 0 5px 5px 5px;
@@ -827,10 +824,7 @@ body {
 }
 
 .txp-navigation {
-  width: 100%;
-  margin: 2em -2em 0;
-  padding: 0 2em;
-  border-top: 1px solid #d4d4d4;
+  margin-bottom: .5em;
 }
 
 .pageby {
@@ -853,10 +847,11 @@ table#edit {
 }
 
 /* Login page */
-#page-login .login-pane,
-#page-logout .login-pane {
-  width: 360px;
+#login_form {
   margin: 0 auto;
+  padding: .5em 0;
+  width: 400px;
+  background: #f7f7f7;
 }
 
 .login-pane p {
@@ -864,15 +859,13 @@ table#edit {
 }
 
 .login-pane tr:first-child p {
-  margin: 1em 0;
-}
-
-.login-pane tr:last-child p {
-  margin: 0 0 6px;
+  margin: .375em 0;
+  font-size: 1.23076923076923em;
+  font-weight: bold;
 }
 
 .login-pane td {
-  padding: 4px 1em;
+  padding: .38461538461538em 1em;
   text-align: left !important;
 }
 
@@ -895,8 +888,12 @@ table#edit {
 }
 
 .category-list div {
-  padding: 1em 1em 1px 1em !important;
-  margin: 0 1em;
+  margin: 0 .5em 1em;
+  padding: 1em 1em 1px;
+  background: #f7f7f7;
+}
+.category-list div select {
+  margin-left: -0.385em;
 }
 
 #categories_article {
@@ -1482,15 +1479,15 @@ table#edit {
 }
 
 /* =============================================================================
-   Additional layout for screen media < 920px
+   Additional layout for screen media < 769px
    ========================================================================== */
-@media only screen and (max-width: 919px) {
+@media only screen and (max-width: 768px) {
   /* =============================================================================
      Layout
      ========================================================================== */
   body {
-    min-width: 294px;
     padding: 4em 1em 0;
+    min-width: 294px;
   }
 
   /* =============================================================================
@@ -1498,6 +1495,7 @@ table#edit {
      ========================================================================== */
   #txp-head {
     padding: 0 1em;
+    min-width: 294px;
   }
   #txp-head h1 {
     padding-left: 24px;
@@ -1546,32 +1544,14 @@ table#edit {
     margin-left: 0;
   }
 
-  /* Login page */
-  #page-login .login-pane,
-  #page-logout .login-pane {
-    width: 280px;
-  }
-
-  .login-pane tr:nth-of-type(4) {
-    display: none;
-  }
-
   /* Categories page */
   .category-list td {
     float: left;
-    width: 280px;
+    width: 100%;
   }
 
   .category-list div {
-    margin: 0 0 20px 0;
-  }
-
-  #categories_file {
-    margin: 0;
-  }
-
-  .category-list .small {
-    display: block;
+    margin: 0 0 1em 0;
   }
 
   /* Write page */
@@ -1648,5 +1628,14 @@ table#edit {
   #page-discuss table.edit-pane tr:nth-last-child(2) td:first-child,
   #page-discuss table#edit-discuss tr:nth-child(9) {
     display: none !important;
+  }
+}
+/* =============================================================================
+   Additional layout for screen media < 480px
+   ========================================================================== */
+@media only screen and (max-width: 479px) {
+  #login_form {
+    width: 100%;
+    max-width: 400px;
   }
 }
