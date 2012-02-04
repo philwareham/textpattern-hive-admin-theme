@@ -634,7 +634,7 @@ body {
         }
         background-repeat: no-repeat;
         background-position: 50% bottom;
-        @include hires-graphic(indicator, gif, 44px, 104px);
+        @include svg-graphic(indicator, gif, 16px, 8px);
     }
 }
 
