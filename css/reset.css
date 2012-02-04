@@ -457,10 +457,10 @@ optgroup {
   select[size="0"], .svg
   select[size="1"] {
     background-image: url("../img/svg/select_arrow.svg");
-    -webkit-background-size: 13px 4px;
-    -moz-background-size: 13px 4px;
-    -o-background-size: 13px 4px;
-    background-size: 13px 4px;
+    -webkit-background-size: 1em 0.308em;
+    -moz-background-size: 1em 0.308em;
+    -o-background-size: 1em 0.308em;
+    background-size: 1em 0.308em;
   }
 }
 /* addresses box sizing set to content-box and excess padding in IE7-9 */

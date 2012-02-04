@@ -541,7 +541,7 @@ body {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        @include svg-graphic(textpattern-lrg, png, $logo-large-width, 30px);
+        @include svg-graphic(textpattern-lrg, png, $logo-large-width, 2.30769230769231em);
         a {
             margin-right: 1em;
             margin-left: 1em;
@@ -634,7 +634,7 @@ body {
         }
         background-repeat: no-repeat;
         background-position: 50% bottom;
-        @include svg-graphic(indicator, gif, 16px, 8px);
+        @include svg-graphic(indicator, gif, 1.23076923076923em, 0.61538461538462em);
     }
 }
 
@@ -1444,7 +1444,7 @@ body {
     min-width: 294px;
     h1 {
         padding-left: $logo-small-width;
-        @include svg-graphic(textpattern-sml, png, $logo-small-width, 24px);
+        @include svg-graphic(textpattern-sml, png, $logo-small-width, 1.84615384615385em);
     }
 }
 

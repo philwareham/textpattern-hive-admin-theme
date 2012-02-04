@@ -672,7 +672,7 @@ body {
 #txp-head h1 {
   float: left;
   margin: 0;
-  padding-left: 148px;
+  padding-left: 11.385em;
   line-height: 3em;
   background: no-repeat left 48%;
   max-width: 25%;
@@ -683,10 +683,10 @@ body {
 }
 .svg #txp-head h1 {
   background-image: url("../img/svg/textpattern-lrg.svg");
-  -webkit-background-size: 148px 30px;
-  -moz-background-size: 148px 30px;
-  -o-background-size: 148px 30px;
-  background-size: 148px 30px;
+  -webkit-background-size: 11.385em 2.308em;
+  -moz-background-size: 11.385em 2.308em;
+  -o-background-size: 11.385em 2.308em;
+  background-size: 11.385em 2.308em;
 }
 #txp-head h1 a {
   margin-right: 1em;
@@ -781,10 +781,10 @@ body {
 }
 .svg .dropdown:hover a.dropdown-toggle {
   background-image: url("../img/svg/indicator.svg");
-  -webkit-background-size: 16px 8px;
-  -moz-background-size: 16px 8px;
-  -o-background-size: 16px 8px;
-  background-size: 16px 8px;
+  -webkit-background-size: 1.231em 0.615em;
+  -moz-background-size: 1.231em 0.615em;
+  -o-background-size: 1.231em 0.615em;
+  background-size: 1.231em 0.615em;
 }
 
 .dropdown.active a.dropdown-toggle {
@@ -1545,15 +1545,15 @@ table#edit {
     min-width: 294px;
   }
   #txp-head h1 {
-    padding-left: 24px;
+    padding-left: 1.846;
     background-image: url("../img/textpattern-sml.png");
   }
   .svg #txp-head h1 {
     background-image: url("../img/svg/textpattern-sml.svg");
-    -webkit-background-size: 24px 24px;
-    -moz-background-size: 24px 24px;
-    -o-background-size: 24px 24px;
-    background-size: 24px 24px;
+    -webkit-background-size: 1.846 1.846em;
+    -moz-background-size: 1.846 1.846em;
+    -o-background-size: 1.846 1.846em;
+    background-size: 1.846 1.846em;
   }
 
   #txp-logout {
