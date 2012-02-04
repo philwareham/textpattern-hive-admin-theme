@@ -61,7 +61,6 @@ class hive_theme extends theme
                 }
                 $out[] = '</optgroup>';
             }
-            $out[] = '<optgroup label="Content">';
             $out[] = '</select>';
         }
         $out[] = '</div>';
