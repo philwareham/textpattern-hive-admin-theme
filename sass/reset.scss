@@ -373,7 +373,7 @@ select[size="1"] {
         position: right center;
     }
     padding-right: 20px;
-    @include hires-graphic(select_arrow, gif, 13px, 4px);
+    @include svg-graphic(select_arrow, gif, 13px, 4px);
 }
 
 }

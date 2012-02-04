@@ -453,16 +453,16 @@ optgroup {
     padding-right: 20px;
     background-image: url("../img/select_arrow.gif");
   }
-}
-@media (-webkit-min-device-pixel-ratio: 0) and (-webkit-min-device-pixel-ratio: 2) {
-  select,
-  select[size="0"],
+  .svg select, .svg
+  select[size="0"], .svg
   select[size="1"] {
-    background-image: url("../img/retina/select_arrow@2x.gif") !important;
+    background-image: url("../img/svg/select_arrow.svg");
     -webkit-background-size: 13px 4px;
+    -moz-background-size: 13px 4px;
+    -o-background-size: 13px 4px;
+    background-size: 13px 4px;
   }
 }
-
 /* addresses box sizing set to content-box and excess padding in IE7-9 */
 input[type="checkbox"],
 input[type="radio"] {
