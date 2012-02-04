@@ -327,19 +327,15 @@ input[name="form_preview"] {
     *overflow-x: hidden;
 }
 
-#list tr.spam {
-    background: #fa8f98;
-}
-
 #list {
-    th, td {
-        padding: .38461538461538em 1em;
-    }
     tr {
         border: 1px solid #e3e3e3;
         &.even {
             background: $color-background-box;
         }
+    }
+    th, td {
+        padding: .38461538461538em 1em;
     }
     ul {
         list-style: none;
@@ -361,20 +357,49 @@ input[name="form_preview"] {
     }
 }
 
-#list thead {
-    th {
-        position: relative;
-        @include text-shadow-light;
-        @include gradient-bar;
-        a {
-            display: block;
+#list thead th {
+    position: relative;
+    @include text-shadow-light;
+    @include gradient;
+    border: 1px solid $color-gradient-to;
+    border-bottom: 1px solid darken($color-gradient-to, 10%);
+    a {
+        display: block;
+        color: $color-text;
+        margin-right: .5em;
+        &:hover {
             color: $color-text;
-            margin-right: 12px;
-            &:hover {
-                color: $color-text;
-                text-decoration: none;
-            }
+            text-decoration: none;
         }
+        &:after {
+            position: absolute;
+            top: .92307692307692em;
+            right: .5em;
+            z-index: 10;
+            width: 0;
+            height: 0;
+            display: inline-block;
+            text-indent: -9999px;
+            vertical-align: top;
+            opacity: .5;
+        }
+        &:hover:after {
+            opacity: 1;
+        }
+    }
+    &.desc a:after {
+        content: "&#8595;";
+        border-left: .30769230769231em solid transparent;
+        border-right: .30769230769231em solid transparent;
+        border-top: .30769230769231em solid $color-text;
+        border-bottom: 0;
+    }
+    &.asc a:after {
+        content: "&#8593;";
+        border-left: .30769230769231em solid transparent;
+        border-right: .30769230769231em solid transparent;
+        border-top: 0;
+        border-bottom: .30769230769231em solid $color-text;
     }
 }
 

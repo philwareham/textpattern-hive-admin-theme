@@ -430,18 +430,14 @@ input[name="form_preview"] {
   *overflow-x: hidden;
 }
 
-#list tr.spam {
-  background: #fa8f98;
-}
-
-#list th, #list td {
-  padding: .38461538461538em 1em;
-}
 #list tr {
   border: 1px solid #e3e3e3;
 }
 #list tr.even {
   background: #f7f7f7;
+}
+#list th, #list td {
+  padding: .38461538461538em 1em;
 }
 #list ul {
   list-style: none;
@@ -465,8 +461,6 @@ input[name="form_preview"] {
 #list thead th {
   position: relative;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
-  border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #c4c4c4;
   background-color: #dddddd;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
@@ -486,15 +480,46 @@ input[name="form_preview"] {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee',EndColorStr='#dddddd');
   /* hack to remove any border-radius in IE9 so we can keep filter gradients */
   border-radius: 0 \0;
+  border: 1px solid #dddddd;
+  border-bottom: 1px solid #c4c4c4;
 }
 #list thead th a {
   display: block;
   color: #333333;
-  margin-right: 12px;
+  margin-right: .5em;
 }
 #list thead th a:hover {
   color: #333333;
   text-decoration: none;
+}
+#list thead th a:after {
+  position: absolute;
+  top: .92307692307692em;
+  right: .5em;
+  z-index: 10;
+  width: 0;
+  height: 0;
+  display: inline-block;
+  text-indent: -9999px;
+  vertical-align: top;
+  opacity: .5;
+}
+#list thead th a:hover:after {
+  opacity: 1;
+}
+#list thead th.desc a:after {
+  content: "&#8595;";
+  border-left: .30769230769231em solid transparent;
+  border-right: .30769230769231em solid transparent;
+  border-top: 0.308em solid #333333;
+  border-bottom: 0;
+}
+#list thead th.asc a:after {
+  content: "&#8593;";
+  border-left: .30769230769231em solid transparent;
+  border-right: .30769230769231em solid transparent;
+  border-top: 0;
+  border-bottom: 0.308em solid #333333;
 }
 
 #list tfoot th, #list tfoot td {
