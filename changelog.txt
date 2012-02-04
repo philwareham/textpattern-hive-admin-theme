@@ -2,242 +2,232 @@ VERSION HISTORY
 
 ---
 
-2.0b1: ?????
+2.0beta1: ?????
 
-1. Complete rewrite of CSS files - simplified many rules, used Normalize and Formalize
-   as a baseline for reset.css.
+01. Complete rewrite of CSS files - simplified many rules, using Normalize and Formalize
+    as a baseline for reset.css. Also should be more forgiving of plugin code now.
 
-2. Now uses Sass (http://sass-lang.com) for speedier development/reduced code.
+02.  Now uses Sass (http://sass-lang.com) for speedier development/reduced code.
 
-3. Redrawn all images - now with retina (higher resolution display) versions included.
+03. More responsive - extensive work on making the admin area more usable on a small
+    screen devices.
 
-4. Just one colour scheme now - but colours can be easily changed using Sass variables.
+04. Nicer aesthetic. Just one colour scheme now - but colours can be easily changed using
+    Sass variables.
 
-5. New, lightweight navigation bar, fixed to top of screen.
+05. SVG (resolution independent) images for supported browsers (via Modernizr).
 
-6. 
+06. New lightweight navigation bar.
 
----
+07. Touch friendly (via Modernizr). Removed unviable dropdown navigation menu on touch
+    devices and instead using a <select> tag.
 
-1.3: UNREALEASED
+08. The monospace Cousine font is now bundled, which provides a more consistent font
+   across multiple devices.
 
-1. Initial work to make theme passable on small screen sizes (such as an iPhone).
-   This works by generally hiding features that would not render well on that size
-   screen (such as lists) - a kind of admin area 'lite' version if you will. More work
-   to improve this will follow in future releases.
+09. Add CSS gradient and transition support for IE10. Add CSS gradient support for
+    IE6-IE9 (via MS filter). Add CSS gradient support for Opera 11.10.
 
-2. Now uses Cousine font from Google Font API for monospaced text. Solves font
-   inconsistencies across multiple devices.
+10. Remove custom (hot pink) selection colour, it's better for accessibility to let user 
+    keep their own browser selection colour settings.
 
-3. Remove custom (hot pink) selection colour, it's better for accessibility to let user 
-   keep their own browser selection colour settings.
-   
-4. For better accessibility, allow zoom on touch devices.
-
-5. Had to revert back to making the top navigation not links again, as it was reported
-   that Android devices were firing off the link immediately instead of focussing on
-   the dropdown. Bah!
-
-6. Add CSS gradient and transition support for IE10. Add CSS gradient support for
-   IE6-IE9 (via MS filter). Add CSS gradient support for Opera 11.10.
-
-7. More rendering fixups for various browsers as recommended in Normalize CSS.
+11. 
 
 ---
 
 1.2.3: 24/06/2011
 
-1. The !important class on textareas to override inline styling on glz_custom_field
-   elements was stopping users from manually resizing any of their textareas within the
-   theme (in browsers that support resizing). A better compromise has been devised now.
+01. The !important class on textareas to override inline styling on glz_custom_field
+    elements was stopping users from manually resizing any of their textareas within the
+    theme (in browsers that support resizing). A better compromise has been devised now.
 
 ---
 
 1.2.2: 22/06/2011
 
-1. Change to more standard version labelling and use Textgarden.org download link.
+01. Change to more standard version labelling and use Textgarden.org download link.
 
-2. The dropdown menu code has been rewritten to be more usable on touchscreen devices
-   without compromising the desktop version. For example you can now close active
-   dropdown menus on touchscreen devices nicely, and top navigation buttons are now
-   links again like they were in v1.1.
+02. The dropdown menu code has been rewritten to be more usable on touchscreen devices
+    without compromising the desktop version. For example you can now close active
+    dropdown menus on touchscreen devices nicely, and top navigation buttons are now
+    links again like they were in v1.1.
 
-3. Tidy up of code in 'hive.php' to make editing/customising easier.
+03. Tidy up of code in 'hive.php' to make editing/customising easier.
 
-4. Added styling for the tru_tags plugin in 'custom.css', thanks to Stuart Butcher.
+04. Added styling for the tru_tags plugin in 'custom.css', thanks to Stuart Butcher.
 
-5. Form preview button is now removed and other fields on the form page inlined to
-   save some screen estate, thanks to Stuart Butcher.
+05. Form preview button is now removed and other fields on the form page inlined to
+    save some screen estate, thanks to Stuart Butcher.
 
-6. CSS cleanup: make 'outline:none' now 'outline:0' and 'border:none' now 'border:0'.
+06. CSS cleanup: make 'outline:none' now 'outline:0' and 'border:none' now 'border:0'.
 
-7. Amend language uploader area CSS, as structure changed slightly in TXP v4.4.1.
+07. Amend language uploader area CSS, as structure changed slightly in TXP v4.4.1.
 
-8. Fixed a major display bug when using both glz_custom_fields and bot_wtc plugins.
+08. Fixed a major display bug when using both glz_custom_fields and bot_wtc plugins.
 
-9. Style up the wet_quicklink plugin text 'Insert Link' as a button.
+09. Style up the wet_quicklink plugin text 'Insert Link' as a button.
 
 ---
 
 1.21: 15/06/2011
 
-1. Fixed tagbuilder links breakage on forms page, as reported by Adi.
+01. Fixed tagbuilder links breakage on forms page, as reported by Adi.
 
 ---
 
 1.2: 13/06/2011
 
-1. Dropdown menu now works on touchscreen devices.
+01. Dropdown menu now works on touchscreen devices.
 
-2. Added tap highlight colour for mobile webkit browsers.
+02. Added tap highlight colour for mobile webkit browsers.
 
-3. Added responsive CSS for detecting 768px portait screen orientation and adjust page
-   width accordingly.
+03. Added responsive CSS for detecting 768px portait screen orientation and adjust page
+    width accordingly.
 
-4. Reset CSS moved to an external @import, since we need that to load before all other
-   CSS files (otherwise it could override colourscheme rules).
+04. Reset CSS moved to an external @import, since we need that to load before all other
+    CSS files (otherwise it could override colourscheme rules).
 
 ---
 
 1.1: 12/06/2011
 
-1. You can now choose between 3 different colourschemes: default, green and blue.
-   To change the colourscheme amend URL of line 7 in the 'custom.css' file. More colours
-   will be added in future updates or you can easily create your own by modifying one of
-   the css files within the 'color' directory.
+01. You can now choose between 3 different colourschemes: default, green and blue.
+    To change the colourscheme amend URL of line 7 in the 'custom.css' file. More colours
+    will be added in future updates or you can easily create your own by modifying one of
+    the css files within the 'color' directory.
 
-2. Added minor styling for 'rah_external_output' plugin.
+02. Added minor styling for 'rah_external_output' plugin.
 
 ---
 
 1.01: 08/06/2011
 
-1. Added a few CSS transition effects for capable browsers.
+01. Added a few CSS transition effects for capable browsers.
 
-2. There is now an option in custom.css to remove the tag builder columns on forms and
-   pages sections, thus giving much more room for the code edit textarea.
+02. There is now an option in custom.css to remove the tag builder columns on forms and
+    pages sections, thus giving much more room for the code edit textarea.
 
-3. Added a separate changelog.txt and now made the readme.txt instructions on theme.
+03. Added a separate changelog.txt and now made the readme.txt instructions on theme.
 
-4. Make clickable on list column selectors more obvious.
+04. Make clickable on list column selectors more obvious.
 
 ---
 
 1.0: 02/06/2011
 
-1. Fixed incorrect length of a selects on image list page.
+01. Fixed incorrect length of a selects on image list page.
 
-2. Hovering on a label now changes cursor to pointer (because labels are clickable).
+02. Hovering on a label now changes cursor to pointer (because labels are clickable).
 
-3. Now includes selectivzr.js to allow advanced CSS3 selectors in older IE - resolves
-   many rendering issues for those browsers now (IE7, IE8).
+03. Now includes selectivzr.js to allow advanced CSS3 selectors in older IE - resolves
+    many rendering issues for those browsers now (IE7, IE8).
 
-4. Fixed display of lever popup help icons on form page (IE7, IE8).
+04. Fixed display of lever popup help icons on form page (IE7, IE8).
 
-5. Fixed excessive padding of text fields and radio/checkboxes (IE7, IE8).
+05. Fixed excessive padding of text fields and radio/checkboxes (IE7, IE8).
 
-6. Fixed wonky multi-edit fields formatting on list tfoot (IE7).
+06. Fixed wonky multi-edit fields formatting on list tfoot (IE7).
 
-7. Added hacks to workaround lack of box-sizing support (IE7).
+07. Added hacks to workaround lack of box-sizing support (IE7).
 
-8. Fixed lack of bottom-margin on 'popuphelp' and 'edit' links in labels (IE7).
+08. Fixed lack of bottom-margin on 'popuphelp' and 'edit' links in labels (IE7).
 
 ---
 
 1.0beta8: 31/05/2011
 
-1. Plugin help page now has a fixed width to prevent long text linage.
+01. Plugin help page now has a fixed width to prevent long text linage.
 
-2. Added more padding to page bottom to allow for Chrome/Firefox dynamic status bar.
+02. Added more padding to page bottom to allow for Chrome/Firefox dynamic status bar.
 
-3. Made write page recent articles list decimal.
+03. Made write page recent articles list decimal.
 
-4. Added subtle shadow around img on image content pages, so they stand out better.
+04. Added subtle shadow around img on image content pages, so they stand out better.
 
-5. Fixed link to view site for multi-site installs.
+05. Fixed link to view site for multi-site installs.
 
-6. Fixed unwanted bold text on login page (IE7).
+06. Fixed unwanted bold text on login page (IE7).
 
-7. Fixed z-index of nav menus falling behind txp-body (IE7).
+07. Fixed z-index of nav menus falling behind txp-body (IE7).
 
 ---
 
 1.0beta7: 28/05/2011
 
-1. Completely reworked layout structure - now has liquid widths (as much as the inbuilt
-   table structure of Textpattern allows) down to 768px.
+01. Completely reworked layout structure - now has liquid widths (as much as the inbuilt
+    table structure of Textpattern allows) down to 768px.
 
-2. All body fonts have been increased in size, as many users requested it.
+02. All body fonts have been increased in size, as many users requested it.
 
-3. Header and navigation areas have been combined to save more screen estate.
+03. Header and navigation areas have been combined to save more screen estate.
 
-4. Many layout display fixes/re-jigs.
+04. Many layout display fixes/re-jigs.
 
-5. Plugin and diagnostic content fields now have a default height assigned.
+05. Plugin and diagnostic content fields now have a default height assigned.
 
-6. CSS has been optimised more and labelled a bit better.
+06. CSS has been optimised more and labelled a bit better.
 
-7. Incorrect display of empty <ul> tag on login pages has been fixed.
+07. Incorrect display of empty <ul> tag on login pages has been fixed.
 
-8. Removed some plugin styling from custom.css as it's fixed in main CSS file now.
-   More plugin custom style will be added over time if major inconsistencies are discovered.
+08. Removed some plugin styling from custom.css as it's fixed in main CSS file now.
+    More plugin custom style will be added over time if major inconsistencies are discovered.
 
 ---
 
 1.0beta6: 21/03/2011
 
-1. Changed to a dropdown navigation system. Better method for supporting long lists
-   (such as the extensions tab when lots of plugins are installed).
+01. Changed to a dropdown navigation system. Better method for supporting long lists
+    (such as the extensions tab when lots of plugins are installed).
 
-2. Added confirmation dialog box on logout.
+02. Added confirmation dialog box on logout.
 
-3. Fixed missing styling on links page form.
+03. Fixed missing styling on links page form.
 
-4. Added !important to hiding CSS in custom.css, previously in some cases it could be
-   overrode due to the cascade (culprit: evil styling code directly in HTML pages).
+04. Added !important to hiding CSS in custom.css, previously in some cases it could be
+    overrode due to the cascade (culprit: evil styling code directly in HTML pages).
 
 ---
 
 1.0beta5: 11/03/2011
 
-1. Fixes for arc_twitter display issues - requires latest version of arc_twitter
-   from https://github.com/drmonkeyninja/TXP-Tweet
+01. Fixes for arc_twitter display issues - requires latest version of arc_twitter
+    from https://github.com/drmonkeyninja/TXP-Tweet
 
 ---
 
 1.0beta4: 02/03/2011
 
-1. Added z-index value to wet_quicklink popup box, fixes display issue.
+01. Added z-index value to wet_quicklink popup box, fixes display issue.
 
 ---
 
 1.0beta3: 22/02/2011
 
-1. Corrected height between 'form preview' and 'form save' buttons.
+01. Corrected height between 'form preview' and 'form save' buttons.
 
-2. Removed z-index of secondary nav so it doesn't interfere with wet_quicklink popup.
+02. Removed z-index of secondary nav so it doesn't interfere with wet_quicklink popup.
 
-3. Fixed display of category edit table.
+03. Fixed display of category edit table.
 
-4. Added more hide toggles to 'custom.css'.
+04. Added more hide toggles to 'custom.css'.
 
 ---
 
 1.0beta2: 21/02/2011
 
-1. Renamed 'plugins.css' to 'custom.css', now includes optional toggles to hide
-   (via CSS) items in the write/edit screen. More info:
-   http://forum.textpattern.com/viewtopic.php?pid=240058#p240058
+01. Renamed 'plugins.css' to 'custom.css', now includes optional toggles to hide
+    (via CSS) items in the write/edit screen. More info:
+    http://forum.textpattern.com/viewtopic.php?pid=240058#p240058
 
-2. 'th' styling is now part of the main CSS (instead of 'thead th' styling since
-   many plugins don't use that structure).
+02. 'th' styling is now part of the main CSS (instead of 'thead th' styling since
+    many plugins don't use that structure).
 
-2. Enlarged publsh/save buttons so they have prominence.
+02. Enlarged publsh/save buttons so they have prominence.
 
-3. Styling for tabs as used in gdb_permanent_links plugin tabs (which might also
-   benefit other plugins that use the same tab structure).
+03. Styling for tabs as used in gdb_permanent_links plugin tabs (which might also
+    benefit other plugins that use the same tab structure).
 
-4. Fixes for mem_postmaster plugin display.
+04. Fixes for mem_postmaster plugin display.
 
 ---
 
