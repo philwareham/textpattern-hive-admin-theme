@@ -4,10 +4,6 @@
 @import "variables", "mixins";
 
 
-
-/* ------------------- DEFAULT COLORSCHEME ------------------- */
-
-
 /* General */
 
 #article-main .author {
@@ -24,13 +20,6 @@
 #supporting_content p,
 #section_container .section {
     background: $color-background-box;
-}
-
-
-/* Tables */
-
-#list .odd {
-    background: #fff;
 }
 
 

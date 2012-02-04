@@ -445,7 +445,7 @@ input[name="form_preview"] {
   margin: 0;
 }
 #list .id {
-  width: 7%;
+  width: 6%;
 }
 #list .date {
   width: 14%;
@@ -455,11 +455,9 @@ input[name="form_preview"] {
 }
 #list .multi-edit {
   width: 2%;
-  text-align: right;
 }
 
 #list thead th {
-  position: relative;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   background-color: #dddddd;
   /* Konqueror */
@@ -484,6 +482,7 @@ input[name="form_preview"] {
   border-bottom: 1px solid #c4c4c4;
 }
 #list thead th a {
+  position: relative;
   display: block;
   color: #333333;
   margin-right: .5em;
@@ -494,8 +493,8 @@ input[name="form_preview"] {
 }
 #list thead th a:after {
   position: absolute;
-  top: .92307692307692em;
-  right: .5em;
+  top: .53846153846154em;
+  right: -0.769em;
   z-index: 10;
   width: 0;
   height: 0;
@@ -526,8 +525,7 @@ input[name="form_preview"] {
   vertical-align: middle;
 }
 
-#content_switcher #list .odd,
-#content_switcher #list .even {
+#content_switcher #list tr.even {
   background: none;
 }
 

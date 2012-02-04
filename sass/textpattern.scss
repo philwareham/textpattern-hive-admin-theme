@@ -343,7 +343,7 @@ input[name="form_preview"] {
         margin: 0;
     }
     .id {
-        width: 7%;
+        width: 6%;
     }
     .date {
         width: 14%;
@@ -353,17 +353,16 @@ input[name="form_preview"] {
     }
     .multi-edit {
         width: 2%;
-        text-align: right;
     }
 }
 
 #list thead th {
-    position: relative;
     @include text-shadow-light;
     @include gradient;
     border: 1px solid $color-gradient-to;
     border-bottom: 1px solid darken($color-gradient-to, 10%);
     a {
+        position: relative;
         display: block;
         color: $color-text;
         margin-right: .5em;
@@ -373,8 +372,8 @@ input[name="form_preview"] {
         }
         &:after {
             position: absolute;
-            top: .92307692307692em;
-            right: .5em;
+            top: .53846153846154em;
+            right: -.76923076923077em;
             z-index: 10;
             width: 0;
             height: 0;
@@ -409,9 +408,8 @@ input[name="form_preview"] {
     }
 }
 
-#content_switcher #list .odd,
-#content_switcher #list .even {
-    background:none;
+#content_switcher #list tr.even {
+    background: none;
 }
 
 #page-page #content_switcher,
