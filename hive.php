@@ -2,8 +2,6 @@
 
 if (!defined('txpinterface')) die('txpinterface is undefined.');
 
-theme::based_on('classic');
-
 class hive_theme extends theme
 
 {
@@ -34,7 +32,7 @@ class hive_theme extends theme
             foreach ($this->menu as $tab)
             {
                 $class = ($tab['active']) ? ' active' : ' inactive';
-                $out[] = "<li class='dropdown{$class}'><a class='dropdown-toggle' href='#'>{$tab['label']}</a>";
+                $out[] = "<li class='dropdown{$class}'><a class='dropdown-toggle' href='?event={$tab['event']}'>{$tab['label']}</a>";
                 if (!empty($tab['items']))
                 {
                     $out[] = '<ul class="dropdown-menu">';
