@@ -12,7 +12,7 @@
 /* =============================================================================
    IMPORT CUSTOM CSS FILE
    ========================================================================== */
-/* See the 'readme.txt' for instructions on how to use this file */
+/* see the 'readme.txt' for instructions on how to use this file */
 @import url("custom.css");
 
 
@@ -118,18 +118,15 @@ samp,
     /* IE 7 */
     *zoom: 1;
     *display: inline;
-
     &.warning {
         @include text-shadow-light;
         @include gradient-bar(lighten($color-warning, 30%), lighten($color-warning, 10%));
     }
-
     &.success {
         color: $color-text-inverse;
         @include text-shadow-dark;
         @include gradient-bar(lighten($color-success, 20%), $color-success);
     }
-
     &.error {
         color: $color-text-inverse;
         @include text-shadow-dark;
@@ -161,27 +158,62 @@ legend {
 .lever {
     font-weight: bold;
     margin: 0;
-    height: 2em;
     line-height: 2em;
-    position: relative;
+    height: 2em;
+    overflow: hidden; // hide the space between link and pophelp
     @include text-shadow-light;
     @include box-shadow(rgba(#fff, .25) 0 1px 0 0 inset);
     @include gradient-bar;
 }
 
 .lever a {
+    position: relative;
+    display: block;
     color: $color-text;
     padding: 0 2em 0 1em;
-    display: block;
-    background: url("../img/twisty-arrow.gif") no-repeat right 0;
+    &:hover {
+        color: $color-text;
+        text-decoration: none;
+    }
+    &:after {
+        position: absolute;
+        top: .69230769230769em;
+        right: .76923076923077em;
+        z-index: 10;
+        width: 0;
+        height: 0;
+        display: inline-block;
+        text-indent: -9999px;
+        vertical-align: top;
+        opacity: .5;
+        content: "&#8594;";
+        border-left: .30769230769231em solid $color-text;
+        border-right: 0;
+        border-top: .30769230769231em solid transparent;
+        border-bottom: .30769230769231em solid transparent;
+    }
+    &:hover:after {
+        opacity: 1;
+    }
 }
 
 .lever a:hover {
     text-decoration: none;
 }
 
-.expanded a {
-    background-position: right -26px;
+/* remove pophelp on levers - inconsistent UI */
+.lever a.pophelp {
+    display: none;
+}
+
+.lever.expanded a:after {
+    top: .84615384615385em;
+    right: .69230769230769em;
+    content: "&#8595;";
+    border-left: .30769230769231em solid transparent;
+    border-right: .30769230769231em solid transparent;
+    border-top: .30769230769231em solid $color-text;
+    border-bottom: 0;
 }
 
 .toggle {
@@ -325,9 +357,6 @@ input[name="form_preview"] {
     /* IE7 */
     *overflow-y: scroll; 
     *overflow-x: hidden;
-}
-
-#list {
     tr {
         border: 1px solid #e3e3e3;
         &.even {
@@ -1088,17 +1117,6 @@ table#edit {
 
 #form_form select {
     margin:7px 0;
-}
-
-.lever a.pophelp {
-    padding: 0 1em;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 5;
-    width: .6em;
-    height: 2em;
-    line-height: 2em;
 }
 
 #form_form input[type="submit"].smallbox { /* Removes preview button on froms page, will anyone miss it? */
