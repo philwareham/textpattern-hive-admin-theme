@@ -11,7 +11,7 @@ class hive_theme extends theme
     function html_head()
     {
         $out[] = '<link href="'.$this->url.'css/textpattern.css" rel="stylesheet" type="text/css" />';
-        $out[] = '<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1" />';
+        $out[] = '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
         $out[] = '<meta name="generator" content="Textpattern CMS" />';
         $out[] = '<script type="text/javascript" src="'.$this->url.'js/modernizr.js"></script>';
         $out[] = '<script type="text/javascript" src="'.$this->url.'js/jquery.formalize.min.js"></script>';
