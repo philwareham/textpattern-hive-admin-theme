@@ -7,31 +7,33 @@ VERSION HISTORY
 01. Complete rewrite of CSS files - simplified many rules, using Normalize and Formalize
     as a baseline for reset.css. Also should be more forgiving of plugin code now.
 
-02.  Now uses Sass (http://sass-lang.com) for speedier development/reduced code.
+02. Now uses Sass (http://sass-lang.com) for speedier development/reduced code.
 
 03. More responsive - extensive work on making the admin area more usable on a small
     screen devices.
 
-04. Nicer aesthetic. Just one colour scheme now - but colours can be easily changed using
+04. Removed dependance on Classic theme.
+
+05. Nicer aesthetic. Just one colour scheme now - but colours can be easily changed using
     Sass variables.
 
-05. SVG (resolution independent) images for supported browsers (via Modernizr).
+06. SVG (resolution independent) images for supported browsers (via Modernizr).
 
-06. New lightweight navigation bar.
+07. New lightweight navigation bar.
 
-07. Touch friendly (via Modernizr). Removed unviable dropdown navigation menu on touch
+08. Touch friendly (via Modernizr). Removed unviable dropdown navigation menu on touch
     devices and instead using a <select> tag.
 
-08. The monospace Cousine font is now bundled, which provides a more consistent font
+09. The monospace Cousine font is now bundled, which provides a more consistent font
    across multiple devices.
 
-09. Add CSS gradient and transition support for IE10. Add CSS gradient support for
+10. Add CSS gradient and transition support for IE10. Add CSS gradient support for
     IE6-IE9 (via MS filter). Add CSS gradient support for Opera 11.10.
 
-10. Remove custom (hot pink) selection colour, it's better for accessibility to let user 
+11. Remove custom (hot pink) selection colour, it's better for accessibility to let user 
     keep their own browser selection colour settings.
 
-11. 
+12. 
 
 ---
 
