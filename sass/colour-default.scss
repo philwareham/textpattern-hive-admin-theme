@@ -4,20 +4,12 @@
 @import "variables", "mixins";
 
 
-/* General */
-
-#article-main .author {
-    color: $color-text-footnote;
-}
-
-
 /* Light tint backgrounds */
 
 #configuration_content .plain-list,
 #tagbuild_links .plain-list,
 #tagbuild_links,
 #content_switcher,
-#supporting_content p,
 #section_container .section {
     background: $color-background-box;
 }

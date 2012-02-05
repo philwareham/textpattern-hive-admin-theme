@@ -88,6 +88,20 @@ samp,
     font-family: $font-mono;
 }
 
+code,
+mark {
+    padding: .23076923076923em;
+    background: lighten($color-text-highlight, 28%);
+    @include border-radius(3px);
+}
+
+pre {
+    padding: 1em;
+    overflow-x: auto;
+    background: lighten($color-text-highlight, 28%);
+    @include border-radius;
+}
+
 .pophelp {
     font-weight: normal;
 }
@@ -826,7 +840,12 @@ table#edit {
 }
 
 #article-main .article-view {
-    float:right;
+    float: right;
+}
+
+#article-main .author {
+    font-size: $smallfont;
+    color: $color-text-footnote;
 }
 
 #main_content > div:first-of-type > p:first-of-type {
@@ -835,12 +854,12 @@ table#edit {
 
 #configuration_content,
 #tagbuild_links {
-    margin-right: 20px;
+    margin-right: 2em;
 }
 
 #supporting_content,
 #content_switcher {
-    margin-left: 20px;
+    margin-left: 2em;
 }
 
 #configuration_content > div {
@@ -852,14 +871,6 @@ table#edit {
 
 #configuration_content > div.empty {
     display: none;
-}
-
-#supporting_content .action-create a {
-    margin-top:6px
-}
-
-#supporting_content .article-nav a {
-    margin-bottom:6px
 }
 
 #supporting_content .publish {
