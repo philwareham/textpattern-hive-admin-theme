@@ -8,23 +8,9 @@
 
 #configuration_content .plain-list,
 #tagbuild_links .plain-list,
-#tagbuild_links,
 #content_switcher,
 #section_container .section {
     background: $color-background-box;
-}
-
-
-/* Sections page */
-
-#section_container .section {
-    border-top:2px solid #fff;
-}
-
-#section_container #list .label,
-#section_container #list .actions,
-#section_container #list .section > td:last-child {
-    background:#fff;
 }
 
 

@@ -358,11 +358,12 @@ input[type="checkbox"] {
     /* IE7 */
     *overflow-y: scroll; 
     *overflow-x: hidden;
-    tr {
-        border: 1px solid #e3e3e3;
-        &.even {
+    tr.odd td {
+            border: 1px solid #e3e3e3;
+    }
+    tr.even td {
+            border: 1px solid #e3e3e3;
             background: $color-background-box;
-        }
     }
     th, td {
         padding: .38461538461538em 1em;
@@ -436,6 +437,9 @@ input[type="checkbox"] {
     th, td {
         vertical-align: middle;
     }
+    .multi-edit input[type="button"] {
+        margin-right: .38461538461538em;
+    }
 }
 
 #content_switcher #list tr.even {
@@ -455,16 +459,8 @@ input[type="checkbox"] {
 
 #page-page #content_switcher #list td,
 #page-css #content_switcher #list td {
-    position:relative;
+    position: relative;
     padding: 0 1em 5px;
-}
-
-#list tfoot .detail-toggle {
-    width: 20%;
-}
-
-#list tfoot .multi-edit {
-    width: 100% !important;
 }
 
 #list tfoot #js {
@@ -716,6 +712,10 @@ body {
    Miscellaneous/shared layout
    ========================================================================== */
 
+.search-form input[type="submit"] {
+    margin-left: .38461538461538em;
+}
+
 .edit-pane {
     width:448px !important;
     margin:0 auto;
@@ -762,6 +762,20 @@ table#edit {
     width:100%;
 }
 
+.copy-as {
+    display: block;
+    margin: 1em 0;
+    width: 250px;
+}
+
+.copy-as input[type="submit"] {
+    margin-top: .38461538461538em;
+}
+
+#page-css .copy-as input[type="submit"] {
+    margin-left: -.38461538461538em; // fix inconsistent alignment
+}
+
 
 /* Login page */
 
@@ -794,7 +808,11 @@ table#edit {
 /* Categories page */
 
 #page-category .edit-pane td:first-child {
-    width:36%;
+    width: 36%;
+}
+
+#page-category .action-create input[type="submit"] {
+    margin-top: .38461538461538em;
 }
 
 .category-list {
@@ -862,7 +880,8 @@ table#edit {
     margin-left: 2em;
 }
 
-#configuration_content > div {
+#configuration_content > div,
+#tagbuild_links > div {
     border: 1px solid lighten($color-border, 9%);
     border-top: 0;
     background: $color-background-box;
@@ -1001,12 +1020,12 @@ table#edit {
 
 /* Comments page */
 
-#cb_show_spam {
-    margin-left:4px
+.cb_show_spam {
+    margin: -1em 0 1em 1em;
 }
 
-#discuss_ban_container td {
-    width:20% !important;
+#page-discuss #list tr.spam td {
+    background: lighten($color-error, 58%);
 }
 
 
@@ -1019,6 +1038,16 @@ table#edit {
 #section_container .txp-control-panel {
     padding:0;
     margin-bottom:-2px;
+}
+
+#section_container .section {
+    border-top: 1em solid $color-background;
+}
+
+#section_container #list .label,
+#section_container #list .actions,
+#section_container #list .section > td:last-child {
+    background: $color-background;
 }
 
 #section_container .section input[type="text"],
@@ -1072,17 +1101,6 @@ table#edit {
 #page_form #html {
     height:537px;
     margin:-3px 0 1em;
-}
-
-#page_form label {
-    display:block;
-    width:250px;
-    margin-top:1em;
-}
-
-#page_form input[type="text"] {
-    width:250px;
-    margin-left:-1em;
 }
 
 #content_switcher p {
@@ -1150,17 +1168,6 @@ table#edit {
 #style_form #css {
     height:537px;
     margin:-3px 0 1em;
-}
-
-#style_form label {
-    display:block;
-    width:250px;
-    margin-top:1em;
-}
-
-#style_form input[type="text"] {
-    width:250px;
-    margin-left:-1em;
 }
 
 
@@ -1512,13 +1519,6 @@ body {
 #article-main {
     float: left;
     width: 100%;
-}
-
-#configuration_content,
-#tagbuild_links,
-#supporting_content,
-#content_switcher {
-    margin: 0;
 }
 
 /* Turn off features to optimise small screen size */

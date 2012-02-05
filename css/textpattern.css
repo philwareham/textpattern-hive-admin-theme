@@ -467,10 +467,11 @@ input[type="checkbox"] {
   *overflow-y: scroll;
   *overflow-x: hidden;
 }
-#list tr {
+#list tr.odd td {
   border: 1px solid #e3e3e3;
 }
-#list tr.even {
+#list tr.even td {
+  border: 1px solid #e3e3e3;
   background: #f7f7f7;
 }
 #list th, #list td {
@@ -561,6 +562,9 @@ input[type="checkbox"] {
 #list tfoot th, #list tfoot td {
   vertical-align: middle;
 }
+#list tfoot .multi-edit input[type="button"] {
+  margin-right: .38461538461538em;
+}
 
 #content_switcher #list tr.even {
   background: none;
@@ -581,14 +585,6 @@ input[type="checkbox"] {
 #page-css #content_switcher #list td {
   position: relative;
   padding: 0 1em 5px;
-}
-
-#list tfoot .detail-toggle {
-  width: 20%;
-}
-
-#list tfoot .multi-edit {
-  width: 100% !important;
 }
 
 #list tfoot #js {
@@ -862,6 +858,10 @@ body {
 /* =============================================================================
    Miscellaneous/shared layout
    ========================================================================== */
+.search-form input[type="submit"] {
+  margin-left: .38461538461538em;
+}
+
 .edit-pane {
   width: 448px !important;
   margin: 0 auto;
@@ -907,6 +907,20 @@ table#edit {
   width: 100%;
 }
 
+.copy-as {
+  display: block;
+  margin: 1em 0;
+  width: 250px;
+}
+
+.copy-as input[type="submit"] {
+  margin-top: .38461538461538em;
+}
+
+#page-css .copy-as input[type="submit"] {
+  margin-left: -0.385em;
+}
+
 /* Login page */
 #login_form {
   margin: 0 auto;
@@ -936,6 +950,10 @@ table#edit {
 /* Categories page */
 #page-category .edit-pane td:first-child {
   width: 36%;
+}
+
+#page-category .action-create input[type="submit"] {
+  margin-top: .38461538461538em;
 }
 
 .category-list {
@@ -1001,7 +1019,8 @@ table#edit {
   margin-left: 2em;
 }
 
-#configuration_content > div {
+#configuration_content > div,
+#tagbuild_links > div {
   border: 1px solid #e3e3e3;
   border-top: 0;
   background: #f7f7f7;
@@ -1134,12 +1153,12 @@ table#edit {
 }
 
 /* Comments page */
-#cb_show_spam {
-  margin-left: 4px;
+.cb_show_spam {
+  margin: -1em 0 1em 1em;
 }
 
-#discuss_ban_container td {
-  width: 20% !important;
+#page-discuss #list tr.spam td {
+  background: #fbe9e7;
 }
 
 /* Sections page */
@@ -1150,6 +1169,16 @@ table#edit {
 #section_container .txp-control-panel {
   padding: 0;
   margin-bottom: -2px;
+}
+
+#section_container .section {
+  border-top: 1em solid white;
+}
+
+#section_container #list .label,
+#section_container #list .actions,
+#section_container #list .section > td:last-child {
+  background: white;
 }
 
 #section_container .section input[type="text"],
@@ -1201,17 +1230,6 @@ table#edit {
 #page_form #html {
   height: 537px;
   margin: -3px 0 1em;
-}
-
-#page_form label {
-  display: block;
-  width: 250px;
-  margin-top: 1em;
-}
-
-#page_form input[type="text"] {
-  width: 250px;
-  margin-left: -1em;
 }
 
 #content_switcher p {
@@ -1275,17 +1293,6 @@ table#edit {
 #style_form #css {
   height: 537px;
   margin: -3px 0 1em;
-}
-
-#style_form label {
-  display: block;
-  width: 250px;
-  margin-top: 1em;
-}
-
-#style_form input[type="text"] {
-  width: 250px;
-  margin-left: -1em;
 }
 
 /* Diagnostics page */
@@ -1612,13 +1619,6 @@ table#edit {
   #article-main {
     float: left;
     width: 100%;
-  }
-
-  #configuration_content,
-  #tagbuild_links,
-  #supporting_content,
-  #content_switcher {
-    margin: 0;
   }
 
   /* Turn off features to optimise small screen size */
