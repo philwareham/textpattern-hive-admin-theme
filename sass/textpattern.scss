@@ -289,19 +289,6 @@ input[type="checkbox"] {
    Buttons
    ========================================================================== */
 
-#page-login input[type="submit"],
-#page-logout input[type="submit"] {
-    margin-bottom:1em;
-}
-
-.txp-control-panel input[type="submit"] {
-    margin-left:9px;
-}
-
-input[name="form_preview"] {
-    margin-bottom:1em;
-}
-
 .actions input[type="submit"],
 #content_switcher .list .smallerbox,
 #page-arc_admin_twitter .smallerbox,
@@ -769,25 +756,24 @@ table#edit {
     padding: .5em 0;
     width: 30em;
     background: $color-background-box;
-}
-
-.login-pane p {
-    margin: 0;
-}
-
-.login-pane tr:first-child p {
-    margin: .375em 0;
-    font-size: 1.23076923076923em; // 16px
-    font-weight: bold;
-}
-
-.login-pane td {
-    padding: .38461538461538em 1em;
-    text-align: left !important; // override inline CSS
-}
-
-.login-pane .noline label {
-    font-weight: bold;
+    p {
+        margin: 0;
+    }
+    tr:first-child p {
+        margin: .375em 0;
+        font-size: 1.23076923076923em; // 16px
+        font-weight: bold;
+    }
+    td {
+        padding: .38461538461538em 1em;
+        text-align: left !important; // override inline CSS
+    }
+    .noline label {
+        font-weight: bold;
+    }
+    input[type="submit"] {
+        margin-bottom: 1em;
+    }
 }
 
 

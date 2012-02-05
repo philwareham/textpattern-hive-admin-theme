@@ -399,19 +399,6 @@ input[type="checkbox"] {
 /* =============================================================================
    Buttons
    ========================================================================== */
-#page-login input[type="submit"],
-#page-logout input[type="submit"] {
-  margin-bottom: 1em;
-}
-
-.txp-control-panel input[type="submit"] {
-  margin-left: 9px;
-}
-
-input[name="form_preview"] {
-  margin-bottom: 1em;
-}
-
 .navlink-disabled {
   padding: .1em 1em;
   display: inline-block;
@@ -911,24 +898,23 @@ table#edit {
   width: 30em;
   background: #f7f7f7;
 }
-
-.login-pane p {
+#login_form p {
   margin: 0;
 }
-
-.login-pane tr:first-child p {
+#login_form tr:first-child p {
   margin: .375em 0;
   font-size: 1.23076923076923em;
   font-weight: bold;
 }
-
-.login-pane td {
+#login_form td {
   padding: .38461538461538em 1em;
   text-align: left !important;
 }
-
-.login-pane .noline label {
+#login_form .noline label {
   font-weight: bold;
+}
+#login_form input[type="submit"] {
+  margin-bottom: 1em;
 }
 
 /* Categories page */
