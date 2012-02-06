@@ -1621,6 +1621,13 @@ table#edit {
     width: 100%;
   }
 
+  #configuration_content,
+  #tagbuild_links,
+  #supporting_content,
+  #content_switcher {
+    margin: 0;
+  }
+
   /* Turn off features to optimise small screen size */
   #textile_group,
   #recent_group,
