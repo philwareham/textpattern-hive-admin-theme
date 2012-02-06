@@ -104,16 +104,16 @@ code,
 mark {
   padding: .23076923076923em;
   background: #fff6d3;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -moz-border-radius: 0.231em;
+  border-radius: 0.231em;
 }
 
 pre {
   padding: 1em;
   overflow-x: auto;
   background: #fff6d3;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -moz-border-radius: 0.385em;
+  border-radius: 0.385em;
 }
 
 .pophelp {
@@ -135,8 +135,8 @@ pre {
 
 /* alert boxes */
 #messagepane span {
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -moz-border-radius: 0.385em;
+  border-radius: 0.385em;
   padding: .5em 1em;
   -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
   box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
@@ -399,7 +399,7 @@ input[type="checkbox"] {
 .edit-pane input[type="text"],
 .edit-pane input[type="password"],
 .edit-pane textarea {
-  width: 250px;
+  width: 20em;
 }
 
 #article-main .title input {
@@ -417,7 +417,7 @@ input[type="checkbox"] {
    ========================================================================== */
 /* delete buttons */
 input[value="×"] {
-  padding: 0 4px;
+  padding: 0 .30769230769231em;
   color: #f9e0df;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25);
   border-top: 1px solid #9d261d;
@@ -499,8 +499,8 @@ input[value="×"]:active {
   text-align: center;
   color: white;
   border: solid 1px #d2d2d2;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -moz-border-radius: 0.385em;
+  border-radius: 0.385em;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   background: #dadada;
@@ -672,7 +672,7 @@ input[value="×"]:active {
 body {
   position: relative;
   padding: 4em 2em 1em;
-  min-width: 908px;
+  min-width: 70em;
   color: #333333;
   background: white;
 }
@@ -718,7 +718,7 @@ body {
   z-index: 10000;
   padding: 0 2em;
   height: 3em;
-  min-width: 908px;
+  min-width: 70em;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-top: 1px solid #fabc2b;
@@ -817,7 +817,6 @@ body {
 .data-dropdown {
   display: block;
   float: left;
-  position: relative;
   left: 0;
   margin: 0;
 }
@@ -837,7 +836,6 @@ body {
 }
 .dropdown a.dropdown-toggle {
   display: block;
-  float: none;
   padding: 0 1em;
   line-height: 3em;
   text-decoration: none;
@@ -869,22 +867,20 @@ body {
 }
 
 .dropdown-menu {
-  float: left;
   position: absolute;
   top: 3em;
   left: -9999px;
   z-index: 10001;
-  min-width: 166px;
+  min-width: 12em;
   border: solid 1px #d4d4d4;
   border-top: 0;
-  background: #fef5d2;
-  -moz-border-radius: 0 5px 5px 5px;
-  border-radius: 0 5px 5px 5px;
+  background: #fff6d3;
+  -moz-border-radius: 0 0.385em 0.385em 0.385em;
+  border-radius: 0 0.385em 0.385em 0.385em;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 .dropdown-menu li {
-  float: none;
   border: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -892,12 +888,12 @@ body {
   margin-right: 0;
 }
 .dropdown-menu li:first-child {
-  -moz-border-radius: 0 5px 0 0;
-  border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 0.385em 0 0;
+  border-radius: 0 0.385em 0 0;
 }
 .dropdown-menu li:last-child {
-  -moz-border-radius: 0 0 5px 5px;
-  border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 0.385em 0.385em;
+  border-radius: 0 0 0.385em 0.385em;
 }
 .dropdown-menu li:hover {
   background: #feefb0;
@@ -985,7 +981,7 @@ table#edit {
 .copy-as {
   display: block;
   margin: 1em 0;
-  width: 250px;
+  width: 20em;
 }
 
 .copy-as input[type="submit"] {
@@ -1171,8 +1167,8 @@ table#edit {
 /* Images page */
 #page-image img {
   border: solid 1px #cccccc;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -moz-border-radius: 0.385em;
+  border-radius: 0.385em;
   padding: 4px;
   background: #fff;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -1392,16 +1388,11 @@ table#edit {
 }
 
 /* Diagnostics page */
-#pre_flight_check table {
-  margin: 0 0 20px;
-}
-
-#pre_flight_check table td,
-#diagnostics table td {
+#page-diag table td {
   padding: 0;
 }
 
-#diagnostics textarea {
+#page-diag textarea {
   width: 100% !important;
   margin-bottom: 1em;
 }

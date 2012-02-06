@@ -92,7 +92,7 @@ code,
 mark {
     padding: .23076923076923em;
     background: lighten($color-text-highlight, 28%);
-    @include border-radius(3px);
+    @include border-radius(.23076923076923em);
 }
 
 pre {
@@ -285,7 +285,7 @@ input[type="checkbox"] {
 .edit-pane input[type="text"],
 .edit-pane input[type="password"],
 .edit-pane textarea {
-    width: 250px;
+    width: 20em;
 }
 
 #article-main .title input {
@@ -306,7 +306,7 @@ input[type="checkbox"] {
 /* delete buttons */
 
 input[value="×"] {
-    padding: 0 4px;
+    padding: 0 .30769230769231em;
     color: lighten($color-error, 56%);
     @include text-shadow-dark;
     @include gradient-bar(lighten($color-error, 20%), $color-error);
@@ -484,7 +484,7 @@ input[value="×"] {
 body {
     position: relative;
     padding: 4em 2em 1em;
-    min-width: 908px;
+    min-width: 70em;
     color: $color-text;
     background: $color-background;
 }
@@ -533,7 +533,7 @@ body {
     z-index: 10000;
     padding: 0 2em;
     height: 3em;
-    min-width: 908px;
+    min-width: 70em;
     @include box-shadow;
     @include gradient-bar(#ffda44, #fabc2b);
     h1 {
@@ -606,7 +606,6 @@ body {
 .data-dropdown {
     display: block;
     float: left;
-    position: relative;
     left: 0;
     margin: 0;
 }
@@ -625,7 +624,6 @@ body {
     }
     a.dropdown-toggle {
         display: block;
-        float: none;
         padding: 0 1em;
         line-height: 3em;
         text-decoration: none;
@@ -653,19 +651,17 @@ body {
 }
 
 .dropdown-menu {
-    float: left;
     position: absolute;
     top: 3em;
     left: -9999px;
     z-index: 10001;
-    min-width: 166px;
+    min-width: 12em;
     border: solid 1px #d4d4d4;
     border-top: 0;
-    background: #fef5d2;
+    background: lighten($color-text-highlight, 28%);
     @include border-radius(0 $border-radius $border-radius $border-radius);
     @include box-shadow(2px 2px 2px rgba(#000, .2));
     li {
-        float: none;
         border: 0;
         @include border-radius(0);
         background: none;
@@ -773,7 +769,7 @@ table#edit {
 .copy-as {
     display: block;
     margin: 1em 0;
-    width: 250px;
+    width: 20em;
 }
 
 .copy-as input[type="submit"] {
@@ -1204,17 +1200,12 @@ table#edit {
 
 /* Diagnostics page */
 
-#pre_flight_check table {
-    margin:0 0 20px;
+#page-diag table td {
+    padding: 0;
 }
 
-#pre_flight_check table td,
-#diagnostics table td {
-    padding:0;
-}
-
-#diagnostics textarea {
-    width:100% !important;
+#page-diag textarea {
+    width: 100% !important;
     margin-bottom: 1em;
 }
 
