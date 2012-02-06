@@ -1589,6 +1589,24 @@ body {
 }
 
 
+/* Files page */
+
+/* Hide table cells to optimise screen estate */
+#page-file #list {
+    .id,
+    .actions,
+    .category,
+    .tag-build,
+    .status,
+    .condition,
+    .downloads,
+    .multi-edit,
+    tfoot {
+        display: none !important;
+    }
+}
+
+
 /* Links page */
 
 /* Hide table cells to optimise screen estate */

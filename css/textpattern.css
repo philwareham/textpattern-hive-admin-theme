@@ -1747,6 +1747,20 @@ table#edit {
     display: none !important;
   }
 
+  /* Files page */
+  /* Hide table cells to optimise screen estate */
+  #page-file #list .id,
+  #page-file #list .actions,
+  #page-file #list .category,
+  #page-file #list .tag-build,
+  #page-file #list .status,
+  #page-file #list .condition,
+  #page-file #list .downloads,
+  #page-file #list .multi-edit,
+  #page-file #list tfoot {
+    display: none !important;
+  }
+
   /* Links page */
   /* Hide table cells to optimise screen estate */
   #page-link #list .id,
