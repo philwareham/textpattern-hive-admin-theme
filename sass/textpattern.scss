@@ -1486,11 +1486,6 @@ body {
     text-align:left;
 }
 
-.txp-control-panel select {
-    display:block;
-    margin-bottom:-14px;
-}
-
 .txp-control-panel input[type="submit"] {
     margin-left:0;
 }
@@ -1546,6 +1541,7 @@ body {
     .section,
     .category,
     .author,
+    .status,
     .comments,
     .multi-edit,
     tfoot {
@@ -1560,6 +1556,7 @@ body {
 #page-image #list {
     .actions,
     .date,
+    .name,
     .tag-build,
     .category,
     .multi-edit,
@@ -1613,6 +1610,7 @@ body {
     .name,
     .date,
     .discuss_detail,
+    .parent,
     .multi-edit,
     tfoot {
         display: none !important;

@@ -1667,11 +1667,6 @@ table#edit {
     text-align: left;
   }
 
-  .txp-control-panel select {
-    display: block;
-    margin-bottom: -14px;
-  }
-
   .txp-control-panel input[type="submit"] {
     margin-left: 0;
   }
@@ -1720,6 +1715,7 @@ table#edit {
   #page-list #list .section,
   #page-list #list .category,
   #page-list #list .author,
+  #page-list #list .status,
   #page-list #list .comments,
   #page-list #list .multi-edit,
   #page-list #list tfoot {
@@ -1730,6 +1726,7 @@ table#edit {
   /* Hide table cells to optimise screen estate */
   #page-image #list .actions,
   #page-image #list .date,
+  #page-image #list .name,
   #page-image #list .tag-build,
   #page-image #list .category,
   #page-image #list .multi-edit,
@@ -1771,6 +1768,7 @@ table#edit {
   #page-discuss #list .name,
   #page-discuss #list .date,
   #page-discuss #list .discuss_detail,
+  #page-discuss #list .parent,
   #page-discuss #list .multi-edit,
   #page-discuss #list tfoot {
     display: none !important;
