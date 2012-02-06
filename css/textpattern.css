@@ -1725,9 +1725,7 @@ table#edit {
 
   /* Hide table cells to optimise screen estate */
   #page-list #list .id,
-  #page-list #list .created,
-  #page-list #list .modified,
-  #page-list #list .expires,
+  #page-list #list .date,
   #page-list #list .section,
   #page-list #list .category,
   #page-list #list .author,
@@ -1737,13 +1735,25 @@ table#edit {
     display: none !important;
   }
 
+  /* Images page */
+  /* Hide table cells to optimise screen estate */
+  #page-image #list .id,
+  #page-image #list .actions,
+  #page-image #list .date,
+  #page-image #list .tag-build,
+  #page-image #list .category,
+  #page-image #list .multi-edit,
+  #page-image #list tfoot {
+    display: none !important;
+  }
+
   /* Links page */
   /* Hide table cells to optimise screen estate */
   #page-link #list .id,
   #page-link #list .actions,
   #page-link #list .description,
   #page-link #list .category,
-  #page-link #list .created,
+  #page-link #list .date,
   #page-link #list .author,
   #page-link #list .multi-edit,
   #page-link #list tfoot {

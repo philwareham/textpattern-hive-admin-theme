@@ -1561,13 +1561,27 @@ body {
 /* Hide table cells to optimise screen estate */
 #page-list #list {
     .id,
-    .created,
-    .modified,
-    .expires,
+    .date,
     .section,
     .category,
     .author,
     .comments,
+    .multi-edit,
+    tfoot {
+        display: none !important;
+    }
+}
+
+
+/* Images page */
+
+/* Hide table cells to optimise screen estate */
+#page-image #list {
+    .id,
+    .actions,
+    .date,
+    .tag-build,
+    .category,
     .multi-edit,
     tfoot {
         display: none !important;
@@ -1583,7 +1597,7 @@ body {
     .actions,
     .description,
     .category,
-    .created,
+    .date,
     .author,
     .multi-edit,
     tfoot {
