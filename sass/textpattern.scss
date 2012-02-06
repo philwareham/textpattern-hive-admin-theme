@@ -790,7 +790,8 @@ table#edit {
 #login_form {
     margin: 0 auto;
     padding: .5em 0;
-    width: 30em;
+    width: 100%;
+    max-width: 30em;
     background: $color-background-box;
     p {
         margin: 0;
@@ -1630,16 +1631,16 @@ body {
 
 
 /* =============================================================================
-   Additional layout for screen media < 480px
+   Additional layout for screen media < 640px
    ========================================================================== */
 
 
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 639px) {
 
 
-#login_form {
-    width: 100%;
-    max-width: 400px;
+/* Header not fixed on small devices - takes up valuable screen estate */
+#txp-head {
+    position: absolute;
 }
 
 
