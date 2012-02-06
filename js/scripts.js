@@ -2,7 +2,7 @@ jQuery(function () {
 
 
     // To make select navigation menu work
-    $('#txp-nav-select').change(function() {
+    $('#txp-nav-select select').change(function() {
         window.location = $(this).find('option:selected').val();
     });
 

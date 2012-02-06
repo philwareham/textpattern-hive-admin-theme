@@ -47,7 +47,8 @@ class hive_theme extends theme
             }
             $out[] = '</ul>';
             $out[] = '</div>';
-            $out[] = '<select id="txp-nav-select">';
+            $out[] = '<div id="txp-nav-select">';
+            $out[] = '<select>';
             foreach ($this->menu as $tab)
             {
                 $out[] = "<optgroup label='{$tab['label']}'>";
@@ -62,6 +63,7 @@ class hive_theme extends theme
                 $out[] = '</optgroup>';
             }
             $out[] = '</select>';
+            $out[] = '</div>';
         }
         $out[] = '</div>';
         $out[] = '<div id="messagepane">'.$this->announce($this->message).'</div>';
