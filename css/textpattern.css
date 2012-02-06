@@ -982,6 +982,11 @@ table#edit {
   margin-left: -0.385em;
 }
 
+/* Hide upload form on touch based devices */
+.touch .upload-form {
+  display: none;
+}
+
 /* Tabs */
 .tabs a {
   color: #333333;

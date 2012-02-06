@@ -760,6 +760,11 @@ table#edit {
     margin-left: -.38461538461538em; // fix inconsistent alignment
 }
 
+/* Hide upload form on touch based devices */
+.touch .upload-form {
+    display: none;
+}
+
 
 /* Tabs */
 
