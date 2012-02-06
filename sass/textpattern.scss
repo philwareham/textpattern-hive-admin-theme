@@ -279,13 +279,11 @@ input[type="checkbox"] {
     width: 100%;
 }
 
-.txp-control-panel input[type="text"],
-.txp-control-panel input[type="password"],
-.txp-control-panel textarea,
-.edit-pane input[type="text"],
-.edit-pane input[type="password"],
-.edit-pane textarea {
-    width: 20em;
+.txp-control-panel,
+.edit-pane {
+    & input[type="text"], & input[type="password"], & textarea {
+        width: 15em;
+    }
 }
 
 #article-main .title input {
@@ -294,7 +292,6 @@ input[type="checkbox"] {
 
 #content_switcher input[type="checkbox"],
 #content_switcher #list input[type="submit"] {
-    margin: 0;
     float: right;
 }
 
@@ -728,6 +725,13 @@ body {
     margin-bottom: .5em;
 }
 
+.txp-control-panel {
+    text-align: center;
+    select {
+        margin-bottom: .38461538461538em;
+    }
+}
+
 .pageby {
     float: left;
     margin: .61538461538462em 0 0;
@@ -738,11 +742,6 @@ body {
     margin-bottom: 0;
 }
 
-.txp-control-panel {
-    text-align:center;
-    padding-bottom:1em;
-}
-
 table#edit {
     width:100%;
 }
@@ -750,7 +749,7 @@ table#edit {
 .copy-as {
     display: block;
     margin: 1em 0;
-    width: 20em;
+    width: 16em;
 }
 
 .copy-as input[type="submit"] {
@@ -1042,11 +1041,6 @@ table#edit {
 
 #section_container #list td {
     padding:0;
-}
-
-#section_container .txp-control-panel {
-    padding:0;
-    margin-bottom:-2px;
 }
 
 #section_container .section {
@@ -1451,6 +1445,7 @@ body {
     padding: 0 1em;
     min-width: 294px;
     h1 {
+        max-width: 50%;
         padding-left: $logo-small-width;
         @include svg-graphic(textpattern-sml, png, $logo-small-width, 1.84615384615385em);
     }
@@ -1479,15 +1474,7 @@ body {
 /* Miscellaneous/shared layout stuff */
 
 .edit-pane {
-    width:280px !important;
-}
-
-.txp-control-panel {
-    text-align:left;
-}
-
-.txp-control-panel input[type="submit"] {
-    margin-left:0;
+    width: 280px !important;
 }
 
 
@@ -1635,10 +1622,30 @@ body {
 
 @media only screen and (max-width: 639px) {
 
+body {
+    padding-top: 7em;
+}
+
 
 /* Header not fixed on small devices - takes up valuable screen estate */
 #txp-head {
     position: absolute;
+    h1 {
+        max-width: 66%;
+    }
+}
+
+/* show select version of navigation for smaller screens (and hide list version) */
+#txp-nav-select {
+    position: absolute;
+    top: 2.46153846153846em;
+    right: 0;
+    left: 0;
+    z-index: 10010;
+    border-top: 1px solid lighten($color-text-highlight, 33%);
+    padding: .53846153846154em 1em;
+    background: lighten($color-text-highlight, 28%);
+    @include box-shadow;
 }
 
 

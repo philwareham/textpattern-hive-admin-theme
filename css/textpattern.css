@@ -393,13 +393,11 @@ input[type="checkbox"] {
   width: 100%;
 }
 
-.txp-control-panel input[type="text"],
-.txp-control-panel input[type="password"],
-.txp-control-panel textarea,
+.txp-control-panel input[type="text"], .txp-control-panel input[type="password"], .txp-control-panel textarea,
 .edit-pane input[type="text"],
 .edit-pane input[type="password"],
 .edit-pane textarea {
-  width: 20em;
+  width: 15em;
 }
 
 #article-main .title input {
@@ -408,7 +406,6 @@ input[type="checkbox"] {
 
 #content_switcher input[type="checkbox"],
 #content_switcher #list input[type="submit"] {
-  margin: 0;
   float: right;
 }
 
@@ -950,6 +947,13 @@ body {
   margin-bottom: .5em;
 }
 
+.txp-control-panel {
+  text-align: center;
+}
+.txp-control-panel select {
+  margin-bottom: .38461538461538em;
+}
+
 .pageby {
   float: left;
   margin: .61538461538462em 0 0;
@@ -960,11 +964,6 @@ body {
   margin-bottom: 0;
 }
 
-.txp-control-panel {
-  text-align: center;
-  padding-bottom: 1em;
-}
-
 table#edit {
   width: 100%;
 }
@@ -972,7 +971,7 @@ table#edit {
 .copy-as {
   display: block;
   margin: 1em 0;
-  width: 20em;
+  width: 16em;
 }
 
 .copy-as input[type="submit"] {
@@ -1248,11 +1247,6 @@ table#edit {
 /* Sections page */
 #section_container #list td {
   padding: 0;
-}
-
-#section_container .txp-control-panel {
-  padding: 0;
-  margin-bottom: -2px;
 }
 
 #section_container .section {
@@ -1630,6 +1624,7 @@ table#edit {
     min-width: 294px;
   }
   #txp-head h1 {
+    max-width: 50%;
     padding-left: 1.846em;
     background-image: url("../img/textpattern-sml.png");
   }
@@ -1661,14 +1656,6 @@ table#edit {
   /* Miscellaneous/shared layout stuff */
   .edit-pane {
     width: 280px !important;
-  }
-
-  .txp-control-panel {
-    text-align: left;
-  }
-
-  .txp-control-panel input[type="submit"] {
-    margin-left: 0;
   }
 
   /* Categories page */
@@ -1784,8 +1771,29 @@ table#edit {
    Additional layout for screen media < 640px
    ========================================================================== */
 @media only screen and (max-width: 639px) {
+  body {
+    padding-top: 7em;
+  }
+
   /* Header not fixed on small devices - takes up valuable screen estate */
   #txp-head {
     position: absolute;
+  }
+  #txp-head h1 {
+    max-width: 66%;
+  }
+
+  /* show select version of navigation for smaller screens (and hide list version) */
+  #txp-nav-select {
+    position: absolute;
+    top: 2.46153846153846em;
+    right: 0;
+    left: 0;
+    z-index: 10010;
+    border-top: 1px solid #fffbec;
+    padding: .53846153846154em 1em;
+    background: #fff6d3;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
 }
