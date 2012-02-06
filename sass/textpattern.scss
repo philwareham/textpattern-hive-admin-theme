@@ -1541,7 +1541,6 @@ body {
 
 /* Hide table cells to optimise screen estate */
 #page-list #list {
-    .id,
     .date,
     .section,
     .category,
@@ -1558,7 +1557,6 @@ body {
 
 /* Hide table cells to optimise screen estate */
 #page-image #list {
-    .id,
     .actions,
     .date,
     .tag-build,
@@ -1574,8 +1572,8 @@ body {
 
 /* Hide table cells to optimise screen estate */
 #page-file #list {
-    .id,
     .actions,
+    .title,
     .category,
     .tag-build,
     .status,
@@ -1592,9 +1590,7 @@ body {
 
 /* Hide table cells to optimise screen estate */
 #page-link #list {
-    .id,
     .actions,
-    .description,
     .category,
     .date,
     .author,
@@ -1607,15 +1603,15 @@ body {
 
 /* Comments page */
 
+.cb_show_spam {
+    margin-top: -.5em;
+}
+
 /* Hide table cells to optimise screen estate */
 #page-discuss #list {
-    .created,
     .name,
-    .email,
-    .website,
-    .ip,
-    .status,
-    .parent,
+    .date,
+    .discuss_detail,
     .multi-edit,
     tfoot {
         display: none !important;
