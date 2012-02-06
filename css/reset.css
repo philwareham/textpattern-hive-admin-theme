@@ -217,7 +217,7 @@ a.navlink-active,
   text-decoration: none;
   outline: 0;
   margin: 0;
-  padding: 3px .75em;
+  padding: .25em .75em;
   -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
   box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
@@ -346,7 +346,7 @@ input[type="text"] {
   background-color: white;
   margin: 0;
   border: 1px solid #cccccc;
-  padding: 2px 5px;
+  padding: .15384615384615em .38461538461538em;
   outline: 0;
   height: 1.84615384615385em;
   -webkit-box-sizing: border-box;
@@ -442,7 +442,7 @@ optgroup {
   select[multiple],
   select[multiple][size] {
     background-image: none;
-    padding-right: 3px;
+    padding-right: .23076923076923em;
   }
 
   select,
@@ -450,7 +450,7 @@ optgroup {
   select[size="1"] {
     background-repeat: no-repeat;
     background-position: right center;
-    padding-right: 20px;
+    padding-right: 2em;
     background-image: url("../img/select_arrow.gif");
   }
   .svg select, .svg

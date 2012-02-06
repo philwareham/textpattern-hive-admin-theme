@@ -229,7 +229,7 @@ a.navlink-active,
     text-decoration: none;
     outline: 0;
     margin: 0;
-    padding: 3px .75em;
+    padding: .25em .75em;
     @include box-shadow(rgba(#fff, .25) 0 1px 0 0 inset);
     @include text-shadow-light;
     width: auto;
@@ -271,7 +271,7 @@ input[type="text"] {
     background-color: $color-background;
     margin: 0;
     border: 1px solid $color-border;
-    padding: 2px 5px;
+    padding: .15384615384615em .38461538461538em;
     outline: 0;
     height: 1.84615384615385em;
     @include box-sizing;
@@ -362,7 +362,7 @@ select[size],
 select[multiple],
 select[multiple][size] {
     background-image: none;
-    padding-right: 3px;
+    padding-right: .23076923076923em;
 }
 
 select,
@@ -372,7 +372,7 @@ select[size="1"] {
         repeat: no-repeat;
         position: right center;
     }
-    padding-right: 20px;
+    padding-right: 2em;
     @include svg-graphic(select_arrow, gif, 1em, .30769230769231em);
 }
 

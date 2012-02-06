@@ -306,7 +306,7 @@ input[type="checkbox"] {
 /* delete buttons */
 
 input[value="×"] {
-    padding: 0 .30769230769231em;
+    padding: 0 .33333333333333em;
     color: lighten($color-error, 56%);
     @include text-shadow-dark;
     @include gradient-bar(lighten($color-error, 20%), $color-error);
@@ -319,29 +319,10 @@ input[value="×"] {
     }
 }
 
-.navlink-disabled {
-    padding:.1em 1em;
-    display:inline-block;
-    vertical-align:baseline;
-    margin:0 3px 0 0;
-    outline:0;
-    text-align:center;
-    color: $color-text-inverse;
-    border:solid 1px #d2d2d2;
-    @include border-radius;
-    @include box-shadow;
-    background:#dadada;
-    background:-webkit-gradient(linear,left top,left bottom,from(#e6e6e6),to(#dadada)); /* Safari 4+, Chrome */
-    background:-webkit-linear-gradient(top,#e6e6e6,#dadada); /* Safari 5.1+, Chrome 10+ */
-    background:   -moz-linear-gradient(top,#e6e6e6,#dadada); /* Firefox 3.6 */
-    background:    -ms-linear-gradient(top,#e6e6e6,#dadada); /* IE10 */
-    background:     -o-linear-gradient(top,#e6e6e6,#dadada); /* Opera 11.10+ */
-    background:        linear-gradient(top,#e6e6e6,#dadada);
-		filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#e6e6e6',EndColorStr='#dadada'); /* IE7-IE9 */
-    cursor:default;
-    /* IE 7 */
-    *zoom: 1;
-    *display: inline;
+form.busy input[type='submit'] {
+    border: 1px solid #eee;
+    border-bottom-color: #bbb;
+    @include gradient(#e6e6e6, #dadada);
 }
 
 
