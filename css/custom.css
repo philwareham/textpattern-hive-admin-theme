@@ -1,7 +1,4 @@
 /* Hive theme for Textpattern CMS (v2.0a1) */
-/* ----------------------- COLORSCHEME ----------------------- */
-/* Options available: "colour-default.css" "colour-green.css" "colour-blue.css" */
-@import url("colour-default.css");
 /* ------ OPTIONALLY HIDE FEATURES IN WRITE/EDIT PAGES ------- */
 /* More info: http://forum.textpattern.com/viewtopic.php?pid=240058#p240058 */
 /* Uncomment any rule below to apply it */
@@ -45,6 +42,11 @@
 
 #page-rss_sql_run input[type="submit"] {
   margin-right: 10px;
+}
+
+#page-rss_db_man #list tr[style="background-color: #eee;"],
+#page-rss_db_bk #list tr[style="background-color: #eee;"] {
+  background: #f7f7f7 !important;
 }
 
 /* bot_privs */

@@ -475,7 +475,7 @@ input[type="checkbox"] {
 
 body {
     position: relative;
-    padding: 4em 2em .5em;
+    padding: 4em 2em 1em;
     min-width: 908px;
     color: $color-text;
     background: $color-background;
@@ -774,6 +774,29 @@ table#edit {
 
 #page-css .copy-as input[type="submit"] {
     margin-left: -.38461538461538em; // fix inconsistent alignment
+}
+
+
+/* Tabs */
+
+.tabs a {
+    color: $color-text;
+}
+
+.tabs .tabup a {
+    background:#ffda44;
+}
+
+.tabs .tabup a:hover {
+    background:#fcdd62;
+}
+
+.tabs .tabdown2 a {
+    background:#c7d3d8;
+}
+
+.tabs .tabdown2 a:hover {
+    background:#d2dce0;
 }
 
 

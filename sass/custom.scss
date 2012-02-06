@@ -5,11 +5,6 @@
 
 
 
-/* ----------------------- COLORSCHEME ----------------------- */
-/* Options available: "colour-default.css" "colour-green.css" "colour-blue.css" */
-@import url("colour-default.css"); 
-
-
 
 /* ------ OPTIONALLY HIDE FEATURES IN WRITE/EDIT PAGES ------- */
 
@@ -71,6 +66,11 @@
 
 #page-rss_sql_run input[type="submit"] {
     margin-right: 10px;
+}
+
+#page-rss_db_man #list tr[style="background-color: #eee;"],
+#page-rss_db_bk #list tr[style="background-color: #eee;"] {
+    background: $color-background-box !important;
 }
 
 
