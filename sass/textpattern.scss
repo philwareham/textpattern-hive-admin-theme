@@ -944,7 +944,11 @@ table#edit {
 /* Articles page */
 
 .unpublished {
-    color: #999;
+    color: $color-text-footnote;
+}
+
+#page-list .title {
+    width: 50%;
 }
 
 
