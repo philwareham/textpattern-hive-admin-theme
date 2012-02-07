@@ -1,0 +1,244 @@
+// note: this file is for use with Sass - http://sass-lang.com, don't use it as your live site stylesheet!
+
+// import Sass partials
+@import "variables", "mixins";
+
+
+
+
+/* =============================================================================
+   Additional layout for screen media < 769px
+   ========================================================================== */
+
+
+@media only screen and (max-width: 768px) {
+
+
+/* =============================================================================
+   Layout
+   ========================================================================== */
+
+body {
+    padding: 4em 1em 0;
+    min-width: 294px;
+}
+
+
+/* =============================================================================
+   Header
+   ========================================================================== */
+
+#txp-head {
+    padding: 0 1em;
+    min-width: 294px;
+    h1 {
+        max-width: 50%;
+        padding-left: $logo-small-width;
+        @include svg-graphic(textpattern-sml, png, $logo-small-width, 1.84615384615385em);
+    }
+}
+
+#txp-logout {
+    right: 1em;
+}
+
+
+/* =============================================================================
+   Navigation
+   ========================================================================== */
+
+/* Show <select> version of navigation on small screen widths */
+#txp-nav-select {
+    display: inherit;
+}
+
+/* Hide <ul> version of navigation on small screen widths */
+#txp-nav {
+    display: none;
+}
+
+
+/* Miscellaneous/shared layout stuff */
+
+.edit-pane {
+    width: 280px !important;
+}
+
+
+/* Categories page */
+
+.category-list td {
+    float: left;
+    width: 100%;
+}
+
+.category-list div {
+    margin: 0 0 1em 0;
+}
+
+
+/* Write page */
+
+#page-article #edit {
+    th,
+    td,
+    tr {
+        display: block;
+    }
+}
+
+#article-col-1,
+#article-col-2,
+#article-main {
+    float: left;
+    width: 100%;
+}
+
+#configuration_content,
+#tagbuild_links,
+#supporting_content,
+#content_switcher {
+    margin: 0;
+}
+
+/* Turn off features to optimise small screen size */
+#textile_group,
+#recent_group,
+#page-article .action-create,
+#page-article .article-nav {
+    display: none;
+}
+
+/* Hide table cells to optimise screen estate */
+#page-list #list {
+    .date,
+    .section,
+    .category,
+    .author,
+    .status,
+    .comments,
+    .multi-edit,
+    tfoot {
+        display: none !important;
+    }
+}
+
+
+/* Images page */
+
+/* Hide table cells to optimise screen estate */
+#page-image #list {
+    .actions,
+    .date,
+    .name,
+    .tag-build,
+    .category,
+    .multi-edit,
+    tfoot {
+        display: none !important;
+    }
+}
+
+
+/* Files page */
+
+/* Hide table cells to optimise screen estate */
+#page-file #list {
+    .actions,
+    .title,
+    .category,
+    .tag-build,
+    .status,
+    .condition,
+    .downloads,
+    .multi-edit,
+    tfoot {
+        display: none !important;
+    }
+}
+
+
+/* Links page */
+
+/* Hide table cells to optimise screen estate */
+#page-link #list {
+    .actions,
+    .category,
+    .date,
+    .author,
+    .multi-edit,
+    tfoot {
+        display: none !important;
+    }
+}
+
+
+/* Comments page */
+
+.cb_show_spam {
+    margin-top: -.5em;
+}
+
+/* Hide table cells to optimise screen estate */
+#page-discuss #list {
+    .name,
+    .date,
+    .discuss_detail,
+    .parent,
+    .multi-edit,
+    tfoot {
+        display: none !important;
+    }
+}
+#page-discuss table.edit-pane tr:last-child,
+#page-discuss table.edit-pane tr:nth-last-child(2) td:first-child,
+#page-discuss table#edit-discuss tr:nth-child(9) {
+    display: none !important;
+}
+
+
+}
+
+
+
+
+/* =============================================================================
+   Additional layout for screen media < 560px
+   ========================================================================== */
+
+
+@media only screen and (max-width: 559px) {
+
+body {
+    padding-top: 7em;
+}
+
+#page-login,
+#page-logout {
+    padding-top: 4em;
+}
+
+
+/* Header not fixed on small devices - takes up valuable screen estate */
+#txp-head {
+    position: absolute;
+    h1 {
+        max-width: 66%;
+    }
+}
+
+/* show select version of navigation for smaller screens (and hide list version) */
+#txp-nav-select {
+    position: absolute;
+    top: 2.46153846153846em;
+    right: 0;
+    left: 0;
+    z-index: 10010;
+    border-top: 1px solid lighten($color-text-highlight, 33%);
+    padding: .53846153846154em 1em;
+    background: lighten($color-text-highlight, 28%);
+    @include box-shadow;
+}
+
+
+}
