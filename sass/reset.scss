@@ -53,6 +53,12 @@ a {
    Typography
    ========================================================================== */
 
+/* Addresses margins set differently in IE7 */
+p,
+pre {
+    margin: 1em 0;
+}
+
 /* addresses styling not present in IE7-9, Safari5, Chrome */
 abbr[title],
 acronym[title],
