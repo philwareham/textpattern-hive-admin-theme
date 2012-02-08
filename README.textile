@@ -7,12 +7,11 @@ h2. Installation instructions
 # Upload the directory 'hive' into your Textpattern installation -> theme directory.
 # Log in to your Textpattern admin area. Navigate to admin -> preferences -> advanced.
 # Select 'Hive' from the 'Admin-side theme' dropdown list. Save the preferences.
-# Log out and then log in again - you should now be using the Hive theme.
 # You can also install the theme easily using the "smd_admin_themes":http://stefdawson.com/sw/plugins/smd_admin_themes plugin.
 
 h2. Usage instructions
 
-If you want to remove the Textpattern logo branding and link from the header, simply delete line 25 of @hive.php@.
+*NEEDS TO BE REWRITTEN ONCE THEME REDESIGN IS COMPLETE*
 
 Also within the @custom.css@ file, there are options to hide certain sections/fields from displaying in the admin pages. To use any of the options uncomment their lines (remove the @/*@ and @*/@ from the line of CSS you want to activate).
 
