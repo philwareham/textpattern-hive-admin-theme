@@ -26,6 +26,18 @@
     }
 }
 
+// Higher resolution images for retina displays
+        
+@mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
+    $file_name: $hdfile + '.' + $hdtype;
+    $retina_name: $hdfile + '@2x.' + $hdtype;
+    background-image: url('../img/' + $file_name);
+    @media (-webkit-min-device-pixel-ratio: 2) {
+        background-image: url('../img/retina/' + $retina_name) !important;
+        -webkit-background-size: $hdwidth $hdheight;
+    }
+}
+
 // rounded corners
 
 @mixin border-radius($border-radius) {

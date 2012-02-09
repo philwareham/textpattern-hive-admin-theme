@@ -322,6 +322,15 @@ form.busy input[type='submit'] {
     @include gradient(#e6e6e6, #dadada);
 }
 
+form.busy span.spinner:after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    @include hires-graphic(spinner, gif, 16px, 16px)
+}
+
 
 /* =============================================================================
    Lists

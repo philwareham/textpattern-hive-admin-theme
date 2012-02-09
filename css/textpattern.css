@@ -511,6 +511,21 @@ form.busy input[type='submit'] {
   border-radius: 0 \0;
 }
 
+form.busy span.spinner:after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  background-image: url("../img/spinner.gif");
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  form.busy span.spinner:after {
+    background-image: url("../img/retina/spinner@2x.gif") !important;
+    -webkit-background-size: 16px 16px;
+  }
+}
+
 /* =============================================================================
    Lists
    ========================================================================== */
