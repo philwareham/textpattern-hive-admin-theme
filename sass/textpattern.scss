@@ -103,7 +103,10 @@ pre {
 }
 
 .pophelp {
+    padding: 0 .23076923076923em;
     font-weight: normal;
+    background: #ddd;
+    @include border-radius(.53846153846154em);
 }
 
 
