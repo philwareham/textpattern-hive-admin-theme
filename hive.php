@@ -79,18 +79,6 @@ class hive_theme extends theme
         return join(n, $out);
     }
 
-    function manifest()
-    {
-        global $prefs;
-        return array(
-            'author'      => 'Phil Wareham',
-            'author_uri'  => 'http://twitter.com/philwareham',
-            'version'     => '2.0a1',
-            'description' => 'Textpattern Hive Theme',
-            'help'        => 'http://textgarden.org/administration-themes/261/hive',
-        );
-    }
-
 	function announce($thing)
     {
         // $thing[0]: message text
@@ -126,6 +114,18 @@ $(document).ready( function(){
 })
 EOS;
         return script_js(str_replace('</', '<\/', $js), $html);
+    }
+
+    function manifest()
+    {
+        global $prefs;
+        return array(
+            'author'      => 'Phil Wareham',
+            'author_uri'  => 'http://twitter.com/philwareham',
+            'version'     => '2.0a1',
+            'description' => 'Textpattern Hive Theme',
+            'help'        => 'http://textgarden.org/administration-themes/261/hive',
+        );
     }
 
 }
