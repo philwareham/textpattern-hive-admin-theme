@@ -121,33 +121,35 @@ pre {
 
 .not-ok,
 #plugin_form .modified {
-    color: $color-error;
+    color: $error-text;
 }
 
 /* alert boxes */
 #messagepane span {
     @include border-radius;
+    border: 1px solid;
     padding: .5em 1em;
-    @include box-shadow(rgba(#fff, .25) 0 1px 0 0 inset);
     text-align: center;
     max-width: 42em;
     display: inline-block;
+    @include text-shadow-light;
     /* IE 7 */
     *zoom: 1;
     *display: inline;
-    &.warning {
-        @include text-shadow-light;
-        @include gradient-bar(lighten($color-warning, 30%), lighten($color-warning, 10%));
-    }
     &.success {
-        color: $color-text-inverse;
-        @include text-shadow-dark;
-        @include gradient-bar(lighten($color-success, 20%), $color-success);
+        color: $success-text;
+        background: $success-background;
+        border-color: $success-border;
+    }
+    &.warning {
+        color: $warning-text;
+        background: $warning-background;
+        border-color: $warning-border;
     }
     &.error {
-        color: $color-text-inverse;
-        @include text-shadow-dark;
-        @include gradient-bar(lighten($color-error, 20%), $color-error);
+        color: $error-text;
+        background: $error-background;
+        border-color: $error-border;
     }
 }
 
@@ -307,15 +309,15 @@ input[type="checkbox"] {
 
 input[value="×"] {
     padding: 0 .33333333333333em;
-    color: lighten($color-error, 56%);
+    color: lighten($error-text, 56%);
     @include text-shadow-dark;
-    @include gradient-bar(lighten($color-error, 20%), $color-error);
+    @include gradient-bar(lighten($error-text, 20%), $error-text);
     &:hover {
         color: $color-text-inverse;
-        @include gradient-bar(lighten($color-error, 28%), lighten($color-error, 10%));
+        @include gradient-bar(lighten($error-text, 28%), lighten($error-text, 10%));
     }
     &:active {
-        @include gradient-bar(lighten($color-error, 10%), lighten($color-error, 28%));
+        @include gradient-bar(lighten($error-text, 10%), lighten($error-text, 28%));
     }
 }
 
@@ -1054,7 +1056,7 @@ table#edit {
 }
 
 #page-discuss #list tr.spam td {
-    background: lighten($color-error, 58%);
+    background: lighten($error-background, 2%);
 }
 
 

@@ -45,9 +45,18 @@ $color-gradient-to:     #ddd;
 
 // accent colours
 
-$color-success:         #46a546;
-$color-warning:         #ffb300;
-$color-error:           #9d261d;
 $color-background:      #fff;
 $color-background-box:  #f7f7f7;
 $color-highlight-box:   #fdf5d9;
+
+// alert colours
+
+$success-text:          #238c23;
+$success-background:    #dff0d8;
+$success-border:        darken($success-background, 10%);
+$warning-text:          #ffb300;
+$warning-background:    #fcf8e3;
+$warning-border:        darken($warning-background, 10%);
+$error-text:            #9d261d;
+$error-background:      #f2dede;
+$error-border:          darken($error-background, 10%);
