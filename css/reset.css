@@ -440,6 +440,10 @@ optgroup {
   font-weight: normal;
   color: #333333;
 }
+optgroup::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
 
 /* tweaks for Safari, Chrome */
 @media (-webkit-min-device-pixel-ratio: 0) {

@@ -359,6 +359,10 @@ optgroup {
     font-style: normal;
     font-weight: normal;
     color: $color-text;
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
 }
 
 /* tweaks for Safari, Chrome */
