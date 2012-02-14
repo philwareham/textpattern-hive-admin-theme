@@ -536,7 +536,7 @@ body {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        @include svg-graphic(textpattern-lrg, png, $logo-large-width, 2.30769230769231em);
+        @include svg-graphic($logo-large-filename, $logo-large-filetype, $logo-large-width, $logo-large-height);
         a {
             margin-right: 1em;
             margin-left: 1em;

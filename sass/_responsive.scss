@@ -34,7 +34,7 @@ body {
     h1 {
         max-width: 50%;
         padding-left: $logo-small-width;
-        @include svg-graphic(textpattern-sml, png, $logo-small-width, 1.84615384615385em);
+        @include svg-graphic($logo-small-filename, $logo-small-filetype, $logo-small-width, $logo-small-height);
     }
 }
 
