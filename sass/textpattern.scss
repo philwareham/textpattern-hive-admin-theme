@@ -131,8 +131,8 @@ pre {
     padding: .5em 1em;
     text-align: center;
     max-width: 42em;
-    display: inline-block;
     @include text-shadow-light;
+    display: inline-block;
     /* IE 7 */
     *zoom: 1;
     *display: inline;
@@ -333,7 +333,7 @@ form.busy span.spinner:after {
     width: 16px;
     height: 16px;
     margin-left: 5px;
-    @include hires-graphic(spinner, gif, 16px, 16px)
+    @include hires-graphic(spinner, gif, 16px, 16px);
 }
 
 
@@ -555,9 +555,6 @@ body {
     position: absolute;
     top: -.5em;
     right: 2em;
-    a {
-        display: block;
-    }
 }
 
 

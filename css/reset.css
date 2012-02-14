@@ -248,7 +248,10 @@ a.navlink-active,
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee',EndColorStr='#bbbbbb');
   /* hack to remove any border-radius in IE9 so we can keep filter gradients */
   border-radius: 0 \0;
+  display: inline-block;
   /* IE7 */
+  *display: inline;
+  *zoom: 1;
   *padding-top: 2px;
   *padding-bottom: 0;
   *overflow: visible;

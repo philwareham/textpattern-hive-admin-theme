@@ -242,7 +242,10 @@ a.navlink-active,
     border: 1px solid #bbb;
     border-bottom-color: #a2a2a2;
     @include gradient(#eee, #bbb);
+    display: inline-block;
     /* IE7 */
+    *display: inline;
+    *zoom: 1;
     *padding-top: 2px;
     *padding-bottom: 0;
     *overflow: visible;
