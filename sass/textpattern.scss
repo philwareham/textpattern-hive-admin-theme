@@ -942,9 +942,11 @@ table#edit {
     width:3.5em;
 }
 
-.recent li {
+.recent {
     list-style: decimal-leading-zero;
-    margin-left: 2em;
+    li {
+        margin-left: 2em;
+    }
 }
 
 

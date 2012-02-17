@@ -1102,8 +1102,10 @@ table#edit {
   width: 3.5em;
 }
 
-.recent li {
+.recent {
   list-style: decimal-leading-zero;
+}
+.recent li {
   margin-left: 2em;
 }
 
