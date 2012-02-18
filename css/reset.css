@@ -109,20 +109,28 @@ sub {
 /* =============================================================================
    Lists
    ========================================================================== */
-ul,
-ol {
-  margin-left: 0;
-  padding: 0 0 0 1em;
+/* addresses margins set differently in IE7 */
+dl,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+dd {
+  margin: 0 0 0 2em;
 }
 
 /* remove margins from nested lists */
+dl dl,
 ul ul,
 ol ol {
   margin: 0;
 }
 
-dd {
-  margin: 0 0 0 1em;
+/* addresses paddings set differently in IE7 */
+ol,
+ul {
+  padding: 0 0 0 2em;
 }
 
 dt {
