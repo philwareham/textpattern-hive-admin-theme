@@ -80,17 +80,29 @@ samp,
     font-family: $font-mono;
 }
 
-code,
-mark {
+mark,
+var {
     padding: 0 .23076923076923em;
-    background: $color-highlight-box;
-    @include border-radius(.23076923076923em);
+    background: $warning-background;
+    border: 1px solid $warning-border;
+    @include border-radius(.23076923076923em); // 3px / 13px
+}
+
+code,
+kbd,
+samp,
+var {
+    padding: 0 .23076923076923em;
+    background: $color-background-box;
+    border: 1px solid lighten($color-border, 9%);
+    @include border-radius(.23076923076923em); // 3px / 13px
 }
 
 pre {
     padding: 1em;
     overflow-x: auto;
-    background: $color-highlight-box;
+    background: $color-background-box;
+    border: 1px solid lighten($color-border, 9%);
     @include border-radius;
 }
 

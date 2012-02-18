@@ -96,10 +96,22 @@ samp,
   font-family: Cousine, Menlo, Consolas, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
 }
 
-code,
-mark {
+mark,
+var {
   padding: 0 .23076923076923em;
   background: #fff6d3;
+  border: 1px solid #ffeca0;
+  -moz-border-radius: 0.231em;
+  border-radius: 0.231em;
+}
+
+code,
+kbd,
+samp,
+var {
+  padding: 0 .23076923076923em;
+  background: #f7f7f7;
+  border: 1px solid #e3e3e3;
   -moz-border-radius: 0.231em;
   border-radius: 0.231em;
 }
@@ -107,7 +119,8 @@ mark {
 pre {
   padding: 1em;
   overflow-x: auto;
-  background: #fff6d3;
+  background: #f7f7f7;
+  border: 1px solid #e3e3e3;
   -moz-border-radius: 0.385em;
   border-radius: 0.385em;
 }
