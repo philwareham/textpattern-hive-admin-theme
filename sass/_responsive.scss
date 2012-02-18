@@ -234,9 +234,9 @@ body {
     right: 0;
     left: 0;
     z-index: 10010;
-    border-top: 1px solid lighten($color-text-highlight, 33%);
+    border-top: 1px solid lighten($color-highlight-box, 5%);
     padding: .53846153846154em 1em;
-    background: lighten($color-text-highlight, 28%);
+    background: $color-highlight-box;
     @include box-shadow;
 }
 

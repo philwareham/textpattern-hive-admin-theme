@@ -3,19 +3,11 @@
 // import Sass partials
 @import "variables", "mixins";
 
-/* import rules to make base rendering consistent for all browsers */
+
+// import other stylesheets
 @import url("reset.css");
-
-
-
-
-/* =============================================================================
-   IMPORT CUSTOM CSS FILE
-   ========================================================================== */
-/* see the 'readme.txt' for instructions on how to use this file */
 @import url("custom.css");
-
-
+/* See readme for instructions on how to use the 'custom.css' file above */
 
 
 /* =============================================================================
@@ -90,15 +82,15 @@ samp,
 
 code,
 mark {
-    padding: .23076923076923em;
-    background: lighten($color-text-highlight, 28%);
+    padding: 0 .23076923076923em;
+    background: $color-highlight-box;
     @include border-radius(.23076923076923em);
 }
 
 pre {
     padding: 1em;
     overflow-x: auto;
-    background: lighten($color-text-highlight, 28%);
+    background: $color-highlight-box;
     @include border-radius;
 }
 
@@ -647,7 +639,7 @@ body {
     min-width: 12em;
     border: solid 1px #d4d4d4;
     border-top: 0;
-    background: lighten($color-text-highlight, 28%);
+    background: $color-highlight-box;
     @include border-radius(0 $border-radius $border-radius $border-radius);
     @include box-shadow(2px 2px 2px rgba(#000, .2));
     li {

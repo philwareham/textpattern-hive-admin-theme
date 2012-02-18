@@ -1,11 +1,7 @@
-/* Hive theme for Textpattern CMS (v2.0a1) */
-/* import rules to make base rendering consistent for all browsers */
 @import url("reset.css");
-/* =============================================================================
-   IMPORT CUSTOM CSS FILE
-   ========================================================================== */
-/* see the 'readme.txt' for instructions on how to use this file */
 @import url("custom.css");
+/* Hive theme for Textpattern CMS (v2.0a2) */
+/* See readme for instructions on how to use the 'custom.css' file above */
 /* =============================================================================
    Web fonts
    ========================================================================== */
@@ -102,7 +98,7 @@ samp,
 
 code,
 mark {
-  padding: .23076923076923em;
+  padding: 0 .23076923076923em;
   background: #fff6d3;
   -moz-border-radius: 0.231em;
   border-radius: 0.231em;
@@ -157,9 +153,9 @@ pre {
   border-color: #c1e2b3;
 }
 #messagepane span.warning {
-  color: #ffb300;
-  background: #fcf8e3;
-  border-color: #f7ecb5;
+  color: #d69702;
+  background: #fff6d3;
+  border-color: #ffeca0;
 }
 #messagepane span.error {
   color: #9d261d;
@@ -1572,7 +1568,7 @@ table#edit {
   padding: .9em;
 }
 
-/* Hive theme for Textpattern CMS (v2.0a1) */
+/* Hive theme for Textpattern CMS (v2.0a2) */
 /* =============================================================================
    Additional layout for screen media < 769px
    ========================================================================== */
@@ -1764,7 +1760,7 @@ table#edit {
     right: 0;
     left: 0;
     z-index: 10010;
-    border-top: 1px solid #fffbec;
+    border-top: 1px solid #fffbed;
     padding: .53846153846154em 1em;
     background: #fff6d3;
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);

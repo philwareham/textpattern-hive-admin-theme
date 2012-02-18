@@ -1,6 +1,6 @@
 // note: this file is for use with Sass - http://sass-lang.com, don't use it as your live site stylesheet!
 
-/* Hive theme for Textpattern CMS (v2.0a1) */
+/* Hive theme for Textpattern CMS (v2.0a2) */
 
 // logo (logo-large for screen width > 480px, logo-small for screen width < 481px)
 
@@ -29,7 +29,6 @@ $smallfont:             .84615384615385em; // 11px / 13px
 $color-text:            #333;
 $color-text-inverse:    #fff;
 $color-text-footnote:   #888;
-$color-text-highlight:  #ffda44;
 $color-link:            #1a428b;
 $color-link-hover:      #06f;
 
@@ -47,15 +46,15 @@ $color-gradient-to:     #ddd;
 
 $color-background:      #fff;
 $color-background-box:  #f7f7f7;
-$color-highlight-box:   #fdf5d9;
+$color-highlight-box:   #fff6d3;
 
 // alert colours
 
 $success-text:          #238c23;
 $success-background:    #dff0d8;
 $success-border:        darken($success-background, 10%);
-$warning-text:          #ffb300;
-$warning-background:    #fcf8e3;
+$warning-text:          #d69702;
+$warning-background:    #fff6d3;
 $warning-border:        darken($warning-background, 10%);
 $error-text:            #9d261d;
 $error-background:      #f2dede;
