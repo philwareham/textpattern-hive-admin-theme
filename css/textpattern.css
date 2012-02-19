@@ -550,10 +550,10 @@ form.busy span.spinner:after {
   padding-left: 0;
   margin: 0;
 }
-#list .id {
+#list .id, #list .ip {
   width: 6%;
 }
-#list .date {
+#list .date, #list .name, #list .parent {
   width: 14%;
 }
 #list .section {
@@ -1247,6 +1247,13 @@ table#edit {
   background: #f5e5e5;
 }
 
+#discuss_ban_container #list .name {
+  width: 28%;
+}
+#discuss_ban_container #list .id {
+  width: 14%;
+}
+
 /* Sections page */
 #section_container #list td {
   padding: 0;
@@ -1755,7 +1762,6 @@ table#edit {
   }
 
   /* Hide table cells to optimise screen estate */
-  #page-discuss #list .name,
   #page-discuss #list .date,
   #page-discuss #list .discuss_detail,
   #page-discuss #list .parent,

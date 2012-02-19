@@ -393,10 +393,10 @@ form.busy span.spinner:after {
         padding-left: 0;
         margin: 0;
     }
-    .id {
+    .id, .ip {
         width: 6%;
     }
-    .date {
+    .date, .name, .parent {
         width: 14%;
     }
     .section {
@@ -1072,6 +1072,15 @@ table#edit {
 
 #page-discuss #list tr.spam td {
     background: lighten($error-background, 2%);
+}
+
+#discuss_ban_container #list {
+    .name {
+        width: 28%;
+    }
+    .id {
+        width: 14%;
+    }
 }
 
 
