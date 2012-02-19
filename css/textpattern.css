@@ -87,6 +87,19 @@ sup,
   font-size: 0.846em;
 }
 
+mark,
+var {
+  border: 1px solid #ffeca0;
+  padding: 0 .23076923076923em;
+  -moz-border-radius: 0.231em;
+  border-radius: 0.231em;
+  background: #fff6d3;
+}
+
+var {
+  font-weight: bold;
+}
+
 pre,
 code,
 kbd,
@@ -96,33 +109,23 @@ samp,
   font-family: Cousine, Menlo, Consolas, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
 }
 
-mark,
-var {
-  padding: 0 .23076923076923em;
-  background: #fff6d3;
-  border: 1px solid #ffeca0;
-  -moz-border-radius: 0.231em;
-  border-radius: 0.231em;
-}
-
 code,
 kbd,
-samp,
-var {
-  padding: 0 .23076923076923em;
-  background: #f7f7f7;
+samp {
   border: 1px solid #e3e3e3;
+  padding: 0 .23076923076923em;
   -moz-border-radius: 0.231em;
   border-radius: 0.231em;
+  background: #f7f7f7;
 }
 
 pre {
-  padding: 1em;
   overflow-x: auto;
-  background: #f7f7f7;
   border: 1px solid #e3e3e3;
+  padding: 1em;
   -moz-border-radius: 0.385em;
   border-radius: 0.385em;
+  background: #f7f7f7;
 }
 
 .pophelp {

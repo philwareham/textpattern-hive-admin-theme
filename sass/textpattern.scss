@@ -71,6 +71,18 @@ sup,
     font-size: $smallfont;
 }
 
+mark,
+var {
+    border: 1px solid $warning-border;
+    padding: 0 .23076923076923em;
+    @include border-radius(.23076923076923em); // 3px / 13px
+    background: $warning-background;
+}
+
+var {
+    font-weight: bold;
+}
+
 pre,
 code,
 kbd,
@@ -80,30 +92,21 @@ samp,
     font-family: $font-mono;
 }
 
-mark,
-var {
-    padding: 0 .23076923076923em;
-    background: $warning-background;
-    border: 1px solid $warning-border;
-    @include border-radius(.23076923076923em); // 3px / 13px
-}
-
 code,
 kbd,
-samp,
-var {
-    padding: 0 .23076923076923em;
-    background: $color-background-box;
+samp {
     border: 1px solid lighten($color-border, 9%);
+    padding: 0 .23076923076923em;
     @include border-radius(.23076923076923em); // 3px / 13px
+    background: $color-background-box;
 }
 
 pre {
-    padding: 1em;
     overflow-x: auto;
-    background: $color-background-box;
     border: 1px solid lighten($color-border, 9%);
+    padding: 1em;
     @include border-radius;
+    background: $color-background-box;
 }
 
 .pophelp {
