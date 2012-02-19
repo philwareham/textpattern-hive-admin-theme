@@ -313,7 +313,6 @@ input[type="checkbox"] {
    ========================================================================== */
 
 /* primary buttons */
-
 input[type="submit"].publish {
     font-weight: bold;
     border: 1px solid #f2ab05;
@@ -329,7 +328,6 @@ input[type="submit"].publish {
 }
 
 /* delete buttons */
-
 input[value="×"] {
     padding: 0 .33333333333333em;
     color: lighten($error-text, 56%);
@@ -344,12 +342,12 @@ input[value="×"] {
     }
 }
 
+/* busy buttons */
 form.busy input[type='submit'] {
-    border: 1px solid #eee;
-    border-bottom-color: #bbb;
+    border: 1px solid #dadada;
+    border-bottom-color: darken(#dadada, 10%);
     @include gradient(#e6e6e6, #dadada);
 }
-
 form.busy span.spinner:after {
     content: "";
     display: inline-block;

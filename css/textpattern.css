@@ -513,9 +513,10 @@ input[value="×"]:active {
   border-radius: 0 \0;
 }
 
+/* busy buttons */
 form.busy input[type='submit'] {
-  border: 1px solid #eee;
-  border-bottom-color: #bbb;
+  border: 1px solid #dadada;
+  border-bottom-color: #c1c1c1;
   background-color: #dadada;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#e6e6e6), to(#dadada));
