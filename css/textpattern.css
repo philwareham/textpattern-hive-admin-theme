@@ -338,14 +338,6 @@ input[type="checkbox"] {
 .login-pane input[type="password"],
 .category-list div input[type="text"] {
   width: 100%;
-  max-width: 320px;
-}
-
-.txp-control-panel input[type="text"], .txp-control-panel input[type="password"], .txp-control-panel textarea,
-.edit-pane input[type="text"],
-.edit-pane input[type="password"],
-.edit-pane textarea {
-  width: 15em;
 }
 
 #article-main .title input {
@@ -910,26 +902,23 @@ body {
 /* =============================================================================
    Miscellaneous/shared layout
    ========================================================================== */
+.edit-title {
+  margin-bottom: 1em;
+}
+
 .search-form input[type="submit"] {
   margin-left: .38461538461538em;
 }
 
-.edit-pane {
-  width: 448px !important;
+table#edit.edit-pane {
+  width: 454px;
   margin: 0 auto;
+  background: #f7f7f7;
 }
 
 .edit-pane td {
   padding: 4px 1em;
   text-align: left !important;
-}
-
-.edit-form {
-  margin-bottom: 20px !important;
-}
-
-.edit-title {
-  margin-bottom: 1em;
 }
 
 .nav-tertiary a {
@@ -1303,8 +1292,10 @@ table#edit {
 }
 
 /* Pages page */
-#page-page .edit-pane {
-  width: 100% !important;
+/* override incorrect class assigned to 'Pages' page */
+#page-page table#edit.edit-pane {
+  background: none;
+  width: 100%;
 }
 
 #page-page #edit td:first-child {
@@ -1669,6 +1660,8 @@ table#edit {
   .category-list td,
   .category-list tr {
     display: block;
+    margin: 0 auto;
+    max-width: 454px;
   }
   .category-list td {
     float: left;
@@ -1767,12 +1760,6 @@ table#edit {
   #page-discuss #list .parent,
   #page-discuss #list .multi-edit,
   #page-discuss #list tfoot {
-    display: none !important;
-  }
-
-  #page-discuss table.edit-pane tr:last-child,
-  #page-discuss table.edit-pane tr:nth-last-child(2) td:first-child,
-  #page-discuss table#edit-discuss tr:nth-child(9) {
     display: none !important;
   }
 }

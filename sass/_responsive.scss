@@ -65,6 +65,8 @@ body {
     td,
     tr {
         display: block;
+        margin: 0 auto;
+        max-width: 454px;
     }
     td {
         float: left;
@@ -187,11 +189,6 @@ body {
     tfoot {
         display: none !important;
     }
-}
-#page-discuss table.edit-pane tr:last-child,
-#page-discuss table.edit-pane tr:nth-last-child(2) td:first-child,
-#page-discuss table#edit-discuss tr:nth-child(9) {
-    display: none !important;
 }
 
 

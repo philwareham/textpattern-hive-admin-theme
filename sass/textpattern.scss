@@ -287,14 +287,6 @@ input[type="checkbox"] {
 .login-pane input[type="password"],
 .category-list div input[type="text"] {
     width: 100%;
-    max-width: 320px;
-}
-
-.txp-control-panel,
-.edit-pane {
-    & input[type="text"], & input[type="password"], & textarea {
-        width: 15em;
-    }
 }
 
 #article-main .title input {
@@ -724,13 +716,18 @@ body {
    Miscellaneous/shared layout
    ========================================================================== */
 
+.edit-title {
+    margin-bottom: 1em;
+}
+
 .search-form input[type="submit"] {
     margin-left: .38461538461538em;
 }
 
-.edit-pane {
-    width:448px !important;
-    margin:0 auto;
+table#edit.edit-pane {
+    width: 454px;
+    margin: 0 auto;
+    background: $color-background-box;
 }
 
 .edit-pane td {
@@ -738,13 +735,7 @@ body {
     text-align:left !important;
 }
 
-.edit-form {
-    margin-bottom:20px !important;
-}
 
-.edit-title {
-    margin-bottom:1em;
-}
 
 .nav-tertiary a {
     margin-bottom:1em;
@@ -1136,8 +1127,10 @@ table#edit {
 
 /* Pages page */
 
-#page-page .edit-pane {
-    width:100% !important;
+/* override incorrect class assigned to 'Pages' page */
+#page-page table#edit.edit-pane {
+    background: none;
+    width: 100%;
 }
 
 #page-page #edit td:first-child {
