@@ -367,8 +367,77 @@ input[type="checkbox"] {
 }
 
 /* =============================================================================
-   Buttons
+   Specific buttons
    ========================================================================== */
+/* primary buttons */
+input[type="submit"].publish {
+  font-weight: bold;
+  border: 1px solid #f2ab05;
+  border-bottom-color: #c08804;
+  padding: .75em .75em;
+  background-color: #f2ab05;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ffda44), to(#f2ab05));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffda44), to(#f2ab05));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#ffda44, #f2ab05);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#ffda44, #f2ab05);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#ffda44, #f2ab05);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#ffda44, #f2ab05);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#ffda44, #f2ab05);
+  /* IE7-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffda44',EndColorStr='#f2ab05');
+  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
+  border-radius: 0 \0;
+}
+input[type="submit"].publish:hover {
+  background-color: #fbbe2f;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ffe98e), to(#fbbe2f));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffe98e), to(#fbbe2f));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#ffe98e, #fbbe2f);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#ffe98e, #fbbe2f);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#ffe98e, #fbbe2f);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#ffe98e, #fbbe2f);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#ffe98e, #fbbe2f);
+  /* IE7-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffe98e',EndColorStr='#fbbe2f');
+  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
+  border-radius: 0 \0;
+}
+input[type="submit"].publish:active {
+  background-color: #ffe98e;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fbbe2f), to(#ffe98e));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fbbe2f), to(#ffe98e));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#fbbe2f, #ffe98e);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#fbbe2f, #ffe98e);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#fbbe2f, #ffe98e);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#fbbe2f, #ffe98e);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#fbbe2f, #ffe98e);
+  /* IE7-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fbbe2f',EndColorStr='#ffe98e');
+  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
+  border-radius: 0 \0;
+}
+
 /* delete buttons */
 input[value="×"] {
   padding: 0 .33333333333333em;
@@ -1070,12 +1139,6 @@ table#edit {
 #tagbuild_links {
   margin-right: 2em;
 }
-
-#supporting_content,
-#content_switcher {
-  margin-left: 2em;
-}
-
 #configuration_content > div,
 #tagbuild_links > div {
   border: 1px solid #e3e3e3;
@@ -1084,12 +1147,17 @@ table#edit {
   margin-bottom: 1em;
 }
 
-#configuration_content > div.empty {
-  display: none;
+#supporting_content,
+#content_switcher {
+  margin-left: 2em;
+}
+#supporting_content > div,
+#content_switcher > div {
+  margin-bottom: 1em;
 }
 
-#supporting_content .publish {
-  margin: 1em;
+#configuration_content > div.empty {
+  display: none;
 }
 
 #more_group .date .label,

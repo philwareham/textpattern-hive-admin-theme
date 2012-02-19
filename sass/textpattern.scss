@@ -309,8 +309,24 @@ input[type="checkbox"] {
 
 
 /* =============================================================================
-   Buttons
+   Specific buttons
    ========================================================================== */
+
+/* primary buttons */
+
+input[type="submit"].publish {
+    font-weight: bold;
+    border: 1px solid #f2ab05;
+    border-bottom-color: darken(#f2ab05, 10%);
+    padding: .75em .75em;
+    @include gradient(#ffda44, #f2ab05);
+    &:hover {
+        @include gradient(lighten(#ffdf5b, 10%), lighten(#f2ab05, 10%));
+    }
+    &:active {
+        @include gradient(lighten(#f2ab05, 10%), lighten(#ffdf5b, 10%));
+    }
+}
 
 /* delete buttons */
 
@@ -904,27 +920,24 @@ table#edit {
 #configuration_content,
 #tagbuild_links {
     margin-right: 2em;
+    > div {
+        border: 1px solid lighten($color-border, 9%);
+        border-top: 0;
+        background: $color-background-box;
+        margin-bottom: 1em;
+    }
 }
 
 #supporting_content,
 #content_switcher {
     margin-left: 2em;
-}
-
-#configuration_content > div,
-#tagbuild_links > div {
-    border: 1px solid lighten($color-border, 9%);
-    border-top: 0;
-    background: $color-background-box;
-    margin-bottom: 1em;
+    > div {
+        margin-bottom: 1em;
+    }
 }
 
 #configuration_content > div.empty {
     display: none;
-}
-
-#supporting_content .publish {
-    margin: 1em;
 }
 
 #more_group .date .label,
