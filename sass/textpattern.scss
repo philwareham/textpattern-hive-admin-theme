@@ -278,9 +278,7 @@ input[type="checkbox"] {
 
 #configuration_content input[type="text"],
 #configuration_content input[type="password"],
-#configuration_content textarea,
 #configuration_content select,
-#main_content textarea,
 #main_content input[type="text"],
 #main_content input[type="password"],
 #supporting_content select,
@@ -289,6 +287,7 @@ input[type="checkbox"] {
 .login-pane input[type="password"],
 .category-list div input[type="text"] {
     width: 100%;
+    max-width: 320px;
 }
 
 .txp-control-panel,

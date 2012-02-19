@@ -58,22 +58,21 @@ body {
 }
 
 
-/* Miscellaneous/shared layout stuff */
-
-.edit-pane {
-    width: 280px !important;
-}
-
-
 /* Categories page */
 
-.category-list td {
-    float: left;
-    width: 100%;
-}
-
-.category-list div {
-    margin: 0 0 1em 0;
+.category-list {
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    td {
+        float: left;
+        width: 100%;
+    }
+    div {
+        margin: 0 0 1em 0;
+    }
 }
 
 
