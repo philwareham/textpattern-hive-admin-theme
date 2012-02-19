@@ -209,10 +209,6 @@ legend {
   background-image: -o-linear-gradient(#eeeeee, #dddddd);
   /* CSS3 Compliant */
   background-image: linear-gradient(#eeeeee, #dddddd);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee',EndColorStr='#dddddd');
-  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
-  border-radius: 0 \0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -247,10 +243,6 @@ legend {
   background-image: -o-linear-gradient(#eeeeee, #dddddd);
   /* CSS3 Compliant */
   background-image: linear-gradient(#eeeeee, #dddddd);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee',EndColorStr='#dddddd');
-  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
-  border-radius: 0 \0;
 }
 
 .lever a {
@@ -390,10 +382,6 @@ input[type="submit"].publish {
   background-image: -o-linear-gradient(#ffda44, #f2ab05);
   /* CSS3 Compliant */
   background-image: linear-gradient(#ffda44, #f2ab05);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffda44',EndColorStr='#f2ab05');
-  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
-  border-radius: 0 \0;
 }
 input[type="submit"].publish:hover {
   background-color: #fbbe2f;
@@ -411,10 +399,6 @@ input[type="submit"].publish:hover {
   background-image: -o-linear-gradient(#ffe477, #fbbe2f);
   /* CSS3 Compliant */
   background-image: linear-gradient(#ffe477, #fbbe2f);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffe477',EndColorStr='#fbbe2f');
-  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
-  border-radius: 0 \0;
 }
 input[type="submit"].publish:active {
   background-color: #ffe477;
@@ -432,10 +416,6 @@ input[type="submit"].publish:active {
   background-image: -o-linear-gradient(#fbbe2f, #ffe477);
   /* CSS3 Compliant */
   background-image: linear-gradient(#fbbe2f, #ffe477);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fbbe2f',EndColorStr='#ffe477');
-  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
-  border-radius: 0 \0;
 }
 
 /* delete buttons */
@@ -460,10 +440,6 @@ input[value="×"] {
   background-image: -o-linear-gradient(#dc4e44, #9d261d);
   /* CSS3 Compliant */
   background-image: linear-gradient(#dc4e44, #9d261d);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#dc4e44',EndColorStr='#9d261d');
-  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
-  border-radius: 0 \0;
 }
 input[value="×"]:hover {
   color: white;
@@ -484,10 +460,6 @@ input[value="×"]:hover {
   background-image: -o-linear-gradient(#e36f66, #c83025);
   /* CSS3 Compliant */
   background-image: linear-gradient(#e36f66, #c83025);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#e36f66',EndColorStr='#c83025');
-  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
-  border-radius: 0 \0;
 }
 input[value="×"]:active {
   border-top: 1px solid #e36f66;
@@ -507,10 +479,6 @@ input[value="×"]:active {
   background-image: -o-linear-gradient(#c83025, #e36f66);
   /* CSS3 Compliant */
   background-image: linear-gradient(#c83025, #e36f66);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#c83025',EndColorStr='#e36f66');
-  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
-  border-radius: 0 \0;
 }
 
 /* busy buttons */
@@ -532,10 +500,6 @@ form.busy input[type='submit'] {
   background-image: -o-linear-gradient(#e6e6e6, #dadada);
   /* CSS3 Compliant */
   background-image: linear-gradient(#e6e6e6, #dadada);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#e6e6e6',EndColorStr='#dadada');
-  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
-  border-radius: 0 \0;
 }
 
 form.busy span.spinner:after {
@@ -617,10 +581,6 @@ form.busy span.spinner:after {
   background-image: -o-linear-gradient(#eeeeee, #dddddd);
   /* CSS3 Compliant */
   background-image: linear-gradient(#eeeeee, #dddddd);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee',EndColorStr='#dddddd');
-  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
-  border-radius: 0 \0;
   border: 1px solid #dddddd;
   border-bottom: 1px solid #c4c4c4;
 }
@@ -768,10 +728,6 @@ body {
   background-image: -o-linear-gradient(#ffda44, #fabc2b);
   /* CSS3 Compliant */
   background-image: linear-gradient(#ffda44, #fabc2b);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffda44',EndColorStr='#fabc2b');
-  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
-  border-radius: 0 \0;
 }
 #txp-head h1 {
   float: left;
@@ -804,6 +760,7 @@ body {
 
 #txp-logout {
   position: absolute;
+  z-index: 10010;
   top: -0.5em;
   right: 2em;
 }
@@ -827,7 +784,6 @@ body {
 
 #txp-nav {
   float: left;
-  overflow: visible;
 }
 #txp-nav a {
   color: #333;
@@ -844,7 +800,6 @@ body {
 .data-dropdown {
   display: block;
   float: left;
-  left: 0;
   margin: 0;
 }
 
@@ -897,7 +852,7 @@ body {
   position: absolute;
   top: 3em;
   left: -9999px;
-  z-index: 10001;
+  z-index: 20000;
   min-width: 12em;
   border: solid 1px #d4d4d4;
   border-top: 0;

@@ -251,10 +251,6 @@ a.navlink-active,
   background-image: -o-linear-gradient(#eeeeee, #bbbbbb);
   /* CSS3 Compliant */
   background-image: linear-gradient(#eeeeee, #bbbbbb);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#eeeeee',EndColorStr='#bbbbbb');
-  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
-  border-radius: 0 \0;
   display: inline-block;
   /* IE7 */
   *display: inline;
@@ -293,10 +289,6 @@ a.navlink-active:hover,
   background-image: -o-linear-gradient(#f8f8f8, #c5c5c5);
   /* CSS3 Compliant */
   background-image: linear-gradient(#f8f8f8, #c5c5c5);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f8f8f8',EndColorStr='#c5c5c5');
-  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
-  border-radius: 0 \0;
 }
 button:active,
 input[type="reset"]:active,
@@ -326,10 +318,6 @@ a.navlink-active:active,
   background-image: -o-linear-gradient(#c5c5c5, #f8f8f8);
   /* CSS3 Compliant */
   background-image: linear-gradient(#c5c5c5, #f8f8f8);
-  /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#c5c5c5',EndColorStr='#f8f8f8');
-  /* hack to remove any border-radius in IE9 so we can keep filter gradients */
-  border-radius: 0 \0;
 }
 
 /* IE7 button fixes */
