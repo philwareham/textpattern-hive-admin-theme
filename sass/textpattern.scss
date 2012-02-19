@@ -276,21 +276,19 @@ input[type="checkbox"] {
     margin-right: .5em;
 }
 
-#configuration_content input[type="text"],
-#configuration_content input[type="password"],
-#configuration_content select,
-#main_content input[type="text"],
-#main_content input[type="password"],
-#supporting_content select,
-#comment-invite,
-.login-pane input[type="text"],
-.login-pane input[type="password"],
-.category-list div input[type="text"] {
+input[type="text"],
+input[type="password"] {
     width: 100%;
+    max-width: 24.6153846153846em;
+}
+
+.search-form input[type="text"] {
+    max-width: 220px;
 }
 
 #article-main .title input {
-    width: 80%;
+    width: 75%;
+    max-width: 75%;
 }
 
 #content_switcher input[type="checkbox"],
@@ -725,15 +723,22 @@ body {
 }
 
 table#edit.edit-pane {
-    width: 454px;
-    margin: 0 auto;
+    width: 34.9230769230769em;
+    margin: 0 auto 1em;
+    border-top: .5em solid $color-background-box;
+    border-bottom: .5em solid $color-background-box;
     background: $color-background-box;
 }
 
 .edit-pane td {
-    padding:4px 1em;
-    text-align:left !important;
+    padding: .5em 1em;
+    text-align:left !important; // override inline CSS
+    &:first-child {
+        width: 24%;
+    }
 }
+
+
 
 
 
@@ -816,7 +821,7 @@ table#edit {
     margin: 0 auto;
     padding: .5em 0;
     width: 100%;
-    max-width: 30em;
+    max-width: 34.9230769230769em;
     background: $color-background-box;
     p {
         margin: 0;
@@ -840,10 +845,6 @@ table#edit {
 
 
 /* Categories page */
-
-#page-category .edit-pane td:first-child {
-    width: 36%;
-}
 
 #page-category .action-create input[type="submit"] {
     margin-top: .38461538461538em;
@@ -987,10 +988,6 @@ table#edit {
     @include box-shadow(0 1px 2px rgba($color-link-hover, .4));
 }
 
-#page-image .edit-pane {
-    width: 448px !important;
-}
-
 #page-image img.fullsize {
     margin-bottom: 18px;
 }
@@ -998,10 +995,6 @@ table#edit {
 #page-image #width,
 #page-image #height {
     width: 3.5em;
-}
-
-#page-image .edit-pane table td {
-    padding: 0 5px 0 0;
 }
 
 #thumbnail_alter {
@@ -1016,24 +1009,12 @@ table#edit {
     margin-top:.3em;
 }
 
-#page-image .edit-pane select {
-    width: 250px;
-}
-
 #page-image #caption {
     width: 412px;
 }
 
 
 /* Files page */
-
-#page-file .edit-pane {
-    width:448px !important;
-}
-
-#page-file #description {
-    width:412px !important;
-}
 
 #page-file .year {
     width:3.5em;
@@ -1050,9 +1031,7 @@ table#edit {
 
 /* Links page */
 
-#page-link .edit-pane td:first-child {
-    width:36%;
-}
+
 
 
 /* Comments page */
@@ -1129,8 +1108,9 @@ table#edit {
 
 /* override incorrect class assigned to 'Pages' page */
 #page-page table#edit.edit-pane {
-    background: none;
+    margin: 0;
     width: 100%;
+    background: none;
 }
 
 #page-page #edit td:first-child {
@@ -1327,10 +1307,6 @@ table#edit {
 
 /* Users page */
 
-#page-admin .edit-pane td:first-child {
-    width:36%;
-}
-
 #change_password {
     margin-top:-2em;
 }
@@ -1389,14 +1365,6 @@ table#edit {
     height:316px;
     overflow:auto;
     margin-bottom: 1em;
-}
-
-#plugin_container .edit-pane {
-    width:100% !important;
-}
-
-#plugin_container .edit-pane td {
-    padding:0;
 }
 
 .plugin-help{
