@@ -374,7 +374,7 @@ input[type="submit"].publish {
   font-weight: bold;
   border: 1px solid #f2ab05;
   border-bottom-color: #c08804;
-  padding: .75em .75em;
+  padding: .66666666666667em .75em;
   background-color: #f2ab05;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#ffda44), to(#f2ab05));
@@ -398,42 +398,42 @@ input[type="submit"].publish {
 input[type="submit"].publish:hover {
   background-color: #fbbe2f;
   /* Konqueror */
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#ffe98e), to(#fbbe2f));
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ffe477), to(#fbbe2f));
   /* Safari4+, Chrome */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffe98e), to(#fbbe2f));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffe477), to(#fbbe2f));
   /* Safari5.1+, Chrome10+ */
-  background-image: -webkit-linear-gradient(#ffe98e, #fbbe2f);
+  background-image: -webkit-linear-gradient(#ffe477, #fbbe2f);
   /* Firefox3.6 */
-  background-image: -moz-linear-gradient(#ffe98e, #fbbe2f);
+  background-image: -moz-linear-gradient(#ffe477, #fbbe2f);
   /* IE10 */
-  background-image: -ms-linear-gradient(#ffe98e, #fbbe2f);
+  background-image: -ms-linear-gradient(#ffe477, #fbbe2f);
   /* Opera11.10+ */
-  background-image: -o-linear-gradient(#ffe98e, #fbbe2f);
+  background-image: -o-linear-gradient(#ffe477, #fbbe2f);
   /* CSS3 Compliant */
-  background-image: linear-gradient(#ffe98e, #fbbe2f);
+  background-image: linear-gradient(#ffe477, #fbbe2f);
   /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffe98e',EndColorStr='#fbbe2f');
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffe477',EndColorStr='#fbbe2f');
   /* hack to remove any border-radius in IE9 so we can keep filter gradients */
   border-radius: 0 \0;
 }
 input[type="submit"].publish:active {
-  background-color: #ffe98e;
+  background-color: #ffe477;
   /* Konqueror */
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#fbbe2f), to(#ffe98e));
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fbbe2f), to(#ffe477));
   /* Safari4+, Chrome */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fbbe2f), to(#ffe98e));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fbbe2f), to(#ffe477));
   /* Safari5.1+, Chrome10+ */
-  background-image: -webkit-linear-gradient(#fbbe2f, #ffe98e);
+  background-image: -webkit-linear-gradient(#fbbe2f, #ffe477);
   /* Firefox3.6 */
-  background-image: -moz-linear-gradient(#fbbe2f, #ffe98e);
+  background-image: -moz-linear-gradient(#fbbe2f, #ffe477);
   /* IE10 */
-  background-image: -ms-linear-gradient(#fbbe2f, #ffe98e);
+  background-image: -ms-linear-gradient(#fbbe2f, #ffe477);
   /* Opera11.10+ */
-  background-image: -o-linear-gradient(#fbbe2f, #ffe98e);
+  background-image: -o-linear-gradient(#fbbe2f, #ffe477);
   /* CSS3 Compliant */
-  background-image: linear-gradient(#fbbe2f, #ffe98e);
+  background-image: linear-gradient(#fbbe2f, #ffe477);
   /* IE7-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fbbe2f',EndColorStr='#ffe98e');
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fbbe2f',EndColorStr='#ffe477');
   /* hack to remove any border-radius in IE9 so we can keep filter gradients */
   border-radius: 0 \0;
 }
