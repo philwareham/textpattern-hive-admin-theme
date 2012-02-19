@@ -236,7 +236,7 @@ a.navlink-active,
   width: auto;
   border: 1px solid #bbb;
   border-bottom-color: #a2a2a2;
-  background-color: #bbbbbb;
+  background-color: #eeeeee;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#bbbbbb));
   /* Safari4+, Chrome */
@@ -274,7 +274,7 @@ a.navlink-active:hover,
 #insert-link:hover {
   color: #333333;
   text-decoration: none;
-  background-color: #c5c5c5;
+  background-color: #f8f8f8;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#f8f8f8), to(#c5c5c5));
   /* Safari4+, Chrome */
@@ -303,7 +303,7 @@ a.navlink-active:active,
 .navlink-active a:active,
 #list_banned_ips a:active,
 #insert-link:active {
-  background-color: #f8f8f8;
+  background-color: #c5c5c5;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#c5c5c5), to(#f8f8f8));
   /* Safari4+, Chrome */
