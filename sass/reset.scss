@@ -229,7 +229,6 @@ a.navlink-active,
 .navlink a,
 .navlink-active a,
 #list_banned_ips a,
-#page-rss_db_bk h3 a,
 #insert-link {
     -webkit-appearance: none;
     @include border-radius;
@@ -247,7 +246,7 @@ a.navlink-active,
     @include text-shadow-light;
     width: auto;
     border: 1px solid #bbb;
-    border-bottom-color: #a2a2a2;
+    border-bottom-color: darken(#bbb, 10%);
     @include gradient(#eee, #bbb);
     display: inline-block;
     /* IE7 */
