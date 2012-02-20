@@ -137,7 +137,7 @@ pre {
     border: 1px solid;
     padding: .5em 1em;
     text-align: center;
-    max-width: 42em;
+    max-width: 42em; // 546px / 13px
     @include text-shadow-light;
     display: inline-block;
     /* IE 7 */
@@ -279,11 +279,11 @@ input[type="checkbox"] {
 input[type="text"],
 input[type="password"] {
     width: 100%;
-    max-width: 24.6153846153846em;
+    max-width: 24.6153846153846em; // 320px / 13px
 }
 
 .search-form input[type="text"] {
-    max-width: 220px;
+    max-width: 16.9230769230769em; // 220px / 13px
 }
 
 #article-main .title input {
@@ -486,13 +486,13 @@ form.busy span.spinner:after {
 body {
     position: relative;
     padding: 4em 2em 1em;
-    min-width: 70em;
+    min-width: 71.3846153846154em; // 928px + (13px x 4) = 980px
     color: $color-text;
     background: $color-background;
 }
 
 .txp-container {
-    max-width: 110em;
+    max-width: 110em; // 1430px / 13px
     margin: 0 auto;
 }
 
@@ -723,7 +723,7 @@ body {
 }
 
 table#edit.edit-pane {
-    width: 34.9230769230769em;
+    width: 34.9230769230769em; // 454px / 13px
     margin: 0 auto 1em;
     border-top: .5em solid $color-background-box;
     border-bottom: .5em solid $color-background-box;
@@ -821,14 +821,14 @@ table#edit {
     margin: 0 auto;
     padding: .5em 0;
     width: 100%;
-    max-width: 34.9230769230769em;
+    max-width: 34.9230769230769em; // 454px / 13px
     background: $color-background-box;
     p {
         margin: 0;
     }
     tr:first-child p {
         margin: .375em 0;
-        font-size: 1.23076923076923em; // 16px
+        font-size: 1.23076923076923em; // 16px / 13px
         font-weight: bold;
     }
     td {
