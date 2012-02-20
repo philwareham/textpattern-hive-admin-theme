@@ -252,7 +252,7 @@ a.navlink-active,
   /* CSS3 Compliant */
   background-image: linear-gradient(#eeeeee, #bbbbbb);
   display: inline-block;
-  /* IE7 */
+  /* display and zoom IE7 fix for display:inline-block */
   *display: inline;
   *zoom: 1;
   *padding-top: 2px;

@@ -140,9 +140,7 @@ pre {
     max-width: 42em; // 546px / 13px
     @include text-shadow-light;
     display: inline-block;
-    /* IE 7 */
-    *zoom: 1;
-    *display: inline;
+    @include ie7-inline-block;
     &.success {
         color: $success-text;
         background: $success-background;
