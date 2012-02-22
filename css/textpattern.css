@@ -1267,13 +1267,6 @@ table#edit {
 }
 
 /* Pages page */
-/* override incorrect class assigned to 'Pages' page */
-#page-page table#edit.edit-pane {
-  margin: 0;
-  width: 100%;
-  background: none;
-}
-
 #page-page #edit td:first-child {
   width: 25%;
 }
