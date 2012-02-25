@@ -255,6 +255,7 @@ a.navlink-active,
   /* display and zoom IE7 fix for display:inline-block */
   *display: inline;
   *zoom: 1;
+  /* IE7 vertical alignment fix */
   *padding-top: 2px;
   *padding-bottom: 0;
   *overflow: visible;

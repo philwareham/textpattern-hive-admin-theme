@@ -250,6 +250,7 @@ a.navlink-active,
     @include gradient(#eee, #bbb);
     display: inline-block;
     @include ie7-inline-block;
+    /* IE7 vertical alignment fix */
     *padding-top: 2px;
     *padding-bottom: 0;
     *overflow: visible;
