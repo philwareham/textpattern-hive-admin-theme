@@ -128,6 +128,13 @@ pre {
   background: #f7f7f7;
 }
 
+pre code,
+.code code {
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
 .pophelp {
   padding: 0 .23076923076923em;
   font-weight: normal;
@@ -924,6 +931,20 @@ table#edit.edit-pane {
   width: 24%;
 }
 
+div.code {
+  margin-bottom: 1em;
+  border: 1px solid #cccccc;
+  padding: 2px 5px;
+  max-height: 23em;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* IE7 box-sizing workaround */
+  *padding-right: 0;
+  *padding-left: 0;
+}
+
 .nav-tertiary a {
   margin-bottom: 1em;
 }
@@ -1433,21 +1454,12 @@ table#edit {
   display: none;
 }
 
-#text_uploader {
-  text-align: center;
-  margin-top: -12px;
+#textpack-install {
+  height: 4.38461538461538em;
 }
 
 #text_uploader p {
-  display: inline;
-  vertical-align: text-bottom !important;
-  position: relative;
-  top: -6px;
-}
-
-#textpack-install {
-  width: 50%;
-  height: 5em;
+  margin-top: .38461538461538em;
 }
 
 /* Users page */
@@ -1474,39 +1486,18 @@ table#edit {
 /* Plugin page */
 #plugin_install_form span {
   vertical-align: text-bottom !important;
-  position: relative;
-  top: -6px;
 }
 
 #plugin-install {
   width: 50%;
-  height: 5em;
 }
 
 #plugin_preview {
   width: 100% !important;
 }
 
-#preview-plugin,
-#preview-help {
-  max-height: 316px;
-  padding: 4px;
-  margin-bottom: 20px;
-  overflow: auto;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  /* IE7 box-sizing workaround */
-  *padding-right: 0;
-  *padding-left: 0;
-}
-
 #plugin-code {
-  width: 100%;
-  height: 316px;
-  overflow: auto;
-  margin-bottom: 1em;
+  height: 23em;
 }
 
 .plugin-help {
