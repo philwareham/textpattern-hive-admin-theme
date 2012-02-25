@@ -210,6 +210,7 @@ legend {
     }
     &:after {
         position: absolute;
+        content: "&#8594;";
         top: .69230769230769em;
         right: .76923076923077em;
         z-index: 10;
@@ -219,7 +220,6 @@ legend {
         text-indent: -9999px;
         vertical-align: top;
         opacity: .5;
-        content: "&#8594;";
         border-left: .30769230769231em solid $color-text;
         border-right: 0;
         border-top: .30769230769231em solid transparent;
@@ -240,9 +240,9 @@ legend {
 }
 
 .lever.expanded a:after {
+    content: "&#8595;";
     top: .84615384615385em;
     right: .69230769230769em;
-    content: "&#8595;";
     border-left: .30769230769231em solid transparent;
     border-right: .30769230769231em solid transparent;
     border-top: .30769230769231em solid $color-text;
@@ -620,9 +620,9 @@ body {
     display: block;
     float: left;
     border-right: 1px solid #fabc2b;
-    background-color: #fcdc7f;
+    background: #fcdc7f;
     .rgba & {
-        background-color: rgba(#fff, .2);
+        background: rgba(#fff, .2);
     }
     &:first-child {
         border-left: 1px solid #fabc2b;
@@ -636,21 +636,18 @@ body {
         @include text-shadow-light;
     }
     &:hover a.dropdown-toggle {
-        background-color: #fcdc7f;
+        background: #fcdc7f;
         .rgba & {
-            background-color: rgba(#fff, .2);
+            background: rgba(#fff, .2);
         }
-        background-repeat: no-repeat;
-        background-position: 50% bottom;
-        @include svg-graphic(indicator, gif, 1.23076923076923em, 0.61538461538462em);
     }
 }
 
 .dropdown.active {
     a.dropdown-toggle {
-        background-color: #fcdc7f;
+        background: #fcdc7f;
         .rgba & {
-            background-color: rgba(#fff, .2);
+            background: rgba(#fff, .2);
         }
     }
 }
@@ -687,6 +684,15 @@ body {
     a {
         display: block;
         padding: .5em 1em;
+    }
+    &:before {
+        position: absolute;
+        content: "";
+        top: -.61538461538462em;
+        left: 1em;
+        width: 1.23076923076923em;
+        height: .61538461538462em;
+        @include svg-graphic(indicator, gif, 1.23076923076923em, .61538461538462em);
     }
 }
 
@@ -749,7 +755,7 @@ div.code {
     margin-bottom: 1em;
     border: 1px solid $color-border;
     padding: .15384615384615em .38461538461538em;
-    max-height: 21em;
+    height: 21em;
     overflow: auto;
     @include box-sizing;
     /* IE7 box-sizing workaround */
@@ -984,7 +990,7 @@ table#edit {
 /* Articles page */
 
 .unpublished {
-    color: $color-text-footnote;
+    color: #999;
 }
 
 #page-list .title {
@@ -1213,7 +1219,8 @@ table#edit {
 }
 
 #page-diag textarea {
-    width: 100% !important;
+    width: 100% !important; // override inline CSS
+    height: 21em !important; // override inline CSS
     margin-bottom: 1em;
 }
 
