@@ -4,17 +4,17 @@ VERSION HISTORY
 
 2.0beta1: ?????
 
-01. Complete rewrite of CSS files - simplified many rules, using Normalize and Formalize
+01. Complete rewrite of CSS files - simplifies many rules, using Normalize and Formalize
     as a baseline for reset.css. Also should be more forgiving of plugin code now.
 
-02. Now uses Sass (http://sass-lang.com) for speedier development/reduced code.
+02. Now using Sass (http://sass-lang.com) for speedier development/reduced code.
 
 03. More responsive - extensive work on making the admin area more usable on a small
     screen devices.
 
-04. Removed dependance on Classic theme.
+04. Remove dependance on Classic theme.
 
-05. Nicer aesthetic. Just one colour scheme now - but colours can be easily changed using
+05. Nicer aesthetic. Just one colour scheme now, but colours can be easily changed using
     Sass variables.
 
 06. SVG (resolution independent) images for supported browsers (via Modernizr).
@@ -25,10 +25,10 @@ VERSION HISTORY
     devices and instead using a <select> tag.
 
 09. The monospace Cousine font is now bundled, which provides a more consistent font
-   across multiple devices.
+    across multiple devices.
 
-10. Add CSS gradient and transition support for IE10. Add CSS gradient support for
-    IE6-IE9 (via MS filter). Add CSS gradient support for Opera 11.10.
+10. Add CSS gradient and transition support for IE10, and add CSS gradient support for
+    Opera 11.10.
 
 11. Remove custom (hot pink) selection colour, it's better for accessibility to let user 
     keep their own browser selection colour settings.
