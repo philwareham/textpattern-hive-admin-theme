@@ -22,33 +22,6 @@
   width: 100% !important;
 }
 
-/* rss_admin_db_manager */
-#page-rss_db_man #dbinfo {
-  margin: 0 auto;
-}
-
-#page-rss_db_man #dbinfo th,
-#page-rss_db_man #dbinfo td {
-  color: #333 !important;
-  padding: 0 3px !important;
-}
-
-#page-rss_sql_run textarea {
-  width: 100% !important;
-  height: 316px !important;
-  overflow: auto;
-  margin-bottom: 10px;
-}
-
-#page-rss_sql_run input[type="submit"] {
-  margin-right: 10px;
-}
-
-#page-rss_db_man #list tr[style="background-color: #eee;"],
-#page-rss_db_bk #list tr[style="background-color: #eee;"] {
-  background: #f7f7f7 !important;
-}
-
 /* bot_privs */
 #page-bot_privs_tab #list tr:first-child {
   color: #fff;
