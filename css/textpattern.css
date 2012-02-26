@@ -1619,7 +1619,6 @@ table#edit {
     max-width: 34.9230769230769em;
   }
   .category-list td {
-    float: left;
     width: 100%;
   }
   .category-list div {
@@ -1636,7 +1635,6 @@ table#edit {
   #article-col-1,
   #article-col-2,
   #article-main {
-    float: left;
     width: 100%;
   }
 
@@ -1751,5 +1749,30 @@ table#edit {
     background: #fff6d3;
     -webkit-box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
     box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
+  }
+}
+/* =============================================================================
+   Additional layout for screen media < 480px
+   ========================================================================== */
+@media only screen and (max-width: 479px) {
+  table#edit.edit-pane {
+    width: 100%;
+    border-top-width: 1em;
+    border-bottom: 0;
+  }
+  table#edit.edit-pane td {
+    display: block;
+    padding: 0 1em;
+  }
+  table#edit.edit-pane td:last-child {
+    padding-bottom: 1em;
+  }
+  table#edit.edit-pane tr:last-child td:first-child {
+    height: 1em;
+  }
+  table#edit.edit-pane tr:last-child td:last-child {
+    padding-bottom: 0;
+    position: relative;
+    top: -1em;
   }
 }

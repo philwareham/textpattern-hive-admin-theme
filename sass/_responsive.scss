@@ -69,7 +69,6 @@ body {
         max-width: 34.9230769230769em; // 454px / 13px
     }
     td {
-        float: left;
         width: 100%;
     }
     div {
@@ -91,7 +90,6 @@ body {
 #article-col-1,
 #article-col-2,
 #article-main {
-    float: left;
     width: 100%;
 }
 
@@ -204,6 +202,7 @@ body {
 
 @media only screen and (max-width: 559px) {
 
+
 body {
     padding-top: 7em;
 }
@@ -233,6 +232,43 @@ body {
     padding: .53846153846154em 1em;
     background: $color-highlight-box;
     @include box-shadow;
+}
+
+
+}
+
+
+
+
+/* =============================================================================
+   Additional layout for screen media < 480px
+   ========================================================================== */
+
+
+@media only screen and (max-width: 479px) {
+
+
+table#edit.edit-pane {
+    width: 100%;
+    border-top-width: 1em;
+    border-bottom: 0;
+    td {
+        display: block;
+        padding: 0 1em;
+        &:last-child {
+            padding-bottom: 1em;
+        }
+    }
+    tr:last-child {
+        td:first-child {
+            height: 1em;
+        }
+        td:last-child {
+            padding-bottom: 0;
+            position: relative;
+            top: -1em;
+        }
+    }
 }
 
 
