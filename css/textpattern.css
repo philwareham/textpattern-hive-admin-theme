@@ -271,13 +271,15 @@ legend {
   width: 0;
   height: 0;
   display: inline-block;
-  text-indent: -9999px;
   vertical-align: top;
   opacity: .5;
   border-left: 0.308em solid #333333;
   border-right: 0;
   border-top: .30769230769231em solid transparent;
   border-bottom: .30769230769231em solid transparent;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .lever a:hover:after {
   opacity: 1;
@@ -598,9 +600,11 @@ form.busy span.spinner:after {
   width: 0;
   height: 0;
   display: inline-block;
-  text-indent: -9999px;
   vertical-align: top;
   opacity: .5;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 #list thead th a:hover:after {
   opacity: 1;
