@@ -10,6 +10,7 @@ class hive_theme extends theme
     {
         $out[] = '<link href="'.$this->url.'css/textpattern.css" rel="stylesheet" type="text/css" />';
         $out[] = '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />';
+        $out[] = '<meta name="apple-mobile-web-app-capable" content="yes" />';
         $out[] = '<meta name="generator" content="Textpattern CMS" />';
         $out[] = '<script type="text/javascript" src="'.$this->url.'js/modernizr.js"></script>';
         $out[] = '<script type="text/javascript" src="'.$this->url.'js/jquery.formalize.min.js"></script>';
