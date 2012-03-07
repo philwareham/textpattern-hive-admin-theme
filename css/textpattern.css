@@ -277,9 +277,9 @@ legend {
   border-right: 0;
   border-top: .30769230769231em solid transparent;
   border-bottom: .30769230769231em solid transparent;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
 }
 .lever a:hover:after {
   opacity: 1;
@@ -602,9 +602,9 @@ form.busy span.spinner:after {
   display: inline-block;
   vertical-align: top;
   opacity: .5;
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
 }
 #list thead th a:hover:after {
   opacity: 1;

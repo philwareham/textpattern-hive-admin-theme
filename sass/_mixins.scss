@@ -138,9 +138,9 @@
 // alternative to the text-indent:-9999px method
 
 @mixin hide-text {
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
+    font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
 }
 
 // IE7 inline-block
