@@ -1768,6 +1768,9 @@ table#edit {
     display: block;
     padding: 0 1em;
   }
+  table#edit.edit-pane td:first-child {
+    width: auto;
+  }
   table#edit.edit-pane td:last-child {
     padding-bottom: 1em;
   }
