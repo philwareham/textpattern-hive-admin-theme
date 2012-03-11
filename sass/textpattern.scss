@@ -142,14 +142,13 @@ pre,
 
 /* alert boxes */
 #messagepane span {
+    @include inline-block;
     @include border-radius;
     border: 1px solid;
     padding: .5em 1em;
     text-align: center;
     max-width: 42em; // 546px / 13px
     @include text-shadow-light;
-    display: inline-block;
-    @include ie7-inline-block;
     &.success {
         color: $success-text;
         background: $success-background;
@@ -216,7 +215,7 @@ legend {
         z-index: 10;
         width: 0;
         height: 0;
-        display: inline-block;
+        @include inline-block;
         vertical-align: top;
         opacity: .5;
         border-left: .30769230769231em solid $color-text;
@@ -346,7 +345,7 @@ form.busy input[type='submit'] {
 }
 form.busy span.spinner:after {
     content: "";
-    display: inline-block;
+    @include inline-block;
     width: 16px;
     height: 16px;
     margin-left: 5px;
@@ -425,7 +424,7 @@ form.busy span.spinner:after {
             z-index: 10;
             width: 0;
             height: 0;
-            display: inline-block;
+            @include inline-block;
             vertical-align: top;
             opacity: .5;
             @include hide-text;

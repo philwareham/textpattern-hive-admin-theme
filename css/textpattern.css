@@ -158,6 +158,13 @@ pre code,
 
 /* alert boxes */
 #messagepane span {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *display: inline;
+  *zoom: 1;
+  *vertical-align: auto;
   -moz-border-radius: 0.385em;
   border-radius: 0.385em;
   border: 1px solid;
@@ -165,10 +172,6 @@ pre code,
   text-align: center;
   max-width: 42em;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
-  display: inline-block;
-  /* display and zoom IE7 fix for display:inline-block */
-  *display: inline;
-  *zoom: 1;
 }
 #messagepane span.success {
   color: #238c23;
@@ -270,7 +273,13 @@ legend {
   z-index: 10;
   width: 0;
   height: 0;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
   display: inline-block;
+  vertical-align: middle;
+  *display: inline;
+  *zoom: 1;
+  *vertical-align: auto;
   vertical-align: top;
   opacity: .5;
   border-left: 0.308em solid #333333;
@@ -502,7 +511,13 @@ form.busy input[type='submit'] {
 
 form.busy span.spinner:after {
   content: "";
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
   display: inline-block;
+  vertical-align: middle;
+  *display: inline;
+  *zoom: 1;
+  *vertical-align: auto;
   width: 16px;
   height: 16px;
   margin-left: 5px;
@@ -599,7 +614,13 @@ form.busy span.spinner:after {
   z-index: 10;
   width: 0;
   height: 0;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
   display: inline-block;
+  vertical-align: middle;
+  *display: inline;
+  *zoom: 1;
+  *vertical-align: auto;
   vertical-align: top;
   opacity: .5;
   font: 0/0 serif;

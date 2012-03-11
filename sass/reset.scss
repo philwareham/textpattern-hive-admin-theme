@@ -248,8 +248,7 @@ a.navlink-active,
     border: 1px solid #bbb;
     border-bottom-color: darken(#bbb, 10%);
     @include gradient(#eee, #bbb);
-    display: inline-block;
-    @include ie7-inline-block;
+    @include inline-block;
     /* IE7 vertical alignment fix */
     *padding-top: 2px;
     *padding-bottom: 0;
