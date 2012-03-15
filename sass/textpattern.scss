@@ -146,7 +146,6 @@ pre,
     @include border-radius;
     border: 1px solid;
     padding: .5em 1em;
-    text-align: center;
     max-width: 42em; // 546px / 13px
     @include text-shadow-light;
     &.success {
