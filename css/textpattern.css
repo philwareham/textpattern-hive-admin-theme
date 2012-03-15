@@ -1787,12 +1787,4 @@ table#edit {
   table#edit.edit-pane td:last-child {
     padding-bottom: 1em;
   }
-  table#edit.edit-pane tr:last-child td:first-child {
-    height: 1em;
-  }
-  table#edit.edit-pane tr:last-child td:last-child {
-    padding-bottom: 0;
-    position: relative;
-    top: -1em;
-  }
 }
