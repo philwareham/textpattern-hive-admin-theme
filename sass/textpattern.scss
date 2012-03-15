@@ -136,7 +136,8 @@ pre,
 }
 
 .not-ok,
-#plugin_form .modified {
+#plugin_form .modified,
+.highlight {
     color: $error-text;
 }
 
@@ -856,9 +857,8 @@ table#edit {
     }
     td {
         padding: .38461538461538em 1em;
-        text-align: left !important; // override inline CSS
     }
-    .noline label {
+    .cell-label {
         font-weight: bold;
     }
     input[type="submit"] {
@@ -878,7 +878,6 @@ table#edit {
 }
 
 .category-list td {
-    padding: 0 !important; // override inline CSS
     width: 25%;
 }
 
@@ -1217,8 +1216,7 @@ table#edit {
 }
 
 #page-diag textarea {
-    width: 100% !important; // override inline CSS
-    height: 21em !important; // override inline CSS
+    height: 21em;
     margin-bottom: 1em;
 }
 

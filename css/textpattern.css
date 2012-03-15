@@ -152,7 +152,8 @@ pre code,
 }
 
 .not-ok,
-#plugin_form .modified {
+#plugin_form .modified,
+.highlight {
   color: #9d261d;
 }
 
@@ -1054,9 +1055,8 @@ table#edit {
 }
 #login_form td {
   padding: .38461538461538em 1em;
-  text-align: left !important;
 }
-#login_form .noline label {
+#login_form .cell-label {
   font-weight: bold;
 }
 #login_form input[type="submit"] {
@@ -1073,7 +1073,6 @@ table#edit {
 }
 
 .category-list td {
-  padding: 0 !important;
   width: 25%;
 }
 
@@ -1392,8 +1391,7 @@ table#edit {
 }
 
 #page-diag textarea {
-  width: 100% !important;
-  height: 21em !important;
+  height: 21em;
   margin-bottom: 1em;
 }
 

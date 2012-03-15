@@ -12,7 +12,7 @@
     <!--[if lt IE 9]><script type="text/javascript" src="../../js/selectivizr.min.js"></script><![endif]-->
     <script type="text/javascript" src="../../js/scripts.js"></script>
 </head>
-<body style="border-top:15px solid #FC3">
+<body id="page-setup">
     <div align="center">
         <form action="/textpattern/setup/index.php" method="post">
             <table id="setup" cellpadding="0" cellspacing="0" border="0">
@@ -25,19 +25,19 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="noline" style="text-align: right; vertical-align: middle;">MySQL login </td>
+                    <td class="noline cell-label">MySQL login </td>
                     <td class="noline"><input type="text" value="" name="duser" class="edit" tabindex="1" /></td>
-                    <td class="noline" style="text-align: right; vertical-align: middle;">MySQL password </td>
+                    <td class="noline cell-label">MySQL password </td>
                     <td class="noline"><input type="text" value="" name="dpass" class="edit" tabindex="2" /></td>
                 </tr>
                 <tr>
-                    <td class="noline" style="text-align: right; vertical-align: middle;">MySQL server </td>
+                    <td class="noline cell-label">MySQL server </td>
                     <td class="noline"><input type="text" value="localhost" name="dhost" class="edit" tabindex="3" /></td>
-                    <td class="noline" style="text-align: right; vertical-align: middle;">MySQL database </td>
+                    <td class="noline cell-label">MySQL database </td>
                     <td class="noline"><input type="text" value="" name="ddb" class="edit" tabindex="4" /></td>
                 </tr>
                 <tr>
-                    <td class="noline" style="text-align: right; vertical-align: middle;">Table prefix </td>
+                    <td class="noline cell-label">Table prefix </td>
                     <td class="noline"><input type="text" value="" name="dprefix" class="edit" tabindex="5" /></td>
                     <td align="left" valign="top" colspan="2"><small>(Use <strong>only</strong> if you require multiple installations in one database)</small></td>
                 </tr>
@@ -51,7 +51,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="noline" style="text-align: right; vertical-align: middle;">http:// </td>
+                    <td class="noline cell-label">http:// </td>
                     <td align="left" valign="top" colspan="3">
                         <input type="text" value="www.textpattern.dev" name="siteurl" size="40" class="edit" /><a target="_blank" href="http://rpc.textpattern.com/help/?item=siteurl&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a>
                     </td>

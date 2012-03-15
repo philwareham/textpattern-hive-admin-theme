@@ -12,13 +12,13 @@
     <!--[if lt IE 9]><script type="text/javascript" src="../../js/selectivizr.min.js"></script><![endif]-->
     <script type="text/javascript" src="../../js/scripts.js"></script>
 </head>
-<body style="border-top:15px solid #FC3">
+<body id="page-setup">
     <div align="center">
         <p>Checking database connection&hellip;</p>
         <p>Connected</p>
         <p>Using <strong>local-test-mysql</strong> (utf8)</p>
         <p><strong>Before you proceed</strong>, Create a file called <code>config.php</code> in the <code>/textpattern/</code> directory and paste the following inside:</p>
-        <textarea name="config" cols="40" rows="5" style="width: 400px; height: 200px">
+        <textarea name="config" cols="40" rows="5">
             <?php
             $txpcfg['db'] = 'test-mysql';
             $txpcfg['user'] = 'test-mysql';
