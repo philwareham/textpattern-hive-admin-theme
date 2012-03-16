@@ -143,7 +143,7 @@ EOS;
         return array(
             'author'      => 'Phil Wareham',
             'author_uri'  => 'http://twitter.com/philwareham',
-            'version'     => '2.0a2',
+            'version'     => '2.0a3',
             'description' => 'Textpattern Hive Theme',
             'help'        => 'http://textgarden.org/administration-themes/261/hive',
         );
