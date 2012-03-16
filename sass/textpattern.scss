@@ -744,7 +744,6 @@ table#edit.edit-pane {
 
 .edit-pane td {
     padding: .5em 1em;
-    text-align:left !important; // override inline CSS
     &:first-child {
         width: 24%;
     }
@@ -1199,10 +1198,6 @@ table#edit {
     width:25%;
 }
 
-#page-css td.column {
-    padding:0 !important;
-}
-
 #style_form #css {
     height:537px;
     margin:-3px 0 1em;
@@ -1226,10 +1221,6 @@ table#edit {
 #prefs_container #list td,
 #language_container #list td {
     padding:0;
-}
-
-#prefs_container td {
-    text-align:left !important;
 }
 
 #prefs_container td:first-child,
@@ -1268,10 +1259,6 @@ table#edit {
 #prefs_control{
     float:right;
     margin-top:-20px;
-}
-
-#language_container .nav-tertiary a {
-    margin-bottom:0;
 }
 
 #language_container tr[style="font-weight:bold"] td {
