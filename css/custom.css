@@ -1,113 +1,26 @@
-/* Hive theme for Textpattern CMS (v2.0a3) */
-/* ------ OPTIONALLY HIDE FEATURES IN WRITE/EDIT PAGES ------- */
+/* ------ OPTIONALLY HIDE FEATURES ------- */
+
+
 /* More info: http://forum.textpattern.com/viewtopic.php?pid=240058#p240058 */
 /* Uncomment any rule below to apply it */
-/* Textile group */
-/* #textile_group{display:none !important;} */
-/* Advanced group */
-/* #advanced_group{display:none !important;} */
-/* Recent articles group */
-/* #recent_group{display:none !important;} */
-/* Keywords field */
-/* .keywords{display:none !important;} */
-/* Comments group */
-/* #write-comments{display:none !important;} */
-/* Expires fields */
-/* #write-expires{display:none !important;} */
-/* Tag builder column on pages and forms sections */
-/* #page-page #edit td.column:first-child,#page-form #edit td.column:first-child{display:none !important;} */
-/* -- STYLES FOR VARIOUS PLUGINS (delete if you do not use) -- */
-/* glz_custom_fields */
-.glz_text_area_field textarea {
-  width: 100% !important;
-}
 
-/* bot_privs */
-#page-bot_privs_tab #list tr:first-child {
-  color: #fff;
-  background: #555;
-}
+/* Write/edit page: Textile group */
+/* #textile_group {display:none !important;} */
 
-#page-bot_privs_tab #list td {
-  width: 11%;
-}
+/* Write/edit page: Advanced group */
+/* #advanced_group {display:none !important;} */
 
-#page-bot_privs_tab #list td:first-child {
-  width: 34%;
-}
+/* Write/edit page: Recent articles group */
+/* #recent_group {display:none !important;} */
 
-/* wet_quicklink */
-#quicklink {
-  z-index: 50;
-  padding: 10px 0 0 !important;
-  -moz-border-radius: 0.385em;
-  border-radius: 0.385em;
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-}
+/* Write/edit page: Keywords field */
+/* .keywords {display:none !important;} */
 
-#quicklink #ql-menu {
-  padding: 0 10px !important;
-}
+/* Write/edit page: Comments group */
+/* #write-comments {display:none !important;} */
 
-#quicklink #list {
-  padding: 0 !important;
-  margin-top: 5px !important;
-}
+/* Write/edit page: Expires fields */
+/* #write-expires {display:none !important;} */
 
-#quicklink th {
-  padding: 4px 2px 4px 10px !important;
-}
-
-#quicklink td {
-  padding: 4px 10px !important;
-}
-
-#ql-search {
-  width: 220px;
-  margin-left: 5px;
-}
-
-#ql-close {
-  height: inherit !important;
-  width: inherit !important;
-}
-
-h3.plain #insert-link {
-  margin-left: 10px;
-  margin-top: 8px;
-}
-
-/* arc_twitter */
-#arc_twitter .plain {
-  padding: 0;
-  margin: 0 !important;
-}
-
-#arc_twitter_options {
-  padding: 0;
-}
-
-#arc_twitter_options .edit {
-  width: 100%;
-}
-
-/* rah_external_output */
-#rah_external_output_container input[type="text"],
-#rah_external_output_container select {
-  width: 250px !important;
-}
-
-/* tru_tags (thanks by Stuart Butcher) */
-.tru_tags_admin_tags {
-  display: block;
-  margin-top: 12px;
-  padding: 4px;
-  border: 1px solid #d2d2d2;
-  border-top: 1px solid #a3a3a3;
-  background-color: #fff;
-  height: 150px;
-  /* set this to whatever you want */
-  overflow: auto;
-  /* this will cause a scrollbar to appear */
-}
+/* Pages and Forms pages: Tag builder column */
+/* #page-page #edit td.column:first-child, #page-form #edit td.column:first-child {display:none !important;} */
