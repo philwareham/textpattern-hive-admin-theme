@@ -690,20 +690,12 @@ body {
   padding: 0;
 }
 
-#form_container td[style] {
-  padding: 0 !important;
-}
-
 #import_container td {
   padding: 4px;
 }
 
 #page_container td {
   padding: 0;
-}
-
-#form_container td[style] {
-  padding: 0 !important;
 }
 
 #import_container td {
@@ -949,7 +941,7 @@ table#edit.edit-pane {
 .edit-pane td {
   padding: .5em 1em;
 }
-.edit-pane td:first-child {
+.edit-pane td.cell-label {
   width: 24%;
 }
 
@@ -1290,7 +1282,6 @@ table#edit {
 #section_container #list .section table td {
   border: 0;
   padding: 0 0 5px;
-  text-align: left !important;
 }
 
 #section_container #list .section table td:first-child {
@@ -1492,10 +1483,6 @@ table#edit {
 }
 
 /* Plugin page */
-#plugin_install_form span {
-  vertical-align: text-bottom !important;
-}
-
 #plugin-install {
   width: 50%;
 }
@@ -1521,7 +1508,6 @@ table#edit {
 
 #page-import #edit td {
   padding: 4px 0;
-  text-align: left !important;
 }
 
 #page-import #edit td:first-child,
@@ -1765,7 +1751,7 @@ table#edit {
     display: block;
     padding: 0 1em;
   }
-  table#edit.edit-pane td:first-child {
+  table#edit.edit-pane td.cell-label {
     width: auto;
   }
   table#edit.edit-pane td:last-child {

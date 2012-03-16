@@ -508,20 +508,12 @@ body {
     padding: 0;
 }
 
-#form_container td[style] {
-    padding: 0 !important;
-}
-
 #import_container td {
     padding: 4px;
 }
 
 #page_container td {
     padding: 0;
-}
-
-#form_container td[style] {
-    padding: 0 !important;
 }
 
 #import_container td {
@@ -744,7 +736,7 @@ table#edit.edit-pane {
 
 .edit-pane td {
     padding: .5em 1em;
-    &:first-child {
+    &.cell-label {
         width: 24%;
     }
 }
@@ -1107,7 +1099,6 @@ table#edit {
 #section_container #list .section table td {
     border:0;
     padding:0 0 5px;
-    text-align:left !important;
 }
 
 #section_container #list .section table td:first-child {
@@ -1325,10 +1316,6 @@ table#edit {
 
 /* Plugin page */
 
-#plugin_install_form span {
-    vertical-align: text-bottom !important; // override inline CSS
-}
-
 #plugin-install {
     width: 50%;
 }
@@ -1341,22 +1328,21 @@ table#edit {
     height: 23em;
 }
 
-.plugin-help{
-    width:728px !important;
-    margin:0 auto;
+.plugin-help {
+    width: 728px !important;
+    margin: 0 auto;
 }
 
 
 /* Import page */
 
 #page-import #edit {
-    width:448px !important;
-    margin:0 auto;
+    width: 448px !important;
+    margin: 0 auto;
 }
 
 #page-import #edit td {
-    padding:4px 0;
-    text-align:left !important;
+    padding: 4px 0;
 }
 
 #page-import #edit td:first-child,

@@ -255,7 +255,7 @@ table#edit.edit-pane {
     td {
         display: block;
         padding: 0 1em;
-        &:first-child {
+        &.cell-label {
             width: auto;
         }
         &:last-child {
