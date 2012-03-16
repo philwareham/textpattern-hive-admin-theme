@@ -47,21 +47,25 @@ a {
    Typography
    ========================================================================== */
 
-h1,
+h1 {
+    font-size: 2em; // 26px / 13px
+    margin: 0 0 .5em; // 13px / 26px
+}
+
+h2 {
+    font-size: 1.23076923076923em; // 16px / 13px
+    margin: 0 0 .8125em;
+    .pophelp {
+        font-size: .8125em; // 13px / 16px
+    }
+}
+
 h3,
 h4,
 h5,
 h6 {
     font-size: 1em; // 13px
     margin: 0 0 1em;
-}
-
-h2 {
-    font-size: 1.23076923076923em; // 16px
-    margin: 0 0 .8125em;
-    .pophelp {
-        font-size: .8125em; // 13px
-    }
 }
 
 small,
@@ -338,18 +342,20 @@ input[value="×"] {
 }
 
 /* busy buttons */
-form.busy input[type='submit'] {
-    border: 1px solid #dadada;
-    border-bottom-color: darken(#dadada, 10%);
-    @include gradient(#e6e6e6, #dadada);
-}
-form.busy span.spinner:after {
-    content: "";
-    @include inline-block;
-    width: 16px;
-    height: 16px;
-    margin-left: 5px;
-    @include hires-graphic(spinner, gif, 16px, 16px);
+form.busy {
+    input[type='submit'] {
+        border: 1px solid #dadada;
+        border-bottom-color: darken(#dadada, 10%);
+        @include gradient(#e6e6e6, #dadada);
+    }
+    span.spinner:after {
+        content: "";
+        @include inline-block;
+        width: 16px;
+        height: 16px;
+        margin-left: 5px;
+        @include hires-graphic(spinner, gif, 16px, 16px);
+    }
 }
 
 
@@ -458,35 +464,9 @@ form.busy span.spinner:after {
     }
 }
 
-#content_switcher #list tr.even {
-    background: none;
-}
-
-#page-page #content_switcher,
-#page-css #content_switcher {
-    padding-bottom:5px;
-}
-
-#page-page #content_switcher #list,
-#page-css #content_switcher #list {
-    margin: 0;
-    float: none;
-}
-
-#page-page #content_switcher #list td,
-#page-css #content_switcher #list td {
-    position: relative;
-    padding: 0 1em 5px;
-}
-
-#list tfoot #js {
-    margin-right: 36px;
-}
-
-
 
 /* =============================================================================
-   Layout
+   Container
    ========================================================================== */
 
 body {
@@ -500,24 +480,6 @@ body {
 .txp-container {
     max-width: 110em; // 1430px / 13px
     margin: 0 auto;
-}
-
-/* Containers */
-
-#page_container td {
-    padding: 0;
-}
-
-#import_container td {
-    padding: 4px;
-}
-
-#page_container td {
-    padding: 0;
-}
-
-#import_container td {
-    padding: 4px;
 }
 
 
@@ -540,6 +502,7 @@ body {
         float: left;
         margin: 0;
         padding-left: $logo-large-width;
+        font-size: 1em; // 13px
         line-height: 3em;
         background: no-repeat left 48%;
         max-width: 25%;
@@ -757,9 +720,6 @@ div.code {
 
 
 
-.nav-tertiary a {
-    margin-bottom:1em;
-}
 
 .txp-navigation {
     @extend .clearfix;

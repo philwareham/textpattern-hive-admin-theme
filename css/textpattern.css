@@ -63,13 +63,9 @@ a:hover {
 /* =============================================================================
    Typography
    ========================================================================== */
-h1,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 1em;
-  margin: 0 0 1em;
+h1 {
+  font-size: 2em;
+  margin: 0 0 .5em;
 }
 
 h2 {
@@ -78,6 +74,14 @@ h2 {
 }
 h2 .pophelp {
   font-size: .8125em;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  margin: 0 0 1em;
 }
 
 small,
@@ -504,7 +508,6 @@ form.busy input[type='submit'] {
   /* CSS3 Compliant */
   background-image: linear-gradient(#e6e6e6, #dadada);
 }
-
 form.busy span.spinner:after {
   content: "";
   display: -moz-inline-box;
@@ -644,33 +647,8 @@ form.busy span.spinner:after {
   margin-right: .38461538461538em;
 }
 
-#content_switcher #list tr.even {
-  background: none;
-}
-
-#page-page #content_switcher,
-#page-css #content_switcher {
-  padding-bottom: 5px;
-}
-
-#page-page #content_switcher #list,
-#page-css #content_switcher #list {
-  margin: 0;
-  float: none;
-}
-
-#page-page #content_switcher #list td,
-#page-css #content_switcher #list td {
-  position: relative;
-  padding: 0 1em 5px;
-}
-
-#list tfoot #js {
-  margin-right: 36px;
-}
-
 /* =============================================================================
-   Layout
+   Container
    ========================================================================== */
 body {
   position: relative;
@@ -683,23 +661,6 @@ body {
 .txp-container {
   max-width: 110em;
   margin: 0 auto;
-}
-
-/* Containers */
-#page_container td {
-  padding: 0;
-}
-
-#import_container td {
-  padding: 4px;
-}
-
-#page_container td {
-  padding: 0;
-}
-
-#import_container td {
-  padding: 4px;
 }
 
 /* =============================================================================
@@ -738,6 +699,7 @@ body {
   float: left;
   margin: 0;
   padding-left: 11.385em;
+  font-size: 1em;
   line-height: 3em;
   background: no-repeat left 48%;
   max-width: 25%;
@@ -957,10 +919,6 @@ div.code {
   /* IE7 box-sizing workaround */
   *padding-right: 0;
   *padding-left: 0;
-}
-
-.nav-tertiary a {
-  margin-bottom: 1em;
 }
 
 .txp-navigation {
