@@ -189,6 +189,19 @@ body {
     }
 }
 
+/* Users page */
+
+/* Hide table cells to optimise screen estate */
+#page-admin #list {
+    .real-name,
+    .privs,
+    .last-login,
+    .multi-edit,
+    tfoot {
+        display: none !important;
+    }
+}
+
 
 }
 

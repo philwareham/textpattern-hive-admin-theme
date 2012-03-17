@@ -890,8 +890,9 @@ table#edit {
 
 table#edit.edit-pane,
 table#list.edit-pane {
-  width: 34.9230769230769em;
-  margin: 0 auto 1em;
+  margin-right: auto;
+  width: 40em;
+  margin-bottom: 1em;
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
   background: #f7f7f7;
@@ -902,12 +903,9 @@ table#list.edit-pane td {
 }
 table#edit.edit-pane td.cell-label,
 table#list.edit-pane td.cell-label {
-  width: 24%;
+  width: 34%;
 }
 
-.txp-control-panel {
-  text-align: center;
-}
 .txp-control-panel select {
   margin-bottom: .38461538461538em;
 }
@@ -1365,13 +1363,8 @@ td:nth-child(2).install-item strong {
 /* =============================================================================
    Admin -> Users page
    ========================================================================== */
-#change_password p {
-  margin: 0;
-}
-
-#new_pass {
-  width: 198px;
-  margin-right: 5px;
+.txp-alter {
+  margin-top: 2em;
 }
 
 /* =============================================================================
@@ -1581,6 +1574,16 @@ div.code {
   #page-discuss #list .parent,
   #page-discuss #list .multi-edit,
   #page-discuss #list tfoot {
+    display: none !important;
+  }
+
+  /* Users page */
+  /* Hide table cells to optimise screen estate */
+  #page-admin #list .real-name,
+  #page-admin #list .privs,
+  #page-admin #list .last-login,
+  #page-admin #list .multi-edit,
+  #page-admin #list tfoot {
     display: none !important;
   }
 }

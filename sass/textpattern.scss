@@ -687,24 +687,22 @@ table#edit {
 
 table#edit.edit-pane,
 table#list.edit-pane {
-    width: 34.9230769230769em; // 454px / 13px
-    margin: 0 auto 1em;
+    margin-right: auto;
+    width: 40em; // 520px / 13px
+    margin-bottom: 1em;
     border-top: .5em solid $color-background-box;
     border-bottom: .5em solid $color-background-box;
     background: $color-background-box;
     td {
         padding: .5em 1em;
         &.cell-label {
-            width: 24%;
+            width: 34%;
         }
     }
 }
 
-.txp-control-panel {
-    text-align: center;
-    select {
-        margin-bottom: .38461538461538em;
-    }
+.txp-control-panel select {
+    margin-bottom: .38461538461538em;
 }
 
 /* list navigators on list pages */
@@ -1180,8 +1178,6 @@ td:nth-child(2).install-item {
 
 /* fixes for poor HTML structure on Prefrences pages */
 
-
-
 #language_control {
     margin-top: 1em;
     text-align: left !important; // override inline CSS
@@ -1199,13 +1195,8 @@ td:nth-child(2).install-item {
    Admin -> Users page
    ========================================================================== */
 
-#change_password p {
-    margin:0;
-}
-
-#new_pass {
-    width:198px;
-    margin-right:5px;
+.txp-alter {
+    margin-top: 2em;
 }
 
 
