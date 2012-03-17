@@ -106,6 +106,7 @@ mark {
 /* prevents sub and sup affecting line-height in all browsers - gist.github.com/413930 */
 sub,
 sup {
+    font-size: $smallfont;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
