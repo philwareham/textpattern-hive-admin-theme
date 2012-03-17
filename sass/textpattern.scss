@@ -404,7 +404,7 @@ form.busy {
     .section {
         width: 12%;
     }
-    .multi-edit {
+    thead .multi-edit, tbody .multi-edit {
         width: 2%;
     }
 }
@@ -459,8 +459,11 @@ form.busy {
     th, td {
         vertical-align: middle;
     }
-    .multi-edit input[type="button"] {
-        margin-right: .38461538461538em;
+    .multi-edit {
+        text-align: right;
+        input[type="button"] {
+            margin-right: .38461538461538em;
+        }
     }
 }
 
@@ -681,49 +684,23 @@ body {
    Miscellaneous/shared layout
    ========================================================================== */
 
-.edit-title {
-    margin-bottom: 1em;
-}
-
 .search-form input[type="submit"] {
     margin-left: .38461538461538em;
 }
 
-table#edit.edit-pane {
+table#edit.edit-pane,
+table#list.edit-pane {
     width: 34.9230769230769em; // 454px / 13px
     margin: 0 auto 1em;
     border-top: .5em solid $color-background-box;
     border-bottom: .5em solid $color-background-box;
     background: $color-background-box;
-}
-
-.edit-pane td {
-    padding: .5em 1em;
-    &.cell-label {
-        width: 24%;
+    td {
+        padding: .5em 1em;
+        &.cell-label {
+            width: 24%;
+        }
     }
-}
-
-div.code {
-    margin-bottom: 1em;
-    border: 1px solid $color-border;
-    padding: .15384615384615em .38461538461538em;
-    height: 21em;
-    overflow: auto;
-    @include box-sizing;
-    /* IE7 box-sizing workaround */
-    *padding-right: 0;
-    *padding-left: 0;
-}
-
-
-
-
-
-
-.txp-navigation {
-    @extend .clearfix;
-    margin-bottom: .5em;
 }
 
 .txp-control-panel {
@@ -731,6 +708,12 @@ div.code {
     select {
         margin-bottom: .38461538461538em;
     }
+}
+
+/* list navigators on list pages */
+.txp-navigation {
+    @extend .clearfix;
+    margin-bottom: .5em;
 }
 
 .pageby {
@@ -741,6 +724,11 @@ div.code {
 .prev-next {
     float: right;
     margin-bottom: 0;
+}
+
+/* intro text div on pages, forms and styles pages */
+.edit-title {
+    margin-bottom: 1em;
 }
 
 table#edit {
@@ -761,7 +749,7 @@ table#edit {
     margin-left: -.38461538461538em; // fix inconsistent alignment
 }
 
-/* Hide upload form on touch based devices */
+/* Hide upload forms on touch based devices */
 .touch .upload-form {
     display: none;
 }
@@ -789,8 +777,33 @@ table#edit {
     background:#d2dce0;
 }
 
+/* Tagbuilder popup */
 
-/* Login page */
+#tag-event {
+    background:#fff;
+    width:auto;
+    padding: 1em;
+}
+
+#tag-event th,
+#tag-event td {
+    padding: .5em;
+    text-align:left;
+}
+
+.tabs {
+    padding-top:20px;
+}
+
+.tabs a {
+    display:block;
+    padding:.9em;
+}
+
+
+/* =============================================================================
+   Login page
+   ========================================================================== */
 
 #login_form {
     margin: 0 auto;
@@ -818,7 +831,9 @@ table#edit {
 }
 
 
-/* Categories page */
+/* =============================================================================
+   Content -> Categories page
+   ========================================================================== */
 
 #page-category .action-create input[type="submit"] {
     margin-top: .38461538461538em;
@@ -854,7 +869,9 @@ table#edit {
 }
 
 
-/* Write page */
+/* =============================================================================
+   Content -> Write page
+   ========================================================================== */
 
 #article-col-1,
 #article-col-2 {
@@ -931,11 +948,9 @@ table#edit {
 }
 
 
-/* Hide article_tabs column (as it's useless IMHO) */
-#article-tabs{display:none;}
-
-
-/* Articles page */
+/* =============================================================================
+   Content -> Articles page
+   ========================================================================== */
 
 .unpublished {
     color: #999;
@@ -946,7 +961,9 @@ table#edit {
 }
 
 
-/* Images page */
+/* =============================================================================
+   Content -> Images page
+   ========================================================================== */
 
 #page-image img {
     border: solid 1px $color-border;
@@ -987,7 +1004,9 @@ table#edit {
 }
 
 
-/* Files page */
+/* =============================================================================
+   Content -> Files page
+   ========================================================================== */
 
 #page-file .year {
     width:3.5em;
@@ -1002,12 +1021,16 @@ table#edit {
 }
 
 
-/* Links page */
+/* =============================================================================
+   Content -> Links page
+   ========================================================================== */
 
 
 
 
-/* Comments page */
+/* =============================================================================
+   Content -> Comments page
+   ========================================================================== */
 
 .cb_show_spam {
     margin: -1em 0 1em 1em;
@@ -1027,7 +1050,9 @@ table#edit {
 }
 
 
-/* Sections page */
+/* =============================================================================
+   Presentation -> Sections page
+   ========================================================================== */
 
 #section_container #list td {
     padding:0;
@@ -1076,7 +1101,9 @@ table#edit {
 }
 
 
-/* Pages page */
+/* =============================================================================
+   Presentation -> Pages page
+   ========================================================================== */
 
 #page-page #edit td:first-child {
     width:25%;
@@ -1098,7 +1125,9 @@ table#edit {
 }
 
 
-/* Forms page */
+/* =============================================================================
+   Presentation -> Forms page
+   ========================================================================== */
 
 #page-form #edit td:first-child {
     width:25%;
@@ -1142,8 +1171,9 @@ table#edit {
 }
 
 
-
-/* Style page */
+/* =============================================================================
+   Presentation -> Styles page
+   ========================================================================== */
 
 #page-css #edit td:last-child {
     width:25%;
@@ -1155,7 +1185,9 @@ table#edit {
 }
 
 
-/* Diagnostics page */
+/* =============================================================================
+   Admin -> Diagnostics page
+   ========================================================================== */
 
 #page-diag table td {
     padding: 0;
@@ -1167,12 +1199,16 @@ table#edit {
 }
 
 
-/* Preferences page */
+/* =============================================================================
+   Admin -> Preferences page
+   ========================================================================== */
 
 
 
 
-/* Users page */
+/* =============================================================================
+   Admin -> Users page
+   ========================================================================== */
 
 #change_password {
     margin-top:-2em;
@@ -1188,7 +1224,9 @@ table#edit {
 }
 
 
-/* Visitor logs page */
+/* =============================================================================
+   Admin -> Visitor Logs page
+   ========================================================================== */
 
 #page-log .host,
 #page-log .page,
@@ -1197,7 +1235,9 @@ table#edit {
 }
 
 
-/* Plugin page */
+/* =============================================================================
+   Admin -> Plugins page
+   ========================================================================== */
 
 #plugin-install {
     width: 50%;
@@ -1212,12 +1252,25 @@ table#edit {
 }
 
 .plugin-help {
-    width: 728px !important;
-    margin: 0 auto;
+    width: 640px !important; // override inline CSS
+}
+
+div.code {
+    margin-bottom: 1em;
+    border: 1px solid $color-border;
+    padding: .15384615384615em .38461538461538em;
+    height: 21em;
+    overflow: auto;
+    @include box-sizing;
+    /* IE7 box-sizing workaround */
+    *padding-right: 0;
+    *padding-left: 0;
 }
 
 
-/* Import page */
+/* =============================================================================
+   Admin -> Import page
+   ========================================================================== */
 
 #page-import #edit {
     width: 448px !important;
@@ -1242,32 +1295,6 @@ table#edit {
 #page-import #edit select {
     width:250px;
 }
-
-
-/* Tagbuilder popup */
-
-#tag-event {
-    background:#fff;
-    width:auto;
-    padding: 1em;
-}
-
-#tag-event th,
-#tag-event td {
-    padding: .5em;
-    text-align:left;
-}
-
-.tabs {
-    padding-top:20px;
-}
-
-.tabs a {
-    display:block;
-    padding:.9em;
-}
-
-
 
 
 @import "responsive";

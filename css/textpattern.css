@@ -570,7 +570,7 @@ form.busy span.spinner:after {
 #list .section {
   width: 12%;
 }
-#list .multi-edit {
+#list thead .multi-edit, #list tbody .multi-edit {
   width: 2%;
 }
 
@@ -642,6 +642,9 @@ form.busy span.spinner:after {
 
 #list tfoot th, #list tfoot td {
   vertical-align: middle;
+}
+#list tfoot .multi-edit {
+  text-align: right;
 }
 #list tfoot .multi-edit input[type="button"] {
   margin-right: .38461538461538em;
@@ -884,45 +887,25 @@ body {
 /* =============================================================================
    Miscellaneous/shared layout
    ========================================================================== */
-.edit-title {
-  margin-bottom: 1em;
-}
-
 .search-form input[type="submit"] {
   margin-left: .38461538461538em;
 }
 
-table#edit.edit-pane {
+table#edit.edit-pane,
+table#list.edit-pane {
   width: 34.9230769230769em;
   margin: 0 auto 1em;
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
   background: #f7f7f7;
 }
-
-.edit-pane td {
+table#edit.edit-pane td,
+table#list.edit-pane td {
   padding: .5em 1em;
 }
-.edit-pane td.cell-label {
+table#edit.edit-pane td.cell-label,
+table#list.edit-pane td.cell-label {
   width: 24%;
-}
-
-div.code {
-  margin-bottom: 1em;
-  border: 1px solid #cccccc;
-  padding: .15384615384615em .38461538461538em;
-  height: 21em;
-  overflow: auto;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  /* IE7 box-sizing workaround */
-  *padding-right: 0;
-  *padding-left: 0;
-}
-
-.txp-navigation {
-  margin-bottom: .5em;
 }
 
 .txp-control-panel {
@@ -930,6 +913,11 @@ div.code {
 }
 .txp-control-panel select {
   margin-bottom: .38461538461538em;
+}
+
+/* list navigators on list pages */
+.txp-navigation {
+  margin-bottom: .5em;
 }
 
 .pageby {
@@ -940,6 +928,11 @@ div.code {
 .prev-next {
   float: right;
   margin-bottom: 0;
+}
+
+/* intro text div on pages, forms and styles pages */
+.edit-title {
+  margin-bottom: 1em;
 }
 
 table#edit {
@@ -960,7 +953,7 @@ table#edit {
   margin-left: -0.385em;
 }
 
-/* Hide upload form on touch based devices */
+/* Hide upload forms on touch based devices */
 .touch .upload-form {
   display: none;
 }
@@ -986,7 +979,31 @@ table#edit {
   background: #d2dce0;
 }
 
-/* Login page */
+/* Tagbuilder popup */
+#tag-event {
+  background: #fff;
+  width: auto;
+  padding: 1em;
+}
+
+#tag-event th,
+#tag-event td {
+  padding: .5em;
+  text-align: left;
+}
+
+.tabs {
+  padding-top: 20px;
+}
+
+.tabs a {
+  display: block;
+  padding: .9em;
+}
+
+/* =============================================================================
+   Login page
+   ========================================================================== */
 #login_form {
   margin: 0 auto;
   padding: .5em 0;
@@ -1012,7 +1029,9 @@ table#edit {
   margin-bottom: 1em;
 }
 
-/* Categories page */
+/* =============================================================================
+   Content -> Categories page
+   ========================================================================== */
 #page-category .action-create input[type="submit"] {
   margin-top: .38461538461538em;
 }
@@ -1046,7 +1065,9 @@ table#edit {
   display: block;
 }
 
-/* Write page */
+/* =============================================================================
+   Content -> Write page
+   ========================================================================== */
 #article-col-1,
 #article-col-2 {
   width: 25%;
@@ -1123,12 +1144,9 @@ table#edit {
   margin-left: 2em;
 }
 
-/* Hide article_tabs column (as it's useless IMHO) */
-#article-tabs {
-  display: none;
-}
-
-/* Articles page */
+/* =============================================================================
+   Content -> Articles page
+   ========================================================================== */
 .unpublished {
   color: #999;
 }
@@ -1137,7 +1155,9 @@ table#edit {
   width: 50%;
 }
 
-/* Images page */
+/* =============================================================================
+   Content -> Images page
+   ========================================================================== */
 #page-image img {
   border: solid 1px #cccccc;
   -moz-border-radius: 0.385em;
@@ -1179,7 +1199,9 @@ table#edit {
   width: 412px;
 }
 
-/* Files page */
+/* =============================================================================
+   Content -> Files page
+   ========================================================================== */
 #page-file .year {
   width: 3.5em;
 }
@@ -1192,8 +1214,12 @@ table#edit {
   width: 2.4em;
 }
 
-/* Links page */
-/* Comments page */
+/* =============================================================================
+   Content -> Links page
+   ========================================================================== */
+/* =============================================================================
+   Content -> Comments page
+   ========================================================================== */
 .cb_show_spam {
   margin: -1em 0 1em 1em;
 }
@@ -1209,7 +1235,9 @@ table#edit {
   width: 14%;
 }
 
-/* Sections page */
+/* =============================================================================
+   Presentation -> Sections page
+   ========================================================================== */
 #section_container #list td {
   padding: 0;
 }
@@ -1256,7 +1284,9 @@ table#edit {
   text-align: right;
 }
 
-/* Pages page */
+/* =============================================================================
+   Presentation -> Pages page
+   ========================================================================== */
 #page-page #edit td:first-child {
   width: 25%;
 }
@@ -1276,7 +1306,9 @@ table#edit {
   margin: 0;
 }
 
-/* Forms page */
+/* =============================================================================
+   Presentation -> Forms page
+   ========================================================================== */
 #page-form #edit td:first-child {
   width: 25%;
 }
@@ -1319,7 +1351,9 @@ table#edit {
   margin-right: 0;
 }
 
-/* Style page */
+/* =============================================================================
+   Presentation -> Styles page
+   ========================================================================== */
 #page-css #edit td:last-child {
   width: 25%;
 }
@@ -1329,7 +1363,9 @@ table#edit {
   margin: -3px 0 1em;
 }
 
-/* Diagnostics page */
+/* =============================================================================
+   Admin -> Diagnostics page
+   ========================================================================== */
 #page-diag table td {
   padding: 0;
 }
@@ -1339,8 +1375,12 @@ table#edit {
   margin-bottom: 1em;
 }
 
-/* Preferences page */
-/* Users page */
+/* =============================================================================
+   Admin -> Preferences page
+   ========================================================================== */
+/* =============================================================================
+   Admin -> Users page
+   ========================================================================== */
 #change_password {
   margin-top: -2em;
 }
@@ -1354,14 +1394,18 @@ table#edit {
   margin-right: 5px;
 }
 
-/* Visitor logs page */
+/* =============================================================================
+   Admin -> Visitor Logs page
+   ========================================================================== */
 #page-log .host,
 #page-log .page,
 #page-log .refer {
   width: 28%;
 }
 
-/* Plugin page */
+/* =============================================================================
+   Admin -> Plugins page
+   ========================================================================== */
 #plugin-install {
   width: 50%;
 }
@@ -1375,11 +1419,26 @@ table#edit {
 }
 
 .plugin-help {
-  width: 728px !important;
-  margin: 0 auto;
+  width: 640px !important;
 }
 
-/* Import page */
+div.code {
+  margin-bottom: 1em;
+  border: 1px solid #cccccc;
+  padding: .15384615384615em .38461538461538em;
+  height: 21em;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* IE7 box-sizing workaround */
+  *padding-right: 0;
+  *padding-left: 0;
+}
+
+/* =============================================================================
+   Admin -> Import page
+   ========================================================================== */
 #page-import #edit {
   width: 448px !important;
   margin: 0 auto;
@@ -1402,28 +1461,6 @@ table#edit {
 #page-import #edit input[type="text"],
 #page-import #edit select {
   width: 250px;
-}
-
-/* Tagbuilder popup */
-#tag-event {
-  background: #fff;
-  width: auto;
-  padding: 1em;
-}
-
-#tag-event th,
-#tag-event td {
-  padding: .5em;
-  text-align: left;
-}
-
-.tabs {
-  padding-top: 20px;
-}
-
-.tabs a {
-  display: block;
-  padding: .9em;
 }
 
 /* Hive theme for Textpattern CMS (v2.0a3) */
@@ -1615,6 +1652,10 @@ table#edit {
     background: #fff6d3;
     -webkit-box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
     box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
+  }
+
+  .plugin-help {
+    width: 100% !important;
   }
 }
 /* =============================================================================
