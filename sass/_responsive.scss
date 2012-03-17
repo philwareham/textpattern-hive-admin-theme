@@ -136,6 +136,10 @@ body {
     tfoot {
         display: none !important;
     }
+    #image_details_form .name,
+    #image_details_form .category {
+        display: block !important;
+    }
 }
 
 
@@ -228,7 +232,6 @@ body {
 
 /* Header not fixed on small devices - takes up valuable screen estate */
 #txp-head {
-    position: absolute;
     h1 {
         max-width: 66%;
     }
@@ -258,15 +261,16 @@ body {
 
 
 /* =============================================================================
-   Additional layout for screen media < 480px
+   Additional layout for screen media < 580px
    ========================================================================== */
 
 
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 571px) {
 
 
-table#edit.edit-pane {
-    width: 100%;
+table#edit.edit-pane,
+table#list.edit-pane  {
+    width: 100% !important;
     border-top-width: 1em;
     border-bottom: 0;
     td {

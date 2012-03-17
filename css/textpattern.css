@@ -143,11 +143,6 @@ pre code,
 /* =============================================================================
    Messages
    ========================================================================== */
-#messagepane {
-  margin: 1em 0;
-  text-align: center;
-}
-
 .not-ok,
 #plugin_form .modified,
 .highlight {
@@ -155,6 +150,10 @@ pre code,
 }
 
 /* alert boxes */
+#messagepane {
+  margin: 1em auto;
+  max-width: 110em;
+}
 #messagepane span {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
@@ -891,7 +890,7 @@ table#edit {
 table#edit.edit-pane,
 table#list.edit-pane {
   margin-right: auto;
-  width: 40em;
+  width: 42em !important;
   margin-bottom: 1em;
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
@@ -903,7 +902,7 @@ table#list.edit-pane td {
 }
 table#edit.edit-pane td.cell-label,
 table#list.edit-pane td.cell-label {
-  width: 34%;
+  width: 36%;
 }
 
 .txp-control-panel select {
@@ -1117,6 +1116,12 @@ table#list.edit-pane td.cell-label {
 /* =============================================================================
    Content -> Images page
    ========================================================================== */
+/* hide upload forms on touch based devices */
+.touch .image-replace,
+.touch .thumbnail-upload {
+  display: none;
+}
+
 #page-image img {
   border: solid 1px #cccccc;
   -moz-border-radius: 0.385em;
@@ -1133,29 +1138,56 @@ table#list.edit-pane td.cell-label {
   box-shadow: 0 0.077em 0.154em rgba(0, 102, 255, 0.4);
 }
 
-#page-image img.fullsize {
-  margin-bottom: 18px;
+/* fix for inconsistent structure */
+#page-image table#list.edit-pane {
+  border-bottom: 0;
+}
+#page-image table#list.edit-pane tr:last-child td {
+  padding-bottom: 0;
+}
+
+table#list.edit-pane #image-thumbnail {
+  margin-right: auto;
+  margin-bottom: 1em;
+}
+table#list.edit-pane #image-thumbnail td {
+  padding: 0;
+}
+
+.thumbwrapper img {
+  margin-right: .5em;
+}
+
+.thumbnail-alter p {
+  margin: 0;
+}
+
+table#list.edit-pane #thumbnail_alter td {
+  padding: 0 .5em 0 0;
+  width: auto;
+  vertical-align: middle;
 }
 
 #page-image #width,
 #page-image #height {
-  width: 3.5em;
+  width: 3.38461538461538em;
 }
 
-#thumbnail_alter {
-  margin-top: -5px;
+/* fix for inconsistent structure */
+#page-image .name label {
+  width: 13.6em;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
 }
-
-#thumbnail_alter input[type="checkbox"] {
-  margin-top: .7em;
-}
-
-#thumbnail_alter input[type="submit"] {
-  margin-top: .3em;
+#page-image #image-name {
+  width: 13.6em;
 }
 
 #page-image #caption {
-  width: 412px;
+  max-width: 520px;
 }
 
 /* =============================================================================
@@ -1413,12 +1445,22 @@ div.code {
    Admin -> Import page
    ========================================================================== */
 #page-import #edit {
-  width: 448px !important;
-  margin: 0 auto;
+  margin-right: auto;
+  width: 42em;
+  margin-bottom: 1em;
+  border-top: 0.5em solid #f7f7f7;
+  border-bottom: 0.5em solid #f7f7f7;
+  background: #f7f7f7;
 }
-
 #page-import #edit td {
   padding: .5em 1em;
+}
+#page-import #edit td.cell-label {
+  width: 36%;
+}
+#page-import #edit #databased {
+  margin-left: -1em;
+  margin-right: -1em;
 }
 
 /* Hive theme for Textpattern CMS (v2.0a3) */
@@ -1537,6 +1579,10 @@ div.code {
   #page-image #list tfoot {
     display: none !important;
   }
+  #page-image #list #image_details_form .name,
+  #page-image #list #image_details_form .category {
+    display: block !important;
+  }
 
   /* Files page */
   /* Hide table cells to optimise screen estate */
@@ -1601,9 +1647,6 @@ div.code {
   }
 
   /* Header not fixed on small devices - takes up valuable screen estate */
-  #txp-head {
-    position: absolute;
-  }
   #txp-head h1 {
     max-width: 66%;
   }
@@ -1627,22 +1670,26 @@ div.code {
   }
 }
 /* =============================================================================
-   Additional layout for screen media < 480px
+   Additional layout for screen media < 580px
    ========================================================================== */
-@media only screen and (max-width: 479px) {
-  table#edit.edit-pane {
-    width: 100%;
+@media only screen and (max-width: 571px) {
+  table#edit.edit-pane,
+  table#list.edit-pane {
+    width: 100% !important;
     border-top-width: 1em;
     border-bottom: 0;
   }
-  table#edit.edit-pane td {
+  table#edit.edit-pane td,
+  table#list.edit-pane td {
     display: block;
     padding: 0 1em;
   }
-  table#edit.edit-pane td.cell-label {
+  table#edit.edit-pane td.cell-label,
+  table#list.edit-pane td.cell-label {
     width: auto;
   }
-  table#edit.edit-pane td:last-child {
+  table#edit.edit-pane td:last-child,
+  table#list.edit-pane td:last-child {
     padding-bottom: 1em;
   }
 }

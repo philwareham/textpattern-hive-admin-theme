@@ -127,11 +127,6 @@ pre,
    Messages
    ========================================================================== */
 
-#messagepane {
-    margin: 1em 0;
-    text-align: center;
-}
-
 .not-ok,
 #plugin_form .modified,
 .highlight {
@@ -139,27 +134,31 @@ pre,
 }
 
 /* alert boxes */
-#messagepane span {
-    @include inline-block;
-    @include border-radius;
-    border: 1px solid;
-    padding: .5em 1em;
-    max-width: 42em; // 546px / 13px
-    @include text-shadow-light;
-    &.success {
-        color: $success-text;
-        background: $success-background;
-        border-color: $success-border;
-    }
-    &.warning {
-        color: $warning-text;
-        background: $warning-background;
-        border-color: $warning-border;
-    }
-    &.error {
-        color: $error-text;
-        background: $error-background;
-        border-color: $error-border;
+#messagepane {
+    margin: 1em auto;
+    max-width: 110em;
+    span {
+        @include inline-block;
+        @include border-radius;
+        border: 1px solid;
+        padding: .5em 1em;
+        max-width: 42em; // 546px / 13px
+        @include text-shadow-light;
+        &.success {
+            color: $success-text;
+            background: $success-background;
+            border-color: $success-border;
+        }
+        &.warning {
+            color: $warning-text;
+            background: $warning-background;
+            border-color: $warning-border;
+        }
+        &.error {
+            color: $error-text;
+            background: $error-background;
+            border-color: $error-border;
+        }
     }
 }
 
@@ -688,7 +687,7 @@ table#edit {
 table#edit.edit-pane,
 table#list.edit-pane {
     margin-right: auto;
-    width: 40em; // 520px / 13px
+    width: 42em !important; // 546px / 13px
     margin-bottom: 1em;
     border-top: .5em solid $color-background-box;
     border-bottom: .5em solid $color-background-box;
@@ -696,7 +695,7 @@ table#list.edit-pane {
     td {
         padding: .5em 1em;
         &.cell-label {
-            width: 34%;
+            width: 36%;
         }
     }
 }
@@ -922,6 +921,12 @@ table#list.edit-pane {
    Content -> Images page
    ========================================================================== */
 
+/* hide upload forms on touch based devices */
+.touch .image-replace,
+.touch .thumbnail-upload {
+    display: none;
+}
+
 #page-image img {
     border: solid 1px $color-border;
     @include border-radius;
@@ -935,29 +940,56 @@ table#list.edit-pane {
     @include box-shadow(0 .07692307692308em .15384615384615em rgba($color-link-hover, .4));
 }
 
-#page-image img.fullsize {
-    margin-bottom: 18px;
+/* fix for inconsistent structure */
+#page-image table#list.edit-pane {
+    border-bottom: 0;
+    tr:last-child td {
+        padding-bottom: 0;
+    }
+}
+
+table#list.edit-pane #image-thumbnail {
+    margin-right: auto;
+    margin-bottom: 1em;
+    td {
+        padding: 0;
+    }
+}
+
+.thumbwrapper img {
+    margin-right: .5em;
+}
+
+.thumbnail-alter p {
+    margin: 0;
+}
+
+table#list.edit-pane #thumbnail_alter {
+    td {
+        padding: 0 .5em 0 0;
+        width: auto;
+        vertical-align: middle;
+    }
 }
 
 #page-image #width,
 #page-image #height {
-    width: 3.5em;
+    width: 3.38461538461538em;
 }
 
-#thumbnail_alter {
-    margin-top:-5px;
-}
-
-#thumbnail_alter input[type="checkbox"] {
-    margin-top:.7em;
-}
-
-#thumbnail_alter input[type="submit"] {
-    margin-top:.3em;
+/* fix for inconsistent structure */
+#page-image {
+    .name label {
+        width: 13.6em;
+        @include inline-block;
+    }
+    #image-name {
+        width: 13.6em;
+    }
 }
 
 #page-image #caption {
-    width: 412px;
+    max-width: 520px;
 }
 
 
@@ -1207,7 +1239,7 @@ td:nth-child(2).install-item {
 #page-log .host,
 #page-log .page,
 #page-log .refer {
-    width:28%;
+    width: 28%;
 }
 
 
@@ -1249,12 +1281,22 @@ div.code {
    ========================================================================== */
 
 #page-import #edit {
-    width: 448px !important;
-    margin: 0 auto;
-}
-
-#page-import #edit td {
-    padding: .5em 1em;
+    margin-right: auto;
+    width: 42em; // 546px / 13px
+    margin-bottom: 1em;
+    border-top: .5em solid $color-background-box;
+    border-bottom: .5em solid $color-background-box;
+    background: $color-background-box;
+    td {
+        padding: .5em 1em;
+        &.cell-label {
+            width: 36%;
+        }
+    }
+    #databased {
+        margin-left: -1em;
+        margin-right: -1em;
+    }
 }
 
 
