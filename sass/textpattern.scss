@@ -7,7 +7,7 @@
 // import other stylesheets
 @import url("reset.css");
 @import url("custom.css");
-/* See readme for instructions on how to use the 'custom.css' file above */
+/* see readme for instructions on how to use the 'custom.css' file above */
 
 
 /* =============================================================================
@@ -530,8 +530,8 @@ body {
    Navigation
    ========================================================================== */
 
-/* Hide <select> version of navigation on non-touch devices */
-/* Also happens via media-queries when screen width is < 768px regardless of touch ability */
+/* hide <select> version of navigation on non-touch devices
+    also happens via media-queries when screen width is < 768px regardless of touch ability */
 #txp-nav-select {
     display: none;
     .touch & {
@@ -721,12 +721,12 @@ table#list.edit-pane {
     }
 }
 
-/* Hide upload forms on touch based devices */
+/* hide upload forms on touch based devices */
 .touch .upload-form {
     display: none;
 }
 
-/* Tabs */
+/* tabs */
 .tabs {
      padding-top: 1em;
     a {
@@ -748,7 +748,7 @@ table#list.edit-pane {
     }
 }
 
-/* Tagbuilder popup */
+/* tagbuilder popup */
 
 #tag-event {
     background: #fff;
@@ -1075,7 +1075,6 @@ table#list.edit-pane {
     width: 25%;
 }
 
-/* intro text div on pages, forms and styles pages */
 .edit-title {
     margin: .30769230769231em 0 1em;
 }
@@ -1085,6 +1084,12 @@ table#list.edit-pane {
 #page-css {
     textarea.code {
         height: 40em;
+    }
+}
+
+#page-page,
+#page-css {
+    textarea.code {
         margin-bottom: 1em;
     }
 }
@@ -1099,41 +1104,9 @@ table#list.edit-pane {
     margin-top: .38461538461538em;
 }
 
+/* fix inconsistent button alignment on Styles page */
 #page-css .copy-as input[type="submit"] {
-    margin-left: -.38461538461538em; // fix inconsistent button alignment on Styles page
-}
-
-
-/* =============================================================================
-   Presentation -> Forms page
-   ========================================================================== */
-
-#form_form input[type="text"] {
-    width:250px;
-    margin-top:7px;
-}
-
-#form_form select {
-    margin:7px 0;
-}
-
-#form_form input[type="submit"].smallbox { /* Removes preview button on froms page, will anyone miss it? */
-    display:none;
-}
-
-#form_form select.list {
-    margin-top:5px;
-}
-
-#form_form p {
-    float:left;
-    margin-right: 1em;
-}
-
-#form_form p:last-child {
-    float:none;
-    clear:both;
-    margin-right:0;
+    margin-left: -.38461538461538em;
 }
 
 

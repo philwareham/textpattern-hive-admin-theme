@@ -53,7 +53,7 @@ a {
    Typography
    ========================================================================== */
 
-/* Addresses margins set differently in IE7 */
+/* addresses margins set differently in IE7 */
 p,
 pre {
     margin: 1em 0;
@@ -155,7 +155,7 @@ dt {
    Embedded content
    ========================================================================== */
 
-/* 1. Removes border when inside 'a' element in IE7-9, Firefox3
+/* 1. removes border when inside 'a' element in IE7-9, Firefox3
    2. improves image quality when scaled in IE7
       code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 img {
@@ -199,9 +199,9 @@ form {
     margin: 0;
 }
 
-/* 1. Corrects color not being inherited in IE7-9
-   2. Corrects text not wrapping in FF3 
-   3. Corrects alignment displayed oddly in IE7 */
+/* 1. corrects color not being inherited in IE7-9
+   2. corrects text not wrapping in FF3 
+   3. corrects alignment displayed oddly in IE7 */
 legend {
     /* 1 */
     border: 0;
@@ -363,7 +363,7 @@ select[size="1"] {
 }
 
 optgroup {
-    font-family: $font-body; // Font family repeated, for Firefox
+    font-family: $font-body; // font family repeated, for Firefox
     font-style: normal;
     font-weight: normal;
     color: $color-text;
