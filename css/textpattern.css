@@ -102,7 +102,7 @@ code,
 kbd,
 samp,
 .code,
-#diagnostics textarea {
+#diagnostics-detail {
   font-family: Cousine, Menlo, Consolas, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
 }
 
@@ -880,6 +880,10 @@ body {
 /* =============================================================================
    Miscellaneous/shared layout
    ========================================================================== */
+table#edit {
+  width: 100%;
+}
+
 .search-form input[type="submit"] {
   margin-left: .38461538461538em;
 }
@@ -912,38 +916,13 @@ table#list.edit-pane td.cell-label {
 .txp-navigation {
   margin-bottom: .5em;
 }
-
-.pageby {
+.txp-navigation .pageby {
   float: left;
   margin: .61538461538462em 0 0;
 }
-
-.prev-next {
+.txp-navigation .prev-next {
   float: right;
   margin-bottom: 0;
-}
-
-/* intro text div on pages, forms and styles pages */
-.edit-title {
-  margin-bottom: 1em;
-}
-
-table#edit {
-  width: 100%;
-}
-
-.copy-as {
-  display: block;
-  margin: 1em 0;
-  width: 16em;
-}
-
-.copy-as input[type="submit"] {
-  margin-top: .38461538461538em;
-}
-
-#page-css .copy-as input[type="submit"] {
-  margin-left: -0.385em;
 }
 
 /* Hide upload forms on touch based devices */
@@ -952,22 +931,23 @@ table#edit {
 }
 
 /* Tabs */
+.tabs {
+  padding-top: 1em;
+}
 .tabs a {
+  display: block;
+  padding: 1em;
   color: #333333;
 }
-
 .tabs .tabup a {
   background: #ffda44;
 }
-
 .tabs .tabup a:hover {
   background: #fcdd62;
 }
-
 .tabs .tabdown2 a {
   background: #c7d3d8;
 }
-
 .tabs .tabdown2 a:hover {
   background: #d2dce0;
 }
@@ -978,20 +958,8 @@ table#edit {
   width: auto;
   padding: 1em;
 }
-
-#tag-event th,
-#tag-event td {
+#tag-event th, #tag-event td {
   padding: .5em;
-  text-align: left;
-}
-
-.tabs {
-  padding-top: 20px;
-}
-
-.tabs a {
-  display: block;
-  padding: .9em;
 }
 
 /* =============================================================================
@@ -1064,10 +1032,6 @@ table#edit {
 #article-col-1,
 #article-col-2 {
   width: 25%;
-}
-
-#article-main {
-  width: 50%;
 }
 
 #article-main .article-view {
@@ -1278,21 +1242,47 @@ table#edit {
 }
 
 /* =============================================================================
+   Presentation -> Pages, Forms, Styles pages shared
+   ========================================================================== */
+#page-page #edit td:first-child, #page-page #edit td:last-child,
+#page-form #edit td:first-child,
+#page-form #edit td:last-child {
+  width: 25%;
+}
+
+#page-css #edit td:last-child {
+  width: 25%;
+}
+
+/* intro text div on pages, forms and styles pages */
+.edit-title {
+  margin-bottom: 1em;
+}
+
+#page-page textarea.code,
+#page-form textarea.code,
+#page-css textarea.code {
+  height: 21em;
+  margin-bottom: 1em;
+}
+
+.copy-as {
+  display: block;
+  margin: 1em 0;
+  width: 16em;
+}
+
+.copy-as input[type="submit"] {
+  margin-top: .38461538461538em;
+}
+
+#page-css .copy-as input[type="submit"] {
+  margin-left: -0.385em;
+}
+
+/* =============================================================================
    Presentation -> Pages page
    ========================================================================== */
-#page-page #edit td:first-child {
-  width: 25%;
-}
-
-#page-page #edit td:last-child {
-  width: 25%;
-}
-
-#page_form #html {
-  height: 537px;
-  margin: -3px 0 1em;
-}
-
 #content_switcher p {
   text-align: left;
   padding: 1em;
@@ -1302,19 +1292,6 @@ table#edit {
 /* =============================================================================
    Presentation -> Forms page
    ========================================================================== */
-#page-form #edit td:first-child {
-  width: 25%;
-}
-
-#page-form #edit td:last-child {
-  width: 25%;
-}
-
-#form_form #form {
-  height: 537px;
-  margin: -3px 0 1em;
-}
-
 #form_form input[type="text"] {
   width: 250px;
   margin-top: 7px;
@@ -1342,18 +1319,6 @@ table#edit {
   float: none;
   clear: both;
   margin-right: 0;
-}
-
-/* =============================================================================
-   Presentation -> Styles page
-   ========================================================================== */
-#page-css #edit td:last-child {
-  width: 25%;
-}
-
-#style_form #css {
-  height: 537px;
-  margin: -3px 0 1em;
 }
 
 /* =============================================================================
@@ -1438,22 +1403,7 @@ div.code {
 }
 
 #page-import #edit td {
-  padding: 4px 0;
-}
-
-#page-import #edit td:first-child,
-#page-import #edit table td:first-child {
-  width: 171px;
-}
-
-#page-import #edit td:last-child,
-#page-import #edit table td:last-child {
-  width: 277px;
-}
-
-#page-import #edit input[type="text"],
-#page-import #edit select {
-  width: 250px;
+  padding: .5em 1em;
 }
 
 /* Hive theme for Textpattern CMS (v2.0a3) */
