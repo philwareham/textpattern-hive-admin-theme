@@ -841,6 +841,10 @@ table#list.edit-pane {
     float: right;
 }
 
+#article-main #body {
+    height: 34em;
+}
+
 #article-main .author {
     font-size: $smallfont;
     color: $color-text-footnote;
@@ -908,7 +912,7 @@ table#list.edit-pane {
    ========================================================================== */
 
 .unpublished {
-    color: #999;
+    color: $color-text-footnote;
 }
 
 #page-list .title {
@@ -1073,14 +1077,16 @@ table#list.edit-pane {
 
 /* intro text div on pages, forms and styles pages */
 .edit-title {
-    margin-bottom: 1em;
+    margin: .30769230769231em 0 1em;
 }
 
-#page-page textarea.code,
-#page-form textarea.code,
-#page-css textarea.code {
-    height: 21em;
-    margin-bottom: 1em;
+#page-page,
+#page-form,
+#page-css {
+    textarea.code {
+        height: 40em;
+        margin-bottom: 1em;
+    }
 }
 
 .copy-as {
@@ -1095,17 +1101,6 @@ table#list.edit-pane {
 
 #page-css .copy-as input[type="submit"] {
     margin-left: -.38461538461538em; // fix inconsistent button alignment on Styles page
-}
-
-
-/* =============================================================================
-   Presentation -> Pages page
-   ========================================================================== */
-
-#content_switcher p {
-    text-align:left;
-    padding: 1em;
-    margin:0;
 }
 
 

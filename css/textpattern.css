@@ -1038,6 +1038,10 @@ table#list.edit-pane td.cell-label {
   float: right;
 }
 
+#article-main #body {
+  height: 34em;
+}
+
 #article-main .author {
   font-size: 0.846em;
   color: #888888;
@@ -1105,7 +1109,7 @@ table#list.edit-pane td.cell-label {
    Content -> Articles page
    ========================================================================== */
 .unpublished {
-  color: #999;
+  color: #888888;
 }
 
 #page-list .title {
@@ -1256,13 +1260,13 @@ table#list.edit-pane td.cell-label {
 
 /* intro text div on pages, forms and styles pages */
 .edit-title {
-  margin-bottom: 1em;
+  margin: .30769230769231em 0 1em;
 }
 
 #page-page textarea.code,
 #page-form textarea.code,
 #page-css textarea.code {
-  height: 21em;
+  height: 40em;
   margin-bottom: 1em;
 }
 
@@ -1278,15 +1282,6 @@ table#list.edit-pane td.cell-label {
 
 #page-css .copy-as input[type="submit"] {
   margin-left: -0.385em;
-}
-
-/* =============================================================================
-   Presentation -> Pages page
-   ========================================================================== */
-#content_switcher p {
-  text-align: left;
-  padding: 1em;
-  margin: 0;
 }
 
 /* =============================================================================
