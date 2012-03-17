@@ -14,4 +14,9 @@ jQuery(function () {
     });
 
 
+    // Remove hardcoded align="center" from tables (hopefully this will be removed from HTML eventually)
+    $('table#edit').attr('align','left');
+    $('table#list').attr('align','left');
+    $('table#image-thumbnail').attr('align','left');
+
 });
