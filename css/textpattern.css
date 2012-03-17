@@ -1291,7 +1291,7 @@ table#list.edit-pane td.cell-label {
 /* =============================================================================
    Admin -> Diagnostics page
    ========================================================================== */
-#page-diag table td {
+#page-diag table#list td {
   padding: 0;
 }
 
@@ -1303,13 +1303,68 @@ table#list.edit-pane td.cell-label {
 /* =============================================================================
    Admin -> Preferences page
    ========================================================================== */
+#page-prefs h3 {
+  margin-top: 1em;
+}
+
+#prefs_container .publish {
+  margin-top: 1em;
+}
+
+#page-prefs table#list td, #page-prefs table#list th {
+  padding: 0;
+  white-space: normal !important;
+}
+#page-prefs table#list th {
+  padding: 1em 0;
+}
+#page-prefs table#list tr.odd td, #page-prefs table#list tr.even td {
+  padding: .38461538461538em 1em;
+}
+#page-prefs table#list br {
+  display: none;
+}
+
+.list-item .modified {
+  color: #888888;
+}
+
+td:nth-child(2).pref-value {
+  width: 50%;
+}
+
+td:nth-child(2).install-item {
+  width: 50%;
+  color: #888888;
+}
+td:nth-child(2).install-item strong {
+  margin-right: .35em;
+}
+
+#prefs_control {
+  max-width: 110em;
+  margin: 0 auto;
+}
+#prefs_control form {
+  text-align: left !important;
+}
+
+/* fixes for poor HTML structure on Prefrences pages */
+#language_control {
+  margin-top: 1em;
+  text-align: left !important;
+}
+
+#language_container p {
+  margin: 1em auto !important;
+  width: inherit !important;
+  max-width: 110em;
+  text-align: left !important;
+}
+
 /* =============================================================================
    Admin -> Users page
    ========================================================================== */
-#change_password {
-  margin-top: -2em;
-}
-
 #change_password p {
   margin: 0;
 }

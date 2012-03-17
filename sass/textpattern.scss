@@ -1114,7 +1114,7 @@ table#list.edit-pane {
    Admin -> Diagnostics page
    ========================================================================== */
 
-#page-diag table td {
+#page-diag table#list td {
     padding: 0;
 }
 
@@ -1128,16 +1128,76 @@ table#list.edit-pane {
    Admin -> Preferences page
    ========================================================================== */
 
+#page-prefs h3 {
+    margin-top: 1em;
+}
 
+#prefs_container .publish {
+    margin-top: 1em;
+}
+
+#page-prefs table#list {
+    td, th {
+        padding: 0;
+        white-space: normal !important; // override inline nowrap
+    }
+    th {
+        padding: 1em 0;
+    }
+    tr.odd td, tr.even td {
+        padding: .38461538461538em 1em;
+    }
+    br {
+        display: none;
+    }
+}
+
+.list-item {
+    .modified {
+        color: $color-text-footnote;
+    }
+}
+
+td:nth-child(2).pref-value {
+    width: 50%;
+}
+
+td:nth-child(2).install-item {
+    width: 50%;
+    color: $color-text-footnote;
+    strong {
+        margin-right: .35em;
+    }
+}
+
+#prefs_control {
+    max-width: 110em;
+    margin: 0 auto;
+    form {
+        text-align: left !important; // override inline CSS
+    }
+}
+
+/* fixes for poor HTML structure on Prefrences pages */
+
+
+
+#language_control {
+    margin-top: 1em;
+    text-align: left !important; // override inline CSS
+}
+
+#language_container p {
+    margin: 1em auto !important; // override inline CSS
+    width: inherit !important; // override inline CSS
+    max-width: 110em;
+    text-align: left !important; // override inline CSS
+}
 
 
 /* =============================================================================
    Admin -> Users page
    ========================================================================== */
-
-#change_password {
-    margin-top:-2em;
-}
 
 #change_password p {
     margin:0;
