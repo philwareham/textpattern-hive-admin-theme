@@ -976,7 +976,7 @@ table#list.edit-pane #thumbnail_alter {
 
 #page-image #width,
 #page-image #height {
-    width: 3.38461538461538em;
+    width: 3.38461538461538em; // 44px / 13px
 }
 
 /* fix for inconsistent structure */
@@ -1000,7 +1000,7 @@ table#list.edit-pane #thumbnail_alter {
    ========================================================================== */
 
 #page-file .year {
-    width:3.5em;
+    width: 3.38461538461538em; // 44px / 13px
 }
 
 #page-file .month,
@@ -1008,7 +1008,7 @@ table#list.edit-pane #thumbnail_alter {
 #page-file .hour,
 #page-file .minute,
 #page-file .second {
-    width:2.4em;
+    width: 2.46153846153846em; // 32px / 13px
 }
 
 
@@ -1022,6 +1022,10 @@ table#list.edit-pane #thumbnail_alter {
 /* =============================================================================
    Content -> Comments page
    ========================================================================== */
+
+#list_banned_ips {
+    text-align: center;
+}
 
 .cb_show_spam {
     margin: -1em 0 1em 1em;

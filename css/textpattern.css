@@ -1196,7 +1196,7 @@ table#list.edit-pane #thumbnail_alter td {
    Content -> Files page
    ========================================================================== */
 #page-file .year {
-  width: 3.5em;
+  width: 3.38461538461538em;
 }
 
 #page-file .month,
@@ -1204,7 +1204,7 @@ table#list.edit-pane #thumbnail_alter td {
 #page-file .hour,
 #page-file .minute,
 #page-file .second {
-  width: 2.4em;
+  width: 2.46153846153846em;
 }
 
 /* =============================================================================
@@ -1213,6 +1213,10 @@ table#list.edit-pane #thumbnail_alter td {
 /* =============================================================================
    Content -> Comments page
    ========================================================================== */
+#list_banned_ips {
+  text-align: center;
+}
+
 .cb_show_spam {
   margin: -1em 0 1em 1em;
 }
