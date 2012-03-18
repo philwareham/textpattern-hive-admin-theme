@@ -152,7 +152,7 @@ pre code,
 /* alert boxes */
 #messagepane {
   margin: 1em auto;
-  max-width: 110em;
+  text-align: center;
 }
 #messagepane span {
   display: -moz-inline-box;
@@ -889,7 +889,6 @@ table#edit {
 
 table#edit.edit-pane,
 table#list.edit-pane {
-  margin-right: auto;
   width: 42em !important;
   margin-bottom: 1em;
   border-top: 0.5em solid #f7f7f7;
@@ -905,6 +904,9 @@ table#list.edit-pane td.cell-label {
   width: 36%;
 }
 
+.txp-control-panel {
+  text-align: center;
+}
 .txp-control-panel select {
   margin-bottom: .38461538461538em;
 }
@@ -1229,6 +1231,10 @@ table#list.edit-pane #thumbnail_alter td {
 /* =============================================================================
    Presentation -> Sections page
    ========================================================================== */
+#page-section h2 {
+  text-align: center;
+}
+
 #section_container #list td {
   padding: 0;
 }
@@ -1395,8 +1401,13 @@ td:nth-child(2).install-item strong {
 /* =============================================================================
    Admin -> Users page
    ========================================================================== */
+#user_edit h2 {
+  text-align: center;
+}
+
 .txp-alter {
   margin-top: 2em;
+  text-align: center;
 }
 
 /* =============================================================================
@@ -1413,6 +1424,10 @@ td:nth-child(2).install-item strong {
    ========================================================================== */
 #plugin-install {
   width: 50%;
+}
+
+#plugin_install_form {
+  text-align: center;
 }
 
 #plugin_preview {
@@ -1445,7 +1460,6 @@ div.code {
    Admin -> Import page
    ========================================================================== */
 #page-import #edit {
-  margin-right: auto;
   width: 42em;
   margin-bottom: 1em;
   border-top: 0.5em solid #f7f7f7;

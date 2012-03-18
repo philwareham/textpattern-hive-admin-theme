@@ -136,7 +136,7 @@ pre,
 /* alert boxes */
 #messagepane {
     margin: 1em auto;
-    max-width: 110em;
+    text-align: center;
     span {
         @include inline-block;
         @include border-radius;
@@ -686,7 +686,6 @@ table#edit {
 
 table#edit.edit-pane,
 table#list.edit-pane {
-    margin-right: auto;
     width: 42em !important; // 546px / 13px
     margin-bottom: 1em;
     border-top: .5em solid $color-background-box;
@@ -700,8 +699,11 @@ table#list.edit-pane {
     }
 }
 
-.txp-control-panel select {
-    margin-bottom: .38461538461538em;
+.txp-control-panel {
+    text-align: center;
+    select {
+        margin-bottom: .38461538461538em;
+    }
 }
 
 /* list navigators on list pages */
@@ -1043,6 +1045,10 @@ table#list.edit-pane #thumbnail_alter {
    Presentation -> Sections page
    ========================================================================== */
 
+#page-section h2 {
+    text-align: center;
+}
+
 #section_container #list td {
     padding:0;
 }
@@ -1227,8 +1233,13 @@ td:nth-child(2).install-item {
    Admin -> Users page
    ========================================================================== */
 
+#user_edit h2 {
+    text-align: center;
+}
+
 .txp-alter {
     margin-top: 2em;
+    text-align: center;
 }
 
 
@@ -1249,6 +1260,10 @@ td:nth-child(2).install-item {
 
 #plugin-install {
     width: 50%;
+}
+
+#plugin_install_form {
+    text-align: center;
 }
 
 #plugin_preview {
@@ -1281,7 +1296,6 @@ div.code {
    ========================================================================== */
 
 #page-import #edit {
-    margin-right: auto;
     width: 42em; // 546px / 13px
     margin-bottom: 1em;
     border-top: .5em solid $color-background-box;
