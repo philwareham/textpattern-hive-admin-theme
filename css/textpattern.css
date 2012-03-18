@@ -1235,50 +1235,38 @@ table#list.edit-pane #thumbnail_alter td {
   text-align: center;
 }
 
-#section_container #list td {
-  padding: 0;
-}
-
-#section_container .section {
+#page-section #list .section {
   border-top: 1em solid white;
 }
-
-#section_container #list .label,
-#section_container #list .actions,
-#section_container #list .section > td:last-child {
+#page-section #list td {
+  padding: 0;
+}
+#page-section #list .label {
+  padding-right: 1em;
+  width: 25%;
+  font-weight: bold;
+  text-align: right;
+}
+#page-section #list .actions {
+  padding-left: 1em;
+  width: 25%;
+}
+#page-section #list tr.odd td, #page-section #list tr.even td {
+  border: 0;
   background: white;
 }
 
-#section_container .section input[type="text"],
-#section_container .section select {
-  width: 72%;
+#page-section #list .section table {
+  border-top: 0.5em solid #f7f7f7;
+  border-bottom: 0.5em solid #f7f7f7;
+  width: 42em;
 }
-
-#section_container #list .section td {
-  padding: 10px 10px 5px;
+#page-section #list .section table td {
+  padding: .38461538461538em 1em;
+  background: #f7f7f7 !important;
 }
-
-#section_container #list .section table {
-  width: 100%;
-}
-
-#section_container #list .section table td {
-  border: 0;
-  padding: 0 0 5px;
-}
-
-#section_container #list .section table td:first-child {
-  width: 40%;
-}
-
-#section_container #list .label,
-#section_container #list .actions {
-  width: 25%;
-}
-
-#section_container #list .section .label {
-  font-weight: bold;
-  text-align: right;
+#page-section #list .section table .cell-label {
+  width: 36%;
 }
 
 /* =============================================================================
