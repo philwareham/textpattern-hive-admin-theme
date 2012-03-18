@@ -715,6 +715,8 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
   background-image: url("../img/textpattern-lrg.png");
 }
 .svg #txp-head h1 {
@@ -1048,7 +1050,7 @@ table#list.edit-pane td.cell-label {
 }
 
 #article-tabs {
-  width: 2em;
+  width: 1.69230769230769em;
   padding-left: 1em;
 }
 
@@ -1057,24 +1059,69 @@ table#list.edit-pane td.cell-label {
   margin: 0;
   padding: 0;
 }
+#view_modes .text {
+  background-image: url("../img/view-text.png");
+}
+.svg #view_modes .text {
+  background-image: url("../img/svg/view-text.svg");
+  -webkit-background-size: 1.692em 1.692em;
+  -moz-background-size: 1.692em 1.692em;
+  -o-background-size: 1.692em 1.692em;
+  background-size: 1.692em 1.692em;
+}
+#view_modes .html {
+  background-image: url("../img/view-html.png");
+}
+.svg #view_modes .html {
+  background-image: url("../img/svg/view-html.svg");
+  -webkit-background-size: 1.692em 1.692em;
+  -moz-background-size: 1.692em 1.692em;
+  -o-background-size: 1.692em 1.692em;
+  background-size: 1.692em 1.692em;
+}
+#view_modes .preview {
+  background-image: url("../img/view-preview.png");
+}
+.svg #view_modes .preview {
+  background-image: url("../img/svg/view-preview.svg");
+  -webkit-background-size: 1.692em 1.692em;
+  -moz-background-size: 1.692em 1.692em;
+  -o-background-size: 1.692em 1.692em;
+  background-size: 1.692em 1.692em;
+}
 
 .view-mode {
   margin-bottom: 1em;
-  width: 2em;
-  height: 2em;
+  width: 1.69230769230769em;
+  height: 1.69230769230769em;
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
-  background: #f00;
+  border: 1px solid #e3e3e3;
+  -moz-border-radius: 0.385em;
+  border-radius: 0.385em;
+  background-color: #f7f7f7;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 .view-mode a {
   display: block;
-  width: 2em;
-  height: 2em;
+  width: 1.69230769230769em;
+  height: 1.69230769230769em;
+}
+.view-mode:hover {
+  border-color: #cccccc;
 }
 
-#article-main .article-view {
-  float: right;
+#tab-textup,
+#tab-htmlup,
+#tab-previewup {
+  border-color: #cccccc;
+  background-color: #fff6d3;
+}
+
+.xhtml .excerpt {
+  margin-bottom: 1em;
 }
 
 #article-main #body {
@@ -1109,6 +1156,10 @@ table#list.edit-pane td.cell-label {
 #supporting_content > div,
 #content_switcher > div {
   margin-bottom: 1em;
+}
+#supporting_content .action-create,
+#content_switcher .action-create {
+  margin-top: 0;
 }
 
 #configuration_content > div.empty {

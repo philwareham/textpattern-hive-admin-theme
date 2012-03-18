@@ -518,6 +518,10 @@ body {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        background: {
+            repeat: no-repeat;
+            position: 0 50%;
+        }
         @include svg-graphic($logo-large-filename, $logo-large-filetype, $logo-large-width, $logo-large-height);
         a {
             margin-right: 1em;
@@ -851,31 +855,59 @@ table#list.edit-pane {
 }
 
 #article-tabs {
-    width: 2em;
+    width: 1.69230769230769em; // 22px / 13px
     padding-left: 1em;
 }
 
-#view_modes ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+#view_modes {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .text {
+        @include svg-graphic(view-text, png, 1.69230769230769em, 1.69230769230769em);
+    }
+    .html {
+        @include svg-graphic(view-html, png, 1.69230769230769em, 1.69230769230769em);
+    }
+    .preview {
+        @include svg-graphic(view-preview, png, 1.69230769230769em, 1.69230769230769em);
+    }
 }
 
 .view-mode {
     margin-bottom: 1em;
-    width: 2em;
-    height: 2em;
+    width: 1.69230769230769em; // 22px / 13px
+    height: 1.69230769230769em; // 22px / 13px
     @include hide-text;
-    background: #f00;
+    border: 1px solid lighten($color-border, 9%);
+    @include border-radius;
+    background: {
+        color: $color-background-box;
+        repeat: no-repeat;
+        position: 50% 50%;
+    }
     a {
         display: block;
-        width: 2em;
-        height: 2em;
+        width: 1.69230769230769em; // 22px / 13px
+        height: 1.69230769230769em; // 22px / 13px
+    }
+    &:hover {
+        border-color: $color-border;
     }
 }
 
-#article-main .article-view {
-    float: right;
+#tab-textup,
+#tab-htmlup,
+#tab-previewup,
+ {
+    border-color: $color-border;
+    background-color: $color-highlight-box;
+}
+
+.xhtml .excerpt {
+    margin-bottom: 1em;
 }
 
 #article-main #body {
@@ -907,6 +939,9 @@ table#list.edit-pane {
     margin-left: 1em;
     > div {
         margin-bottom: 1em;
+    }
+    .action-create {
+        margin-top: 0;
     }
 }
 
