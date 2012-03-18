@@ -1239,6 +1239,9 @@ table#list.edit-pane #thumbnail_alter td {
   text-align: center;
 }
 
+#page-section #list {
+  width: auto !important;
+}
 #page-section #list .section {
   border-top: 1em solid white;
 }
@@ -1247,13 +1250,16 @@ table#list.edit-pane #thumbnail_alter td {
 }
 #page-section #list .label {
   padding-right: 1em;
-  width: 25%;
+  width: 20%;
   font-weight: bold;
   text-align: right;
 }
 #page-section #list .actions {
   padding-left: 1em;
-  width: 25%;
+  width: 20%;
+}
+#page-section #list .main {
+  width: 41em;
 }
 #page-section #list tr.odd td, #page-section #list tr.even td {
   border: 0;
@@ -1263,7 +1269,7 @@ table#list.edit-pane #thumbnail_alter td {
 #page-section #list .section table {
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
-  width: 42em;
+  width: 100%;
 }
 #page-section #list .section table td {
   padding: .38461538461538em 1em;

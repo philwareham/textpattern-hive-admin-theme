@@ -1054,6 +1054,7 @@ table#list.edit-pane #thumbnail_alter {
 }
 
 #page-section #list {
+    width: auto !important;
     .section {
         border-top: 1em solid $color-background;
     }
@@ -1062,13 +1063,16 @@ table#list.edit-pane #thumbnail_alter {
     }
     .label {
         padding-right: 1em;
-        width: 25%;
+        width: 20%;
         font-weight: bold;
         text-align: right;
     }
     .actions {
         padding-left: 1em;
-        width: 25%;
+        width: 20%;
+    }
+    .main {
+        width: 41em;
     }
     tr.odd td, tr.even td {
         border: 0;
@@ -1079,7 +1083,7 @@ table#list.edit-pane #thumbnail_alter {
 #page-section #list .section table {
     border-top: .5em solid $color-background-box;
     border-bottom: .5em solid $color-background-box;
-    width: 42em;
+    width: 100%;
     td {
         padding: .38461538461538em 1em;
         background: $color-background-box !important;
