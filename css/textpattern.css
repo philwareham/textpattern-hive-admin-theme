@@ -178,7 +178,7 @@ hr {
   border-radius: 0.385em;
   border: 1px solid;
   padding: .5em 1em;
-  max-width: 42em;
+  max-width: 40em;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
 }
 #messagepane span.success {
@@ -354,7 +354,7 @@ input[type="checkbox"] {
 input[type="text"],
 input[type="password"] {
   width: 100%;
-  max-width: 24.6153846153846em;
+  max-width: 23.2307692307692em;
 }
 
 .search-form input[type="text"] {
@@ -683,7 +683,7 @@ body {
   z-index: 10000;
   padding: 0 2em;
   height: 3em;
-  min-width: 70em;
+  min-width: 71.3846153846154em;
   -webkit-box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
   box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
   border-top: 1px solid #fabc2b;
@@ -903,7 +903,7 @@ table#edit {
 
 table#edit.edit-pane,
 table#list.edit-pane {
-  width: 42em !important;
+  width: 40em !important;
   margin-bottom: 1em;
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
@@ -915,7 +915,7 @@ table#list.edit-pane td {
 }
 table#edit.edit-pane td.cell-label,
 table#list.edit-pane td.cell-label {
-  width: 36%;
+  width: 37%;
 }
 
 .txp-control-panel {
@@ -1044,7 +1044,33 @@ table#list.edit-pane td.cell-label {
    ========================================================================== */
 #article-col-1,
 #article-col-2 {
-  width: 25%;
+  width: 24%;
+}
+
+#article-tabs {
+  width: 2em;
+  padding-left: 1em;
+}
+
+#view_modes ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.view-mode {
+  margin-bottom: 1em;
+  width: 2em;
+  height: 2em;
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #f00;
+}
+.view-mode a {
+  display: block;
+  width: 2em;
+  height: 2em;
 }
 
 #article-main .article-view {
@@ -1066,7 +1092,7 @@ table#list.edit-pane td.cell-label {
 
 #configuration_content,
 #tagbuild_links {
-  margin-right: 2em;
+  margin-right: 1em;
 }
 #configuration_content > div,
 #tagbuild_links > div {
@@ -1078,7 +1104,7 @@ table#list.edit-pane td.cell-label {
 
 #supporting_content,
 #content_switcher {
-  margin-left: 2em;
+  margin-left: 1em;
 }
 #supporting_content > div,
 #content_switcher > div {
@@ -1472,7 +1498,7 @@ div.code {
    Admin -> Import page
    ========================================================================== */
 #page-import #edit {
-  width: 42em;
+  width: 40em;
   margin-bottom: 1em;
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
@@ -1482,7 +1508,7 @@ div.code {
   padding: .5em 1em;
 }
 #page-import #edit td.cell-label {
-  width: 36%;
+  width: 37%;
 }
 #page-import #edit #databased {
   margin-left: -1em;

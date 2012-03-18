@@ -156,7 +156,7 @@ hr {
         @include border-radius;
         border: 1px solid;
         padding: .5em 1em;
-        max-width: 42em; // 546px / 13px
+        max-width: 40em; // 520px / 13px
         @include text-shadow-light;
         &.success {
             color: $success-text;
@@ -295,7 +295,7 @@ input[type="checkbox"] {
 input[type="text"],
 input[type="password"] {
     width: 100%;
-    max-width: 24.6153846153846em; // 320px / 13px
+    max-width: 23.2307692307692em; // 302px / 13px
 }
 
 .search-form input[type="text"] {
@@ -504,7 +504,7 @@ body {
     z-index: 10000;
     padding: 0 2em;
     height: 3em;
-    min-width: 70em;
+    min-width: 71.3846153846154em;
     @include box-shadow;
     @include gradient-bar(#ffda44, #fabc2b);
     h1 {
@@ -700,7 +700,7 @@ table#edit {
 
 table#edit.edit-pane,
 table#list.edit-pane {
-    width: 42em !important; // 546px / 13px
+    width: 40em !important; // 520px / 13px
     margin-bottom: 1em;
     border-top: .5em solid $color-background-box;
     border-bottom: .5em solid $color-background-box;
@@ -708,7 +708,7 @@ table#list.edit-pane {
     td {
         padding: .5em 1em;
         &.cell-label {
-            width: 36%;
+            width: 37%;
         }
     }
 }
@@ -741,7 +741,7 @@ table#list.edit-pane {
 
 /* tabs */
 .tabs {
-     padding-top: 1em;
+    padding-top: 1em;
     a {
         display: block;
         padding: 1em;
@@ -847,7 +847,31 @@ table#list.edit-pane {
 
 #article-col-1,
 #article-col-2 {
-    width: 25%;
+    width: 24%;
+}
+
+#article-tabs {
+    width: 2em;
+    padding-left: 1em;
+}
+
+#view_modes ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.view-mode {
+    margin-bottom: 1em;
+    width: 2em;
+    height: 2em;
+    @include hide-text;
+    background: #f00;
+    a {
+        display: block;
+        width: 2em;
+        height: 2em;
+    }
 }
 
 #article-main .article-view {
@@ -869,7 +893,7 @@ table#list.edit-pane {
 
 #configuration_content,
 #tagbuild_links {
-    margin-right: 2em;
+    margin-right: 1em;
     > div {
         border: 1px solid lighten($color-border, 9%);
         border-top: 0;
@@ -880,7 +904,7 @@ table#list.edit-pane {
 
 #supporting_content,
 #content_switcher {
-    margin-left: 2em;
+    margin-left: 1em;
     > div {
         margin-bottom: 1em;
     }
@@ -1308,7 +1332,7 @@ div.code {
    ========================================================================== */
 
 #page-import #edit {
-    width: 42em; // 546px / 13px
+    width: 40em; // 546px / 13px
     margin-bottom: 1em;
     border-top: .5em solid $color-background-box;
     border-bottom: .5em solid $color-background-box;
@@ -1316,7 +1340,7 @@ div.code {
     td {
         padding: .5em 1em;
         &.cell-label {
-            width: 36%;
+            width: 37%;
         }
     }
     #databased {
