@@ -115,6 +115,20 @@ pre,
     }
 }
 
+code.body,
+code.excerpt {
+    border: 0;
+    padding: 0;
+    background: none;
+}
+
+hr {
+    margin: 1.5em 0;
+    border-color: $color-border;
+    border-style: solid;
+    width: 100% !important; // override inline width
+}
+
 .pophelp {
     padding: 0 .23076923076923em;
     font-weight: normal;

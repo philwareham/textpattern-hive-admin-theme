@@ -132,6 +132,20 @@ pre code,
   background: none;
 }
 
+code.body,
+code.excerpt {
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+hr {
+  margin: 1.5em 0;
+  border-color: #cccccc;
+  border-style: solid;
+  width: 100% !important;
+}
+
 .pophelp {
   padding: 0 .23076923076923em;
   font-weight: normal;
