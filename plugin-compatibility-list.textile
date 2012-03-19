@@ -11,6 +11,7 @@ h2. bot_privs
 *Notes:* Uses inline styling that needs to be removed. Also, table should follow Textpattern @#list@ standard with @<thead>@ for heading row, alternate @<tbody>@ rows should use @class="odd"@ and @class="even"@. Uninstall text should be @<h2>@ not @<h1>@.
 
 h2. dzd_counter_view
+
 *Version tested:* v0.3
 *Notes:* Help documentation @<h1>@ is not displaying correctly.
 
@@ -33,6 +34,11 @@ h2. smd_if
 
 *Version tested:* v0.91
 *Notes:* Help documentation has inline styling that need to be removed by plugin author.
+
+h2. soo_page_numbers
+
+*Version tested:* v0.3.1
+*Notes:* Help documentation has inline styling that need to be removed by plugin author. Can use Textpattern standard classes and structure instead (i.e. @<code>@ and @<pre>@ tags, @class="highlight"@, etc).
 
 h2. upm_textile_toggle
 
