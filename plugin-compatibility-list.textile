@@ -3,7 +3,7 @@ h1. Plugin Compatibility
 h2. adi_calc
 
 *Version tested:* v1.1
-*Notes:* Help documentation needs pre code boxes where appropriate (currently incorrectly uses code tag with br tag).
+*Notes:* Help documentation needs @<pre>@ code boxes where appropriate (currently incorrectly uses @<code>@ tag with @<br>@ tag).
 
 h2. bot_privs
 
@@ -18,7 +18,7 @@ h2. dzd_counter_view
 h2. rah_replace
 
 *Version tested:* v0.3
-*Notes:* Help documentation needs h2 instead of h3, and h3 instead of h4.
+*Notes:* Help documentation shluld use @<h2>@ instead of @<h3>@, and @<h3>@ instead of @<h4>@.
 
 h2. smd_article_stats
 
@@ -38,7 +38,7 @@ h2. smd_if
 h2. soo_page_numbers
 
 *Version tested:* v0.3.1
-*Notes:* Help documentation has inline styling that need to be removed by plugin author. Can use Textpattern standard classes and structure instead (i.e. @<code>@ and @<pre>@ tags, @class="highlight"@, etc).
+*Notes:* Help documentation has inline styling that need to be removed by plugin author. Should use Textpattern standard classes and structure instead (i.e. @<code>@ and @<pre>@ tags, @class="highlight"@, etc).
 
 h2. upm_textile_toggle
 
