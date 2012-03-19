@@ -1,0 +1,40 @@
+h1. Plugin Compatibility
+
+h2. adi_calc
+
+*Version tested:* v1.1
+*Notes:* Help documentation needs pre code boxes where appropriate (currently incorrectly uses code tag with br tag).
+
+h2. bot_privs
+
+*Version tested:* v0.3.2
+*Notes:* Uses inline styling that needs to be removed. Also, table should follow Textpattern @#list@ standard with @<thead>@ for heading row, alternate @<tbody>@ rows should use @class="odd"@ and @class="even"@. Uninstall text should be @<h2>@ not @<h1>@.
+
+h2. dzd_counter_view
+*Version tested:* v0.3
+*Notes:* Help documentation @<h1>@ is not displaying correctly.
+
+h2. rah_replace
+
+*Version tested:* v0.3
+*Notes:* Help documentation needs h2 instead of h3, and h3 instead of h4.
+
+h2. smd_article_stats
+
+*Version tested:* v0.23
+*Notes:* Functionality/display fully compliant. Help documentation has inline styling that need to be removed by plugin author.
+
+h2. smd_browse_by
+
+*Version tested:* v0.11
+*Notes:* Functionality/display fully compliant. Help documentation has inline styling that need to be removed by plugin author.
+
+h2. smd_if
+
+*Version tested:* v0.91
+*Notes:* Help documentation has inline styling that need to be removed by plugin author.
+
+h2. upm_textile_toggle
+
+*Version tested:* v0.5
+*Notes:* Functionality/display fully compliant.
