@@ -1726,6 +1726,12 @@ div.code {
     display: none !important;
   }
 
+  /* Pages and Forms pages */
+  #page-page #edit td.column:first-child,
+  #page-form #edit td.column:first-child {
+    display: none;
+  }
+
   /* Users page */
   /* Hide table cells to optimise screen estate */
   #page-admin #list .real-name,

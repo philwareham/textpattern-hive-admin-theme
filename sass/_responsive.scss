@@ -193,6 +193,13 @@ body {
     }
 }
 
+/* Pages and Forms pages */
+
+#page-page #edit td.column:first-child,
+#page-form #edit td.column:first-child {
+    display: none;
+}
+
 /* Users page */
 
 /* Hide table cells to optimise screen estate */
