@@ -195,9 +195,11 @@ body {
 
 /* Pages and Forms pages */
 
-#page-page #edit td.column:first-child,
-#page-form #edit td.column:first-child {
+#page-page,
+#page-form {
+    #edit td.column:first-child {
     display: none;
+    }
 }
 
 /* Users page */
@@ -220,11 +222,11 @@ body {
 
 
 /* =============================================================================
-   Additional layout for screen media < 560px
+   Additional layout for screen media < 572px
    ========================================================================== */
 
 
-@media only screen and (max-width: 559px) {
+@media only screen and (max-width: 571px) {
 
 
 body {
@@ -260,20 +262,6 @@ body {
 .plugin-help {
     width: 100% !important; // override inline CSS
 }
-
-
-}
-
-
-
-
-/* =============================================================================
-   Additional layout for screen media < 580px
-   ========================================================================== */
-
-
-@media only screen and (max-width: 571px) {
-
 
 table#edit.edit-pane,
 table#list.edit-pane  {

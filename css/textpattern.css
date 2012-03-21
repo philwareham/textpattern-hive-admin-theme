@@ -1743,9 +1743,9 @@ div.code {
   }
 }
 /* =============================================================================
-   Additional layout for screen media < 560px
+   Additional layout for screen media < 572px
    ========================================================================== */
-@media only screen and (max-width: 559px) {
+@media only screen and (max-width: 571px) {
   body {
     padding-top: 7em;
   }
@@ -1777,11 +1777,7 @@ div.code {
   .plugin-help {
     width: 100% !important;
   }
-}
-/* =============================================================================
-   Additional layout for screen media < 580px
-   ========================================================================== */
-@media only screen and (max-width: 571px) {
+
   table#edit.edit-pane,
   table#list.edit-pane {
     width: 100% !important;
