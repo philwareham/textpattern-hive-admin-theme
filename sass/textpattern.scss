@@ -776,6 +776,11 @@ table#list.edit-pane {
     }
 }
 
+.restricted-area {
+    font-size: 2em; // 26px / 13px
+    text-align: center;
+}
+
 
 /* =============================================================================
    Login page
@@ -1292,11 +1297,9 @@ td:nth-child(2).install-item {
     text-align: left !important; // override inline CSS
 }
 
-#language_container p {
+.lang-msg {
     margin: 1em auto !important; // override inline CSS
-    width: inherit !important; // override inline CSS
     max-width: 110em;
-    text-align: left !important; // override inline CSS
 }
 
 
@@ -1337,16 +1340,8 @@ td:nth-child(2).install-item {
     text-align: center;
 }
 
-#plugin_preview {
-    width: 100% !important; // override inline CSS
-}
-
 #plugin-code {
     height: 23em;
-}
-
-.plugin-help {
-    width: 640px !important; // override inline CSS
 }
 
 div.code {

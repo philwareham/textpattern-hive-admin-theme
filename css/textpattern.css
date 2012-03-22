@@ -977,6 +977,11 @@ table#list.edit-pane td.cell-label {
   padding: .5em;
 }
 
+.restricted-area {
+  font-size: 2em;
+  text-align: center;
+}
+
 /* =============================================================================
    Login page
    ========================================================================== */
@@ -1480,11 +1485,9 @@ td:nth-child(2).install-item strong {
   text-align: left !important;
 }
 
-#language_container p {
+.lang-msg {
   margin: 1em auto !important;
-  width: inherit !important;
   max-width: 110em;
-  text-align: left !important;
 }
 
 /* =============================================================================
@@ -1519,16 +1522,8 @@ td:nth-child(2).install-item strong {
   text-align: center;
 }
 
-#plugin_preview {
-  width: 100% !important;
-}
-
 #plugin-code {
   height: 23em;
-}
-
-.plugin-help {
-  width: 640px !important;
 }
 
 div.code {
