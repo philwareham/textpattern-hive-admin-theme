@@ -147,6 +147,13 @@ hr {
     color: $error-text;
 }
 
+.highlight a {
+    color: $error-text;
+    &:hover {
+        color: lighten($error-text, 10%);
+    }
+}
+
 /* alert boxes */
 #messagepane {
     margin: 1em auto;
@@ -709,6 +716,9 @@ table#list.edit-pane {
     border-top: .5em solid $color-background-box;
     border-bottom: .5em solid $color-background-box;
     background: $color-background-box;
+    h2 {
+        margin: 0;
+    }
     td {
         padding: .5em 1em;
         &.cell-label {
@@ -719,6 +729,7 @@ table#list.edit-pane {
 
 .txp-control-panel {
     text-align: center;
+    margin-bottom: 1em;
     select {
         margin-bottom: .38461538461538em;
     }
@@ -1307,13 +1318,8 @@ td:nth-child(2).install-item {
    Admin -> Users page
    ========================================================================== */
 
-#user_edit h2 {
-    text-align: center;
-}
-
-.txp-alter {
+#change_password {
     margin-top: 2em;
-    text-align: center;
 }
 
 

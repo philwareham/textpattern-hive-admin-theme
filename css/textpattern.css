@@ -163,6 +163,13 @@ hr {
   color: #9d261d;
 }
 
+.highlight a {
+  color: #9d261d;
+}
+.highlight a:hover {
+  color: #c83025;
+}
+
 /* alert boxes */
 #messagepane {
   margin: 1em auto;
@@ -911,6 +918,10 @@ table#list.edit-pane {
   border-bottom: 0.5em solid #f7f7f7;
   background: #f7f7f7;
 }
+table#edit.edit-pane h2,
+table#list.edit-pane h2 {
+  margin: 0;
+}
 table#edit.edit-pane td,
 table#list.edit-pane td {
   padding: .5em 1em;
@@ -922,6 +933,7 @@ table#list.edit-pane td.cell-label {
 
 .txp-control-panel {
   text-align: center;
+  margin-bottom: 1em;
 }
 .txp-control-panel select {
   margin-bottom: .38461538461538em;
@@ -1493,13 +1505,8 @@ td:nth-child(2).install-item strong {
 /* =============================================================================
    Admin -> Users page
    ========================================================================== */
-#user_edit h2 {
-  text-align: center;
-}
-
-.txp-alter {
+#change_password {
   margin-top: 2em;
-  text-align: center;
 }
 
 /* =============================================================================
