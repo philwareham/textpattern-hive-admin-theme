@@ -912,10 +912,10 @@ table#edit {
 
 table#edit.edit-pane,
 table#list.edit-pane {
-  width: 40em;
   margin-bottom: 1em;
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
+  width: 40em;
   background: #f7f7f7;
 }
 table#edit.edit-pane h2,
@@ -1507,7 +1507,36 @@ td:nth-child(2).install-item strong {
    ========================================================================== */
 #change_password,
 #change_email {
-  margin-top: 2em;
+  margin: 2em auto 1em;
+  padding: 1em 1em 1px;
+  width: 38em;
+  text-align: left;
+  background: #f7f7f7;
+}
+#change_password label,
+#change_email label {
+  display: block;
+  float: left;
+  width: 36%;
+  margin: .23076923076923em 0 1.23076923076923em;
+}
+#change_password #new_pass, #change_password #new_email,
+#change_email #new_pass,
+#change_email #new_email {
+  float: right;
+  margin-bottom: 1em;
+}
+#change_password input[type="submit"],
+#change_email input[type="submit"] {
+  clear: both;
+}
+
+#change_password input[type="checkbox"] {
+  float: left;
+  margin-top: .61538461538462em;
+}
+#change_password label[for="mail_password"] {
+  width: 90%;
 }
 
 /* =============================================================================

@@ -711,10 +711,10 @@ table#edit {
 
 table#edit.edit-pane,
 table#list.edit-pane {
-    width: 40em; // 520px / 13px
     margin-bottom: 1em;
     border-top: .5em solid $color-background-box;
     border-bottom: .5em solid $color-background-box;
+    width: 40em; // 520px / 13px
     background: $color-background-box;
     h2 {
         margin: 0;
@@ -1320,7 +1320,34 @@ td:nth-child(2).install-item {
 
 #change_password,
 #change_email {
-    margin-top: 2em;
+    margin: 2em auto 1em;
+    padding: 1em 1em 1px;
+    width: 38em; // 520px / 13px
+    text-align: left;
+    background: $color-background-box;
+    label {
+        display: block;
+        float: left;
+        width: 36%;
+        margin: .23076923076923em 0 1.23076923076923em;
+    }
+    #new_pass, #new_email {
+        float: right;
+        margin-bottom: 1em;
+    }
+    input[type="submit"] {
+        clear: both;
+    }
+}
+
+#change_password {
+    input[type="checkbox"] {
+        float: left;
+        margin-top: .61538461538462em;
+    }
+    label[for="mail_password"] {
+            width: 90%;
+    }
 }
 
 
