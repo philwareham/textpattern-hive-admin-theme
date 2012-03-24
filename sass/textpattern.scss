@@ -711,7 +711,7 @@ table#edit {
 
 table#edit.edit-pane,
 table#list.edit-pane {
-    width: 40em !important; // 520px / 13px
+    width: 40em; // 520px / 13px
     margin-bottom: 1em;
     border-top: .5em solid $color-background-box;
     border-bottom: .5em solid $color-background-box;

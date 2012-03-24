@@ -912,7 +912,7 @@ table#edit {
 
 table#edit.edit-pane,
 table#list.edit-pane {
-  width: 40em !important;
+  width: 40em;
   margin-bottom: 1em;
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
@@ -1778,12 +1778,12 @@ div.code {
   }
 
   .plugin-help {
-    width: 100% !important;
+    width: 100%;
   }
 
   table#edit.edit-pane,
   table#list.edit-pane {
-    width: 100% !important;
+    width: 100%;
     border-top-width: 1em;
     border-bottom: 0;
   }

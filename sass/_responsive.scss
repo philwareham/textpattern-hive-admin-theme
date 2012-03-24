@@ -260,12 +260,12 @@ body {
 }
 
 .plugin-help {
-    width: 100% !important; // override inline CSS
+    width: 100%; // override inline CSS
 }
 
 table#edit.edit-pane,
 table#list.edit-pane  {
-    width: 100% !important;
+    width: 100%;
     border-top-width: 1em;
     border-bottom: 0;
     td {
