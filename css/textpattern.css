@@ -176,6 +176,7 @@ hr {
   text-align: center;
 }
 #messagepane span {
+  position: relative;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -184,7 +185,7 @@ hr {
   -moz-border-radius: 0.385em;
   border-radius: 0.385em;
   border: 1px solid;
-  padding: .5em 1em;
+  padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
   max-width: 40em;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
 }
@@ -202,6 +203,25 @@ hr {
   color: #9d261d;
   background: #f2dede;
   border-color: #e4b9b9;
+}
+
+/* close icon */
+.close {
+  position: absolute;
+  right: .72222222222222em;
+  top: 50%;
+  margin-top: -0.667em;
+  text-decoration: none;
+  color: rgba(51, 51, 51, 0.4);
+  font-size: 1.38461538461538em;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.25);
+}
+.close:hover {
+  color: #333333;
+  text-decoration: none;
+  color: rgba(51, 51, 51, 0.6);
+  cursor: pointer;
 }
 
 /* =============================================================================
@@ -503,40 +523,40 @@ input[value="×"]:active {
 
 /* busy buttons */
 form.busy input[type='submit'] {
-  border: 1px solid #dadada;
-  border-bottom-color: #c1c1c1;
-  background-color: #e6e6e6;
-  /* Konqueror */
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#e6e6e6), to(#dadada));
-  /* Safari4+, Chrome */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#dadada));
-  /* Safari5.1+, Chrome10+ */
-  background-image: -webkit-linear-gradient(#e6e6e6, #dadada);
-  /* Firefox3.6 */
-  background-image: -moz-linear-gradient(#e6e6e6, #dadada);
-  /* IE10 */
-  background-image: -ms-linear-gradient(#e6e6e6, #dadada);
-  /* Opera11.10+ */
-  background-image: -o-linear-gradient(#e6e6e6, #dadada);
-  /* CSS3 Compliant */
-  background-image: linear-gradient(#e6e6e6, #dadada);
+  border: 1px solid #e3e3e3;
+  background-color: #eee;
+  background-image: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  user-select: none;
+  color: #888888;
+  cursor: default;
+}
+form.busy input[type='submit']:hover, form.busy input[type='submit']:active {
+  background-color: #eee;
+  background-image: none;
 }
 form.busy span.spinner:after {
   content: "";
+  position: relative;
+  top: .61538461538462em;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  width: 16px;
-  height: 16px;
-  margin-left: 5px;
+  width: 24px;
+  height: 24px;
+  margin-left: .5em;
   background-image: url("../img/spinner.gif");
 }
 @media (-webkit-min-device-pixel-ratio: 2) {
   form.busy span.spinner:after {
     background-image: url("../img/retina/spinner@2x.gif") !important;
-    -webkit-background-size: 16px 16px;
+    -webkit-background-size: 24px 24px;
   }
 }
 

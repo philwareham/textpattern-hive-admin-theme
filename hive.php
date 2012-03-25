@@ -118,14 +118,15 @@ class hive_theme extends theme
 			$html = ''; // TODO: Say what?
 			$js = 'window.alert("'.escape_js(strip_tags($thing[0])).'")';
 		} else {
-			$html = "<span id='message' class='$class'>".gTxt($thing[0]).'</span>';
+			$html = "<span id='message' class='$class'>".gTxt($thing[0]).' <a class="close">&times;</a></span>';
 			// Try to inject $html into the message pane no matter when _announce()'s output is printed
 			$js = escape_js($html);
 			$js = <<< EOS
 		        $(document).ready( function(){
-			        $("#messagepane").html("{$js}");
-					$('#messagepane #message.error').fadeOut(800).fadeIn(800);
-					$('#messagepane #message.warning').fadeOut(800).fadeIn(800);
+			        $("#messagepane").html("{$js}").fadeTo(200,.5).fadeTo(200,1).fadeTo(200,.5).fadeTo(200,1);
+                    $(".close").click(function() {
+                        $(this).parent().remove();
+                    });
 				});
 EOS;
 		}
