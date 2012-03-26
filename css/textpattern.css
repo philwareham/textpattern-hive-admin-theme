@@ -1368,7 +1368,7 @@ table#list.edit-pane #thumbnail_alter td {
 }
 
 #page-section #list {
-  width: auto !important;
+  width: auto;
 }
 #page-section #list .section {
   border-top: 1em solid white;
@@ -1410,13 +1410,13 @@ table#list.edit-pane #thumbnail_alter td {
 /* =============================================================================
    Presentation -> Pages, Forms, Styles pages shared
    ========================================================================== */
-#page-page #edit td:first-child, #page-page #edit td:last-child,
-#page-form #edit td:first-child,
-#page-form #edit td:last-child {
+#page-page #edit td.column:first-child, #page-page #edit td.column:last-child,
+#page-form #edit td.column:first-child,
+#page-form #edit td.column:last-child {
   width: 25%;
 }
 
-#page-css #edit td:last-child {
+#page-css #edit td.column:last-child {
   width: 25%;
 }
 

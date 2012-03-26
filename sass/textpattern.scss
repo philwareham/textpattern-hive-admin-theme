@@ -1176,7 +1176,7 @@ table#list.edit-pane #thumbnail_alter {
 }
 
 #page-section #list {
-    width: auto !important;
+    width: auto;
     .section {
         border-top: 1em solid $color-background;
     }
@@ -1220,14 +1220,14 @@ table#list.edit-pane #thumbnail_alter {
    Presentation -> Pages, Forms, Styles pages shared
    ========================================================================== */
 
-#page-page #edit td,
-#page-form #edit td {
+#page-page #edit td.column,
+#page-form #edit td.column {
     &:first-child, &:last-child {
         width: 25%;
     }
 }
 
-#page-css #edit td:last-child {
+#page-css #edit td.column:last-child {
     width: 25%;
 }
 
