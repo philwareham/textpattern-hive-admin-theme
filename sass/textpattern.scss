@@ -420,18 +420,18 @@ form.busy {
    ========================================================================== */
 
 #list {
-    width: 100% !important;
+    width: 100%;
     margin-bottom: 1em;
     overflow: auto;
     /* IE7 */
     *overflow-y: scroll; 
     *overflow-x: hidden;
     tr.odd td {
-            border: 1px solid #e3e3e3;
+        border: 1px solid #e3e3e3;
     }
     tr.even td {
-            border: 1px solid #e3e3e3;
-            background: $color-background-box;
+        border: 1px solid #e3e3e3;
+        background: $color-background-box;
     }
     th, td {
         padding: .38461538461538em 1em;
