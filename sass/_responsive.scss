@@ -215,6 +215,34 @@ body {
     }
 }
 
+/* Visitor logs page */
+
+/* Hide table cells to optimise screen estate */
+#page-log #list {
+    .log_detail,
+    .host,
+    .refer,
+    .multi-edit,
+    tfoot {
+        display: none !important;
+    }
+}
+
+/* Plugins page */
+
+/* Hide table cells to optimise screen estate */
+#page-plugin #list {
+    .author,
+    .modified,
+    .description,
+    .load-order,
+    .manage,
+    .multi-edit,
+    tfoot {
+        display: none !important;
+    }
+}
+
 
 }
 

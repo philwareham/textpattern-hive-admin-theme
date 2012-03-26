@@ -1793,6 +1793,28 @@ div.code {
   #page-admin #list tfoot {
     display: none !important;
   }
+
+  /* Visitor logs page */
+  /* Hide table cells to optimise screen estate */
+  #page-log #list .log_detail,
+  #page-log #list .host,
+  #page-log #list .refer,
+  #page-log #list .multi-edit,
+  #page-log #list tfoot {
+    display: none !important;
+  }
+
+  /* Plugins page */
+  /* Hide table cells to optimise screen estate */
+  #page-plugin #list .author,
+  #page-plugin #list .modified,
+  #page-plugin #list .description,
+  #page-plugin #list .load-order,
+  #page-plugin #list .manage,
+  #page-plugin #list .multi-edit,
+  #page-plugin #list tfoot {
+    display: none !important;
+  }
 }
 /* =============================================================================
    Additional layout for screen media < 572px
