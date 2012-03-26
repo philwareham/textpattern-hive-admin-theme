@@ -426,11 +426,10 @@ form.busy {
     /* IE7 */
     *overflow-y: scroll; 
     *overflow-x: hidden;
-    tr.odd td {
-        border: 1px solid #e3e3e3;
+    thead tr, tbody tr {
+        border: 1px solid $color-gradient-to;
     }
     tr.even td {
-        border: 1px solid #e3e3e3;
         background: $color-background-box;
     }
     th, td {
@@ -453,13 +452,19 @@ form.busy {
     thead .multi-edit, tbody .multi-edit {
         width: 2%;
     }
+    tbody td:last-child { // webkit border rendering bug fix
+        border-right: 1px solid $color-gradient-to;
+    }
 }
 
 #list thead th {
     @include text-shadow-light;
     @include gradient;
-    border: 1px solid $color-gradient-to;
+    border-right: 1px solid darken($color-gradient-to, 5%);
     border-bottom: 1px solid darken($color-gradient-to, 10%);
+    &:last-child {
+        border-right: 1px solid $color-gradient-to;
+    }
     a {
         position: relative;
         display: block;
@@ -1175,13 +1180,23 @@ table#list.edit-pane #thumbnail_alter {
     text-align: center;
 }
 
+#page-section .txp-control-panel {
+    margin-bottom: .38461538461538em;
+}
+
 #page-section #list {
     width: auto;
     .section {
         border-top: 1em solid $color-background;
     }
+    tr {
+        border: 0;
+    }
     td {
         padding: 0;
+        &:last-child {
+            border: 0;
+        }
     }
     .label {
         padding-right: 1em;
@@ -1302,6 +1317,8 @@ table#list.edit-pane #thumbnail_alter {
     }
     tr.odd td, tr.even td {
         padding: .38461538461538em 1em;
+        height: 1.84615384615385em; // 24px / 13px
+        vertical-align: middle;
     }
     br {
         display: none;

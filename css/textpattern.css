@@ -579,11 +579,10 @@ form.busy span.spinner:after {
   *overflow-y: scroll;
   *overflow-x: hidden;
 }
-#list tr.odd td {
-  border: 1px solid #e3e3e3;
+#list thead tr, #list tbody tr {
+  border: 1px solid #dddddd;
 }
 #list tr.even td {
-  border: 1px solid #e3e3e3;
   background: #f7f7f7;
 }
 #list th, #list td {
@@ -606,6 +605,9 @@ form.busy span.spinner:after {
 #list thead .multi-edit, #list tbody .multi-edit {
   width: 2%;
 }
+#list tbody td:last-child {
+  border-right: 1px solid #dddddd;
+}
 
 #list thead th {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
@@ -624,8 +626,11 @@ form.busy span.spinner:after {
   background-image: -o-linear-gradient(#eeeeee, #dddddd);
   /* CSS3 Compliant */
   background-image: linear-gradient(#eeeeee, #dddddd);
-  border: 1px solid #dddddd;
+  border-right: 1px solid #d0d0d0;
   border-bottom: 1px solid #c4c4c4;
+}
+#list thead th:last-child {
+  border-right: 1px solid #dddddd;
 }
 #list thead th a {
   position: relative;
@@ -1367,14 +1372,24 @@ table#list.edit-pane #thumbnail_alter td {
   text-align: center;
 }
 
+#page-section .txp-control-panel {
+  margin-bottom: .38461538461538em;
+}
+
 #page-section #list {
   width: auto;
 }
 #page-section #list .section {
   border-top: 1em solid white;
 }
+#page-section #list tr {
+  border: 0;
+}
 #page-section #list td {
   padding: 0;
+}
+#page-section #list td:last-child {
+  border: 0;
 }
 #page-section #list .label {
   padding-right: 1em;
@@ -1482,6 +1497,8 @@ table#list.edit-pane #thumbnail_alter td {
 }
 #page-prefs table#list tr.odd td, #page-prefs table#list tr.even td {
   padding: .38461538461538em 1em;
+  height: 1.84615384615385em;
+  vertical-align: middle;
 }
 #page-prefs table#list br {
   display: none;
