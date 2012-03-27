@@ -1,5 +1,10 @@
 h1. Hive admin-side theme for Textpattern CMS v4.5
 
+*Please note 1:* You'll need to be using the "latest SVN releases of Textpattern":http://code.google.com/p/textpattern/ in order to use this admin theme - we have done extensive work on improving the Textpattern admin-side code structure since v4.4.1 which directly relates to features used within this theme.
+
+*Please note 2:* This theme is currently under development, and as such parts of the code are unfinished/unformated/untested - please check the "GitHub project":https://github.com/philwareham/txp-hive-admin-theme/commits/master regularly for the latest revisions.
+
+You are free to modify this theme, reuse code herein, and distribute all it's supporting files - go wild!
 
 h2. Installation instructions
 
@@ -12,18 +17,26 @@ h2. Usage instructions
 
 *NEEDS TO BE REWRITTEN ONCE THEME REDESIGN IS COMPLETE*
 
-Also within the @custom.css@ file, there are options to hide certain sections/fields from displaying in the admin pages. To use any of the options uncomment their lines (remove the @/*@ and @*/@ from the line of CSS you want to activate).
+Within the @custom.css@ file, there are options to hide certain sections/fields from displaying in the admin pages. To use any of the options just uncomment their lines (remove the @/*@ and @*/@ from the line of CSS you want to activate).
 
 For example, to completely hide the keywords field from your admin-side, find this line in the @custom.css@ file:
 
-bc. /* #write-comments{display:none !important;} */
+bc. /* #write-comments {display:none !important;} */
 
 and change to:
 
-bc. #write-comments{display:none !important;}
+bc. #write-comments {display:none !important;}
 
-h3. One last thing...
+h2. License
 
-In this theme, the 3 preview tabs on article write/article edit forms have been removed to save screen estate. They were arguable pretty useless anyway so they were dropped, we have never used them in all our time with Textpattern. If you really do want to enable these tabs again then comment out the following line ~??? of the theme's @textpattern.css@ file (you'll have to add some custom styling to them though):
+Major components:
 
-bc. #article-tabs{display:none;}
+* Modernizr: MIT/BSD
+* Selectivizr: MIT
+* Formalize: MIT/GPL
+
+* Google Code Prettify: Apache License v2.0
+
+Everything else:
+
+* "The Unlicense":http://unlicense.org (aka: Public Domain)
