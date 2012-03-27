@@ -1144,13 +1144,6 @@ table#list.edit-pane #thumbnail_alter {
 
 
 /* =============================================================================
-   Content -> Links page
-   ========================================================================== */
-
-
-
-
-/* =============================================================================
    Content -> Comments page
    ========================================================================== */
 
@@ -1219,18 +1212,17 @@ table#list.edit-pane #thumbnail_alter {
         border: 0;
         background: $color-background;
     }
-}
-
-#page-section #list .section table {
-    border-top: .5em solid $color-background-box;
-    border-bottom: .5em solid $color-background-box;
-    width: 100%;
-    td {
-        padding: .38461538461538em 1em;
-        background: $color-background-box !important;
-    }
-    .cell-label {
-        width: 36%;
+    .section table {
+        border-top: .5em solid $color-background-box;
+        border-bottom: .5em solid $color-background-box;
+        width: 100%;
+        td {
+            padding: .38461538461538em 1em;
+            background: $color-background-box !important;
+        }
+        .cell-label {
+            width: 36%;
+        }
     }
 }
 
