@@ -329,16 +329,6 @@ input[type="password"] {
     max-width: 16.9230769230769em; // 220px / 13px
 }
 
-#article-main .title input {
-    width: 75%;
-    max-width: 75%;
-}
-
-#content_switcher input[type="checkbox"],
-#content_switcher #list input[type="submit"] {
-    float: right;
-}
-
 
 /* =============================================================================
    Specific buttons
@@ -968,13 +958,18 @@ table#list.edit-pane {
     margin-bottom: 1em;
 }
 
-#article-main #body {
-    height: 34em;
-}
-
-#article-main .author {
-    font-size: $smallfont;
-    color: $color-text-footnote;
+#article-main {
+    .title input {
+        width: 75%;
+        max-width: 75%;
+    }
+    #body {
+        height: 34em;
+    }
+    .author {
+        font-size: $smallfont;
+        color: $color-text-footnote;
+    }
 }
 
 #main_content > div:first-of-type > p:first-of-type {
@@ -1274,6 +1269,11 @@ table#list.edit-pane #thumbnail_alter {
 /* fix inconsistent button alignment on Styles page */
 #page-css .copy-as input[type="submit"] {
     margin-left: -.38461538461538em;
+}
+
+#content_switcher input[type="checkbox"],
+#content_switcher #list input[type="submit"] {
+    float: right;
 }
 
 

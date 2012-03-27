@@ -388,16 +388,6 @@ input[type="password"] {
   max-width: 16.9230769230769em;
 }
 
-#article-main .title input {
-  width: 75%;
-  max-width: 75%;
-}
-
-#content_switcher input[type="checkbox"],
-#content_switcher #list input[type="submit"] {
-  float: right;
-}
-
 /* =============================================================================
    Specific buttons
    ========================================================================== */
@@ -1168,10 +1158,13 @@ table#list.edit-pane td.cell-label {
   margin-bottom: 1em;
 }
 
+#article-main .title input {
+  width: 75%;
+  max-width: 75%;
+}
 #article-main #body {
   height: 34em;
 }
-
 #article-main .author {
   font-size: 0.846em;
   color: #888888;
@@ -1461,6 +1454,11 @@ table#list.edit-pane #thumbnail_alter td {
 /* fix inconsistent button alignment on Styles page */
 #page-css .copy-as input[type="submit"] {
   margin-left: -0.385em;
+}
+
+#content_switcher input[type="checkbox"],
+#content_switcher #list input[type="submit"] {
+  float: right;
 }
 
 /* =============================================================================
