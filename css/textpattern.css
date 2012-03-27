@@ -579,8 +579,11 @@ form.busy span.spinner:after {
   *overflow-y: scroll;
   *overflow-x: hidden;
 }
-#list thead tr, #list tbody tr {
+#list tr.odd, #list tr.even {
   border: 1px solid #dddddd;
+}
+#list tr.odd td:last-child, #list tr.even td:last-child {
+  border-right: 1px solid #dddddd;
 }
 #list tr.even td {
   background: #f7f7f7;
@@ -605,10 +608,6 @@ form.busy span.spinner:after {
 #list thead .multi-edit, #list tbody .multi-edit {
   width: 2%;
 }
-#list tbody td:last-child {
-  border-right: 1px solid #dddddd;
-}
-
 #list thead th {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   background-color: #eeeeee;
@@ -626,8 +625,12 @@ form.busy span.spinner:after {
   background-image: -o-linear-gradient(#eeeeee, #dddddd);
   /* CSS3 Compliant */
   background-image: linear-gradient(#eeeeee, #dddddd);
+  border-top: 1px solid #dddddd;
   border-right: 1px solid #d0d0d0;
   border-bottom: 1px solid #c4c4c4;
+}
+#list thead th:first-child {
+  border-left: 1px solid #dddddd;
 }
 #list thead th:last-child {
   border-right: 1px solid #dddddd;
@@ -677,7 +680,6 @@ form.busy span.spinner:after {
   border-top: 0;
   border-bottom: 0.308em solid #333333;
 }
-
 #list tfoot th, #list tfoot td {
   vertical-align: middle;
 }

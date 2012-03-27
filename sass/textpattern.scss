@@ -426,8 +426,11 @@ form.busy {
     /* IE7 */
     *overflow-y: scroll; 
     *overflow-x: hidden;
-    thead tr, tbody tr {
+    tr.odd, tr.even {
         border: 1px solid $color-gradient-to;
+        td:last-child { // webkit border rendering bug fix
+            border-right: 1px solid $color-gradient-to;
+        }
     }
     tr.even td {
         background: $color-background-box;
@@ -452,68 +455,69 @@ form.busy {
     thead .multi-edit, tbody .multi-edit {
         width: 2%;
     }
-    tbody td:last-child { // webkit border rendering bug fix
-        border-right: 1px solid $color-gradient-to;
-    }
-}
-
-#list thead th {
-    @include text-shadow-light;
-    @include gradient;
-    border-right: 1px solid darken($color-gradient-to, 5%);
-    border-bottom: 1px solid darken($color-gradient-to, 10%);
-    &:last-child {
-        border-right: 1px solid $color-gradient-to;
-    }
-    a {
-        position: relative;
-        display: block;
-        color: $color-text;
-        margin-right: .5em;
-        &:hover {
-            color: $color-text;
-            text-decoration: none;
+    thead {
+        th {
+            @include text-shadow-light;
+            @include gradient;
+            border-top: 1px solid $color-gradient-to;
+            border-right: 1px solid darken($color-gradient-to, 5%);
+            border-bottom: 1px solid darken($color-gradient-to, 10%);
+            &:first-child {
+                border-left: 1px solid $color-gradient-to;
+            }
+            &:last-child {
+                border-right: 1px solid $color-gradient-to;
+            }
+            a {
+                position: relative;
+                display: block;
+                color: $color-text;
+                margin-right: .5em;
+                &:hover {
+                    color: $color-text;
+                    text-decoration: none;
+                }
+                &:after {
+                    position: absolute;
+                    top: .53846153846154em;
+                    right: -.76923076923077em;
+                    z-index: 10;
+                    width: 0;
+                    height: 0;
+                    @include inline-block;
+                    vertical-align: top;
+                    opacity: .5;
+                    @include hide-text;
+                }
+                &:hover:after {
+                    opacity: 1;
+                }
+            }
+            &.desc a:after {
+                content: "&#8595;";
+                border-left: .30769230769231em solid transparent;
+                border-right: .30769230769231em solid transparent;
+                border-top: .30769230769231em solid $color-text;
+                border-bottom: 0;
+            }
+            &.asc a:after {
+                content: "&#8593;";
+                border-left: .30769230769231em solid transparent;
+                border-right: .30769230769231em solid transparent;
+                border-top: 0;
+                border-bottom: .30769230769231em solid $color-text;
+            }
         }
-        &:after {
-            position: absolute;
-            top: .53846153846154em;
-            right: -.76923076923077em;
-            z-index: 10;
-            width: 0;
-            height: 0;
-            @include inline-block;
-            vertical-align: top;
-            opacity: .5;
-            @include hide-text;
+    }
+    tfoot {
+        th, td {
+            vertical-align: middle;
         }
-        &:hover:after {
-            opacity: 1;
-        }
-    }
-    &.desc a:after {
-        content: "&#8595;";
-        border-left: .30769230769231em solid transparent;
-        border-right: .30769230769231em solid transparent;
-        border-top: .30769230769231em solid $color-text;
-        border-bottom: 0;
-    }
-    &.asc a:after {
-        content: "&#8593;";
-        border-left: .30769230769231em solid transparent;
-        border-right: .30769230769231em solid transparent;
-        border-top: 0;
-        border-bottom: .30769230769231em solid $color-text;
-    }
-}
-
-#list tfoot {
-    th, td {
-        vertical-align: middle;
-    }
-    .multi-edit {
-        text-align: right;
-        input[type="button"] {
-            margin-right: .38461538461538em;
+        .multi-edit {
+            text-align: right;
+            input[type="button"] {
+                margin-right: .38461538461538em;
+            }
         }
     }
 }
