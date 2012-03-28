@@ -129,10 +129,11 @@ hr {
     width: 100% !important; // override inline width
 }
 
-.pophelp {
+.pophelp,
+.pophelpsubtle {
     padding: 0 .23076923076923em;
     font-weight: normal;
-    background: #ddd;
+    background: #e5e5e5;
     @include border-radius(.53846153846154em);
 }
 
