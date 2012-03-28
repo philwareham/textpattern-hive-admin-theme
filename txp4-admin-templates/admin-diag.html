@@ -112,46 +112,25 @@
     <div id="diag_container" class="txp-container txp-list">
 
         <div id="pre_flight_check">
-            <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
-                <thead>
-                    <tr>
-                        <td><h2>Pre-flight check</h2></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="not-ok">/Users/username/Sites/SVN/TextPattern CMS/textpattern/setup/ still exists&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
-                    </tr>
-                    <tr>
-                        <td class="not-ok">Some Textpattern files have been modified: <br />
-                        /Users/username/Sites/SVN/TextPattern CMS/textpattern/jquery.js&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>Pre-flight check</h2>
+            <p class="not-ok">/Users/pwareham/Sites/ SVN/TextPattern CMS/textpattern/setup/ still exists&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></p>
+            <p class="not-ok">Some Textpattern files have been modified: <br />
+                /Users/pwareham/Sites/ SVN/TextPattern CMS/textpattern/jquery.js&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></p>
+            <p class="not-ok">You are running in-development files on a live server: <br />
+                /Users/pwareham/Sites/ SVN/TextPattern CMS/textpattern/include/txp_admin.php, <br />
+                /Users/pwareham/Sites/ SVN/TextPattern CMS/textpattern/include/txp_article.php&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></p>
         </div>
 
         <div id="diagnostics">
-            <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
-                <thead>
-                    <tr>
-                        <td><h2>Diagnostic info</h2></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <textarea id="diagnostics-detail" cols="78" rows="18" readonly="readonly">Diagnostic information would go here...</textarea><br />
-                            <form method="post" action="index.php">
-                                Detail:
-                                <select name="step" class="list" onchange="submit(this.form);">
-                                    <option value="low" selected="selected">Low</option>
-                                    <option value="high">High</option>
-                                </select>
-                            </form>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>Diagnostic info</h2>
+            <textarea id="diagnostics-detail" cols="78" rows="18" readonly="readonly">Diagnostic information would go here...</textarea><br />
+            <form method="post" action="index.php">
+                <input type="hidden" value="diag" name="event" />
+                Detail: <select name="step" class="list" onchange="submit(this.form);">
+                    <option value="low">Low</option>
+                    <option value="high">High</option>
+                </select>
+            </form>
         </div>
 
     </div>
