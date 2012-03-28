@@ -1070,14 +1070,14 @@ table#list.edit-pane {
 }
 
 /* fix for inconsistent structure */
-#page-image table#list.edit-pane {
+#page-image table#edit.edit-pane {
     border-bottom: 0;
     tr:last-child td {
         padding-bottom: 0;
     }
 }
 
-table#list.edit-pane #image-thumbnail {
+table#edit.edit-pane #image-thumbnail {
     margin-right: auto;
     margin-bottom: 1em;
     td {
@@ -1093,7 +1093,7 @@ table#list.edit-pane #image-thumbnail {
     margin: 0;
 }
 
-table#list.edit-pane #thumbnail_alter {
+table#edit.edit-pane #thumbnail_alter {
     td {
         padding: 0 .5em 0 0;
         width: auto;

@@ -1270,18 +1270,18 @@ table#list.edit-pane td.cell-label {
 }
 
 /* fix for inconsistent structure */
-#page-image table#list.edit-pane {
+#page-image table#edit.edit-pane {
   border-bottom: 0;
 }
-#page-image table#list.edit-pane tr:last-child td {
+#page-image table#edit.edit-pane tr:last-child td {
   padding-bottom: 0;
 }
 
-table#list.edit-pane #image-thumbnail {
+table#edit.edit-pane #image-thumbnail {
   margin-right: auto;
   margin-bottom: 1em;
 }
-table#list.edit-pane #image-thumbnail td {
+table#edit.edit-pane #image-thumbnail td {
   padding: 0;
 }
 
@@ -1293,7 +1293,7 @@ table#list.edit-pane #image-thumbnail td {
   margin: 0;
 }
 
-table#list.edit-pane #thumbnail_alter td {
+table#edit.edit-pane #thumbnail_alter td {
   padding: 0 .5em 0 0;
   width: auto;
   vertical-align: middle;
