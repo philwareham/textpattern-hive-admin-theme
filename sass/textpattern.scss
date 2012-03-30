@@ -1155,6 +1155,10 @@ table#edit.edit-pane #thumbnail_alter {
     background: lighten($error-background, 2%);
 }
 
+#page-discuss #list tr.moderate td {
+    background: lighten($warning-background, 2%);
+}
+
 #discuss_ban_container #list {
     .name {
         width: 28%;
