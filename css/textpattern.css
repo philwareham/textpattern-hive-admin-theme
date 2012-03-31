@@ -1842,12 +1842,22 @@ div.code {
     display: none;
   }
 
+  #page-page h2,
+  #page-form h2,
+  #page-css h2 {
+    margin-top: 1.625em;
+  }
   #page-page > tr, #page-page #edit td.column,
   #page-form > tr,
   #page-form #edit td.column,
   #page-css > tr,
   #page-css #edit td.column {
     display: block;
+    width: 100%;
+  }
+  #page-page #edit td.column:last-child,
+  #page-form #edit td.column:last-child,
+  #page-css #edit td.column:last-child {
     width: 100%;
   }
 
@@ -1894,7 +1904,7 @@ div.code {
    ========================================================================== */
 @media only screen and (max-width: 571px) {
   body {
-    padding-top: 7em;
+    padding-top: 6em;
   }
 
   #page-login,
@@ -1942,5 +1952,11 @@ div.code {
   table#edit.edit-pane td:last-child,
   table#list.edit-pane td:last-child {
     padding-bottom: 1em;
+  }
+
+  #page-page textarea.code,
+  #page-form textarea.code,
+  #page-css textarea.code {
+    height: 17.5384615384615em;
   }
 }

@@ -228,15 +228,21 @@ body {
 #page-page,
 #page-form {
     #edit td.column:first-child {
-    display: none;
+        display: none;
     }
 }
 
 #page-page,
 #page-form,
 #page-css {
+    h2 {
+        margin-top: 1.625em;
+    }
     > tr, #edit td.column {
         display: block;
+        width: 100%;
+    }
+    #edit td.column:last-child {
         width: 100%;
     }
 }
@@ -306,7 +312,7 @@ body {
 
 
 body {
-    padding-top: 7em;
+    padding-top: 6em; // 78px / 13px
 }
 
 #page-login,
@@ -351,6 +357,14 @@ table#list.edit-pane  {
         &:last-child {
             padding-bottom: 1em;
         }
+    }
+}
+
+#page-page,
+#page-form,
+#page-css {
+    textarea.code {
+        height: 17.5384615384615em; // 228px / 13px
     }
 }
 
