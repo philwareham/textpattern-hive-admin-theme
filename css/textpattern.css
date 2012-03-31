@@ -1448,7 +1448,8 @@ table#edit.edit-pane #thumbnail_alter td {
 .copy-as {
   display: block;
   margin: 1em 0;
-  width: 16em;
+  width: 100%;
+  max-width: 23.2307692307692em;
 }
 
 .copy-as input[type="submit"] {
