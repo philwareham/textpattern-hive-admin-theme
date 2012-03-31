@@ -1655,11 +1655,11 @@ div.code {
 
 /* Hive theme for Textpattern CMS (v2.0a3) */
 /* =============================================================================
-   Additional layout for screen media < 769px
+   ADDITIONAL LAYOUT FOR DEVICES < 769px
    ========================================================================== */
 @media only screen and (max-width: 768px) {
   /* =============================================================================
-     Layout
+     Layout (< 769px)
      ========================================================================== */
   body {
     padding: 4em 1em 0;
@@ -1667,7 +1667,7 @@ div.code {
   }
 
   /* =============================================================================
-     Header
+     Header (< 769px)
      ========================================================================== */
   #txp-head {
     padding: 0 1em;
@@ -1691,7 +1691,7 @@ div.code {
   }
 
   /* =============================================================================
-     Navigation
+     Navigation (< 769px)
      ========================================================================== */
   /* Show <select> version of navigation on small screen widths */
   #txp-nav-select {
@@ -1703,7 +1703,9 @@ div.code {
     display: none;
   }
 
-  /* Categories page */
+  /* =============================================================================
+     Content -> Categories page (< 769px)
+     ========================================================================== */
   .category-list th,
   .category-list td,
   .category-list tr {
@@ -1718,7 +1720,9 @@ div.code {
     margin: 0 0 1em 0;
   }
 
-  /* Write page */
+  /* =============================================================================
+     Content -> Write page (< 769px)
+     ========================================================================== */
   #page-article #edit th,
   #page-article #edit td,
   #page-article #edit tr {
@@ -1733,8 +1737,7 @@ div.code {
 
   #configuration_content,
   #tagbuild_links,
-  #supporting_content,
-  #content_switcher {
+  #supporting_content {
     margin: 0;
   }
 
@@ -1746,6 +1749,9 @@ div.code {
     display: none;
   }
 
+  /* =============================================================================
+     Content -> Articles page (< 769px)
+     ========================================================================== */
   /* Hide table cells to optimise screen estate */
   #page-list #list .date,
   #page-list #list .section,
@@ -1758,7 +1764,9 @@ div.code {
     display: none !important;
   }
 
-  /* Images page */
+  /* =============================================================================
+     Content -> Images page (< 769px)
+     ========================================================================== */
   /* Hide table cells to optimise screen estate */
   #page-image #list .actions,
   #page-image #list .date,
@@ -1774,7 +1782,9 @@ div.code {
     display: block !important;
   }
 
-  /* Files page */
+  /* =============================================================================
+     Content -> Files page (< 769px)
+     ========================================================================== */
   /* Hide table cells to optimise screen estate */
   #page-file #list .actions,
   #page-file #list .title,
@@ -1788,7 +1798,9 @@ div.code {
     display: none !important;
   }
 
-  /* Links page */
+  /* =============================================================================
+     Content -> Links page (< 769px)
+     ========================================================================== */
   /* Hide table cells to optimise screen estate */
   #page-link #list .actions,
   #page-link #list .category,
@@ -1799,7 +1811,9 @@ div.code {
     display: none !important;
   }
 
-  /* Comments page */
+  /* =============================================================================
+     Content -> Comments page (< 769px)
+     ========================================================================== */
   .cb_show_spam {
     margin-top: -0.5em;
   }
@@ -1813,13 +1827,33 @@ div.code {
     display: none !important;
   }
 
-  /* Pages and Forms pages */
+  /* =============================================================================
+     Presentation -> Sections page (< 769px)
+     ========================================================================== */
+  /* =============================================================================
+     Presentation -> Pages, Forms, Styles pages shared (< 769px)
+     ========================================================================== */
+  #content_switcher {
+    margin: 0;
+  }
+
   #page-page #edit td.column:first-child,
   #page-form #edit td.column:first-child {
     display: none;
   }
 
-  /* Users page */
+  #page-page > tr, #page-page #edit td.column,
+  #page-form > tr,
+  #page-form #edit td.column,
+  #page-css > tr,
+  #page-css #edit td.column {
+    display: block;
+    width: 100%;
+  }
+
+  /* =============================================================================
+     Admin -> Users page (< 769px)
+     ========================================================================== */
   /* Hide table cells to optimise screen estate */
   #page-admin #list .real-name,
   #page-admin #list .privs,
@@ -1829,7 +1863,9 @@ div.code {
     display: none !important;
   }
 
-  /* Visitor logs page */
+  /* =============================================================================
+     Admin -> Visitor Logs page (< 769px)
+     ========================================================================== */
   /* Hide table cells to optimise screen estate */
   #page-log #list .log_detail,
   #page-log #list .host,
@@ -1839,7 +1875,9 @@ div.code {
     display: none !important;
   }
 
-  /* Plugins page */
+  /* =============================================================================
+     Admin -> Plugins page (< 769px)
+     ========================================================================== */
   /* Hide table cells to optimise screen estate */
   #page-plugin #list .author,
   #page-plugin #list .modified,
@@ -1852,7 +1890,7 @@ div.code {
   }
 }
 /* =============================================================================
-   Additional layout for screen media < 572px
+   ADDITIONAL LAYOUT FOR DEVICES < 572px
    ========================================================================== */
 @media only screen and (max-width: 571px) {
   body {
