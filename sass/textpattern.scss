@@ -188,9 +188,8 @@ hr {
 /* close icon */
 .close {
     position: absolute;
+    top: .27777777777778em; // 5px / 18px
     right: .72222222222222em;
-    top: 50%;
-    margin-top: -.66666666666667em;
     text-decoration: none;
     color: transparentize($color-text, .6);
     font-size: 1.38461538461538em; // 18px / 13px
