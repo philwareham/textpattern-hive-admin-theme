@@ -93,8 +93,25 @@ body {
 
 #article-col-1,
 #article-col-2,
-#article-main {
+#article-main,
+#article-tabs {
     width: 100%;
+    margin: 0 auto;
+    max-width: 40em;
+}
+
+#article-col-2 {
+    clear: left;
+}
+
+#article-tabs {
+    padding: 0;
+}
+
+.view-mode {
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 0;
 }
 
 #configuration_content,
