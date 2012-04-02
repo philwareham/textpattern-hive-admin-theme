@@ -9,6 +9,38 @@ class hive_theme extends theme
     function html_head()
     {
         $out[] = '<link href="'.$this->url.'css/textpattern.css" rel="stylesheet" type="text/css" />';
+        // start of custom CSS toggles (see README.textile for usage instructions)
+        if(defined('hive_theme_hide_branding')) {
+            $out[] = '<link href="'.$this->url.'css/custom/hide_branding.css" rel="stylesheet" type="text/css" />';
+        }
+        if(defined('hive_theme_hide_preview_tabs_group')) {
+            $out[] = '<link href="'.$this->url.'css/custom/hide_preview_tabs.css" rel="stylesheet" type="text/css" />';
+        }
+        if(defined('hive_theme_hide_textile_group')) {
+            $out[] = '<link href="'.$this->url.'css/custom/hide_textile_group.css" rel="stylesheet" type="text/css" />';
+        }
+        if(defined('hive_theme_hide_advanced_group')) {
+            $out[] = '<link href="'.$this->url.'css/custom/hide_advanced_group.css" rel="stylesheet" type="text/css" />';
+        }
+        if(defined('hive_theme_hide_recent_articles_group')) {
+            $out[] = '<link href="'.$this->url.'css/custom/hide_recent_articles_group.css" rel="stylesheet" type="text/css" />';
+        }
+        if(defined('hive_theme_hide_keywords_field')) {
+            $out[] = '<link href="'.$this->url.'css/custom/hide_keywords_field.css" rel="stylesheet" type="text/css" />';
+        }
+        if(defined('hive_theme_hide_comments_group')) {
+            $out[] = '<link href="'.$this->url.'css/custom/hide_comments_group.css" rel="stylesheet" type="text/css" />';
+        }
+        if(defined('hive_theme_hide_expires_field')) {
+            $out[] = '<link href="'.$this->url.'css/custom/hide_expires_field.css" rel="stylesheet" type="text/css" />';
+        }
+        if(defined('hive_theme_hide_tag_builder_column')) {
+            $out[] = '<link href="'.$this->url.'css/custom/hide_tag_builder_column.css" rel="stylesheet" type="text/css" />';
+        }
+        if(defined('hive_theme_hide_form_preview')) {
+            $out[] = '<link href="'.$this->url.'css/custom/hide_form_preview.css" rel="stylesheet" type="text/css" />';
+        }
+        // end of custom CSS toggles
         $out[] = '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />';
         $out[] = '<meta name="apple-mobile-web-app-capable" content="yes" />';
         $out[] = '<meta name="generator" content="Textpattern CMS" />';
