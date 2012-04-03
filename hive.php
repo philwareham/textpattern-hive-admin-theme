@@ -106,8 +106,8 @@ class hive_theme extends theme
     function footer()
     {
         $out[] = '<div id="txp-foot">';
-        $out[] = '<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v'.txp_version.')</p>';
-        $out[] = '<p class="pagejump"><a href="#">&#8593; Back to top</a></p>';
+        $out[] = '<p class="mothership"><a href="http://textpattern.com" title="'.gTxt('go_txp_com').'" rel="external">Textpattern CMS</a> (v'.txp_version.')</p>';
+        $out[] = '<p class="pagejump"><a href="#">&#8593; '.gTxt('back_to_top').'</a></p>';
         $out[] = '</div>';
         return join(n, $out);
     }
@@ -176,7 +176,7 @@ EOS;
         return array(
             'author'      => 'Phil Wareham',
             'author_uri'  => 'http://twitter.com/philwareham',
-            'version'     => '2.0a3',
+            'version'     => '2.0a4',
             'description' => 'Textpattern Hive Theme',
             'help'        => 'https://github.com/philwareham/txp-hive-admin-theme',
         );
