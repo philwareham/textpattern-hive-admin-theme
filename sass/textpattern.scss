@@ -964,7 +964,7 @@ table#list.edit-pane {
         max-width: 75%;
     }
     #body {
-        height: 34em;
+        height: 34.4615384615385em; // 448px / 13px
     }
     .author {
         font-size: $smallfont;
@@ -1249,7 +1249,7 @@ table#edit.edit-pane #thumbnail_alter {
 #page-form,
 #page-css {
     textarea.code {
-        height: 34em;
+        height: 34.4615384615385em; // 448px / 13px
     }
 }
 
