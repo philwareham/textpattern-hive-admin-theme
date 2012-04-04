@@ -1458,6 +1458,12 @@ div.code {
     *padding-left: 0;
 }
 
+table#edit.plugin-help td {
+    display: block;
+    margin: 0 auto;
+    max-width: 40em; // 520px / 13px
+}
+
 
 /* =============================================================================
    Admin -> Import page

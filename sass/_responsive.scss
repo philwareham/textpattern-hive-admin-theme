@@ -356,10 +356,6 @@ body {
     @include box-shadow;
 }
 
-.plugin-help {
-    width: 100%; // override inline CSS
-}
-
 table#edit.edit-pane,
 table#list.edit-pane  {
     width: 100%;
@@ -383,6 +379,10 @@ table#list.edit-pane  {
     textarea.code {
         height: 17.5384615384615em; // 228px / 13px
     }
+}
+
+table#edit.plugin-help td {
+    width: 100% !important; // override inline CSS
 }
 
 

@@ -1630,6 +1630,12 @@ div.code {
   *padding-left: 0;
 }
 
+table#edit.plugin-help td {
+  display: block;
+  margin: 0 auto;
+  max-width: 40em;
+}
+
 /* =============================================================================
    Admin -> Import page
    ========================================================================== */
@@ -1945,10 +1951,6 @@ div.code {
     box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
   }
 
-  .plugin-help {
-    width: 100%;
-  }
-
   table#edit.edit-pane,
   table#list.edit-pane {
     width: 100%;
@@ -1973,5 +1975,9 @@ div.code {
   #page-form textarea.code,
   #page-css textarea.code {
     height: 17.5384615384615em;
+  }
+
+  table#edit.plugin-help td {
+    width: 100% !important;
   }
 }
