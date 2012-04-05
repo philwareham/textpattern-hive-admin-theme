@@ -381,8 +381,8 @@ table#list.edit-pane  {
     }
 }
 
-table#edit.plugin-help td {
-    width: 100% !important; // override inline CSS
+div.plugin-help {
+    width: 100%;
 }
 
 

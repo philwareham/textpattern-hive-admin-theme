@@ -1630,10 +1630,9 @@ div.code {
   *padding-left: 0;
 }
 
-table#edit.plugin-help td {
-  display: block;
+div.plugin-help {
   margin: 0 auto;
-  max-width: 40em;
+  width: 40em;
 }
 
 /* =============================================================================
@@ -1977,7 +1976,7 @@ table#edit.plugin-help td {
     height: 17.5384615384615em;
   }
 
-  table#edit.plugin-help td {
-    width: 100% !important;
+  div.plugin-help {
+    width: 100%;
   }
 }
