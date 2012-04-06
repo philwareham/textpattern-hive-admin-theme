@@ -1073,9 +1073,10 @@ table#edit.edit-pane {
 
 /* fix for inconsistent structure */
 #page-image table#edit.edit-pane {
+    border-top: 1em solid #F7F7F7;
     border-bottom: 0;
-    tr:last-child td {
-        padding-bottom: 0;
+    td {
+        padding: 0 1em;
     }
 }
 
@@ -1138,6 +1139,14 @@ table#edit.edit-pane #thumbnail_alter {
 #page-file .minute,
 #page-file .second {
     width: 2.46153846153846em; // 32px / 13px
+}
+
+/* fix for inconsistent structure */
+#page-file table#edit.edit-pane {
+    border: 0;
+    td {
+        padding: 0 1em;
+    }
 }
 
 

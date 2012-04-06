@@ -358,11 +358,11 @@ body {
     @include box-shadow;
 }
 
-table#edit.edit-pane {
+table#edit.edit-pane > tbody > tr {
     width: 100%;
     border-top-width: 1em;
     border-bottom: 0;
-    td {
+    > td {
         display: block;
         padding: 0 1em;
         &.cell-label {

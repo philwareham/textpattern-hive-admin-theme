@@ -1268,10 +1268,11 @@ table#edit.edit-pane td.cell-label {
 
 /* fix for inconsistent structure */
 #page-image table#edit.edit-pane {
+  border-top: 1em solid #F7F7F7;
   border-bottom: 0;
 }
-#page-image table#edit.edit-pane tr:last-child td {
-  padding-bottom: 0;
+#page-image table#edit.edit-pane td {
+  padding: 0 1em;
 }
 
 table#edit.edit-pane #image-thumbnail {
@@ -1331,6 +1332,14 @@ table#edit.edit-pane #thumbnail_alter td {
 #page-file .minute,
 #page-file .second {
   width: 2.46153846153846em;
+}
+
+/* fix for inconsistent structure */
+#page-file table#edit.edit-pane {
+  border: 0;
+}
+#page-file table#edit.edit-pane td {
+  padding: 0 1em;
 }
 
 /* =============================================================================
@@ -1952,19 +1961,19 @@ div.plugin-help {
     box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
   }
 
-  table#edit.edit-pane {
+  table#edit.edit-pane > tbody > tr {
     width: 100%;
     border-top-width: 1em;
     border-bottom: 0;
   }
-  table#edit.edit-pane td {
+  table#edit.edit-pane > tbody > tr > td {
     display: block;
     padding: 0 1em;
   }
-  table#edit.edit-pane td.cell-label {
+  table#edit.edit-pane > tbody > tr > td.cell-label {
     width: auto;
   }
-  table#edit.edit-pane td:last-child {
+  table#edit.edit-pane > tbody > tr > td:last-child {
     padding-bottom: 1em;
   }
 
