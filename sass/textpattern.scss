@@ -1031,6 +1031,10 @@ table#list.edit-pane {
     }
 }
 
+#keywords {
+    height: 4.38461538461538em; // 57px / 13px
+}
+
 
 /* =============================================================================
    Content -> Articles page
@@ -1308,7 +1312,7 @@ table#edit.edit-pane #thumbnail_alter {
    ========================================================================== */
 
 #page-diag textarea {
-    height: 21em;
+    height: 17.4615384615385em; // 227px / 13px
     margin-bottom: 1em;
 }
 

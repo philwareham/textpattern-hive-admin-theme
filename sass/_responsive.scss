@@ -375,11 +375,19 @@ table#list.edit-pane  {
     }
 }
 
+#article-main #body {
+    height: 17.4615384615385em; // 227px / 13px
+}
+
+#excerpt {
+    height: 4.38461538461538em; // 57px / 13px
+}
+
 #page-page,
 #page-form,
 #page-css {
     textarea.code {
-        height: 17.5384615384615em; // 228px / 13px
+        height: 17.4615384615385em; // 227px / 13px
     }
 }
 

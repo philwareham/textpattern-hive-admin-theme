@@ -1230,6 +1230,10 @@ table#list.edit-pane td.cell-label {
   margin-left: 2em;
 }
 
+#keywords {
+  height: 4.38461538461538em;
+}
+
 /* =============================================================================
    Content -> Articles page
    ========================================================================== */
@@ -1489,7 +1493,7 @@ table#edit.edit-pane #thumbnail_alter td {
    Admin -> Diagnostics page
    ========================================================================== */
 #page-diag textarea {
-  height: 21em;
+  height: 17.4615384615385em;
   margin-bottom: 1em;
 }
 
@@ -1972,10 +1976,18 @@ div.plugin-help {
     padding-bottom: 1em;
   }
 
+  #article-main #body {
+    height: 17.4615384615385em;
+  }
+
+  #excerpt {
+    height: 4.38461538461538em;
+  }
+
   #page-page textarea.code,
   #page-form textarea.code,
   #page-css textarea.code {
-    height: 17.5384615384615em;
+    height: 17.4615384615385em;
   }
 
   div.plugin-help {
