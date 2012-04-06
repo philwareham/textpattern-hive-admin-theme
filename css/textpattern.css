@@ -1239,12 +1239,6 @@ table#edit.edit-pane td.cell-label {
 /* =============================================================================
    Content -> Images page
    ========================================================================== */
-/* hide upload forms on touch based devices */
-.touch .image-replace,
-.touch .thumbnail-upload {
-  display: none;
-}
-
 #page-image img {
   border: solid 1px #cccccc;
   -moz-border-radius: 0.385em;
