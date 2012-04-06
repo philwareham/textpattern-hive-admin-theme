@@ -173,7 +173,7 @@ hr {
         padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
         max-width: 40em; // 520px / 13px
         @include text-shadow-light;
-        @include box-shadow($shadow: 0 -.07692307692308em .15384615384615em rgba(#000, .2));
+        @include box-shadow;
         &.success {
             color: $success-text;
             background: $success-background;
@@ -223,7 +223,7 @@ legend {
     font-weight: bold;
     line-height: 2em;
     @include text-shadow-light;
-    @include box-shadow(rgba(#fff, .25) 0 1px 0 0 inset);
+    @include box-shadow(0 1px 0 0 inset rgba(#fff, .25));
     @include gradient-bar;
     @include box-sizing;
     /* IE7 box-sizing workaround */
@@ -238,7 +238,7 @@ legend {
     height: 2em;
     overflow: hidden; // hide the space between link and pophelp
     @include text-shadow-light;
-    @include box-shadow(rgba(#fff, .25) 0 1px 0 0 inset);
+    @include box-shadow(0 1px 0 0 inset rgba(#fff, .25));
     @include gradient-bar;
 }
 
@@ -526,7 +526,7 @@ form.busy {
 
 body {
     position: relative;
-    padding: 4em 2em 1em;
+    padding: 5em 2em 1em;
     min-width: 71.3846153846154em; // 928px + (13px x 4) = 980px
     color: $color-text;
     background: $color-background;
@@ -551,7 +551,7 @@ body {
     padding: 0 2em;
     height: 3em;
     min-width: 71.3846153846154em;
-    @include box-shadow;
+    @include box-shadow(0 .23076923076923em .38461538461538em rgba(#000, .2));
     @include gradient-bar(#ffda44, #fabc2b);
     h1 {
         float: left;
@@ -675,7 +675,7 @@ body {
     border-top: 0;
     background: $color-highlight-box;
     @include border-radius(0 $border-radius $border-radius $border-radius);
-    @include box-shadow(.15384615384615em .15384615384615em .15384615384615em rgba(#000, .2));
+    @include box-shadow;
     li {
         border: 0;
         @include border-radius(0);
@@ -1064,7 +1064,7 @@ table#edit.edit-pane {
 
 #page-image a img:hover {
     border: solid 1px $color-link-hover;
-    @include box-shadow(0 .07692307692308em .15384615384615em rgba($color-link-hover, .4));
+    @include box-shadow(0 0 .61538461538462em rgba($color-link-hover, .4));
 }
 
 /* fix for inconsistent structure */

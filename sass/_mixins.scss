@@ -47,7 +47,7 @@
 
 // drop shadows
 
-@mixin box-shadow($shadow: 0 .07692307692308em .15384615384615em rgba(#000, .2)) {
+@mixin box-shadow($shadow: 0 0 .61538461538462em rgba(#000, .35)) {
     -webkit-box-shadow: $shadow;
             box-shadow: $shadow;
 }

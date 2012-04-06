@@ -331,7 +331,7 @@ body {
 
 
 body {
-    padding-top: 6em; // 78px / 13px
+    padding-top: 7.23076923076923em; // 94px / 13px
 }
 
 #page-login,
@@ -355,7 +355,7 @@ body {
     border-top: 1px solid lighten($color-highlight-box, 5%);
     padding: .53846153846154em 1em;
     background: $color-highlight-box;
-    @include box-shadow;
+    @include box-shadow(0 .23076923076923em .38461538461538em rgba(#000, .2));
 }
 
 table#edit.edit-pane {

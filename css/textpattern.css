@@ -193,8 +193,8 @@ hr {
   padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
   max-width: 40em;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
-  -webkit-box-shadow: 0 -0.077em 0.154em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 -0.077em 0.154em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 0.615em rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0.615em rgba(0, 0, 0, 0.35);
 }
 #messagepane span.success {
   color: #238c23;
@@ -241,8 +241,8 @@ legend {
   font-weight: bold;
   line-height: 2em;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
-  -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
-  box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  -webkit-box-shadow: 0 1px 0 0 inset rgba(255, 255, 255, 0.25);
+  box-shadow: 0 1px 0 0 inset rgba(255, 255, 255, 0.25);
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #c4c4c4;
   background-color: #eeeeee;
@@ -275,8 +275,8 @@ legend {
   height: 2em;
   overflow: hidden;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
-  -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
-  box-shadow: rgba(255, 255, 255, 0.25) 0 1px 0 0 inset;
+  -webkit-box-shadow: 0 1px 0 0 inset rgba(255, 255, 255, 0.25);
+  box-shadow: 0 1px 0 0 inset rgba(255, 255, 255, 0.25);
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #c4c4c4;
   background-color: #eeeeee;
@@ -691,7 +691,7 @@ form.busy span.spinner:after {
    ========================================================================== */
 body {
   position: relative;
-  padding: 4em 2em 1em;
+  padding: 5em 2em 1em;
   min-width: 71.3846153846154em;
   color: #333333;
   background: white;
@@ -714,8 +714,8 @@ body {
   padding: 0 2em;
   height: 3em;
   min-width: 71.3846153846154em;
-  -webkit-box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0.231em 0.385em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.231em 0.385em rgba(0, 0, 0, 0.2);
   border-top: 1px solid #fabc2b;
   border-bottom: 1px solid #eca706;
   background-color: #ffda44;
@@ -857,8 +857,8 @@ body {
   background: #fff6d3;
   -moz-border-radius: 0 0.385em 0.385em 0.385em;
   border-radius: 0 0.385em 0.385em 0.385em;
-  -webkit-box-shadow: 0.154em 0.154em 0.154em rgba(0, 0, 0, 0.2);
-  box-shadow: 0.154em 0.154em 0.154em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 0.615em rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0.615em rgba(0, 0, 0, 0.35);
 }
 .dropdown-menu li {
   border: 0;
@@ -1253,14 +1253,14 @@ table#edit.edit-pane td.cell-label {
   border-radius: 0.385em;
   padding: 4px;
   background: #fff;
-  -webkit-box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 0.615em rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0.615em rgba(0, 0, 0, 0.35);
 }
 
 #page-image a img:hover {
   border: solid 1px #0066ff;
-  -webkit-box-shadow: 0 0.077em 0.154em rgba(0, 102, 255, 0.4);
-  box-shadow: 0 0.077em 0.154em rgba(0, 102, 255, 0.4);
+  -webkit-box-shadow: 0 0 0.615em rgba(0, 102, 255, 0.4);
+  box-shadow: 0 0 0.615em rgba(0, 102, 255, 0.4);
 }
 
 /* fix for inconsistent structure */
@@ -1932,7 +1932,7 @@ div.plugin-help {
    ========================================================================== */
 @media only screen and (max-width: 545px) {
   body {
-    padding-top: 6em;
+    padding-top: 7.23076923076923em;
   }
 
   #page-login,
@@ -1954,8 +1954,8 @@ div.plugin-help {
     border-top: 1px solid #fffbed;
     padding: .53846153846154em 1em;
     background: #fff6d3;
-    -webkit-box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0.231em 0.385em rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.231em 0.385em rgba(0, 0, 0, 0.2);
   }
 
   table#edit.edit-pane {
