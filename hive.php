@@ -160,6 +160,11 @@ class hive_theme extends theme
                         $(this).parent().remove();
                     });
 				});
+                $(document).keyup(function(e) {
+                    if (e.keyCode == 27) {
+                        $(".close").parent().remove();
+                    }
+                });
 EOS;
 		}
 		if ($async) {

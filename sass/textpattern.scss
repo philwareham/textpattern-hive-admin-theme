@@ -157,16 +157,23 @@ hr {
 
 /* alert boxes */
 #messagepane {
-    margin: 1em auto;
+    position: fixed;
+    bottom: -1em;
+    right: 0;
+    left: 0;
+    z-index: 10005;
     text-align: center;
     span {
         position: relative;
         @include inline-block;
-        @include border-radius;
+        @include border-radius($border-radius $border-radius 0 0);
+        margin: 1em auto;
         border: 1px solid;
+        border-bottom: 0;
         padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
         max-width: 40em; // 520px / 13px
         @include text-shadow-light;
+        @include box-shadow($shadow: 0 -.07692307692308em .15384615384615em rgba(#000, .2));
         &.success {
             color: $success-text;
             background: $success-background;

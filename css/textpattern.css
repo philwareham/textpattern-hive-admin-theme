@@ -171,7 +171,11 @@ hr {
 
 /* alert boxes */
 #messagepane {
-  margin: 1em auto;
+  position: fixed;
+  bottom: -1em;
+  right: 0;
+  left: 0;
+  z-index: 10005;
   text-align: center;
 }
 #messagepane span {
@@ -181,12 +185,16 @@ hr {
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  -moz-border-radius: 0.385em;
-  border-radius: 0.385em;
+  -moz-border-radius: 0.385em 0.385em 0 0;
+  border-radius: 0.385em 0.385em 0 0;
+  margin: 1em auto;
   border: 1px solid;
+  border-bottom: 0;
   padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
   max-width: 40em;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: 0 -0.077em 0.154em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -0.077em 0.154em rgba(0, 0, 0, 0.2);
 }
 #messagepane span.success {
   color: #238c23;
