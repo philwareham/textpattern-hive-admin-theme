@@ -257,7 +257,9 @@ body {
     }
     > tr, #edit td.column {
         display: block;
+        margin: 0 auto;
         width: 100%;
+        max-width: 40em; // 520px / 13px
     }
     #edit td.column:last-child {
         width: 100%;

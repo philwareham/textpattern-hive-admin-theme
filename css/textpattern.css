@@ -1873,7 +1873,9 @@ div.plugin-help {
   #page-css > tr,
   #page-css #edit td.column {
     display: block;
+    margin: 0 auto;
     width: 100%;
+    max-width: 40em;
   }
   #page-page #edit td.column:last-child,
   #page-form #edit td.column:last-child,
