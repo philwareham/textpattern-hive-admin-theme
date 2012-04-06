@@ -358,11 +358,11 @@ body {
     @include box-shadow;
 }
 
-table#edit.edit-pane > tbody > tr {
+table#edit.edit-pane {
     width: 100%;
     border-top-width: 1em;
     border-bottom: 0;
-    > td {
+    > tbody > tr > td {
         display: block;
         padding: 0 1em;
         &.cell-label {
@@ -387,6 +387,15 @@ table#edit.edit-pane > tbody > tr {
 #page-css {
     textarea.code {
         height: 17.4615384615385em; // 227px / 13px
+    }
+}
+
+/* Add some margin above upload submit in case it wraps */
+.upload-form,
+#image-replace,
+#thumbnail-upload {
+    input[type="submit"] {
+        margin-top: 1em;
     }
 }
 

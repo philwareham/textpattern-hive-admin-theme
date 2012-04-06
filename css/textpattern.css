@@ -1950,7 +1950,7 @@ div.plugin-help {
     box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
   }
 
-  table#edit.edit-pane > tbody > tr {
+  table#edit.edit-pane {
     width: 100%;
     border-top-width: 1em;
     border-bottom: 0;
@@ -1978,6 +1978,13 @@ div.plugin-help {
   #page-form textarea.code,
   #page-css textarea.code {
     height: 17.4615384615385em;
+  }
+
+  /* Add some margin above upload submit in case it wraps */
+  .upload-form input[type="submit"],
+  #image-replace input[type="submit"],
+  #thumbnail-upload input[type="submit"] {
+    margin-top: 1em;
   }
 
   div.plugin-help {
