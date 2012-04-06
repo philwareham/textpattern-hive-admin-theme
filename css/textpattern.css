@@ -1584,9 +1584,9 @@ td:nth-child(2).install-item strong {
 
 #change_password input[type="checkbox"] {
   float: left;
-  margin-top: .61538461538462em;
 }
 #change_password label[for="mail_password"] {
+  margin: 0 0 1em;
   width: 90%;
 }
 
@@ -1920,9 +1920,9 @@ div.plugin-help {
   }
 }
 /* =============================================================================
-   ADDITIONAL LAYOUT FOR DEVICES < 550px
+   ADDITIONAL LAYOUT FOR DEVICES < 546px
    ========================================================================== */
-@media only screen and (max-width: 549px) {
+@media only screen and (max-width: 545px) {
   body {
     padding-top: 6em;
   }

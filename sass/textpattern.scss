@@ -1412,10 +1412,10 @@ td:nth-child(2).install-item {
 #change_password {
     input[type="checkbox"] {
         float: left;
-        margin-top: .61538461538462em;
     }
     label[for="mail_password"] {
-            width: 90%;
+        margin: 0 0 1em;
+        width: 90%;
     }
 }
 
