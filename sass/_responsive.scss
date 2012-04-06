@@ -358,8 +358,7 @@ body {
     @include box-shadow;
 }
 
-table#edit.edit-pane,
-table#list.edit-pane  {
+table#edit.edit-pane {
     width: 100%;
     border-top-width: 1em;
     border-bottom: 0;

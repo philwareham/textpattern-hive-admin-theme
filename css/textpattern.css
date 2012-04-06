@@ -925,24 +925,20 @@ table#edit {
   margin-left: .38461538461538em;
 }
 
-table#edit.edit-pane,
-table#list.edit-pane {
+table#edit.edit-pane {
   margin-bottom: 1em;
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
   width: 40em;
   background: #f7f7f7;
 }
-table#edit.edit-pane h2,
-table#list.edit-pane h2 {
+table#edit.edit-pane h2 {
   margin: 0;
 }
-table#edit.edit-pane td,
-table#list.edit-pane td {
+table#edit.edit-pane td {
   padding: .5em 1em;
 }
-table#edit.edit-pane td.cell-label,
-table#list.edit-pane td.cell-label {
+table#edit.edit-pane td.cell-label {
   width: 37%;
 }
 
@@ -1956,23 +1952,19 @@ div.plugin-help {
     box-shadow: 0 0.077em 0.154em rgba(0, 0, 0, 0.2);
   }
 
-  table#edit.edit-pane,
-  table#list.edit-pane {
+  table#edit.edit-pane {
     width: 100%;
     border-top-width: 1em;
     border-bottom: 0;
   }
-  table#edit.edit-pane td,
-  table#list.edit-pane td {
+  table#edit.edit-pane td {
     display: block;
     padding: 0 1em;
   }
-  table#edit.edit-pane td.cell-label,
-  table#list.edit-pane td.cell-label {
+  table#edit.edit-pane td.cell-label {
     width: auto;
   }
-  table#edit.edit-pane td:last-child,
-  table#list.edit-pane td:last-child {
+  table#edit.edit-pane td:last-child {
     padding-bottom: 1em;
   }
 
