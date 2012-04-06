@@ -355,7 +355,7 @@ body {
     border-top: 1px solid lighten($color-highlight-box, 5%);
     padding: .53846153846154em 1em;
     background: $color-highlight-box;
-    @include box-shadow(0 .23076923076923em .38461538461538em rgba(#000, .2));
+    @include box-shadow( 0 .15384615384615em .0.23076923076923em rgba(#000, .15));
 }
 
 table#edit.edit-pane {
