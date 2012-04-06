@@ -64,15 +64,15 @@ class hive_theme extends theme
             $out[] = '<ul class="data-dropdown">';
             foreach ($this->menu as $tab)
             {
-                $class = ($tab['active']) ? ' active' : ' inactive';
-                $out[] = "<li class='dropdown{$class}'><a class='dropdown-toggle' href='?event={$tab['event']}'>{$tab['label']}</a>";
+                $class = ($tab['active']) ? 'active' : 'inactive';
+                $out[] = '<li class="dropdown '.$class.'"><a class="dropdown-toggle" href="?event='.$tab["event"].'">'.$tab["label"].'</a>';
                 if (!empty($tab['items']))
                 {
                     $out[] = '<ul class="dropdown-menu">';
                     foreach ($tab['items'] as $item)
                     {
                         $class = ($item['active']) ? 'active' : 'inactive';
-                        $out[] = "<li class='{$class}'><a href='?event={$item['event']}'>{$item['label']}</a></li>";
+                        $out[] = '<li class="'.$class.'"><a href="?event='.$item["event"].'">'.$item["label"].'</a></li>';
                     }
                     $out[] = '</ul>';
                 }
@@ -84,13 +84,13 @@ class hive_theme extends theme
             $out[] = '<select>';
             foreach ($this->menu as $tab)
             {
-                $out[] = "<optgroup label='{$tab['label']}'>";
+                $out[] = '<optgroup label="'.$tab['label'].'">';
                 if (!empty($tab['items']))
                 {
                     foreach ($tab['items'] as $item)
                     {
                         $select = ($item['active']) ? ' selected="selected"' : '';
-                        $out[] = "<option value='?event={$item['event']}'{$select}>{$item['label']}</option>";
+                        $out[] = '<option value="?event='.$item["event"].'"'.$select.'>'.$item["label"].'</option>';
                     }
                 }
                 $out[] = '</optgroup>';
@@ -150,7 +150,7 @@ class hive_theme extends theme
 			$html = ''; // TODO: Say what?
 			$js = 'window.alert("'.escape_js(strip_tags($thing[0])).'")';
 		} else {
-			$html = "<span id='message' class='$class'>".gTxt($thing[0]).' <a class="close">&times;</a></span>';
+			$html = '<span id="message" class="'.$class.'">'.gTxt($thing[0]).' <a class="close">&times;</a></span>';
 			// Try to inject $html into the message pane no matter when _announce()'s output is printed
 			$js = escape_js($html);
 			$js = <<< EOS
