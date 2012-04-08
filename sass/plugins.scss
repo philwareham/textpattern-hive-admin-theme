@@ -1,0 +1,21 @@
+// note: this file is for use with Sass - http://sass-lang.com, don't use it as your live site stylesheet!
+
+// import Sass partials
+@import "variables", "mixins";
+
+
+
+
+/* =============================================================================
+   rah plugins
+   ========================================================================== */
+
+.rah_ui_container {
+    width: auto !important;
+}
+
+// TO DO
+// .rah_ui_nav (wraps the panel's sub-menu)
+// .rah_ui_step (auto-hidden action selector under table#list)
+// .rah_ui_view_limit (lists list view limits)
+// .rah_ui_pages (lists page numbers as a list)
