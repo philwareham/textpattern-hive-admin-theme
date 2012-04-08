@@ -68,7 +68,7 @@ body {
     tr {
         display: block;
         margin: 0 auto;
-        max-width: 40em; // 520px / 13px
+        max-width: $standard-column;
     }
     td {
         width: 100%;
@@ -97,7 +97,7 @@ body {
 #article-tabs {
     width: 100%;
     margin: 0 auto;
-    max-width: 40em;
+    max-width: $standard-column;
 }
 
 #article-col-2 {
@@ -259,7 +259,7 @@ body {
         display: block;
         margin: 0 auto;
         width: 100%;
-        max-width: 40em; // 520px / 13px
+        max-width: $standard-column;
     }
     #edit td.column:last-child {
         width: 100%;

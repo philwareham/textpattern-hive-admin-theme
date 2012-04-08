@@ -20,9 +20,9 @@ $font-mono:             Cousine, Menlo, Consolas, "Lucida Console", "Bitstream V
 
 // typography grid
 
-$basefont:              .8125em;           // 13px / 16px
-$baseline:              1.38461538461538;  // 18px / 13px
-$smallfont:             .84615384615385em; // 11px / 13px
+$basefont:              .8125em;            // 13px / 16px
+$baseline:              1.38461538461538;   // 18px / 13px
+$smallfont:             .84615384615385em;  // 11px / 13px
 
 // text colours
 
@@ -31,6 +31,10 @@ $color-text-inverse:    #fff;
 $color-text-footnote:   #888;
 $color-link:            #114eb1;
 $color-link-hover:      #06f;
+
+// layout
+
+$standard-column:       40em;               // 520px / 13px
 
 // borders
 

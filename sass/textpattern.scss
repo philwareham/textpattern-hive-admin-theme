@@ -171,7 +171,7 @@ hr {
         border: 1px solid;
         border-bottom: 0;
         padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
-        max-width: 40em; // 520px / 13px
+        max-width: $standard-column;
         @include text-shadow-light;
         @include box-shadow;
         &.success {
@@ -752,7 +752,7 @@ table#edit.edit-pane {
     margin-bottom: 1em;
     border-top: .5em solid $color-background-box;
     border-bottom: .5em solid $color-background-box;
-    width: 40em; // 520px / 13px
+    width: $standard-column;
     background: $color-background-box;
     h2 {
         margin: 0;
@@ -1468,7 +1468,7 @@ div.code {
 
 div.plugin-help {
     margin: 0 auto;
-    width: 40em; // 520px / 13px
+    width: $standard-column;
 }
 
 
@@ -1477,7 +1477,7 @@ div.plugin-help {
    ========================================================================== */
 
 #page-import #edit {
-    width: 40em; // 546px / 13px
+    width: $standard-column;
     margin-bottom: 1em;
     border-top: .5em solid $color-background-box;
     border-bottom: .5em solid $color-background-box;
