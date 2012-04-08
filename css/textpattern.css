@@ -1007,7 +1007,7 @@ table#edit.edit-pane td.cell-label {
 
 /* tagbuilder popup */
 #tag-event {
-  padding: 2.5em .5em 0;
+  padding: 2.5em .5em 1em;
 }
 #tag-event h3 {
   position: fixed;
@@ -1041,8 +1041,7 @@ table#edit.edit-pane td.cell-label {
   width: 50%;
 }
 #tag-event p {
-  padding-right: .5em;
-  padding-left: .5em;
+  margin: .5em;
 }
 
 #tagbuilder-output textarea {

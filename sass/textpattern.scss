@@ -821,7 +821,7 @@ table#edit.edit-pane {
 /* tagbuilder popup */
 
 #tag-event {
-    padding: 2.5em .5em 0;
+    padding: 2.5em .5em 1em;
     h3 {
         position: fixed;
         top: 0;
@@ -837,8 +837,7 @@ table#edit.edit-pane {
         width: 50%;
     }
     p {
-        padding-right: .5em;
-        padding-left: .5em;
+        margin: .5em;
     }
 }
 
