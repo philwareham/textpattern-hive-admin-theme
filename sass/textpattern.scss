@@ -158,7 +158,7 @@ hr {
 /* alert boxes */
 #messagepane {
     position: fixed;
-    bottom: -1em;
+    bottom: 0;
     right: 0;
     left: 0;
     z-index: 20000;
@@ -167,7 +167,7 @@ hr {
         position: relative;
         @include inline-block;
         @include border-radius($border-radius $border-radius 0 0);
-        margin: 1em auto;
+        margin: 0 auto;
         border: 1px solid;
         border-bottom: 0;
         padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
@@ -526,7 +526,7 @@ form.busy {
 
 body {
     position: relative;
-    padding: 5em 2em 1em;
+    padding: 5em 2em 0;
     min-width: 71.3846153846154em; // 928px + (13px x 4) = 980px
     color: $color-text;
     background: $color-background;
