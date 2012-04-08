@@ -965,6 +965,11 @@ table#edit.edit-pane td.cell-label {
   margin-bottom: .38461538461538em;
 }
 
+.restricted-area {
+  font-size: 2em;
+  text-align: center;
+}
+
 /* list navigators on list pages */
 .txp-navigation {
   margin-bottom: .5em;
@@ -1002,17 +1007,47 @@ table#edit.edit-pane td.cell-label {
 
 /* tagbuilder popup */
 #tag-event {
-  background: #fff;
-  width: auto;
-  padding: 1em;
+  padding: 2.5em .5em 0;
+}
+#tag-event h3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  padding: .5em 1em;
+  -webkit-box-shadow: 0 0.154em 0.231em rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.154em 0.231em rgba(0, 0, 0, 0.15);
+  border-top: 1px solid #fabc2b;
+  border-bottom: 1px solid #e2a005;
+  background-color: #ffda44;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ffda44), to(#fabc2b));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffda44), to(#fabc2b));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#ffda44, #fabc2b);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#ffda44, #fabc2b);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#ffda44, #fabc2b);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#ffda44, #fabc2b);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#ffda44, #fabc2b);
 }
 #tag-event th, #tag-event td {
   padding: .5em;
+  width: 50%;
+}
+#tag-event p {
+  padding-right: .5em;
+  padding-left: .5em;
 }
 
-.restricted-area {
-  font-size: 2em;
-  text-align: center;
+#tagbuilder-output textarea {
+  width: 100% !important;
+  height: 7em !important;
 }
 
 /* =============================================================================
@@ -1554,17 +1589,16 @@ td:nth-child(2).install-item strong {
   margin: 0 auto;
 }
 #prefs_control form {
-  text-align: left !important;
+  text-align: left;
 }
 
 /* fixes for poor HTML structure on Prefrences pages */
 #language_control {
   margin-top: 1em;
-  text-align: left !important;
+  text-align: left;
 }
 
 .lang-msg {
-  margin: 1em auto !important;
   max-width: 110em;
 }
 

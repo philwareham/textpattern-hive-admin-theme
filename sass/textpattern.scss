@@ -777,6 +777,11 @@ table#edit.edit-pane {
     }
 }
 
+.restricted-area {
+    font-size: 2em; // 26px / 13px
+    text-align: center;
+}
+
 /* list navigators on list pages */
 .txp-navigation {
     @extend .clearfix;
@@ -816,17 +821,30 @@ table#edit.edit-pane {
 /* tagbuilder popup */
 
 #tag-event {
-    background: #fff;
-    width: auto;
-    padding: 1em;
+    padding: 2.5em .5em 0;
+    h3 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        padding: .5em 1em;
+        @include box-shadow(0 .15384615384615em .23076923076923em rgba(#000, .15));
+        @include gradient-bar(#ffda44, #fabc2b);
+    }
     th, td {
         padding: .5em;
+        width: 50%;
+    }
+    p {
+        padding-right: .5em;
+        padding-left: .5em;
     }
 }
 
-.restricted-area {
-    font-size: 2em; // 26px / 13px
-    text-align: center;
+#tagbuilder-output textarea {
+    width: 100% !important; // override inline CSS
+    height: 7em !important;  // override inline CSS
 }
 
 
@@ -1377,7 +1395,7 @@ td:nth-child(2).install-item {
     max-width: 110em;
     margin: 0 auto;
     form {
-        text-align: left !important; // override inline CSS
+        text-align: left;
     }
 }
 
@@ -1385,11 +1403,10 @@ td:nth-child(2).install-item {
 
 #language_control {
     margin-top: 1em;
-    text-align: left !important; // override inline CSS
+    text-align: left;
 }
 
 .lang-msg {
-    margin: 1em auto !important; // override inline CSS
     max-width: 110em;
 }
 
