@@ -175,11 +175,11 @@ hr {
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 20000;
   text-align: center;
 }
 #messagepane span {
   position: relative;
+  z-index: 20000;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -698,6 +698,8 @@ body {
 }
 
 .txp-container {
+  position: relative;
+  z-index: 1;
   max-width: 110em;
   margin: 0 auto;
 }
@@ -914,6 +916,11 @@ body {
 /* =============================================================================
    Footer
    ========================================================================== */
+#txp-foot {
+  position: relative;
+  z-index: 1;
+}
+
 .mothership {
   float: left;
 }
