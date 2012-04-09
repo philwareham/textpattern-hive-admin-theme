@@ -316,8 +316,8 @@ legend {
     @include gradient-bar;
     @include box-sizing;
     /* IE7 box-sizing workaround */
-    *padding-right: 0;
-    *padding-left: 0;
+    *margin-left: -1.53846153846154em;
+    *padding: 0;
 }
 
 input[type="radio"],
