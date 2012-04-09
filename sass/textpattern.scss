@@ -304,10 +304,9 @@ fieldset > * {
 legend {
     position: absolute;
     top: 0;
-    right: 0;
-    left: 0;
     margin: 0;
     padding: 0 1em;
+    width: 100%;
     font-weight: bold;
     line-height: 2em;
     @include text-shadow-light;
@@ -317,6 +316,9 @@ legend {
     /* corrects alignment displayed oddly in IE7 */
     *margin-right: 7px;
     *margin-left: -7px;
+    *right: 0;
+    *left: 0;
+    *width: auto;
 }
 
 input[type="radio"],
