@@ -1240,26 +1240,22 @@ table#edit.edit-pane td.cell-label {
   display: none;
 }
 
-#more_group .date .label,
-#more_group .time .label {
+#more_group {
+  border: 1px solid #e3e3e3;
+  border-top: 0;
+  background: #f7f7f7;
+}
+#more_group .date .label, #more_group .time .label {
   display: block;
 }
-
-#more_group .date input,
-#more_group .time input {
-  width: 2.4em;
+#more_group .date input, #more_group .time input {
+  width: 2.30769230769231em;
 }
-
-#more_group .date input.year,
-#more_group .time input.hour,
-#more_group .date input.exp_year,
-#more_group .time input.exp_hour {
-  margin-left: -8px;
+#more_group .date input.year, #more_group .time input.hour, #more_group .date input.exp_year, #more_group .time input.exp_hour {
+  margin-left: -0.615em;
 }
-
-#more_group .date input.year,
-#more_group .date input.exp_year {
-  width: 3.5em;
+#more_group .date input.year, #more_group .date input.exp_year {
+  width: 3.30769230769231em;
 }
 
 .recent {
