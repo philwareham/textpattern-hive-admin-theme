@@ -209,13 +209,13 @@ legend {
     /* 2 */
     white-space: normal;
     /* 3 */
+    *margin-right: 7px;
     *margin-left: -7px;
 }
 
 /* added via JS to <textarea> and class="input_full" (applies only to IE7, other browsers don't need it) */
 .input_full_wrap {
     display: block;
-    padding-right: 8px;
 }
 
 button,
@@ -291,8 +291,8 @@ input[type="text"] {
     *padding-right: 0;
     *padding-left: 0;
     /* IE7 vertical alignment fix */
-    *padding-top: 2px;
-    *padding-bottom: 1px;
+    *padding-top: 1px;
+    *padding-bottom: 4px;
     *height: auto;
 }
 
@@ -401,6 +401,8 @@ input[type="radio"] {
     @include box-sizing;
     *height: 1em;
     *width: 1em;
+    *position: relative;
+    *top: -3px;
 }
 
 /* suppress red glow that Firefox adds to form fields by default, even when user is still typing

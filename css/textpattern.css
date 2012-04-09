@@ -331,6 +331,8 @@ fieldset {
   border-top: 0;
   padding: 2.07692307692308em 0 0 0;
   background: #f7f7f7;
+  /* corrects padding inconsistency in IE7 */
+  *padding-top: 3em;
 }
 
 fieldset > * {
@@ -338,14 +340,11 @@ fieldset > * {
   margin-left: 1em;
 }
 
-fieldset > legend {
+legend {
   position: absolute;
   top: 0;
-}
-
-legend {
-  display: block;
-  width: 100%;
+  right: 0;
+  left: 0;
   margin: 0;
   padding: 0 1em;
   font-weight: bold;
@@ -373,9 +372,9 @@ legend {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  /* IE7 box-sizing workaround */
-  *margin-left: -1.538em;
-  *padding: 0;
+  /* corrects alignment displayed oddly in IE7 */
+  *margin-right: 7px;
+  *margin-left: -7px;
 }
 
 input[type="radio"],
