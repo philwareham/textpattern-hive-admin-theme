@@ -228,8 +228,7 @@ input[type="button"],
 a.navlink,
 a.navlink-active,
 .navlink a,
-.navlink-active a,
-#insert-link {
+.navlink-active a {
     -webkit-appearance: none;
     @include border-radius;
     @include background-clip;

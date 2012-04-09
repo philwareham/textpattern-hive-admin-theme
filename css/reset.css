@@ -210,8 +210,7 @@ input[type="button"],
 a.navlink,
 a.navlink-active,
 .navlink a,
-.navlink-active a,
-#insert-link {
+.navlink-active a {
   -webkit-appearance: none;
   -moz-border-radius: 0.385em;
   border-radius: 0.385em;
@@ -271,8 +270,7 @@ input[type="button"]:hover,
 a.navlink:hover,
 a.navlink-active:hover,
 .navlink a:hover,
-.navlink-active a:hover,
-#insert-link:hover {
+.navlink-active a:hover {
   color: #333333;
   text-decoration: none;
   background-color: #f8f8f8;
@@ -301,8 +299,7 @@ input[type="button"]:active,
 a.navlink:active,
 a.navlink-active:active,
 .navlink a:active,
-.navlink-active a:active,
-#insert-link:active {
+.navlink-active a:active {
   background-color: #c5c5c5;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#c5c5c5), to(#f8f8f8));
