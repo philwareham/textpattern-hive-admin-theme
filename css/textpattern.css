@@ -233,41 +233,6 @@ hr {
 /* =============================================================================
    Twistees
    ========================================================================== */
-legend {
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 1px 1em 0;
-  font-weight: bold;
-  line-height: 2em;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
-  -webkit-box-shadow: 0 1px 0 0 inset rgba(255, 255, 255, 0.25);
-  box-shadow: 0 1px 0 0 inset rgba(255, 255, 255, 0.25);
-  border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #bebebe;
-  background-color: #eeeeee;
-  /* Konqueror */
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
-  /* Safari4+, Chrome */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
-  /* Safari5.1+, Chrome10+ */
-  background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
-  /* Firefox3.6 */
-  background-image: -moz-linear-gradient(#eeeeee, #dddddd);
-  /* IE10 */
-  background-image: -ms-linear-gradient(#eeeeee, #dddddd);
-  /* Opera11.10+ */
-  background-image: -o-linear-gradient(#eeeeee, #dddddd);
-  /* CSS3 Compliant */
-  background-image: linear-gradient(#eeeeee, #dddddd);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  /* IE7 box-sizing workaround */
-  *padding-right: 0;
-  *padding-left: 0;
-}
-
 .lever {
   font-weight: bold;
   margin: 0;
@@ -361,9 +326,10 @@ legend {
    ========================================================================== */
 fieldset {
   position: relative;
-  margin: -1em 0 1em 0;
+  margin: 0 0 1em 0;
   border: 1px solid #e3e3e3;
-  padding: 1em 0 0 0;
+  border-top: 0;
+  padding: 2.07692307692308em 0 0 0;
   background: #f7f7f7;
 }
 
@@ -373,10 +339,43 @@ fieldset > * {
 }
 
 fieldset > legend {
-  position: relative;
-  top: 1em;
-  margin-right: 0;
-  margin-left: 0;
+  position: absolute;
+  top: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 1px 1em 0;
+  font-weight: bold;
+  line-height: 2em;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: 0 1px 0 0 inset rgba(255, 255, 255, 0.25);
+  box-shadow: 0 1px 0 0 inset rgba(255, 255, 255, 0.25);
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #bebebe;
+  background-color: #eeeeee;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#eeeeee, #dddddd);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#eeeeee, #dddddd);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#eeeeee, #dddddd);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#eeeeee, #dddddd);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* IE7 box-sizing workaround */
+  *padding-right: 0;
+  *padding-left: 0;
 }
 
 input[type="radio"],

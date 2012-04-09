@@ -215,22 +215,6 @@ hr {
    Twistees
    ========================================================================== */
 
-legend {
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 1px 1em 0;
-    font-weight: bold;
-    line-height: 2em;
-    @include text-shadow-light;
-    @include box-shadow(0 1px 0 0 inset rgba(#fff, .25));
-    @include gradient-bar;
-    @include box-sizing;
-    /* IE7 box-sizing workaround */
-    *padding-right: 0;
-    *padding-left: 0;
-}
-
 .lever {
     font-weight: bold;
     margin: 0;
@@ -303,9 +287,10 @@ legend {
 
 fieldset {
     position: relative;
-    margin: -1em 0 1em 0;
+    margin: 0 0 1em 0;
     border: 1px solid lighten($color-border, 9%);
-    padding: 1em 0 0 0;
+    border-top: 0;
+    padding: 2.07692307692308em 0 0 0;
     background: $color-background-box;
 }
 
@@ -315,10 +300,24 @@ fieldset > * {
 }
 
 fieldset > legend {
-    position: relative;
-    top: 1em;
-    margin-right: 0;
-    margin-left: 0;
+    position: absolute;
+    top: 0;
+}
+
+legend {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 1px 1em 0;
+    font-weight: bold;
+    line-height: 2em;
+    @include text-shadow-light;
+    @include box-shadow(0 1px 0 0 inset rgba(#fff, .25));
+    @include gradient-bar;
+    @include box-sizing;
+    /* IE7 box-sizing workaround */
+    *padding-right: 0;
+    *padding-left: 0;
 }
 
 input[type="radio"],
