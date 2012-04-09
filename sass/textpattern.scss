@@ -935,12 +935,15 @@ table#edit.edit-pane {
     }
     .text {
         @include svg-graphic(view-text, png, 1.69230769230769em, 1.69230769230769em);
+        background-position: 0 0;
     }
     .html {
         @include svg-graphic(view-html, png, 1.69230769230769em, 1.69230769230769em);
+        background-position: 0 0;
     }
     .preview {
         @include svg-graphic(view-preview, png, 1.69230769230769em, 1.69230769230769em);
+        background-position: 0 0;
     }
 }
 
