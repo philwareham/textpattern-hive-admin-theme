@@ -389,13 +389,12 @@ form.busy {
             background-image: none;
         }
     }
-    span.spinner:after {
-        content: "";
+    span.spinner {
         @include inline-block;
-        width: 16px;
-        height: 16px;
+        width: 15px;
+        height: 15px;
         margin-left: .5em;
-        @include hires-graphic(spinner, gif, 16px, 16px);
+        @include hires-graphic(spinner, gif, 15px, 15px);
     }
 }
 
