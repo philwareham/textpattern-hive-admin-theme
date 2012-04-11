@@ -15,7 +15,7 @@
     <!--[if lt IE 9]><script type="text/javascript" src="../js/selectivizr.min.js"></script><![endif]-->
     <script type="text/javascript" src="../js/scripts.js"></script>
 </head>
-<body id="page-article" class="content">
+<body id="page-article" class="content busy">
 
     <div id="txp-head">
         <h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
@@ -105,7 +105,7 @@
 
     <div id="article_container" class="txp-container txp-edit">
 
-        <form id="article_form" name="article_form" method="post" action="index.php">
+        <form id="article_form" name="article_form" method="post" action="index.php" class="async busy">
             <table cellpadding="3" cellspacing="0" border="0" id="edit" align="center">
                 <tr>
 
@@ -347,7 +347,7 @@
 
                                 </div>
                             </div>
-                            <p id="write-publish"><input type="submit" value="Publish" name="publish" class="publish" tabindex="4" /></p>
+                            <p id="write-publish"><input type="submit" value="Publish" name="publish" class="publish" tabindex="4" disabled="disabled" /><span class="spinner"></span></p>
                         </div>
 
                     </td>
