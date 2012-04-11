@@ -210,6 +210,35 @@ hr {
     }
 }
 
+/* flash the alert */
+@-webkit-keyframes messageflash {
+    0%, 50%, 100% {opacity: 1;}	
+    25%, 75% {opacity: .5;}
+}
+@-moz-keyframes messageflash {
+    0%, 50%, 100% {opacity: 1;}	
+    25%, 75% {opacity: .5;}
+}
+@-ms-keyframes messageflash {
+    0%, 50%, 100% {opacity: 1;}	
+    25%, 75% {opacity: .5;}
+}
+@-o-keyframes messageflash {
+    0%, 50%, 100% {opacity: 1;}	
+    25%, 75% {opacity: .5;}
+}
+@keyframes messageflash {
+    0%, 50%, 100% {opacity: 1;}	
+    25%, 75% {opacity: .5;}
+}
+.messageflash {
+    -webkit-animation: messageflash 1s;
+       -moz-animation: messageflash 1s;
+        -ms-animation: messageflash 1s;
+         -o-animation: messageflash 1s;
+            animation: messageflash 1s;
+}
+
 
 /* =============================================================================
    Twistees
