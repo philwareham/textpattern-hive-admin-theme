@@ -537,22 +537,20 @@ form.busy input[type='submit']:hover, form.busy input[type='submit']:active {
 }
 form.busy span.spinner:after {
   content: "";
-  position: relative;
-  top: .61538461538462em;
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   margin-left: .5em;
   background-image: url("../img/spinner.gif");
 }
 @media (-webkit-min-device-pixel-ratio: 2) {
   form.busy span.spinner:after {
     background-image: url("../img/retina/spinner@2x.gif") !important;
-    -webkit-background-size: 24px 24px;
+    -webkit-background-size: 16px 16px;
   }
 }
 

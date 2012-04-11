@@ -391,13 +391,11 @@ form.busy {
     }
     span.spinner:after {
         content: "";
-        position: relative;
-        top: .61538461538462em;
         @include inline-block;
-        width: 24px;
-        height: 24px;
+        width: 16px;
+        height: 16px;
         margin-left: .5em;
-        @include hires-graphic(spinner, gif, 24px, 24px);
+        @include hires-graphic(spinner, gif, 16px, 16px);
     }
 }
 
