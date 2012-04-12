@@ -478,6 +478,13 @@ input[type="password"] {
   max-width: 16.9230769230769em;
 }
 
+input.year, input.exp_year {
+  width: 3.30769230769231em;
+}
+input.month, input.exp_month, input.day, input.exp_day, input.hour, input.exp_hour, input.minute, input.exp_minute, input.second, input.exp_second {
+  width: 2.30769230769231em;
+}
+
 /* =============================================================================
    Specific buttons
    ========================================================================== */
@@ -1333,14 +1340,8 @@ table#edit.edit-pane td.cell-label {
 #more_group .date .label, #more_group .time .label {
   display: block;
 }
-#more_group .date input, #more_group .time input {
-  width: 2.30769230769231em;
-}
 #more_group .date input.year, #more_group .time input.hour, #more_group .date input.exp_year, #more_group .time input.exp_hour {
   margin-left: -0.615em;
-}
-#more_group .date input.year, #more_group .date input.exp_year {
-  width: 3.30769230769231em;
 }
 
 #more {
@@ -1444,18 +1445,6 @@ table#edit.edit-pane #thumbnail_alter td {
 /* =============================================================================
    Content -> Files page
    ========================================================================== */
-#page-file .year {
-  width: 3.38461538461538em;
-}
-
-#page-file .month,
-#page-file .day,
-#page-file .hour,
-#page-file .minute,
-#page-file .second {
-  width: 2.46153846153846em;
-}
-
 /* fix for inconsistent structure */
 #page-file table#edit.edit-pane {
   border: 0;

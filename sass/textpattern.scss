@@ -375,6 +375,15 @@ input[type="password"] {
     max-width: 16.9230769230769em; // 220px / 13px
 }
 
+input {
+    &.year, &.exp_year {
+        width: 3.30769230769231em; // 43px / 13px
+    }
+    &.month, &.exp_month, &.day, &.exp_day, &.hour, &.exp_hour, &.minute, &.exp_minute, &.second, &.exp_second {
+        width: 2.30769230769231em; // 30px / 13px
+    }
+}
+
 
 /* =============================================================================
    Specific buttons
@@ -855,7 +864,6 @@ table#edit.edit-pane {
 }
 
 /* tagbuilder popup */
-
 #tag-event {
     padding: 2.5em .5em 1em;
     h3 {
@@ -876,7 +884,6 @@ table#edit.edit-pane {
         margin: .5em;
     }
 }
-
 #tagbuilder-output textarea {
     width: 100% !important; // override inline CSS
     height: 7em !important;  // override inline CSS
@@ -1071,15 +1078,9 @@ table#edit.edit-pane {
         .label {
             display: block;
         }
-        input {
-            width: 2.30769230769231em;
-        }
     }
     .date input.year, .time input.hour, .date input.exp_year, .time input.exp_hour {
         margin-left: -.61538461538462em;
-    }
-    .date input.year, .date input.exp_year {
-        width: 3.30769230769231em;
     }
 }
 
@@ -1186,18 +1187,6 @@ table#edit.edit-pane #thumbnail_alter {
 /* =============================================================================
    Content -> Files page
    ========================================================================== */
-
-#page-file .year {
-    width: 3.38461538461538em; // 44px / 13px
-}
-
-#page-file .month,
-#page-file .day,
-#page-file .hour,
-#page-file .minute,
-#page-file .second {
-    width: 2.46153846153846em; // 32px / 13px
-}
 
 /* fix for inconsistent structure */
 #page-file table#edit.edit-pane {
