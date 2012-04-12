@@ -277,7 +277,7 @@
                 <textarea id="textarea" name="textarea" cols="78" rows="5"></textarea>
             </p>
             <p>
-                <label for="text-lrg">Text (large)</label><br />
+                <label for="text-lrg">Text (large) with pophelp</label>&#160;<a href="#" class="pophelp">?</a><br />
                 <input type="text" id="text-lrg" name="text-lrg" />
             </p>
             <p>
@@ -291,6 +291,18 @@
             <p>
                 <label for="password">Password</label><br />
                 <input type="password" id="password" name="password" />
+            </p>
+            <p>
+                <span class="label">Date</span><br />
+                <input type="text" name="year" value="" size="4" maxlength="4" class="year" title="Year" /> / 
+                <input type="text" name="month" value="" size="2" maxlength="2" class="month" title="Month" /> / 
+                <input type="text" name="day" value="" size="2" maxlength="2" class="day" title="Day" />
+            </p>
+            <p>
+                <span class="label">Time</span><br />
+                <input type="text" name="hour" value="" size="2" maxlength="2" class="hour" title="Hour" /> : 
+                <input type="text" name="minute" value="" size="2" maxlength="2" class="minute" title="Minute" /> : 
+                <input type="text" name="second" value="" size="2" maxlength="2" class="second" title="Second" />
             </p>
             <p>
                 <input type="submit" value="Input - Submit" />
