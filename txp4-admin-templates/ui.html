@@ -363,15 +363,15 @@
             </p>
             <p>
                 <label for="text-lrg">Text (large) with pophelp</label>&#160;<a href="#" class="pophelp">?</a><br />
-                <input type="text" id="text-lrg" name="text-lrg" />
+                <input type="text" id="text-lrg" name="text-lrg" class="input-large" /> <!-- new class added -->
             </p>
             <p>
                 <label for="text-med">Text medium</label><br />
-                <input type="text" id="text-med" name="text-med" />
+                <input type="text" id="text-med" name="text-med" class="input-medium" /> <!-- new class added -->
             </p>
             <p>
                 <label for="text-sml">Text (small)</label><br />
-                <input type="text" id="text-sml" name="text-sml" />
+                <input type="text" id="text-sml" name="text-sml" class="input-small" /> <!-- new class added -->
             </p>
             <p>
                 <label for="password">Password</label><br />
@@ -390,10 +390,11 @@
                 <input type="text" name="second" value="" size="2" maxlength="2" class="second" title="Second" />
             </p>
             <p>
-                <input type="submit" value="Input - Submit" />
-                <input type="button" value="Input - Button" />
-                <input type="reset" value="Input - Reset" />
-                <button>Button tag</button>
+                <input type="submit" value="Input Submit (Primary)" class="publish" />
+                <input type="submit" value="Input Submit" class="smallerboxsp" />
+                <input type="reset" value="Input Reset" class="smallerboxsp" />
+                <input type="button" value="Input Button" class="smallerboxsp" />
+                <button class="smallerboxsp">Button tag</button>
             </p>
             <fieldset>
                 <legend>Fieldset example</legend>
