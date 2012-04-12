@@ -104,6 +104,11 @@
     <div class="txp-container">
 
 
+        <h1>Grids and columns</h1>
+
+        <p>PLACEHOLDER - TO BE DONE</p>
+
+
         <h1>Headings</h1>
 
         <h1>h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 Heading 1 h1</h1>
@@ -255,8 +260,41 @@
         </table>
 
 
+        <h1>Summary/details boxes</h1>
+
+        <div id="configuration_content"><!-- div for demo purposes only -->
+            <div>
+                <h3 class="plain lever expanded"><a href="#summary">Summary lever</a></h3>
+                <div id="summary" class="toggle">
+                    <form action="#">
+                        <p>
+                            <label for="text-lrg">Form element within a details box</label>&#160;<a href="#" class="pophelp">?</a><br />
+                            <input type="text" id="text-lrg" name="text-lrg" />
+                        </p>
+                    </form>
+                    <p>Standard paragraph text within a details box.</p>
+                    <ul>
+                        <li>Unordered list</li>
+                        <li>items within</li>
+                        <li>a details box</li>
+                    </ul>
+                    <ol>
+                        <li>Ordered list</li>
+                        <li>items within</li>
+                        <li>a details box</li>
+                    </ol>
+                    <ul class="plain-list">
+                        <li>Plain (unstyled) list</li>
+                        <li>items within</li>
+                        <li>a details box</li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- div for demo purposes only -->
+
+
         <h1>Forms</h1>
-        <form action="#" method="post" enctype="multipart/form-data" onsubmit="return false">
+        <form action="#">
             <p>
                 <input type="checkbox" id="test_checkbox_1" name="test_checkbox_1" />
                 <label for="test_checkbox_1">Test checkbox 1</label>
@@ -357,6 +395,29 @@
                 <input type="reset" value="Input - Reset" />
                 <button>Button tag</button>
             </p>
+            <fieldset>
+                <legend>Fieldset example</legend>
+                <p>
+                    <label for="text-lrg">Form element within a fieldset</label>&#160;<a href="#" class="pophelp">?</a><br />
+                    <input type="text" id="text-lrg" name="text-lrg" />
+                </p>
+                <p>Standard paragraph text within a fieldset.</p>
+                <ul>
+                    <li>Unordered list</li>
+                    <li>items within</li>
+                    <li>a fieldset</li>
+                </ul>
+                <ol>
+                    <li>Ordered list</li>
+                    <li>items within</li>
+                    <li>a fieldset</li>
+                </ol>
+                <ul class="plain-list">
+                    <li>Plain (unstyled) list</li>
+                    <li>items within</li>
+                    <li>a details box</li>
+                </ul>
+            </fieldset>
         </form>
 
 
