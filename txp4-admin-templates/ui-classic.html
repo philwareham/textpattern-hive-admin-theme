@@ -274,35 +274,33 @@
 
         <h1>Summary/details boxes</h1>
 
-        <div id="configuration_content"><!-- div for demo purposes only -->
-            <div>
-                <h3 class="plain lever expanded"><a href="#summary">Summary lever</a></h3>
-                <div id="summary" class="toggle">
-                    <form action="#">
-                        <p>
-                            <label for="text-lrg">Form element within a details box</label>&#160;<a href="#" class="pophelp">?</a><br />
-                            <input type="text" id="text-lrg" name="text-lrg" />
-                        </p>
-                    </form>
-                    <p>Standard paragraph text within a details box.</p>
-                    <ul>
-                        <li>Unordered list</li>
-                        <li>items within</li>
-                        <li>a details box</li>
-                    </ul>
-                    <ol>
-                        <li>Ordered list</li>
-                        <li>items within</li>
-                        <li>a details box</li>
-                    </ol>
-                    <ul class="plain-list">
-                        <li>Plain (unstyled) list</li>
-                        <li>items within</li>
-                        <li>a details box</li>
-                    </ul>
-                </div>
+        <div class="summary-details">
+            <h3 class="plain lever expanded"><a href="#details">Summary lever</a></h3>
+            <div id="details" class="toggle">
+                <form action="#">
+                    <p>
+                        <label for="text-lrg">Form element within a details box</label>&#160;<a href="#" class="pophelp">?</a><br />
+                        <input type="text" id="text-lrg" name="text-lrg" />
+                    </p>
+                </form>
+                <p>Standard paragraph text within a details box.</p>
+                <ul>
+                    <li>Unordered list</li>
+                    <li>items within</li>
+                    <li>a details box</li>
+                </ul>
+                <ol>
+                    <li>Ordered list</li>
+                    <li>items within</li>
+                    <li>a details box</li>
+                </ol>
+                <ul class="plain-list">
+                    <li>Plain (unstyled) list</li>
+                    <li>items within</li>
+                    <li>a details box</li>
+                </ul>
             </div>
-        </div><!-- div for demo purposes only -->
+        </div>
 
 
         <h1>Forms</h1>
@@ -452,9 +450,9 @@
                     <legend>Fieldset within fieldset</legend>
                     <p>Standard paragraph text within a fieldset.</p>
                 </fieldset>
-                <div>
-                    <h3 class="plain lever expanded"><a href="#summary">Summary/details box within fieldset</a></h3>
-                    <div id="summary" class="toggle">
+                <div class="summary-details">
+                    <h3 class="plain lever expanded"><a href="#details2">Summary/details box within fieldset</a></h3>
+                    <div id="details2" class="toggle">
                         <p>Standard paragraph text within a details box.</p>
                     </div>
                 </div>
