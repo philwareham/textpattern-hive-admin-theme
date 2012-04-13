@@ -63,6 +63,7 @@ a:hover {
    ========================================================================== */
 h1 {
   font-size: 2.30769230769231em;
+  line-height: 1.3;
   margin: 0 0 .43333333333333em;
 }
 
@@ -93,7 +94,7 @@ small,
 }
 
 var {
-  border: 1px solid #ffe996;
+  border: 1px solid #ffe16d;
   padding: 0 .23076923076923em;
   -moz-border-radius: 0.231em;
   border-radius: 0.231em;
@@ -174,6 +175,30 @@ hr {
   color: #c83025;
 }
 
+/* label colours */
+.success,
+.warning,
+.error {
+  padding: 0 .23076923076923em;
+  -moz-border-radius: 0.231em;
+  border-radius: 0.231em;
+}
+
+.success {
+  color: #238c23;
+  background: #dff0d8;
+}
+
+.warning {
+  color: #cb8f02;
+  background: #fff6d3;
+}
+
+.error {
+  color: #9d261d;
+  background: #f2dede;
+}
+
 /* alert boxes */
 #messagepane {
   position: fixed;
@@ -182,7 +207,8 @@ hr {
   left: 0;
   text-align: center;
 }
-#messagepane span {
+
+span#message {
   position: relative;
   z-index: 20000;
   display: -moz-inline-box;
@@ -201,19 +227,13 @@ hr {
   -webkit-box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
 }
-#messagepane span.success {
-  color: #238c23;
-  background: #dff0d8;
+span#message.success {
   border-color: #a3d48e;
 }
-#messagepane span.warning {
-  color: #cb8f02;
-  background: #fff6d3;
-  border-color: #ffe996;
+span#message.warning {
+  border-color: #ffe16d;
 }
-#messagepane span.error {
-  color: #9d261d;
-  background: #f2dede;
+span#message.error {
   border-color: #e1b2b2;
 }
 
@@ -1747,7 +1767,7 @@ div.code {
 
 div.plugin-help {
   margin: 0 auto;
-  width: 40em;
+  max-width: 56em;
 }
 
 /* =============================================================================

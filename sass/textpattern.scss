@@ -49,6 +49,7 @@ a {
 
 h1 {
     font-size: 2.30769230769231em; // 30px / 13px
+    line-height: 1.3; // 39px / 30px
     margin: 0 0 .43333333333333em; // 13px / 30px
 }
 
@@ -160,6 +161,26 @@ hr {
     }
 }
 
+/* label colours */
+.success,
+.warning,
+.error {
+    padding: 0 .23076923076923em;
+    @include border-radius(.23076923076923em); // 3px / 13px
+}
+.success {
+    color: $success-text;
+    background: $success-background;
+}
+.warning {
+    color: $warning-text;
+    background: $warning-background;
+}
+.error {
+    color: $error-text;
+    background: $error-background;
+}
+
 /* alert boxes */
 #messagepane {
     position: fixed;
@@ -167,33 +188,28 @@ hr {
     right: 0;
     left: 0;
     text-align: center;
-    span {
-        position: relative;
-        z-index: 20000;
-        @include inline-block;
-        @include border-radius($border-radius $border-radius 0 0);
-        margin: 0 auto;
-        border: 1px solid;
-        border-bottom: 0;
-        padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
-        max-width: $standard-column;
-        @include text-shadow-light;
-        @include box-shadow;
-        &.success {
-            color: $success-text;
-            background: $success-background;
-            border-color: $success-border;
-        }
-        &.warning {
-            color: $warning-text;
-            background: $warning-background;
-            border-color: $warning-border;
-        }
-        &.error {
-            color: $error-text;
-            background: $error-background;
-            border-color: $error-border;
-        }
+}
+
+span#message {
+    position: relative;
+    z-index: 20000;
+    @include inline-block;
+    @include border-radius($border-radius $border-radius 0 0);
+    margin: 0 auto;
+    border: 1px solid;
+    border-bottom: 0;
+    padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
+    max-width: $standard-column;
+    @include text-shadow-light;
+    @include box-shadow;
+    &.success {
+        border-color: $success-border;
+    }
+    &.warning {
+        border-color: $warning-border;
+    }
+    &.error {
+        border-color: $error-border;
     }
 }
 
@@ -1514,7 +1530,7 @@ div.code {
 
 div.plugin-help {
     margin: 0 auto;
-    width: $standard-column;
+    max-width: 56em; // 728px / 13px
 }
 
 
