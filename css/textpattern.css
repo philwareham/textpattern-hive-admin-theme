@@ -80,7 +80,6 @@ h3 {
   margin: 0 0 .86666666666667em;
 }
 
-h3.lever,
 h4,
 h5,
 h6 {
@@ -337,10 +336,11 @@ span#message.error {
 /* =============================================================================
    Twistees
    ========================================================================== */
-.lever {
+h3.lever {
+  font-size: 1em;
   font-weight: bold;
-  margin: 0;
   line-height: 2em;
+  margin: 0;
   height: 2em;
   overflow: hidden;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
@@ -364,18 +364,17 @@ span#message.error {
   /* CSS3 Compliant */
   background-image: linear-gradient(#eeeeee, #dddddd);
 }
-
-.lever a {
+h3.lever a {
   position: relative;
   display: block;
   color: #333333;
   padding: 0 2em 0 1em;
 }
-.lever a:hover {
+h3.lever a:hover {
   color: #333333;
   text-decoration: none;
 }
-.lever a:after {
+h3.lever a:after {
   position: absolute;
   content: "&#8594;";
   top: .69230769230769em;
@@ -398,20 +397,16 @@ span#message.error {
   white-space: nowrap;
   overflow: hidden;
 }
-.lever a:hover:after {
+h3.lever a:hover:after {
   opacity: 1;
 }
 
-.lever a:hover {
-  text-decoration: none;
-}
-
 /* remove pophelp on levers - inconsistent UI */
-.lever a.pophelp {
+h3.lever a.pophelp {
   display: none;
 }
 
-.lever.expanded a:after {
+h3.lever.expanded a:after {
   content: "&#8595;";
   top: .84615384615385em;
   right: .69230769230769em;

@@ -66,7 +66,6 @@ h3 {
     margin: 0 0 .86666666666667em; // 13px / 15px
 }
 
-h3.lever,
 h4,
 h5,
 h6 {
@@ -270,58 +269,54 @@ span#message {
    Twistees
    ========================================================================== */
 
-.lever {
+h3.lever {
+    font-size: 1em; // 13px
     font-weight: bold;
-    margin: 0;
     line-height: 2em;
+    margin: 0;
     height: 2em;
     overflow: hidden; // hide the space between link and pophelp
     @include text-shadow-light;
     @include box-shadow(0 1px 0 0 inset rgba(#fff, .25));
     @include gradient-bar;
-}
-
-.lever a {
-    position: relative;
-    display: block;
-    color: $color-text;
-    padding: 0 2em 0 1em;
-    &:hover {
+    a {
+        position: relative;
+        display: block;
         color: $color-text;
-        text-decoration: none;
+        padding: 0 2em 0 1em;
+        &:hover {
+            color: $color-text;
+            text-decoration: none;
+        }
+        &:after {
+            position: absolute;
+            content: "&#8594;";
+            top: .69230769230769em;
+            right: .76923076923077em;
+            z-index: 10;
+            width: 0;
+            height: 0;
+            @include inline-block;
+            vertical-align: top;
+            opacity: .5;
+            border-left: .30769230769231em solid $color-text;
+            border-right: 0;
+            border-top: .30769230769231em solid transparent;
+            border-bottom: .30769230769231em solid transparent;
+            @include hide-text;
+        }
+        &:hover:after {
+            opacity: 1;
+        }
     }
-    &:after {
-        position: absolute;
-        content: "&#8594;";
-        top: .69230769230769em;
-        right: .76923076923077em;
-        z-index: 10;
-        width: 0;
-        height: 0;
-        @include inline-block;
-        vertical-align: top;
-        opacity: .5;
-        border-left: .30769230769231em solid $color-text;
-        border-right: 0;
-        border-top: .30769230769231em solid transparent;
-        border-bottom: .30769230769231em solid transparent;
-        @include hide-text;
-    }
-    &:hover:after {
-        opacity: 1;
-    }
-}
-
-.lever a:hover {
-    text-decoration: none;
 }
 
 /* remove pophelp on levers - inconsistent UI */
-.lever a.pophelp {
+h3.lever a.pophelp {
     display: none;
 }
 
-.lever.expanded a:after {
+h3.lever.expanded a:after {
     content: "&#8595;";
     top: .84615384615385em;
     right: .69230769230769em;
