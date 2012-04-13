@@ -1058,12 +1058,15 @@ table#edit.edit-pane {
 #configuration_content,
 #tagbuild_links {
     margin-right: 1em;
-    > div {
-        border: 1px solid lighten($color-border, 9%);
-        border-top: 0;
-        background: $color-background-box;
-        margin-bottom: 1em;
-    }
+}
+
+#configuration_content > div,
+#tagbuild_links > div,
+.summary-details {
+    border: 1px solid lighten($color-border, 9%);
+    border-top: 0;
+    background: $color-background-box;
+    margin-bottom: 1em;
 }
 
 #supporting_content,

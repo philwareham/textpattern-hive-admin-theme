@@ -1322,8 +1322,10 @@ table#edit.edit-pane td.cell-label {
 #tagbuild_links {
   margin-right: 1em;
 }
+
 #configuration_content > div,
-#tagbuild_links > div {
+#tagbuild_links > div,
+.summary-details {
   border: 1px solid #e3e3e3;
   border-top: 0;
   background: #f7f7f7;
