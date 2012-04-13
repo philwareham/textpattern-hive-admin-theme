@@ -180,7 +180,7 @@
         <p><span id="message" class="warning">Invalid width or height. <a class="close">&times;</a></span></p>
 
         <h2>Error</h2>
-        <p><span id="message" class="error">Username not found. <a class="close">&times;</a></span></p>
+        <p><span id="message" class="error">Username <strong>anon</strong> not found. <a class="close">&times;</a></span></p>
 
 
         <h1>Block text-level semantics</h1>
@@ -192,7 +192,7 @@
 
         <h2>Pre-formatted code blocks</h2>
         <pre><code>&lt;div id="messagepane"&gt;
-    &lt;span id="message" class="error"&gt;Username not found &lt;a class="close"&gt;&amp;times;&lt;/a&gt;&lt;/span&gt;
+    &lt;span id="message" class="success"&gt;Article posted. &lt;a class="close"&gt;&amp;times;&lt;/a&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
 
         <h1>Embedded content</h1>
@@ -206,21 +206,18 @@
         <h2>Left ranged image</h2>
         <p><code>&lt;img src="#" alt="" class="align-left" /&gt;</code><br />
                 <span class="warning">suggested class name addition</span></p>
-
         <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="experimental-align-left" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
         <p>Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
 
         <h2>Right ranged image</h2>
         <p><code>&lt;img src="#" alt="" class="align-right" /&gt;</code><br />
                 <span class="warning">suggested class name addition</span></p>
-
         <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="experimental-align-right" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
         <p>Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
 
         <h2>Centred image</h2>
         <p><code>&lt;img src="#" alt="" class="align-center" /&gt;</code><br />
                 <span class="warning">suggested class name addition</span></p>
-
         <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="experimental-align-center" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet.</p>
 
 
@@ -461,22 +458,38 @@
             </p>
 
             <h2>Date fields</h2>
+            <pre><code>&lt;p&gt;
+    &lt;span&gt;Date&lt;/span&gt;&lt;br /&gt;
+    &lt;input type="text" name="year" value="" size="4" maxlength="4" class="year" title="Year" /&gt; / 
+    &lt;input type="text" name="month" value="" size="2" maxlength="2" class="month" title="Month" /&gt; / 
+    &lt;input type="text" name="day" value="" size="2" maxlength="2" class="day" title="Day" /&gt;
+&lt;/p&gt;</code></pre>
             <p>
                 <span class="label">Date</span><br />
-                <input type="text" name="year" value="" size="4" maxlength="4" class="year" title="Year" /> / 
-                <input type="text" name="month" value="" size="2" maxlength="2" class="month" title="Month" /> / 
-                <input type="text" name="day" value="" size="2" maxlength="2" class="day" title="Day" />
+                <input type="text" name="year" value="" size="4" maxlength="4" title="Year" class="year" /> / 
+                <input type="text" name="month" value="" size="2" maxlength="2" title="Month" class="month" /> / 
+                <input type="text" name="day" value="" size="2" maxlength="2" title="Day" class="day" />
             </p>
 
             <h2>Time fields</h2>
+            <pre><code>&lt;p&gt;
+    &lt;span&gt;Date&lt;/span&gt;&lt;br /&gt;
+    &lt;input type="text" name="hour" value="" size="2" maxlength="2" class="hour" title="Hour" /&gt; : 
+    &lt;input type="text" name="minute" value="" size="2" maxlength="2" class="minute" title="Minute" /&gt; : 
+    &lt;input type="text" name="second" value="" size="2" maxlength="2" class="second" title="Second" /&gt;
+&lt;/p&gt;</code></pre>
             <p>
                 <span class="label">Time</span><br />
-                <input type="text" name="hour" value="" size="2" maxlength="2" class="hour" title="Hour" /> : 
-                <input type="text" name="minute" value="" size="2" maxlength="2" class="minute" title="Minute" /> : 
-                <input type="text" name="second" value="" size="2" maxlength="2" class="second" title="Second" />
+                <input type="text" name="hour" value="" size="2" maxlength="2" title="Hour" class="hour" /> : 
+                <input type="text" name="minute" value="" size="2" maxlength="2" title="Minute" class="minute" /> : 
+                <input type="text" name="second" value="" size="2" maxlength="2" title="Second" class="second" />
             </p>
 
             <h2>Fieldsets</h2>
+            <pre><code>&lt;fieldset&gt;
+    &lt;legend&gt;Heading&lt;/legend&gt;
+    &lt;p&gt;...content...&lt;/p&gt;
+&lt;/fieldset&gt;</code></pre>
             <fieldset>
                 <legend>Fieldset example</legend>
                 <p>

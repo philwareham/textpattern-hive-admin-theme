@@ -124,13 +124,13 @@
         <h1>Alert boxes</h1>
 
         <h2>Success</h2>
-        <span id="message" class="success">Article posted.</span>
+        <p><span id="message" class="success">Article posted.</span></p>
 
         <h2>Warning</h2>
-        <span id="message" class="warning">Invalid width or height.</span>
+        <p><span id="message" class="warning">Invalid width or height.</span></p>
 
         <h2>Error</h2>
-        <span id="message" class="error">Username <strong>anon</strong> not found.</span>
+        <p><span id="message" class="error">Username <strong>anon</strong> not found.</span></p>
 
 
         <h1>Block text-level semantics</h1>
@@ -142,7 +142,7 @@
 
         <h2>Pre-formatted code blocks</h2>
         <pre><code>&lt;div id="messagepane"&gt;
-    &lt;span id="message" class="error"&gt;Username not found &lt;a class="close"&gt;&amp;times;&lt;/a&gt;&lt;/span&gt;
+    &lt;span id="message" class="success"&gt;Article posted. &lt;a class="close"&gt;&amp;times;&lt;/a&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
 
         <h1>Embedded content</h1>
@@ -408,22 +408,38 @@
             </p>
 
             <h2>Date fields</h2>
+            <pre><code>&lt;p&gt;
+    &lt;span&gt;Date&lt;/span&gt;&lt;br /&gt;
+    &lt;input type="text" name="year" value="" size="4" maxlength="4" class="year" title="Year" /&gt; / 
+    &lt;input type="text" name="month" value="" size="2" maxlength="2" class="month" title="Month" /&gt; / 
+    &lt;input type="text" name="day" value="" size="2" maxlength="2" class="day" title="Day" /&gt;
+&lt;/p&gt;</code></pre>
             <p>
                 <span class="label">Date</span><br />
-                <input type="text" name="year" value="" size="4" maxlength="4" class="year" title="Year" /> / 
-                <input type="text" name="month" value="" size="2" maxlength="2" class="month" title="Month" /> / 
-                <input type="text" name="day" value="" size="2" maxlength="2" class="day" title="Day" />
+                <input type="text" name="year" value="" size="4" maxlength="4" title="Year" class="year" /> / 
+                <input type="text" name="month" value="" size="2" maxlength="2" title="Month" class="month" /> / 
+                <input type="text" name="day" value="" size="2" maxlength="2" title="Day" class="day" />
             </p>
 
             <h2>Time fields</h2>
+            <pre><code>&lt;p&gt;
+    &lt;span&gt;Date&lt;/span&gt;&lt;br /&gt;
+    &lt;input type="text" name="hour" value="" size="2" maxlength="2" class="hour" title="Hour" /&gt; : 
+    &lt;input type="text" name="minute" value="" size="2" maxlength="2" class="minute" title="Minute" /&gt; : 
+    &lt;input type="text" name="second" value="" size="2" maxlength="2" class="second" title="Second" /&gt;
+&lt;/p&gt;</code></pre>
             <p>
                 <span class="label">Time</span><br />
-                <input type="text" name="hour" value="" size="2" maxlength="2" class="hour" title="Hour" /> : 
-                <input type="text" name="minute" value="" size="2" maxlength="2" class="minute" title="Minute" /> : 
-                <input type="text" name="second" value="" size="2" maxlength="2" class="second" title="Second" />
+                <input type="text" name="hour" value="" size="2" maxlength="2" title="Hour" class="hour" /> : 
+                <input type="text" name="minute" value="" size="2" maxlength="2" title="Minute" class="minute" /> : 
+                <input type="text" name="second" value="" size="2" maxlength="2" title="Second" class="second" />
             </p>
 
             <h2>Fieldsets</h2>
+            <pre><code>&lt;fieldset&gt;
+    &lt;legend&gt;Heading&lt;/legend&gt;
+    &lt;p&gt;...content...&lt;/p&gt;
+&lt;/fieldset&gt;</code></pre>
             <fieldset>
                 <legend>Fieldset example</legend>
                 <p>
