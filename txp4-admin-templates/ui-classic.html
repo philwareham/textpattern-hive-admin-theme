@@ -66,41 +66,82 @@
 
         <h1>Headings</h1>
 
+        <p><code>&lt;h1&gt;</code></p>
         <h1>h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 heading 1</h1>
+        <p><code>&lt;h2&gt;</code></p>
         <h2>h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2</h2>
+        <p><code>&lt;h3&gt;</code></p>
         <h3>h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3</h3>
 
 
         <h1>Paragraphs</h1>
 
+        <p><code>&lt;p&gt;</code></p>
         <p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet elit vitae arcu interdum ullamcorper.</strong> Nullam ultrices, nisi quis scelerisque convallis, augue neque tempor enim, et mattis justo nibh eu elit.</p>
         <p>Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci.</p>
 
 
         <h1>Text-level semantics</h1>
 
-        <p>
-            The <a href="#">a element</a> example<br/>
-            The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br/>
-            The <b>b element</b> example<br/>
-            The <cite>cite element</cite> example<br/>
-            The <code>code element</code> example<br/>
-            The <del>del element</del> example<br/>
-            The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br/>
-            The <em>em element</em> example<br/>
-            The <i>i element</i> example<br/>
-            The <ins>ins element</ins> example<br/>
-            The <kbd>kbd element</kbd> example<br/>
-            The <s>s element</s> example<br/>
-            The <samp>samp element</samp> example<br/>
-            The <small>small element</small> example<br/>
-            The <span>span element</span> example<br/>
-            The <strong>strong element</strong> example<br/>
-            The <sub>sub element</sub> example<br/>
-            The <sup>sup element</sup> example<br/>
-            The <u>u element</u> example<br/>
-            The <var>var element</var> example
-        </p>
+        <p><code>&lt;a&gt;</code></p>
+        <p>The <a href="#">a element</a> example</p>
+
+        <p><code>&lt;abbr&gt;</code></p>
+        <p>The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples</p>
+
+        <p><code>&lt;b&gt;</code></p>
+        <p>The <b>b element</b> example</p>
+
+        <p><code>&lt;cite&gt;</code></p>
+        <p>The <cite>cite element</cite> example</p>
+
+        <p><code>&lt;code&gt;</code></p>
+        <p>The <code>code element</code> example</p>
+
+        <p><code>&lt;del&gt;</code></p>
+        <p>The <del>del element</del> example</p>
+
+        <p><code>&lt;dfn&gt;</code></p>
+        <p>The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples</p>
+
+        <p><code>&lt;em&gt;</code></p>
+        <p>The <em>em element</em> example</p>
+
+        <p><code>&lt;i&gt;</code></p>
+        <p>The <i>i element</i> example</p>
+
+        <p><code>&lt;ins&gt;</code></p>
+        <p>The <ins>ins element</ins> example</p>
+
+        <p><code>&lt;kbd&gt;</code></p>
+        <p>The <kbd>kbd element</kbd> example</p>
+
+        <p><code>&lt;s&gt;</code></p>
+        <p>The <s>s element</s> example</p>
+
+        <p><code>&lt;samp&gt;</code></p>
+        <p>The <samp>samp element</samp> example</p>
+
+        <p><code>&lt;small&gt;</code></p>
+        <p>The <small>small element</small> example</p>
+
+        <p><code>&lt;span&gt;</code></p>
+        <p>The <span>span element</span> example</p>
+
+        <p><code>&lt;strong&gt;</code></p>
+        <p>The <strong>strong element</strong> example</p>
+
+        <p><code>&lt;sub&gt;</code></p>
+        <p>The <sub>sub element</sub> example</p>
+
+        <p><code>&lt;sup&gt;</code></p>
+        <p>The <sup>sup element</sup> example</p>
+
+        <p><code>&lt;u&gt;</code></p>
+        <p>The <u>u element</u> example</p>
+
+        <p><code>&lt;var&gt;</code></p>
+        <p>The <var>var element</var> example</p>
 
 
         <h1>Inline text labels</h1>
@@ -124,13 +165,13 @@
         <h1>Alert boxes</h1>
 
         <h2>Success</h2>
-        <p><span id="message" class="success">Article posted.</span></p>
+        <p><span id="message" class="success">Article posted. <a class="close">&times;</a></span></p>
 
         <h2>Warning</h2>
-        <p><span id="message" class="warning">Invalid width or height.</span></p>
+        <p><span id="message" class="warning">Invalid width or height. <a class="close">&times;</a></span></p>
 
         <h2>Error</h2>
-        <p><span id="message" class="error">Username <strong>anon</strong> not found.</span></p>
+        <p><span id="message" class="error">Username <strong>anon</strong> not found. <a class="close">&times;</a></span></p>
 
 
         <h1>Block text-level semantics</h1>
@@ -279,8 +320,8 @@
             <div id="details" class="toggle">
                 <form action="#">
                     <p>
-                        <label for="text-lrg">Form element within a details box</label>&#160;<a href="#" class="pophelp">?</a><br />
-                        <input type="text" id="text-lrg" name="text-lrg" />
+                        <label for="text-lrg2">Form element within a details box</label>&#160;<a href="#" class="pophelp">?</a><br />
+                        <input type="text" id="text-lrg2" name="text-lrg2" />
                     </p>
                 </form>
                 <p>Standard paragraph text within a details box.</p>
@@ -443,8 +484,8 @@
             <fieldset>
                 <legend>Fieldset example</legend>
                 <p>
-                    <label for="text-lrg">Form element within a fieldset</label>&#160;<a href="#" class="pophelp">?</a><br />
-                    <input type="text" id="text-lrg" name="text-lrg" />
+                    <label for="text-lrg3">Form element within a fieldset</label>&#160;<a href="#" class="pophelp">?</a><br />
+                    <input type="text" id="text-lrg3" name="text-lrg3" />
                 </p>
                 <p>Standard paragraph text within a fieldset.</p>
                 <ul>
@@ -476,12 +517,12 @@
 
             <h2>Primary buttons</h2>
             <p><code>&lt;input type="submit" value="" class="publish" /&gt;</code><br />
-                <span class="warning">class naming could be improved, suggest "btn-primary"</span</p>
+                <span class="warning">class naming could be improved, suggest "btn-primary"</span></p>
             <p><input type="submit" value="Input Submit (Primary)" class="publish" /></p>
 
             <h2>Standard buttons</h2>
             <p><code>&lt;input type="submit" value="" class="smallerboxsp" /&gt;</code><br />
-                <span class="warning">class naming unnecessary, should be default state for buttons (i.e. no class defined)</span</p>
+                <span class="warning">class naming unnecessary, should be default state for buttons (i.e. no class defined)</span></p>
             <p>
                 <input type="submit" value="Input Submit" class="smallerboxsp" />
                 <input type="reset" value="Input Reset" class="smallerboxsp" />
