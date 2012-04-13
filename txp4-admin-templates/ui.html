@@ -7,6 +7,9 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="textpattern.js"></script>
     <link href="../css/textpattern.css" rel="stylesheet" type="text/css" />
+    <!-- proposed additional CSS rules -->
+    <link href="../css/experimental.css" rel="stylesheet" type="text/css" />
+    <!-- /proposed additional CSS rules -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="generator" content="Textpattern CMS" />
@@ -103,6 +106,8 @@
 
     <div class="txp-container">
 
+    <div class="plugin-help"><!-- temp container div -->
+
 
         <h1>Grids and columns</h1>
 
@@ -111,9 +116,9 @@
 
         <h1>Headings</h1>
 
-        <h1>h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 Heading 1 h1</h1>
-        <h2>h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2</h2>
-        <h3>h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3</h3>
+        <h1>h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 heading 1</h1>
+        <h2>h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2</h2>
+        <h3>h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3</h3>
 
 
         <h1>Paragraphs</h1>
@@ -148,6 +153,36 @@
         </p>
 
 
+        <h1>Inline text labels</h1>
+
+        <h2>Safe</h2>
+        <p><code>&lt;span class="success"&gt;...message...&lt;/span&gt;</code></p>
+        <p><code>&lt;strong class="success"&gt;...message...&lt;/strong&gt;</code></p>
+        <p>This is an example of a <span class="success">span success label</span> and a <strong class="success">strong success label</strong>.</p>
+
+        <h2>Warning</h2>
+        <p><code>&lt;span class="warning"&gt;...message...&lt;/span&gt;</code></p>
+        <p><code>&lt;strong class="warning"&gt;...message...&lt;/strong&gt;</code></p>
+        <p>This is an example of a <span class="warning">span warning label</span> and a <strong class="warning">strong warning label</strong>.</p>
+
+        <h2>Danger</h2>
+        <p><code>&lt;span class="error"&gt;...message...&lt;/span&gt;</code></p>
+        <p><code>&lt;strong class="error"&gt;...message...&lt;/strong&gt;</code></p>
+        <p>This is an example of a <span class="error">span error label</span> and a <strong class="error">strong error label</strong>.</p>
+
+
+        <h1>Alert boxes</h1>
+
+        <h2>Success</h2>
+        <p><span id="message" class="success">Article posted. <a class="close">&times;</a></span></p>
+
+        <h2>Warning</h2>
+        <p><span id="message" class="warning">Invalid width or height. <a class="close">&times;</a></span></p>
+
+        <h2>Error</h2>
+        <p><span id="message" class="error">Username not found. <a class="close">&times;</a></span></p>
+
+
         <h1>Block text-level semantics</h1>
 
         <h2>Pre-formatted text blocks</h2>
@@ -162,24 +197,31 @@
 
         <h1>Embedded content</h1>
 
-        <h2>Images</h2>
+        <h2>Image</h2>
         <p><img class="image" src="http://placehold.it/160/fabc2b/333333" alt="Alt text" /></p>
 
-        <h2>Images with link</h2>
+        <h2>Image with link</h2>
         <p><a href="#" title="Title text"><img class="image" src="http://placehold.it/160/fabc2b/333333" alt="Alt text" /></a></p>
     
         <h2>Left ranged image</h2>
-        <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img src="http://placehold.it/160/fabc2b/333333" class="align-left" title="160x160px placeholder" alt="160x160px placeholder"/> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
+        <p><code>&lt;img class="experimental-align-left" src="" alt="" /&gt;</code></p>
+        <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="experimental-align-left" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
+        <p>Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
 
         <h2>Right ranged image</h2>
-        <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img src="http://placehold.it/160/fabc2b/333333" class="align-right" title="160x160px placeholder" alt="160x160px placeholder"/> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
+        <p><code>&lt;img class="experimental-align-right" src="" alt="" /&gt;</code></p>
+        <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="experimental-align-right" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
+        <p>Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
 
         <h2>Centred image</h2>
-        <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img src="http://placehold.it/160/fabc2b/333333" class="align-center" title="160x160px placeholder" alt="160x160px placeholder"/> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
+        <p><code>&lt;img class="experimental-align-center" src="" alt="" /&gt;</code></p>
+        <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="experimental-align-center" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet.</p>
 
 
         <h1>Lists</h1>
 
+        <h2>Ordered</h2>
+        <p><code>&lt;ol&gt;</code></p>
         <ol>
             <li>this is an example</li>
             <li>of a numbered</li>
@@ -191,6 +233,8 @@
             </li>
         </ol>
 
+        <h2>Unordered</h2>
+        <p><code>&lt;ul&gt;</code></p>
         <ul>
             <li>this is an example</li>
             <li>of a bulletpoint</li>
@@ -202,6 +246,21 @@
             </li>
         </ul>
 
+        <h2>Plain</h2>
+        <p><code>&lt;ul class="plain-list"&gt;</code></p>
+        <ul class="plain-list">
+            <li>this is an example</li>
+            <li>of a plain</li>
+            <li>(unstyled) list
+                <ul>
+                    <li>and a second level</li>
+                    <li>bulletpoint list example</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Description</h2>
+        <p><code>&lt;dl&gt;</code></p>
         <dl>
             <dt>This is a definition list term 1</dt>
             <dd>Definition of term 1 here</dd>
@@ -290,7 +349,7 @@
                     </ul>
                 </div>
             </div>
-        </div><!-- div for demo purposes only -->
+        </div><!-- /div for demo purposes only -->
 
 
         <h1>Forms</h1>
@@ -421,6 +480,7 @@
             </fieldset>
         </form>
 
+    </div><!-- /temp container div -->
 
     </div>
 
