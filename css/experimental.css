@@ -1,0 +1,16 @@
+/* Hive theme for Textpattern CMS (v2.0a4) */
+/* Proposed improvements to the Textpattern core classes (prefixed with 'expermental-' for now) */
+.experimental-align-left {
+  float: left;
+  margin: 1em 1em 1em 0;
+}
+
+.experimental-align-right {
+  float: right;
+  margin: 1em 0 1em 1em;
+}
+
+.experimental-align-center {
+  display: block;
+  margin: 1em auto;
+}
