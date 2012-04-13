@@ -45,7 +45,7 @@
                         <li class='inactive'><a href='presentation-css.html'>Style</a></li>
                     </ul>
                 </li>
-                <li class='dropdown active'><a class='dropdown-toggle' href='admin-admin.html'>Admin</a>
+                <li class='dropdown inactive'><a class='dropdown-toggle' href='admin-admin.html'>Admin</a>
                     <ul class="dropdown-menu">
                         <li class='inactive'><a href='admin-diag.html'>Diagnostics</a></li>
                         <li class='inactive'><a href='admin-prefs_basic.html'>Preferences</a></li>
@@ -204,17 +204,23 @@
         <p><a href="#" title="Title text"><img class="image" src="http://placehold.it/160/fabc2b/333333" alt="Alt text" /></a></p>
     
         <h2>Left ranged image</h2>
-        <p><code>&lt;img class="experimental-align-left" src="" alt="" /&gt;</code></p>
+        <p><code>&lt;img src="#" alt="" class="align-left" /&gt;</code><br />
+                <span class="warning">suggested class name addition</span></p>
+
         <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="experimental-align-left" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
         <p>Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
 
         <h2>Right ranged image</h2>
-        <p><code>&lt;img class="experimental-align-right" src="" alt="" /&gt;</code></p>
+        <p><code>&lt;img src="#" alt="" class="align-right" /&gt;</code><br />
+                <span class="warning">suggested class name addition</span></p>
+
         <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="experimental-align-right" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
         <p>Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
 
         <h2>Centred image</h2>
-        <p><code>&lt;img class="experimental-align-center" src="" alt="" /&gt;</code></p>
+        <p><code>&lt;img src="#" alt="" class="align-center" /&gt;</code><br />
+                <span class="warning">suggested class name addition</span></p>
+
         <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="experimental-align-center" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet.</p>
 
 
@@ -354,6 +360,8 @@
 
         <h1>Forms</h1>
         <form action="#">
+
+            <h2>Checkboxes and radiobuttons</h2>
             <p>
                 <input type="checkbox" id="test_checkbox_1" name="test_checkbox_1" />
                 <label for="test_checkbox_1">Test checkbox 1</label>
@@ -374,6 +382,8 @@
                 <input type="radio" id="test_radio_3" name="test_radio_group" />
                 <label for="test_radio_3">Test radio 3</label>
             </p>
+
+            <h2>Selects</h2>
             <p>
                 <label for="select_dd">Select drop-down</label><br />
                 <select id="select_dd" name="select_dd">
@@ -416,45 +426,60 @@
                     </optgroup>
                 </select>
             </p>
+
+            <h2>Textareas</h2>
             <p>
                 <label for="textarea">Textarea</label><br />
                 <textarea id="textarea" name="textarea" cols="78" rows="5"></textarea>
             </p>
+
+            <h2>Text fields large</h2>
+            <p><code>&lt;input type="text" id="" name="" class="input-large" /&gt;</code><br />
+                <span class="warning">suggested class name addition</span></p>
             <p>
                 <label for="text-lrg">Text (large) with pophelp</label>&#160;<a href="#" class="pophelp">?</a><br />
                 <input type="text" id="text-lrg" name="text-lrg" class="input-large" /> <!-- new class added -->
             </p>
+
+            <h2>Text fields medium</h2>
+            <p><code>&lt;input type="text" id="" name="" class="input-medium" /&gt;</code><br />
+                <span class="warning">suggested class name addition</span></p>
             <p>
                 <label for="text-med">Text medium</label><br />
                 <input type="text" id="text-med" name="text-med" class="input-medium" /> <!-- new class added -->
             </p>
+
+            <h2>Text fields small</h2>
+            <p><code>&lt;input type="text" id="" name="" class="input-small" /&gt;</code><br />
+                <span class="warning">suggested class name addition</span></p>
             <p>
                 <label for="text-sml">Text (small)</label><br />
                 <input type="text" id="text-sml" name="text-sml" class="input-small" /> <!-- new class added -->
             </p>
+
+            <h2>Password fields</h2>
             <p>
                 <label for="password">Password</label><br />
                 <input type="password" id="password" name="password" />
             </p>
+
+            <h2>Date fields</h2>
             <p>
                 <span class="label">Date</span><br />
                 <input type="text" name="year" value="" size="4" maxlength="4" class="year" title="Year" /> / 
                 <input type="text" name="month" value="" size="2" maxlength="2" class="month" title="Month" /> / 
                 <input type="text" name="day" value="" size="2" maxlength="2" class="day" title="Day" />
             </p>
+
+            <h2>Time fields</h2>
             <p>
                 <span class="label">Time</span><br />
                 <input type="text" name="hour" value="" size="2" maxlength="2" class="hour" title="Hour" /> : 
                 <input type="text" name="minute" value="" size="2" maxlength="2" class="minute" title="Minute" /> : 
                 <input type="text" name="second" value="" size="2" maxlength="2" class="second" title="Second" />
             </p>
-            <p>
-                <input type="submit" value="Input Submit (Primary)" class="publish" />
-                <input type="submit" value="Input Submit" class="smallerboxsp" />
-                <input type="reset" value="Input Reset" class="smallerboxsp" />
-                <input type="button" value="Input Button" class="smallerboxsp" />
-                <button class="smallerboxsp">Button tag</button>
-            </p>
+
+            <h2>Fieldsets</h2>
             <fieldset>
                 <legend>Fieldset example</legend>
                 <p>
@@ -477,8 +502,40 @@
                     <li>items within</li>
                     <li>a details box</li>
                 </ul>
+                <fieldset>
+                    <legend>Fieldset within fieldset</legend>
+                    <p>Standard paragraph text within a fieldset.</p>
+                </fieldset>
+                <div>
+                    <h3 class="plain lever expanded"><a href="#summary">Summary/details box within fieldset</a></h3>
+                    <div id="summary" class="toggle">
+                        <p>Standard paragraph text within a details box.</p>
+                    </div>
+                </div>
             </fieldset>
+
+            <h2>Primary buttons</h2>
+            <p><code>&lt;input type="submit" value="" class="publish" /&gt;</code><br />
+                <span class="warning">class naming could be improved, suggest "btn-primary"</span</p>
+            <p><input type="submit" value="Input Submit (Primary)" class="publish" /></p>
+
+            <h2>Standard buttons</h2>
+            <p><code>&lt;input type="submit" value="" class="smallerboxsp" /&gt;</code><br />
+                <span class="warning">class naming unnecessary, should be default state for buttons (i.e. no class defined)</span</p>
+            <p>
+                <input type="submit" value="Input Submit" class="smallerboxsp" />
+                <input type="reset" value="Input Reset" class="smallerboxsp" />
+                <input type="button" value="Input Button" class="smallerboxsp" />
+                <button class="smallerboxsp">Button tag</button>
+            </p>
+
+            <h2>Delete buttons</h2>
+            <p><code>&lt;input type="submit" value="x" class="smallerbox" /&gt;</code><br />
+                <span class="warning">class naming inconsistent, suggest "btn-delete"</span></p>
+            <p><input type="submit" value="×" class="smallerbox" /></p>
+
         </form>
+
 
     </div><!-- /temp container div -->
 
