@@ -1035,6 +1035,22 @@ body {
 /* =============================================================================
    Miscellaneous/shared layout
    ========================================================================== */
+.image {
+  border: solid 1px #cccccc;
+  -moz-border-radius: 0.385em;
+  border-radius: 0.385em;
+  padding: 4px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
+}
+
+a:hover .image {
+  border: solid 1px #0066ff;
+  -webkit-box-shadow: 0 0 0.462em rgba(0, 102, 255, 0.4);
+  box-shadow: 0 0 0.462em rgba(0, 102, 255, 0.4);
+}
+
 table#edit {
   width: 100%;
 }
@@ -1390,22 +1406,6 @@ table#edit.edit-pane td.cell-label {
 /* =============================================================================
    Content -> Images page
    ========================================================================== */
-#page-image img {
-  border: solid 1px #cccccc;
-  -moz-border-radius: 0.385em;
-  border-radius: 0.385em;
-  padding: 4px;
-  background: #fff;
-  -webkit-box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
-}
-
-#page-image a img:hover {
-  border: solid 1px #0066ff;
-  -webkit-box-shadow: 0 0 0.462em rgba(0, 102, 255, 0.4);
-  box-shadow: 0 0 0.462em rgba(0, 102, 255, 0.4);
-}
-
 /* fix for inconsistent structure */
 #page-image table#edit.edit-pane {
   border-top: 1em solid #F7F7F7;

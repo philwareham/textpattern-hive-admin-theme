@@ -800,6 +800,19 @@ body {
    Miscellaneous/shared layout
    ========================================================================== */
 
+.image {
+    border: solid 1px $color-border;
+    @include border-radius;
+    padding: 4px;
+    background: #fff;
+    @include box-shadow;
+}
+
+a:hover .image {
+    border: solid 1px $color-link-hover;
+    @include box-shadow(0 0 .46153846153846em rgba($color-link-hover, .4));
+}
+
 table#edit {
     width: 100%;
 }
@@ -1130,19 +1143,6 @@ table#edit.edit-pane {
 /* =============================================================================
    Content -> Images page
    ========================================================================== */
-
-#page-image img {
-    border: solid 1px $color-border;
-    @include border-radius;
-    padding: 4px;
-    background: #fff;
-    @include box-shadow;
-}
-
-#page-image a img:hover {
-    border: solid 1px $color-link-hover;
-    @include box-shadow(0 0 .46153846153846em rgba($color-link-hover, .4));
-}
 
 /* fix for inconsistent structure */
 #page-image table#edit.edit-pane {
