@@ -429,33 +429,6 @@ input[value="×"] {
     }
 }
 
-/* busy buttons */
-form.busy {
-    input[type='submit'] {
-        border: 1px solid lighten($color-border, 9%);
-        background-color: #eee;
-        background-image: none;
-        @include box-shadow(none);
-         -khtml-user-select: none;
-        -webkit-user-select: none;
-           -moz-user-select: -moz-none;
-                user-select: none;
-        color: $color-text-footnote;
-        cursor: default;
-        &:hover, &:active {
-            background-color: #eee;
-            background-image: none;
-        }
-    }
-    span.spinner {
-        @include inline-block;
-        width: 15px;
-        height: 15px;
-        margin-left: .5em;
-        @include hires-graphic(spinner, gif, 15px, 15px);
-    }
-}
-
 
 /* =============================================================================
    Lists
@@ -862,6 +835,15 @@ table#edit.edit-pane {
         float: right;
         margin-bottom: 0;
     }
+}
+
+/* AJAX spinner */
+span.spinner {
+        @include inline-block;
+        width: 15px;
+        height: 15px;
+        margin-left: .5em;
+        @include hires-graphic(spinner, gif, 15px, 15px);
 }
 
 /* tabs */

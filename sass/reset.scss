@@ -228,7 +228,7 @@ a.navlink-active,
     text-decoration: none;
     outline: 0;
     margin: 0;
-    padding: .25em .75em;
+    padding: .30769230769231em .75em;
     @include box-shadow(0 1px 0 0 inset rgba(#fff, .25));
     @include text-shadow-light;
     width: auto;
@@ -302,26 +302,27 @@ input[type="checkbox"] {
     }
 }
 
-select[disabled],
-textarea[disabled],
-input[type="password"][disabled],
-input[type="text"][disabled] {
-    background-color: #eee;
-}
-
 button[disabled],
 input[disabled],
 select[disabled],
 select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled] {
+    border-color: $color-border !important;
+    background-color: #eee !important;
+    text-shadow: none !important;
     @include box-shadow(none);
      -khtml-user-select: none;
     -webkit-user-select: none;
        -moz-user-select: -moz-none;
             user-select: none;
-    color: $color-text-footnote;
+    color: $color-text-footnote !important;
     cursor: default;
+}
+
+button[disabled],
+input[disabled] {
+    background-image: none !important;
 }
 
 textarea {

@@ -622,42 +622,6 @@ input[value="×"]:active {
   background-image: linear-gradient(#c83025, #e36f66);
 }
 
-/* busy buttons */
-form.busy input[type='submit'] {
-  border: 1px solid #e3e3e3;
-  background-color: #eee;
-  background-image: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: -moz-none;
-  user-select: none;
-  color: #888888;
-  cursor: default;
-}
-form.busy input[type='submit']:hover, form.busy input[type='submit']:active {
-  background-color: #eee;
-  background-image: none;
-}
-form.busy span.spinner {
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-  width: 15px;
-  height: 15px;
-  margin-left: .5em;
-  background-image: url("../img/spinner.gif");
-}
-@media (-webkit-min-device-pixel-ratio: 2) {
-  form.busy span.spinner {
-    background-image: url("../img/retina/spinner@2x.gif") !important;
-    -webkit-background-size: 15px 15px;
-  }
-}
-
 /* =============================================================================
    Lists
    ========================================================================== */
@@ -1099,6 +1063,25 @@ table#edit.edit-pane td.cell-label {
 .txp-navigation .prev-next {
   float: right;
   margin-bottom: 0;
+}
+
+/* AJAX spinner */
+span.spinner {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 15px;
+  height: 15px;
+  margin-left: .5em;
+  background-image: url("../img/spinner.gif");
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  span.spinner {
+    background-image: url("../img/retina/spinner@2x.gif") !important;
+    -webkit-background-size: 15px 15px;
+  }
 }
 
 /* tabs */
