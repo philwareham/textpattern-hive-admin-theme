@@ -373,10 +373,15 @@
 
         <div class="experimental-section" id="ui-doc-summarydetails">
             <h1>Summary/details boxes</h1>
-
+                <pre><code>&lt;div class="summary-details"&gt;
+    &lt;h3 class="plain lever"&gt;&lt;a href="#name-of-details"&gt;Summary lever&lt;/a&gt;&lt;/h3&gt;
+    &lt;div id="name-of-details" class="toggle"&gt;
+        &lt;p&gt;...content...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
             <div class="summary-details">
-                <h3 class="plain lever expanded"><a href="#details">Summary lever</a></h3>
-                <div id="details" class="toggle">
+                <h3 class="plain lever expanded"><a href="#name-of-details">Summary lever</a></h3>
+                <div id="name-of-details" class="toggle">
                     <form action="#">
                         <p>
                             <label for="text-lrg2">Form element within a details box</label>&#160;<a href="#" class="pophelp">?</a><br />
@@ -446,11 +451,11 @@
 
                 <h2>Date fields</h2>
                 <pre><code>&lt;p&gt;
-        &lt;span&gt;Date&lt;/span&gt;&lt;br /&gt;
-        &lt;input type="text" name="year" value="" size="4" maxlength="4" class="year" title="Year" /&gt; / 
-        &lt;input type="text" name="month" value="" size="2" maxlength="2" class="month" title="Month" /&gt; / 
-        &lt;input type="text" name="day" value="" size="2" maxlength="2" class="day" title="Day" /&gt;
-    &lt;/p&gt;</code></pre>
+    &lt;span&gt;Date&lt;/span&gt;&lt;br /&gt;
+    &lt;input type="text" name="year" value="" size="4" maxlength="4" class="year" title="Year" /&gt; / 
+    &lt;input type="text" name="month" value="" size="2" maxlength="2" class="month" title="Month" /&gt; / 
+    &lt;input type="text" name="day" value="" size="2" maxlength="2" class="day" title="Day" /&gt;
+&lt;/p&gt;</code></pre>
                 <p>
                     <span class="label">Date</span><br />
                     <input type="text" name="year" value="" size="4" maxlength="4" title="Year" class="year" /> / 
@@ -460,11 +465,11 @@
 
                 <h2>Time fields</h2>
                 <pre><code>&lt;p&gt;
-        &lt;span&gt;Date&lt;/span&gt;&lt;br /&gt;
-        &lt;input type="text" name="hour" value="" size="2" maxlength="2" class="hour" title="Hour" /&gt; : 
-        &lt;input type="text" name="minute" value="" size="2" maxlength="2" class="minute" title="Minute" /&gt; : 
-        &lt;input type="text" name="second" value="" size="2" maxlength="2" class="second" title="Second" /&gt;
-    &lt;/p&gt;</code></pre>
+    &lt;span&gt;Date&lt;/span&gt;&lt;br /&gt;
+    &lt;input type="text" name="hour" value="" size="2" maxlength="2" class="hour" title="Hour" /&gt; : 
+    &lt;input type="text" name="minute" value="" size="2" maxlength="2" class="minute" title="Minute" /&gt; : 
+    &lt;input type="text" name="second" value="" size="2" maxlength="2" class="second" title="Second" /&gt;
+&lt;/p&gt;</code></pre>
                 <p>
                     <span class="label">Time</span><br />
                     <input type="text" name="hour" value="" size="2" maxlength="2" title="Hour" class="hour" /> : 
@@ -564,9 +569,9 @@
 
                 <h2>Fieldsets</h2>
                 <pre><code>&lt;fieldset&gt;
-        &lt;legend&gt;Heading&lt;/legend&gt;
-        &lt;p&gt;...content...&lt;/p&gt;
-    &lt;/fieldset&gt;</code></pre>
+    &lt;legend&gt;Heading&lt;/legend&gt;
+    &lt;p&gt;...content...&lt;/p&gt;
+&lt;/fieldset&gt;</code></pre>
                 <fieldset>
                     <legend>Fieldset example</legend>
                     <p>
