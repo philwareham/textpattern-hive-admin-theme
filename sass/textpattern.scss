@@ -169,7 +169,8 @@ hr {
 /* label colours */
 .success,
 .warning,
-.error {
+.error,
+.information {
     padding: 0 .23076923076923em;
     @include border-radius(.23076923076923em); // 3px / 13px
 }
@@ -184,6 +185,10 @@ hr {
 .error {
     color: $error-text;
     background: $error-background;
+}
+.information {
+    color: $info-text;
+    background: $info-background;
 }
 
 /* alert boxes */

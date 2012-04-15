@@ -183,7 +183,8 @@ hr {
 /* label colours */
 .success,
 .warning,
-.error {
+.error,
+.information {
   padding: 0 .23076923076923em;
   -moz-border-radius: 0.231em;
   border-radius: 0.231em;
@@ -202,6 +203,11 @@ hr {
 .error {
   color: #9d261d;
   background: #f2dede;
+}
+
+.information {
+  color: #3a87ad;
+  background: #e4f5fd;
 }
 
 /* alert boxes */
