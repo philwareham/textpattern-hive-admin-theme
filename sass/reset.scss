@@ -77,6 +77,15 @@ blockquote {
     margin: 1em 2em;
 }
 
+/* addresses CSS quotes not supported in IE7, addresses quote property not supported in Safari4 */
+q {
+    quotes: none;
+    &:before, &:after {
+        content: "";
+        content: none;
+    }
+}
+
 /* addresses styling not present in Safari5, Chrome */
 dfn {
     font-style: italic;
