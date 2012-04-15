@@ -92,12 +92,18 @@ small,
   font-size: 0.846em;
 }
 
+dfn,
+q,
 var {
-  border: 1px solid #ffe16d;
+  font-style: italic;
+  background: #fff6d3;
+}
+
+var {
   padding: 0 .23076923076923em;
   -moz-border-radius: 0.231em;
   border-radius: 0.231em;
-  background: #fff6d3;
+  font-weight: bold;
 }
 
 pre,

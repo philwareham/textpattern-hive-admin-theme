@@ -78,11 +78,17 @@ small,
     font-size: $smallfont;
 }
 
+dfn,
+q,
 var {
-    border: 1px solid $warning-border;
+    font-style: italic;
+    background: $color-highlight-box;
+}
+
+var {
     padding: 0 .23076923076923em;
     @include border-radius(.23076923076923em); // 3px / 13px
-    background: $warning-background;
+    font-weight: bold;
 }
 
 pre,
