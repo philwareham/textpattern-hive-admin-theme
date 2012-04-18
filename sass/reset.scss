@@ -226,6 +226,7 @@ a.navlink,
 a.navlink-active,
 .navlink a,
 .navlink-active a {
+    position: relative;
     -webkit-appearance: none;
     @include border-radius;
     @include background-clip;
