@@ -412,7 +412,8 @@ input {
    ========================================================================== */
 
 /* primary buttons */
-input[type="submit"].publish {
+input[type="submit"].publish,
+button.publish {
     font-weight: bold;
     border: 1px solid #f2ab05;
     border-bottom-color: darken(#f2ab05, 10%);

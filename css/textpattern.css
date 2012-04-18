@@ -516,7 +516,8 @@ input.month, input.exp_month, input.day, input.exp_day, input.hour, input.exp_ho
    Specific buttons
    ========================================================================== */
 /* primary buttons */
-input[type="submit"].publish {
+input[type="submit"].publish,
+button.publish {
   font-weight: bold;
   border: 1px solid #f2ab05;
   border-bottom-color: #c08804;
@@ -536,7 +537,8 @@ input[type="submit"].publish {
   /* CSS3 Compliant */
   background-image: linear-gradient(#ffda44, #f2ab05);
 }
-input[type="submit"].publish:hover {
+input[type="submit"].publish:hover,
+button.publish:hover {
   background-color: #ffe477;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#ffe477), to(#fbbe2f));
@@ -553,7 +555,8 @@ input[type="submit"].publish:hover {
   /* CSS3 Compliant */
   background-image: linear-gradient(#ffe477, #fbbe2f);
 }
-input[type="submit"].publish:active {
+input[type="submit"].publish:active,
+button.publish:active {
   background-color: #fbbe2f;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#fbbe2f), to(#ffe477));
