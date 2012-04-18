@@ -60,10 +60,10 @@ a.icon {
 }
 .svg a.icon {
   background-image: url("../img/svg/icon-sprite.svg");
-  -webkit-background-size: 27.077em 3.385em;
-  -moz-background-size: 27.077em 3.385em;
-  -o-background-size: 27.077em 3.385em;
-  background-size: 27.077em 3.385em;
+  -webkit-background-size: 27.077em 5.077em;
+  -moz-background-size: 27.077em 5.077em;
+  -o-background-size: 27.077em 5.077em;
+  background-size: 27.077em 5.077em;
 }
 a.icon:hover {
   border-color: #cccccc;
@@ -85,10 +85,10 @@ button.icon:before {
 }
 .svg button.icon:before {
   background-image: url("../img/svg/icon-sprite.svg");
-  -webkit-background-size: 27.077em 3.385em;
-  -moz-background-size: 27.077em 3.385em;
-  -o-background-size: 27.077em 3.385em;
-  background-size: 27.077em 3.385em;
+  -webkit-background-size: 27.077em 5.077em;
+  -moz-background-size: 27.077em 5.077em;
+  -o-background-size: 27.077em 5.077em;
+  background-size: 27.077em 5.077em;
 }
 
 a.icon-write, button.icon-write:before {
@@ -217,4 +217,8 @@ a.icon-folder, button.icon-folder:before {
 
 a.icon-file, button.icon-file:before {
   background-position: -25.385em -1.692em;
+}
+
+a.icon-attach, button.icon-attach:before {
+  background-position: 0 -3.385em;
 }

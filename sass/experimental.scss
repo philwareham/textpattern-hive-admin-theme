@@ -68,7 +68,7 @@ a.icon {
     border: 1px solid lighten($color-border, 9%);
     @include border-radius;
     background-color: $color-background-box;
-    @include svg-graphic(icon-sprite, png, 27.0769230769231em, 3.38461538461538em); // 352px / 13px, 44px / 13px
+    @include svg-graphic(icon-sprite, png, 27.0769230769231em, 5.07692307692308em); // 352px / 13px, 44px / 13px
     &:hover {
         border-color: $color-border;
     }
@@ -85,7 +85,7 @@ button.icon {
         z-index: 2;
         width: 1.69230769230769em; // 22px / 13px
         height: 1.69230769230769em; // 22px / 13px
-    @include svg-graphic(icon-sprite, png, 27.0769230769231em, 3.38461538461538em); // 352px / 13px, 44px / 13px
+    @include svg-graphic(icon-sprite, png, 27.0769230769231em, 5.07692307692308em); // 352px / 13px, 44px / 13px
     }
 }
 
@@ -122,3 +122,5 @@ a.icon-trash, button.icon-trash:before          { background-position: -20.30769
 a.icon-favourite, button.icon-favourite:before  { background-position: -22em -1.69230769230769em; }
 a.icon-folder, button.icon-folder:before        { background-position: -23.6923076923077em -1.69230769230769em; }
 a.icon-file, button.icon-file:before            { background-position: -25.3846153846154em -1.69230769230769em; }
+
+a.icon-attach, button.icon-attach:before        { background-position: 0 -3.38461538461538em }
