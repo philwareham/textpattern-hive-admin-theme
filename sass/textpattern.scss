@@ -362,6 +362,10 @@ fieldset > * {
     margin-left: 1em;
 }
 
+.toggle fieldset {
+    margin-top: 1em;
+}
+
 legend {
     position: absolute;
     top: 0;
@@ -1098,8 +1102,7 @@ span.spinner {
     background: $color-background-box;
 }
 
-#more {
-    padding-top: 1em;
+#dates {
     .date, .time {
         .label {
             display: block;
