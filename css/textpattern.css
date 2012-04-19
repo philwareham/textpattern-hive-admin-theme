@@ -1196,24 +1196,25 @@ span.spinner {
 /* =============================================================================
    Content -> Categories page
    ========================================================================== */
-#page-category .action-create input[type="submit"] {
+#page-category .action-create input[type="submit"],
+.parent {
   margin-top: .38461538461538em;
 }
 
 .category-list {
   width: 100%;
 }
-
 .category-list td {
   width: 25%;
 }
 
-.category-list div {
+.categories > div {
   margin: 0 .5em 1em;
   padding: 1em 1em 1px;
   background: #f7f7f7;
 }
-.category-list div select {
+
+.category-tree select {
   margin-left: -0.385em;
 }
 
@@ -1362,20 +1363,20 @@ span.spinner {
   display: none;
 }
 
-#more_group {
+#supporting_content > div {
   border: 1px solid #e3e3e3;
   border-top: 0;
   background: #f7f7f7;
 }
-#more_group .date .label, #more_group .time .label {
-  display: block;
-}
-#more_group .date input.year, #more_group .time input.hour, #more_group .date input.exp_year, #more_group .time input.exp_hour {
-  margin-left: -0.615em;
-}
 
 #more {
   padding-top: 1em;
+}
+#more .date .label, #more .time .label {
+  display: block;
+}
+#more .date input.year, #more .time input.hour, #more .date input.exp_year, #more .time input.exp_hour {
+  margin-left: -0.615em;
 }
 
 .recent {
@@ -1848,7 +1849,8 @@ div.plugin-help {
   .category-list td {
     width: 100%;
   }
-  .category-list div {
+
+  .categories > div {
     margin: 0 0 1em 0;
   }
 

@@ -941,25 +941,26 @@ span.spinner {
    Content -> Categories page
    ========================================================================== */
 
-#page-category .action-create input[type="submit"] {
+#page-category .action-create input[type="submit"],
+.parent {
     margin-top: .38461538461538em;
 }
 
 .category-list {
     width: 100%;
+    td {
+        width: 25%;
+    }
 }
 
-.category-list td {
-    width: 25%;
-}
-
-.category-list div {
+.categories > div {
     margin: 0 .5em 1em;
     padding: 1em 1em 1px;
     background: $color-background-box;
-    select {
-        margin-left: -.38461538461538em;
-    }
+}
+
+.category-tree select {
+    margin-left: -.38461538461538em;
 }
 
 #categories_article {
@@ -1090,10 +1091,14 @@ span.spinner {
     display: none;
 }
 
-#more_group {
+#supporting_content > div {
     border: 1px solid lighten($color-border, 9%);
     border-top: 0;
     background: $color-background-box;
+}
+
+#more {
+    padding-top: 1em;
     .date, .time {
         .label {
             display: block;
@@ -1102,10 +1107,6 @@ span.spinner {
     .date input.year, .time input.hour, .date input.exp_year, .time input.exp_hour {
         margin-left: -.61538461538462em;
     }
-}
-
-#more {
-    padding-top: 1em;
 }
 
 .recent {
