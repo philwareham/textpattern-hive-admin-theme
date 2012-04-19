@@ -118,68 +118,75 @@
     <div id="plugin_container" class="txp-container txp-list">
 
         <form action="index.php" id="plugin_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
-            <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
-                <thead>
-                    <tr>
-                        <th class="asc name"><a href="#">Plugin</a></th>
-                        <th class="author"><a href="#">Author</a></th>
-                        <th class="version"><a href="#">Version</a></th>
-                        <th class="modified"><a href="#">Modified</a></th>
-                        <th class="description">Description</th>
-                        <th class="status"><a href="#">Active</a></th>
-                        <th class="load-order"><a href="#">Order</a></th>
-                        <th class="manage actions">Manage</th>
-                        <th class="multi-edit">&#160;</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <td class="multi-edit" colspan="10">
-                            Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;<select name="edit_method" class="list" id="withselected" onchange="poweredit(this); return false;">
-                                <option value="" selected="selected"></option>
-                                <option value="changestatus">Change status</option>
-                                <option value="changeorder">Change order</option>
-                                <option value="delete">Delete</option>
-                            </select>
-                            <input type="submit" value="Go" class="smallerbox" />
-                        </td>
-                    </tr>
-                </tfoot>
-                <tbody>
-                    <tr class="odd">
-                        <td class="name">rah_external_output</td>
-                        <td class="author"><a href="http://rahforum.biz">Jukka Svahn</a></td>
-                        <td width="10" class="version">0.9</td>
-                        <td class="modified">&#160;</td>
-                        <td width="260" class="description">Output external content-type snippets</td>
-                        <td width="30" class="status"><a href="#7">No</a></td>
-                        <td class="load-order">5</td>
-                        <td class="manage">
-                            <ul class="actions">
-                                <li class="action-view"><a href="#">Help</a></li>
-                                <li class="action-edit"><a href="#">Edit</a></li>
-                            </ul>
-                        </td>
-                        <td width="30" class="multi-edit"><input type="checkbox" value="rah_external_output" name="selected[]" /></td>
-                    </tr>
-                    <tr class="even">
-                        <td class="name">smd_browse_by</td>
-                        <td class="author"><a href="http://stefdawson.com/">Stef Dawson</a></td>
-                        <td width="10" class="version">0.10</td>
-                        <td class="modified">Yes</td>
-                        <td width="260" class="description">Browse by Category (+article Section) in admin side</td>
-                        <td width="30" class="status"><a href="#">Yes</a></td>
-                        <td class="load-order">5</td>
-                        <td class="manage">
-                            <ul class="actions">
-                                <li class="action-view"><a href="#">Help</a></li>
-                                <li class="action-edit"><a href="#">Edit</a></li>
-                            </ul>
-                        </td>
-                        <td width="30" class="multi-edit"><input type="checkbox" value="smd_browse_by" name="selected[]" /></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="txp-listtables">
+
+                <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
+
+                    <thead>
+                        <tr>
+                            <th class="asc name"><a href="#">Plugin</a></th>
+                            <th class="author"><a href="#">Author</a></th>
+                            <th class="version"><a href="#">Version</a></th>
+                            <th class="modified"><a href="#">Modified</a></th>
+                            <th class="description">Description</th>
+                            <th class="status"><a href="#">Active</a></th>
+                            <th class="load-order"><a href="#">Order</a></th>
+                            <th class="manage actions">Manage</th>
+                            <th class="multi-edit">&#160;</th>
+                        </tr>
+                    </thead>
+
+                    <tfoot>
+                        <tr>
+                            <td class="multi-edit" colspan="10">
+                                Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;<select name="edit_method" class="list" id="withselected" onchange="poweredit(this); return false;">
+                                    <option value="" selected="selected"></option>
+                                    <option value="changestatus">Change status</option>
+                                    <option value="changeorder">Change order</option>
+                                    <option value="delete">Delete</option>
+                                </select>
+                                <input type="submit" value="Go" class="smallerbox" />
+                            </td>
+                        </tr>
+                    </tfoot>
+
+                    <tbody>
+                        <tr class="odd">
+                            <td class="name">rah_external_output</td>
+                            <td class="author"><a href="http://rahforum.biz">Jukka Svahn</a></td>
+                            <td width="10" class="version">0.9</td>
+                            <td class="modified">&#160;</td>
+                            <td width="260" class="description">Output external content-type snippets</td>
+                            <td width="30" class="status"><a href="#7">No</a></td>
+                            <td class="load-order">5</td>
+                            <td class="manage">
+                                <ul class="actions">
+                                    <li class="action-view"><a href="#">Help</a></li>
+                                    <li class="action-edit"><a href="#">Edit</a></li>
+                                </ul>
+                            </td>
+                            <td width="30" class="multi-edit"><input type="checkbox" value="rah_external_output" name="selected[]" /></td>
+                        </tr>
+                        <tr class="even">
+                            <td class="name">smd_browse_by</td>
+                            <td class="author"><a href="http://stefdawson.com/">Stef Dawson</a></td>
+                            <td width="10" class="version">0.10</td>
+                            <td class="modified">Yes</td>
+                            <td width="260" class="description">Browse by Category (+article Section) in admin side</td>
+                            <td width="30" class="status"><a href="#">Yes</a></td>
+                            <td class="load-order">5</td>
+                            <td class="manage">
+                                <ul class="actions">
+                                    <li class="action-view"><a href="#">Help</a></li>
+                                    <li class="action-edit"><a href="#">Edit</a></li>
+                                </ul>
+                            </td>
+                            <td width="30" class="multi-edit"><input type="checkbox" value="smd_browse_by" name="selected[]" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
         </form>
 
     </div>

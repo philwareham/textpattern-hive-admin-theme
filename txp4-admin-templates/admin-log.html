@@ -119,54 +119,62 @@
     <div id="log_container" class="txp-container txp-list">
 
         <form action="index.php" id="log_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
-            <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
-                <thead>
-                    <tr>
-                        <th class="desc date time"><a href="#">Time</a></th>
-                        <th class="log_detail ip"><a href="#">IP</a></th>
-                        <th class="host"><a href="#">Host</a></th>
-                        <th class="page"><a href="#">Page</a></th>
-                        <th class="refer"><a href="#">Referrer</a></th>
-                        <th class="log_detail method"><a href="#">Method</a></th>
-                        <th class="log_detail status"><a href="#">Status</a></th>
-                        <th class="multi-edit">&#160;</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <td class="detail-toggle" colspan="2"><input type="checkbox" name="cb_toggle_log_detail" id="cb_toggle_log_detail" value="1" class="checkbox" onclick="toggleClassRemember('log_detail');" /> <label for="cb_toggle_log_detail">Show detail</label></td>
-                        <td class="multi-edit" colspan="6">
-                            Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;<select name="edit_method" class="list" id="withselected" onchange="poweredit(this); return false;">
-                                <option value="" selected="selected"></option>
-                                <option value="delete">Delete</option>
-                            </select>
-                            <input type="submit" value="Go" class="smallerbox" />
-                        </td>
-                    </tr>
-                </tfoot>
-                <tbody>
-                    <tr class="odd">
-                        <td width="85" class="date time">21&#160;Sep&#160;2011 10:13:58</td>
-                        <td width="20" class="log_detail ip">127.0.0.1</td>
-                        <td class="host">www.anon.​dev</td>
-                        <td class="page"><strong><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site</a></strong></td>
-                        <td class="refer">&#160;</td>
-                        <td width="60" class="log_detail method">POST</td>
-                        <td width="60" class="log_detail status">302</td>
-                        <td class="multi-edit"><input type="checkbox" value="126" name="selected[]" /></td>
-                    </tr>
-                    <tr class="even">
-                        <td width="85" class="date time">21&#160;Sep&#160;2011 10:13:58</td>
-                        <td width="20" class="log_detail ip">127.0.0.1</td>
-                        <td class="host">www.anon.​dev</td>
-                        <td class="page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site?​commented=0</a></td>
-                        <td class="refer">&#160;</td>
-                        <td width="60" class="log_detail method">GET</td>
-                        <td width="60" class="log_detail status">200</td>
-                        <td class="multi-edit"><input type="checkbox" value="127" name="selected[]" /></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="txp-listtables">
+
+                <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
+
+                    <thead>
+                        <tr>
+                            <th class="desc date time"><a href="#">Time</a></th>
+                            <th class="log_detail ip"><a href="#">IP</a></th>
+                            <th class="host"><a href="#">Host</a></th>
+                            <th class="page"><a href="#">Page</a></th>
+                            <th class="refer"><a href="#">Referrer</a></th>
+                            <th class="log_detail method"><a href="#">Method</a></th>
+                            <th class="log_detail status"><a href="#">Status</a></th>
+                            <th class="multi-edit">&#160;</th>
+                        </tr>
+                    </thead>
+
+                    <tfoot>
+                        <tr>
+                            <td class="detail-toggle" colspan="2"><input type="checkbox" name="cb_toggle_log_detail" id="cb_toggle_log_detail" value="1" class="checkbox" onclick="toggleClassRemember('log_detail');" /> <label for="cb_toggle_log_detail">Show detail</label></td>
+                            <td class="multi-edit" colspan="6">
+                                Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;<select name="edit_method" class="list" id="withselected" onchange="poweredit(this); return false;">
+                                    <option value="" selected="selected"></option>
+                                    <option value="delete">Delete</option>
+                                </select>
+                                <input type="submit" value="Go" class="smallerbox" />
+                            </td>
+                        </tr>
+                    </tfoot>
+
+                    <tbody>
+                        <tr class="odd">
+                            <td width="85" class="date time">21&#160;Sep&#160;2011 10:13:58</td>
+                            <td width="20" class="log_detail ip">127.0.0.1</td>
+                            <td class="host">www.anon.​dev</td>
+                            <td class="page"><strong><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site</a></strong></td>
+                            <td class="refer">&#160;</td>
+                            <td width="60" class="log_detail method">POST</td>
+                            <td width="60" class="log_detail status">302</td>
+                            <td class="multi-edit"><input type="checkbox" value="126" name="selected[]" /></td>
+                        </tr>
+                        <tr class="even">
+                            <td width="85" class="date time">21&#160;Sep&#160;2011 10:13:58</td>
+                            <td width="20" class="log_detail ip">127.0.0.1</td>
+                            <td class="host">www.anon.​dev</td>
+                            <td class="page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site?​commented=0</a></td>
+                            <td class="refer">&#160;</td>
+                            <td width="60" class="log_detail method">GET</td>
+                            <td width="60" class="log_detail status">200</td>
+                            <td class="multi-edit"><input type="checkbox" value="127" name="selected[]" /></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
         </form>
 
         <div id="log_navigation" class="txp-navigation">

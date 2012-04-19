@@ -159,78 +159,86 @@
         <div class="txp-list">
 
             <form action="index.php" id="links_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
-                <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
-                    <thead>
-                        <tr>
-                            <th class="id"><a href="#">ID#</a></th>
-                            <th class="actions">&#160;</th>
-                            <th class="asc name"><a href="#">Name</a></th>
-                            <th class="description"><a href="#">Description</a></th>
-                            <th class="category"><a href="#">Category</a></th>
-                            <th class="date created"><a href="#">Date</a></th>
-                            <th class="multi-edit">&#160;</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <td class="multi-edit" colspan="7">Select:
-                                <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" />
-                                <input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" />
-                                <input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" />
-                                <label for="withselected">With selected:</label>&#160;<select name="edit_method" class="list" id="withselected" onchange="poweredit(this); return false;">
-                                    <option value="" selected="selected"></option>
-                                    <option value="changecategory">Change category</option>
-                                    <option value="delete">Delete</option>
-                                </select>
-                                <input type="submit" value="Go" class="smallerbox" />
-                            </td>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        <tr class="odd">
-                            <td width="20" class="id">2</td>
-                            <td width="35" class="actions">
-                                <ul>
-                                    <li class="action-edit"><a href="#">Edit</a></li>
-                                    <li class="action-view"><a href="http://textpattern.net/">View</a></li>
-                                </ul>
-                            </td>
-                            <td width="125" class="name"><a href="#">TextBook</a></td>
-                            <td width="150" class="description">&#160;</td>
-                            <td width="125" class="category"><span title="Textpattern">textpattern</span></td>
-                            <td width="75" class="date created">20&#160;Jul&#160;2005 12:54:41</td>
-                            <td class="multi-edit"><input type="checkbox" value="2" name="selected[]" /></td>
-                        </tr>
-                        <tr class="even">
-                            <td width="20" class="id">1</td>
-                            <td width="35" class="actions">
-                                <ul>
-                                    <li class="action-edit"><a href="#">Edit</a></li>
-                                    <li class="action-view"><a href="http://textpattern.com/">View</a></li>
-                                </ul>
-                            </td>
-                            <td width="125" class="name"><a href="#">Textpattern</a></td>
-                            <td width="150" class="description">&#160;</td>
-                            <td width="125" class="category"><span title="Textpattern">textpattern</span></td>
-                            <td width="75" class="date created">20&#160;Jul&#160;2005 12:54:26</td>
-                            <td class="multi-edit"><input type="checkbox" value="1" name="selected[]" /></td>
-                        </tr>
-                        <tr class="odd">
-                            <td width="20" class="id">3</td>
-                            <td width="35" class="actions">
-                                <ul>
-                                    <li class="action-edit"><a href="#">Edit</a></li>
-                                    <li class="action-view"><a href="http://textpattern.org/">View</a></li>
-                                </ul>
-                            </td>
-                            <td width="125" class="name"><a href="#">Txp Resources</a></td>
-                            <td width="150" class="description">&#160;</td>
-                            <td width="125" class="category"><span title="Textpattern">textpattern</span></td>
-                            <td width="75" class="date created">20&#160;Jul&#160;2005 12:55:04</td>
-                            <td class="multi-edit"><input type="checkbox" value="3" name="selected[]" /></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="txp-listtables">
+
+                    <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
+
+                        <thead>
+                            <tr>
+                                <th class="id"><a href="#">ID#</a></th>
+                                <th class="actions">&#160;</th>
+                                <th class="asc name"><a href="#">Name</a></th>
+                                <th class="description"><a href="#">Description</a></th>
+                                <th class="category"><a href="#">Category</a></th>
+                                <th class="date created"><a href="#">Date</a></th>
+                                <th class="multi-edit">&#160;</th>
+                            </tr>
+                        </thead>
+
+                        <tfoot>
+                            <tr>
+                                <td class="multi-edit" colspan="7">Select:
+                                    <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" />
+                                    <input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" />
+                                    <input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" />
+                                    <label for="withselected">With selected:</label>&#160;<select name="edit_method" class="list" id="withselected" onchange="poweredit(this); return false;">
+                                        <option value="" selected="selected"></option>
+                                        <option value="changecategory">Change category</option>
+                                        <option value="delete">Delete</option>
+                                    </select>
+                                    <input type="submit" value="Go" class="smallerbox" />
+                                </td>
+                            </tr>
+                        </tfoot>
+
+                        <tbody>
+                            <tr class="odd">
+                                <td width="20" class="id">2</td>
+                                <td width="35" class="actions">
+                                    <ul>
+                                        <li class="action-edit"><a href="#">Edit</a></li>
+                                        <li class="action-view"><a href="http://textpattern.net/">View</a></li>
+                                    </ul>
+                                </td>
+                                <td width="125" class="name"><a href="#">TextBook</a></td>
+                                <td width="150" class="description">&#160;</td>
+                                <td width="125" class="category"><span title="Textpattern">textpattern</span></td>
+                                <td width="75" class="date created">20&#160;Jul&#160;2005 12:54:41</td>
+                                <td class="multi-edit"><input type="checkbox" value="2" name="selected[]" /></td>
+                            </tr>
+                            <tr class="even">
+                                <td width="20" class="id">1</td>
+                                <td width="35" class="actions">
+                                    <ul>
+                                        <li class="action-edit"><a href="#">Edit</a></li>
+                                        <li class="action-view"><a href="http://textpattern.com/">View</a></li>
+                                    </ul>
+                                </td>
+                                <td width="125" class="name"><a href="#">Textpattern</a></td>
+                                <td width="150" class="description">&#160;</td>
+                                <td width="125" class="category"><span title="Textpattern">textpattern</span></td>
+                                <td width="75" class="date created">20&#160;Jul&#160;2005 12:54:26</td>
+                                <td class="multi-edit"><input type="checkbox" value="1" name="selected[]" /></td>
+                            </tr>
+                            <tr class="odd">
+                                <td width="20" class="id">3</td>
+                                <td width="35" class="actions">
+                                    <ul>
+                                        <li class="action-edit"><a href="#">Edit</a></li>
+                                        <li class="action-view"><a href="http://textpattern.org/">View</a></li>
+                                    </ul>
+                                </td>
+                                <td width="125" class="name"><a href="#">Txp Resources</a></td>
+                                <td width="150" class="description">&#160;</td>
+                                <td width="125" class="category"><span title="Textpattern">textpattern</span></td>
+                                <td width="75" class="date created">20&#160;Jul&#160;2005 12:55:04</td>
+                                <td class="multi-edit"><input type="checkbox" value="3" name="selected[]" /></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
             </form>
 
             <div id="link_navigation" class="txp-navigation">

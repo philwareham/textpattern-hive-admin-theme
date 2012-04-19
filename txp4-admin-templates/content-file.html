@@ -124,63 +124,67 @@
     <div id="file_container" class="txp-container txp-list">
 
         <form name="longform" id="files_form" method="post" action="index.php" onsubmit="return verify('Are you sure?')">
-            <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
+            <div class="txp-listtables">
 
-                <thead>
-                    <tr>
-                        <th class="id"><a href="#">ID#</a></th><th class="actions">&#160;</th>
-                        <th class="asc name"><a href="#">Name</a></th>
-                        <th class="title"><a href="#">Title</a></th>
-                        <th class="description"><a href="#">Description</a></th>
-                        <th class="category"><a href="#">Category</a></th>
-                        <th class="tag-build">Tags</th>
-                        <th class="status">Status</th><th class="condition">Condition</th>
-                        <th class="downloads"><a href="#">Downloads</a></th>
-                        <th class="multi-edit">&#160;</th>
-                    </tr>
-                </thead>
+                <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
 
-                <tfoot>
-                    <tr>
-                        <td class="multi-edit" colspan="11">
-                            Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;<select name="edit_method" class="list" id="withselected" onchange="poweredit(this); return false;">
-                                <option value="" selected="selected"></option>
-                                <option value="changecategory">Change category</option>
-                                <option value="delete">Delete</option>
-                            </select>
-                            <input type="submit" value="Go" class="smallerbox" />
-                        </td>
-                    </tr>
-                </tfoot>
+                    <thead>
+                        <tr>
+                            <th class="id"><a href="#">ID#</a></th><th class="actions">&#160;</th>
+                            <th class="asc name"><a href="#">Name</a></th>
+                            <th class="title"><a href="#">Title</a></th>
+                            <th class="description"><a href="#">Description</a></th>
+                            <th class="category"><a href="#">Category</a></th>
+                            <th class="tag-build">Tags</th>
+                            <th class="status">Status</th><th class="condition">Condition</th>
+                            <th class="downloads"><a href="#">Downloads</a></th>
+                            <th class="multi-edit">&#160;</th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    <tr class="odd">
-                        <td class="id">1</td>
-                        <td width="65" class="actions">
-                            <ul>
-                                <li class="action-edit"><a href="secondary/content-file_edit.html">Edit</a></li>
-                                <li class="action-view"><a href="#">Download</a></li>
-                            </ul>
-                        </td>
-                        <td width="125" class="name"><a href="secondary/content-file_edit.html">test-file.zip</a></td>
-                        <td width="90" class="title">A Test File</td>
-                        <td width="150" class="description">This is a test file upload description</td>
-                        <td width="90" class="category">&#160;</td>
-                        <td width="75" class="tag-build">
-                            <ul>
-                                <li><a target="_blank" href="#" onclick="popWin(this.href, 400, 250); return false;">Textile</a></li>
-                                <li><a target="_blank" href="#" onclick="popWin(this.href, 400, 250); return false;">Textpattern</a></li>
-                                <li><a target="_blank" href="#" onclick="popWin(this.href, 400, 250); return false;">XHTML</a></li>
-                            </ul>
-                        </td>
-                        <td width="45" class="status">Live</td>
-                        <td width="45" class="condition"><span class="ok">Ok</span></td>
-                        <td width="25" class="downloads">None</td>
-                        <td width="10" class="multi-edit"><input type="checkbox" value="1" name="selected[]" /></td>
-                    </tr>
-                </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="multi-edit" colspan="11">
+                                Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;<select name="edit_method" class="list" id="withselected" onchange="poweredit(this); return false;">
+                                    <option value="" selected="selected"></option>
+                                    <option value="changecategory">Change category</option>
+                                    <option value="delete">Delete</option>
+                                </select>
+                                <input type="submit" value="Go" class="smallerbox" />
+                            </td>
+                        </tr>
+                    </tfoot>
 
-            </table>
+                    <tbody>
+                        <tr class="odd">
+                            <td class="id">1</td>
+                            <td width="65" class="actions">
+                                <ul>
+                                    <li class="action-edit"><a href="secondary/content-file_edit.html">Edit</a></li>
+                                    <li class="action-view"><a href="#">Download</a></li>
+                                </ul>
+                            </td>
+                            <td width="125" class="name"><a href="secondary/content-file_edit.html">test-file.zip</a></td>
+                            <td width="90" class="title">A Test File</td>
+                            <td width="150" class="description">This is a test file upload description</td>
+                            <td width="90" class="category">&#160;</td>
+                            <td width="75" class="tag-build">
+                                <ul>
+                                    <li><a target="_blank" href="#" onclick="popWin(this.href, 400, 250); return false;">Textile</a></li>
+                                    <li><a target="_blank" href="#" onclick="popWin(this.href, 400, 250); return false;">Textpattern</a></li>
+                                    <li><a target="_blank" href="#" onclick="popWin(this.href, 400, 250); return false;">XHTML</a></li>
+                                </ul>
+                            </td>
+                            <td width="45" class="status">Live</td>
+                            <td width="45" class="condition"><span class="ok">Ok</span></td>
+                            <td width="25" class="downloads">None</td>
+                            <td width="10" class="multi-edit"><input type="checkbox" value="1" name="selected[]" /></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
         </form>
 
         <div id="file_navigation" class="txp-navigation">
