@@ -417,6 +417,7 @@ button.publish {
     font-weight: bold;
     border: 1px solid #f2ab05;
     border-bottom-color: darken(#f2ab05, 10%);
+    padding: .66666666666667em .75em;
     @include gradient(#ffda44, #f2ab05);
     &:hover {
         @include gradient(lighten(#ffda44, 10%), lighten(#f2ab05, 10%));
