@@ -113,7 +113,17 @@
                         <h2>Article categories&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=article_category&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a></h2>
 
                         <form method="post" action="index.php" class="action-create article">
-                            <input type="text" value="" name="title" size="20" class="edit" /><input type="submit" value="Create" class="smallerbox" />
+                            <input type="text" value="" name="title" size="20" class="edit" />
+                            <div class="parent">
+                                <label for="parent_cat">Parent</label>
+                                <select name="parent_cat" class="list">
+                                    <option value="" selected="selected">&nbsp;</option>
+                                    <option value="hope-for-the-future">Hope for the Future</option>
+                                    <option value="meaningful-labor">Meaningful Labor</option>
+                                    <option value="reciprocal-affection">Reciprocal Affection</option>
+                                </select>
+                            </div>
+                            <input type="submit" value="Create" class="smallerbox" />
                         </form>
 
                         <form method="post" action="index.php" id="category_article_form" class="category-tree" onsubmit="return verify('Are you sure?')">
@@ -138,7 +148,15 @@
                         <h2>Link categories&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=link_category&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a></h2>
 
                         <form method="post" action="index.php" class="action-create link">
-                            <input type="text" value="" name="title" size="20" class="edit" /><input type="submit" value="Create" class="smallerbox" />
+                            <input type="text" value="" name="title" size="20" class="edit" />
+                            <div class="parent">
+                                <label for="parent_cat">Parent</label>
+                                <select name="parent_cat" class="list">
+                                    <option value="" selected="selected">&nbsp;</option>
+                                    <option value="textpattern">Textpattern</option>
+                                </select>
+                            </div>
+                            <input type="submit" value="Create" class="smallerbox" />
                         </form>
 
                         <form method="post" action="index.php" id="category_link_form" class="category-tree" onsubmit="return verify('Are you sure?')">
@@ -156,7 +174,15 @@
                         <h2>Image categories&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=image_category&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a></h2>
 
                         <form method="post" action="index.php" class="action-create image">
-                            <input type="text" value="" name="title" size="20" class="edit" /><input type="submit" value="Create" class="smallerbox" />
+                            <input type="text" value="" name="title" size="20" class="edit" />
+                            <div class="parent">
+                                <label for="parent_cat">Parent</label>
+                                <select name="parent_cat" class="list">
+                                    <option value="" selected="selected">&nbsp;</option>
+                                    <option value="site-design">Site Design</option>
+                                </select>
+                            </div>
+                            <input type="submit" value="Create" class="smallerbox" />
                         </form>
 
                         <form method="post" action="index.php" id="category_image_form" class="category-tree" onsubmit="return verify('Are you sure?')">
@@ -174,7 +200,8 @@
                         <h2>File categories&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=file_category&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a></h2>
 
                         <form method="post" action="index.php" class="action-create file">
-                            <input type="text" value="" name="title" size="20" class="edit" /><input type="submit" value="Create" class="smallerbox" />
+                            <input type="text" value="" name="title" size="20" class="edit" />
+                            <input type="submit" value="Create" class="smallerbox" />
                         </form>
 
                         <p>None exist.</p>
