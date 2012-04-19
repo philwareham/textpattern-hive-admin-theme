@@ -1022,7 +1022,7 @@ body {
   display: none;
 }
 
-.image {
+.content-image {
   border: solid 1px #cccccc;
   -moz-border-radius: 0.385em;
   border-radius: 0.385em;
@@ -1032,7 +1032,7 @@ body {
   box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
 }
 
-a:hover .image {
+a:hover .content-image {
   border: solid 1px #0066ff;
   -webkit-box-shadow: 0 0 0.462em rgba(0, 102, 255, 0.4);
   box-shadow: 0 0 0.462em rgba(0, 102, 255, 0.4);
