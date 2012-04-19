@@ -1018,6 +1018,10 @@ body {
 /* =============================================================================
    Miscellaneous/shared layout
    ========================================================================== */
+.empty {
+  display: none;
+}
+
 .image {
   border: solid 1px #cccccc;
   -moz-border-radius: 0.385em;
@@ -1362,10 +1366,6 @@ span.spinner {
 #supporting_content .action-create,
 #content_switcher .action-create {
   margin-top: 0;
-}
-
-#configuration_content > div.empty {
-  display: none;
 }
 
 #supporting_content > div {

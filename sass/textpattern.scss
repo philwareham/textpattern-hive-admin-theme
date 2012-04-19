@@ -789,6 +789,10 @@ body {
    Miscellaneous/shared layout
    ========================================================================== */
 
+.empty {
+    display: none;
+}
+
 .image {
     border: solid 1px $color-border;
     @include border-radius;
@@ -1090,10 +1094,6 @@ span.spinner {
     .action-create {
         margin-top: 0;
     }
-}
-
-#configuration_content > div.empty {
-    display: none;
 }
 
 #supporting_content > div {
