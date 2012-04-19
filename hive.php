@@ -38,6 +38,9 @@ class hive_theme extends theme
         if(defined('hive_theme_hide_tag_builder_column')) {
             $out[] = '<link href="'.$this->url.'css/custom/hide_tag_builder_column.css" rel="stylesheet" type="text/css" />';
         }
+        if(defined('hive_theme_hide_copy_as')) {
+            $out[] = '<link href="'.$this->url.'css/custom/hide_copy_as.css" rel="stylesheet" type="text/css" />';
+        }
         if(defined('hive_theme_hide_form_preview')) {
             $out[] = '<link href="'.$this->url.'css/custom/hide_form_preview.css" rel="stylesheet" type="text/css" />';
         }
