@@ -68,7 +68,7 @@ a.icon {
     border: 1px solid lighten($color-border, 9%);
     @include border-radius;
     background-color: $color-background-box;
-    @include svg-graphic(icon-sprite, png, 27.0769230769231em, 5.07692307692308em); // 352px / 13px, 44px / 13px
+    @include svg-graphic(icon-sprite, png, 27.0769230769231em, 5.07692307692308em); // 352px / 13px, 66px / 13px
     &:hover {
         border-color: $color-border;
     }
@@ -85,7 +85,7 @@ button.icon {
         z-index: 2;
         width: 1.69230769230769em; // 22px / 13px
         height: 1.69230769230769em; // 22px / 13px
-    @include svg-graphic(icon-sprite, png, 27.0769230769231em, 5.07692307692308em); // 352px / 13px, 44px / 13px
+    @include svg-graphic(icon-sprite, png, 27.0769230769231em, 5.07692307692308em); // 352px / 13px, 66px / 13px
     }
 }
 
