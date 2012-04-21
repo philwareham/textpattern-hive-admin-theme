@@ -80,13 +80,17 @@ button.icon {
     &:before {
         content: "";
         position: absolute;
-        top: .15384615384615em;
-        left: .46153846153846em;
+        top: .15384615384615em; // 2px / 13px
+        left: .46153846153846em; // 6px / 13px
         z-index: 2;
         width: 1.69230769230769em; // 22px / 13px
         height: 1.69230769230769em; // 22px / 13px
     @include svg-graphic(icon-sprite, png, 27.0769230769231em, 5.07692307692308em); // 352px / 13px, 66px / 13px
     }
+}
+
+button.publish:before {
+    top: .46153846153846em; // 8px / 13px
 }
 
 a.icon-write, button.icon-write:before          { background-position: 0 0; }
