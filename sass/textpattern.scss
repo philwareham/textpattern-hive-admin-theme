@@ -463,7 +463,6 @@ input[value="×"] {
 
 #list {
     width: 100%;
-    margin-bottom: 1em;
     overflow: auto;
     /* IE7 */
     *overflow-y: scroll; 
@@ -562,6 +561,12 @@ input[value="×"] {
             }
         }
     }
+}
+
+/* Allow overflow scroll on tables */
+.txp-listtables {
+    overflow-x: auto;
+    margin-bottom: 1em;
 }
 
 

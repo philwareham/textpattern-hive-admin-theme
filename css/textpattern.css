@@ -655,7 +655,6 @@ input[value="×"]:active {
    ========================================================================== */
 #list {
   width: 100%;
-  margin-bottom: 1em;
   overflow: auto;
   /* IE7 */
   *overflow-y: scroll;
@@ -770,6 +769,12 @@ input[value="×"]:active {
 }
 #list tfoot .multi-edit input[type="button"] {
   margin-right: .38461538461538em;
+}
+
+/* Allow overflow scroll on tables */
+.txp-listtables {
+  overflow-x: auto;
+  margin-bottom: 1em;
 }
 
 /* =============================================================================
