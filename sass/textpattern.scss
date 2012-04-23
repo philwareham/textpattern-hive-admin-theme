@@ -839,8 +839,9 @@ table#edit.edit-pane {
 .txp-control-panel {
     text-align: center;
     margin-bottom: 1em;
-    select {
-        margin-bottom: .38461538461538em;
+    line-height: 2.53846153846154;
+    p {
+        margin-top: 0;
     }
 }
 
@@ -1456,6 +1457,10 @@ td:nth-child(2).install-item {
 /* =============================================================================
    Admin -> Users page
    ========================================================================== */
+
+#page-admin .txp-control-panel {
+    line-height: $baseline;
+}
 
 #change_password,
 #change_email {

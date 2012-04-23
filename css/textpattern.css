@@ -1071,9 +1071,10 @@ table#edit.edit-pane td.cell-label {
 .txp-control-panel {
   text-align: center;
   margin-bottom: 1em;
+  line-height: 2.53846153846154;
 }
-.txp-control-panel select {
-  margin-bottom: .38461538461538em;
+.txp-control-panel p {
+  margin-top: 0;
 }
 
 .restricted-area {
@@ -1695,6 +1696,10 @@ td:nth-child(2).install-item strong {
 /* =============================================================================
    Admin -> Users page
    ========================================================================== */
+#page-admin .txp-control-panel {
+  line-height: 1.385;
+}
+
 #change_password,
 #change_email {
   margin: 2em auto 1em;
