@@ -6,7 +6,7 @@
     <title>Txp &#8250; My site &#8250; Classic/Remora theme UI style guide</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="/textpattern/textpattern.js"></script>
-    <link href="/textpattern/theme/remora/textpattern2.css" rel="stylesheet" type="text/css" />
+    <link href="/textpattern/theme/remora/textpattern.css" rel="stylesheet" type="text/css" />
 </head>
 <body id="page-list" class="content">
 
@@ -59,8 +59,8 @@
     <div class="txp-container">
 
     <div class="plugin-help"><!-- temp container div -->
-        <h1>Classic/Remora theme UI style guide</h1>
-        <p>The purpose of this guide is to document UI elements used within this theme in order to streamline development, avoid conflicts and inconsistencies, and as a reference for admin theme authors and plugin authors.</p>
+        <h1>Classic/Remora theme UI style guide (ORIGINAL CORE)</h1>
+        <p>The original core Textpattern theme UI, before my additions and improvements.</p>
 
         <ol>
             <li><a href="#ui-doc-layouts">Grids and columns</a></li>
@@ -77,15 +77,6 @@
             <li><a href="#ui-doc-forms">Forms</a></li>
             <li><a href="#ui-doc-icons">Icons</a></li>
         </ol>
-
-
-        <div class="experimental-text-section" id="ui-doc-layouts">
-            <h1>Grids and columns</h1>
-
-            <p>PLACEHOLDER - TO BE DONE</p>
-
-        </div>
-
 
         <div class="experimental-text-section" id="ui-doc-headings">
             <h1>Headings</h1>
@@ -179,32 +170,6 @@
         </div>
 
 
-        <div class="experimental-text-section" id="ui-doc-labels">
-            <h1>Inline text labels</h1>
-
-            <h2>Safe</h2>
-            <p><code>&lt;span class="success"&gt;...message...&lt;/span&gt;</code></p>
-            <p><code>&lt;strong class="success"&gt;...message...&lt;/strong&gt;</code></p>
-            <p>This is an example of a <span class="success">span success label</span> and a <strong class="success">strong success label</strong>.</p>
-
-            <h2>Warning</h2>
-            <p><code>&lt;span class="warning"&gt;...message...&lt;/span&gt;</code></p>
-            <p><code>&lt;strong class="warning"&gt;...message...&lt;/strong&gt;</code></p>
-            <p>This is an example of a <span class="warning">span warning label</span> and a <strong class="warning">strong warning label</strong>.</p>
-
-            <h2>Danger</h2>
-            <p><code>&lt;span class="error"&gt;...message...&lt;/span&gt;</code></p>
-            <p><code>&lt;strong class="error"&gt;...message...&lt;/strong&gt;</code></p>
-            <p>This is an example of a <span class="error">span error label</span> and a <strong class="error">strong error label</strong>.</p>
-
-            <h2>Information (no semantic meaning)</h2>
-            <p><code>&lt;span class="information"&gt;...message...&lt;/span&gt;</code></p>
-            <p><code>&lt;strong class="information"&gt;...message...&lt;/strong&gt;</code></p>
-            <p>This is an example of a <span class="information">span information label</span> and a <strong class="information">strong information label</strong>.</p>
-
-        </div>
-
-
         <div class="experimental-text-section" id="ui-doc-alerts">
             <h1>Alert boxes</h1>
 
@@ -254,19 +219,19 @@
             <h2>Left ranged image</h2>
             <p><code>&lt;img src="" alt="" class="align-left" /&gt;</code><br />
                 <span class="warning">suggested class name addition</span></p>
-            <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="align-left" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
+            <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="experimental-align-left" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
             <p>Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
 
             <h2>Right ranged image</h2>
             <p><code>&lt;img src="" alt="" class="align-right" /&gt;</code><br />
                 <span class="warning">suggested class name addition</span></p>
-            <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="align-right" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
+            <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="experimental-align-right" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
             <p>Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
 
             <h2>Centred image</h2>
             <p><code>&lt;img src="" alt="" class="align-center" /&gt;</code><br />
                 <span class="warning">suggested class name addition</span></p>
-            <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="align-center" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet.</p>
+            <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="experimental-align-center" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder" /> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet.</p>
 
         </div>
 
@@ -457,27 +422,11 @@
                     <textarea id="textarea" name="textarea" cols="78" rows="5"></textarea>
                 </p>
 
-                <h2>Text fields large</h2>
+                <h2>Text fields</h2>
                 <p><code>&lt;input type="text" id="" name="" /&gt;</code></p>
                 <p>
                     <label for="text-lrg">Text (large) with pophelp</label>&#160;<a href="#" class="pophelp">?</a><br />
                     <input type="text" id="text-lrg" name="text-lrg" />
-                </p>
-
-                <h2>Text fields medium</h2>
-                <p><code>&lt;input type="text" id="" name="" class="input-medium" /&gt;</code><br />
-                    <span class="warning">suggested class name addition</span></p>
-                <p>
-                    <label for="text-med">Text medium</label><br />
-                    <input type="text" id="text-med" name="text-med" class="experimental-input-medium" />
-                </p>
-
-                <h2>Text fields small</h2>
-                <p><code>&lt;input type="text" id="" name="" class="input-small" /&gt;</code><br />
-                    <span class="warning">suggested class name addition</span></p>
-                <p>
-                    <label for="text-sml">Text (small)</label><br />
-                    <input type="text" id="text-sml" name="text-sml" class="experimental-input-small" />
                 </p>
 
                 <h2>Password fields</h2>
@@ -664,14 +613,6 @@
                 <p><input type="submit" value="×" class="smallerbox" /></p>
 
             </form>
-
-        </div>
-
-
-        <div class="experimental-text-section" id="ui-doc-icons">
-            <h1>Icons</h1>
-
-            <p>PLACEHOLDER - TO BE DONE</p>
 
         </div>
 
