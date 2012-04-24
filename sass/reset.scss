@@ -239,7 +239,7 @@ a.navlink-active,
     outline: 0;
     margin: 0;
     padding: .30769230769231em .75em;
-    @include box-shadow(0 1px 0 0 inset rgba(#fff, .25));
+    @include box-shadow(inset 0 1px 0 0 rgba(#fff, .25));
     @include text-shadow-light;
     width: auto;
     border: 1px solid #bbb;

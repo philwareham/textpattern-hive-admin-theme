@@ -288,7 +288,7 @@ h3.lever {
     height: 2em;
     overflow: hidden; // hide the space between link and pophelp
     @include text-shadow-light;
-    @include box-shadow(0 1px 0 0 inset rgba(#fff, .25));
+    @include box-shadow(inset 0 1px 0 0 rgba(#fff, .25));
     @include gradient-bar;
     a {
         position: relative;
@@ -375,7 +375,7 @@ legend {
     font-weight: bold;
     line-height: 2em;
     @include text-shadow-light;
-    @include box-shadow(0 1px 0 0 inset rgba(#fff, .25));
+    @include box-shadow(inset 0 1px 0 0 rgba(#fff, .25));
     @include gradient-bar;
     @include box-sizing;
     /* corrects alignment displayed oddly in IE7 */
