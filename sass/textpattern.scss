@@ -191,6 +191,15 @@ hr {
     background: $info-background;
 }
 
+#warning {
+    border: 1px solid $warning-border;
+    padding: .53846153846154em 2.84615384615385em;
+    line-height: 1.38461538461538;
+    text-align: center;
+    color: $warning-text;
+    background: $warning-background;
+}
+
 /* alert boxes */
 #messagepane {
     position: fixed;
