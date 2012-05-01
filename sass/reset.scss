@@ -225,7 +225,8 @@ input[type="button"],
 a.navlink,
 a.navlink-active,
 .navlink a,
-.navlink-active a {
+.navlink-active a,
+#install-language-file {
     position: relative;
     -webkit-appearance: none;
     @include border-radius;
