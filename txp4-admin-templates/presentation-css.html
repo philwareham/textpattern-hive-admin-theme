@@ -105,7 +105,7 @@
 
     <div id="css_container" class="txp-container txp-edit">
 
-        <table cellpadding="3" cellspacing="0" border="0" id="edit" align="center">
+        <table id="edit">
             <tr>
                 <td class="column">
                     <form method="post" action="index.php" id="style_form" class="edit-form">
@@ -120,7 +120,7 @@ h1 {
     font-weight: normal;
 }</textarea><br />
                             <input type="submit" value="Save" class="publish" />
-                            <span class="copy-as"><label for="copy-css">&#8230;or copy style as</label>&#160;<input type="text" value="" name="newname" class="edit" id="copy-css" />&#160;<input type="submit" value="Copy" name="copy" class="smallerbox" /></span>
+                            <span class="copy-as"><label for="copy-css">&#8230;or copy style as</label>&#160;<input type="text" value="" name="newname" id="copy-css" />&#160;<input type="submit" value="Copy" name="copy" class="smallerbox" /></span>
                         </div>
                     </form>
                 </td>
@@ -128,7 +128,7 @@ h1 {
                     <div id="content_switcher">
                         <h2>All styles</h2>
                         <p class="action-create smallerbox"><a href="?event=css&#38;step=pour">Create new style</a></p>
-                        <table cellpadding="0" cellspacing="0" border="0" id="list" align="left" class="list">
+                        <table id="list" class="list">
                             <tr class="first odd">
                                 <td><a href="#">default</a></td>
                                 <td>&#160;</td>

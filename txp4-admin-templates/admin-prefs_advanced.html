@@ -106,7 +106,7 @@
     <div id="prefs_container" class="txp-container txp-list">
 
         <form method="post" class="prefs-form advanced" action="index.php">
-            <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
+            <table id="list" class="list">
                 <tr>
                     <td align="left" valign="top" colspan="3"><h2>Advanced</h2></td>
                 </tr>
@@ -118,32 +118,32 @@
                 </tr>
                 <tr id='prefs-img_dir' class='admin-prefs odd'>
                     <td class="pref-label cell-label"><label for="img_dir">Image directory</label></td>
-                    <td class="pref-value"><input type="text" value="images" name="img_dir" size="20" class="edit" id="img_dir" /></td>
+                    <td class="pref-value"><input type="text" value="images" name="img_dir" size="20" id="img_dir" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-file_base_path' class='admin-prefs even'>
                     <td class="pref-label cell-label"><label for="file_base_path">File directory path</label></td>
-                    <td class="pref-value"><input type="text" value="/Users/pwareham/Sites/ svn/textpattern.dev/files" name="file_base_path" size="20" class="edit" id="file_base_path" /></td>
+                    <td class="pref-value"><input type="text" value="/Users/pwareham/Sites/ svn/textpattern.dev/files" name="file_base_path" size="20" id="file_base_path" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-file_max_upload_size' class='admin-prefs odd'>
                     <td class="pref-label cell-label"><label for="file_max_upload_size">Maximum file size of uploads (in bytes)</label></td>
-                    <td class="pref-value"><input type="text" value="2000000" name="file_max_upload_size" size="20" class="edit" id="file_max_upload_size" /></td>
+                    <td class="pref-value"><input type="text" value="2000000" name="file_max_upload_size" size="20" id="file_max_upload_size" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-tempdir' class='admin-prefs even'>
                     <td class="pref-label cell-label"><label for="tempdir">Temporary directory path</label></td>
-                    <td class="pref-value"><input type="text" value="/private/tmp" name="tempdir" size="20" class="edit" id="tempdir" /></td>
+                    <td class="pref-value"><input type="text" value="/private/tmp" name="tempdir" size="20" id="tempdir" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-plugin_cache_dir' class='admin-prefs odd'>
                     <td class="pref-label cell-label"><label for="plugin_cache_dir">Plugin cache directory path</label></td>
-                    <td class="pref-value"><input type="text" value="" name="plugin_cache_dir" size="20" class="edit" id="plugin_cache_dir" /></td>
+                    <td class="pref-value"><input type="text" value="" name="plugin_cache_dir" size="20" id="plugin_cache_dir" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-smtp_from' class='admin-prefs even'>
                     <td class="pref-label cell-label"><label for="smtp_from">SMTP envelope sender address</label></td>
-                    <td class="pref-value"><input type="text" value="" name="smtp_from" size="20" class="edit" id="smtp_from" /></td>
+                    <td class="pref-value"><input type="text" value="" name="smtp_from" size="20" id="smtp_from" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-override_emailcharset' class='admin-prefs odd'>
@@ -159,7 +159,7 @@
                 <tr id='prefs-default_event' class='admin-prefs odd'>
                     <td class="pref-label cell-label"><label for="default_event">Default admin tab</label></td>
                     <td class="pref-value">
-                        <select name="default_event" class="list default-events">
+                        <select name="default_event" class="default-events">
                             <optgroup label="Content">
                                 <option value="category">Categories</option>
                                 <option value="article" selected="selected">Write</option>
@@ -190,7 +190,7 @@
                 <tr id='prefs-theme_name' class='admin-prefs even'>
                     <td class="pref-label cell-label"><label for="theme_name">Admin-side theme</label></td>
                     <td class="pref-value">
-                        <select id="theme_name" name="theme_name" class="list">
+                        <select id="theme_name" name="theme_name">
                             <option value="classic">Classic</option>
                             <option value="remora" selected="selected">Remora</option>
                         </select>
@@ -232,7 +232,7 @@
                 </tr>
                 <tr id='prefs-spam_blacklists' class='comments-prefs odd'>
                     <td class="pref-label cell-label"><label for="spam_blacklists">Spam blacklists (comma-separated)</label></td>
-                    <td><input type="text" value="sbl.spamhaus.org" name="spam_blacklists" size="20" class="edit" id="spam_blacklists" /></td>
+                    <td><input type="text" value="sbl.spamhaus.org" name="spam_blacklists" size="20" id="spam_blacklists" /></td>
                     <td class="list-item"><a target="_blank" href="#b" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-comment_means_site_updated' class='comments-prefs even'>
@@ -245,52 +245,52 @@
                 </tr>
                 <tr id='prefs-custom_1_set' class='custom-prefs odd'>
                     <td class="pref-label cell-label"><label for="custom_1_set">Custom field 1 name</label></td>
-                    <td class="pref-value"><input type="text" value="custom1" name="custom_1_set" size="20" class="edit" id="custom_1_set" /></td>
+                    <td class="pref-value"><input type="text" value="custom1" name="custom_1_set" size="20" id="custom_1_set" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-custom_2_set' class='custom-prefs even'>
                     <td class="pref-label cell-label"><label for="custom_2_set">Custom field 2 name</label></td>
-                    <td class="pref-value"><input type="text" value="custom2" name="custom_2_set" size="20" class="edit" id="custom_2_set" /></td>
+                    <td class="pref-value"><input type="text" value="custom2" name="custom_2_set" size="20" id="custom_2_set" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-custom_3_set' class='custom-prefs odd'>
                     <td class="pref-label cell-label"><label for="custom_3_set">Custom field 3 name</label></td>
-                    <td class="pref-value"><input type="text" value="" name="custom_3_set" size="20" class="edit" id="custom_3_set" /></td>
+                    <td class="pref-value"><input type="text" value="" name="custom_3_set" size="20" id="custom_3_set" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-custom_4_set' class='custom-prefs even'>
                     <td class="pref-label cell-label"><label for="custom_4_set">Custom field 4 name</label></td>
-                    <td class="pref-value"><input type="text" value="" name="custom_4_set" size="20" class="edit" id="custom_4_set" /></td>
+                    <td class="pref-value"><input type="text" value="" name="custom_4_set" size="20" id="custom_4_set" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-custom_5_set' class='custom-prefs odd'>
                     <td class="pref-label cell-label"><label for="custom_5_set">Custom field 5 name</label></td>
-                    <td class="pref-value"><input type="text" value="" name="custom_5_set" size="20" class="edit" id="custom_5_set" /></td>
+                    <td class="pref-value"><input type="text" value="" name="custom_5_set" size="20" id="custom_5_set" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-custom_6_set' class='custom-prefs even'>
                     <td class="pref-label cell-label"><label for="custom_6_set">Custom field 6 name</label></td>
-                    <td class="pref-value"><input type="text" value="" name="custom_6_set" size="20" class="edit" id="custom_6_set" /></td>
+                    <td class="pref-value"><input type="text" value="" name="custom_6_set" size="20" id="custom_6_set" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-custom_7_set' class='custom-prefs odd'>
                     <td class="pref-label cell-label"><label for="custom_7_set">Custom field 7 name</label></td>
-                    <td class="pref-value"><input type="text" value="" name="custom_7_set" size="20" class="edit" id="custom_7_set" /></td>
+                    <td class="pref-value"><input type="text" value="" name="custom_7_set" size="20" id="custom_7_set" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-custom_8_set' class='custom-prefs even'>
                     <td class="pref-label cell-label"><label for="custom_8_set">Custom field 8 name</label></td>
-                    <td class="pref-value"><input type="text" value="" name="custom_8_set" size="20" class="edit" id="custom_8_set" /></td>
+                    <td class="pref-value"><input type="text" value="" name="custom_8_set" size="20" id="custom_8_set" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-custom_9_set' class='custom-prefs odd'>
                     <td class="pref-label cell-label"><label for="custom_9_set">Custom field 9 name</label></td>
-                    <td class="pref-value"><input type="text" value="" name="custom_9_set" size="20" class="edit" id="custom_9_set" /></td>
+                    <td class="pref-value"><input type="text" value="" name="custom_9_set" size="20" id="custom_9_set" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-custom_10_set' class='custom-prefs even'>
                     <td class="pref-label cell-label"><label for="custom_10_set">Custom field 10 name</label></td>
-                    <td class="pref-value"><input type="text" value="" name="custom_10_set" size="20" class="edit" id="custom_10_set" /></td>
+                    <td class="pref-value"><input type="text" value="" name="custom_10_set" size="20" id="custom_10_set" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr>
@@ -303,7 +303,7 @@
                 </tr>
                 <tr id='prefs-rss_how_many' class='feeds-prefs even'>
                     <td class="pref-label cell-label"><label for="rss_how_many">How many articles should be included in feeds?</label></td>
-                    <td><input type="text" value="5" name="rss_how_many" size="3" class="edit" id="rss_how_many" /></td>
+                    <td><input type="text" value="5" name="rss_how_many" size="3" id="rss_how_many" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-show_comment_count_in_feed' class='feeds-prefs odd'>
@@ -376,7 +376,7 @@
                 </tr>
                 <tr id='prefs-expire_logs_after' class='publish-prefs odd'>
                     <td class="pref-label cell-label"><label for="expire_logs_after">Logs expire after how many days?</label></td>
-                    <td><input type="text" value="7" name="expire_logs_after" size="3" class="edit" id="expire_logs_after" /></td>
+                    <td><input type="text" value="7" name="expire_logs_after" size="3" id="expire_logs_after" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-use_dns' class='publish-prefs even'>
@@ -385,7 +385,7 @@
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-max_url_len' class='publish-prefs odd'>
-                    <td class="pref-label cell-label"><label for="max_url_len">Maximum URL length (in characters)</label></td>    <td><input type="text" value="200" name="max_url_len" size="3" class="edit" id="max_url_len" /></td>
+                    <td class="pref-label cell-label"><label for="max_url_len">Maximum URL length (in characters)</label></td>    <td><input type="text" value="200" name="max_url_len" size="3" id="max_url_len" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-use_plugins' class='publish-prefs even'>

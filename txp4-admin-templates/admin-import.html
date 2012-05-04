@@ -106,7 +106,7 @@
     <div id="import_container" class="txp-container txp-edit">
 
         <form method="post" action="index.php" id="import">
-            <table cellpadding="3" cellspacing="0" border="0" id="edit" align="center">
+            <table id="edit">
                 <tr>
                     <td align="left" valign="top" colspan="2">
                         <h2>Import content from other publishing tools</h2>
@@ -128,7 +128,7 @@
                 <tr class="import-section">
                     <td class="noline cell-label"><label for="section">Section to import into <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
                     <td class="section">
-                        <select name="Section" class="list">
+                        <select name="Section">
                             <option value="" selected="selected"></option>
                             <option value="about">about</option>
                             <option value="articles">articles</option>
@@ -148,7 +148,7 @@
                 </tr>
                 <tr class="import-comment">
                     <td class="noline cell-label"><label for="comment-invite">Default comments invite <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
-                    <td class="comment-invite"><input type="text" value="Comments" name="comments_invite" class="edit" /></td>
+                    <td class="comment-invite"><input type="text" value="Comments" name="comments_invite" /></td>
                 </tr>
                 <tr>
                     <td colspan="2">
@@ -160,19 +160,19 @@
                             </tr>
                             <tr class="import-database">
                                 <td class="noline cell-label"><label for="database">Database name <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
-                                <td class="database"><input type="text" value="" name="importdb" class="edit" /></td>
+                                <td class="database"><input type="text" value="" name="importdb" /></td>
                             </tr>
                             <tr class="import-login">
                                 <td class="noline cell-label"><label for="login">MySQL user <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
-                                <td class="login"><input type="text" value="" name="importdblogin" class="edit" /></td>
+                                <td class="login"><input type="text" value="" name="importdblogin" /></td>
                             </tr>
                             <tr class="import-password">
                                 <td class="noline cell-label"><label for="password">MySQL password <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
-                                <td class="password"><input type="text" value="" name="importdbpass" class="edit" /></td>
+                                <td class="password"><input type="text" value="" name="importdbpass" /></td>
                             </tr>
                             <tr class="import-host">
                                 <td class="noline cell-label"><label for="host">MySQL host <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
-                                <td class="host"><input type="text" value="" name="importdbhost" class="edit" /></td>
+                                <td class="host"><input type="text" value="" name="importdbhost" /></td>
                             </tr>
                         </table>
                     </td>
@@ -182,7 +182,7 @@
                         <table id="mtblogid" style="display: none;">
                             <tr class="import-blog-id">
                                 <td class="noline cell-label"><label for="blog-id">Weblog ID <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
-                                <td class="blog-id"><input type="text" value="" name="blog_id" class="edit" /></td>
+                                <td class="blog-id"><input type="text" value="" name="blog_id" /></td>
                             </tr>
                         </table>
                     </td>
@@ -192,7 +192,7 @@
                         <table id="wponly" style="display: none;">
                             <tr class="import-wp-prefix">
                                 <td class="noline cell-label"><label for="wp-prefix">Tables prefix (if any) <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></label></td>
-                                <td class="wp-prefix"><input type="text" value="wp_" name="wpdbprefix" class="edit" /></td>
+                                <td class="wp-prefix"><input type="text" value="wp_" name="wpdbprefix" /></td>
                             </tr>
                         </table>
                     </td>

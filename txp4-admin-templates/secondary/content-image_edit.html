@@ -105,13 +105,13 @@
 
     <div id="image_container" class="txp-container txp-edit">
 
-        <table cellpadding="0" cellspacing="0" border="0" id="edit" align="center" class="edit-pane">
+        <table id="edit" class="edit-pane">
             <tr class="image-edit landscape">
                 <td>
                     <img class="content-image fullsize" src="http://static1.designhive.com/img/cms/53.jpg" height="294" width="460" alt="" title="53.jpg (460 × 294)" id="image-fullsize" /><br />
                     <form class="image-replace" method="post" enctype="multipart/form-data" action="#">
                         <div>
-                            <p><label for="image-replace">Replace image</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>&#160;<input type="file" value="" name="thefile" class="edit" id="image-replace" />&#160;<input type="submit" value="Upload" class="smallerbox" /></p>
+                            <p><label for="image-replace">Replace image</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>&#160;<input type="file" value="" name="thefile" id="image-replace" />&#160;<input type="submit" value="Upload" class="smallerbox" /></p>
                         </div>
                     </form>
                 </td>
@@ -133,7 +133,7 @@
                     <br/>
                     <form class="thumbnail-upload" method="post" enctype="multipart/form-data" action="#">
                         <div>
-                            <p><label for="upload-thumbnail">Upload thumbnail</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>&#160;<input type="file" value="" name="thefile" class="edit" id="upload-thumbnail"/>&#160;<input type="submit" value="Upload" class="smallerbox"/></p>
+                            <p><label for="upload-thumbnail">Upload thumbnail</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>&#160;<input type="file" value="" name="thefile" id="upload-thumbnail"/>&#160;<input type="submit" value="Upload" class="smallerbox"/></p>
                         </div>
                     </form>
                 </td>
@@ -145,9 +145,9 @@
                         <table cellpadding="1" cellspacing="0" border="0" id="thumbnail_alter" align="left">
                             <tr class="thumbnail-alter-controls">
                                 <td class="noline cell-label"><label for="width">Width </label></td>
-                                <td class="noline"><input type="text" value="" name="width" size="4" class="edit" id="width" /></td>
+                                <td class="noline"><input type="text" value="" name="width" size="4" id="width" /></td>
                                 <td class="noline cell-label"><label for="height">Height </label></td>
-                                <td class="noline"><input type="text" value="" name="height" size="4" class="edit" id="height" /></td>
+                                <td class="noline"><input type="text" value="" name="height" size="4" id="height" /></td>
                                 <td class="noline cell-label"><label for="crop">Crop </label></td>
                                 <td class="noline"><input type="checkbox" name="crop" value="1" id="crop" class="checkbox" /></td>
                                 <td class="noline"><input type="submit" value="Create" class="smallerbox" /></td>
@@ -160,14 +160,14 @@
                 <td>
                     <form method="post" action="index.php" id="image_details_form" class="edit-form">
                         <p class="name"><label for="image-name">Image name</label><br />
-                            <input type="text" value="txp_slug105x45.gif" name="name" class="edit" id="image-name" /></p>
+                            <input type="text" value="txp_slug105x45.gif" name="name" id="image-name" /></p>
                         <p class="category"><label for="image-category">Category</label><br />
-                            <select id="image-category"  name="category" class="list">
+                            <select id="image-category"  name="category">
                                 <option value="">&nbsp;</option>
                                 <option value="site-design" selected="selected">Site Design</option>
                             </select></p>
                         <p class="alt text"><label for="alt-text">Alternate text</label><br />
-                            <input type="text" value="Textpattern CMS" name="alt" size="50" class="edit" id="alt-text" /></p>
+                            <input type="text" value="Textpattern CMS" name="alt" size="50" id="alt-text" /></p>
                         <p class="caption description text"><label for="caption">Caption</label><br />
                             <textarea id="caption" name="caption"></textarea></p>
                         <p><input type="submit" value="Save" class="publish" /></p>

@@ -106,7 +106,7 @@
     <div id="list_control" class="txp-control-panel">
         <form method="get" action="index.php" class="search-form">
             <p>
-                <label for="list-search">Search</label>&#160;<select id="list-search" name="search_method" class="list">
+                <label for="list-search">Search</label>&#160;<select id="list-search" name="search_method">
                     <option value="id">ID#</option>
                     <option value="title_body_excerpt" selected="selected">Title, body &amp; excerpt</option>
                     <option value="section">Section</option>
@@ -117,7 +117,7 @@
                     <option value="article_image">Article image</option>
                     <option value="posted">Posted</option>
                     <option value="lastmod">Modified</option>
-                </select>&#160;<input type="text" value="" name="crit" size="15" class="edit" /><input type="submit" value="Go" name="search" class="smallerbox" />
+                </select>&#160;<input type="text" value="" name="crit" size="15" /><input type="submit" value="Go" name="search" class="smallerbox" />
             </p>
         </form>
     </div>
@@ -127,7 +127,7 @@
         <form name="longform" id="articles_form" method="post" action="index.php" onsubmit="return verify('Are you sure?')">
             <div class="txp-listtables">
 
-                <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
+                <table id="list" class="list">
 
                     <thead>
                         <tr>
@@ -151,7 +151,7 @@
                                 <input type="checkbox" name="cb_toggle_articles_detail" id="cb_toggle_articles_detail" value="1" class="checkbox" onclick="toggleClassRemember('articles_detail');" /> <label for="cb_toggle_articles_detail">Show detail</label>
                             </td>
                             <td class="multi-edit" colspan="9">
-                                Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;<select name="edit_method" class="list" id="withselected" onchange="poweredit(this); return false;">
+                                Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
                                     <option value="" selected="selected"></option>
                                     <option value="changesection">Change section</option>
                                     <option value="changecategory1">Change category1</option>
@@ -225,7 +225,7 @@
             <p class="prev-next">1/1</p>
             <form method="post" action="index.php" class="pageby">
                 <div>View
-                    <select name="qty" class="list" onchange="submit(this.form);">
+                    <select name="qty" onchange="submit(this.form);">
                         <option value="15">15</option>
                         <option value="25">25</option>
                         <option value="50">50</option>

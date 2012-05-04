@@ -105,7 +105,7 @@
 
     <div id="page_container" class="txp-container txp-edit">
 
-        <table cellpadding="3" cellspacing="0" border="0" id="edit" align="center">
+        <table id="edit">
             <tr>
                 <td class="column">
                     <div id="tagbuild_links">
@@ -114,7 +114,7 @@
                         <div class="article-tags">
                             <h3 class="plain lever expanded"><a href="#article-tags">Article output</a></h3>
                             <div id="article-tags" class="toggle">
-                                <ul class="plain-list small">
+                                <ul class="plain-list">
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Articles (single or list)</a></li>
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Articles (custom list)</a></li>
                                 </ul>
@@ -124,7 +124,7 @@
                         <div class="article-nav-tags">
                             <h3 class="plain lever expanded"><a href="#article-nav-tags">Article navigation</a></h3>
                             <div id="article-nav-tags" class="toggle">
-                                <ul class="plain-list small">
+                                <ul class="plain-list">
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Previous article title</a></li>
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Next article title</a></li>
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Previous article link</a></li>
@@ -138,7 +138,7 @@
                         <div class="nav-tags">
                             <h3 class="plain lever"><a href="#nav-tags">Site navigation</a></h3>
                             <div id="nav-tags" class="toggle" style="display:none">
-                                <ul class="plain-list small">
+                                <ul class="plain-list">
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Homepage link</a></li>
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Section list</a></li>
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Category list</a></li>
@@ -154,7 +154,7 @@
                         <div class="xml-tags">
                             <h3 class="plain lever"><a href="#xml-tags">XML feeds</a></h3>
                             <div id="xml-tags" class="toggle" style="display:none">
-                                <ul class="plain-list small">
+                                <ul class="plain-list">
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Articles feed link</a></li>
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Links feed link</a></li>
                                 </ul>
@@ -164,7 +164,7 @@
                         <div class="misc-tags">
                             <h3 class="plain lever"><a href="#misc-tags">Miscellaneous</a></h3>
                             <div id="misc-tags" class="toggle" style="display:none">
-                                <ul class="plain-list small">
+                                <ul class="plain-list">
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Page title</a></li>
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">CSS link (head)</a></li>
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Site name</a></li>
@@ -183,7 +183,7 @@
                         <div class="file-tags">
                             <h3 class="plain lever"><a href="#file-tags">File downloads</a></h3>
                             <div id="file-tags" class="toggle" style="display:none">
-                                <ul class="plain-list small">
+                                <ul class="plain-list">
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File download list</a></li>
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File download</a></li>
                                     <li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File download link</a></li>
@@ -209,7 +209,7 @@
     &lt;/body&gt;
 &lt;/html&gt;</textarea><br />
                             <input type="submit" value="Save" name="save" class="publish" />
-                            <span class="copy-as"><label for="copy-page">&hellip;or, copy page as</label>&#160;<input type="text" value="" name="newname" class="edit" id="copy-page" /><input type="submit" value="Copy" name="copy" class="smallerbox" /></span>
+                            <span class="copy-as"><label for="copy-page">&hellip;or, copy page as</label>&#160;<input type="text" value="" name="newname" id="copy-page" /><input type="submit" value="Copy" name="copy" class="smallerbox" /></span>
                         </div>
                     </form>
                 </td>
@@ -218,7 +218,7 @@
                     <div id="content_switcher">
                         <h2>All pages</h2>
                         <p class="action-create smallerbox"><a href="#">Create new page</a></p>
-                        <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
+                        <table id="list" class="list">
                             <tr class="first odd">
                                 <td><a href="#">archive</a></td>
                                 <td>&#160;</td>

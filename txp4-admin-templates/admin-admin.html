@@ -108,26 +108,26 @@
         <div class="txp-edit">
             <form method="post" action="index.php" id="user_edit" class="edit-form">
                 <div class="txp-listtables">
-                    <table cellpadding="3" cellspacing="0" border="0" id="edit" align="center" class="edit-pane">
+                    <table id="edit" class="edit-pane">
                         <tr>
                             <td align="left" valign="top" colspan="2"><h2>Add new author</h2></td>
                         </tr>
                         <tr class="name login-name">
                             <td class="noline cell-label"><label for="name">Login </label></td>
-                            <td class="noline"><input type="text" value="" name="name" class="edit" /></td>
+                            <td class="noline"><input type="text" value="" name="name" /></td>
                         </tr>
                         <tr class="name real-name">
                             <td class="noline cell-label"><label for="RealName">Real name </label></td>
-                            <td class="noline"><input type="text" value="" name="RealName" class="edit" /></td>
+                            <td class="noline"><input type="text" value="" name="RealName" /></td>
                         </tr>
                         <tr class="email">
                             <td class="noline cell-label"><label for="email">E-mail </label></td>
-                            <td class="noline"><input type="text" value="" name="email" class="edit" /></td>
+                            <td class="noline"><input type="text" value="" name="email" /></td>
                         </tr>
                         <tr class="privs">
                             <td class="noline cell-label"><label for="privs">Privileges </label></td>
                             <td>
-                                <select name="privs" class="list">
+                                <select name="privs">
                                     <option value="1">Publisher</option>
                                     <option value="2">Managing Editor</option>
                                     <option value="3">Copy Editor</option>
@@ -149,7 +149,7 @@
         <div class="txp-list">
 
             <form action="index.php" id="users_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
-                <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
+                <table class="list">
                     <thead>
                         <tr>
                             <th class="asc name login-name"><a href="#">Login</a></th>
@@ -164,7 +164,7 @@
                         <tr>
                             <td class="multi-edit" colspan="7">
                                 Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;
-                                <select name="edit_method" class="list" id="withselected" onchange="poweredit(this); return false;">
+                                <select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
                                     <option value="" selected="selected"></option>
                                     <option value="changeprivilege">Change privilege</option>
                                     <option value="resetpassword">Reset password</option>
@@ -201,7 +201,7 @@
                 <p class="prev-next">1/1</p>
                 <form method="post" action="index.php" class="pageby">
                     <div>
-                        View <select name="qty" class="list" onchange="submit(this.form);">
+                        View <select name="qty" onchange="submit(this.form);">
                             <option value="15">15</option>
                             <option value="25">25</option>
                             <option value="50">50</option>
@@ -218,7 +218,7 @@
                 <h2>Change your password</h2>
                 <p>
                     <label for="new_pass">New password</label>
-                    <input type="password" value="" name="new_pass" size="20" class="edit" id="new_pass" /><input type="checkbox" name="mail_password" value="1" id="mail_password" checked="checked" class="checkbox active" /><label for="mail_password">Mail it to me</label>
+                    <input type="password" value="" name="new_pass" size="20" id="new_pass" /><input type="checkbox" name="mail_password" value="1" id="mail_password" checked="checked" class="checkbox active" /><label for="mail_password">Mail it to me</label>
                     <input type="submit" value="Submit" name="change_pass" class="smallerbox" />
                 </p>
             </form>

@@ -106,7 +106,7 @@
     <div id="prefs_container" class="txp-container txp-list">
 
         <form method="post" class="prefs-form basic" action="index.php">
-            <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
+            <table id="list" class="list">
                 <tr>
                     <td align="left" valign="top" colspan="3"><h2>Basic</h2></td>
                 </tr>
@@ -118,23 +118,23 @@
                 </tr>
                 <tr id='prefs-sitename' class='publish-prefs odd'>
                     <td class="pref-label cell-label"><label for="sitename">Site name</label></td>
-                    <td class="pref-value"><input type="text" value="My Site" name="sitename" size="20" class="edit" id="sitename" /></td>
+                    <td class="pref-value"><input type="text" value="My Site" name="sitename" size="20" id="sitename" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-site_slogan' class='publish-prefs even'>
                     <td class="pref-label cell-label"><label for="site_slogan">Site slogan</label></td>
-                    <td class="pref-value"><input type="text" value="My pithy slogan" name="site_slogan" size="20" class="edit" id="site_slogan" /></td>
+                    <td class="pref-value"><input type="text" value="My pithy slogan" name="site_slogan" size="20" id="site_slogan" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-siteurl' class='publish-prefs odd'>
                     <td class="pref-label cell-label"><label for="siteurl">Site URL</label></td>
-                    <td class="pref-value"><input type="text" value="www.textpattern.dev" name="siteurl" size="20" class="edit" id="siteurl" /></td>
+                    <td class="pref-value"><input type="text" value="www.textpattern.dev" name="siteurl" size="20" id="siteurl" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-production_status' class='publish-prefs even'>
                     <td class="pref-label cell-label"><label for="production_status">Production status</label></td>
                     <td class="pref-value">
-                        <select id="production_status" name="production_status" class="list">
+                        <select id="production_status" name="production_status">
                             <option value="debug">Debugging</option>
                             <option value="testing" selected="selected">Testing</option>
                             <option value="live">Live</option>
@@ -145,7 +145,7 @@
                 <tr id='prefs-gmtoffset' class='publish-prefs odd'>
                     <td class="pref-label cell-label"><label for="gmtoffset">Time zone</label></td>
                     <td class="pref-value">
-                        <select id="gmtoffset" name="timezone_key" class="list">
+                        <select id="gmtoffset" name="timezone_key">
                             <option value="" selected="selected"></option>
                             <optgroup label="Africa">
                                 <option value="Africa/Abidjan">Abidjan</option>
@@ -641,7 +641,7 @@
                 <tr id='prefs-dateformat' class='publish-prefs even'>
                     <td class="pref-label cell-label"><label for="dateformat">Date format</label></td>
                     <td class="pref-value">
-                        <select id="dateformat" name="dateformat" class="list">
+                        <select id="dateformat" name="dateformat">
                             <option value="%b %Oe, %I:%M %p">Sep 21, 07:04 pm</option>
                             <option value="%e.%m.%y">21.09.11</option>
                             <option value="%Oe %B, %I:%M %p">21 September, 07:04 pm</option>
@@ -670,7 +670,7 @@
                 <tr id='prefs-archive_dateformat' class='publish-prefs odd'>
                     <td class="pref-label cell-label"><label for="archive_dateformat">Archive date format</label></td>
                     <td class="pref-value">
-                        <select id="archive_dateformat" name="archive_dateformat" class="list">
+                        <select id="archive_dateformat" name="archive_dateformat">
                             <option value="%b %Oe, %I:%M %p">Sep 21, 07:04 pm</option>
                             <option value="%e.%m.%y">21.09.11</option>
                             <option value="%Oe %B, %I:%M %p">21 September, 07:04 pm</option>
@@ -699,7 +699,7 @@
                 <tr id='prefs-permlink_mode' class='publish-prefs even'>
                     <td class="pref-label cell-label"><label for="permlink_mode">Permanent link mode</label></td>
                     <td class="pref-value">
-                        <select id="permlink_mode" name="permlink_mode" class="list">
+                        <select id="permlink_mode" name="permlink_mode">
                             <option value="messy">?=messy</option>
                             <option value="id_title">/id/title</option>
                             <option value="section_id_title" selected="selected">/section/id/title</option>
@@ -713,7 +713,7 @@
                 <tr id='prefs-use_textile' class='publish-prefs odd'>
                     <td class="pref-label cell-label"><label for="use_textile">Use Textile</label></td>
                     <td class="pref-value">
-                        <select id="use_textile" name="use_textile" class="list">
+                        <select id="use_textile" name="use_textile">
                             <option value="1" selected="selected">Use Textile</option>
                             <option value="2">Convert linebreaks</option>
                             <option value="0">Leave text untouched</option>
@@ -724,7 +724,7 @@
                 <tr id='prefs-logging' class='publish-prefs even'>
                     <td class="pref-label cell-label"><label for="logging">Logging</label></td>
                     <td class="pref-value">
-                        <select id="logging" name="logging" class="list">
+                        <select id="logging" name="logging">
                             <option value="all" selected="selected">All hits</option>
                             <option value="refer">Referrers only</option>
                             <option value="none">None</option>
@@ -747,7 +747,7 @@
                 </tr>
                 <tr id='prefs-comments_default_invite' class='comments-prefs even'>
                     <td class="pref-label cell-label"><label for="comments_default_invite">Default invite</label></td>
-                    <td class="pref-value"><input type="text" value="Comment" name="comments_default_invite" size="20" class="edit" id="comments_default_invite" /></td>
+                    <td class="pref-value"><input type="text" value="Comment" name="comments_default_invite" size="20" id="comments_default_invite" /></td>
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr id='prefs-comments_moderate' class='comments-prefs odd'>
@@ -758,7 +758,7 @@
                 <tr id='prefs-comments_disabled_after' class='comments-prefs even'>
                     <td class="pref-label cell-label"><label for="comments_disabled_after">Disabled after</label></td>
                     <td class="pref-value">
-                        <select id="comments_disabled_after" name="comments_disabled_after" class="list">
+                        <select id="comments_disabled_after" name="comments_disabled_after">
                             <option value="0">never</option>
                             <option value="7">1 week</option>
                             <option value="14">2 weeks</option>
@@ -778,7 +778,7 @@
                 <tr id='prefs-comments_mode' class='comments-prefs even'>
                     <td class="pref-label cell-label"><label for="comments_mode">Comments mode</label></td>
                     <td class="pref-value">
-                        <select id="comments_mode" name="comments_mode" class="list">
+                        <select id="comments_mode" name="comments_mode">
                             <option value="0" selected="selected">nopopup</option>
                             <option value="1">popup</option>
                         </select>
@@ -788,7 +788,7 @@
                 <tr id='prefs-comments_dateformat' class='comments-prefs odd'>
                     <td class="pref-label cell-label"><label for="comments_dateformat">Comments date format</label></td>
                     <td class="pref-value">
-                        <select id="comments_dateformat" name="comments_dateformat" class="list">
+                        <select id="comments_dateformat" name="comments_dateformat">
                             <option value="%b %Oe, %I:%M %p">Sep 21, 07:04 pm</option>
                             <option value="%e.%m.%y">21.09.11</option>
                             <option value="%Oe %B, %I:%M %p">21 September, 07:04 pm</option>
@@ -822,7 +822,7 @@
                 <tr id='prefs-comments_sendmail' class='comments-prefs odd'>
                     <td class="pref-label cell-label"><label for="comments_sendmail">Mail comments to author?</label></td>
                     <td class="pref-value">
-                        <select id="comments_sendmail" name="comments_sendmail" class="list">
+                        <select id="comments_sendmail" name="comments_sendmail">
                             <option value="1">All</option>
                             <option value="0" selected="selected">None</option>
                             <option value="2">All but spam</option>

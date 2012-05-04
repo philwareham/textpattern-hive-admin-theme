@@ -106,7 +106,7 @@
     <div id="article_container" class="txp-container txp-edit">
 
         <form id="article_form" name="article_form" method="post" action="index.php" class="async busy">
-            <table cellpadding="3" cellspacing="0" border="0" id="edit" align="center">
+            <table id="edit">
                 <tr>
 
                     <td id="article-col-1">
@@ -116,14 +116,14 @@
                             <div id="textile_group">
                                 <h3 class="plain lever expanded"><a href="#textile_help">Textile help</a></h3>
                                 <div id="textile_help" class="toggle">
-                                    <ul class="textile plain-list small">
+                                    <ul class="textile plain-list">
                                         <li>header: <strong>h<em>n</em>.</strong>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=header&#38;language=en-gb" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle">?</a></li>
                                         <li>Blockquote: <strong>bq.</strong>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=blockquote&#38;language=en-gb" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle">?</a></li>
                                         <li>Numeric list: <strong>#</strong>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=numeric&#38;language=en-gb" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle">?</a></li>
                                         <li>Bulleted list: <strong>*</strong>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=bulleted&#38;language=en-gb" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle">?</a></li>
                                         <li>Definition List: <strong>; :</strong>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=definition&#38;language=en-gb" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle">?</a></li>
                                     </ul>
-                                    <ul class="textile plain-list small">
+                                    <ul class="textile plain-list">
                                         <li>_<em>emphasis</em>_&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=italic&#38;language=en-gb" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle">?</a></li>
                                         <li>*<strong>strong</strong>*&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=bold&#38;language=en-gb" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle">?</a></li>
                                         <li>??<cite>citation</cite>??&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=cite&#38;language=en-gb" onclick="popWin(this.href, 500, 300); return false;" class="pophelpsubtle">?</a></li>
@@ -132,8 +132,8 @@
                                         <li>^superscript^&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=super&#38;language=en-gb" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle">?</a></li>
                                         <li>~subscript~&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=subscript&#38;language=en-gb" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle">?</a></li>
                                     </ul>
-                                    <p class="textile small">"linktext":url&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=link&#38;language=en-gb" onclick="popWin(this.href, 400, 500); return false;" class="pophelpsubtle">?</a></p>
-                                    <p class="textile small">!imageurl!&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=image&#38;language=en-gb" onclick="popWin(this.href, 500, 500); return false;" class="pophelpsubtle">?</a></p>
+                                    <p class="textile">"linktext":url&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=link&#38;language=en-gb" onclick="popWin(this.href, 400, 500); return false;" class="pophelpsubtle">?</a></p>
+                                    <p class="textile">!imageurl!&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=image&#38;language=en-gb" onclick="popWin(this.href, 500, 500); return false;" class="pophelpsubtle">?</a></p>
                                     <p><a id="textile-docs-link" href="http://textpattern.com/textile-sandbox" target="_blank">More</a></p>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@
                                 <div id="advanced" class="toggle">
                                     <p class="markup markup-body">
                                         <label for="markup-body">Article markup</label><br />
-                                        <select id="markup-body" name="textile_body" class="list">
+                                        <select id="markup-body" name="textile_body">
                                             <option value="1" selected="selected">Use Textile</option>
                                             <option value="2">Convert linebreaks</option>
                                             <option value="0">Leave text untouched</option>
@@ -151,7 +151,7 @@
                                     </p>
                                     <p class="markup markup-excerpt">
                                         <label for="markup-excerpt">Excerpt markup</label><br />
-                                        <select id="markup-excerpt" name="textile_excerpt" class="list">
+                                        <select id="markup-excerpt" name="textile_excerpt">
                                             <option value="1" selected="selected">Use Textile</option>
                                             <option value="2">Convert linebreaks</option>
                                             <option value="0">Leave text untouched</option>
@@ -159,7 +159,7 @@
                                     </p>
                                     <p class="override-form">
                                         <label for="override-form">Override form</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=override_form&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a><br />
-                                        <select id="override-form" name="override_form" class="list">
+                                        <select id="override-form" name="override_form">
                                             <option value="" selected="selected"></option>
                                             <option value="article_listing">article_listing</option>
                                             <option value="comments_display">comments_display</option>
@@ -176,11 +176,11 @@
                                 <div id="custom_field" class="toggle" style="display:none;">
                                     <p class="custom-field custom-1">
                                         <label for="custom-1">custom1</label><br />
-                                        <input type="text" value="" name="custom_1" size="22" class="edit" id="custom-1" />
+                                        <input type="text" value="" name="custom_1" size="22" id="custom-1" />
                                     </p>
                                     <p class="custom-field custom-2">
                                         <label for="custom-2">custom2</label><br />
-                                        <input type="text" value="" name="custom_2" size="22" class="edit" id="custom-2" />
+                                        <input type="text" value="" name="custom_2" size="22" id="custom-2" />
                                     </p>
                                 </div>
                             </div>
@@ -190,7 +190,7 @@
                                 <div id="image" class="toggle">
                                     <p class="article-image">
                                         <label for="article-image">Article image</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=article_image&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a><br />
-                                        <input type="text" value="" name="Image" size="22" class="edit" id="article-image" />
+                                        <input type="text" value="" name="Image" size="22" id="article-image" />
                                     </p>
                                 </div>
                             </div>
@@ -204,7 +204,7 @@
                                     </p>
                                     <p class="url-title">
                                         <label for="url-title">URL-only title</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=url_title&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a><br />
-                                        <input type="text" value="" name="url_title" size="22" class="edit" id="url-title" />
+                                        <input type="text" value="" name="url_title" size="22" id="url-title" />
                                     </p>
                                 </div>
                             </div>
@@ -228,7 +228,7 @@
                             <div class="text">
                                 <p class="title">
                                     <label for="title">Title</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=title&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a><br />
-                                    <input type="text" id="title" name="Title" value="" class="edit" size="40" tabindex="1" />
+                                    <input type="text" id="title" name="Title" value="" size="40" tabindex="1" />
                                 </p>
                                 <p class="body">
                                     <label for="body">Body</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=body&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a><br />
@@ -274,8 +274,8 @@
                             <fieldset id="write-sort">
                                 <legend>Sort and display</legend>
                                 <p class="category category-1">
-                                    <label for="category-1">Category 1</label> <span class="edit category-edit small">[<a href="?event=category&#38;_txp_token=417ae348c47ce07a5fd05573b71ed6ec">Edit</a>]</span><br />
-                                    <select id="category-1" name="Category1" class="list">
+                                    <label for="category-1">Category 1</label> <span class="edit category-edit">[<a href="?event=category&#38;_txp_token=417ae348c47ce07a5fd05573b71ed6ec">Edit</a>]</span><br />
+                                    <select id="category-1" name="Category1">
                                         <option value="" selected="selected">&nbsp;</option>
                                         <option value="hope-for-the-future">Hope for the Future</option>
                                         <option value="meaningful-labor">Meaningful Labor</option>
@@ -284,7 +284,7 @@
                                 </p>
                                 <p class="category category-2">
                                     <label for="category-2">Category 2</label><br />
-                                    <select id="category-2" name="Category2" class="list">
+                                    <select id="category-2" name="Category2">
                                         <option value="" selected="selected">&nbsp;</option>
                                         <option value="hope-for-the-future">Hope for the Future</option>
                                         <option value="meaningful-labor">Meaningful Labor</option>
@@ -292,8 +292,8 @@
                                     </select>
                                 </p>
                                 <p class="section">
-                                    <label for="section">Section</label> <span class="edit section-edit small">[<a href="?event=section&#38;_txp_token=417ae348c47ce07a5fd05573b71ed6ec">Edit</a>]</span><br />
-                                    <select id="section" name="Section" class="list">
+                                    <label for="section">Section</label> <span class="edit section-edit">[<a href="?event=section&#38;_txp_token=417ae348c47ce07a5fd05573b71ed6ec">Edit</a>]</span><br />
+                                    <select id="section" name="Section">
                                         <option value="about">about</option>
                                         <option value="articles" selected="selected">articles</option>
                                     </select>
@@ -309,7 +309,7 @@
                                     </p>
                                     <p class="comment-invite">
                                         <label for="comment-invite">Invitation</label><br />
-                                        <input type="text" value="Comment" name="AnnotateInvite" class="edit" id="comment-invite" />
+                                        <input type="text" value="Comment" name="AnnotateInvite" id="comment-invite" />
                                     </p>
                                 </div>
                             </div>

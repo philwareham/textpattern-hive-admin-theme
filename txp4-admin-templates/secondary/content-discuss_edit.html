@@ -106,10 +106,10 @@
     <div id="discuss_container" class="txp-container txp-edit">
 
         <form method="post" action="index.php" id="discuss_edit_form" class="edit-form">
-            <table cellpadding="3" cellspacing="0" border="0" id="edit" align="center" class="edit-pane">
+            <table id="edit" class="edit-pane">
                 <tr>
                     <td class="noline cell-label">Name </td>
-                    <td class="noline"><input type="text" value="Donald Swain" name="name" class="edit" id="name" /></td>
+                    <td class="noline"><input type="text" value="Donald Swain" name="name" id="name" /></td>
                 </tr>
                 <tr>
                     <td class="noline cell-label">IP </td>
@@ -117,11 +117,11 @@
                 </tr>
                 <tr>
                     <td class="noline cell-label">E-mail </td>
-                    <td class="noline"><input type="text" value="donald.swain@example.com" name="email" class="edit" id="email" /></td>
+                    <td class="noline"><input type="text" value="donald.swain@example.com" name="email" id="email" /></td>
                 </tr>
                 <tr>
                     <td class="noline cell-label">Website </td>
-                    <td class="noline"><input type="text" value="example.com" name="web" class="edit" id="website" /></td>
+                    <td class="noline"><input type="text" value="example.com" name="web" id="website" /></td>
                 </tr>
                 <tr>
                     <td class="noline cell-label">Date </td>
@@ -136,7 +136,7 @@
                 <tr>
                     <td class="noline cell-label">Status </td>
                     <td class="status">
-                        <select name="visible" class="list">
+                        <select name="visible">
                             <option value="1" selected="selected">Visible</option>
                             <option value="-1">Spam</option>
                             <option value="0">Unmoderated</option>

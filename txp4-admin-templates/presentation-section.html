@@ -105,14 +105,14 @@
 
     <div id="section_container" class="txp-container txp-list">
 
-        <table cellpadding="0" cellspacing="0" border="0" id="list" align="center">
+        <table id="list">
 
             <tr>
                 <td colspan="3">
                     <h2>Site sections&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></h2>
                     <div id="section_control" class="txp-control-panel">
                         <form method="post" action="index.php" id="section_create" class="edit-form">
-                            <input type="text" value="" name="name" size="10" class="edit" /><input type="submit" value="Create" class="smallerbox" />
+                            <input type="text" value="" name="name" size="10" /><input type="submit" value="Create" class="smallerbox" />
                         </form>
                     </div>
                 </td>
@@ -126,7 +126,7 @@
                             <tr class="uses-page">
                                 <td class="noline cell-label">Uses page: </td>
                                 <td class="noline">
-                                    <select name="page" class="list">
+                                    <select name="page">
                                         <option value="archive">archive</option>
                                         <option value="default" selected="selected">default</option>
                                         <option value="error_default">error_default</option>
@@ -137,7 +137,7 @@
                             <tr class="uses-style">
                                 <td class="noline cell-label">Uses style: </td>
                                 <td class="noline">
-                                    <select name="css" class="list">
+                                    <select name="css">
                                         <option value="default" selected="selected">default</option>
                                         <option value="new_style">new_style</option>
                                     </select>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
@@ -159,16 +159,16 @@
                         <table>
                             <tr class="name">
                                 <td class="noline cell-label">Section name: </td>
-                                <td class="noline"><input type="text" value="about" name="name" size="20" class="edit" /></td>
+                                <td class="noline"><input type="text" value="about" name="name" size="20" /></td>
                             </tr>
                             <tr class="title">
                                 <td class="noline cell-label">Section title: </td>
-                                <td class="noline"><input type="text" value="About" name="title" size="20" class="edit" /></td>
+                                <td class="noline"><input type="text" value="About" name="title" size="20" /></td>
                             </tr>
                             <tr class="uses-page">
                                 <td class="noline cell-label">Uses page: </td>
                                 <td class="noline">
-                                    <select name="page" class="list">
+                                    <select name="page">
                                         <option value="archive">archive</option>
                                         <option value="default" selected="selected">default</option>
                                         <option value="error_default">error_default</option>
@@ -179,7 +179,7 @@
                             <tr class="uses-style">
                                 <td class="noline cell-label">Uses style: </td>
                                 <td class="noline">
-                                    <select name="css" class="list">
+                                    <select name="css">
                                         <option value="default" selected="selected">default</option>
                                         <option value="new_style">new_style</option>
                                     </select>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
@@ -233,16 +233,16 @@
                         <table>
                             <tr class="name">
                                 <td class="noline cell-label">Section name: </td>
-                                <td class="noline"><input type="text" value="articles" name="name" size="20" class="edit" /></td>
+                                <td class="noline"><input type="text" value="articles" name="name" size="20" /></td>
                             </tr>
                             <tr class="title">
                                 <td class="noline cell-label">Section title: </td>
-                                <td class="noline"><input type="text" value="Articles" name="title" size="20" class="edit" /></td>
+                                <td class="noline"><input type="text" value="Articles" name="title" size="20" /></td>
                             </tr>
                             <tr class="uses-page">
                                 <td class="noline cell-label">Uses page: </td>
                                 <td class="noline">
-                                    <select name="page" class="list">
+                                    <select name="page">
                                         <option value="archive" selected="selected">archive</option>
                                         <option value="default">default</option>
                                         <option value="error_default">error_default</option>
@@ -253,7 +253,7 @@
                             <tr class="uses-style">
                                 <td class="noline cell-label">Uses style: </td>
                                 <td class="noline">
-                                    <select name="css" class="list">
+                                    <select name="css">
                                         <option value="default" selected="selected">default</option>
                                         <option value="new_style">new_style</option>
                                     </select>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>

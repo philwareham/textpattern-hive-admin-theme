@@ -104,7 +104,7 @@
     <div id="messagepane"><span id="message" class="success">Plugin <strong>smd_browse_by</strong> updated. <a class="close">&times;</a></span></div>
 
     <div id="plugin_control" class="txp-control-panel">
-        <table cellpadding="3" cellspacing="0" border="0" id="edit" align="center" class="plugin-install">
+        <table id="edit" class="plugin-install">
             <tr>
                 <td>
                     <form method="post" action="index.php" id="plugin_install_form" class="plugin-data">
@@ -120,7 +120,7 @@
         <form action="index.php" id="plugin_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
             <div class="txp-listtables">
 
-                <table cellpadding="0" cellspacing="0" border="0" id="list" align="center" class="list">
+                <table id="list" class="list">
 
                     <thead>
                         <tr>
@@ -139,7 +139,7 @@
                     <tfoot>
                         <tr>
                             <td class="multi-edit" colspan="10">
-                                Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;<select name="edit_method" class="list" id="withselected" onchange="poweredit(this); return false;">
+                                Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
                                     <option value="" selected="selected"></option>
                                     <option value="changestatus">Change status</option>
                                     <option value="changeorder">Change order</option>
