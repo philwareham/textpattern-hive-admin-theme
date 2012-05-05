@@ -59,7 +59,6 @@ class hive_theme extends theme
     function header()
     {
         global $txp_user;
-        $out[] = '<div id="txp-head">';
         $out[] = '<h1><a href="'.hu.'" title="'.gTxt('tab_view_site').'" rel="external">'.$GLOBALS["prefs"]["sitename"].'</a></h1>';
         if ($txp_user)
         {
@@ -102,17 +101,14 @@ class hive_theme extends theme
             $out[] = '</select>';
             $out[] = '</div>';
         }
-        $out[] = '</div>';
         $out[] = '<div id="messagepane">'.$this->announce($this->message).'</div>';
         return join(n, $out);
     }
 
     function footer()
     {
-        $out[] = '<div id="txp-foot">';
         $out[] = '<p class="mothership"><a href="http://textpattern.com" title="'.gTxt('go_txp_com').'" rel="external">Textpattern CMS</a> (v'.txp_version.')</p>';
         $out[] = '<p class="pagejump"><a href="#">&#8593; '.gTxt('back_to_top').'</a></p>';
-        $out[] = '</div>';
         return join(n, $out);
     }
 
