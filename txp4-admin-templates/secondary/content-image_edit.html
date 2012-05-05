@@ -99,11 +99,12 @@
             </select>
         </div>
 
-    </div>
+        <div id="messagepane"></div>
 
-    <div id="messagepane"></div>
+    </div><!-- /#txp-head -->
+    <div id="txp-body">
 
-    <div id="image_container" class="txp-container txp-edit">
+    <div id="image_container" class="txp-container txp-edit"><!-- TO DELETE -->
 
         <table id="edit" class="edit-pane">
             <tr class="image-edit landscape">
@@ -118,7 +119,7 @@
             </tr>
             <tr class="thumbnail-edit">
                 <td>
-                    <table cellpadding="0" cellspacing="0" border="0" id="image-thumbnail" align="center" class="image-thumbnail">
+                    <table id="image-thumbnail" class="image-thumbnail">
                         <tr>
                             <td class="thumbwrapper">
                                 <img class="content-image" src="http://static1.designhive.com/img/cms/53t.jpg" alt="" width='184' height='118' />
@@ -142,7 +143,7 @@
                 <td>
                     <form method="post" action="index.php" id="thumbnail_alter_form" class="edit-form">
                         <p class="label">Create thumbnail</p>
-                        <table cellpadding="1" cellspacing="0" border="0" id="thumbnail_alter" align="left">
+                        <table id="thumbnail_alter">
                             <tr class="thumbnail-alter-controls">
                                 <td class="noline cell-label"><label for="width">Width </label></td>
                                 <td class="noline"><input type="text" value="" name="width" size="4" id="width" /></td>
@@ -177,12 +178,13 @@
 
         </table>
 
-    </div>
+    </div><!-- TO DELETE -->
+    </div><!-- /#txp-body -->
 
     <div id="txp-foot">
         <p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.5)</p>
         <p class="pagejump"><a href="#">&#8593; Back to top</a></p>
-    </div>
+    </div><!-- /#txp-foot -->
 
 </body>
 </html>

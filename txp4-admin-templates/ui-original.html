@@ -10,53 +10,58 @@
 </head>
 <body id="page-list" class="content">
 
-    <div id="masthead">
-        <ul id="nav">
-            <li class='primary tabup inactive'><a href='?event=article'>Content</a>
-                <ul>
-                    <li class='secondary tabdown2 inactive'><a href='?event=category'>Categories</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=article'>Write</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=list'>Articles</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=image'>Images</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=file'>Files</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=link'>Links</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=discuss'>Comments</a></li>
-                </ul>
-            </li>
-            <li class='primary tabdown inactive'><a href='?event=page'>Presentation</a>
-                <ul>
-                    <li class='secondary tabdown2 inactive'><a href='?event=section'>Sections</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=page'>Pages</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=form'>Forms</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=css'>Style</a></li>
-                </ul>
-            </li>
-            <li class='primary tabdown inactive'><a href='?event=admin'>Admin</a>
-                <ul>
-                    <li class='secondary tabdown2 inactive'><a href='?event=diag'>Diagnostics</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=prefs'>Preferences</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=admin'>Users</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=log'>Visitor logs</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=plugin'>Plugins</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=import'>Import</a></li>
-                </ul>
-            </li>
-            <li class='primary tabdown inactive'><a href='?event=rss_db_man'>Extensions</a>
-                <ul>
-                    <li class='secondary tabdown2 inactive'><a href='?event=rss_db_man'>DB Manager</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=rss_sql_run'>Run SQL</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=rss_db_bk'>DB Backup</a></li>
-                    <li class='secondary tabdown2 inactive'><a href='?event=smd_at'>Admin themes</a></li>
-                </ul>
-            </li>
-            <li id="view-site" class="primary tabdown inactive"><a href="http://www.textpattern.dev/" target="_blank">View site</a></li>
-            <li id="logout" class="primary tabdown inactive"><a href="index.php?logout=1" onclick="return verify('Are you sure?')">Logout</a></li>
-        </ul>
-    </div>
+    <div id="txp-head">
 
-    <div id="messagepane"></div>
+        <div id="masthead">
+            <ul id="nav">
+                <li class='primary tabup inactive'><a href='?event=article'>Content</a>
+                    <ul>
+                        <li class='secondary tabdown2 inactive'><a href='?event=category'>Categories</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=article'>Write</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=list'>Articles</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=image'>Images</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=file'>Files</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=link'>Links</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=discuss'>Comments</a></li>
+                    </ul>
+                </li>
+                <li class='primary tabdown inactive'><a href='?event=page'>Presentation</a>
+                    <ul>
+                        <li class='secondary tabdown2 inactive'><a href='?event=section'>Sections</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=page'>Pages</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=form'>Forms</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=css'>Style</a></li>
+                    </ul>
+                </li>
+                <li class='primary tabdown inactive'><a href='?event=admin'>Admin</a>
+                    <ul>
+                        <li class='secondary tabdown2 inactive'><a href='?event=diag'>Diagnostics</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=prefs'>Preferences</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=admin'>Users</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=log'>Visitor logs</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=plugin'>Plugins</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=import'>Import</a></li>
+                    </ul>
+                </li>
+                <li class='primary tabdown inactive'><a href='?event=rss_db_man'>Extensions</a>
+                    <ul>
+                        <li class='secondary tabdown2 inactive'><a href='?event=rss_db_man'>DB Manager</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=rss_sql_run'>Run SQL</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=rss_db_bk'>DB Backup</a></li>
+                        <li class='secondary tabdown2 inactive'><a href='?event=smd_at'>Admin themes</a></li>
+                    </ul>
+                </li>
+                <li id="view-site" class="primary tabdown inactive"><a href="http://www.textpattern.dev/" target="_blank">View site</a></li>
+                <li id="logout" class="primary tabdown inactive"><a href="index.php?logout=1" onclick="return verify('Are you sure?')">Logout</a></li>
+            </ul>
+        </div>
 
-    <div class="txp-container">
+        <div id="messagepane"></div>
+
+    </div><!-- /#txp-head -->
+    <div id="txp-body">
+
+    <div class="txp-container"><!-- TO DELETE -->
 
     <div class="plugin-help"><!-- temp container div -->
         <h1>Classic/Remora theme design patterns (ORIGINAL CORE)</h1>
@@ -534,8 +539,8 @@
 
                 <h2>Disabled form elements</h2>
                 <p>
-                    <label for="select_dd">Select drop-down</label><br />
-                    <select id="select_dd" name="select_dd" disabled="disabled">
+                    <label for="select_dd2">Select drop-down</label><br />
+                    <select id="select_dd2" name="select_dd2" disabled="disabled">
                         <optgroup label="Group 1">
                             <option value="1">Some text goes here</option>
                             <option value="2">Another choice could be here</option>
@@ -552,7 +557,7 @@
                             <option value="9">Yet another item to be chosen</option>
                         </optgroup>
                     </select>
-                    <input type="text" id="text_inline" name="text_inline" disabled="disabled" />
+                    <input type="text" id="text_inline2" name="text_inline2" disabled="disabled" />
                     <input type="button" value="Hello" disabled="disabled" />
                 </p>
 
@@ -622,7 +627,8 @@
 
     </div><!-- /temp container div -->
 
-    </div>
+    </div><!-- TO DELETE -->
+    </div><!-- /#txp-body -->
 
     <div id="end_page">
         <a href="http://textpattern.com/" id="mothership"><img src="/textpattern/theme/classic/carver.gif" width="60" height="48" border="0" alt="" /></a>

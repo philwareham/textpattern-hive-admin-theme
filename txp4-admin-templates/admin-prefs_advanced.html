@@ -99,22 +99,23 @@
             </select>
         </div>
 
-    </div>
+        <div id="messagepane"></div>
 
-    <div id="messagepane"></div>
+    </div><!-- /#txp-head -->
+    <div id="txp-body">
 
-    <div id="prefs_container" class="txp-container txp-list">
+    <div id="prefs_container" class="txp-container txp-list"><!-- TO DELETE -->
 
         <form method="post" class="prefs-form advanced" action="index.php">
             <table id="list" class="list">
                 <tr>
-                    <td align="left" valign="top" colspan="3"><h2>Advanced</h2></td>
+                    <td colspan="3"><h2>Advanced</h2></td>
                 </tr>
                 <tr>
-                    <td align="left" valign="top" colspan="3" class="nav-tertiary"><a href="admin-prefs_basic.html" class="navlink">Basic</a>&#160;<a href="admin-prefs_advanced.html" class="navlink-active">Advanced</a>&#160;<a href="admin-prefs_languages.html" class="navlink">Language</a></td>
+                    <td colspan="3" class="nav-tertiary"><a href="admin-prefs_basic.html" class="navlink">Basic</a>&#160;<a href="admin-prefs_advanced.html" class="navlink-active">Advanced</a>&#160;<a href="admin-prefs_languages.html" class="navlink">Language</a></td>
                 </tr>
                 <tr>
-                    <td align="left" valign="top" colspan="3"><h3 class="pref-heading admin-prefs">Admin</h3></td>
+                    <td colspan="3"><h3 class="pref-heading admin-prefs">Admin</h3></td>
                 </tr>
                 <tr id='prefs-img_dir' class='admin-prefs odd'>
                     <td class="pref-label cell-label"><label for="img_dir">Image directory</label></td>
@@ -198,7 +199,7 @@
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr>
-                    <td align="left" valign="top" colspan="3"><h3 class="pref-heading comments-prefs">Comments</h3></td>
+                    <td colspan="3"><h3 class="pref-heading comments-prefs">Comments</h3></td>
                 </tr>
                 <tr id='prefs-comments_require_name' class='comments-prefs odd'>
                     <td class="pref-label cell-label">Require user&#8217;s name?</td>
@@ -241,7 +242,7 @@
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr>
-                    <td align="left" valign="top" colspan="3"><h3 class="pref-heading custom-prefs">Custom fields</h3></td>
+                    <td colspan="3"><h3 class="pref-heading custom-prefs">Custom fields</h3></td>
                 </tr>
                 <tr id='prefs-custom_1_set' class='custom-prefs odd'>
                     <td class="pref-label cell-label"><label for="custom_1_set">Custom field 1 name</label></td>
@@ -294,7 +295,7 @@
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr>
-                    <td align="left" valign="top" colspan="3"><h3 class="pref-heading feeds-prefs">Feeds</h3></td>
+                    <td colspan="3"><h3 class="pref-heading feeds-prefs">Feeds</h3></td>
                 </tr>
                 <tr id='prefs-syndicate_body_or_excerpt' class='feeds-prefs odd'>
                     <td class="pref-label cell-label">Syndicate article excerpt <strong>only</strong>?</td>
@@ -322,7 +323,7 @@
                     <td class="list-item"><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></td>
                 </tr>
                 <tr>
-                    <td align="left" valign="top" colspan="3"><h3 class="pref-heading publish-prefs">Publish</h3></td>
+                    <td colspan="3"><h3 class="pref-heading publish-prefs">Publish</h3></td>
                 </tr>
                 <tr id='prefs-title_no_widow' class='publish-prefs odd'>
                     <td class="pref-label cell-label">Prevent widowed words in article titles?</td>
@@ -419,12 +420,13 @@
             </table>
         </form>
 
-    </div>
+    </div><!-- TO DELETE -->
+    </div><!-- /#txp-body -->
 
     <div id="txp-foot">
         <p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.5)</p>
         <p class="pagejump"><a href="#">&#8593; Back to top</a></p>
-    </div>
+    </div><!-- /#txp-foot -->
 
 </body>
 </html>
