@@ -591,7 +591,7 @@ body {
     background: $color-background;
 }
 
-.txp-container {
+#txp-body {
     position: relative;
     z-index: 1;
     max-width: 110em; // 1430px / 13px
@@ -1240,13 +1240,8 @@ table#edit.edit-pane #thumbnail_alter {
     background: lighten($warning-background, 2%);
 }
 
-#discuss_ban_container #list {
-    .name {
-        width: 28%;
-    }
-    .id {
-        width: 14%;
-    }
+#page-discuss .actions {
+    width: 20%;
 }
 
 
@@ -1403,7 +1398,7 @@ table#edit.edit-pane #thumbnail_alter {
     margin-top: 1em;
 }
 
-#prefs_container .publish {
+#page-prefs .publish {
     margin-top: 1em;
 }
 
@@ -1450,7 +1445,6 @@ td:nth-child(2).install-item {
 /* fixes for poor HTML structure on Prefrences pages */
 
 #language_control {
-    margin-top: 1em;
     text-align: left;
 }
 
