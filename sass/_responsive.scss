@@ -28,7 +28,7 @@ body {
    Header (< 769px)
    ========================================================================== */
 
-#txp-head {
+.txp-head {
     padding: 0 1em;
     min-width: 294px;
     h1 {
@@ -38,7 +38,7 @@ body {
     }
 }
 
-#txp-logout {
+.txp-logout {
     right: 1em;
 }
 
@@ -48,12 +48,12 @@ body {
    ========================================================================== */
 
 /* Show <select> version of navigation on small screen widths */
-#txp-nav-select {
+.txp-nav-select {
     display: inherit;
 }
 
 /* Hide <ul> version of navigation on small screen widths */
-#txp-nav {
+.txp-nav {
     display: none;
 }
 
@@ -341,7 +341,7 @@ body {
     padding-top: 4em;
 }
 
-#txp-head {
+.txp-head {
     position: absolute;
     h1 {
         max-width: 66%;
@@ -349,7 +349,7 @@ body {
 }
 
 /* show select version of navigation for smaller screens (and hide list version) */
-#txp-nav-select {
+.txp-nav-select {
     position: absolute;
     top: 2.46153846153846em;
     right: 0;

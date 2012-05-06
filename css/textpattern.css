@@ -34,14 +34,14 @@
 /* =============================================================================
    Clearfix
    ========================================================================== */
-.clearfix, #txp-foot, .txp-navigation {
+.clearfix, .txp-foot, .txp-navigation {
   *zoom: 1;
 }
-.clearfix:before, #txp-foot:before, .txp-navigation:before, .clearfix:after, #txp-foot:after, .txp-navigation:after {
+.clearfix:before, .txp-foot:before, .txp-navigation:before, .clearfix:after, .txp-foot:after, .txp-navigation:after {
   content: "";
   display: table;
 }
-.clearfix:after, #txp-foot:after, .txp-navigation:after {
+.clearfix:after, .txp-foot:after, .txp-navigation:after {
   clear: both;
 }
 
@@ -88,7 +88,7 @@ h6 {
 }
 
 small,
-#txp-foot {
+.txp-foot {
   font-size: 0.846em;
 }
 
@@ -797,7 +797,7 @@ body {
   background: white;
 }
 
-#txp-body {
+.txp-body {
   position: relative;
   z-index: 1;
   max-width: 110em;
@@ -807,7 +807,7 @@ body {
 /* =============================================================================
    Header
    ========================================================================== */
-#txp-head {
+.txp-head {
   position: fixed;
   top: 0;
   left: 0;
@@ -836,7 +836,7 @@ body {
   /* CSS3 Compliant */
   background-image: linear-gradient(#ffda44, #fabc2b);
 }
-#txp-head h1 {
+.txp-head h1 {
   float: left;
   margin: 0;
   padding-left: 11.385em;
@@ -851,24 +851,24 @@ body {
   background-position: 0 46%;
   background-image: url("../img/textpattern-lrg.png");
 }
-.svg #txp-head h1 {
+.svg .txp-head h1 {
   background-image: url("../img/svg/textpattern-lrg.svg");
   -webkit-background-size: 11.385em 2.308em;
   -moz-background-size: 11.385em 2.308em;
   -o-background-size: 11.385em 2.308em;
   background-size: 11.385em 2.308em;
 }
-#txp-head h1 a {
+.txp-head h1 a {
   margin-right: 1em;
   margin-left: 1em;
   color: #333333;
 }
-#txp-head h1 a:hover {
+.txp-head h1 a:hover {
   color: #4d4d4d;
   text-decoration: none;
 }
 
-#txp-logout {
+.txp-logout {
   position: absolute;
   z-index: 10010;
   top: -0.5em;
@@ -880,29 +880,28 @@ body {
    ========================================================================== */
 /* hide <select> version of navigation on non-touch devices
     also happens via media-queries when screen width is < 768px regardless of touch ability */
-#txp-nav-select {
+.txp-nav-select {
   display: none;
 }
-.touch #txp-nav-select {
+.touch .txp-nav-select {
   display: inherit;
 }
 
 /* Hide <ul> version of navigation on touch devices */
-.touch #txp-nav {
+.touch .txp-nav {
   display: none;
 }
 
-#txp-nav {
+.txp-nav {
   float: left;
 }
-#txp-nav a {
+.txp-nav a {
   color: #333;
 }
-#txp-nav a:hover {
+.txp-nav a:hover {
   text-decoration: none;
 }
-
-#txp-nav ul {
+.txp-nav ul {
   list-style: none;
   padding-left: 0;
 }
@@ -1009,14 +1008,14 @@ body {
   left: 0;
 }
 
-#txp-nav-select {
+.txp-nav-select {
   margin-top: .61538461538462em;
 }
 
 /* =============================================================================
    Footer
    ========================================================================== */
-#txp-foot {
+.txp-foot {
   position: relative;
   z-index: 1;
 }
@@ -1814,16 +1813,16 @@ div.plugin-help {
   /* =============================================================================
      Header (< 769px)
      ========================================================================== */
-  #txp-head {
+  .txp-head {
     padding: 0 1em;
     min-width: 294px;
   }
-  #txp-head h1 {
+  .txp-head h1 {
     max-width: 50%;
     padding-left: 1.846em;
     background-image: url("../img/textpattern-sml.png");
   }
-  .svg #txp-head h1 {
+  .svg .txp-head h1 {
     background-image: url("../img/svg/textpattern-sml.svg");
     -webkit-background-size: 1.846em 1.846em;
     -moz-background-size: 1.846em 1.846em;
@@ -1831,7 +1830,7 @@ div.plugin-help {
     background-size: 1.846em 1.846em;
   }
 
-  #txp-logout {
+  .txp-logout {
     right: 1em;
   }
 
@@ -1839,12 +1838,12 @@ div.plugin-help {
      Navigation (< 769px)
      ========================================================================== */
   /* Show <select> version of navigation on small screen widths */
-  #txp-nav-select {
+  .txp-nav-select {
     display: inherit;
   }
 
   /* Hide <ul> version of navigation on small screen widths */
-  #txp-nav {
+  .txp-nav {
     display: none;
   }
 
@@ -2078,15 +2077,15 @@ div.plugin-help {
     padding-top: 4em;
   }
 
-  #txp-head {
+  .txp-head {
     position: absolute;
   }
-  #txp-head h1 {
+  .txp-head h1 {
     max-width: 66%;
   }
 
   /* show select version of navigation for smaller screens (and hide list version) */
-  #txp-nav-select {
+  .txp-nav-select {
     position: absolute;
     top: 2.46153846153846em;
     right: 0;

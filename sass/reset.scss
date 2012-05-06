@@ -219,7 +219,7 @@ button,
 input[type="reset"],
 input[type="submit"],
 input[type="button"],
-#txp-logout a,
+.txp-logout a,
 #article-main a.article-view,
 .action-create a,
 a.navlink,
@@ -299,7 +299,7 @@ button:focus,
 input:focus,
 select:focus,
 textarea:focus,
-#txp-logout a:focus {
+.txp-logout a:focus {
     @include box-shadow(0 0 7px $color-link-hover);
     /* Opera */
     z-index: 1;
