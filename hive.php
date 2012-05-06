@@ -62,8 +62,8 @@ class hive_theme extends theme
         $out[] = '<h1><a href="'.hu.'" title="'.gTxt('tab_view_site').'" rel="external">'.$GLOBALS["prefs"]["sitename"].'</a></h1>';
         if ($txp_user)
         {
-            $out[] = '<p id="txp-logout"><a href="index.php?logout=1" onclick="return verify(\''.gTxt('are_you_sure').'\')">'.gTxt('logout').'</a></p>';
-            $out[] = '<div id="txp-nav">';
+            $out[] = '<p class="txp-logout"><a href="index.php?logout=1" onclick="return verify(\''.gTxt('are_you_sure').'\')">'.gTxt('logout').'</a></p>';
+            $out[] = '<div class="txp-nav">';
             $out[] = '<ul class="data-dropdown">';
             foreach ($this->menu as $tab)
             {
@@ -83,7 +83,7 @@ class hive_theme extends theme
             }
             $out[] = '</ul>';
             $out[] = '</div>';
-            $out[] = '<div id="txp-nav-select">';
+            $out[] = '<div class="txp-nav-select">';
             $out[] = '<select>';
             foreach ($this->menu as $tab)
             {
