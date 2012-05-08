@@ -8,87 +8,84 @@
 /* Formalize original author: Nathan Smith - http://formalize.me/ */
 
 
-/* =============================================================================
-   Base
-   ========================================================================== */
+/* Base
+========================================================================== */
 
 /* 1. corrects text resizing oddly in IE7 when body font-size is set using em units
    2. keeps page centred in all browsers regardless of content height
    3. prevents iOS text size adjust after orientation change, without disabling user zoom
       www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 html {
-    /* 1 */
-    font-size: 100%;
-    font-family: $font-body;
-    /* 2 */
-    overflow-y: scroll;
-    /* 3 */
-    -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
+	/* 1 */
+	font-size: 100%;
+	font-family: $font-body;
+	/* 2 */
+	overflow-y: scroll;
+	/* 3 */
+	-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
 }
 
 /* addresses margins handled incorrectly in IE7 */
 body {
-    margin: 0;
-    font-size: $basefont;
-    line-height: $baseline;
+	margin: 0;
+	font-size: $basefont;
+	line-height: $baseline;
 }
 
 
-/* =============================================================================
-   Links
-   ========================================================================== */
+/* Links
+========================================================================== */
 
 a {
-    &:focus {
-        outline: thin dotted $color-link-hover;
-    }
-    &:hover, &:active {
-        outline: 0;
-    }
+	&:focus {
+		outline: thin dotted $color-link-hover;
+	}
+	&:hover, &:active {
+		outline: 0;
+	}
 }
 
 
-/* =============================================================================
-   Typography
-   ========================================================================== */
+/* Typography
+========================================================================== */
 
 /* addresses margins set differently in IE7 */
 p,
 pre {
-    margin: 1em 0;
+	margin: 1em 0;
 }
 
 /* addresses styling not present in IE7-9, Safari5, Chrome */
 abbr[title],
 acronym[title],
 dfn[title] {
-    border-bottom: 1px dotted;
-    cursor: help;
+	border-bottom: 1px dotted;
+	cursor: help;
 }
 
 /* addresses style set to 'bolder' in Firefox3-4, Safari4-5, Chrome */
 b,
 strong {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 blockquote {
-    margin: 1em 2em;
+	margin: 1em 2em;
 }
 
 /* addresses CSS quotes not supported in IE7, addresses quote property not supported in Safari4 */
 q {
-    quotes: none;
-    &:before, &:after {
-        content: "";
-        content: none;
-    }
+	quotes: none;
+	&:before, &:after {
+		content: "";
+		content: none;
+	}
 }
 
 /* addresses styling not present in Safari5, Chrome */
 dfn {
-    font-style: italic;
+	font-style: italic;
 }
 
 /* corrects font family set oddly in Safari4-5, Chrome - en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
@@ -96,123 +93,118 @@ pre,
 code,
 kbd,
 samp {
-    font-family: monospace, monospace;
-    font-size: 1em;
+	font-family: monospace, monospace;
+	font-size: 1em;
 }
 
 /* prevents sub and sup affecting line-height in all browsers - gist.github.com/413930 */
 sub,
 sup {
-    font-size: $smallfont;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+	font-size: $smallfont;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
 sup {
-    top: -.5em;
+	top: -.5em;
 }
 sub {
-    bottom: -.25em;
+	bottom: -.25em;
 }
 
 
-/* =============================================================================
-   Lists
-   ========================================================================== */
+/* Lists
+========================================================================== */
 
 /* addresses margins set differently in IE7 */
 dl,
 ol,
 ul {
-    margin: 1em 0;
+	margin: 1em 0;
 }
 dd {
-    margin: 0 0 0 2em;
+	margin: 0 0 0 2em;
 }
 
 /* remove margins from nested lists */
 dl dl,
 ul ul,
 ol ol {
-    margin: 0;
+	margin: 0;
 }
 
 /* addresses paddings set differently in IE7 */
 ol,
 ul {
-    padding: 0 0 0 2em;
+	padding: 0 0 0 2em;
 }
 
 dt {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 
-/* =============================================================================
-   Embedded content
-   ========================================================================== */
+/* Embedded content
+========================================================================== */
 
 /* 1. removes border when inside 'a' element in IE7-9, Firefox3
-   2. improves image quality when scaled in IE7
-      code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+   2. improves image quality when scaled in IE7 */
 img {
-    /* 1 */
-    border: 0;
-    /* 2 */
-    -ms-interpolation-mode: bicubic;
+	/* 1 */
+	border: 0;
+	/* 2 */
+	-ms-interpolation-mode: bicubic;
 }
 
 /* corrects overflow displayed oddly in IE9 */
 svg:not(:root) {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 
-/* =============================================================================
-   Tables
-   ========================================================================== */
+/* Tables
+========================================================================== */
 
 /* remove most spacing between table cells */
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* make table cells align top and left by default, remove any cellpadding */
 th,
 td {
-    vertical-align: top;
-    text-align: left;
-    padding: 0;
+	vertical-align: top;
+	text-align: left;
+	padding: 0;
 }
 
 
-/* =============================================================================
-   Forms
-   ========================================================================== */
+/* Forms
+========================================================================== */
 
 /* corrects margin displayed oddly in IE7 */
 form {
-    margin: 0;
+	margin: 0;
 }
 
 /* 1. corrects color not being inherited in IE7-9
    2. corrects text not wrapping in FF3 
    3. corrects alignment displayed oddly in IE7 */
 legend {
-    /* 1 */
-    border: 0;
-    padding: 0;
-    /* 2 */
-    white-space: normal;
-    /* 3 */
-    *margin-right: 7px;
-    *margin-left: -7px;
+	/* 1 */
+	border: 0;
+	padding: 0;
+	/* 2 */
+	white-space: normal;
+	/* 3 */
+	*margin-right: 7px;
+	*margin-left: -7px;
 }
 
 /* added via JS to <textarea> and class="input_full" (applies only to IE7, other browsers don't need it) */
 .input_full_wrap {
-    display: block;
+	display: block;
 }
 
 button,
@@ -227,72 +219,72 @@ a.navlink-active,
 .navlink a,
 .navlink-active a,
 #install-language-file {
-    position: relative;
-    -webkit-appearance: none;
-    @include border-radius;
-    @include background-clip;
-    cursor: pointer;
-    color: $color-text;
-    font-family: $font-body;
-    font-size: .92307692307692em;  // 12px / 13px
-    line-height: 1.33333333333333em; // 16px / 12px
-    text-decoration: none;
-    outline: 0;
-    margin: 0;
-    padding: .30769230769231em .75em;
-    @include box-shadow(inset 0 1px 0 0 rgba(#fff, .25));
-    @include text-shadow-light;
-    width: auto;
-    border: 1px solid #bbb;
-    border-bottom-color: darken(#bbb, 10%);
-    @include gradient(#eee, #bbb);
-    @include inline-block;
-    /* IE7 vertical alignment fix */
-    *padding-top: 2px;
-    *padding-bottom: 0;
-    *overflow: visible;
-    &:hover {
-        color: $color-text;
-        text-decoration: none;
-        @include gradient(lighten(#eee, 4%), lighten(#bbb, 4%));
-    }
-    &:active {
-        @include gradient(lighten(#bbb, 4%), lighten(#eee, 4%));
-    }
+	position: relative;
+	-webkit-appearance: none;
+	@include border-radius;
+	@include background-clip;
+	cursor: pointer;
+	color: $color-text;
+	font-family: $font-body;
+	font-size: .92307692307692em;  // 12px / 13px
+	line-height: 1.33333333333333em; // 16px / 12px
+	text-decoration: none;
+	outline: 0;
+	margin: 0;
+	padding: .30769230769231em .75em;
+	@include box-shadow(inset 0 1px 0 0 rgba(#fff, .25));
+	@include text-shadow-light;
+	width: auto;
+	border: 1px solid #bbb;
+	border-bottom-color: darken(#bbb, 10%);
+	@include gradient(#eee, #bbb);
+	@include inline-block;
+	/* IE7 vertical alignment fix */
+	*padding-top: 2px;
+	*padding-bottom: 0;
+	*overflow: visible;
+	&:hover {
+		color: $color-text;
+		text-decoration: none;
+		@include gradient(lighten(#eee, 4%), lighten(#bbb, 4%));
+	}
+	&:active {
+		@include gradient(lighten(#bbb, 4%), lighten(#eee, 4%));
+	}
 }
 
 /* IE7 button fixes */
 button {
-    *padding-top: 1px;
-    *padding-bottom: 1px;
+	*padding-top: 1px;
+	*padding-bottom: 1px;
 }
 
 textarea,
 select,
 input[type="password"],
 input[type="text"] {
-    -webkit-appearance: none;
-    @include border-radius(0);
-    @include background-clip;
-    font-family: $font-body;
-    font-size: 1em;
-    line-height: 1.38461538461538; // 18px / 13px
-    text-align: left;
-    color: $color-text;
-    background-color: $color-background;
-    margin: 0;
-    border: 1px solid $color-border;
-    padding: .15384615384615em .38461538461538em;
-    outline: 0;
-    height: 1.84615384615385em;
-    @include box-sizing;
-    /* IE7 box-sizing workaround */
-    *padding-right: 0;
-    *padding-left: 0;
-    /* IE7 vertical alignment fix */
-    *padding-top: 1px;
-    *padding-bottom: 4px;
-    *height: auto;
+	-webkit-appearance: none;
+	@include border-radius(0);
+	@include background-clip;
+	font-family: $font-body;
+	font-size: 1em;
+	line-height: 1.38461538461538; // 18px / 13px
+	text-align: left;
+	color: $color-text;
+	background-color: $color-background;
+	margin: 0;
+	border: 1px solid $color-border;
+	padding: .15384615384615em .38461538461538em;
+	outline: 0;
+	height: 1.84615384615385em;
+	@include box-sizing;
+	/* IE7 box-sizing workaround */
+	*padding-right: 0;
+	*padding-left: 0;
+	/* IE7 vertical alignment fix */
+	*padding-top: 1px;
+	*padding-bottom: 4px;
+	*height: auto;
 }
 
 button:focus,
@@ -300,17 +292,17 @@ input:focus,
 select:focus,
 textarea:focus,
 .txp-logout a:focus {
-    @include box-shadow(0 0 7px $color-link-hover);
-    /* Opera */
-    z-index: 1;
+	@include box-shadow(0 0 7px $color-link-hover);
+	/* Opera */
+	z-index: 1;
 }
 
 input[type="file"],
 input[type="radio"],
 input[type="checkbox"] {
-    &:focus, &:active {
-        @include box-shadow(none);
-    }
+	&:focus, &:active {
+		@include box-shadow(none);
+	}
 }
 
 button[disabled],
@@ -319,55 +311,55 @@ select[disabled],
 select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled] {
-    border-color: $color-border !important;
-    background-color: #eee !important;
-    text-shadow: none !important;
-    @include box-shadow(none);
-     -khtml-user-select: none;
-    -webkit-user-select: none;
-       -moz-user-select: -moz-none;
-            user-select: none;
-    color: $color-text-footnote !important;
-    cursor: default;
+	border-color: $color-border !important;
+	background-color: #eee !important;
+	text-shadow: none !important;
+	@include box-shadow(none);
+	 -khtml-user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: -moz-none;
+			user-select: none;
+	color: $color-text-footnote !important;
+	cursor: default;
 }
 
 button[disabled],
 input[disabled] {
-    background-image: none !important;
+	background-image: none !important;
 }
 
 textarea {
-    min-height: 4.38461538461538em; // 57px / 13px
-    resize: vertical;
-    width: 100%;
-    /* removes default vertical scrollbar in IE7-9 */
-    overflow: auto;
-    /* improves readability and alignment in all browsers */
-    vertical-align: top;
+	min-height: 4.38461538461538em; // 57px / 13px
+	resize: vertical;
+	width: 100%;
+	/* removes default vertical scrollbar in IE7-9 */
+	overflow: auto;
+	/* improves readability and alignment in all browsers */
+	vertical-align: top;
 }
 
 textarea,
 select[size],
 select[multiple] {
-    height: auto;
+	height: auto;
 }
 
 select[size="0"],
 select[size="1"] {
-    height: 1.8em;
-    /* IE7 */
-    *height: auto;
+	height: 1.8em;
+	/* IE7 */
+	*height: auto;
 }
 
 optgroup {
-    font-family: $font-body; // font family repeated, for Firefox
-    font-style: normal;
-    font-weight: normal;
-    color: $color-text;
-    &::-moz-focus-inner {
-        border: 0;
-        padding: 0;
-    }
+	font-family: $font-body; // font family repeated, for Firefox
+	font-style: normal;
+	font-weight: normal;
+	color: $color-text;
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
 }
 
 /* tweaks for Safari, Chrome */
@@ -376,19 +368,19 @@ optgroup {
 select[size],
 select[multiple],
 select[multiple][size] {
-    background-image: none;
-    padding-right: .23076923076923em;
+	background-image: none;
+	padding-right: .23076923076923em;
 }
 
 select,
 select[size="0"],
 select[size="1"] {
-    background: {
-        repeat: no-repeat;
-        position: right center;
-    }
-    padding-right: 2em;
-    @include svg-graphic(select_arrow, gif, 1em, .30769230769231em);
+	background: {
+		repeat: no-repeat;
+		position: right center;
+	}
+	padding-right: 2em;
+	@include svg-graphic(select_arrow, gif, 1em, .30769230769231em);
 }
 
 }
@@ -396,25 +388,25 @@ select[size="1"] {
 /* addresses box sizing set to content-box and excess padding in IE7-9 */
 input[type="checkbox"],
 input[type="radio"] {
-    padding: 0;
-    @include box-sizing;
-    *height: 1em;
-    *width: 1em;
-    *position: relative;
-    *top: -3px;
+	padding: 0;
+	@include box-sizing;
+	*height: 1em;
+	*width: 1em;
+	*position: relative;
+	*top: -3px;
 }
 
 /* suppress red glow that Firefox adds to form fields by default, even when user is still typing
-    and kill phantom spacing and dotted border that appears in Firefox */
+   and kill phantom spacing and dotted border that appears in Firefox */
 input,
 button,
 select,
 textarea {
-    &:invalid {
-        @include box-shadow(none);
-    }
-    &::-moz-focus-inner {
-        border: 0;
-        padding: 0;
-    }
+	&:invalid {
+		@include box-shadow(none);
+	}
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
 }
