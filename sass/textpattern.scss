@@ -550,9 +550,6 @@ button.destroy {
 		}
 		.multi-edit {
 			text-align: right;
-			input[type="button"] {
-				margin-right: .38461538461538em;
-			}
 		}
 	}
 }
@@ -803,10 +800,6 @@ table#edit {
 	width: 100%;
 }
 
-.search-form input[type="submit"] {
-	margin-left: .38461538461538em;
-}
-
 table#edit.edit-pane {
 	margin-bottom: 1em;
 	border-top: .5em solid $color-background-box;
@@ -957,10 +950,6 @@ span.spinner {
 	margin: 0 .5em 1em;
 	padding: 1em 1em 1px;
 	background: $color-background-box;
-}
-
-.category-tree select {
-	margin-left: -.38461538461538em;
 }
 
 #categories_article {

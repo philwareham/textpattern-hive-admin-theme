@@ -763,9 +763,6 @@ button.destroy:active {
 #list tfoot .multi-edit {
   text-align: right;
 }
-#list tfoot .multi-edit input[type="button"] {
-  margin-right: .38461538461538em;
-}
 
 /* Allow overflow scroll on tables */
 .txp-listtables {
@@ -1037,10 +1034,6 @@ table#edit {
   width: 100%;
 }
 
-.search-form input[type="submit"] {
-  margin-left: .38461538461538em;
-}
-
 table#edit.edit-pane {
   margin-bottom: 1em;
   border-top: 0.5em solid #f7f7f7;
@@ -1214,10 +1207,6 @@ span.spinner {
   margin: 0 .5em 1em;
   padding: 1em 1em 1px;
   background: #f7f7f7;
-}
-
-.category-tree select {
-  margin-left: -0.385em;
 }
 
 #categories_article {
