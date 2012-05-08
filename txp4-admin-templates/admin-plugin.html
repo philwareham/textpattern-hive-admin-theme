@@ -109,7 +109,7 @@
             <tr>
                 <td>
                     <form method="post" action="index.php" id="plugin_install_form" class="plugin-data">
-                        <p><label>Install plugin</label>&#160;<textarea id="plugin-install" class="code" name="plugin" cols="62" rows="1"></textarea>&#160;<span><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>&#160;<input type="submit" value="Upload" name="install_new" class="smallerbox" /></span></p>
+                        <p><label>Install plugin</label>&#160;<textarea id="plugin-install" class="code" name="plugin" cols="62" rows="1"></textarea>&#160;<span><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>&#160;<input type="submit" value="Upload" name="install_new" /></span></p>
                     </form>
                 </td>
             </tr>
@@ -140,13 +140,18 @@
                     <tfoot>
                         <tr>
                             <td class="multi-edit" colspan="10">
-                                Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
+                                Select:
+								<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
+								<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
+								<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
+								<label for="withselected">With selected:</label>
+								<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
                                     <option value="" selected="selected"></option>
                                     <option value="changestatus">Change status</option>
                                     <option value="changeorder">Change order</option>
                                     <option value="delete">Delete</option>
                                 </select>
-                                <input type="submit" value="Go" class="smallerbox" />
+                                <input type="submit" value="Go" />
                             </td>
                         </tr>
                     </tfoot>

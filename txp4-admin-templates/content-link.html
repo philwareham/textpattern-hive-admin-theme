@@ -146,13 +146,16 @@
 
         <div id="link_control" class="txp-control-panel">
             <form method="get" action="index.php" class="search-form">
-                <p><label for="link-search">Search</label>&#160;<select id="link-search" name="search_method">
-                    <option value="id">ID#</option>
-                    <option value="name" selected="selected">Name</option>
-                    <option value="description">Description</option>
-                    <option value="category">Category</option>
-                    <option value="author">Author</option>
-                </select>&#160;<input type="text" value="" name="crit" size="15" /><input type="submit" value="Go" name="search" class="smallerbox" />
+                <p><label for="link-search">Search</label>
+					<select id="link-search" name="search_method">
+                    	<option value="id">ID#</option>
+                    	<option value="name" selected="selected">Name</option>
+                    	<option value="description">Description</option>
+                    	<option value="category">Category</option>
+                    	<option value="author">Author</option>
+                	</select>
+					<input type="text" value="" name="crit" size="15" />
+					<input type="submit" value="Go" name="search" />
                 </p>
             </form>
         </div>
@@ -179,15 +182,16 @@
                         <tfoot>
                             <tr>
                                 <td class="multi-edit" colspan="7">Select:
-                                    <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" />
-                                    <input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" />
-                                    <input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" />
-                                    <label for="withselected">With selected:</label>&#160;<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
+                                    <input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
+                                    <input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
+                                    <input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
+                                    <label for="withselected">With selected:</label>
+									<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
                                         <option value="" selected="selected"></option>
                                         <option value="changecategory">Change category</option>
                                         <option value="delete">Delete</option>
                                     </select>
-                                    <input type="submit" value="Go" class="smallerbox" />
+                                    <input type="submit" value="Go" />
                                 </td>
                             </tr>
                         </tfoot>
@@ -251,7 +255,7 @@
                             <option value="25">25</option>
                             <option value="50">50</option>
                             <option value="100">100</option>
-                        </select> per page<noscript> <input type="submit" value="Go" class="smallerbox" /></noscript>
+                        </select> per page<noscript> <input type="submit" value="Go" /></noscript>
                     </div>
                 </form>
             </div>

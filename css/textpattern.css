@@ -589,7 +589,8 @@ button.publish:active {
 }
 
 /* delete buttons */
-input[value="×"] {
+input[type="submit"].destroy,
+button.destroy {
   padding: 0 .33333333333333em;
   color: #f9e0df;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25);
@@ -611,7 +612,8 @@ input[value="×"] {
   /* CSS3 Compliant */
   background-image: linear-gradient(#dc4e44, #9d261d);
 }
-input[value="×"]:hover {
+input[type="submit"].destroy:hover,
+button.destroy:hover {
   color: white;
   border-top: 1px solid #c83025;
   border-bottom: 1px solid #94241b;
@@ -631,7 +633,8 @@ input[value="×"]:hover {
   /* CSS3 Compliant */
   background-image: linear-gradient(#e36f66, #c83025);
 }
-input[value="×"]:active {
+input[type="submit"].destroy:active,
+button.destroy:active {
   border-top: 1px solid #e36f66;
   border-bottom: 1px solid #d93e32;
   background-color: #c83025;

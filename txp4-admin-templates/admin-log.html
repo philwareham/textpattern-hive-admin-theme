@@ -106,14 +106,19 @@
 
     <div id="log_control" class="txp-control-panel">
         <form method="get" action="index.php" class="search-form">
-            <p><label for="log-search">Search</label>&#160;<select id="log-search" name="search_method">
-                <option value="ip">IP</option>
-                <option value="host">Host</option>
-                <option value="page" selected="selected">Page</option>
-                <option value="refer">Referrer</option>
-                <option value="method">Method</option>
-                <option value="status">Status</option>
-            </select>&#160;<input type="text" value="" name="crit" size="15" /><input type="submit" value="Go" name="search" class="smallerbox" /></p>
+            <p>
+				<label for="log-search">Search</label>
+				<select id="log-search" name="search_method">
+                	<option value="ip">IP</option>
+                	<option value="host">Host</option>
+                	<option value="page" selected="selected">Page</option>
+                	<option value="refer">Referrer</option>
+                	<option value="method">Method</option>
+                	<option value="status">Status</option>
+            	</select>
+				<input type="text" value="" name="crit" size="15" />
+				<input type="submit" value="Go" name="search" />
+			</p>
         </form>
     </div>
 
@@ -141,11 +146,16 @@
                         <tr>
                             <td class="detail-toggle" colspan="2"><input type="checkbox" name="cb_toggle_log_detail" id="cb_toggle_log_detail" value="1" class="checkbox" onclick="toggleClassRemember('log_detail');" /> <label for="cb_toggle_log_detail">Show detail</label></td>
                             <td class="multi-edit" colspan="6">
-                                Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
+                                Select:
+								<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
+								<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
+								<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
+								<label for="withselected">With selected:</label>
+								<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
                                     <option value="" selected="selected"></option>
                                     <option value="delete">Delete</option>
                                 </select>
-                                <input type="submit" value="Go" class="smallerbox" />
+                                <input type="submit" value="Go" />
                             </td>
                         </tr>
                     </tfoot>
@@ -182,12 +192,13 @@
             <p class="prev-next">1/1</p>
             <form method="post" action="index.php" class="pageby">
                 <div>
-                    View <select name="qty" onchange="submit(this.form);">
+                    View
+					<select name="qty" onchange="submit(this.form);">
                         <option value="15">15</option>
                         <option value="25">25</option>
                         <option value="50">50</option>
                         <option value="100">100</option>
-                    </select> per page<noscript> <input type="submit" value="Go" class="smallerbox" /></noscript>
+                    </select> per page<noscript> <input type="submit" value="Go" /></noscript>
                 </div>
             </form>
         </div>

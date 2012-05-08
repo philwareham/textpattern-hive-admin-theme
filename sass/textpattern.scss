@@ -441,7 +441,8 @@ button.publish {
 }
 
 /* delete buttons */
-input[value="×"] {
+input[type="submit"].destroy,
+button.destroy {
     padding: 0 .33333333333333em;
     color: lighten($error-text, 56%);
     @include text-shadow-dark;

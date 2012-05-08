@@ -164,14 +164,18 @@
                     <tfoot>
                         <tr>
                             <td class="multi-edit" colspan="7">
-                                Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;
+                                Select:
+								<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
+								<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
+								<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
+								<label for="withselected">With selected:</label>
                                 <select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
                                     <option value="" selected="selected"></option>
                                     <option value="changeprivilege">Change privilege</option>
                                     <option value="resetpassword">Reset password</option>
                                     <option value="delete">Delete</option>
                                 </select>
-                                <input type="submit" value="Go" class="smallerbox" />
+                                <input type="submit" value="Go" />
                             </td>
                         </tr>
                     </tfoot>
@@ -207,7 +211,7 @@
                             <option value="25">25</option>
                             <option value="50">50</option>
                             <option value="100">100</option>
-                        </select> per page<noscript> <input type="submit" value="Go" class="smallerbox" /></noscript>
+                        </select> per page<noscript> <input type="submit" value="Go" /></noscript>
                     </div>
                 </form>
             </div>
@@ -220,7 +224,7 @@
                 <p>
                     <label for="new_pass">New password</label>
                     <input type="password" value="" name="new_pass" size="20" id="new_pass" /><input type="checkbox" name="mail_password" value="1" id="mail_password" checked="checked" class="checkbox active" /><label for="mail_password">Mail it to me</label>
-                    <input type="submit" value="Submit" name="change_pass" class="smallerbox" />
+                    <input type="submit" value="Submit" name="change_pass" />
                 </p>
             </form>
         </div>

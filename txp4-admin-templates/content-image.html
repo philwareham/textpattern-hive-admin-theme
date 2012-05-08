@@ -108,19 +108,23 @@
 
         <form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
             <div>
-                <p><label for="image-upload">Upload image</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>&#160;<input type="file" value="" name="thefile" id="image-upload" />&#160;<input type="submit" value="Upload" class="smallerbox" /></p>
+                <p><label for="image-upload">Upload image</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>&#160;<input type="file" value="" name="thefile" id="image-upload" />&#160;<input type="submit" value="Upload" /></p>
             </div>
         </form>
 
         <form method="get" action="index.php" class="search-form">
-            <p><label for="image-search">Search</label>&#160;<select id="image-search" name="search_method">
-                <option value="id">ID#</option>
-                <option value="name" selected="selected">Name</option>
-                <option value="category">Category</option>
-                <option value="author">Author</option>
-                <option value="alt">Alternate text</option>
-                <option value="caption">Caption</option>
-            </select>&#160;<input type="text" value="" name="crit" size="15" /><input type="submit" value="Go" name="search" class="smallerbox" /></p>
+            <p>
+				<label for="image-search">Search</label>
+				<select id="image-search" name="search_method">
+                	<option value="id">ID#</option>
+                	<option value="name" selected="selected">Name</option>
+                	<option value="category">Category</option>
+                	<option value="author">Author</option>
+                	<option value="alt">Alternate text</option>
+                	<option value="caption">Caption</option>
+            	</select>
+				<input type="text" value="" name="crit" size="15" /><input type="submit" value="Go" name="search" />
+			</p>
         </form>
     </div>
 
@@ -146,12 +150,17 @@
                     <tfoot>
                         <tr>
                             <td class="multi-edit" colspan="8">
-                                Select: <input type="button" value="All" name="selall" class="smallerboxsp" title="select all" onclick="selectall();" /><input type="button" value="None" name="selnone" class="smallerboxsp" title="select none" onclick="deselectall();" /><input type="button" value="Range" name="selrange" class="smallerboxsp" title="select range" onclick="selectrange();" /><label for="withselected">With selected:</label>&#160;<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
+                                Select:
+								<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
+								<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
+								<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
+								<label for="withselected">With selected:</label>
+								<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
                                     <option value="" selected="selected"></option>
                                     <option value="changecategory">Change category</option>
                                     <option value="delete">Delete</option>
                                 </select>
-                                <input type="submit" value="Go" class="smallerbox" />
+                                <input type="submit" value="Go" />
                             </td>
                         </tr>
                     </tfoot>
@@ -215,7 +224,7 @@
                         <option value="25">25</option>
                         <option value="50">50</option>
                         <option value="100">100</option>
-                    </select> per page<noscript> <input type="submit" value="Go" class="smallerbox" /></noscript>
+                    </select> per page<noscript> <input type="submit" value="Go" /></noscript>
                 </div>
             </form>
         </div>
