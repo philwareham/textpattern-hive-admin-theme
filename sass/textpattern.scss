@@ -289,7 +289,6 @@ h3.lever {
 	line-height: 2em;
 	margin: 0;
 	height: 2em;
-	overflow: hidden; // hide the space between link and pophelp
 	@include text-shadow-light;
 	@include box-shadow(inset 0 1px 0 0 rgba(#fff, .25));
 	@include gradient-bar;
@@ -323,11 +322,6 @@ h3.lever {
 			opacity: 1;
 		}
 	}
-}
-
-/* remove pophelp on levers - inconsistent UI */
-h3.lever a.pophelp {
-	display: none;
 }
 
 h3.lever.expanded a:after {
