@@ -160,6 +160,40 @@ hr {
   border-radius: 0.538em;
 }
 
+/* Images
+========================================================================== */
+.content-image {
+  border: solid 1px #cccccc;
+  -moz-border-radius: 0.385em;
+  border-radius: 0.385em;
+  padding: 4px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
+}
+
+a:hover .content-image {
+  border: solid 1px #0066ff;
+  -webkit-box-shadow: 0 0 0.462em rgba(0, 102, 255, 0.4);
+  box-shadow: 0 0 0.462em rgba(0, 102, 255, 0.4);
+}
+
+/* image alignments */
+.align-left {
+  float: left;
+  margin: 1em 1em 1em 0;
+}
+
+.align-right {
+  float: right;
+  margin: 1em 0 1em 1em;
+}
+
+.align-center {
+  display: block;
+  margin: 1em auto;
+}
+
 /* Messages
 ========================================================================== */
 .not-ok,
@@ -510,6 +544,17 @@ input.year, input.exp_year {
 }
 input.month, input.exp_month, input.day, input.exp_day, input.hour, input.exp_hour, input.minute, input.exp_minute, input.second, input.exp_second {
   width: 2.30769230769231em;
+}
+
+/* additional input field widths */
+input.input-medium {
+  width: 50%;
+  max-width: 11.6153846153846em;
+}
+
+input.input-small {
+  width: 25%;
+  max-width: 5.76923076923077em;
 }
 
 /* Specific buttons
@@ -1012,22 +1057,6 @@ body {
 ========================================================================== */
 .empty {
   display: none;
-}
-
-.content-image {
-  border: solid 1px #cccccc;
-  -moz-border-radius: 0.385em;
-  border-radius: 0.385em;
-  padding: 4px;
-  background: #fff;
-  -webkit-box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
-}
-
-a:hover .content-image {
-  border: solid 1px #0066ff;
-  -webkit-box-shadow: 0 0 0.462em rgba(0, 102, 255, 0.4);
-  box-shadow: 0 0 0.462em rgba(0, 102, 255, 0.4);
 }
 
 table#edit {

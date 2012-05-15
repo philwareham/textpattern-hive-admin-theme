@@ -145,6 +145,37 @@ hr {
 }
 
 
+/* Images
+========================================================================== */
+
+.content-image {
+	border: solid 1px $color-border;
+	@include border-radius;
+	padding: 4px;
+	background: #fff;
+	@include box-shadow;
+}
+
+a:hover .content-image {
+	border: solid 1px $color-link-hover;
+	@include box-shadow(0 0 .46153846153846em rgba($color-link-hover, .4));
+}
+
+/* image alignments */
+.align-left {
+	float: left;
+	margin: 1em 1em 1em 0;
+}
+.align-right {
+	float: right;
+	margin: 1em 0 1em 1em;
+}
+.align-center {
+	display: block;
+	margin: 1em auto;
+}
+
+
 /* Messages
 ========================================================================== */
 
@@ -404,6 +435,16 @@ input {
 	&.month, &.exp_month, &.day, &.exp_day, &.hour, &.exp_hour, &.minute, &.exp_minute, &.second, &.exp_second {
 		width: 2.30769230769231em; // 30px / 13px
 	}
+}
+
+/* additional input field widths */
+input.input-medium {
+	width: 50%;
+	max-width: 11.6153846153846em; // 151px / 13px
+}
+input.input-small {
+	width: 25%;
+	max-width: 5.76923076923077em; // 75px / 13px
 }
 
 
@@ -781,19 +822,6 @@ body {
 
 .empty {
 	display: none;
-}
-
-.content-image {
-	border: solid 1px $color-border;
-	@include border-radius;
-	padding: 4px;
-	background: #fff;
-	@include box-shadow;
-}
-
-a:hover .content-image {
-	border: solid 1px $color-link-hover;
-	@include box-shadow(0 0 .46153846153846em rgba($color-link-hover, .4));
 }
 
 table#edit {
