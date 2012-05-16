@@ -9,7 +9,6 @@ class hive_theme extends theme
 	function html_head()
 	{
 		$out[] = '<link href="'.$this->url.'css/textpattern.css" rel="stylesheet" type="text/css" />';
-		$out[] = '<link href="'.$this->url.'css/plugins.css" rel="stylesheet" type="text/css" />';
 		// start of custom CSS toggles (see README.textile for usage instructions)
 		if(defined('hive_theme_hide_branding')) {
 			$out[] = '<link href="'.$this->url.'css/custom/hide_branding.css" rel="stylesheet" type="text/css" />';
