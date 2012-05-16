@@ -196,11 +196,7 @@ input[type="button"],
 .txp-logout a,
 #article-main a.article-view,
 .action-create a,
-a.navlink,
-a.navlink-active,
-.navlink a,
-.navlink-active a,
-#install-language-file {
+.nav-tertiary a {
   position: relative;
   -webkit-appearance: none;
   -moz-border-radius: 0.385em;
@@ -258,11 +254,7 @@ input[type="button"]:hover,
 .txp-logout a:hover,
 #article-main a.article-view:hover,
 .action-create a:hover,
-a.navlink:hover,
-a.navlink-active:hover,
-.navlink a:hover,
-.navlink-active a:hover,
-#install-language-file:hover {
+.nav-tertiary a:hover {
   color: #333333;
   text-decoration: none;
   background-color: #f8f8f8;
@@ -281,18 +273,21 @@ a.navlink-active:hover,
   /* CSS3 Compliant */
   background-image: linear-gradient(#f8f8f8, #c5c5c5);
 }
-button:active,
+button:active, button.navlink-active,
 input[type="reset"]:active,
+input[type="reset"].navlink-active,
 input[type="submit"]:active,
+input[type="submit"].navlink-active,
 input[type="button"]:active,
+input[type="button"].navlink-active,
 .txp-logout a:active,
+.txp-logout a.navlink-active,
 #article-main a.article-view:active,
+#article-main a.article-view.navlink-active,
 .action-create a:active,
-a.navlink:active,
-a.navlink-active:active,
-.navlink a:active,
-.navlink-active a:active,
-#install-language-file:active {
+.action-create a.navlink-active,
+.nav-tertiary a:active,
+.nav-tertiary a.navlink-active {
   background-color: #c5c5c5;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#c5c5c5), to(#f8f8f8));

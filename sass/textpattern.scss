@@ -111,6 +111,7 @@ pre {
 	padding: 1em;
 	@include border-radius;
 	background: $color-background-box;
+	tab-size: 4; /* set tab size to 4 spaces */
 }
 
 pre,
@@ -480,6 +481,17 @@ button.destroy {
 	}
 	&:active {
 		@include gradient-bar(lighten($error-text, 10%), lighten($error-text, 28%));
+	}
+}
+
+/* button sets */
+.nav-tertiary a {
+	@include border-radius(0);
+	&:first-child {
+		@include border-radius($border-radius 0 0 $border-radius);
+	}
+	&:last-child {
+		@include border-radius(0 $border-radius $border-radius 0);
 	}
 }
 
@@ -1382,20 +1394,9 @@ table#edit.edit-pane #thumbnail_alter {
 }
 
 #page-prefs table#list {
-	td, th {
-		padding: 0;
-		white-space: normal !important; // override inline nowrap
-	}
-	th {
-		padding: 1em 0;
-	}
 	tr.odd td, tr.even td {
-		padding: .38461538461538em 1em;
 		height: 1.84615384615385em; // 24px / 13px
 		vertical-align: middle;
-	}
-	br {
-		display: none;
 	}
 }
 

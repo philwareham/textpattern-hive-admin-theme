@@ -214,11 +214,7 @@ input[type="button"],
 .txp-logout a,
 #article-main a.article-view,
 .action-create a,
-a.navlink,
-a.navlink-active,
-.navlink a,
-.navlink-active a,
-#install-language-file {
+.nav-tertiary a {
 	position: relative;
 	-webkit-appearance: none;
 	@include border-radius;
@@ -248,7 +244,7 @@ a.navlink-active,
 		text-decoration: none;
 		@include gradient(lighten(#eee, 4%), lighten(#bbb, 4%));
 	}
-	&:active {
+	&:active, &.navlink-active {
 		@include gradient(lighten(#bbb, 4%), lighten(#eee, 4%));
 	}
 }

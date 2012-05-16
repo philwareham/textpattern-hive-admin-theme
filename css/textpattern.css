@@ -128,6 +128,8 @@ pre {
   -moz-border-radius: 0.385em;
   border-radius: 0.385em;
   background: #f7f7f7;
+  tab-size: 4;
+  /* set tab size to 4 spaces */
 }
 
 pre code,
@@ -683,6 +685,20 @@ button.destroy:active {
   background-image: -o-linear-gradient(#c83025, #e36f66);
   /* CSS3 Compliant */
   background-image: linear-gradient(#c83025, #e36f66);
+}
+
+/* button sets */
+.nav-tertiary a {
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.nav-tertiary a:first-child {
+  -moz-border-radius: 0.385em 0 0 0.385em;
+  border-radius: 0.385em 0 0 0.385em;
+}
+.nav-tertiary a:last-child {
+  -moz-border-radius: 0 0.385em 0.385em 0;
+  border-radius: 0 0.385em 0.385em 0;
 }
 
 /* Lists
@@ -1631,20 +1647,9 @@ table#edit.edit-pane #thumbnail_alter td {
   margin-top: 1em;
 }
 
-#page-prefs table#list td, #page-prefs table#list th {
-  padding: 0;
-  white-space: normal !important;
-}
-#page-prefs table#list th {
-  padding: 1em 0;
-}
 #page-prefs table#list tr.odd td, #page-prefs table#list tr.even td {
-  padding: .38461538461538em 1em;
   height: 1.84615384615385em;
   vertical-align: middle;
-}
-#page-prefs table#list br {
-  display: none;
 }
 
 .list-item .modified {
