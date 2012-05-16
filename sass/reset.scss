@@ -371,12 +371,10 @@ select[multiple][size] {
 select,
 select[size="0"],
 select[size="1"] {
-	background: {
-		repeat: no-repeat;
-		position: right center;
-	}
+	background: $color-background url("../img/svg/select_arrow.svg") no-repeat right center;
 	padding-right: 2em;
-	@include svg-graphic(select_arrow, gif, 1em, .30769230769231em);
+	-webkit-background-size: 1em .30769230769231em;
+	        background-size: 1em .30769230769231em;
 }
 
 }

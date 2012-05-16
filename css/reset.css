@@ -437,19 +437,10 @@ optgroup::-moz-focus-inner {
   select,
   select[size="0"],
   select[size="1"] {
-    background-repeat: no-repeat;
-    background-position: right center;
+    background: white url("../img/svg/select_arrow.svg") no-repeat right center;
     padding-right: 2em;
-    background-image: url("../img/select_arrow.gif");
-  }
-  .svg select, .svg
-  select[size="0"], .svg
-  select[size="1"] {
-    background-image: url("../img/svg/select_arrow.svg");
-    -webkit-background-size: 1em 0.308em;
-    -moz-background-size: 1em 0.308em;
-    -o-background-size: 1em 0.308em;
-    background-size: 1em 0.308em;
+    -webkit-background-size: 1em .30769230769231em;
+    background-size: 1em .30769230769231em;
   }
 }
 /* addresses box sizing set to content-box and excess padding in IE7-9 */
