@@ -12,10 +12,10 @@
 
 /* Web fonts
 ========================================================================== */
-@include font-face(cousine, Cousine-Regular, normal, normal);
-@include font-face(cousine, Cousine-Italic, normal, italic);
-@include font-face(cousine, Cousine-Bold, bold, normal);
-@include font-face(cousine, Cousine-BoldItalic, bold, italic);
+@include font-face(liberation, liberation-mono, normal, normal);
+@include font-face(liberation, liberation-mono-italic, normal, italic);
+@include font-face(liberation, liberation-mono-bold, bold, normal);
+@include font-face(liberation, liberation-mono-bold-italic, bold, italic);
 
 
 /* Clearfix
