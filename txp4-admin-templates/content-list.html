@@ -128,7 +128,7 @@
 
 	<div id="list_container" class="txp-container txp-list"><!-- TO DELETE -->
 
-		<form name="longform" id="articles_form" method="post" action="index.php" onsubmit="return verify('Are you sure?')">
+		<form name="longform" id="articles_form" method="post" action="#" onsubmit="return verify('Are you sure?')">
 			<div class="txp-listtables">
 
 				<table id="list" class="list">
@@ -231,7 +231,13 @@
 		</form>
 
 		<div id="list_navigation" class="txp-navigation">
-			<p class="prev-next">1/1</p>
+			<form class="prev-next" method="get" action="#">
+				<span class="navlink-disabled">&#8249; Prev</span>&#160;<select name="page" onchange="submit(this.form);">
+						<option value="1" selected="selected">1/2</option>
+						<option value="2">2/2</option>
+					</select><noscript> <input type="submit" value="Go" /></noscript>&#160;<a href="#" class="navlink">Next&#160;&#8250;</a>
+			</form>
+
 			<form method="post" action="index.php" class="pageby">
 				<div>View
 					<select name="qty" onchange="submit(this.form);">
