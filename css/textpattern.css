@@ -1,35 +1,5 @@
 @import url("reset.css");
 /* Hive theme for Textpattern CMS (v2.0a4) */
-/* Web fonts
-========================================================================== */
-@font-face {
-  font-family: liberation;
-  src: url("../fonts/liberation-mono.eot?#iefix") format("embedded-opentype"), url("../fonts/liberation-mono.woff") format("woff"), url("../fonts/liberation-mono.ttf") format("truetype"), url("../fonts/liberation-mono.svg#liberation-mono") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: liberation;
-  src: url("../fonts/liberation-mono-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/liberation-mono-italic.woff") format("woff"), url("../fonts/liberation-mono-italic.ttf") format("truetype"), url("../fonts/liberation-mono-italic.svg#liberation-mono-italic") format("svg");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: liberation;
-  src: url("../fonts/liberation-mono-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/liberation-mono-bold.woff") format("woff"), url("../fonts/liberation-mono-bold.ttf") format("truetype"), url("../fonts/liberation-mono-bold.svg#liberation-mono-bold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: liberation;
-  src: url("../fonts/liberation-mono-bold-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/liberation-mono-bold-italic.woff") format("woff"), url("../fonts/liberation-mono-bold-italic.ttf") format("truetype"), url("../fonts/liberation-mono-bold-italic.svg#liberation-mono-bold-italic") format("svg");
-  font-weight: bold;
-  font-style: italic;
-}
-
 /* Clearfix
 ========================================================================== */
 .clearfix, .txp-foot, .txp-navigation {
@@ -108,7 +78,7 @@ kbd,
 samp,
 .code,
 #diagnostics-detail {
-  font-family: Menlo, Consolas, "Liberation Mono", liberation, monospace;
+  font-family: Menlo, Consolas, "Liberation Mono", monospace;
 }
 
 code,
