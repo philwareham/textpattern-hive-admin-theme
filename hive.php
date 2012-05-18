@@ -22,11 +22,17 @@ class hive_theme extends theme
 		if(defined('hive_theme_hide_advanced_group')) {
 			$out[] = '<link href="'.$this->url.'css/custom/hide_advanced_group.css" rel="stylesheet" type="text/css" />';
 		}
-		if(defined('hive_theme_hide_recent_articles_group')) {
-			$out[] = '<link href="'.$this->url.'css/custom/hide_recent_articles_group.css" rel="stylesheet" type="text/css" />';
+		if(defined('hive_theme_hide_custom_field_group')) {
+			$out[] = '<link href="'.$this->url.'css/custom/hide_custom_field_group.css" rel="stylesheet" type="text/css" />';
+		}
+		if(defined('hive_theme_hide_image_group')) {
+			$out[] = '<link href="'.$this->url.'css/custom/hide_image_group.css" rel="stylesheet" type="text/css" />';
 		}
 		if(defined('hive_theme_hide_keywords_field')) {
 			$out[] = '<link href="'.$this->url.'css/custom/hide_keywords_field.css" rel="stylesheet" type="text/css" />';
+		}
+		if(defined('hive_theme_hide_recent_articles_group')) {
+			$out[] = '<link href="'.$this->url.'css/custom/hide_recent_articles_group.css" rel="stylesheet" type="text/css" />';
 		}
 		if(defined('hive_theme_hide_comments_group')) {
 			$out[] = '<link href="'.$this->url.'css/custom/hide_comments_group.css" rel="stylesheet" type="text/css" />';
@@ -180,7 +186,7 @@ EOS;
 		return array(
 			'author'	  => 'Phil Wareham',
 			'author_uri'  => 'http://twitter.com/philwareham',
-			'version'	 => '2.0a4',
+			'version'	 => '4.5alpha',
 			'description' => 'Textpattern Hive Theme',
 			'help'		=> 'https://github.com/philwareham/txp-hive-admin-theme',
 		);
