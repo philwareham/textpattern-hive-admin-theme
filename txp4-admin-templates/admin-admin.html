@@ -150,56 +150,60 @@
 		<div class="txp-list">
 
 			<form action="index.php" id="users_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
-				<table id="list" class="list">
-					<thead>
-						<tr>
-							<th class="asc name login-name"><a href="#">Login</a></th>
-							<th class="name real-name"><a href="#">Real name</a></th>
-							<th class="email"><a href="#">E-mail</a></th>
-							<th class="privs"><a href="#">Privileges</a></th>
-							<th class="date last-login modified"><a href="#">Last login</a></th>
-							<th class="actions">&#160;</th><th class="multi-edit">&#160;</th>
-						</tr>
-					</thead>
-					<tfoot>
-						<tr>
-							<td class="multi-edit" colspan="7">
-								Select:
-								<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
-								<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
-								<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
-								<label for="withselected">With selected:</label>
-								<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
-									<option value="" selected="selected"></option>
-									<option value="changeprivilege">Change privilege</option>
-									<option value="resetpassword">Reset password</option>
-									<option value="delete">Delete</option>
-								</select>
-								<input type="submit" value="Go" />
-							</td>
-						</tr>
-					</tfoot>
-					<tbody>
-						<tr class="odd">
-							<td class="name login-name">admin</td>
-							<td class="name real-name">Phil Wareham</td>
-							<td class="email"><a href="mailto:phil@anon.com">phil@anon.com</a></td>
-							<td class="privs">Publisher</td>
-							<td class="date last-login modified">Sep&#160;2011</td>
-							<td class="actions"><a href="#">Edit</a></td>
-							<td class="multi-edit">&#160;</td>
-						</tr>
-						<tr class="even">
-							<td class="name login-name">anon</td>
-							<td class="name real-name">A Non</td>
-							<td class="email"><a href="mailto:anon@anon.com">anon@anon.com</a></td>
-							<td class="privs">Freelancer</td>
-							<td class="date last-login modified">&#160;</td>
-							<td class="actions"><a href="#">Edit</a></td>
-							<td class="multi-edit"><input type="checkbox" value="anon" name="selected[]" class="checkbox" /></td>
-						</tr>
-					</tbody>
-				</table>
+				<div class="txp-listtables">
+
+					<table id="list" class="list">
+						<thead>
+							<tr>
+								<th class="asc name login-name"><a href="#">Login</a></th>
+								<th class="name real-name"><a href="#">Real name</a></th>
+								<th class="email"><a href="#">E-mail</a></th>
+								<th class="privs"><a href="#">Privileges</a></th>
+								<th class="date last-login modified"><a href="#">Last login</a></th>
+								<th class="actions">&#160;</th><th class="multi-edit">&#160;</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td class="multi-edit" colspan="7">
+									Select:
+									<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
+									<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
+									<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
+									<label for="withselected">With selected:</label>
+									<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
+										<option value="" selected="selected"></option>
+										<option value="changeprivilege">Change privilege</option>
+										<option value="resetpassword">Reset password</option>
+										<option value="delete">Delete</option>
+									</select>
+									<input type="submit" value="Go" />
+								</td>
+							</tr>
+						</tfoot>
+						<tbody>
+							<tr class="odd">
+								<td class="name login-name">admin</td>
+								<td class="name real-name">Phil Wareham</td>
+								<td class="email"><a href="mailto:phil@anon.com">phil@anon.com</a></td>
+								<td class="privs">Publisher</td>
+								<td class="date last-login modified">Sep&#160;2011</td>
+								<td class="actions"><a href="#">Edit</a></td>
+								<td class="multi-edit">&#160;</td>
+							</tr>
+							<tr class="even">
+								<td class="name login-name">anon</td>
+								<td class="name real-name">A Non</td>
+								<td class="email"><a href="mailto:anon@anon.com">anon@anon.com</a></td>
+								<td class="privs">Freelancer</td>
+								<td class="date last-login modified">&#160;</td>
+								<td class="actions"><a href="#">Edit</a></td>
+								<td class="multi-edit"><input type="checkbox" value="anon" name="selected[]" class="checkbox" /></td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
 			</form>
 
 			<div id="users_navigation" class="txp-navigation">
