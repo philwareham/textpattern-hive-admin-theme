@@ -1092,9 +1092,11 @@ table#edit.edit-pane td.cell-label {
 
 /* list navigators on list pages */
 .txp-navigation .pageby {
+  margin: 1em 0;
   float: left;
 }
 .txp-navigation .prev-next {
+  margin: 1em 0;
   float: right;
 }
 
@@ -1864,77 +1866,18 @@ div.plugin-help {
     display: none;
   }
 
-  /* Content -> Articles page (< 769px)
-  ========================================================================== */
-  /* hide table cells to optimise screen estate */
-  #page-list #list .date,
-  #page-list #list .section,
-  #page-list #list .category,
-  #page-list #list .author,
-  #page-list #list .status,
-  #page-list #list .comments,
-  #page-list #list .multi-edit,
-  #page-list #list tfoot {
-    display: none !important;
-  }
-
   /* Content -> Images page (< 769px)
   ========================================================================== */
   /* hide table cells to optimise screen estate */
-  #page-image #list .actions,
-  #page-image #list .date,
-  #page-image #list .name,
-  #page-image #list .tag-build,
-  #page-image #list .category,
-  #page-image #list .multi-edit,
-  #page-image #list tfoot {
-    display: none !important;
-  }
-  #page-image #list #image_details_form .name,
-  #page-image #list #image_details_form .category {
+  #image_details_form .name,
+  #image_details_form .category {
     display: block !important;
-  }
-
-  /* Content -> Files page (< 769px)
-  ========================================================================== */
-  /* hide table cells to optimise screen estate */
-  #page-file #list .actions,
-  #page-file #list .title,
-  #page-file #list .category,
-  #page-file #list .tag-build,
-  #page-file #list .status,
-  #page-file #list .condition,
-  #page-file #list .downloads,
-  #page-file #list .multi-edit,
-  #page-file #list tfoot {
-    display: none !important;
-  }
-
-  /* Content -> Links page (< 769px)
-  ========================================================================== */
-  /* hide table cells to optimise screen estate */
-  #page-link #list .actions,
-  #page-link #list .category,
-  #page-link #list .date,
-  #page-link #list .author,
-  #page-link #list .multi-edit,
-  #page-link #list tfoot {
-    display: none !important;
   }
 
   /* Content -> Comments page (< 769px)
   ========================================================================== */
   .cb_show_spam {
-    margin-top: -0.5em;
-  }
-
-  /* hide table cells to optimise screen estate */
-  #page-discuss #list .date,
-  #page-discuss #list .discuss_detail,
-  #page-discuss #list .parent,
-  #page-discuss #list .multi-edit,
-  #page-discuss #list tfoot {
-    display: none !important;
+    margin-top: 0;
   }
 
   /* Presentation -> Sections page (< 769px)
@@ -1969,41 +1912,6 @@ div.plugin-help {
   #page-form #edit td.column:last-child,
   #page-css #edit td.column:last-child {
     width: 100%;
-  }
-
-  /* Admin -> Users page (< 769px)
-  ========================================================================== */
-  /* hide table cells to optimise screen estate */
-  #page-admin #list .real-name,
-  #page-admin #list .privs,
-  #page-admin #list .last-login,
-  #page-admin #list .multi-edit,
-  #page-admin #list tfoot {
-    display: none !important;
-  }
-
-  /* Admin -> Visitor Logs page (< 769px)
-  ========================================================================== */
-  /* hide table cells to optimise screen estate */
-  #page-log #list .log_detail,
-  #page-log #list .host,
-  #page-log #list .refer,
-  #page-log #list .multi-edit,
-  #page-log #list tfoot {
-    display: none !important;
-  }
-
-  /* Admin -> Plugins page (< 769px)
-  ========================================================================== */
-  /* hide table cells to optimise screen estate */
-  #page-plugin #list .author,
-  #page-plugin #list .modified,
-  #page-plugin #list .description,
-  #page-plugin #list .load-order,
-  #page-plugin #list .manage,
-  #page-plugin #list .multi-edit,
-  #page-plugin #list tfoot {
-    display: none !important;
   }
 }
 /* ADDITIONAL LAYOUT FOR DEVICES < 546px
@@ -2071,7 +1979,6 @@ div.plugin-help {
 
   /* remove float from txp-navigation elements */
   .txp-navigation {
-    line-height: 2.15384615384615;
     text-align: center;
   }
   .txp-navigation .pageby {
