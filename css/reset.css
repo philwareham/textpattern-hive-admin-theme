@@ -196,6 +196,7 @@ input[type="button"],
 .txp-logout a,
 #article-main a.article-view,
 .action-create a,
+.article-nav a,
 .nav-tertiary a {
   -webkit-appearance: none;
   -moz-border-radius: 0.385em;
@@ -251,6 +252,7 @@ input[type="button"]:hover,
 .txp-logout a:hover,
 #article-main a.article-view:hover,
 .action-create a:hover,
+.article-nav a:hover,
 .nav-tertiary a:hover {
   color: #333333;
   text-decoration: none;
@@ -270,20 +272,32 @@ input[type="button"]:hover,
   /* CSS3 Compliant */
   background-image: linear-gradient(#f8f8f8, #c5c5c5);
 }
-button:active, button.navlink-active,
+button:active,
 input[type="reset"]:active,
-input[type="reset"].navlink-active,
 input[type="submit"]:active,
-input[type="submit"].navlink-active,
 input[type="button"]:active,
-input[type="button"].navlink-active,
 .txp-logout a:active,
-.txp-logout a.navlink-active,
 #article-main a.article-view:active,
-#article-main a.article-view.navlink-active,
 .action-create a:active,
-.action-create a.navlink-active,
-.nav-tertiary a:active,
+.article-nav a:active,
+.nav-tertiary a:active {
+  background-color: #c5c5c5;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#c5c5c5), to(#f8f8f8));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#c5c5c5), to(#f8f8f8));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#c5c5c5, #f8f8f8);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#c5c5c5, #f8f8f8);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#c5c5c5, #f8f8f8);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#c5c5c5, #f8f8f8);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#c5c5c5, #f8f8f8);
+}
+
 .nav-tertiary a.navlink-active {
   background-color: #c5c5c5;
   /* Konqueror */
@@ -377,7 +391,7 @@ textarea[disabled] {
   -webkit-user-select: none;
   -moz-user-select: -moz-none;
   user-select: none;
-  color: #888888 !important;
+  color: #999999 !important;
   cursor: default;
 }
 

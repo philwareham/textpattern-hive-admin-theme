@@ -214,6 +214,7 @@ input[type="button"],
 .txp-logout a,
 #article-main a.article-view,
 .action-create a,
+.article-nav a,
 .nav-tertiary a {
 	-webkit-appearance: none;
 	@include border-radius;
@@ -243,9 +244,13 @@ input[type="button"],
 		text-decoration: none;
 		@include gradient(lighten(#eee, 4%), lighten(#bbb, 4%));
 	}
-	&:active, &.navlink-active {
+	&:active {
 		@include gradient(lighten(#bbb, 4%), lighten(#eee, 4%));
 	}
+}
+
+.nav-tertiary a.navlink-active {
+	@include gradient(lighten(#bbb, 4%), lighten(#eee, 4%));
 }
 
 /* IE7 button fixes */
