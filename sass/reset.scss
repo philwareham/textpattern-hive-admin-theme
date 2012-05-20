@@ -215,7 +215,8 @@ input[type="button"],
 #article-main a.article-view,
 .action-create a,
 .article-nav a,
-.nav-tertiary a {
+.nav-tertiary a,
+.prev-next a {
 	-webkit-appearance: none;
 	@include border-radius;
 	@include background-clip;
@@ -249,7 +250,16 @@ input[type="button"],
 	}
 }
 
-.nav-tertiary a.navlink-active {
+.navlink-disabled {
+	@include border-radius;
+	font-size: .92307692307692em;  // 12px / 13px
+	line-height: 1.33333333333333em; // 16px / 12px
+	border: 1px solid;
+	padding: .30769230769231em .75em;
+	@include inline-block;
+}
+
+.nav-tertiary .navlink-active {
 	@include gradient(lighten(#bbb, 4%), lighten(#eee, 4%));
 }
 
@@ -310,8 +320,9 @@ input[disabled],
 select[disabled],
 select[disabled] option,
 select[disabled] optgroup,
-textarea[disabled] {
-	border-color: $color-border !important;
+textarea[disabled],
+.navlink-disabled {
+	border-color: $color-gradient-to !important;
 	background-color: #eee !important;
 	text-shadow: none !important;
 	@include box-shadow(none);
@@ -324,7 +335,8 @@ textarea[disabled] {
 }
 
 button[disabled],
-input[disabled] {
+input[disabled],
+.navlink-disabled {
 	background-image: none !important;
 }
 

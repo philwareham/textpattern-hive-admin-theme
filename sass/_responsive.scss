@@ -43,12 +43,12 @@ body {
 /* Navigation (< 769px)
 ========================================================================== */
 
-/* Show <select> version of navigation on small screen widths */
+/* show <select> version of navigation on small screen widths */
 .txp-nav-select {
 	display: inherit;
 }
 
-/* Hide <ul> version of navigation on small screen widths */
+/* hide <ul> version of navigation on small screen widths */
 .txp-nav {
 	display: none;
 }
@@ -116,7 +116,7 @@ body {
 	margin: 0;
 }
 
-/* Turn off features to optimise small screen size */
+/* turn off features to optimise small screen size */
 #textile_group,
 #recent_group {
 	display: none;
@@ -126,7 +126,7 @@ body {
 /* Content -> Articles page (< 769px)
 ========================================================================== */
 
-/* Hide table cells to optimise screen estate */
+/* hide table cells to optimise screen estate */
 #page-list #list {
 	.date,
 	.section,
@@ -144,7 +144,7 @@ body {
 /* Content -> Images page (< 769px)
 ========================================================================== */
 
-/* Hide table cells to optimise screen estate */
+/* hide table cells to optimise screen estate */
 #page-image #list {
 	.actions,
 	.date,
@@ -165,7 +165,7 @@ body {
 /* Content -> Files page (< 769px)
 ========================================================================== */
 
-/* Hide table cells to optimise screen estate */
+/* hide table cells to optimise screen estate */
 #page-file #list {
 	.actions,
 	.title,
@@ -184,7 +184,7 @@ body {
 /* Content -> Links page (< 769px)
 ========================================================================== */
 
-/* Hide table cells to optimise screen estate */
+/* hide table cells to optimise screen estate */
 #page-link #list {
 	.actions,
 	.category,
@@ -204,7 +204,7 @@ body {
 	margin-top: -.5em;
 }
 
-/* Hide table cells to optimise screen estate */
+/* hide table cells to optimise screen estate */
 #page-discuss #list {
 	.date,
 	.discuss_detail,
@@ -257,7 +257,7 @@ body {
 /* Admin -> Users page (< 769px)
 ========================================================================== */
 
-/* Hide table cells to optimise screen estate */
+/* hide table cells to optimise screen estate */
 #page-admin #list {
 	.real-name,
 	.privs,
@@ -272,7 +272,7 @@ body {
 /* Admin -> Visitor Logs page (< 769px)
 ========================================================================== */
 
-/* Hide table cells to optimise screen estate */
+/* hide table cells to optimise screen estate */
 #page-log #list {
 	.log_detail,
 	.host,
@@ -287,7 +287,7 @@ body {
 /* Admin -> Plugins page (< 769px)
 ========================================================================== */
 
-/* Hide table cells to optimise screen estate */
+/* hide table cells to optimise screen estate */
 #page-plugin #list {
 	.author,
 	.modified,
@@ -374,7 +374,19 @@ table#edit.edit-pane {
 	}
 }
 
-/* Add some margin above upload submit in case it wraps */
+/* remove float from txp-navigation elements */
+.txp-navigation {
+	line-height: 2.15384615384615;
+	text-align: center;
+	.pageby {
+		float: none;
+	}
+	.prev-next {
+		float: none;
+	}
+}
+
+/* add some margin above upload submit in case it wraps */
 .upload-form,
 #image-replace,
 #thumbnail-upload {

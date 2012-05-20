@@ -477,13 +477,16 @@ button.destroy {
 }
 
 /* button sets */
-.article-nav a,
-.nav-tertiary a {
-	@include border-radius(0);
-	&:first-child {
+.article-nav,
+.nav-tertiary,
+.prev-next {
+	a, .navlink-disabled {
+		@include border-radius(0);
+	}
+	> :first-child {
 		@include border-left-radius;
 	}
-	&:last-child {
+	> :last-child {
 		@include border-right-radius;
 	}
 }
@@ -852,7 +855,6 @@ table#edit.edit-pane {
 
 .txp-control-panel {
 	text-align: center;
-	margin-bottom: 1em;
 	line-height: 2.53846153846154;
 	p {
 		margin-top: 0;
@@ -867,14 +869,11 @@ table#edit.edit-pane {
 /* list navigators on list pages */
 .txp-navigation {
 	@extend .clearfix;
-	margin-bottom: .5em;
 	.pageby {
 		float: left;
-		margin: .61538461538462em 0 0;
 	}
 	.prev-next {
 		float: right;
-		margin-bottom: 0;
 	}
 }
 
