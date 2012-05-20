@@ -13,24 +13,31 @@
   }
 }
 /* icons */
-.icon b {
+.icon {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
   font-size: 16px;
-  width: 1.375em;
-  height: 1.375em;
+  line-height: 1.125;
+  vertical-align: text-bottom;
+  width: 1em;
+  height: 1em;
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
   background-image: url("../img/icon-sprite.png");
 }
-.svg .icon b {
+.svg .icon {
   background-image: url("../img/svg/icon-sprite.svg");
-  -webkit-background-size: 22em 5.5em;
-  -moz-background-size: 22em 5.5em;
-  -o-background-size: 22em 5.5em;
-  background-size: 22em 5.5em;
+  -webkit-background-size: 24em 4.5em;
+  -moz-background-size: 24em 4.5em;
+  -o-background-size: 24em 4.5em;
+  background-size: 24em 4.5em;
 }
 
-a.icon {
+a.icon-container {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
@@ -38,29 +45,16 @@ a.icon {
   *zoom: 1;
   margin: 0 .5em .5em 0;
   border: 1px solid #e3e3e3;
+  padding: .23076923076923em;
   -moz-border-radius: 0.385em;
   border-radius: 0.385em;
   background-color: #f7f7f7;
 }
-a.icon:hover {
+a.icon-container:hover {
   border-color: #cccccc;
 }
-a.icon b {
+a.icon-container b {
   display: block;
-}
-
-button.icon {
-  padding-left: 2.5em;
-}
-button.icon b {
-  position: absolute;
-  top: 0;
-  left: .375em;
-  z-index: 2;
-}
-
-button.publish.icon b {
-  top: .25em;
 }
 
 .icon-write {
@@ -68,129 +62,129 @@ button.publish.icon b {
 }
 
 .icon-code {
-  background-position: -1.375em 0;
+  background-position: -1.5em 0;
 }
 
 .icon-view {
-  background-position: -2.75em 0;
+  background-position: -3em 0;
 }
 
 .icon-mail {
-  background-position: -4.125em 0;
+  background-position: -4.5em 0;
 }
 
 .icon-plus {
-  background-position: -5.5em 0;
+  background-position: -6em 0;
 }
 
 .icon-minus {
-  background-position: -6.875em 0;
+  background-position: -7.5em 0;
 }
 
 .icon-close {
-  background-position: -8.25em 0;
+  background-position: -9em 0;
 }
 
 .icon-ban {
-  background-position: -9.625em 0;
+  background-position: -10.5em 0;
 }
 
 .icon-warn {
-  background-position: -11em 0;
+  background-position: -12em 0;
 }
 
 .icon-search {
-  background-position: -12.375em 0;
+  background-position: -13.5em 0;
 }
 
 .icon-yes {
-  background-position: -13.75em 0;
+  background-position: -15em 0;
 }
 
 .icon-no {
-  background-position: -15.125em 0;
-}
-
-.icon-time {
   background-position: -16.5em 0;
 }
 
+.icon-time {
+  background-position: -18em 0;
+}
+
 .icon-cog {
-  background-position: -17.875em 0;
+  background-position: -19.5em 0;
 }
 
 .icon-repeat {
-  background-position: -19.25em 0;
+  background-position: -21em 0;
 }
 
 .icon-off {
-  background-position: -20.625em 0;
+  background-position: -22.5em 0;
 }
 
 .icon-arrow-n {
-  background-position: 0 -1.375em;
+  background-position: 0 -1.5em;
 }
 
 .icon-arrow-e {
-  background-position: -1.375em -1.375em;
+  background-position: -1.5em -1.5em;
 }
 
 .icon-arrow-s {
-  background-position: -2.75em -1.375em;
+  background-position: -3em -1.5em;
 }
 
 .icon-arrow-w {
-  background-position: -4.125em -1.375em;
+  background-position: -4.5em -1.5em;
 }
 
 .icon-star {
-  background-position: -5.5em -1.375em;
+  background-position: -6em -1.5em;
 }
 
 .icon-refresh {
-  background-position: -6.875em -1.375em;
+  background-position: -7.5em -1.5em;
 }
 
 .icon-list {
-  background-position: -8.25em -1.375em;
+  background-position: -9em -1.5em;
 }
 
 .icon-grid {
-  background-position: -9.625em -1.375em;
+  background-position: -10.5em -1.5em;
 }
 
 .icon-image {
-  background-position: -11em -1.375em;
+  background-position: -12em -1.5em;
 }
 
 .icon-user {
-  background-position: -12.375em -1.375em;
+  background-position: -13.5em -1.5em;
 }
 
 .icon-target {
-  background-position: -13.75em -1.375em;
+  background-position: -15em -1.5em;
 }
 
 .icon-comment {
-  background-position: -15.125em -1.375em;
+  background-position: -16.5em -1.5em;
 }
 
 .icon-trash {
-  background-position: -16.5em -1.375em;
+  background-position: -18em -1.5em;
 }
 
 .icon-favourite {
-  background-position: -17.875em -1.375em;
+  background-position: -19.5em -1.5em;
 }
 
 .icon-folder {
-  background-position: -19.25em -1.375em;
+  background-position: -21em -1.5em;
 }
 
 .icon-file {
-  background-position: -20.625em -1.375em;
+  background-position: -22.5em -1.5em;
 }
 
 .icon-attach {
-  background-position: 0 -2.75em;
+  background-position: 0 -3em;
 }

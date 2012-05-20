@@ -28,18 +28,23 @@
 
 /* icons */
 
-.icon b {
+.icon {
+	@include inline-block;
 	font-size: 16px;
-	width: 1.375em; // 22px / 16px
-	height: 1.375em; // 22px / 16px
+	line-height: 1.125; // 18px / 16px
+	vertical-align: text-bottom;
+	width: 1em; // 16px
+	height: 1em; // 16px
 	@include hide-text;
-	@include svg-graphic(icon-sprite, png, 22em, 5.5em); // 352px / 16px, 88px / 16px
+	@include svg-graphic(icon-sprite, png, 24em, 4.5em); // 384px / 16px, 72px / 16px
 }
 
-a.icon {
+a.icon-container {
+
 	@include inline-block;
 	margin: 0 .5em .5em 0;
 	border: 1px solid lighten($color-border, 9%);
+	padding: .23076923076923em; // 3px / 13px
 	@include border-radius;
 	background-color: $color-background-box;
 	&:hover {
@@ -50,52 +55,38 @@ a.icon {
 	}
 }
 
-button.icon {
-	padding-left: 2.5em; // 30px / 12px
-	b {
-		position: absolute;
-		top: 0;
-		left: .375em; // 6px / 16px
-		z-index: 2;
-	}
-}
-
-button.publish.icon b {
-	top: .25em; // 4px / 16px
-}
-
 .icon-write		{ background-position: 0 0; }
-.icon-code		{ background-position: -1.375em 0; }
-.icon-view		{ background-position: -2.75em 0; }
-.icon-mail		{ background-position: -4.125em 0; }
-.icon-plus		{ background-position: -5.5em 0; }
-.icon-minus		{ background-position: -6.875em 0; }
-.icon-close		{ background-position: -8.25em 0; }
-.icon-ban		{ background-position: -9.625em 0; }
-.icon-warn		{ background-position: -11em 0; }
-.icon-search	{ background-position: -12.375em 0; }
-.icon-yes		{ background-position: -13.75em 0; }
-.icon-no		{ background-position: -15.125em 0; }
-.icon-time		{ background-position: -16.5em 0; }
-.icon-cog		{ background-position: -17.875em 0; }
-.icon-repeat	{ background-position: -19.25em 0; }
-.icon-off		{ background-position: -20.625em 0; }
+.icon-code		{ background-position: -1.5em 0; }
+.icon-view		{ background-position: -3em 0; }
+.icon-mail		{ background-position: -4.5em 0; }
+.icon-plus		{ background-position: -6em 0; }
+.icon-minus		{ background-position: -7.5em 0; }
+.icon-close		{ background-position: -9em 0; }
+.icon-ban		{ background-position: -10.5em 0; }
+.icon-warn		{ background-position: -12em 0; }
+.icon-search	{ background-position: -13.5em 0; }
+.icon-yes		{ background-position: -15em 0; }
+.icon-no		{ background-position: -16.5em 0; }
+.icon-time		{ background-position: -18em 0; }
+.icon-cog		{ background-position: -19.5em 0; }
+.icon-repeat	{ background-position: -21em 0; }
+.icon-off		{ background-position: -22.5em 0; }
 
-.icon-arrow-n	{ background-position: 0 -1.375em; }
-.icon-arrow-e	{ background-position: -1.375em -1.375em; }
-.icon-arrow-s	{ background-position: -2.75em -1.375em; }
-.icon-arrow-w	{ background-position: -4.125em -1.375em; }
-.icon-star		{ background-position: -5.5em -1.375em; }
-.icon-refresh	{ background-position: -6.875em -1.375em; }
-.icon-list		{ background-position: -8.25em -1.375em; }
-.icon-grid		{ background-position: -9.625em -1.375em; }
-.icon-image		{ background-position: -11em -1.375em; }
-.icon-user		{ background-position: -12.375em -1.375em; }
-.icon-target	{ background-position: -13.75em -1.375em; }
-.icon-comment	{ background-position: -15.125em -1.375em; }
-.icon-trash		{ background-position: -16.5em -1.375em; }
-.icon-favourite	{ background-position: -17.875em -1.375em; }
-.icon-folder	{ background-position: -19.25em -1.375em; }
-.icon-file		{ background-position: -20.625em -1.375em; }
+.icon-arrow-n	{ background-position: 0 -1.5em; }
+.icon-arrow-e	{ background-position: -1.5em -1.5em; }
+.icon-arrow-s	{ background-position: -3em -1.5em; }
+.icon-arrow-w	{ background-position: -4.5em -1.5em; }
+.icon-star		{ background-position: -6em -1.5em; }
+.icon-refresh	{ background-position: -7.5em -1.5em; }
+.icon-list		{ background-position: -9em -1.5em; }
+.icon-grid		{ background-position: -10.5em -1.5em; }
+.icon-image		{ background-position: -12em -1.5em; }
+.icon-user		{ background-position: -13.5em -1.5em; }
+.icon-target	{ background-position: -15em -1.5em; }
+.icon-comment	{ background-position: -16.5em -1.5em; }
+.icon-trash		{ background-position: -18em -1.5em; }
+.icon-favourite	{ background-position: -19.5em -1.5em; }
+.icon-folder	{ background-position: -21em -1.5em; }
+.icon-file		{ background-position: -22.5em -1.5em; }
 
-.icon-attach	{ background-position: 0 -2.75em; }
+.icon-attach	{ background-position: 0 -3em; }
