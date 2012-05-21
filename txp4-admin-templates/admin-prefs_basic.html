@@ -109,8 +109,8 @@
 		<form method="post" class="prefs-form basic" action="index.php">
 			<h2>Basic</h2>
 
-			<div class="nav-tertiary"><!-- NEEDS PARAGRAPH TAG -->
-				<a href="admin-prefs_basic.html" class="navlink-active">Basic</a><a href="admin-prefs_advanced.html" class="navlink">Advanced</a><a href="admin-prefs_languages.html" class="navlink">Language</a>
+			<div class="nav-tertiary">
+				<p><a href="admin-prefs_basic.html" class="navlink-active">Basic</a><a href="admin-prefs_advanced.html" class="navlink">Advanced</a><a href="admin-prefs_languages.html" class="navlink">Language</a></p>
 			</div>
 
 			<table id="list" class="list">
@@ -121,7 +121,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-sitename' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="sitename">Site name</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -130,7 +130,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-site_slogan' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="site_slogan">Site slogan</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -139,7 +139,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-siteurl' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="siteurl">Site URL</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -148,7 +148,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-production_status' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="production_status">Production status</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -161,7 +161,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-gmtoffset' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="gmtoffset">Time zone</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -649,7 +649,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-auto_dst' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Automatically adjust <abbr title="Daylight Saving Time">DST</abbr> setting?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -659,7 +659,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-is_dst' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="is_dst"><abbr title="Daylight Saving Time">DST</abbr> enabled?</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -669,7 +669,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-dateformat' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="dateformat">Date format</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -700,7 +700,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-archive_dateformat' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="archive_dateformat">Archive date format</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -731,7 +731,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-permlink_mode' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="permlink_mode">Permanent link mode</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -747,7 +747,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-doctype' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="doctype">doctype</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -759,7 +759,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-use_textile' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="use_textile">Use Textile</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -772,7 +772,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-logging' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="logging">Logging</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -785,7 +785,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-use_comments' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Accept comments?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -800,7 +800,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comments_on_default' class='comments-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							On by default?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -810,7 +810,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comments_default_invite' class='comments-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="comments_default_invite">Default invite</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -819,7 +819,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comments_moderate' class='comments-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Moderate comments?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -829,7 +829,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comments_disabled_after' class='comments-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="comments_disabled_after">Disabled after</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -846,7 +846,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comments_auto_append' class='comments-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Automatically append comments to articles?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -856,7 +856,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comments_mode' class='comments-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="comments_mode">Comments mode</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -868,7 +868,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comments_dateformat' class='comments-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="comments_dateformat">Comments date format</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -899,7 +899,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comments_are_ol' class='comments-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Present comments as a numbered list?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -909,7 +909,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comments_sendmail' class='comments-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="comments_sendmail">Mail comments to author?</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>

@@ -109,8 +109,8 @@
 		<form method="post" class="prefs-form advanced" action="index.php">
 			<h2>Advanced</h2>
 
-			<div class="nav-tertiary"><!-- NEEDS PARAGRAPH TAG -->
-				<a href="admin-prefs_basic.html" class="navlink">Basic</a><a href="admin-prefs_advanced.html" class="navlink-active">Advanced</a><a href="admin-prefs_languages.html" class="navlink">Language</a>
+			<div class="nav-tertiary">
+				<p><a href="admin-prefs_basic.html" class="navlink">Basic</a><a href="admin-prefs_advanced.html" class="navlink-active">Advanced</a><a href="admin-prefs_languages.html" class="navlink">Language</a></p>
 			</div>
 
 			<table id="list" class="list">
@@ -121,7 +121,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-img_dir' class='admin-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="img_dir">Image directory</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -130,7 +130,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-file_base_path' class='admin-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="file_base_path">File directory path</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -139,7 +139,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-file_max_upload_size' class='admin-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="file_max_upload_size">Maximum file size of uploads (in bytes)</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -148,7 +148,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-tempdir' class='admin-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="tempdir">Temporary directory path</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -157,7 +157,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-plugin_cache_dir' class='admin-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="plugin_cache_dir">Plugin cache directory path</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -166,7 +166,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-smtp_from' class='admin-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="smtp_from">SMTP envelope sender address</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -175,7 +175,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-override_emailcharset' class='admin-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Use ISO-8859-1 encoding in e-mails sent (default is UTF-8)?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -185,7 +185,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-enable_xmlrpc_server' class='admin-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Enable XML-RPC server?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -195,7 +195,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-default_event' class='admin-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="default_event">Default admin tab</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -228,7 +228,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-theme_name' class='admin-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="theme_name">Admin-side theme</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -245,7 +245,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comments_require_name' class='comments-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Require user&#8217;s name?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -255,7 +255,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comments_require_email' class='comments-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Require user&#8217;s e-mail address?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -265,7 +265,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-never_display_email' class='comments-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Hide e-mail address?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -275,7 +275,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comment_nofollow' class='comments-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Apply rel="nofollow" to comments?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -285,7 +285,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comments_disallow_images' class='comments-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Strip user images?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -295,7 +295,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comments_use_fat_textile' class='comments-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Allow more Textile markup?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -305,7 +305,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-spam_blacklists' class='comments-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="spam_blacklists">Spam blacklists (comma-separated)</label>
 							<a target="_blank" href="#b" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -314,7 +314,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-comment_means_site_updated' class='comments-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							New comment means site updated?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -329,7 +329,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-custom_1_set' class='custom-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="custom_1_set">Custom field 1 name</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -338,7 +338,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-custom_2_set' class='custom-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="custom_2_set">Custom field 2 name</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -347,7 +347,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-custom_3_set' class='custom-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="custom_3_set">Custom field 3 name</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -356,7 +356,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-custom_4_set' class='custom-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="custom_4_set">Custom field 4 name</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -365,7 +365,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-custom_5_set' class='custom-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="custom_5_set">Custom field 5 name</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -374,7 +374,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-custom_6_set' class='custom-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="custom_6_set">Custom field 6 name</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -383,7 +383,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-custom_7_set' class='custom-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="custom_7_set">Custom field 7 name</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -392,7 +392,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-custom_8_set' class='custom-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="custom_8_set">Custom field 8 name</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -401,7 +401,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-custom_9_set' class='custom-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="custom_9_set">Custom field 9 name</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -410,7 +410,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-custom_10_set' class='custom-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="custom_10_set">Custom field 10 name</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -424,7 +424,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-syndicate_body_or_excerpt' class='feeds-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Syndicate article excerpt <strong>only</strong>?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -434,7 +434,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-rss_how_many' class='feeds-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="rss_how_many">How many articles should be included in feeds?</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -443,7 +443,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-show_comment_count_in_feed' class='feeds-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Show comment count in feeds?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -453,7 +453,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-include_email_atom' class='feeds-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Include e-mail in Atom feeds?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -463,7 +463,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-use_mail_on_feeds_id' class='feeds-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Use e-mail address to construct feed IDs (default is site URL)?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -478,7 +478,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-title_no_widow' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Prevent widowed words in article titles?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -488,7 +488,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-articles_use_excerpts' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Articles use excerpts?
 							<a target="_blank" href="#b" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -498,7 +498,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-allow_form_override' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Allow form override?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -508,7 +508,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-attach_titles_to_permalinks' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Attach titles to permalinks?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -518,7 +518,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-permalink_title_format' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Permalink title-like-this (instead of TitleLikeThis)?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -528,7 +528,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-send_lastmod' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Send "Last-Modified" header?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -538,7 +538,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-publish_expired_articles' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Publish expired articles?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -548,7 +548,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-lastmod_keepalive' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Compensate for persistent connections mod_deflate bug?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -558,7 +558,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-ping_weblogsdotcom' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Ping ping-o-matic.com?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -568,7 +568,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-ping_textpattern_com' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Ping textpattern.com?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -578,7 +578,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-expire_logs_after' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="expire_logs_after">Logs expire after how many days?</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -587,7 +587,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-use_dns' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Use DNS lookup in visitor logs?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -597,7 +597,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-max_url_len' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							<label for="max_url_len">Maximum URL length (in characters)</label>
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -606,7 +606,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-use_plugins' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Use plugins?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -616,7 +616,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-admin_side_plugins' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Use admin-side plugins?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -626,7 +626,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-allow_page_php_scripting' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Allow PHP in pages?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -636,7 +636,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-allow_article_php_scripting' class='publish-prefs odd'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Allow PHP in articles?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
@@ -646,7 +646,7 @@
 						</td>
 					</tr>
 					<tr id='prefs-allow_raw_php_scripting' class='publish-prefs even'>
-						<td class="pref-label cell-label">
+						<td class="pref-label">
 							Allow raw PHP?
 							<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
 						</td>
