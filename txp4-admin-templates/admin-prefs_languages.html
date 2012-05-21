@@ -118,8 +118,7 @@
 					Currently active language
 					<select id="language" name="language" class="languages">
 						<option value="en-gb" selected="selected">English (Great Britain)</option>
-					</select>
-					<input type="submit" value="Save" name="Submit" class="publish" />
+					</select><input type="submit" value="Save" name="Submit" class="publish" />
 				</p>
 			</form>
 		</div>
@@ -269,7 +268,7 @@
 				<tr class="odd">
 					<td class="pref-label">Srpski</td>
 					<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-					</tr>
+				</tr>
 				<tr class="even">
 					<td class="pref-label">Српски</td>
 					<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
@@ -306,21 +305,20 @@
 					<td class="pref-label">中文(繁體)</td>
 					<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
 				</tr>
-				<tr>
-					<td colspan="3">
-						<strong>Install Textpack</strong>&#160;&#160;<span><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span><br />
-						<form method="post" action="index.php" id="text_uploader" class="edit-form">
-							<textarea id="textpack-install" class="code" name="textpack" cols="45" rows="5"></textarea>
-							<p><input type="submit" value="Upload" name="install_new" /></p>
-						</form>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="3" class="install-item"><strong><a href="secondary/admin-update-languages.html">Install from file (experts only)</a></strong></td>
-				</tr>
 			</tbody>
 		</table>
-		<p class="lang-msg">To install new languages from file you can download them from <strong><a href="#">http://rpc.textpattern.com/lang/</a></strong> and place them inside your ./textpattern/lang/ directory.</p>
+
+		<h3>Install from Textpack</h3>
+
+		<form method="post" action="index.php" id="text_uploader" class="edit-form">
+			<label for="textpack-install">Install Textpack</label>
+			<span><a rel="help" target="_blank" href="http://rpc.textpattern.com/help/?item=get_textpack&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+			<textarea id="textpack-install" class="code" name="textpack" cols="45" rows="5"></textarea>
+			<input type="submit" value="Upload" name="install_new" />
+		</form>
+
+		<strong><a href="secondary/admin-update-languages.html">Install from file</a></strong>
+		<p class="lang-msg">To install new languages from file you can download them from <strong><a href="http://rpc.textpattern.com/lang/">http://rpc.textpattern.com/lang/</a></strong> and place them inside your ./textpattern/lang/ directory.</p>
 
 	</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
