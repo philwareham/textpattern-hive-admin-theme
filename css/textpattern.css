@@ -665,17 +665,17 @@ button.destroy:active {
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.article-nav > :first-child,
-.nav-tertiary > :first-child,
-.prev-next > :first-child {
+.article-nav p > :first-child,
+.nav-tertiary p > :first-child,
+.prev-next p > :first-child {
   -moz-border-radius-topleft: 0.385em;
   border-top-left-radius: 0.385em;
   -moz-border-radius-bottomleft: 0.385em;
   border-bottom-left-radius: 0.385em;
 }
-.article-nav > :last-child,
-.nav-tertiary > :last-child,
-.prev-next > :last-child {
+.article-nav p > :last-child,
+.nav-tertiary p > :last-child,
+.prev-next p > :last-child {
   -moz-border-radius-topright: 0.385em;
   border-top-right-radius: 0.385em;
   -moz-border-radius-bottomright: 0.385em;
