@@ -104,6 +104,8 @@ pre {
 	@include border-radius;
 	background: $color-background-box;
 	tab-size: 4; // set tab size to 4 spaces
+	/* IE7 */
+	*overflow-y: hidden;
 }
 
 pre,
@@ -506,10 +508,6 @@ button.destroy {
 
 #list {
 	width: 100%;
-	overflow: auto;
-	/* IE7 */
-	*overflow-y: scroll; 
-	*overflow-x: hidden;
 	tr.odd, tr.even {
 		border: 1px solid $color-gradient-to;
 		td:last-child { // webkit border rendering bug fix
@@ -607,6 +605,8 @@ button.destroy {
 .txp-listtables {
 	overflow-x: auto;
 	margin-bottom: 1em;
+	/* IE7 */
+	*overflow-y: hidden; 
 }
 
 
@@ -1382,47 +1382,23 @@ table#edit.edit-pane #thumbnail_alter {
 	margin-top: 1em;
 }
 
-#page-prefs .publish {
-	margin-top: 1em;
-}
-
 #page-prefs table#list {
 	tr.odd td, tr.even td {
 		height: 1.84615384615385em; // 24px / 13px
 		vertical-align: middle;
 	}
-}
-
-.list-item {
 	.modified {
 		color: $color-text-footnote;
+		margin-left: .6em;
 	}
 }
-
-td:nth-child(2).pref-value {
-	width: 50%;
-}
-
-td:nth-child(2).install-item {
-	width: 50%;
-	color: $color-text-footnote;
-	strong {
-		margin-right: .35em;
-	}
-}
-
-#textpack-install {
-	width: 50%;
-}
-
-/* fixes for poor HTML structure on Prefrences pages */
 
 #language_control {
 	text-align: left;
 }
 
-.lang-msg {
-	max-width: 110em;
+#textpack-install {
+	width: 50%;
 }
 
 

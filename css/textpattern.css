@@ -99,6 +99,8 @@ pre {
   border-radius: 0.385em;
   background: #f7f7f7;
   tab-size: 4;
+  /* IE7 */
+  *overflow-y: hidden;
 }
 
 pre code,
@@ -693,10 +695,6 @@ button.destroy:active {
 ========================================================================== */
 #list {
   width: 100%;
-  overflow: auto;
-  /* IE7 */
-  *overflow-y: scroll;
-  *overflow-x: hidden;
 }
 #list tr.odd, #list tr.even {
   border: 1px solid #dddddd;
@@ -810,6 +808,8 @@ button.destroy:active {
 .txp-listtables {
   overflow-x: auto;
   margin-bottom: 1em;
+  /* IE7 */
+  *overflow-y: hidden;
 }
 
 /* Container
@@ -1620,42 +1620,21 @@ table#edit.edit-pane #thumbnail_alter td {
   margin-top: 1em;
 }
 
-#page-prefs .publish {
-  margin-top: 1em;
-}
-
 #page-prefs table#list tr.odd td, #page-prefs table#list tr.even td {
   height: 1.84615384615385em;
   vertical-align: middle;
 }
-
-.list-item .modified {
+#page-prefs table#list .modified {
   color: #999999;
+  margin-left: .6em;
 }
 
-td:nth-child(2).pref-value {
-  width: 50%;
-}
-
-td:nth-child(2).install-item {
-  width: 50%;
-  color: #999999;
-}
-td:nth-child(2).install-item strong {
-  margin-right: .35em;
-}
-
-#textpack-install {
-  width: 50%;
-}
-
-/* fixes for poor HTML structure on Prefrences pages */
 #language_control {
   text-align: left;
 }
 
-.lang-msg {
-  max-width: 110em;
+#textpack-install {
+  width: 50%;
 }
 
 /* Admin -> Users page
