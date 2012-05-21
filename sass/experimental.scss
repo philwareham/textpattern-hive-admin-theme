@@ -59,6 +59,11 @@ button .icon {
 	margin: 0 0 -1px -1px;
 }
 
+[disabled] .icon,
+.navlink-disabled .icon {
+	opacity: .33;
+}
+
 .icon-write		{ background-position: 0 0; }
 .icon-code		{ background-position: -1.5em 0; }
 .icon-view		{ background-position: -3em 0; }

@@ -61,6 +61,11 @@ button .icon {
   margin: 0 0 -1px -1px;
 }
 
+[disabled] .icon,
+.navlink-disabled .icon {
+  opacity: .33;
+}
+
 .icon-write {
   background-position: 0 0;
 }
