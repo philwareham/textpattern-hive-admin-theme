@@ -64,7 +64,7 @@ class hive_theme extends theme
 	function header()
 	{
 		global $txp_user;
-		$out[] = '<h1><a href="'.hu.'" title="'.gTxt('tab_view_site').'" rel="external">'.$GLOBALS["prefs"]["sitename"].'</a></h1>';
+		$out[] = '<h1><a href="'.hu.'" title="'.gTxt('tab_view_site').'" rel="external">'.htmlspecialchars($GLOBALS["prefs"]["sitename"]).'</a></h1>';
 		if ($txp_user)
 		{
 			$out[] = '<p class="txp-logout"><a href="index.php?logout=1" onclick="return verify(\''.gTxt('are_you_sure').'\')">'.gTxt('logout').'</a></p>';
