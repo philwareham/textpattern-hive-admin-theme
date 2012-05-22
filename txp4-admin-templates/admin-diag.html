@@ -119,13 +119,14 @@
 
 		<div id="diagnostics">
 			<h2>Diagnostic info</h2>
-			<textarea id="diagnostics-detail" cols="78" rows="18" readonly="readonly">Diagnostic information would go here...</textarea><br />
+			<p><textarea id="diagnostics-detail" cols="78" rows="18" readonly="readonly">Diagnostic information would go here...</textarea></p>
 			<form method="post" action="index.php">
-				<input type="hidden" value="diag" name="event" />
-				Detail: <select name="step" onchange="submit(this.form);">
-					<option value="low">Low</option>
-					<option value="high">High</option>
-				</select>
+				<p>
+					Detail: <select name="step" onchange="submit(this.form);">
+						<option value="low">Low</option>
+						<option value="high">High</option>
+					</select>
+				</p>
 			</form>
 		</div>
 
