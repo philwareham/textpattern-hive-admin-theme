@@ -894,28 +894,6 @@ span.spinner {
 		@include hires-graphic(spinner, gif, 15px, 15px);
 }
 
-/* tabs */
-.tabs {
-	padding-top: 1em;
-	a {
-		display: block;
-		padding: 1em;
-		color: $color-text;
-	}
-	.tabup a {
-		background: #ffda44;
-		&:hover {
-			background: #fcdd62;
-		}
-	}
-	.tabdown2 a {
-		background: #c7d3d8;
-		&:hover {
-			background: #d2dce0;
-		}
-	}
-}
-
 /* tagbuilder popup */
 #tag-event {
 	padding: 2.5em .5em 1em;
