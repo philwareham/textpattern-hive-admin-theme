@@ -139,6 +139,16 @@ hr {
 	@include border-radius(.53846153846154em);
 }
 
+#list thead th a.pophelp {
+	border: 1px solid #fff;
+	display: inline;
+	color: $color-link;
+	&:hover {
+		color: $color-link-hover;
+		text-decoration: underline;
+	}
+}
+
 
 /* Images
 ========================================================================== */
@@ -479,16 +489,15 @@ button.destroy {
 }
 
 /* button sets */
-.article-nav,
 .nav-tertiary,
 .prev-next {
 	a, .navlink-disabled {
 		@include border-radius(0);
 	}
-	p > :first-child {
+	> :first-child {
 		@include border-left-radius;
 	}
-	p > :last-child {
+	> :last-child {
 		@include border-right-radius;
 	}
 }

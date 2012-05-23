@@ -133,6 +133,16 @@ hr {
   border-radius: 0.538em;
 }
 
+#list thead th a.pophelp {
+  border: 1px solid #fff;
+  display: inline;
+  color: #114eb1;
+}
+#list thead th a.pophelp:hover {
+  color: #0066ff;
+  text-decoration: underline;
+}
+
 /* Images
 ========================================================================== */
 .content-image {
@@ -659,25 +669,21 @@ button.destroy:active {
 }
 
 /* button sets */
-.article-nav a, .article-nav .navlink-disabled,
-.nav-tertiary a,
-.nav-tertiary .navlink-disabled,
+.nav-tertiary a, .nav-tertiary .navlink-disabled,
 .prev-next a,
 .prev-next .navlink-disabled {
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.article-nav p > :first-child,
-.nav-tertiary p > :first-child,
-.prev-next p > :first-child {
+.nav-tertiary > :first-child,
+.prev-next > :first-child {
   -moz-border-radius-topleft: 0.385em;
   border-top-left-radius: 0.385em;
   -moz-border-radius-bottomleft: 0.385em;
   border-bottom-left-radius: 0.385em;
 }
-.article-nav p > :last-child,
-.nav-tertiary p > :last-child,
-.prev-next p > :last-child {
+.nav-tertiary > :last-child,
+.prev-next > :last-child {
   -moz-border-radius-topright: 0.385em;
   border-top-right-radius: 0.385em;
   -moz-border-radius-bottomright: 0.385em;
