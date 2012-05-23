@@ -213,8 +213,8 @@ input[type="button"],
 .txp-logout a,
 #article-main a.article-view,
 .action-create a,
-.nav-tertiary a,
-.prev-next a {
+.navlink,
+.navlink-active {
 	-webkit-appearance: none;
 	@include border-radius;
 	@include background-clip;
