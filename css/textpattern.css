@@ -29,7 +29,7 @@ a:hover {
 ========================================================================== */
 h1 {
   font-size: 2.30769230769231em;
-  line-height: 1.3;
+  line-height: 1.2;
   margin: 0 0 .43333333333333em;
 }
 
@@ -1062,24 +1062,24 @@ body {
   display: none;
 }
 
-table#edit {
+#edit {
   width: 100%;
 }
 
-table#edit.edit-pane {
-  margin-bottom: 1em;
+#edit.edit-pane {
+  margin: 0 auto 1em;
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
   width: 40em;
   background: #f7f7f7;
 }
-table#edit.edit-pane h2 {
+#edit.edit-pane h2 {
   margin: 0;
 }
-table#edit.edit-pane td {
+#edit.edit-pane td {
   padding: .5em 1em;
 }
-table#edit.edit-pane td.cell-label {
+#edit.edit-pane td.cell-label {
   width: 37%;
 }
 
@@ -1412,19 +1412,19 @@ span.spinner {
 /* Content -> Images page
 ========================================================================== */
 /* fix for inconsistent structure */
-#page-image table#edit.edit-pane {
+#page-image #edit.edit-pane {
   border-top: 1em solid #F7F7F7;
   border-bottom: 0;
 }
-#page-image table#edit.edit-pane td {
+#page-image #edit.edit-pane td {
   padding: 0 1em;
 }
 
-table#edit.edit-pane #image-thumbnail {
+#edit.edit-pane #image-thumbnail {
   margin-right: auto;
   margin-bottom: 1em;
 }
-table#edit.edit-pane #image-thumbnail td {
+#edit.edit-pane #image-thumbnail td {
   padding: 0;
 }
 
@@ -1436,7 +1436,7 @@ table#edit.edit-pane #image-thumbnail td {
   margin: 0;
 }
 
-table#edit.edit-pane #thumbnail_alter td {
+#edit.edit-pane #thumbnail_alter td {
   padding: 0 .5em 0 0;
   width: auto;
   vertical-align: middle;
@@ -1467,10 +1467,10 @@ table#edit.edit-pane #thumbnail_alter td {
 /* Content -> Files page
 ========================================================================== */
 /* fix for inconsistent structure */
-#page-file table#edit.edit-pane {
+#page-file #edit.edit-pane {
   border: 0;
 }
-#page-file table#edit.edit-pane td {
+#page-file #edit.edit-pane td {
   padding: 0 1em;
 }
 
@@ -1623,11 +1623,11 @@ table#edit.edit-pane #thumbnail_alter td {
   margin-top: 1em;
 }
 
-#page-prefs table#list tr.odd td, #page-prefs table#list tr.even td {
+#page-prefs #list tr.odd td, #page-prefs #list tr.even td {
   height: 1.84615384615385em;
   vertical-align: middle;
 }
-#page-prefs table#list .modified {
+#page-prefs #list .modified {
   color: #999999;
   margin-left: .6em;
 }
@@ -1929,19 +1929,19 @@ div.plugin-help {
     box-shadow: 0 0.154em 0.231em rgba(0, 0, 0, 0.15);
   }
 
-  table#edit.edit-pane {
+  #edit.edit-pane {
     width: 100%;
     border-top-width: 1em;
     border-bottom: 0;
   }
-  table#edit.edit-pane > tbody > tr > td {
+  #edit.edit-pane > tbody > tr > td {
     display: block;
     padding: 0 1em;
   }
-  table#edit.edit-pane > tbody > tr > td.cell-label {
+  #edit.edit-pane > tbody > tr > td.cell-label {
     width: auto;
   }
-  table#edit.edit-pane > tbody > tr > td:last-child {
+  #edit.edit-pane > tbody > tr > td:last-child {
     padding-bottom: 1em;
   }
 
