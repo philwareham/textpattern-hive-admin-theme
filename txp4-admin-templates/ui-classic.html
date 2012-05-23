@@ -656,12 +656,15 @@
 				<p><input type="submit" value="Input Submit (Primary)" class="publish" /></p>
 
 				<h2>Standard buttons</h2>
-				<p><code>&lt;input type="submit" value="" /&gt;</code></p>
+				<p><code>&lt;input type="submit" value="Input Submit" /&gt;</code></p>
+				<p><code>&lt;input type="button" value="Input Button" /&gt;</code></p>
+				<p><code>&lt;button&gt;Button Tag&lt;/button&gt;</code></p>
+				<p><code>&lt;a class="navlink"&gt;Link (navlink)&lt;/a&gt;</code></p>
 				<p>
 					<input type="submit" value="Input Submit" />
-					<input type="reset" value="Input Reset" />
 					<input type="button" value="Input Button" />
-					<button>Button tag</button>
+					<button>Button Tag</button>
+					<a class="navlink">Link (navlink)</a>
 				</p>
 
 				<h2>Delete buttons</h2>
@@ -669,12 +672,20 @@
 				<p><input type="submit" value="&times;" class="destroy" /></p>
 
 				<h2>Button sets</h2>
-				<pre><code>&lt;div class="nav-tertiary"&gt;
-	&lt;p&gt;&lt;a href="#" class="navlink-active"&gt;Basic&lt;/a&gt;&lt;a href="#" class="navlink">Advanced&lt;/a&gt;&lt;a href="#" class="navlink"&gt;Language&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</code></pre>
-				<div class="nav-tertiary">
+				<pre><code>&lt;p class="nav-tertiary"&gt;
+	&lt;a href="#" class="navlink-active"&gt;Basic&lt;/a&gt;&lt;a href="#" class="navlink">Advanced&lt;/a&gt;&lt;a href="#" class="navlink"&gt;Language&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+				<p class="nav-tertiary">
 					<a href="#" class="navlink-active">Basic</a><a href="#" class="navlink">Advanced</a><a href="#" class="navlink">Language</a>
-				</div>
+				</p>
+
+				<h2>Previous/next buttons</h2>
+				<pre><code>&lt;p class="prev-next"&gt;
+	&lt;span class="navlink-disabled"&gt;&lt;b class="icon icon-arrow-w"&gt;&amp;#8592;&lt;/b&gt; Prev&lt;/span&gt;&lt;a href="#" class="navlink"&gt;Next &lt;b class="icon icon-arrow-e"&gt;&amp;#8594;&lt;/b&gt;&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+				<p class="prev-next">
+					<span class="navlink-disabled"><b class="icon icon-arrow-w">&#8592;</b> Prev</span><a href="#" class="navlink">Next <b class="icon icon-arrow-e">&#8594;</b></a>
+				</p>
 
 			</form>
 
