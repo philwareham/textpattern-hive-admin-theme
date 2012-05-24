@@ -132,12 +132,12 @@ hr {
   border-radius: 0.538em;
 }
 
-#list thead th a.pophelp {
+.txp-list thead th a.pophelp {
   border: 1px solid #fff;
   display: inline;
   color: #114eb1;
 }
-#list thead th a.pophelp:hover {
+.txp-list thead th a.pophelp:hover {
   color: #0066ff;
   text-decoration: underline;
 }
@@ -698,39 +698,39 @@ button.destroy:active {
 
 /* Tables
 ========================================================================== */
-#list {
+.txp-list {
   width: 100%;
 }
-#list tr.odd, #list tr.even {
+.txp-list tr.odd, .txp-list tr.even {
   border: 1px solid #dddddd;
 }
-#list tr.odd td:last-child, #list tr.even td:last-child {
+.txp-list tr.odd td:last-child, .txp-list tr.even td:last-child {
   border-right: 1px solid #dddddd;
 }
-#list tr.even td {
+.txp-list tr.even td {
   background: #f7f7f7;
 }
-#list th, #list td {
+.txp-list th, .txp-list td {
   padding: .38461538461538em 1em;
 }
-#list ul {
+.txp-list ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
-#list .id, #list .ip {
+.txp-list .id, .txp-list .ip {
   width: 6%;
 }
-#list .date, #list .name, #list .parent {
+.txp-list .date, .txp-list .name, .txp-list .parent {
   width: 14%;
 }
-#list .section {
+.txp-list .section {
   width: 12%;
 }
-#list thead .multi-edit, #list tbody .multi-edit {
+.txp-list thead .multi-edit, .txp-list tbody .multi-edit {
   width: 2%;
 }
-#list thead th {
+.txp-list thead th {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   background-color: #eeeeee;
   /* Konqueror */
@@ -751,23 +751,23 @@ button.destroy:active {
   border-right: 1px solid #d0d0d0;
   border-bottom: 1px solid #c4c4c4;
 }
-#list thead th:first-child {
+.txp-list thead th:first-child {
   border-left: 1px solid #dddddd;
 }
-#list thead th:last-child {
+.txp-list thead th:last-child {
   border-right: 1px solid #dddddd;
 }
-#list thead th a {
+.txp-list thead th a {
   position: relative;
   display: block;
   color: #333333;
   margin-right: .5em;
 }
-#list thead th a:hover {
+.txp-list thead th a:hover {
   color: #333333;
   text-decoration: none;
 }
-#list thead th a:after {
+.txp-list thead th a:after {
   position: absolute;
   top: .53846153846154em;
   right: -0.769em;
@@ -785,27 +785,27 @@ button.destroy:active {
   white-space: nowrap;
   overflow: hidden;
 }
-#list thead th a:hover:after {
+.txp-list thead th a:hover:after {
   opacity: 1;
 }
-#list thead th.desc a:after {
+.txp-list thead th.desc a:after {
   content: "&#8595;";
   border-left: .30769230769231em solid transparent;
   border-right: .30769230769231em solid transparent;
   border-top: 0.308em solid #333333;
   border-bottom: 0;
 }
-#list thead th.asc a:after {
+.txp-list thead th.asc a:after {
   content: "&#8593;";
   border-left: .30769230769231em solid transparent;
   border-right: .30769230769231em solid transparent;
   border-top: 0;
   border-bottom: 0.308em solid #333333;
 }
-#list tfoot th, #list tfoot td {
+.txp-list tfoot th, .txp-list tfoot td {
   vertical-align: middle;
 }
-#list tfoot .multi-edit {
+.txp-list tfoot .multi-edit {
   text-align: right;
 }
 
@@ -1065,20 +1065,20 @@ body {
   width: 100%;
 }
 
-#edit.edit-pane {
+.txp-edit {
   margin: 0 auto 1em;
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
   width: 40em;
   background: #f7f7f7;
 }
-#edit.edit-pane h2 {
+.txp-edit h2 {
   margin: 0;
 }
-#edit.edit-pane td {
+.txp-edit td {
   padding: .5em 1em;
 }
-#edit.edit-pane td.cell-label {
+.txp-edit td.cell-label {
   width: 37%;
 }
 
@@ -1389,19 +1389,19 @@ span.spinner {
 /* Content -> Images page
 ========================================================================== */
 /* fix for inconsistent structure */
-#page-image #edit.edit-pane {
+#page-image .txp-edit {
   border-top: 1em solid #f7f7f7;
   border-bottom: 0;
 }
-#page-image #edit.edit-pane td {
+#page-image .txp-edit td {
   padding: 0 1em;
 }
 
-#edit.edit-pane #image-thumbnail {
+.txp-edit #image-thumbnail {
   margin-right: auto;
   margin-bottom: 1em;
 }
-#edit.edit-pane #image-thumbnail td {
+.txp-edit #image-thumbnail td {
   padding: 0;
 }
 
@@ -1413,7 +1413,7 @@ span.spinner {
   margin: 0;
 }
 
-#edit.edit-pane #thumbnail_alter td {
+.txp-edit #thumbnail_alter td {
   padding: 0 .5em 0 0;
   width: auto;
   vertical-align: middle;
@@ -1444,10 +1444,10 @@ span.spinner {
 /* Content -> Files page
 ========================================================================== */
 /* fix for inconsistent structure */
-#page-file #edit.edit-pane {
+#page-file .txp-edit {
   border: 0;
 }
-#page-file #edit.edit-pane td {
+#page-file .txp-edit td {
   padding: 0 1em;
 }
 
@@ -1457,11 +1457,11 @@ span.spinner {
   margin: -1em 0 1em 1em;
 }
 
-#page-discuss #list tr.spam td {
+#page-discuss .txp-list tr.spam td {
   background: #f5e5e5;
 }
 
-#page-discuss #list tr.moderate td {
+#page-discuss .txp-list tr.moderate td {
   background: #fff8dd;
 }
 
@@ -1479,48 +1479,48 @@ span.spinner {
   margin-bottom: .38461538461538em;
 }
 
-#page-section #list {
+#page-section .txp-list {
   width: auto;
 }
-#page-section #list .section {
+#page-section .txp-list .section {
   border-top: 1em solid white;
 }
-#page-section #list tr {
+#page-section .txp-list tr {
   border: 0;
 }
-#page-section #list td {
+#page-section .txp-list td {
   padding: 0;
 }
-#page-section #list td:last-child {
+#page-section .txp-list td:last-child {
   border: 0;
 }
-#page-section #list .label {
+#page-section .txp-list .label {
   padding-right: 1em;
   width: 20%;
   font-weight: bold;
   text-align: right;
 }
-#page-section #list .actions {
+#page-section .txp-list .actions {
   padding-left: 1em;
   width: 20%;
 }
-#page-section #list .main {
+#page-section .txp-list .main {
   width: 41em;
 }
-#page-section #list tr.odd td, #page-section #list tr.even td {
+#page-section .txp-list tr.odd td, #page-section .txp-list tr.even td {
   border: 0;
   background: white;
 }
-#page-section #list .section table {
+#page-section .txp-list .section table {
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
   width: 100%;
 }
-#page-section #list .section table td {
+#page-section .txp-list .section table td {
   padding: .38461538461538em 1em;
   background: #f7f7f7 !important;
 }
-#page-section #list .section table .cell-label {
+#page-section .txp-list .section table .cell-label {
   width: 36%;
 }
 
@@ -1563,7 +1563,7 @@ span.spinner {
 }
 
 #content_switcher input[type="checkbox"],
-#content_switcher #list input[type="submit"] {
+#content_switcher .txp-list input[type="submit"] {
   float: right;
 }
 
@@ -1600,11 +1600,11 @@ span.spinner {
   margin-top: 1em;
 }
 
-#page-prefs #list tr.odd td, #page-prefs #list tr.even td {
+#page-prefs .txp-list tr.odd td, #page-prefs .txp-list tr.even td {
   height: 1.84615384615385em;
   vertical-align: middle;
 }
-#page-prefs #list .modified {
+#page-prefs .txp-list .modified {
   color: #999999;
   margin-left: .6em;
 }
@@ -1700,20 +1700,20 @@ div.plugin-help {
 
 /* Admin -> Import page
 ========================================================================== */
-#page-import #edit {
+#page-import .txp-edit {
   width: 40em;
   margin-bottom: 1em;
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
   background: #f7f7f7;
 }
-#page-import #edit td {
+#page-import .txp-edit td {
   padding: .5em 1em;
 }
-#page-import #edit td.cell-label {
+#page-import .txp-edit td.cell-label {
   width: 37%;
 }
-#page-import #edit #databased {
+#page-import .txp-edit #databased {
   margin-left: -1em;
   margin-right: -1em;
 }
@@ -1906,19 +1906,19 @@ div.plugin-help {
     box-shadow: 0 0.154em 0.231em rgba(0, 0, 0, 0.15);
   }
 
-  #edit.edit-pane {
+  .txp-edit {
     width: 100%;
     border-top-width: 1em;
     border-bottom: 0;
   }
-  #edit.edit-pane > tbody > tr > td {
+  .txp-edit > tbody > tr > td {
     display: block;
     padding: 0 1em;
   }
-  #edit.edit-pane > tbody > tr > td.cell-label {
+  .txp-edit > tbody > tr > td.cell-label {
     width: auto;
   }
-  #edit.edit-pane > tbody > tr > td:last-child {
+  .txp-edit > tbody > tr > td:last-child {
     padding-bottom: 1em;
   }
 

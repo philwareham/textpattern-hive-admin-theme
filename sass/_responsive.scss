@@ -220,7 +220,7 @@ body {
 	@include box-shadow(0 .15384615384615em .23076923076923em rgba(#000, .15));
 }
 
-#edit.edit-pane {
+.txp-edit {
 	width: 100%;
 	border-top-width: 1em;
 	border-bottom: 0;

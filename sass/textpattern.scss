@@ -138,7 +138,7 @@ hr {
 	@include border-radius(.53846153846154em);
 }
 
-#list thead th a.pophelp {
+.txp-list thead th a.pophelp {
 	border: 1px solid #fff;
 	display: inline;
 	color: $color-link;
@@ -514,7 +514,7 @@ button.destroy {
 /* Tables
 ========================================================================== */
 
-#list {
+.txp-list {
 	width: 100%;
 	tr.odd, tr.even {
 		border: 1px solid $color-gradient-to;
@@ -844,7 +844,7 @@ body {
 	width: 100%;
 }
 
-#edit.edit-pane {
+.txp-edit {
 	margin: 0 auto 1em;
 	border-top: .5em solid $color-background-box;
 	border-bottom: .5em solid $color-background-box;
@@ -1137,7 +1137,7 @@ span.spinner {
 ========================================================================== */
 
 /* fix for inconsistent structure */
-#page-image #edit.edit-pane {
+#page-image .txp-edit {
 	border-top: 1em solid $color-background-box;
 	border-bottom: 0;
 	td {
@@ -1145,7 +1145,7 @@ span.spinner {
 	}
 }
 
-#edit.edit-pane #image-thumbnail {
+.txp-edit #image-thumbnail {
 	margin-right: auto;
 	margin-bottom: 1em;
 	td {
@@ -1161,7 +1161,7 @@ span.spinner {
 	margin: 0;
 }
 
-#edit.edit-pane #thumbnail_alter {
+.txp-edit #thumbnail_alter {
 	td {
 		padding: 0 .5em 0 0;
 		width: auto;
@@ -1194,7 +1194,7 @@ span.spinner {
 ========================================================================== */
 
 /* fix for inconsistent structure */
-#page-file #edit.edit-pane {
+#page-file .txp-edit {
 	border: 0;
 	td {
 		padding: 0 1em;
@@ -1209,11 +1209,11 @@ span.spinner {
 	margin: -1em 0 1em 1em;
 }
 
-#page-discuss #list tr.spam td {
+#page-discuss .txp-list tr.spam td {
 	background: lighten($error-background, 2%);
 }
 
-#page-discuss #list tr.moderate td {
+#page-discuss .txp-list tr.moderate td {
 	background: lighten($warning-background, 2%);
 }
 
@@ -1233,7 +1233,7 @@ span.spinner {
 	margin-bottom: .38461538461538em;
 }
 
-#page-section #list {
+#page-section .txp-list {
 	width: auto;
 	.section {
 		border-top: 1em solid $color-background;
@@ -1324,7 +1324,7 @@ span.spinner {
 }
 
 #content_switcher input[type="checkbox"],
-#content_switcher #list input[type="submit"] {
+#content_switcher .txp-list input[type="submit"] {
 	float: right;
 }
 
@@ -1365,7 +1365,7 @@ span.spinner {
 	margin-top: 1em;
 }
 
-#page-prefs #list {
+#page-prefs .txp-list {
 	tr.odd td, tr.even td {
 		height: 1.84615384615385em; // 24px / 13px
 		vertical-align: middle;
@@ -1471,7 +1471,7 @@ div.plugin-help {
 /* Admin -> Import page
 ========================================================================== */
 
-#page-import #edit {
+#page-import .txp-edit {
 	width: $standard-column;
 	margin-bottom: 1em;
 	border-top: .5em solid $color-background-box;
