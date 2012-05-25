@@ -78,7 +78,7 @@ body {
 /* Content -> Write page (< 769px)
 ========================================================================== */
 
-#page-article #edit {
+#page-article .txp-columntable {
 	th,
 	td,
 	tr {
@@ -156,7 +156,7 @@ body {
 
 #page-page,
 #page-form {
-	#edit td.column:first-child {
+	.txp-columntable td.column:first-child {
 		display: none;
 	}
 }
@@ -167,13 +167,13 @@ body {
 	h2 {
 		margin-top: 1.625em;
 	}
-	> tr, #edit td.column {
+	> tr, .txp-columntable td.column {
 		display: block;
 		margin: 0 auto;
 		width: 100%;
 		max-width: $standard-column;
 	}
-	#edit td.column:last-child {
+	.txp-columntable td.column:last-child {
 		width: 100%;
 	}
 }

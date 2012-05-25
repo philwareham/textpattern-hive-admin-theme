@@ -1061,7 +1061,7 @@ body {
   display: none;
 }
 
-#edit {
+.txp-columntable {
   width: 100%;
 }
 
@@ -1526,13 +1526,13 @@ span.spinner {
 
 /* Presentation -> Pages, Forms, Styles pages shared
 ========================================================================== */
-#page-page #edit td.column:first-child, #page-page #edit td.column:last-child,
-#page-form #edit td.column:first-child,
-#page-form #edit td.column:last-child {
+#page-page .txp-columntable td.column:first-child, #page-page .txp-columntable td.column:last-child,
+#page-form .txp-columntable td.column:first-child,
+#page-form .txp-columntable td.column:last-child {
   width: 25%;
 }
 
-#page-css #edit td.column:last-child {
+#page-css .txp-columntable td.column:last-child {
   width: 25%;
 }
 
@@ -1783,9 +1783,9 @@ div.plugin-help {
 
   /* Content -> Write page (< 769px)
   ========================================================================== */
-  #page-article #edit th,
-  #page-article #edit td,
-  #page-article #edit tr {
+  #page-article .txp-columntable th,
+  #page-article .txp-columntable td,
+  #page-article .txp-columntable tr {
     display: block;
   }
 
@@ -1847,8 +1847,8 @@ div.plugin-help {
     margin: 0;
   }
 
-  #page-page #edit td.column:first-child,
-  #page-form #edit td.column:first-child {
+  #page-page .txp-columntable td.column:first-child,
+  #page-form .txp-columntable td.column:first-child {
     display: none;
   }
 
@@ -1857,19 +1857,19 @@ div.plugin-help {
   #page-css h2 {
     margin-top: 1.625em;
   }
-  #page-page > tr, #page-page #edit td.column,
+  #page-page > tr, #page-page .txp-columntable td.column,
   #page-form > tr,
-  #page-form #edit td.column,
+  #page-form .txp-columntable td.column,
   #page-css > tr,
-  #page-css #edit td.column {
+  #page-css .txp-columntable td.column {
     display: block;
     margin: 0 auto;
     width: 100%;
     max-width: 40em;
   }
-  #page-page #edit td.column:last-child,
-  #page-form #edit td.column:last-child,
-  #page-css #edit td.column:last-child {
+  #page-page .txp-columntable td.column:last-child,
+  #page-form .txp-columntable td.column:last-child,
+  #page-css .txp-columntable td.column:last-child {
     width: 100%;
   }
 }

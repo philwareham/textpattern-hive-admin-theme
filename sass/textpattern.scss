@@ -840,7 +840,7 @@ body {
 	display: none;
 }
 
-#edit {
+.txp-columntable {
 	width: 100%;
 }
 
@@ -1282,14 +1282,14 @@ span.spinner {
 /* Presentation -> Pages, Forms, Styles pages shared
 ========================================================================== */
 
-#page-page #edit td.column,
-#page-form #edit td.column {
+#page-page .txp-columntable td.column,
+#page-form .txp-columntable td.column {
 	&:first-child, &:last-child {
 		width: 25%;
 	}
 }
 
-#page-css #edit td.column:last-child {
+#page-css .txp-columntable td.column:last-child {
 	width: 25%;
 }
 
