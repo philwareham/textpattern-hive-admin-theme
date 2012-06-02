@@ -6,316 +6,176 @@
 
 
 
-/* =============================================================================
-   ADDITIONAL LAYOUT FOR DEVICES < 769px
-   ========================================================================== */
+/* ADDITIONAL LAYOUT FOR DEVICES < 769px
+========================================================================== */
 
 
 @media only screen and (max-width: 768px) { // may be changed to 'device-max-width' in final build
 
 
-/* =============================================================================
-   Layout (< 769px)
-   ========================================================================== */
+/* Layout (< 769px)
+========================================================================== */
 
 body {
-    padding: 4em 1em 0;
-    min-width: 294px;
+	padding: 4em 1em 0;
+	min-width: 294px;
 }
 
 
-/* =============================================================================
-   Header (< 769px)
-   ========================================================================== */
+/* Header (< 769px)
+========================================================================== */
 
-#txp-head {
-    padding: 0 1em;
-    min-width: 294px;
-    h1 {
-        max-width: 50%;
-        padding-left: $logo-small-width;
-        @include svg-graphic($logo-small-filename, $logo-small-filetype, $logo-small-width, $logo-small-height);
-    }
+.txp-head {
+	padding: 0 1em;
+	min-width: 294px;
+	h1 {
+		max-width: 50%;
+		padding-left: $logo-small-width;
+		@include svg-graphic($logo-small-filename, $logo-small-filetype, $logo-small-width, $logo-small-height);
+	}
 }
 
-#txp-logout {
-    right: 1em;
-}
-
-
-/* =============================================================================
-   Navigation (< 769px)
-   ========================================================================== */
-
-/* Show <select> version of navigation on small screen widths */
-#txp-nav-select {
-    display: inherit;
-}
-
-/* Hide <ul> version of navigation on small screen widths */
-#txp-nav {
-    display: none;
+.txp-logout {
+	right: 1em;
 }
 
 
-/* =============================================================================
-   Content -> Categories page (< 769px)
-   ========================================================================== */
+/* Navigation (< 769px)
+========================================================================== */
+
+/* show <select> version of navigation on small screen widths */
+.txp-nav-select {
+	display: inherit;
+}
+
+/* hide <ul> version of navigation on small screen widths */
+.txp-nav {
+	display: none;
+}
+
+
+/* Content -> Categories page (< 769px)
+========================================================================== */
 
 .category-list {
-    th,
-    td,
-    tr {
-        display: block;
-        margin: 0 auto;
-        max-width: $standard-column;
-    }
-    td {
-        width: 100%;
-    }
+	th,
+	td,
+	tr {
+		display: block;
+		margin: 0 auto;
+		max-width: $standard-column;
+	}
+	td {
+		width: 100%;
+	}
 }
 
 .categories > div {
-    margin: 0 0 1em 0;
+	margin: 0 0 1em 0;
 }
 
 
-/* =============================================================================
-   Content -> Write page (< 769px)
-   ========================================================================== */
+/* Content -> Write page (< 769px)
+========================================================================== */
 
-#page-article #edit {
-    th,
-    td,
-    tr {
-        display: block;
-    }
+#page-article .txp-columntable {
+	th,
+	td,
+	tr {
+		display: block;
+	}
 }
 
 #article-col-1,
 #article-col-2,
 #article-main,
 #article-tabs {
-    width: 100%;
-    margin: 0 auto;
-    max-width: $standard-column;
+	width: 100%;
+	margin: 0 auto;
+	max-width: $standard-column;
 }
 
 #article-col-2 {
-    clear: left;
+	clear: left;
 }
 
 #article-tabs {
-    padding: 0 0 1em 0;
-    height: 1.84615384615385em; // 24px / 13px
+	padding: 0 0 1em 0;
+	height: 1.84615384615385em; // 24px / 13px
 }
 
 .view-mode {
-    float: left;
-    margin-right: 1em;
-    margin-bottom: 0;
+	float: left;
+	margin-right: 1em;
+	margin-bottom: 0;
 }
 
 #configuration_content,
 #tagbuild_links,
 #supporting_content {
-    margin: 0;
+	margin: 0;
 }
 
-/* Turn off features to optimise small screen size */
+/* turn off features to optimise small screen size */
 #textile_group,
-#recent_group,
-#page-article .action-create,
-#page-article .article-nav {
-    display: none;
+#recent_group {
+	display: none;
 }
 
 
-/* =============================================================================
-   Content -> Articles page (< 769px)
-   ========================================================================== */
+/* Content -> Images page (< 769px)
+========================================================================== */
 
-/* Hide table cells to optimise screen estate */
-#page-list #list {
-    .date,
-    .section,
-    .category,
-    .author,
-    .status,
-    .comments,
-    .multi-edit,
-    tfoot {
-        display: none !important;
-    }
+/* hide table cells to optimise screen estate */
+#image_details_form .name,
+#image_details_form .category {
+	display: block !important;
 }
 
 
-/* =============================================================================
-   Content -> Images page (< 769px)
-   ========================================================================== */
-
-/* Hide table cells to optimise screen estate */
-#page-image #list {
-    .actions,
-    .date,
-    .name,
-    .tag-build,
-    .category,
-    .multi-edit,
-    tfoot {
-        display: none !important;
-    }
-    #image_details_form .name,
-    #image_details_form .category {
-        display: block !important;
-    }
-}
-
-
-/* =============================================================================
-   Content -> Files page (< 769px)
-   ========================================================================== */
-
-/* Hide table cells to optimise screen estate */
-#page-file #list {
-    .actions,
-    .title,
-    .category,
-    .tag-build,
-    .status,
-    .condition,
-    .downloads,
-    .multi-edit,
-    tfoot {
-        display: none !important;
-    }
-}
-
-
-/* =============================================================================
-   Content -> Links page (< 769px)
-   ========================================================================== */
-
-/* Hide table cells to optimise screen estate */
-#page-link #list {
-    .actions,
-    .category,
-    .date,
-    .author,
-    .multi-edit,
-    tfoot {
-        display: none !important;
-    }
-}
-
-
-/* =============================================================================
-   Content -> Comments page (< 769px)
-   ========================================================================== */
+/* Content -> Comments page (< 769px)
+========================================================================== */
 
 .cb_show_spam {
-    margin-top: -.5em;
-}
-
-/* Hide table cells to optimise screen estate */
-#page-discuss #list {
-    .date,
-    .discuss_detail,
-    .parent,
-    .multi-edit,
-    tfoot {
-        display: none !important;
-    }
+	margin-top: 0;
 }
 
 
-/* =============================================================================
-   Presentation -> Sections page (< 769px)
-   ========================================================================== */
+/* Presentation -> Sections page (< 769px)
+========================================================================== */
 
 // TO BE DONE
 
 
-/* =============================================================================
-   Presentation -> Pages, Forms, Styles pages shared (< 769px)
-   ========================================================================== */
+/* Presentation -> Pages, Forms, Styles pages shared (< 769px)
+========================================================================== */
 
 #content_switcher {
-    margin: 0;
+	margin: 0;
 }
 
 #page-page,
 #page-form {
-    #edit td.column:first-child {
-        display: none;
-    }
+	.txp-columntable td.column:first-child {
+		display: none;
+	}
 }
 
 #page-page,
 #page-form,
 #page-css {
-    h2 {
-        margin-top: 1.625em;
-    }
-    > tr, #edit td.column {
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-        max-width: $standard-column;
-    }
-    #edit td.column:last-child {
-        width: 100%;
-    }
-}
-
-
-/* =============================================================================
-   Admin -> Users page (< 769px)
-   ========================================================================== */
-
-/* Hide table cells to optimise screen estate */
-#page-admin #list {
-    .real-name,
-    .privs,
-    .last-login,
-    .multi-edit,
-    tfoot {
-        display: none !important;
-    }
-}
-
-
-/* =============================================================================
-   Admin -> Visitor Logs page (< 769px)
-   ========================================================================== */
-
-/* Hide table cells to optimise screen estate */
-#page-log #list {
-    .log_detail,
-    .host,
-    .refer,
-    .multi-edit,
-    tfoot {
-        display: none !important;
-    }
-}
-
-
-/* =============================================================================
-   Admin -> Plugins page (< 769px)
-   ========================================================================== */
-
-/* Hide table cells to optimise screen estate */
-#page-plugin #list {
-    .author,
-    .modified,
-    .description,
-    .load-order,
-    .manage,
-    .multi-edit,
-    tfoot {
-        display: none !important;
-    }
+	h2 {
+		margin-top: 1.625em;
+	}
+	> tr, .txp-columntable td.column {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		max-width: $standard-column;
+	}
+	.txp-columntable td.column:last-child {
+		width: 100%;
+	}
 }
 
 
@@ -324,86 +184,96 @@ body {
 
 
 
-/* =============================================================================
-   ADDITIONAL LAYOUT FOR DEVICES < 546px
-   ========================================================================== */
+/* ADDITIONAL LAYOUT FOR DEVICES < 546px
+========================================================================== */
 
 
 @media only screen and (max-width: 545px) { // may be changed to 'device-max-width' in final build
 
 
 body {
-    padding-top: 7.23076923076923em; // 94px / 13px
+	padding-top: 7.23076923076923em; // 94px / 13px
 }
 
 #page-login,
 #page-logout {
-    padding-top: 4em;
+	padding-top: 4em;
 }
 
-#txp-head {
-    position: absolute;
-    h1 {
-        max-width: 66%;
-    }
+.txp-head {
+	position: absolute;
+	h1 {
+		max-width: 66%;
+	}
 }
 
 /* show select version of navigation for smaller screens (and hide list version) */
-#txp-nav-select {
-    position: absolute;
-    top: 2.46153846153846em;
-    right: 0;
-    left: 0;
-    z-index: 10010;
-    border-top: 1px solid lighten($color-highlight-box, 5%);
-    padding: .53846153846154em 1em;
-    background: $color-highlight-box;
-    @include box-shadow(0 .15384615384615em .23076923076923em rgba(#000, .15));
+.txp-nav-select {
+	position: absolute;
+	top: 2.46153846153846em;
+	right: 0;
+	left: 0;
+	z-index: 10010;
+	border-top: 1px solid lighten($color-highlight-box, 5%);
+	padding: .53846153846154em 1em;
+	background: $color-highlight-box;
+	@include box-shadow(0 .15384615384615em .23076923076923em rgba(#000, .15));
 }
 
-table#edit.edit-pane {
-    width: 100%;
-    border-top-width: 1em;
-    border-bottom: 0;
-    > tbody > tr > td {
-        display: block;
-        padding: 0 1em;
-        &.cell-label {
-            width: auto;
-        }
-        &:last-child {
-            padding-bottom: 1em;
-        }
-    }
+.txp-edit {
+	width: 100%;
+	border-top-width: 1em;
+	border-bottom: 0;
+	> tbody > tr > td {
+		display: block;
+		padding: 0 1em;
+		&.cell-label {
+			width: auto;
+		}
+		&:last-child {
+			padding-bottom: 1em;
+		}
+	}
 }
 
 #article-main #body {
-    height: 17.4615384615385em; // 227px / 13px
+	height: 17.4615384615385em; // 227px / 13px
 }
 
 #excerpt {
-    height: 4.38461538461538em; // 57px / 13px
+	height: 4.38461538461538em; // 57px / 13px
 }
 
 #page-page,
 #page-form,
 #page-css {
-    textarea.code {
-        height: 17.4615384615385em; // 227px / 13px
-    }
+	textarea.code {
+		height: 17.4615384615385em; // 227px / 13px
+	}
 }
 
-/* Add some margin above upload submit in case it wraps */
+/* remove float from txp-navigation elements */
+.txp-navigation {
+	text-align: center;
+	.pageby {
+		float: none;
+	}
+	.prev-next {
+		float: none;
+	}
+}
+
+/* add some margin above upload submit in case it wraps */
 .upload-form,
 #image-replace,
 #thumbnail-upload {
-    input[type="submit"] {
-        margin-top: 1em;
-    }
+	input[type="submit"] {
+		margin-top: 1em;
+	}
 }
 
 div.plugin-help {
-    width: 100%;
+	width: 100%;
 }
 
 

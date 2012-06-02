@@ -1,69 +1,69 @@
 // note: this file is for use with Sass - http://sass-lang.com, don't use it as your live site stylesheet!
 
-/* Hive theme for Textpattern CMS (v2.0a4) */
+/* Hive theme for Textpattern CMS (v4.5alpha) */
 
 // logo (logo-large for screen width > 480px, logo-small for screen width < 481px)
 
-$logo-large-filename:   textpattern-lrg;
+$logo-large-filename:	textpattern-lrg;
 $logo-large-filetype:   png;
-$logo-large-width:      11.3846153846154em; // 148px / 13px
-$logo-large-height:     2.30769230769231em; // 30px / 13px
-$logo-small-filename:   textpattern-sml;
-$logo-small-filetype:   png;
-$logo-small-width:      1.84615384615385em; // 24px / 13px
-$logo-small-height:     1.84615384615385em; // 24px / 13px
+$logo-large-width:		9.84615384615385em;	// 128px / 13px
+$logo-large-height:		2em;	// 26px / 13px
+$logo-small-filename:	textpattern-sml;
+$logo-small-filetype:	png;
+$logo-small-width:		2em;	// 26px / 13px
+$logo-small-height:		2em;	// 26px / 13px
 
 // font families
 
-$font-body:             Arial, Helvetica, sans-serif;
-$font-mono:             Cousine, Menlo, Consolas, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
+$font-body:				Arial, Helvetica, sans-serif;
+$font-mono:				Menlo, Consolas, "Liberation Mono", monospace;
 
 // typography grid
 
-$basefont:              .8125em;            // 13px / 16px
-$baseline:              1.38461538461538;   // 18px / 13px
-$smallfont:             .84615384615385em;  // 11px / 13px
+$basefont:				.8125em;			// 13px / 16px
+$baseline:				1.38461538461538;	// 18px / 13px
+$smallfont:				.84615384615385em;	// 11px / 13px
 
 // text colours
 
-$color-text:            #333;
-$color-text-inverse:    #fff;
-$color-text-footnote:   #888;
-$color-link:            #114eb1;
-$color-link-hover:      #06f;
+$color-text:			#333;
+$color-text-inverse:	#fff;
+$color-text-footnote:	#999;
+$color-link:			#114eb1;
+$color-link-hover:		#06f;
 
 // layout
 
-$standard-column:       40em;               // 520px / 13px
-$text-column:           56em;               // 728px / 13px
+$standard-column:		40em;				// 520px / 13px
+$text-column:			56em;				// 728px / 13px
 
 // borders
 
-$color-border:          #ccc;
-$border-radius:         .38461538461538em;
+$color-border:			#ccc;
+$border-radius:			.38461538461538em;
 
 // default gradients
 
-$color-gradient-from:   #eee;
-$color-gradient-to:     #ddd;
+$color-gradient-from:	#eee;
+$color-gradient-to:		#ddd;
 
 // accent colours
 
-$color-background:      #fff;
-$color-background-box:  #f7f7f7;
-$color-highlight-box:   #fff6d3;
+$color-background:		#fff;
+$color-background-box:	#f7f7f7;
+$color-highlight-box:	#fff6d3;
 
 // alert colours
 
-$success-text:          #238c23;
-$success-background:    #dff0d8;
-$success-border:        darken($success-background, 20%);
-$warning-text:          #cb8f02;
-$warning-background:    #fff6d3;
-$warning-border:        darken($warning-background, 20%);
-$error-text:            #9d261d;
-$error-background:      #f2dede;
-$error-border:          darken($error-background, 12%);
-$info-text:             #3a87ad;
-$info-background:       #e7f6fc;
-$info-border:           darken($error-background, 12%);
+$success-text:			#238c23;
+$success-background:	#dff0d8;
+$success-border:		darken($success-background, 20%);
+$warning-text:			#cb8f02;
+$warning-background:	#fff6d3;
+$warning-border:		darken($warning-background, 20%);
+$error-text:			#9d261d;
+$error-background:		#f2dede;
+$error-border:			darken($error-background, 12%);
+$info-text:				#3a87ad;
+$info-background:		#e7f6fc;
+$info-border:			darken($error-background, 12%);

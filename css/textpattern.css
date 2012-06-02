@@ -1,53 +1,20 @@
 @import url("reset.css");
-/* Hive theme for Textpattern CMS (v2.0a4) */
-/* =============================================================================
-   Web fonts
-   ========================================================================== */
-@font-face {
-  font-family: cousine;
-  src: url("../fonts/Cousine-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Cousine-Regular.woff") format("woff"), url("../fonts/Cousine-Regular.ttf") format("truetype"), url("../fonts/Cousine-Regular.svg#Cousine-Regular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: cousine;
-  src: url("../fonts/Cousine-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Cousine-Italic.woff") format("woff"), url("../fonts/Cousine-Italic.ttf") format("truetype"), url("../fonts/Cousine-Italic.svg#Cousine-Italic") format("svg");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: cousine;
-  src: url("../fonts/Cousine-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Cousine-Bold.woff") format("woff"), url("../fonts/Cousine-Bold.ttf") format("truetype"), url("../fonts/Cousine-Bold.svg#Cousine-Bold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: cousine;
-  src: url("../fonts/Cousine-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Cousine-BoldItalic.woff") format("woff"), url("../fonts/Cousine-BoldItalic.ttf") format("truetype"), url("../fonts/Cousine-BoldItalic.svg#Cousine-BoldItalic") format("svg");
-  font-weight: bold;
-  font-style: italic;
-}
-
-/* =============================================================================
-   Clearfix
-   ========================================================================== */
-.clearfix, #txp-foot, .txp-navigation {
+/* Hive theme for Textpattern CMS (v4.5alpha) */
+/* Clearfix
+========================================================================== */
+.clearfix, .txp-foot, .txp-navigation {
   *zoom: 1;
 }
-.clearfix:before, #txp-foot:before, .txp-navigation:before, .clearfix:after, #txp-foot:after, .txp-navigation:after {
+.clearfix:before, .txp-foot:before, .txp-navigation:before, .clearfix:after, .txp-foot:after, .txp-navigation:after {
   content: "";
   display: table;
 }
-.clearfix:after, #txp-foot:after, .txp-navigation:after {
+.clearfix:after, .txp-foot:after, .txp-navigation:after {
   clear: both;
 }
 
-/* =============================================================================
-   Links
-   ========================================================================== */
+/* Links
+========================================================================== */
 a {
   -webkit-tap-highlight-color: rgba(0, 102, 255, 0.5);
   color: #114eb1;
@@ -58,12 +25,11 @@ a:hover {
   text-decoration: underline;
 }
 
-/* =============================================================================
-   Typography
-   ========================================================================== */
+/* Typography
+========================================================================== */
 h1 {
   font-size: 2.30769230769231em;
-  line-height: 1.3;
+  line-height: 1.2;
   margin: 0 0 .43333333333333em;
 }
 
@@ -88,7 +54,7 @@ h6 {
 }
 
 small,
-#txp-foot {
+.txp-foot {
   font-size: 0.846em;
 }
 
@@ -112,7 +78,7 @@ kbd,
 samp,
 .code,
 #diagnostics-detail {
-  font-family: Cousine, Menlo, Consolas, "Lucida Console", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
+  font-family: Menlo, Consolas, "Liberation Mono", monospace;
 }
 
 code,
@@ -132,6 +98,9 @@ pre {
   -moz-border-radius: 0.385em;
   border-radius: 0.385em;
   background: #f7f7f7;
+  tab-size: 4;
+  /* IE7 */
+  *overflow-y: hidden;
 }
 
 pre code,
@@ -152,7 +121,6 @@ hr {
   margin: 1.5em 0;
   border-color: #cccccc;
   border-style: solid;
-  width: 100% !important;
 }
 
 .pophelp,
@@ -164,9 +132,52 @@ hr {
   border-radius: 0.538em;
 }
 
-/* =============================================================================
-   Messages
-   ========================================================================== */
+.txp-list thead th a.pophelp {
+  border: 1px solid #fff;
+  display: inline;
+  color: #114eb1;
+}
+.txp-list thead th a.pophelp:hover {
+  color: #0066ff;
+  text-decoration: underline;
+}
+
+/* Images
+========================================================================== */
+.content-image {
+  border: solid 1px #cccccc;
+  -moz-border-radius: 0.385em;
+  border-radius: 0.385em;
+  padding: 4px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
+}
+
+a:hover .content-image {
+  border: solid 1px #0066ff;
+  -webkit-box-shadow: 0 0 0.462em rgba(0, 102, 255, 0.4);
+  box-shadow: 0 0 0.462em rgba(0, 102, 255, 0.4);
+}
+
+/* image alignments */
+.align-left {
+  float: left;
+  margin: 1em 1em 1em 0;
+}
+
+.align-right {
+  float: right;
+  margin: 1em 0 1em 1em;
+}
+
+.align-center {
+  display: block;
+  margin: 1em auto;
+}
+
+/* Messages
+========================================================================== */
 .not-ok,
 #plugin_form .modified,
 .highlight {
@@ -354,16 +365,14 @@ span#message.error {
   animation: messageflash 1s;
 }
 
-/* =============================================================================
-   Twistees
-   ========================================================================== */
+/* Twistees
+========================================================================== */
 h3.lever {
   font-size: 1em;
   font-weight: bold;
   line-height: 2em;
   margin: 0;
   height: 2em;
-  overflow: hidden;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
@@ -422,11 +431,6 @@ h3.lever a:hover:after {
   opacity: 1;
 }
 
-/* remove pophelp on levers - inconsistent UI */
-h3.lever a.pophelp {
-  display: none;
-}
-
 h3.lever.expanded a:after {
   content: "&#8595;";
   top: .84615384615385em;
@@ -441,9 +445,8 @@ h3.lever.expanded a:after {
   padding: 0 1em;
 }
 
-/* =============================================================================
-   Forms
-   ========================================================================== */
+/* Forms
+========================================================================== */
 fieldset {
   position: relative;
   margin: 0 0 1em 0;
@@ -525,9 +528,19 @@ input.month, input.exp_month, input.day, input.exp_day, input.hour, input.exp_ho
   width: 2.30769230769231em;
 }
 
-/* =============================================================================
-   Specific buttons
-   ========================================================================== */
+/* additional input field widths */
+input.input-medium {
+  width: 50%;
+  max-width: 11.6153846153846em;
+}
+
+input.input-small {
+  width: 25%;
+  max-width: 5.76923076923077em;
+}
+
+/* Specific buttons
+========================================================================== */
 /* primary buttons */
 input[type="submit"].publish,
 button.publish {
@@ -589,7 +602,8 @@ button.publish:active {
 }
 
 /* delete buttons */
-input[value="×"] {
+input[type="submit"].destroy,
+button.destroy {
   padding: 0 .33333333333333em;
   color: #f9e0df;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25);
@@ -611,7 +625,8 @@ input[value="×"] {
   /* CSS3 Compliant */
   background-image: linear-gradient(#dc4e44, #9d261d);
 }
-input[value="×"]:hover {
+input[type="submit"].destroy:hover,
+button.destroy:hover {
   color: white;
   border-top: 1px solid #c83025;
   border-bottom: 1px solid #94241b;
@@ -631,7 +646,8 @@ input[value="×"]:hover {
   /* CSS3 Compliant */
   background-image: linear-gradient(#e36f66, #c83025);
 }
-input[value="×"]:active {
+input[type="submit"].destroy:active,
+button.destroy:active {
   border-top: 1px solid #e36f66;
   border-bottom: 1px solid #d93e32;
   background-color: #c83025;
@@ -651,54 +667,70 @@ input[value="×"]:active {
   background-image: linear-gradient(#c83025, #e36f66);
 }
 
-/* =============================================================================
-   Lists
-   ========================================================================== */
+/* button sets */
+.nav-tertiary a, .nav-tertiary .navlink-disabled,
+.prev-next a,
+.prev-next .navlink-disabled {
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.nav-tertiary > :first-child,
+.prev-next > :first-child {
+  -moz-border-radius-topleft: 0.385em;
+  border-top-left-radius: 0.385em;
+  -moz-border-radius-bottomleft: 0.385em;
+  border-bottom-left-radius: 0.385em;
+}
+.nav-tertiary > :last-child,
+.prev-next > :last-child {
+  -moz-border-radius-topright: 0.385em;
+  border-top-right-radius: 0.385em;
+  -moz-border-radius-bottomright: 0.385em;
+  border-bottom-right-radius: 0.385em;
+}
+
+/* Lists
+========================================================================== */
 .plain-list {
   list-style: none;
   padding-left: 0;
 }
 
-/* =============================================================================
-   Tables
-   ========================================================================== */
-#list {
+/* Tables
+========================================================================== */
+.txp-list {
   width: 100%;
-  overflow: auto;
-  /* IE7 */
-  *overflow-y: scroll;
-  *overflow-x: hidden;
 }
-#list tr.odd, #list tr.even {
+.txp-list tr.odd, .txp-list tr.even {
   border: 1px solid #dddddd;
 }
-#list tr.odd td:last-child, #list tr.even td:last-child {
+.txp-list tr.odd td:last-child, .txp-list tr.even td:last-child {
   border-right: 1px solid #dddddd;
 }
-#list tr.even td {
+.txp-list tr.even td {
   background: #f7f7f7;
 }
-#list th, #list td {
+.txp-list th, .txp-list td {
   padding: .38461538461538em 1em;
 }
-#list ul {
+.txp-list ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
-#list .id, #list .ip {
+.txp-list .id, .txp-list .ip {
   width: 6%;
 }
-#list .date, #list .name, #list .parent {
+.txp-list .date, .txp-list .name, .txp-list .parent {
   width: 14%;
 }
-#list .section {
+.txp-list .section {
   width: 12%;
 }
-#list thead .multi-edit, #list tbody .multi-edit {
+.txp-list thead .multi-edit, .txp-list tbody .multi-edit {
   width: 2%;
 }
-#list thead th {
+.txp-list thead th {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   background-color: #eeeeee;
   /* Konqueror */
@@ -719,23 +751,23 @@ input[value="×"]:active {
   border-right: 1px solid #d0d0d0;
   border-bottom: 1px solid #c4c4c4;
 }
-#list thead th:first-child {
+.txp-list thead th:first-child {
   border-left: 1px solid #dddddd;
 }
-#list thead th:last-child {
+.txp-list thead th:last-child {
   border-right: 1px solid #dddddd;
 }
-#list thead th a {
+.txp-list thead th a {
   position: relative;
   display: block;
   color: #333333;
   margin-right: .5em;
 }
-#list thead th a:hover {
+.txp-list thead th a:hover {
   color: #333333;
   text-decoration: none;
 }
-#list thead th a:after {
+.txp-list thead th a:after {
   position: absolute;
   top: .53846153846154em;
   right: -0.769em;
@@ -753,42 +785,40 @@ input[value="×"]:active {
   white-space: nowrap;
   overflow: hidden;
 }
-#list thead th a:hover:after {
+.txp-list thead th a:hover:after {
   opacity: 1;
 }
-#list thead th.desc a:after {
+.txp-list thead th.desc a:after {
   content: "&#8595;";
   border-left: .30769230769231em solid transparent;
   border-right: .30769230769231em solid transparent;
   border-top: 0.308em solid #333333;
   border-bottom: 0;
 }
-#list thead th.asc a:after {
+.txp-list thead th.asc a:after {
   content: "&#8593;";
   border-left: .30769230769231em solid transparent;
   border-right: .30769230769231em solid transparent;
   border-top: 0;
   border-bottom: 0.308em solid #333333;
 }
-#list tfoot th, #list tfoot td {
+.txp-list tfoot th, .txp-list tfoot td {
   vertical-align: middle;
 }
-#list tfoot .multi-edit {
+.txp-list tfoot .multi-edit {
   text-align: right;
-}
-#list tfoot .multi-edit input[type="button"] {
-  margin-right: .38461538461538em;
 }
 
 /* Allow overflow scroll on tables */
 .txp-listtables {
   overflow-x: auto;
   margin-bottom: 1em;
+  /* IE7 */
+  *overflow-y: hidden;
 }
 
-/* =============================================================================
-   Container
-   ========================================================================== */
+/* Container
+========================================================================== */
 body {
   position: relative;
   padding: 5em 2em 0;
@@ -797,17 +827,16 @@ body {
   background: white;
 }
 
-.txp-container {
+.txp-body {
   position: relative;
   z-index: 1;
   max-width: 110em;
   margin: 0 auto;
 }
 
-/* =============================================================================
-   Header
-   ========================================================================== */
-#txp-head {
+/* Header
+========================================================================== */
+.txp-head {
   position: fixed;
   top: 0;
   left: 0;
@@ -836,10 +865,10 @@ body {
   /* CSS3 Compliant */
   background-image: linear-gradient(#ffda44, #fabc2b);
 }
-#txp-head h1 {
+.txp-head h1 {
   float: left;
   margin: 0;
-  padding-left: 11.385em;
+  padding-left: 9.846em;
   font-size: 1em;
   line-height: 3em;
   background: no-repeat left 48%;
@@ -851,58 +880,56 @@ body {
   background-position: 0 46%;
   background-image: url("../img/textpattern-lrg.png");
 }
-.svg #txp-head h1 {
+.svg .txp-head h1 {
   background-image: url("../img/svg/textpattern-lrg.svg");
-  -webkit-background-size: 11.385em 2.308em;
-  -moz-background-size: 11.385em 2.308em;
-  -o-background-size: 11.385em 2.308em;
-  background-size: 11.385em 2.308em;
+  -webkit-background-size: 9.846em 2em;
+  -moz-background-size: 9.846em 2em;
+  -o-background-size: 9.846em 2em;
+  background-size: 9.846em 2em;
 }
-#txp-head h1 a {
+.txp-head h1 a {
   margin-right: 1em;
   margin-left: 1em;
   color: #333333;
 }
-#txp-head h1 a:hover {
+.txp-head h1 a:hover {
   color: #4d4d4d;
   text-decoration: none;
 }
 
-#txp-logout {
+.txp-logout {
   position: absolute;
   z-index: 10010;
   top: -0.5em;
   right: 2em;
 }
 
-/* =============================================================================
-   Navigation
-   ========================================================================== */
+/* Navigation
+========================================================================== */
 /* hide <select> version of navigation on non-touch devices
-    also happens via media-queries when screen width is < 768px regardless of touch ability */
-#txp-nav-select {
+   also happens via media-queries when screen width is < 768px regardless of touch ability */
+.txp-nav-select {
   display: none;
 }
-.touch #txp-nav-select {
+.touch .txp-nav-select {
   display: inherit;
 }
 
 /* Hide <ul> version of navigation on touch devices */
-.touch #txp-nav {
+.touch .txp-nav {
   display: none;
 }
 
-#txp-nav {
+.txp-nav {
   float: left;
 }
-#txp-nav a {
+.txp-nav a {
   color: #333;
 }
-#txp-nav a:hover {
+.txp-nav a:hover {
   text-decoration: none;
 }
-
-#txp-nav ul {
+.txp-nav ul {
   list-style: none;
   padding-left: 0;
 }
@@ -1009,14 +1036,13 @@ body {
   left: 0;
 }
 
-#txp-nav-select {
+.txp-nav-select {
   margin-top: .61538461538462em;
 }
 
-/* =============================================================================
-   Footer
-   ========================================================================== */
-#txp-foot {
+/* Footer
+========================================================================== */
+.txp-foot {
   position: relative;
   z-index: 1;
 }
@@ -1029,57 +1055,35 @@ body {
   float: right;
 }
 
-/* =============================================================================
-   Miscellaneous/shared layout
-   ========================================================================== */
+/* Miscellaneous/shared layout
+========================================================================== */
 .empty {
   display: none;
 }
 
-.content-image {
-  border: solid 1px #cccccc;
-  -moz-border-radius: 0.385em;
-  border-radius: 0.385em;
-  padding: 4px;
-  background: #fff;
-  -webkit-box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
-}
-
-a:hover .content-image {
-  border: solid 1px #0066ff;
-  -webkit-box-shadow: 0 0 0.462em rgba(0, 102, 255, 0.4);
-  box-shadow: 0 0 0.462em rgba(0, 102, 255, 0.4);
-}
-
-table#edit {
+.txp-columntable {
   width: 100%;
 }
 
-.search-form input[type="submit"] {
-  margin-left: .38461538461538em;
-}
-
-table#edit.edit-pane {
-  margin-bottom: 1em;
+.txp-edit {
+  margin: 0 auto 1em;
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
   width: 40em;
   background: #f7f7f7;
 }
-table#edit.edit-pane h2 {
+.txp-edit h2 {
   margin: 0;
 }
-table#edit.edit-pane td {
+.txp-edit td {
   padding: .5em 1em;
 }
-table#edit.edit-pane td.cell-label {
+.txp-edit td.cell-label {
   width: 37%;
 }
 
 .txp-control-panel {
   text-align: center;
-  margin-bottom: 1em;
   line-height: 2.53846153846154;
 }
 .txp-control-panel p {
@@ -1092,16 +1096,11 @@ table#edit.edit-pane td.cell-label {
 }
 
 /* list navigators on list pages */
-.txp-navigation {
-  margin-bottom: .5em;
-}
 .txp-navigation .pageby {
   float: left;
-  margin: .61538461538462em 0 0;
 }
 .txp-navigation .prev-next {
   float: right;
-  margin-bottom: 0;
 }
 
 /* AJAX spinner */
@@ -1121,28 +1120,6 @@ span.spinner {
     background-image: url("../img/retina/spinner@2x.gif") !important;
     -webkit-background-size: 15px 15px;
   }
-}
-
-/* tabs */
-.tabs {
-  padding-top: 1em;
-}
-.tabs a {
-  display: block;
-  padding: 1em;
-  color: #333333;
-}
-.tabs .tabup a {
-  background: #ffda44;
-}
-.tabs .tabup a:hover {
-  background: #fcdd62;
-}
-.tabs .tabdown2 a {
-  background: #c7d3d8;
-}
-.tabs .tabdown2 a:hover {
-  background: #d2dce0;
 }
 
 /* tagbuilder popup */
@@ -1185,13 +1162,11 @@ span.spinner {
 }
 
 #tagbuilder-output textarea {
-  width: 100% !important;
-  height: 7em !important;
+  height: 7em;
 }
 
-/* =============================================================================
-   Login page
-   ========================================================================== */
+/* Login page
+========================================================================== */
 #login_form {
   margin: 0 auto;
   padding: .5em 0;
@@ -1217,9 +1192,8 @@ span.spinner {
   margin-bottom: 1em;
 }
 
-/* =============================================================================
-   Content -> Categories page
-   ========================================================================== */
+/* Content -> Categories page
+========================================================================== */
 #page-category .action-create input[type="submit"],
 .parent {
   margin-top: .38461538461538em;
@@ -1238,10 +1212,6 @@ span.spinner {
   background: #f7f7f7;
 }
 
-.category-tree select {
-  margin-left: -0.385em;
-}
-
 #categories_article {
   margin-left: 0;
 }
@@ -1254,9 +1224,8 @@ span.spinner {
   display: block;
 }
 
-/* =============================================================================
-   Content -> Write page
-   ========================================================================== */
+/* Content -> Write page
+========================================================================== */
 #article-col-1,
 #article-col-2 {
   width: 24%;
@@ -1349,7 +1318,7 @@ span.spinner {
 }
 #article-main .author {
   font-size: 0.846em;
-  color: #888888;
+  color: #999999;
 }
 
 #main_content > div:first-of-type > p:first-of-type {
@@ -1407,34 +1376,32 @@ span.spinner {
   height: 4.38461538461538em;
 }
 
-/* =============================================================================
-   Content -> Articles page
-   ========================================================================== */
+/* Content -> Articles page
+========================================================================== */
 .unpublished {
-  color: #888888;
+  color: #999999;
 }
 
 #page-list .title {
   width: 50%;
 }
 
-/* =============================================================================
-   Content -> Images page
-   ========================================================================== */
+/* Content -> Images page
+========================================================================== */
 /* fix for inconsistent structure */
-#page-image table#edit.edit-pane {
-  border-top: 1em solid #F7F7F7;
+#page-image .txp-edit {
+  border-top: 1em solid #f7f7f7;
   border-bottom: 0;
 }
-#page-image table#edit.edit-pane td {
+#page-image .txp-edit td {
   padding: 0 1em;
 }
 
-table#edit.edit-pane #image-thumbnail {
+.txp-edit #image-thumbnail {
   margin-right: auto;
   margin-bottom: 1em;
 }
-table#edit.edit-pane #image-thumbnail td {
+.txp-edit #image-thumbnail td {
   padding: 0;
 }
 
@@ -1446,7 +1413,7 @@ table#edit.edit-pane #image-thumbnail td {
   margin: 0;
 }
 
-table#edit.edit-pane #thumbnail_alter td {
+.txp-edit #thumbnail_alter td {
   padding: 0 .5em 0 0;
   width: auto;
   vertical-align: middle;
@@ -1474,105 +1441,49 @@ table#edit.edit-pane #thumbnail_alter td {
   max-width: 520px;
 }
 
-/* =============================================================================
-   Content -> Files page
-   ========================================================================== */
+/* Content -> Files page
+========================================================================== */
 /* fix for inconsistent structure */
-#page-file table#edit.edit-pane {
+#page-file .txp-edit {
   border: 0;
 }
-#page-file table#edit.edit-pane td {
+#page-file .txp-edit td {
   padding: 0 1em;
 }
 
-/* =============================================================================
-   Content -> Comments page
-   ========================================================================== */
+/* Content -> Comments page
+========================================================================== */
 .cb_show_spam {
   margin: -1em 0 1em 1em;
 }
 
-#page-discuss #list tr.spam td {
+#page-discuss .txp-list tr.spam td {
   background: #f5e5e5;
 }
 
-#page-discuss #list tr.moderate td {
+#page-discuss .txp-list tr.moderate td {
   background: #fff8dd;
 }
 
-#discuss_ban_container #list .name {
-  width: 28%;
-}
-#discuss_ban_container #list .id {
-  width: 14%;
-}
-
-/* =============================================================================
-   Presentation -> Sections page
-   ========================================================================== */
-#page-section h2 {
-  text-align: center;
-}
-
-#page-section .txp-control-panel {
-  margin-bottom: .38461538461538em;
-}
-
-#page-section #list {
-  width: auto;
-}
-#page-section #list .section {
-  border-top: 1em solid white;
-}
-#page-section #list tr {
-  border: 0;
-}
-#page-section #list td {
-  padding: 0;
-}
-#page-section #list td:last-child {
-  border: 0;
-}
-#page-section #list .label {
-  padding-right: 1em;
-  width: 20%;
-  font-weight: bold;
-  text-align: right;
-}
-#page-section #list .actions {
-  padding-left: 1em;
+#page-discuss .actions {
   width: 20%;
 }
-#page-section #list .main {
-  width: 41em;
-}
-#page-section #list tr.odd td, #page-section #list tr.even td {
-  border: 0;
-  background: white;
-}
-#page-section #list .section table {
-  border-top: 0.5em solid #f7f7f7;
-  border-bottom: 0.5em solid #f7f7f7;
-  width: 100%;
-}
-#page-section #list .section table td {
-  padding: .38461538461538em 1em;
-  background: #f7f7f7 !important;
-}
-#page-section #list .section table .cell-label {
-  width: 36%;
+
+/* Presentation -> Sections page
+========================================================================== */
+#page-section .destroy {
+  float: right;
 }
 
-/* =============================================================================
-   Presentation -> Pages, Forms, Styles pages shared
-   ========================================================================== */
-#page-page #edit td.column:first-child, #page-page #edit td.column:last-child,
-#page-form #edit td.column:first-child,
-#page-form #edit td.column:last-child {
+/* Presentation -> Pages, Forms, Styles pages shared
+========================================================================== */
+#page-page .txp-columntable td.column:first-child, #page-page .txp-columntable td.column:last-child,
+#page-form .txp-columntable td.column:first-child,
+#page-form .txp-columntable td.column:last-child {
   width: 25%;
 }
 
-#page-css #edit td.column:last-child {
+#page-css .txp-columntable td.column:last-child {
   width: 25%;
 }
 
@@ -1602,13 +1513,8 @@ table#edit.edit-pane #thumbnail_alter td {
   margin-top: .38461538461538em;
 }
 
-/* fix inconsistent button alignment on Styles page */
-#page-css .copy-as input[type="submit"] {
-  margin-left: -0.385em;
-}
-
 #content_switcher input[type="checkbox"],
-#content_switcher #list input[type="submit"] {
+#content_switcher .txp-list input[type="submit"] {
   float: right;
 }
 
@@ -1633,74 +1539,37 @@ table#edit.edit-pane #thumbnail_alter td {
   border-top: 0;
 }
 
-/* =============================================================================
-   Admin -> Diagnostics page
-   ========================================================================== */
+/* Admin -> Diagnostics page
+========================================================================== */
 #page-diag textarea {
   height: 17.4615384615385em;
-  margin-bottom: 1em;
 }
 
-/* =============================================================================
-   Admin -> Preferences page
-   ========================================================================== */
+/* Admin -> Preferences page
+========================================================================== */
 #page-prefs h3 {
   margin-top: 1em;
 }
 
-#prefs_container .publish {
-  margin-top: 1em;
-}
-
-#page-prefs table#list td, #page-prefs table#list th {
-  padding: 0;
-  white-space: normal !important;
-}
-#page-prefs table#list th {
-  padding: 1em 0;
-}
-#page-prefs table#list tr.odd td, #page-prefs table#list tr.even td {
-  padding: .38461538461538em 1em;
+#page-prefs .txp-list tr.odd td, #page-prefs .txp-list tr.even td {
   height: 1.84615384615385em;
   vertical-align: middle;
 }
-#page-prefs table#list br {
-  display: none;
+#page-prefs .txp-list .modified {
+  color: #999999;
+  margin-left: .6em;
 }
 
-.list-item .modified {
-  color: #888888;
-}
-
-td:nth-child(2).pref-value {
-  width: 50%;
-}
-
-td:nth-child(2).install-item {
-  width: 50%;
-  color: #888888;
-}
-td:nth-child(2).install-item strong {
-  margin-right: .35em;
+#language_control {
+  text-align: left;
 }
 
 #textpack-install {
   width: 50%;
 }
 
-/* fixes for poor HTML structure on Prefrences pages */
-#language_control {
-  margin-top: 1em;
-  text-align: left;
-}
-
-.lang-msg {
-  max-width: 110em;
-}
-
-/* =============================================================================
-   Admin -> Users page
-   ========================================================================== */
+/* Admin -> Users page
+========================================================================== */
 #page-admin .txp-control-panel {
   line-height: 1.385;
 }
@@ -1739,18 +1608,16 @@ td:nth-child(2).install-item strong {
   width: 90%;
 }
 
-/* =============================================================================
-   Admin -> Visitor Logs page
-   ========================================================================== */
+/* Admin -> Visitor Logs page
+========================================================================== */
 #page-log .host,
 #page-log .page,
 #page-log .refer {
   width: 28%;
 }
 
-/* =============================================================================
-   Admin -> Plugins page
-   ========================================================================== */
+/* Admin -> Plugins page
+========================================================================== */
 #plugin-install {
   width: 50%;
 }
@@ -1782,80 +1649,74 @@ div.plugin-help {
   max-width: 56em;
 }
 
-/* =============================================================================
-   Admin -> Import page
-   ========================================================================== */
-#page-import #edit {
+/* Admin -> Import page
+========================================================================== */
+#page-import .txp-edit {
   width: 40em;
   margin-bottom: 1em;
   border-top: 0.5em solid #f7f7f7;
   border-bottom: 0.5em solid #f7f7f7;
   background: #f7f7f7;
 }
-#page-import #edit td {
+#page-import .txp-edit td {
   padding: .5em 1em;
 }
-#page-import #edit td.cell-label {
+#page-import .txp-edit td.cell-label {
   width: 37%;
 }
-#page-import #edit #databased {
+#page-import .txp-edit #databased {
   margin-left: -1em;
   margin-right: -1em;
 }
 
-/* Hive theme for Textpattern CMS (v2.0a4) */
-/* =============================================================================
-   ADDITIONAL LAYOUT FOR DEVICES < 769px
-   ========================================================================== */
+/* Hive theme for Textpattern CMS (v4.5alpha) */
+/* ADDITIONAL LAYOUT FOR DEVICES < 769px
+========================================================================== */
 @media only screen and (max-width: 768px) {
-  /* =============================================================================
-     Layout (< 769px)
-     ========================================================================== */
+  /* Layout (< 769px)
+  ========================================================================== */
   body {
     padding: 4em 1em 0;
     min-width: 294px;
   }
 
-  /* =============================================================================
-     Header (< 769px)
-     ========================================================================== */
-  #txp-head {
+  /* Header (< 769px)
+  ========================================================================== */
+  .txp-head {
     padding: 0 1em;
     min-width: 294px;
   }
-  #txp-head h1 {
+  .txp-head h1 {
     max-width: 50%;
-    padding-left: 1.846em;
+    padding-left: 2em;
     background-image: url("../img/textpattern-sml.png");
   }
-  .svg #txp-head h1 {
+  .svg .txp-head h1 {
     background-image: url("../img/svg/textpattern-sml.svg");
-    -webkit-background-size: 1.846em 1.846em;
-    -moz-background-size: 1.846em 1.846em;
-    -o-background-size: 1.846em 1.846em;
-    background-size: 1.846em 1.846em;
+    -webkit-background-size: 2em 2em;
+    -moz-background-size: 2em 2em;
+    -o-background-size: 2em 2em;
+    background-size: 2em 2em;
   }
 
-  #txp-logout {
+  .txp-logout {
     right: 1em;
   }
 
-  /* =============================================================================
-     Navigation (< 769px)
-     ========================================================================== */
-  /* Show <select> version of navigation on small screen widths */
-  #txp-nav-select {
+  /* Navigation (< 769px)
+  ========================================================================== */
+  /* show <select> version of navigation on small screen widths */
+  .txp-nav-select {
     display: inherit;
   }
 
-  /* Hide <ul> version of navigation on small screen widths */
-  #txp-nav {
+  /* hide <ul> version of navigation on small screen widths */
+  .txp-nav {
     display: none;
   }
 
-  /* =============================================================================
-     Content -> Categories page (< 769px)
-     ========================================================================== */
+  /* Content -> Categories page (< 769px)
+  ========================================================================== */
   .category-list th,
   .category-list td,
   .category-list tr {
@@ -1871,12 +1732,11 @@ div.plugin-help {
     margin: 0 0 1em 0;
   }
 
-  /* =============================================================================
-     Content -> Write page (< 769px)
-     ========================================================================== */
-  #page-article #edit th,
-  #page-article #edit td,
-  #page-article #edit tr {
+  /* Content -> Write page (< 769px)
+  ========================================================================== */
+  #page-article .txp-columntable th,
+  #page-article .txp-columntable td,
+  #page-article .txp-columntable tr {
     display: block;
   }
 
@@ -1910,104 +1770,36 @@ div.plugin-help {
     margin: 0;
   }
 
-  /* Turn off features to optimise small screen size */
+  /* turn off features to optimise small screen size */
   #textile_group,
-  #recent_group,
-  #page-article .action-create,
-  #page-article .article-nav {
+  #recent_group {
     display: none;
   }
 
-  /* =============================================================================
-     Content -> Articles page (< 769px)
-     ========================================================================== */
-  /* Hide table cells to optimise screen estate */
-  #page-list #list .date,
-  #page-list #list .section,
-  #page-list #list .category,
-  #page-list #list .author,
-  #page-list #list .status,
-  #page-list #list .comments,
-  #page-list #list .multi-edit,
-  #page-list #list tfoot {
-    display: none !important;
-  }
-
-  /* =============================================================================
-     Content -> Images page (< 769px)
-     ========================================================================== */
-  /* Hide table cells to optimise screen estate */
-  #page-image #list .actions,
-  #page-image #list .date,
-  #page-image #list .name,
-  #page-image #list .tag-build,
-  #page-image #list .category,
-  #page-image #list .multi-edit,
-  #page-image #list tfoot {
-    display: none !important;
-  }
-  #page-image #list #image_details_form .name,
-  #page-image #list #image_details_form .category {
+  /* Content -> Images page (< 769px)
+  ========================================================================== */
+  /* hide table cells to optimise screen estate */
+  #image_details_form .name,
+  #image_details_form .category {
     display: block !important;
   }
 
-  /* =============================================================================
-     Content -> Files page (< 769px)
-     ========================================================================== */
-  /* Hide table cells to optimise screen estate */
-  #page-file #list .actions,
-  #page-file #list .title,
-  #page-file #list .category,
-  #page-file #list .tag-build,
-  #page-file #list .status,
-  #page-file #list .condition,
-  #page-file #list .downloads,
-  #page-file #list .multi-edit,
-  #page-file #list tfoot {
-    display: none !important;
-  }
-
-  /* =============================================================================
-     Content -> Links page (< 769px)
-     ========================================================================== */
-  /* Hide table cells to optimise screen estate */
-  #page-link #list .actions,
-  #page-link #list .category,
-  #page-link #list .date,
-  #page-link #list .author,
-  #page-link #list .multi-edit,
-  #page-link #list tfoot {
-    display: none !important;
-  }
-
-  /* =============================================================================
-     Content -> Comments page (< 769px)
-     ========================================================================== */
+  /* Content -> Comments page (< 769px)
+  ========================================================================== */
   .cb_show_spam {
-    margin-top: -0.5em;
+    margin-top: 0;
   }
 
-  /* Hide table cells to optimise screen estate */
-  #page-discuss #list .date,
-  #page-discuss #list .discuss_detail,
-  #page-discuss #list .parent,
-  #page-discuss #list .multi-edit,
-  #page-discuss #list tfoot {
-    display: none !important;
-  }
-
-  /* =============================================================================
-     Presentation -> Sections page (< 769px)
-     ========================================================================== */
-  /* =============================================================================
-     Presentation -> Pages, Forms, Styles pages shared (< 769px)
-     ========================================================================== */
+  /* Presentation -> Sections page (< 769px)
+  ========================================================================== */
+  /* Presentation -> Pages, Forms, Styles pages shared (< 769px)
+  ========================================================================== */
   #content_switcher {
     margin: 0;
   }
 
-  #page-page #edit td.column:first-child,
-  #page-form #edit td.column:first-child {
+  #page-page .txp-columntable td.column:first-child,
+  #page-form .txp-columntable td.column:first-child {
     display: none;
   }
 
@@ -2016,63 +1808,24 @@ div.plugin-help {
   #page-css h2 {
     margin-top: 1.625em;
   }
-  #page-page > tr, #page-page #edit td.column,
+  #page-page > tr, #page-page .txp-columntable td.column,
   #page-form > tr,
-  #page-form #edit td.column,
+  #page-form .txp-columntable td.column,
   #page-css > tr,
-  #page-css #edit td.column {
+  #page-css .txp-columntable td.column {
     display: block;
     margin: 0 auto;
     width: 100%;
     max-width: 40em;
   }
-  #page-page #edit td.column:last-child,
-  #page-form #edit td.column:last-child,
-  #page-css #edit td.column:last-child {
+  #page-page .txp-columntable td.column:last-child,
+  #page-form .txp-columntable td.column:last-child,
+  #page-css .txp-columntable td.column:last-child {
     width: 100%;
   }
-
-  /* =============================================================================
-     Admin -> Users page (< 769px)
-     ========================================================================== */
-  /* Hide table cells to optimise screen estate */
-  #page-admin #list .real-name,
-  #page-admin #list .privs,
-  #page-admin #list .last-login,
-  #page-admin #list .multi-edit,
-  #page-admin #list tfoot {
-    display: none !important;
-  }
-
-  /* =============================================================================
-     Admin -> Visitor Logs page (< 769px)
-     ========================================================================== */
-  /* Hide table cells to optimise screen estate */
-  #page-log #list .log_detail,
-  #page-log #list .host,
-  #page-log #list .refer,
-  #page-log #list .multi-edit,
-  #page-log #list tfoot {
-    display: none !important;
-  }
-
-  /* =============================================================================
-     Admin -> Plugins page (< 769px)
-     ========================================================================== */
-  /* Hide table cells to optimise screen estate */
-  #page-plugin #list .author,
-  #page-plugin #list .modified,
-  #page-plugin #list .description,
-  #page-plugin #list .load-order,
-  #page-plugin #list .manage,
-  #page-plugin #list .multi-edit,
-  #page-plugin #list tfoot {
-    display: none !important;
-  }
 }
-/* =============================================================================
-   ADDITIONAL LAYOUT FOR DEVICES < 546px
-   ========================================================================== */
+/* ADDITIONAL LAYOUT FOR DEVICES < 546px
+========================================================================== */
 @media only screen and (max-width: 545px) {
   body {
     padding-top: 7.23076923076923em;
@@ -2083,15 +1836,15 @@ div.plugin-help {
     padding-top: 4em;
   }
 
-  #txp-head {
+  .txp-head {
     position: absolute;
   }
-  #txp-head h1 {
+  .txp-head h1 {
     max-width: 66%;
   }
 
   /* show select version of navigation for smaller screens (and hide list version) */
-  #txp-nav-select {
+  .txp-nav-select {
     position: absolute;
     top: 2.46153846153846em;
     right: 0;
@@ -2104,19 +1857,19 @@ div.plugin-help {
     box-shadow: 0 0.154em 0.231em rgba(0, 0, 0, 0.15);
   }
 
-  table#edit.edit-pane {
+  .txp-edit {
     width: 100%;
     border-top-width: 1em;
     border-bottom: 0;
   }
-  table#edit.edit-pane > tbody > tr > td {
+  .txp-edit > tbody > tr > td {
     display: block;
     padding: 0 1em;
   }
-  table#edit.edit-pane > tbody > tr > td.cell-label {
+  .txp-edit > tbody > tr > td.cell-label {
     width: auto;
   }
-  table#edit.edit-pane > tbody > tr > td:last-child {
+  .txp-edit > tbody > tr > td:last-child {
     padding-bottom: 1em;
   }
 
@@ -2134,7 +1887,18 @@ div.plugin-help {
     height: 17.4615384615385em;
   }
 
-  /* Add some margin above upload submit in case it wraps */
+  /* remove float from txp-navigation elements */
+  .txp-navigation {
+    text-align: center;
+  }
+  .txp-navigation .pageby {
+    float: none;
+  }
+  .txp-navigation .prev-next {
+    float: none;
+  }
+
+  /* add some margin above upload submit in case it wraps */
   .upload-form input[type="submit"],
   #image-replace input[type="submit"],
   #thumbnail-upload input[type="submit"] {
