@@ -9,7 +9,6 @@ class hive_theme extends theme
 	function html_head()
 	{
 		$out[] = '<link href="'.$this->url.'css/textpattern.css" rel="stylesheet" type="text/css" />';
-		$out[] = '<link href="'.$this->url.'css/plugins.css" rel="stylesheet" type="text/css" />';
 		// start of custom CSS toggles (see README.textile for usage instructions)
 		if(defined('hive_theme_hide_branding')) {
 			$out[] = '<link href="'.$this->url.'css/custom/hide_branding.css" rel="stylesheet" type="text/css" />';
@@ -65,12 +64,11 @@ class hive_theme extends theme
 	function header()
 	{
 		global $txp_user;
-		$out[] = '<div id="txp-head">';
-		$out[] = '<h1><a href="'.hu.'" title="'.gTxt('tab_view_site').'" rel="external">'.$GLOBALS["prefs"]["sitename"].'</a></h1>';
+		$out[] = '<h1><a href="'.hu.'" title="'.gTxt('tab_view_site').'" rel="external">'.htmlspecialchars($GLOBALS["prefs"]["sitename"]).'</a></h1>';
 		if ($txp_user)
 		{
-			$out[] = '<p id="txp-logout"><a href="index.php?logout=1" onclick="return verify(\''.gTxt('are_you_sure').'\')">'.gTxt('logout').'</a></p>';
-			$out[] = '<div id="txp-nav">';
+			$out[] = '<p class="txp-logout"><a href="index.php?logout=1" onclick="return verify(\''.gTxt('are_you_sure').'\')">'.gTxt('logout').'</a></p>';
+			$out[] = '<div class="txp-nav">';
 			$out[] = '<ul class="data-dropdown">';
 			foreach ($this->menu as $tab)
 			{
@@ -90,7 +88,7 @@ class hive_theme extends theme
 			}
 			$out[] = '</ul>';
 			$out[] = '</div>';
-			$out[] = '<div id="txp-nav-select">';
+			$out[] = '<div class="txp-nav-select">';
 			$out[] = '<select>';
 			foreach ($this->menu as $tab)
 			{
@@ -108,17 +106,14 @@ class hive_theme extends theme
 			$out[] = '</select>';
 			$out[] = '</div>';
 		}
-		$out[] = '</div>';
 		$out[] = '<div id="messagepane">'.$this->announce($this->message).'</div>';
 		return join(n, $out);
 	}
 
 	function footer()
 	{
-		$out[] = '<div id="txp-foot">';
 		$out[] = '<p class="mothership"><a href="http://textpattern.com" title="'.gTxt('go_txp_com').'" rel="external">Textpattern CMS</a> (v'.txp_version.')</p>';
 		$out[] = '<p class="pagejump"><a href="#">&#8593; '.gTxt('back_to_top').'</a></p>';
-		$out[] = '</div>';
 		return join(n, $out);
 	}
 
@@ -191,7 +186,7 @@ EOS;
 		return array(
 			'author'	  => 'Phil Wareham',
 			'author_uri'  => 'http://twitter.com/philwareham',
-			'version'	 => '2.0a4',
+			'version'	 => '4.5alpha',
 			'description' => 'Textpattern Hive Theme',
 			'help'		=> 'https://github.com/philwareham/txp-hive-admin-theme',
 		);
