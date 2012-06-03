@@ -104,17 +104,12 @@ pre {
 }
 
 pre code,
-.code code {
-  border: 0;
-  padding: 0;
-  background: none;
-}
-
+.code code,
 code.body,
 code.excerpt {
   border: 0;
   padding: 0;
-  background: none;
+  background: transparent;
 }
 
 hr {

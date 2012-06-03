@@ -108,20 +108,13 @@ pre {
 	*overflow-y: hidden;
 }
 
-pre,
-.code {
-	code {
-		border: 0;
-		padding: 0;
-		background: none;
-	}
-}
-
+pre code,
+.code code,
 code.body,
 code.excerpt {
 	border: 0;
 	padding: 0;
-	background: none;
+	background: transparent;
 }
 
 hr {
