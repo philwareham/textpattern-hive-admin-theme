@@ -12,16 +12,13 @@
 ========================================================================== */
 
 /* 1. corrects text resizing oddly in IE7 when body font-size is set using em units
-   2. keeps page centred in all browsers regardless of content height
-   3. prevents iOS text size adjust after orientation change, without disabling user zoom
+   2. prevents iOS text size adjust after orientation change, without disabling user zoom
       www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 html {
 	/* 1 */
 	font-size: 100%;
 	font-family: $font-body;
 	/* 2 */
-	overflow-y: scroll;
-	/* 3 */
 	-webkit-text-size-adjust: 100%;
 		-ms-text-size-adjust: 100%;
 }
