@@ -237,8 +237,6 @@ a:hover .content-image {
 span#message {
   position: relative;
   z-index: 20000;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -407,8 +405,6 @@ h3.lever a:after {
   z-index: 10;
   width: 0;
   height: 0;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -769,8 +765,6 @@ button.destroy:active {
   z-index: 10;
   width: 0;
   height: 0;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -1100,8 +1094,6 @@ body {
 
 /* AJAX spinner */
 span.spinner {
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -1423,8 +1415,6 @@ span.spinner {
 /* fix for inconsistent structure */
 #page-image .name label {
   width: 13.6em;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
   display: inline-block;
   *display: inline;
   *zoom: 1;

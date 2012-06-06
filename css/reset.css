@@ -231,8 +231,6 @@ input[type="button"],
   background-image: -o-linear-gradient(#eeeeee, #bbbbbb);
   /* CSS3 Compliant */
   background-image: linear-gradient(#eeeeee, #bbbbbb);
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -301,8 +299,6 @@ input[type="button"]:active,
   line-height: 1.33333333333333em;
   border: 1px solid;
   padding: .30769230769231em .75em;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
   display: inline-block;
   *display: inline;
   *zoom: 1;
