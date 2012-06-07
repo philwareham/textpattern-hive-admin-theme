@@ -1554,46 +1554,6 @@ span.spinner {
   width: 50%;
 }
 
-/* Admin -> Users page
-========================================================================== */
-#page-admin .txp-control-panel {
-  line-height: 1.385;
-}
-
-#change_password,
-#change_email {
-  margin: 2em auto 1em;
-  padding: 1em 1em 1px;
-  width: 38em;
-  text-align: left;
-  background: #f7f7f7;
-}
-#change_password label,
-#change_email label {
-  display: block;
-  float: left;
-  width: 36%;
-  margin: .23076923076923em 0 1.23076923076923em;
-}
-#change_password #new_pass, #change_password #new_email,
-#change_email #new_pass,
-#change_email #new_email {
-  float: right;
-  margin-bottom: 1em;
-}
-#change_password input[type="submit"],
-#change_email input[type="submit"] {
-  clear: both;
-}
-
-#change_password input[type="checkbox"] {
-  float: left;
-}
-#change_password label[for="mail_password"] {
-  margin: 0 0 1em;
-  width: 90%;
-}
-
 /* Admin -> Visitor Logs page
 ========================================================================== */
 #page-log .host,
