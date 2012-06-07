@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>Txp &#8250; My site &#8250; Plugin help</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../textpattern.js"></script>
+	<link href="../../css/textpattern.css" rel="stylesheet" type="text/css" />
+	<!-- proposed additional CSS rules -->
+	<link href="../../css/experimental.css" rel="stylesheet" type="text/css" />
+	<!-- /proposed additional CSS rules -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="generator" content="Textpattern CMS" />
+	<script type="text/javascript" src="../../js/modernizr.js"></script>
+	<script type="text/javascript" src="../../js/jquery.formalize.min.js"></script>
+	<!--[if lt IE 9]><script type="text/javascript" src="../../js/selectivizr.min.js"></script><![endif]-->
+	<script type="text/javascript" src="../../js/scripts.js"></script>
+</head>
+<body id="page-plugin" class="admin">
+
+	<div class="txp-head">
+		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
+		<p class="txp-logout"><a href="../login.html" onclick="return verify('Are you sure?')">Logout</a></p>
+
+		<div class="txp-nav">
+			<ul class="data-dropdown">
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="../content-article.html">Content</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="../content-category.html">Categories</a></li>
+						<li class="inactive"><a href="../content-article.html">Write</a></li>
+						<li class="inactive"><a href="../content-list.html">Articles</a></li>
+						<li class="inactive"><a href="../content-image.html">Images</a></li>
+						<li class="inactive"><a href="../content-file.html">Files</a></li>
+						<li class="inactive"><a href="../content-link.html">Links</a></li>
+						<li class="inactive"><a href="../content-discuss.html">Comments</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="../presentation-page.html">Presentation</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="../presentation-section.html">Sections</a></li>
+						<li class="inactive"><a href="../presentation-page.html">Pages</a></li>
+						<li class="inactive"><a href="../presentation-form.html">Forms</a></li>
+						<li class="inactive"><a href="../presentation-css.html">Style</a></li>
+					</ul>
+				</li>
+				<li class="dropdown active"><a class="dropdown-toggle" href="../admin-admin.html">Admin</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="../admin-diag.html">Diagnostics</a></li>
+						<li class="inactive"><a href="../admin-prefs_basic.html">Preferences</a></li>
+						<li class="inactive"><a href="../admin-admin.html">Users</a></li>
+						<li class="inactive"><a href="../admin-log.html">Visitor logs</a></li>
+						<li class="active"><a href="../admin-plugin.html">Plugins</a></li>
+						<li class="inactive"><a href="../admin-import.html">Import</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="#">Extensions</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="#">Extension 1</a></li>
+						<li class="inactive"><a href="#">Extension 2</a></li>
+						<li class="inactive"><a href="#">Extension 3</a></li>
+						<li class="inactive"><a href="#">Extension 4</a></li>
+						<li class="inactive"><a href="#">Extension 5</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="txp-nav-select">
+			<select>
+				<optgroup label="Content">
+					<option value="../content-category.html">Categories</option>
+					<option value="../content-article.html">Write</option>
+					<option value="../content-list.html">Articles</option>
+					<option value="../content-image.html">Images</option>
+					<option value="../content-file.html">Files</option>
+					<option value="../content-link.html">Links</option>
+					<option value="../content-discuss.html">Comments</option>
+				</optgroup>
+				<optgroup label="Presentation">
+					<option value="../presentation-section.html">Sections</option>
+					<option value="../presentation-page.html">Pages</option>
+					<option value="../presentation-form.html">Forms</option>
+					<option value="../presentation-css.html">Style</option>
+				</optgroup>
+				<optgroup label="Admin">
+					<option value="../admin-diag.html">Diagnostics</option>
+					<option value="../admin-prefs_basic.html">Preferences</option>
+					<option value="../admin-admin.html">Users</option>
+					<option value="../admin-log.html">Visitor logs</option>
+					<option value="../admin-plugin.html" selected="selected">Plugins</option>
+					<option value="../admin-import.html">Import</option>
+				</optgroup>
+				<optgroup label="Extensions">
+					<option value="#">Extension 1</option>
+					<option value="#">Extension 2</option>
+					<option value="#">Extension 3</option>
+					<option value="#">Extension 4</option>
+					<option value="#">Extension 5</option>
+				</optgroup>
+			</select>
+		</div>
+
+		<div id="messagepane"></div>
+
+	</div><!-- /txp-head -->
+	<div class="txp-body">
+
+	<div id="plugin_container" class="txp-container">
+
+		<div class="plugin-help">
+
+			<h1>prefix_plugin_name</h1>
+			<p>A brief summary of what the plugin does.</p>
+			<p><strong>Version:</strong> current version number goes here.</p>
+			<h2>Table of contents</h2>
+			<ol>
+				<li><a href="#help-section01">List of features</a></li>
+				<li><a href="#help-section02">Plugin requirements</a></li>
+				<li><a href="#help-section03">Installation</a></li>
+				<li><a href="#help-section04">Uninstallation</a></li>
+				<li><a href="#help-section05">Tags</a></li>
+				<li><a href="#help-section06">Exposed functions</a></li>
+				<li><a href="#help-section07">Global variables</a></li>
+				<li><a href="#help-section08">Plugin events</a></li>
+				<li><a href="#help-section09">Examples</a></li>
+				<li><a href="#help-section10">License</a></li>
+				<li><a href="#help-section11">Author contact</a></li>
+			</ol>
+
+			<div class="experimental-text-section" id="help-section01">
+				<h2>List of features</h2>
+				<ul>
+					<li>Feature 1</li>
+					<li>Feature 2</li>
+					<li>Feature 3</li>
+				</ul>
+			</div>
+
+			<div class="experimental-text-section" id="help-section02">
+				<h2>Plugin requirements</h2>
+				<p>my_plugin_name’s minimum requirements:</p>
+				<ul>
+					<li>Textpattern 4.x</li>
+					<li>Plugin dependency 1</li>
+					<li>Plugin dependency 2</li>
+				</ul>
+			</div>
+			<div class="experimental-text-section" id="help-section03">
+				<h2>Installation</h2>
+				<p>Any special installation instructions (when differs from standard installation procedure).</p>
+			</div>
+			<div class="experimental-text-section" id="help-section04">
+				<h2>Uninstallation</h2>
+				<p>Any special uninstallation instructions (when differs from standard uninstallation procedure).</p>
+			</div>
+			<div class="experimental-text-section" id="help-section05">
+				<h2>Tags</h2>
+				<h3>prefix_tag_name1</h3>
+				<p>Description of the plugin tag and how it is intended to be used.</p>
+				<p><code>attribute_name</code> <code>value_type</code><br />
+					Description of the attribute usage.</p>
+				<p><code>attribute_name</code> <code>value_type</code><br />
+					Description of the attribute usage.</p>
+				<h3>prefix_tag_name2</h3>
+				<p>Description of the plugin tag and how it is intended to be used.</p>
+				<p><code>attribute_name</code> <code>value_type</code><br />
+					Description of the attribute usage.</p>
+				<p><code>attribute_name</code> <code>value_type</code><br />
+					Description of the attribute usage.</p>
+			</div>
+			<div class="experimental-text-section" id="help-section06">
+				<h2>Exposed functions</h2>
+				<h3>my_plugin_func</h3>
+				<p>This function will do foo or bar.</p>
+				<p><code>Return Value</code> <code>return_value_type</code><br />
+					Description of the function return value.</p>
+				<p><code>arg_name</code> <code>arg_value_type</code><br />
+					Argument description.</p>
+			</div>
+			<div class="experimental-text-section" id="help-section07">
+				<h2>Global variables</h2>
+				<h3>$my_plugin_global</h3>
+				<p>This array is set during <em>blah</em> and is false on failure.</p>
+			</div>
+			<div class="experimental-text-section" id="help-section08">
+				<h2>Plugin events</h2>
+				<h3>my_plugin.event</h3>
+				<p>This event is called when <em>blah</em> happens.</p>
+			</div>
+			<div class="experimental-text-section" id="help-section09">
+				<h2>Examples</h2>
+				<h3>Example 1</h3>
+				<p>A large example that puts it all together or examples to go with each tag (in which case it is probably better to include it with the tag above).</p>
+				<pre><code>Example code</code></pre>
+				<h3>Example 2</h3>
+				<p>A large example that puts it all together or examples to go with each tag (in which case it is probably better to include it with the tag above).</p>
+				<pre><code>Example code</code></pre>
+			</div>
+			<div class="experimental-text-section" id="help-section10">
+				<h2>Licence</h2>
+				<p>State any special licence information here.</p>
+			</div>
+			<div class="experimental-text-section" id="help-section11">
+				<h2>Author contact</h2>
+				<p>Optional direct contact details for the plugin author.</p>
+			</div>
+
+		</div><!-- /plugin-help -->
+
+	</div><!-- /txp-container -->
+	</div><!-- /txp-body -->
+
+	<div class="txp-foot">
+		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.5)</p>
+		<p class="pagejump"><a href="#">&#8593; Back to top</a></p>
+	</div><!-- /txp-foot -->
+
+</body>
+</html>
