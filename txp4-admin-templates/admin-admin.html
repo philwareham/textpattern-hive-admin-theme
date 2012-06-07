@@ -107,42 +107,40 @@
 	<div id="users_container" class="txp-container">
 
 		<form method="post" action="index.php" id="user_edit" class="edit-form">
-		    <div class="txp-listtables">
-		    	<table class="txp-edit">
-		    		<tr>
-		    			<td colspan="2"><h2>Add new author</h2></td>
-		    		</tr>
-		    		<tr class="name login-name">
-		    			<td class="cell-label"><label for="name">Login</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></td>
-		    			<td><input type="text" value="" name="name" id="name"/></td>
-		    		</tr>
-		    		<tr class="name real-name">
-		    			<td class="cell-label"><label for="RealName">Real name</label></td>
-		    			<td><input type="text" value="" name="RealName" id="RealName" /></td>
-		    		</tr>
-		    		<tr class="email">
-		    			<td class="cell-label"><label for="email">E-mail</label></td>
-		    			<td><input type="text" value="" name="email" id="email" /></td>
-		    		</tr>
-		    		<tr class="privs">
-		    			<td class="cell-label"><label for="privs">Privileges</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></td>
-		    			<td>
-		    				<select name="privs" id="privs">
-		    					<option value="1">Publisher</option>
-		    					<option value="2">Managing Editor</option>
-		    					<option value="3">Copy Editor</option>
-		    					<option value="4">Staff Writer</option>
-		    					<option value="5">Freelancer</option>
-		    					<option value="6">Designer</option>
-		    					<option value="0" selected="selected">None</option>
-		    				</select>
-		    			</td>
-		    		</tr>
-		    		<tr>
-		    			<td colspan="2"><input type="submit" value="Save" class="publish" /></td>
-		    		</tr>
-		    	</table>
-		    </div>
+	    	<table class="txp-edit">
+	    		<tr>
+	    			<td colspan="2"><h2>Add new author</h2></td>
+	    		</tr>
+	    		<tr class="name login-name">
+	    			<td class="cell-label"><label for="name">Login</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></td>
+	    			<td><input type="text" value="" name="name" id="name"/></td>
+	    		</tr>
+	    		<tr class="name real-name">
+	    			<td class="cell-label"><label for="RealName">Real name</label></td>
+	    			<td><input type="text" value="" name="RealName" id="RealName" /></td>
+	    		</tr>
+	    		<tr class="email">
+	    			<td class="cell-label"><label for="email">E-mail</label></td>
+	    			<td><input type="text" value="" name="email" id="email" /></td>
+	    		</tr>
+	    		<tr class="privs">
+	    			<td class="cell-label"><label for="privs">Privileges</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></td>
+	    			<td>
+	    				<select name="privs" id="privs">
+	    					<option value="1">Publisher</option>
+	    					<option value="2">Managing Editor</option>
+	    					<option value="3">Copy Editor</option>
+	    					<option value="4">Staff Writer</option>
+	    					<option value="5">Freelancer</option>
+	    					<option value="6">Designer</option>
+	    					<option value="0" selected="selected">None</option>
+	    				</select>
+	    			</td>
+	    		</tr>
+	    		<tr>
+	    			<td colspan="2"><input type="submit" value="Save" class="publish" /></td>
+	    		</tr>
+	    	</table>
 		</form>
 
 		<div class="txp-list">
