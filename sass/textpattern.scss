@@ -141,6 +141,11 @@ hr {
 	}
 }
 
+.text-section {
+	padding-top: 5em;
+	background: url("../img/separator.gif") repeat-x 0 2.15384615384615em; // 28px / 13px
+}
+
 
 /* Images
 ========================================================================== */
@@ -1234,6 +1239,7 @@ span.spinner {
 	}
 }
 
+#page-section .txp-columntable td.column:last-child,
 #page-css .txp-columntable td.column:last-child {
 	width: 25%;
 }

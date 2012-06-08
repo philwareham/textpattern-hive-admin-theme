@@ -1,17 +1,5 @@
 /* Hive theme for Textpattern CMS (v4.5alpha) */
 /* PROPOSED ADDITIONS TO THE TEXTAPTTERN CORE CLASSES (prefixed with 'expermental-' for now) */
-/* Sections */
-.experimental-text-section {
-  padding-top: 5em;
-  background: url("../img/separator.gif") repeat-x 0 2.154em;
-}
-
-@media only screen and (max-width: 768px) {
-  .experimental-text-section {
-    padding-top: 4em;
-    background-position: 0 1.69230769230769em;
-  }
-}
 /* icons */
 .icon {
   display: inline-block;

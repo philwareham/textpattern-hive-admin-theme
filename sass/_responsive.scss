@@ -54,6 +54,15 @@ body {
 }
 
 
+/* Typography
+========================================================================== */
+
+.text-section {
+	padding-top: 4em;
+	background-position: 0 1.69230769230769em;
+}
+
+
 /* Content -> Categories page (< 769px)
 ========================================================================== */
 
@@ -163,7 +172,8 @@ body {
 
 #page-page,
 #page-form,
-#page-css {
+#page-css,
+#page-section {
 	h2 {
 		margin-top: 1.625em;
 	}
