@@ -2,14 +2,14 @@
 /* Hive theme for Textpattern CMS (v4.5alpha) */
 /* Clearfix
 ========================================================================== */
-.clearfix, .txp-foot, .txp-navigation {
+.clearfix, .txp-footer, .txp-navigation {
   *zoom: 1;
 }
-.clearfix:before, .txp-foot:before, .txp-navigation:before, .clearfix:after, .txp-foot:after, .txp-navigation:after {
+.clearfix:before, .txp-footer:before, .txp-navigation:before, .clearfix:after, .txp-footer:after, .txp-navigation:after {
   content: "";
   display: table;
 }
-.clearfix:after, .txp-foot:after, .txp-navigation:after {
+.clearfix:after, .txp-footer:after, .txp-navigation:after {
   clear: both;
 }
 
@@ -54,7 +54,7 @@ h6 {
 }
 
 small,
-.txp-foot {
+.txp-footer {
   font-size: 0.846em;
 }
 
@@ -821,7 +821,7 @@ body {
 
 /* Header
 ========================================================================== */
-.txp-head {
+.txp-header {
   position: fixed;
   top: 0;
   left: 0;
@@ -850,7 +850,7 @@ body {
   /* CSS3 Compliant */
   background-image: linear-gradient(#ffda44, #fabc2b);
 }
-.txp-head h1 {
+.txp-header h1 {
   float: left;
   margin: 0;
   padding-left: 9.846em;
@@ -865,19 +865,19 @@ body {
   background-position: 0 46%;
   background-image: url("../img/textpattern-lrg.png");
 }
-.svg .txp-head h1 {
+.svg .txp-header h1 {
   background-image: url("../img/svg/textpattern-lrg.svg");
   -webkit-background-size: 9.846em 2em;
   -moz-background-size: 9.846em 2em;
   -o-background-size: 9.846em 2em;
   background-size: 9.846em 2em;
 }
-.txp-head h1 a {
+.txp-header h1 a {
   margin-right: 1em;
   margin-left: 1em;
   color: #333333;
 }
-.txp-head h1 a:hover {
+.txp-header h1 a:hover {
   color: #4d4d4d;
   text-decoration: none;
 }
@@ -1027,7 +1027,7 @@ body {
 
 /* Footer
 ========================================================================== */
-.txp-foot {
+.txp-footer {
   position: relative;
   z-index: 1;
 }
@@ -1605,16 +1605,16 @@ div.plugin-help {
 
   /* Header (< 769px)
   ========================================================================== */
-  .txp-head {
+  .txp-header {
     padding: 0 1em;
     min-width: 294px;
   }
-  .txp-head h1 {
+  .txp-header h1 {
     max-width: 50%;
     padding-left: 2em;
     background-image: url("../img/textpattern-sml.png");
   }
-  .svg .txp-head h1 {
+  .svg .txp-header h1 {
     background-image: url("../img/svg/textpattern-sml.svg");
     -webkit-background-size: 2em 2em;
     -moz-background-size: 2em 2em;
@@ -1770,10 +1770,10 @@ div.plugin-help {
     padding-top: 4em;
   }
 
-  .txp-head {
+  .txp-header {
     position: absolute;
   }
-  .txp-head h1 {
+  .txp-header h1 {
     max-width: 66%;
   }
 

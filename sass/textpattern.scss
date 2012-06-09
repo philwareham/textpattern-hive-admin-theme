@@ -62,7 +62,7 @@ h6 {
 }
 
 small,
-.txp-foot {
+.txp-footer {
 	font-size: $smallfont;
 }
 
@@ -629,7 +629,7 @@ body {
 /* Header
 ========================================================================== */
 
-.txp-head {
+.txp-header {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -807,7 +807,7 @@ body {
 /* Footer
 ========================================================================== */
 
-.txp-foot {
+.txp-footer {
 	position: relative;
 	z-index: 1;
 	@extend .clearfix;
