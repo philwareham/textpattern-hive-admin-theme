@@ -714,15 +714,6 @@ button.destroy:active {
   padding-left: 0;
   margin: 0;
 }
-.txp-list .id, .txp-list .ip {
-  width: 6%;
-}
-.txp-list .date, .txp-list .name, .txp-list .parent {
-  width: 14%;
-}
-.txp-list .section {
-  width: 12%;
-}
 .txp-list thead .multi-edit, .txp-list tbody .multi-edit {
   width: 2%;
 }
@@ -1375,10 +1366,6 @@ span.spinner {
   color: #999999;
 }
 
-#page-list .title {
-  width: 50%;
-}
-
 /* Content -> Images page
 ========================================================================== */
 /* fix for inconsistent structure */
@@ -1454,10 +1441,6 @@ span.spinner {
 
 #page-discuss .txp-list tr.moderate td {
   background: #fff8dd;
-}
-
-#page-discuss .actions {
-  width: 20%;
 }
 
 /* Presentation -> Sections page
@@ -1558,14 +1541,6 @@ span.spinner {
 
 #textpack-install {
   width: 50%;
-}
-
-/* Admin -> Visitor Logs page
-========================================================================== */
-#page-log .host,
-#page-log .page,
-#page-log .refer {
-  width: 28%;
 }
 
 /* Admin -> Plugins page

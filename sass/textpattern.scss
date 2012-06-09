@@ -531,15 +531,6 @@ button.destroy {
 		padding-left: 0;
 		margin: 0;
 	}
-	.id, .ip {
-		width: 6%;
-	}
-	.date, .name, .parent {
-		width: 14%;
-	}
-	.section {
-		width: 12%;
-	}
 	thead .multi-edit, tbody .multi-edit {
 		width: 2%;
 	}
@@ -1127,10 +1118,6 @@ span.spinner {
 	color: $color-text-footnote;
 }
 
-#page-list .title {
-	width: 50%;
-}
-
 
 /* Content -> Images page
 ========================================================================== */
@@ -1214,10 +1201,6 @@ span.spinner {
 
 #page-discuss .txp-list tr.moderate td {
 	background: lighten($warning-background, 2%);
-}
-
-#page-discuss .actions {
-	width: 20%;
 }
 
 
@@ -1333,16 +1316,6 @@ span.spinner {
 
 #textpack-install {
 	width: 50%;
-}
-
-
-/* Admin -> Visitor Logs page
-========================================================================== */
-
-#page-log .host,
-#page-log .page,
-#page-log .refer {
-	width: 28%;
 }
 
 
