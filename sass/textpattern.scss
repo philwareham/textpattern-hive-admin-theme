@@ -1257,9 +1257,10 @@ span.spinner {
 	margin-top: .38461538461538em;
 }
 
-#content_switcher input[type="checkbox"],
-#content_switcher .txp-list input[type="submit"] {
+#content_switcher .form-list-action,
+#content_switcher .destroy {
 	float: right;
+	margin-left: 1em;
 }
 
 .form-list-group {
