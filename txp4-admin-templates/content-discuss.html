@@ -149,10 +149,10 @@
 					<tfoot>
 						<tr>
 							<td class="detail-toggle" colspan="2">
-								<input type="checkbox" name="cb_toggle_discuss_detail" id="cb_toggle_discuss_detail" value="1" class="checkbox" onclick="toggleClassRemember('discuss_detail');" />
+								<input type="checkbox" name="cb_toggle_discuss_detail" id="cb_toggle_discuss_detail" value="1" class="checkbox" onclick="toggleClassRemember('discuss_detail');" checked="checked" />
 								<label for="cb_toggle_discuss_detail">Show detail</label> 
 							</td>
-							<td class="multi-edit" colspan="9">
+							<td class="multi-edit" colspan="8">
 								Select:
 								<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
 								<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
@@ -173,12 +173,7 @@
 
 					<tbody>
 						<tr class="odd spam">
-							<td class="id">
-								<a class="action-edit" href="secondary/content-discuss_edit.html">000003</a>
-								<ul class="discuss_detail actions">
-									<li class="action-edit"><a href="secondary/content-discuss_edit.html">Edit</a></li>
-								</ul>
-							</td>
+							<td class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000003</a></td>
 							<td class="date posted created">21&#160;Sep&#160;2011 10:13:58</td>
 							<td class="name">Anon</td>
 							<td class="message">test of a spam comment</td>
@@ -190,12 +185,7 @@
 							<td class="multi-edit"><input type="checkbox" value="000003" name="selected[]" /></td>
 						</tr>
 						<tr class="even moderate">
-							<td class="id">
-								<a class="action-edit" href="secondary/content-discuss_edit.html">000002</a>
-								<ul class="discuss_detail actions">
-									<li class="action-edit"><a href="secondary/content-discuss_edit.html">Edit</a></li>
-								</ul>
-							</td>
+							<td class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000002</a></td>
 							<td class="date posted created">21&#160;Sep&#160;2011 10:13:58</td>
 							<td class="name">Phil</td>
 							<td class="message">test of a banned commentator</td>
@@ -207,20 +197,14 @@
 							<td class="multi-edit"><input type="checkbox" value="000002" name="selected[]" /></td>
 						</tr>
 						<tr class="odd visible">
-							<td class="id">
-								<a class="action-edit" href="secondary/content-discuss_edit.html">000001</a>
-								<ul class="discuss_detail actions">
-									<li class="action-edit"><a href="secondary/content-discuss_edit.html">Edit</a></li>
-									<li class="action-view"><a href="#">View</a></li>
-								</ul>
-							</td>
+							<td class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000001</a></td>
 							<td class="date posted created">22&#160;Jul&#160;2005 14:11:32</td>
 							<td class="name">Donald Swain</td>
 							<td class="message">I enjoy your site very much.</td>
 							<td class="discuss_detail email">donald.​swain@​example.​com</td>
 							<td class="discuss_detail website">example.​com</td>
 							<td class="discuss_detail ip">127.0.0.1</td>
-							<td class="discuss_detail status">Visible</td>
+							<td class="discuss_detail status"><a href="#" title="View">Visible</a></td>
 							<td class="parent"><a href="#">Welcome to Your Site!</a></td>
 							<td class="multi-edit"><input type="checkbox" value="000001" name="selected[]" /></td>
 						</tr>
@@ -232,7 +216,7 @@
 		</form>
 
 		<form class="cb_show_spam" method="post" action="index.php?event=discuss">
-			<input type="checkbox" name="cb_show_spam" id="cb_show_spam" value="1" class="checkbox" onclick="setClassRemember('show_spam',1);submit(this.form);" />
+			<input type="checkbox" name="cb_show_spam" id="cb_show_spam" value="1" class="checkbox" onclick="setClassRemember('show_spam',1);submit(this.form);" checked="checked" />
 			<label for="cb_show_spam">Show spam</label>
 			<noscript>
 				<div><input type="submit" value="Go" /></div>
