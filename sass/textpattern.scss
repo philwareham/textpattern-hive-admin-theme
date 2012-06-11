@@ -181,19 +181,6 @@ a:hover .content-image {
 /* Messages
 ========================================================================== */
 
-.not-ok,
-#plugin_form .modified,
-.highlight {
-	color: $error-text;
-}
-
-.highlight a {
-	color: $error-text;
-	&:hover {
-		color: lighten($error-text, 10%);
-	}
-}
-
 /* label colours */
 .success,
 .warning,
