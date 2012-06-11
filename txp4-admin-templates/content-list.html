@@ -144,6 +144,7 @@
 							<th class="articles_detail category category1"><a href="#">Category 1</a></th>
 							<th class="articles_detail category category2"><a href="#">Category 2</a></th>
 							<th class="status"><a href="#">Status</a></th>
+							<th class="author"><a href="#">Author</a></th>
 							<th class="articles_detail comments"><a href="#">Comments</a></th>
 							<th class="multi-edit">&#160;</th>
 						</tr>
@@ -154,7 +155,7 @@
 							<td class="detail-toggle" colspan="2">
 								<input type="checkbox" name="cb_toggle_articles_detail" id="cb_toggle_articles_detail" value="1" class="checkbox" onclick="toggleClassRemember('articles_detail');" checked="checked" /> <label for="cb_toggle_articles_detail">Show detail</label>
 							</td>
-							<td class="multi-edit" colspan="9">
+							<td class="multi-edit" colspan="10">
 								Select:
 								<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
 								<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
@@ -167,6 +168,7 @@
 									<option value="changecategory2">Change category2</option>
 									<option value="changestatus">Change status</option>
 									<option value="changecomments">Change comments</option>
+									<option value="changeauthor">Change author</option>
 									<option value="delete">Delete</option>
 								</select>
 								<input type="submit" value="Go" />
@@ -185,6 +187,7 @@
 							<td class="articles_detail category category1">&#160;</td>
 							<td class="articles_detail category category2">&#160;</td>
 							<td class="status"><a href="#" title="View">Live</a></td>
+							<td class="author"><span title="Phil Wareham">admin</span></td>
 							<td class="articles_detail comments">
 								<span class="comments-status">On</span>
 								<span class="comments-manage"><a title="Manage" href="#">(1)</a></span></td>
@@ -201,6 +204,7 @@
 							<td class="articles_detail category category1"><span title="Hope for the Future">hope-for-the-future</span></td>
 							<td class="articles_detail category category2"><span title="Meaningful Labor">meaningful-labor</span></td>
 							<td class="status"><a href="#" title="View">Live</a></td>
+							<td class="author"><span title="Phil Wareham">admin</span></td>
 							<td class="articles_detail comments">
 								<span class="comments-status">Expired</span>
 								<span class="comments-manage">(0)</span></td>
