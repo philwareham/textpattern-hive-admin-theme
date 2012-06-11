@@ -105,15 +105,13 @@
 	<div class="txp-body">
 
 	<div id="plugin_control" class="txp-control-panel">
-		<table class="plugin-install">
-			<tr>
-				<td>
-					<form method="post" action="secondary/admin-plugin_install.html" id="plugin_install_form" class="plugin-data">
-						<p><label>Install plugin</label>&#160;<textarea id="plugin-install" class="code" name="plugin" cols="62" rows="1"></textarea>&#160;<span><a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>&#160;<input type="submit" value="Upload" name="install_new" /></span></p>
-					</form>
-				</td>
-			</tr>
-		</table>
+		<form method="post" action="index.php" id="plugin_install_form" class="plugin-data">
+			<p>
+				<label for="plugin-install">Install plugin</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
+				<textarea id="plugin-install" class="code" name="plugin" cols="62" rows="1"></textarea>
+				<input type="submit" value="Upload" name="install_new" />
+			</p>
+		</form>
 	</div>
 
 	<div id="plugin_container" class="txp-container">
