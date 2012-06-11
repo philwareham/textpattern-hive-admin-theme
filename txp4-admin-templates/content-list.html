@@ -136,10 +136,10 @@
 					<thead>
 						<tr>
 							<th class="id actions"><a href="#">ID#</a></th>
+							<th class="title"><a href="#">Title</a></th>
 							<th class="desc date posted created"><a href="#">Posted</a></th>
 							<th class="articles_detail date modified"><a href="#">Modified</a></th>
 							<th class="articles_detail date expires"><a href="#">Expires</a></th>
-							<th class="title"><a href="#">Title</a></th>
 							<th class="section"><a href="#">Section</a></th>
 							<th class="articles_detail category category1"><a href="#">Category 1</a></th>
 							<th class="articles_detail category category2"><a href="#">Category 2</a></th>
@@ -152,7 +152,7 @@
 					<tfoot>
 						<tr>
 							<td class="detail-toggle" colspan="2">
-								<input type="checkbox" name="cb_toggle_articles_detail" id="cb_toggle_articles_detail" value="1" class="checkbox" onclick="toggleClassRemember('articles_detail');" /> <label for="cb_toggle_articles_detail">Show detail</label>
+								<input type="checkbox" name="cb_toggle_articles_detail" id="cb_toggle_articles_detail" value="1" class="checkbox" onclick="toggleClassRemember('articles_detail');" checked="checked" /> <label for="cb_toggle_articles_detail">Show detail</label>
 							</td>
 							<td class="multi-edit" colspan="9">
 								Select:
@@ -177,37 +177,33 @@
 					<tbody>
 						<tr class="odd">
 							<td class="id"><a href="#">2</a></td>
+							<td class="title"><a href="#">test article 2 title</a></td>
 							<td class="date posted created">03&#160;Jul&#160;2011 12:27:33</td>
 							<td class="articles_detail date modified">03&#160;Jul&#160;2011 12:27:33</td>
 							<td class="articles_detail date expires">&#160;</td>
-							<td class="title"><a href="#">test article 2 title</a></td>
 							<td class="section"><span title="Articles">articles</span></td>
 							<td class="articles_detail category category1">&#160;</td>
 							<td class="articles_detail category category2">&#160;</td>
-							<td class="status"><a href="#">Live</a></td>
+							<td class="status"><a href="#" title="View">Live</a></td>
 							<td class="articles_detail comments">
-								<ul>
-									<li class="comments-status">Off</li>
-									<li class="comments-manage">None</li>
-								</ul>
+								<span class="comments-status">On</span>
+								<span class="comments-manage"><a title="Manage" href="#">(1)</a></span></td>
 							</td>
 							<td class="multi-edit"><input type="checkbox" value="2" name="selected[]" class="checkbox" /></td>
 						</tr>
 						<tr class="even">
 							<td class="id"><a href="#">1</a></td>
+							<td class="title"><a href="#">Welcome to Your Site!</a></td>
 							<td class="date posted created">29&#160;Jun&#160;2011 19:07:55</td>
 							<td class="articles_detail date modified">29&#160;Jun&#160;2011 19:07:55</td>
 							<td class="articles_detail date expires">&#160;</td>
-							<td class="title"><a href="#">Welcome to Your Site!</a></td>
 							<td class="section"><span title="Articles">articles</span></td>
 							<td class="articles_detail category category1"><span title="Hope for the Future">hope-for-the-future</span></td>
 							<td class="articles_detail category category2"><span title="Meaningful Labor">meaningful-labor</span></td>
-							<td class="status"><a href="http://www.textpattern.dev/articles/1/welcome-to-your-site">Live</a></td>
+							<td class="status"><a href="#" title="View">Live</a></td>
 							<td class="articles_detail comments">
-								<ul>
-									<li class="comments-status">On</li>
-									<li class="comments-manage"><a href="#">Manage</a> (1)</li>
-								</ul>
+								<span class="comments-status">Expired</span>
+								<span class="comments-manage">(0)</span></td>
 							</td>
 							<td class="multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox" /></td>
 						</tr>
