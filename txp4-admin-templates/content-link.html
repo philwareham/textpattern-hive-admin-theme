@@ -168,11 +168,11 @@
 						<thead>
 							<tr>
 								<th class="id"><a href="#">ID#</a></th>
-								<th class="actions">&#160;</th>
 								<th class="asc name"><a href="#">Name</a></th>
 								<th class="description"><a href="#">Description</a></th>
 								<th class="category"><a href="#">Category</a></th>
 								<th class="date created"><a href="#">Date</a></th>
+								<th class="author"><a href="#">Author</a></th>
 								<th class="multi-edit">&#160;</th>
 							</tr>
 						</thead>
@@ -187,6 +187,7 @@
 									<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
 										<option value="" selected="selected"></option>
 										<option value="changecategory">Change category</option>
+										<option value="changeauthor">Change author</option>
 										<option value="delete">Delete</option>
 									</select>
 									<input type="submit" value="Go" />
@@ -196,45 +197,30 @@
 
 						<tbody>
 							<tr class="odd">
-								<td class="id">2</td>
-								<td class="actions">
-									<ul>
-										<li class="action-edit"><a href="#">Edit</a></li>
-										<li class="action-view"><a href="http://textpattern.net/">View</a></li>
-									</ul>
-								</td>
-								<td class="name"><a href="#">TextBook</a></td>
+								<td class="id"><a href="#" title="Edit">2</a></td>
+								<td class="name"><a href="#" title="Edit">TextBook</a></td>
 								<td class="description">&#160;</td>
 								<td class="category"><span title="Textpattern">textpattern</span></td>
 								<td class="date created">20&#160;Jul&#160;2005 12:54:41</td>
+								<td class="author"><span title="Phil Wareham">admin</span></td>
 								<td class="multi-edit"><input type="checkbox" value="2" name="selected[]" /></td>
 							</tr>
 							<tr class="even">
-								<td class="id">1</td>
-								<td class="actions">
-									<ul>
-										<li class="action-edit"><a href="#">Edit</a></li>
-										<li class="action-view"><a href="http://textpattern.com/">View</a></li>
-									</ul>
-								</td>
-								<td class="name"><a href="#">Textpattern</a></td>
+								<td class="id"><a href="#" title="Edit">1</a></td>
+								<td class="name"><a href="#" title="Edit">Textpattern</a></td>
 								<td class="description">&#160;</td>
 								<td class="category"><span title="Textpattern">textpattern</span></td>
 								<td class="date created">20&#160;Jul&#160;2005 12:54:26</td>
+								<td class="author"><span title="Phil Wareham">admin</span></td>
 								<td class="multi-edit"><input type="checkbox" value="1" name="selected[]" /></td>
 							</tr>
 							<tr class="odd">
-								<td class="id">3</td>
-								<td class="actions">
-									<ul>
-										<li class="action-edit"><a href="#">Edit</a></li>
-										<li class="action-view"><a href="http://textpattern.org/">View</a></li>
-									</ul>
-								</td>
-								<td class="name"><a href="#">Txp Resources</a></td>
+								<td class="id"><a href="#" title="Edit">3</a></td>
+								<td class="name"><a href="#" title="Edit">Txp Resources</a></td>
 								<td class="description">&#160;</td>
 								<td class="category"><span title="Textpattern">textpattern</span></td>
 								<td class="date created">20&#160;Jul&#160;2005 12:55:04</td>
+								<td class="author"><span title="Phil Wareham">admin</span></td>
 								<td class="multi-edit"><input type="checkbox" value="3" name="selected[]" /></td>
 							</tr>
 						</tbody>
