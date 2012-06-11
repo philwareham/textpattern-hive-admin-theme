@@ -137,13 +137,13 @@
 					<thead>
 						<tr>
 							<th class="id"><a href="#">ID#</a></th>
-							<th class="actions">&#160;</th>
 							<th class="asc name"><a href="#">Name</a></th>
 							<th class="title"><a href="#">Title</a></th>
 							<th class="description"><a href="#">Description</a></th>
 							<th class="category"><a href="#">Category</a></th>
 							<th class="tag-build">Tags</th>
-							<th class="status">Status</th><th class="condition">Condition</th>
+							<th class="status">Status</th>
+							<th class="condition">Condition</th>
 							<th class="downloads"><a href="#">Downloads</a></th>
 							<th class="multi-edit">&#160;</th>
 						</tr>
@@ -151,7 +151,7 @@
 
 					<tfoot>
 						<tr>
-							<td class="multi-edit" colspan="11">
+							<td class="multi-edit" colspan="10">
 								Select:
 								<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
 								<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
@@ -169,27 +169,19 @@
 
 					<tbody>
 						<tr class="odd">
-							<td class="id">1</td>
-							<td class="actions">
-								<ul>
-									<li class="action-edit"><a href="secondary/content-file_edit.html">Edit</a></li>
-									<li class="action-view"><a href="#">Download</a></li>
-								</ul>
-							</td>
-							<td class="name"><a href="secondary/content-file_edit.html">test-file.zip</a></td>
+							<td class="id"><a href="secondary/content-file_edit.html" title="Edit">1</a></td>
+							<td class="name"><a href="secondary/content-file_edit.html" title="Edit">test-file.zip</a></td>
 							<td class="title">A Test File</td>
 							<td class="description">This is a test file upload description</td>
 							<td class="category">&#160;</td>
 							<td class="tag-build">
-								<ul>
-									<li><a target="_blank" href="#" onclick="popWin(this.href, 400, 250); return false;">Textile</a></li>
-									<li><a target="_blank" href="#" onclick="popWin(this.href, 400, 250); return false;">Textpattern</a></li>
-									<li><a target="_blank" href="#" onclick="popWin(this.href, 400, 250); return false;">XHTML</a></li>
-								</ul>
+								<a target="_blank" href="#" onclick="popWin(this.href); return false;">Textile</a>
+								&#124; <a target="_blank" href="#" onclick="popWin(this.href); return false;">Textpattern</a>
+								&#124; <a target="_blank" href="#" onclick="popWin(this.href); return false;">HTML</a>
 							</td>
 							<td class="status">Live</td>
-							<td class="condition"><span class="ok">Ok</span></td>
-							<td class="downloads">None</td>
+							<td class="condition"><span class="success">Ok</span></td>
+							<td class="downloads"><a href="#" title="Download">0</a></td>
 							<td class="multi-edit"><input type="checkbox" value="1" name="selected[]" /></td>
 						</tr>
 					</tbody>
