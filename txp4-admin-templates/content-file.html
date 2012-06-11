@@ -145,13 +145,14 @@
 							<th class="status">Status</th>
 							<th class="condition">Condition</th>
 							<th class="downloads"><a href="#">Downloads</a></th>
+							<th class="author"><a href="#">Author</a></th>
 							<th class="multi-edit">&#160;</th>
 						</tr>
 					</thead>
 
 					<tfoot>
 						<tr>
-							<td class="multi-edit" colspan="10">
+							<td class="multi-edit" colspan="11">
 								Select:
 								<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
 								<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
@@ -160,6 +161,7 @@
 								<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
 									<option value="" selected="selected"></option>
 									<option value="changecategory">Change category</option>
+									<option value="changeauthor">Change author</option>
 									<option value="delete">Delete</option>
 								</select>
 								<input type="submit" value="Go" />
@@ -182,6 +184,7 @@
 							<td class="status">Live</td>
 							<td class="condition"><span class="success">Ok</span></td>
 							<td class="downloads"><a href="#" title="Download">0</a></td>
+							<td class="author"><span title="Phil Wareham">admin</span></td>
 							<td class="multi-edit"><input type="checkbox" value="1" name="selected[]" /></td>
 						</tr>
 					</tbody>
