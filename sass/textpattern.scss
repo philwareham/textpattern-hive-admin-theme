@@ -1109,15 +1109,6 @@ span.spinner {
 /* Content -> Images page
 ========================================================================== */
 
-/* fix for inconsistent structure */
-#page-image .txp-edit {
-	border-top: 1em solid $color-background-box;
-	border-bottom: 0;
-	td {
-		padding: 0 1em;
-	}
-}
-
 .txp-edit #image-thumbnail {
 	margin-right: auto;
 	margin-bottom: 1em;
@@ -1160,18 +1151,6 @@ span.spinner {
 
 #page-image #caption {
 	max-width: 520px;
-}
-
-
-/* Content -> Files page
-========================================================================== */
-
-/* fix for inconsistent structure */
-#page-file .txp-edit {
-	border: 0;
-	td {
-		padding: 0 1em;
-	}
 }
 
 
@@ -1327,28 +1306,6 @@ div.code {
 div.plugin-help {
 	margin: 0 auto;
 	max-width: $text-column;
-}
-
-
-/* Admin -> Import page
-========================================================================== */
-
-#page-import .txp-edit {
-	width: $standard-column;
-	margin-bottom: 1em;
-	border-top: .5em solid $color-background-box;
-	border-bottom: .5em solid $color-background-box;
-	background: $color-background-box;
-	td {
-		padding: .5em 1em;
-		&.cell-label {
-			width: 37%;
-		}
-	}
-	#databased {
-		margin-left: -1em;
-		margin-right: -1em;
-	}
 }
 
 

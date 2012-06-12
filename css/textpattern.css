@@ -1355,15 +1355,6 @@ span.spinner {
 
 /* Content -> Images page
 ========================================================================== */
-/* fix for inconsistent structure */
-#page-image .txp-edit {
-  border-top: 1em solid #f7f7f7;
-  border-bottom: 0;
-}
-#page-image .txp-edit td {
-  padding: 0 1em;
-}
-
 .txp-edit #image-thumbnail {
   margin-right: auto;
   margin-bottom: 1em;
@@ -1404,16 +1395,6 @@ span.spinner {
 
 #page-image #caption {
   max-width: 520px;
-}
-
-/* Content -> Files page
-========================================================================== */
-/* fix for inconsistent structure */
-#page-file .txp-edit {
-  border: 0;
-}
-#page-file .txp-edit td {
-  padding: 0 1em;
 }
 
 /* Content -> Comments page
@@ -1556,26 +1537,6 @@ div.plugin-help {
   max-width: 56em;
 }
 
-/* Admin -> Import page
-========================================================================== */
-#page-import .txp-edit {
-  width: 40em;
-  margin-bottom: 1em;
-  border-top: 0.5em solid #f7f7f7;
-  border-bottom: 0.5em solid #f7f7f7;
-  background: #f7f7f7;
-}
-#page-import .txp-edit td {
-  padding: .5em 1em;
-}
-#page-import .txp-edit td.cell-label {
-  width: 37%;
-}
-#page-import .txp-edit #databased {
-  margin-left: -1em;
-  margin-right: -1em;
-}
-
 /* Hive theme for Textpattern CMS (v4.5alpha) */
 /* ADDITIONAL LAYOUT FOR DEVICES < 769px
 ========================================================================== */
@@ -1692,7 +1653,6 @@ div.plugin-help {
 
   /* Content -> Images page (< 769px)
   ========================================================================== */
-  /* hide table cells to optimise screen estate */
   #image_details_form .name,
   #image_details_form .category {
     display: block !important;
