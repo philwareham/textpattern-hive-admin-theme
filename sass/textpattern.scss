@@ -233,7 +233,7 @@ span#message {
 	border: 1px solid;
 	border-bottom: 0;
 	padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
-	max-width: $standard-column;
+	max-width: ($standard-column - 3.84615384615385em);
 	@include text-shadow-light;
 	@include box-shadow;
 	&.success {
@@ -809,6 +809,35 @@ body {
 }
 
 
+/* Edit panes
+========================================================================== */
+
+.txp-edit {
+	margin: 0 auto 1em;
+	padding: 1em 1em 1px 1em;
+	width: ($standard-column - 2em);
+	background: $color-background-box;
+	p {
+		clear: both;
+	}
+}
+
+.edit-label {
+	@include inline-block;
+	float: left;
+	margin-bottom: 1em;
+	padding: .23076923076923em 0;
+	width: 39%;
+}
+
+.edit-value {
+	@include inline-block;
+	float: right;
+	margin-bottom: 1em;
+	width: 61%;
+}
+
+
 /* Miscellaneous/shared layout
 ========================================================================== */
 
@@ -818,12 +847,6 @@ body {
 
 .txp-columntable {
 	width: 100%;
-}
-
-.txp-edit {
-	margin: 0 auto;
-	width: $standard-column;
-	background: $color-background-box;
 }
 
 .txp-control-panel {
@@ -1117,10 +1140,6 @@ span.spinner {
 
 #page-discuss .txp-list tr.moderate td {
 	background: lighten($warning-background, 2%);
-}
-
-#commentmessage {
-	height: 7em;
 }
 
 

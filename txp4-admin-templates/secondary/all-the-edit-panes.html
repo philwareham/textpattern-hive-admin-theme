@@ -112,20 +112,22 @@
 			<div class="txp-edit">
 				<h2>Edit category</h2>
 				<p>
-					<label class="cell-label">Article category name</label>
-					<input type="text" value="hope-for-the-future" name="name" size="20" />
+					<span class="edit-label"><label for="categoryname">Article category name</label></span>
+					<span class="edit-value"><input type="text" value="hope-for-the-future" name="categoryname" id="categoryname" size="30" /></span>
 				</p>
 				<p>
-					<label class="cell-label">Parent</label>
-					<select name="parent">
-						<option value="" selected="selected">&nbsp;</option>
-						<option value="meaningful-labor">Meaningful Labor</option>
-						<option value="reciprocal-affection">Reciprocal Affection</option>
-					</select>
+					<span class="edit-label"><label for="categoryparent">Parent</label></span>
+					<span class="edit-value">
+						<select name="categoryparent" id="categoryparent">
+							<option value="" selected="selected">&nbsp;</option>
+							<option value="meaningful-labor">Meaningful Labor</option>
+							<option value="reciprocal-affection">Reciprocal Affection</option>
+						</select>
+					</span>
 				</p>
 				<p>
-					<label class="cell-label">Article category title</label>
-					<input type="text" value="Hope for the Future" name="title" size="30" />
+					<span class="edit-label"><label for="categorytitle">Article category title</label></span>
+					<span class="edit-value"><input type="text" value="Hope for the Future" name="categorytitle" id="categorytitle" size="30" /></span>
 				</p>
 				<p><input type="submit" value="Save" class="publish" /></p>
 			</div>
@@ -204,8 +206,17 @@
 			<h2>Edit file</h2>
 			<div class="file-info">
 				<p class="condition">File status: <span class="success">Ok</span></p>
-				<p class="name">Name: <a href="#">test-file.zip</a></p>
-				<p class="downloads">Download count: 0</p>
+				<p class="name">Name: <a href="#" title="Download">test-file.zip</a></p>
+				<p class="downloads">Download count: 2</p>
+			</div>
+			<div class="replace-file">
+				<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
+					<p>
+						<label for="file-replace">Replace file</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
+						<input type="file" value="" name="thefile" id="file-replace" />
+						<input type="submit" value="Upload" />
+					</p>
+				</form>
 			</div>
 			<div class="file-detail exists">
 				<form method="post" action="index.php" id="file_details" class="edit-form">
@@ -223,51 +234,31 @@
 						<label for="description">Description</label>
 						<textarea id="description" name="description" cols="40" rows="5">This is a test file upload description</textarea>
 					</p>
+
 					<fieldset id="file-status">
 						<legend>Status</legend>
 						<ul class="status plain-list">
-							<li class="status-2 Hidden">
-								<input type="radio" name="status" value="2" id="status-2" class="radio" />
-								<label for="status-2">Hidden</label>
-							</li>
-							<li class="status-3 Pending">
-								<input type="radio" name="status" value="3" id="status-3" class="radio" />
-								<label for="status-3">Pending</label>
-							</li>
-							<li class="status-4 Live active">
-								<input type="radio" name="status" value="4" id="status-4" checked="checked" class="radio active" />
-								<label for="status-4"><strong>Live</strong></label>
-							</li>
+							<li class="status-2"><input type="radio" name="status" value="2" id="status-2" class="radio" /><label for="status-2">Hidden</label></li>
+							<li class="status-3"><input type="radio" name="status" value="3" id="status-3" class="radio" /><label for="status-3">Pending</label></li>
+							<li class="status-4 active"><input type="radio" name="status" value="4" id="status-4" checked="checked" class="radio active" /><label for="status-4"><strong>Live</strong></label></li>
 						</ul>
 					</fieldset>
 					<fieldset id="file-created">
 						<legend>Timestamp</legend>
-							<p class="publish-now">
-								<input type="checkbox" name="publish_now" value="1" id="publish_now" class="checkbox" />
-								<label for="publish_now">Set timestamp to now&#8230;</label>
-							</p>
-							<p class="publish-at">&#8230;or publish at&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
-							<p class="date posted created"><span class="label">Date</span>&#160;
-								<input type="text" name="year" value="2011" size="4" maxlength="4" class="edit year" title="Year" /> / 
-								<input type="text" name="month" value="09" size="2" maxlength="2" class="edit month" title="Month" /> / 
-								<input type="text" name="day" value="04" size="2" maxlength="2" class="edit day" title="Day" />
-							</p>
-							<p class="time posted created"><span class="label">Time</span>&#160;
-								<input type="text" name="hour" value="20" size="2" maxlength="2" class="edit hour" title="Hour" /> : 
-								<input type="text" name="minute" value="45" size="2" maxlength="2" class="edit minute" title="Minute" /> : 
-								<input type="text" name="second" value="54" size="2" maxlength="2" class="edit second" title="Second" />
-							</p>
+						<p class="publish-now"><input type="checkbox" name="publish_now" value="1" id="publish_now" class="checkbox" /><label for="publish_now">Set timestamp to now&#8230;</label></p>
+						<p class="publish-at">&#8230;or publish at&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
+						<p class="date posted created"><span class="label">Date</span>&#160;
+							<input type="text" name="year" value="2011" size="4" maxlength="4" class="edit year" title="Year" /> / 
+							<input type="text" name="month" value="09" size="2" maxlength="2" class="edit month" title="Month" /> / 
+							<input type="text" name="day" value="04" size="2" maxlength="2" class="edit day" title="Day" />
+						</p>
+						<p class="time posted created"><span class="label">Time</span>&#160;
+							<input type="text" name="hour" value="20" size="2" maxlength="2" class="edit hour" title="Hour" /> : 
+							<input type="text" name="minute" value="45" size="2" maxlength="2" class="edit minute" title="Minute" /> : 
+							<input type="text" name="second" value="54" size="2" maxlength="2" class="edit second" title="Second" />
+						</p>
 					</fieldset>
 					<p><input type="submit" value="Save" class="publish" /></p>
-				</form>
-			</div>
-			<div class="replace-file">
-				<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
-					<p>
-						<label for="file-replace">Replace file</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-						<input type="file" value="" name="thefile" id="file-replace" />
-						<input type="submit" value="Upload" />
-					</p>
 				</form>
 			</div>
 		</div>
@@ -278,27 +269,30 @@
 			<div class="txp-edit">
 				<h2>Add new link</h2>
 				<p class="name">
-					<label class="cell-label" for="link-title">Title </label>
-					<input type="text" value="" name="linkname" size="30" id="link-title" />
+					<span class="edit-label"><label for="linkname">Title</label></span>
+					<span class="edit-value"><input type="text" value="" name="linkname" id="linkname" size="30" /></span>
 				</p>
 				<p class="sort">
-					<label class="cell-label" for="link-sort">Sort value </label>
-					<input type="text" value="" name="linksort" size="15" id="link-sort" />
+					<span class="edit-label"><label for="linksort">Sort value</label></span>
+					<span class="edit-value"><input class="input-medium" type="text" value="" name="linksort" id="linksort" size="15" /></span>
 				</p>
 				<p class="url">
-					<label class="cell-label" for="link-url">URL <a target="_blank" href="http://rpc.textpattern.com/help/?item=link_url&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></label>
-					<input type="text" value="" name="url" size="30" id="link-url" />
+					<span class="edit-label"><label for="linkurl">URL</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+					<span class="edit-value"><input type="text" value="" name="linkurl" id="linkurl" size="30" /></span>
 				</p>
 				<p class="category">
-					<label class="cell-label" for="link-category">Category <a target="_blank" href="http://rpc.textpattern.com/help/?item=link_category&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></label>
-					<select id="link-category"  name="category">
-						<option value="" selected="selected">&nbsp;</option>
-						<option value="textpattern">Textpattern</option>
-					</select> [<a href="?event=category&#38;step=list&#38;_txp_token=148b2007c6cad8cce7a1125354607d50">Edit</a>]
+					<span class="edit-label"><label for="linkcategory">Category</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+					<span class="edit-value">
+						<select name="linkcategory" id="linkcategory">
+							<option value="" selected="selected">&nbsp;</option>
+							<option value="textpattern">Textpattern</option>
+						</select>
+						[<a href="#">Edit</a>]
+					</span>
 				</p>
 				<p class="description text">
-					<label class="cell-label" for="link-description">Description</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=link_description&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-					<textarea id="link-description" name="description" cols="40" rows="7"></textarea>
+					<span class="edit-label"><label for="linkdescription">Description</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+					<span class="edit-value"><textarea name="linkdescription" id="linkdescription" cols="60" rows="7"></textarea></span>
 				</p>
 				<p><input type="submit" value="Save" class="publish" /></p>
 			</div>
@@ -310,36 +304,38 @@
 			<div class="txp-edit">
 				<h2>Edit comment</h2>
 				<p>
-					<label class="cell-label">Name</label>
-					<input type="text" value="Donald Swain" name="name" id="name" />
+					<span class="edit-label"><label for="commentname">Name</label></span>
+					<span class="edit-value"><input type="text" value="Donald Swain" name="commentname" id="commentname" size="30" /></span>
 				</p>
 				<p class="ip">
-					<label class="cell-label">IP</label>
-					<span>127.0.0.1 [<a class="action-ban" href="#">Ban</a>]</span>
+					<span class="edit-label">IP</span>
+					<span class="edit-value-fixed" style="color:#f00;">127.0.0.1 [<a class="action-ban" href="#">Ban</a>] NEEDS FIX</span>
 				</p>
 				<p>
-					<label class="cell-label">E-mail</label>
-					<input type="text" value="donald.swain@example.com" name="email" id="email" />
+					<span class="edit-label"><label for="commentemail">E-mail</label></span>
+					<span class="edit-value"><input type="text" value="donald.swain@example.com" name="commentemail" id="commentemail" size="30" /></span>
 				</p>
 				<p>
-					<label class="cell-label">Website</label>
-					<input type="text" value="example.com" name="web" id="website" />
+					<span class="edit-label"><label for="commentwebsite">Website</label></span>
+					<span class="edit-value"><input type="text" value="example.com" name="commentwebsite" id="commentwebsite" size="30" /></span>
 				</p>
 				<p class="date posted created">
-					<label class="cell-label">Date</label>
-					<span>22 Jul 2005 14:11:32</span>
+					<span class="edit-label">Date</span>
+					<span class="edit-value-fixed" style="color:#f00;">22 Jul 2005 14:11:32 NEEDS FIX</span>
 				</p>
 				<p class="comment message text">
-					<label class="cell-label">Message</label>
-					<textarea id="commentmessage" name="message" cols="60" rows="15">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea>
+					<span class="edit-label"><label for="commentmessage">Message</label></span>
+					<span class="edit-value"><textarea name="commentmessage" id="commentmessage" cols="60" rows="14">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea></span>
 				</p>
 				<p class="status">
-					<label class="cell-label">Status</label>
-					<select name="visible">
-						<option value="1" selected="selected">Visible</option>
-						<option value="-1">Spam</option>
-						<option value="0">Unmoderated</option>
-					</select>
+					<span class="edit-label"><label for="commentvisible">Status</label></span>
+					<span class="edit-value">
+						<select name="commentvisible" id="commentvisible">
+							<option value="1" selected="selected">Visible</option>
+							<option value="-1">Spam</option>
+							<option value="0">Unmoderated</option>
+						</select>
+					</span>
 				</p>
 				<p><input type="submit" value="Save" name="step" class="publish" /></p>
 			</div>
@@ -351,43 +347,53 @@
 			<div class="txp-edit">
 				<h2>Add new section</h2>
 				<p>
-					<label class="cell-label" for="name">Section name</label>
-					<input type="text" name="name" size="20" id="name" />
+					<span class="edit-label"><label for="sectionname">Section name</label></span>
+					<span class="edit-value"><input type="text" name="sectionname" id="sectionname" size="30" /></span>
 				</p>
 				<p>
-					<label class="cell-label" for="title">Section title</label>
-					<input type="text" name="title" size="20" id="title" />
+					<span class="edit-label"><label for="sectiontitle">Section title</label></span>
+					<span class="edit-value"><input type="text" name="sectiontitle" id="sectiontitle" size="30" /></span>
 				</p>
 				<p>
-					<label class="cell-label" for="page">Uses page</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-					<select name="page" id="page">
-						<option value="archive">archive</option>
-						<option value="default" selected="selected">default</option>
-						<option value="error_default">error_default</option>
-						<option value="new_page">new_page</option>
-					</select>
+					<span class="edit-label"><label for="sectionpage">Uses page</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+					<span class="edit-value">
+							<select name="sectionpage" id="sectionpage">
+							<option value="archive">archive</option>
+							<option value="default" selected="selected">default</option>
+							<option value="error_default">error_default</option>
+							<option value="new_page">new_page</option>
+						</select>
+					</span>
 				</p>
 				<p>
-					<label class="cell-label" for="css">Uses style</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-					<select name="css" id="css">
-						<option value="default" selected="selected">default</option>
-						<option value="new_style">new_style</option>
-					</select>
+					<span class="edit-label"><label for="sectioncss">Uses style</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+					<span class="edit-value">
+						<select name="sectioncss" id="sectioncss">
+							<option value="default" selected="selected">default</option>
+							<option value="new_style">new_style</option>
+						</select>
+					</span>
 				</p>
 				<p>
-					<span class="cell-label">On front page</span> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-					<input type="radio" id="about-on_frontpage-0" name="on_frontpage" value="0" class="radio active" checked="checked" /><label for="about-on_frontpage-0">No</label>
-					<input type="radio" id="about-on_frontpage-1" name="on_frontpage" value="1" class="radio" /><label for="about-on_frontpage-1">Yes</label>
+					<span class="edit-label">On front page&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+					<span class="edit-value">
+						<input type="radio" id="about-on_frontpage-0" name="on_frontpage" value="0" class="radio active" checked="checked" /><label for="about-on_frontpage-0">No</label>
+						<input type="radio" id="about-on_frontpage-1" name="on_frontpage" value="1" class="radio" /><label for="about-on_frontpage-1">Yes</label>
+					</span>
 				</p>
 				<p>
-					<span class="cell-label">Syndicate</span> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-					<input type="radio" id="about-in_rss-0" name="in_rss" value="0" class="radio active" checked="checked" /><label for="about-in_rss-0">No</label>
-					<input type="radio" id="about-in_rss-1" name="in_rss" value="1" class="radio" /><label for="about-in_rss-1">Yes</label>
+					<span class="edit-label">Syndicate&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+					<span class="edit-value">
+						<input type="radio" id="about-in_rss-0" name="in_rss" value="0" class="radio active" checked="checked" /><label for="about-in_rss-0">No</label>
+						<input type="radio" id="about-in_rss-1" name="in_rss" value="1" class="radio" /><label for="about-in_rss-1">Yes</label>
+					</span>
 				</p>
 				<p>
-					<span class="cell-label">Include in site search</span> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-					<input type="radio" id="about-searchable-0" name="searchable" value="0" class="radio" /><label for="about-searchable-0">No</label>
-					<input type="radio" id="about-searchable-1" name="searchable" value="1" class="radio active" checked="checked" /><label for="about-searchable-1">Yes</label>
+					<span class="edit-label">Include in site search&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+					<span class="edit-value">
+						<input type="radio" id="about-searchable-0" name="searchable" value="0" class="radio" /><label for="about-searchable-0">No</label>
+						<input type="radio" id="about-searchable-1" name="searchable" value="1" class="radio active" checked="checked" /><label for="about-searchable-1">Yes</label>
+					</span>
 				</p>
 				<p><input type="submit" value="Save" class="publish" /></p>
 			</div>
@@ -399,28 +405,30 @@
 	    	<div class="txp-edit">
 	    		<h2>Edit author</h2>
 	    		<p class="name login-name">
-	    			<label class="cell-label" for="name">Login</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-	    			<input type="text" value="" name="name" id="name"/>
+	    			<span class="edit-label"><label for="username">Login</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+	    			<span class="edit-value"><input type="text" value="" name="username" id="username" size="30" /></span>
 	    		</p>
 	    		<p class="name real-name">
-	    			<label class="cell-label" for="RealName">Real name</label>
-	    			<input type="text" value="" name="RealName" id="RealName" />
+	    			<span class="edit-label"><label for="userrealname">Real name</label></span>
+	    			<span class="edit-value"><input type="text" value="" name="userrealname" id="userrealname" size="30" /></span>
 	    		</p>
 	    		<p class="email">
-	    			<label class="cell-label" for="email">E-mail</label>
-	    			<input type="text" value="" name="email" id="email" />
+	    			<span class="edit-label"><label for="useremail">E-mail</label></span>
+	    			<span class="edit-value"><input type="text" value="" name="useremail" id="useremail" size="30" /></span>
 	    		</p>
 	    		<p class="privs">
-	    			<label class="cell-label" for="privs">Privileges</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-	    			<select name="privs" id="privs">
-	    				<option value="1">Publisher</option>
-	    				<option value="2">Managing Editor</option>
-	    				<option value="3">Copy Editor</option>
-	    				<option value="4">Staff Writer</option>
-	    				<option value="5">Freelancer</option>
-	    				<option value="6">Designer</option>
-	    				<option value="0" selected="selected">None</option>
-	    			</select>
+	    			<span class="edit-label"><label for="userprivs">Privileges</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+	    			<span class="edit-value">
+	    				<select name="userprivs" id="userprivs">
+	    					<option value="1">Publisher</option>
+	    					<option value="2">Managing Editor</option>
+	    					<option value="3">Copy Editor</option>
+	    					<option value="4">Staff Writer</option>
+	    					<option value="5">Freelancer</option>
+	    					<option value="6">Designer</option>
+	    					<option value="0" selected="selected">None</option>
+	    				</select>
+	    			</span>
 	    		</p>
 	    		<p><input type="submit" value="Save" class="publish" /></p>
 	    	</div>

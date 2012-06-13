@@ -230,19 +230,7 @@ body {
 }
 
 .txp-edit {
-	width: 100%;
-	border-top-width: 1em;
-	border-bottom: 0;
-	> tbody > tr > td {
-		display: block;
-		padding: 0 1em;
-		&.cell-label {
-			width: auto;
-		}
-		&:last-child {
-			padding-bottom: 1em;
-		}
-	}
+	width: inherit;
 }
 
 #article-main #body {

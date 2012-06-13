@@ -238,7 +238,7 @@ span#message {
   border: 1px solid;
   border-bottom: 0;
   padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
-  max-width: 40em;
+  max-width: 36.154em;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   -webkit-box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
@@ -1027,6 +1027,37 @@ body {
   float: right;
 }
 
+/* Edit panes
+========================================================================== */
+.txp-edit {
+  margin: 0 auto 1em;
+  padding: 1em 1em 1px 1em;
+  width: 38em;
+  background: #f7f7f7;
+}
+.txp-edit p {
+  clear: both;
+}
+
+.edit-label {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  float: left;
+  margin-bottom: 1em;
+  padding: .23076923076923em 0;
+  width: 39%;
+}
+
+.edit-value {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  float: right;
+  margin-bottom: 1em;
+  width: 61%;
+}
+
 /* Miscellaneous/shared layout
 ========================================================================== */
 .empty {
@@ -1035,12 +1066,6 @@ body {
 
 .txp-columntable {
   width: 100%;
-}
-
-.txp-edit {
-  margin: 0 auto;
-  width: 40em;
-  background: #f7f7f7;
 }
 
 .txp-control-panel {
@@ -1361,10 +1386,6 @@ span.spinner {
 
 #page-discuss .txp-list tr.moderate td {
   background: #fff8dd;
-}
-
-#commentmessage {
-  height: 7em;
 }
 
 /* Presentation -> Sections page
@@ -1688,19 +1709,7 @@ div.plugin-help {
   }
 
   .txp-edit {
-    width: 100%;
-    border-top-width: 1em;
-    border-bottom: 0;
-  }
-  .txp-edit > tbody > tr > td {
-    display: block;
-    padding: 0 1em;
-  }
-  .txp-edit > tbody > tr > td.cell-label {
-    width: auto;
-  }
-  .txp-edit > tbody > tr > td:last-child {
-    padding-bottom: 1em;
+    width: inherit;
   }
 
   #article-main #body {
