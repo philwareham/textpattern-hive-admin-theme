@@ -821,20 +821,9 @@ body {
 }
 
 .txp-edit {
-	margin: 0 auto 1em;
-	border-top: .5em solid $color-background-box;
-	border-bottom: .5em solid $color-background-box;
+	margin: 0 auto;
 	width: $standard-column;
 	background: $color-background-box;
-	h2 {
-		margin: 0;
-	}
-	td {
-		padding: .5em 1em;
-		&.cell-label {
-			width: 37%;
-		}
-	}
 }
 
 .txp-control-panel {
@@ -1109,48 +1098,9 @@ span.spinner {
 /* Content -> Images page
 ========================================================================== */
 
-.txp-edit #image-thumbnail {
-	margin-right: auto;
-	margin-bottom: 1em;
-	td {
-		padding: 0;
-	}
-}
-
-.thumbwrapper img {
-	margin-right: .5em;
-}
-
-.thumbnail-alter p {
-	margin: 0;
-}
-
-.txp-edit #thumbnail_alter {
-	td {
-		padding: 0 .5em 0 0;
-		width: auto;
-		vertical-align: middle;
-	}
-}
-
 #page-image #width,
 #page-image #height {
 	width: 3.38461538461538em; // 44px / 13px
-}
-
-/* fix for inconsistent structure */
-#page-image {
-	.name label {
-		width: 13.6em;
-		@include inline-block;
-	}
-	#image-name {
-		width: 13.6em;
-	}
-}
-
-#page-image #caption {
-	max-width: 520px;
 }
 
 

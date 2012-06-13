@@ -1038,20 +1038,9 @@ body {
 }
 
 .txp-edit {
-  margin: 0 auto 1em;
-  border-top: 0.5em solid #f7f7f7;
-  border-bottom: 0.5em solid #f7f7f7;
+  margin: 0 auto;
   width: 40em;
   background: #f7f7f7;
-}
-.txp-edit h2 {
-  margin: 0;
-}
-.txp-edit td {
-  padding: .5em 1em;
-}
-.txp-edit td.cell-label {
-  width: 37%;
 }
 
 .txp-control-panel {
@@ -1355,46 +1344,9 @@ span.spinner {
 
 /* Content -> Images page
 ========================================================================== */
-.txp-edit #image-thumbnail {
-  margin-right: auto;
-  margin-bottom: 1em;
-}
-.txp-edit #image-thumbnail td {
-  padding: 0;
-}
-
-.thumbwrapper img {
-  margin-right: .5em;
-}
-
-.thumbnail-alter p {
-  margin: 0;
-}
-
-.txp-edit #thumbnail_alter td {
-  padding: 0 .5em 0 0;
-  width: auto;
-  vertical-align: middle;
-}
-
 #page-image #width,
 #page-image #height {
   width: 3.38461538461538em;
-}
-
-/* fix for inconsistent structure */
-#page-image .name label {
-  width: 13.6em;
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-}
-#page-image #image-name {
-  width: 13.6em;
-}
-
-#page-image #caption {
-  max-width: 520px;
 }
 
 /* Content -> Comments page
