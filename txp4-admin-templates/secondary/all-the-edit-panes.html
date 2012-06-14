@@ -218,6 +218,14 @@
 			<div class="file-detail exists">
 				<form method="post" action="index.php" id="file_details" class="edit-form">
 					<p>
+						<span class="edit-label"><label for="category">Status</label></span>
+						<span class="edit-value">
+							<input type="radio" name="status" value="2" id="status-2" class="radio" /><label for="status-2">Hidden</label>&#160;
+							<input type="radio" name="status" value="3" id="status-3" class="radio" /><label for="status-3">Pending</label>&#160;
+							<input type="radio" name="status" value="4" id="status-4" checked="checked" class="radio active" /><label for="status-4"><strong>Live</strong></label>
+						</span>
+					</p>
+					<p>
 						<span class="edit-label"><label for="file_title">Title</label></span>
 						<span class="edit-value"><input type="text" value="A Test File" name="file_title" id="file_title" size="32" /></span>
 					</p>
@@ -233,15 +241,6 @@
 						<span class="edit-label"><label for="description">Description</label></span>
 						<textarea id="description" name="description" cols="64" rows="4">This is a test file upload description</textarea>
 					</p>
-
-					<fieldset id="file-status">
-						<legend>Status</legend>
-						<ul class="status plain-list">
-							<li class="status-2"><input type="radio" name="status" value="2" id="status-2" class="radio" /><label for="status-2">Hidden</label></li>
-							<li class="status-3"><input type="radio" name="status" value="3" id="status-3" class="radio" /><label for="status-3">Pending</label></li>
-							<li class="status-4 active"><input type="radio" name="status" value="4" id="status-4" checked="checked" class="radio active" /><label for="status-4"><strong>Live</strong></label></li>
-						</ul>
-					</fieldset>
 					<fieldset id="file-created">
 						<legend>Timestamp</legend>
 						<p class="publish-now"><input type="checkbox" name="publish_now" value="1" id="publish_now" class="checkbox" /><label for="publish_now">Set timestamp to now&#8230;</label></p>
@@ -257,15 +256,15 @@
 							<input type="text" name="second" value="54" size="2" maxlength="2" class="edit second" title="Second" />
 						</p>
 					</fieldset>
-					<div class="replace-file">
+					<fieldset class="replace-file">
+						<legend>Replace file&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
 						<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
 							<p>
-								<span class="edit-label"><label for="file-replace">Replace file</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
 								<input type="file" value="" name="thefile" id="file-replace" />
 								<input type="submit" value="Upload" />
 							</p>
 						</form>
-					</div>
+					</fieldset>
 					<p><input type="submit" value="Save" class="publish" /></p>
 				</form>
 			</div>
