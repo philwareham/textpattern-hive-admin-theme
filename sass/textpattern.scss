@@ -129,6 +129,7 @@ hr {
 
 .pophelp,
 .pophelpsubtle {
+	border: 1px solid #fff;
 	padding: 0 .23076923076923em;
 	font-weight: normal;
 	background: #e5e5e5;
@@ -136,7 +137,6 @@ hr {
 }
 
 .txp-list thead th a.pophelp {
-	border: 1px solid #fff;
 	display: inline;
 	color: $color-link;
 	&:hover {
