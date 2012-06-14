@@ -1,9 +1,11 @@
-/* Hive theme for Textpattern CMS (v4.5alpha) */
-/* combined and abridged version of Normalize and Formalize */
-/* Normalize original authors: Nicolas Gallagher and Jonathan Neal - http://necolas.github.com/normalize.css/ */
-/* Formalize original author: Nathan Smith - http://formalize.me/ */
+/* ==========================================================================
+   Hive theme for Textpattern CMS (v4.5alpha)
+   ========================================================================== */
+/* combined and abridged version of Normalize and Formalize
+   Normalize original authors: Nicolas Gallagher and Jonathan Neal - http://necolas.github.com/normalize.css/
+   Formalize original author: Nathan Smith - http://formalize.me/ */
 /* Base
-========================================================================== */
+   ========================================================================== */
 /* 1. corrects text resizing oddly in IE7 when body font-size is set using em units
    2. prevents iOS text size adjust after orientation change, without disabling user zoom
       www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
@@ -24,7 +26,7 @@ body {
 }
 
 /* Links
-========================================================================== */
+   ========================================================================== */
 a:focus {
   outline: thin dotted #0066ff;
 }
@@ -33,7 +35,7 @@ a:hover, a:active {
 }
 
 /* Typography
-========================================================================== */
+   ========================================================================== */
 /* addresses margins set differently in IE7 */
 p,
 pre {
@@ -98,7 +100,7 @@ sub {
 }
 
 /* Lists
-========================================================================== */
+   ========================================================================== */
 /* addresses margins set differently in IE7 */
 dl,
 ol,
@@ -128,7 +130,7 @@ dt {
 }
 
 /* Embedded content
-========================================================================== */
+   ========================================================================== */
 /* 1. removes border when inside 'a' element in IE7-9, Firefox3
    2. improves image quality when scaled in IE7 */
 img {
@@ -144,7 +146,7 @@ svg:not(:root) {
 }
 
 /* Tables
-========================================================================== */
+   ========================================================================== */
 /* remove most spacing between table cells */
 table {
   border-collapse: collapse;
@@ -160,7 +162,7 @@ td {
 }
 
 /* Forms
-========================================================================== */
+   ========================================================================== */
 /* corrects margin displayed oddly in IE7 */
 form {
   margin: 0;

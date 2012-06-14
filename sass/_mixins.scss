@@ -1,4 +1,8 @@
-// note: this file is for use with Sass - http://sass-lang.com, don't use it as your live site stylesheet!
+//
+// note: this file is for use with Sass- http://sass-lang.com,
+// don't use it as your live site stylesheet!
+//
+
 
 // clearfix - http://nicolasgallagher.com/micro-clearfix-hack/
 
@@ -26,7 +30,7 @@
 	}
 }
 
-// Higher resolution images for retina displays
+// higher resolution images for retina displays
 		
 @mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
 	$file_name: $hdfile + '.' + $hdtype;

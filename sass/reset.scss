@@ -1,15 +1,20 @@
-// note: this file is for use with Sass - http://sass-lang.com, don't use it as your live site stylesheet!
+//
+// note: this file is for use with Sass- http://sass-lang.com,
+// don't use it as your live site stylesheet!
+//
+
 
 // import Sass partials
 @import "variables", "mixins";
 
-/* combined and abridged version of Normalize and Formalize */
-/* Normalize original authors: Nicolas Gallagher and Jonathan Neal - http://necolas.github.com/normalize.css/ */
-/* Formalize original author: Nathan Smith - http://formalize.me/ */
+
+/* combined and abridged version of Normalize and Formalize
+   Normalize original authors: Nicolas Gallagher and Jonathan Neal - http://necolas.github.com/normalize.css/
+   Formalize original author: Nathan Smith - http://formalize.me/ */
 
 
 /* Base
-========================================================================== */
+   ========================================================================== */
 
 /* 1. corrects text resizing oddly in IE7 when body font-size is set using em units
    2. prevents iOS text size adjust after orientation change, without disabling user zoom
@@ -32,7 +37,7 @@ body {
 
 
 /* Links
-========================================================================== */
+   ========================================================================== */
 
 a {
 	&:focus {
@@ -45,7 +50,7 @@ a {
 
 
 /* Typography
-========================================================================== */
+   ========================================================================== */
 
 /* addresses margins set differently in IE7 */
 p,
@@ -110,7 +115,7 @@ sub {
 
 
 /* Lists
-========================================================================== */
+   ========================================================================== */
 
 /* addresses margins set differently in IE7 */
 dl,
@@ -141,7 +146,7 @@ dt {
 
 
 /* Embedded content
-========================================================================== */
+   ========================================================================== */
 
 /* 1. removes border when inside 'a' element in IE7-9, Firefox3
    2. improves image quality when scaled in IE7 */
@@ -159,7 +164,7 @@ svg:not(:root) {
 
 
 /* Tables
-========================================================================== */
+   ========================================================================== */
 
 /* remove most spacing between table cells */
 table {
@@ -177,7 +182,7 @@ td {
 
 
 /* Forms
-========================================================================== */
+   ========================================================================== */
 
 /* corrects margin displayed oddly in IE7 */
 form {

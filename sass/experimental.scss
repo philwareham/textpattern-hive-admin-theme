@@ -1,15 +1,20 @@
-// note: this file is for use with Sass - http://sass-lang.com, don't use it as your live site stylesheet!
+//
+// note: this file is for use with Sass- http://sass-lang.com,
+// don't use it as your live site stylesheet!
+//
+
 
 // import Sass partials
 @import "variables", "mixins";
 
 
 
+/* PROPOSED ADDITIONS TO THE TEXTPATTERN CORE CLASSES
+   (prefixed with 'expermental-' for now) */
 
-/* PROPOSED ADDITIONS TO THE TEXTAPTTERN CORE CLASSES (prefixed with 'expermental-' for now) */
 
-
-/* icons */
+/* Icons
+   ========================================================================== */
 
 .icon {
 	@include inline-block;
