@@ -229,6 +229,18 @@ body {
 	width: inherit;
 }
 
+.edit-label,
+.edit-value {
+	float: none;
+	width: 100%;
+}
+
+.edit-value input,
+.edit-value select {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 #article-main #body {
 	height: 17.4615384615385em; // 227px / 13px
 }

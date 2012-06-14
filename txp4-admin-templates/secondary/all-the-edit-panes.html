@@ -203,20 +203,18 @@
 
 		<div class="txp-edit">
 			<h2>Edit file</h2>
-			<div class="file-info">
-				<p class="condition">File status: <span class="success">Ok</span></p>
-				<p class="name">Name: <a href="#" title="Download">test-file.zip</a></p>
-				<p class="downloads">Download count: 2</p>
-			</div>
-			<div class="replace-file">
-				<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
-					<p>
-						<label for="file-replace">Replace file</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-						<input type="file" value="" name="thefile" id="file-replace" />
-						<input type="submit" value="Upload" />
-					</p>
-				</form>
-			</div>
+			<p>
+				<span class="edit-label">File status</span>
+				<span class="edit-value"><span class="success">Ok</span></span>
+			</p>
+			<p>
+				<span class="edit-label">Name</span>
+				<span class="edit-value"><a href="#" title="Download">test-file.zip</a></span>
+			</p>
+			<p>
+				<span class="edit-label">Download count</span>
+				<span class="edit-value"><a href="#" title="Download">2</a></span>
+			</p>
 			<div class="file-detail exists">
 				<form method="post" action="index.php" id="file_details" class="edit-form">
 					<p>
@@ -259,6 +257,15 @@
 							<input type="text" name="second" value="54" size="2" maxlength="2" class="edit second" title="Second" />
 						</p>
 					</fieldset>
+					<div class="replace-file">
+						<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
+							<p>
+								<span class="edit-label"><label for="file-replace">Replace file</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+								<input type="file" value="" name="thefile" id="file-replace" />
+								<input type="submit" value="Upload" />
+							</p>
+						</form>
+					</div>
 					<p><input type="submit" value="Save" class="publish" /></p>
 				</form>
 			</div>
