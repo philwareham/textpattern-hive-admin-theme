@@ -126,6 +126,7 @@
 			<li><a href="#ui-doc-tables">Tables</a></li>
 			<li><a href="#ui-doc-summarydetails">Summary/details boxes</a></li>
 			<li><a href="#ui-doc-forms">Forms</a></li>
+			<li><a href="#ui-doc-edit-panes">Edit panes</a></li>
 			<li><a href="#ui-doc-icons">Icons</a></li>
 		</ol>
 
@@ -512,32 +513,33 @@
 				</p>
 
 				<h2>Text fields large</h2>
-				<p><code>&lt;input type="text" id="" name="" /&gt;</code></p>
+				<p><code>&lt;input type="text" id="" name="" size="32" /&gt;</code></p>
 				<p>
 					<label for="text-lrg">Text (large) with pophelp</label>&#160;<a href="#" class="pophelp" rel="help">?</a><br />
-					<input type="text" id="text-lrg" name="text-lrg" />
+					<input type="text" id="text-lrg" name="text-lrg" size="32" />
 				</p>
 
 				<h2>Text fields medium</h2>
-				<p><code>&lt;input type="text" id="" name="" class="input-medium" /&gt;</code><br />
+				<p><code>&lt;input type="text" id="" name="" size="16" class="input-medium" /&gt;</code><br />
 					<span class="warning">suggested class name addition</span></p>
 				<p>
 					<label for="text-med">Text medium</label><br />
-					<input type="text" id="text-med" name="text-med" class="input-medium" />
+					<input type="text" id="text-med" name="text-med" size="16" class="input-medium" />
 				</p>
 
 				<h2>Text fields small</h2>
-				<p><code>&lt;input type="text" id="" name="" class="input-small" /&gt;</code><br />
+				<p><code>&lt;input type="text" id="" name="" size="8" class="input-small" /&gt;</code><br />
 					<span class="warning">suggested class name addition</span></p>
 				<p>
 					<label for="text-sml">Text (small)</label><br />
-					<input type="text" id="text-sml" name="text-sml" class="input-small" />
+					<input type="text" id="text-sml" name="text-sml" size="8" class="input-small" />
 				</p>
 
 				<h2>Password fields</h2>
+				<p><code>&lt;input type="password" id="" name="" size="32" /&gt;</code></p>
 				<p>
 					<label for="password">Password</label><br />
-					<input type="password" id="password" name="password" />
+					<input type="password" id="password" name="password" size="32" />
 				</p>
 
 				<h2>Date fields</h2>
@@ -733,6 +735,52 @@
 					<span class="navlink-disabled"><b class="icon icon-arrow-w">&#8592;</b> Prev</span><a href="#" class="navlink">Next <b class="icon icon-arrow-e">&#8594;</b></a>
 				</p>
 
+			</form>
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-edit-panes">
+			<h1>Edit panes</h1>
+
+			<form method="post" action=#" class="edit-form">
+				<div class="txp-edit">
+					<h2>Edit pane title</h2>
+					<p>
+						<span class="edit-label"><label for="example1">Long text (with pophelp)</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+						<span class="edit-value"><input type="text" value="" name="example1" id="example1" size="32" /></span>
+					</p>
+					<p>
+						<span class="edit-label"><label for="example2">Medium text (with pophelp)</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+						<span class="edit-value"><input type="text" value="" name="example2" id="example2" size="16" class="input-medium" /></span>
+					</p>
+					<p>
+						<span class="edit-label"><label for="example3">Small text</label></span>
+						<span class="edit-value"><input type="text" value="" name="example3" id="example3" size="8" class="input-small" /></span>
+					</p>
+					<p>
+						<span class="edit-label"><label for="example4">Select</label></span>
+						<span class="edit-value">
+							<select name="example4" id="example4">
+								<option value="" selected="selected">&#160;</option>
+								<option value="option1">Option 1</option>
+								<option value="option2">Option 2</option>
+							</select>
+						</span>
+					</p>
+					<p>
+						<span class="edit-label">Radio buttons (with pophelp)&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+						<span class="edit-value">
+							<input type="radio" id="example4-0" name="example4" value="0" class="radio active" checked="checked" /><label for="example4-0">No</label>
+							<input type="radio" id="example4-1" name="example4" value="1" class="radio" /><label for="example4-1">Yes</label>
+						</span>
+					</p>
+					<p>
+						<span class="edit-label"><label for="example5">Textarea (with pophelp)</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+						<textarea name="example5" id="example5" cols="64" rows="7"></textarea>
+					</p>
+					<p><input type="submit" value="Save" class="publish" /></p>
+				</div>
 			</form>
 
 		</div>
