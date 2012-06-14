@@ -113,13 +113,13 @@
 				<h2>Edit category</h2>
 				<p>
 					<span class="edit-label"><label for="categoryname">Article category name</label></span>
-					<span class="edit-value"><input type="text" value="hope-for-the-future" name="categoryname" id="categoryname" size="30" /></span>
+					<span class="edit-value"><input type="text" value="hope-for-the-future" name="categoryname" id="categoryname" size="32" /></span>
 				</p>
 				<p>
 					<span class="edit-label"><label for="categoryparent">Parent</label></span>
 					<span class="edit-value">
 						<select name="categoryparent" id="categoryparent">
-							<option value="" selected="selected">&nbsp;</option>
+							<option value="" selected="selected">&#160;</option>
 							<option value="meaningful-labor">Meaningful Labor</option>
 							<option value="reciprocal-affection">Reciprocal Affection</option>
 						</select>
@@ -127,7 +127,7 @@
 				</p>
 				<p>
 					<span class="edit-label"><label for="categorytitle">Article category title</label></span>
-					<span class="edit-value"><input type="text" value="Hope for the Future" name="categorytitle" id="categorytitle" size="30" /></span>
+					<span class="edit-value"><input type="text" value="Hope for the Future" name="categorytitle" id="categorytitle" size="32" /></span>
 				</p>
 				<p><input type="submit" value="Save" class="publish" /></p>
 			</div>
@@ -222,7 +222,7 @@
 				<form method="post" action="index.php" id="file_details" class="edit-form">
 					<p class="title">
 						<label class="cell-label" for="file_title">Title</label>
-						<input type="text" value="A Test File" name="title" size="40" id="file_title" />
+						<input type="text" value="A Test File" name="title" size="32" id="file_title" />
 					</p>
 					<p class="category">
 						<label class="cell-label" for="category">Category</label>
@@ -232,7 +232,7 @@
 					</p>
 					<p class="description text">
 						<label for="description">Description</label>
-						<textarea id="description" name="description" cols="40" rows="5">This is a test file upload description</textarea>
+						<textarea id="description" name="description" cols="64" rows="5">This is a test file upload description</textarea>
 					</p>
 
 					<fieldset id="file-status">
@@ -268,19 +268,19 @@
 		<form method="post" action="index.php" id="link_details" class="edit-form">
 			<div class="txp-edit">
 				<h2>Add new link</h2>
-				<p class="name">
+				<p>
 					<span class="edit-label"><label for="linkname">Title</label></span>
-					<span class="edit-value"><input type="text" value="" name="linkname" id="linkname" size="30" /></span>
+					<span class="edit-value"><input type="text" value="" name="linkname" id="linkname" size="32" /></span>
 				</p>
-				<p class="sort">
+				<p>
 					<span class="edit-label"><label for="linksort">Sort value</label></span>
-					<span class="edit-value"><input class="input-medium" type="text" value="" name="linksort" id="linksort" size="15" /></span>
+					<span class="edit-value"><input class="input-medium" type="text" value="" name="linksort" id="linksort" size="16" /></span>
 				</p>
-				<p class="url">
+				<p>
 					<span class="edit-label"><label for="linkurl">URL</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-					<span class="edit-value"><input type="text" value="" name="linkurl" id="linkurl" size="30" /></span>
+					<span class="edit-value"><input type="text" value="" name="linkurl" id="linkurl" size="32" /></span>
 				</p>
-				<p class="category">
+				<p>
 					<span class="edit-label"><label for="linkcategory">Category</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
 					<span class="edit-value">
 						<select name="linkcategory" id="linkcategory">
@@ -290,9 +290,9 @@
 						[<a href="#">Edit</a>]
 					</span>
 				</p>
-				<p class="description text">
+				<p>
 					<span class="edit-label"><label for="linkdescription">Description</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-					<span class="edit-value"><textarea name="linkdescription" id="linkdescription" cols="60" rows="7"></textarea></span>
+					<textarea name="linkdescription" id="linkdescription" cols="64" rows="4"></textarea>
 				</p>
 				<p><input type="submit" value="Save" class="publish" /></p>
 			</div>
@@ -304,30 +304,6 @@
 			<div class="txp-edit">
 				<h2>Edit comment</h2>
 				<p>
-					<span class="edit-label"><label for="commentname">Name</label></span>
-					<span class="edit-value"><input type="text" value="Donald Swain" name="commentname" id="commentname" size="30" /></span>
-				</p>
-				<p class="ip">
-					<span class="edit-label">IP</span>
-					<span class="edit-value-fixed" style="color:#f00;">127.0.0.1 [<a class="action-ban" href="#">Ban</a>] NEEDS FIX</span>
-				</p>
-				<p>
-					<span class="edit-label"><label for="commentemail">E-mail</label></span>
-					<span class="edit-value"><input type="text" value="donald.swain@example.com" name="commentemail" id="commentemail" size="30" /></span>
-				</p>
-				<p>
-					<span class="edit-label"><label for="commentwebsite">Website</label></span>
-					<span class="edit-value"><input type="text" value="example.com" name="commentwebsite" id="commentwebsite" size="30" /></span>
-				</p>
-				<p class="date posted created">
-					<span class="edit-label">Date</span>
-					<span class="edit-value-fixed" style="color:#f00;">22 Jul 2005 14:11:32 NEEDS FIX</span>
-				</p>
-				<p class="comment message text">
-					<span class="edit-label"><label for="commentmessage">Message</label></span>
-					<span class="edit-value"><textarea name="commentmessage" id="commentmessage" cols="60" rows="14">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea></span>
-				</p>
-				<p class="status">
 					<span class="edit-label"><label for="commentvisible">Status</label></span>
 					<span class="edit-value">
 						<select name="commentvisible" id="commentvisible">
@@ -336,6 +312,30 @@
 							<option value="0">Unmoderated</option>
 						</select>
 					</span>
+				</p>
+				<p>
+					<span class="edit-label"><label for="commentname">Name</label></span>
+					<span class="edit-value"><input type="text" value="Donald Swain" name="commentname" id="commentname" size="32" /></span>
+				</p>
+				<p class="ip">
+					<span class="edit-label">IP</span>
+					<span class="edit-value">127.0.0.1 [<a class="action-ban" href="#">Ban</a>]</span>
+				</p>
+				<p>
+					<span class="edit-label"><label for="commentemail">E-mail</label></span>
+					<span class="edit-value"><input type="text" value="donald.swain@example.com" name="commentemail" id="commentemail" size="32" /></span>
+				</p>
+				<p>
+					<span class="edit-label"><label for="commentwebsite">Website</label></span>
+					<span class="edit-value"><input type="text" value="example.com" name="commentwebsite" id="commentwebsite" size="32" /></span>
+				</p>
+				<p class="date posted created">
+					<span class="edit-label">Date</span>
+					<span class="edit-value">22 Jul 2005 14:11:32</span>
+				</p>
+				<p class="comment message text">
+					<span class="edit-label"><label for="commentmessage">Message</label></span>
+					<textarea name="commentmessage" id="commentmessage" cols="60" rows="8">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea>
 				</p>
 				<p><input type="submit" value="Save" name="step" class="publish" /></p>
 			</div>
@@ -348,11 +348,11 @@
 				<h2>Add new section</h2>
 				<p>
 					<span class="edit-label"><label for="sectionname">Section name</label></span>
-					<span class="edit-value"><input type="text" name="sectionname" id="sectionname" size="30" /></span>
+					<span class="edit-value"><input type="text" name="sectionname" id="sectionname" size="32" /></span>
 				</p>
 				<p>
 					<span class="edit-label"><label for="sectiontitle">Section title</label></span>
-					<span class="edit-value"><input type="text" name="sectiontitle" id="sectiontitle" size="30" /></span>
+					<span class="edit-value"><input type="text" name="sectiontitle" id="sectiontitle" size="32" /></span>
 				</p>
 				<p>
 					<span class="edit-label"><label for="sectionpage">Uses page</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
@@ -406,15 +406,15 @@
 	    		<h2>Edit author</h2>
 	    		<p class="name login-name">
 	    			<span class="edit-label"><label for="username">Login</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-	    			<span class="edit-value"><input type="text" value="" name="username" id="username" size="30" /></span>
+	    			<span class="edit-value"><input type="text" value="" name="username" id="username" size="32" /></span>
 	    		</p>
 	    		<p class="name real-name">
 	    			<span class="edit-label"><label for="userrealname">Real name</label></span>
-	    			<span class="edit-value"><input type="text" value="" name="userrealname" id="userrealname" size="30" /></span>
+	    			<span class="edit-value"><input type="text" value="" name="userrealname" id="userrealname" size="32" /></span>
 	    		</p>
 	    		<p class="email">
 	    			<span class="edit-label"><label for="useremail">E-mail</label></span>
-	    			<span class="edit-value"><input type="text" value="" name="useremail" id="useremail" size="30" /></span>
+	    			<span class="edit-value"><input type="text" value="" name="useremail" id="useremail" size="32" /></span>
 	    		</p>
 	    		<p class="privs">
 	    			<span class="edit-label"><label for="userprivs">Privileges</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
@@ -435,7 +435,7 @@
 		</form>
 
 
-		<h2 style="text-align:center;">Plugin edit</h2>
+		<h2 style="text-align:center;">Plugin edit TO BE RETOOLED</h2>
 		<form method="post" action="index.php" id="plugin_details" class="edit-form">
 			<div class="txp-edit">
 	    		<h2>Edit plugin</h2>
@@ -450,7 +450,7 @@
 			<div class="txp-edit">
 				<h2>Import content from other publishing tools</h2>
 				<p class="import-from">
-					<label class="cell-label" for="import_tool">Import from</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
+					<label for="import_tool">Import from</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
 					<select class="from" name="import_tool" id="import_tool" onchange="showHideFields(this.value);">
 						<option value=""></option>
 						<option value="mt">Movable Type (File)</option>
@@ -461,7 +461,7 @@
 					</select>
 				</p>
 				<p class="import-section">
-					<label class="cell-label" for="section">Section to import into</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
+					<label for="section">Section to import into</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
 					<select class="section" name="Section" id="section">
 						<option value="" selected="selected"></option>
 						<option value="about">about</option>
@@ -469,7 +469,7 @@
 					</select>
 				</p>
 				<p class="import-status">
-					<label class="cell-label" for="status">Default article status</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
+					<label for="status">Default article status</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
 					<select class="status" name="type" id="status">
 						<option value="4">Live</option>
 						<option value="1">Draft</option>
@@ -478,38 +478,38 @@
 					</select>
 				</p>
 				<p class="import-comment">
-					<label class="cell-label" for="comments_invite">Default comments invite</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-					<input class="comment-invite" type="text" value="Comments" name="comments_invite" id="comments_invite" />
+					<label for="comments_invite">Default comments invite</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
+					<input class="comment-invite" type="text" value="Comments" name="comments_invite" id="comments_invite" size="32" />
 				</p>
 				<div id="databased">
 					<h2>Database data</h2>
 					<p class="import-database">
-						<label class="cell-label" for="importdb">Database name</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-						<input class="database" type="text" value="" name="importdb" id="importdb" />
+						<label for="importdb">Database name</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
+						<input class="database" type="text" value="" name="importdb" id="importdb" size="32" />
 					</p>
 					<p class="import-login">
-						<label class="cell-label" for="importdblogin">MySQL user</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-						<input class="login" type="text" value="" name="importdblogin" id="importdblogin" />
+						<label for="importdblogin">MySQL user</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
+						<input class="login" type="text" value="" name="importdblogin" id="importdblogin" size="32" />
 					</p>
 					<p class="import-password">
-						<label class="cell-label" for="importdbpass">MySQL password</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-						<input class="password" type="text" value="" name="importdbpass" id="importdbpass" />
+						<label for="importdbpass">MySQL password</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
+						<input class="password" type="text" value="" name="importdbpass" id="importdbpass" size="32" />
 					</p>
 					<p class="import-host">
-						<label class="cell-label" for="importdbhost">MySQL host</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-						<input class="host" type="text" value="" name="importdbhost" id="importdbhost" />
+						<label for="importdbhost">MySQL host</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
+						<input class="host" type="text" value="" name="importdbhost" id="importdbhost" size="32" />
 					</p>
 				</div>
 				<div id="mtblogid">
 					<p class="import-blog-id">
-						<label class="cell-label" for="blog_id">Weblog ID</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-						<input class="blog-id" type="text" value="" name="blog_id" id="blog_id" />
+						<label for="blog_id">Weblog ID</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
+						<input class="blog-id" type="text" value="" name="blog_id" id="blog_id" size="32" />
 					</p>
 				</div>
 				<div id="wponly">
 					<p class="import-wp-prefix">
-						<label class="cell-label" for="wpdbprefix">Tables prefix (if any)</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-						<input class="wp-prefix" type="text" value="wp_" name="wpdbprefix" id="wpdbprefix" />
+						<label for="wpdbprefix">Tables prefix (if any)</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
+						<input class="wp-prefix" type="text" value="wp_" name="wpdbprefix" id="wpdbprefix" size="32" />
 					</p>
 				</div>
 				<p><input type="submit" value="Continue" name="choose" class="publish" /></p>

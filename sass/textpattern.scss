@@ -818,23 +818,26 @@ body {
 	width: ($standard-column - 2em);
 	background: $color-background-box;
 	p {
-		clear: both;
+		@extend .clearfix;
 	}
 }
 
 .edit-label {
 	@include inline-block;
 	float: left;
-	margin-bottom: 1em;
-	padding: .23076923076923em 0;
 	width: 39%;
 }
 
 .edit-value {
 	@include inline-block;
 	float: right;
-	margin-bottom: 1em;
 	width: 61%;
+}
+
+.edit-value input,
+.edit-value select {
+	margin-top: -.23076923076923em;
+	margin-bottom: -.23076923076923em;
 }
 
 

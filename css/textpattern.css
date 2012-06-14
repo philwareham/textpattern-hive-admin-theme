@@ -2,14 +2,14 @@
 /* Hive theme for Textpattern CMS (v4.5alpha) */
 /* Clearfix
 ========================================================================== */
-.clearfix, .txp-footer, .txp-navigation {
+.clearfix, .txp-footer, .txp-edit p, .txp-navigation {
   *zoom: 1;
 }
-.clearfix:before, .txp-footer:before, .txp-navigation:before, .clearfix:after, .txp-footer:after, .txp-navigation:after {
+.clearfix:before, .txp-footer:before, .txp-edit p:before, .txp-navigation:before, .clearfix:after, .txp-footer:after, .txp-edit p:after, .txp-navigation:after {
   content: "";
   display: table;
 }
-.clearfix:after, .txp-footer:after, .txp-navigation:after {
+.clearfix:after, .txp-footer:after, .txp-edit p:after, .txp-navigation:after {
   clear: both;
 }
 
@@ -1035,17 +1035,12 @@ body {
   width: 38em;
   background: #f7f7f7;
 }
-.txp-edit p {
-  clear: both;
-}
 
 .edit-label {
   display: inline-block;
   *display: inline;
   *zoom: 1;
   float: left;
-  margin-bottom: 1em;
-  padding: .23076923076923em 0;
   width: 39%;
 }
 
@@ -1054,8 +1049,13 @@ body {
   *display: inline;
   *zoom: 1;
   float: right;
-  margin-bottom: 1em;
   width: 61%;
+}
+
+.edit-value input,
+.edit-value select {
+  margin-top: -0.231em;
+  margin-bottom: -0.231em;
 }
 
 /* Miscellaneous/shared layout
