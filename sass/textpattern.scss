@@ -1143,10 +1143,13 @@ span.spinner {
 #page-image #height {
 	width: 3.38461538461538em; // 44px / 13px
 }
-
 .fullsize-image {
 	text-align: center;
 	margin-bottom: 1em;
+	img {
+		max-width: 100%;
+		height: auto;
+	}
 }
 
 .thumbnail-edit form {

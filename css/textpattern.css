@@ -1387,6 +1387,10 @@ span.spinner {
   text-align: center;
   margin-bottom: 1em;
 }
+.fullsize-image img {
+  max-width: 100%;
+  height: auto;
+}
 
 .thumbnail-edit form {
   display: inline-block;
