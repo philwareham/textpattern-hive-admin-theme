@@ -107,47 +107,44 @@
 	<div id="discuss_container" class="txp-container">
 
 		<form method="post" action="index.php" id="discuss_edit_form" class="edit-form">
-			<table class="txp-edit">
-				<tr>
-					<td class="cell-label">Name </td>
-					<td><input type="text" value="Donald Swain" name="name" id="name" /></td>
-				</tr>
-				<tr>
-					<td class="cell-label">IP </td>
-					<td class="ip">127.0.0.1 [<a class="action-ban" href="#">Ban</a>]</td>
-				</tr>
-				<tr>
-					<td class="cell-label">E-mail </td>
-					<td><input type="text" value="donald.swain@example.com" name="email" id="email" /></td>
-				</tr>
-				<tr>
-					<td class="cell-label">Website </td>
-					<td><input type="text" value="example.com" name="web" id="website" /></td>
-				</tr>
-				<tr>
-					<td class="cell-label">Date </td>
-					<td class="date posted created">22 Jul 2005 14:11:32</td>
-				</tr>
-				<tr>
-					<td>Message</td>
-					<td class="comment message text">
-						<textarea id="commentmessage" name="message" cols="60" rows="15">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea>
-					</td>
-				</tr>
-				<tr>
-					<td class="cell-label">Status </td>
-					<td class="status">
-						<select name="visible">
+			<div class="txp-edit">
+				<h2>Edit comment</h2>
+				<p>
+					<span class="edit-label"><label for="commentvisible">Status</label></span>
+					<span class="edit-value">
+						<select name="commentvisible" id="commentvisible">
 							<option value="1" selected="selected">Visible</option>
 							<option value="-1">Spam</option>
 							<option value="0">Unmoderated</option>
 						</select>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2"><input type="submit" value="Save" name="step" class="publish"></td>
-				</tr>
-			</table>
+					</span>
+				</p>
+				<p>
+					<span class="edit-label"><label for="commentname">Name</label></span>
+					<span class="edit-value"><input type="text" value="Donald Swain" name="commentname" id="commentname" size="32" /></span>
+				</p>
+				<p class="ip">
+					<span class="edit-label">IP</span>
+					<span class="edit-value">127.0.0.1 [<a class="action-ban" href="#">Ban</a>]</span>
+				</p>
+				<p>
+					<span class="edit-label"><label for="commentemail">E-mail</label></span>
+					<span class="edit-value"><input type="text" value="donald.swain@example.com" name="commentemail" id="commentemail" size="32" /></span>
+				</p>
+				<p>
+					<span class="edit-label"><label for="commentwebsite">Website</label></span>
+					<span class="edit-value"><input type="text" value="example.com" name="commentwebsite" id="commentwebsite" size="32" /></span>
+				</p>
+				<p class="date posted created">
+					<span class="edit-label">Date</span>
+					<span class="edit-value">22 Jul 2005 14:11:32</span>
+				</p>
+				<p class="comment message text">
+					<span class="edit-label"><label for="commentmessage">Message</label></span>
+					<textarea name="commentmessage" id="commentmessage" cols="64" rows="8">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea>
+				</p>
+				<p><input type="submit" value="Save" name="step" class="publish" /></p>
+			</div>
 		</form>
 
 	</div><!-- /txp-container -->

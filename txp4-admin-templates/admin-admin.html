@@ -107,26 +107,24 @@
 	<div id="users_container" class="txp-container">
 
 		<form method="post" action="index.php" id="user_edit" class="edit-form">
-	    	<table class="txp-edit">
-	    		<tr>
-	    			<td colspan="2"><h2>Add new author</h2></td>
-	    		</tr>
-	    		<tr class="name login-name">
-	    			<td class="cell-label"><label for="name">Login</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></td>
-	    			<td><input type="text" value="" name="name" id="name"/></td>
-	    		</tr>
-	    		<tr class="name real-name">
-	    			<td class="cell-label"><label for="RealName">Real name</label></td>
-	    			<td><input type="text" value="" name="RealName" id="RealName" /></td>
-	    		</tr>
-	    		<tr class="email">
-	    			<td class="cell-label"><label for="email">E-mail</label></td>
-	    			<td><input type="text" value="" name="email" id="email" /></td>
-	    		</tr>
-	    		<tr class="privs">
-	    			<td class="cell-label"><label for="privs">Privileges</label> <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></td>
-	    			<td>
-	    				<select name="privs" id="privs">
+	    	<div class="txp-edit">
+	    		<h2>Edit author</h2>
+	    		<p class="edit-user-name">
+	    			<span class="edit-label"><label for="user_name">Login</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+	    			<span class="edit-value"><input type="text" value="" name="user_name" id="user_name" size="32" /></span>
+	    		</p>
+	    		<p class="edit-user-realname">
+	    			<span class="edit-label"><label for="user_realname">Real name</label></span>
+	    			<span class="edit-value"><input type="text" value="" name="user_realname" id="user_realname" size="32" /></span>
+	    		</p>
+	    		<p class="edit-user-email">
+	    			<span class="edit-label"><label for="user_email">E-mail</label></span>
+	    			<span class="edit-value"><input type="text" value="" name="user_email" id="user_email" size="32" /></span>
+	    		</p>
+	    		<p class="edit-user-privs">
+	    			<span class="edit-label"><label for="user_privs">Privileges</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+	    			<span class="edit-value">
+	    				<select name="user_privs" id="user_privs">
 	    					<option value="1">Publisher</option>
 	    					<option value="2">Managing Editor</option>
 	    					<option value="3">Copy Editor</option>
@@ -135,12 +133,10 @@
 	    					<option value="6">Designer</option>
 	    					<option value="0" selected="selected">None</option>
 	    				</select>
-	    			</td>
-	    		</tr>
-	    		<tr>
-	    			<td colspan="2"><input type="submit" value="Save" class="publish" /></td>
-	    		</tr>
-	    	</table>
+	    			</span>
+	    		</p>
+	    		<p><input type="submit" value="Save" class="publish" /></p>
+	    	</div>
 		</form>
 
 		<div class="txp-list">
@@ -218,16 +214,20 @@
 
 		</div>
 
-		<div class="txp-control-panel">
-			<form method="post" action="index.php" id="change_password">
+		<form method="post" action="index.php" id="change_password">
+			<div class="txp-edit">
 				<h2>Change your password</h2>
-				<p>
-					<label for="new_pass">New password</label>
-					<input type="password" value="" name="new_pass" size="20" id="new_pass" /><input type="checkbox" name="mail_password" value="1" id="mail_password" checked="checked" class="checkbox active" /><label for="mail_password">Mail it to me</label>
-					<input type="submit" value="Submit" name="change_pass" />
+				<p class="edit-new-password">
+					<span class="edit-label"><label for="user_new_password">New password</label></span>
+					<span class="edit-value"><input type="password" value="" name="user_new_password" id="user_new_password" size="32" /></span>
 				</p>
-			</form>
-		</div>
+				<p class="edit-mail-password">
+					<span class="edit-label"><label for="mail_password">Mail it to me?</label></span>
+					<input type="checkbox" name="user_mail_password" id="user_mail_password" value="1" checked="checked" class="checkbox active" />
+				</p>
+				<p><input type="submit" value="Submit" name="change_pass" /></p>
+			</div>
+		</form>
 
 	</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
