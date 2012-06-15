@@ -1147,6 +1147,7 @@ span.spinner {
 	text-align: center;
 	margin-bottom: 1em;
 	img {
+		@include box-sizing;
 		max-width: 100%;
 		height: auto;
 	}
