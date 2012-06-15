@@ -139,11 +139,6 @@ hr {
   text-decoration: underline;
 }
 
-.text-section {
-  padding-top: 5em;
-  background: url("../img/separator.gif") repeat-x 0 2.154em;
-}
-
 /* Images
    ========================================================================== */
 .content-image {
@@ -1089,6 +1084,11 @@ body {
   text-align: center;
 }
 
+.text-section {
+  padding-top: 5em;
+  background: url("../img/separator.gif") repeat-x 0 2.154em;
+}
+
 /* list navigators on list pages */
 .txp-navigation .pageby {
   float: left;
@@ -1539,9 +1539,6 @@ div.plugin-help {
   max-width: 56em;
 }
 
-/* ==========================================================================
-   Hive theme for Textpattern CMS (v4.5alpha)
-   ========================================================================== */
 /* ==========================================================================
    Additional layout for devices < 769px
    ========================================================================== */
