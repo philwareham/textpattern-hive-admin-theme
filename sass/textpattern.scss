@@ -889,7 +889,10 @@ span.spinner {
 		@include hires-graphic(spinner, gif, 15px, 15px);
 }
 
-/* tagbuilder popup */
+
+/* Tag builder page
+   ========================================================================== */
+
 #tag-event {
 	padding: 2.5em .5em 1em;
 	overflow-y: scroll;
@@ -1131,6 +1134,17 @@ span.spinner {
 #page-image #width,
 #page-image #height {
 	width: 3.38461538461538em; // 44px / 13px
+}
+
+.fullsize-image {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.thumbnail-edit form {
+	@include inline-block;
+	vertical-align: top;
+	margin-top: 5px;
 }
 
 
