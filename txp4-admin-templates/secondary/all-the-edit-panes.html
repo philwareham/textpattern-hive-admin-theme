@@ -138,26 +138,32 @@
 		</div>
 		<div class="txp-edit">
 			<h2>Edit image</h2>
-			<form class="thumbnail-upload" method="post" enctype="multipart/form-data" action="#">
-				<p class="edit-image-replace">
-					<label for="image_replace">Replace image</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-					<input type="file" value="" name="image_replace" id="image_replace" />
-					<input type="submit" value="Upload" />
-				</p>
-			</form>
+			<fieldset class="replace-image">
+				<legend>Replace image&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
+				<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
+					<p class="edit-image-replace">
+						<input type="file" value="" name="image_replace" id="image_replace" />
+						<input type="submit" value="Upload" />
+					</p>
+				</form>
+			</fieldset>
 			<div class="thumbnail-edit txp-listtables">
 				<img class="content-image" src="http://static1.designhive.com/img/cms/53t.jpg" width="184" height="118" alt="53t.jpg (184 &times; 118)" />
 				<form method="post" action="index.php" onsubmit="return confirm('Really delete?');">
 					<input type="submit" value="×" class="destroy"/>
 				</form>
 			</div>
-			<form class="thumbnail-upload" method="post" enctype="multipart/form-data" action="#">
-				<p>
-					<label for="upload-thumbnail">Upload thumbnail</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-					<input type="file" value="" name="thefile" id="upload-thumbnail"/>
-					<input type="submit" value="Upload" />
-				</p>
-			</form>
+
+			<fieldset class="thumbnail-upload">
+				<legend>Upload thumbnail&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
+				<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
+					<p class="edit-upload-thummbnail">
+						<input type="file" value="" name="upload_thumbnail" id="upload_thumbnail"/>
+						<input type="submit" value="Upload" />
+					</p>
+				</form>
+			</fieldset>
+
 			<div class="thumbnail-alter">
 				<form method="post" action="index.php" id="thumbnail_alter_form" class="edit-form">
 					<p class="label">Create thumbnail</p>

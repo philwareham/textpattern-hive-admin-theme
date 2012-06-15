@@ -490,6 +490,14 @@ button.destroy {
 	}
 }
 
+.edit-image-replace,
+.edit-upload-thummbnail,
+.edit-file-replace {
+	input[type="submit"] {
+		float: right;
+	}
+}
+
 
 /* Lists
    ========================================================================== */

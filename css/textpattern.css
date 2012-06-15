@@ -674,6 +674,12 @@ button.destroy:active {
   border-bottom-right-radius: 0.385em;
 }
 
+.edit-image-replace input[type="submit"],
+.edit-upload-thummbnail input[type="submit"],
+.edit-file-replace input[type="submit"] {
+  float: right;
+}
+
 /* Lists
    ========================================================================== */
 .plain-list {
@@ -1740,6 +1746,12 @@ div.plugin-help {
   .edit-value select {
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  .edit-image-replace input[type="submit"],
+  .edit-upload-thummbnail input[type="submit"],
+  .edit-file-replace input[type="submit"] {
+    float: none;
   }
 
   #article-main #body {
