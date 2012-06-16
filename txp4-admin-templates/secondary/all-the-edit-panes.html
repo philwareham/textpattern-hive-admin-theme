@@ -140,44 +140,39 @@
 			<h2>Edit image</h2>
 			<fieldset class="replace-image">
 				<legend>Replace image&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
-				<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
+				<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
 					<p class="edit-image-replace">
 						<input type="file" value="" name="image_replace" id="image_replace" />
 						<input type="submit" value="Upload" />
 					</p>
 				</form>
 			</fieldset>
-			<div class="thumbnail-edit txp-listtables">
+			<div class="thumbnail-edit">
 				<img class="content-image" src="http://static1.designhive.com/img/cms/53t.jpg" width="184" height="118" alt="53t.jpg (184 &times; 118)" />
 				<form method="post" action="index.php" onsubmit="return confirm('Really delete?');">
 					<input type="submit" value="×" class="destroy"/>
 				</form>
 			</div>
-
 			<fieldset class="thumbnail-upload">
 				<legend>Upload thumbnail&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
-				<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
+				<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
 					<p class="edit-upload-thummbnail">
 						<input type="file" value="" name="upload_thumbnail" id="upload_thumbnail"/>
 						<input type="submit" value="Upload" />
 					</p>
 				</form>
 			</fieldset>
-
-			<div class="thumbnail-alter">
-				<form method="post" action="index.php" id="thumbnail_alter_form" class="edit-form">
-					<p class="label">Create thumbnail</p>
-					<p id="thumbnail_alter">
-						<label for="width">Width</label>
-						<input class="input-small" type="text" value="" name="width" size="8" id="width" />
-						<label for="height">Height</label>
-						<input class="input-small" type="text" value="" name="height" size="8" id="height" />
-						<label for="crop">Crop</label>
-						<input type="checkbox" name="crop" value="1" id="crop" class="checkbox" />
+			<fieldset class="thumbnail-alter">
+				<legend>Create thumbnail&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
+				<form id="thumbnail_alter_form" method="post" action="#" class="edit-form">
+					<p class="edit-alter-thumbnail">
+						<label for="width">Width</label>&#160;<input class="input-xsmall" type="text" value="" name="width" id="width" size="4" />
+						<label for="height">Height</label>&#160;<input class="input-xsmall" type="text" value="" name="height" id="height" size="4" />
+						<label for="crop">Crop</label>&#160;<input type="checkbox" value="1" name="crop" id="crop" class="checkbox" />
 						<input type="submit" value="Create" />
 					</p>
 				</form>
-			</div>
+			</fieldset>
 			<div class="image-detail">
 				<form method="post" action="index.php" id="image_details_form" class="edit-form">
 					<p>
@@ -188,7 +183,7 @@
 						<span class="edit-label"><label for="image-category">Category</label></span>
 						<span class="edit-value">
 							<select id="image-category" name="image-category">
-								<option value="">&nbsp;</option>
+								<option value="">&#160;</option>
 								<option value="site-design" selected="selected">Site Design</option>
 							</select>
 						</span>
@@ -224,7 +219,7 @@
 			<div class="file-detail exists">
 				<form method="post" action="index.php" id="file_details" class="edit-form">
 					<p class="edit-file-status">
-						<span class="edit-label"><label for="category">Status</label></span>
+						<span class="edit-label">Status</span>
 						<span class="edit-value">
 							<input type="radio" name="file_status" value="2" id="file_status_1" class="radio" /><label for="file_status_1">Hidden</label>&#160;
 							<input type="radio" name="file_status" value="3" id="file_status_2" class="radio" /><label for="file_status_2">Pending</label>&#160;
@@ -456,8 +451,7 @@
 					<span class="edit-value"><input type="password" value="" name="user_new_password" id="user_new_password" size="32" /></span>
 				</p>
 				<p class="edit-mail-password">
-					<span class="edit-label"><label for="mail_password">Mail it to me?</label></span>
-					<input type="checkbox" name="user_mail_password" id="user_mail_password" value="1" checked="checked" class="checkbox active" />
+					<input type="checkbox" name="user_mail_password" id="user_mail_password" value="1" checked="checked" class="checkbox active" />&#160;<label for="user_mail_password">Mail it to me</label>
 				</p>
 				<p><input type="submit" value="Submit" name="change_pass" /></p>
 			</div>

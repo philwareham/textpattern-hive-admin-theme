@@ -263,15 +263,6 @@ body {
 	}
 }
 
-/* add some margin above upload submit in case it wraps */
-.upload-form,
-#image-replace,
-#thumbnail-upload {
-	input[type="submit"] {
-		margin-top: 1em;
-	}
-}
-
 div.plugin-help {
 	width: 100%;
 }

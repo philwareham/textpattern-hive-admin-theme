@@ -327,6 +327,10 @@ input.input-small {
 	width: 25%;
 	max-width: 5.76923076923077em; // 75px / 13px
 }
+input.input-xsmall {
+	width: 16.6666666666667%;
+	max-width: 3.46153846153846em; // 45px / 13px
+}
 
 
 /* Specific buttons
@@ -380,6 +384,7 @@ button.destroy {
 
 .edit-image-replace,
 .edit-upload-thummbnail,
+.edit-alter-thumbnail,
 .edit-file-replace {
 	input[type="submit"] {
 		float: right;
@@ -1046,10 +1051,16 @@ span.spinner {
 	}
 }
 
-.thumbnail-edit form {
-	@include inline-block;
-	vertical-align: top;
-	margin-top: 5px;
+.thumbnail-edit {
+	overflow-x: auto;
+	margin-bottom: 1em;
+	/* IE7 */
+	*overflow-y: hidden;
+	form {
+		@include inline-block;
+		vertical-align: top;
+		margin-top: 5px;
+	}
 }
 
 

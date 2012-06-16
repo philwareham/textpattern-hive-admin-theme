@@ -519,6 +519,11 @@ input.input-small {
   max-width: 5.76923076923077em;
 }
 
+input.input-xsmall {
+  width: 16.6666666666667%;
+  max-width: 3.46153846153846em;
+}
+
 /* Specific buttons
    ========================================================================== */
 /* primary buttons */
@@ -671,6 +676,7 @@ button.destroy:active {
 
 .edit-image-replace input[type="submit"],
 .edit-upload-thummbnail input[type="submit"],
+.edit-alter-thumbnail input[type="submit"],
 .edit-file-replace input[type="submit"] {
   float: right;
 }
@@ -1395,6 +1401,12 @@ span.spinner {
   height: auto;
 }
 
+.thumbnail-edit {
+  overflow-x: auto;
+  margin-bottom: 1em;
+  /* IE7 */
+  *overflow-y: hidden;
+}
 .thumbnail-edit form {
   display: inline-block;
   *display: inline;
@@ -1775,13 +1787,6 @@ div.plugin-help {
   }
   .txp-navigation .prev-next {
     float: none;
-  }
-
-  /* add some margin above upload submit in case it wraps */
-  .upload-form input[type="submit"],
-  #image-replace input[type="submit"],
-  #thumbnail-upload input[type="submit"] {
-    margin-top: 1em;
   }
 
   div.plugin-help {

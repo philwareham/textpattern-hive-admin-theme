@@ -106,76 +106,73 @@
 
 	<div id="image_container" class="txp-container">
 
-		<table class="txp-edit">
-			<tr class="image-edit landscape">
-				<td>
-					<img class="content-image fullsize" src="http://static1.designhive.com/img/cms/53.jpg" height="294" width="460" alt="" title="53.jpg (460 × 294)" id="image-fullsize" /><br />
-					<form class="image-replace" method="post" enctype="multipart/form-data" action="#">
-						<div>
-							<p><label for="image-replace">Replace image</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>&#160;<input type="file" value="" name="thefile" id="image-replace" />&#160;<input type="submit" value="Upload" /></p>
-						</div>
-					</form>
-				</td>
-			</tr>
-			<tr class="thumbnail-edit">
-				<td>
-					<table id="image-thumbnail" class="image-thumbnail">
-						<tr>
-							<td class="thumbwrapper">
-								<img class="content-image" src="http://static1.designhive.com/img/cms/53t.jpg" alt="" width="184" height="118" />
-							</td>
-							<td>
-								<form method="post" action="index.php" onsubmit="return confirm('Really delete?');">
-									<input type="submit" value="×" class="destroy"/>
-								</form>
-							</td>
-						</tr>
-					</table>
-					<form class="thumbnail-upload" method="post" enctype="multipart/form-data" action="#">
-						<div>
-							<p><label for="upload-thumbnail">Upload thumbnail</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>&#160;<input type="file" value="" name="thefile" id="upload-thumbnail"/>&#160;<input type="submit" value="Upload" /></p>
-						</div>
-					</form>
-				</td>
-			</tr>
-			<tr class="thumbnail-alter">
-				<td>
-					<form method="post" action="index.php" id="thumbnail_alter_form" class="edit-form">
-						<p class="label">Create thumbnail</p>
-						<table id="thumbnail_alter">
-							<tr class="thumbnail-alter-controls">
-								<td class="cell-label"><label for="width">Width </label></td>
-								<td><input type="text" value="" name="width" size="4" id="width" /></td>
-								<td class="cell-label"><label for="height">Height </label></td>
-								<td><input type="text" value="" name="height" size="4" id="height" /></td>
-								<td class="cell-label"><label for="crop">Crop </label></td>
-								<td><input type="checkbox" name="crop" value="1" id="crop" class="checkbox" /></td>
-								<td><input type="submit" value="Create" /></td>
-							</tr>
-						</table>
-					</form>
-				</td>
-			</tr>
-			<tr class="image-detail">
-				<td>
-					<form method="post" action="index.php" id="image_details_form" class="edit-form">
-						<p class="name"><label for="image-name">Image name</label><br />
-							<input type="text" value="txp_slug105x45.gif" name="name" id="image-name" /></p>
-						<p class="category"><label for="image-category">Category</label><br />
-							<select id="image-category"  name="category">
-								<option value="">&nbsp;</option>
+		<div class="fullsize-image">
+			<img class="content-image" src="http://static1.designhive.com/img/cms/53.jpg" alt="53.jpg (460 &times; 294)" title="53.jpg (460 &times; 294)" />
+		</div>
+		<div class="txp-edit">
+			<h2>Edit image</h2>
+			<fieldset class="replace-image">
+				<legend>Replace image&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
+				<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
+					<p class="edit-image-replace">
+						<input type="file" value="" name="image_replace" id="image_replace" />
+						<input type="submit" value="Upload" />
+					</p>
+				</form>
+			</fieldset>
+			<div class="thumbnail-edit">
+				<img class="content-image" src="http://static1.designhive.com/img/cms/53t.jpg" width="184" height="118" alt="53t.jpg (184 &times; 118)" />
+				<form method="post" action="index.php" onsubmit="return confirm('Really delete?');">
+					<input type="submit" value="×" class="destroy"/>
+				</form>
+			</div>
+			<fieldset class="thumbnail-upload">
+				<legend>Upload thumbnail&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
+				<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
+					<p class="edit-upload-thummbnail">
+						<input type="file" value="" name="upload_thumbnail" id="upload_thumbnail"/>
+						<input type="submit" value="Upload" />
+					</p>
+				</form>
+			</fieldset>
+			<fieldset class="thumbnail-alter">
+				<legend>Create thumbnail&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
+				<form id="thumbnail_alter_form" method="post" action="#" class="edit-form">
+					<p class="edit-alter-thumbnail">
+						<label for="width">Width</label>&#160;<input class="input-xsmall" type="text" value="" name="width" id="width" size="4" />
+						<label for="height">Height</label>&#160;<input class="input-xsmall" type="text" value="" name="height" id="height" size="4" />
+						<label for="crop">Crop</label>&#160;<input type="checkbox" value="1" name="crop" id="crop" class="checkbox" />
+						<input type="submit" value="Create" />
+					</p>
+				</form>
+			</fieldset>
+			<div class="image-detail">
+				<form method="post" action="index.php" id="image_details_form" class="edit-form">
+					<p>
+						<span class="edit-label"><label for="image-name">Image name</label></span>
+						<span class="edit-value"><input type="text" value="txp_slug105x45.gif" name="image-name" id="image-name" /></span>
+					</p>
+					<p>
+						<span class="edit-label"><label for="image-category">Category</label></span>
+						<span class="edit-value">
+							<select id="image-category" name="image-category">
+								<option value="">&#160;</option>
 								<option value="site-design" selected="selected">Site Design</option>
-							</select></p>
-						<p class="alt text"><label for="alt-text">Alternate text</label><br />
-							<input type="text" value="Textpattern CMS" name="alt" size="50" id="alt-text" /></p>
-						<p class="caption description text"><label for="caption">Caption</label><br />
-							<textarea id="caption" name="caption"></textarea></p>
-						<p><input type="submit" value="Save" class="publish" /></p>
-					</form>
-				</td>
-			</tr>
-
-		</table>
+							</select>
+						</span>
+					</p>
+					<p>
+						<span class="edit-label"><label for="alt-text">Alternate text</label></span>
+						<span class="edit-value"><input type="text" value="Textpattern CMS" name="alt-text" id="alt-text" size="32" /></span>
+					</p>
+					<p>
+						<span class="edit-label"><label for="caption">Caption</label></span>
+						<textarea id="caption" name="caption" cols="64" rows="4"></textarea>
+					</p>
+					<p><input type="submit" value="Save" class="publish" /></p>
+				</form>
+			</div>
+		</div>
 
 	</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
