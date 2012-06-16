@@ -103,133 +103,134 @@
 
 	</div><!-- /txp-head -->
 	<div class="txp-body">
+		<h1 class="txp-heading">Users</h1>
 
-	<div id="users_container" class="txp-container">
+		<div id="users_container" class="txp-container">
 
-		<form method="post" action="index.php" id="user_edit" class="edit-form">
-	    	<div class="txp-edit">
-	    		<h2>Edit author</h2>
-	    		<p class="edit-user-name">
-	    			<span class="edit-label"><label for="user_name">Login</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-	    			<span class="edit-value"><input type="text" value="" name="user_name" id="user_name" size="32" /></span>
-	    		</p>
-	    		<p class="edit-user-realname">
-	    			<span class="edit-label"><label for="user_realname">Real name</label></span>
-	    			<span class="edit-value"><input type="text" value="" name="user_realname" id="user_realname" size="32" /></span>
-	    		</p>
-	    		<p class="edit-user-email">
-	    			<span class="edit-label"><label for="user_email">E-mail</label></span>
-	    			<span class="edit-value"><input type="text" value="" name="user_email" id="user_email" size="32" /></span>
-	    		</p>
-	    		<p class="edit-user-privs">
-	    			<span class="edit-label"><label for="user_privs">Privileges</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-	    			<span class="edit-value">
-	    				<select name="user_privs" id="user_privs">
-	    					<option value="1">Publisher</option>
-	    					<option value="2">Managing Editor</option>
-	    					<option value="3">Copy Editor</option>
-	    					<option value="4">Staff Writer</option>
-	    					<option value="5">Freelancer</option>
-	    					<option value="6">Designer</option>
-	    					<option value="0" selected="selected">None</option>
-	    				</select>
-	    			</span>
-	    		</p>
-	    		<p><input type="submit" value="Save" class="publish" /></p>
-	    	</div>
-		</form>
+			<form method="post" action="index.php" id="user_edit" class="edit-form">
+		    	<div class="txp-edit">
+		    		<h2>Edit author</h2>
+		    		<p class="edit-user-name">
+		    			<span class="edit-label"><label for="user_name">Login</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+		    			<span class="edit-value"><input type="text" value="" name="user_name" id="user_name" size="32" /></span>
+		    		</p>
+		    		<p class="edit-user-realname">
+		    			<span class="edit-label"><label for="user_realname">Real name</label></span>
+		    			<span class="edit-value"><input type="text" value="" name="user_realname" id="user_realname" size="32" /></span>
+		    		</p>
+		    		<p class="edit-user-email">
+		    			<span class="edit-label"><label for="user_email">E-mail</label></span>
+		    			<span class="edit-value"><input type="text" value="" name="user_email" id="user_email" size="32" /></span>
+		    		</p>
+		    		<p class="edit-user-privs">
+		    			<span class="edit-label"><label for="user_privs">Privileges</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+		    			<span class="edit-value">
+		    				<select name="user_privs" id="user_privs">
+		    					<option value="1">Publisher</option>
+		    					<option value="2">Managing Editor</option>
+		    					<option value="3">Copy Editor</option>
+		    					<option value="4">Staff Writer</option>
+		    					<option value="5">Freelancer</option>
+		    					<option value="6">Designer</option>
+		    					<option value="0" selected="selected">None</option>
+		    				</select>
+		    			</span>
+		    		</p>
+		    		<p><input type="submit" value="Save" class="publish" /></p>
+		    	</div>
+			</form>
 
-		<div class="txp-list">
+			<div class="txp-list">
 
-			<form action="index.php" id="users_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
-				<div class="txp-listtables">
+				<form action="index.php" id="users_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
+					<div class="txp-listtables">
 
-					<table class="txp-list">
-						<thead>
-							<tr>
-								<th class="asc name login-name"><a href="#">Login</a></th>
-								<th class="name real-name"><a href="#">Real name</a></th>
-								<th class="email"><a href="#">E-mail</a></th>
-								<th class="privs"><a href="#">Privileges</a></th>
-								<th class="date last-login modified"><a href="#">Last login</a></th>
-								<th class="actions">&#160;</th><th class="multi-edit">&#160;</th>
-							</tr>
-						</thead>
-						<tfoot>
-							<tr>
-								<td class="multi-edit" colspan="7">
-									Select:
-									<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
-									<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
-									<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
-									<label for="withselected">With selected:</label>
-									<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
-										<option value="" selected="selected"></option>
-										<option value="changeprivilege">Change privilege</option>
-										<option value="resetpassword">Reset password</option>
-										<option value="delete">Delete</option>
-									</select>
-									<input type="submit" value="Go" />
-								</td>
-							</tr>
-						</tfoot>
-						<tbody>
-							<tr class="odd">
-								<td class="name login-name">admin</td>
-								<td class="name real-name">Phil Wareham</td>
-								<td class="email"><a href="mailto:phil@anon.com">phil@anon.com</a></td>
-								<td class="privs">Publisher</td>
-								<td class="date last-login modified">Sep&#160;2011</td>
-								<td class="actions"><a href="#">Edit</a></td>
-								<td class="multi-edit">&#160;</td>
-							</tr>
-							<tr class="even">
-								<td class="name login-name">anon</td>
-								<td class="name real-name">A Non</td>
-								<td class="email"><a href="mailto:anon@anon.com">anon@anon.com</a></td>
-								<td class="privs">Freelancer</td>
-								<td class="date last-login modified">&#160;</td>
-								<td class="actions"><a href="#">Edit</a></td>
-								<td class="multi-edit"><input type="checkbox" value="anon" name="selected[]" class="checkbox" /></td>
-							</tr>
-						</tbody>
-					</table>
+						<table class="txp-list">
+							<thead>
+								<tr>
+									<th class="asc name login-name"><a href="#">Login</a></th>
+									<th class="name real-name"><a href="#">Real name</a></th>
+									<th class="email"><a href="#">E-mail</a></th>
+									<th class="privs"><a href="#">Privileges</a></th>
+									<th class="date last-login modified"><a href="#">Last login</a></th>
+									<th class="actions">&#160;</th><th class="multi-edit">&#160;</th>
+								</tr>
+							</thead>
+							<tfoot>
+								<tr>
+									<td class="multi-edit" colspan="7">
+										Select:
+										<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
+										<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
+										<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
+										<label for="withselected">With selected:</label>
+										<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
+											<option value="" selected="selected"></option>
+											<option value="changeprivilege">Change privilege</option>
+											<option value="resetpassword">Reset password</option>
+											<option value="delete">Delete</option>
+										</select>
+										<input type="submit" value="Go" />
+									</td>
+								</tr>
+							</tfoot>
+							<tbody>
+								<tr class="odd">
+									<td class="name login-name">admin</td>
+									<td class="name real-name">Phil Wareham</td>
+									<td class="email"><a href="mailto:phil@anon.com">phil@anon.com</a></td>
+									<td class="privs">Publisher</td>
+									<td class="date last-login modified">Sep&#160;2011</td>
+									<td class="actions"><a href="#">Edit</a></td>
+									<td class="multi-edit">&#160;</td>
+								</tr>
+								<tr class="even">
+									<td class="name login-name">anon</td>
+									<td class="name real-name">A Non</td>
+									<td class="email"><a href="mailto:anon@anon.com">anon@anon.com</a></td>
+									<td class="privs">Freelancer</td>
+									<td class="date last-login modified">&#160;</td>
+									<td class="actions"><a href="#">Edit</a></td>
+									<td class="multi-edit"><input type="checkbox" value="anon" name="selected[]" class="checkbox" /></td>
+								</tr>
+							</tbody>
+						</table>
 
+					</div>
+				</form>
+
+				<div id="users_navigation" class="txp-navigation">
+					<p class="prev-next">1/1</p>
+					<form method="post" action="index.php" class="pageby">
+						<p>
+							View <select name="qty" onchange="submit(this.form);">
+								<option value="15">15</option>
+								<option value="25">25</option>
+								<option value="50">50</option>
+								<option value="100">100</option>
+							</select> per page<noscript> <input type="submit" value="Go" /></noscript>
+						</p>
+					</form>
+				</div>
+
+			</div>
+
+			<form method="post" action="index.php" id="change_password">
+				<div class="txp-edit">
+					<h2>Change your password</h2>
+					<p class="edit-new-password">
+						<span class="edit-label"><label for="user_new_password">New password</label></span>
+						<span class="edit-value"><input type="password" value="" name="user_new_password" id="user_new_password" size="32" /></span>
+					</p>
+					<p class="edit-mail-password">
+						<span class="edit-label"><label for="mail_password">Mail it to me?</label></span>
+						<input type="checkbox" name="user_mail_password" id="user_mail_password" value="1" checked="checked" class="checkbox active" />
+					</p>
+					<p><input type="submit" value="Submit" name="change_pass" /></p>
 				</div>
 			</form>
 
-			<div id="users_navigation" class="txp-navigation">
-				<p class="prev-next">1/1</p>
-				<form method="post" action="index.php" class="pageby">
-					<p>
-						View <select name="qty" onchange="submit(this.form);">
-							<option value="15">15</option>
-							<option value="25">25</option>
-							<option value="50">50</option>
-							<option value="100">100</option>
-						</select> per page<noscript> <input type="submit" value="Go" /></noscript>
-					</p>
-				</form>
-			</div>
-
-		</div>
-
-		<form method="post" action="index.php" id="change_password">
-			<div class="txp-edit">
-				<h2>Change your password</h2>
-				<p class="edit-new-password">
-					<span class="edit-label"><label for="user_new_password">New password</label></span>
-					<span class="edit-value"><input type="password" value="" name="user_new_password" id="user_new_password" size="32" /></span>
-				</p>
-				<p class="edit-mail-password">
-					<span class="edit-label"><label for="mail_password">Mail it to me?</label></span>
-					<input type="checkbox" name="user_mail_password" id="user_mail_password" value="1" checked="checked" class="checkbox active" />
-				</p>
-				<p><input type="submit" value="Submit" name="change_pass" /></p>
-			</div>
-		</form>
-
-	</div><!-- /txp-container -->
+		</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
 
 	<div class="txp-footer">

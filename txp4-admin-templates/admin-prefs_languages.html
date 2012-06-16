@@ -103,325 +103,324 @@
 
 	</div><!-- /txp-head -->
 	<div class="txp-body">
+		<h1 class="txp-heading">Update languages</h1>
 
-	<div id="language_container" class="txp-container">
+		<div id="language_container" class="txp-container">
 
-		<h2>Language</h2>
+			<p class="nav-tertiary">
+				<a href="admin-prefs_basic.html" class="navlink">Basic</a><a href="admin-prefs_advanced.html" class="navlink">Advanced</a><a href="admin-prefs_languages.html" class="navlink-active">Language</a>
+			</p>
 
-		<p class="nav-tertiary">
-			<a href="admin-prefs_basic.html" class="navlink">Basic</a><a href="admin-prefs_advanced.html" class="navlink">Advanced</a><a href="admin-prefs_languages.html" class="navlink-active">Language</a>
-		</p>
+			<div id="language_control" class="txp-control-panel">
+				<form method="post" action="#" style="display:inline;">
+					<p>
+						Currently active language
+						<select id="language" name="language" class="languages">
+							<option value="en-gb" selected="selected">English (Great Britain)</option>
+						</select>
+						<input type="submit" value="Save" name="Submit" class="publish" />
+					</p>
+				</form>
+			</div>
 
-		<div id="language_control" class="txp-control-panel">
-			<form method="post" action="#" style="display:inline;">
+			<div class="txp-listtables">
+				<table class="txp-list">
+					<thead>
+						<tr>
+							<th>Language</th>
+							<th>Install from remote server <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></th>
+							<th class="languages_detail">Install from file <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></th>
+							<th class="languages_detail">remove_lang <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td class="detail-toggle" colspan="4">
+								<input type="checkbox" name="cb_toggle_languages_detail" id="cb_toggle_languages_detail" value="1" class="checkbox" onclick="" checked="checked" /> <label for="cb_toggle_languages_detail">Show detail</label>
+							</td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr class="odd">
+							<td class="pref-label">عربي</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Български</td>
+							<td class="pref-value"><strong> <a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Bosanski (Bosna i Hercegovina)</td>
+							<td class="pref-value"><strong> <a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Català</td>
+							<td class="pref-value"><strong> <a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Čeština</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Dansk</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Deutsch</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Ελληνικά</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="highlight pref-label">English (Great Britain)</td>
+							<td class="highlight pref-value"><strong><a href="#">Update</a></strong> <span class="date modified">07 Jun 2012 15:27:30</span></td>
+							<td class="langfile pref-value languages_detail highlight"><strong><a href="#">Install</a></strong> <span class="date modified">18/06/11 06:46 AM</span></td>
+							<td class="languages_detail highlight">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">English (United States)</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Español</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Eesti</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Persian (پارسی)</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Suomi</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Français</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Galego</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">עברית</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Hrvatski</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Magyar</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Bahasa Indonesia</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Íslenska</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Italiano</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">日本語</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">한국말 (대한민국)</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Lietuvių</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Latviešu</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Nederlands</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Norsk</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Polski</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Português (Brasil)</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Português (Portugal)</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Română</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Русский</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Slovenčina</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Srpski</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Српски</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Svenska</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">ไทย</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">Türkçe</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Українська</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">اردو (بھارت</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">Tiếng Việt (Việt Nam)</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="odd">
+							<td class="pref-label">中文(简体)</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+						<tr class="even">
+							<td class="pref-label">中文(繁體)</td>
+							<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
+							<td class="langfile pref-value languages_detail">-</td>
+							<td class="languages_detail">-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<h3>Install from Textpack</h3>
+
+			<form method="post" action="index.php" id="text_uploader" class="edit-form">
 				<p>
-					Currently active language
-					<select id="language" name="language" class="languages">
-						<option value="en-gb" selected="selected">English (Great Britain)</option>
-					</select>
-					<input type="submit" value="Save" name="Submit" class="publish" />
+					<label for="textpack-install">Install Textpack</label>
+					<a target="_blank" href="http://rpc.textpattern.com/help/?item=get_textpack&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
+					<textarea id="textpack-install" class="code" name="textpack" cols="45" rows="5"></textarea>
+					<input type="submit" value="Upload" name="install_new" />
 				</p>
 			</form>
-		</div>
 
-		<div class="txp-listtables">
-			<table class="txp-list">
-				<thead>
-					<tr>
-						<th>Language</th>
-						<th>Install from remote server <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></th>
-						<th class="languages_detail">Install from file <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></th>
-						<th class="languages_detail">remove_lang <a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></th>
-					</tr>
-				</thead>
-				<tfoot>
-					<tr>
-						<td class="detail-toggle" colspan="4">
-							<input type="checkbox" name="cb_toggle_languages_detail" id="cb_toggle_languages_detail" value="1" class="checkbox" onclick="" checked="checked" /> <label for="cb_toggle_languages_detail">Show detail</label>
-						</td>
-					</tr>
-				</tfoot>
-				<tbody>
-					<tr class="odd">
-						<td class="pref-label">عربي</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Български</td>
-						<td class="pref-value"><strong> <a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Bosanski (Bosna i Hercegovina)</td>
-						<td class="pref-value"><strong> <a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Català</td>
-						<td class="pref-value"><strong> <a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Čeština</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Dansk</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Deutsch</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Ελληνικά</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="highlight pref-label">English (Great Britain)</td>
-						<td class="highlight pref-value"><strong><a href="#">Update</a></strong> <span class="date modified">07 Jun 2012 15:27:30</span></td>
-						<td class="langfile pref-value languages_detail highlight"><strong><a href="#">Install</a></strong> <span class="date modified">18/06/11 06:46 AM</span></td>
-						<td class="languages_detail highlight">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">English (United States)</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Español</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Eesti</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Persian (پارسی)</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Suomi</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Français</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Galego</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">עברית</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Hrvatski</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Magyar</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Bahasa Indonesia</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Íslenska</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Italiano</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">日本語</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">한국말 (대한민국)</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Lietuvių</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Latviešu</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Nederlands</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Norsk</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Polski</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Português (Brasil)</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Português (Portugal)</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Română</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Русский</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Slovenčina</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Srpski</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Српски</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Svenska</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">ไทย</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">Türkçe</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Українська</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">اردو (بھارت</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">Tiếng Việt (Việt Nam)</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="odd">
-						<td class="pref-label">中文(简体)</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-					<tr class="even">
-						<td class="pref-label">中文(繁體)</td>
-						<td class="pref-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-						<td class="langfile pref-value languages_detail">-</td>
-						<td class="languages_detail">-</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<h3>Install from Textpack</h3>
-
-		<form method="post" action="index.php" id="text_uploader" class="edit-form">
-			<p>
-				<label for="textpack-install">Install Textpack</label>
-				<a target="_blank" href="http://rpc.textpattern.com/help/?item=get_textpack&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-				<textarea id="textpack-install" class="code" name="textpack" cols="45" rows="5"></textarea>
-				<input type="submit" value="Upload" name="install_new" />
-			</p>
-		</form>
-
-	</div><!-- /txp-container -->
+		</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
 
 	<div class="txp-footer">

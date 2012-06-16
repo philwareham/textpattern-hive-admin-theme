@@ -103,35 +103,36 @@
 
 	</div><!-- /txp-head -->
 	<div class="txp-body">
+		<h1 class="txp-heading">Diagnostics</h1>
 
-	<div id="diag_container" class="txp-container">
+		<div id="diag_container" class="txp-container">
 
-		<div id="pre_flight_check">
-			<h2>Pre-flight check</h2>
-			<p class="error">New Textpattern CMS version 4.4.1 <a href="http://textpattern.com/download" rel="external" title="Go to the Textpattern CMS download area">available for download</a>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
-			<p class="error">/Users/pwareham/Sites/ SVN/TextPattern CMS/textpattern/setup/ still exists&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
-			<p class="error">Some Textpattern files have been modified: <br />
-				/Users/pwareham/Sites/ SVN/TextPattern CMS/textpattern/jquery.js&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
-			<p class="error">You are running in-development files on a live server: <br />
-				/Users/pwareham/Sites/ SVN/TextPattern CMS/textpattern/include/txp_admin.php, <br />
-				/Users/pwareham/Sites/ SVN/TextPattern CMS/textpattern/include/txp_article.php&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
-		</div>
+			<div id="pre_flight_check">
+				<h2>Pre-flight check</h2>
+				<p class="error">New Textpattern CMS version 4.4.1 <a href="http://textpattern.com/download" rel="external" title="Go to the Textpattern CMS download area">available for download</a>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
+				<p class="error">/Users/pwareham/Sites/ SVN/TextPattern CMS/textpattern/setup/ still exists&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
+				<p class="error">Some Textpattern files have been modified: <br />
+					/Users/pwareham/Sites/ SVN/TextPattern CMS/textpattern/jquery.js&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
+				<p class="error">You are running in-development files on a live server: <br />
+					/Users/pwareham/Sites/ SVN/TextPattern CMS/textpattern/include/txp_admin.php, <br />
+					/Users/pwareham/Sites/ SVN/TextPattern CMS/textpattern/include/txp_article.php&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
+			</div>
 
-		<div id="diagnostics">
-			<h2>Diagnostic info</h2>
-			<p><textarea id="diagnostics-detail" cols="78" rows="18" readonly="readonly">Diagnostic information would go here...</textarea></p>
-			<form method="post" action="index.php">
-				<p>
-					Detail
-					<select name="step" onchange="submit(this.form);">
-						<option value="low">Low</option>
-						<option value="high">High</option>
-					</select>
-				</p>
-			</form>
-		</div>
+			<div id="diagnostics">
+				<h2>Diagnostic info</h2>
+				<p><textarea id="diagnostics-detail" cols="78" rows="18" readonly="readonly">Diagnostic information would go here...</textarea></p>
+				<form method="post" action="index.php">
+					<p>
+						Detail
+						<select name="step" onchange="submit(this.form);">
+							<option value="low">Low</option>
+							<option value="high">High</option>
+						</select>
+					</p>
+				</form>
+			</div>
 
-	</div><!-- /txp-container -->
+		</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
 
 	<div class="txp-footer">

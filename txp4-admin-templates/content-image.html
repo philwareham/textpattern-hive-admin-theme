@@ -103,122 +103,123 @@
 
 	</div><!-- /txp-head -->
 	<div class="txp-body">
+		<h1 class="txp-heading">Images</h1>
 
-	<div id="image_control" class="txp-control-panel">
+		<div id="image_control" class="txp-control-panel">
 
-		<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
-			<div>
-				<p><label for="image-upload">Upload image</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>&#160;<input type="file" value="" name="thefile" id="image-upload" />&#160;<input type="submit" value="Upload" /></p>
-			</div>
-		</form>
+			<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
+				<div>
+					<p><label for="image-upload">Upload image</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>&#160;<input type="file" value="" name="thefile" id="image-upload" />&#160;<input type="submit" value="Upload" /></p>
+				</div>
+			</form>
 
-		<form method="get" action="index.php" class="search-form">
-			<p>
-				<label for="image-search">Search</label>
-				<select id="image-search" name="search_method">
-					<option value="id">ID#</option>
-					<option value="name" selected="selected">Name</option>
-					<option value="category">Category</option>
-					<option value="author">Author</option>
-					<option value="alt">Alternate text</option>
-					<option value="caption">Caption</option>
-				</select>
-				<input type="text" value="" name="crit" size="15" />
-				<input type="submit" value="Go" name="search" />
-			</p>
-		</form>
-	</div>
-
-	<div id="image_container" class="txp-container">
-
-		<form name="longform" id="images_form" method="post" action="index.php" onsubmit="return verify('Are you sure?')">
-			<div class="txp-listtables">
-
-				<table class="txp-list">
-
-					<thead>
-						<tr>
-							<th class="desc id"><a href="#">ID#</a></th>
-							<th class="name"><a href="#">Name</a></th>
-							<th class="date created"><a href="#">Date</a></th>
-							<th class="thumbnail"><a href="#">Thumbnail</a></th>
-							<th class="tag-build">Tags</th>
-							<th class="category"><a href="#">Category</a></th>
-							<th class="author"><a href="#">Author</a></th>
-							<th class="multi-edit">&#160;</th>
-						</tr>
-					</thead>
-
-					<tfoot>
-						<tr>
-							<td class="multi-edit" colspan="8">
-								Select:
-								<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
-								<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
-								<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
-								<label for="withselected">With selected:</label>
-								<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
-									<option value="" selected="selected"></option>
-									<option value="changecategory">Change category</option>
-									<option value="changeauthor">Change author</option>
-									<option value="delete">Delete</option>
-								</select>
-								<input type="submit" value="Go" />
-							</td>
-						</tr>
-					</tfoot>
-
-					<tbody>
-						<tr class="odd">
-							<td class="id"><a href="secondary/content-image_edit.html" title="Edit">2</a></td>
-							<td class="name"><a href="secondary/content-image_edit.html" title="Edit">txp_slug105x45.gif</a></td>
-							<td class="date created">24&#160;Dec&#160;1977 14:20:42</td>
-							<td class="thumbnail"><a href="secondary/content-image_edit.html"><img src="http://static1.designhive.com/img/cms/53t.jpg" alt="" title="53.jpg (460 × 294)" width="184" height="118" class="content-image" /></a></td>
-							<td class="tag-build">
-								<a target="_blank" href="#" onclick="popWin(this.href); return false;">Textile</a>
-								&#124; <a target="_blank" href="#" onclick="popWin(this.href); return false;">Textpattern</a>
-								&#124; <a target="_blank" href="#" onclick="popWin(this.href); return false;">HTML</a>
-							</td>
-							<td class="category"><span title="Site Design">site-design</span></td>
-							<td class="author"><span title="Phil Wareham">admin</span></td>
-							<td class="multi-edit"><input type="checkbox" value="2" name="selected[]" /></td>
-						</tr>
-						<tr class="even">
-							<td class="id"><a href="secondary/content-image_edit.html" title="Edit">1</a></td>
-							<td class="name"><a href="secondary/content-image_edit.html" title="Edit">divider.gif</a></td>
-							<td class="date created">22&#160;Jul&#160;2005 16:37:11</td>
-							<td class="thumbnail"><a href="secondary/content-image_edit.html">No</a></td>
-							<td class="tag-build">
-								<a target="_blank" href="#" onclick="popWin(this.href); return false;">Textile</a>
-								&#124; <a target="_blank" href="#" onclick="popWin(this.href); return false;">Textpattern</a>
-								&#124; <a target="_blank" href="#" onclick="popWin(this.href); return false;">HTML</a>
-							</td>
-							<td class="category"><span title="Site Design">site-design</span></td>
-							<td class="author"><span title="Phil Wareham">admin</span></td>
-							<td class="multi-edit"><input type="checkbox" value="1" name="selected[]" /></td>
-						</tr>
-					</tbody>
-
-				</table>
-
-			</div>
-		</form>
-
-		<div id="image_navigation" class="txp-navigation">
-			<p class="prev-next">1/1</p>
-			<form method="post" action="index.php" class="pageby">
+			<form method="get" action="index.php" class="search-form">
 				<p>
-					View <select name="qty" onchange="submit(this.form);">
-						<option value="15">15</option>
-						<option value="25">25</option>
-						<option value="50">50</option>
-						<option value="100">100</option>
-					</select> per page<noscript> <input type="submit" value="Go" /></noscript>
+					<label for="image-search">Search</label>
+					<select id="image-search" name="search_method">
+						<option value="id">ID#</option>
+						<option value="name" selected="selected">Name</option>
+						<option value="category">Category</option>
+						<option value="author">Author</option>
+						<option value="alt">Alternate text</option>
+						<option value="caption">Caption</option>
+					</select>
+					<input type="text" value="" name="crit" size="15" />
+					<input type="submit" value="Go" name="search" />
 				</p>
 			</form>
 		</div>
 
-	</div><!-- /txp-container -->
+		<div id="image_container" class="txp-container">
+
+			<form name="longform" id="images_form" method="post" action="index.php" onsubmit="return verify('Are you sure?')">
+				<div class="txp-listtables">
+
+					<table class="txp-list">
+
+						<thead>
+							<tr>
+								<th class="desc id"><a href="#">ID#</a></th>
+								<th class="name"><a href="#">Name</a></th>
+								<th class="date created"><a href="#">Date</a></th>
+								<th class="thumbnail"><a href="#">Thumbnail</a></th>
+								<th class="tag-build">Tags</th>
+								<th class="category"><a href="#">Category</a></th>
+								<th class="author"><a href="#">Author</a></th>
+								<th class="multi-edit">&#160;</th>
+							</tr>
+						</thead>
+
+						<tfoot>
+							<tr>
+								<td class="multi-edit" colspan="8">
+									Select:
+									<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
+									<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
+									<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
+									<label for="withselected">With selected:</label>
+									<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
+										<option value="" selected="selected"></option>
+										<option value="changecategory">Change category</option>
+										<option value="changeauthor">Change author</option>
+										<option value="delete">Delete</option>
+									</select>
+									<input type="submit" value="Go" />
+								</td>
+							</tr>
+						</tfoot>
+
+						<tbody>
+							<tr class="odd">
+								<td class="id"><a href="secondary/content-image_edit.html" title="Edit">2</a></td>
+								<td class="name"><a href="secondary/content-image_edit.html" title="Edit">txp_slug105x45.gif</a></td>
+								<td class="date created">24&#160;Dec&#160;1977 14:20:42</td>
+								<td class="thumbnail"><a href="secondary/content-image_edit.html"><img src="http://static1.designhive.com/img/cms/53t.jpg" alt="" title="53.jpg (460 × 294)" width="184" height="118" class="content-image" /></a></td>
+								<td class="tag-build">
+									<a target="_blank" href="#" onclick="popWin(this.href); return false;">Textile</a>
+									&#124; <a target="_blank" href="#" onclick="popWin(this.href); return false;">Textpattern</a>
+									&#124; <a target="_blank" href="#" onclick="popWin(this.href); return false;">HTML</a>
+								</td>
+								<td class="category"><span title="Site Design">site-design</span></td>
+								<td class="author"><span title="Phil Wareham">admin</span></td>
+								<td class="multi-edit"><input type="checkbox" value="2" name="selected[]" /></td>
+							</tr>
+							<tr class="even">
+								<td class="id"><a href="secondary/content-image_edit.html" title="Edit">1</a></td>
+								<td class="name"><a href="secondary/content-image_edit.html" title="Edit">divider.gif</a></td>
+								<td class="date created">22&#160;Jul&#160;2005 16:37:11</td>
+								<td class="thumbnail"><a href="secondary/content-image_edit.html">No</a></td>
+								<td class="tag-build">
+									<a target="_blank" href="#" onclick="popWin(this.href); return false;">Textile</a>
+									&#124; <a target="_blank" href="#" onclick="popWin(this.href); return false;">Textpattern</a>
+									&#124; <a target="_blank" href="#" onclick="popWin(this.href); return false;">HTML</a>
+								</td>
+								<td class="category"><span title="Site Design">site-design</span></td>
+								<td class="author"><span title="Phil Wareham">admin</span></td>
+								<td class="multi-edit"><input type="checkbox" value="1" name="selected[]" /></td>
+							</tr>
+						</tbody>
+	
+					</table>
+	
+				</div>
+			</form>
+
+			<div id="image_navigation" class="txp-navigation">
+				<p class="prev-next">1/1</p>
+				<form method="post" action="index.php" class="pageby">
+					<p>
+						View <select name="qty" onchange="submit(this.form);">
+							<option value="15">15</option>
+							<option value="25">25</option>
+							<option value="50">50</option>
+							<option value="100">100</option>
+						</select> per page<noscript> <input type="submit" value="Go" /></noscript>
+					</p>
+				</form>
+			</div>
+
+		</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
 
 	<div class="txp-footer">

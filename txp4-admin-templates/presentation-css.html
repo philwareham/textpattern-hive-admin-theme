@@ -103,16 +103,17 @@
 
 	</div><!-- /txp-head -->
 	<div class="txp-body">
+		<h1 class="txp-heading">Style</h1>
 
-	<div id="css_container" class="txp-container">
+		<div id="css_container" class="txp-container">
 
-		<table class="txp-columntable">
-			<tr>
-				<td class="column">
-					<form method="post" action="index.php" id="style_form" class="edit-form">
-						<div id="main_content">
-							<div class="edit-title">You are editing style&#160;<strong>new_style</strong></div>
-							<textarea id="css" class="code" name="css" cols="78" rows="32">body {
+			<table class="txp-columntable">
+				<tr>
+					<td class="column">
+						<form method="post" action="index.php" id="style_form" class="edit-form">
+							<div id="main_content">
+								<div class="edit-title">You are editing style&#160;<strong>new_style</strong></div>
+								<textarea id="css" class="code" name="css" cols="78" rows="32">body {
 	color: #fff;
 	background: #000;
 }
@@ -120,39 +121,39 @@
 h1 {
 	font-weight: normal;
 }</textarea>
-							<p><input type="submit" value="Save" class="publish" /></p>
-							<p class="copy-as">
-								<label for="copy-css">&#8230;or copy style as</label>
-								<input type="text" value="" name="newname" id="copy-css" />
-								<input type="submit" value="Copy" name="copy" />
-							</p>
+								<p><input type="submit" value="Save" class="publish" /></p>
+								<p class="copy-as">
+									<label for="copy-css">&#8230;or copy style as</label>
+									<input type="text" value="" name="newname" id="copy-css" />
+									<input type="submit" value="Copy" name="copy" />
+								</p>
+							</div>
+						</form>
+					</td>
+					<td class="column">
+						<div id="content_switcher">
+							<h2>All styles</h2>
+							<p class="action-create"><a href="?event=css&#38;step=pour">Create new style</a></p>
+							<table class="txp-list">
+								<tr class="first odd">
+									<td><a href="#">default</a></td>
+									<td>&#160;</td>
+								</tr>
+								<tr class="even">
+									<td>new_style</td>
+									<td>
+										<form method="post" action="index.php" onsubmit="return confirm('Really delete?');">
+											<input type="submit" value="×" class="destroy" />
+										</form>
+									</td>
+								</tr>
+							</table>
 						</div>
-					</form>
-				</td>
-				<td class="column">
-					<div id="content_switcher">
-						<h2>All styles</h2>
-						<p class="action-create"><a href="?event=css&#38;step=pour">Create new style</a></p>
-						<table class="txp-list">
-							<tr class="first odd">
-								<td><a href="#">default</a></td>
-								<td>&#160;</td>
-							</tr>
-							<tr class="even">
-								<td>new_style</td>
-								<td>
-									<form method="post" action="index.php" onsubmit="return confirm('Really delete?');">
-										<input type="submit" value="×" class="destroy" />
-									</form>
-								</td>
-							</tr>
-						</table>
-					</div>
-				</td>
-			</tr>
-		</table>
+					</td>
+				</tr>
+			</table>
 
-	</div><!-- /txp-container -->
+		</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
 
 	<div class="txp-footer">

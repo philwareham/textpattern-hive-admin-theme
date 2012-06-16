@@ -103,110 +103,111 @@
 
 	</div><!-- /txp-head -->
 	<div class="txp-body">
+		<h1 class="txp-heading">Visitor logs</h1>
 
-	<div id="log_control" class="txp-control-panel">
-		<form method="get" action="index.php" class="search-form">
-			<p>
-				<label for="log-search">Search</label>
-				<select id="log-search" name="search_method">
-					<option value="ip">IP</option>
-					<option value="host">Host</option>
-					<option value="page" selected="selected">Page</option>
-					<option value="refer">Referrer</option>
-					<option value="method">Method</option>
-					<option value="status">Status</option>
-				</select>
-				<input type="text" value="" name="crit" size="15" />
-				<input type="submit" value="Go" name="search" />
-			</p>
-		</form>
-	</div>
-
-	<div id="log_container" class="txp-container">
-
-		<form action="index.php" id="log_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
-			<div class="txp-listtables">
-
-				<table class="txp-list">
-
-					<thead>
-						<tr>
-							<th class="desc date time"><a href="#">Time</a></th>
-							<th class="log_detail ip"><a href="#">IP</a></th>
-							<th class="host"><a href="#">Host</a></th>
-							<th class="page"><a href="#">Page</a></th>
-							<th class="refer"><a href="#">Referrer</a></th>
-							<th class="log_detail method"><a href="#">Method</a></th>
-							<th class="log_detail status"><a href="#">Status</a></th>
-							<th class="multi-edit">&#160;</th>
-						</tr>
-					</thead>
-
-					<tfoot>
-						<tr>
-							<td class="detail-toggle" colspan="2">
-								<input type="checkbox" name="cb_toggle_log_detail" id="cb_toggle_log_detail" value="1" class="checkbox" onclick="toggleClassRemember('log_detail');" checked="checked" />
-								<label for="cb_toggle_log_detail">Show detail</label>
-							</td>
-							<td class="multi-edit" colspan="6">
-								Select:
-								<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
-								<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
-								<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
-								<label for="withselected">With selected:</label>
-								<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
-									<option value="" selected="selected"></option>
-									<option value="delete">Delete</option>
-								</select>
-								<input type="submit" value="Go" />
-							</td>
-						</tr>
-					</tfoot>
-
-					<tbody>
-						<tr class="odd">
-							<td class="date time">21&#160;Sep&#160;2011 10:13:58</td>
-							<td class="log_detail ip">127.0.0.1</td>
-							<td class="host">www.anon.​dev</td>
-							<td class="page"><strong><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site</a></strong></td>
-							<td class="refer">&#160;</td>
-							<td class="log_detail method">POST</td>
-							<td class="log_detail status">302</td>
-							<td class="multi-edit"><input type="checkbox" value="126" name="selected[]" /></td>
-						</tr>
-						<tr class="even">
-							<td class="date time">21&#160;Sep&#160;2011 10:13:58</td>
-							<td class="log_detail ip">127.0.0.1</td>
-							<td class="host">www.anon.​dev</td>
-							<td class="page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site?​commented=0</a></td>
-							<td class="refer">&#160;</td>
-							<td class="log_detail method">GET</td>
-							<td class="log_detail status">200</td>
-							<td class="multi-edit"><input type="checkbox" value="127" name="selected[]" /></td>
-						</tr>
-					</tbody>
-
-				</table>
-
-			</div>
-		</form>
-
-		<div id="log_navigation" class="txp-navigation">
-			<p class="prev-next">1/1</p>
-			<form method="post" action="index.php" class="pageby">
+		<div id="log_control" class="txp-control-panel">
+			<form method="get" action="index.php" class="search-form">
 				<p>
-					View
-					<select name="qty" onchange="submit(this.form);">
-						<option value="15">15</option>
-						<option value="25">25</option>
-						<option value="50">50</option>
-						<option value="100">100</option>
-					</select> per page<noscript> <input type="submit" value="Go" /></noscript>
+					<label for="log-search">Search</label>
+					<select id="log-search" name="search_method">
+						<option value="ip">IP</option>
+						<option value="host">Host</option>
+						<option value="page" selected="selected">Page</option>
+						<option value="refer">Referrer</option>
+						<option value="method">Method</option>
+						<option value="status">Status</option>
+					</select>
+					<input type="text" value="" name="crit" size="15" />
+					<input type="submit" value="Go" name="search" />
 				</p>
 			</form>
 		</div>
 
-	</div><!-- /txp-container -->
+		<div id="log_container" class="txp-container">
+
+			<form action="index.php" id="log_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
+				<div class="txp-listtables">
+
+					<table class="txp-list">
+
+						<thead>
+							<tr>
+								<th class="desc date time"><a href="#">Time</a></th>
+								<th class="log_detail ip"><a href="#">IP</a></th>
+								<th class="host"><a href="#">Host</a></th>
+								<th class="page"><a href="#">Page</a></th>
+								<th class="refer"><a href="#">Referrer</a></th>
+								<th class="log_detail method"><a href="#">Method</a></th>
+								<th class="log_detail status"><a href="#">Status</a></th>
+								<th class="multi-edit">&#160;</th>
+							</tr>
+						</thead>
+
+						<tfoot>
+							<tr>
+								<td class="detail-toggle" colspan="2">
+									<input type="checkbox" name="cb_toggle_log_detail" id="cb_toggle_log_detail" value="1" class="checkbox" onclick="toggleClassRemember('log_detail');" checked="checked" />
+									<label for="cb_toggle_log_detail">Show detail</label>
+								</td>
+								<td class="multi-edit" colspan="6">
+									Select:
+									<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
+									<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
+									<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
+									<label for="withselected">With selected:</label>
+									<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
+										<option value="" selected="selected"></option>
+										<option value="delete">Delete</option>
+									</select>
+									<input type="submit" value="Go" />
+								</td>
+							</tr>
+						</tfoot>
+
+						<tbody>
+							<tr class="odd">
+								<td class="date time">21&#160;Sep&#160;2011 10:13:58</td>
+								<td class="log_detail ip">127.0.0.1</td>
+								<td class="host">www.anon.​dev</td>
+								<td class="page"><strong><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site</a></strong></td>
+								<td class="refer">&#160;</td>
+								<td class="log_detail method">POST</td>
+								<td class="log_detail status">302</td>
+								<td class="multi-edit"><input type="checkbox" value="126" name="selected[]" /></td>
+							</tr>
+							<tr class="even">
+								<td class="date time">21&#160;Sep&#160;2011 10:13:58</td>
+								<td class="log_detail ip">127.0.0.1</td>
+								<td class="host">www.anon.​dev</td>
+								<td class="page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site?​commented=0</a></td>
+								<td class="refer">&#160;</td>
+								<td class="log_detail method">GET</td>
+								<td class="log_detail status">200</td>
+								<td class="multi-edit"><input type="checkbox" value="127" name="selected[]" /></td>
+							</tr>
+						</tbody>
+
+					</table>
+
+				</div>
+			</form>
+
+			<div id="log_navigation" class="txp-navigation">
+				<p class="prev-next">1/1</p>
+				<form method="post" action="index.php" class="pageby">
+					<p>
+						View
+						<select name="qty" onchange="submit(this.form);">
+							<option value="15">15</option>
+							<option value="25">25</option>
+							<option value="50">50</option>
+							<option value="100">100</option>
+						</select> per page<noscript> <input type="submit" value="Go" /></noscript>
+					</p>
+				</form>
+			</div>
+
+		</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
 
 	<div class="txp-footer">

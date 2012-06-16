@@ -103,97 +103,98 @@
 
 	</div><!-- /txp-head -->
 	<div class="txp-body">
+		<h1 class="txp-heading">Plugins</h1>
 
-	<div id="plugin_control" class="txp-control-panel">
-		<form method="post" action="index.php" id="plugin_install_form" class="plugin-data">
-			<p>
-				<label for="plugin-install">Install plugin</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
-				<textarea id="plugin-install" class="code" name="plugin" cols="62" rows="1"></textarea>
-				<input type="submit" value="Upload" name="install_new" />
-			</p>
-		</form>
-	</div>
+		<div id="plugin_control" class="txp-control-panel">
+			<form method="post" action="index.php" id="plugin_install_form" class="plugin-data">
+				<p>
+					<label for="plugin-install">Install plugin</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
+					<textarea id="plugin-install" class="code" name="plugin" cols="62" rows="1"></textarea>
+					<input type="submit" value="Upload" name="install_new" />
+				</p>
+			</form>
+		</div>
 
-	<div id="plugin_container" class="txp-container">
+		<div id="plugin_container" class="txp-container">
 
-		<form action="index.php" id="plugin_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
-			<div class="txp-listtables">
+			<form action="index.php" id="plugin_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
+				<div class="txp-listtables">
 
-				<table class="txp-list">
+					<table class="txp-list">
 
-					<thead>
-						<tr>
-							<th class="asc name"><a href="#">Plugin</a></th>
-							<th class="author"><a href="#">Author</a></th>
-							<th class="version"><a href="#">Version</a></th>
-							<th class="modified"><a href="#">Modified</a></th>
-							<th class="description">Description</th>
-							<th class="status"><a href="#">Active</a></th>
-							<th class="load-order"><a href="#">Order</a></th>
-							<th class="manage actions">Manage</th>
-							<th class="multi-edit">&#160;</th>
-						</tr>
-					</thead>
+						<thead>
+							<tr>
+								<th class="asc name"><a href="#">Plugin</a></th>
+								<th class="author"><a href="#">Author</a></th>
+								<th class="version"><a href="#">Version</a></th>
+								<th class="modified"><a href="#">Modified</a></th>
+								<th class="description">Description</th>
+								<th class="status"><a href="#">Active</a></th>
+								<th class="load-order"><a href="#">Order</a></th>
+								<th class="manage actions">Manage</th>
+								<th class="multi-edit">&#160;</th>
+							</tr>
+						</thead>
 
-					<tfoot>
-						<tr>
-							<td class="multi-edit" colspan="10">
-								Select:
-								<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
-								<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
-								<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
-								<label for="withselected">With selected:</label>
-								<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
-									<option value="" selected="selected"></option>
-									<option value="changestatus">Change status</option>
-									<option value="changeorder">Change order</option>
-									<option value="delete">Delete</option>
-								</select>
-								<input type="submit" value="Go" />
-							</td>
-						</tr>
-					</tfoot>
+						<tfoot>
+							<tr>
+								<td class="multi-edit" colspan="10">
+									Select:
+									<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
+									<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
+									<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
+									<label for="withselected">With selected:</label>
+									<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
+										<option value="" selected="selected"></option>
+										<option value="changestatus">Change status</option>
+										<option value="changeorder">Change order</option>
+										<option value="delete">Delete</option>
+									</select>
+									<input type="submit" value="Go" />
+								</td>
+							</tr>
+						</tfoot>
 
-					<tbody>
-						<tr class="odd">
-							<td class="name">rah_external_output</td>
-							<td class="author"><a href="http://rahforum.biz">Jukka Svahn</a></td>
-							<td class="version">0.9</td>
-							<td class="modified">&#160;</td>
-							<td class="description">Output external content-type snippets</td>
-							<td class="status"><a href="#7">No</a></td>
-							<td class="load-order">5</td>
-							<td class="manage">
-								<ul class="actions">
-									<li class="action-view"><a href="secondary/admin-plugin_help.html">Help</a></li>
-									<li class="action-edit"><a href="secondary/admin-plugin_edit.html">Edit</a></li>
-								</ul>
-							</td>
-							<td class="multi-edit"><input type="checkbox" value="rah_external_output" name="selected[]" /></td>
-						</tr>
-						<tr class="even">
-							<td class="name">smd_browse_by</td>
-							<td class="author"><a href="http://stefdawson.com/">Stef Dawson</a></td>
-							<td class="version">0.10</td>
-							<td class="modified"><span class="warning">Yes</span></td>
-							<td class="description">Browse by Category (+article Section) in admin side</td>
-							<td class="status"><a href="#">Yes</a></td>
-							<td class="load-order">5</td>
-							<td class="manage">
-								<ul class="actions">
-									<li class="action-view"><a href="secondary/admin-plugin_help.html">Help</a></li>
-									<li class="action-edit"><a href="secondary/admin-plugin_edit.html">Edit</a></li>
-								</ul>
-							</td>
-							<td class="multi-edit"><input type="checkbox" value="smd_browse_by" name="selected[]" /></td>
-						</tr>
-					</tbody>
-				</table>
+						<tbody>
+							<tr class="odd">
+								<td class="name">rah_external_output</td>
+								<td class="author"><a href="http://rahforum.biz">Jukka Svahn</a></td>
+								<td class="version">0.9</td>
+								<td class="modified">&#160;</td>
+								<td class="description">Output external content-type snippets</td>
+								<td class="status"><a href="#7">No</a></td>
+								<td class="load-order">5</td>
+								<td class="manage">
+									<ul class="actions">
+										<li class="action-view"><a href="secondary/admin-plugin_help.html">Help</a></li>
+										<li class="action-edit"><a href="secondary/admin-plugin_edit.html">Edit</a></li>
+									</ul>
+								</td>
+								<td class="multi-edit"><input type="checkbox" value="rah_external_output" name="selected[]" /></td>
+							</tr>
+							<tr class="even">
+								<td class="name">smd_browse_by</td>
+								<td class="author"><a href="http://stefdawson.com/">Stef Dawson</a></td>
+								<td class="version">0.10</td>
+								<td class="modified"><span class="warning">Yes</span></td>
+								<td class="description">Browse by Category (+article Section) in admin side</td>
+								<td class="status"><a href="#">Yes</a></td>
+								<td class="load-order">5</td>
+								<td class="manage">
+									<ul class="actions">
+										<li class="action-view"><a href="secondary/admin-plugin_help.html">Help</a></li>
+										<li class="action-edit"><a href="secondary/admin-plugin_edit.html">Edit</a></li>
+									</ul>
+								</td>
+								<td class="multi-edit"><input type="checkbox" value="smd_browse_by" name="selected[]" /></td>
+							</tr>
+						</tbody>
+					</table>
 
-			</div>
-		</form>
+				</div>
+			</form>
 
-	</div><!-- /txp-container -->
+		</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
 
 	<div class="txp-footer">
