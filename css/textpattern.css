@@ -235,7 +235,7 @@ span#message {
   border: 1px solid;
   border-bottom: 0;
   padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
-  max-width: 36.154em;
+  max-width: 38.154em;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   -webkit-box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0.462em rgba(0, 0, 0, 0.2);
@@ -1040,8 +1040,10 @@ body {
    ========================================================================== */
 .txp-edit {
   margin: 0 auto 1em;
+  -moz-border-radius: 0.385em;
+  border-radius: 0.385em;
   padding: 1em 1em 1px 1em;
-  width: 38em;
+  width: 40em;
   background: #f7f7f7;
 }
 
@@ -1050,7 +1052,7 @@ body {
   *display: inline;
   *zoom: 1;
   float: left;
-  width: 39%;
+  width: 42%;
 }
 
 .edit-value {
@@ -1058,7 +1060,7 @@ body {
   *display: inline;
   *zoom: 1;
   float: right;
-  width: 61%;
+  width: 58%;
 }
 
 .edit-value input,
@@ -1611,7 +1613,7 @@ div.plugin-help {
   .category-list tr {
     display: block;
     margin: 0 auto;
-    max-width: 40em;
+    max-width: 42em;
   }
   .category-list td {
     width: 100%;
@@ -1635,7 +1637,7 @@ div.plugin-help {
   #article-tabs {
     width: 100%;
     margin: 0 auto;
-    max-width: 40em;
+    max-width: 42em;
   }
 
   #article-col-2 {
@@ -1705,7 +1707,7 @@ div.plugin-help {
     display: block;
     margin: 0 auto;
     width: 100%;
-    max-width: 40em;
+    max-width: 42em;
   }
   #page-page .txp-columntable td.column:last-child,
   #page-form .txp-columntable td.column:last-child,

@@ -719,6 +719,7 @@ body {
 
 .txp-edit {
 	margin: 0 auto 1em;
+	@include border-radius;
 	padding: 1em 1em 1px 1em;
 	width: ($standard-column - 2em);
 	background: $color-background-box;
@@ -730,13 +731,13 @@ body {
 .edit-label {
 	@include inline-block;
 	float: left;
-	width: 39%;
+	width: 42%;
 }
 
 .edit-value {
 	@include inline-block;
 	float: right;
-	width: 61%;
+	width: 58%;
 }
 
 .edit-value input,
