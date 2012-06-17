@@ -783,11 +783,8 @@ button.destroy:active {
   border-top: 0;
   border-bottom: 0.308em solid #333333;
 }
-.txp-list tfoot th, .txp-list tfoot td {
+.txp-list tfoot td {
   vertical-align: middle;
-}
-.txp-list tfoot .multi-edit {
-  text-align: right;
 }
 
 /* Allow overflow scroll on tables */
