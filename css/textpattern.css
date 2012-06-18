@@ -786,8 +786,8 @@ button.destroy:active {
 .txp-list tfoot td {
   vertical-align: middle;
 }
-.txp-list .id span {
-  float: right;
+.txp-list .id {
+  white-space: nowrap;
 }
 
 /* Allow overflow scroll on tables */
@@ -1386,11 +1386,6 @@ span.spinner {
 
 /* Content -> Images page
    ========================================================================== */
-#page-image #width,
-#page-image #height {
-  width: 3.38461538461538em;
-}
-
 .fullsize-image {
   text-align: center;
   margin-bottom: 1em;
