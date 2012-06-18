@@ -786,6 +786,9 @@ button.destroy:active {
 .txp-list tfoot td {
   vertical-align: middle;
 }
+.txp-list .id span {
+  float: right;
+}
 
 /* Allow overflow scroll on tables */
 .txp-listtables {
