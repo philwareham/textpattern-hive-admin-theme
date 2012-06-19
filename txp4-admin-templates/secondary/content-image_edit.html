@@ -113,16 +113,16 @@
 			<h2>Edit image</h2>
 			<fieldset class="replace-image">
 				<legend>Replace image&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
-				<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
+				<form class="image-replace" method="post" enctype="multipart/form-data" action="#">
 					<p class="edit-image-replace">
-						<input type="file" value="" name="image_replace" id="image_replace" />
+						<input type="file" value="" name="thefile" id="image_replace" />
 						<input type="submit" value="Upload" />
 					</p>
 				</form>
 			</fieldset>
 			<div class="thumbnail-edit">
 				<img class="content-image" src="http://static1.designhive.com/img/cms/53t.jpg" width="184" height="118" alt="53t.jpg (184 &times; 118)" />
-				<form method="post" action="index.php" onsubmit="return confirm('Really delete?');">
+				<form method="post" action="#" onsubmit="return confirm('Really delete?');">
 					<input type="submit" value="×" class="destroy"/>
 				</form>
 			</div>
@@ -130,7 +130,7 @@
 				<legend>Upload thumbnail&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
 				<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
 					<p class="edit-upload-thummbnail">
-						<input type="file" value="" name="upload_thumbnail" id="upload_thumbnail"/>
+						<input type="file" value="" name="thefile" id="upload_thumbnail"/>
 						<input type="submit" value="Upload" />
 					</p>
 				</form>
@@ -147,23 +147,23 @@
 				</form>
 			</fieldset>
 			<div class="image-detail">
-				<form method="post" action="index.php" id="image_details_form" class="edit-form">
+				<form method="post" action="#" id="image_details_form" class="edit-form">
 					<p>
-						<span class="edit-label"><label for="image-name">Image name</label></span>
-						<span class="edit-value"><input type="text" value="txp_slug105x45.gif" name="image-name" id="image-name" /></span>
+						<span class="edit-label"><label for="image_name">Image name</label></span>
+						<span class="edit-value"><input type="text" value="txp_slug105x45.gif" name="name" id="image_name" size="32" /></span>
 					</p>
 					<p>
-						<span class="edit-label"><label for="image-category">Category</label></span>
+						<span class="edit-label"><label for="image_category">Category</label></span>
 						<span class="edit-value">
-							<select id="image-category" name="image-category">
+							<select id="image_category" name="category">
 								<option value="">&#160;</option>
 								<option value="site-design" selected="selected">Site Design</option>
 							</select>
 						</span>
 					</p>
 					<p>
-						<span class="edit-label"><label for="alt-text">Alternate text</label></span>
-						<span class="edit-value"><input type="text" value="Textpattern CMS" name="alt-text" id="alt-text" size="32" /></span>
+						<span class="edit-label"><label for="alt_text">Alternate text</label></span>
+						<span class="edit-value"><input type="text" value="Textpattern CMS" name="alt" id="alt_text" size="32" /></span>
 					</p>
 					<p>
 						<span class="edit-label"><label for="caption">Caption</label></span>
