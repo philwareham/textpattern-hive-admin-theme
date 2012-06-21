@@ -16,6 +16,7 @@ h1 {
 h2 {
 	font-size: 1.38461538461538em; // 18px / 13px
 	margin: 0 0 .72222222222222em; // 13px / 18px
+
 	.pophelp {
 		font-size: .72222222222222em; // 13px / 18px
 	}
@@ -107,6 +108,7 @@ hr {
 .txp-list thead th a.pophelp {
 	display: inline;
 	color: $color-link;
+
 	&:hover {
 		color: $color-link-hover;
 		text-decoration: underline;

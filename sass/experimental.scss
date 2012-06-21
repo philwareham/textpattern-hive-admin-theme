@@ -35,9 +35,11 @@ a.icon-container {
 	padding: .23076923076923em; // 3px / 13px
 	@include border-radius;
 	background-color: $color-background-box;
+
 	&:hover {
 		border-color: $color-border;
 	}
+
 	b {
 		display: block;
 	}

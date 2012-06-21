@@ -27,6 +27,7 @@ body {
 .txp-header {
 	padding: 0 1em;
 	min-width: 294px;
+
 	h1 {
 		max-width: 50%;
 		padding-left: $logo-small-width;
@@ -73,6 +74,7 @@ body {
 		margin: 0 auto;
 		max-width: $standard-column;
 	}
+
 	td {
 		width: 100%;
 	}
@@ -169,12 +171,15 @@ body {
 	h2 {
 		margin-top: 1.625em;
 	}
-	> tr, .txp-columntable td.column {
+
+	> tr,
+	.txp-columntable td.column {
 		display: block;
 		margin: 0 auto;
 		width: 100%;
 		max-width: $standard-column;
 	}
+
 	.txp-columntable td.column:last-child {
 		width: 100%;
 	}
@@ -202,6 +207,7 @@ body {
 
 .txp-header {
 	position: absolute;
+
 	h1 {
 		max-width: 66%;
 	}
@@ -255,9 +261,11 @@ body {
 /* remove float from txp-navigation elements */
 .txp-navigation {
 	text-align: center;
+
 	.pageby {
 		float: none;
 	}
+
 	.prev-next {
 		float: none;
 	}
@@ -266,6 +274,5 @@ body {
 div.plugin-help {
 	width: 100%;
 }
-
 
 }

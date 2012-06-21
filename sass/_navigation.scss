@@ -11,6 +11,7 @@
    also happens via media-queries when screen width is < 768px regardless of touch ability */
 .txp-nav-select {
 	display: none;
+
 	.touch & {
 		display: inherit;
 	}
@@ -23,12 +24,15 @@
 
 .txp-nav {
 	float: left;
+
 	a {
 		color: #333;
+
 		&:hover {
 			text-decoration: none;
 		}
 	}
+
 	ul {
 		list-style: none;
 		padding-left: 0;
@@ -47,12 +51,15 @@
 	float: left;
 	border-right: 1px solid #fabc2b;
 	background: #fcdc7f;
+
 	.rgba & {
 		background: rgba(#fff, .2);
 	}
+
 	&:first-child {
 		border-left: 1px solid #fabc2b;
 	}
+
 	a.dropdown-toggle {
 		display: block;
 		padding: 0 1em;
@@ -61,8 +68,10 @@
 		color: darken($color-text, 20%);
 		@include text-shadow-light;
 	}
+
 	&:hover a.dropdown-toggle {
 		background: #fcdc7f;
+
 		.rgba & {
 			background: rgba(#fff, .2);
 		}
@@ -72,6 +81,7 @@
 .dropdown.active {
 	a.dropdown-toggle {
 		background: #fcdc7f;
+
 		.rgba & {
 			background: rgba(#fff, .2);
 		}
@@ -89,28 +99,35 @@
 	background: $color-highlight-box;
 	@include border-radius(0 $border-radius $border-radius $border-radius);
 	@include box-shadow;
+
 	li {
 		border: 0;
 		@include border-radius(0);
 		background: none;
 		margin-right: 0;
+
 		&:first-child {
 			@include border-radius(0 $border-radius 0 0);
 		}
+
 		&:last-child {
 			@include border-radius(0 0 $border-radius $border-radius);
 		}
+
 		&:hover {
 			background: #feefb0;
 		}
+
 		&.active {
 			background: #fee580;
 		}
 	}
+
 	a {
 		display: block;
 		padding: .5em 1em;
 	}
+
 	&:before {
 		position: absolute;
 		content: "";
@@ -122,9 +139,11 @@
 	}
 }
 
-.data-dropdown li:hover .dropdown-menu,
-.data-dropdown li:focus .dropdown-menu {
+.data-dropdown li:hover,
+.data-dropdown li:focus {
+	.dropdown-menu {
 	left: 0;
+	}
 }
 
 .txp-nav-select {

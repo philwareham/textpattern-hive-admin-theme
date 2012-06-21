@@ -9,26 +9,35 @@
 
 .txp-list {
 	width: 100%;
-	tr.odd, tr.even {
+
+	tr.odd,
+	tr.even {
 		border: 1px solid $color-gradient-to;
 		td:last-child { // webkit border rendering bug fix
 			border-right: 1px solid $color-gradient-to;
 		}
 	}
+
 	tr.even td {
 		background: $color-background-box;
 	}
-	th, td {
+
+	th,
+	td {
 		padding: .38461538461538em 1em;
 	}
+
 	ul {
 		list-style: none;
 		padding-left: 0;
 		margin: 0;
 	}
-	thead .multi-edit, tbody .multi-edit {
+
+	thead .multi-edit,
+	tbody .multi-edit {
 		width: 18px;
 	}
+
 	thead {
 		th {
 			@include text-shadow-light;
@@ -36,21 +45,26 @@
 			border-top: 1px solid $color-gradient-to;
 			border-right: 1px solid darken($color-gradient-to, 5%);
 			border-bottom: 1px solid darken($color-gradient-to, 10%);
+
 			&:first-child {
 				border-left: 1px solid $color-gradient-to;
 			}
+
 			&:last-child {
 				border-right: 1px solid $color-gradient-to;
 			}
+
 			a {
 				position: relative;
 				display: block;
 				color: $color-text;
 				margin-right: .5em;
+
 				&:hover {
 					color: $color-text;
 					text-decoration: none;
 				}
+
 				&:after {
 					position: absolute;
 					top: .53846153846154em;
@@ -63,10 +77,12 @@
 					opacity: .5;
 					@include hide-text;
 				}
+
 				&:hover:after {
 					opacity: 1;
 				}
 			}
+
 			&.desc a:after {
 				content: "&#8595;";
 				border-left: .30769230769231em solid transparent;
@@ -74,6 +90,7 @@
 				border-top: .30769230769231em solid $color-text;
 				border-bottom: 0;
 			}
+
 			&.asc a:after {
 				content: "&#8593;";
 				border-left: .30769230769231em solid transparent;
@@ -83,11 +100,11 @@
 			}
 		}
 	}
-	tfoot {
-		td {
-			vertical-align: middle;
-		}
+
+	tfoot td {
+		vertical-align: middle;
 	}
+
 	.id {
 		white-space: nowrap;
 	}

@@ -43,7 +43,9 @@ a {
 	&:focus {
 		outline: thin dotted $color-link-hover;
 	}
-	&:hover, &:active {
+
+	&:hover,
+	&:active {
 		outline: 0;
 	}
 }
@@ -78,7 +80,9 @@ blockquote {
 /* addresses CSS quotes not supported in IE7, addresses quote property not supported in Safari4 */
 q {
 	quotes: none;
-	&:before, &:after {
+
+	&:before,
+	&:after {
 		content: "";
 		content: none;
 	}
@@ -240,11 +244,13 @@ input[type="button"],
 	*padding-top: 2px;
 	*padding-bottom: 0;
 	*overflow: visible;
+
 	&:hover {
 		color: $color-text;
 		text-decoration: none;
 		@include gradient(lighten(#eee, 4%), lighten(#bbb, 4%));
 	}
+
 	&:active {
 		@include gradient(lighten(#bbb, 4%), lighten(#eee, 4%));
 	}
@@ -310,7 +316,8 @@ textarea:focus,
 input[type="file"],
 input[type="radio"],
 input[type="checkbox"] {
-	&:focus, &:active {
+	&:focus,
+	&:active {
 		@include box-shadow(none);
 	}
 }
@@ -368,6 +375,7 @@ optgroup {
 	font-style: normal;
 	font-weight: normal;
 	color: $color-text;
+
 	&::-moz-focus-inner {
 		border: 0;
 		padding: 0;
@@ -415,6 +423,7 @@ textarea {
 	&:invalid {
 		@include box-shadow(none);
 	}
+
 	&::-moz-focus-inner {
 		border: 0;
 		padding: 0;
