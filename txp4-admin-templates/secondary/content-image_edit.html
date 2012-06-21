@@ -104,77 +104,74 @@
 	</div><!-- /txp-head -->
 	<div class="txp-body">
 
-	<div id="image_container" class="txp-container">
+		<div id="image_container" class="txp-container">
 
-		<div class="fullsize-image">
-			<img class="content-image" src="http://static1.designhive.com/img/cms/53.jpg" alt="53.jpg (460 &times; 294)" title="53.jpg (460 &times; 294)" />
-		</div>
-		<div class="txp-edit">
-			<h2>Edit image</h2>
-			<fieldset class="replace-image">
-				<legend>Replace image&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
-				<form class="image-replace" method="post" enctype="multipart/form-data" action="#">
-					<p class="edit-image-replace">
-						<input type="file" value="" name="thefile" id="image_replace" />
-						<input type="submit" value="Upload" />
-					</p>
-				</form>
-			</fieldset>
-			<div class="thumbnail-edit">
-				<img class="content-image" src="http://static1.designhive.com/img/cms/53t.jpg" width="184" height="118" alt="53t.jpg (184 &times; 118)" />
-				<form method="post" action="#" onsubmit="return confirm('Really delete?');">
-					<input type="submit" value="×" class="destroy"/>
-				</form>
+			<div class="fullsize-image">
+				<img class="content-image" src="http://static1.designhive.com/img/cms/53.jpg" alt="53.jpg (460 &#215; 294)" title="53.jpg (460 &#215; 294)" />
 			</div>
-			<fieldset class="thumbnail-upload">
-				<legend>Upload thumbnail&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
-				<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
-					<p class="edit-upload-thumbnail">
-						<input type="file" value="" name="thefile" id="upload_thumbnail"/>
-						<input type="submit" value="Upload" />
-					</p>
-				</form>
-			</fieldset>
-			<fieldset class="thumbnail-alter">
-				<legend>Create thumbnail&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
-				<form id="thumbnail_alter_form" method="post" action="#" class="edit-form">
-					<p class="edit-alter-thumbnail">
-						<label for="width">Width</label>&#160;<input class="input-xsmall" type="text" value="" name="width" id="width" size="4" />
-						<label for="height">Height</label>&#160;<input class="input-xsmall" type="text" value="" name="height" id="height" size="4" />
-						<label for="crop">Crop</label>&#160;<input type="checkbox" value="1" name="crop" id="crop" class="checkbox" />
-						<input type="submit" value="Create" />
-					</p>
-				</form>
-			</fieldset>
-			<div class="image-detail">
-				<form method="post" action="#" id="image_details_form" class="edit-form">
-					<p>
-						<span class="edit-label"><label for="image_name">Image name</label></span>
-						<span class="edit-value"><input type="text" value="txp_slug105x45.gif" name="name" id="image_name" size="32" /></span>
-					</p>
-					<p>
-						<span class="edit-label"><label for="image_category">Category</label></span>
-						<span class="edit-value">
-							<select id="image_category" name="category">
-								<option value="">&#160;</option>
-								<option value="site-design" selected="selected">Site Design</option>
-							</select>
-						</span>
-					</p>
-					<p>
-						<span class="edit-label"><label for="alt_text">Alternate text</label></span>
-						<span class="edit-value"><input type="text" value="Textpattern CMS" name="alt" id="alt_text" size="32" /></span>
-					</p>
-					<p>
-						<span class="edit-label"><label for="caption">Caption</label></span>
-						<textarea id="caption" name="caption" cols="64" rows="4"></textarea>
-					</p>
-					<p><input type="submit" value="Save" class="publish" /></p>
-				</form>
+			<div class="txp-edit">
+				<h2>Edit image</h2>
+				<fieldset class="replace-image">
+					<legend>Replace image&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></legend>
+					<form class="image-replace" method="post" enctype="multipart/form-data" action="#">
+						<p class="edit-image-replace">&#160;<input type="file" value="" name="thefile" id="image_replace" />&#160;<input type="submit" value="Upload" /></p>
+					</form>
+				</fieldset>
+				<div class="thumbnail-edit">
+					<img class="content-image" src="http://static1.designhive.com/img/cms/53t.jpg" width="184" height="118" alt="53t.jpg (184 &#215; 118)" title="53t.jpg (184 &#215; 118)" />
+					<form method="post" action="index.php" onsubmit="return confirm('Really delete?');">
+						<input type="submit" value="×" class="destroy" />
+					</form>
+				</div>
+				<fieldset class="thumbnail-upload">
+					<legend>Upload thumbnail&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></legend>
+					<form class="thumbnail-upload" method="post" enctype="multipart/form-data" action="#">
+						<p class="edit-upload-thumbnail">&#160;<input type="file" value="" name="thefile" id="upload_thumbnail" />&#160;<input type="submit" value="Upload" /></p>
+					</form>
+				</fieldset>
+				<fieldset class="thumbnail-alter">
+					<legend>Create thumbnail&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></legend>
+					<form method="post" action="#" id="thumbnail_alter_form" class="edit-form">
+						<p class="edit-alter-thumbnail">
+							<label for="width">Width</label>
+							<input type="text" value="100" name="width" size="4" class="input-xsmall" id="width" />
+							<label for="height">Height</label>
+							<input type="text" value="67" name="height" size="4" class="input-xsmall" id="height" />
+							<label for="crop">Crop</label>
+							<input type="checkbox" name="crop" value="1" id="crop" class="checkbox" />
+							<input type="submit" value="Create" />
+						</p>
+					</form>
+				</fieldset>
+				<div class="image-detail">
+					<form method="post" action="#" id="image_details_form" class="edit-form">
+						<p class="edit-image-name">
+							<span class="edit-label"><label for="image_name">Image name</label></span>
+							<span class="edit-value"><input type="text" value="child-with-carrots.jpg" name="image_name" id="image_name" size="32" /></span>
+						</p>
+						<p class="edit-image-category">
+							<span class="edit-label"><label for="image_category">Category</label></span>
+							<span class="edit-value">
+								<select id="image_category"  name="image_category">
+									<option value="">&#160;</option>
+									<option value="site-design" selected="selected">Site Design</option>
+								</select>
+							</span>
+						</p>
+						<p class="edit-image-alt-text">
+							<span class="edit-label"><label for="image_alt_text">Alternate text</label></span>
+							<span class="edit-value"><input type="text" value="Child with carrots" name="image_alt_text" id="image_alt_text" size="32" /></span>
+						</p>
+						<p class="edit-image-caption">
+							<span class="edit-label"><label for="image_caption">Caption</label></span>
+							<textarea id="image_caption" name="image_caption" rows="4" cols="64">Example image with thumbnail</textarea>
+						</p>
+						<p><input type="submit" value="Save" class="publish" /></p>
+					</form>
+				</div>
 			</div>
-		</div>
 
-	</div><!-- /txp-container -->
+		</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
 
 	<div class="txp-footer">

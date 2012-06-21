@@ -105,143 +105,127 @@
 	<div class="txp-body">
 		<h1 class="txp-heading">Links</h1>
 
+		<div id="link_control" class="txp-control-panel">
+
+			<form method="post" action="#" id="link_create" class="edit-form">
+				<p>
+					<label>Add new link</label>
+					<input type="text" value="" name="url" size="32" />
+					<input type="submit" value="Create" />
+				</p>
+			</form>
+
+			<form method="get" action="index.php" class="search-form">
+				<p>
+					<label for="link-search">Search</label>
+					<select id="link-search" name="search_method">
+						<option value="id">ID#</option>
+						<option value="name" selected="selected">Name</option>
+						<option value="description">Description</option>
+						<option value="url">URL</option>
+						<option value="category">Category</option>
+						<option value="author">Author</option>
+					</select>
+					<input type="text" value="" name="crit" size="15" />
+					<input type="submit" value="Go" name="search" />
+				</p>
+			</form>
+		</div>
+
+
 		<div id="link_container" class="txp-container">
 
-			<form method="post" action="index.php" id="link_details" class="edit-form">
-				<div class="txp-edit">
-					<h2>Add new link</h2>
-					<p class="edit-link-title">
-						<span class="edit-label"><label for="link_title">Title</label></span>
-						<span class="edit-value"><input type="text" value="" name="link_title" id="link_title" size="32" /></span>
-					</p>
-					<p class="edit-link-sort">
-						<span class="edit-label"><label for="link_sort">Sort value</label></span>
-						<span class="edit-value"><input class="input-medium" type="text" value="" name="link_sort" id="link_sort" size="16" /></span>
-					</p>
-					<p class="edit-link-url">
-						<span class="edit-label"><label for="link_url">URL</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-						<span class="edit-value"><input type="text" value="" name="link_url" id="link_url" size="32" /></span>
-					</p>
-					<p class="edit-link-category">
-						<span class="edit-label"><label for="link_category">Category</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-						<span class="edit-value">
-							<select name="link_category" id="link_category">
-								<option value="" selected="selected">&nbsp;</option>
-								<option value="textpattern">Textpattern</option>
-							</select>
-							[<a href="#">Edit</a>]
-						</span>
-					</p>
-					<p class="edit-link-description">
-						<span class="edit-label"><label for="link_description">Description</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-						<textarea name="link_description" id="link_description" cols="64" rows="4"></textarea>
-					</p>
-					<p><input type="submit" value="Save" class="publish" /></p>
+			<form action="#" id="links_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
+				<div class="txp-listtables">
+
+					<table class="txp-list">
+						
+						<thead>
+							<tr>
+								<th class="desc id"><a href="#">ID#</a></th>
+								<th class="name"><a href="#">Name</a></th>
+								<th class="links_detail description"><a href="#">Description</a></th>
+								<th class="category"><a href="#">Category</a></th>
+								<th class="url"><a href="#">URL</a></th>
+								<th class="links_detail date created"><a href="#">Date</a></th>
+								<th class="author"><a href="#">Author</a></th>
+								<th class="multi-edit">&#160;</th>
+							</tr>
+						</thead>
+
+						<tfoot>
+							<tr>
+								<td class="detail-toggle" colspan="2">
+									<input type="checkbox" name="cb_toggle_links_detail" id="cb_toggle_links_detail" value="1" checked="checked" class="checkbox" onclick="toggleClassRemember('links_detail');" />
+									<label for="cb_toggle_links_detail">Show detail</label>
+								</td>
+								<td class="multi-edit" colspan="6">
+									Select:
+									<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
+									<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
+									<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
+									<label for="withselected">With selected:</label>
+									<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
+										<option value="" selected="selected"></option>
+										<option value="changecategory">Change category</option>
+										<option value="changeauthor">Change author</option>
+										<option value="delete">Delete</option>
+									</select>
+									<input type="submit" value="Go" />
+								</td>
+							</tr>
+						</tfoot>
+
+						<tbody>
+							<tr class="odd">
+								<td class="id"><a href="secondary/content-link_edit.html" title="Edit">2</a></td>
+								<td class="name"><a href="secondary/content-link_edit.html" title="Edit">TextBook</a></td>
+								<td class="links_detail description">&#160;</td>
+								<td class="url"><a rel="external" target="_blank" href="http://textpattern.net/">http://textpattern.net/</a></td>
+								<td class="category"><span title="Textpattern">textpattern</span></td>
+								<td class="links_detail date created">20&#160;Jul&#160;2005 12:54:41</td>
+								<td class="author"><span title="Phil Wareham">admin</span></td>
+								<td class="multi-edit"><input type="checkbox" value="2" name="selected[]" /></td>
+							</tr>
+							<tr class="even">
+								<td class="id"><a href="secondary/content-link_edit.html" title="Edit">1</a></td>
+								<td class="name"><a href="secondary/content-link_edit.html" title="Edit">Textpattern</a></td>
+								<td class="links_detail description">&#160;</td>
+								<td class="url"><a rel="external" target="_blank" href="http://textpattern.com/">http://textpattern.com/</a></td>
+								<td class="category"><span title="Textpattern">textpattern</span></td>
+								<td class="links_detail date created">20&#160;Jul&#160;2005 12:54:26</td>
+								<td class="author"><span title="Phil Wareham">admin</span></td>
+								<td class="multi-edit"><input type="checkbox" value="1" name="selected[]" /></td>
+							</tr>
+							<tr class="odd">
+								<td class="id"><a href="secondary/content-link_edit.html" title="Edit">3</a></td>
+								<td class="name"><a href="secondary/content-link_edit.html" title="Edit">Textpattern Resources</a></td>
+								<td class="links_detail description">An example link description.</td>
+								<td class="url"><a rel="external" target="_blank" href="http://textpattern.org/">http://textpattern.org/</a></td>
+								<td class="category"><span title="Textpattern">textpattern</span></td>
+								<td class="links_detail date created">20&#160;Jul&#160;2005 12:55:04</td>
+								<td class="author"><span title="Phil Wareham">admin</span></td>
+								<td class="multi-edit"><input type="checkbox" value="3" name="selected[]" /></td>
+							</tr>
+						</tbody>
+
+					</table>
+
 				</div>
 			</form>
 
-			<div id="link_control" class="txp-control-panel">
-				<form method="get" action="index.php" class="search-form">
-					<p><label for="link-search">Search</label>
-						<select id="link-search" name="search_method">
-							<option value="id">ID#</option>
-							<option value="name" selected="selected">Name</option>
-							<option value="description">Description</option>
-							<option value="category">Category</option>
-							<option value="author">Author</option>
-						</select>
-						<input type="text" value="" name="crit" size="15" />
-						<input type="submit" value="Go" name="search" />
+			<div id="link_navigation" class="txp-navigation">
+				<p class="prev-next">1/1</p>
+				<form method="post" action="index.php" class="pageby">
+					<p>View 
+						<select name="qty" onchange="submit(this.form);">
+							<option value="15">15</option>
+							<option value="25">25</option>
+							<option value="50">50</option>
+							<option value="100">100</option>
+						</select> per page<noscript> <input type="submit" value="Go" /></noscript>
 					</p>
 				</form>
-			</div>
-
-			<div class="txp-list">
-
-				<form action="index.php" id="links_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
-					<div class="txp-listtables">
-
-						<table class="txp-list">
-
-							<thead>
-								<tr>
-									<th class="id"><a href="#">ID#</a></th>
-									<th class="asc name"><a href="#">Name</a></th>
-									<th class="description"><a href="#">Description</a></th>
-									<th class="category"><a href="#">Category</a></th>
-									<th class="date created"><a href="#">Date</a></th>
-									<th class="author"><a href="#">Author</a></th>
-									<th class="multi-edit">&#160;</th>
-								</tr>
-							</thead>
-
-							<tfoot>
-								<tr>
-									<td class="multi-edit" colspan="7">Select:
-										<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
-										<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
-										<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
-										<label for="withselected">With selected:</label>
-										<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
-											<option value="" selected="selected"></option>
-											<option value="changecategory">Change category</option>
-											<option value="changeauthor">Change author</option>
-											<option value="delete">Delete</option>
-										</select>
-										<input type="submit" value="Go" />
-									</td>
-								</tr>
-							</tfoot>
-
-							<tbody>
-								<tr class="odd">
-									<td class="id"><a href="#" title="Edit">2</a></td>
-									<td class="name"><a href="#" title="Edit">TextBook</a></td>
-									<td class="description">&#160;</td>
-									<td class="category"><span title="Textpattern">textpattern</span></td>
-									<td class="date created">20&#160;Jul&#160;2005 12:54:41</td>
-									<td class="author"><span title="Phil Wareham">admin</span></td>
-									<td class="multi-edit"><input type="checkbox" value="2" name="selected[]" /></td>
-								</tr>
-								<tr class="even">
-									<td class="id"><a href="#" title="Edit">1</a></td>
-									<td class="name"><a href="#" title="Edit">Textpattern</a></td>
-									<td class="description">&#160;</td>
-									<td class="category"><span title="Textpattern">textpattern</span></td>
-									<td class="date created">20&#160;Jul&#160;2005 12:54:26</td>
-									<td class="author"><span title="Phil Wareham">admin</span></td>
-									<td class="multi-edit"><input type="checkbox" value="1" name="selected[]" /></td>
-								</tr>
-								<tr class="odd">
-									<td class="id"><a href="#" title="Edit">3</a></td>
-									<td class="name"><a href="#" title="Edit">Txp Resources</a></td>
-									<td class="description">&#160;</td>
-									<td class="category"><span title="Textpattern">textpattern</span></td>
-									<td class="date created">20&#160;Jul&#160;2005 12:55:04</td>
-									<td class="author"><span title="Phil Wareham">admin</span></td>
-									<td class="multi-edit"><input type="checkbox" value="3" name="selected[]" /></td>
-								</tr>
-							</tbody>
-	
-						</table>
-	
-					</div>
-				</form>
-
-				<div id="link_navigation" class="txp-navigation">
-					<p class="prev-next">1/1</p>
-					<form method="post" action="index.php" class="pageby">
-						<p>View 
-							<select name="qty" onchange="submit(this.form);">
-								<option value="15">15</option>
-								<option value="25">25</option>
-								<option value="50">50</option>
-								<option value="100">100</option>
-							</select> per page<noscript> <input type="submit" value="Go" /></noscript>
-						</p>
-					</form>
-				</div>
-
 			</div>
 
 		</div><!-- /txp-container -->

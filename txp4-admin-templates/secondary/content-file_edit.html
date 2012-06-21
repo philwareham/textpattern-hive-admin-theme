@@ -104,82 +104,77 @@
 	</div><!-- /txp-head -->
 	<div class="txp-body">
 
-	<div id="file_container" class="txp-container">
+		<div id="file_container" class="txp-container">
 
-		<div class="txp-edit">
-			<h2>Edit file</h2>
-			<p class="edit-file-condition">
-				<span class="edit-label">File condition</span>
-				<span class="edit-value"><span class="success">Ok</span></span>
-			</p>
-			<p class="edit-file-name">
-				<span class="edit-label">Name</span>
-				<span class="edit-value"><a href="#" title="Download">test-file.zip</a></span>
-			</p>
-			<p class="edit-file-downloads">
-				<span class="edit-label">Download count</span>
-				<span class="edit-value"><a href="#" title="Download">2</a></span>
-			</p>
-			<div class="file-detail exists">
-				<form method="post" action="index.php" id="file_details" class="edit-form">
-					<p class="edit-file-status">
-						<span class="edit-label">Status</span>
-						<span class="edit-value">
-							<input type="radio" name="file_status" value="2" id="file_status_1" class="radio" /><label for="file_status_1">Hidden</label>&#160;
-							<input type="radio" name="file_status" value="3" id="file_status_2" class="radio" /><label for="file_status_2">Pending</label>&#160;
-							<input type="radio" name="file_status" value="4" id="file_status_3" checked="checked" class="radio active" /><label for="file_status_3"><strong>Live</strong></label>
-						</span>
-					</p>
-					<p class="edit-file-title">
-						<span class="edit-label"><label for="file_title">Title</label></span>
-						<span class="edit-value"><input type="text" value="A Test File" name="file_title" id="file_title" size="32" /></span>
-					</p>
-					<p class="edit-file-category">
-						<span class="edit-label"><label for="file_category">Category</label></span>
-						<span class="edit-value">
-							<select name="file_category" id="file_category">
-								<option value="" selected="selected">&#160;</option>
-							</select>
-						</span>
-					</p>
-					<p class="edit-file-description">
-						<span class="edit-label"><label for="file_description">Description</label></span>
-						<textarea id="file_description" name="file_description" cols="64" rows="4">This is a test file upload description</textarea>
-					</p>
-					<fieldset id="file-created">
-						<legend>Timestamp</legend>
-						<p class="edit-file-publish-now">
-							<input type="checkbox" name="file_publish_now" id="file_publish_now" value="1" class="checkbox" /><label for="file_publish_now">Set timestamp to now&#8230;</label>
+			<div class="txp-edit">
+				<h2>Edit file</h2>
+				<p class="edit-condition">
+					<span class="edit-label">Condition</span>
+					<span class="edit-value"><span class="success">Ok</span></span>
+				</p>
+				<p class="edit-name">
+					<span class="edit-label">Name</span>
+					<span class="edit-value"><a href="#" title="Download">test-file.zip</a></span>
+				</p>
+				<p class="edit-download-count">
+					<span class="edit-label">Download count</span>
+					<span class="edit-value">2</span>
+				</p>
+				<fieldset class="replace-file">
+					<legend>Replace file&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></legend>
+					<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
+						<p class="edit-file-replace">&#160;<input type="file" value="" name="thefile" id="file_replace" />&#160;<input type="submit" value="Upload" /></p>
+					</form>
+				</fieldset>
+				<div class="file-detail exists">
+					<form method="post" action="#" id="file_details" class="edit-form">
+						<p class="edit-file-status">
+							<span class="edit-label">File status</span>
+							<span class="edit-value">
+								<input type="radio" id="file_status-2" name="file_status" value="2" class="radio" /><label for="file_status-2">Hidden</label>
+								<input type="radio" id="file_status-3" name="file_status" value="3" class="radio" /><label for="file_status-3">Pending</label>
+								<input type="radio" id="file_status-4" name="file_status" value="4" class="radio active" checked="checked" /><label for="file_status-4">Live</label>
+							</span>
 						</p>
-						<p class="edit-file-publish-at">&#8230;or publish at&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
-						<p class="edit-file-published">
-							Date
-							<input type="text" name="year" value="2011" size="4" maxlength="4" class="edit year" title="Year" /> / 
-							<input type="text" name="month" value="09" size="2" maxlength="2" class="edit month" title="Month" /> / 
-							<input type="text" name="day" value="04" size="2" maxlength="2" class="edit day" title="Day" />
+						<p class="edit-file-title">
+							<span class="edit-label"><label for="file_title">Title</label></span>
+							<span class="edit-value"><input type="text" value="" name="file_title" id="file_title" size="32" /></span>
 						</p>
-						<p class="edit-file-created">
-							Time
-							<input type="text" name="hour" value="20" size="2" maxlength="2" class="edit hour" title="Hour" /> : 
-							<input type="text" name="minute" value="45" size="2" maxlength="2" class="edit minute" title="Minute" /> : 
-							<input type="text" name="second" value="54" size="2" maxlength="2" class="edit second" title="Second" />
+						<p class="edit-file-category">
+							<span class="edit-label"><label for="file_category">Category</label></span>
+							<span class="edit-value">
+								<select id="file_category"  name="file_category">
+									<option value="" selected="selected">&#160;</option>
+								</select>
+							</span>
 						</p>
-					</fieldset>
-					<fieldset class="replace-file">
-						<legend>Replace file&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
-						<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
-							<p class="edit-file-replace">
-								<input type="file" value="" name="file_replace" id="file_replace" />
-								<input type="submit" value="Upload" />
+						<p class="edit-file-description">
+							<span class="edit-label"><label for="file_description">Description</label></span>
+							<textarea id="file_description" name="file_description" rows="4" cols="64"></textarea>
+						</p>
+						<fieldset class="file-created">
+							<legend>Timestamp</legend>
+							<p class="edit-file-publish-now"><input type="checkbox" name="publish_now" value="1" id="publish_now" class="checkbox" /><label for="publish_now">Set timestamp to now&#8230;</label></p>
+							<p class="edit-file-publish-at">&#8230;or publish at&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></p>
+							<p class="edit-file-published">
+								<span class="label">Date</span>
+								<input type="text" name="year" value="2012" size="4" maxlength="4" class="year" title="Year" /> / 
+								<input type="text" name="month" value="03" size="2" maxlength="2" class="month" title="Month" /> / 
+								<input type="text" name="day" value="21" size="2" maxlength="2" class="day" title="Day" />
 							</p>
-						</form>
-					</fieldset>
-					<p><input type="submit" value="Save" class="publish" /></p>
-				</form>
+							<p class="edit-file-created">
+								<span class="label">Time</span>
+								<input type="text" name="hour" value="10" size="2" maxlength="2" class="hour" title="Hour" /> : 
+								<input type="text" name="minute" value="07" size="2" maxlength="2" class="minute" title="Minute" /> : 
+								<input type="text" name="second" value="23" size="2" maxlength="2" class="second" title="Second" />
+							</p>
+						</fieldset>
+						<p><input type="submit" value="Save" class="publish" /></p>
+					</form>
+				</div>
 			</div>
-		</div>
 
-	</div><!-- /txp-container -->
+		</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
 
 	<div class="txp-footer">

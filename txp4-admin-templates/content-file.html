@@ -140,9 +140,9 @@
 								<th class="id"><a href="#">ID#</a></th>
 								<th class="asc name"><a href="#">Name</a></th>
 								<th class="title"><a href="#">Title</a></th>
-								<th class="description"><a href="#">Description</a></th>
+								<th class="files_detail description"><a href="#">Description</a></th>
 								<th class="category"><a href="#">Category</a></th>
-								<th class="tag-build">Tags</th>
+								<th class="files_detail tag-build">Tags</th>
 								<th class="status">Status</th>
 								<th class="condition">Condition</th>
 								<th class="downloads"><a href="#">Downloads</a></th>
@@ -153,7 +153,11 @@
 
 						<tfoot>
 							<tr>
-								<td class="multi-edit" colspan="11">
+								<td class="detail-toggle" colspan="2">
+									<input type="checkbox" name="cb_toggle_files_detail" id="cb_toggle_files_detail" value="1" checked="checked" class="checkbox" onclick="toggleClassRemember('files_detail');" />
+									<label for="cb_toggle_files_detail">Show detail</label>
+								</td>
+								<td class="multi-edit" colspan="9">
 									Select:
 									<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
 									<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
@@ -175,9 +179,9 @@
 								<td class="id"><a href="secondary/content-file_edit.html" title="Edit">1</a>&#160;<span class="articles_detail">[<a href="#" title="View">Download</a>]</span></td>
 								<td class="name"><a href="secondary/content-file_edit.html" title="Edit">test-file.zip</a></td>
 								<td class="title">A Test File</td>
-								<td class="description">This is a test file upload description</td>
+								<td class="files_detail description">This is a test file upload description</td>
 								<td class="category">&#160;</td>
-								<td class="tag-build">
+								<td class="files_detail tag-build">
 									<a target="_blank" href="#" onclick="popWin(this.href); return false;">Textile</a>
 									&#124; <a target="_blank" href="#" onclick="popWin(this.href); return false;">Textpattern</a>
 									&#124; <a target="_blank" href="#" onclick="popWin(this.href); return false;">HTML</a>

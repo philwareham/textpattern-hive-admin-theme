@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="robots" content="noindex, nofollow" />
-	<title>Edit link - My Site &#124; Textpattern CMS</title>
+	<title>Users - My Site &#124; Textpattern CMS</title>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script type="text/javascript" src="../textpattern.js"></script>
 	<link href="../../css/textpattern.css" rel="stylesheet" type="text/css" />
@@ -15,7 +15,7 @@
 	<!--[if lt IE 9]><script type="text/javascript" src="../../js/selectivizr.min.js"></script><![endif]-->
 	<script type="text/javascript" src="../../js/scripts.js"></script>
 </head>
-<body id="page-file" class="content">
+<body id="page-plugin" class="admin">
 
 	<div class="txp-header">
 		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
@@ -23,14 +23,14 @@
 
 		<div class="txp-nav">
 			<ul class="data-dropdown">
-				<li class="dropdown active"><a class="dropdown-toggle" href="../content-article.html">Content</a>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="../content-article.html">Content</a>
 					<ul class="dropdown-menu">
 						<li class="inactive"><a href="../content-category.html">Categories</a></li>
 						<li class="inactive"><a href="../content-article.html">Write</a></li>
 						<li class="inactive"><a href="../content-list.html">Articles</a></li>
 						<li class="inactive"><a href="../content-image.html">Images</a></li>
 						<li class="inactive"><a href="../content-file.html">Files</a></li>
-						<li class="active"><a href="../content-link.html">Links</a></li>
+						<li class="inactive"><a href="../content-link.html">Links</a></li>
 						<li class="inactive"><a href="../content-discuss.html">Comments</a></li>
 					</ul>
 				</li>
@@ -42,11 +42,11 @@
 						<li class="inactive"><a href="../presentation-css.html">Style</a></li>
 					</ul>
 				</li>
-				<li class="dropdown inactive"><a class="dropdown-toggle" href="../admin-admin.html">Admin</a>
+				<li class="dropdown active"><a class="dropdown-toggle" href="../admin-admin.html">Admin</a>
 					<ul class="dropdown-menu">
 						<li class="inactive"><a href="../admin-diag.html">Diagnostics</a></li>
 						<li class="inactive"><a href="../admin-prefs_basic.html">Preferences</a></li>
-						<li class="inactive"><a href="../admin-admin.html">Users</a></li>
+						<li class="active"><a href="../admin-admin.html">Users</a></li>
 						<li class="inactive"><a href="../admin-log.html">Visitor logs</a></li>
 						<li class="inactive"><a href="../admin-plugin.html">Plugins</a></li>
 						<li class="inactive"><a href="../admin-import.html">Import</a></li>
@@ -72,7 +72,7 @@
 					<option value="../content-list.html">Articles</option>
 					<option value="../content-image.html">Images</option>
 					<option value="../content-file.html">Files</option>
-					<option value="../content-link.html" selected="selected">Links</option>
+					<option value="../content-link.html">Links</option>
 					<option value="../content-discuss.html">Comments</option>
 				</optgroup>
 				<optgroup label="Presentation">
@@ -84,7 +84,7 @@
 				<optgroup label="Admin">
 					<option value="../admin-diag.html">Diagnostics</option>
 					<option value="../admin-prefs_basic.html">Preferences</option>
-					<option value="../admin-admin.html">Users</option>
+					<option value="../admin-admin.html" selected="selected">Users</option>
 					<option value="../admin-log.html">Visitor logs</option>
 					<option value="../admin-plugin.html">Plugins</option>
 					<option value="../admin-import.html">Import</option>
@@ -104,41 +104,31 @@
 	</div><!-- /txp-head -->
 	<div class="txp-body">
 
-		<div id="link_container" class="txp-container">
-	
-			<form method="post" action="#" id="link_details" class="edit-form">
+		<div id="plugin_container" class="txp-container">
+
+			<form method="post" action="#" id="user_edit" class="edit-form">
 				<div class="txp-edit">
-					<h2>Edit link</h2>
-					<p class="edit-linkname">
-						<span class="edit-label"><label for="linkname">Title</label></span>
-						<span class="edit-value"><input type="text" value="Txp Resources" name="linkname" id="linkname" size="32" /></span>
+					<h2>Edit author</h2>
+					<p class="edit-login-name">
+						<span class="edit-label"><label for="login_name">Login</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+						<span class="edit-value"><strong>admin</strong></span>
 					</p>
-					<p class="edit-linksort">
-						<span class="edit-label"><label for="linksort">Sort value</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
-						<span class="edit-value"><input type="text" value="Txp Resources" name="linksort" id="linksort" size="32" /></span>
+					<p class="edit-real-name">
+						<span class="edit-label"><label for="real_name">Real name</label></span>
+						<span class="edit-value"><input type="text" value="Phil Wareham" name="real_name" id="real_name" size="32" /></span>
 					</p>
-					<p class="edit-link-url">
-						<span class="edit-label"><label for="url">URL</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
-						<span class="edit-value"><input type="text" value="http://textpattern.org/" name="url" id="url" size="32" /></span>
+					<p class="edit-login-email">
+						<span class="edit-label"><label for="login_email">E-mail</label></span>
+						<span class="edit-value"><input type="text" value="phil@designhive.com" name="login_email" id="login_email" size="32" /></span>
 					</p>
-					<p class="edit-link-category">
-						<span class="edit-label"><label for="link_category">Category</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
-						<span class="edit-value">
-							<select id="link_category"  name="category">
-								<option value="">&#160;</option>
-								<option value="textpattern" selected="selected">Textpattern</option>
-							</select>
-							[<a href="#" title="Edit">Edit</a>]
-						</span>
-					</p>
-					<p class="edit-link-description">
-						<span class="edit-label"><label for="link_description">Description</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
-						<textarea id="link_description" name="description" cols="64" rows="7"></textarea>
+					<p class="edit-login-privileges">
+						<span class="edit-label"><label for="login_privileges">Privileges</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+						<span class="edit-value"><input type="hidden" value="1" name="login_privileges" /><strong>Publisher</strong></span>
 					</p>
 					<p><input type="submit" value="Save" class="publish" /></p>
 				</div>
 			</form>
-	
+
 		</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
 

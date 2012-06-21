@@ -106,7 +106,13 @@
 		<h1 class="txp-heading">Comments</h1>
 
 		<div id="discuss_control" class="txp-control-panel">
-			<a id="list_banned_ips" href="secondary/content-discuss_ipban.html">List banned IPs</a>
+
+			<div class="txp-buttons">
+				<form method="post" action="secondary/content-discuss_ipban.html" id="change_password">
+					<p><input type="submit" value="List banned IPs" /></p>
+				</form>
+			</div>
+
 			<form method="get" action="index.php" class="search-form">
 				<p>
 					<label for="discuss-search">Search</label>
@@ -123,6 +129,7 @@
 					<input type="submit" value="Go" name="search" />
 				</p>
 			</form>
+
 		</div>
 
 		<div id="discuss_container" class="txp-container">

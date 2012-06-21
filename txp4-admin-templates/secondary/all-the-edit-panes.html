@@ -107,7 +107,7 @@
 	<div class="txp-container">
 
 
-		<form method="post" action="index.php" class="edit-form">
+		<form method="post" action="#" class="edit-form">
 			<div class="txp-edit">
 				<h2>Edit category</h2>
 				<p class="edit-category-name">
@@ -134,67 +134,64 @@
 
 
 		<div class="fullsize-image">
-			<img class="content-image" src="http://static1.designhive.com/img/cms/53.jpg" alt="53.jpg (460 &times; 294)" title="53.jpg (460 &times; 294)" />
+			<img class="content-image" src="http://static1.designhive.com/img/cms/53.jpg" alt="53.jpg (460 &#215; 294)" title="53.jpg (460 &#215; 294)" />
 		</div>
 		<div class="txp-edit">
 			<h2>Edit image</h2>
 			<fieldset class="replace-image">
-				<legend>Replace image&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
-				<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
-					<p class="edit-image-replace">
-						<input type="file" value="" name="image_replace" id="image_replace" />
-						<input type="submit" value="Upload" />
-					</p>
+				<legend>Replace image&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></legend>
+				<form class="image-replace" method="post" enctype="multipart/form-data" action="#">
+					<p class="edit-image-replace">&#160;<input type="file" value="" name="thefile" id="image_replace" />&#160;<input type="submit" value="Upload" /></p>
 				</form>
 			</fieldset>
 			<div class="thumbnail-edit">
-				<img class="content-image" src="http://static1.designhive.com/img/cms/53t.jpg" width="184" height="118" alt="53t.jpg (184 &times; 118)" />
+				<img class="content-image" src="http://static1.designhive.com/img/cms/53t.jpg" width="184" height="118" alt="53t.jpg (184 &#215; 118)" title="53t.jpg (184 &#215; 118)" />
 				<form method="post" action="index.php" onsubmit="return confirm('Really delete?');">
-					<input type="submit" value="×" class="destroy"/>
+					<input type="submit" value="×" class="destroy" />
 				</form>
 			</div>
 			<fieldset class="thumbnail-upload">
-				<legend>Upload thumbnail&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
-				<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
-					<p class="edit-upload-thumbnail">
-						<input type="file" value="" name="upload_thumbnail" id="upload_thumbnail"/>
-						<input type="submit" value="Upload" />
-					</p>
+				<legend>Upload thumbnail&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></legend>
+				<form class="thumbnail-upload" method="post" enctype="multipart/form-data" action="#">
+					<p class="edit-upload-thumbnail">&#160;<input type="file" value="" name="thefile" id="upload_thumbnail" />&#160;<input type="submit" value="Upload" /></p>
 				</form>
 			</fieldset>
 			<fieldset class="thumbnail-alter">
-				<legend>Create thumbnail&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
-				<form id="thumbnail_alter_form" method="post" action="#" class="edit-form">
+				<legend>Create thumbnail&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></legend>
+				<form method="post" action="index.php" id="thumbnail_alter_form" class="edit-form">
 					<p class="edit-alter-thumbnail">
-						<label for="width">Width</label>&#160;<input class="input-xsmall" type="text" value="" name="width" id="width" size="4" />
-						<label for="height">Height</label>&#160;<input class="input-xsmall" type="text" value="" name="height" id="height" size="4" />
-						<label for="crop">Crop</label>&#160;<input type="checkbox" value="1" name="crop" id="crop" class="checkbox" />
+						<label for="width">Width</label>
+						<input type="text" value="100" name="width" size="4" class="input-xsmall" id="width" />
+						<label for="height">Height</label>
+						<input type="text" value="67" name="height" size="4" class="input-xsmall" id="height" />
+						<label for="crop">Crop</label>
+						<input type="checkbox" name="crop" value="1" id="crop" class="checkbox" />
 						<input type="submit" value="Create" />
 					</p>
 				</form>
 			</fieldset>
 			<div class="image-detail">
-				<form method="post" action="index.php" id="image_details_form" class="edit-form">
-					<p>
-						<span class="edit-label"><label for="image-name">Image name</label></span>
-						<span class="edit-value"><input type="text" value="txp_slug105x45.gif" name="image-name" id="image-name" /></span>
+				<form method="post" action="#" id="image_details_form" class="edit-form">
+					<p class="edit-image-name">
+						<span class="edit-label"><label for="image_name">Image name</label></span>
+						<span class="edit-value"><input type="text" value="child-with-carrots.jpg" name="image_name" id="image_name" size="32" /></span>
 					</p>
-					<p>
-						<span class="edit-label"><label for="image-category">Category</label></span>
+					<p class="edit-image-category">
+						<span class="edit-label"><label for="image_category">Category</label></span>
 						<span class="edit-value">
-							<select id="image-category" name="image-category">
+							<select id="image_category"  name="image_category">
 								<option value="">&#160;</option>
 								<option value="site-design" selected="selected">Site Design</option>
 							</select>
 						</span>
 					</p>
-					<p>
-						<span class="edit-label"><label for="alt-text">Alternate text</label></span>
-						<span class="edit-value"><input type="text" value="Textpattern CMS" name="alt-text" id="alt-text" size="32" /></span>
+					<p class="edit-image-alt-text">
+						<span class="edit-label"><label for="image_alt_text">Alternate text</label></span>
+						<span class="edit-value"><input type="text" value="Child with carrots" name="image_alt_text" id="image_alt_text" size="32" /></span>
 					</p>
-					<p>
-						<span class="edit-label"><label for="caption">Caption</label></span>
-						<textarea id="caption" name="caption" cols="64" rows="4"></textarea>
+					<p class="edit-image-caption">
+						<span class="edit-label"><label for="image_caption">Caption</label></span>
+						<textarea id="image_caption" name="image_caption" rows="4" cols="64">Example image with thumbnail</textarea>
 					</p>
 					<p><input type="submit" value="Save" class="publish" /></p>
 				</form>
@@ -204,71 +201,66 @@
 
 		<div class="txp-edit">
 			<h2>Edit file</h2>
-			<p class="edit-file-condition">
-				<span class="edit-label">File condition</span>
+			<p class="edit-condition">
+				<span class="edit-label">Condition</span>
 				<span class="edit-value"><span class="success">Ok</span></span>
 			</p>
-			<p class="edit-file-name">
+			<p class="edit-name">
 				<span class="edit-label">Name</span>
 				<span class="edit-value"><a href="#" title="Download">test-file.zip</a></span>
 			</p>
-			<p class="edit-file-downloads">
+			<p class="edit-download-count">
 				<span class="edit-label">Download count</span>
-				<span class="edit-value"><a href="#" title="Download">2</a></span>
+				<span class="edit-value">2</span>
 			</p>
+			<fieldset class="replace-file">
+				<legend>Replace file&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></legend>
+				<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
+					<p class="edit-file-replace">&#160;<input type="file" value="" name="thefile" id="file_replace" />&#160;<input type="submit" value="Upload" /></p>
+				</form>
+			</fieldset>
 			<div class="file-detail exists">
-				<form method="post" action="index.php" id="file_details" class="edit-form">
+				<form method="post" action="#" id="file_details" class="edit-form">
 					<p class="edit-file-status">
-						<span class="edit-label">Status</span>
+						<span class="edit-label">File status</span>
 						<span class="edit-value">
-							<input type="radio" name="file_status" value="2" id="file_status_1" class="radio" /><label for="file_status_1">Hidden</label>&#160;
-							<input type="radio" name="file_status" value="3" id="file_status_2" class="radio" /><label for="file_status_2">Pending</label>&#160;
-							<input type="radio" name="file_status" value="4" id="file_status_3" checked="checked" class="radio active" /><label for="file_status_3"><strong>Live</strong></label>
+							<input type="radio" id="file_status-2" name="file_status" value="2" class="radio" /><label for="file_status-2">Hidden</label>
+							<input type="radio" id="file_status-3" name="file_status" value="3" class="radio" /><label for="file_status-3">Pending</label>
+							<input type="radio" id="file_status-4" name="file_status" value="4" class="radio active" checked="checked" /><label for="file_status-4">Live</label>
 						</span>
 					</p>
 					<p class="edit-file-title">
 						<span class="edit-label"><label for="file_title">Title</label></span>
-						<span class="edit-value"><input type="text" value="A Test File" name="file_title" id="file_title" size="32" /></span>
+						<span class="edit-value"><input type="text" value="" name="file_title" id="file_title" size="32" /></span>
 					</p>
 					<p class="edit-file-category">
 						<span class="edit-label"><label for="file_category">Category</label></span>
 						<span class="edit-value">
-							<select name="file_category" id="file_category">
+							<select id="file_category"  name="file_category">
 								<option value="" selected="selected">&#160;</option>
 							</select>
 						</span>
 					</p>
 					<p class="edit-file-description">
 						<span class="edit-label"><label for="file_description">Description</label></span>
-						<textarea id="file_description" name="file_description" cols="64" rows="4">This is a test file upload description</textarea>
+						<textarea id="file_description" name="file_description" rows="4" cols="64"></textarea>
 					</p>
-					<fieldset id="file-created">
+					<fieldset class="file-created">
 						<legend>Timestamp</legend>
-						<p class="edit-file-publish-now">
-							<input type="checkbox" name="file_publish_now" id="file_publish_now" value="1" class="checkbox" /><label for="file_publish_now">Set timestamp to now&#8230;</label>
-						</p>
-						<p class="edit-file-publish-at">&#8230;or publish at&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
+						<p class="edit-file-publish-now"><input type="checkbox" name="publish_now" value="1" id="publish_now" class="checkbox" /><label for="publish_now">Set timestamp to now&#8230;</label></p>
+						<p class="edit-file-publish-at">&#8230;or publish at&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></p>
 						<p class="edit-file-published">
-							Date
-							<input type="text" name="year" value="2011" size="4" maxlength="4" class="edit year" title="Year" /> / 
-							<input type="text" name="month" value="09" size="2" maxlength="2" class="edit month" title="Month" /> / 
-							<input type="text" name="day" value="04" size="2" maxlength="2" class="edit day" title="Day" />
+							<span class="label">Date</span>
+							<input type="text" name="year" value="2012" size="4" maxlength="4" class="year" title="Year" /> / 
+							<input type="text" name="month" value="03" size="2" maxlength="2" class="month" title="Month" /> / 
+							<input type="text" name="day" value="21" size="2" maxlength="2" class="day" title="Day" />
 						</p>
 						<p class="edit-file-created">
-							Time
-							<input type="text" name="hour" value="20" size="2" maxlength="2" class="edit hour" title="Hour" /> : 
-							<input type="text" name="minute" value="45" size="2" maxlength="2" class="edit minute" title="Minute" /> : 
-							<input type="text" name="second" value="54" size="2" maxlength="2" class="edit second" title="Second" />
+							<span class="label">Time</span>
+							<input type="text" name="hour" value="10" size="2" maxlength="2" class="hour" title="Hour" /> : 
+							<input type="text" name="minute" value="07" size="2" maxlength="2" class="minute" title="Minute" /> : 
+							<input type="text" name="second" value="23" size="2" maxlength="2" class="second" title="Second" />
 						</p>
-					</fieldset>
-					<fieldset class="replace-file">
-						<legend>Replace file&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></legend>
-						<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
-							<p class="edit-file-replace">
-								<input type="file" value="" name="file_replace" id="file_replace" />
-								<input type="submit" value="Upload" />
-							</p>
-						</form>
 					</fieldset>
 					<p><input type="submit" value="Save" class="publish" /></p>
 				</form>
@@ -276,76 +268,76 @@
 		</div>
 
 
-		<form method="post" action="index.php" id="link_details" class="edit-form">
+		<form method="post" action="#" id="link_details" class="edit-form">
 			<div class="txp-edit">
-				<h2>Add new link</h2>
-				<p class="edit-link-title">
-					<span class="edit-label"><label for="link_title">Title</label></span>
-					<span class="edit-value"><input type="text" value="" name="link_title" id="link_title" size="32" /></span>
+				<h2>Edit link</h2>
+				<p class="edit-linkname">
+					<span class="edit-label"><label for="linkname">Title</label></span>
+					<span class="edit-value"><input type="text" value="Txp Resources" name="linkname" id="linkname" size="32" /></span>
 				</p>
-				<p class="edit-link-sort">
-					<span class="edit-label"><label for="link_sort">Sort value</label></span>
-					<span class="edit-value"><input class="input-medium" type="text" value="" name="link_sort" id="link_sort" size="16" /></span>
+				<p class="edit-linksort">
+					<span class="edit-label"><label for="linksort">Sort value</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+					<span class="edit-value"><input type="text" value="Txp Resources" name="linksort" id="linksort" size="32" /></span>
 				</p>
 				<p class="edit-link-url">
-					<span class="edit-label"><label for="link_url">URL</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-					<span class="edit-value"><input type="text" value="" name="link_url" id="link_url" size="32" /></span>
+					<span class="edit-label"><label for="url">URL</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+					<span class="edit-value"><input type="text" value="http://textpattern.org/" name="url" id="url" size="32" /></span>
 				</p>
 				<p class="edit-link-category">
-					<span class="edit-label"><label for="link_category">Category</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+					<span class="edit-label"><label for="link_category">Category</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
 					<span class="edit-value">
-						<select name="link_category" id="link_category">
-							<option value="" selected="selected">&nbsp;</option>
-							<option value="textpattern">Textpattern</option>
+						<select id="link_category"  name="category">
+							<option value="">&#160;</option>
+							<option value="textpattern" selected="selected">Textpattern</option>
 						</select>
-						[<a href="#">Edit</a>]
+						[<a href="#" title="Edit">Edit</a>]
 					</span>
 				</p>
 				<p class="edit-link-description">
-					<span class="edit-label"><label for="link_description">Description</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-					<textarea name="link_description" id="link_description" cols="64" rows="4"></textarea>
+					<span class="edit-label"><label for="link_description">Description</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+					<textarea id="link_description" name="description" cols="64" rows="7"></textarea>
 				</p>
 				<p><input type="submit" value="Save" class="publish" /></p>
 			</div>
 		</form>
 
 
-		<form method="post" action="index.php" id="discuss_edit_form" class="edit-form">
+		<form method="post" action="#" id="discuss_edit_form" class="edit-form">
 			<div class="txp-edit">
 				<h2>Edit comment</h2>
-				<p>
-					<span class="edit-label"><label for="commentvisible">Status</label></span>
+				<p class="edit-status">
+					<span class="edit-label"><label for="status">Status</label></span>
 					<span class="edit-value">
-						<select name="commentvisible" id="commentvisible">
+						<select name="visible">
 							<option value="1" selected="selected">Visible</option>
 							<option value="-1">Spam</option>
 							<option value="0">Unmoderated</option>
 						</select>
 					</span>
 				</p>
-				<p>
-					<span class="edit-label"><label for="commentname">Name</label></span>
-					<span class="edit-value"><input type="text" value="Donald Swain" name="commentname" id="commentname" size="32" /></span>
+				<p class="edit-name">
+					<span class="edit-label"><label for="name">Name</label></span>
+					<span class="edit-value"><input type="text" value="Donald Swain" name="name" id="name" size="32" /></span>
 				</p>
-				<p class="ip">
-					<span class="edit-label">IP</span>
+				<p class="edit-ip">
+					<span class="edit-label"><label for="ip">IP</label></span>
 					<span class="edit-value">127.0.0.1 [<a class="action-ban" href="#">Ban</a>]</span>
 				</p>
-				<p>
-					<span class="edit-label"><label for="commentemail">E-mail</label></span>
-					<span class="edit-value"><input type="text" value="donald.swain@example.com" name="commentemail" id="commentemail" size="32" /></span>
+				<p class="edit-email">
+					<span class="edit-label"><label for="email">E-mail</label></span>
+					<span class="edit-value"><input type="email" value="donald.swain@example.com" name="email" id="email" size="32" /></span>
 				</p>
-				<p>
-					<span class="edit-label"><label for="commentwebsite">Website</label></span>
-					<span class="edit-value"><input type="text" value="example.com" name="commentwebsite" id="commentwebsite" size="32" /></span>
+				<p class="edit-website">
+					<span class="edit-label"><label for="website">Website</label></span>
+					<span class="edit-value"><input type="text" value="example.com" name="web" id="web" size="32" /></span>
 				</p>
-				<p class="date posted created">
-					<span class="edit-label">Date</span>
+				<p class="edit-date">
+					<span class="edit-label"><label for="date">Date</label></span>
 					<span class="edit-value">22 Jul 2005 14:11:32</span>
 				</p>
-				<p class="comment message text">
-					<span class="edit-label"><label for="commentmessage">Message</label></span>
-					<textarea name="commentmessage" id="commentmessage" cols="64" rows="8">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea>
+				<p class="edit-message">
+					<span class="edit-label"><label for="message">Message</label></span>
+					<textarea id="commentmessage" name="message" cols="60" rows="15">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea>
 				</p>
 				<p><input type="submit" value="Save" name="step" class="publish" /></p>
 			</div>
@@ -409,37 +401,42 @@
 		</form>
 
 
-		<form method="post" action="index.php" id="user_edit" class="edit-form">
-	    	<div class="txp-edit">
-	    		<h2>Edit author</h2>
-	    		<p class="edit-user-name">
-	    			<span class="edit-label"><label for="user_name">Login</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-	    			<span class="edit-value"><input type="text" value="" name="user_name" id="user_name" size="32" /></span>
-	    		</p>
-	    		<p class="edit-user-realname">
-	    			<span class="edit-label"><label for="user_realname">Real name</label></span>
-	    			<span class="edit-value"><input type="text" value="" name="user_realname" id="user_realname" size="32" /></span>
-	    		</p>
-	    		<p class="edit-user-email">
-	    			<span class="edit-label"><label for="user_email">E-mail</label></span>
-	    			<span class="edit-value"><input type="text" value="" name="user_email" id="user_email" size="32" /></span>
-	    		</p>
-	    		<p class="edit-user-privs">
-	    			<span class="edit-label"><label for="user_privs">Privileges</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-	    			<span class="edit-value">
-	    				<select name="user_privs" id="user_privs">
-	    					<option value="1">Publisher</option>
-	    					<option value="2">Managing Editor</option>
-	    					<option value="3">Copy Editor</option>
-	    					<option value="4">Staff Writer</option>
-	    					<option value="5">Freelancer</option>
-	    					<option value="6">Designer</option>
-	    					<option value="0" selected="selected">None</option>
-	    				</select>
-	    			</span>
-	    		</p>
-	    		<p><input type="submit" value="Save" class="publish" /></p>
-	    	</div>
+		<form method="post" action="#" id="user_edit" class="edit-form">
+			<div class="txp-edit">
+				<h2>Edit author</h2>
+				<p class="edit-login-name">
+					<span class="edit-label"><label for="login_name">Login</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+					<span class="edit-value"><strong>admin</strong></span>
+				</p>
+				<p class="edit-real-name">
+					<span class="edit-label"><label for="real_name">Real name</label></span>
+					<span class="edit-value"><input type="text" value="Phil Wareham" name="real_name" id="real_name" size="32" /></span>
+				</p>
+				<p class="edit-login-email">
+					<span class="edit-label"><label for="login_email">E-mail</label></span>
+					<span class="edit-value"><input type="text" value="phil@designhive.com" name="login_email" id="login_email" size="32" /></span>
+				</p>
+				<p class="edit-login-privileges">
+					<span class="edit-label"><label for="login_privileges">Privileges</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+					<span class="edit-value"><input type="hidden" value="1" name="login_privileges" /><strong>Publisher</strong></span>
+				</p>
+				<p><input type="submit" value="Save" class="publish" /></p>
+			</div>
+		</form>
+
+
+		<form method="post" action="#" id="change_password">
+			<div class="txp-edit">
+				<h2>Change your password</h2>
+				<p class="edit-new-pass">
+					<span class="edit-label"><label for="new_pass">New password</label></span>
+					<span class="edit-value"><input type="password" value="" name="new_pass" id="new_pass" size="32" /></span>
+				</p>
+				<p class="edit-mail-password">
+					<input type="checkbox" name="mail_password" value="1" id="mail_password" checked="checked" class="checkbox active" /><label for="mail_password">Mail it to me</label>
+				</p>
+				<p><input type="submit" value="Submit" name="change_pass" class="publish" /></p>
+			</div>
 		</form>
 
 
