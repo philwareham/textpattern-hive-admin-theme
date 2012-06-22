@@ -701,29 +701,19 @@ button.destroy:active {
 .txp-list {
   width: 100%;
 }
-.txp-list tr.odd,
-.txp-list tr.even {
-  border: 1px solid #dddddd;
-}
-.txp-list tr.odd td:last-child,
-.txp-list tr.even td:last-child {
-  border-right: 1px solid #dddddd;
-}
-.txp-list tr.even td {
-  background: #f7f7f7;
-}
 .txp-list th,
 .txp-list td {
   padding: .38461538461538em 1em;
 }
-.txp-list ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
 .txp-list thead .multi-edit,
 .txp-list tbody .multi-edit {
   width: 18px;
+}
+.txp-list tbody tr {
+  border: 1px solid #dddddd;
+}
+.txp-list tbody tr:nth-child(even) {
+  background: #f7f7f7;
 }
 .txp-list thead th {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);

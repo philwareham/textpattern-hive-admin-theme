@@ -10,32 +10,24 @@
 .txp-list {
 	width: 100%;
 
-	tr.odd,
-	tr.even {
-		border: 1px solid $color-gradient-to;
-		td:last-child { // webkit border rendering bug fix
-			border-right: 1px solid $color-gradient-to;
-		}
-	}
-
-	tr.even td {
-		background: $color-background-box;
-	}
-
 	th,
 	td {
 		padding: .38461538461538em 1em;
 	}
 
-	ul {
-		list-style: none;
-		padding-left: 0;
-		margin: 0;
-	}
-
 	thead .multi-edit,
 	tbody .multi-edit {
 		width: 18px;
+	}
+
+	tbody {
+		tr {
+			border: 1px solid $color-gradient-to;
+
+			&:nth-child(even) {
+				background: $color-background-box;
+			}
+		}
 	}
 
 	thead {
