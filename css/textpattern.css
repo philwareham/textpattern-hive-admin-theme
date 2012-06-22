@@ -205,6 +205,10 @@ a:hover .content-image {
   background: #e7f6fc;
 }
 
+.highlight {
+  background: #fff6d3;
+}
+
 #warning {
   border: 1px solid #ffe16d;
   padding: .53846153846154em 2.84615384615385em;
@@ -1508,7 +1512,7 @@ span.spinner {
   margin-top: 1em;
 }
 
-#page-prefs .txp-list tr.odd td,
+#page-prefs .txp-list tr td,
 #page-prefs .txp-list tr.even td {
   height: 1.84615384615385em;
   vertical-align: middle;

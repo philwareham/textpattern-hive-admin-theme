@@ -107,6 +107,10 @@ a:hover .content-image {
 	background: $info-background;
 }
 
+.highlight {
+	background: $color-highlight-box;
+}
+
 #warning {
 	border: 1px solid $warning-border;
 	padding: .53846153846154em 2.84615384615385em;
@@ -1024,7 +1028,7 @@ span.spinner {
 }
 
 #page-prefs .txp-list {
-	tr.odd td,
+	tr td,
 	tr.even td {
 		height: 1.84615384615385em; // 24px / 13px
 		vertical-align: middle;
