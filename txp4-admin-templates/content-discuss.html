@@ -108,7 +108,7 @@
 		<div id="discuss_control" class="txp-control-panel">
 
 			<div class="txp-buttons">
-				<form method="post" action="secondary/content-discuss_ipban.html" id="change_password">
+				<form method="post" action="secondary/content-discuss_ipban.html" id="list_banned_ips">
 					<p><input type="submit" value="List banned IPs" /></p>
 				</form>
 			</div>
@@ -134,7 +134,7 @@
 
 		<div id="discuss_container" class="txp-container">
 
-			<form name="longform" id="discuss_form" method="post" action="index.php" onsubmit="return verify('Are you sure?')">
+			<form name="longform" id="discuss_form" method="post" action="#" onsubmit="return verify('Are you sure?')">
 				<div class="txp-listtables">
 
 					<table class="txp-list">
@@ -223,7 +223,7 @@
 				</div>
 			</form>
 
-			<form class="cb_show_spam" method="post" action="index.php?event=discuss">
+			<form class="cb_show_spam" method="post" action="#">
 				<input type="checkbox" name="cb_show_spam" id="cb_show_spam" value="1" class="checkbox" onclick="setClassRemember('show_spam',1);submit(this.form);" checked="checked" />
 				<label for="cb_show_spam">Show spam</label>
 				<noscript>

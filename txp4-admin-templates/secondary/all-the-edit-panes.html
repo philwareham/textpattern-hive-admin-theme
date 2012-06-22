@@ -325,7 +325,7 @@
 					<p class="edit-status">
 						<span class="edit-label"><label for="status">Status</label></span>
 						<span class="edit-value">
-							<select name="visible">
+							<select name="visible" id="status">
 								<option value="1" selected="selected">Visible</option>
 								<option value="-1">Spam</option>
 								<option value="0">Unmoderated</option>
@@ -337,24 +337,24 @@
 						<span class="edit-value"><input type="text" value="Donald Swain" name="name" id="name" size="32" /></span>
 					</p>
 					<p class="edit-ip">
-						<span class="edit-label"><label for="ip">IP</label></span>
+						<span class="edit-label">IP</span>
 						<span class="edit-value">127.0.0.1 [<a class="action-ban" href="#">Ban</a>]</span>
 					</p>
 					<p class="edit-email">
 						<span class="edit-label"><label for="email">E-mail</label></span>
-						<span class="edit-value"><input type="email" value="donald.swain@example.com" name="email" id="email" size="32" /></span>
+						<span class="edit-value"><input type="text" value="donald.swain@example.com" name="email" id="email" size="32" /></span>
 					</p>
 					<p class="edit-website">
 						<span class="edit-label"><label for="website">Website</label></span>
-						<span class="edit-value"><input type="text" value="example.com" name="web" id="web" size="32" /></span>
+						<span class="edit-value"><input type="text" value="example.com" name="web" id="website" size="32" /></span>
 					</p>
 					<p class="edit-date">
-						<span class="edit-label"><label for="date">Date</label></span>
+						<span class="edit-label">Date</span>
 						<span class="edit-value">22 Jul 2005 14:11:32</span>
 					</p>
 					<p class="edit-message">
-						<span class="edit-label"><label for="message">Message</label></span>
-						<textarea id="commentmessage" name="message" cols="60" rows="15">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea>
+						<span class="edit-label"><label for="commentmessage">Message</label></span>
+						<textarea name="message" id="commentmessage" cols="60" rows="15">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea>
 					</p>
 					<p><input type="submit" value="Save" name="step" class="publish" /></p>
 				</div>
@@ -476,14 +476,14 @@
 			</form>
 
 
-			<form method="post" action="index.php" id="import">
+			<form method="post" action="#" id="import">
 				<div class="txp-edit">
 					<h2>Import content from other publishing tools</h2>
-					<p class="edit-import-tool">
-						<span class="edit-label"><label for="import_tool">Import from</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+					<p class="edit-import-from">
+						<span class="edit-label"><label for="import_from">Import from</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
 						<span class="edit-value">
-							<select name="import_tool" id="import_tool" onchange="showHideFields(this.value);">
-								<option value="&#160;"></option>
+							<select id="import_from" name="import_tool" onchange="showHideFields(this.value);">
+								<option value=""></option>
 								<option value="mt">Movable Type (File)</option>
 								<option value="mtdb">Movable Type (MySQL DB)</option>
 								<option value="blogger">Blogger</option>
@@ -493,9 +493,9 @@
 						</span>
 					</p>
 					<p class="edit-import-section">
-						<span class="edit-label"><label for="import_section">Section to import into</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+						<span class="edit-label"><label for="import_section">Section to import into</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
 						<span class="edit-value">
-							<select name="import_section" id="import_section">
+							<select id="import_section" name="import_section">
 								<option value="" selected="selected"></option>
 								<option value="about">about</option>
 								<option value="articles">articles</option>
@@ -503,9 +503,9 @@
 						</span>
 					</p>
 					<p class="edit-import-status">
-						<span class="edit-label"><label for="import_status">Default article status</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
+						<span class="edit-label"><label for="import_status">Default article status</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
 						<span class="edit-value">
-							<select name="import_status" id="import_status">
+							<select id="import_status">
 								<option value="4">Live</option>
 								<option value="1">Draft</option>
 								<option value="2">Hidden</option>
@@ -513,39 +513,48 @@
 							</select>
 						</span>
 					</p>
-					<p class="edit-import-comments-invite">
-						<span class="edit-label"><label for="import_comments_invite">Default comments invite</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-						<span class="edit-value"><input type="text" value="Comments" name="import_comments_invite" id="import_comments_invite" size="32" /></span>
+					<p class="edit-import-comment">
+						<span class="edit-label"><label for="import_comment">Default comments invite</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+						<span class="edit-value"><input type="text" value="Comments" name="import_comments_invite" id="import_comment" size="32" /></span>
 					</p>
 					<div id="databased">
-						<h3>Database data</h3>
-						<p class="edit-import-db">
-							<span class="edit-label"><label for="import_db">Database name</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-							<span class="edit-value"><input type="text" value="" name="import_db" id="import_db" size="32" /></span>
+						<h2>Database data</h2>
+						<p class="edit-import-database">
+							<span class="edit-label"><label for="import_database">Database name</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+							<span class="edit-value"><input type="text" value="" name="importdb" id="import_database" size="32" /></span>
 						</p>
-						<p class="edit-import-dblogin">
-							<span class="edit-label"><label for="import_dblogin">MySQL user</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-							<span class="edit-value"><input type="text" value="" name="import_dblogin" id="import_dblogin" size="32" /></span>
+						<p class="edit-import-login">
+							<span class="edit-label"><label for="import_login">MySQL user</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+							<span class="edit-value"><input type="text" value="" name="importdblogin" id="import_login" size="32" /></span>
 						</p>
-						<p class="edit-import-dbpass">
-							<span class="edit-label"><label for="import_dbpass">MySQL password</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-							<span class="edit-value"><input type="text" value="" name="import_dbpass" id="import_dbpass" size="32" /></span>
+						<p class="edit-import-password">
+							<span class="edit-label"><label for="import_password">MySQL password</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+							<span class="edit-value"><input type="text" value="" name="importdbpass" id="import_password" size="32" /></span>
 						</p>
-						<p class="edit-import-dbhost">
-							<span class="edit-label"><label for="import_dbhost">MySQL host</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-							<span class="edit-value"><input type="text" value="" name="import_dbhost" id="import_dbhost" size="32" /></span>
+						<p class="edit-import-host">
+							<span class="edit-label"><label for="import_host">MySQL host</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+							<span class="edit-value"><input type="text" value="" name="importdbhost" id="import_host" size="32" /></span>
 						</p>
 					</div>
 					<div id="mtblogid">
-						<p class="edit-import-blog-id">
-							<span class="edit-label"><label for="import_blog_id">Weblog ID</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-							<span class="edit-value"><input type="text" value="" name="import_blog_id" id="import_blog_id" size="32" /></span>
+						<p class="edit-import-blogid">
+							<span class="edit-label"><label for="import_blogid">Weblog ID</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+							<span class="edit-value"><input type="text" value="" name="import_blog_id" id="import_blogid" size="32" /></span>
 						</p>
 					</div>
 					<div id="wponly">
-						<p class="edit-import-wpdbprefix">
-							<span class="edit-label"><label for="import_wpdbprefix">Tables prefix (if any)</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-							<span class="edit-value"><input type="text" value="wp_" name="import_wpdbprefix" id="import_wpdbprefix" size="16" class="input-medium" /></span>
+						<p class="edit-import-wpprefix">
+							<span class="edit-label"><label for="import_wpprefix">Tables prefix (if any)</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+							<span class="edit-value"><input type="text" value="wp_" name="wpdbprefix" id="import_wpprefix" size="32" /></span>
+						</p>
+						<p class="edit-import-wpdbcharset">
+							<span class="edit-label"><label for="import_wpdbcharset">Database character set</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+							<span class="edit-value">
+								<select id="import_wpdbcharset" name="wpdbcharset">
+									<option value="utf8" selected="selected">utf8</option>
+									<option value="latin1">latin1</option>
+								</select>
+							</span>
 						</p>
 					</div>
 					<p><input type="submit" value="Continue" name="choose" class="publish" /></p>
