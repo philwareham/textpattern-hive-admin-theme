@@ -104,65 +104,65 @@
 	</div><!-- /txp-head -->
 	<div class="txp-body">
 
-	<div id="category_container" class="txp-container">
+		<div id="category_container" class="txp-container">
 
-		<form method="post" action="index.php" id="section_details" class="edit-form">
-			<div class="txp-edit">
-				<h2>Add new section</h2>
-				<p class="edit-section-name">
-					<span class="edit-label"><label for="section_name">Section name</label></span>
-					<span class="edit-value"><input type="text" name="section_name" id="section_name" size="32" /></span>
-				</p>
-				<p class="edit-section-title">
-					<span class="edit-label"><label for="section_title">Section title</label></span>
-					<span class="edit-value"><input type="text" name="section_title" id="section_title" size="32" /></span>
-				</p>
-				<p class="edit-section-page">
-					<span class="edit-label"><label for="section_page">Uses page</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-					<span class="edit-value">
-						<select name="section_page" id="section_page">
-							<option value="archive">archive</option>
-							<option value="default" selected="selected">default</option>
-							<option value="error_default">error_default</option>
-							<option value="new_page">new_page</option>
-						</select>
-					</span>
-				</p>
-				<p class="edit-section-css">
-					<span class="edit-label"><label for="section_css">Uses style</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-					<span class="edit-value">
-						<select name="section_css" id="section_css">
-							<option value="default" selected="selected">default</option>
-							<option value="new_style">new_style</option>
-						</select>
-					</span>
-				</p>
-				<p class="edit-section-on-frontpage">
-					<span class="edit-label">On front page&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-					<span class="edit-value">
-						<input type="radio" id="on_frontpage_0" name="on_frontpage" value="0" class="radio active" checked="checked" /><label for="on_frontpage_0">No</label>
-						<input type="radio" id="on_frontpage_1" name="on_frontpage" value="1" class="radio" /><label for="on_frontpage_1">Yes</label>
-					</span>
-				</p>
-				<p class="edit-section-in-rss">
-					<span class="edit-label">Syndicate&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-					<span class="edit-value">
-						<input type="radio" id="in_rss_0" name="in_rss" value="0" class="radio active" checked="checked" /><label for="in_rss_0">No</label>
-						<input type="radio" id="in_rss_1" name="in_rss" value="1" class="radio" /><label for="in_rss_1">Yes</label>
-					</span>
-				</p>
-				<p class="edit-section-searchable">
-					<span class="edit-label">Include in site search&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
-					<span class="edit-value">
-						<input type="radio" id="searchable_0" name="searchable" value="0" class="radio" /><label for="searchable_0">No</label>
-						<input type="radio" id="searchable_1" name="searchable" value="1" class="radio active" checked="checked" /><label for="searchable_1">Yes</label>
-					</span>
-				</p>
-				<p><input type="submit" value="Save" class="publish" /></p>
-			</div>
-		</form>
+			<form method="post" action="index.php" id="section_details" class="edit-form">
+				<div class="txp-edit">
+					<h2>Edit section</h2>
+					<p class="edit-section-name">
+						<span class="edit-label"><label for="section_name">Section name</label></span>
+						<span class="edit-value"><input type="text" value="about" name="section_name" id="section_name" size="32" /></span>
+					</p>
+					<p class="edit-section-title">
+						<span class="edit-label"><label for="section_title">Section title</label></span>
+						<span class="edit-value"><input type="text" value="About" name="section_title" id="section_title" size="32" /></span>
+					</p>
+					<p class="edit-section-page">
+						<span class="edit-label"><label for="section_page">Uses page</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+						<span class="edit-value">
+							<select id="section_page" name="section_page">
+								<option value="archive">archive</option>
+								<option value="default" selected="selected">default</option>
+								<option value="error_default">error_default</option>
+								<option value="test page">test page</option>
+							</select>
+						</span>
+					</p>
+					<p class="edit-section-css">
+						<span class="edit-label"><label for="section_css">Uses style</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+						<span class="edit-value">
+							<select id="section_css" name="section_css">
+								<option value="default" selected="selected">default</option>
+								<option value="new_style">new_style</option>
+							</select>
+						</span>
+					</p>
+					<p class="edit-on-front-page">
+						<span class="edit-label">On front page&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+						<span class="edit-value">
+							<input type="radio" id="about_on_front_page_0" name="on_front_page" value="0" class="radio active" checked="checked" /><label for="about_on_front_page_0">No</label>
+							<input type="radio" id="about_on_front_page_1" name="on_front_page" value="1" class="radio" /><label for="about_on_front_page_1">Yes</label>
+						</span>
+					</p>
+					<p class="edit-syndicate">
+						<span class="edit-label">Syndicate&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+						<span class="edit-value">
+							<input type="radio" id="about_syndicate_0" name="syndicate" value="0" class="radio active" checked="checked" /><label for="about_syndicate_0">No</label>
+							<input type="radio" id="about_syndicate_1" name="syndicate" value="1" class="radio" /><label for="about_syndicate_1">Yes</label>
+						</span>
+					</p>
+					<p class="edit-include-in-search">
+						<span class="edit-label">Include in site search&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
+						<span class="edit-value">
+							<input type="radio" id="about_include_in_search_0" name="include_in_search" value="0" class="radio" /><label for="about_include_in_search_0">No</label>
+							<input type="radio" id="about_include_in_search_1" name="include_in_search" value="1" class="radio active" checked="checked" /><label for="about_include_in_search_1">Yes</label>
+						</span>
+					</p>
+					<p><input type="submit" value="Save" class="publish" /></p>
+				</div>
+			</form>
 
-	</div><!-- /txp-container -->
+		</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
 
 	<div class="txp-footer">

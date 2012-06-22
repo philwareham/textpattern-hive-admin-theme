@@ -102,149 +102,159 @@
 		<div id="messagepane"></div>
 
 	</div><!-- /txp-head -->
+
 	<div class="txp-body">
-		<h1 class="txp-heading">Sections</h1>
+		<h1>Sections</h1>
 
 		<div id="section_control" class="txp-control-panel">
-		    <form method="post" action="index.php" id="section_create" class="edit-form">
-		    	<p>
-		    		<label>create_section</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
-		    		<input type="text" value="" name="name" size="10" />
-		    		<input type="submit" value="Create" /><input type="hidden" value="section" name="event" /><input type="hidden" value="section_create" name="step" />
-		    	</p>
-		    </form>
-		    <form id="default_section_form" name="default_section_form" method="post" action="index.php" class="async">
-		    	<p>
-		    		<label>default_write_section</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
-		    		<select id="default_section" name="default_section">
-		    			<option value="about">About</option>
-		    			<option value="articles">Articles</option>
-		    			<option value="search">Search</option>
-		    		</select>
-		    	</p>
-		    </form>
-		    <form method="get" action="index.php" class="search-form">
-		    	<p>
-		    		<label for="section-search">Search</label>
-		    		<select id="section-search" name="search_method">
-		    			<option value="name" selected="selected">Name</option>
-		    			<option value="title">Title</option>
-		    			<option value="page">Page</option>
-		    			<option value="css">Style</option>
-		    			<option value="on_frontpage">On front page</option>
-		    			<option value="in_rss">Syndicate?</option>
-		    			<option value="searchable">Include in site search</option>
-		    		</select>
-		    		<input type="text" value="" name="crit" size="16" />
-		    		<input type="submit" value="Go" name="search" />
-		    	</p>
-		    </form>
+			<form method="post" action="#" id="section_create" class="edit-form">
+				<p>
+					<label>create_section</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
+					<input type="text" value="" name="name" size="32" />
+					<input type="submit" value="Create" />
+				</p>
+			</form>
+
+			<form id="default_section_form" name="default_section_form" method="post" action="#" class="async">
+				<p>
+					<label>default_write_section</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
+					<select id="default_section" name="default_section">
+						<option value="about">About</option>
+						<option value="articles" selected="selected">Articles</option>
+					</select>
+				</p>
+			</form>
+
+			<form method="get" action="index.php" class="search-form">
+				<p>
+					<label for="section-search">Search</label>
+					<select id="section-search" name="search_method">
+						<option value="name" selected="selected">Name</option>
+						<option value="title">Title</option>
+						<option value="page">Page</option>
+						<option value="css">Style</option>
+						<option value="on_frontpage">On front page</option>
+						<option value="in_rss">Syndicate</option>
+						<option value="searchable">Include in site search</option>
+					</select>
+					<input type="text" value="" name="crit" size="16" />
+					<input type="submit" value="Go" name="search" />
+				</p>
+			</form>
 		</div>
 
 		<div id="section_container" class="txp-container">
 
-		    <form action="index.php" id="section_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
-		    	<p class="detail-toggle">
-		    		<input type="checkbox" name="cb_toggle_section_detail" id="cb_toggle_section_detail" value="1" class="checkbox" checked="checked" />
-		    		<label for="cb_toggle_section_detail">Show detail</label>
-		    	</p>
-		    	<div class="txp-listtables">
-		    		<table class="txp-list">
-		    			<thead>
-		    				<tr>
-		    					<th title="toggle_all_selected" class="multi-edit"><input type="checkbox" value="0" name="selected_toggle" id="selected_toggle" /></th>
-		    					<th class="name asc"><a href="#">Name</a></th>
-		    					<th class="name"><a href="#">Title</a></th>
-		    					<th class="page"><a href="#">Page</a></th>
-		    					<th class="style"><a href="#">Style</a></th>
-		    					<th class="section_detail frontpage"><a href="#">On front page</a></th>
-		    					<th class="section_detail syndicate"><a href="#">Syndicate?</a></th>
-		    					<th class="section_detail searchable"><a href="#">Include in site search</a></th>
-		    				</tr>
-		    			</thead>
-		    			<tfoot>
-		    				<tr>
-		    					<td class="multi-edit" colspan="8">
-		    						Select
-		    						<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
-		    						<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
-		    						<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
-		    						<input type="button" value="toggle" name="seltoggle" title="select toggle" onclick="selecttoggle();" />
-		    						<label for="withselected">With selected:</label>
-		    						<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
-		    							<option value="" selected="selected"></option>
-		    							<option value="changepage">Uses page</option>
-		    							<option value="changecss">Uses style</option>
-		    							<option value="changeonfrontpage">On front page</option>
-		    							<option value="changesyndicate">Syndicate?</option>
-		    							<option value="changesearchable">Include in site search</option>
-		    							<option value="delete">Delete</option>
-		    						</select>
-		    						<input type="submit" value="Go" />
-		    					</td>
-		    				</tr>
-		    			</tfoot>
-		    			<tbody>
-		    				<tr class="odd">
-		    					<td class="multi-edit"><input type="checkbox" value="search" name="selected[]" /></td>
-		    					<td class="name"><a href="secondary/presentation-section_edit.html" title="Edit">search</a></td>
-		    					<td class="name">Search</td>
-		    					<td class="page"><a href="#" title="Edit">default</a> (0)</td>
-		    					<td class="style"><a href="#" title="Edit">default</a></td>
-		    					<td class="section_detail on_frontpage"><a href="#" class="section_toggle_option">No</a></td>
-		    					<td class="section_detail in_rss"><a href="#" class="section_toggle_option">No</a></td>
-		    					<td class="section_detail searchable"><a href="#" class="section_toggle_option">No</a></td>
-		    				</tr>
-		    				<tr class="even">
-		    					<td class="multi-edit"><input type="checkbox" value="default" name="selected[]" /></td>
-		    					<td class="name"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
-		    					<td class="name">default</td>
-		    					<td class="page"><a href="#" title="Edit">default</a></td>
-		    					<td class="style"><a href="#" title="Edit">default</a></td>
-		    					<td class="section_detail on_frontpage">-</td>
-		    					<td class="section_detail in_rss">-</td>
-		    					<td class="section_detail searchable">-</td>
-		    				</tr>
-		    				<tr class="odd">
-		    					<td class="multi-edit"><input type="checkbox" value="articles" name="selected[]" /></td>
-		    					<td class="name"><a href="secondary/presentation-section_edit.html" title="Edit">articles</a></td>
-		    					<td class="name">Articles</td>
-		    					<td class="page"><a href="#" title="Edit">archive</a> <a title="article_count: 16" href="#">(16)</a></td>
-		    					<td class="style"><a href="#" title="Edit">default</a></td>
-		    					<td class="section_detail on_frontpage"><a href="#" class="section_toggle_option">Yes</a></a></td>
-		    					<td class="section_detail in_rss"><a href="#" class="section_toggle_option">Yes</a></td>
-		    					<td class="section_detail searchable"><a href="#" class="section_toggle_option">Yes</a></td>
-		    				</tr>
-		    				<tr class="even">
-		    					<td class="multi-edit"><input type="checkbox" value="about" name="selected[]" /></td>
-		    					<td class="name"><a href="secondary/presentation-section_edit.html" title="Edit">about</a></td>
-		    					<td class="name">About</td>
-		    					<td class="page"><a href="#" title="Edit">default</a> (0)</td>
-		    					<td class="style"><a href="#" title="Edit">default</a></td>
-		    					<td class="section_detail on_frontpage"><a href="#" class="section_toggle_option">No</a></td>
-		    					<td class="section_detail in_rss"><a href="#" class="section_toggle_option">No</a></td>
-		    					<td class="section_detail searchable"><a href="#" class="section_toggle_option">Yes</a></td>
-		    				</tr>
-		    			</tbody>
-		    		</table>
-		    	</div>
-		    </form>
+			<form action="index.php" id="section_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
+				<div class="txp-listtables">
 
-		    <div id="section_navigation" class="txp-navigation">
-		    	<p class="prev-next">1/1</p>
-		    	<form method="post" action="index.php" class="pageby">
-		    		<p>
-		    			View
-		    			<select name="qty" onchange="submit(this.form);">
-		    				<option value="15">15</option>
+					<table class="txp-list">
+						<thead>
+							<tr>
+								<th title="toggle_all_selected" class="multi-edit"><input type="checkbox" value="0" name="selected_toggle" id="selected_toggle" /></th>
+								<th class="name"><a href="#">Name</a></th>
+								<th class="name"><a href="#">Title</a></th>
+								<th class="page"><a href="#">Page</a></th>
+								<th class="style"><a href="#">Style</a></th>
+								<th class="section_detail frontpage"><a href="#">On front page</a></th>
+								<th class="section_detail syndicate"><a href="#">Syndicate</a></th>
+								<th class="section_detail searchable"><a href="#">Include in site search</a></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="txp_section_default">
+								<td class="multi-edit"><input type="checkbox" value="default" name="selected[]" /></td>
+								<td class="name">
+									<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
+									<span class="section_detail">[<a href="#">View</a>]</span>
+								</td>
+								<td class="name">default</td>
+								<td class="page">
+									<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
+								</td>
+								<td class="style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
+								<td class="section_detail frontpage">-</td>
+								<td class="section_detail syndicate">-</td>
+								<td class="section_detail searchable">-</td>
+							</tr>
+							<tr id="txp_section_articles">
+								<td class="multi-edit"><input type="checkbox" value="articles" name="selected[]" /></td>
+								<td class="name">
+									<a href="secondary/presentation-section_edit.html" title="Edit">articles</a>
+									<span class="section_detail">[<a href="#">View</a>]</span>
+								</td>
+								<td class="name">Articles</td>
+								<td class="page">
+									<a href="secondary/presentation-section_edit.html" title="Edit">archive</a>
+									<a title="article_count: 16" href="#">(16)</a>
+								</td>
+								<td class="style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
+								<td class="section_detail frontpage"><a href="#" id="txp_column_articles_on_frontpage" class="section_toggle_option">Yes</a></td>
+								<td class="section_detail syndicate"><a href="#" id="txp_column_articles_in_rss" class="section_toggle_option">Yes</a></td>
+								<td class="section_detail searchable"><a href="#" id="txp_column_articles_searchable" class="section_toggle_option">Yes</a></td>
+							</tr>
+							<tr id="txp_section_about">
+								<td class="multi-edit"><input type="checkbox" value="about" name="selected[]" /></td>
+								<td class="name">
+									<a href="secondary/presentation-section_edit.html" title="Edit">about</a>
+									<span class="section_detail">[<a href="#">View</a>]</span>
+								</td>
+								<td class="name">About</td>
+								<td class="page">
+									<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
+									(0)
+								</td>
+								<td class="style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
+								<td class="section_detail frontpage"><a href="#" id="txp_column_about_on_frontpage" class="section_toggle_option">No</a></td>
+								<td class="section_detail syndicate"><a href="#" id="txp_column_about_in_rss" class="section_toggle_option">No</a></td>
+								<td class="section_detail searchable"><a href="#" id="txp_column_about_searchable" class="section_toggle_option">Yes</a></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p class="multi-edit">
+						Select
+						<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
+						<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
+						<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
+						<input type="button" value="toggle" name="seltoggle" title="select toggle" onclick="selecttoggle();" />
+						<label for="withselected">With selected:</label>
+						<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
+							<option value="" selected="selected"></option>
+							<option value="changepage">Uses page</option>
+							<option value="changecss">Uses style</option>
+							<option value="changeonfrontpage">On front page</option>
+							<option value="changesyndicate">Syndicate</option>
+							<option value="changesearchable">Include in site search</option>
+							<option value="delete">Delete</option>
+						</select>
+						<input type="submit" value="Go" />
+					</p>
+
+				</div>
+			</form>
+
+			<p class="detail-toggle">
+				<input type="checkbox" name="cb_toggle_section_detail" id="cb_toggle_section_detail" value="1" checked="checked" class="checkbox" onclick="toggleClassRemember('section_detail');" />
+				<label for="cb_toggle_section_detail">Show detail</label>
+			</p>
+
+			<div id="section_navigation" class="txp-navigation">
+				<p class="prev-next">1/1</p>
+
+				<form method="post" action="#" class="pageby">
+					<p>
+						View
+						<select name="qty" onchange="submit(this.form);">
+							<option value="15">15</option>
 							<option value="25">25</option>
-		    				<option value="50">50</option>
-		    				<option value="100">100</option>
-		    			</select>
-		    			per page
-		    		</p>
-		    	</form>
-		    </div>
+							<option value="50">50</option>
+							<option value="100">100</option>
+						</select>
+						per page
+					</p>
+				</form>
+			</div>
 
 		</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
