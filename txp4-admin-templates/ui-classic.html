@@ -14,45 +14,45 @@
 
 		<div id="masthead">
 			<ul id="nav">
-				<li class='primary tabup inactive'><a href='?event=article'>Content</a>
+				<li class='primary tabup inactive'><a href='#'>Content</a>
 					<ul>
-						<li class='secondary tabdown2 inactive'><a href='?event=category'>Categories</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=article'>Write</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=list'>Articles</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=image'>Images</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=file'>Files</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=link'>Links</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=discuss'>Comments</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Categories</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Write</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Articles</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Images</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Files</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Links</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Comments</a></li>
 					</ul>
 				</li>
-				<li class='primary tabdown inactive'><a href='?event=page'>Presentation</a>
+				<li class='primary tabdown inactive'><a href='#'>Presentation</a>
 					<ul>
-						<li class='secondary tabdown2 inactive'><a href='?event=section'>Sections</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=page'>Pages</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=form'>Forms</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=css'>Style</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Sections</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Pages</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Forms</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Style</a></li>
 					</ul>
 				</li>
-				<li class='primary tabdown inactive'><a href='?event=admin'>Admin</a>
+				<li class='primary tabdown inactive'><a href='#'>Admin</a>
 					<ul>
-						<li class='secondary tabdown2 inactive'><a href='?event=diag'>Diagnostics</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=prefs'>Preferences</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=admin'>Users</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=log'>Visitor logs</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=plugin'>Plugins</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=import'>Import</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Diagnostics</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Preferences</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Users</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Visitor logs</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Plugins</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Import</a></li>
 					</ul>
 				</li>
-				<li class='primary tabdown inactive'><a href='?event=rss_db_man'>Extensions</a>
+				<li class='primary tabdown inactive'><a href='#'>Extensions</a>
 					<ul>
-						<li class='secondary tabdown2 inactive'><a href='?event=rss_db_man'>DB Manager</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=rss_sql_run'>Run SQL</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=rss_db_bk'>DB Backup</a></li>
-						<li class='secondary tabdown2 inactive'><a href='?event=smd_at'>Admin themes</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>DB Manager</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Run SQL</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>DB Backup</a></li>
+						<li class='secondary tabdown2 inactive'><a href='#'>Admin themes</a></li>
 					</ul>
 				</li>
 				<li id="view-site" class="primary tabdown inactive"><a href="http://www.textpattern.dev/" target="_blank">View site</a></li>
-				<li id="logout" class="primary tabdown inactive"><a href="index.php?logout=1" onclick="return verify('Are you sure?')">Logout</a></li>
+				<li id="logout" class="primary tabdown inactive"><a href="#" onclick="return verify('Are you sure?')">Logout</a></li>
 			</ul>
 		</div>
 
@@ -214,13 +214,13 @@
 			<h1>Alert boxes</h1>
 
 			<h2>Success</h2>
-			<p><span id="message" class="success">Article posted. <a class="close">&times;</a></span></p>
+			<p><span id="message" class="success">Article posted.</span></p>
 
 			<h2>Warning</h2>
-			<p><span id="message" class="warning">Invalid width or height. <a class="close">&times;</a></span></p>
+			<p><span id="message" class="warning">Invalid width or height.</span></p>
 
 			<h2>Error</h2>
-			<p><span id="message" class="error">Username <strong>anon</strong> not found. <a class="close">&times;</a></span></p>
+			<p><span id="message" class="error">Username <strong>anon</strong> not found.</span></p>
 
 			<h2>System warnings</h2>
 			<p id="warning">Warning: cannot write to image directory /Users/user/textpattern/images/.</p>
@@ -475,7 +475,7 @@
 					<input type="text" id="text-sml" name="text-sml" size="8" class="input-small" />
 				</p>
 
-				<h2>Text fields extra small <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+				<h2>Text fields extra small <span class="information" style="font-family:Verdana,Tahoma,sans-serif;font-size:.64705882352941em;font-weight:normal;">new v4.5</span></h2>
 				<p><code>&lt;input type="text" id="" name="" size="4" class="input-xsmall" /&gt;</code></p>
 				<p>
 					<label for="text-xsml">Text (extra small)</label><br />
@@ -662,7 +662,7 @@
 					<a class="navlink">Link (navlink)</a>
 				</p>
 
-				<h2>Delete buttons</h2>
+				<h2>Delete buttons <span class="warning" style="font-family:Verdana,Tahoma,sans-serif;font-size:.64705882352941em;font-weight:normal;">changed v4.5</span></h2>
 				<p><code>&lt;input type="submit" value="&amp;times;" class="destroy" /&gt;</code></p>
 				<p><input type="submit" value="&times;" class="destroy" /></p>
 
@@ -688,7 +688,7 @@
 
 
 		<div class="text-section" id="ui-doc-edit-panes">
-			<h1>Edit panes <span class="warning" style="font-size:.43333333333333em;font-weight:normal;">changed v4.5</span></h1>
+			<h1>Edit panes <span class="warning" style="font-family:Verdana,Tahoma,sans-serif;font-size:.5em;font-weight:normal;">changed v4.5</span></h1>
 
 				<pre><code>&lt;form method="post" action="#" class="edit-form"&gt;
 	&lt;div class="txp-edit"&gt;
