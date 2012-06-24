@@ -275,4 +275,21 @@ div.plugin-help {
 	width: 100%;
 }
 
+.progress-meter {
+	ol {
+		display: block;
+		margin-bottom: 1em;
+	}
+
+	li {
+		float: none;
+		display: block;
+		margin: 0;
+
+		&:after {
+			display: none;
+		}
+	}
+}
+
 }

@@ -1566,6 +1566,314 @@ div.plugin-help {
   max-width: 56em;
 }
 
+/* EXPERIMENTAL RULES - NOT PART OF CORE AS YET
+   ========================================================================== */
+/* ==========================================================================
+   Hive theme for Textpattern CMS (v4.5alpha)
+   ========================================================================== */
+/* PROPOSED ADDITIONS TO THE TEXTPATTERN CORE CLASSES
+   (prefixed with 'expermental-' for now) */
+/* Progress meters
+   ========================================================================== */
+.progress-meter p {
+  display: none;
+}
+.progress-meter ol {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  position: relative;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+  counter-reset: step;
+}
+.progress-meter li {
+  position: relative;
+  float: left;
+  display: block;
+  margin: 0 1em 1em 0;
+  padding: 1em 1em 1em 4em;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #bebebe;
+  background-color: #eeeeee;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#eeeeee, #dddddd);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#eeeeee, #dddddd);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#eeeeee, #dddddd);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#eeeeee, #dddddd);
+  border-right: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+  /* IE7 padding fix for lack of ':before' support */
+  *padding: 1em;
+}
+.progress-meter li.active {
+  border-top: 1px solid #fabc2b;
+  border-bottom: 1px solid #e2a005;
+  background-color: #ffda44;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ffda44), to(#fabc2b));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffda44), to(#fabc2b));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#ffda44, #fabc2b);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#ffda44, #fabc2b);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#ffda44, #fabc2b);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#ffda44, #fabc2b);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#ffda44, #fabc2b);
+  border-right: 1px solid #fabc2b;
+  border-left: 1px solid #fabc2b;
+}
+.progress-meter li:before {
+  position: absolute;
+  z-index: 2;
+  counter-increment: step;
+  content: counter(step);
+  top: .4375em;
+  left: .6875em;
+  border: 1px solid #fff;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  padding: .25em;
+  width: 1.375em;
+  text-align: center;
+  font-size: 1.23076923076923em;
+  font-weight: bold;
+  background: #cccccc;
+}
+.progress-meter li:after {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 2;
+  content: "";
+  height: 0;
+  width: 0;
+  border-top: 1.75em solid transparent;
+  border-left: .9em solid #ccc;
+  border-bottom: 1.75em solid transparent;
+}
+.progress-meter strong {
+  font-weight: normal;
+}
+
+/* Icons
+   ========================================================================== */
+.icon {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-size: 16px;
+  line-height: 1.125;
+  vertical-align: text-bottom;
+  width: 1em;
+  height: 1em;
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url("../img/icon-sprite.png");
+}
+.svg .icon {
+  background-image: url("../img/svg/icon-sprite.svg");
+  -webkit-background-size: 24em 4.5em;
+  -moz-background-size: 24em 4.5em;
+  -o-background-size: 24em 4.5em;
+  background-size: 24em 4.5em;
+}
+
+a.icon-container {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin: 0 .5em .5em 0;
+  border: 1px solid #e3e3e3;
+  padding: .23076923076923em;
+  -moz-border-radius: 0.385em;
+  border-radius: 0.385em;
+  background-color: #f7f7f7;
+}
+a.icon-container:hover {
+  border-color: #cccccc;
+}
+a.icon-container b {
+  display: block;
+}
+
+button .icon {
+  margin: 0 0 -1px -1px;
+}
+
+[disabled] .icon,
+.navlink-disabled .icon {
+  opacity: .33;
+}
+
+.icon-write {
+  background-position: 0 0;
+}
+
+.icon-code {
+  background-position: -1.5em 0;
+}
+
+.icon-view {
+  background-position: -3em 0;
+}
+
+.icon-mail {
+  background-position: -4.5em 0;
+}
+
+.icon-plus {
+  background-position: -6em 0;
+}
+
+.icon-minus {
+  background-position: -7.5em 0;
+}
+
+.icon-close {
+  background-position: -9em 0;
+}
+
+.icon-ban {
+  background-position: -10.5em 0;
+}
+
+.icon-warn {
+  background-position: -12em 0;
+}
+
+.icon-search {
+  background-position: -13.5em 0;
+}
+
+.icon-yes {
+  background-position: -15em 0;
+}
+
+.icon-no {
+  background-position: -16.5em 0;
+}
+
+.icon-time {
+  background-position: -18em 0;
+}
+
+.icon-cog {
+  background-position: -19.5em 0;
+}
+
+.icon-repeat {
+  background-position: -21em 0;
+}
+
+.icon-off {
+  background-position: -22.5em 0;
+}
+
+.icon-arrow-n {
+  background-position: 0 -1.5em;
+}
+
+.icon-arrow-e {
+  background-position: -1.5em -1.5em;
+}
+
+.icon-arrow-s {
+  background-position: -3em -1.5em;
+}
+
+.icon-arrow-w {
+  background-position: -4.5em -1.5em;
+}
+
+.icon-star {
+  background-position: -6em -1.5em;
+}
+
+.icon-refresh {
+  background-position: -7.5em -1.5em;
+}
+
+.icon-list {
+  background-position: -9em -1.5em;
+}
+
+.icon-grid {
+  background-position: -10.5em -1.5em;
+}
+
+.icon-image {
+  background-position: -12em -1.5em;
+}
+
+.icon-user {
+  background-position: -13.5em -1.5em;
+}
+
+.icon-target {
+  background-position: -15em -1.5em;
+}
+
+.icon-comment {
+  background-position: -16.5em -1.5em;
+}
+
+.icon-trash {
+  background-position: -18em -1.5em;
+}
+
+.icon-favourite {
+  background-position: -19.5em -1.5em;
+}
+
+.icon-folder {
+  background-position: -21em -1.5em;
+}
+
+.icon-file {
+  background-position: -22.5em -1.5em;
+}
+
+.icon-attach {
+  background-position: 0 -3em;
+}
+
+.icon-download {
+  background-position: -1.5em -3em;
+}
+
+.icon-upload {
+  background-position: -3em -3em;
+}
+
+.icon-locked {
+  background-position: -4.5em -3em;
+}
+
+.icon-unlocked {
+  background-position: -6em -3em;
+}
+
+/* END OF EXPERIMENTAL RULES
+   ========================================================================== */
 /* ==========================================================================
    Additional layout for devices < 769px
    ========================================================================== */
@@ -1807,5 +2115,18 @@ div.plugin-help {
 
   div.plugin-help {
     width: 100%;
+  }
+
+  .progress-meter ol {
+    display: block;
+    margin-bottom: 1em;
+  }
+  .progress-meter li {
+    float: none;
+    display: block;
+    margin: 0;
+  }
+  .progress-meter li:after {
+    display: none;
   }
 }
