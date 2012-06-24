@@ -4,14 +4,18 @@
    ========================================================================== */
 /* Clearfix
    ========================================================================== */
-.clearfix, .txp-footer, .txp-edit p, .txp-navigation {
+.clearfix, .txp-footer, .txp-edit p, .txp-navigation,
+.progress-meter ol {
   *zoom: 1;
 }
-.clearfix:before, .txp-footer:before, .txp-edit p:before, .txp-navigation:before, .clearfix:after, .txp-footer:after, .txp-edit p:after, .txp-navigation:after {
+.clearfix:before, .txp-footer:before, .txp-edit p:before, .txp-navigation:before, .clearfix:after, .txp-footer:after, .txp-edit p:after, .txp-navigation:after,
+.progress-meter ol:before,
+.progress-meter ol:after {
   content: "";
   display: table;
 }
-.clearfix:after, .txp-footer:after, .txp-edit p:after, .txp-navigation:after {
+.clearfix:after, .txp-footer:after, .txp-edit p:after, .txp-navigation:after,
+.progress-meter ol:after {
   clear: both;
 }
 
@@ -539,7 +543,7 @@ button.publish {
   font-weight: bold;
   border: 1px solid #f2ab05;
   border-bottom-color: #c08804;
-  padding: .66666666666667em .75em;
+  padding: .75em;
   background-color: #ffda44;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#ffda44), to(#f2ab05));
@@ -680,13 +684,6 @@ button.destroy:active {
   border-top-right-radius: 0.385em;
   -moz-border-radius-bottomright: 0.385em;
   border-bottom-right-radius: 0.385em;
-}
-
-.edit-image-replace input[type="submit"],
-.edit-upload-thumbnail input[type="submit"],
-.edit-alter-thumbnail input[type="submit"],
-.edit-file-replace input[type="submit"] {
-  float: right;
 }
 
 /* Lists
@@ -1069,6 +1066,26 @@ body {
 .edit-value select {
   margin-top: -0.231em;
   margin-bottom: -0.231em;
+}
+
+.txp-edit input[type="submit"] {
+  float: right;
+}
+
+.txp-edit-action {
+  margin-right: -1em;
+  margin-left: -1em;
+  margin-bottom: 0;
+  border-top: 1px solid white;
+  -moz-border-radius-bottomright: 0.385em;
+  border-bottom-right-radius: 0.385em;
+  -moz-border-radius-bottomleft: 0.385em;
+  border-bottom-left-radius: 0.385em;
+  padding: 1em;
+  background: #efefef;
+}
+.txp-edit-action button {
+  margin-top: .5em;
 }
 
 /* Miscellaneous/shared layout

@@ -17,7 +17,8 @@
 /* Clearfix
    ========================================================================== */
 
-.clearfix {
+.clearfix,
+.progress-meter ol {
 	@include clearfix;
 }
 
@@ -388,7 +389,7 @@ button.publish {
 	font-weight: bold;
 	border: 1px solid #f2ab05;
 	border-bottom-color: darken(#f2ab05, 10%);
-	padding: .66666666666667em .75em;
+	padding: .75em; // 9px / 12px
 	@include gradient(#ffda44, #f2ab05);
 
 	&:hover {
@@ -434,15 +435,6 @@ button.destroy {
 
 	> :last-child {
 		@include border-right-radius;
-	}
-}
-
-.edit-image-replace,
-.edit-upload-thumbnail,
-.edit-alter-thumbnail,
-.edit-file-replace {
-	input[type="submit"] {
-		float: right;
 	}
 }
 
@@ -583,6 +575,24 @@ body {
 .edit-value select {
 	margin-top: -.23076923076923em;
 	margin-bottom: -.23076923076923em;
+}
+
+.txp-edit input[type="submit"] {
+	float: right;
+}
+
+.txp-edit-action {
+	margin-right: -1em;
+	margin-left: -1em;
+	margin-bottom: 0;
+	border-top: 1px solid $color-background;
+	@include border-bottom-radius;
+	padding: 1em;
+	background: darken($color-background-box, 3%);
+
+	button {
+		margin-top: .5em; // 6px / 12px
+	}
 }
 
 

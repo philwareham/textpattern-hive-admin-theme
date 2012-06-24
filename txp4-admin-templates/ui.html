@@ -124,6 +124,7 @@
 			<li><a href="#ui-doc-media">Embedded content</a></li>
 			<li><a href="#ui-doc-lists">Lists</a></li>
 			<li><a href="#ui-doc-tables">Tables</a></li>
+			<li><a href="#ui-doc-progress">Progress meters</a></li>
 			<li><a href="#ui-doc-summarydetails">Summary/details boxes</a></li>
 			<li><a href="#ui-doc-forms">Forms</a></li>
 			<li><a href="#ui-doc-edit-panes">Edit panes</a></li>
@@ -383,7 +384,7 @@
 
 
 		<div class="text-section" id="ui-doc-tables">
-			<h1>Tables <span class="warning" style="font-size:.43333333333333em;font-weight:normal;">changed v4.5</span></h1>
+			<h1>Tables <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.5</span></h1>
 				<pre><code>&lt;div class="txp-listtables"&gt;
 	&lt;table class="txp-list"&gt;
 		&lt;thead&gt;
@@ -455,6 +456,31 @@
 						</tr>
 					</tbody>
 				</table>
+			</div>
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-progress">
+			<h1>Progress meters <span class="information" style="font-size:.5em;font-weight:normal;">new v4.5</span></h1>
+				<pre><code>&lt;div class="progress-meter"&gt;
+	&lt;p&gt;There are 4 steps to this installation process:&lt;/p&gt;
+	&lt;ol&gt;
+		&lt;li class="active"&gt;&lt;strong&gt;Add database details&lt;/strong&gt;&lt;/li&gt;
+		&lt;li&gt;Add config.php file&lt;/li&gt;
+		&lt;li&gt;Create database&lt;/li&gt;
+		&lt;li&gt;Go!&lt;/li&gt;
+	&lt;/ol&gt;
+&lt;/div&gt;</code></pre>
+
+			<div class="progress-meter">
+				<p>There are 4 steps to this installation process:</p>
+				<ol>
+					<li class="active"><strong>Add database details</strong></li>
+					<li>Add config.php file</li>
+					<li>Create database</li>
+					<li>Go!</li>
+				</ol>
 			</div>
 
 		</div>
@@ -743,7 +769,7 @@
 
 
 		<div class="text-section" id="ui-doc-edit-panes">
-			<h1>Edit panes <span class="warning" style="font-size:.43333333333333em;font-weight:normal;">changed v4.5</span></h1>
+			<h1>Edit panes <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.5</span></h1>
 
 				<pre><code>&lt;form method="post" action="#" class="edit-form"&gt;
 	&lt;div class="txp-edit"&gt;
@@ -778,7 +804,7 @@
 			&lt;span class="edit-label"&gt;&lt;label for="example_5"&gt;Textarea (with pophelp)&lt;/label&gt;&#160;&lt;a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help"&gt;?&lt;/a&gt;&lt;/span&gt;
 			&lt;textarea name="example_5" id="example_5" cols="64" rows="7"&gt;&lt;/textarea&gt;
 		&lt;/p&gt;
-		&lt;p&gt;&lt;input type="submit" value="Save" class="publish" /&gt;&lt;/p&gt;
+		&lt;p class="txp-edit-action"&gt;&lt;button&gt;Cancel&lt;/button&gt; &lt;input type="submit" value="Save" class="publish" /&gt;&lt;/p&gt;
 
 	&lt;/div&gt;
 &lt;/form&gt;</code></pre>
@@ -815,7 +841,7 @@
 						<span class="edit-label"><label for="example_5">Textarea (with pophelp)</label>&#160;<a target="_blank" href="#" class="pophelp" rel="help">?</a></span>
 						<textarea name="example_5" id="example_5" cols="64" rows="7"></textarea>
 					</p>
-					<p><input type="submit" value="Save" class="publish" /></p>
+					<p class="txp-edit-action"><button>Cancel</button> <input type="submit" value="Save" class="publish" /></p>
 				</div>
 			</form>
 

@@ -13,6 +13,95 @@
    (prefixed with 'expermental-' for now) */
 
 
+/* Progress meters
+   ========================================================================== */
+
+.progress-meter {
+	p {
+		display: none;
+	}
+
+	ol {
+		@include inline-block;
+		position: relative;
+		list-style: none;
+		padding: 0;
+		counter-reset: step; // set up name of increment on parent
+		&:after {
+			position: absolute;
+			top: 0;
+			left: 100%;
+			z-index: 2;
+			content: "";
+			height: 0;
+			width: 0;
+			border-top: 1.75em solid transparent;
+			border-left: .9em solid #ccc;
+			border-bottom: 1.75em solid transparent;
+		}
+	}
+
+	li {
+		position: relative;
+		float: left;
+		display: block;
+		padding: 1em 1em 1em 4.5em;
+		@include text-shadow-light;
+		@include box-shadow(inset 0 1px 0 0 rgba(#fff, .25));
+		@include gradient-bar;
+		/* IE7 padding fix for lack of ':before' support */
+		*padding: 1em;
+
+		&:last-child {
+			border-right: 1px solid lighten($color-border, 9%);
+		}
+
+		&.active {
+			@include gradient-bar(#ffda44, #fabc2b);
+		}
+
+		&:before {
+			position: absolute;
+			z-index: 2;
+			counter-increment: step; // increment the step on each occurance of this (pesudo) element
+			content: counter(step); // write out value of the increment
+			top: .4375em;
+			left: 1.2em;
+			border: 1px solid #fff;
+			@include border-radius(50%);
+			padding: .25em; // 4px / 16px
+			width: 1.375em; // 22px / 16px
+			text-align: center;
+			font-size: 1.23076923076923em; // 16px / 13px
+			font-weight: bold;
+			background: $color-border;
+		}
+
+		&:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			content: "";
+			height: 0;
+			width: 0;
+			border-top: 1.75em solid transparent;
+			border-left: .9em solid #ccc;
+			border-bottom: 1.75em solid transparent;
+		}
+
+		&:first-child:after {
+			border-left: .9em solid #fff;
+		}
+		
+	}
+
+	strong {
+		font-weight: normal;
+	}
+}
+
+
 /* Icons
    ========================================================================== */
 

@@ -3,6 +3,118 @@
    ========================================================================== */
 /* PROPOSED ADDITIONS TO THE TEXTPATTERN CORE CLASSES
    (prefixed with 'expermental-' for now) */
+/* Progress meters
+   ========================================================================== */
+.progress-meter p {
+  display: none;
+}
+.progress-meter ol {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  counter-reset: step;
+}
+.progress-meter ol:after {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 2;
+  content: "";
+  height: 0;
+  width: 0;
+  border-top: 1.75em solid transparent;
+  border-left: .9em solid #ccc;
+  border-bottom: 1.75em solid transparent;
+}
+.progress-meter li {
+  position: relative;
+  float: left;
+  display: block;
+  padding: 1em 1em 1em 4.5em;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #bebebe;
+  background-color: #eeeeee;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#eeeeee, #dddddd);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#eeeeee, #dddddd);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#eeeeee, #dddddd);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#eeeeee, #dddddd);
+  /* IE7 padding fix for lack of ':before' support */
+  *padding: 1em;
+}
+.progress-meter li:last-child {
+  border-right: 1px solid #e3e3e3;
+}
+.progress-meter li.active {
+  border-top: 1px solid #fabc2b;
+  border-bottom: 1px solid #e2a005;
+  background-color: #ffda44;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ffda44), to(#fabc2b));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffda44), to(#fabc2b));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#ffda44, #fabc2b);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#ffda44, #fabc2b);
+  /* IE10 */
+  background-image: -ms-linear-gradient(#ffda44, #fabc2b);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#ffda44, #fabc2b);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#ffda44, #fabc2b);
+}
+.progress-meter li:before {
+  position: absolute;
+  z-index: 2;
+  counter-increment: step;
+  content: counter(step);
+  top: .4375em;
+  left: 1.2em;
+  border: 1px solid #fff;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  padding: .25em;
+  width: 1.375em;
+  text-align: center;
+  font-size: 1.23076923076923em;
+  font-weight: bold;
+  background: #cccccc;
+}
+.progress-meter li:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  content: "";
+  height: 0;
+  width: 0;
+  border-top: 1.75em solid transparent;
+  border-left: .9em solid #ccc;
+  border-bottom: 1.75em solid transparent;
+}
+.progress-meter li:first-child:after {
+  border-left: .9em solid #fff;
+}
+.progress-meter strong {
+  font-weight: normal;
+}
+
 /* Icons
    ========================================================================== */
 .icon {
