@@ -220,7 +220,8 @@ input[type="button"],
 #article-main a.article-view,
 .action-create a,
 .navlink,
-.navlink-active {
+.navlink-active,
+.txp-buttons a {
 	-webkit-appearance: none;
 	@include border-radius;
 	@include background-clip;

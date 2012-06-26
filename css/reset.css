@@ -195,7 +195,8 @@ input[type="button"],
 #article-main a.article-view,
 .action-create a,
 .navlink,
-.navlink-active {
+.navlink-active,
+.txp-buttons a {
   -webkit-appearance: none;
   -moz-border-radius: 0.385em;
   border-radius: 0.385em;
@@ -249,7 +250,8 @@ input[type="button"]:hover,
 #article-main a.article-view:hover,
 .action-create a:hover,
 .navlink:hover,
-.navlink-active:hover {
+.navlink-active:hover,
+.txp-buttons a:hover {
   color: #333333;
   text-decoration: none;
   background-color: #f8f8f8;
@@ -276,7 +278,8 @@ input[type="button"]:active,
 #article-main a.article-view:active,
 .action-create a:active,
 .navlink:active,
-.navlink-active:active {
+.navlink-active:active,
+.txp-buttons a:active {
   background-color: #c5c5c5;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#c5c5c5), to(#f8f8f8));
