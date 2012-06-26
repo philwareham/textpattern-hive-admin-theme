@@ -190,8 +190,8 @@
 								<td class="section_detail syndicate"><a href="#" id="txp_column_articles_in_rss" class="section_toggle_option">Yes</a></td>
 								<td class="section_detail searchable"><a href="#" id="txp_column_articles_searchable" class="section_toggle_option">Yes</a></td>
 							</tr>
-							<tr id="txp_section_about">
-								<td class="multi-edit"><input type="checkbox" value="about" name="selected[]" /></td>
+							<tr id="txp_section_about" class="selected">
+								<td class="multi-edit"><input type="checkbox" value="about" name="selected[]" checked="checked" /></td>
 								<td class="name">
 									<a href="secondary/presentation-section_edit.html" title="Edit">about</a>
 									<span class="section_detail">[<a href="#">View</a>]</span>
@@ -209,7 +209,7 @@
 						</tbody>
 					</table>
 
-					<p class="multi-edit">
+					<p class="multi-select">
 						Select
 						<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
 						<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />

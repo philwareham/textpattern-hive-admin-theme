@@ -27,6 +27,10 @@
 			&:nth-child(even) {
 				background: $color-background-box;
 			}
+
+			&.selected {
+				background: lighten($color-link, 56%);
+			}
 		}
 	}
 

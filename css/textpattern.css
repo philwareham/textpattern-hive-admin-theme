@@ -712,6 +712,9 @@ button.destroy:active {
 .txp-list tbody tr:nth-child(even) {
   background: #f7f7f7;
 }
+.txp-list tbody tr.selected {
+  background: #e3edfc;
+}
 .txp-list thead th {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   background-color: #eeeeee;
