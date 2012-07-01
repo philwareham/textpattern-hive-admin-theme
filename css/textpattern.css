@@ -792,7 +792,6 @@ button.destroy:active {
 /* Allow overflow scroll on tables */
 .txp-listtables {
   overflow-x: auto;
-  margin-bottom: 1em;
   /* IE7 */
   *overflow-y: hidden;
 }
@@ -1091,7 +1090,7 @@ body {
 /* Miscellaneous/shared layout
    ========================================================================== */
 div.multi-edit {
-  margin-top: 1em;
+  margin: 1em 0;
   display: inline-block;
   *display: inline;
   *zoom: 1;
