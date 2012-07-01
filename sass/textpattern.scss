@@ -603,7 +603,12 @@ div.multi-edit {
 	margin: 1em 0;
 }
 
-div.multi-option {
+.multi-option {
+	display: none;
+}
+
+.multi-step {
+	margin-left: .30769230769231em;
 	@include inline-block;
 }
 
