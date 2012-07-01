@@ -1092,6 +1092,15 @@ body {
    ========================================================================== */
 div.multi-edit {
   margin-top: 1em;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+div.multi-option {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
 }
 
 .empty {

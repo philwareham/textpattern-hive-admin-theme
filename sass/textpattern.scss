@@ -601,6 +601,11 @@ body {
 
 div.multi-edit {
 	margin-top: 1em;
+	@include inline-block;
+}
+
+div.multi-option {
+	@include inline-block;
 }
 
 .empty {
