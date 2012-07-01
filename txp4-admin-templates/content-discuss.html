@@ -132,13 +132,14 @@
 
 		<div id="discuss_container" class="txp-container">
 
-			<form name="longform" id="discuss_form" method="post" action="#" onsubmit="return verify('Are you sure?')">
+			<form name="longform" id="discuss_form" class="multi_edit_form" method="post" action="#">
 				<div class="txp-listtables">
 
 					<table class="txp-list">
 
 						<thead>
 							<tr>
+								<th title="toggle_all_selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
 								<th class="id"><a href="#">ID#</a></th>
 								<th class="desc date posted created"><a href="#">Date</a></th>
 								<th class="name"><a href="#">Name</a></th>
@@ -148,37 +149,12 @@
 								<th class="discuss_detail ip"><a href="#">IP</a></th>
 								<th class="discuss_detail status"><a href="#">Status</a></th>
 								<th class="parent"><a href="#">Parent</a></th>
-								<th class="multi-edit">&#160;</th>
 							</tr>
 						</thead>
 
-						<tfoot>
-							<tr>
-								<td class="detail-toggle" colspan="2">
-									<input type="checkbox" name="cb_toggle_discuss_detail" id="cb_toggle_discuss_detail" value="1" class="checkbox" onclick="toggleClassRemember('discuss_detail');" checked="checked" />
-									<label for="cb_toggle_discuss_detail">Show detail</label> 
-								</td>
-								<td class="multi-edit" colspan="8">
-									Select:
-									<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
-									<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
-									<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
-									<label for="withselected">With selected:</label>
-									<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
-										<option value="" selected="selected"></option>
-										<option value="visible">Show</option>
-										<option value="unmoderated">Hide (unmoderated)</option>
-										<option value="spam">Hide (spam)</option>
-										<option value="ban">Ban comment author</option>
-										<option value="delete">Delete</option>
-									</select>
-									<input type="submit" value="Go" />
-								</td>
-							</tr>
-						</tfoot>
-
 						<tbody>
 							<tr class="spam">
+								<td class="multi-edit"><input type="checkbox" value="000003" name="selected[]" /></td>
 								<td class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000003</a></td>
 								<td class="date posted created">21&#160;Sep&#160;2011 10:13:58</td>
 								<td class="name">Anon</td>
@@ -188,9 +164,9 @@
 								<td class="discuss_detail ip">127.0.0.1</td>
 								<td class="discuss_detail status">Spam</td>
 								<td class="parent"><a href="#">Welcome to Your Site!</a></td>
-								<td class="multi-edit"><input type="checkbox" value="000003" name="selected[]" /></td>
 							</tr>
 							<tr class="moderate">
+								<td class="multi-edit"><input type="checkbox" value="000002" name="selected[]" /></td>
 								<td class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000002</a></td>
 								<td class="date posted created">21&#160;Sep&#160;2011 10:13:58</td>
 								<td class="name">Phil</td>
@@ -200,9 +176,9 @@
 								<td class="discuss_detail ip">127.0.0.1</td>
 								<td class="discuss_detail status">Unmoderated</td>
 								<td class="parent"><a href="#">Welcome to Your Site!</a></td>
-								<td class="multi-edit"><input type="checkbox" value="000002" name="selected[]" /></td>
 							</tr>
 							<tr class="visible">
+								<td class="multi-edit"><input type="checkbox" value="000001" name="selected[]" /></td>
 								<td class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000001</a></td>
 								<td class="date posted created">22&#160;Jul&#160;2005 14:11:32</td>
 								<td class="name">Donald Swain</td>
@@ -212,28 +188,41 @@
 								<td class="discuss_detail ip">127.0.0.1</td>
 								<td class="discuss_detail status"><a href="#" title="View">Visible</a></td>
 								<td class="parent"><a href="#">Welcome to Your Site!</a></td>
-								<td class="multi-edit"><input type="checkbox" value="000001" name="selected[]" /></td>
 							</tr>
 						</tbody>
-	
+
 					</table>
-	
+
+					<div class="multi-edit">
+						<select name="edit_method">
+							<option value="" selected="selected">with_selected_option</option>
+							<option value="visible">Show</option>
+							<option value="unmoderated">Hide (unmoderated)</option>
+							<option value="spam">Hide (spam)</option>
+							<option value="ban">Ban comment author</option>
+							<option value="delete">Delete</option>
+						</select>
+					</div>
+
 				</div>
 			</form>
+
+			<p class="detail-toggle">
+				<input type="checkbox" name="cb_toggle_discuss_detail" id="cb_toggle_discuss_detail" value="1" class="checkbox" onclick="toggleClassRemember('discuss_detail');" checked="checked" />
+				<label for="cb_toggle_discuss_detail">Show detail</label>
+			</p>
 
 			<form class="cb_show_spam" method="post" action="#">
 				<input type="checkbox" name="cb_show_spam" id="cb_show_spam" value="1" class="checkbox" onclick="setClassRemember('show_spam',1);submit(this.form);" checked="checked" />
 				<label for="cb_show_spam">Show spam</label>
-				<noscript>
-					<div><input type="submit" value="Go" /></div>
-				</noscript>
 			</form>
 
 			<div id="discuss_navigation" class="txp-navigation">
 				<p class="prev-next">1/1</p>
 				<form method="post" action="index.php" class="pageby">
 					<p>
-						View <select name="qty" onchange="submit(this.form);">
+						View
+						<select name="qty" onchange="submit(this.form);">
 							<option value="15">15</option>
 							<option value="25">25</option>
 							<option value="50">50</option>

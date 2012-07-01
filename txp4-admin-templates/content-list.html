@@ -216,7 +216,7 @@
 			</form>
 
 			<p class="detail-toggle">
-				<input type="checkbox" name="cb_toggle_articles_detail" id="cb_toggle_articles_detail" value="1" class="checkbox" onclick="toggleClassRemember('articles_detail');" />
+				<input type="checkbox" name="cb_toggle_articles_detail" id="cb_toggle_articles_detail" value="1" class="checkbox" onclick="toggleClassRemember('articles_detail');" checked="checked" />
 				<label for="cb_toggle_articles_detail">Show detail</label>
 			</p>
 
@@ -231,14 +231,15 @@
 				</form>
 
 				<form method="post" action="index.php" class="pageby">
-					<p>View
+					<p>
+						View
 						<select name="qty" onchange="submit(this.form);">
 							<option value="15">15</option>
 							<option value="25">25</option>
 							<option value="50">50</option>
 							<option value="100">100</option>
 						</select>
-						per page<noscript> <input type="submit" value="Go" /></noscript>
+						per page
 					</p>
 				</form>
 			</div>

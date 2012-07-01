@@ -142,13 +142,14 @@
 
 		<div id="section_container" class="txp-container">
 
-			<form action="index.php" id="section_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
+			<form action="index.php" id="section_form" class="multi_edit_form" method="post" name="longform">
 				<div class="txp-listtables">
 
 					<table class="txp-list">
+
 						<thead>
 							<tr>
-								<th title="toggle_all_selected" class="multi-edit"><input type="checkbox" value="0" name="selected_toggle" id="selected_toggle" /></th>
+								<th title="toggle_all_selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
 								<th class="name"><a href="#">Name</a></th>
 								<th class="name"><a href="#">Title</a></th>
 								<th class="page"><a href="#">Page</a></th>
@@ -158,6 +159,7 @@
 								<th class="section_detail searchable"><a href="#">Include in site search</a></th>
 							</tr>
 						</thead>
+
 						<tbody>
 							<tr id="txp_section_default">
 								<td class="multi-edit"><input type="checkbox" value="default" name="selected[]" /></td>
@@ -207,17 +209,12 @@
 								<td class="section_detail searchable"><a href="#" id="txp_column_about_searchable" class="section_toggle_option">Yes</a></td>
 							</tr>
 						</tbody>
+
 					</table>
 
-					<p class="multi-select">
-						Select
-						<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
-						<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
-						<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
-						<input type="button" value="toggle" name="seltoggle" title="select toggle" onclick="selecttoggle();" />
-						<label for="withselected">With selected:</label>
-						<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
-							<option value="" selected="selected"></option>
+					<div class="multi-edit">
+						<select name="edit_method">
+							<option value="" selected="selected">with_selected_option</option>
 							<option value="changepage">Uses page</option>
 							<option value="changecss">Uses style</option>
 							<option value="changeonfrontpage">On front page</option>
@@ -225,14 +222,18 @@
 							<option value="changesearchable">Include in site search</option>
 							<option value="delete">Delete</option>
 						</select>
+						<div class="multi-option" id="multi-option-changeonfrontpage">
+							<input type="radio" id="on_front_page-0" name="on_front_page" value="0" class="radio" /><label for="on_front_page-0">No</label>
+							<input type="radio" id="on_front_page-1" name="on_front_page" value="1" class="radio active" checked="checked" /><label for="on_front_page-1">Yes</label>
+						</div>
 						<input type="submit" value="Go" />
-					</p>
+					</div>
 
 				</div>
 			</form>
 
 			<p class="detail-toggle">
-				<input type="checkbox" name="cb_toggle_section_detail" id="cb_toggle_section_detail" value="1" checked="checked" class="checkbox" onclick="toggleClassRemember('section_detail');" />
+				<input type="checkbox" name="cb_toggle_section_detail" id="cb_toggle_section_detail" value="1" class="checkbox" onclick="toggleClassRemember('section_detail');" checked="checked" />
 				<label for="cb_toggle_section_detail">Show detail</label>
 			</p>
 

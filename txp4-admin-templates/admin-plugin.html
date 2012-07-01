@@ -117,12 +117,14 @@
 
 		<div id="plugin_container" class="txp-container">
 
-			<form action="index.php" id="plugin_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
+			<form action="#" id="plugin_form" class="multi_edit_form" method="post" name="longform">
 				<div class="txp-listtables">
 
 					<table class="txp-list">
+
 						<thead>
 							<tr>
+								<th title="toggle_all_selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
 								<th class="asc name"><a href="#">Plugin</a></th>
 								<th class="author"><a href="#">Author</a></th>
 								<th class="version"><a href="#">Version</a></th>
@@ -131,29 +133,12 @@
 								<th class="status"><a href="#">Active</a></th>
 								<th class="load-order"><a href="#">Order</a></th>
 								<th class="manage actions">Manage</th>
-								<th class="multi-edit">&#160;</th>
 							</tr>
 						</thead>
-						<tfoot>
-							<tr>
-								<td class="multi-edit" colspan="9">
-									Select:
-									<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
-									<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
-									<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
-									<label for="withselected">With selected:</label>
-									<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
-										<option value="" selected="selected"></option>
-										<option value="changestatus">Change status</option>
-										<option value="changeorder">Change order</option>
-										<option value="delete">Delete</option>
-									</select>
-									<input type="submit" value="Go" />
-								</td>
-							</tr>
-						</tfoot>
+
 						<tbody>
 							<tr>
+								<td class="multi-edit"><input type="checkbox" value="rah_external_output" name="selected[]" /></td>
 								<td class="name"><a href="secondary/admin-plugin_edit.html" title="Edit">rah_external_output</a></td>
 								<td class="author"><a href="http://rahforum.biz" rel="external">Jukka Svahn</a></td>
 								<td class="version">0.9</td>
@@ -162,9 +147,9 @@
 								<td class="status"><a href="#" title="enable">No</a></td>
 								<td class="load-order">5</td>
 								<td class="manage"><a href="secondary/admin-plugin_help.html">Help</a>&#160;&#124;&#160;<a href="#">Options</a></td>
-								<td class="multi-edit"><input type="checkbox" value="rah_external_output" name="selected[]" /></td>
 							</tr>
 							<tr>
+								<td class="multi-edit"><input type="checkbox" value="smd_browse_by" name="selected[]" /></td>
 								<td class="name"><a href="secondary/admin-plugin_edit.html" title="Edit">smd_browse_by</a></td>
 								<td class="author"><a href="http://stefdawson.com/" rel="external">Stef Dawson</a></td>
 								<td class="version">0.10</td>
@@ -173,10 +158,33 @@
 								<td class="status"><a href="#" title="disable">Yes</a></td>
 								<td class="load-order">5</td>
 								<td class="manage"><a href="secondary/admin-plugin_help.html">Help</a></td>
-								<td class="multi-edit"><input type="checkbox" value="smd_browse_by" name="selected[]" /></td>
 							</tr>
 						</tbody>
+
 					</table>
+
+					<div class="multi-edit">
+						<select name="edit_method">
+							<option value="" selected="selected">with_selected_option</option>
+							<option value="changestatus">Change status</option>
+							<option value="changeorder">Change order</option>
+							<option value="delete">Delete</option>
+						</select>
+						<div class="multi-option" id="multi-option-changeorder">
+							<select name="order">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5" selected="selected">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+							</select>
+						</div>
+						<input type="submit" value="Go" />
+					</div>
 
 				</div>
 			</form>

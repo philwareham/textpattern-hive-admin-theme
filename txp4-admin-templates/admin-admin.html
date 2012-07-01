@@ -131,56 +131,64 @@
 
 		<div id="users_container" class="txp-container">
 
-			<form action="index.php" id="users_form" method="post" name="longform" onsubmit="return verify('Are you sure?')">
+			<form action="index.php" id="users_form" class="multi_edit_form" method="post" name="longform">
 				<div class="txp-listtables">
+
 					<table class="txp-list">
+
 						<thead>
 							<tr>
+								<th title="toggle_all_selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
 								<th class="asc name login-name"><a href="#">Login</a></th>
 								<th class="name real-name"><a href="#">Real name</a></th>
 								<th class="email"><a href="#">E-mail</a></th>
 								<th class="privs"><a href="#">Privileges</a></th>
 								<th class="date last-login modified"><a href="#">Last login</a></th>
-								<th class="multi-edit">&#160;</th>
 							</tr>
 						</thead>
-						<tfoot>
-							<tr>
-								<td class="multi-edit" colspan="6">
-									Select
-									<input type="button" value="All" name="selall" title="select all" onclick="selectall();" />
-									<input type="button" value="None" name="selnone" title="select none" onclick="deselectall();" />
-									<input type="button" value="Range" name="selrange" title="select range" onclick="selectrange();" />
-									<label for="withselected">With selected:</label>
-									<select name="edit_method" id="withselected" onchange="poweredit(this); return false;">
-										<option value="" selected="selected"></option>
-										<option value="changeprivilege">Change privilege</option>
-										<option value="resetpassword">Reset password</option>
-										<option value="delete">Delete</option>
-									</select>
-									<input type="submit" value="Go" />
-								</td>
-							</tr>
-						</tfoot>
+
 						<tbody>
 							<tr>
+								<td class="multi-edit">&#160;</td>
 								<td class="name login-name"><a href="secondary/admin-password_edit.html" title="Edit">admin</a></td>
 								<td class="name real-name">Phil Wareham</td>
 								<td class="email"><a href="mailto:phil@designhive.com">phil@designhive.com</a></td>
 								<td class="privs">Publisher</td>
 								<td class="date last-login modified">Jun&#160;2012</td>
-								<td class="multi-edit">&#160;</td>
 							</tr>
 							<tr>
+								<td class="multi-edit"><input type="checkbox" value="testuser" name="selected[]" class="checkbox" /></td>
 								<td class="name login-name"><a href="secondary/admin-password_edit.html" title="Edit">anon</a></td>
 								<td class="name real-name">A Non</td>
 								<td class="email"><a href="mailto:anon@anon.com">anon@anon.com</a></td>
 								<td class="privs">Freelancer</td>
 								<td class="date last-login modified">&#160;</td>
-								<td class="multi-edit"><input type="checkbox" value="anon" name="selected[]" class="checkbox" /></td>
 							</tr>
 						</tbody>
+
 					</table>
+
+					<div class="multi-edit">
+						<select name="edit_method">
+							<option value="" selected="selected">with_selected_option</option>
+							<option value="changeprivilege">Change privilege</option>
+							<option value="resetpassword">Reset password</option>
+							<option value="delete">Delete</option>
+						</select>
+						<div class="multi-option" id="multi-option-changeprivilege">
+							<select id="privileges" name="privileges">
+								<option value="1">Publisher</option>
+								<option value="2">Managing Editor</option>
+								<option value="3">Copy Editor</option>
+								<option value="4">Staff Writer</option>
+								<option value="5">Freelancer</option>
+								<option value="6">Designer</option>
+								<option value="0" selected="selected">None</option>
+							</select>
+						</div>
+						<input type="submit" value="Go" />
+					</div>
+
 				</div>
 			</form>
 
