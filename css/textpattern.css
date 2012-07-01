@@ -716,7 +716,7 @@ button.destroy:active {
   background: #f7f7f7;
 }
 .txp-list tbody tr.selected {
-  background: #dfeafc;
+  background: #e3edfc;
 }
 .txp-list thead th {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
@@ -741,9 +741,6 @@ button.destroy:active {
 }
 .txp-list thead th:first-child {
   border-left: 1px solid #dddddd;
-}
-.txp-list thead th:last-child {
-  border-right: 1px solid #dddddd;
 }
 .txp-list thead th a {
   position: relative;
@@ -787,9 +784,6 @@ button.destroy:active {
   border-right: .30769230769231em solid transparent;
   border-top: 0;
   border-bottom: 0.308em solid #333333;
-}
-.txp-list tfoot td {
-  vertical-align: middle;
 }
 .txp-list .id {
   white-space: nowrap;
@@ -1097,7 +1091,7 @@ body {
 /* Miscellaneous/shared layout
    ========================================================================== */
 div.multi-edit {
-  margin: 1em 0;
+  margin-top: 1em;
 }
 
 .empty {
@@ -1448,10 +1442,6 @@ span.spinner {
 
 /* Content -> Comments page
    ========================================================================== */
-.cb_show_spam {
-  margin: -1em 0 1em 1em;
-}
-
 #page-discuss .txp-list tr.spam td {
   background: #f5e5e5;
 }
@@ -1999,12 +1989,6 @@ button .icon {
   #image_details_form .name,
   #image_details_form .category {
     display: block !important;
-  }
-
-  /* Content -> Comments page (< 769px)
-     ========================================================================== */
-  .cb_show_spam {
-    margin-top: 0;
   }
 
   /* Presentation -> Pages, Forms, Styles pages shared (< 769px)

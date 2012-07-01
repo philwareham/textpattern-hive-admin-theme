@@ -29,7 +29,7 @@
 			}
 
 			&.selected {
-				background: lighten($color-link, 55%);
+				background: lighten($color-link, 56%);
 			}
 		}
 	}
@@ -44,10 +44,6 @@
 
 			&:first-child {
 				border-left: 1px solid $color-gradient-to;
-			}
-
-			&:last-child {
-				border-right: 1px solid $color-gradient-to;
 			}
 
 			a {
@@ -95,10 +91,6 @@
 				border-bottom: .30769230769231em solid $color-text;
 			}
 		}
-	}
-
-	tfoot td {
-		vertical-align: middle;
 	}
 
 	.id {

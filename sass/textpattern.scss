@@ -600,7 +600,7 @@ body {
    ========================================================================== */
 
 div.multi-edit {
-	margin: 1em 0;
+	margin-top: 1em;
 }
 
 .empty {
@@ -946,10 +946,6 @@ span.spinner {
 
 /* Content -> Comments page
    ========================================================================== */
-
-.cb_show_spam {
-	margin: -1em 0 1em 1em;
-}
 
 #page-discuss .txp-list tr.spam td {
 	background: lighten($error-background, 2%);
