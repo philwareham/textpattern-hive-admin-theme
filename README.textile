@@ -21,6 +21,10 @@ Options are provided to hide certain sections/fields/features from displaying in
 
 @define('hive_theme_hide_branding', true);@
 
+*Hide page headings:*
+
+@define('hive_theme_hide_headings', true);@
+
 *Hide preview tabs group (write/edit page):*
 
 @define('hive_theme_hide_preview_tabs_group', true);@

@@ -13,6 +13,9 @@ class hive_theme extends theme
 		if(defined('hive_theme_hide_branding')) {
 			$out[] = '<link href="'.$this->url.'css/custom/hide_branding.css" rel="stylesheet" type="text/css" />';
 		}
+		if(defined('hive_theme_hide_headings')) {
+			$out[] = '<link href="'.$this->url.'css/custom/hide_headings.css" rel="stylesheet" type="text/css" />';
+		}
 		if(defined('hive_theme_hide_preview_tabs_group')) {
 			$out[] = '<link href="'.$this->url.'css/custom/hide_preview_tabs.css" rel="stylesheet" type="text/css" />';
 		}
