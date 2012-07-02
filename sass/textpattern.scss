@@ -37,6 +37,10 @@ a {
 	}
 }
 
+a.async.busy {
+	visibility: hidden;
+}
+
 
 @import "typography";
 
