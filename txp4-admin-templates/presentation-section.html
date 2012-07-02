@@ -151,12 +151,13 @@
 							<tr>
 								<th title="toggle_all_selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
 								<th class="name"><a href="#">Name</a></th>
-								<th class="name"><a href="#">Title</a></th>
+								<th class="title"><a href="#">Title</a></th>
 								<th class="page"><a href="#">Page</a></th>
 								<th class="style"><a href="#">Style</a></th>
 								<th class="section_detail frontpage"><a href="#">On front page</a></th>
 								<th class="section_detail syndicate"><a href="#">Syndicate</a></th>
 								<th class="section_detail searchable"><a href="#">Include in site search</a></th>
+								<th class="section_detail article_count"><a href="#">article</a></th>
 							</tr>
 						</thead>
 
@@ -167,7 +168,7 @@
 									<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
 									<span class="section_detail">[<a href="#">View</a>]</span>
 								</td>
-								<td class="name">default</td>
+								<td class="title">default</td>
 								<td class="page">
 									<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
 								</td>
@@ -175,6 +176,7 @@
 								<td class="section_detail frontpage">-</td>
 								<td class="section_detail syndicate">-</td>
 								<td class="section_detail searchable">-</td>
+								<td class="section_detail article_count">&#160;</td>
 							</tr>
 							<tr id="txp_section_articles">
 								<td class="multi-edit"><input type="checkbox" value="articles" name="selected[]" /></td>
@@ -182,15 +184,16 @@
 									<a href="secondary/presentation-section_edit.html" title="Edit">articles</a>
 									<span class="section_detail">[<a href="#">View</a>]</span>
 								</td>
-								<td class="name">Articles</td>
+								<td class="title">Articles</td>
 								<td class="page">
 									<a href="secondary/presentation-section_edit.html" title="Edit">archive</a>
 									<a title="article_count: 16" href="#">(16)</a>
 								</td>
 								<td class="style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
-								<td class="section_detail frontpage"><a href="#" id="txp_column_articles_on_frontpage" class="section_toggle_option">Yes</a></td>
-								<td class="section_detail syndicate"><a href="#" id="txp_column_articles_in_rss" class="section_toggle_option">Yes</a></td>
-								<td class="section_detail searchable"><a href="#" id="txp_column_articles_searchable" class="section_toggle_option">Yes</a></td>
+								<td class="section_detail frontpage"><a href="#" id="txp_column_articles_on_frontpage" class="section_toggle_option async">Yes</a></td>
+								<td class="section_detail syndicate"><a href="#" id="txp_column_articles_in_rss" class="section_toggle_option async">Yes</a></td>
+								<td class="section_detail searchable"><a href="#" id="txp_column_articles_searchable" class="section_toggle_option async">Yes</a></td>
+								<td class="section_detail article_count"><a title="article_count: 16" href="content-list.html">16</a></td>
 							</tr>
 							<tr id="txp_section_about" class="selected">
 								<td class="multi-edit"><input type="checkbox" value="about" name="selected[]" checked="checked" /></td>
@@ -204,9 +207,10 @@
 									(0)
 								</td>
 								<td class="style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
-								<td class="section_detail frontpage"><a href="#" id="txp_column_about_on_frontpage" class="section_toggle_option">No</a></td>
-								<td class="section_detail syndicate"><a href="#" id="txp_column_about_in_rss" class="section_toggle_option">No</a></td>
-								<td class="section_detail searchable"><a href="#" id="txp_column_about_searchable" class="section_toggle_option">Yes</a></td>
+								<td class="section_detail frontpage"><a href="#" id="txp_column_about_on_frontpage" class="section_toggle_option async">No</a></td>
+								<td class="section_detail syndicate"><a href="#" id="txp_column_about_in_rss" class="section_toggle_option async">No</a></td>
+								<td class="section_detail searchable"><a href="#" id="txp_column_about_searchable" class="section_toggle_option async">Yes</a></td>
+								<td class="section_detail article_count">0</td>
 							</tr>
 						</tbody>
 
