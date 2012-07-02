@@ -1133,7 +1133,7 @@ span.spinner {
 }
 @media (-webkit-min-device-pixel-ratio: 2) {
   span.spinner {
-    background-image: url("../img/retina/spinner@2x.gif") !important;
+    background-image: url("../img/hidpi/spinner@2x.gif") !important;
     -webkit-background-size: 15px 15px;
   }
 }

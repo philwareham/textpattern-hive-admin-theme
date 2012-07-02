@@ -30,14 +30,14 @@
 	}
 }
 
-// higher resolution images for retina displays
+// higher resolution images for high resolution displays
 		
 @mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
-	$file_name: $hdfile + '.' + $hdtype;
-	$retina_name: $hdfile + '@2x.' + $hdtype;
-	background-image: url('../img/' + $file_name);
+	$filename: $hdfile + '.' + $hdtype;
+	$hdfilename: $hdfile + '@2x.' + $hdtype;
+	background-image: url('../img/' + $filename);
 	@media (-webkit-min-device-pixel-ratio: 2) {
-		background-image: url('../img/retina/' + $retina_name) !important;
+		background-image: url('../img/hidpi/' + $hdfilename) !important;
 		-webkit-background-size: $hdwidth $hdheight;
 	}
 }
