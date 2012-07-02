@@ -1549,6 +1549,16 @@ span.spinner {
 
 /* Admin -> Plugins page
    ========================================================================== */
+tr .manage span,
+tr .plugin-prefs {
+  visibility: hidden;
+}
+
+tr.active .manage span,
+tr.active .plugin-prefs {
+  visibility: visible;
+}
+
 #plugin-install {
   width: 50%;
 }
