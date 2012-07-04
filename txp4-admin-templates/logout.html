@@ -27,34 +27,25 @@
 	<div class="txp-body">
 
 	<div id="login_container" class="txp-container">
+
 		<form method="post" action="content-article.html" id="login_form">
-			<table class="login-pane">
-				<tr>
-					<td>&#160;</td>
-					<td><p>Login to Textpattern</p></td>
-				</tr>
-				<tr>
-					<td class="cell-label"><label for="name">Name </label></td>
-					<td><input type="text" value="" name="p_userid" id="name" /></td>
-				</tr>
-				<tr>
-					<td class="cell-label"><label for="password">Password </label></td>
-					<td><input type="password" value="" name="p_password" id="password" /></td>
-				</tr>
-				<tr>
-					<td>&#160;</td>
-					<td>
-						<p><input type="checkbox" name="stay" value="1" id="stay" class="checkbox" /><label for="stay">Remain logged in with this browser</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=remember_login&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
-					</td>
-				</tr>
-				<tr>
-					<td>&#160;</td>
-					<td>
-						<input type="submit" value="Login" class="publish" />
-						<p><a href="reset-password.html">Forgot password?</a></p>
-					</td>
-				</tr>
-			</table>
+			<div class="txp-login">
+				<h2>Login to Textpattern</h2>
+				<p class="login-name">
+					<span class="login-label"><label for="login_name">Name</label></span>
+					<span class="login-value"><input type="text" value="" name="p_userid" size="32" id="login_name" /></span>
+				</p>
+				<p class="login-password">
+					<span class="login-label"><label for="login_password">Password</label></span>
+					<span class="login-value"><input type="password" value="" name="p_password" size="32" id="login_password" /></span>
+				</p>
+				<p class="login-stay">
+					<input type="checkbox" name="stay" value="1" id="login_stay" checked="checked" class="checkbox active" />
+					<label for="login_stay">Remain logged in with this browser</label>&#160;<a rel="help" target="_blank" href="http://rpc.textpattern.com/help/?item=remember_login&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a>
+				</p>
+				<p><input type="submit" value="Login" class="publish" /></p>
+				<p class="login-forgot"><a href="reset-password.html">Forgot password?</a></p>
+			</div>
 		</form>
 
 	</div><!-- /txp-container -->

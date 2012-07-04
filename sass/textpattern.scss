@@ -547,41 +547,65 @@ body {
 }
 
 
-/* Edit panes
+/* Edit and login panes
    ========================================================================== */
 
-.txp-edit {
+.txp-edit,
+.txp-login {
 	margin: 0 auto 1em;
 	@include border-radius;
 	padding: 1em 1em 1px 1em;
-	width: ($standard-column - 2em);
 	background: $color-background-box;
 
 	p {
 		@extend .clearfix;
 	}
+
+	input[type="submit"] {
+		float: right;
+	}
+}
+
+.txp-edit {
+	width: ($standard-column - 2em);
+}
+
+.txp-login {
+	max-width: 33.5384615384615em; // 436px / 13px
+}
+
+.edit-label,
+.login-label {
+	@include inline-block;
+	float: left;
 }
 
 .edit-label {
-	@include inline-block;
-	float: left;
 	width: 42%;
 }
 
-.edit-value {
+.login-label {
+	width: 31%;
+}
+
+.edit-value,
+.login-value {
 	@include inline-block;
 	float: right;
+
+	input,
+	select {
+		margin-top: -.23076923076923em;
+		margin-bottom: -.23076923076923em;
+	}
+}
+
+.edit-value {
 	width: 58%;
 }
 
-.edit-value input,
-.edit-value select {
-	margin-top: -.23076923076923em;
-	margin-bottom: -.23076923076923em;
-}
-
-.txp-edit input[type="submit"] {
-	float: right;
+.login-value {
+	width: 69%;
 }
 
 .txp-edit-action {
@@ -695,40 +719,6 @@ span.spinner {
 
 #tagbuilder-output textarea {
 	height: 7em;
-}
-
-
-/* Login page
-   ========================================================================== */
-
-#login_form {
-	margin: 0 auto;
-	padding: .5em 0;
-	width: 100%;
-	max-width: 33.5384615384615em; // 436px / 13px
-	background: $color-background-box;
-
-	p {
-		margin: 0;
-	}
-
-	tr:first-child p {
-		margin: .375em 0;
-		font-size: 1.23076923076923em; // 16px / 13px
-		font-weight: bold;
-	}
-
-	td {
-		padding: .38461538461538em 1em;
-	}
-
-	.cell-label {
-		font-weight: bold;
-	}
-
-	input[type="submit"] {
-		margin-bottom: 1em;
-	}
 }
 
 

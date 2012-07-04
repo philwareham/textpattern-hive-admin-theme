@@ -4,17 +4,21 @@
    ========================================================================== */
 /* Clearfix
    ========================================================================== */
-.clearfix, .txp-footer, .txp-edit p, .txp-navigation,
+.clearfix, .txp-footer, .txp-edit p,
+.txp-login p, .txp-navigation,
 .progress-meter ol {
   *zoom: 1;
 }
-.clearfix:before, .txp-footer:before, .txp-edit p:before, .txp-navigation:before, .clearfix:after, .txp-footer:after, .txp-edit p:after, .txp-navigation:after,
+.clearfix:before, .txp-footer:before, .txp-edit p:before,
+.txp-login p:before, .txp-navigation:before, .clearfix:after, .txp-footer:after, .txp-edit p:after,
+.txp-login p:after, .txp-navigation:after,
 .progress-meter ol:before,
 .progress-meter ol:after {
   content: "";
   display: table;
 }
-.clearfix:after, .txp-footer:after, .txp-edit p:after, .txp-navigation:after,
+.clearfix:after, .txp-footer:after, .txp-edit p:after,
+.txp-login p:after, .txp-navigation:after,
 .progress-meter ol:after {
   clear: both;
 }
@@ -1017,41 +1021,66 @@ body {
   float: right;
 }
 
-/* Edit panes
+/* Edit and login panes
    ========================================================================== */
-.txp-edit {
+.txp-edit,
+.txp-login {
   margin: 0 auto 1em;
   -moz-border-radius: 0.385em;
   border-radius: 0.385em;
   padding: 1em 1em 1px 1em;
-  width: 40em;
   background: #f7f7f7;
 }
+.txp-edit input[type="submit"],
+.txp-login input[type="submit"] {
+  float: right;
+}
 
-.edit-label {
+.txp-edit {
+  width: 40em;
+}
+
+.txp-login {
+  max-width: 33.5384615384615em;
+}
+
+.edit-label,
+.login-label {
   display: inline-block;
   *display: inline;
   *zoom: 1;
   float: left;
+}
+
+.edit-label {
   width: 42%;
 }
 
-.edit-value {
+.login-label {
+  width: 31%;
+}
+
+.edit-value,
+.login-value {
   display: inline-block;
   *display: inline;
   *zoom: 1;
   float: right;
-  width: 58%;
 }
-
 .edit-value input,
-.edit-value select {
+.edit-value select,
+.login-value input,
+.login-value select {
   margin-top: -0.231em;
   margin-bottom: -0.231em;
 }
 
-.txp-edit input[type="submit"] {
-  float: right;
+.edit-value {
+  width: 58%;
+}
+
+.login-value {
+  width: 69%;
 }
 
 .txp-edit-action {
@@ -1180,33 +1209,6 @@ span.spinner {
 
 #tagbuilder-output textarea {
   height: 7em;
-}
-
-/* Login page
-   ========================================================================== */
-#login_form {
-  margin: 0 auto;
-  padding: .5em 0;
-  width: 100%;
-  max-width: 33.5384615384615em;
-  background: #f7f7f7;
-}
-#login_form p {
-  margin: 0;
-}
-#login_form tr:first-child p {
-  margin: .375em 0;
-  font-size: 1.23076923076923em;
-  font-weight: bold;
-}
-#login_form td {
-  padding: .38461538461538em 1em;
-}
-#login_form .cell-label {
-  font-weight: bold;
-}
-#login_form input[type="submit"] {
-  margin-bottom: 1em;
 }
 
 /* Content -> Categories page
@@ -2063,18 +2065,23 @@ button .icon {
     box-shadow: 0 0.154em 0.231em rgba(0, 0, 0, 0.15);
   }
 
-  .txp-edit {
+  .txp-edit,
+  .txp-login {
     width: inherit;
   }
 
   .edit-label,
-  .edit-value {
+  .edit-value,
+  .login-label,
+  .login-value {
     float: none;
     width: 100%;
   }
 
   .edit-value input,
-  .edit-value select {
+  .edit-value select,
+  .login-value input,
+  .login-value select {
     margin-top: 0;
     margin-bottom: 0;
   }

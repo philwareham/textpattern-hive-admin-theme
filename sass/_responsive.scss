@@ -218,20 +218,26 @@ body {
 	@include box-shadow(0 .15384615384615em .23076923076923em rgba(#000, .15));
 }
 
-.txp-edit {
+.txp-edit,
+.txp-login {
 	width: inherit;
 }
 
 .edit-label,
-.edit-value {
+.edit-value,
+.login-label,
+.login-value {
 	float: none;
 	width: 100%;
 }
 
-.edit-value input,
-.edit-value select {
-	margin-top: 0;
-	margin-bottom: 0;
+.edit-value,
+.login-value {
+	input,
+	select {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 }
 
 #article-main #body {
