@@ -560,7 +560,12 @@ body {
 	p {
 		@extend .clearfix;
 	}
+}
 
+.edit-image-replace,
+.edit-upload-thumbnail,
+.edit-alter-thumbnail,
+.edit-file-replace {
 	input[type="submit"] {
 		float: right;
 	}
@@ -608,6 +613,7 @@ body {
 	width: 69%;
 }
 
+/* TBC (for Textpattern v4.6 modals) */
 .txp-edit-action {
 	margin-right: -1em;
 	margin-left: -1em;
@@ -619,6 +625,10 @@ body {
 
 	button {
 		margin-top: .5em; // 6px / 12px
+	}
+
+	input[type="submit"] {
+		float: right;
 	}
 }
 

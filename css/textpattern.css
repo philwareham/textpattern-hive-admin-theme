@@ -1031,8 +1031,11 @@ body {
   padding: 1em 1em 1px 1em;
   background: #f7f7f7;
 }
-.txp-edit input[type="submit"],
-.txp-login input[type="submit"] {
+
+.edit-image-replace input[type="submit"],
+.edit-upload-thumbnail input[type="submit"],
+.edit-alter-thumbnail input[type="submit"],
+.edit-file-replace input[type="submit"] {
   float: right;
 }
 
@@ -1083,6 +1086,7 @@ body {
   width: 69%;
 }
 
+/* TBC (for Textpattern v4.6 modals) */
 .txp-edit-action {
   margin-right: -1em;
   margin-left: -1em;
@@ -1097,6 +1101,9 @@ body {
 }
 .txp-edit-action button {
   margin-top: .5em;
+}
+.txp-edit-action input[type="submit"] {
+  float: right;
 }
 
 /* Miscellaneous/shared layout
