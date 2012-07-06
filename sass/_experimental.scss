@@ -17,14 +17,18 @@
    ========================================================================== */
 
 .progress-meter {
+	text-align: center;
+
 	p {
 		display: none;
 	}
 
 	ol {
+		@include inline-block;
 		list-style: none;
 		margin-bottom: 0;
 		padding: 0;
+		text-align: left;
 		counter-reset: step; // set up name of increment on parent
 	}
 

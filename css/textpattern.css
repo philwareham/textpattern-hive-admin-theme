@@ -5,20 +5,20 @@
 /* Clearfix
    ========================================================================== */
 .clearfix, .txp-footer, .txp-edit p,
-.txp-login p, .txp-navigation,
+.txp-login p, .txp-navigation, .txp-setup p,
 .progress-meter ol {
   *zoom: 1;
 }
 .clearfix:before, .txp-footer:before, .txp-edit p:before,
-.txp-login p:before, .txp-navigation:before, .clearfix:after, .txp-footer:after, .txp-edit p:after,
-.txp-login p:after, .txp-navigation:after,
+.txp-login p:before, .txp-navigation:before, .txp-setup p:before, .clearfix:after, .txp-footer:after, .txp-edit p:after,
+.txp-login p:after, .txp-navigation:after, .txp-setup p:after,
 .progress-meter ol:before,
 .progress-meter ol:after {
   content: "";
   display: table;
 }
 .clearfix:after, .txp-footer:after, .txp-edit p:after,
-.txp-login p:after, .txp-navigation:after,
+.txp-login p:after, .txp-navigation:after, .txp-setup p:after,
 .progress-meter ol:after {
   clear: both;
 }
@@ -1174,6 +1174,17 @@ span.spinner {
   }
 }
 
+/* Setup pages
+   ========================================================================== */
+#page-setup {
+  padding: 1em 2em 0;
+}
+
+.txp-setup {
+  margin: 1em auto 2em;
+  width: 40em;
+}
+
 /* Tag builder page
    ========================================================================== */
 #tag-event {
@@ -1589,13 +1600,20 @@ div.plugin-help {
    (prefixed with 'expermental-' for now) */
 /* Progress meters
    ========================================================================== */
+.progress-meter {
+  text-align: center;
+}
 .progress-meter p {
   display: none;
 }
 .progress-meter ol {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
   list-style: none;
   margin-bottom: 0;
   padding: 0;
+  text-align: left;
   counter-reset: step;
 }
 .progress-meter li {
@@ -2073,7 +2091,8 @@ button .icon {
   }
 
   .txp-edit,
-  .txp-login {
+  .txp-login,
+  .txp-setup {
     width: inherit;
   }
 

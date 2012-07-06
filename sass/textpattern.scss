@@ -698,6 +698,23 @@ span.spinner {
 }
 
 
+/* Setup pages
+   ========================================================================== */
+
+#page-setup {
+	padding: 1em 2em 0;
+}
+
+.txp-setup {
+	margin: 1em auto 2em;
+	width: ($standard-column - 2em);
+
+	p {
+		@extend .clearfix;
+	}
+}
+
+
 /* Tag builder page
    ========================================================================== */
 
