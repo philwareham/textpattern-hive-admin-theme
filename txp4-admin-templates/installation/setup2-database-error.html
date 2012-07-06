@@ -32,21 +32,9 @@
 	<div class="txp-edit"><!-- temp container div -->
 
 		<h2>Checking database connection&hellip;</h2>
-		<p><strong class="success">Connected</strong> using <code>local-test-mysql</code> (utf8)</p>
-		<h2>Creating config.php&hellip;</h2>
-		<p><strong>Before you proceed</strong>, create a file called <code>config.php</code> in the <code>/textpattern/</code> directory and paste the following inside:</p>
-		<p><textarea name="config" cols="64" rows="16" readonly="readonly" class="code"><?php
-$txpcfg['db'] = 'test-mysql';
-$txpcfg['user'] = 'test-mysql';
-$txpcfg['pass'] = 'password1';
-$txpcfg['host'] = 'localhost';
-$txpcfg['table_prefix'] = '';
-$txpcfg['txpath'] = '/Users/johnqpublic/textpattern';
-$txpcfg['dbcharset'] = 'utf8';
-?></textarea></p>
-		<form action="setup4-database-populate1.html" method="post">
-			<p><input type="submit" value="I did it &#8594;" name="submit" class="publish" /></p>
-		</form>
+		<p><strong class="success">Connected</strong></p>
+		<p class="error">Database does not exist or your specified user does not have permission to access it.</p>
+		<p><a class="navlink" href="setup3-database-config1.html">&#8592; Back to database details</a></p>
 
 	</div><!-- /temp container div -->
 

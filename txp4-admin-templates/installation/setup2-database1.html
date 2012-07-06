@@ -16,67 +16,61 @@
 </head>
 <body id="page-setup">
 
-	<div class="progress-meter">
-		<p>There are 4 steps to this installation process:</p>
-		<ol>
-			<li class="active"><strong>Add database details</strong></li>
-			<li>Add config.php file</li>
-			<li>Create database</li>
-			<li>Go!</li>
-		</ol>
-	</div>
+	<div class="txp-body">
+	<div class="txp-container">
 
-	<div align="center">
-		<form action="setup3-database-config1.html" method="post">
-			<table id="setup">
-				<tr>
-					<td width="400" height="50" colspan="4" align="left">
-						<h1>Welcome to Textpattern</h1>
-						<p style="margin-bottom:3em">Inevitably, we need a few details</p>
-						<h2>MySQL</h2>
-						<p>Note that the database you specify must already exist, Textpattern will not create it.</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="cell-label">MySQL login </td>
-					<td><input type="text" value="" name="duser" /></td>
-					<td class="cell-label">MySQL password </td>
-					<td><input type="text" value="" name="dpass" /></td>
-				</tr>
-				<tr>
-					<td class="cell-label">MySQL server </td>
-					<td><input type="text" value="localhost" name="dhost" /></td>
-					<td class="cell-label">MySQL database </td>
-					<td><input type="text" value="" name="ddb" /></td>
-				</tr>
-				<tr>
-					<td class="cell-label">Table prefix </td>
-					<td><input type="text" value="" name="dprefix" /></td>
-					<td align="left" valign="top" colspan="2"><small>(use <strong>only</strong> if you require multiple installations in one database)</small></td>
-				</tr>
-				<tr>
-					<td align="left" valign="top" colspan="4">&nbsp;</td>
-				</tr>
-				<tr>
-					<td align="left" valign="top" colspan="4">
-						<h2>Site URL</h2>
-						<p>Please enter the web-reachable address of your site</p>
-					</td>
-				</tr>
-				<tr>
-					<td class="cell-label">http:// </td>
-					<td align="left" valign="top" colspan="3">
-						<input type="text" value="www.textpattern.dev" name="siteurl" size="40" /><a target="_blank" href="http://rpc.textpattern.com/help/?item=siteurl&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>
-					</td>
-				</tr>
-				<tr>
-					<td>&#160;</td>
-					<td><input type="submit" value="next" name="Submit" class="publish" /></td>
-					<td>&#160;</td>
-					<td>&#160;</td>
-				</tr>
-			</table>
+		<div class="progress-meter">
+			<p>There are 4 steps to this installation process:</p>
+			<ol>
+				<li class="active"><strong>Add database details</strong></li>
+				<li>Add config file</li>
+				<li>Create database</li>
+				<li>Go!</li>
+			</ol>
+		</div>
+
+	<div class="txp-edit"><!-- temp container div -->
+
+		<form action="setup2-database-error.html" method="post">
+			<h1>Inevitably, we need a few details&hellip;</h1>
+			<h2>MySQL</h2>
+			<p>Note that the database you specify must already exist, Textpattern will not create it.</p>
+			<p>
+				<label for="setup_duser">MySQL login</label><br />
+				<input type="text" value="" name="duser" id="setup_duser" size="32" />
+			</p>
+			<p>
+				<label for="setup_dpass">MySQL password</label><br />
+				<input type="text" value="" name="dpass" id="setup_dpass" size="32" />
+			</p>
+			<p>
+				<label for="setup_dhost">MySQL server</label><br />
+				<input type="text" value="localhost" name="dhost" id="setup_dhost" size="32" />
+			</p>
+			<p>
+				<label for="setup_ddb">MySQL database</label><br />
+				<input type="text" value="" name="ddb" id="setup_ddb" size="32" />
+			</p>
+			<p>
+				<label for="setup_dprefix">Table prefix</label><br />
+				<input type="text" value="" name="dprefix" id="setup_dprefix" /><br />
+				<span class="warning">(Use <strong>only</strong> if you require multiple installations in one database)</span>
+			</p>
+			<h2>Site URL</h2>
+			<p>Please enter the web-reachable address of your site</p>
+			<p>
+				<label for="setup_siteurl">http://</label>&#160;<a rel="help" target="_blank" href="http://rpc.textpattern.com/help/?item=siteurl&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a><br />
+				<input type="text" value="" name="siteurl" id="setup_siteurl" size="32" />
+			</p>
+			<p>
+				<input type="submit" value="Next &#8594;" name="Submit" class="publish" />
+			</p>
 		</form>
-	</div>
+
+	</div><!-- /temp container div -->
+
+	</div><!-- /txp-container -->
+	</div><!-- /txp-body -->
+
 </body>
 </html>
