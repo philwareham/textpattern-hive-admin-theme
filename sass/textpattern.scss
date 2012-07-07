@@ -388,7 +388,8 @@ input.input-xsmall {
 /* primary buttons */
 
 input[type="submit"].publish,
-button.publish {
+button.publish,
+a.publish {
 	font-weight: bold;
 	border: 1px solid #f2ab05;
 	border-bottom-color: darken(#f2ab05, 10%);
