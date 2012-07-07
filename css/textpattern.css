@@ -1185,6 +1185,30 @@ span.spinner {
   width: 40em;
 }
 
+/* rules specific to the very first page you'll see */
+.welcome .txp-setup {
+  max-width: 20.3076923076923em;
+}
+.welcome h1 {
+  font-size: 1em;
+  width: 20.3076923076923em;
+  height: 4.15384615384615em;
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url("../img/textpattern-xlrg.png");
+}
+.svg .welcome h1 {
+  background-image: url("../img/svg/textpattern-xlrg.svg");
+  -webkit-background-size: 20.308em 4.154em;
+  -moz-background-size: 20.308em 4.154em;
+  -o-background-size: 20.308em 4.154em;
+  background-size: 20.308em 4.154em;
+}
+.welcome select {
+  width: 100%;
+}
+
 /* Tag builder page
    ========================================================================== */
 #tag-event {

@@ -714,6 +714,25 @@ span.spinner {
 	}
 }
 
+/* rules specific to the very first page you'll see */
+.welcome {
+	.txp-setup {
+		max-width: 20.3076923076923em;
+	}
+
+	h1 {
+		font-size: 1em;
+		width: 20.3076923076923em; // 264px / 13px
+		height: 4.15384615384615em; // 54px / 13px
+		@include hide-text;
+		@include svg-graphic(textpattern-xlrg, png, 20.3076923076923em, 4.15384615384615em);
+	}
+
+	select {
+		width: 100%;
+	}
+}
+
 
 /* Tag builder page
    ========================================================================== */
