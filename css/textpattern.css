@@ -1179,7 +1179,7 @@ span.spinner {
 
 /* Setup pages
    ========================================================================== */
-#page-setup {
+body#page-setup {
   padding: 1em 2em 0;
 }
 
@@ -1934,6 +1934,10 @@ button .icon {
   body {
     padding: 4em 1em 0;
     min-width: 294px;
+  }
+
+  body#page-setup {
+    padding: 0 1em 0;
   }
 
   /* Header (< 769px)
