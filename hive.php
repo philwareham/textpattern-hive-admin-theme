@@ -186,11 +186,11 @@ EOS;
 	{
 		global $prefs;
 		return array(
-			'author'	  => 'Phil Wareham',
+			'author'      => 'Phil Wareham',
 			'author_uri'  => 'http://twitter.com/philwareham',
-			'version'	 => '4.5beta1',
+			'version'     => '4.5beta1',
 			'description' => 'Textpattern Hive Theme',
-			'help'		=> 'https://github.com/philwareham/txp-hive-admin-theme',
+			'help'        => 'https://github.com/philwareham/txp-hive-admin-theme',
 		);
 	}
 
