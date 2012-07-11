@@ -12,7 +12,7 @@
 @media only screen and (max-width: 768px) { // may be changed to 'device-max-width' in final build
 
 
-/* Layout (< 769px)
+/* Layout < 769px
    ========================================================================== */
 
 body {
@@ -25,7 +25,7 @@ body#page-setup {
 }
 
 
-/* Header (< 769px)
+/* Header < 769px
    ========================================================================== */
 
 .txp-header {
@@ -44,7 +44,7 @@ body#page-setup {
 }
 
 
-/* Navigation (< 769px)
+/* Navigation < 769px
    ========================================================================== */
 
 /* show <select> version of navigation on small screen widths */
@@ -58,7 +58,7 @@ body#page-setup {
 }
 
 
-/* Typography
+/* Typography < 769px
    ========================================================================== */
 
 .text-section {
@@ -67,7 +67,7 @@ body#page-setup {
 }
 
 
-/* Content -> Categories page (< 769px)
+/* Content -> Categories page < 769px
    ========================================================================== */
 
 .category-list {
@@ -89,7 +89,7 @@ body#page-setup {
 }
 
 
-/* Content -> Write page (< 769px)
+/* Content -> Write page < 769px
    ========================================================================== */
 
 #page-article .txp-columntable {
@@ -120,7 +120,7 @@ body#page-setup {
 
 .view-mode {
 	float: left;
-	margin-right: .75em;
+	margin-right: .8125em;
 	margin-bottom: 0;
 }
 
@@ -137,7 +137,7 @@ body#page-setup {
 }
 
 
-/* Presentation -> Pages, Forms, Styles pages shared (< 769px)
+/* Presentation -> Pages, Forms, Styles pages shared < 769px
    ========================================================================== */
 
 #content_switcher {
@@ -168,6 +168,27 @@ body#page-setup {
 	}
 
 	.txp-columntable td.column:last-child {
+		width: 100%;
+	}
+}
+
+
+/* Admin -> Basic/advanced preferences pages < 769px
+   ========================================================================== */
+
+#page-prefs .basic,
+#page-prefs .advanced {
+	th,
+	td,
+	tr {
+		display: block;
+	}
+
+	tr {
+		border-top: 0;
+	}
+
+	.pref-value {
 		width: 100%;
 	}
 }

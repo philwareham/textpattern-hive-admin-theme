@@ -1210,6 +1210,14 @@ body {
 
 /* Miscellaneous/shared layout
    ========================================================================== */
+.txp-control-panel {
+  text-align: center;
+  line-height: 2;
+}
+.txp-control-panel p {
+  margin-top: 0;
+}
+
 div.multi-edit {
   margin: 1em 0;
 }
@@ -1225,10 +1233,6 @@ div.multi-edit {
   *zoom: 1;
 }
 
-.empty {
-  display: none;
-}
-
 .txp-columntable {
   width: 100%;
 }
@@ -1239,12 +1243,9 @@ div.text-column {
   max-width: 56em;
 }
 
-.txp-control-panel {
-  text-align: center;
-  line-height: 2;
-}
-.txp-control-panel p {
-  margin-top: 0;
+.text-section {
+  padding-top: 5em;
+  background: url("../img/separator.gif") repeat-x 0 2.154em;
 }
 
 .restricted-area {
@@ -1252,9 +1253,8 @@ div.text-column {
   text-align: center;
 }
 
-.text-section {
-  padding-top: 5em;
-  background: url("../img/separator.gif") repeat-x 0 2.154em;
+.empty {
+  display: none;
 }
 
 /* list navigators on list pages */
@@ -1668,7 +1668,26 @@ body#page-setup {
   margin-left: .6em;
 }
 #page-prefs .txp-list .pref-heading {
-  background-color: #fff6d3;
+  border-top: 1px solid #dddddd;
+  border-right: 1px solid #d0d0d0;
+  border-bottom: 1px solid #c4c4c4;
+}
+#page-prefs .txp-list .pref-heading td {
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  background-color: #eeeeee;
+  /* Konqueror */
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari4+, Chrome */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#dddddd));
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#eeeeee, #dddddd);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#eeeeee, #dddddd);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#eeeeee, #dddddd);
+  height: auto;
 }
 
 #page-prefs .basic .pref-value,
@@ -1727,7 +1746,7 @@ div.code {
    Additional layout for devices < 769px
    ========================================================================== */
 @media only screen and (max-width: 768px) {
-  /* Layout (< 769px)
+  /* Layout < 769px
      ========================================================================== */
   body {
     padding: 4em 1em 0;
@@ -1738,7 +1757,7 @@ div.code {
     padding: 0 1em 0;
   }
 
-  /* Header (< 769px)
+  /* Header < 769px
      ========================================================================== */
   .txp-header {
     padding: 0 1em;
@@ -1761,7 +1780,7 @@ div.code {
     right: 1em;
   }
 
-  /* Navigation (< 769px)
+  /* Navigation < 769px
      ========================================================================== */
   /* show <select> version of navigation on small screen widths */
   .txp-nav-select {
@@ -1773,14 +1792,14 @@ div.code {
     display: none;
   }
 
-  /* Typography
+  /* Typography < 769px
      ========================================================================== */
   .text-section {
     padding-top: 4em;
     background-position: 0 1.69230769230769em;
   }
 
-  /* Content -> Categories page (< 769px)
+  /* Content -> Categories page < 769px
      ========================================================================== */
   .category-list th,
   .category-list td,
@@ -1797,7 +1816,7 @@ div.code {
     margin: 0 0 1em 0;
   }
 
-  /* Content -> Write page (< 769px)
+  /* Content -> Write page < 769px
      ========================================================================== */
   #page-article .txp-columntable th,
   #page-article .txp-columntable td,
@@ -1825,7 +1844,7 @@ div.code {
 
   .view-mode {
     float: left;
-    margin-right: .75em;
+    margin-right: .8125em;
     margin-bottom: 0;
   }
 
@@ -1841,7 +1860,7 @@ div.code {
     display: none;
   }
 
-  /* Presentation -> Pages, Forms, Styles pages shared (< 769px)
+  /* Presentation -> Pages, Forms, Styles pages shared < 769px
      ========================================================================== */
   #content_switcher {
     margin: 0;
@@ -1875,6 +1894,25 @@ div.code {
   #page-form .txp-columntable td.column:last-child,
   #page-css .txp-columntable td.column:last-child,
   #page-section .txp-columntable td.column:last-child {
+    width: 100%;
+  }
+
+  /* Admin -> Basic/advanced preferences pages < 769px
+     ========================================================================== */
+  #page-prefs .basic th,
+  #page-prefs .basic td,
+  #page-prefs .basic tr,
+  #page-prefs .advanced th,
+  #page-prefs .advanced td,
+  #page-prefs .advanced tr {
+    display: block;
+  }
+  #page-prefs .basic tr,
+  #page-prefs .advanced tr {
+    border-top: 0;
+  }
+  #page-prefs .basic .pref-value,
+  #page-prefs .advanced .pref-value {
     width: 100%;
   }
 }

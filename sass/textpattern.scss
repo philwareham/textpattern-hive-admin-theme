@@ -713,6 +713,14 @@ body {
 /* Miscellaneous/shared layout
    ========================================================================== */
 
+.txp-control-panel {
+	text-align: center;
+	line-height: 2;
+	p {
+		margin-top: 0;
+	}
+}
+
 div.multi-edit {
 	margin: 1em 0;
 }
@@ -726,10 +734,6 @@ div.multi-edit {
 	@include inline-block;
 }
 
-.empty {
-	display: none;
-}
-
 .txp-columntable {
 	width: 100%;
 }
@@ -740,12 +744,9 @@ div.text-column {
 	max-width: $text-column;
 }
 
-.txp-control-panel {
-	text-align: center;
-	line-height: 2;
-	p {
-		margin-top: 0;
-	}
+.text-section {
+	padding-top: 5em;
+	background: url("../img/separator.gif") repeat-x 0 2.15384615384615em; // 28px / 13px
 }
 
 .restricted-area {
@@ -753,9 +754,8 @@ div.text-column {
 	text-align: center;
 }
 
-.text-section {
-	padding-top: 5em;
-	background: url("../img/separator.gif") repeat-x 0 2.15384615384615em; // 28px / 13px
+.empty {
+	display: none;
 }
 
 /* list navigators on list pages */
@@ -1177,7 +1177,15 @@ body#page-setup {
 	}
 
 	.pref-heading {
-		background-color: $color-highlight-box;
+		border-top: 1px solid $color-gradient-to;
+		border-right: 1px solid darken($color-gradient-to, 5%);
+		border-bottom: 1px solid darken($color-gradient-to, 10%);
+
+		td {
+			@include text-shadow-light;
+			@include gradient;
+			height: auto;
+		}
 	}
 }
 
