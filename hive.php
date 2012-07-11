@@ -186,8 +186,8 @@ EOS;
 	{
 		global $prefs;
 		return array(
-			'author'      => 'Phil Wareham',
-			'author_uri'  => 'http://twitter.com/philwareham',
+			'author'      => 'Team Textpattern',
+			'author_uri'  => 'http://textpattern.com/',
 			'version'     => '4.5beta1',
 			'description' => 'Textpattern Hive Theme',
 			'help'        => 'https://github.com/philwareham/txp-hive-admin-theme',
