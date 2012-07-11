@@ -1,0 +1,202 @@
+/* ==========================================================================
+   Hive theme for Textpattern CMS (v4.5beta1)
+   ========================================================================== */
+/* PROPOSED ADDITIONS TO THE TEXTPATTERN CORE CLASSES */
+/* Icons
+   ========================================================================== */
+.icon {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-size: 16px;
+  line-height: 1.125;
+  vertical-align: text-bottom;
+  width: 1em;
+  height: 1em;
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url("../img/icon-sprite.png");
+}
+.svg .icon {
+  background-image: url("../img/svg/icon-sprite.svg");
+  -webkit-background-size: 24em 4.5em;
+  -moz-background-size: 24em 4.5em;
+  -o-background-size: 24em 4.5em;
+  background-size: 24em 4.5em;
+}
+
+a.icon-container {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin: 0 .5em .5em 0;
+  border: 1px solid #e3e3e3;
+  padding: .23076923076923em;
+  -moz-border-radius: 0.385em;
+  border-radius: 0.385em;
+  background-color: #f7f7f7;
+}
+a.icon-container:hover {
+  border-color: #cccccc;
+}
+a.icon-container b {
+  display: block;
+}
+
+button .icon {
+  margin: 0 0 -1px -1px;
+}
+
+[disabled] .icon,
+.navlink-disabled .icon {
+  opacity: .33;
+}
+
+.icon-write {
+  background-position: 0 0;
+}
+
+.icon-code {
+  background-position: -1.5em 0;
+}
+
+.icon-view {
+  background-position: -3em 0;
+}
+
+.icon-mail {
+  background-position: -4.5em 0;
+}
+
+.icon-plus {
+  background-position: -6em 0;
+}
+
+.icon-minus {
+  background-position: -7.5em 0;
+}
+
+.icon-close {
+  background-position: -9em 0;
+}
+
+.icon-ban {
+  background-position: -10.5em 0;
+}
+
+.icon-warn {
+  background-position: -12em 0;
+}
+
+.icon-search {
+  background-position: -13.5em 0;
+}
+
+.icon-yes {
+  background-position: -15em 0;
+}
+
+.icon-no {
+  background-position: -16.5em 0;
+}
+
+.icon-time {
+  background-position: -18em 0;
+}
+
+.icon-cog {
+  background-position: -19.5em 0;
+}
+
+.icon-repeat {
+  background-position: -21em 0;
+}
+
+.icon-off {
+  background-position: -22.5em 0;
+}
+
+.icon-arrow-n {
+  background-position: 0 -1.5em;
+}
+
+.icon-arrow-e {
+  background-position: -1.5em -1.5em;
+}
+
+.icon-arrow-s {
+  background-position: -3em -1.5em;
+}
+
+.icon-arrow-w {
+  background-position: -4.5em -1.5em;
+}
+
+.icon-star {
+  background-position: -6em -1.5em;
+}
+
+.icon-refresh {
+  background-position: -7.5em -1.5em;
+}
+
+.icon-list {
+  background-position: -9em -1.5em;
+}
+
+.icon-grid {
+  background-position: -10.5em -1.5em;
+}
+
+.icon-image {
+  background-position: -12em -1.5em;
+}
+
+.icon-user {
+  background-position: -13.5em -1.5em;
+}
+
+.icon-target {
+  background-position: -15em -1.5em;
+}
+
+.icon-comment {
+  background-position: -16.5em -1.5em;
+}
+
+.icon-trash {
+  background-position: -18em -1.5em;
+}
+
+.icon-favourite {
+  background-position: -19.5em -1.5em;
+}
+
+.icon-folder {
+  background-position: -21em -1.5em;
+}
+
+.icon-file {
+  background-position: -22.5em -1.5em;
+}
+
+.icon-attach {
+  background-position: 0 -3em;
+}
+
+.icon-download {
+  background-position: -1.5em -3em;
+}
+
+.icon-upload {
+  background-position: -3em -3em;
+}
+
+.icon-locked {
+  background-position: -4.5em -3em;
+}
+
+.icon-unlocked {
+  background-position: -6em -3em;
+}

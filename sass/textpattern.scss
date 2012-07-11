@@ -734,6 +734,12 @@ div.multi-edit {
 	width: 100%;
 }
 
+div.plugin-help,
+div.text-column {
+	margin: 0 auto;
+	max-width: $text-column;
+}
+
 .txp-control-panel {
 	text-align: center;
 	line-height: 2;
@@ -889,7 +895,7 @@ body#page-setup {
 }
 
 #article-tabs {
-	width: 1.69230769230769em; // 22px / 13px
+	width: 2em; // 26px / 13px
 	padding-left: 1em;
 }
 
@@ -901,49 +907,45 @@ body#page-setup {
 	}
 
 	.text {
-		@include svg-graphic(view-text, png, 1.69230769230769em, 1.69230769230769em);
-		background-position: 0 0;
+		@include svg-graphic(view-text, png, 1.5em, 1.5em);
 	}
 
 	.html {
-		@include svg-graphic(view-html, png, 1.69230769230769em, 1.69230769230769em);
-		background-position: 0 0;
+		@include svg-graphic(view-html, png, 1.5em, 1.5em);
 	}
 
 	.preview {
-		@include svg-graphic(view-preview, png, 1.69230769230769em, 1.69230769230769em);
-		background-position: 0 0;
+		@include svg-graphic(view-preview, png, 1.5em, 1.5em);
 	}
 }
 
 .view-mode {
-	margin-bottom: 1em;
-	width: 1.69230769230769em; // 22px / 13px
-	height: 1.69230769230769em; // 22px / 13px
+	font-size: 16px;
+	margin-bottom: .8125em; // 13px / 16px
+	width: 1.5em; // 24px / 16px
+	height: 1.5em; // 24px / 16px
 	@include hide-text;
-	border: 1px solid lighten($color-border, 9%);
 	@include border-radius;
 	background: {
-		color: $color-background-box;
+		color: $color-gradient-from;
 		repeat: no-repeat;
 		position: 50% 50%;
 	}
 
 	a {
 		display: block;
-		width: 1.69230769230769em; // 22px / 13px
-		height: 1.69230769230769em; // 22px / 13px
+		width: 1.5em; // 24px / 16px
+		height: 1.5em; // 24px / 16px
 	}
 
 	&:hover {
-		border-color: $color-border;
+		background-color: $color-highlight-box;
 	}
 }
 
 #tab-textup,
 #tab-htmlup,
 #tab-previewup {
-	border-color: $color-border;
 	background-color: $color-highlight-box;
 }
 
@@ -1162,10 +1164,6 @@ body#page-setup {
 /* Admin -> Preferences page
    ========================================================================== */
 
-#page-prefs h3 {
-	margin-top: 1em;
-}
-
 #page-prefs .txp-list {
 	tr td,
 	tr.even td {
@@ -1177,6 +1175,20 @@ body#page-setup {
 		color: $color-text-footnote;
 		margin-left: .6em;
 	}
+
+	.pref-heading {
+		background-color: $color-highlight-box;
+	}
+}
+
+#page-prefs .basic .pref-value,
+#page-prefs .advanced .pref-value {
+	width: 66%;
+}
+
+.pref-heading h3 {
+	font-size: 1em;
+	margin: 0;
 }
 
 #language_control {
@@ -1224,18 +1236,6 @@ div.code {
 	*padding-right: 0;
 	*padding-left: 0;
 }
-
-div.plugin-help {
-	margin: 0 auto;
-	max-width: $text-column;
-}
-
-
-/* EXPERIMENTAL RULES - NOT PART OF CORE AS YET
-   ========================================================================== */
-@import "experimental";
-/* END OF EXPERIMENTAL RULES
-   ========================================================================== */
 
 
 @import "responsive";
