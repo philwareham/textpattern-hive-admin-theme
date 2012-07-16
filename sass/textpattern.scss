@@ -116,13 +116,27 @@ a:hover .content-image {
 	background: $color-highlight-box;
 }
 
-#warning {
-	border: 1px solid $warning-border;
+.alert-block {
+	border: 1px solid;
 	padding: .53846153846154em 2.84615384615385em;
 	line-height: 1.38461538461538;
 	text-align: center;
-	color: $warning-text;
-	background: $warning-background;
+
+	&.success {
+		border-color: $success-border;
+	}
+
+	&.warning {
+		border-color: $warning-border;
+	}
+
+	&.error {
+		border-color: $error-border;
+	}
+
+	&.information {
+		border-color: $info-border;
+	}
 }
 
 /* alert boxes */

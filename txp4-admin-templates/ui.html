@@ -259,17 +259,31 @@
 		<div class="text-section" id="ui-doc-alerts">
 			<h1>Alert boxes</h1>
 
-			<h2>Success</h2>
+			<h2>Notification: success</h2>
 			<p><span id="message" class="success">Article posted. <a class="close">&times;</a></span></p>
 
-			<h2>Warning</h2>
+			<h2>Notification: warning</h2>
 			<p><span id="message" class="warning">Invalid width or height. <a class="close">&times;</a></span></p>
 
-			<h2>Error</h2>
+			<h2>Notification: error</h2>
 			<p><span id="message" class="error">Username <strong>anon</strong> not found. <a class="close">&times;</a></span></p>
 
-			<h2>System warnings</h2>
-			<p id="warning">Warning: cannot write to image directory /Users/user/textpattern/images/.</p>
+			<h2>System message: success <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code>&lt;p class="alert-block success"&gt;...message...&lt;/p&gt;</code></p>
+			<p class="alert-block success">Success: a suitable success message goes here.</p>
+
+			<h2>System message: warning <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.5</span></h2>
+			<p><code>&lt;p class="alert-block warning"&gt;...message...&lt;/p&gt;</code></p>
+			<p class="alert-block warning">Warning: a suitable warning message goes here.</p>
+
+			<h2>System message: error <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code>&lt;p class="alert-block error"&gt;...message...&lt;/p&gt;</code></p>
+			<p class="alert-block error">Error: a suitable error message goes here.</p>
+
+			<h2>System message: information (no semantic meaning) <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code>&lt;p class="alert-block information"&gt;...message...&lt;/p&gt;</code></p>
+			<p class="alert-block information">Information: a suitable information message goes here.</p>
+
 
 		</div>
 
