@@ -1268,5 +1268,14 @@ div.code {
 	*padding-left: 0;
 }
 
+.plugin-column {
+	margin: 0 auto;
+	max-width: $text-column;
+
+	p {
+		@extend .clearfix;
+	}
+}
+
 
 @import "responsive";
