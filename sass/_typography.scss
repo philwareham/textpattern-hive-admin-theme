@@ -29,6 +29,10 @@ h2 {
 h3 {
 	font-size: 1.15384615384615em; // 15px / 13px
 	margin: 0 0 .86666666666667em; // 13px / 15px
+
+	.txp-grid-cell & {
+		margin-top: .86666666666667em;
+	}
 }
 
 h4,

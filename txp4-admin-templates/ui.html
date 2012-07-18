@@ -112,7 +112,7 @@
 		<p>The purpose of this guide is to document UI elements used within this theme in order to streamline development, avoid conflicts and inconsistencies, and as a reference for admin theme authors and plugin authors.</p>
 
 		<ol>
-			<li><a href="#ui-doc-layouts">Grids and columns</a></li>
+			<li><a href="#ui-doc-layouts">Columns and grids</a></li>
 			<li><a href="#ui-doc-headings">Headings</a></li>
 			<li><a href="#ui-doc-paragraphs">Paragraphs</a></li>
 			<li><a href="#ui-doc-textsemantics">Text-level semantics</a></li>
@@ -132,18 +132,66 @@
 
 
 		<div class="text-section" id="ui-doc-layouts">
-			<h1>Grids and columns</h1>
+			<h1>Columns and grids</h1>
 
+			<h2>Text columns</h2>
+			<pre><code>&lt;div class="text-column"&gt;
+	&lt;p&gt;...content here...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+			<p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate.</p>
+
+			<h2>Plugin option columns</h2>
+			<pre><code>&lt;div class="plugin-column"&gt;
+	TO BE DONE
+&lt;/div&gt;</code></pre>
 			<p>PLACEHOLDER - TO BE DONE</p>
+
+			<h2>Grids</h2>
+			<pre><code>&lt;div class="txp-grid"&gt;
+	TO BE DONE
+&lt;/div&gt;</code></pre>
+
+
+
+			<div class="txp-grid">
+
+				<div class="txp-grid-cell">
+					<p>Grid item 1</p>
+				</div>
+
+				<div class="txp-grid-cell">
+					<p>Grid item 2</p>
+				</div>
+
+				<div class="txp-grid-cell">
+					<p>Grid item 3</p>
+				</div>
+
+				<div class="txp-grid-cell">
+					<p>Grid item 4</p>
+				</div>
+
+				<div class="txp-grid-cell">
+					<p>Grid item 5</p>
+				</div>
+
+				<div class="txp-grid-cell">
+					<p>Grid item 6</p>
+				</div>
+
+			</div>
+
+
 
 		</div>
 
 
 		<div class="text-section" id="ui-doc-headings">
-			<h1>Headings</h1>
+			<h1>Headings <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.5</span></h1>
 
-			<p><code>&lt;h1&gt;</code></p>
-			<h1>h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 heading 1</h1>
+			<p><code>&lt;h1 class="txp-heading"&gt;</code></p>
+			<h1 class="txp-heading">h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 heading 1</h1>
+			<p>Top level headings in the Textpattern admin side, we advise using the <code>class="txp-heading"</code> attribute to allow advanced users to optionally hide headings throughout the admin area.</p>
 			<p><code>&lt;h2&gt;</code></p>
 			<h2>h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2</h2>
 			<p><code>&lt;h3&gt;</code></p>
@@ -398,7 +446,7 @@
 
 		<div class="text-section" id="ui-doc-tables">
 			<h1>Tables <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.5</span></h1>
-				<pre><code>&lt;div class="txp-listtables"&gt;
+			<pre><code>&lt;div class="txp-listtables"&gt;
 	&lt;table class="txp-list"&gt;
 		&lt;thead&gt;
 			&lt;tr&gt;
@@ -476,7 +524,7 @@
 
 		<div class="text-section" id="ui-doc-progress">
 			<h1>Progress meters <span class="information" style="font-size:.5em;font-weight:normal;">new v4.5</span></h1>
-				<pre><code>&lt;div class="progress-meter"&gt;
+			<pre><code>&lt;div class="progress-meter"&gt;
 	&lt;p&gt;There are 4 steps to this installation process:&lt;/p&gt;
 	&lt;ol&gt;
 		&lt;li class="active"&gt;&lt;strong&gt;Add database details&lt;/strong&gt;&lt;/li&gt;
@@ -501,7 +549,7 @@
 
 		<div class="text-section" id="ui-doc-summarydetails">
 			<h1>Summary/details boxes</h1>
-				<pre><code>&lt;div class="summary-details"&gt;
+			<pre><code>&lt;div class="summary-details"&gt;
 	&lt;h3 class="lever"&gt;&lt;a href="#name-of-details"&gt;Summary lever&lt;/a&gt;&lt;/h3&gt;
 	&lt;div id="name-of-details" class="toggle"&gt;
 		&lt;p&gt;...content...&lt;/p&gt;
@@ -795,7 +843,7 @@
 		<div class="text-section" id="ui-doc-edit-panes">
 			<h1>Edit panes <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.5</span></h1>
 
-				<pre><code>&lt;form method="post" action="#" class="edit-form"&gt;
+			<pre><code>&lt;form method="post" action="#" class="edit-form"&gt;
 	&lt;div class="txp-edit"&gt;
 		&lt;h2&gt;Edit pane title&lt;/h2&gt;
 
