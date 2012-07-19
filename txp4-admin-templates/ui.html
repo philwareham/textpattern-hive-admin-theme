@@ -135,54 +135,66 @@
 		<div class="text-section" id="ui-doc-layouts">
 			<h1>Columns and grids</h1>
 
-			<h2>Text columns</h2>
+			<h2>Text columns <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
 			<pre><code>&lt;div class="text-column"&gt;
 	&lt;p&gt;...content here...&lt;/p&gt;
 &lt;/div&gt;</code></pre>
-			<p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate.</p>
+			<p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate. <strong>Please note</strong> this replaces the old <code>.plugin-help</code> class.</p>
 
-			<h2>Plugin option columns</h2>
+			<h2>Plugin option columns <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
 			<pre><code>&lt;div class="plugin-column"&gt;
 	TO BE DONE
 &lt;/div&gt;</code></pre>
 			<p>PLACEHOLDER - TO BE DONE</p>
 
-			<h2>Grids</h2>
+			<h2>Grids <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
 			<pre><code>&lt;div class="txp-grid"&gt;
-	TO BE DONE
+	&lt;div class="txp-grid-cell">
+		&lt;p>Grid item 1&lt;/p>
+	&lt;/div>
+	&lt;div class="txp-grid-cell">
+		&lt;p>Grid item 2&lt;/p>
+	&lt;/div>
+	&lt;div class="txp-grid-cell highlight">
+		&lt;p>Grid item 3&lt;/p>
+	&lt;/div>
+	&lt;div class="txp-grid-cell">
+		&lt;p>Grid item 4&lt;/p>
+	&lt;/div>
+	...etc...
 &lt;/div&gt;</code></pre>
 
-
-
 			<div class="txp-grid">
-
 				<div class="txp-grid-cell">
 					<p>Grid item 1</p>
 				</div>
-
 				<div class="txp-grid-cell">
 					<p>Grid item 2</p>
 				</div>
-
 				<div class="txp-grid-cell">
 					<p>Grid item 3</p>
 				</div>
-
 				<div class="txp-grid-cell">
 					<p>Grid item 4</p>
 				</div>
-
-				<div class="txp-grid-cell">
+				<div class="txp-grid-cell highlight">
 					<p>Grid item 5</p>
 				</div>
-
 				<div class="txp-grid-cell">
 					<p>Grid item 6</p>
 				</div>
-
+				<div class="txp-grid-cell">
+					<p>Grid item 7</p>
+				</div>
+				<div class="txp-grid-cell">
+					<p>Grid item 8</p>
+				</div>
+				<div class="txp-grid-cell">
+					<p>Grid item 9</p>
+				</div>
 			</div>
 
-
+			<p>PLACEHOLDER - TO BE DONE</p>
 
 		</div>
 
@@ -487,7 +499,7 @@
 					</thead>
 					<tfoot>
 						<tr>
-							<td colspan="3">This is the tfoot</td>
+							<td colspan="3">This is the tfoot (optional)</td>
 						</tr>
 					</tfoot>
 					<tbody>

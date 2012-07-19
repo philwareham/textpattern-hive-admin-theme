@@ -415,6 +415,21 @@ div.multi-edit {
 	background: url("../img/separator.gif") repeat-x 0 2.15384615384615em; // 28px / 13px
 }
 
+/* grids */
+
+.txp-grid {
+	text-align: center;
+	margin-bottom: .69230769230769em; // 9px / 13px
+}
+
+.txp-grid-cell {
+	@include inline-block;
+	text-align: left;
+	padding: 0 1em;
+	margin-bottom: .30769230769231em; // 4px / 13px
+	border: 1px solid $color-border;
+}
+
 .restricted-area {
 	font-size: 2em; // 26px / 13px
 	text-align: center;
