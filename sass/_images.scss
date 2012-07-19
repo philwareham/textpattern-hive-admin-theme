@@ -1,0 +1,38 @@
+//
+// note: this file is for use with Sass- http://sass-lang.com,
+// don't use it as your live site stylesheet!
+//
+
+
+/* Images
+   ========================================================================== */
+
+.content-image {
+	border: solid 1px $color-border;
+	@include border-radius;
+	padding: 4px;
+	background: #fff;
+	@include box-shadow;
+}
+
+a:hover .content-image {
+	border: solid 1px $color-link-hover;
+	@include box-shadow(0 0 .46153846153846em rgba($color-link-hover, .4));
+}
+
+/* image alignments */
+
+.align-left {
+	float: left;
+	margin: 1em 1em 1em 0;
+}
+
+.align-right {
+	float: right;
+	margin: 1em 0 1em 1em;
+}
+
+.align-center {
+	display: block;
+	margin: 1em auto;
+}

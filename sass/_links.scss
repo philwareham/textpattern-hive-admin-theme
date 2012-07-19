@@ -1,0 +1,23 @@
+//
+// note: this file is for use with Sass- http://sass-lang.com,
+// don't use it as your live site stylesheet!
+//
+
+
+/* Links
+   ========================================================================== */
+
+a {
+	-webkit-tap-highlight-color: rgba($color-link-hover, .5);
+	color: $color-link;
+	text-decoration: none;
+
+	&:hover {
+		color: $color-link-hover;
+		text-decoration: underline;
+	}
+}
+
+a.busy {
+	visibility: hidden;
+}
