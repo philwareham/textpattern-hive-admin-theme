@@ -125,6 +125,7 @@
 			<li><a href="#ui-doc-progress">Progress meters</a></li>
 			<li><a href="#ui-doc-summarydetails">Summary/details boxes</a></li>
 			<li><a href="#ui-doc-forms">Forms</a></li>
+			<li><a href="#ui-doc-buttons">Buttons</a></li>
 			<li><a href="#ui-doc-edit-panes">Edit panes</a></li>
 			<li><a href="#ui-doc-icons">Icons</a></li>
 			<li><a href="#ui-doc-misc">Miscellaneous</a></li>
@@ -191,7 +192,7 @@
 
 			<p><code>&lt;h1 class="txp-heading"&gt;</code></p>
 			<h1 class="txp-heading">h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 heading 1</h1>
-			<p>Top level headings in the Textpattern admin side, we advise using the <code>class="txp-heading"</code> attribute to allow advanced users to optionally hide headings throughout the admin area.</p>
+			<p>Top level headings in the Textpattern admin area, we advise adding the <code>class="txp-heading"</code> attribute which allows advanced users to optionally hide headings throughout the admin area.</p>
 			<p><code>&lt;h2&gt;</code></p>
 			<h2>h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2</h2>
 			<p><code>&lt;h3&gt;</code></p>
@@ -586,9 +587,11 @@
 		</div>
 
 
-		<div class="text-section" id="ui-doc-forms">
-			<h1>Forms</h1>
-			<form action="#">
+		<form action="#">
+
+			<div class="text-section" id="ui-doc-forms">
+				<h1>Forms</h1>
+
 
 				<h2>Textareas</h2>
 				<p>
@@ -756,10 +759,6 @@
 					<input type="button" value="Hello" disabled="disabled" />
 				</p>
 
-				<h2>Disabled non-form elements <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-				<p><code>&lt;p class="disabled"&gt;...message...&lt;/p&gt;</code></p>
-				<p class="disabled">This is an example of an element greyed out via a <code>.disabled</code> class.</p>
-
 				<h2>Fieldsets</h2>
 				<pre><code>&lt;fieldset&gt;
 	&lt;legend&gt;Heading&lt;/legend&gt;
@@ -799,6 +798,12 @@
 					</div>
 				</fieldset>
 
+			</div>
+
+
+			<div class="text-section" id="ui-doc-buttons">
+				<h1>Buttons</h1>
+
 				<h2>Primary buttons</h2>
 				<p><code>&lt;input type="submit" value="" class="publish" /&gt;</code></p>
 				<p><input type="submit" value="Input Submit (Primary)" class="publish" /></p>
@@ -835,9 +840,9 @@
 					<span class="navlink-disabled"><b class="icon icon-arrow-w">&#8592;</b> Prev</span><a href="#" class="navlink">Next <b class="icon icon-arrow-e">&#8594;</b></a>
 				</p>
 
-			</form>
+			</div>
 
-		</div>
+		</form>
 
 
 		<div class="text-section" id="ui-doc-edit-panes">
@@ -994,9 +999,14 @@
 		<div class="text-section" id="ui-doc-misc">
 			<h1>Miscellaneous</h1>
 
-			<h2>AJAX spinner</h2>
+			<h2>AJAX spinner <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
 			<p><code>&lt;span class="spinner"&gt;&lt;/span&gt;</code></p>
 			<p><span class="spinner"></span></p>
+
+			<h2>Disabled non-form elements <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code>&lt;p class="disabled"&gt;...message...&lt;/p&gt;</code></p>
+			<p class="disabled">This is an example of an element greyed out via a <code>.disabled</code> class.</p>
+			<p><strong>Please note</strong> that this class only gives a visual impression of disabled elements, any links and/or form elements therein would still be active and clickable. To truly disable form elements use the proper <code>disabled="disabled"</code> attribute instead, see the <a href="#ui-doc-forms">forms</a> section for more information.</p>
 
 		</div>
 
