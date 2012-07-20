@@ -425,7 +425,7 @@ div.multi-edit {
 .txp-grid-cell {
 	@include inline-block;
 	text-align: left;
-	margin-bottom: .30769230769231em; // 4px / 13px
+	margin: 0 .15384615384615em .30769230769231em; // 2px / 13px and 4px / 13px
 	border: 1px solid $color-border;
 	padding: 0 1em;
 }
