@@ -66,6 +66,7 @@
 	<div class="text-column">
 		<h1>Classic/Remora theme design patterns</h1>
 		<p>The purpose of this guide is to document UI elements used within this theme in order to streamline development, avoid conflicts and inconsistencies, and as a reference for admin theme authors and plugin authors.</p>
+		<p><a href="ui.html">Switch to the Hive theme design patterns document</a>.</p>
 
 		<ol>
 			<li><a href="#ui-doc-layouts">Columns and grids</a></li>
@@ -323,9 +324,17 @@
 		<div class="text-section" id="ui-doc-media">
 			<h1>Embedded content</h1>
 
-			<h2>Image</h2>
+			<h2>Image (unstyled)</h2>
 			<p><code>&lt;img src="" alt="" /&gt;</code></p>
 			<p><img src="http://placehold.it/160/fabc2b/333333" alt="Alt text" /></p>
+
+			<h2>Image (styled) <span class="information" style="font-family:Verdana,Tahoma,sans-serif;font-size:.64705882352941em;">new v4.5</span></h2>
+			<p><code>&lt;img src="" alt="" class="content-image" /&gt;</code></p>
+			<p><img src="http://placehold.it/160/fabc2b/333333" alt="Alt text" class="content-image" /></p>
+
+			<h2>Image (styled) with link <span class="information" style="font-family:Verdana,Tahoma,sans-serif;font-size:.64705882352941em;">new v4.5</span></h2>
+			<p><code>&lt;a href="" title=""&gt;&lt;img src="" alt="" class="content-image" /&gt;&lt;/a&gt;</code></p>
+			<p><a href="#" title="Title text"><img src="http://placehold.it/160/fabc2b/333333" alt="Alt text" class="content-image" /></a></p>
 
 			<h2>Left ranged image <span class="information" style="font-family:Verdana,Tahoma,sans-serif;font-size:.64705882352941em;">new v4.5</span></h2>
 			<p><code>&lt;img src="" alt="" class="align-left" /&gt;</code></p>
