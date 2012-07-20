@@ -1267,10 +1267,15 @@ div.multi-edit {
 }
 
 .txp-grid-cell {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: inline-block;
   *display: inline;
   *zoom: 1;
   text-align: left;
+  max-width: 22.6153846153846;
+  vertical-align: top;
   margin: 0 .15384615384615em .30769230769231em;
   border: 1px solid #cccccc;
   padding: 0 1em;

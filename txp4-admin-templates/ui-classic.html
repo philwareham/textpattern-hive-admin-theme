@@ -104,52 +104,47 @@
 
 			<h2>Grids< <span class="information" style="font-family:Verdana,Tahoma,sans-serif;font-size:.64705882352941em;">new v4.5</span></h2>
 			<pre><code>&lt;div class="txp-grid"&gt;
-	&lt;div class="txp-grid-cell">
+	&lt;div class="txp-grid-cell" [width, see below]>
 		&lt;p>Grid item 1&lt;/p>
-	&lt;/div>
-	&lt;div class="txp-grid-cell">
+	&lt;/div>&lt;div class="txp-grid-cell" [width, see notes]>
 		&lt;p>Grid item 2&lt;/p>
-	&lt;/div>
-	&lt;div class="txp-grid-cell highlight">
+	&lt;/div>&lt;div class="txp-grid-cell highlight" [width, see notes]>
 		&lt;p>Grid item 3&lt;/p>
-	&lt;/div>
-	&lt;div class="txp-grid-cell">
+	&lt;/div>&lt;div class="txp-grid-cell" [width, see notes]>
 		&lt;p>Grid item 4&lt;/p>
 	&lt;/div>
 	...etc...
 &lt;/div&gt;</code></pre>
 
 			<div class="txp-grid">
-				<div class="txp-grid-cell">
-					<p>Grid item 1</p>
-				</div>
-				<div class="txp-grid-cell">
-					<p>Grid item 2</p>
-				</div>
-				<div class="txp-grid-cell">
-					<p>Grid item 3</p>
-				</div>
-				<div class="txp-grid-cell">
-					<p>Grid item 4</p>
-				</div>
-				<div class="txp-grid-cell highlight">
-					<p>Grid item 5</p>
-				</div>
-				<div class="txp-grid-cell">
-					<p>Grid item 6</p>
-				</div>
-				<div class="txp-grid-cell">
-					<p>Grid item 7</p>
-				</div>
-				<div class="txp-grid-cell">
-					<p>Grid item 8</p>
-				</div>
-				<div class="txp-grid-cell">
-					<p>Grid item 9</p>
+				<div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell highlight" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
 				</div>
 			</div>
 
-			<p>PLACEHOLDER - TO BE DONE</p>
+			<p>Rudimentary grid-type layouts—works best if inner content is of equal quantity (such as a grid of images). If you want to utilise this layout then there are some prerequisites:</p>
+			<ol>
+				<li>You must define a specific width for each <code>.txp-grid-cell</code>, either as a <code>class</code> attribute or <code>style</code> attribute, otherwise the cell width fits the to block content within it.</li>
+				<li>The <code>.txp-grid-cell</code> should have a maximum width of no more than 294px (or its equivalent em measurement).</li>
+				<li>As this layout uses <code>inline-block</code>, you will need to collapse the white space between each <code>.txp-grid-cell</code> to negate any unwanted margin between the cells.</li>
+			</ol>
+			<p>Once CSS3 flexbox module is more settled and has improved browser support, this layout type can be made more robust.</p>
 
 		</div>
 

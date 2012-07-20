@@ -423,8 +423,11 @@ div.multi-edit {
 }
 
 .txp-grid-cell {
+	@include box-sizing;
 	@include inline-block;
 	text-align: left;
+	max-width: 22.6153846153846; // 294px / 13px
+	vertical-align: top;
 	margin: 0 .15384615384615em .30769230769231em; // 2px / 13px and 4px / 13px
 	border: 1px solid $color-border;
 	padding: 0 1em;
