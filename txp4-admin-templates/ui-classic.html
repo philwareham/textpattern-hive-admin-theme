@@ -498,8 +498,8 @@
 				<div id="name-of-details" class="toggle">
 					<form action="#">
 						<p>
-							<label for="text-lrg2">Form element within a details box</label>&#160;<a href="#" class="pophelp" rel="help">?</a><br />
-							<input type="text" id="text-lrg2" name="text-lrg2" />
+							<label for="text-std2">Form element within a details box</label>&#160;<a href="#" class="pophelp" rel="help">?</a><br />
+							<input type="text" id="text-std2" name="text-std2" size="32" />
 						</p>
 					</form>
 					<p>Standard paragraph text within a details box.</p>
@@ -536,11 +536,18 @@
 					<textarea id="textarea" name="textarea" cols="78" rows="5"></textarea>
 				</p>
 
-				<h2>Text fields large</h2>
-				<p><code>&lt;input type="text" id="" name="" size="32" /&gt;</code></p>
+				<h2>Text fields large <span class="information" style="font-family:Verdana,Tahoma,sans-serif;font-size:.64705882352941em;">new v4.5</span></h2>
+				<p><code>&lt;input type="text" id="" name="" size="64" class="input-large" /&gt;</code></p>
 				<p>
 					<label for="text-lrg">Text (large) with pophelp</label>&#160;<a href="#" class="pophelp" rel="help">?</a><br />
-					<input type="text" id="text-lrg" name="text-lrg" size="32" />
+					<input type="text" id="text-lrg" name="text-lrg" size="64" class="input-large" />
+				</p>
+
+				<h2>Text fields standard</h2>
+				<p><code>&lt;input type="text" id="" name="" size="32" /&gt;</code></p>
+				<p>
+					<label for="text-std">Text (standard) with pophelp</label>&#160;<a href="#" class="pophelp" rel="help">?</a><br />
+					<input type="text" id="text-std" name="text-std" size="32" />
 				</p>
 
 				<h2>Text fields medium <span class="information" style="font-family:Verdana,Tahoma,sans-serif;font-size:.64705882352941em;">new v4.5</span></h2>
@@ -641,7 +648,7 @@
 							<option value="9">Yet another item to be chosen</option>
 						</optgroup>
 					</select>
-					<input type="text" id="text_inline" name="text_inline" />
+					<input type="text" id="text_inline" name="text_inline" size="16" class="input-medium" />
 					<input type="button" value="Hello" />
 				</p>
 				<p>
@@ -685,7 +692,7 @@
 							<option value="9">Yet another item to be chosen</option>
 						</optgroup>
 					</select>
-					<input type="text" id="text_inline2" name="text_inline2" disabled="disabled" />
+					<input type="text" id="text_inline2" name="text_inline2" disabled="disabled" size="16" class="input-medium" />
 					<input type="button" value="Hello" disabled="disabled" />
 				</p>
 
@@ -697,8 +704,8 @@
 				<fieldset>
 					<legend>Fieldset example</legend>
 					<p>
-						<label for="text-lrg3">Form element within a fieldset</label>&#160;<a href="#" class="pophelp" rel="help">?</a><br />
-						<input type="text" id="text-lrg3" name="text-lrg3" />
+						<label for="text-std3">Form element within a fieldset</label>&#160;<a href="#" class="pophelp" rel="help">?</a><br />
+						<input type="text" id="text-std3" name="text-std3" size="32" />
 					</p>
 					<p>Standard paragraph text within a fieldset.</p>
 					<ul>
