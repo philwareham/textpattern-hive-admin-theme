@@ -73,16 +73,6 @@ input[type="checkbox"] {
 	margin-right: .5em;
 }
 
-input[type="text"],
-input[type="password"] {
-	width: 100%;
-	max-width: 23.2307692307692em; // 302px / 13px
-}
-
-.search-form input[type="text"] {
-	max-width: 16.9230769230769em; // 220px / 13px
-}
-
 input {
 	&.year,
 	&.exp_year {
@@ -105,8 +95,13 @@ input {
 
 /* additional input field widths */
 
+input[size="32"] {
+	width: 100%;
+	max-width: 23.2307692307692em; // 302px / 13px
+}
+
 input.input-large {
-	max-width: 100%;
+	width: 100%;
 }
 
 input.input-medium {
@@ -644,9 +639,8 @@ body#page-setup {
 }
 
 #article-main {
-	.title input {
+	#title {
 		width: 75%;
-		max-width: 75%;
 	}
 
 	#body {

@@ -292,6 +292,7 @@ input[type="text"] {
 	padding: .15384615384615em .38461538461538em;
 	outline: 0;
 	height: 1.84615384615385em;
+	max-width: 100%;
 	@include box-sizing;
 	/* IE7 box-sizing workaround */
 	*padding-right: 0;
