@@ -329,6 +329,7 @@ select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled],
 .navlink-disabled {
+	opacity: 1;
 	border-color: $color-gradient-to !important;
 	background-color: #eee !important;
 	text-shadow: none !important;
@@ -385,21 +386,21 @@ optgroup {
 /* tweaks for Safari, Chrome */
 @media (-webkit-min-device-pixel-ratio: 0) {
 
-select[size],
-select[multiple],
-select[multiple][size] {
-	background-image: none;
-	padding-right: .23076923076923em;
-}
+	select[size],
+	select[multiple],
+	select[multiple][size] {
+		background-image: none;
+		padding-right: .23076923076923em;
+	}
 
-select,
-select[size="0"],
-select[size="1"] {
-	background: $color-background url("../img/svg/select_arrow.svg") no-repeat right center;
-	padding-right: 2em;
-	-webkit-background-size: 1em .30769230769231em;
-	        background-size: 1em .30769230769231em;
-}
+	select,
+	select[size="0"],
+	select[size="1"] {
+		background: $color-background url("../img/svg/select_arrow.svg") no-repeat right center;
+		padding-right: 2em;
+		-webkit-background-size: 1em .30769230769231em;
+	            background-size: 1em .30769230769231em;
+	}
 
 }
 

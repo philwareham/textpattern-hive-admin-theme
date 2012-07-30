@@ -383,6 +383,7 @@ select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled],
 .navlink-disabled {
+  opacity: 1;
   border-color: #dddddd !important;
   background-color: #eee !important;
   text-shadow: none !important;
