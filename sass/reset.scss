@@ -256,6 +256,12 @@ input[type="button"],
 	}
 }
 
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+	height: 2em;
+}
+
 .navlink-disabled {
 	@include border-radius;
 	font-size: .92307692307692em;  // 12px / 13px
@@ -284,14 +290,14 @@ input[type="text"] {
 	@include background-clip;
 	font-family: $font-body;
 	font-size: 1em;
-	line-height: 1.38461538461538; // 18px / 13px
+	line-height: 1.46153846153846; // 19px / 13px
 	color: $color-text;
 	background-color: $color-background;
 	margin: 0;
 	border: 1px solid $color-border;
 	padding: .15384615384615em .38461538461538em;
 	outline: 0;
-	height: 1.84615384615385em;
+	height: 1.84615384615385em; // 24px / 13px
 	max-width: 100%;
 	@include box-sizing;
 	/* IE7 box-sizing workaround */

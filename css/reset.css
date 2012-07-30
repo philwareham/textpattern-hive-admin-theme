@@ -288,6 +288,12 @@ input[type="button"]:active,
   background-image: linear-gradient(#c5c5c5, #f8f8f8);
 }
 
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  height: 2em;
+}
+
 .navlink-disabled {
   -moz-border-radius: 0.38462em;
   border-radius: 0.38462em;
@@ -335,7 +341,7 @@ input[type="text"] {
   background-clip: padding-box;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  line-height: 1.38461538461538;
+  line-height: 1.46153846153846;
   color: #333333;
   background-color: white;
   margin: 0;

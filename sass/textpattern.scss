@@ -132,6 +132,7 @@ a.publish {
 	border: 1px solid #f2ab05;
 	border-bottom-color: darken(#f2ab05, 10%);
 	padding: .75em; // 9px / 12px
+	height: 3em; // 36px / 12px
 	@include gradient(#ffda44, #f2ab05);
 
 	&:hover {
@@ -148,6 +149,7 @@ a.publish {
 input[type="submit"].destroy,
 button.destroy {
 	padding: 0 .33333333333333em;
+	height: 1.5em; // 18px / 12px
 	color: lighten($error-text, 56%);
 	@include text-shadow-dark;
 	@include gradient-bar(lighten($error-text, 20%), $error-text);
@@ -933,6 +935,5 @@ div.code {
 		@extend .clearfix;
 	}
 }
-
 
 @import "responsive";

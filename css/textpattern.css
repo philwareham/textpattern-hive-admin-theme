@@ -658,6 +658,7 @@ a.publish {
   border: 1px solid #f2ab05;
   border-bottom-color: #c08804;
   padding: .75em;
+  height: 3em;
   background-color: #ffda44;
   /* Konqueror */
   background-image: -khtml-gradient(linear, left top, left bottom, from(#ffda44), to(#f2ab05));
@@ -711,6 +712,7 @@ a.publish:active {
 input[type="submit"].destroy,
 button.destroy {
   padding: 0 .33333333333333em;
+  height: 1.5em;
   color: #f9e0df;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25);
   border-top: 1px solid #9d261d;
