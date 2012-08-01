@@ -153,6 +153,28 @@ hr {
   text-decoration: underline;
 }
 
+/* Support for non-latin languages (can be removed if not required)
+   ========================================================================== */
+html[lang="ja-jp"] * {
+  font-family: "Hiragino Kaku Gothic Pro", Meiryo;
+  font-weight: normal;
+}
+
+html[lang="ko-kr"] * {
+  font-family: GulimChe, Gulim;
+  font-weight: normal;
+}
+
+html[lang="zh-cn"] * {
+  font-family: SimHei;
+  font-weight: normal;
+}
+
+html[lang="zh-tw"] * {
+  font-family: PMingLiU;
+  font-weight: normal;
+}
+
 /* Images
    ========================================================================== */
 .content-image {
