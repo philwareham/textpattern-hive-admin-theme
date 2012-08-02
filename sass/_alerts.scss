@@ -80,23 +80,21 @@ span#message {
 	@include inline-block;
 	@include border-radius($border-radius $border-radius 0 0);
 	margin: 0 auto;
-	border: 1px solid;
-	border-bottom: 0;
 	padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
 	max-width: ($standard-column - 3.84615384615385em);
-	@include text-shadow-light;
+	color: #fff;
 	@include box-shadow;
 
 	&.success {
-		border-color: $success-border;
+		background: $success-text;
 	}
 
 	&.warning {
-		border-color: $warning-border;
+		background: $warning-text;
 	}
 
 	&.error {
-		border-color: $error-border;
+		background: $error-text;
 	}
 }
 
@@ -107,16 +105,23 @@ span#message {
 	top: .27777777777778em; // 5px / 18px
 	right: .72222222222222em;
 	text-decoration: none;
-	color: transparentize($color-text, .6);
+	color: #ccc;
 	font-size: 1.38461538461538em; // 18px / 13px
 	font-weight: bold;
-	text-shadow: 1px 1px 0 rgba(#fff, .25);
+
+	.rgba & {
+		color: transparentize(#fff, .4);
+	}
 
 	&:hover {
 		color: $color-text;
 		text-decoration: none;
-		color: transparentize($color-text, .4);
+		color: #fff;
 		cursor: pointer;
+
+		.rgba & {
+			color: transparentize(#fff, .2);
+		}
 	}
 }
 
