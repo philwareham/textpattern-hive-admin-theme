@@ -228,7 +228,7 @@ input[type="button"],
 	color: $color-text;
 	font-family: $font-body;
 	font-size: .92307692307692em;  // 12px / 13px
-	line-height: 1.33333333333333em; // 16px / 12px
+	line-height: 1.33333333333333; // 16px / 12px
 	text-decoration: none;
 	outline: 0;
 	margin: 0;
@@ -265,7 +265,7 @@ input[type="button"] {
 .navlink-disabled {
 	@include border-radius;
 	font-size: .92307692307692em;  // 12px / 13px
-	line-height: 1.33333333333333em; // 16px / 12px
+	line-height: 1.33333333333333; // 16px / 12px
 	border: 1px solid;
 	padding: .30769230769231em .75em;
 	@include inline-block;
