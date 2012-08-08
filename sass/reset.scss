@@ -230,7 +230,6 @@ input[type="button"],
 	font-size: .92307692307692em;  // 12px / 13px
 	line-height: 1.33333333333333; // 16px / 12px
 	text-decoration: none;
-	outline: 0;
 	margin: 0;
 	padding: .25em .75em; // 3px / 12px + 9px / 12px
 	@include box-shadow(inset 0 1px 0 0 rgba(#fff, .25));
@@ -296,7 +295,6 @@ input[type="text"] {
 	margin: 0;
 	border: 1px solid $color-border;
 	padding: .15384615384615em .38461538461538em;
-	outline: 0;
 	height: 1.84615384615385em; // 24px / 13px
 	max-width: 100%;
 	@include box-sizing;
@@ -309,14 +307,27 @@ input[type="text"] {
 	*height: auto;
 }
 
-button:focus,
-input:focus,
-select:focus,
-textarea:focus,
-.txp-logout a:focus {
-	@include box-shadow(0 0 7px $color-link-hover);
-	/* Opera */
-	z-index: 1;
+.boxshadow {
+	button,
+	input[type="button"],
+	input[type="password"],
+	input[type="reset"],
+	input[type="submit"],
+	input[type="text"],
+	select,
+	textarea,
+	.txp-logout a,
+	.action-create a,
+	.navlink,
+	.navlink-active,
+	.txp-buttons a {
+		&:focus {
+			outline: 0;
+			@include box-shadow(0 0 7px $color-link-hover);
+			/* Opera */
+			z-index: 1;
+		}
+	}
 }
 
 input[type="file"],
