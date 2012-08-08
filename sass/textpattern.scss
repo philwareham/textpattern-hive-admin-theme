@@ -207,8 +207,6 @@ body {
 }
 
 .txp-body {
-	position: relative;
-	z-index: 1;
 	max-width: 110em; // 1430px / 13px
 	margin: 0 auto;
 }
@@ -274,8 +272,6 @@ body {
    ========================================================================== */
 
 .txp-footer {
-	position: relative;
-	z-index: 1;
 	@extend .clearfix;
 }
 
@@ -650,7 +646,6 @@ body#page-setup {
 	}
 
 	.author {
-		font-size: $smallfont;
 		color: $color-text-footnote;
 	}
 }
