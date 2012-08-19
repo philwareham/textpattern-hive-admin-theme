@@ -222,7 +222,7 @@ input[type="button"],
 .navlink-active,
 .txp-buttons a {
 	-webkit-appearance: none;
-	@include border-radius;
+	@include border-radius($border-radius);
 	@include background-clip;
 	@include box-sizing;
 	cursor: pointer;
@@ -264,7 +264,7 @@ input[type="button"] {
 }
 
 .navlink-disabled {
-	@include border-radius;
+	@include border-radius($border-radius);
 	@include background-clip;
 	@include box-sizing;
 	font-size: .92307692307692em;  // 12px / 13px

@@ -58,7 +58,7 @@ legend {
 	line-height: 2em;
 	@include text-shadow-light;
 	@include box-shadow(inset 0 1px 0 0 rgba(#fff, .25));
-	@include gradient-bar;
+	@include gradient-bar($color-gradient-from, $color-gradient-to);
 	@include box-sizing;
 	/* corrects alignment displayed oddly in IE7 */
 	*margin-right: 7px;
@@ -174,11 +174,11 @@ button.destroy {
 	}
 
 	> :first-child {
-		@include border-left-radius;
+		@include border-left-radius($border-radius);
 	}
 
 	> :last-child {
-		@include border-right-radius;
+		@include border-right-radius($border-radius);
 	}
 }
 
@@ -290,7 +290,7 @@ body {
 .txp-edit,
 .txp-login {
 	margin: 0 auto 1em;
-	@include border-radius;
+	@include border-radius($border-radius);
 	padding: 1em 1em 1px 1em;
 	background: $color-background-box;
 
@@ -356,7 +356,7 @@ body {
 	margin-left: -1em;
 	margin-bottom: 0;
 	border-top: 1px solid $color-background;
-	@include border-bottom-radius;
+	@include border-bottom-radius($border-radius);
 	padding: 1em;
 	background: darken($color-background-box, 3%);
 
@@ -608,7 +608,7 @@ body#page-setup {
 	width: 1.5em; // 24px / 16px
 	height: 1.5em; // 24px / 16px
 	@include hide-text;
-	@include border-radius;
+	@include border-radius($border-radius);
 	background: {
 		color: $color-gradient-from;
 		repeat: no-repeat;
@@ -860,7 +860,7 @@ body#page-setup {
 
 		td {
 			@include text-shadow-light;
-			@include gradient;
+			@include gradient($color-gradient-from, $color-gradient-to);
 			height: auto;
 		}
 	}

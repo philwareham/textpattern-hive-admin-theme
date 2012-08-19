@@ -36,7 +36,7 @@
 	$filename: $hdfile + '.' + $hdtype;
 	$hdfilename: $hdfile + '@2x.' + $hdtype;
 	background-image: url('../img/' + $filename);
-	@media (-webkit-min-device-pixel-ratio: 2) {
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
 		background-image: url('../img/hidpi/' + $hdfilename) !important;
 		-webkit-background-size: $hdwidth $hdheight;
 	}
@@ -52,29 +52,29 @@
 // rounded corners top only
 
 @mixin border-top-radius($border-radius) {
-	@include border-top-left-radius;
-	@include border-top-right-radius;
+	@include border-top-left-radius($border-radius);
+	@include border-top-right-radius($border-radius);
 }
 
 // rounded corners right only
 
 @mixin border-right-radius($border-radius) {
-	@include border-top-right-radius;
-	@include border-bottom-right-radius;
+	@include border-top-right-radius($border-radius);
+	@include border-bottom-right-radius($border-radius);
 }
 
 // rounded corners bottom only
 
 @mixin border-bottom-radius($border-radius) {
-	@include border-bottom-right-radius;
-	@include border-bottom-left-radius;
+	@include border-bottom-right-radius($border-radius);
+	@include border-bottom-left-radius($border-radius);
 }
 
 // rounded corners left only
 
 @mixin border-left-radius($border-radius) {
-	@include border-top-left-radius;
-	@include border-bottom-left-radius;
+	@include border-top-left-radius($border-radius);
+	@include border-bottom-left-radius($border-radius);
 }
 
 // rounded corners top left only

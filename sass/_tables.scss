@@ -36,7 +36,7 @@
 	thead {
 		th {
 			@include text-shadow-light;
-			@include gradient;
+			@include gradient($color-gradient-from, $color-gradient-to);
 			border-top: 1px solid $color-gradient-to;
 			border-right: 1px solid darken($color-gradient-to, 5%);
 			border-bottom: 1px solid darken($color-gradient-to, 10%);
