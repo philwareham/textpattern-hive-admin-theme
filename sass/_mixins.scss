@@ -39,6 +39,7 @@
 	@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
 		background-image: url('../img/hidpi/' + $hdfilename) !important;
 		-webkit-background-size: $hdwidth $hdheight;
+		        background-size: $hdwidth $hdheight;
 	}
 }
 
