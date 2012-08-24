@@ -328,7 +328,7 @@ input[type="text"] {
 	.txp-buttons a {
 		&:focus {
 			outline: 0;
-			@include box-shadow(0 0 7px $color-link-hover);
+			@include box-shadow-multi(inset 0 1px 0 0 rgba(#fff, .25), 0 0 7px $color-link-hover);
 			/* Opera */
 			z-index: 1;
 		}
@@ -355,7 +355,7 @@ textarea[disabled],
 	border-color: $color-gradient-to !important;
 	background-color: #eee !important;
 	text-shadow: none !important;
-	@include box-shadow(none);
+	@include box-shadow(none !important);
 	 -khtml-user-select: none;
 	-webkit-user-select: none;
 	   -moz-user-select: -moz-none;

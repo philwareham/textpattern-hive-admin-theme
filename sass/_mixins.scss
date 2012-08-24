@@ -113,6 +113,11 @@
 	        box-shadow: $shadow;
 }
 
+@mixin box-shadow-multi($shadows...) {
+	-webkit-box-shadow: $shadows;
+	        box-shadow: $shadows;
+}
+
 // text shadows
 
 @mixin text-shadow-light {
