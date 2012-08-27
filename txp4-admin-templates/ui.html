@@ -143,10 +143,80 @@
 			<p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate. <strong>Please note</strong> this replaces the old <code>.plugin-help</code> class.</p>
 
 			<h2>Plugin option columns <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-			<pre><code>&lt;div class="plugin-column"&gt;
-	TO BE DONE
-&lt;/div&gt;</code></pre>
-			<p>PLACEHOLDER - TO BE DONE</p>
+			<pre><code>&lt;form method="post" action="#" class="edit-form"&gt;
+	&lt;div class="plugin-column"&gt;
+		&lt;h2&gt;Plugin pane title&lt;/h2&gt;
+
+		&lt;p class="plugin-example-1"&gt;
+			&lt;span class="edit-label"&gt;&lt;label for="plugin_example_1"&gt;Long text&lt;/label&gt;&lt;/span&gt;
+			&lt;span class="edit-value"&gt;&lt;input type="text" value="" name="plugin_example_1" id="plugin_example_1" size="32" /&gt;&lt;/span&gt;
+		&lt;/p&gt;
+		&lt;p class="plugin-example-2"&gt;
+			&lt;span class="edit-label"&gt;&lt;label for="plugin_example_2"&gt;Medium text&lt;/label&gt;&lt;/span&gt;
+			&lt;span class="edit-value"&gt;&lt;input type="text" value="" name="plugin_example_2" id="plugin_example_2" size="8" class="input-medium" /&gt;&lt;/span&gt;
+		&lt;/p&gt;
+		&lt;p class="plugin-example-3"&gt;
+			&lt;span class="edit-label"&gt;&lt;label for="plugin_example_3"&gt;Select&lt;/label&gt;&lt;/span&gt;
+			&lt;span class="edit-value"&gt;
+				&lt;select name="plugin_example_3" id="plugin_example_3"&gt;
+					&lt;option value="" selected="selected"&gt;&#160;&lt;/option&gt;
+					&lt;option value="option1"&gt;Option 1&lt;/option&gt;
+					&lt;option value="option2"&gt;Option 2&lt;/option&gt;
+				&lt;/select&gt;
+			&lt;/span&gt;
+		&lt;/p&gt;
+		&lt;p class="plugin-example-4"&gt;
+			&lt;span class="edit-label"&gt;Radio buttons&lt;/span&gt;
+			&lt;span class="edit-value"&gt;
+				&lt;input type="radio" id="plugin_example_4_0" name="plugin_example_4" value="0" class="radio active" checked="checked" /&gt;&lt;label for="plugin_example_4_0"&gt;No&lt;/label&gt;
+				&lt;input type="radio" id="plugin_example_4_1" name="plugin_example_4" value="1" class="radio" /&gt;&lt;label for="plugin_example_4_1"&gt;Yes&lt;/label&gt;
+			&lt;/span&gt;
+		&lt;/p&gt;
+		&lt;p class="plugin-example-5"&gt;
+			&lt;span class="edit-label"&gt;&lt;label for="plugin_example_5"&gt;Textarea&lt;/label&gt;&lt;/span&gt;
+			&lt;textarea name="plugin_example_5" id="plugin_example_5" cols="64" rows="7"&gt;&lt;/textarea&gt;
+		&lt;/p&gt;
+		...etc...
+		&lt;p&gt;&lt;input type="submit" value="Save" class="publish" /&gt;&lt;/p&gt;
+
+	&lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+			<form method="post" action="#" class="edit-form">
+				<div class="plugin-column">
+					<h2>Plugin pane title</h2>
+					<p class="plugin-example-1">
+						<span class="edit-label"><label for="plugin_example_1">Long text</label></span>
+						<span class="edit-value"><input type="text" value="" name="plugin_example_1" id="plugin_example_1" size="32" /></span>
+					</p>
+					<p class="plugin-example-2">
+						<span class="edit-label"><label for="plugin_example_2">Medium text</label></span>
+						<span class="edit-value"><input type="text" value="" name="plugin_example_2" id="plugin_example_2" size="8" class="input-medium" /></span>
+					</p>
+					<p class="plugin-example-3">
+						<span class="edit-label"><label for="plugin_example_3">Select</label></span>
+						<span class="edit-value">
+							<select name="plugin_example_3" id="plugin_example_3">
+								<option value="" selected="selected">&#160;</option>
+								<option value="option1">Option 1</option>
+								<option value="option2">Option 2</option>
+							</select>
+						</span>
+					</p>
+					<p class="plugin-example-4">
+						<span class="edit-label">Radio buttons</span>
+						<span class="edit-value">
+							<input type="radio" id="plugin_example_4_0" name="plugin_example_4" value="0" class="radio active" checked="checked" /><label for="plugin_example_4_0">No</label>
+							<input type="radio" id="plugin_example_4_1" name="plugin_example_4" value="1" class="radio" /><label for="plugin_example_4_1">Yes</label>
+						</span>
+					</p>
+					<p class="plugin-example-5">
+						<span class="edit-label"><label for="plugin_example_5">Textarea</label></span>
+						<textarea name="plugin_example_5" id="plugin_example_5" cols="64" rows="7"></textarea>
+					</p>
+					<p><input type="submit" value="Save" class="publish" /></p>
+				</div>
+			</form>
 
 			<h2>Grids <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
 			<pre><code>&lt;div class="txp-grid"&gt;
@@ -318,13 +388,13 @@
 			<h1>Alert boxes</h1>
 
 			<h2>Notification: success</h2>
-			<p><span id="message" class="success">Article posted. <a class="close">&times;</a></span></p>
+			<p><span id="message" class="success">Article posted.</span></p>
 
 			<h2>Notification: warning</h2>
-			<p><span id="message" class="warning">Invalid width or height. <a class="close">&times;</a></span></p>
+			<p><span id="message" class="warning">Invalid width or height.</span></p>
 
 			<h2>Notification: error</h2>
-			<p><span id="message" class="error">Username <strong>anon</strong> not found. <a class="close">&times;</a></span></p>
+			<p><span id="message" class="error">Username <strong>anon</strong> not found.</span></p>
 
 			<h2>System message: success <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
 			<p><code>&lt;p class="alert-block success"&gt;...message...&lt;/p&gt;</code></p>
