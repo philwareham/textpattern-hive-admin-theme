@@ -18,8 +18,8 @@
 .icon {
 	@include inline-block;
 	font-size: 16px;
-	line-height: 1.125; // 18px / 16px
-	vertical-align: text-bottom;
+	line-height: 1; // 16px
+	vertical-align: -14%;
 	width: 1em; // 16px
 	height: 1em; // 16px
 	@include hide-text;
@@ -46,6 +46,7 @@ a.icon-container {
 
 button .icon {
 	margin: 0 0 -1px -1px;
+	vertical-align: text-bottom;
 }
 
 [disabled] .icon,

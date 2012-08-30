@@ -9,8 +9,8 @@
   *display: inline;
   *zoom: 1;
   font-size: 16px;
-  line-height: 1.125;
-  vertical-align: text-bottom;
+  line-height: 1;
+  vertical-align: -14%;
   width: 1em;
   height: 1em;
   text-indent: 110%;
@@ -46,6 +46,7 @@ a.icon-container b {
 
 button .icon {
   margin: 0 0 -1px -1px;
+  vertical-align: text-bottom;
 }
 
 [disabled] .icon,
