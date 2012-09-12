@@ -16,14 +16,10 @@
 /* Base
    ========================================================================== */
 
-/* 1. corrects text resizing oddly in IE7 when body font-size is set using em units
-   2. prevents iOS text size adjust after orientation change, without disabling user zoom
-      www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+/* prevents iOS text size adjust after orientation change, without disabling user zoom
+   www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 html {
-	/* 1 */
-	font-size: 100%;
 	font-family: $font-body;
-	/* 2 */
 	-webkit-text-size-adjust: 100%;
 		-ms-text-size-adjust: 100%;
 }
@@ -54,13 +50,7 @@ a {
 /* Typography
    ========================================================================== */
 
-/* addresses margins set differently in IE7 */
-p,
-pre {
-	margin: 1em 0;
-}
-
-/* addresses styling not present in IE7-9, Safari5, Chrome */
+/* addresses styling not present in IE8-9, Safari5, Chrome */
 abbr[title],
 dfn[title] {
 	border-bottom: 1px dotted;
@@ -188,23 +178,14 @@ td {
 /* Forms
    ========================================================================== */
 
-/* corrects margin displayed oddly in IE7 */
-form {
-	margin: 0;
-}
-
-/* 1. corrects color not being inherited in IE7-9
-   2. corrects text not wrapping in FF3 
-   3. corrects alignment displayed oddly in IE7 */
+/* 1. corrects color not being inherited in IE8-9
+   2. corrects text not wrapping in FF3 */
 legend {
 	/* 1 */
 	border: 0;
 	padding: 0;
 	/* 2 */
 	white-space: normal;
-	/* 3 */
-	*margin-right: 7px;
-	*margin-left: -7px;
 }
 
 /* added via JS to <textarea> and class="input_full" (applies only to IE7, other browsers don't need it) */
@@ -241,10 +222,6 @@ input[type="button"],
 	border-bottom-color: darken(#bbb, 10%);
 	@include gradient(#eee, #bbb);
 	display: inline-block;
-	/* IE7 vertical alignment fix */
-	*padding-top: 2px;
-	*padding-bottom: 0;
-	*overflow: visible;
 
 	&:hover {
 		color: $color-text;
@@ -279,12 +256,6 @@ input[type="button"] {
 	@include gradient(lighten(#bbb, 4%), lighten(#eee, 4%));
 }
 
-/* IE7 button fixes */
-button {
-	*padding-top: 1px;
-	*padding-bottom: 1px;
-}
-
 textarea,
 select,
 input[type="password"],
@@ -303,13 +274,6 @@ input[type="text"] {
 	padding: .15384615384615em .38461538461538em;
 	height: 1.84615384615385em; // 24px / 13px
 	max-width: 100%;
-	/* IE7 box-sizing workaround */
-	*padding-right: 0;
-	*padding-left: 0;
-	/* IE7 vertical alignment fix */
-	*padding-top: 1px;
-	*padding-bottom: 4px;
-	*height: auto;
 }
 
 .boxshadow {
@@ -374,7 +338,7 @@ textarea {
 	min-height: 4.38461538461538em; // 57px / 13px
 	resize: vertical;
 	width: 100%;
-	/* removes default vertical scrollbar in IE7-9 */
+	/* removes default vertical scrollbar in IE8-9 */
 	overflow: auto;
 	/* improves readability and alignment in all browsers */
 	vertical-align: top;
@@ -389,8 +353,6 @@ select[multiple] {
 select[size="0"],
 select[size="1"] {
 	height: 1.8em;
-	/* IE7 */
-	*height: auto;
 }
 
 optgroup {
@@ -426,15 +388,11 @@ optgroup {
 
 }
 
-/* addresses box sizing set to content-box and excess padding in IE7-9 */
+/* addresses box sizing set to content-box and excess padding in IE8-9 */
 input[type="checkbox"],
 input[type="radio"] {
 	padding: 0;
 	@include box-sizing;
-	*height: 1em;
-	*width: 1em;
-	*position: relative;
-	*top: -3px;
 }
 
 /* suppress red glow that Firefox adds to form fields by default, even when user is still typing

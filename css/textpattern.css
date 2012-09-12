@@ -111,8 +111,6 @@ pre {
   border-radius: 0.38462em;
   background: #f7f7f7;
   tab-size: 4;
-  /* IE7 */
-  *overflow-y: hidden;
 }
 
 pre code,
@@ -505,8 +503,6 @@ h3.lever.expanded a:after {
   background-image: linear-gradient(#eeeeee, #dddddd);
   border-right: 1px solid #e3e3e3;
   border-left: 1px solid #e3e3e3;
-  /* IE7 padding fix for lack of ':before' support */
-  *padding: 1em;
 }
 .progress-meter li.active {
   border-top: 1px solid #fabc2b;
@@ -569,8 +565,6 @@ fieldset {
   border-top: 0;
   padding: 2.07692307692308em 0 0 0;
   background: #f7f7f7;
-  /* corrects padding inconsistency in IE7 */
-  *padding-top: 3em;
 }
 
 fieldset > * {
@@ -611,12 +605,6 @@ legend {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  /* corrects alignment displayed oddly in IE7 */
-  *margin-right: 7px;
-  *margin-left: -7px;
-  *right: 0;
-  *left: 0;
-  *width: auto;
 }
 
 input[type="radio"],
@@ -899,8 +887,6 @@ button.destroy:active {
 .txp-listtables {
   margin-bottom: 1em;
   overflow-x: auto;
-  /* IE7 */
-  *overflow-y: hidden;
 }
 
 /* Container
@@ -1596,8 +1582,6 @@ body#page-setup {
 .thumbnail-edit {
   overflow-x: auto;
   margin-bottom: 1em;
-  /* IE7 */
-  *overflow-y: hidden;
 }
 .thumbnail-edit form {
   display: inline-block;
@@ -1755,9 +1739,6 @@ div.code {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  /* IE7 box-sizing workaround */
-  *padding-right: 0;
-  *padding-left: 0;
 }
 
 .plugin-column {

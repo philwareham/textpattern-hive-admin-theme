@@ -100,7 +100,5 @@
 /* Allow overflow scroll on tables */
 .txp-listtables {
 	margin-bottom: 1em;
-	overflow-x: auto;
-	/* IE7 */
-	*overflow-y: hidden; 
+	overflow-x: auto; 
 }

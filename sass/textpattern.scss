@@ -35,8 +35,6 @@ fieldset {
 	border-top: 0;
 	padding: 2.07692307692308em 0 0 0;
 	background: $color-background-box;
-	/* corrects padding inconsistency in IE7 */
-	*padding-top: 3em;
 }
 
 fieldset > * {
@@ -60,12 +58,6 @@ legend {
 	@include box-shadow(inset 0 1px 0 0 rgba(#fff, .25));
 	@include gradient-bar($color-gradient-from, $color-gradient-to);
 	@include box-sizing;
-	/* corrects alignment displayed oddly in IE7 */
-	*margin-right: 7px;
-	*margin-left: -7px;
-	*right: 0;
-	*left: 0;
-	*width: auto;
 }
 
 input[type="radio"],
@@ -745,8 +737,6 @@ body#page-setup {
 .thumbnail-edit {
 	overflow-x: auto;
 	margin-bottom: 1em;
-	/* IE7 */
-	*overflow-y: hidden;
 
 	form {
 		display: inline-block;
@@ -917,9 +907,6 @@ div.code {
 	height: 21em;
 	overflow: auto;
 	@include box-sizing;
-	/* IE7 box-sizing workaround */
-	*padding-right: 0;
-	*padding-left: 0;
 }
 
 .plugin-column {
