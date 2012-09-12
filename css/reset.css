@@ -235,8 +235,6 @@ input[type="button"],
   /* CSS3 Compliant */
   background-image: linear-gradient(#eeeeee, #bbbbbb);
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
   /* IE7 vertical alignment fix */
   *padding-top: 2px;
   *padding-bottom: 0;
@@ -313,8 +311,6 @@ input[type="button"] {
   padding: .30769230769231em .75em;
   height: 2em;
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
 }
 
 .nav-tertiary .navlink-active {

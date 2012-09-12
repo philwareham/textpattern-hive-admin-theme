@@ -270,8 +270,6 @@ a:hover .content-image {
 
 span#message {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
   -moz-border-radius: 0.38462em 0.38462em 0 0;
   border-radius: 0.38462em 0.38462em 0 0;
   margin: 0 auto;
@@ -440,8 +438,6 @@ h3.lever a:after {
   width: 0;
   height: 0;
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
   vertical-align: top;
   opacity: .5;
   border-left: 0.30769em solid #333333;
@@ -481,8 +477,6 @@ h3.lever.expanded a:after {
 }
 .progress-meter ol {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
   list-style: none;
   margin-bottom: 0;
   padding: 0;
@@ -878,8 +872,6 @@ button.destroy:active {
   width: 0;
   height: 0;
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
   vertical-align: top;
   opacity: .5;
   text-indent: 110%;
@@ -1173,8 +1165,6 @@ body {
 .edit-label,
 .login-label {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
   float: left;
 }
 
@@ -1189,8 +1179,6 @@ body {
 .edit-value,
 .login-value {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
   float: right;
 }
 .edit-value input,
@@ -1250,8 +1238,6 @@ div.multi-edit {
 .multi-step {
   margin-left: .30769230769231em;
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
 }
 
 .txp-columntable {
@@ -1279,8 +1265,6 @@ div.multi-edit {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
   text-align: left;
   max-width: 22.6153846153846em;
   vertical-align: top;
@@ -1316,8 +1300,6 @@ div.multi-edit {
 /* AJAX spinner */
 span.spinner {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
   width: 13px;
   height: 13px;
   background-image: url("../img/spinner.gif");
@@ -1623,8 +1605,6 @@ body#page-setup {
 }
 .thumbnail-edit form {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
   vertical-align: top;
   margin-top: 5px;
 }

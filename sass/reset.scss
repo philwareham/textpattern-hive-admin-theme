@@ -240,7 +240,7 @@ input[type="button"],
 	border: 1px solid #bbb;
 	border-bottom-color: darken(#bbb, 10%);
 	@include gradient(#eee, #bbb);
-	@include inline-block;
+	display: inline-block;
 	/* IE7 vertical alignment fix */
 	*padding-top: 2px;
 	*padding-bottom: 0;
@@ -272,7 +272,7 @@ input[type="button"] {
 	border: 1px solid;
 	padding: .30769230769231em .75em;
 	height: 2em;
-	@include inline-block;
+	display: inline-block;
 }
 
 .nav-tertiary .navlink-active {

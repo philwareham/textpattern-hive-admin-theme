@@ -16,7 +16,7 @@
    ========================================================================== */
 
 .icon {
-	@include inline-block;
+	display: inline-block;
 	font-size: 16px;
 	line-height: 1; // 16px
 	vertical-align: -14%;
@@ -27,8 +27,7 @@
 }
 
 a.icon-container {
-
-	@include inline-block;
+	display: inline-block;
 	margin: 0 .5em .5em 0;
 	border: 1px solid lighten($color-border, 9%);
 	padding: .23076923076923em; // 3px / 13px

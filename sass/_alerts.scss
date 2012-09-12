@@ -74,7 +74,7 @@
 }
 
 span#message {
-	@include inline-block;
+	display: inline-block;
 	@include border-radius($border-radius $border-radius 0 0);
 	margin: 0 auto;
 	padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;

@@ -6,8 +6,6 @@
    ========================================================================== */
 .icon {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
   font-size: 16px;
   line-height: 1;
   vertical-align: -14%;
@@ -28,8 +26,6 @@
 
 a.icon-container {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
   margin: 0 .5em .5em 0;
   border: 1px solid #e3e3e3;
   padding: .23076923076923em;

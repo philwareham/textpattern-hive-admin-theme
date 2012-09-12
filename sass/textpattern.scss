@@ -318,7 +318,7 @@ body {
 
 .edit-label,
 .login-label {
-	@include inline-block;
+	display: inline-block;
 	float: left;
 }
 
@@ -332,7 +332,7 @@ body {
 
 .edit-value,
 .login-value {
-	@include inline-block;
+	display: inline-block;
 	float: right;
 
 	input,
@@ -391,7 +391,7 @@ div.multi-edit {
 
 .multi-step {
 	margin-left: .30769230769231em;
-	@include inline-block;
+	display: inline-block;
 }
 
 .txp-columntable {
@@ -417,7 +417,7 @@ div.multi-edit {
 
 .txp-grid-cell {
 	@include box-sizing;
-	@include inline-block;
+	display: inline-block;
 	text-align: left;
 	max-width: 22.6153846153846em; // 294px / 13px
 	vertical-align: top;
@@ -457,7 +457,7 @@ div.multi-edit {
 
 /* AJAX spinner */
 span.spinner {
-	@include inline-block;
+	display: inline-block;
 	width: 13px;
 	height: 13px;
 	@include hires-graphic(spinner, gif, 13px, 13px);
@@ -749,7 +749,7 @@ body#page-setup {
 	*overflow-y: hidden;
 
 	form {
-		@include inline-block;
+		display: inline-block;
 		vertical-align: top;
 		margin-top: 5px;
 	}
