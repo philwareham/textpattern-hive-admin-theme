@@ -1,0 +1,271 @@
+<!doctype html> 
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Sections - My Site &#124; Textpattern CMS</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="textpattern.js"></script>
+	<link href="../css/textpattern.css" rel="stylesheet" type="text/css" />
+	<link href="../css/experimental.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="generator" content="Textpattern CMS" />
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+	<script type="text/javascript" src="../js/jquery.formalize.min.js"></script>
+	<!--[if lt IE 9]><script type="text/javascript" src="../js/selectivizr.min.js"></script><![endif]-->
+	<script type="text/javascript" src="../js/scripts.js"></script>
+</head>
+<body id="page-section" class="presentation">
+
+	<div class="txp-header">
+		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
+		<p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
+
+		<div class="txp-nav">
+			<ul class="data-dropdown">
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="content-article.html">Content</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="content-category.html">Categories</a></li>
+						<li class="inactive"><a href="content-article.html">Write</a></li>
+						<li class="inactive"><a href="content-list.html">Articles</a></li>
+						<li class="inactive"><a href="content-image.html">Images</a></li>
+						<li class="inactive"><a href="content-file.html">Files</a></li>
+						<li class="inactive"><a href="content-link.html">Links</a></li>
+						<li class="inactive"><a href="content-discuss.html">Comments</a></li>
+					</ul>
+				</li>
+				<li class="dropdown active"><a class="dropdown-toggle" href="presentation-page.html">Presentation</a>
+					<ul class="dropdown-menu">
+						<li class="active"><a href="presentation-section.html">Sections</a></li>
+						<li class="inactive"><a href="presentation-page.html">Pages</a></li>
+						<li class="inactive"><a href="presentation-form.html">Forms</a></li>
+						<li class="inactive"><a href="presentation-css.html">Style</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="admin-admin.html">Admin</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="admin-diag.html">Diagnostics</a></li>
+						<li class="inactive"><a href="admin-prefs_basic.html">Preferences</a></li>
+						<li class="inactive"><a href="admin-admin.html">Users</a></li>
+						<li class="inactive"><a href="admin-log.html">Visitor logs</a></li>
+						<li class="inactive"><a href="admin-plugin.html">Plugins</a></li>
+						<li class="inactive"><a href="admin-import.html">Import</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="#">Extensions</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="#">Extension 1</a></li>
+						<li class="inactive"><a href="#">Extension 2</a></li>
+						<li class="inactive"><a href="#">Extension 3</a></li>
+						<li class="inactive"><a href="#">Extension 4</a></li>
+						<li class="inactive"><a href="#">Extension 5</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="txp-nav-select">
+			<select>
+				<optgroup label="Content">
+					<option value="content-category.html">Categories</option>
+					<option value="content-article.html">Write</option>
+					<option value="content-list.html">Articles</option>
+					<option value="content-image.html">Images</option>
+					<option value="content-file.html">Files</option>
+					<option value="content-link.html">Links</option>
+					<option value="content-discuss.html">Comments</option>
+				</optgroup>
+				<optgroup label="Presentation">
+					<option value="presentation-section.html" selected="selected">Sections</option>
+					<option value="presentation-page.html">Pages</option>
+					<option value="presentation-form.html">Forms</option>
+					<option value="presentation-css.html">Style</option>
+				</optgroup>
+				<optgroup label="Admin">
+					<option value="admin-diag.html">Diagnostics</option>
+					<option value="admin-prefs_basic.html">Preferences</option>
+					<option value="admin-admin.html">Users</option>
+					<option value="admin-log.html">Visitor logs</option>
+					<option value="admin-plugin.html">Plugins</option>
+					<option value="admin-import.html">Import</option>
+				</optgroup>
+				<optgroup label="Extensions">
+					<option value="#">Extension 1</option>
+					<option value="#">Extension 2</option>
+					<option value="#">Extension 3</option>
+					<option value="#">Extension 4</option>
+					<option value="#">Extension 5</option>
+				</optgroup>
+			</select>
+		</div>
+
+		<div id="messagepane"></div>
+
+	</div><!-- /txp-header -->
+
+	<div class="txp-body">
+		<h1 class="txp-heading">Sections&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></h1>
+
+		<div id="section_control" class="txp-control-panel">
+
+			<p class="txp-buttons">
+				<a href="secondary/presentation-section_edit.html">Add new section</a>
+			</p>
+
+			<form id="default_section_form" name="default_section_form" method="post" action="#" class="async">
+				<p>
+					<label>Default publishing section</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
+					<select id="default_section" name="default_section">
+						<option value="about">About</option>
+						<option value="articles" selected="selected">Articles</option>
+					</select>
+				</p>
+			</form>
+
+			<form method="get" action="index.php" class="search-form">
+				<p>
+					<label for="section-search">Search</label>
+					<select id="section-search" name="search_method">
+						<option value="name" selected="selected">Name</option>
+						<option value="title">Title</option>
+						<option value="page">Page</option>
+						<option value="css">Style</option>
+						<option value="on_frontpage">On front page</option>
+						<option value="in_rss">Syndicate</option>
+						<option value="searchable">Include in site search</option>
+					</select>
+					<input type="text" value="" name="crit" size="16" />
+					<input type="submit" value="Go" name="search" />
+				</p>
+			</form>
+		</div>
+
+		<div id="section_container" class="txp-container">
+
+			<form action="index.php" id="section_form" class="multi_edit_form" method="post" name="longform">
+				<div class="txp-listtables">
+
+					<table class="txp-list">
+
+						<thead>
+							<tr>
+								<th title="toggle_all_selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
+								<th class="name"><a href="#">Name</a></th>
+								<th class="title"><a href="#">Title</a></th>
+								<th class="page"><a href="#">Page</a></th>
+								<th class="style"><a href="#">Style</a></th>
+								<th class="section_detail frontpage"><a href="#">On front page</a></th>
+								<th class="section_detail syndicate"><a href="#">Syndicate</a></th>
+								<th class="section_detail searchable"><a href="#">Include in site search</a></th>
+								<th class="section_detail article_count"><a href="#">article</a></th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr id="txp_section_default">
+								<td class="multi-edit"><input type="checkbox" value="default" name="selected[]" /></td>
+								<td class="name">
+									<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
+									<span class="section_detail">[<a href="#">View</a>]</span>
+								</td>
+								<td class="title">default</td>
+								<td class="page">
+									<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
+								</td>
+								<td class="style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
+								<td class="section_detail frontpage">-</td>
+								<td class="section_detail syndicate">-</td>
+								<td class="section_detail searchable">-</td>
+								<td class="section_detail article_count">&#160;</td>
+							</tr>
+							<tr id="txp_section_articles">
+								<td class="multi-edit"><input type="checkbox" value="articles" name="selected[]" /></td>
+								<td class="name">
+									<a href="secondary/presentation-section_edit.html" title="Edit">articles</a>
+									<span class="section_detail">[<a href="#">View</a>]</span>
+								</td>
+								<td class="title">Articles</td>
+								<td class="page">
+									<a href="secondary/presentation-section_edit.html" title="Edit">archive</a>
+									<a title="article_count: 16" href="#">(16)</a>
+								</td>
+								<td class="style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
+								<td class="section_detail frontpage"><a href="#" id="txp_column_articles_on_frontpage" class="section_toggle_option async">Yes</a></td>
+								<td class="section_detail syndicate"><a href="#" id="txp_column_articles_in_rss" class="section_toggle_option async">Yes</a></td>
+								<td class="section_detail searchable"><a href="#" id="txp_column_articles_searchable" class="section_toggle_option async">Yes</a></td>
+								<td class="section_detail article_count"><a title="article_count: 16" href="content-list.html">16</a></td>
+							</tr>
+							<tr id="txp_section_about" class="selected">
+								<td class="multi-edit"><input type="checkbox" value="about" name="selected[]" checked="checked" /></td>
+								<td class="name">
+									<a href="secondary/presentation-section_edit.html" title="Edit">about</a>
+									<span class="section_detail">[<a href="#">View</a>]</span>
+								</td>
+								<td class="name">About</td>
+								<td class="page">
+									<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
+									(0)
+								</td>
+								<td class="style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
+								<td class="section_detail frontpage"><a href="#" id="txp_column_about_on_frontpage" class="section_toggle_option async">No</a></td>
+								<td class="section_detail syndicate"><a href="#" id="txp_column_about_in_rss" class="section_toggle_option async">No</a></td>
+								<td class="section_detail searchable"><a href="#" id="txp_column_about_searchable" class="section_toggle_option async">Yes</a></td>
+								<td class="section_detail article_count">0</td>
+							</tr>
+						</tbody>
+
+					</table>
+
+					<div class="multi-edit">
+						<select name="edit_method">
+							<option value="" selected="selected">With selected&#8230;</option>
+							<option value="changepage">Uses page</option>
+							<option value="changecss">Uses style</option>
+							<option value="changeonfrontpage">On front page</option>
+							<option value="changesyndicate">Syndicate</option>
+							<option value="changesearchable">Include in site search</option>
+							<option value="delete">Delete</option>
+						</select>
+						<div class="multi-option" id="multi-option-changeonfrontpage">
+							<input type="radio" id="on_front_page-0" name="on_front_page" value="0" class="radio" /><label for="on_front_page-0">No</label>
+							<input type="radio" id="on_front_page-1" name="on_front_page" value="1" class="radio active" checked="checked" /><label for="on_front_page-1">Yes</label>
+						</div>
+						<input type="submit" value="Go" />
+					</div>
+
+				</div>
+			</form>
+
+			<p class="detail-toggle">
+				<input type="checkbox" name="cb_toggle_section_detail" id="cb_toggle_section_detail" value="1" class="checkbox" onclick="toggleClassRemember('section_detail');" checked="checked" />
+				<label for="cb_toggle_section_detail">Show detail</label>
+			</p>
+
+			<div id="section_navigation" class="txp-navigation">
+				<p class="prev-next">1/1</p>
+
+				<form method="post" action="#" class="pageby">
+					<p>
+						View
+						<select name="qty" onchange="submit(this.form);">
+							<option value="15">15</option>
+							<option value="25">25</option>
+							<option value="50">50</option>
+							<option value="100">100</option>
+						</select>
+						per page
+					</p>
+				</form>
+			</div>
+
+		</div><!-- /txp-container -->
+	</div><!-- /txp-body -->
+
+	<div class="txp-footer">
+		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.5)</p>
+		<p class="pagejump"><a href="#">&#8593; Back to top</a></p>
+	</div><!-- /txp-footer -->
+
+</body>
+</html>

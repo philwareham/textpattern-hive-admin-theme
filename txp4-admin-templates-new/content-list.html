@@ -1,0 +1,257 @@
+<!doctype html> 
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Articles - My Site &#124; Textpattern CMS</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="textpattern.js"></script>
+	<link href="../css/textpattern.css" rel="stylesheet" type="text/css" />
+	<link href="../css/experimental.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="generator" content="Textpattern CMS" />
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+	<script type="text/javascript" src="../js/jquery.formalize.min.js"></script>
+	<!--[if lt IE 9]><script type="text/javascript" src="../js/selectivizr.min.js"></script><![endif]-->
+	<script type="text/javascript" src="../js/scripts.js"></script>
+</head>
+<body id="page-list" class="content">
+
+	<div class="txp-header">
+		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
+		<p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
+
+		<div class="txp-nav">
+			<ul class="data-dropdown">
+				<li class="dropdown active"><a class="dropdown-toggle" href="content-article.html">Content</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="content-category.html">Categories</a></li>
+						<li class="inactive"><a href="content-article.html">Write</a></li>
+						<li class="active"><a href="content-list.html">Articles</a></li>
+						<li class="inactive"><a href="content-image.html">Images</a></li>
+						<li class="inactive"><a href="content-file.html">Files</a></li>
+						<li class="inactive"><a href="content-link.html">Links</a></li>
+						<li class="inactive"><a href="content-discuss.html">Comments</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="presentation-page.html">Presentation</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="presentation-section.html">Sections</a></li>
+						<li class="inactive"><a href="presentation-page.html">Pages</a></li>
+						<li class="inactive"><a href="presentation-form.html">Forms</a></li>
+						<li class="inactive"><a href="presentation-css.html">Style</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="admin-admin.html">Admin</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="admin-diag.html">Diagnostics</a></li>
+						<li class="inactive"><a href="admin-prefs_basic.html">Preferences</a></li>
+						<li class="inactive"><a href="admin-admin.html">Users</a></li>
+						<li class="inactive"><a href="admin-log.html">Visitor logs</a></li>
+						<li class="inactive"><a href="admin-plugin.html">Plugins</a></li>
+						<li class="inactive"><a href="admin-import.html">Import</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="#">Extensions</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="#">Extension 1</a></li>
+						<li class="inactive"><a href="#">Extension 2</a></li>
+						<li class="inactive"><a href="#">Extension 3</a></li>
+						<li class="inactive"><a href="#">Extension 4</a></li>
+						<li class="inactive"><a href="#">Extension 5</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="txp-nav-select">
+			<select>
+				<optgroup label="Content">
+					<option value="content-category.html">Categories</option>
+					<option value="content-article.html">Write</option>
+					<option value="content-list.html" selected="selected">Articles</option>
+					<option value="content-image.html">Images</option>
+					<option value="content-file.html">Files</option>
+					<option value="content-link.html">Links</option>
+					<option value="content-discuss.html">Comments</option>
+				</optgroup>
+				<optgroup label="Presentation">
+					<option value="presentation-section.html">Sections</option>
+					<option value="presentation-page.html">Pages</option>
+					<option value="presentation-form.html">Forms</option>
+					<option value="presentation-css.html">Style</option>
+				</optgroup>
+				<optgroup label="Admin">
+					<option value="admin-diag.html">Diagnostics</option>
+					<option value="admin-prefs_basic.html">Preferences</option>
+					<option value="admin-admin.html">Users</option>
+					<option value="admin-log.html">Visitor logs</option>
+					<option value="admin-plugin.html">Plugins</option>
+					<option value="admin-import.html">Import</option>
+				</optgroup>
+				<optgroup label="Extensions">
+					<option value="#">Extension 1</option>
+					<option value="#">Extension 2</option>
+					<option value="#">Extension 3</option>
+					<option value="#">Extension 4</option>
+					<option value="#">Extension 5</option>
+				</optgroup>
+			</select>
+		</div>
+
+		<div id="messagepane"></div>
+
+	</div><!-- /txp-header -->
+	<div class="txp-body">
+		<h1 class="txp-heading">Articles</h1>
+
+		<div id="list_control" class="txp-control-panel">
+			<form method="get" action="#" class="search-form">
+				<p>
+					<label for="list-search">Search</label>
+					<select id="list-search" name="search_method">
+						<option value="id">ID#</option>
+						<option value="title_body_excerpt" selected="selected">Title, body &amp; excerpt</option>
+						<option value="section">Section</option>
+						<option value="categories">Categories</option>
+						<option value="keywords">Keywords</option>
+						<option value="status">Status</option>
+						<option value="author">Author</option>
+						<option value="article_image">Article image</option>
+						<option value="posted">Posted</option>
+						<option value="lastmod">Modified</option>
+					</select>
+					<input type="text" value="" name="crit" size="16" />
+					<input type="submit" value="Go" name="search" />
+				</p>
+			</form>
+		</div>
+
+		<div id="list_container" class="txp-container">
+
+			<form name="longform" id="articles_form" class="multi_edit_form" method="post" action="#">
+				<div class="txp-listtables">
+
+					<table class="txp-list">
+
+						<thead>
+							<tr>
+								<th title="toggle_all_selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
+								<th class="id actions"><a href="#">ID#</a></th>
+								<th class="title"><a href="#">Title</a></th>
+								<th class="desc date posted created"><a href="#">Posted</a></th>
+								<th class="articles_detail date modified"><a href="#">Modified</a></th>
+								<th class="articles_detail date expires"><a href="#">Expires</a></th>
+								<th class="section"><a href="#">Section</a></th>
+								<th class="articles_detail category category1"><a href="#">Category 1</a></th>
+								<th class="articles_detail category category2"><a href="#">Category 2</a></th>
+								<th class="status"><a href="#">Status</a></th>
+								<th class="author"><a href="#">Author</a></th>
+								<th class="articles_detail comments"><a href="#">Comments</a></th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td class="multi-edit"><input type="checkbox" value="2" name="selected[]" class="checkbox" /></td>
+								<td class="id"><a href="#">2</a>&#160;<span class="articles_detail">[<a href="#" title="View">View</a>]</span></td>
+								<td class="title"><a href="#">test article 2 title</a></td>
+								<td class="date posted created">03&#160;Jul&#160;2011 12:27:33</td>
+								<td class="articles_detail date modified">03&#160;Jul&#160;2011 12:27:33</td>
+								<td class="articles_detail date expires">&#160;</td>
+								<td class="section"><span title="Articles">articles</span></td>
+								<td class="articles_detail category category1">&#160;</td>
+								<td class="articles_detail category category2">&#160;</td>
+								<td class="status"><a href="#" title="View">Live</a></td>
+								<td class="author"><span title="Phil Wareham">admin</span></td>
+								<td class="articles_detail comments">
+									<span class="comments-status">On</span>
+									<span class="comments-manage"><a title="Manage" href="#">(1)</a></span>
+								</td>
+							</tr>
+							<tr>
+								<td class="multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox" /></td>
+								<td class="id"><a href="#">1</a>&#160;<span class="articles_detail">[<a href="#" title="View">View</a>]</span></td>
+								<td class="title"><a href="#">Welcome to Your Site!</a></td>
+								<td class="date posted created">29&#160;Jun&#160;2011 19:07:55</td>
+								<td class="articles_detail date modified">29&#160;Jun&#160;2011 19:07:55</td>
+								<td class="articles_detail date expires">&#160;</td>
+								<td class="section"><span title="Articles">articles</span></td>
+								<td class="articles_detail category category1"><span title="Hope for the Future">hope-for-the-future</span></td>
+								<td class="articles_detail category category2"><span title="Meaningful Labor">meaningful-labor</span></td>
+								<td class="status"><a href="#" title="View">Live</a></td>
+								<td class="author"><span title="Phil Wareham">admin</span></td>
+								<td class="articles_detail comments">
+									<span class="comments-status">Expired</span>
+									<span class="comments-manage">(0)</span>
+								</td>
+							</tr>
+						</tbody>
+
+					</table>
+
+					<div class="multi-edit">
+						<select name="edit_method">
+							<option value="" selected="selected">With selected&#8230;</option>
+							<option value="changesection">Change section</option>
+							<option value="changecategory1">Change category1</option>
+							<option value="changecategory2">Change category2</option>
+							<option value="changestatus">Change status</option>
+							<option value="changecomments">Change comments</option>
+							<option value="changeauthor">Change author</option>
+							<option value="delete">Delete</option>
+						</select>
+						<div class="multi-option" id="multi-option-changesection">
+							<select name="Section">
+								<option value="" selected="selected"></option>
+								<option value="about">about</option>
+								<option value="articles">articles</option>
+								<option value="search">search</option>
+							</select>
+						</div>
+						<input type="submit" value="Go" />
+					</div>
+
+				</div>
+			</form>
+
+			<p class="detail-toggle">
+				<input type="checkbox" name="cb_toggle_articles_detail" id="cb_toggle_articles_detail" value="1" class="checkbox" onclick="toggleClassRemember('articles_detail');" checked="checked" />
+				<label for="cb_toggle_articles_detail">Show detail</label>
+			</p>
+
+			<div id="list_navigation" class="txp-navigation">
+				<form class="nav-form" method="get" action="#">
+					<p class="prev-next">
+						<span class="navlink-disabled"><b class="icon icon-arrow-w">&#8592;</b> Prev</span>&#160;<select name="page" onchange="submit(this.form);">
+							<option value="1" selected="selected">1/2</option>
+							<option value="2">2/2</option>
+						</select>&#160;<a href="#" class="navlink" rel="next">Next <b class="icon icon-arrow-e">&#8594;</b></a>
+					</p>
+				</form>
+
+				<form method="post" action="index.php" class="pageby">
+					<p>
+						View
+						<select name="qty" onchange="submit(this.form);">
+							<option value="15">15</option>
+							<option value="25">25</option>
+							<option value="50">50</option>
+							<option value="100">100</option>
+						</select>
+						per page
+					</p>
+				</form>
+			</div>
+
+		</div><!-- /txp-container -->
+	</div><!-- /txp-body -->
+
+	<div class="txp-footer">
+		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.5)</p>
+		<p class="pagejump"><a href="#">&#8593; Back to top</a></p>
+	</div><!-- /txp-footer -->
+
+</body>
+</html>
