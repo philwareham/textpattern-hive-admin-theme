@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>Form templates - My Site &#124; Textpattern CMS</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="textpattern.js"></script>
+	<link href="../css/textpattern.css" rel="stylesheet" type="text/css" />
+	<link href="../css/experimental.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="generator" content="Textpattern CMS" />
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+	<script type="text/javascript" src="../js/jquery.formalize.min.js"></script>
+	<!--[if lt IE 9]><script type="text/javascript" src="../js/selectivizr.min.js"></script><![endif]-->
+	<script type="text/javascript" src="../js/scripts.js"></script>
+</head>
+<body id="page-form" class="presentation">
+
+	<div class="txp-header">
+		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
+		<p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
+
+		<div class="txp-nav">
+			<ul class="data-dropdown">
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="content-article.html">Content</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="content-category.html">Categories</a></li>
+						<li class="inactive"><a href="content-article.html">Write</a></li>
+						<li class="inactive"><a href="content-list.html">Articles</a></li>
+						<li class="inactive"><a href="content-image.html">Images</a></li>
+						<li class="inactive"><a href="content-file.html">Files</a></li>
+						<li class="inactive"><a href="content-link.html">Links</a></li>
+						<li class="inactive"><a href="content-discuss.html">Comments</a></li>
+					</ul>
+				</li>
+				<li class="dropdown active"><a class="dropdown-toggle" href="presentation-page.html">Presentation</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="presentation-section.html">Sections</a></li>
+						<li class="inactive"><a href="presentation-page.html">Pages</a></li>
+						<li class="active"><a href="presentation-form.html">Forms</a></li>
+						<li class="inactive"><a href="presentation-css.html">Style</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="admin-admin.html">Admin</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="admin-diag.html">Diagnostics</a></li>
+						<li class="inactive"><a href="admin-prefs_basic.html">Preferences</a></li>
+						<li class="inactive"><a href="admin-admin.html">Users</a></li>
+						<li class="inactive"><a href="admin-log.html">Visitor logs</a></li>
+						<li class="inactive"><a href="admin-plugin.html">Plugins</a></li>
+						<li class="inactive"><a href="admin-import.html">Import</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="#">Extensions</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="#">Extension 1</a></li>
+						<li class="inactive"><a href="#">Extension 2</a></li>
+						<li class="inactive"><a href="#">Extension 3</a></li>
+						<li class="inactive"><a href="#">Extension 4</a></li>
+						<li class="inactive"><a href="#">Extension 5</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="txp-nav-select">
+			<select>
+				<optgroup label="Content">
+					<option value="content-category.html">Categories</option>
+					<option value="content-article.html">Write</option>
+					<option value="content-list.html">Articles</option>
+					<option value="content-image.html">Images</option>
+					<option value="content-file.html">Files</option>
+					<option value="content-link.html">Links</option>
+					<option value="content-discuss.html">Comments</option>
+				</optgroup>
+				<optgroup label="Presentation">
+					<option value="presentation-section.html">Sections</option>
+					<option value="presentation-page.html">Pages</option>
+					<option value="presentation-form.html" selected="selected">Forms</option>
+					<option value="presentation-css.html">Style</option>
+				</optgroup>
+				<optgroup label="Admin">
+					<option value="admin-diag.html">Diagnostics</option>
+					<option value="admin-prefs_basic.html">Preferences</option>
+					<option value="admin-admin.html">Users</option>
+					<option value="admin-log.html">Visitor logs</option>
+					<option value="admin-plugin.html">Plugins</option>
+					<option value="admin-import.html">Import</option>
+				</optgroup>
+				<optgroup label="Extensions">
+					<option value="#">Extension 1</option>
+					<option value="#">Extension 2</option>
+					<option value="#">Extension 3</option>
+					<option value="#">Extension 4</option>
+					<option value="#">Extension 5</option>
+				</optgroup>
+			</select>
+		</div>
+
+		<div id="messagepane"></div>
+
+	</div><!-- /txp-header -->
+	<div class="txp-body">
+		<h1 class="txp-heading">Forms</h1>
+
+		<div id="form_container" class="txp-container">
+
+			<table class="txp-columntable">
+				<tr>
+
+					<td class="column">
+						<div id="tagbuild_links">
+							<h2>Tag builder</h2>
+							<div class="article-tags">
+								<h3 class="lever expanded"><a href="#article-tags">Articles</a></h3>
+								<div id="article-tags" class="toggle on">
+									<ul class="plain-list">
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Permanent link</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Posted</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Title</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Body</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Excerpt</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Section</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Category 1</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Category 2</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Article image</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comments invite</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Author</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="link-tags">
+								<h3 class="lever"><a href="#link-tags">Links</a></h3>
+								<div id="link-tags" class="toggle on" style="display:none">
+									<ul class="plain-list">
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Link</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Link, title=description</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Link name</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Link description</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Link category</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Link date</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="comment-tags">
+								<h3 class="lever"><a href="#comment-tags">Comments</a></h3>
+								<div id="comment-tags" class="toggle on" style="display:none">
+									<ul class="plain-list">
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comments</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comments form</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comments preview</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="comment-detail-tags">
+								<h3 class="lever"><a href="#comment-detail-tags">Comment details</a></h3>
+								<div id="comment-detail-tags" class="toggle on" style="display:none">
+									<ul class="plain-list">
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comment permanent link</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comment name</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comment e-mail</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comment website</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comment time</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comment message</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="comment-form-tags">
+								<h3 class="lever"><a href="#comment-form-tags">Comment form</a></h3>
+								<div id="comment-form-tags" class="toggle on" style="display:none">
+									<ul class="plain-list">
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comment name input</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comment e-mail input</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comment web input</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comment message input</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Remember details checkbox</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comment preview button</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Comment submit button</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="search-result-tags">
+								<h3 class="lever"><a href="#search-result-tags">Search results</a></h3>
+								<div id="search-result-tags" class="toggle on" style="display:none">
+									<ul class="plain-list">
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Search result title</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Search result excerpt</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Search result date</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Search result URL</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="file-tags">
+								<h3 class="lever"><a href="#file-tags">File downloads</a></h3>
+								<div id="file-tags" class="toggle on" style="display:none">
+									<ul class="plain-list">
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File download link</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File name</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File description</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File category</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File created time</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File modified time</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File size</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File download count</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="category-tags">
+								<h3 class="lever"><a href="#category-tags">Category</a></h3>
+								<div id="category-tags" class="toggle on" style="display:none">
+									<ul class="plain-list">
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Category</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">If category</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="section-tags">
+								<h3 class="lever"><a href="#section-tags">Section</a></h3>
+								<div id="section-tags" class="toggle on" style="display:none">
+									<ul class="plain-list">
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Section</a></li>
+										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">If section</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</td>
+
+					<td class="column">
+						<form action="index.php" method="post" id="form_form">
+							<div id="main_content">
+								<div class="edit-title">You are editing form&#160;<strong>default</strong></div>
+								<textarea id="form" class="code" name="Form" cols="64" rows="32">&lt;txp:if_individual_article&gt;
+&lt;h1 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h1&gt;
+&lt;txp:else /&gt;
+&lt;h3 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h3&gt;
+&lt;/txp:if_individual_article&gt;
+
+&lt;p class=&quot;published&quot;&gt;&lt;txp:posted /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;entry-content&quot;&gt;
+&lt;txp:body /&gt;
+&lt;/div&gt;
+
+&lt;address class=&quot;vcard author&quot;&gt;&amp;#8212; &lt;span class=&quot;fn&quot;&gt;&lt;txp:author /&gt;&lt;/span&gt;&lt;/address&gt;
+
+&lt;p class=&quot;tags&quot;&gt;&lt;txp:category1 title=&quot;1&quot; link=&quot;1&quot; /&gt;, &lt;txp:category2 title=&quot;1&quot; link=&quot;1&quot; /&gt;&lt;/p&gt;
+
+&lt;txp:comments_invite wraptag=&quot;p&quot; /&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;txp:image id=&quot;1&quot; /&gt;&lt;/div&gt;</textarea>
+								<p>Name (required)<br /><em>default</em></p>
+								<p>Type (required)<br />
+									<select name="type">
+										<option value=""></option>
+										<option value="article" selected="selected">article</option>
+										<option value="category">category</option>
+										<option value="comment">comment</option>
+										<option value="file">file</option>
+										<option value="link">link</option>
+										<option value="misc">misc</option>
+										<option value="section">section</option>
+									</select>
+								</p>
+								<input type="submit" value="Preview" name="form_preview" />
+								<p><input type="submit" value="Save" name="save" class="publish" /></p>
+							</div>
+						</form>
+					</td>
+
+					<td class="column">
+						<div id="content_switcher">
+							<h2>All forms</h2>
+							<form method="post" action="#" id="allforms_form">
+								<p class="action-create"><a href="#">Create new form</a></p>
+								<div class="form-list-group article">
+									<h3 class="lever expanded"><a href="#article">Article</a></h3>
+									<div id="article" class="toggle form-list" style="display:block">
+										<ul class="plain-list">
+											<li><span class="form-list-action"><input type="checkbox" name="selected_forms[]" value="article_listing" /></span><span class="form-list-name"><a href="#">article_listing</a></span></li>
+											<li><span class="form-list-action"></span><span class="form-list-name"><a href="#">comments_display</a></span></li>
+											<li><span class="form-list-action"></span><span class="form-list-name">default</span></li>
+											<li><span class="form-list-action"><input type="checkbox" name="selected_forms[]" value="search_results" /></span><span class="form-list-name"><a href="#">search_results</a></span></li>
+											<li><span class="form-list-action"><input type="checkbox" name="selected_forms[]" value="single" /></span><span class="form-list-name"><a href="#0">single</a></span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="form-list-group comment">
+									<h3 class="lever expanded"><a href="#comment">Comment</a></h3>
+									<div id="comment" class="toggle form-list" style="display:block">
+										<ul class="plain-list">
+											<li><span class="form-list-action"></span><span class="form-list-name"><a href="#">comments</a></span></li>
+											<li><span class="form-list-action"></span><span class="form-list-name"><a href="#">comment_form</a></span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="form-list-group file">
+									<h3 class="lever expanded"><a href="#file">File</a></h3>
+									<div id="file" class="toggle form-list" style="display:block">
+										<ul class="plain-list">
+											<li><span class="form-list-action"></span><span class="form-list-name"><a href="#0">files</a></span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="form-list-group link">
+									<h3 class="lever expanded"><a href="#link">Links</a></h3>
+									<div id="link" class="toggle form-list" style="display:block">
+										<ul class="plain-list">
+											<li><span class="form-list-action"></span><span class="form-list-name"><a href="#">Links</a></span></li>
+											<li><span class="form-list-action"><input type="checkbox" name="selected_forms[]" value="plainlinks" /></span><span class="form-list-name"><a href="#">plainlinks</a></span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="multi-edit">
+									<select name="edit_method">
+										<option value="" selected="selected">With selected&#8230;</option>
+										<option value="changetype">changetype</option>
+										<option value="delete">Delete</option>
+									</select>
+								</div>
+							</form>
+						</div>
+					</td>
+
+				</tr>
+			</table>
+
+		</div><!-- /txp-container -->
+	</div><!-- /txp-body -->
+
+	<div class="txp-footer">
+		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.5)</p>
+		<p class="pagejump"><a href="#">&#8593; Back to top</a></p>
+	</div><!-- /txp-footer -->
+
+</body>
+</html>

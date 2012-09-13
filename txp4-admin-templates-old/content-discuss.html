@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>Comments - My Site &#124; Textpattern CMS</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="textpattern.js"></script>
+	<link href="../css/textpattern.css" rel="stylesheet" type="text/css" />
+	<link href="../css/experimental.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="generator" content="Textpattern CMS" />
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+	<script type="text/javascript" src="../js/jquery.formalize.min.js"></script>
+	<!--[if lt IE 9]><script type="text/javascript" src="../js/selectivizr.min.js"></script><![endif]-->
+	<script type="text/javascript" src="../js/scripts.js"></script>
+</head>
+<body id="page-discuss" class="content">
+
+	<div class="txp-header">
+		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
+		<p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
+
+		<div class="txp-nav">
+			<ul class="data-dropdown">
+				<li class="dropdown active"><a class="dropdown-toggle" href="content-article.html">Content</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="content-category.html">Categories</a></li>
+						<li class="inactive"><a href="content-article.html">Write</a></li>
+						<li class="inactive"><a href="content-list.html">Articles</a></li>
+						<li class="inactive"><a href="content-image.html">Images</a></li>
+						<li class="inactive"><a href="content-file.html">Files</a></li>
+						<li class="inactive"><a href="content-link.html">Links</a></li>
+						<li class="active"><a href="content-discuss.html">Comments</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="presentation-page.html">Presentation</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="presentation-section.html">Sections</a></li>
+						<li class="inactive"><a href="presentation-page.html">Pages</a></li>
+						<li class="inactive"><a href="presentation-form.html">Forms</a></li>
+						<li class="inactive"><a href="presentation-css.html">Style</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="admin-admin.html">Admin</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="admin-diag.html">Diagnostics</a></li>
+						<li class="inactive"><a href="admin-prefs_basic.html">Preferences</a></li>
+						<li class="inactive"><a href="admin-admin.html">Users</a></li>
+						<li class="inactive"><a href="admin-log.html">Visitor logs</a></li>
+						<li class="inactive"><a href="admin-plugin.html">Plugins</a></li>
+						<li class="inactive"><a href="admin-import.html">Import</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="#">Extensions</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="#">Extension 1</a></li>
+						<li class="inactive"><a href="#">Extension 2</a></li>
+						<li class="inactive"><a href="#">Extension 3</a></li>
+						<li class="inactive"><a href="#">Extension 4</a></li>
+						<li class="inactive"><a href="#">Extension 5</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="txp-nav-select">
+			<select>
+				<optgroup label="Content">
+					<option value="content-category.html">Categories</option>
+					<option value="content-article.html">Write</option>
+					<option value="content-list.html">Articles</option>
+					<option value="content-image.html">Images</option>
+					<option value="content-file.html">Files</option>
+					<option value="content-link.html">Links</option>
+					<option value="content-discuss.html" selected="selected">Comments</option>
+				</optgroup>
+				<optgroup label="Presentation">
+					<option value="presentation-section.html">Sections</option>
+					<option value="presentation-page.html">Pages</option>
+					<option value="presentation-form.html">Forms</option>
+					<option value="presentation-css.html">Style</option>
+				</optgroup>
+				<optgroup label="Admin">
+					<option value="admin-diag.html">Diagnostics</option>
+					<option value="admin-prefs_basic.html">Preferences</option>
+					<option value="admin-admin.html">Users</option>
+					<option value="admin-log.html">Visitor logs</option>
+					<option value="admin-plugin.html">Plugins</option>
+					<option value="admin-import.html">Import</option>
+				</optgroup>
+				<optgroup label="Extensions">
+					<option value="#">Extension 1</option>
+					<option value="#">Extension 2</option>
+					<option value="#">Extension 3</option>
+					<option value="#">Extension 4</option>
+					<option value="#">Extension 5</option>
+				</optgroup>
+			</select>
+		</div>
+
+		<div id="messagepane"></div>
+
+	</div><!-- /txp-header -->
+	<div class="txp-body">
+		<h1 class="txp-heading">Comments</h1>
+
+		<div id="discuss_control" class="txp-control-panel">
+
+			<p class="txp-buttons">
+				<a href="secondary/content-discuss_ipban.html">List banned IPs</a>
+			</p>
+
+			<form method="get" action="index.php" class="search-form">
+				<p>
+					<label for="discuss-search">Search</label>
+					<select id="discuss-search" name="search_method">
+						<option value="id">ID#</option>
+						<option value="parent">Parent</option>
+						<option value="name">Name</option>
+						<option value="message" selected="selected">Message</option>
+						<option value="email">E-mail</option>
+						<option value="website">Website</option>
+						<option value="ip">IP</option>
+					</select>
+					<input type="text" value="" name="crit" size="16" />
+					<input type="submit" value="Go" name="search" />
+				</p>
+			</form>
+
+		</div>
+
+		<div id="discuss_container" class="txp-container">
+
+			<form name="longform" id="discuss_form" class="multi_edit_form" method="post" action="#">
+				<div class="txp-listtables">
+
+					<table class="txp-list">
+
+						<thead>
+							<tr>
+								<th title="toggle_all_selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
+								<th class="id"><a href="#">ID#</a></th>
+								<th class="desc date posted created"><a href="#">Date</a></th>
+								<th class="name"><a href="#">Name</a></th>
+								<th class="message"><a href="#">Message</a></th>
+								<th class="discuss_detail email"><a href="#">E-mail</a></th>
+								<th class="discuss_detail website"><a href="#">Website</a></th>
+								<th class="discuss_detail ip"><a href="#">IP</a></th>
+								<th class="discuss_detail status"><a href="#">Status</a></th>
+								<th class="parent"><a href="#">Parent</a></th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr class="spam">
+								<td class="multi-edit"><input type="checkbox" value="000003" name="selected[]" /></td>
+								<td class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000003</a></td>
+								<td class="date posted created">21&#160;Sep&#160;2011 10:13:58</td>
+								<td class="name">Anon</td>
+								<td class="message">test of a spam comment</td>
+								<td class="discuss_detail email">anon@anon.com</td>
+								<td class="discuss_detail website">&#160;</td>
+								<td class="discuss_detail ip">127.0.0.1</td>
+								<td class="discuss_detail status">Spam</td>
+								<td class="parent"><a href="#">Welcome to Your Site!</a></td>
+							</tr>
+							<tr class="moderate">
+								<td class="multi-edit"><input type="checkbox" value="000002" name="selected[]" /></td>
+								<td class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000002</a></td>
+								<td class="date posted created">21&#160;Sep&#160;2011 10:13:58</td>
+								<td class="name">Phil</td>
+								<td class="message">test of a banned commentator</td>
+								<td class="discuss_detail email">phil@anon.com</td>
+								<td class="discuss_detail website">&#160;</td>
+								<td class="discuss_detail ip">127.0.0.1</td>
+								<td class="discuss_detail status">Unmoderated</td>
+								<td class="parent"><a href="#">Welcome to Your Site!</a></td>
+							</tr>
+							<tr class="visible">
+								<td class="multi-edit"><input type="checkbox" value="000001" name="selected[]" /></td>
+								<td class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000001</a></td>
+								<td class="date posted created">22&#160;Jul&#160;2005 14:11:32</td>
+								<td class="name">Donald Swain</td>
+								<td class="message">I enjoy your site very much.</td>
+								<td class="discuss_detail email">donald.​swain@​example.​com</td>
+								<td class="discuss_detail website">example.​com</td>
+								<td class="discuss_detail ip">127.0.0.1</td>
+								<td class="discuss_detail status"><a href="#" title="View">Visible</a></td>
+								<td class="parent"><a href="#">Welcome to Your Site!</a></td>
+							</tr>
+						</tbody>
+
+					</table>
+
+					<div class="multi-edit">
+						<select name="edit_method">
+							<option value="" selected="selected">With selected&#8230;</option>
+							<option value="visible">Show</option>
+							<option value="unmoderated">Hide (unmoderated)</option>
+							<option value="spam">Hide (spam)</option>
+							<option value="ban">Ban comment author</option>
+							<option value="delete">Delete</option>
+						</select>
+					</div>
+
+				</div>
+			</form>
+
+			<p class="detail-toggle">
+				<input type="checkbox" name="cb_toggle_discuss_detail" id="cb_toggle_discuss_detail" value="1" class="checkbox" onclick="toggleClassRemember('discuss_detail');" checked="checked" />
+				<label for="cb_toggle_discuss_detail">Show detail</label>
+			</p>
+
+			<form class="cb_show_spam" method="post" action="#">
+				<input type="checkbox" name="cb_show_spam" id="cb_show_spam" value="1" class="checkbox" onclick="setClassRemember('show_spam',1);submit(this.form);" checked="checked" />
+				<label for="cb_show_spam">Show spam</label>
+			</form>
+
+			<div id="discuss_navigation" class="txp-navigation">
+				<p class="prev-next">1/1</p>
+				<form method="post" action="index.php" class="pageby">
+					<p>
+						View
+						<select name="qty" onchange="submit(this.form);">
+							<option value="15">15</option>
+							<option value="25">25</option>
+							<option value="50">50</option>
+							<option value="100">100</option>
+						</select>
+						per page
+					</p>
+				</form>
+			</div>
+
+		</div><!-- /txp-container -->
+	</div><!-- /txp-body -->
+
+	<div class="txp-footer">
+		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.5)</p>
+		<p class="pagejump"><a href="#">&#8593; Back to top</a></p>
+	</div><!-- /txp-footer -->
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>Categories - My Site &#124; Textpattern CMS</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="textpattern.js"></script>
+	<link href="../css/textpattern.css" rel="stylesheet" type="text/css" />
+	<link href="../css/experimental.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="generator" content="Textpattern CMS" />
+	<script type="text/javascript" src="../js/modernizr.js"></script>
+	<script type="text/javascript" src="../js/jquery.formalize.min.js"></script>
+	<!--[if lt IE 9]><script type="text/javascript" src="../js/selectivizr.min.js"></script><![endif]-->
+	<script type="text/javascript" src="../js/scripts.js"></script>
+</head>
+<body id="page-category" class="content">
+
+	<div class="txp-header">
+		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
+		<p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
+
+		<div class="txp-nav">
+			<ul class="data-dropdown">
+				<li class="dropdown active"><a class="dropdown-toggle" href="content-article.html">Content</a>
+					<ul class="dropdown-menu">
+						<li class="active"><a href="content-category.html">Categories</a></li>
+						<li class="inactive"><a href="content-article.html">Write</a></li>
+						<li class="inactive"><a href="content-list.html">Articles</a></li>
+						<li class="inactive"><a href="content-image.html">Images</a></li>
+						<li class="inactive"><a href="content-file.html">Files</a></li>
+						<li class="inactive"><a href="content-link.html">Links</a></li>
+						<li class="inactive"><a href="content-discuss.html">Comments</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="presentation-page.html">Presentation</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="presentation-section.html">Sections</a></li>
+						<li class="inactive"><a href="presentation-page.html">Pages</a></li>
+						<li class="inactive"><a href="presentation-form.html">Forms</a></li>
+						<li class="inactive"><a href="presentation-css.html">Style</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="admin-admin.html">Admin</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="admin-diag.html">Diagnostics</a></li>
+						<li class="inactive"><a href="admin-prefs_basic.html">Preferences</a></li>
+						<li class="inactive"><a href="admin-admin.html">Users</a></li>
+						<li class="inactive"><a href="admin-log.html">Visitor logs</a></li>
+						<li class="inactive"><a href="admin-plugin.html">Plugins</a></li>
+						<li class="inactive"><a href="admin-import.html">Import</a></li>
+					</ul>
+				</li>
+				<li class="dropdown inactive"><a class="dropdown-toggle" href="#">Extensions</a>
+					<ul class="dropdown-menu">
+						<li class="inactive"><a href="#">Extension 1</a></li>
+						<li class="inactive"><a href="#">Extension 2</a></li>
+						<li class="inactive"><a href="#">Extension 3</a></li>
+						<li class="inactive"><a href="#">Extension 4</a></li>
+						<li class="inactive"><a href="#">Extension 5</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="txp-nav-select">
+			<select>
+				<optgroup label="Content">
+					<option value="content-category.html" selected="selected">Categories</option>
+					<option value="content-article.html">Write</option>
+					<option value="content-list.html">Articles</option>
+					<option value="content-image.html">Images</option>
+					<option value="content-file.html">Files</option>
+					<option value="content-link.html">Links</option>
+					<option value="content-discuss.html">Comments</option>
+				</optgroup>
+				<optgroup label="Presentation">
+					<option value="presentation-section.html">Sections</option>
+					<option value="presentation-page.html">Pages</option>
+					<option value="presentation-form.html">Forms</option>
+					<option value="presentation-css.html">Style</option>
+				</optgroup>
+				<optgroup label="Admin">
+					<option value="admin-diag.html">Diagnostics</option>
+					<option value="admin-prefs_basic.html">Preferences</option>
+					<option value="admin-admin.html">Users</option>
+					<option value="admin-log.html">Visitor logs</option>
+					<option value="admin-plugin.html">Plugins</option>
+					<option value="admin-import.html">Import</option>
+				</optgroup>
+				<optgroup label="Extensions">
+					<option value="#">Extension 1</option>
+					<option value="#">Extension 2</option>
+					<option value="#">Extension 3</option>
+					<option value="#">Extension 4</option>
+					<option value="#">Extension 5</option>
+				</optgroup>
+			</select>
+		</div>
+
+		<div id="messagepane"></div>
+
+	</div><!-- /txp-header -->
+	<div class="txp-body">
+		<h1 class="txp-heading">Categories</h1>
+
+		<div id="category_container" class="txp-container">
+
+			<table class="category-list">
+				<tr>
+					<td class="categories article">
+						<div id="categories_article">
+	
+							<h2>Articles&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=article_category&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></h2>
+	
+							<form method="post" action="#" class="action-create article">
+								<input type="text" value="" name="title" size="32" />
+								<div class="parent">
+									<label for="article_category_parent">Parent</label>
+									<select name="parent_cat" id="article_category_parent">
+										<option value="" selected="selected">&#160;</option>
+										<option value="hope-for-the-future">Hope for the Future</option>
+										<option value="meaningful-labor">Meaningful Labor</option>
+										<option value="reciprocal-affection">Reciprocal Affection</option>
+									</select>
+								</div>
+								<input type="submit" value="Create" />
+							</form>
+
+							<form method="post" action="#" id="category_article_form" class="category-tree">
+								<p class="level-0"><input type="checkbox" name="selected[]" value="5" class="checkbox" />&#160;<a href="secondary/content-category_edit.html">Hope for the Future</a>&#160;<a href="#">(1)</a></p>
+								<p class="level-1"><input type="checkbox" name="selected[]" value="14" class="checkbox" />&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 1-1</a>&#160;(0)</p>
+								<p class="level-2"><input type="checkbox" name="selected[]" value="16" class="checkbox" />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 2-1</a>&#160;(0)</p>
+								<p class="level-3"><input type="checkbox" name="selected[]" value="17" class="checkbox" />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 3-1</a>&#160;(0)</p>
+								<p class="level-1"><input type="checkbox" name="selected[]" value="15" class="checkbox" />&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 1-2</a>&#160;(0)</p>
+								<p class="level-1"><input type="checkbox" name="selected[]" value="18" class="checkbox" />&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 1-3</a>&#160;(0)</p>
+								<p class="level-0"><input type="checkbox" name="selected[]" value="6" class="checkbox" />&#160;<a href="secondary/content-category_edit.html">Meaningful Labor</a>&#160;<a href="#">(1)</a></p>
+								<p class="level-0"><input type="checkbox" name="selected[]" value="7" class="checkbox" />&#160;<a href="secondary/content-category_edit.html">Reciprocal Affection</a>&#160;(0)</p>
+								<div class="multi-edit">
+									<select name="edit_method">
+										<option value="" selected="selected">With selected&#8230;</option>
+										<option value="changeparent">changeparent</option>
+										<option value="deleteforce">deleteforce</option>
+										<option value="delete">Delete</option>
+									</select>
+									<div class="multi-option" id="multi-option-changeparent">
+										<select name="new_parent">
+											<option value="" selected="selected">&#160;</option>
+											<option value="hope-for-the-future">Hope for the Future</option>
+											<option value="meaningful-labor">Meaningful Labor</option>
+											<option value="test-nested-category">&#160;&#160;test nested category</option>
+											<option value="reciprocal-affection">Reciprocal Affection</option>
+										</select>
+									</div>
+									<input type="submit" value="Go" />
+								</div>
+							</form>
+						</div>
+					</td>
+					<td class="categories link">
+						<div id="categories_link">
+	
+							<h2>Links&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=link_category&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></h2>
+	
+							<form method="post" action="#" class="action-create link">
+								<input type="text" value="" name="title" size="32" />
+								<div class="parent">
+									<label for="link_category_parent">Parent</label>
+									<select name="parent_cat">
+										<option value="" selected="selected">&#160;</option>
+										<option value="textpattern">Textpattern</option>
+									</select>
+								</div>
+								<input type="submit" value="Create" />
+							</form>
+	
+							<form method="post" action="#" id="category_link_form" class="category-tree">
+								<p class="level-0"><input type="checkbox" name="selected[]" value="8" class="checkbox" />&#160;<a href="secondary/content-category_edit.html">Textpattern</a>&#160;<a href="#">(3)</a></p>
+								<div class="multi-edit">
+									<select name="edit_method">
+										<option value="" selected="selected">With selected&#8230;</option>
+										<option value="changeparent">changeparent</option>
+										<option value="deleteforce">deleteforce</option>
+										<option value="delete">Delete</option>
+									</select>
+									<div class="multi-option" id="multi-option-changeparent">
+										<select name="new_parent">
+											<option value="" selected="selected">&#160;</option>
+											<option value="textpattern">Textpattern</option>
+										</select>
+									</div>
+									<input type="submit" value="Go" />
+								</div>
+							</form>
+						</div>
+					</td>
+					<td class="categories image">
+						<div id="categories_image">
+	
+							<h2>Images&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=image_category&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></h2>
+	
+							<form method="post" action="#" class="action-create image">
+								<input type="text" value="" name="title" size="32" />
+								<div class="parent">
+									<label for="image_category_parent">Parent</label>
+									<select name="parent_cat" id="image_category_parent">
+										<option value="" selected="selected">&#160;</option>
+										<option value="site-design">Site Design</option>
+									</select>
+								</div>
+								<input type="submit" value="Create" />
+							</form>
+	
+							<form method="post" action="#" id="category_image_form" class="category-tree">
+								<p class="level-0"><input type="checkbox" name="selected[]" value="9" class="checkbox" />&#160;<a href="secondary/content-category_edit.html">Site Design</a>&#160;<a href="#">(2)</a></p>
+								<div class="multi-edit">
+									<select name="edit_method">
+										<option value="" selected="selected">With selected&#8230;</option>
+										<option value="changeparent">changeparent</option>
+										<option value="deleteforce">deleteforce</option>
+										<option value="delete">Delete</option>
+									</select>
+									<div class="multi-option" id="multi-option-changeparent">
+										<select name="new_parent">
+											<option value="" selected="selected">&#160;</option>
+											<option value="site-design">Site Design</option>
+										</select>
+									</div>
+									<input type="submit" value="Go" />
+								</div>
+							</form>
+						</div>
+					</td>
+					<td class="categories file">
+						<div id="categories_file">
+	
+							<h2>Files&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=file_category&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></h2>
+	
+							<form method="post" action="#" class="action-create file">
+								<input type="text" value="" name="title" size="32" />
+								<input type="submit" value="Create" />
+							</form>
+	
+							<p>None exist.</p>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+		</div><!-- /txp-container -->
+	</div><!-- /txp-body -->
+
+	<div class="txp-footer">
+		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.5)</p>
+		<p class="pagejump"><a href="#">&#8593; Back to top</a></p>
+	</div><!-- /txp-footer -->
+
+</body>
+</html>
