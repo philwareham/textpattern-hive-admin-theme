@@ -42,8 +42,10 @@ legend {
 
 textarea,
 select,
+input[type="email"],
 input[type="password"],
-input[type="text"] {
+input[type="text"],
+input[type="url"] {
 	-webkit-appearance: none;
 	@include border-radius(0);
 	@include background-clip;
@@ -150,10 +152,12 @@ textarea[disabled],
 .boxshadow {
 	button,
 	input[type="button"],
+	input[type="email"],
 	input[type="password"],
 	input[type="reset"],
 	input[type="submit"],
 	input[type="text"],
+	input[type="url"],
 	select,
 	textarea,
 	.txp-logout a,
