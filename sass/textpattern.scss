@@ -34,15 +34,10 @@ summary {
 }
 
 html {
-	/* prevents iOS text size adjust after orientation change, without disabling user zoom -
-	   http://www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+	/* prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-webkit-text-size-adjust: 100%;
 	/* as above, for Windows Phone */
 	-ms-text-size-adjust: 100%;
-}
-
-body {
-	margin: 0;
 }
 
 
@@ -51,6 +46,10 @@ body {
 
 .clearfix {
 	@include clearfix;
+}
+
+.clear {
+	clear: both;
 }
 
 
@@ -62,6 +61,7 @@ body {
 
 body {
 	position: relative;
+	margin: 0;
 	padding: 5em 2em 0;
 	min-width: 71.3846153846154em; // 928px + (13px x 4) = 980px
 	color: $color-text;
@@ -143,6 +143,103 @@ body {
 
 .pagejump {
 	float: right;
+}
+
+
+/* Miscellaneous/shared layout
+   ========================================================================== */
+
+.txp-accessibility {
+	display: none;
+}
+
+.txp-control-panel {
+	text-align: center;
+	line-height: 2;
+	p {
+		margin-top: 0;
+	}
+}
+
+div.multi-edit {
+	margin: 1em 0;
+}
+
+.multi-option {
+	display: none;
+}
+
+.multi-step {
+	margin-left: .30769230769231em;
+	display: inline-block;
+}
+
+.txp-columntable {
+	width: 100%;
+}
+
+.text-column {
+	margin: 0 auto;
+	max-width: $text-column;
+}
+
+.text-section {
+	padding-top: 5em;
+	background: url("../img/separator.gif") repeat-x 0 2.15384615384615em; // 28px / 13px
+}
+
+/* grids */
+
+.txp-grid {
+	text-align: center;
+	margin-bottom: .69230769230769em; // 9px / 13px
+}
+
+.txp-grid-cell {
+	@include box-sizing;
+	display: inline-block;
+	text-align: left;
+	max-width: 22.6153846153846em; // 294px / 13px
+	vertical-align: top;
+	margin: 0 .15384615384615em .30769230769231em; // 2px / 13px and 4px / 13px
+	border: 1px solid $color-border;
+	padding: 0 1em;
+}
+
+.restricted-area {
+	font-size: 2em; // 26px / 13px
+	text-align: center;
+}
+
+.empty {
+	display: none;
+}
+
+.disabled {
+	opacity: .33;
+	/* transparency support for IE8 */
+	filter: alpha(opacity=33);
+}
+
+/* list navigators on list pages */
+.txp-navigation {
+	@extend .clearfix;
+
+	.pageby {
+		float: left;
+	}
+
+	.prev-next {
+		float: right;
+	}
+}
+
+/* AJAX spinner */
+span.spinner {
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	@include hires-graphic(spinner, gif, 13px, 13px);
 }
 
 
@@ -229,104 +326,6 @@ body {
 	input[type="submit"] {
 		float: right;
 	}
-}
-
-
-/* Miscellaneous/shared layout
-   ========================================================================== */
-
-.txp-accessibility {
-	display: none;
-}
-
-.txp-control-panel {
-	text-align: center;
-	line-height: 2;
-	p {
-		margin-top: 0;
-	}
-}
-
-div.multi-edit {
-	margin: 1em 0;
-}
-
-.multi-option {
-	display: none;
-}
-
-.multi-step {
-	margin-left: .30769230769231em;
-	display: inline-block;
-}
-
-.txp-columntable {
-	width: 100%;
-}
-
-.text-column {
-	margin: 0 auto;
-	max-width: $text-column;
-}
-
-.text-section {
-	padding-top: 5em;
-	background: url("../img/separator.gif") repeat-x 0 2.15384615384615em; // 28px / 13px
-}
-
-/* grids */
-
-.txp-grid {
-	text-align: center;
-	margin-bottom: .69230769230769em; // 9px / 13px
-}
-
-.txp-grid-cell {
-	@include box-sizing;
-	display: inline-block;
-	text-align: left;
-	max-width: 22.6153846153846em; // 294px / 13px
-	vertical-align: top;
-	margin: 0 .15384615384615em .30769230769231em; // 2px / 13px and 4px / 13px
-	border: 1px solid $color-border;
-	padding: 0 1em;
-}
-
-.restricted-area {
-	font-size: 2em; // 26px / 13px
-	text-align: center;
-}
-
-.empty {
-	display: none;
-}
-
-.disabled {
-	opacity: .33;
-	/* transparency support for IE < 9 */
-	filter: alpha(opacity=33);
-	*zoom: 1;
-}
-
-/* list navigators on list pages */
-.txp-navigation {
-	@extend .clearfix;
-
-	.pageby {
-		float: left;
-	}
-
-	.prev-next {
-		float: right;
-	}
-}
-
-/* AJAX spinner */
-span.spinner {
-	display: inline-block;
-	width: 13px;
-	height: 13px;
-	@include hires-graphic(spinner, gif, 13px, 13px);
 }
 
 

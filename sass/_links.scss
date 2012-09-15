@@ -16,14 +16,14 @@ a {
 		outline: thin dotted $color-link-hover;
 	}
 
-	&:hover,
-	&:active {
-		outline: 0;
-	}
-
 	&:hover {
 		color: $color-link-hover;
 		text-decoration: underline;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
 	}
 
 	&.busy {
