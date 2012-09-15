@@ -16,11 +16,11 @@ input[type="button"],
 .navlink,
 .navlink-active,
 .txp-buttons a {
-	-webkit-appearance: none;
+	-webkit-appearance: none; // remove iOS Safari default styling
 	@include background-clip;
 	@include box-sizing;
 	width: auto;
-	height: 2em;
+	height: 2em; // 24px / 12px
 	overflow: visible;
 	font-family: $font-body;
 	font-size: .92307692307692em;  // 12px / 13px
@@ -52,7 +52,7 @@ input[type="button"],
 .navlink-disabled {
 	@include background-clip;
 	@include box-sizing;
-	height: 2em;
+	height: 2em; // 24px / 12px
 	font-size: .92307692307692em;  // 12px / 13px
 	line-height: 1.33333333333333; // 16px / 12px
 	border: 1px solid;

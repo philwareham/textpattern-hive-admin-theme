@@ -268,13 +268,22 @@ html[lang="zh-tw"] {
 
 /* Embedded content
    ========================================================================== */
-/* 1. removes border when inside 'a' element in IE7-9, Firefox3
-   2. improves image quality when scaled in IE7 */
+/* image alignemnts */
 img {
-  /* 1 */
+  /* removes border when inside 'a' element in IE8-9 */
   border: 0;
-  /* 2 */
-  -ms-interpolation-mode: bicubic;
+}
+img.align-left {
+  float: left;
+  margin: 1em 1em 1em 0;
+}
+img.align-right {
+  float: right;
+  margin: 1em 0 1em 1em;
+}
+img.align-center {
+  display: block;
+  margin: 1em auto;
 }
 
 /* corrects overflow displayed oddly in IE9 */
@@ -291,27 +300,10 @@ svg:not(:root) {
   -webkit-box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
 }
-
 a:hover .content-image {
   border: solid 1px #0066ff;
   -webkit-box-shadow: 0 0 0.46154em rgba(0, 102, 255, 0.4);
   box-shadow: 0 0 0.46154em rgba(0, 102, 255, 0.4);
-}
-
-/* image alignments */
-.align-left {
-  float: left;
-  margin: 1em 1em 1em 0;
-}
-
-.align-right {
-  float: right;
-  margin: 1em 0 1em 1em;
-}
-
-.align-center {
-  display: block;
-  margin: 1em auto;
 }
 
 /* Messages
@@ -723,12 +715,100 @@ legend {
   box-sizing: border-box;
 }
 
-textarea,
-select,
+/* colour placeholder text (Webkit and Mozilla only, so far) */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #999999;
+}
+
+/* colour placeholder text when using polyfill */
+span.placeholder {
+  color: #999999;
+}
+
+/* suppress red glow that Firefox adds to form fields by default, even when user is still typing
+   and kill phantom spacing and dotted border that appears in Firefox */
+input:invalid,
+button:invalid,
+select:invalid,
+textarea:invalid {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner,
+select::-moz-focus-inner,
+textarea::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* better focus glows, if box-shadow is supported */
+.boxshadow input[type="color"]:focus,
+.boxshadow input[type="date"]:focus,
+.boxshadow input[type="datetime"]:focus,
+.boxshadow input[type="datetime-local"]:focus,
+.boxshadow input[type="email"]:focus,
+.boxshadow input[type="month"]:focus,
+.boxshadow input[type="number"]:focus,
+.boxshadow input[type="password"]:focus,
+.boxshadow input[type="search"]:focus,
+.boxshadow input[type="tel"]:focus,
+.boxshadow input[type="text"]:focus,
+.boxshadow input[type="time"]:focus,
+.boxshadow input[type="url"]:focus,
+.boxshadow input[type="week"]:focus,
+.boxshadow select:focus,
+.boxshadow textarea:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 7px #0066ff;
+  box-shadow: 0 0 7px #0066ff;
+  /* Opera */
+  z-index: 1;
+}
+.boxshadow button:focus,
+.boxshadow input[type="button"]:focus,
+.boxshadow input[type="reset"]:focus,
+.boxshadow input[type="submit"]:focus,
+.boxshadow .txp-logout a:focus,
+.boxshadow .action-create a:focus,
+.boxshadow .navlink:focus,
+.boxshadow .navlink-active:focus,
+.boxshadow .txp-buttons a:focus {
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
+  /* Opera */
+  z-index: 1;
+}
+
+/* removes inner padding and search cancel button in Safari 5+ and Chrome on OS X */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
 input[type="email"],
+input[type="month"],
+input[type="number"],
 input[type="password"],
+input[type="search"],
+input[type="tel"],
 input[type="text"],
-input[type="url"] {
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea {
   -webkit-appearance: none;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -753,17 +833,7 @@ input[type="url"] {
 
 input[type="color"] {
   padding: 0;
-  height: 1.8em;
-}
-
-/* addresses box sizing set to content-box and excess padding in IE8-9 */
-input[type="checkbox"],
-input[type="radio"] {
-  margin-right: .5em;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  height: 1.84615384615385em;
 }
 
 textarea {
@@ -784,10 +854,10 @@ select[multiple] {
 
 select[size="0"],
 select[size="1"] {
-  height: 1.8em;
+  height: 1.84615384615385em;
 }
 
-/* tweaks for Safari, Chrome */
+/* addresses select alignment in Safari/Chrome */
 @media (-webkit-min-device-pixel-ratio: 0) {
   select[size],
   select[multiple],
@@ -816,8 +886,22 @@ optgroup::-moz-focus-inner {
   padding: 0;
 }
 
+/* addresses box sizing set to content-box and excess padding in IE8-9 */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: .5em;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* make sure disable elements really are disabled */
 button[disabled],
 input[disabled],
+input[type="button"][disabled],
+input[type="reset"][disabled],
+input[type="submit"][disabled],
 select[disabled],
 select[disabled] option,
 select[disabled] optgroup,
@@ -835,54 +919,6 @@ textarea[disabled],
   user-select: none;
   color: #999999 !important;
   cursor: default;
-}
-
-.boxshadow button:focus,
-.boxshadow input[type="button"]:focus,
-.boxshadow input[type="email"]:focus,
-.boxshadow input[type="password"]:focus,
-.boxshadow input[type="reset"]:focus,
-.boxshadow input[type="submit"]:focus,
-.boxshadow input[type="text"]:focus,
-.boxshadow input[type="url"]:focus,
-.boxshadow select:focus,
-.boxshadow textarea:focus,
-.boxshadow .txp-logout a:focus,
-.boxshadow .action-create a:focus,
-.boxshadow .navlink:focus,
-.boxshadow .navlink-active:focus,
-.boxshadow .txp-buttons a:focus {
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
-  /* Opera */
-  z-index: 1;
-}
-
-input[type="file"]:focus, input[type="file"]:active,
-input[type="radio"]:focus,
-input[type="radio"]:active,
-input[type="checkbox"]:focus,
-input[type="checkbox"]:active {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-/* suppress red glow that Firefox adds to form fields by default, even when user is still typing
-   and kill phantom spacing and dotted border that appears in Firefox */
-input:invalid,
-button:invalid,
-select:invalid,
-textarea:invalid {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-input::-moz-focus-inner,
-button::-moz-focus-inner,
-select::-moz-focus-inner,
-textarea::-moz-focus-inner {
-  border: 0;
-  padding: 0;
 }
 
 /* additional input field widths */
