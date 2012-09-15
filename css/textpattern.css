@@ -69,6 +69,25 @@ a.busy {
   visibility: hidden;
 }
 
+.pophelp,
+.pophelpsubtle {
+  border: 1px solid #fff;
+  padding: 0 .23076923076923em;
+  font-weight: normal;
+  background: #e5e5e5;
+  -moz-border-radius: 0.53846em;
+  border-radius: 0.53846em;
+}
+
+.txp-list thead th a.pophelp {
+  display: inline;
+  color: #114eb1;
+}
+.txp-list thead th a.pophelp:hover {
+  color: #0066ff;
+  text-decoration: underline;
+}
+
 /* Typography
    ========================================================================== */
 body {
@@ -109,42 +128,28 @@ h6 {
   margin: 0 0 1em;
 }
 
-/* addresses style set to 'bolder' in Firefox3-4, Safari4-5, Chrome */
+/* addresses style set to `bolder` in Firefox4+, Safari5, and Chrome */
 b,
 strong {
   font-weight: bold;
+}
+
+address {
+  margin: 1em 0;
 }
 
 blockquote {
   margin: 1em 2em;
 }
 
-dfn,
-q,
-var {
-  font-style: italic;
-  background: #fff6d3;
+/* sets consistent quote types */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
-/* addresses styling not present in Safari5, Chrome */
+/* addresses styling not present in Safari5 and Chrome */
 dfn {
   font-style: italic;
-}
-
-/* addresses CSS quotes not supported in IE7, addresses quote property not supported in Safari4 */
-q {
-  quotes: none;
-}
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-var {
-  padding: 0 .23076923076923em;
-  -moz-border-radius: 0.23077em;
-  border-radius: 0.23077em;
-  font-weight: bold;
 }
 
 /* addresses styling not present in IE8-9, Safari5, Chrome */
@@ -154,12 +159,20 @@ dfn[title] {
   cursor: help;
 }
 
-/* corrects font family set oddly in Safari4-5, Chrome - en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+mark,
+var {
+  padding: 0 .23076923076923em;
+  -moz-border-radius: 0.23077em;
+  border-radius: 0.23077em;
+  color: #333333;
+  background: #fff6d3;
+}
+
+/* corrects font size set oddly in Safari5 and Chrome */
 pre,
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -198,7 +211,7 @@ code.body,
 code.excerpt {
   border: 0;
   padding: 0;
-  background: transparent;
+  background: none;
 }
 
 /* prevents sub and sup affecting line-height in all browsers */
@@ -219,6 +232,7 @@ sub {
 }
 
 small,
+figcaption,
 .txp-footer {
   font-size: 0.84615em;
 }
@@ -227,25 +241,6 @@ hr {
   margin: 1.5em 0;
   border-color: #cccccc;
   border-style: solid;
-}
-
-.pophelp,
-.pophelpsubtle {
-  border: 1px solid #fff;
-  padding: 0 .23076923076923em;
-  font-weight: normal;
-  background: #e5e5e5;
-  -moz-border-radius: 0.53846em;
-  border-radius: 0.53846em;
-}
-
-.txp-list thead th a.pophelp {
-  display: inline;
-  color: #114eb1;
-}
-.txp-list thead th a.pophelp:hover {
-  color: #0066ff;
-  text-decoration: underline;
 }
 
 /* Support for non-latin languages
@@ -284,6 +279,11 @@ img.align-right {
 img.align-center {
   display: block;
   margin: 1em auto;
+}
+
+/* addresses margin not present in IE 8-9 and Safari 5 */
+figure {
+  margin: 0;
 }
 
 /* corrects overflow displayed oddly in IE9 */

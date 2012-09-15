@@ -27,6 +27,11 @@ img {
 	}
 }
 
+/* addresses margin not present in IE 8-9 and Safari 5 */
+figure {
+	margin: 0;
+}
+
 /* corrects overflow displayed oddly in IE9 */
 svg:not(:root) {
 	overflow: hidden;

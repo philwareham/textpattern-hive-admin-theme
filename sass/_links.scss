@@ -30,3 +30,22 @@ a {
 		visibility: hidden;
 	}
 }
+
+.pophelp,
+.pophelpsubtle {
+	border: 1px solid #fff;
+	padding: 0 .23076923076923em;
+	font-weight: normal;
+	background: #e5e5e5;
+	@include border-radius(.53846153846154em);
+}
+
+.txp-list thead th a.pophelp {
+	display: inline;
+	color: $color-link;
+
+	&:hover {
+		color: $color-link-hover;
+		text-decoration: underline;
+	}
+}
