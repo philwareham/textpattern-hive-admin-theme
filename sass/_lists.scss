@@ -1,0 +1,35 @@
+//
+// note: this file is for use with Sass- http://sass-lang.com,
+// don't use it as your live site stylesheet!
+//
+
+
+/* Lists
+   ========================================================================== */
+
+/* addresses paddings set differently */
+menu,
+ol,
+ul {
+	padding: 0 0 0 2em;
+}
+
+/* remove margins from nested lists */
+ul ul,
+ol ol,
+dl dl {
+	margin: 0;
+}
+
+dd {
+	margin: 0 0 0 2em;
+}
+
+dt {
+	font-style: bold;
+}
+
+.plain-list {
+	list-style: none;
+	padding-left: 0;
+}

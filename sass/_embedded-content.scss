@@ -4,8 +4,22 @@
 //
 
 
-/* Images
+/* Embedded content
    ========================================================================== */
+
+/* 1. removes border when inside 'a' element in IE7-9, Firefox3
+   2. improves image quality when scaled in IE7 */
+img {
+	/* 1 */
+	border: 0;
+	/* 2 */
+	-ms-interpolation-mode: bicubic;
+}
+
+/* corrects overflow displayed oddly in IE9 */
+svg:not(:root) {
+	overflow: hidden;
+}
 
 .content-image {
 	border: solid 1px $color-border;

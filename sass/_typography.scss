@@ -7,6 +7,12 @@
 /* Typography
    ========================================================================== */
 
+body {
+	font-family: $font-body;
+	font-size: $basefont;
+	line-height: $baseline;
+}
+
 h1 {
 	font-size: 2em; // 26px / 13px
 	line-height: 1.23076923076923; // 32px / 26px
@@ -42,9 +48,14 @@ h6 {
 	margin: 0 0 1em;
 }
 
-small,
-.txp-footer {
-	font-size: $smallfont;
+/* addresses style set to 'bolder' in Firefox3-4, Safari4-5, Chrome */
+b,
+strong {
+	font-weight: bold;
+}
+
+blockquote {
+	margin: 1em 2em;
 }
 
 dfn,
@@ -54,10 +65,42 @@ var {
 	background: $color-highlight-box;
 }
 
+/* addresses styling not present in Safari5, Chrome */
+dfn {
+	font-style: italic;
+}
+
+/* addresses CSS quotes not supported in IE7, addresses quote property not supported in Safari4 */
+q {
+	quotes: none;
+
+	&:before,
+	&:after {
+		content: "";
+		content: none;
+	}
+}
+
 var {
 	padding: 0 .23076923076923em;
 	@include border-radius(.23076923076923em); // 3px / 13px
 	font-weight: bold;
+}
+
+/* addresses styling not present in IE8-9, Safari5, Chrome */
+abbr[title],
+dfn[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+/* corrects font family set oddly in Safari4-5, Chrome - en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre,
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
 }
 
 pre,
@@ -94,6 +137,26 @@ code.excerpt {
 	border: 0;
 	padding: 0;
 	background: transparent;
+}
+
+/* prevents sub and sup affecting line-height in all browsers */
+sub,
+sup {
+	font-size: $smallfont;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -.5em;
+}
+sub {
+	bottom: -.25em;
+}
+
+small,
+.txp-footer {
+	font-size: $smallfont;
 }
 
 hr {

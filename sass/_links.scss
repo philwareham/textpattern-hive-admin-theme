@@ -12,12 +12,21 @@ a {
 	color: $color-link;
 	text-decoration: none;
 
+	&:focus {
+		outline: thin dotted $color-link-hover;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+
 	&:hover {
 		color: $color-link-hover;
 		text-decoration: underline;
 	}
-}
 
-a.busy {
-	visibility: hidden;
+	&.busy {
+		visibility: hidden;
+	}
 }

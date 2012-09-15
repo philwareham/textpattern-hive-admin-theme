@@ -1,0 +1,242 @@
+//
+// note: this file is for use with Sass- http://sass-lang.com,
+// don't use it as your live site stylesheet!
+//
+
+
+/* Forms
+   ========================================================================== */
+
+fieldset {
+	position: relative;
+	margin: 0 0 1em 0;
+	border: 1px solid lighten($color-border, 9%);
+	border-top: 0;
+	padding: 2.07692307692308em 0 0 0;
+	background: $color-background-box;
+}
+
+fieldset > * {
+	margin-right: 1em;
+	margin-left: 1em;
+}
+
+.toggle fieldset {
+	margin-top: 1em;
+}
+
+legend {
+	position: absolute;
+	top: 0;
+	margin: 0;
+	border: 0;
+	padding: 0 1em;
+	width: 100%;
+	font-weight: bold;
+	line-height: 2em;
+	@include text-shadow-light;
+	@include box-shadow(inset 0 1px 0 0 rgba(#fff, .25));
+	@include gradient-bar($color-gradient-from, $color-gradient-to);
+	@include box-sizing;
+}
+
+textarea,
+select,
+input[type="password"],
+input[type="text"] {
+	-webkit-appearance: none;
+	@include border-radius(0);
+	@include background-clip;
+	@include box-sizing;
+	font-family: $font-body;
+	font-size: 1em;
+	line-height: 1.46153846153846; // 19px / 13px
+	color: $color-text;
+	background-color: $color-background;
+	margin: 0;
+	border: 1px solid $color-border;
+	padding: .15384615384615em .38461538461538em;
+	height: 1.84615384615385em; // 24px / 13px
+	max-width: 100%;
+}
+
+input[type="color"] {
+	padding: 0;
+	height: 1.8em;
+}
+
+/* addresses box sizing set to content-box and excess padding in IE8-9 */
+input[type="checkbox"],
+input[type="radio"] {
+	margin-right: .5em;
+	padding: 0;
+	@include box-sizing;
+}
+
+textarea {
+	min-height: 4.38461538461538em; // 57px / 13px
+	resize: vertical;
+	width: 100%;
+	/* removes default vertical scrollbar in IE8-9 */
+	overflow: auto;
+	/* improves readability and alignment in all browsers */
+	vertical-align: top;
+}
+
+textarea,
+select[size],
+select[multiple] {
+	height: auto;
+}
+
+select[size="0"],
+select[size="1"] {
+	height: 1.8em;
+}
+
+/* tweaks for Safari, Chrome */
+@media (-webkit-min-device-pixel-ratio: 0) {
+
+	select[size],
+	select[multiple],
+	select[multiple][size] {
+		background-image: none;
+		padding-right: .23076923076923em;
+	}
+
+	select,
+	select[size="0"],
+	select[size="1"] {
+		background: $color-background url("../img/svg/select_arrow.svg") no-repeat right center;
+		padding-right: 2em;
+		-webkit-background-size: 1em .30769230769231em;
+	            background-size: 1em .30769230769231em;
+	}
+
+}
+
+optgroup {
+	font-family: $font-body; // font family repeated, for Firefox
+	font-style: normal;
+	font-weight: normal;
+	color: $color-text;
+
+	&::-moz-focus-inner { // kill phantom spacing and dotted border that appears in Firefox
+		border: 0;
+		padding: 0;
+	}
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled],
+.navlink-disabled {
+	opacity: 1;
+	border-color: $color-gradient-to !important;
+	background: #eee !important;
+	text-shadow: none !important;
+	@include box-shadow(none !important);
+	 -khtml-user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: -moz-none;
+			user-select: none;
+	color: $color-text-footnote !important;
+	cursor: default;
+}
+
+.boxshadow {
+	button,
+	input[type="button"],
+	input[type="password"],
+	input[type="reset"],
+	input[type="submit"],
+	input[type="text"],
+	select,
+	textarea,
+	.txp-logout a,
+	.action-create a,
+	.navlink,
+	.navlink-active,
+	.txp-buttons a {
+		&:focus {
+			outline: 0;
+			@include box-shadow-multi(inset 0 1px 0 0 rgba(#fff, .25), 0 0 7px $color-link-hover);
+			/* Opera */
+			z-index: 1;
+		}
+	}
+}
+
+input[type="file"],
+input[type="radio"],
+input[type="checkbox"] {
+	&:focus,
+	&:active {
+		@include box-shadow(none);
+	}
+}
+
+/* suppress red glow that Firefox adds to form fields by default, even when user is still typing
+   and kill phantom spacing and dotted border that appears in Firefox */
+input,
+button,
+select,
+textarea {
+	&:invalid {
+		@include box-shadow(none);
+	}
+
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+}
+
+/* additional input field widths */
+
+input[size="32"] {
+	width: 100%;
+	max-width: 23.2307692307692em; // 302px / 13px
+}
+
+input.input-large {
+	width: 100%;
+}
+
+input.input-medium {
+	width: 50%;
+	max-width: 11.6153846153846em; // 151px / 13px
+}
+
+input.input-small {
+	width: 25%;
+	max-width: 5.76923076923077em; // 75px / 13px
+}
+
+input.input-xsmall {
+	width: 16.6666666666667%;
+	max-width: 3.46153846153846em; // 45px / 13px
+}
+
+input {
+	&.year,
+	&.exp_year {
+		width: 3.30769230769231em; // 43px / 13px
+	}
+
+	&.month,
+	&.exp_month,
+	&.day,
+	&.exp_day,
+	&.hour,
+	&.exp_hour,
+	&.minute,
+	&.exp_minute,
+	&.second,
+	&.exp_second {
+		width: 2.30769230769231em; // 30px / 13px
+	}
+}
