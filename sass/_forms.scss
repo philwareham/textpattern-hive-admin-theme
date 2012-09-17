@@ -50,11 +50,6 @@ textarea:-moz-placeholder {
 	color: $color-text-footnote;
 }
 
-/* colour placeholder text when using polyfill */
-span.placeholder {
-	color: $color-text-footnote;
-}
-
 /* removes inner padding and border in Firefox 4+ */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
