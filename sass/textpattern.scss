@@ -704,7 +704,13 @@ body#page-setup {
 /* Admin -> Preferences page
    ========================================================================== */
 
-#page-prefs .txp-list {
+
+
+
+/* Admin -> Preferences page
+   ========================================================================== */
+
+#page-lang .txp-list {
 	tr td,
 	tr.even td {
 		height: 1.84615384615385em; // 24px / 13px
@@ -715,28 +721,6 @@ body#page-setup {
 		color: $color-text-footnote;
 		margin-left: .6em;
 	}
-
-	.pref-heading {
-		border-top: 1px solid $color-gradient-to;
-		border-right: 1px solid darken($color-gradient-to, 5%);
-		border-bottom: 1px solid darken($color-gradient-to, 10%);
-
-		td {
-			@include text-shadow-light;
-			@include gradient($color-gradient-from, $color-gradient-to);
-			height: auto;
-		}
-	}
-}
-
-#page-prefs .basic .pref-value,
-#page-prefs .advanced .pref-value {
-	width: 66%;
-}
-
-.pref-heading h3 {
-	font-size: 1em;
-	margin: 0;
 }
 
 #language_control {
