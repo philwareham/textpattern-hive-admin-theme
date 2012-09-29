@@ -535,6 +535,7 @@
 
 		<div class="text-section" id="ui-doc-tables">
 			<h1>Tables <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.5</span></h1>
+
 			<pre><code>&lt;div class="txp-listtables"&gt;
 	&lt;table class="txp-list"&gt;
 		&lt;thead&gt;
@@ -612,6 +613,7 @@
 
 		<div class="text-section" id="ui-doc-progress">
 			<h1>Progress meters <span class="information" style="font-size:.5em;font-weight:normal;">new v4.5</span></h1>
+
 			<pre><code>&lt;div class="progress-meter"&gt;
 	&lt;p&gt;There are 4 steps to this installation process:&lt;/p&gt;
 	&lt;ol&gt;
@@ -636,7 +638,8 @@
 
 
 		<div class="text-section" id="ui-doc-summarydetails">
-			<h1>Summary/details boxes</h1>
+			<h1>Summary/details boxes <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.6</span></h1>
+
 			<pre><code>&lt;div class="txp-details"&gt;
 	&lt;h3 class="txp-summary"&gt;&lt;a href="#name-of-details"&gt;Summary lever&lt;/a&gt;&lt;/h3&gt;
 	&lt;div id="name-of-details" class="toggle"&gt;
@@ -671,6 +674,7 @@
 				</div>
 			</div>
 
+			<p><strong>Note:</strong> will eventually be changed to use HTML5 <code>details</code> and <code>summary</code> tags when browser support is better.</p>
 		</div>
 
 
@@ -877,8 +881,8 @@
 						<legend>Fieldset within fieldset</legend>
 						<p>Standard paragraph text within a fieldset.</p>
 					</fieldset>
-					<div class="summary-details">
-						<h3 class="lever expanded"><a href="#details2">Summary/details box within fieldset</a></h3>
+					<div class="txp-details">
+						<h3 class="txp-summary expanded"><a href="#details2">Summary/details box within fieldset</a></h3>
 						<div id="details2" class="toggle">
 							<p>Standard paragraph text within a details box.</p>
 						</div>

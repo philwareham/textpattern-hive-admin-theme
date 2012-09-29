@@ -491,8 +491,15 @@ span#message.error {
 
 /* Twisties
    ========================================================================== */
-h3.lever,
-.summary-details > h3 {
+.txp-details {
+  border: 1px solid #e3e3e3;
+  border-top: 0;
+  background: #f7f7f7;
+  margin-bottom: 1em;
+}
+
+h3.txp-summary,
+.txp-details > h3 {
   position: relative;
   font-size: 1em;
   font-weight: bold;
@@ -516,15 +523,15 @@ h3.lever,
   background-image: linear-gradient(#eeeeee, #dddddd);
 }
 
-h3.lever a {
+h3.txp-summary a {
   display: block;
   color: #333333;
 }
-h3.lever a:hover {
+h3.txp-summary a:hover {
   color: #333333;
   text-decoration: none;
 }
-h3.lever a:after {
+h3.txp-summary a:after {
   position: absolute;
   content: "&#8594;";
   top: .69230769230769em;
@@ -543,11 +550,11 @@ h3.lever a:after {
   white-space: nowrap;
   overflow: hidden;
 }
-h3.lever a:hover:after {
+h3.txp-summary a:hover:after {
   opacity: 1;
 }
 
-h3.lever.expanded a:after {
+h3.txp-summary.expanded a:after {
   content: "&#8595;";
   top: .84615384615385em;
   right: .69230769230769em;
@@ -558,7 +565,7 @@ h3.lever.expanded a:after {
 }
 
 .toggle,
-.summary-details > div {
+.txp-details > div {
   padding: 0 1em;
 }
 
@@ -1911,15 +1918,6 @@ body#page-setup {
 #configuration_content,
 #tagbuild_links {
   margin-right: 1em;
-}
-
-#configuration_content > div,
-#tagbuild_links > div,
-.summary-details {
-  border: 1px solid #e3e3e3;
-  border-top: 0;
-  background: #f7f7f7;
-  margin-bottom: 1em;
 }
 
 #supporting_content,
