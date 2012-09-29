@@ -122,7 +122,7 @@
 						<div id="tagbuild_links">
 							<h2>Tag builder</h2>
 
-							<div id="article-tags" class="txp-details">
+							<div id="article-tags_group" class="txp-details">
 								<h3 class="txp-summary expanded"><a href="#article-tags">Articles</a></h3>
 								<div id="article-tags" class="toggle">
 									<ul class="plain-list">
@@ -141,7 +141,7 @@
 								</div>
 							</div>
 
-							<div id="link-tags" class="txp-details">
+							<div id="link-tags_group" class="txp-details">
 								<h3 class="txp-summary"><a href="#link-tags">Links</a></h3>
 								<div id="link-tags" class="toggle" style="display:none">
 									<ul class="plain-list">
@@ -155,7 +155,7 @@
 								</div>
 							</div>
 
-							<div id="comment-tags" class="txp-details">
+							<div id="comment-tags_group" class="txp-details">
 								<h3 class="txp-summary"><a href="#comment-tags">Comments</a></h3>
 								<div id="comment-tags" class="toggle" style="display:none">
 									<ul class="plain-list">
@@ -166,7 +166,7 @@
 								</div>
 							</div>
 
-							<div id="comment-detail-tags" class="txp-details">
+							<div id="comment-detail-tags_group" class="txp-details">
 								<h3 class="txp-summary"><a href="#comment-detail-tags">Comment details</a></h3>
 								<div id="comment-detail-tags" class="toggle" style="display:none">
 									<ul class="plain-list">
@@ -180,7 +180,7 @@
 								</div>
 							</div>
 
-							<div id="comment-form-tags" class="txp-details">
+							<div id="comment-form-tags_group" class="txp-details">
 								<h3 class="txp-summary"><a href="#comment-form-tags">Comment form</a></h3>
 								<div id="comment-form-tags" class="toggle" style="display:none">
 									<ul class="plain-list">
@@ -195,7 +195,7 @@
 								</div>
 							</div>
 
-							<div id="search-result-tags" class="txp-details">
+							<div id="search-result-tags_group" class="txp-details">
 								<h3 class="txp-summary"><a href="#search-result-tags">Search results</a></h3>
 								<div id="search-result-tags" class="toggle" style="display:none">
 									<ul class="plain-list">
@@ -207,7 +207,7 @@
 								</div>
 							</div>
 
-							<div id="file-tags" class="txp-details">
+							<div id="file-tags_group" class="txp-details">
 								<h3 class="txp-summary"><a href="#file-tags">File downloads</a></h3>
 								<div id="file-tags" class="toggle" style="display:none">
 									<ul class="plain-list">
@@ -223,7 +223,7 @@
 								</div>
 							</div>
 
-							<div id="category-tags" class="txp-details">
+							<div id="category-tags_group" class="txp-details">
 								<h3 class="txp-summary"><a href="#category-tags">Category</a></h3>
 								<div id="category-tags" class="toggle" style="display:none">
 									<ul class="plain-list">
@@ -233,7 +233,7 @@
 								</div>
 							</div>
 
-							<div id="section-tags" class="txp-details">
+							<div id="section-tags_group" class="txp-details">
 								<h3 class="txp-summary"><a href="#section-tags">Section</a></h3>
 								<div id="section-tags" class="toggle" style="display:none">
 									<ul class="plain-list">
@@ -293,9 +293,9 @@
 							<h2>All forms</h2>
 							<form method="post" action="#" id="allforms_form">
 								<p class="action-create"><a href="#">Create new form</a></p>
-								<div class="txp-details form-list-group article">
-									<h3 class="txp-summary expanded"><a href="#article">Article</a></h3>
-									<div id="article" class="toggle form-list" style="display:block">
+								<div id="article_forms_group" class="txp-details">
+									<h3 class="txp-summary expanded"><a href="#article_forms">Article</a></h3>
+									<div id="article_forms" class="toggle form-list">
 										<ul class="plain-list">
 											<li><span class="form-list-action"><input type="checkbox" name="selected_forms[]" value="article_listing" /></span><span class="form-list-name"><a href="#">article_listing</a></span></li>
 											<li><span class="form-list-action"></span><span class="form-list-name"><a href="#">comments_display</a></span></li>
@@ -305,26 +305,26 @@
 										</ul>
 									</div>
 								</div>
-								<div class="txp-details form-list-group comment">
-									<h3 class="txp-summary expanded"><a href="#comment">Comment</a></h3>
-									<div id="comment" class="toggle form-list" style="display:block">
+								<div id="comment_forms_group" class="txp-details">
+									<h3 class="txp-summary expanded"><a href="#comment_forms">Comment</a></h3>
+									<div id="comment_forms" class="toggle form-list">
 										<ul class="plain-list">
 											<li><span class="form-list-action"></span><span class="form-list-name"><a href="#">comments</a></span></li>
 											<li><span class="form-list-action"></span><span class="form-list-name"><a href="#">comment_form</a></span></li>
 										</ul>
 									</div>
 								</div>
-								<div class="txp-details form-list-group file">
-									<h3 class="txp-summary expanded"><a href="#file">File</a></h3>
-									<div id="file" class="toggle form-list" style="display:block">
+								<div id="file_forms_group" class="txp-details">
+									<h3 class="txp-summary expanded"><a href="#file_forms">File</a></h3>
+									<div id="file_forms" class="toggle form-list">
 										<ul class="plain-list">
 											<li><span class="form-list-action"></span><span class="form-list-name"><a href="#0">files</a></span></li>
 										</ul>
 									</div>
 								</div>
-								<div class="txp-details form-list-group link">
-									<h3 class="txp-summary expanded"><a href="#link">Links</a></h3>
-									<div id="link" class="toggle form-list" style="display:block">
+								<div id="link_forms_group" class="txp-details">
+									<h3 class="txp-summary expanded"><a href="#link_forms">Links</a></h3>
+									<div id="link_forms" class="toggle form-list">
 										<ul class="plain-list">
 											<li><span class="form-list-action"></span><span class="form-list-name"><a href="#">Links</a></span></li>
 											<li><span class="form-list-action"><input type="checkbox" name="selected_forms[]" value="plainlinks" /></span><span class="form-list-name"><a href="#">plainlinks</a></span></li>

@@ -2033,22 +2033,15 @@ body#page-setup {
   margin-left: 1em;
 }
 
-.form-list-group {
-  margin-bottom: 1em;
-  border-bottom: 1px solid #dddddd;
-}
-
 .form-list .plain-list {
   margin: 0 -1em;
-  border-right: 1px solid #dddddd;
-  border-left: 1px solid #dddddd;
 }
 .form-list .plain-list li {
   border-top: 1px solid #dddddd;
   padding: .38461538461538em .5em .38461538461538em 1em;
 }
-.form-list .plain-list li.even {
-  background: #f7f7f7;
+.form-list .plain-list li:nth-child(odd) {
+  background: white;
 }
 .form-list .plain-list li:first-child {
   border-top: 0;

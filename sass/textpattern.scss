@@ -659,22 +659,15 @@ body#page-setup {
 	margin-left: 1em;
 }
 
-.form-list-group {
-	margin-bottom: 1em;
-	border-bottom: 1px solid $color-gradient-to;
-}
-
 .form-list .plain-list {
 	margin: 0 -1em;
-	border-right: 1px solid $color-gradient-to;
-	border-left: 1px solid $color-gradient-to;
 
 	li {
 		border-top: 1px solid $color-gradient-to;
 		padding: .38461538461538em .5em .38461538461538em 1em;
 
-		&.even {
-			background: $color-background-box;
+		&:nth-child(odd) {
+			background: $color-background;
 		}
 
 		&:first-child {
