@@ -140,21 +140,21 @@
 
 						<thead>
 							<tr>
-								<th title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
-								<th class="desc date time"><a href="#">Time</a></th>
-								<th class="log_detail ip"><a href="#">IP</a></th>
-								<th class="host"><a href="#">Host</a></th>
-								<th class="page"><a href="#">Page</a></th>
-								<th class="refer"><a href="#">Referrer</a></th>
-								<th class="log_detail method"><a href="#">Method</a></th>
-								<th class="log_detail status"><a href="#">Status</a></th>
+								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
+								<th scope="col" class="desc date time"><a href="#">Time</a></th>
+								<th scope="col" class="log_detail ip"><a href="#">IP</a></th>
+								<th scope="col" class="host"><a href="#">Host</a></th>
+								<th scope="col" class="page"><a href="#">Page</a></th>
+								<th scope="col" class="refer"><a href="#">Referrer</a></th>
+								<th scope="col" class="log_detail method"><a href="#">Method</a></th>
+								<th scope="col" class="log_detail status"><a href="#">Status</a></th>
 							</tr>
 						</thead>
 
 						<tbody>
 							<tr>
 								<td class="multi-edit"><input type="checkbox" value="126" name="selected[]" /></td>
-								<td class="date time">21&#160;Sep&#160;2011 10:13:58</td>
+								<th scope="row" class="date time">21&#160;Sep&#160;2011 10:13:58</th>
 								<td class="log_detail ip">127.0.0.1</td>
 								<td class="host">www.anon.​dev</td>
 								<td class="page"><strong><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site</a></strong></td>
@@ -164,7 +164,7 @@
 							</tr>
 							<tr>
 								<td class="multi-edit"><input type="checkbox" value="127" name="selected[]" /></td>
-								<td class="date time">21&#160;Sep&#160;2011 10:13:58</td>
+								<th scope="row" class="date time">21&#160;Sep&#160;2011 10:13:58</th>
 								<td class="log_detail ip">127.0.0.1</td>
 								<td class="host">www.anon.​dev</td>
 								<td class="page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site?​commented=0</a></td>

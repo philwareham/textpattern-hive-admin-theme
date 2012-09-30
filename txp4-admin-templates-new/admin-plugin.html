@@ -132,22 +132,22 @@
 
 						<thead>
 							<tr>
-								<th title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
-								<th class="asc name"><a href="#">Plugin</a></th>
-								<th class="author"><a href="#">Author</a></th>
-								<th class="version"><a href="#">Version</a></th>
-								<th class="modified"><a href="#">Modified</a></th>
-								<th class="description">Description</th>
-								<th class="status"><a href="#">Active</a></th>
-								<th class="load-order"><a href="#">Order</a></th>
-								<th class="manage actions">Manage</th>
+								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
+								<th scope="col" class="asc name"><a href="#">Plugin</a></th>
+								<th scope="col" class="author"><a href="#">Author</a></th>
+								<th scope="col" class="version"><a href="#">Version</a></th>
+								<th scope="col" class="modified"><a href="#">Modified</a></th>
+								<th scope="col" class="description">Description</th>
+								<th scope="col" class="status"><a href="#">Active</a></th>
+								<th scope="col" class="load-order"><a href="#">Order</a></th>
+								<th scope="col" class="manage actions">Manage</th>
 							</tr>
 						</thead>
 
 						<tbody>
 							<tr class="active">
 								<td class="multi-edit"><input type="checkbox" value="rah_external_output" name="selected[]" /></td>
-								<td class="name"><a href="secondary/admin-plugin_edit.html" title="Edit">rah_external_output</a></td>
+								<th scope="row" class="name"><a href="secondary/admin-plugin_edit.html" title="Edit">rah_external_output</a></th>
 								<td class="author"><a href="http://rahforum.biz" rel="external">Jukka Svahn</a></td>
 								<td class="version">0.9</td>
 								<td class="modified">&#160;</td>
@@ -158,7 +158,7 @@
 							</tr>
 							<tr>
 								<td class="multi-edit"><input type="checkbox" value="smd_browse_by" name="selected[]" /></td>
-								<td class="name"><a href="secondary/admin-plugin_edit.html" title="Edit">smd_browse_by</a></td>
+								<th scope="row" class="name"><a href="secondary/admin-plugin_edit.html" title="Edit">smd_browse_by</a></th>
 								<td class="author"><a href="http://stefdawson.com/" rel="external">Stef Dawson</a></td>
 								<td class="version">0.10</td>
 								<td class="modified"><span class="warning">Yes</span></td>

@@ -157,25 +157,25 @@
 
 						<thead>
 							<tr>
-								<th title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
-								<th class="name"><a href="#">Name</a></th>
-								<th class="title"><a href="#">Title</a></th>
-								<th class="page"><a href="#">Page</a></th>
-								<th class="style"><a href="#">Style</a></th>
-								<th class="section_detail frontpage"><a href="#">On front page</a></th>
-								<th class="section_detail syndicate"><a href="#">Syndicate</a></th>
-								<th class="section_detail searchable"><a href="#">Include in site search</a></th>
-								<th class="section_detail article_count"><a href="#">article</a></th>
+								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
+								<th scope="col" class="name"><a href="#">Name</a></th>
+								<th scope="col" class="title"><a href="#">Title</a></th>
+								<th scope="col" class="page"><a href="#">Page</a></th>
+								<th scope="col" class="style"><a href="#">Style</a></th>
+								<th scope="col" class="section_detail frontpage"><a href="#">On front page</a></th>
+								<th scope="col" class="section_detail syndicate"><a href="#">Syndicate</a></th>
+								<th scope="col" class="section_detail searchable"><a href="#">Include in site search</a></th>
+								<th scope="col" class="section_detail article_count"><a href="#">article</a></th>
 							</tr>
 						</thead>
 
 						<tbody>
 							<tr id="txp_section_default">
 								<td class="multi-edit"><input type="checkbox" value="default" name="selected[]" /></td>
-								<td class="name">
+								<th scope="row" class="name">
 									<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
 									<span class="section_detail">[<a href="#">View</a>]</span>
-								</td>
+								</th>
 								<td class="title">default</td>
 								<td class="page">
 									<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
@@ -188,10 +188,10 @@
 							</tr>
 							<tr id="txp_section_articles">
 								<td class="multi-edit"><input type="checkbox" value="articles" name="selected[]" /></td>
-								<td class="name">
+								<th scope="row" class="name">
 									<a href="secondary/presentation-section_edit.html" title="Edit">articles</a>
 									<span class="section_detail">[<a href="#">View</a>]</span>
-								</td>
+								</th>
 								<td class="title">Articles</td>
 								<td class="page">
 									<a href="secondary/presentation-section_edit.html" title="Edit">archive</a>
@@ -205,10 +205,10 @@
 							</tr>
 							<tr id="txp_section_about" class="selected">
 								<td class="multi-edit"><input type="checkbox" value="about" name="selected[]" checked="checked" /></td>
-								<td class="name">
+								<th scope="row" class="name">
 									<a href="secondary/presentation-section_edit.html" title="Edit">about</a>
 									<span class="section_detail">[<a href="#">View</a>]</span>
-								</td>
+								</th>
 								<td class="name">About</td>
 								<td class="page">
 									<a href="secondary/presentation-section_edit.html" title="Edit">default</a>

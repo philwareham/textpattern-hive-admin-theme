@@ -146,21 +146,21 @@
 						
 						<thead>
 							<tr>
-								<th title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
-								<th class="desc id"><a href="#">ID#</a></th>
-								<th class="name"><a href="#">Name</a></th>
-								<th class="links_detail description"><a href="#">Description</a></th>
-								<th class="category"><a href="#">Category</a></th>
-								<th class="url"><a href="#">URL</a></th>
-								<th class="links_detail date created"><a href="#">Date</a></th>
-								<th class="author"><a href="#">Author</a></th>
+								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
+								<th scope="col" class="desc id"><a href="#">ID#</a></th>
+								<th scope="col" class="name"><a href="#">Name</a></th>
+								<th scope="col" class="links_detail description"><a href="#">Description</a></th>
+								<th scope="col" class="category"><a href="#">Category</a></th>
+								<th scope="col" class="url"><a href="#">URL</a></th>
+								<th scope="col" class="links_detail date created"><a href="#">Date</a></th>
+								<th scope="col" class="author"><a href="#">Author</a></th>
 							</tr>
 						</thead>
 
 						<tbody>
 							<tr>
 								<td class="multi-edit"><input type="checkbox" value="2" name="selected[]" /></td>
-								<td class="id"><a href="secondary/content-link_edit.html" title="Edit">2</a></td>
+								<th scope="row" class="id"><a href="secondary/content-link_edit.html" title="Edit">2</a></th>
 								<td class="name"><a href="secondary/content-link_edit.html" title="Edit">TextBook</a></td>
 								<td class="links_detail description">&#160;</td>
 								<td class="url"><a rel="external" target="_blank" href="http://textpattern.net/">http://textpattern.net/</a></td>
@@ -170,7 +170,7 @@
 							</tr>
 							<tr>
 								<td class="multi-edit"><input type="checkbox" value="1" name="selected[]" /></td>
-								<td class="id"><a href="secondary/content-link_edit.html" title="Edit">1</a></td>
+								<th scope="row" class="id"><a href="secondary/content-link_edit.html" title="Edit">1</a></th>
 								<td class="name"><a href="secondary/content-link_edit.html" title="Edit">Textpattern</a></td>
 								<td class="links_detail description">&#160;</td>
 								<td class="url"><a rel="external" target="_blank" href="http://textpattern.com/">http://textpattern.com/</a></td>
@@ -180,7 +180,7 @@
 							</tr>
 							<tr>
 								<td class="multi-edit"><input type="checkbox" value="3" name="selected[]" /></td>
-								<td class="id"><a href="secondary/content-link_edit.html" title="Edit">3</a></td>
+								<th scope="row" class="id"><a href="secondary/content-link_edit.html" title="Edit">3</a></th>
 								<td class="name"><a href="secondary/content-link_edit.html" title="Edit">Textpattern Resources</a></td>
 								<td class="links_detail description">An example link description.</td>
 								<td class="url"><a rel="external" target="_blank" href="http://textpattern.org/">http://textpattern.org/</a></td>

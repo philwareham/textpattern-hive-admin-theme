@@ -147,23 +147,23 @@
 
 						<thead>
 							<tr>
-								<th title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
-								<th class="id"><a href="#">ID#</a></th>
-								<th class="desc date posted created"><a href="#">Date</a></th>
-								<th class="name"><a href="#">Name</a></th>
-								<th class="message"><a href="#">Message</a></th>
-								<th class="discuss_detail email"><a href="#">E-mail</a></th>
-								<th class="discuss_detail website"><a href="#">Website</a></th>
-								<th class="discuss_detail ip"><a href="#">IP</a></th>
-								<th class="discuss_detail status"><a href="#">Status</a></th>
-								<th class="parent"><a href="#">Parent</a></th>
+								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
+								<th scope="col" class="id"><a href="#">ID#</a></th>
+								<th scope="col" class="desc date posted created"><a href="#">Date</a></th>
+								<th scope="col" class="name"><a href="#">Name</a></th>
+								<th scope="col" class="message"><a href="#">Message</a></th>
+								<th scope="col" class="discuss_detail email"><a href="#">E-mail</a></th>
+								<th scope="col" class="discuss_detail website"><a href="#">Website</a></th>
+								<th scope="col" class="discuss_detail ip"><a href="#">IP</a></th>
+								<th scope="col" class="discuss_detail status"><a href="#">Status</a></th>
+								<th scope="col" class="parent"><a href="#">Parent</a></th>
 							</tr>
 						</thead>
 
 						<tbody>
 							<tr class="spam">
 								<td class="multi-edit"><input type="checkbox" value="000003" name="selected[]" /></td>
-								<td class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000003</a></td>
+								<th scope="row" class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000003</a></th>
 								<td class="date posted created">21&#160;Sep&#160;2011 10:13:58</td>
 								<td class="name">Anon</td>
 								<td class="message">test of a spam comment</td>
@@ -175,7 +175,7 @@
 							</tr>
 							<tr class="moderate">
 								<td class="multi-edit"><input type="checkbox" value="000002" name="selected[]" /></td>
-								<td class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000002</a></td>
+								<th scope="row" class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000002</a></th>
 								<td class="date posted created">21&#160;Sep&#160;2011 10:13:58</td>
 								<td class="name">Phil</td>
 								<td class="message">test of a banned commentator</td>
@@ -187,7 +187,7 @@
 							</tr>
 							<tr class="visible">
 								<td class="multi-edit"><input type="checkbox" value="000001" name="selected[]" /></td>
-								<td class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000001</a></td>
+								<th scope="row" class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000001</a></th>
 								<td class="date posted created">22&#160;Jul&#160;2005 14:11:32</td>
 								<td class="name">Donald Swain</td>
 								<td class="message">I enjoy your site very much.</td>
