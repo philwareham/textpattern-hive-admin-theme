@@ -124,7 +124,7 @@
 							<div id="configuration_content">
 	
 								<div id="textile_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#textile_help" role="button">Textile help</a></h3>
+									<h3 class="txp-summary expanded"><a href="#textile_help" role="button" aria-pressed="true">Textile help</a></h3>
 									<div id="textile_help" class="toggle">
 										<ul class="textile plain-list">
 											<li>header: <strong>h<em>n</em>.</strong>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=header&#38;language=en-gb" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" rel="help">?</a></li>
@@ -149,7 +149,7 @@
 								</div>
 
 								<div id="advanced_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#advanced" role="button">Advanced options</a></h3>
+									<h3 class="txp-summary expanded"><a href="#advanced" role="button" aria-pressed="true">Advanced options</a></h3>
 									<div id="advanced" class="toggle">
 										<p class="markup markup-body">
 											<label for="markup-body">Article markup</label><br />
@@ -182,7 +182,7 @@
 								</div>
 
 								<div id="custom_field_group" class="txp-details">
-									<h3 class="txp-summary"><a href="#custom_field" role="button">Custom fields</a></h3>
+									<h3 class="txp-summary"><a href="#custom_field" role="button" aria-pressed="false">Custom fields</a></h3>
 									<div id="custom_field" class="toggle" style="display:none;">
 										<p class="custom-field custom-1">
 											<label for="custom-1">custom1</label><br />
@@ -196,7 +196,7 @@
 								</div>
 
 								<div id="image_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#image" role="button">Article image</a></h3>
+									<h3 class="txp-summary expanded"><a href="#image" role="button" aria-pressed="true">Article image</a></h3>
 									<div id="image" class="toggle">
 										<p class="article-image">
 											<label for="article-image">Article image</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=article_image&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a><br />
@@ -206,7 +206,7 @@
 								</div>
 	
 								<div id="meta_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#meta" role="button">Meta</a></h3>
+									<h3 class="txp-summary expanded"><a href="#meta" role="button" aria-pressed="true">Meta</a></h3>
 									<div id="meta" class="toggle">
 										<p class="keywords">
 											<label for="keywords">Keywords</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=keywords&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a><br />
@@ -219,8 +219,8 @@
 									</div>
 								</div>
 
-								<div id="recent_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#recent" role="button">Recent articles</a></h3>
+								<div role="navigation" id="recent_group" class="txp-details">
+									<h3 class="txp-summary expanded"><a href="#recent" role="button" aria-pressed="true">Recent articles</a></h3>
 									<div id="recent" class="toggle">
 										<ul class="recent plain-list">
 											<li class="recent-article"><a href="#">Welcome to Your Site!</a></li>
@@ -259,8 +259,8 @@
 
 								<ul>
 									<li class="view-mode text" id="tab-textup">text</li>
-									<li class="view-mode html" id="tab-htmldown"><a href="#">html</a></li>
-									<li class="view-mode preview" id="tab-previewdown"><a href="#">Preview</a></li>
+									<li class="view-mode html" id="tab-htmldown"><a role="button" href="#">html</a></li>
+									<li class="view-mode preview" id="tab-previewdown"><a role="button" href="#">Preview</a></li>
 								</ul>
 
 							</div>
@@ -274,7 +274,7 @@
 									<a href="#">Create new</a>
 								</p>
 
-								<p class="nav-tertiary">
+								<p role="navigation" class="nav-tertiary">
 									<a href="#" class="navlink" rel="prev"><b class="icon icon-arrow-w">&#8592;</b> Prev</a><span class="navlink-disabled">Next <b class="icon icon-arrow-e">&#8594;</b></span>
 								</p>
 
@@ -321,7 +321,7 @@
 								</fieldset>
 
 								<div id="comments_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#comments" role="button">Comment options</a></h3>
+									<h3 class="txp-summary expanded"><a href="#comments" role="button" aria-pressed="true">Comment options</a></h3>
 									<div id="comments" class="toggle">
 										<p class="comment-annotate">
 											<input type="radio" id="Annotate-0" name="Annotate" value="0" class="radio active" checked="checked" /><label for="Annotate-0">Off</label>
@@ -335,7 +335,7 @@
 								</div>
 
 								<div id="dates_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#dates" role="button">Date and time</a></h3>
+									<h3 class="txp-summary expanded"><a href="#dates" role="button" aria-pressed="true">Date and time</a></h3>
 									<div id="dates" class="toggle">
 
 										<fieldset id="write-timestamp">
