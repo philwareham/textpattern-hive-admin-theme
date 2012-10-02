@@ -72,14 +72,18 @@
 	z-index: 20000;
 	text-align: center;
 
-	> span {
-		display: inline-block;
-		@include border-radius($border-radius $border-radius 0 0);
-		margin: 0 auto;
-		padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
-		max-width: ($standard-column - 3.84615384615385em);
-		color: #fff;
-		@include box-shadow;
+	span {
+		&.success,
+		&.warning,
+		&.error {
+			display: inline-block;
+			@include border-radius($border-radius $border-radius 0 0);
+			margin: 0 auto;
+			padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
+			max-width: ($standard-column - 3.84615384615385em);
+			color: #fff;
+			@include box-shadow;
+		}
 	
 		&.success {
 			background: $success-text;
