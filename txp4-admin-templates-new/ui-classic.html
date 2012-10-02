@@ -556,14 +556,14 @@
 
 
 		<div class="text-section" id="ui-doc-summarydetails">
-			<h1>Summary/details boxes</h1>
-			<pre><code>&lt;div class="txp-details"&gt;
+			<h1>Summary/details boxes <span class="warning" style="font-family:Verdana,Tahoma,sans-serif;font-size:.5em;">changed v4.6</span></h1>
+			<pre><code>&lt;div role="group" class="txp-details"&gt;
 	&lt;h3 class="txp-summary"&gt;&lt;a href="#name-of-details" role="button" aria-pressed="true"&gt;Summary lever&lt;/a&gt;&lt;/h3&gt;
 	&lt;div id="name-of-details" class="toggle"&gt;
 		&lt;p&gt;...content...&lt;/p&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-			<div class="txp-details">
+			<div role="group" class="txp-details">
 				<h3 class="txp-summary expanded"><a href="#name-of-details" role="button" aria-pressed="true">Summary lever</a></h3>
 				<div id="name-of-details" class="toggle">
 					<form action="#">
@@ -797,7 +797,7 @@
 						<legend>Fieldset within fieldset</legend>
 						<p>Standard paragraph text within a fieldset.</p>
 					</fieldset>
-					<div class="txp-details">
+					<div role="group" class="txp-details">
 						<h3 class="txp-summary expanded"><a href="#details2" role="button" aria-pressed="true">Summary/details box within fieldset</a></h3>
 						<div id="details2" class="toggle">
 							<p>Standard paragraph text within a details box.</p>
