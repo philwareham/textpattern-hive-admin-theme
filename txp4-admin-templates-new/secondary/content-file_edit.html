@@ -128,15 +128,17 @@
 					<span class="edit-label">Download count</span>
 					<span class="edit-value">2</span>
 				</p>
-				<fieldset class="replace-file">
-					<legend>Replace file&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></legend>
-					<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
-						<p class="edit-file-replace">
-							<input type="file" value="" name="thefile" id="file_replace" />
-							<input type="submit" value="Upload" />
-						</p>
-					</form>
-				</fieldset>
+				<div role="group" class="txp-details replace-file">
+					<h3>Replace file&nbsp;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></h3>
+					<div>
+						<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
+							<p class="edit-file-replace">
+								<input type="file" value="" name="thefile" id="file_replace">
+								<input type="submit" value="Upload">
+							</p>
+						</form>
+					</div>
+				</div>
 				<div class="file-detail exists">
 					<form method="post" action="#" id="file_details" class="edit-form">
 						<p class="edit-file-status">

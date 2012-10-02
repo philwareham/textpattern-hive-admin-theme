@@ -119,30 +119,34 @@
 			</div>
 			<div class="txp-edit">
 				<h2>Edit image</h2>
-				<fieldset class="replace-image">
-					<legend>Replace image&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></legend>
-					<form class="image-replace" method="post" enctype="multipart/form-data" action="#">
-						<p class="edit-image-replace">
-							<input type="file" value="" name="thefile" id="image_replace" />
-							<input type="submit" value="Upload" />
-						</p>
-					</form>
-				</fieldset>
+				<div role="group" class="txp-details replace-image">
+					<h3>Replace image&nbsp;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></h3>
+					<div>
+						<form class="image-replace" method="post" enctype="multipart/form-data" action="#">
+							<p class="edit-image-replace">
+								<input type="file" value="" name="thefile" id="image_replace">
+								<input type="submit" value="Upload">
+							</p>
+						</form>
+					</div>
+				</div>
 				<div class="thumbnail-edit">
 					<img class="content-image" src="http://static1.designhive.com/img/cms/53t.jpg" width="184" height="118" alt="53t.jpg (184 &#215; 118)" title="53t.jpg (184 &#215; 118)" />
 					<form method="post" action="index.php" onsubmit="return confirm('Really delete?');">
 						<input type="submit" value="&times;" class="destroy" />
 					</form>
 				</div>
-				<fieldset class="thumbnail-upload">
-					<legend>Upload thumbnail&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></legend>
-					<form class="thumbnail-upload" method="post" enctype="multipart/form-data" action="#">
-						<p class="edit-upload-thumbnail">
-							<input type="file" value="" name="thefile" id="upload_thumbnail" />
-							<input type="submit" value="Upload" />
-						</p>
-					</form>
-				</fieldset>
+				<div role="group" class="txp-details thumbnail-upload">
+					<h3>Upload thumbnail&nbsp;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></h3>
+					<div>
+						<form class="thumbnail-upload" method="post" enctype="multipart/form-data" action="#">
+							<p class="edit-upload-thumbnail">
+								<input type="file" value="" name="thefile" id="upload_thumbnail">
+								<input type="submit" value="Upload">
+							</p>
+						</form>
+					</div>
+				</div>
 				<fieldset class="thumbnail-alter">
 					<legend>Create thumbnail&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></legend>
 					<form method="post" action="#" id="thumbnail_alter_form" class="edit-form">
