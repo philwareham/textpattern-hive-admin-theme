@@ -632,14 +632,14 @@
 			<h1>Summary/details boxes <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.6</span></h1>
 
 			<pre><code>&lt;div role="group" class="txp-details"&gt;
-	&lt;h3 class="txp-summary"&gt;&lt;a href="#name-of-details" role="button" aria-pressed="true"&gt;Summary lever&lt;/a&gt;&lt;/h3&gt;
-	&lt;div id="name-of-details" class="toggle"&gt;
+	&lt;h3 class="txp-summary"&gt;&lt;a href="#name-of-details" role="button" aria-controls="name-of-details" aria-pressed="true"&gt;Summary lever&lt;/a&gt;&lt;/h3&gt;
+	&lt;div role="region" id="name-of-details" class="toggle" aria-expanded="true"&gt;
 		&lt;p&gt;...content...&lt;/p&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 			<div role="group" class="txp-details">
-				<h3 class="txp-summary expanded"><a href="#name-of-details" role="button" aria-pressed="true">Summary lever</a></h3>
-				<div id="name-of-details" class="toggle">
+				<h3 class="txp-summary expanded"><a href="#name-of-details" role="button" aria-controls="name-of-details" aria-pressed="true">Summary lever</a></h3>
+				<div role="region" id="name-of-details" class="toggle" aria-expanded="true">
 					<form action="#">
 						<p>
 							<label for="text-std2">Form element within a details box</label>&#160;<a href="#" class="pophelp" rel="help">?</a><br />
@@ -873,8 +873,8 @@
 						<p>Standard paragraph text within a fieldset.</p>
 					</fieldset>
 					<div role="group" class="txp-details">
-						<h3 class="txp-summary expanded"><a href="#details2" role="button" aria-pressed="true">Summary/details box within fieldset</a></h3>
-						<div id="details2" class="toggle">
+						<h3 class="txp-summary expanded"><a href="#details2" role="button" aria-controls="region2" aria-pressed="true">Summary/details box within fieldset</a></h3>
+						<div role="region" id="details2" class="toggle" aria-expanded="true">
 							<p>Standard paragraph text within a details box.</p>
 						</div>
 					</div>

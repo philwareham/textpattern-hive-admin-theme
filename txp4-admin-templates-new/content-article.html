@@ -123,9 +123,9 @@
 	
 							<div id="configuration_content">
 	
-								<div role="group" id="textile_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#textile_help" role="button" aria-pressed="true">Textile help</a></h3>
-									<div id="textile_help" class="toggle">
+								<div role="group" id="textfilter_group" class="txp-details">
+									<h3 class="txp-summary expanded"><a href="#textfilter_help" role="button" aria-controls="textfilter_help" aria-pressed="true">Textile help</a></h3>
+									<div role="region" id="textfilter_help" class="toggle" aria-expanded="true">
 										<ul class="textile plain-list">
 											<li>header: <strong>h<em>n</em>.</strong>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=header&#38;language=en-gb" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" rel="help">?</a></li>
 											<li>Blockquote: <strong>bq.</strong>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=blockquote&#38;language=en-gb" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" rel="help">?</a></li>
@@ -149,8 +149,8 @@
 								</div>
 
 								<div role="group" id="advanced_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#advanced" role="button" aria-pressed="true">Advanced options</a></h3>
-									<div id="advanced" class="toggle">
+									<h3 class="txp-summary expanded"><a href="#advanced" role="button" aria-controls="advanced" aria-pressed="true">Advanced options</a></h3>
+									<div role="region" id="advanced" class="toggle" aria-expanded="true">
 										<p class="markup markup-body">
 											<label for="markup-body">Article markup</label><br />
 											<select id="markup-body" name="textile_body">
@@ -182,8 +182,8 @@
 								</div>
 
 								<div role="group" id="custom_field_group" class="txp-details">
-									<h3 class="txp-summary"><a href="#custom_field" role="button" aria-pressed="false">Custom fields</a></h3>
-									<div id="custom_field" class="toggle" style="display:none;">
+									<h3 class="txp-summary"><a href="#custom_field" role="button" aria-controls="custom_field" aria-pressed="false">Custom fields</a></h3>
+									<div role="region" id="custom_field" class="toggle" style="display:none;" aria-expanded="false">
 										<p class="custom-field custom-1">
 											<label for="custom-1">custom1</label><br />
 											<input type="text" value="" name="custom_1" size="32" id="custom-1" />
@@ -196,8 +196,8 @@
 								</div>
 
 								<div role="group" id="image_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#image" role="button" aria-pressed="true">Article image</a></h3>
-									<div id="image" class="toggle">
+									<h3 class="txp-summary expanded"><a href="#image" role="button" aria-controls="image" aria-pressed="true">Article image</a></h3>
+									<div role="region" id="image" class="toggle" aria-expanded="true">
 										<p class="article-image">
 											<label for="article-image">Article image</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=article_image&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a><br />
 											<input type="text" value="" name="Image" size="32" id="article-image" />
@@ -206,8 +206,8 @@
 								</div>
 	
 								<div role="group" id="meta_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#meta" role="button" aria-pressed="true">Meta</a></h3>
-									<div id="meta" class="toggle">
+									<h3 class="txp-summary expanded"><a href="#meta" role="button" aria-controls="meta" aria-pressed="true">Meta</a></h3>
+									<div role="region" id="meta" class="toggle" aria-expanded="true">
 										<p class="keywords">
 											<label for="keywords">Keywords</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=keywords&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a><br />
 											<textarea id="keywords" name="Keywords" cols="16" rows="4"></textarea>
@@ -220,8 +220,8 @@
 								</div>
 
 								<div role="navigation" id="recent_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#recent" role="button" aria-pressed="true">Recent articles</a></h3>
-									<div id="recent" class="toggle">
+									<h3 class="txp-summary expanded"><a href="#recent" role="button" aria-controls="recent" aria-pressed="true">Recent articles</a></h3>
+									<div role="region" id="recent" class="toggle" aria-expanded="true">
 										<ul class="recent plain-list">
 											<li class="recent-article"><a href="#">Welcome to Your Site!</a></li>
 										</ul>
@@ -321,8 +321,8 @@
 								</fieldset>
 
 								<div role="group" id="comments_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#comments" role="button" aria-pressed="true">Comment options</a></h3>
-									<div id="comments" class="toggle">
+									<h3 class="txp-summary expanded"><a href="#comments" role="button" aria-controls="comments" aria-pressed="true">Comment options</a></h3>
+									<div role="region" id="comments" class="toggle" aria-expanded="true">
 										<p class="comment-annotate">
 											<input type="radio" id="Annotate-0" name="Annotate" value="0" class="radio active" checked="checked" /><label for="Annotate-0">Off</label>
 											<input type="radio" id="Annotate-1" name="Annotate" value="1" class="radio" /><label for="Annotate-1">On</label>
@@ -335,8 +335,8 @@
 								</div>
 
 								<div role="group" id="dates_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#dates" role="button" aria-pressed="true">Date and time</a></h3>
-									<div id="dates" class="toggle">
+									<h3 class="txp-summary expanded"><a href="#dates" role="button" aria-controls="dates" aria-pressed="true">Date and time</a></h3>
+									<div role="region" id="dates" class="toggle" aria-expanded="true">
 
 										<fieldset id="write-timestamp">
 											<legend>Timestamp</legend>
