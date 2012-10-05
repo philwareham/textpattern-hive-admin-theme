@@ -35,29 +35,29 @@
 			<p>Note that the database you specify must already exist, Textpattern will not create it.</p>
 			<p>
 				<span class="edit-label"><label for="setup_mysql_login">MySQL login</label></span>
-				<span class="edit-value"><input type="text" value="" name="duser" id="setup_mysql_login" size="32" /></span>
+				<span class="edit-value"><input type="text" value="" name="duser" id="setup_mysql_login" size="32" required></span>
 			</p>
 			<p>
 				<span class="edit-label"><label for="setup_mysql_pass">MySQL password</label></span>
-				<span class="edit-value"><input type="text" value="" name="dpass" id="setup_mysql_pass" size="32" /></span>
+				<span class="edit-value"><input type="text" value="" name="dpass" id="setup_mysql_pass" size="32" required></span>
 			</p>
 			<p>
 				<span class="edit-label"><label for="setup_mysql_server">MySQL server</label></span>
-				<span class="edit-value"><input type="text" value="localhost" name="dhost" id="setup_mysql_server" size="32" /></span>
+				<span class="edit-value"><input type="text" value="localhost" name="dhost" id="setup_mysql_server" size="32" required></span>
 			</p>
 			<p>
 				<span class="edit-label"><label for="setup_mysql_db">MySQL database</label></span>
-				<span class="edit-value"><input type="text" value="" name="ddb" id="setup_mysql_db" size="32" /></span>
+				<span class="edit-value"><input type="text" value="" name="ddb" id="setup_mysql_db" size="32" required></span>
 			</p>
 			<p>
 				<span class="edit-label"><label for="setup_table_prefix">Table prefix (optional)</label>&#160;<a rel="help" target="_blank" href="http://rpc.textpattern.com/help/?item=table_prefix&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
-				<span class="edit-value"><input type="text" value="" name="dprefix" id="setup_table_prefix" /></span>
+				<span class="edit-value"><input type="text" value="" name="dprefix" id="setup_table_prefix"></span>
 			</p>
 			<h2>Site URL</h2>
 			<p>Please enter the web-reachable address of your site.</p>
 			<p>
 				<span class="edit-label"><label for="setup_siteurl">http://</label>&#160;<a rel="help" target="_blank" href="http://rpc.textpattern.com/help/?item=siteurl&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp">?</a></span>
-				<span class="edit-value"><input type="text" value="" name="siteurl" id="setup_siteurl" size="32" /></span>
+				<span class="edit-value"><input type="text" value="" name="siteurl" id="setup_siteurl" size="32" required></span>
 			</p>
 			<p>
 				<input type="submit" value="Next &#8594;" name="Submit" class="publish" />
