@@ -112,13 +112,12 @@
 	<div role="main" id="txp-main" class="txp-body" aria-label="Main content">
 		<h1 class="txp-heading">Comments</h1>
 
+		<p class="txp-buttons">
+			<a href="secondary/content-discuss_ipban.html">List banned IPs</a>
+		</p>
+
 		<div id="discuss_control" class="txp-control-panel">
-
-			<p class="txp-buttons">
-				<a href="secondary/content-discuss_ipban.html">List banned IPs</a>
-			</p>
-
-			<form method="get" action="index.php" class="search-form">
+			<form method="get" action="#" class="search-form">
 				<p>
 					<label for="discuss-search">Search</label>
 					<select id="discuss-search" name="search_method">
@@ -134,8 +133,12 @@
 					<input type="submit" value="Go" name="search">
 				</p>
 			</form>
-
 		</div>
+
+		<p class="detail-toggle">
+			<input type="checkbox" name="cb_toggle_discuss_detail" id="cb_toggle_discuss_detail" value="1" class="checkbox" onclick="toggleClassRemember('discuss_detail');" checked="checked">
+			<label for="cb_toggle_discuss_detail">Show more detail</label>
+		</p>
 
 		<div id="discuss_container" class="txp-container">
 
@@ -214,11 +217,6 @@
 				</div>
 			</form>
 
-			<p class="detail-toggle">
-				<input type="checkbox" name="cb_toggle_discuss_detail" id="cb_toggle_discuss_detail" value="1" class="checkbox" onclick="toggleClassRemember('discuss_detail');" checked="checked">
-				<label for="cb_toggle_discuss_detail">Show detail</label>
-			</p>
-
 			<form class="cb_show_spam" method="post" action="#">
 				<input type="checkbox" name="cb_show_spam" id="cb_show_spam" value="1" class="checkbox" onclick="setClassRemember('show_spam',1);submit(this.form);" checked="checked">
 				<label for="cb_show_spam">Show spam</label>
@@ -226,7 +224,7 @@
 
 			<div id="discuss_navigation" class="txp-navigation">
 				<p class="prev-next">1/1</p>
-				<form method="post" action="index.php" class="pageby">
+				<form method="post" action="#" class="pageby">
 					<p>
 						View
 						<select name="qty" onchange="submit(this.form);">

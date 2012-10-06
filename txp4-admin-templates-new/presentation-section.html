@@ -113,12 +113,11 @@
 	<div role="main" id="txp-main" class="txp-body" aria-label="Main content">
 		<h1 class="txp-heading">Sections&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a></h1>
 
+		<p class="txp-buttons">
+			<a href="secondary/presentation-section_edit.html">Add new section</a>
+		</p>
+
 		<div id="section_control" class="txp-control-panel">
-
-			<p class="txp-buttons">
-				<a href="secondary/presentation-section_edit.html">Add new section</a>
-			</p>
-
 			<form id="default_section_form" name="default_section_form" method="post" action="#" class="async">
 				<p>
 					<label>Default publishing section</label>&#160;<a rel="help" target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp">?</a>
@@ -129,7 +128,7 @@
 				</p>
 			</form>
 
-			<form method="get" action="index.php" class="search-form">
+			<form method="get" action="#" class="search-form">
 				<p>
 					<label for="section-search">Search</label>
 					<select id="section-search" name="search_method">
@@ -147,9 +146,14 @@
 			</form>
 		</div>
 
+		<p class="detail-toggle">
+			<input type="checkbox" name="cb_toggle_section_detail" id="cb_toggle_section_detail" value="1" class="checkbox" onclick="toggleClassRemember('section_detail');" checked="checked">
+			<label for="cb_toggle_section_detail">Show more detail</label>
+		</p>
+
 		<div id="section_container" class="txp-container">
 
-			<form action="index.php" id="section_form" class="multi_edit_form" method="post" name="longform">
+			<form action="#" id="section_form" class="multi_edit_form" method="post" name="longform">
 				<div class="txp-listtables">
 
 					<table class="txp-list">
@@ -242,11 +246,6 @@
 
 				</div>
 			</form>
-
-			<p class="detail-toggle">
-				<input type="checkbox" name="cb_toggle_section_detail" id="cb_toggle_section_detail" value="1" class="checkbox" onclick="toggleClassRemember('section_detail');" checked="checked">
-				<label for="cb_toggle_section_detail">Show detail</label>
-			</p>
 
 			<div id="section_navigation" class="txp-navigation">
 				<p class="prev-next">1/1</p>

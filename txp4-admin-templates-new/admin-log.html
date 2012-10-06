@@ -113,7 +113,7 @@
 		<h1 class="txp-heading">Visitor logs</h1>
 
 		<div id="log_control" class="txp-control-panel">
-			<form method="get" action="index.php" class="search-form">
+			<form method="get" action="#" class="search-form">
 				<p>
 					<label for="log-search">Search</label>
 					<select id="log-search" name="search_method">
@@ -129,6 +129,11 @@
 				</p>
 			</form>
 		</div>
+
+		<p class="detail-toggle">
+			<input type="checkbox" name="cb_toggle_log_detail" id="cb_toggle_log_detail" value="1" class="checkbox" onclick="toggleClassRemember('log_detail');" checked="checked">
+			<label for="cb_toggle_log_detail">Show more detail</label>
+		</p>
 
 		<div id="log_container" class="txp-container">
 
@@ -185,14 +190,9 @@
 				</div>
 			</form>
 
-			<p class="detail-toggle">
-				<input type="checkbox" name="cb_toggle_log_detail" id="cb_toggle_log_detail" value="1" class="checkbox" onclick="toggleClassRemember('log_detail');" checked="checked">
-				<label for="cb_toggle_log_detail">Show detail</label>
-			</p>
-
 			<div id="log_navigation" class="txp-navigation">
 				<p class="prev-next">1/1</p>
-				<form method="post" action="index.php" class="pageby">
+				<form method="post" action="#" class="pageby">
 					<p>
 						View
 						<select name="qty" onchange="submit(this.form);">

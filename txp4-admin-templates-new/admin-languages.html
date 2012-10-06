@@ -112,6 +112,11 @@
 	<div role="main" id="txp-main" class="txp-body" aria-label="Main content">
 		<h1 class="txp-heading">Languages</h1>
 
+		<p class="detail-toggle">
+			<input type="checkbox" name="cb_toggle_languages_detail" id="cb_toggle_languages_detail" value="1" class="checkbox" checked="checked">
+			<label for="cb_toggle_languages_detail">Show more detail</label>
+		</p>
+
 		<div id="language_container" class="txp-container">
 
 			<div id="language_control" class="txp-control-panel">
@@ -405,14 +410,9 @@
 				</table>
 			</div>
 
-			<p class="detail-toggle">
-				<input type="checkbox" name="cb_toggle_languages_detail" id="cb_toggle_languages_detail" value="1" class="checkbox" checked="checked">
-				<label for="cb_toggle_languages_detail">Show detail</label>
-			</p>
-
 			<h3>Install from Textpack</h3>
 
-			<form method="post" action="index.php" id="text_uploader" class="edit-form">
+			<form method="post" action="#" id="text_uploader" class="edit-form">
 				<p>
 					<label for="textpack-install">Install Textpack</label>
 					<a target="_blank" href="http://rpc.textpattern.com/help/?item=get_textpack&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>

@@ -112,13 +112,12 @@
 	<div role="main" id="txp-main" class="txp-body" aria-label="Main content">
 		<h1 class="txp-heading">Files</h1>
 
+		<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
+			<p><label for="file-upload">Upload file</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>&#160;<input type="file" value="" name="thefile" id="file-upload">&#160;<input type="submit" value="Upload"></p>
+		</form>
+
 		<div id="file_control" class="txp-control-panel">
-			<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
-				<div>
-					<p><label for="file-upload">Upload file</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>&#160;<input type="file" value="" name="thefile" id="file-upload">&#160;<input type="submit" value="Upload"></p>
-				</div>
-			</form>
-			<form method="get" action="index.php" class="search-form">
+			<form method="get" action="#" class="search-form">
 				<p>
 					<label for="file-search">Search</label>
 					<select id="file-search" name="search_method">
@@ -134,6 +133,11 @@
 				</p>
 			</form>
 		</div>
+
+		<p class="detail-toggle">
+			<input type="checkbox" name="cb_toggle_files_detail" id="cb_toggle_files_detail" value="1" class="checkbox" onclick="toggleClassRemember('files_detail');" checked="checked"> 
+			<label for="cb_toggle_files_detail">Show more detail</label>
+		</p>
 
 		<div id="file_container" class="txp-container">
 
@@ -194,14 +198,9 @@
 				</div>
 			</form>
 
-			<p class="detail-toggle">
-				<input type="checkbox" name="cb_toggle_files_detail" id="cb_toggle_files_detail" value="1" class="checkbox" onclick="toggleClassRemember('files_detail');" checked="checked"> 
-				<label for="cb_toggle_files_detail">Show detail</label>
-			</p>
-
 			<div id="file_navigation" class="txp-navigation">
 				<p class="prev-next">1/1</p>
-				<form method="post" action="index.php" class="pageby">
+				<form method="post" action="#" class="pageby">
 					<p>
 						View
 						<select name="qty" onchange="submit(this.form);">

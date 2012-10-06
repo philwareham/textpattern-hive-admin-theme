@@ -112,14 +112,13 @@
 	<div role="main" id="txp-main" class="txp-body" aria-label="Main content">
 		<h1 class="txp-heading">Users</h1>
 
+		<p class="txp-buttons">
+			<a href="secondary/admin-password_edit.html">Change your password</a>
+			<a href="secondary/admin-admin_edit.html">Add new author</a>
+		</p>
+
 		<div id="users_control" class="txp-control-panel">
-
-			<p class="txp-buttons">
-				<a href="secondary/admin-password_edit.html">Change your password</a>
-				<a href="secondary/admin-admin_edit.html">Add new author</a>
-			</p>
-
-			<form method="get" action="index.php" class="search-form">
+			<form method="get" action="#" class="search-form">
 				<p>
 					<label for="admin-search">Search</label>
 					<select id="admin-search" name="search_method">
@@ -133,12 +132,11 @@
 					<input type="submit" value="Go" name="search">
 				</p>
 			</form>
-
 		</div>
 
 		<div id="users_container" class="txp-container">
 
-			<form action="index.php" id="users_form" class="multi_edit_form" method="post" name="longform">
+			<form action="#" id="users_form" class="multi_edit_form" method="post" name="longform">
 				<div class="txp-listtables">
 
 					<table class="txp-list">

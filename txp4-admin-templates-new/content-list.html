@@ -134,6 +134,11 @@
 			</form>
 		</div>
 
+		<p class="detail-toggle">
+			<input type="checkbox" name="cb_toggle_articles_detail" id="cb_toggle_articles_detail" value="1" class="checkbox" onclick="toggleClassRemember('articles_detail');" checked="checked">
+			<label for="cb_toggle_articles_detail">Show more detail</label>
+		</p>
+
 		<div id="list_container" class="txp-container">
 
 			<form name="longform" id="articles_form" class="multi_edit_form" method="post" action="#">
@@ -222,11 +227,6 @@
 				</div>
 			</form>
 
-			<p class="detail-toggle">
-				<input type="checkbox" name="cb_toggle_articles_detail" id="cb_toggle_articles_detail" value="1" class="checkbox" onclick="toggleClassRemember('articles_detail');" checked="checked">
-				<label for="cb_toggle_articles_detail">Show detail</label>
-			</p>
-
 			<div id="list_navigation" class="txp-navigation">
 				<form class="nav-form" method="get" action="#">
 					<p class="prev-next">
@@ -237,7 +237,7 @@
 					</p>
 				</form>
 
-				<form method="post" action="index.php" class="pageby">
+				<form method="post" action="#" class="pageby">
 					<p>
 						View
 						<select name="qty" onchange="submit(this.form);">
