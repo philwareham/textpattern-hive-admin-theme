@@ -622,11 +622,11 @@ body#page-setup {
 /* Content -> Comments page
    ========================================================================== */
 
-#page-discuss .txp-list tr.spam td {
+#page-discuss .txp-list tr.spam {
 	background: lighten($error-background, 2%);
 }
 
-#page-discuss .txp-list tr.moderate td {
+#page-discuss .txp-list tr.moderate {
 	background: lighten($warning-background, 2%);
 }
 
