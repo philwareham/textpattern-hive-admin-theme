@@ -159,11 +159,15 @@ body {
 }
 
 .txp-control-panel {
-	text-align: center;
 	line-height: 2;
 	p {
 		margin-top: 0;
 	}
+}
+
+.txp-buttons {
+	float: right;
+	margin-top: 0;
 }
 
 div.multi-edit {
