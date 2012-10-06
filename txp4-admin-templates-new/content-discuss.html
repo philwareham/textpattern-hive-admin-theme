@@ -140,6 +140,13 @@
 			<label for="cb_toggle_discuss_detail">Show more detail</label>
 		</p>
 
+		<form class="cb_show_spam" method="post" action="#">
+			<p>
+				<input type="checkbox" name="cb_show_spam" id="cb_show_spam" value="1" class="checkbox" onclick="setClassRemember('show_spam',1);submit(this.form);" checked="checked">
+				<label for="cb_show_spam">Show spam</label>
+			</p>
+		</form>
+
 		<div id="discuss_container" class="txp-container">
 
 			<form name="longform" id="discuss_form" class="multi_edit_form" method="post" action="#">
@@ -215,11 +222,6 @@
 					</div>
 
 				</div>
-			</form>
-
-			<form class="cb_show_spam" method="post" action="#">
-				<input type="checkbox" name="cb_show_spam" id="cb_show_spam" value="1" class="checkbox" onclick="setClassRemember('show_spam',1);submit(this.form);" checked="checked">
-				<label for="cb_show_spam">Show spam</label>
 			</form>
 
 			<div id="discuss_navigation" class="txp-navigation">
