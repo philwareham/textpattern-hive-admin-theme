@@ -116,7 +116,7 @@
 
 			<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
 				<div>
-					<p><label for="image-upload">Upload image</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>&#160;<input type="file" value="" name="thefile" id="image-upload" />&#160;<input type="submit" value="Upload" /></p>
+					<p><label for="image-upload">Upload image</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>&#160;<input type="file" value="" name="thefile" id="image-upload">&#160;<input type="submit" value="Upload"></p>
 				</div>
 			</form>
 
@@ -131,8 +131,8 @@
 						<option value="alt">Alternate text</option>
 						<option value="caption">Caption</option>
 					</select>
-					<input type="text" value="" name="crit" size="16" />
-					<input type="submit" value="Go" name="search" />
+					<input type="text" value="" name="crit" size="16">
+					<input type="submit" value="Go" name="search">
 				</p>
 			</form>
 		</div>
@@ -146,7 +146,7 @@
 
 						<thead>
 							<tr>
-								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
+								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
 								<th scope="col" class="desc id"><a href="#">ID#</a></th>
 								<th scope="col" class="name"><a href="#">Name</a></th>
 								<th scope="col" class="images_detail date created"><a href="#">Date</a></th>
@@ -159,11 +159,11 @@
 
 						<tbody>
 							<tr>
-								<td class="multi-edit"><input type="checkbox" value="2" name="selected[]" /></td>
+								<td class="multi-edit"><input type="checkbox" value="2" name="selected[]"></td>
 								<th scope="row" class="id"><a href="secondary/content-image_edit.html" title="Edit">2</a>&#160;<span class="articles_detail">[<a href="#" title="View">View</a>]</span></th>
 								<td class="name"><a href="secondary/content-image_edit.html" title="Edit">txp_slug105x45.gif</a></td>
 								<td class="images_detail date created">24&#160;Dec&#160;1977 14:20:42</td>
-								<td class="thumbnail"><a href="secondary/content-image_edit.html"><img src="http://static1.designhive.com/img/cms/53t.jpg" alt="" title="53.jpg (460 × 294)" width="184" height="118" class="content-image" /></a></td>
+								<td class="thumbnail"><a href="secondary/content-image_edit.html"><img src="http://static1.designhive.com/img/cms/53t.jpg" alt="" title="53.jpg (460 × 294)" width="184" height="118" class="content-image"></a></td>
 								<td class="images_detail tag-build">
 									<a target="_blank" href="#" onclick="popWin(this.href); return false;">Textile</a>
 									&#124; <a target="_blank" href="#" onclick="popWin(this.href); return false;">Textpattern</a>
@@ -173,7 +173,7 @@
 								<td class="author"><span title="Phil Wareham">admin</span></td>
 							</tr>
 							<tr>
-								<td class="multi-edit"><input type="checkbox" value="1" name="selected[]" /></td>
+								<td class="multi-edit"><input type="checkbox" value="1" name="selected[]"></td>
 								<th scope="row" class="id"><a href="secondary/content-image_edit.html" title="Edit">1</a>&#160;<span class="articles_detail">[<a href="#" title="View">View</a>]</span></th>
 								<td class="name"><a href="secondary/content-image_edit.html" title="Edit">divider.gif</a></td>
 								<td class="images_detail date created">22&#160;Jul&#160;2005 16:37:11</td>
@@ -203,18 +203,18 @@
 								<option value="admin">admin</option>
 							</select>
 						</div>
-						<input type="submit" value="Go" />
+						<input type="submit" value="Go">
 					</div>
 
 				</div>
 			</form>
 
 			<p class="detail-toggle">
-				<input type="checkbox" name="cb_toggle_images_detail" id="cb_toggle_images_detail" value="1" checked="checked" class="checkbox" onclick="toggleClassRemember('images_detail');" checked="checked" />
+				<input type="checkbox" name="cb_toggle_images_detail" id="cb_toggle_images_detail" value="1" class="checkbox" onclick="toggleClassRemember('images_detail');" checked="checked">
 				<label for="cb_toggle_images_detail">Show detail</label>
 			</p>
 
-			<div id="image_navigation" class="txp-navigation">
+			<div role="navigation" id="image_navigation" class="txp-navigation" aria-label="List controls">
 				<p class="prev-next">1/1</p>
 				<form method="post" action="index.php" class="pageby">
 					<p>

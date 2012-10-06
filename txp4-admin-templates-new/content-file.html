@@ -115,7 +115,7 @@
 		<div id="file_control" class="txp-control-panel">
 			<form class="upload-form" method="post" enctype="multipart/form-data" action="index.php">
 				<div>
-					<p><label for="file-upload">Upload file</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>&#160;<input type="file" value="" name="thefile" id="file-upload" />&#160;<input type="submit" value="Upload" /></p>
+					<p><label for="file-upload">Upload file</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>&#160;<input type="file" value="" name="thefile" id="file-upload">&#160;<input type="submit" value="Upload"></p>
 				</div>
 			</form>
 			<form method="get" action="index.php" class="search-form">
@@ -129,8 +129,8 @@
 						<option value="category">Category</option>
 						<option value="author">Author</option>
 					</select>
-					<input type="text" value="" name="crit" size="16" />
-					<input type="submit" value="Go" name="search" />
+					<input type="text" value="" name="crit" size="16">
+					<input type="submit" value="Go" name="search">
 				</p>
 			</form>
 		</div>
@@ -144,7 +144,7 @@
 
 						<thead>
 							<tr>
-								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all" /></th>
+								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
 								<th scope="col" class="id"><a href="#">ID#</a></th>
 								<th scope="col" class="asc name"><a href="#">Name</a></th>
 								<th scope="col" class="title"><a href="#">Title</a></th>
@@ -160,7 +160,7 @@
 
 						<tbody>
 							<tr>
-								<td class="multi-edit"><input type="checkbox" value="1" name="selected[]" /></td>
+								<td class="multi-edit"><input type="checkbox" value="1" name="selected[]"></td>
 								<th scope="row" class="id"><a href="secondary/content-file_edit.html" title="Edit">1</a>&#160;<span class="articles_detail">[<a href="#" title="View">Download</a>]</span></th>
 								<td class="name"><a href="secondary/content-file_edit.html" title="Edit">test-file.zip</a></td>
 								<td class="title">A Test File</td>
@@ -195,7 +195,7 @@
 			</form>
 
 			<p class="detail-toggle">
-				<input type="checkbox" name="cb_toggle_files_detail" id="cb_toggle_files_detail" value="1" class="checkbox" onclick="toggleClassRemember('files_detail');" checked="checked" /> 
+				<input type="checkbox" name="cb_toggle_files_detail" id="cb_toggle_files_detail" value="1" class="checkbox" onclick="toggleClassRemember('files_detail');" checked="checked"> 
 				<label for="cb_toggle_files_detail">Show detail</label>
 			</p>
 
