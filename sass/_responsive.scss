@@ -9,7 +9,7 @@
    ========================================================================== */
 
 
-@media only screen and (max-width: 768px) { // may be changed to 'device-max-width' in final build
+@media only screen and (max-width: 768px) {
 
 
 /* Layout < 769px
@@ -22,6 +22,17 @@ body {
 
 body#page-setup {
 	padding: 0 1em 0;
+}
+
+
+/* Layout grid < 769px
+   ========================================================================== */
+
+/* proportional units */
+.txp-layout-1-4,
+.txp-layout-2-4,
+.txp-layout-3-4 {
+	width: 100%;
 }
 
 
@@ -47,12 +58,12 @@ body#page-setup {
 /* Navigation < 769px
    ========================================================================== */
 
-/* show <select> version of navigation on small screen widths */
+/* show `<select>` version of navigation on small screen widths */
 .txp-nav-select {
 	display: inherit;
 }
 
-/* hide <ul> version of navigation on small screen widths */
+/* hide `<ul>` version of navigation on small screen widths */
 .txp-nav {
 	display: none;
 }
@@ -202,7 +213,7 @@ body#page-setup {
    ========================================================================== */
 
 
-@media only screen and (max-width: 545px) { // may be changed to 'device-max-width' in final build
+@media only screen and (max-width: 545px) {
 
 body {
 	padding-top: 7.23076923076923em; // 94px / 13px
@@ -221,7 +232,7 @@ body {
 	}
 }
 
-/* show select version of navigation for smaller screens (and hide list version) */
+/* show `<select>` version of navigation for smaller screens (and hide `<ul>` version) */
 .txp-nav-select {
 	position: absolute;
 	top: 2.46153846153846em;

@@ -28,7 +28,7 @@ summary {
 	display: block;
 }
 
-/* addresses styling for 'hidden' attribute not present in IE8-9 */
+/* addresses styling for `hidden` attribute not present in IE8-9 */
 [hidden] {
 	display: none;
 }
@@ -53,7 +53,7 @@ html {
 }
 
 
-@import "grid-helpers", "grid-core", "grid", "links", "typography", "internationalisation", "embedded-content", "alerts", "twisties", "progress", "forms", "buttons", "lists", "tables";
+@import "grid", "links", "typography", "internationalisation", "embedded-content", "alerts", "twisties", "progress", "forms", "buttons", "lists", "tables";
 
 
 /* Container
@@ -149,7 +149,7 @@ body {
 /* Miscellaneous/shared layout
    ========================================================================== */
 
-/* Hide text but still allow screen reader access */
+/* hide text but still allow screen reader access */
 .txp-accessibility {
 	position: absolute;
 	left: -1000em;
@@ -187,32 +187,9 @@ div.multi-edit {
 	width: 100%;
 }
 
-.text-column {
-	margin: 0 auto;
-	max-width: $text-column;
-}
-
 .text-section {
 	padding-top: 5em;
 	background: url("../img/separator.gif") repeat-x 0 2.15384615384615em; // 28px / 13px
-}
-
-/* grids */
-
-.txp-grid {
-	text-align: center;
-	margin-bottom: .69230769230769em; // 9px / 13px
-}
-
-.txp-grid-cell {
-	@include box-sizing;
-	display: inline-block;
-	text-align: left;
-	max-width: 22.6153846153846em; // 294px / 13px
-	vertical-align: top;
-	margin: 0 .15384615384615em .30769230769231em; // 2px / 13px and 4px / 13px
-	border: 1px solid $color-border;
-	padding: 0 1em;
 }
 
 .restricted-area {
@@ -431,11 +408,11 @@ body#page-setup {
 }
 
 #categories_article {
-	margin-left: 0; // remove left margin from first .category-list div
+	margin-left: 0; // remove left margin from first `.category-list` div
 }
 
 #categories_file {
-	margin-right: 0; // remove right margin from last .category-list div
+	margin-right: 0; // remove right margin from last `.category-list` div
 }
 
 .category-list .small {

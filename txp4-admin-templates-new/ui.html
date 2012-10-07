@@ -14,6 +14,12 @@
 	<script src="../js/modernizr.js"></script>
 	<!--[if lt IE 9]><script src="../js/selectivizr.min.js"></script><![endif]-->
 	<script src="../js/scripts.js"></script>
+
+	<!-- INLINE STYLE JUST FOR DESIGN PATTERNS DOC - NOT IN ACTUAL SITE -->
+	<style>
+		.box { padding: 1em; margin-bottom: 1em; background: #999;}
+	</style>
+
 </head>
 <body id="page-admin" class="admin">
 
@@ -142,11 +148,52 @@
 		<div class="text-section" id="ui-doc-layouts">
 			<h1>Columns and grids</h1>
 
+			<h2>Page layout columns <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.6</span></h2>
+		</div>
+	</div><!--end of text-column - to demonstrate other grids -->
+
+
+	<div class="txp-layout-grid">
+
+		<div class="txp-layout-cell"><div class="box">4 column span</div></div>
+
+		<div class="txp-layout-cell txp-layout-2-4"><div class="box">2 column span</div></div>
+		<div class="txp-layout-cell txp-layout-2-4"><div class="box">2 column span</div></div>
+
+		<div class="txp-layout-cell txp-layout-3-4"><div class="box">3 column span</div></div>
+		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+
+		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+		<div class="txp-layout-cell txp-layout-3-4"><div class="box">3 column span</div></div>
+
+		<div class="txp-layout-cell txp-layout-2-4"><div class="box">2 column span</div></div>
+		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+
+		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+		<div class="txp-layout-cell txp-layout-2-4"><div class="box">2 column span</div></div>
+		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+
+		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+		<div class="txp-layout-cell txp-layout-2-4"><div class="box">2 column span</div></div>
+
+		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+
+	</div>
+
+
+	<div class="text-column">
+		<div>
 			<h2>Text columns <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate. <strong>Please note</strong> this replaces the old <code>.plugin-help</code> class.</p>
 			<pre><code>&lt;div class="text-column"&gt;
 	&lt;p&gt;...content here...&lt;/p&gt;
 &lt;/div&gt;</code></pre>
-			<p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate. <strong>Please note</strong> this replaces the old <code>.plugin-help</code> class.</p>
+			<div class="box">Text column (independent of grid columns)</div>
 
 			<h2>Plugin option columns <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
 			<pre><code>&lt;form method="post" action="#" class="edit-form"&gt;
@@ -224,7 +271,7 @@
 				</div>
 			</form>
 
-			<h2>Grids <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<h2>Inline grids <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
 			<pre><code>&lt;div class="txp-grid"&gt;
 	&lt;div class="txp-grid-cell" [width, see below]>
 		&lt;p>Grid item 1&lt;/p>
@@ -260,7 +307,7 @@
 				</div>
 			</div>
 
-			<p>Rudimentary grid-type layouts—works best if inner content is of equal quantity (such as a grid of images). If you want to utilise this layout then there are some prerequisites:</p>
+			<p>Rudimentary inline grid type layouts—works best if inner content is of equal quantity (such as a grid of images). If you want to utilise this layout then there are some prerequisites:</p>
 			<ol>
 				<li>You must define a specific width for each <code>.txp-grid-cell</code>, either as a <code>class</code> attribute or <code>style</code> attribute, otherwise the cell width fits to the block content within it.</li>
 				<li>The <code>.txp-grid-cell</code> should have a maximum width of no more than 294px (or its equivalent em measurement).</li>
