@@ -293,7 +293,7 @@ code.excerpt {
   background: none;
 }
 
-/* prevents sub and sup affecting line height in all browsers */
+/* prevents `<sub>` and `<sup>` affecting line height in all browsers */
 sub,
 sup {
   font-size: 0.84615em;
@@ -343,7 +343,7 @@ html[lang="zh-tw"] {
 /* Embedded content
    ========================================================================== */
 img {
-  /* removes border when inside `a` element in IE8-9 */
+  /* removes border when inside `<a>` element in IE8-9 */
   border: 0;
 }
 img.align-left {
