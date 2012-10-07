@@ -7,7 +7,7 @@
 /* Navigation
    ========================================================================== */
 
-/* hide <select> version of navigation on non-touch devices
+/* hide `<select>` version of navigation on non-touch devices
    also happens via media-queries when screen width is < 768px regardless of touch ability */
 .txp-nav-select {
 	display: none;
@@ -17,7 +17,7 @@
 	}
 }
 
-/* Hide <ul> version of navigation on touch devices */
+/* Hide `<ul>` version of navigation on touch devices */
 .touch .txp-nav {
 	display: none;
 }

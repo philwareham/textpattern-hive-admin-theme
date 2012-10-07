@@ -40,7 +40,7 @@ legend {
 	@include box-sizing;
 }
 
-/* colour placeholder text (Webkit and Mozilla only, so far) */
+/* colour placeholder text (WebKit and Mozilla only, so far) */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
 	color: $color-text-footnote;
@@ -198,7 +198,7 @@ optgroup {
 	}
 }
 
-/* addresses box sizing set to content-box and excess padding in IE8-9 */
+/* addresses box sizing set to `content-box` and excess padding in IE8-9 */
 input[type="checkbox"],
 input[type="radio"] {
 	margin-right: .5em;
