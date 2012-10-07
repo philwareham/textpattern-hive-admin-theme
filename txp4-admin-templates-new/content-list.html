@@ -110,148 +110,163 @@
 
 	</header><!-- /txp-header -->
 	<div role="main" id="txp-main" class="txp-body" aria-label="Main content">
-		<h1 class="txp-heading">Articles</h1>
 
-		<div id="list_control" class="txp-control-panel">
-			<form method="get" action="#" class="search-form">
-				<p>
-					<label for="list-search">Search</label>
-					<select id="list-search" name="search_method">
-						<option value="id">ID#</option>
-						<option value="title_body_excerpt" selected="selected">Title, body &amp; excerpt</option>
-						<option value="section">Section</option>
-						<option value="categories">Categories</option>
-						<option value="keywords">Keywords</option>
-						<option value="status">Status</option>
-						<option value="author">Author</option>
-						<option value="article_image">Article image</option>
-						<option value="posted">Posted</option>
-						<option value="lastmod">Modified</option>
-					</select>
-					<input type="text" value="" name="crit" size="16">
-					<input type="submit" value="Go" name="search">
+		<div class="txp-layout-grid">
+
+			<div class="txp-layout-cell txp-layout-2-4">
+				<h1 class="txp-heading">Articles</h1>
+			</div>
+
+			<div class="txp-layout-cell txp-layout-2-4">
+				<p class="txp-buttons">
+					<a href="content-article.html">Add new article</a>
 				</p>
-			</form>
-		</div>
+			</div>
 
-		<p class="detail-toggle">
-			<input type="checkbox" name="cb_toggle_articles_detail" id="cb_toggle_articles_detail" value="1" class="checkbox" onclick="toggleClassRemember('articles_detail');" checked="checked">
-			<label for="cb_toggle_articles_detail">Show more detail</label>
-		</p>
-
-		<div id="list_container" class="txp-container">
-
-			<form name="longform" id="articles_form" class="multi_edit_form" method="post" action="#">
-				<div class="txp-listtables">
-
-					<table class="txp-list">
-
-						<thead>
-							<tr>
-								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-								<th scope="col" class="id actions"><a href="#">ID#</a></th>
-								<th scope="col" class="title"><a href="#">Title</a></th>
-								<th scope="col" class="desc date posted created"><a href="#">Posted</a></th>
-								<th scope="col" class="articles_detail date modified"><a href="#">Modified</a></th>
-								<th scope="col" class="articles_detail date expires"><a href="#">Expires</a></th>
-								<th scope="col" class="section"><a href="#">Section</a></th>
-								<th scope="col" class="articles_detail category category1"><a href="#">Category 1</a></th>
-								<th scope="col" class="articles_detail category category2"><a href="#">Category 2</a></th>
-								<th scope="col" class="status"><a href="#">Status</a></th>
-								<th scope="col" class="author"><a href="#">Author</a></th>
-								<th scope="col" class="articles_detail comments"><a href="#">Comments</a></th>
-							</tr>
-						</thead>
-
-						<tbody>
-							<tr>
-								<td class="multi-edit"><input type="checkbox" value="2" name="selected[]" class="checkbox"></td>
-								<th scope="row" class="id"><a href="#">2</a>&#160;<span class="articles_detail">[<a href="#" title="View">View</a>]</span></th>
-								<td class="title"><a href="#">test article 2 title</a></td>
-								<td class="date posted created">03&#160;Jul&#160;2011 12:27:33</td>
-								<td class="articles_detail date modified">03&#160;Jul&#160;2011 12:27:33</td>
-								<td class="articles_detail date expires">&#160;</td>
-								<td class="section"><span title="Articles">articles</span></td>
-								<td class="articles_detail category category1">&#160;</td>
-								<td class="articles_detail category category2">&#160;</td>
-								<td class="status"><a href="#" title="View">Live</a></td>
-								<td class="author"><span title="Phil Wareham">admin</span></td>
-								<td class="articles_detail comments">
-									<span class="comments-status">On</span>
-									<span class="comments-manage"><a title="Manage" href="#">(1)</a></span>
-								</td>
-							</tr>
-							<tr>
-								<td class="multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
-								<th scope="row" class="id"><a href="#">1</a>&#160;<span class="articles_detail">[<a href="#" title="View">View</a>]</span></th>
-								<td class="title"><a href="#">Welcome to Your Site!</a></td>
-								<td class="date posted created">29&#160;Jun&#160;2011 19:07:55</td>
-								<td class="articles_detail date modified">29&#160;Jun&#160;2011 19:07:55</td>
-								<td class="articles_detail date expires">&#160;</td>
-								<td class="section"><span title="Articles">articles</span></td>
-								<td class="articles_detail category category1"><span title="Hope for the Future">hope-for-the-future</span></td>
-								<td class="articles_detail category category2"><span title="Meaningful Labor">meaningful-labor</span></td>
-								<td class="status"><a href="#" title="View">Live</a></td>
-								<td class="author"><span title="Phil Wareham">admin</span></td>
-								<td class="articles_detail comments">
-									<span class="comments-status">Expired</span>
-									<span class="comments-manage">(0)</span>
-								</td>
-							</tr>
-						</tbody>
-
-					</table>
-
-					<div class="multi-edit">
-						<select name="edit_method">
-							<option value="" selected="selected">With selected&#8230;</option>
-							<option value="changesection">Change section</option>
-							<option value="changecategory1">Change category1</option>
-							<option value="changecategory2">Change category2</option>
-							<option value="changestatus">Change status</option>
-							<option value="changecomments">Change comments</option>
-							<option value="changeauthor">Change author</option>
-							<option value="delete">Delete</option>
+			<div id="list_control" class="txp-layout-cell txp-layout-2-4">
+				<form method="get" action="#" class="search-form">
+					<p class="txp-control-panel">
+						<label for="list-search">Search</label>
+						<select id="list-search" name="search_method">
+							<option value="id">ID#</option>
+							<option value="title_body_excerpt" selected="selected">Title, body &amp; excerpt</option>
+							<option value="section">Section</option>
+							<option value="categories">Categories</option>
+							<option value="keywords">Keywords</option>
+							<option value="status">Status</option>
+							<option value="author">Author</option>
+							<option value="article_image">Article image</option>
+							<option value="posted">Posted</option>
+							<option value="lastmod">Modified</option>
 						</select>
-						<div class="multi-option" id="multi-option-changesection">
-							<select name="Section">
-								<option value="" selected="selected"></option>
-								<option value="about">about</option>
-								<option value="articles">articles</option>
-								<option value="search">search</option>
-							</select>
-						</div>
-						<input type="submit" value="Go">
-					</div>
-
-				</div>
-			</form>
-
-			<div id="list_navigation" class="txp-navigation">
-				<form class="nav-form" method="get" action="#">
-					<p class="prev-next">
-						<span class="navlink-disabled"><b class="icon icon-arrow-w">&#8592;</b> Prev</span>&#160;<select name="page" onchange="submit(this.form);">
-							<option value="1" selected="selected">1/2</option>
-							<option value="2">2/2</option>
-						</select>&#160;<a href="#" class="navlink" rel="next">Next <b class="icon icon-arrow-e">&#8594;</b></a>
-					</p>
-				</form>
-
-				<form method="post" action="#" class="pageby">
-					<p>
-						View
-						<select name="qty" onchange="submit(this.form);">
-							<option value="15">15</option>
-							<option value="25">25</option>
-							<option value="50">50</option>
-							<option value="100">100</option>
-						</select>
-						per page
+						<input type="text" value="" name="crit" size="16">
+						<input type="submit" value="Go" name="search">
 					</p>
 				</form>
 			</div>
 
-		</div><!-- /txp-container -->
+			<div class="txp-layout-cell txp-layout-2-4">
+				<p class="detail-toggle">
+					<input type="checkbox" name="cb_toggle_articles_detail" id="cb_toggle_articles_detail" value="1" class="checkbox" onclick="toggleClassRemember('articles_detail');" checked="checked">
+					<label for="cb_toggle_articles_detail">Show more detail</label>
+				</p>
+			</div>
+
+			<div class="txp-layout-cell">
+
+				<form name="longform" id="articles_form" class="multi_edit_form" method="post" action="#">
+					<div class="txp-listtables">
+
+						<table class="txp-list">
+
+							<thead>
+								<tr>
+									<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+									<th scope="col" class="id actions"><a href="#">ID#</a></th>
+									<th scope="col" class="title"><a href="#">Title</a></th>
+									<th scope="col" class="desc date posted created"><a href="#">Posted</a></th>
+									<th scope="col" class="articles_detail date modified"><a href="#">Modified</a></th>
+									<th scope="col" class="articles_detail date expires"><a href="#">Expires</a></th>
+									<th scope="col" class="section"><a href="#">Section</a></th>
+									<th scope="col" class="articles_detail category category1"><a href="#">Category 1</a></th>
+									<th scope="col" class="articles_detail category category2"><a href="#">Category 2</a></th>
+									<th scope="col" class="status"><a href="#">Status</a></th>
+									<th scope="col" class="author"><a href="#">Author</a></th>
+									<th scope="col" class="articles_detail comments"><a href="#">Comments</a></th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td class="multi-edit"><input type="checkbox" value="2" name="selected[]" class="checkbox"></td>
+									<th scope="row" class="id"><a href="#">2</a>&#160;<span class="articles_detail">[<a href="#" title="View">View</a>]</span></th>
+									<td class="title"><a href="#">test article 2 title</a></td>
+									<td class="date posted created">03&#160;Jul&#160;2011 12:27:33</td>
+									<td class="articles_detail date modified">03&#160;Jul&#160;2011 12:27:33</td>
+									<td class="articles_detail date expires">&#160;</td>
+									<td class="section"><span title="Articles">articles</span></td>
+									<td class="articles_detail category category1">&#160;</td>
+									<td class="articles_detail category category2">&#160;</td>
+									<td class="status"><a href="#" title="View">Live</a></td>
+									<td class="author"><span title="Phil Wareham">admin</span></td>
+									<td class="articles_detail comments">
+										<span class="comments-status">On</span>
+										<span class="comments-manage"><a title="Manage" href="#">(1)</a></span>
+									</td>
+								</tr>
+								<tr>
+									<td class="multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+									<th scope="row" class="id"><a href="#">1</a>&#160;<span class="articles_detail">[<a href="#" title="View">View</a>]</span></th>
+									<td class="title"><a href="#">Welcome to Your Site!</a></td>
+									<td class="date posted created">29&#160;Jun&#160;2011 19:07:55</td>
+									<td class="articles_detail date modified">29&#160;Jun&#160;2011 19:07:55</td>
+									<td class="articles_detail date expires">&#160;</td>
+									<td class="section"><span title="Articles">articles</span></td>
+									<td class="articles_detail category category1"><span title="Hope for the Future">hope-for-the-future</span></td>
+									<td class="articles_detail category category2"><span title="Meaningful Labor">meaningful-labor</span></td>
+									<td class="status"><a href="#" title="View">Live</a></td>
+									<td class="author"><span title="Phil Wareham">admin</span></td>
+									<td class="articles_detail comments">
+										<span class="comments-status">Expired</span>
+										<span class="comments-manage">(0)</span>
+									</td>
+								</tr>
+							</tbody>
+
+						</table>
+
+						<div class="multi-edit">
+							<select name="edit_method">
+								<option value="" selected="selected">With selected&#8230;</option>
+								<option value="changesection">Change section</option>
+								<option value="changecategory1">Change category1</option>
+								<option value="changecategory2">Change category2</option>
+								<option value="changestatus">Change status</option>
+								<option value="changecomments">Change comments</option>
+								<option value="changeauthor">Change author</option>
+								<option value="delete">Delete</option>
+							</select>
+							<div class="multi-option" id="multi-option-changesection">
+								<select name="Section">
+									<option value="" selected="selected"></option>
+									<option value="about">about</option>
+									<option value="articles">articles</option>
+									<option value="search">search</option>
+								</select>
+							</div>
+							<input type="submit" value="Go">
+						</div>
+
+					</div>
+				</form>
+
+				<div id="list_navigation" class="txp-navigation">
+					<form class="nav-form" method="get" action="#">
+						<p class="prev-next">
+							<span class="navlink-disabled"><b class="icon icon-arrow-w">&#8592;</b> Prev</span>&#160;<select name="page" onchange="submit(this.form);">
+								<option value="1" selected="selected">1/2</option>
+								<option value="2">2/2</option>
+							</select>&#160;<a href="#" class="navlink" rel="next">Next <b class="icon icon-arrow-e">&#8594;</b></a>
+						</p>
+					</form>
+
+					<form method="post" action="#" class="pageby">
+						<p>
+							View
+							<select name="qty" onchange="submit(this.form);">
+								<option value="15">15</option>
+								<option value="25">25</option>
+								<option value="50">50</option>
+								<option value="100">100</option>
+							</select>
+							per page
+						</p>
+					</form>
+				</div>
+
+			</div>
+
+		</div><!-- /txp-layout-grid -->
 	</div><!-- /txp-body -->
 
 	<footer role="contentinfo" class="txp-footer">

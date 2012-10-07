@@ -159,15 +159,18 @@ body {
 }
 
 .txp-control-panel {
+	margin-top: 0;
 	line-height: 2;
-	p {
-		margin-top: 0;
-	}
+}
+
+.detail-toggle {
+	margin-top: .33em;
+	text-align: right;
 }
 
 .txp-buttons {
-	float: right;
-	margin-top: 0;
+	text-align: right;
+	margin: .15em 0 1.53846153846154em;;
 }
 
 div.multi-edit {
@@ -393,30 +396,10 @@ body#page-setup {
 	margin-top: .38461538461538em;
 }
 
-.category-list {
-	width: 100%;
-
-	td {
-		width: 25%;
-	}
-}
-
-.categories > div {
-	margin: 0 .5em 1em;
+.categories {
+	margin-bottom: 1em;
 	padding: 1em 1em 1px;
 	background: $color-background-box;
-}
-
-#categories_article {
-	margin-left: 0; // remove left margin from first `.category-list` div
-}
-
-#categories_file {
-	margin-right: 0; // remove right margin from last `.category-list` div
-}
-
-.category-list .small {
-	display: block;
 }
 
 
