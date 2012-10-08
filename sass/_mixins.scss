@@ -30,19 +30,6 @@
 	}
 }
 
-// higher resolution images for high resolution displays
-		
-@mixin hires-graphic($hdfile, $hdtype, $hdwidth, $hdheight) {
-	$filename: $hdfile + '.' + $hdtype;
-	$hdfilename: $hdfile + '@2x.' + $hdtype;
-	background-image: url('../img/' + $filename);
-	@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
-		background-image: url('../img/hidpi/' + $hdfilename) !important;
-		-webkit-background-size: $hdwidth $hdheight;
-		        background-size: $hdwidth $hdheight;
-	}
-}
-
 // rounded corners all
 
 @mixin border-radius($border-radius) {
