@@ -664,23 +664,9 @@ body#page-setup {
 /* Admin -> Preferences page
    ========================================================================== */
 
-
-
-
-/* Admin -> Preferences page
-   ========================================================================== */
-
-#page-lang .txp-list {
-	tr td,
-	tr.even td {
-		height: 1.84615384615385em; // 24px / 13px
-		vertical-align: middle;
-	}
-
-	.modified {
-		color: $color-text-footnote;
-		margin-left: .6em;
-	}
+#page-lang .txp-list .modified {
+	color: $color-text-footnote;
+	margin-left: .6em;
 }
 
 #language_control {
