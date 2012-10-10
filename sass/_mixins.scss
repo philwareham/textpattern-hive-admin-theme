@@ -22,7 +22,7 @@
 @mixin svg-graphic($imgfilename, $imgtype, $imgwidth, $imgheight) {
 	background-image: url('../img/' + $imgfilename + '.' + $imgtype);
 	.svg & {
-		background-image: url('../img/svg/' + $imgfilename + '.svg');
+		background-image: url('../img/' + $imgfilename + '.svg');
 		-webkit-background-size: $imgwidth $imgheight;
 		   -moz-background-size: $imgwidth $imgheight;
 		     -o-background-size: $imgwidth $imgheight;
