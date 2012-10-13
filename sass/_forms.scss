@@ -234,7 +234,7 @@ textarea[disabled],
 
 input[size="32"] {
 	width: 100%;
-	max-width: 23.2307692307692em; // 302px / 13px
+	max-width: 28em; // 364px / 13px
 }
 
 input.input-large {
@@ -243,17 +243,17 @@ input.input-large {
 
 input.input-medium {
 	width: 50%;
-	max-width: 11.6153846153846em; // 151px / 13px
+	max-width: 14em; // 182px / 13px
 }
 
 input.input-small {
 	width: 25%;
-	max-width: 5.76923076923077em; // 75px / 13px
+	max-width: 7em; // 91px / 13px
 }
 
 input.input-xsmall {
-	width: 16.6666666666667%;
-	max-width: 3.46153846153846em; // 45px / 13px
+	width: 12.5%;
+	max-width: 3.5em; // 46px / 13px
 }
 
 input {
@@ -261,7 +261,7 @@ input {
 	&.exp_year {
 		text-align: center;
 		padding: .15384615384615em .23076923076923em;
-		width: 3.53846153846154em; // 46px / 13px
+		width: 4.2em; // 55px / 13px
 	}
 
 	&.month,

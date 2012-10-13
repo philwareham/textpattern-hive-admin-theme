@@ -53,6 +53,7 @@
 }
 
 /* text columns (fixed proportion cell) */
+.text-column, // deprecated @ 4.6
 .txp-layout-textbox {
 	margin: 0 auto;
 	max-width: $text-column;

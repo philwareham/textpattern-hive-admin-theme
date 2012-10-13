@@ -254,37 +254,47 @@ span.spinner {
 	}
 }
 
-.edit-image-replace,
-.edit-upload-thumbnail,
-.edit-alter-thumbnail,
-.edit-file-replace {
-	input[type="submit"] {
-		float: right;
-	}
-}
-
 .txp-edit {
-	width: ($standard-column - 2em);
+	width: ($text-column - 2em);
 }
 
 .txp-login {
 	max-width: 33.5384615384615em; // 436px / 13px
 }
 
-.edit-label,
+.txp-label,
+.txp-value {
+	display: inline-block;
+	float: left;
+	width: 50%;
+}
+
+.txp-value {
+	input,
+	select {
+		margin-top: -.23076923076923em;
+		margin-bottom: -.23076923076923em;
+	}
+}
+
+/* deprecated @ 4.6 */
+.edit-label, 
 .login-label {
 	display: inline-block;
 	float: left;
 }
 
+/* deprecated @ 4.6 */
 .edit-label {
 	width: 42%;
 }
 
+/* deprecated @ 4.6 */
 .login-label {
 	width: 31%;
 }
 
+/* deprecated @ 4.6 */
 .edit-value,
 .login-value {
 	display: inline-block;
@@ -297,15 +307,17 @@ span.spinner {
 	}
 }
 
+/* deprecated @ 4.6 */
 .edit-value {
 	width: 58%;
 }
 
+/* deprecated @ 4.6 */
 .login-value {
 	width: 69%;
 }
 
-/* TBC (for Textpattern v4.6 modals) */
+/* TBC (for modals @ 4.6) */
 .txp-edit-action {
 	margin-right: -1em;
 	margin-left: -1em;
@@ -583,6 +595,22 @@ body#page-setup {
 		vertical-align: top;
 		margin-top: 5px;
 	}
+}
+
+.edit-image-replace,
+.edit-upload-thumbnail,
+.edit-alter-thumbnail {
+	input[type="submit"] {
+		float: right;
+	}
+}
+
+
+/* Content -> Files page
+   ========================================================================== */
+
+.edit-file-replace input[type="submit"] {
+	float: right;
 }
 
 
