@@ -71,7 +71,7 @@
 
 	<div class="txp-container">
 
-	<div class="text-column">
+	<div class="txp-layout-textbox">
 		<h1>Classic/Remora theme design patterns</h1>
 		<p>The purpose of this guide is to document UI elements used within this theme in order to streamline development, avoid conflicts and inconsistencies, and as a reference for admin theme authors and plugin authors.</p>
 		<p><a href="ui.html">Switch to the Hive theme design patterns document</a>.</p>
@@ -99,10 +99,10 @@
 			<h1>Columns and grids</h1>
 
 			<h2>Text columns <span class="information" style="font-family:Verdana,Tahoma,sans-serif;font-size:.64705882352941em;">new v4.5</span></h2>
-			<pre><code>&lt;div class="text-column"&gt;
+			<p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate. <strong>Please note</strong> this replaces the old <code>.plugin-help</code> (4.4.x) and <code>.text-column</code> (4.5) classes.</p>
+			<pre><code>&lt;div class="txp-layout-textbox"&gt;
 	&lt;p&gt;...content here...&lt;/p&gt;
 &lt;/div&gt;</code></pre>
-			<p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate. <strong>Please note</strong> this replaces the old <code>.plugin-help</code> class.</p>
 
 			<h2>Plugin option columns <span class="information" style="font-family:Verdana,Tahoma,sans-serif;font-size:.64705882352941em;">new v4.5</span></h2>
 			<pre><code>&lt;form method="post" action="#" class="edit-form"&gt;
@@ -948,7 +948,7 @@
 		</div>
 
 
-	</div><!-- /text-column -->
+	</div><!-- /txp-layout-textbox -->
 
 	</div><!-- /txp-container -->
 	</div><!-- /txp-body -->

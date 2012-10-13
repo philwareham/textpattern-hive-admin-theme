@@ -17,7 +17,6 @@
 
 body {
 	padding: 4em 1em 0;
-	min-width: 294px;
 }
 
 body#page-setup {
@@ -46,7 +45,6 @@ body#page-setup {
 
 .txp-header {
 	padding: 0 1em;
-	min-width: 294px;
 
 	h1 {
 		max-width: 50%;
@@ -228,12 +226,21 @@ body {
 	@include box-shadow(0 .15384615384615em .23076923076923em rgba(#000, .15));
 }
 
-.txp-edit,
-.txp-login,
-.txp-setup {
-	width: inherit;
+.txp-label,
+.txp-value {
+	float: none;
+	width: 100%;
 }
 
+.txp-value {
+	input,
+	select {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
+/* Deprecated @ 4.6 */
 .edit-label,
 .edit-value,
 .login-label,
@@ -242,6 +249,7 @@ body {
 	width: 100%;
 }
 
+/* Deprecated @ 4.6 */
 .edit-value,
 .login-value {
 	input,
@@ -280,6 +288,11 @@ body {
 	}
 }
 
+.txp-layout-textbox {
+	width: 100%;
+}
+
+/* Deprecated @ 4.6 */
 .text-column,
 .plugin-column {
 	width: 100%;

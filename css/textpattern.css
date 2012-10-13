@@ -102,7 +102,7 @@ html {
 .text-column,
 .txp-layout-textbox {
   margin: 0 auto;
-  max-width: 58em;
+  max-width: 57.07692em;
 }
 
 /* Inline grids
@@ -450,7 +450,7 @@ a:hover .content-image {
   border-radius: 0.38462em 0.38462em 0 0;
   margin: 0 auto;
   padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
-  max-width: 38.15385em;
+  max-width: 53.23077em;
   color: #fff;
   -webkit-box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
@@ -1388,14 +1388,13 @@ td {
 body {
   position: relative;
   margin: 0;
-  padding: 5em 2em 0;
-  min-width: 71.3846153846154em;
+  padding: 5em 1.69% 0;
   color: #333333;
   background: white;
 }
 
 .txp-body {
-  max-width: 110em;
+  max-width: 115em;
   margin: 0 auto;
 }
 
@@ -1407,9 +1406,8 @@ body {
   left: 0;
   right: 0;
   z-index: 10000;
-  padding: 0 2em;
+  padding: 0 1.69%;
   height: 3em;
-  min-width: 71.3846153846154em;
   -webkit-box-shadow: 0 0.15385em 0.23077em rgba(0, 0, 0, 0.15);
   box-shadow: 0 0.15385em 0.23077em rgba(0, 0, 0, 0.15);
   border-top: 1px solid #fabc2b;
@@ -1460,7 +1458,7 @@ body {
   position: absolute;
   z-index: 10010;
   top: -0.5em;
-  right: 2em;
+  right: 1.69%;
 }
 
 /* Navigation
@@ -1707,11 +1705,11 @@ span.spinner {
 }
 
 .txp-edit {
-  width: 56em;
+  max-width: 55.07692em;
 }
 
 .txp-login {
-  max-width: 33.5384615384615em;
+  max-width: 40em;
 }
 
 .txp-label,
@@ -1796,7 +1794,7 @@ body#page-setup {
 
 .txp-setup {
   margin: 1em auto 2em;
-  width: 40em;
+  max-width: 42em;
 }
 
 /* rules specific to the very first page you'll see */
@@ -2173,7 +2171,7 @@ div.code {
 
 .plugin-column {
   margin: 0 auto;
-  max-width: 58em;
+  max-width: 57.07692em;
 }
 
 /* ==========================================================================
@@ -2184,7 +2182,6 @@ div.code {
      ========================================================================== */
   body {
     padding: 4em 1em 0;
-    min-width: 294px;
   }
 
   body#page-setup {
@@ -2209,7 +2206,6 @@ div.code {
      ========================================================================== */
   .txp-header {
     padding: 0 1em;
-    min-width: 294px;
   }
   .txp-header h1 {
     max-width: 50%;
@@ -2381,12 +2377,19 @@ div.code {
     box-shadow: 0 0.15385em 0.23077em rgba(0, 0, 0, 0.15);
   }
 
-  .txp-edit,
-  .txp-login,
-  .txp-setup {
-    width: inherit;
+  .txp-label,
+  .txp-value {
+    float: none;
+    width: 100%;
   }
 
+  .txp-value input,
+  .txp-value select {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* Deprecated @ 4.6 */
   .edit-label,
   .edit-value,
   .login-label,
@@ -2395,6 +2398,7 @@ div.code {
     width: 100%;
   }
 
+  /* Deprecated @ 4.6 */
   .edit-value input,
   .edit-value select,
   .login-value input,
@@ -2428,6 +2432,11 @@ div.code {
     float: none;
   }
 
+  .txp-layout-textbox {
+    width: 100%;
+  }
+
+  /* Deprecated @ 4.6 */
   .text-column,
   .plugin-column {
     width: 100%;

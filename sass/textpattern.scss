@@ -62,14 +62,13 @@ html {
 body {
 	position: relative;
 	margin: 0;
-	padding: 5em 2em 0;
-	min-width: 71.3846153846154em; // 928px + (13px x 4) = 980px
+	padding: 5em 1.69% 0;
 	color: $color-text;
 	background: $color-background;
 }
 
 .txp-body {
-	max-width: 110em; // 1430px / 13px
+	max-width: 115em; // 1430px / 13px
 	margin: 0 auto;
 }
 
@@ -83,9 +82,8 @@ body {
 	left: 0;
 	right: 0;
 	z-index: 10000;
-	padding: 0 2em;
+	padding: 0 1.69%;
 	height: 3em;
-	min-width: 71.3846153846154em;
 	@include box-shadow(0 .15384615384615em .23076923076923em rgba(#000, .15));
 	@include gradient-bar(#ffda44, #fabc2b);
 
@@ -123,7 +121,7 @@ body {
 	position: absolute;
 	z-index: 10010;
 	top: -.5em;
-	right: 2em;
+	right: 1.69%;
 }
 
 
@@ -255,11 +253,11 @@ span.spinner {
 }
 
 .txp-edit {
-	width: ($text-column - 2em);
+	max-width: ($text-column - 2em);
 }
 
 .txp-login {
-	max-width: 33.5384615384615em; // 436px / 13px
+	max-width: ($standard-column - 2em);
 }
 
 .txp-label,
@@ -346,7 +344,7 @@ body#page-setup {
 
 .txp-setup {
 	margin: 1em auto 2em;
-	width: ($standard-column - 2em);
+	max-width: $standard-column;
 
 	p {
 		@extend .clearfix;
