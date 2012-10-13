@@ -8,26 +8,18 @@
    ========================================================================== */
 
 .progress-meter {
-	text-align: center;
-
-	p {
-		display: none;
-	}
-
 	ol {
 		@extend .clearfix;
-		display: inline-block;
 		list-style: none;
 		margin-bottom: 0;
 		padding: 0;
-		text-align: left;
+		text-align: center;
 		counter-reset: step; // set up name of increment on parent
 	}
 
 	li {
 		position: relative;
-		float: left;
-		display: block;
+		display: inline-block;
 		margin: 0 1em 1em 0;
 		padding: 1em 1em 1em 4em;
 		@include text-shadow-light;
