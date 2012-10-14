@@ -988,8 +988,8 @@ input.input-small {
 }
 
 input.input-xsmall {
-  width: 12.5%;
-  max-width: 3.5em;
+  width: 16%;
+  width: 4.2em;
 }
 
 input.year, input.exp_year {
@@ -1997,12 +1997,6 @@ body#page-setup {
 #dates .date .label,
 #dates .time .label {
   display: block;
-}
-#dates .date input.year,
-#dates .time input.hour,
-#dates .date input.exp_year,
-#dates .time input.exp_hour {
-  margin-left: -0.61538em;
 }
 
 .recent {
