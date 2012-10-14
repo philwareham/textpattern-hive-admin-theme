@@ -99,8 +99,13 @@ html {
 }
 
 /* text columns (fixed proportion cell) */
-.text-column,
 .txp-layout-textbox {
+  margin: 0 auto;
+  max-width: 57.07692em;
+}
+
+/* Deprecated @ 4.6 */
+.text-column {
   margin: 0 auto;
   max-width: 57.07692em;
 }
@@ -2422,16 +2427,6 @@ div.code {
   }
   .txp-navigation .prev-next {
     float: none;
-  }
-
-  .txp-layout-textbox {
-    width: 100%;
-  }
-
-  /* Deprecated @ 4.6 */
-  .text-column,
-  .plugin-column {
-    width: 100%;
   }
 
   .progress-meter ol {
