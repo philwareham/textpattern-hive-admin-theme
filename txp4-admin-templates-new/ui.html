@@ -143,7 +143,7 @@
 			<li><a href="#ui-doc-summarydetails">Summary/details boxes</a></li>
 			<li><a href="#ui-doc-forms">Forms</a></li>
 			<li><a href="#ui-doc-buttons">Buttons</a></li>
-			<li><a href="#ui-doc-edit-panes">Edit panes</a></li>
+			<li><a href="#ui-doc-edit-panes">Edit panes and panels</a></li>
 			<li><a href="#ui-doc-icons">Icons</a></li>
 			<li><a href="#ui-doc-misc">Miscellaneous</a></li>
 		</ol>
@@ -198,82 +198,6 @@
 	&lt;p&gt;...content here...&lt;/p&gt;
 &lt;/div&gt;</code></pre>
 			<div class="box">Text column (independent of grid columns)</div>
-
-			<h2>Plugin option columns <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-			<pre class="prettyprint linenums"><code>&lt;form method="post" action="#" class="edit-form"&gt;
-	&lt;div class="plugin-column"&gt;
-		&lt;h2&gt;Plugin pane title&lt;/h2&gt;
-
-		&lt;p class="plugin-example-1"&gt;
-			&lt;span class="txp-label"&gt;&lt;label for="plugin_example_1"&gt;Long text&lt;/label&gt;&lt;/span&gt;
-			&lt;span class="txp-value"&gt;&lt;input type="text" value="" name="plugin_example_1" id="plugin_example_1" size="32"&gt;&lt;/span&gt;
-		&lt;/p&gt;
-		&lt;p class="plugin-example-2"&gt;
-			&lt;span class="txp-label"&gt;&lt;label for="plugin_example_2"&gt;Medium text&lt;/label&gt;&lt;/span&gt;
-			&lt;span class="txp-value"&gt;&lt;input type="text" value="" name="plugin_example_2" id="plugin_example_2" size="8" class="input-medium"&gt;&lt;/span&gt;
-		&lt;/p&gt;
-		&lt;p class="plugin-example-3"&gt;
-			&lt;span class="txp-label"&gt;&lt;label for="plugin_example_3"&gt;Select&lt;/label&gt;&lt;/span&gt;
-			&lt;span class="txp-value"&gt;
-				&lt;select name="plugin_example_3" id="plugin_example_3"&gt;
-					&lt;option value="" selected="selected"&gt;&#160;&lt;/option&gt;
-					&lt;option value="option1"&gt;Option 1&lt;/option&gt;
-					&lt;option value="option2"&gt;Option 2&lt;/option&gt;
-				&lt;/select&gt;
-			&lt;/span&gt;
-		&lt;/p&gt;
-		&lt;p class="plugin-example-4"&gt;
-			&lt;span class="txp-label"&gt;Radio buttons&lt;/span&gt;
-			&lt;span class="txp-value"&gt;
-				&lt;input type="radio" id="plugin_example_4_0" name="plugin_example_4" value="0" class="radio active" checked="checked"&gt;&lt;label for="plugin_example_4_0"&gt;No&lt;/label&gt;
-				&lt;input type="radio" id="plugin_example_4_1" name="plugin_example_4" value="1" class="radio"&gt;&lt;label for="plugin_example_4_1"&gt;Yes&lt;/label&gt;
-			&lt;/span&gt;
-		&lt;/p&gt;
-		&lt;p class="plugin-example-5"&gt;
-			&lt;span class="txp-label"&gt;&lt;label for="plugin_example_5"&gt;Textarea&lt;/label&gt;&lt;/span&gt;
-			&lt;textarea name="plugin_example_5" id="plugin_example_5" cols="64" rows="7"&gt;&lt;/textarea&gt;
-		&lt;/p&gt;
-		...etc...
-		&lt;p&gt;&lt;input type="submit" value="Save" class="publish"&gt;&lt;/p&gt;
-
-	&lt;/div&gt;
-&lt;/form&gt;</code></pre>
-
-			<form method="post" action="#" class="edit-form">
-				<div class="plugin-column">
-					<h2>Plugin pane title</h2>
-					<p class="plugin-example-1">
-						<span class="txp-label"><label for="plugin_example_1">Long text</label></span>
-						<span class="txp-value"><input type="text" value="" name="plugin_example_1" id="plugin_example_1" size="32"></span>
-					</p>
-					<p class="plugin-example-2">
-						<span class="txp-label"><label for="plugin_example_2">Medium text</label></span>
-						<span class="txp-value"><input type="text" value="" name="plugin_example_2" id="plugin_example_2" size="8" class="input-medium"></span>
-					</p>
-					<p class="plugin-example-3">
-						<span class="txp-label"><label for="plugin_example_3">Select</label></span>
-						<span class="txp-value">
-							<select name="plugin_example_3" id="plugin_example_3">
-								<option value="" selected="selected">&#160;</option>
-								<option value="option1">Option 1</option>
-								<option value="option2">Option 2</option>
-							</select>
-						</span>
-					</p>
-					<p class="plugin-example-4">
-						<span class="txp-label">Radio buttons</span>
-						<span class="txp-value">
-							<input type="radio" id="plugin_example_4_0" name="plugin_example_4" value="0" class="radio active" checked="checked"><label for="plugin_example_4_0">No</label>
-							<input type="radio" id="plugin_example_4_1" name="plugin_example_4" value="1" class="radio"><label for="plugin_example_4_1">Yes</label>
-						</span>
-					</p>
-					<p class="plugin-example-5">
-						<span class="txp-label"><label for="plugin_example_5">Textarea</label></span>
-						<textarea name="plugin_example_5" id="plugin_example_5" cols="64" rows="7"></textarea>
-					</p>
-					<p><input type="submit" value="Save" class="publish"></p>
-				</div>
-			</form>
 
 			<h2>Inline grids <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
 			<pre class="prettyprint linenums"><code>&lt;div class="txp-grid"&gt;
@@ -978,11 +902,12 @@
 
 
 		<div class="text-section" id="ui-doc-edit-panes">
-			<h1>Edit panes <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.5</span></h1>
+			<h1>Edit panes and panels</h1>
 
+			<h2>Edit panes (modal) <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.6</span></h2>
 			<pre class="prettyprint linenums"><code>&lt;form method="post" action="#" class="edit-form"&gt;
 	&lt;div class="txp-edit"&gt;
-		&lt;h2&gt;Edit pane title&lt;/h2&gt;
+		&lt;h2&gt;Edit pane (modal) title&lt;/h2&gt;
 
 		&lt;p class="edit-example-1"&gt;
 			&lt;span class="txp-label"&gt;&lt;label for="example_1"&gt;Long text (with pophelp)&lt;/label&gt;&#160;&lt;a target="_blank" href="#" class="pophelp" rel="help"&gt;?&lt;/a&gt;&lt;/span&gt;
@@ -1020,7 +945,7 @@
 
 			<form method="post" action="#" class="edit-form">
 				<div class="txp-edit">
-					<h2>Edit pane title</h2>
+					<h2>Edit pane (modal) title</h2>
 					<p class="edit-example-1">
 						<span class="txp-label"><label for="example_1">Long text (with pophelp)</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></span>
 						<span class="txp-value"><input type="text" value="" name="example_1" id="example_1" size="32"></span>
@@ -1052,6 +977,78 @@
 					</p>
 					<p class="txp-edit-action"><button>Cancel</button> <input type="submit" value="Save" class="publish"></p>
 				</div>
+			</form>
+
+			<h2>Edit panels (non-modal) <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.6</span></h2>
+			<pre class="prettyprint linenums"><code>&lt;form method="post" action="#" class="prefs-form"&gt;
+	&lt;h2&gt;Edit panel (non-modal) title&lt;/h2&gt;
+
+	&lt;p class="prefs-example-1"&gt;
+		&lt;span class="txp-label"&gt;&lt;label for="prefs_example_1"&gt;Long text&lt;/label&gt;&lt;/span&gt;
+		&lt;span class="txp-value"&gt;&lt;input type="text" value="" name="prefs_example_1" id="prefs_example_1" size="32"&gt;&lt;/span&gt;
+	&lt;/p&gt;
+	&lt;p class="prefs-example-2"&gt;
+		&lt;span class="txp-label"&gt;&lt;label for="prefs_example_2"&gt;Medium text&lt;/label&gt;&lt;/span&gt;
+		&lt;span class="txp-value"&gt;&lt;input type="text" value="" name="prefs_example_2" id="prefs_example_2" size="8" class="input-medium"&gt;&lt;/span&gt;
+	&lt;/p&gt;
+	&lt;p class="prefs-example-3"&gt;
+		&lt;span class="txp-label"&gt;&lt;label for="prefs_example_3"&gt;Select&lt;/label&gt;&lt;/span&gt;
+		&lt;span class="txp-value"&gt;
+			&lt;select name="prefs_example_3" id="prefs_example_3"&gt;
+				&lt;option value="" selected="selected"&gt;&#160;&lt;/option&gt;
+				&lt;option value="option1"&gt;Option 1&lt;/option&gt;
+				&lt;option value="option2"&gt;Option 2&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/span&gt;
+	&lt;/p&gt;
+	&lt;p class="prefs-example-4"&gt;
+		&lt;span class="txp-label"&gt;Radio buttons&lt;/span&gt;
+		&lt;span class="txp-value"&gt;
+			&lt;input type="radio" id="prefs_example_4_0" name="prefs_example_4" value="0" class="radio active" checked="checked"&gt;&lt;label for="prefs_example_4_0"&gt;No&lt;/label&gt;
+			&lt;input type="radio" id="prefs_example_4_1" name="prefs_example_4" value="1" class="radio"&gt;&lt;label for="prefs_example_4_1"&gt;Yes&lt;/label&gt;
+		&lt;/span&gt;
+	&lt;/p&gt;
+	&lt;p class="prefs-example-5"&gt;
+		&lt;span class="txp-label"&gt;&lt;label for="prefs_example_5"&gt;Textarea&lt;/label&gt;&lt;/span&gt;
+		&lt;textarea name="prefs_example_5" id="prefs_example_5" cols="64" rows="7"&gt;&lt;/textarea&gt;
+	&lt;/p&gt;
+	...etc...
+	&lt;p&gt;&lt;input type="submit" value="Save" class="publish"&gt;&lt;/p&gt;
+
+&lt;/form&gt;</code></pre>
+
+			<form method="post" action="#" class="prefs-form">
+				<h2>Edit panel (non-modal) title</h2>
+				<p class="prefs-example-1">
+					<span class="txp-label"><label for="prefs_example_1">Long text</label></span>
+					<span class="txp-value"><input type="text" value="" name="prefs_example_1" id="prefs_example_1" size="32"></span>
+				</p>
+				<p class="prefs-example-2">
+					<span class="txp-label"><label for="prefs_example_2">Medium text</label></span>
+					<span class="txp-value"><input type="text" value="" name="prefs_example_2" id="prefs_example_2" size="8" class="input-medium"></span>
+				</p>
+				<p class="prefs-example-3">
+					<span class="txp-label"><label for="prefs_example_3">Select</label></span>
+					<span class="txp-value">
+						<select name="prefs_example_3" id="prefs_example_3">
+							<option value="" selected="selected">&#160;</option>
+							<option value="option1">Option 1</option>
+							<option value="option2">Option 2</option>
+						</select>
+					</span>
+				</p>
+				<p class="prefs-example-4">
+					<span class="txp-label">Radio buttons</span>
+					<span class="txp-value">
+						<input type="radio" id="prefs_example_4_0" name="prefs_example_4" value="0" class="radio active" checked="checked"><label for="prefs_example_4_0">No</label>
+						<input type="radio" id="prefs_example_4_1" name="prefs_example_4" value="1" class="radio"><label for="prefs_example_4_1">Yes</label>
+					</span>
+				</p>
+				<p class="prefs-example-5">
+					<span class="txp-label"><label for="prefs_example_5">Textarea</label></span>
+					<textarea name="prefs_example_5" id="prefs_example_5" cols="64" rows="7"></textarea>
+				</p>
+				<p><input type="submit" value="Save" class="publish"></p>
 			</form>
 
 		</div>

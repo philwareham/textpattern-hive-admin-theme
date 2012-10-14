@@ -32,14 +32,17 @@ html {
 
 /* Clearfix
    ========================================================================== */
-.clearfix:before, .progress-meter ol:before, .txp-footer:before, .txp-navigation:before, .txp-edit p:before,
-.txp-login p:before, .txp-setup p:before, .plugin-column p:before, .clearfix:after, .progress-meter ol:after, .txp-footer:after, .txp-navigation:after, .txp-edit p:after,
-.txp-login p:after, .txp-setup p:after, .plugin-column p:after {
+.clearfix:before, .progress-meter ol:before, .txp-footer:before, .txp-navigation:before, .edit-form p:before,
+.prefs-form p:before,
+.txp-login p:before, .clearfix:after, .progress-meter ol:after, .txp-footer:after, .txp-navigation:after, .edit-form p:after,
+.prefs-form p:after,
+.txp-login p:after {
   content: "";
   display: table;
 }
-.clearfix:after, .progress-meter ol:after, .txp-footer:after, .txp-navigation:after, .txp-edit p:after,
-.txp-login p:after, .txp-setup p:after, .plugin-column p:after {
+.clearfix:after, .progress-meter ol:after, .txp-footer:after, .txp-navigation:after, .edit-form p:after,
+.prefs-form p:after,
+.txp-login p:after {
   clear: both;
 }
 
@@ -2156,11 +2159,6 @@ div.code {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-.plugin-column {
-  margin: 0 auto;
-  max-width: 57.07692em;
 }
 
 /* ==========================================================================

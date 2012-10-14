@@ -246,7 +246,11 @@ span.spinner {
 	@include border-radius($border-radius);
 	padding: 1em 1em 1px 1em;
 	background: $color-background-box;
+}
 
+.edit-form,
+.prefs-form,
+.txp-login {
 	p {
 		@extend .clearfix;
 	}
@@ -345,10 +349,6 @@ body#page-setup {
 .txp-setup {
 	margin: 1em auto 2em;
 	max-width: $standard-column;
-
-	p {
-		@extend .clearfix;
-	}
 }
 
 /* rules specific to the very first page you'll see */
@@ -729,15 +729,6 @@ div.code {
 	height: 21em;
 	overflow: auto;
 	@include box-sizing;
-}
-
-.plugin-column {
-	margin: 0 auto;
-	max-width: $text-column;
-
-	p {
-		@extend .clearfix;
-	}
 }
 
 @import "responsive";
