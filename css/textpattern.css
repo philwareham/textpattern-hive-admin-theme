@@ -874,7 +874,7 @@ textarea {
   background-color: white;
   margin: 0;
   border: 1px solid #cccccc;
-  padding: .15384615384615em .38461538461538em;
+  padding: .15384615384615em .23076923076923em;
   height: 1.84615384615385em;
   max-width: 100%;
 }
@@ -979,12 +979,12 @@ input.input-large {
 
 input.input-medium {
   width: 50%;
-  max-width: 14em;
+  max-width: 14.4em;
 }
 
 input.input-small {
   width: 25%;
-  max-width: 7em;
+  max-width: 7.6em;
 }
 
 input.input-xsmall {
@@ -994,12 +994,10 @@ input.input-xsmall {
 
 input.year, input.exp_year {
   text-align: center;
-  padding: .15384615384615em .23076923076923em;
   width: 4.2em;
 }
 input.month, input.exp_month, input.day, input.exp_day, input.hour, input.exp_hour, input.minute, input.exp_minute, input.second, input.exp_second {
   text-align: center;
-  padding: .15384615384615em .23076923076923em;
   width: 2.46153846153846em;
 }
 
