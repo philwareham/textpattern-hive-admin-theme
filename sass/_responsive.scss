@@ -34,6 +34,10 @@ body#page-setup {
 	width: 100%;
 }
 
+.txp-layout-grid > div.txp-layout-textbox {
+	padding: 0 .5em;
+}
+
 .txp-buttons,
 .detail-toggle {
 	text-align: left;
@@ -116,12 +120,6 @@ body#page-setup {
 	margin-bottom: 0;
 }
 
-#configuration_content,
-#tagbuild_links,
-#supporting_content {
-	margin: 0;
-}
-
 /* turn off features to optimise small screen size */
 #textile_group,
 #recent_group {
@@ -132,37 +130,7 @@ body#page-setup {
 /* Presentation -> Pages, Forms, Styles pages shared < 769px
    ========================================================================== */
 
-#content_switcher {
-	margin: 0;
-}
 
-#page-page,
-#page-form {
-	.txp-columntable td.column:first-child {
-		display: none;
-	}
-}
-
-#page-page,
-#page-form,
-#page-css,
-#page-section {
-	h2 {
-		margin-top: 1.625em;
-	}
-
-	> tr,
-	.txp-columntable td.column {
-		display: block;
-		margin: 0 auto;
-		width: 100%;
-		max-width: $standard-column;
-	}
-
-	.txp-columntable td.column:last-child {
-		width: 100%;
-	}
-}
 
 
 /* Admin -> Basic/advanced preferences pages < 769px

@@ -57,6 +57,9 @@
 	margin: 0 auto;
 	max-width: $text-column;
 }
+.txp-layout-grid > div.txp-layout-textbox {
+	padding: 0;
+}
 
 /* Deprecated @ 4.6 */
 .text-column {

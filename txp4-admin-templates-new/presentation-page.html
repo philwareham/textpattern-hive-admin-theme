@@ -112,102 +112,99 @@
 	<div role="main" id="txp-main" class="txp-body" aria-label="Main content">
 		<h1 class="txp-heading">Pages</h1>
 
-		<div id="page_container" class="txp-container">
+		<div id="page_container" class="txp-layout-grid">
 
-			<table class="txp-columntable">
-				<tr>
-					<td class="column">
-						<div id="tagbuild_links">
-							<h2>Tag builder</h2>
 
-							<div role="group" id="article-tags_group" class="txp-details">
-								<h3 class="txp-summary expanded"><a href="#article-tags" role="button" aria-controls="article-tags" aria-pressed="true">Article output</a></h3>
-								<div role="region" id="article-tags" class="toggle" aria-expanded="true">
-									<ul class="plain-list">
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Articles (single or list)</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Articles (custom list)</a></li>
-									</ul>
-								</div>
-							</div>
+			<div id="tagbuild_links" class="txp-layout-cell txp-layout-1-4">
+				<h2>Tag builder</h2>
 
-							<div role="group" id="article-nav-tags_group" class="txp-details">
-								<h3 class="txp-summary expanded"><a href="#article-nav-tags" role="button" aria-controls="article-nav-tags" aria-pressed="true">Article navigation</a></h3>
-								<div role="region" id="article-nav-tags" class="toggle" aria-expanded="true">
-									<ul class="plain-list">
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Previous article title</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Next article title</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Previous article link</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Next article link</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Older articles link</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Newer articles link</a></li>
-									</ul>
-								</div>
-							</div>
+				<div role="group" id="article-tags_group" class="txp-details">
+					<h3 class="txp-summary expanded"><a href="#article-tags" role="button" aria-controls="article-tags" aria-pressed="true">Article output</a></h3>
+					<div role="region" id="article-tags" class="toggle" aria-expanded="true">
+						<ul class="plain-list">
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Articles (single or list)</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Articles (custom list)</a></li>
+						</ul>
+					</div>
+				</div>
 
-							<div role="group" id="nav-tags_group" class="txp-details">
-								<h3 class="txp-summary"><a href="#nav-tags" role="button" aria-controls="nav-tags" aria-pressed="false">Site navigation</a></h3>
-								<div role="region" id="nav-tags" class="toggle" style="display:none" aria-expanded="false">
-									<ul class="plain-list">
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Homepage link</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Section list</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Category list</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Popup list</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Recent articles</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Recent comments</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Related articles</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Search input form</a></li>
-									</ul>
-								</div>
-							</div>
+				<div role="group" id="article-nav-tags_group" class="txp-details">
+					<h3 class="txp-summary expanded"><a href="#article-nav-tags" role="button" aria-controls="article-nav-tags" aria-pressed="true">Article navigation</a></h3>
+					<div role="region" id="article-nav-tags" class="toggle" aria-expanded="true">
+						<ul class="plain-list">
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Previous article title</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Next article title</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Previous article link</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Next article link</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Older articles link</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Newer articles link</a></li>
+						</ul>
+					</div>
+				</div>
 
-							<div role="group" id="xml-tags_group" class="txp-details">
-								<h3 class="txp-summary"><a href="#xml-tags" role="button" aria-controls="xml-tags" aria-pressed="false">XML feeds</a></h3>
-								<div role="region" id="xml-tags" class="toggle" style="display:none" aria-expanded="false">
-									<ul class="plain-list">
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Articles feed link</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Links feed link</a></li>
-									</ul>
-								</div>
-							</div>
+				<div role="group" id="nav-tags_group" class="txp-details">
+					<h3 class="txp-summary"><a href="#nav-tags" role="button" aria-controls="nav-tags" aria-pressed="false">Site navigation</a></h3>
+					<div role="region" id="nav-tags" class="toggle" style="display:none" aria-expanded="false">
+						<ul class="plain-list">
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Homepage link</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Section list</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Category list</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Popup list</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Recent articles</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Recent comments</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Related articles</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Search input form</a></li>
+						</ul>
+					</div>
+				</div>
 
-							<div role="group" id="misc-tags_group" class="txp-details">
-								<h3 class="txp-summary"><a href="#misc-tags" role="button" aria-controls="misc-tags" aria-pressed="false">Miscellaneous</a></h3>
-								<div role="region" id="misc-tags" class="toggle" style="display:none" aria-expanded="false">
-									<ul class="plain-list">
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Page title</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">CSS link (head)</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Site name</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Site slogan</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Breadcrumb</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Search input form</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">E-mail link (spam-proof)</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Links list</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Password protection</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Output form</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Language</a></li>
-									</ul>
-								</div>
-							</div>
+				<div role="group" id="xml-tags_group" class="txp-details">
+					<h3 class="txp-summary"><a href="#xml-tags" role="button" aria-controls="xml-tags" aria-pressed="false">XML feeds</a></h3>
+					<div role="region" id="xml-tags" class="toggle" style="display:none" aria-expanded="false">
+						<ul class="plain-list">
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Articles feed link</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Links feed link</a></li>
+						</ul>
+					</div>
+				</div>
 
-							<div role="group" id="file-tags_group" class="txp-details">
-								<h3 class="txp-summary"><a href="#file-tags" role="button" aria-controls="file-tags" aria-pressed="false">File downloads</a></h3>
-								<div role="region" id="file-tags" class="toggle" style="display:none" aria-expanded="false">
-									<ul class="plain-list">
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File download list</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File download</a></li>
-										<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File download link</a></li>
-									</ul>
-								</div>
-							</div>
-	
-						</div>
-					</td>
+				<div role="group" id="misc-tags_group" class="txp-details">
+					<h3 class="txp-summary"><a href="#misc-tags" role="button" aria-controls="misc-tags" aria-pressed="false">Miscellaneous</a></h3>
+					<div role="region" id="misc-tags" class="toggle" style="display:none" aria-expanded="false">
+						<ul class="plain-list">
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Page title</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">CSS link (head)</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Site name</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Site slogan</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Breadcrumb</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Search input form</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">E-mail link (spam-proof)</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Links list</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Password protection</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Output form</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">Language</a></li>
+						</ul>
+					</div>
+				</div>
 
-					<td class="column">
-						<form method="post" action="#" id="page_form">
-							<div id="main_content">
-								<div class="edit-title">You are editing page template&#160;<strong>new_page</strong></div>
-								<textarea id="html" class="code" name="html" cols="64" rows="32">&lt;!doctype html&gt;
+				<div role="group" id="file-tags_group" class="txp-details">
+					<h3 class="txp-summary"><a href="#file-tags" role="button" aria-controls="file-tags" aria-pressed="false">File downloads</a></h3>
+					<div role="region" id="file-tags" class="toggle" style="display:none" aria-expanded="false">
+						<ul class="plain-list">
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File download list</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File download</a></li>
+							<li><a target="_blank" href="secondary/tag-builder.html" onclick="popWin(this.href); return false;">File download link</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div><!-- /#tagbuild_links -->
+
+
+			<div id="main_content" class="txp-layout-cell txp-layout-2-4">
+				<form method="post" action="#" id="page_form">
+					<div class="edit-title">You are editing page template&#160;<strong>new_page</strong></div>
+					<textarea id="html" class="code" name="html" cols="64" rows="32">&lt;!doctype html&gt;
 &lt;html&gt;
 	&lt;head&gt;
 		&lt;title&gt;Amazing Website&lt;/title&gt;
@@ -217,49 +214,45 @@
 		&lt;p&gt;Under construction. Please come back soon.&lt;/p&gt;
 	&lt;/body&gt;
 &lt;/html&gt;</textarea>
-								<p><input type="submit" value="Save" name="save" class="publish"></p>
-								<p class="copy-as">
-									<label for="copy-page">&#8230;or, copy page as</label>
-									<input type="text" value="" name="newname" id="copy-page" size="16" class="input-medium">
-									<input type="submit" value="Copy" name="copy">
-								</p>
-							</div>
-						</form>
-					</td>
+					<p><input type="submit" value="Save" name="save" class="publish"></p>
+					<p class="copy-as">
+						<label for="copy-page">&#8230;or, copy page as</label>
+						<input type="text" value="" name="newname" id="copy-page" size="16" class="input-medium">
+						<input type="submit" value="Copy" name="copy">
+					</p>
+				</form>
+			</div><!-- /#main_content -->
 
-					<td class="column">
-						<div id="content_switcher">
-							<h2>All pages</h2>
-							<p class="action-create"><a href="#">Create new page</a></p>
-							<table class="txp-list">
-								<tr>
-									<td><a href="#">archive</a></td>
-									<td>&#160;</td>
-								</tr>
-								<tr>
-									<td><a href="#">default</a></td>
-									<td>&#160;</td>
-								</tr>
-								<tr>
-									<td><a href="#">error_default</a></td>
-									<td>&#160;</td>
-								</tr>
-								<tr>
-									<td>new_page</td>
-									<td>
-										<form method="post" action="#" onsubmit="return confirm('Really delete?');">
-											<input type="submit" value="&times;" class="destroy">
-										</form>
-									</td>
-								</tr>
-							</table>
-						</div>
-					</td>
-	
-				</tr>
-			</table>
 
-		</div><!-- /txp-container -->
+			<div id="content_switcher" class="txp-layout-cell txp-layout-1-4">
+				<h2>All pages</h2>
+				<p class="action-create"><a href="#">Create new page</a></p>
+				<table class="txp-list">
+					<tr>
+						<td><a href="#">archive</a></td>
+						<td>&#160;</td>
+					</tr>
+					<tr>
+						<td><a href="#">default</a></td>
+						<td>&#160;</td>
+					</tr>
+					<tr>
+						<td><a href="#">error_default</a></td>
+						<td>&#160;</td>
+					</tr>
+					<tr>
+						<td>new_page</td>
+						<td>
+							<form method="post" action="#" onsubmit="return confirm('Really delete?');">
+								<input type="submit" value="&times;" class="destroy">
+							</form>
+						</td>
+					</tr>
+				</table>
+			</div><!-- /#content_switcher -->
+
+
+		</div><!-- /txp-layout-grid -->
 	</div><!-- /txp-body -->
 
 	<footer role="contentinfo" class="txp-footer">

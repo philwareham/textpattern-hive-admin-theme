@@ -107,6 +107,10 @@ html {
   max-width: 57.07692em;
 }
 
+.txp-layout-grid > div.txp-layout-textbox {
+  padding: 0;
+}
+
 /* Deprecated @ 4.6 */
 .text-column {
   margin: 0 auto;
@@ -1971,15 +1975,6 @@ body#page-setup {
   margin-top: 0;
 }
 
-#configuration_content,
-#tagbuild_links {
-  margin-right: 1em;
-}
-
-#supporting_content,
-#content_switcher {
-  margin-left: 1em;
-}
 #supporting_content > div,
 #content_switcher > div {
   margin-bottom: 1em;
@@ -2065,16 +2060,6 @@ body#page-setup {
 
 /* Presentation -> Pages, Forms, Styles pages shared
    ========================================================================== */
-#page-page .txp-columntable td.column:first-child, #page-page .txp-columntable td.column:last-child,
-#page-form .txp-columntable td.column:first-child,
-#page-form .txp-columntable td.column:last-child {
-  width: 25%;
-}
-
-#page-css .txp-columntable td.column:last-child {
-  width: 25%;
-}
-
 .edit-title {
   margin: .30769230769231em 0 1em;
 }
@@ -2184,6 +2169,10 @@ div.code {
     width: 100%;
   }
 
+  .txp-layout-grid > div.txp-layout-textbox {
+    padding: 0 .5em;
+  }
+
   .txp-buttons,
   .detail-toggle {
     text-align: left;
@@ -2262,12 +2251,6 @@ div.code {
     margin-bottom: 0;
   }
 
-  #configuration_content,
-  #tagbuild_links,
-  #supporting_content {
-    margin: 0;
-  }
-
   /* turn off features to optimise small screen size */
   #textile_group,
   #recent_group {
@@ -2276,41 +2259,6 @@ div.code {
 
   /* Presentation -> Pages, Forms, Styles pages shared < 769px
      ========================================================================== */
-  #content_switcher {
-    margin: 0;
-  }
-
-  #page-page .txp-columntable td.column:first-child,
-  #page-form .txp-columntable td.column:first-child {
-    display: none;
-  }
-
-  #page-page h2,
-  #page-form h2,
-  #page-css h2,
-  #page-section h2 {
-    margin-top: 1.625em;
-  }
-  #page-page > tr,
-  #page-page .txp-columntable td.column,
-  #page-form > tr,
-  #page-form .txp-columntable td.column,
-  #page-css > tr,
-  #page-css .txp-columntable td.column,
-  #page-section > tr,
-  #page-section .txp-columntable td.column {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 42em;
-  }
-  #page-page .txp-columntable td.column:last-child,
-  #page-form .txp-columntable td.column:last-child,
-  #page-css .txp-columntable td.column:last-child,
-  #page-section .txp-columntable td.column:last-child {
-    width: 100%;
-  }
-
   /* Admin -> Basic/advanced preferences pages < 769px
      ========================================================================== */
   #page-prefs .basic th,

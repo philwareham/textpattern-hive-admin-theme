@@ -509,15 +509,8 @@ body#page-setup {
 	margin-top: 0;
 }
 
-#configuration_content,
-#tagbuild_links {
-	margin-right: 1em;
-}
-
 #supporting_content,
 #content_switcher {
-	margin-left: 1em;
-
 	> div {
 		margin-bottom: 1em;
 	}
@@ -619,18 +612,6 @@ body#page-setup {
 
 /* Presentation -> Pages, Forms, Styles pages shared
    ========================================================================== */
-
-#page-page .txp-columntable td.column,
-#page-form .txp-columntable td.column {
-	&:first-child,
-	&:last-child {
-		width: 25%;
-	}
-}
-
-#page-css .txp-columntable td.column:last-child {
-	width: 25%;
-}
 
 .edit-title {
 	margin: .30769230769231em 0 1em;
