@@ -501,7 +501,7 @@
 
 
 		<div class="text-section" id="ui-doc-tables">
-			<h1>Tables <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.5</span></h1>
+			<h1>Tables <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.6</span></h1>
 
 			<pre class="prettyprint linenums"><code>&lt;div class="txp-listtables"&gt;
 	&lt;table class="txp-list"&gt;
@@ -574,6 +574,8 @@
 					</tbody>
 				</table>
 			</div>
+
+			<p><span class="information">Changed at 4.6:</span> Added <code>scope</code> attribute to columns and rows. Each <code>&lt;tbody&gt;</code> row now has a <code>&lt;th&gt;</code> cell.</p>
 
 		</div>
 
@@ -878,9 +880,10 @@
 					<a href="#" class="navlink">Link (navlink)</a>
 				</p>
 
-				<h2>Delete buttons <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.5</span></h2>
-				<p><code class="prettyprint">&lt;input type="submit" value="&amp;times;" class="destroy"&gt;</code></p>
-				<p><input type="submit" value="&times;" class="destroy"></p>
+				<h2>Delete buttons <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.6</span></h2>
+				<p><code class="prettyprint">&lt;input type="submit" value="&amp;times;" title="Delete" class="destroy"&gt;</code></p>
+				<p><input type="submit" value="&times;" title="Delete" class="destroy"></p>
+				<p><span class="information">Changed at 4.6:</span> Added <code>title</code> attribute.</p>
 
 				<h2>Button sets</h2>
 				<pre class="prettyprint linenums"><code>&lt;p class="nav-tertiary"&gt;
