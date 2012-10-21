@@ -1716,7 +1716,6 @@ span.spinner {
 
 .txp-label,
 .txp-value {
-  display: inline-block;
   float: left;
   width: 50%;
 }
@@ -2315,6 +2314,7 @@ div.code {
   .txp-label,
   .txp-value {
     float: none;
+    display: block;
     width: 100%;
   }
 
