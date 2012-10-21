@@ -84,9 +84,9 @@
 	
 							<div id="configuration_content">
 	
-								<div role="group" id="textfilter_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#textfilter_help" role="button" aria-controls="textfilter_help" aria-pressed="true">Textile help</a></h3>
-									<div role="region" id="textfilter_help" class="toggle" aria-expanded="true">
+								<div role="region" id="textfilter_group" class="txp-details" aria-labelledby="textfilter_group-label">
+									<h3 id="textfilter_group-label" class="txp-summary expanded"><a href="#textfilter_help" role="button" aria-controls="textfilter_help" aria-pressed="true">Textile help</a></h3>
+									<div role="group" id="textfilter_help" class="toggle" aria-expanded="true">
 										<ul class="textile plain-list">
 											<li>header: <strong>h<em>n</em>.</strong>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=header&#38;language=en-gb" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" rel="help">?</a></li>
 											<li>Blockquote: <strong>bq.</strong>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=blockquote&#38;language=en-gb" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" rel="help">?</a></li>
@@ -109,9 +109,9 @@
 									</div>
 								</div>
 
-								<div role="group" id="advanced_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#advanced" role="button" aria-controls="advanced" aria-pressed="true">Advanced options</a></h3>
-									<div role="region" id="advanced" class="toggle" aria-expanded="true">
+								<div role="region" id="advanced_group" class="txp-details" aria-labelledby="advanced_group-label">
+									<h3 id="advanced_group-label" class="txp-summary expanded"><a href="#advanced" role="button" aria-controls="advanced" aria-pressed="true">Advanced options</a></h3>
+									<div role="group" id="advanced" class="toggle" aria-expanded="true">
 										<p class="markup markup-body">
 											<label for="markup-body">Article markup</label><br>
 											<select id="markup-body" name="textile_body">
@@ -142,9 +142,9 @@
 									</div>
 								</div>
 
-								<div role="group" id="custom_field_group" class="txp-details">
-									<h3 class="txp-summary"><a href="#custom_field" role="button" aria-controls="custom_field" aria-pressed="false">Custom fields</a></h3>
-									<div role="region" id="custom_field" class="toggle" style="display:none;" aria-expanded="false">
+								<div role="region" id="custom_field_group" class="txp-details" aria-labelledby="custom_field_group-label">
+									<h3 id="custom_field_group-label" class="txp-summary"><a href="#custom_field" role="button" aria-controls="custom_field" aria-pressed="false">Custom fields</a></h3>
+									<div role="group" id="custom_field" class="toggle" style="display:none;" aria-expanded="false">
 										<p class="custom-field custom-1">
 											<label for="custom-1">custom1</label><br>
 											<input type="text" value="" name="custom_1" size="32" id="custom-1">
@@ -156,9 +156,9 @@
 									</div>
 								</div>
 
-								<div role="group" id="image_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#image" role="button" aria-controls="image" aria-pressed="true">Article image</a></h3>
-									<div role="region" id="image" class="toggle" aria-expanded="true">
+								<div role="region" id="image_group" class="txp-details" aria-labelledby="image_group-label">
+									<h3 id="image_group-label" class="txp-summary expanded"><a href="#image" role="button" aria-controls="image" aria-pressed="true">Article image</a></h3>
+									<div role="group" id="image" class="toggle" aria-expanded="true">
 										<p class="article-image">
 											<label for="article-image">Article image</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=article_image&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a><br>
 											<input type="text" value="" name="Image" size="32" id="article-image">
@@ -166,9 +166,9 @@
 									</div>
 								</div>
 	
-								<div role="group" id="meta_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#meta" role="button" aria-controls="meta" aria-pressed="true">Meta</a></h3>
-									<div role="region" id="meta" class="toggle" aria-expanded="true">
+								<div role="region" id="meta_group" class="txp-details" aria-labelledby="meta_group-label">
+									<h3 id="meta_group-label" class="txp-summary expanded"><a href="#meta" role="button" aria-controls="meta" aria-pressed="true">Meta</a></h3>
+									<div role="group" id="meta" class="toggle" aria-expanded="true">
 										<p class="keywords">
 											<label for="keywords">Keywords</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=keywords&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a><br>
 											<textarea id="keywords" name="Keywords" cols="16" rows="4"></textarea>
@@ -180,9 +180,9 @@
 									</div>
 								</div>
 
-								<div role="navigation" id="recent_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#recent" role="button" aria-controls="recent" aria-pressed="true">Recent articles</a></h3>
-									<div role="region" id="recent" class="toggle" aria-expanded="true">
+								<div role="region" id="recent_group" class="txp-details" aria-labelledby="recent_group-label">
+									<h3 id="recent_group-label" class="txp-summary expanded"><a href="#recent" role="button" aria-controls="recent" aria-pressed="true">Recent articles</a></h3>
+									<div role="group" id="recent" class="toggle" aria-expanded="true">
 										<ul class="recent plain-list">
 											<li class="recent-article"><a href="#">Welcome to Your Site!</a></li>
 										</ul>
@@ -219,7 +219,7 @@
 							<div id="view_modes">
 
 								<ul>
-									<li class="view-mode text" id="tab-textup"><a role="button" aria-pressed="true" href="#">text</li>
+									<li class="view-mode text" id="tab-textup"><a role="button" aria-pressed="true" href="#">text</a></li>
 									<li class="view-mode html" id="tab-htmldown"><a role="button" aria-pressed="false" href="#">html</a></li>
 									<li class="view-mode preview" id="tab-previewdown"><a role="button" aria-pressed="false" href="#">Preview</a></li>
 								</ul>
@@ -281,9 +281,9 @@
 									</div>
 								</fieldset>
 
-								<div role="group" id="comments_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#comments" role="button" aria-controls="comments" aria-pressed="true">Comment options</a></h3>
-									<div role="region" id="comments" class="toggle" aria-expanded="true">
+								<div role="region" id="comments_group" class="txp-details" aria-labelledby="comments_group-label">
+									<h3 id="comments_group-label" class="txp-summary expanded"><a href="#comments" role="button" aria-controls="comments" aria-pressed="true">Comment options</a></h3>
+									<div role="group" id="comments" class="toggle" aria-expanded="true">
 										<p class="comment-annotate">
 											<input type="radio" id="Annotate-0" name="Annotate" value="0" class="radio active" checked="checked"><label for="Annotate-0">Off</label>
 											<input type="radio" id="Annotate-1" name="Annotate" value="1" class="radio"><label for="Annotate-1">On</label>
@@ -295,9 +295,9 @@
 									</div>
 								</div>
 
-								<div role="group" id="dates_group" class="txp-details">
-									<h3 class="txp-summary expanded"><a href="#dates" role="button" aria-controls="dates" aria-pressed="true">Date and time</a></h3>
-									<div role="region" id="dates" class="toggle" aria-expanded="true">
+								<div role="region" id="dates_group" class="txp-details" aria-labelledby="dates_group-label">
+									<h3 id="dates_group-label" class="txp-summary expanded"><a href="#dates" role="button" aria-controls="dates" aria-pressed="true">Date and time</a></h3>
+									<div role="group" id="dates" class="toggle" aria-expanded="true">
 
 										<fieldset id="write-timestamp">
 											<legend>Timestamp</legend>

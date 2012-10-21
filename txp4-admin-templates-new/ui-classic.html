@@ -536,15 +536,15 @@
 
 		<div class="text-section" id="ui-doc-summarydetails">
 			<h1>Summary/details boxes <span class="warning" style="font-family:Verdana,Tahoma,sans-serif;font-size:.5em;">changed v4.6</span></h1>
-			<pre class="prettyprint linenums"><code>&lt;div role="group" class="txp-details"&gt;
-	&lt;h3 class="txp-summary"&gt;&lt;a href="#name-of-details" role="button" aria-controls="name-of-details" aria-pressed="true"&gt;Summary lever&lt;/a&gt;&lt;/h3&gt;
-	&lt;div role="region" id="name-of-details" class="toggle" aria-expanded="true"&gt;
+			<pre class="prettyprint linenums"><code>&lt;div role="region" id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label"&gt;
+	&lt;h3 id="regionname1_group-label" class="txp-summary"&gt;&lt;a href="#name-of-details" role="button" aria-controls="name-of-details" aria-pressed="true"&gt;Summary lever&lt;/a&gt;&lt;/h3&gt;
+	&lt;div role="group" id="name-of-details" class="toggle" aria-expanded="true"&gt;
 		&lt;p&gt;...content...&lt;/p&gt;
 	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-			<div role="group" class="txp-details">
-				<h3 class="txp-summary expanded"><a href="#name-of-details" role="button" aria-controls="name-of-details" aria-pressed="true">Summary lever</a></h3>
-				<div role="region" id="name-of-details" class="toggle" aria-expanded="true">
+			<div role="region" id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label">
+				<h3 id="regionname1_group-label" class="txp-summary expanded"><a href="#name-of-details" role="button" aria-controls="name-of-details" aria-pressed="true">Summary lever</a></h3>
+				<div role="group" id="name-of-details" class="toggle" aria-expanded="true">
 					<form action="#">
 						<p>
 							<label for="text-std2">Form element within a details box</label>&#160;<a href="#" class="pophelp" rel="help">?</a><br>
@@ -777,9 +777,9 @@
 						<legend>Fieldset within fieldset</legend>
 						<p>Standard paragraph text within a fieldset.</p>
 					</fieldset>
-					<div role="group" class="txp-details">
-						<h3 class="txp-summary expanded"><a href="#details2" role="button" aria-controls="details2" aria-pressed="true">Summary/details box within fieldset</a></h3>
-						<div role="region" id="details2" class="toggle" aria-expanded="true">
+					<div role="region" id="regionname2_group" class="txp-details" aria-labelledby="regionname2_group-label">
+						<h3 id="regionname2_group-label" class="txp-summary expanded"><a href="#details2" role="button" aria-controls="details2" aria-pressed="true">Summary/details box within fieldset</a></h3>
+						<div role="group" id="details2" class="toggle" aria-expanded="true">
 							<p>Standard paragraph text within a details box.</p>
 						</div>
 					</div>

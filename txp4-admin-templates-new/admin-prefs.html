@@ -119,9 +119,9 @@
 				<form method="post" class="prefs-form" action="#">
 
 
-					<div role="group" id="prefs_group_site" class="txp-details">
-						<h3 class="txp-summary expanded"><a href="#site_prefs" role="button" aria-controls="site_prefs" aria-pressed="true">Site</a></h3>
-						<div role="region" id="site_prefs" class="toggle" aria-expanded="true">
+					<div role="region" id="prefs_group_site" class="txp-details" aria-labelledby="prefs_group_site-label">
+						<h3 id="prefs_group_site-label" class="txp-summary expanded"><a href="#site_prefs" role="button" aria-controls="site_prefs" aria-pressed="true">Site</a></h3>
+						<div role="group" id="prefs_site" class="toggle" aria-expanded="true">
 							<p id="prefs-sitename">
 								<span class="txp-label"><label for="sitename">Site name</label> <a rel="help" target="_blank" href="#" class="pophelp">?</a></span>
 								<span class="txp-value"><input type="text" value="My site" name="sitename" size="32" id="sitename"></span>
@@ -743,12 +743,12 @@
 								</span>
 							</p>
 						</div>
-					</div><!-- /site_prefs_group -->
+					</div><!-- /prefs_group_site -->
 
 
-					<div role="group" id="admin_prefs_group" class="txp-details">
-						<h3 class="txp-summary expanded"><a href="#admin_prefs" role="button" aria-controls="admin_prefs" aria-pressed="true">Admin</a></h3>
-						<div role="region" id="admin_prefs" class="toggle" aria-expanded="true">
+					<div role="region" id="prefs_group_admin" class="txp-details" aria-labelledby="prefs_group_admin-label">
+						<h3 id="prefs_group_admin-label" class="txp-summary expanded"><a href="#admin_prefs" role="button" aria-controls="admin_prefs" aria-pressed="true">Admin</a></h3>
+						<div role="group" id="prefs_admin" class="toggle" aria-expanded="true">
 							<p id="prefs-img_dir">
 								<span class="txp-label"><label for="img_dir">Image directory</label> <a rel="help" target="_blank" href="#" class="pophelp">?</a></span>
 								<span class="txp-value"><input type="text" value="images" name="img_dir" size="32" id="img_dir"></span>
@@ -833,12 +833,12 @@
 								</span>
 							</p>
 						</div>
-					</div><!-- /admin_prefs_group -->
+					</div><!-- /prefs_group_admin -->
 
 
-					<div role="group" id="publish_prefs_group" class="txp-details">
-						<h3 class="txp-summary expanded"><a href="#publish_prefs" role="button" aria-controls="publish_prefs" aria-pressed="true">Publish</a></h3>
-						<div role="region" id="publish_prefs" class="toggle" aria-expanded="true">
+					<div role="region" id="prefs_group_publish" class="txp-details" aria-labelledby="prefs_group_publish-label">
+						<h3 id="prefs_group_publish-label" class="txp-summary expanded"><a href="#publish_prefs" role="button" aria-controls="publish_prefs" aria-pressed="true">Publish</a></h3>
+						<div role="group" id="prefs_publish" class="toggle" aria-expanded="true">
 							<p id="prefs-title_no_widow">
 								<span class="txp-label">Prevent widowed words in article titles? <a rel="help" target="_blank" href="#" class="pophelp">?</a></span>
 								<span class="txp-value">
@@ -959,12 +959,12 @@
 								<span class="txp-value"><input type="text" value="200" name="max_url_len" size="32" id="max_url_len"></span>
 							</p>
 						</div>
-					</div><!-- /publish_prefs_group -->
+					</div><!-- /prefs_group_publish -->
 
 
-					<div role="group" id="feeds_prefs_group" class="txp-details">
-						<h3 class="txp-summary expanded"><a href="#feeds_prefs" role="button" aria-controls="feeds_prefs" aria-pressed="true">Feeds</a></h3>
-						<div role="region" id="feeds_prefs" class="toggle" aria-expanded="true">
+					<div role="region" id="prefs_group_feeds" class="txp-details" aria-labelledby="prefs_group_feeds-label">
+						<h3 id="prefs_group_feeds-label" class="txp-summary expanded"><a href="#feeds_prefs" role="button" aria-controls="feeds_prefs" aria-pressed="true">Feeds</a></h3>
+						<div role="group" id="prefs_feeds" class="toggle" aria-expanded="true">
 							<p id="prefs-syndicate_body_or_excerpt">
 								<span class="txp-label">Syndicate article excerpt <strong>only</strong>? <a rel="help" target="_blank" href="#" class="pophelp">?</a></span>
 								<span class="txp-value">
@@ -998,12 +998,12 @@
 								</span>
 							</p>
 						</div>
-					</div><!-- /feeds_prefs_group -->
+					</div><!-- /prefs_group_feeds -->
 
 
-					<div role="group" id="custom_prefs_group" class="txp-details">
-						<h3 class="txp-summary expanded"><a href="#custom_prefs" role="button" aria-controls="custom_prefs" aria-pressed="true">Custom fields</a></h3>
-						<div role="region" id="custom_prefs" class="toggle" aria-expanded="true">
+					<div role="region" id="prefs_group_custom" class="txp-details" aria-labelledby="prefs_group_custom-label">
+						<h3 id="prefs_group_custom-label" class="txp-summary expanded"><a href="#custom_prefs" role="button" aria-controls="custom_prefs" aria-pressed="true">Custom fields</a></h3>
+						<div role="group" id="prefs_custom" class="toggle" aria-expanded="true">
 							<p id="prefs-custom_1_set">
 								<span class="txp-label"><label for="custom_1_set">Custom field 1 name</label> <a rel="help" target="_blank" href="#" class="pophelp">?</a></span>
 								<span class="txp-value"><input type="text" value="custom1" name="custom_1_set" size="32" id="custom_1_set"></span>
@@ -1045,12 +1045,12 @@
 								<span class="txp-value"><input type="text" value="" name="custom_10_set" size="32" id="custom_10_set"></span>
 							</p>
 						</div>
-					</div><!-- /custom_prefs_group -->
+					</div><!-- /prefs_group_custom -->
 
 
-					<div role="group" id="comments_prefs_group" class="txp-details">
-						<h3 class="txp-summary expanded"><a href="#comments_prefs" role="button" aria-controls="comments_prefs" aria-pressed="true">Comments</a></h3>
-						<div role="region" id="comments_prefs" class="toggle" aria-expanded="true">
+					<div role="region" id="prefs_group_comments" class="txp-details" aria-labelledby="prefs_group_comments-label">
+						<h3 id="prefs_group_comments-label" class="txp-summary expanded"><a href="#comments_prefs" role="button" aria-controls="comments_prefs" aria-pressed="true">Comments</a></h3>
+						<div role="group" id="prefs_comments" class="toggle" aria-expanded="true">
 							<p id="prefs-comments_on_default">
 								<span class="txp-label">On by default? <a rel="help" target="_blank" href="#" class="pophelp">?</a></span>
 								<span class="txp-value">
@@ -1198,7 +1198,7 @@
 								<span class="txp-value"><input type="text" value="sbl.spamhaus.org" name="spam_blacklists" size="32" id="spam_blacklists"></span>
 							</p>
 						</div>
-					</div><!-- /comments_prefs_group -->
+					</div><!-- /prefs_group_comments -->
 
 
 					<p><input type="submit" value="Save" name="Submit" class="publish"></p>
