@@ -65,13 +65,13 @@ body#page-setup {
 /* Navigation < 769px
    ========================================================================== */
 
-/* show `<select>` version of navigation on small screen widths */
-.txp-nav-select {
+/* show `<select>` version of navigation on small screen widths (via TinyNav) */
+.tinynav {
 	display: inherit;
 }
 
 /* hide `<ul>` version of navigation on small screen widths */
-.txp-nav {
+.untinynav {
 	display: none;
 }
 
@@ -181,7 +181,7 @@ body {
 	}
 }
 
-/* show `<select>` version of navigation for smaller screens (and hide `<ul>` version) */
+/* move `<select>` navigation to new row for smaller screens */
 .txp-nav-select {
 	position: absolute;
 	top: 2.46153846153846em;

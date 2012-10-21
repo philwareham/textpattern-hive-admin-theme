@@ -57,8 +57,9 @@ class hive_theme extends theme
 		$out[] = '<meta name="apple-mobile-web-app-capable" content="yes">';
 		$out[] = '<meta name="generator" content="Textpattern CMS">';
 		$out[] = '<script src="modernizr.js"></script>';
-		$out[] = '<!--[if lt IE 9]><script src="'.$this->url.'js/selectivizr.min.js"></script><![endif]-->';
+		$out[] = '<script src="'.$this->url.'js/tinynav.min.js"></script>';
 		$out[] = '<script src="'.$this->url.'js/scripts.js"></script>';
+		$out[] = '<!--[if lt IE 9]><script src="'.$this->url.'js/selectivizr.min.js"></script><![endif]-->';
 
 		return join(n, $out);
 	}
@@ -82,7 +83,7 @@ class hive_theme extends theme
 					$out[] = '<ul class="dropdown-menu">';
 					foreach ($tab['items'] as $item)
 					{
-						$class = ($item['active']) ? ' class="active"' : '';
+						$class = ($item['active']) ? ' class="selected"' : '';
 						$out[] = '<li'.$class.'><a href="?event='.$item["event"].'">'.$item["label"].'</a></li>';
 					}
 					$out[] = '</ul>';
@@ -90,23 +91,6 @@ class hive_theme extends theme
 				$out[] = '</li>';
 			}
 			$out[] = '</ul>';
-			$out[] = '</div>';
-			$out[] = '<div class="txp-nav-select">';
-			$out[] = '<select>';
-			foreach ($this->menu as $tab)
-			{
-				$out[] = '<optgroup label="'.$tab['label'].'">';
-				if (!empty($tab['items']))
-				{
-					foreach ($tab['items'] as $item)
-					{
-						$select = ($item['active']) ? ' selected="selected"' : '';
-						$out[] = '<option value="?event='.$item["event"].'"'.$select.'>'.$item["label"].'</option>';
-					}
-				}
-				$out[] = '</optgroup>';
-			}
-			$out[] = '</select>';
 			$out[] = '</div>';
 			$out[] = '</nav>';
 		}

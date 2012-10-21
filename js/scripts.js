@@ -1,9 +1,9 @@
 jQuery(function () {
 
 
-	// To make select navigation menu work
-	$('.txp-nav-select select').change(function() {
-		window.location = $(this).find('option:selected').val();
+	// To make select navigation menu work (via TinyNav)
+	$('.untinynav').tinyNav({
+		active: 'selected'
 	});
 
 

@@ -9,7 +9,7 @@
 
 /* hide `<select>` version of navigation on non-touch devices
    also happens via media-queries when screen width is < 768px regardless of touch ability */
-.txp-nav-select {
+.tinynav {
 	display: none;
 
 	.touch & {
@@ -18,12 +18,20 @@
 }
 
 /* Hide `<ul>` version of navigation on touch devices */
-.touch .txp-nav {
+.touch .untinynav {
 	display: none;
 }
 
-.txp-nav {
+.untinynav {
 	float: left;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+
+	ul {
+		list-style: none;
+		padding-left: 0;
+	}
 
 	a {
 		color: #333;
@@ -32,17 +40,6 @@
 			text-decoration: none;
 		}
 	}
-
-	ul {
-		list-style: none;
-		padding-left: 0;
-	}
-}
-
-.data-dropdown {
-	display: block;
-	float: left;
-	margin: 0;
 }
 
 .dropdown {
@@ -118,7 +115,7 @@
 			background: #feefb0;
 		}
 
-		&.active {
+		&.selected {
 			background: #fee580;
 		}
 	}
@@ -146,6 +143,6 @@
 	}
 }
 
-.txp-nav-select {
+.tinynav {
 	margin-top: .61538461538462em;
 }

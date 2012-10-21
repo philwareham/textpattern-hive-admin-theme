@@ -1467,36 +1467,33 @@ body {
    ========================================================================== */
 /* hide `<select>` version of navigation on non-touch devices
    also happens via media-queries when screen width is < 768px regardless of touch ability */
-.txp-nav-select {
+.tinynav {
   display: none;
 }
-.touch .txp-nav-select {
+.touch .tinynav {
   display: inherit;
 }
 
 /* Hide `<ul>` version of navigation on touch devices */
-.touch .txp-nav {
+.touch .untinynav {
   display: none;
 }
 
-.txp-nav {
+.untinynav {
   float: left;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
-.txp-nav a {
-  color: #333;
-}
-.txp-nav a:hover {
-  text-decoration: none;
-}
-.txp-nav ul {
+.untinynav ul {
   list-style: none;
   padding-left: 0;
 }
-
-.data-dropdown {
-  display: block;
-  float: left;
-  margin: 0;
+.untinynav a {
+  color: #333;
+}
+.untinynav a:hover {
+  text-decoration: none;
 }
 
 .dropdown {
@@ -1566,7 +1563,7 @@ body {
 .dropdown-menu li:hover {
   background: #feefb0;
 }
-.dropdown-menu li.active {
+.dropdown-menu li.selected {
   background: #fee580;
 }
 .dropdown-menu a {
@@ -1595,7 +1592,7 @@ body {
   left: 0;
 }
 
-.txp-nav-select {
+.tinynav {
   margin-top: .61538461538462em;
 }
 
@@ -2201,13 +2198,13 @@ div.code {
 
   /* Navigation < 769px
      ========================================================================== */
-  /* show `<select>` version of navigation on small screen widths */
-  .txp-nav-select {
+  /* show `<select>` version of navigation on small screen widths (via TinyNav) */
+  .tinynav {
     display: inherit;
   }
 
   /* hide `<ul>` version of navigation on small screen widths */
-  .txp-nav {
+  .untinynav {
     display: none;
   }
 
@@ -2297,7 +2294,7 @@ div.code {
     max-width: 66%;
   }
 
-  /* show `<select>` version of navigation for smaller screens (and hide `<ul>` version) */
+  /* move `<select>` navigation to new row for smaller screens */
   .txp-nav-select {
     position: absolute;
     top: 2.46153846153846em;
