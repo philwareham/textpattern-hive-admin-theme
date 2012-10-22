@@ -239,8 +239,8 @@
 									<a href="#" class="navlink" rel="prev"><b class="icon icon-arrow-w">&#8592;</b> Prev</a><span class="navlink-disabled" aria-disabled="true">Next <b class="icon icon-arrow-e">&#8594;</b></span>
 								</p>
 
-								<fieldset id="write-status">
-									<legend>Status</legend>
+								<fieldset role="region" id="write-status" aria-labelledby="write-status-label">
+									<legend id="write-status-label">Status</legend>
 									<ul class="status plain-list">
 										<li class="status-1"><input type="radio" name="status" value="1" id="status-1" class="radio"><label for="status-1">Draft</label></li>
 										<li class="status-2"><input type="radio" name="status" value="2" id="status-2" class="radio"><label for="status-2">Hidden</label></li>
@@ -250,10 +250,10 @@
 									</ul>
 								</fieldset>
 
-								<fieldset id="write-sort">
-									<legend>Sort and display</legend>
+								<fieldset role="region" id="write-sort" aria-labelledby="write-sort-label">
+									<legend id="write-sort-label">Sort and display</legend>
 									<p class="section">
-										<label for="section">Section</label> <span class="edit section-edit">[<a href="presentation-section.html">Edit</a>]</span><br>
+										<label for="section">Section</label> <span class="edit section-edit"><span role="presentation">[</span><a href="presentation-section.html">Edit</a><span role="presentation">]</span></span><br>
 										<select id="section" name="Section">
 											<option value="about">about</option>
 											<option value="articles" selected="selected">articles</option>
@@ -261,7 +261,7 @@
 									</p>
 									<div id="categories_group">
 										<p class="category category-1">
-											<label for="category-1">Category 1</label> <span class="edit category-edit">[<a href="content-category.html">Edit</a>]</span><br>
+											<label for="category-1">Category 1</label> <span class="edit category-edit"><span role="presentation">[</span><a href="content-category.html">Edit</a><span role="presentation">]</span></span><br>
 											<select id="category-1" name="Category1">
 												<option value="" selected="selected">&nbsp;</option>
 												<option value="hope-for-the-future">Hope for the Future</option>
