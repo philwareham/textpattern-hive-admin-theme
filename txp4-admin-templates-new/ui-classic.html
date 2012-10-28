@@ -536,13 +536,13 @@
 
 		<div class="text-section" id="ui-doc-summarydetails">
 			<h1>Summary/details boxes <span class="warning" style="font-family:Verdana,Tahoma,sans-serif;font-size:.5em;">changed v4.6</span></h1>
-			<pre class="prettyprint linenums"><code>&lt;div role="region" id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label"&gt;
+			<pre class="prettyprint linenums"><code>&lt;section role="region" id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label"&gt;
 	&lt;h3 id="regionname1_group-label" class="txp-summary"&gt;&lt;a href="#name-of-details" role="button" aria-controls="name-of-details" aria-pressed="true"&gt;Summary lever&lt;/a&gt;&lt;/h3&gt;
 	&lt;div role="group" id="name-of-details" class="toggle" aria-expanded="true"&gt;
 		&lt;p&gt;...content...&lt;/p&gt;
 	&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-			<div role="region" id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label">
+&lt;/section&gt;</code></pre>
+			<section role="region" id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label">
 				<h3 id="regionname1_group-label" class="txp-summary expanded"><a href="#name-of-details" role="button" aria-controls="name-of-details" aria-pressed="true">Summary lever</a></h3>
 				<div role="group" id="name-of-details" class="toggle" aria-expanded="true">
 					<form action="#">
@@ -568,7 +568,7 @@
 						<li>a details box</li>
 					</ul>
 				</div>
-			</div>
+			</section>
 			<p>The WAI-ARIA attribute states are managed via JavaScript. <strong>Note:</strong> will eventually be changed to use HTML5 <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> tags when browser support is better.</p>
 
 		</div>
@@ -777,12 +777,12 @@
 						<legend>Fieldset within fieldset</legend>
 						<p>Standard paragraph text within a fieldset.</p>
 					</fieldset>
-					<div role="region" id="regionname2_group" class="txp-details" aria-labelledby="regionname2_group-label">
+					<section role="region" id="regionname2_group" class="txp-details" aria-labelledby="regionname2_group-label">
 						<h3 id="regionname2_group-label" class="txp-summary expanded"><a href="#details2" role="button" aria-controls="details2" aria-pressed="true">Summary/details box within fieldset</a></h3>
 						<div role="group" id="details2" class="toggle" aria-expanded="true">
 							<p>Standard paragraph text within a details box.</p>
 						</div>
-					</div>
+					</section>
 				</fieldset>
 
 			</div>
