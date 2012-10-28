@@ -239,47 +239,51 @@
 									<a href="#" class="navlink" rel="prev"><b class="icon icon-arrow-w">&#8592;</b> Prev</a><span class="navlink-disabled" aria-disabled="true">Next <b class="icon icon-arrow-e">&#8594;</b></span>
 								</p>
 
-								<fieldset role="region" id="write-status" aria-labelledby="write-status-label">
-									<legend id="write-status-label">Status</legend>
-									<ul class="status plain-list">
-										<li class="status-1"><input type="radio" name="status" value="1" id="status-1" class="radio"><label for="status-1">Draft</label></li>
-										<li class="status-2"><input type="radio" name="status" value="2" id="status-2" class="radio"><label for="status-2">Hidden</label></li>
-										<li class="status-3"><input type="radio" name="status" value="3" id="status-3" class="radio"><label for="status-3">Pending</label></li>
-										<li class="status-4 active"><input type="radio" name="status" value="4" id="status-4" checked="checked" class="radio active"><label for="status-4"><strong>Live</strong></label></li>
-										<li class="status-5"><input type="radio" name="status" value="5" id="status-5" class="radio"><label for="status-5">Sticky</label></li>
-									</ul>
-								</fieldset>
-
-								<fieldset role="region" id="write-sort" aria-labelledby="write-sort-label">
-									<legend id="write-sort-label">Sort and display</legend>
-									<p class="section">
-										<label for="section">Section</label> <span class="edit section-edit"><span role="presentation">[</span><a href="presentation-section.html">Edit</a><span role="presentation">]</span></span><br>
-										<select id="section" name="Section">
-											<option value="about">about</option>
-											<option value="articles" selected="selected">articles</option>
-										</select>
-									</p>
-									<div id="categories_group">
-										<p class="category category-1">
-											<label for="category-1">Category 1</label> <span class="edit category-edit"><span role="presentation">[</span><a href="content-category.html">Edit</a><span role="presentation">]</span></span><br>
-											<select id="category-1" name="Category1">
-												<option value="" selected="selected">&nbsp;</option>
-												<option value="hope-for-the-future">Hope for the Future</option>
-												<option value="meaningful-labor">Meaningful Labor</option>
-												<option value="reciprocal-affection">Reciprocal Affection</option>
-											</select>
-										</p>
-										<p class="category category-2">
-											<label for="category-2">Category 2</label><br>
-											<select id="category-2" name="Category2">
-												<option value="" selected="selected">&nbsp;</option>
-												<option value="hope-for-the-future">Hope for the Future</option>
-												<option value="meaningful-labor">Meaningful Labor</option>
-												<option value="reciprocal-affection">Reciprocal Affection</option>
-											</select>
-										</p>
+								<section role="region" id="write-status" class="txp-details" aria-labelledby="write-status-label">
+									<h3 id="write-status-label">Status</h3>
+									<div role="group">
+										<ul class="status plain-list">
+											<li class="status-1"><input type="radio" name="status" value="1" id="status-1" class="radio"><label for="status-1">Draft</label></li>
+											<li class="status-2"><input type="radio" name="status" value="2" id="status-2" class="radio"><label for="status-2">Hidden</label></li>
+											<li class="status-3"><input type="radio" name="status" value="3" id="status-3" class="radio"><label for="status-3">Pending</label></li>
+											<li class="status-4 active"><input type="radio" name="status" value="4" id="status-4" checked="checked" class="radio active"><label for="status-4"><strong>Live</strong></label></li>
+											<li class="status-5"><input type="radio" name="status" value="5" id="status-5" class="radio"><label for="status-5">Sticky</label></li>
+										</ul>
 									</div>
-								</fieldset>
+								</section>
+
+								<section role="region" id="write-sort" class="txp-details" aria-labelledby="write-sort-label">
+									<h3 id="write-sort-label">Sort and display</h3>
+									<div role="group">
+										<p class="section">
+											<label for="section">Section</label> <span class="edit section-edit"><span role="presentation">[</span><a href="presentation-section.html">Edit</a><span role="presentation">]</span></span><br>
+											<select id="section" name="Section">
+												<option value="about">about</option>
+												<option value="articles" selected="selected">articles</option>
+											</select>
+										</p>
+										<div id="categories_group">
+											<p class="category category-1">
+												<label for="category-1">Category 1</label> <span class="edit category-edit"><span role="presentation">[</span><a href="content-category.html">Edit</a><span role="presentation">]</span></span><br>
+												<select id="category-1" name="Category1">
+													<option value="" selected="selected">&nbsp;</option>
+													<option value="hope-for-the-future">Hope for the Future</option>
+													<option value="meaningful-labor">Meaningful Labor</option>
+													<option value="reciprocal-affection">Reciprocal Affection</option>
+												</select>
+											</p>
+											<p class="category category-2">
+												<label for="category-2">Category 2</label><br>
+												<select id="category-2" name="Category2">
+													<option value="" selected="selected">&nbsp;</option>
+													<option value="hope-for-the-future">Hope for the Future</option>
+													<option value="meaningful-labor">Meaningful Labor</option>
+													<option value="reciprocal-affection">Reciprocal Affection</option>
+												</select>
+											</p>
+										</div>
+									</div>
+								</section>
 
 								<section role="region" id="comments_group" class="txp-details" aria-labelledby="comments_group-label">
 									<h3 id="comments_group-label" class="txp-summary expanded"><a href="#comments" role="button" aria-controls="comments" aria-pressed="true">Comment options</a></h3>
@@ -299,35 +303,39 @@
 									<h3 id="dates_group-label" class="txp-summary expanded"><a href="#dates" role="button" aria-controls="dates" aria-pressed="true">Date and time</a></h3>
 									<div role="group" id="dates" class="toggle" aria-expanded="true">
 
-										<fieldset id="write-timestamp">
-											<legend>Timestamp</legend>
-											<p class="publish-now"><input type="checkbox" name="publish_now" value="1" id="publish_now" class="checkbox"><label for="publish_now">Set timestamp to now&#8230;</label></p>
-											<p class="publish-at">&#8230;or publish at&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=timestamp&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
-											<p class="date posted created"><span class="label">Date</span>
-												<input type="text" name="year" value="2011" size="4" maxlength="4" class="edit year" title="Year" placeholder="yyyy"> / 
-												<input type="text" name="month" value="07" size="2" maxlength="2" class="edit month" title="Month" placeholder="mm"> / 
-												<input type="text" name="day" value="02" size="2" maxlength="2" class="edit day" title="Day" placeholder="dd">
-											</p>
-											<p class="time posted created"><span class="label">Time</span>
-												<input type="text" name="hour" value="23" size="2" maxlength="2" class="edit hour" title="Hour" placeholder="hh"> : 
-												<input type="text" name="minute" value="14" size="2" maxlength="2" class="edit minute" title="Minute" placeholder="mm"> : 
-												<input type="text" name="second" value="28" size="2" maxlength="2" class="edit second" title="Second" placeholder="ss">
-											</p>
-										</fieldset>
+										<div id="write-timestamp" class="txp-details">
+											<h3>Timestamp</h3>
+											<div role="group">
+												<p class="publish-now"><input type="checkbox" name="publish_now" value="1" id="publish_now" class="checkbox"><label for="publish_now">Set timestamp to now&#8230;</label></p>
+												<p class="publish-at">&#8230;or publish at&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=timestamp&#38;language=en-gb" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a></p>
+												<p class="date posted created"><span class="label">Date</span>
+													<input type="text" name="year" value="2011" size="4" maxlength="4" class="edit year" title="Year" placeholder="yyyy"> / 
+													<input type="text" name="month" value="07" size="2" maxlength="2" class="edit month" title="Month" placeholder="mm"> / 
+													<input type="text" name="day" value="02" size="2" maxlength="2" class="edit day" title="Day" placeholder="dd">
+												</p>
+												<p class="time posted created"><span class="label">Time</span>
+													<input type="text" name="hour" value="23" size="2" maxlength="2" class="edit hour" title="Hour" placeholder="hh"> : 
+													<input type="text" name="minute" value="14" size="2" maxlength="2" class="edit minute" title="Minute" placeholder="mm"> : 
+													<input type="text" name="second" value="28" size="2" maxlength="2" class="edit second" title="Second" placeholder="ss">
+												</p>
+											</div>
+										</div>
 
-										<fieldset id="write-expires">
-											<legend>Expires</legend>
-											<p class="date expires"><span class="label">Date</span>
-												<input type="text" name="exp_year" value="" size="4" maxlength="4" class="edit exp_year" title="Year" placeholder="yyyy"> / 
-												<input type="text" name="exp_month" value="" size="2" maxlength="2" class="edit exp_month" title="Month" placeholder="mm"> / 
-												<input type="text" name="exp_day" value="" size="2" maxlength="2" class="edit exp_day" title="Day" placeholder="dd">
-											</p>
-											<p class="time expires"><span class="label">Time</span>
-												<input type="text" name="exp_hour" value="" size="2" maxlength="2" class="edit exp_hour" title="Hour" placeholder="hh"> : 
-												<input type="text" name="exp_minute" value="" size="2" maxlength="2" class="edit exp_minute" title="Minute" placeholder="mm"> : 
-												<input type="text" name="exp_second" value="" size="2" maxlength="2" class="edit exp_second" title="Second" placeholder="ss">
-											</p>
-										</fieldset>
+										<div id="write-expires" class="txp-details">
+											<h3>Expires</h3>
+											<div role="group">
+												<p class="date expires"><span class="label">Date</span>
+													<input type="text" name="exp_year" value="" size="4" maxlength="4" class="edit exp_year" title="Year" placeholder="yyyy"> / 
+													<input type="text" name="exp_month" value="" size="2" maxlength="2" class="edit exp_month" title="Month" placeholder="mm"> / 
+													<input type="text" name="exp_day" value="" size="2" maxlength="2" class="edit exp_day" title="Day" placeholder="dd">
+												</p>
+												<p class="time expires"><span class="label">Time</span>
+													<input type="text" name="exp_hour" value="" size="2" maxlength="2" class="edit exp_hour" title="Hour" placeholder="hh"> : 
+													<input type="text" name="exp_minute" value="" size="2" maxlength="2" class="edit exp_minute" title="Minute" placeholder="mm"> : 
+													<input type="text" name="exp_second" value="" size="2" maxlength="2" class="edit exp_second" title="Second" placeholder="ss">
+												</p>
+											</div>
+										</div>
 
 									</div>
 								</section>
