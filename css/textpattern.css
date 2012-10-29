@@ -739,6 +739,19 @@ h3.txp-summary.expanded a:after {
 
 /* Forms
    ========================================================================== */
+/* define consistent fieldset margin, border and padding */
+fieldset {
+  margin: 0 0 1em 0;
+  border: 1px solid #cccccc;
+  padding: 1px 1em;
+}
+
+/* remove padding so people aren't caught out if they zero out fieldsets */
+legend {
+  border: 0;
+  padding: 0;
+}
+
 /* colour placeholder text (WebKit and Mozilla only, so far) */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
