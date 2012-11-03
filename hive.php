@@ -59,7 +59,7 @@ class hive_theme extends theme
 		$out[] = '<script src="modernizr.js"></script>';
 		$out[] = '<script src="'.$this->url.'js/tinynav.min.js"></script>';
 		$out[] = '<script src="'.$this->url.'js/scripts.js"></script>';
-		$out[] = '<!--[if lt IE 9]><script src="'.$this->url.'js/selectivizr.min.js"></script><![endif]-->';
+		$out[] = '<!--[if lt IE 9]><script src="'.$this->url.'js/selectivizr.min.js"></script><![endif]-->'.n;
 
 		return join(n, $out);
 	}
@@ -100,7 +100,7 @@ class hive_theme extends theme
 
 	function footer()
 	{
-		$out[] = '<p class="mothership"><a href="http://textpattern.com" title="'.gTxt('go_txp_com').'" rel="external">Textpattern CMS</a> (v'.txp_version.')</p>';
+		$out[] = n.'<p class="mothership"><a href="http://textpattern.com" title="'.gTxt('go_txp_com').'" rel="external">Textpattern CMS</a> (v'.txp_version.')</p>';
 		$out[] = '<p class="pagejump"><a href="#">'.gTxt('back_to_top').'</a></p>';
 		return join(n, $out);
 	}
