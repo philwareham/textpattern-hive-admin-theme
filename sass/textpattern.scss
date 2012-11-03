@@ -530,8 +530,10 @@ body#page-setup {
 	}
 }
 
-.recent {
-	list-style: decimal-leading-zero;
+#recent_group {
+	ul {
+		list-style: decimal-leading-zero;
+	}
 
 	li {
 		margin-left: 2em;
