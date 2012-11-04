@@ -1852,7 +1852,6 @@ body#page-setup {
 
 #view_modes ul {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 #view_modes .text {
@@ -1927,10 +1926,6 @@ body#page-setup {
 }
 #article-main .author {
   color: #999999;
-}
-
-#main_content > div:first-of-type > p:first-of-type {
-  margin-top: 0;
 }
 
 #supporting_content > div,

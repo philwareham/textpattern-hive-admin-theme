@@ -435,7 +435,6 @@ body#page-setup {
 #view_modes {
 	ul {
 		list-style: none;
-		margin: 0;
 		padding: 0;
 	}
 
@@ -498,10 +497,6 @@ body#page-setup {
 	.author {
 		color: $color-text-footnote;
 	}
-}
-
-#main_content > div:first-of-type > p:first-of-type {
-	margin-top: 0;
 }
 
 #supporting_content,
