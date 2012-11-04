@@ -29,11 +29,9 @@
 	</header><!-- /txp-header -->
 	<div role="main" id="txp-main" class="txp-body" aria-label="Main content">
 
-	<div id="login_container" class="txp-container">
-
 		<form method="post" action="content-article.html" id="login_form">
-			<div class="txp-login">
-				<h2>Login to Textpattern</h2>
+			<section role="region" class="txp-login" aria-labelledby="txp-login-heading">
+				<h2 id="txp-login-heading">Login to Textpattern</h2>
 				<p class="login-name">
 					<span class="txp-label"><label for="login_name">Name</label></span>
 					<span class="txp-value"><input type="text" value="" name="p_userid" size="32" id="login_name"></span>
@@ -48,10 +46,9 @@
 				</p>
 				<p><input type="submit" value="Login" class="publish"></p>
 				<p class="login-forgot"><a href="reset-password.html">Forgot password?</a></p>
-			</div>
+			</section>
 		</form>
 
-	</div><!-- /txp-container -->
 	</div><!-- /txp-body -->
 
 </body>
