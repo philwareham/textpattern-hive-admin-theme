@@ -25,7 +25,7 @@ h1 {
 
 h2 {
 	font-size: 1.38461538461538em; // 18px / 13px
-	margin: 0 0 .72222222222222em; // 13px / 18px
+	margin: .38888888888889em 0 .72222222222222em 0; // 7px / 18px + 13px / 18px
 
 	.pophelp {
 		font-size: .72222222222222em; // 13px / 18px
@@ -34,18 +34,14 @@ h2 {
 
 h3 {
 	font-size: 1.15384615384615em; // 15px / 13px
-	margin: 0 0 .86666666666667em; // 13px / 15px
-
-	.txp-grid-cell & {
-		margin-top: .86666666666667em;
-	}
+	margin: .86666666666667em 0; // 13px / 15px
 }
 
 h4,
 h5,
 h6 {
 	font-size: 1em; // 13px
-	margin: 0 0 1em;
+	margin: 1em 0;
 }
 
 /* addresses style set to `bolder` in Firefox4+, Safari5, and Chrome */

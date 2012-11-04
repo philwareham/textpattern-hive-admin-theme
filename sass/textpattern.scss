@@ -499,23 +499,6 @@ body#page-setup {
 	}
 }
 
-#supporting_content,
-#content_switcher {
-	> div {
-		margin-bottom: 1em;
-	}
-
-	.action-create {
-		margin-top: 0;
-	}
-}
-
-#supporting_content > div {
-	border: 1px solid lighten($color-border, 9%);
-	border-top: 0;
-	background: $color-background-box;
-}
-
 #dates {
 	.date,
 	.time {

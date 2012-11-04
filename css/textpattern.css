@@ -196,7 +196,7 @@ h1 .pophelp {
 
 h2 {
   font-size: 1.38461538461538em;
-  margin: 0 0 .72222222222222em;
+  margin: .38888888888889em 0 .72222222222222em 0;
 }
 h2 .pophelp {
   font-size: .72222222222222em;
@@ -204,17 +204,14 @@ h2 .pophelp {
 
 h3 {
   font-size: 1.15384615384615em;
-  margin: 0 0 .86666666666667em;
-}
-.txp-grid-cell h3 {
-  margin-top: .86666666666667em;
+  margin: .86666666666667em 0;
 }
 
 h4,
 h5,
 h6 {
   font-size: 1em;
-  margin: 0 0 1em;
+  margin: 1em 0;
 }
 
 /* addresses style set to `bolder` in Firefox4+, Safari5, and Chrome */
@@ -1928,21 +1925,6 @@ body#page-setup {
   color: #999999;
 }
 
-#supporting_content > div,
-#content_switcher > div {
-  margin-bottom: 1em;
-}
-#supporting_content .action-create,
-#content_switcher .action-create {
-  margin-top: 0;
-}
-
-#supporting_content > div {
-  border: 1px solid #e3e3e3;
-  border-top: 0;
-  background: #f7f7f7;
-}
-
 #dates .date .label,
 #dates .time .label {
   display: block;
@@ -2190,7 +2172,7 @@ div.code {
   }
 
   #article-tabs {
-    padding: 0 0 1em 0;
+    padding: 0;
     height: 1.84615384615385em;
   }
 
