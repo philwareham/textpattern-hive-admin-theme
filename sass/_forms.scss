@@ -119,6 +119,12 @@ textarea {
 	max-width: 100%;
 }
 
+input[type="search"] {
+	background: url("../img/search.png") no-repeat 0 0;
+	padding-left: 28px;
+	border-right: 0;
+}
+
 input[type="color"] {
 	padding: 0;
 	height: 1.84615384615385em; // 24px / 13px

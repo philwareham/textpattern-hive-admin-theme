@@ -64,6 +64,11 @@ td {
 			border-right: 1px solid darken($color-gradient-to, 5%);
 			border-bottom: 1px solid darken($color-gradient-to, 10%);
 
+			&.asc,
+			&.desc {
+				@include gradient(darken($color-gradient-to, 4%), darken($color-gradient-from, 4%));
+			}
+
 			&:first-child {
 				border-left: 1px solid $color-gradient-to;
 			}
