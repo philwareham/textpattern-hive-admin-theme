@@ -72,35 +72,44 @@
 
 	</header><!-- /txp-header -->
 	<div role="main" id="txp-main" class="txp-body" aria-label="Main content">
-		<h1 class="txp-heading">Comments</h1>
 
-		<p class="txp-buttons">
-			<a href="secondary/content-discuss_ipban.html">List banned IPs</a>
-		</p>
+		<div class="txp-layout-grid">
 
-		<div id="discuss_control" class="txp-control-panel">
-			<form method="get" action="#" class="search-form">
-				<p>
-					<label for="discuss-search">Search</label>
-					<select id="discuss-search" name="search_method">
-						<option value="id">ID#</option>
-						<option value="parent">Parent</option>
-						<option value="name">Name</option>
-						<option value="message" selected="selected">Message</option>
-						<option value="email">E-mail</option>
-						<option value="website">Website</option>
-						<option value="ip">IP</option>
-					</select>
-					<input type="text" value="" name="crit" size="16">
-					<input type="submit" value="Go" name="search">
+			<div class="txp-layout-cell txp-layout-2-4">
+				<h1 class="txp-heading">Comments</h1>
+			</div>
+
+			<div class="txp-layout-cell txp-layout-2-4">
+				<p class="txp-buttons">
+					<a href="secondary/content-discuss_ipban.html">List banned IPs</a>
 				</p>
-			</form>
-		</div>
+			</div>
 
-		<p class="detail-toggle">
-			<input type="checkbox" name="cb_toggle_discuss_detail" id="cb_toggle_discuss_detail" value="1" class="checkbox" onclick="toggleClassRemember('discuss_detail');" checked="checked">
-			<label for="cb_toggle_discuss_detail">Show more detail</label>
-		</p>
+			<div id="discuss_control" class="txp-layout-cell txp-layout-2-4">
+				<form method="get" action="#" class="search-form">
+					<p>
+						<label for="discuss-search">Search</label>
+						<select id="discuss-search" name="search_method">
+							<option value="id">ID#</option>
+							<option value="parent">Parent</option>
+							<option value="name">Name</option>
+							<option value="message" selected="selected">Message</option>
+							<option value="email">E-mail</option>
+							<option value="website">Website</option>
+							<option value="ip">IP</option>
+						</select>
+						<input type="text" value="" name="crit" size="16">
+						<input type="submit" value="Go" name="search">
+					</p>
+				</form>
+			</div>
+
+			<div class="txp-layout-cell txp-layout-2-4">
+				<p class="detail-toggle">
+					<input type="checkbox" name="cb_toggle_discuss_detail" id="cb_toggle_discuss_detail" value="1" class="checkbox" onclick="toggleClassRemember('discuss_detail');" checked="checked">
+					<label for="cb_toggle_discuss_detail">Show more detail</label>
+				</p>
+			</div>
 
 		<form class="cb_show_spam" method="post" action="#">
 			<p>
