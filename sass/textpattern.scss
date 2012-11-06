@@ -157,21 +157,17 @@ body {
 }
 
 .txp-control-panel {
+	margin-top: .5em;
+	text-align: right;
+}
+
+.txp-buttons,
+.upload-form p {
 	margin-top: 0;
-	line-height: 2;
 }
 
 .detail-toggle {
-	margin-top: .33em;
-	text-align: right;
-}
-
-.txp-buttons {
-	text-align: right;
-	margin: .5em 0 1.53846153846154em;;
-}
-
-.upload-form {
+	margin-top: .5em;
 	text-align: right;
 }
 
@@ -210,19 +206,6 @@ div.multi-edit {
 	opacity: .33;
 	/* transparency support for IE8 */
 	filter: alpha(opacity=33);
-}
-
-/* list navigators on list pages */
-.txp-navigation {
-	@extend .clearfix;
-
-	.pageby {
-		float: left;
-	}
-
-	.prev-next {
-		float: right;
-	}
 }
 
 /* AJAX spinner */

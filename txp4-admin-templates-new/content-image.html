@@ -79,34 +79,27 @@
 				<h1 class="txp-heading">Images</h1>
 			</div>
 
-			<div class="txp-layout-cell txp-layout-2-4">
-				<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
-					<p><label for="image-upload">Upload image</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>&#160;<input type="file" value="" name="thefile" id="image-upload">&#160;<input type="submit" value="Upload"></p>
-				</form>
-			</div>
-
 			<div id="image_control" class="txp-layout-cell txp-layout-2-4">
 				<form method="get" action="#" class="search-form">
 					<p class="txp-control-panel">
-						<label for="image-search">Search</label>
-						<select id="image-search" name="search_method">
-							<option value="id">ID#</option>
-							<option value="name" selected="selected">Name</option>
-							<option value="category">Category</option>
-							<option value="author">Author</option>
-							<option value="alt">Alternate text</option>
-							<option value="caption">Caption</option>
-						</select>
-						<input type="text" value="" name="crit" size="16">
-						<input type="submit" value="Go" name="search">
+						<input type="search" value="" name="crit" size="16" class="input-medium"><input type="submit" value="Go" name="search">
+					</p>
+				</form>
+			</div>
+
+			<div class="txp-layout-cell txp-layout-2-4">
+				<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
+					<p>
+						<label for="image-upload">Upload image</label>&#160;<a target="_blank" href="#" onclick="popWin(this.href); return false;" class="pophelp" rel="help">?</a>&#160;<input type="file" value="" name="thefile" id="image-upload">&#160;<input type="submit" value="Upload">
 					</p>
 				</form>
 			</div>
 
 			<div class="txp-layout-cell txp-layout-2-4">
 				<p class="detail-toggle">
-					<input type="checkbox" name="cb_toggle_images_detail" id="cb_toggle_images_detail" value="1" class="checkbox" onclick="toggleClassRemember('images_detail');" checked="checked">
-					<label for="cb_toggle_images_detail">Show more detail</label>
+					<a href="#"><b class="icon icon-list"></b> List view</a>
+					<a href="#"><b class="icon icon-grid"></b> Grid view</a>
+					<a href="#"><b class="icon icon-cog"></b> List options</a>
 				</p>
 			</div>
 

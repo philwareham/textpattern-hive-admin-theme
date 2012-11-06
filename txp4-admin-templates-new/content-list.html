@@ -79,12 +79,6 @@
 				<h1 class="txp-heading">Articles</h1>
 			</div>
 
-			<div class="txp-layout-cell txp-layout-2-4">
-				<p class="txp-buttons">
-					<a href="content-article.html">Add new article</a>
-				</p>
-			</div>
-
 			<div id="list_control" class="txp-layout-cell txp-layout-2-4">
 				<form method="get" action="#" class="search-form">
 					<p class="txp-control-panel">
@@ -94,9 +88,14 @@
 			</div>
 
 			<div class="txp-layout-cell txp-layout-2-4">
+				<p class="txp-buttons">
+					<a href="content-article.html">Add new article</a>
+				</p>
+			</div>
+
+			<div class="txp-layout-cell txp-layout-2-4">
 				<p class="detail-toggle">
-					<input type="checkbox" name="cb_toggle_articles_detail" id="cb_toggle_articles_detail" value="1" class="checkbox" onclick="toggleClassRemember('articles_detail');" checked="checked">
-					<label for="cb_toggle_articles_detail">Show more detail</label>
+					<a href="#"><b class="icon icon-cog"></b> List options</a>
 				</p>
 			</div>
 
@@ -162,43 +161,31 @@
 							</tbody>
 
 						</table>
-
-						<div class="multi-edit">
-							<select name="edit_method">
-								<option value="" selected="selected">With selected&#8230;</option>
-								<option value="changesection">Change section</option>
-								<option value="changecategory1">Change category1</option>
-								<option value="changecategory2">Change category2</option>
-								<option value="changestatus">Change status</option>
-								<option value="changecomments">Change comments</option>
-								<option value="changeauthor">Change author</option>
-								<option value="delete">Delete</option>
-							</select>
-						</div>
-
 					</div>
+
+					<div class="multi-edit">
+						<select name="edit_method">
+							<option value="" selected="selected">With selected&#8230;</option>
+							<option value="changesection">Change section</option>
+							<option value="changecategory1">Change category1</option>
+							<option value="changecategory2">Change category2</option>
+							<option value="changestatus">Change status</option>
+							<option value="changecomments">Change comments</option>
+							<option value="changeauthor">Change author</option>
+							<option value="delete">Delete</option>
+						</select>
+					</div>
+
 				</form>
 
 				<div id="list_navigation" class="txp-navigation">
 					<form class="nav-form" method="get" action="#">
 						<p class="prev-next">
-							<span class="navlink-disabled">← Prev</span>&#160;<select name="page">
+							<span class="navlink-disabled">← Prev</span><a href="#" class="navlink" rel="next">Next →</a>
+							<select name="page">
 								<option value="1" selected="selected">1/2</option>
 								<option value="2">2/2</option>
-							</select>&#160;<a href="#" class="navlink" rel="next">Next →</a>
-						</p>
-					</form>
-
-					<form method="post" action="#" class="pageby">
-						<p>
-							View
-							<select name="qty" onchange="submit(this.form);">
-								<option value="15">15</option>
-								<option value="25">25</option>
-								<option value="50">50</option>
-								<option value="100">100</option>
 							</select>
-							per page
 						</p>
 					</form>
 				</div>
