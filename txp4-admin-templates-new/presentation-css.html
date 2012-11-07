@@ -79,8 +79,13 @@
 
 			<div id="main_content" class="txp-layout-cell txp-layout-3-4">
 				<form method="post" action="#" id="style_form" class="edit-form">
-					<p class="edit-title">You are editing style&#160;<strong>new_style</strong></p>
-					<textarea id="css" class="code" name="css" cols="64" rows="32">body {
+					<p>
+						<label for="text">Style name</label><br>
+						<input id="text" type="text" size="16" value="new_style" class="input-medium">
+					</p>
+					<p>
+						<label for="css">Style code</label><br>
+						<textarea id="css" class="code" name="css" cols="64" rows="32">body {
 	color: #fff;
 	background: #000;
 }
@@ -88,11 +93,10 @@
 h1 {
 	font-weight: normal;
 }</textarea>
-					<p><input type="submit" value="Save" class="publish"></p>
-					<p class="copy-as">
-						<label for="copy-css">&#8230;or copy style as</label>
-						<input type="text" value="" name="newname" id="copy-css" size="16" class="input-medium">
-						<input type="submit" value="Copy" name="copy">
+					</p>
+					<p>
+						<input type="submit" value="Save" class="publish">
+						<input type="submit" value="Clone this style" class="clone">
 					</p>
 				</form>
 			</div><!-- /#main_content -->

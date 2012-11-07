@@ -206,8 +206,27 @@
 
 			<div id="main_content" class="txp-layout-cell txp-layout-2-4">
 				<form action="#" method="post" id="form_form">
-					<p class="edit-title">You are editing form&#160;<strong>default</strong></p>
-					<textarea id="form" class="code" name="Form" cols="64" rows="32">&lt;txp:if_individual_article&gt;
+					<p>
+						<label for="text">Form name</label><br>
+						<input id="text" type="text" size="16" value="default" readonly="readonly" class="input-medium">
+						<span class="previewing"><a href="#" class="article-view">Preview</a></span>
+					</p>
+					<p>
+						<label for="type">Form type</label><br>
+						<select id="type" name="type">
+							<option value=""></option>
+							<option value="article" selected="selected">article</option>
+							<option value="category">category</option>
+							<option value="comment">comment</option>
+							<option value="file">file</option>
+							<option value="link">link</option>
+							<option value="misc">misc</option>
+							<option value="section">section</option>
+						</select>
+					</p>
+					<p>
+						<label for="form">Form code</label><br>
+						<textarea id="form" class="code" name="Form" cols="64" rows="32">&lt;txp:if_individual_article&gt;
 	&lt;h1 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h1&gt;
 &lt;txp:else /&gt;
 	&lt;h3 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h3&gt;
@@ -226,21 +245,11 @@
 &lt;txp:comments_invite wraptag=&quot;p&quot; /&gt;
 
 &lt;div class=&quot;divider&quot;&gt;&lt;txp:image id=&quot;1&quot; /&gt;&lt;/div&gt;</textarea>
-					<p>Name (required)<br><em>default</em></p>
-					<p>Type (required)<br>
-						<select name="type">
-							<option value=""></option>
-							<option value="article" selected="selected">article</option>
-							<option value="category">category</option>
-							<option value="comment">comment</option>
-							<option value="file">file</option>
-							<option value="link">link</option>
-							<option value="misc">misc</option>
-							<option value="section">section</option>
-						</select>
 					</p>
-					<input type="submit" value="Preview" name="form_preview">
-					<p><input type="submit" value="Save" name="save" class="publish"></p>
+					<p>
+						<input type="submit" value="Save" name="save" class="publish">
+						<input type="submit" value="Clone this form" class="clone">
+					</p>
 				</form>
 			</div><!-- /#main_content -->
 
