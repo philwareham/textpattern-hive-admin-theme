@@ -249,19 +249,6 @@ body {
 	}
 }
 
-/* remove float from txp-navigation elements */
-.txp-navigation {
-	text-align: center;
-
-	.pageby {
-		float: none;
-	}
-
-	.prev-next {
-		float: none;
-	}
-}
-
 .progress-meter {
 	ol {
 		display: block;
