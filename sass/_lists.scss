@@ -33,3 +33,34 @@ dt {
 	list-style: none;
 	padding-left: 0;
 }
+
+.switcher-list {
+	list-style: none;
+	margin: 0 -1em;
+	padding-left: 0;
+
+	li {
+		border-top: 1px solid $color-gradient-to;
+		padding: .38461538461538em .5em .38461538461538em 1em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		&:nth-child(odd) {
+			background: $color-background;
+		}
+
+		&:first-child {
+			border-top: 0;
+		}
+
+		&.active {
+			background: $color-highlight-box;
+		}
+	}
+}
+
+.switcher-action,
+.switcher-list .destroy {
+	float: right;
+	margin-left: 1em;
+}

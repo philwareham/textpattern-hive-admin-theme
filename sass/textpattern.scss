@@ -583,33 +583,6 @@ body#page-setup {
 	}
 }
 
-.copy-as {
-	line-height: 2;
-}
-
-#content_switcher .form-list-action,
-#content_switcher .destroy {
-	float: right;
-	margin-left: 1em;
-}
-
-.form-list .plain-list {
-	margin: 0 -1em;
-
-	li {
-		border-top: 1px solid $color-gradient-to;
-		padding: .38461538461538em .5em .38461538461538em 1em;
-
-		&:nth-child(odd) {
-			background: $color-background;
-		}
-
-		&:first-child {
-			border-top: 0;
-		}
-	}
-}
-
 
 /* Admin -> Diagnostics page
    ========================================================================== */
