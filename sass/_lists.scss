@@ -40,8 +40,9 @@ dt {
 	padding-left: 0;
 
 	li {
+		position: relative;
 		border-top: 1px solid $color-gradient-to;
-		padding: .38461538461538em .5em .38461538461538em 1em;
+		padding: .38461538461538em 3em .38461538461538em 1em;
 		overflow: hidden;
 		text-overflow: ellipsis;
 
@@ -61,6 +62,15 @@ dt {
 
 .switcher-action,
 .switcher-list .destroy {
-	float: right;
-	margin-left: 1em;
+	position: absolute;
+	z-index: 2;
+	right: 1em;
+}
+
+.switcher-action {
+	top: .38461538461538em;
+}
+
+.switcher-list .destroy {
+	top: .46153846153846em;
 }
