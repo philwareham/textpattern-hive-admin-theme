@@ -149,7 +149,7 @@ class hive_theme extends theme
 $(document).ready(function ()
 {
 	$("#messagepane").html("{$js}");
-	$(window).resize(function()
+	$(window).resize(function ()
 	{
 		$("#messagepane").css({
 			left: ($(window).width() - $("#messagepane").outerWidth()) / 2
