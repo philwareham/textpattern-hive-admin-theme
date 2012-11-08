@@ -1179,11 +1179,6 @@ button.destroy:active {
   background-image: linear-gradient(#c83025, #e36f66);
 }
 
-/* clone buttons */
-input[type="submit"].clone {
-  margin-left: 1em;
-}
-
 /* search buttons */
 .search-form input[type="submit"] {
   -moz-border-radius: 0 0.38462em 0.38462em 0;
@@ -1899,6 +1894,10 @@ body#page-setup {
   width: 24%;
 }
 
+#article_partial_article_view {
+  margin-left: .75em;
+}
+
 #article-tabs {
   width: 2em;
   padding-left: 1em;
@@ -2056,6 +2055,11 @@ body#page-setup {
 #page-form textarea.code,
 #page-css textarea.code {
   height: 34.4615384615385em;
+}
+
+.cloning,
+.previewing {
+  margin-left: .75em;
 }
 
 /* Admin -> Diagnostics page
