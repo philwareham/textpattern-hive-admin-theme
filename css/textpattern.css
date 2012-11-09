@@ -52,7 +52,7 @@ html {
 
 /* Layout grids
    ========================================================================== */
-/* layout grid container - must only contain `.grid` or `.grid__cell` components as children */
+/* layout grid container - must only contain `.txp-layout-grid` or `.txp-layout-cell` components as children */
 .txp-layout-grid {
   display: block;
   padding: 0;
@@ -109,7 +109,7 @@ html {
 /* text columns (fixed proportion cell) */
 .txp-layout-textbox {
   margin: 0 auto;
-  max-width: 57.07692em;
+  max-width: 57em;
 }
 
 .txp-layout-grid > div.txp-layout-textbox {
@@ -119,7 +119,7 @@ html {
 /* Deprecated @ 4.6 - use .txp-layout-textbox instead */
 .text-column {
   margin: 0 auto;
-  max-width: 57.07692em;
+  max-width: 57em;
 }
 
 /* Inline grids
@@ -464,7 +464,7 @@ a:hover .content-image {
   border-radius: 0.38462em 0.38462em 0 0;
   margin: 0 auto;
   padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
-  max-width: 53.23077em;
+  max-width: 53.15385em;
   color: #fff;
   -webkit-box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
@@ -1728,7 +1728,7 @@ span.spinner {
 }
 
 .txp-edit {
-  max-width: 55.07692em;
+  max-width: 55em;
 }
 
 .txp-login {
