@@ -2139,7 +2139,7 @@ div.code {
   }
 
   .txp-layout-grid > div.txp-layout-textbox {
-    padding: 0 .5em;
+    padding: 0 1em;
   }
 
   .txp-control-panel {
@@ -2195,12 +2195,14 @@ div.code {
 
   /* Content -> Write page < 769px
      ========================================================================== */
+  /* TO BE REMOVED */
   #page-article .txp-columntable th,
   #page-article .txp-columntable td,
   #page-article .txp-columntable tr {
     display: block;
   }
 
+  /* TO BE REMOVED */
   #article-col-1,
   #article-col-2,
   #article-main,
@@ -2210,6 +2212,7 @@ div.code {
     max-width: 42em;
   }
 
+  /* TO BE REMOVED */
   #article-col-2 {
     clear: left;
   }
