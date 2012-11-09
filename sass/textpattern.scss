@@ -68,7 +68,7 @@ body {
 }
 
 .txp-body {
-	max-width: 115em; // 1430px / 13px
+	max-width: 116em; // 1508px / 13px
 	margin: 0 auto;
 }
 
@@ -169,6 +169,10 @@ body {
 .detail-toggle {
 	margin-top: .5em;
 	text-align: right;
+}
+
+.txp-actions a {
+	margin-left: .75em;
 }
 
 div.multi-edit {
@@ -414,10 +418,6 @@ body#page-setup {
 	width: 24%;
 }
 
-#article_partial_article_view {
-	margin-left: .75em;
-}
-
 #article-tabs {
 	width: 2em; // 26px / 13px
 	padding-left: 1em;
@@ -585,11 +585,6 @@ body#page-setup {
 	textarea.code {
 		height: 34.4615384615385em; // 448px / 13px
 	}
-}
-
-.cloning,
-.previewing {
-	margin-left: .75em;
 }
 
 

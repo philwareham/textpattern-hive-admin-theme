@@ -11,7 +11,7 @@
 .txp-layout-grid {
 	display: block;
 	padding: 0;
-	margin: 0 -.5em;
+	margin: 0 -1em;
 	/* ensure consistent default alignment */
 	text-align: left;
 	/* remove inter-unit whitespace for all non-monospace font-families */
@@ -23,7 +23,7 @@
 
 .txp-layout-grid > div {
 	@include box-sizing;
-	padding: 0 .5em;
+	padding: 0 1em;
 	/* reset text defaults */
 	letter-spacing: normal;
 	word-spacing: normal;
@@ -39,6 +39,11 @@
 	vertical-align: top;
 	/* keeps unit content correctly aligned */
 	text-align: left;
+}
+
+/* reset vertical margin on nested layout grids */
+.txp-layout-grid .txp-layout-grid .grid__cell {
+    margin-top: -1em;
 }
 
 /* proportional layout cells */
@@ -61,7 +66,7 @@
 	padding: 0;
 }
 
-/* Deprecated @ 4.6 */
+/* Deprecated @ 4.6 - use .txp-layout-textbox instead */
 .text-column {
 	margin: 0 auto;
 	max-width: $text-column;

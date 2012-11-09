@@ -56,7 +56,7 @@ html {
 .txp-layout-grid {
   display: block;
   padding: 0;
-  margin: 0 -0.5em;
+  margin: 0 -1em;
   /* ensure consistent default alignment */
   text-align: left;
   /* remove inter-unit whitespace for all non-monospace font-families */
@@ -70,7 +70,7 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 .5em;
+  padding: 0 1em;
   /* reset text defaults */
   letter-spacing: normal;
   word-spacing: normal;
@@ -86,6 +86,11 @@ html {
   vertical-align: top;
   /* keeps unit content correctly aligned */
   text-align: left;
+}
+
+/* reset vertical margin on nested layout grids */
+.txp-layout-grid .txp-layout-grid .grid__cell {
+  margin-top: -1em;
 }
 
 /* proportional layout cells */
@@ -111,7 +116,7 @@ html {
   padding: 0;
 }
 
-/* Deprecated @ 4.6 */
+/* Deprecated @ 4.6 - use .txp-layout-textbox instead */
 .text-column {
   margin: 0 auto;
   max-width: 57.07692em;
@@ -1419,7 +1424,7 @@ body {
 }
 
 .txp-body {
-  max-width: 115em;
+  max-width: 116em;
   margin: 0 auto;
 }
 
@@ -1653,6 +1658,10 @@ body {
 .detail-toggle {
   margin-top: .5em;
   text-align: right;
+}
+
+.txp-actions a {
+  margin-left: .75em;
 }
 
 div.multi-edit {
@@ -1894,10 +1903,6 @@ body#page-setup {
   width: 24%;
 }
 
-#article_partial_article_view {
-  margin-left: .75em;
-}
-
 #article-tabs {
   width: 2em;
   padding-left: 1em;
@@ -2055,11 +2060,6 @@ body#page-setup {
 #page-form textarea.code,
 #page-css textarea.code {
   height: 34.4615384615385em;
-}
-
-.cloning,
-.previewing {
-  margin-left: .75em;
 }
 
 /* Admin -> Diagnostics page
