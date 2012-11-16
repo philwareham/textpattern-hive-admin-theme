@@ -390,10 +390,6 @@ body#page-setup {
 	}
 }
 
-#tagbuilder-output textarea {
-	height: 7em;
-}
-
 
 /* Content -> Categories page
    ========================================================================== */
@@ -481,10 +477,6 @@ body#page-setup {
 		width: 75%;
 	}
 
-	#body {
-		height: 34.4615384615385em; // 448px / 13px
-	}
-
 	.author {
 		color: $color-text-footnote;
 	}
@@ -507,10 +499,6 @@ body#page-setup {
 	li {
 		margin-left: 2em;
 	}
-}
-
-#keywords {
-	height: 4.38461538461538em; // 57px / 13px
 }
 
 
@@ -573,26 +561,6 @@ body#page-setup {
 
 #page-discuss .txp-list tr.moderate {
 	background: lighten($warning-background, 2%);
-}
-
-
-/* Presentation -> Pages, Forms, Styles pages shared
-   ========================================================================== */
-
-#page-page,
-#page-form,
-#page-css {
-	textarea.code {
-		height: 34.4615384615385em; // 448px / 13px
-	}
-}
-
-
-/* Admin -> Diagnostics page
-   ========================================================================== */
-
-#page-diag textarea {
-	height: 17.4615384615385em; // 227px / 13px
 }
 
 

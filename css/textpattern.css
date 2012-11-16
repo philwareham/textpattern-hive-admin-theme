@@ -271,8 +271,7 @@ pre,
 code,
 kbd,
 samp,
-.code,
-#diagnostics-detail {
+.code {
   font-family: Menlo, Consolas, "Liberation Mono", monospace;
 }
 
@@ -1880,10 +1879,6 @@ body#page-setup {
   margin: .5em;
 }
 
-#tagbuilder-output textarea {
-  height: 7em;
-}
-
 /* Content -> Categories page
    ========================================================================== */
 #page-category .action-create input[type="submit"],
@@ -1980,9 +1975,6 @@ body#page-setup {
 #article-main #title {
   width: 75%;
 }
-#article-main #body {
-  height: 34.4615384615385em;
-}
 #article-main .author {
   color: #999999;
 }
@@ -1997,10 +1989,6 @@ body#page-setup {
 }
 #recent_group li {
   margin-left: 2em;
-}
-
-#keywords {
-  height: 4.38461538461538em;
 }
 
 /* Content -> Articles page
@@ -2053,20 +2041,6 @@ body#page-setup {
 
 #page-discuss .txp-list tr.moderate {
   background: #fff8dd;
-}
-
-/* Presentation -> Pages, Forms, Styles pages shared
-   ========================================================================== */
-#page-page textarea.code,
-#page-form textarea.code,
-#page-css textarea.code {
-  height: 34.4615384615385em;
-}
-
-/* Admin -> Diagnostics page
-   ========================================================================== */
-#page-diag textarea {
-  height: 17.4615384615385em;
 }
 
 /* Admin -> Preferences page
@@ -2234,8 +2208,6 @@ div.code {
     display: none;
   }
 
-  /* Presentation -> Pages, Forms, Styles pages shared < 769px
-     ========================================================================== */
   /* Admin -> Basic/advanced preferences pages < 769px
      ========================================================================== */
   #page-prefs .basic th,
