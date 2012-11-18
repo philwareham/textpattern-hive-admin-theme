@@ -215,19 +215,6 @@
 						</span>
 					</p>
 					<p>
-						<label for="type">Form type</label><br>
-						<select id="type" name="type">
-							<option value=""></option>
-							<option value="article" selected="selected">article</option>
-							<option value="category">category</option>
-							<option value="comment">comment</option>
-							<option value="file">file</option>
-							<option value="link">link</option>
-							<option value="misc">misc</option>
-							<option value="section">section</option>
-						</select>
-					</p>
-					<p>
 						<label for="form">Form code</label><br>
 						<textarea id="form" class="code" name="Form" cols="64" rows="24">&lt;txp:if_individual_article&gt;
 	&lt;h1 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h1&gt;
@@ -248,6 +235,19 @@
 &lt;txp:comments_invite wraptag=&quot;p&quot; /&gt;
 
 &lt;div class=&quot;divider&quot;&gt;&lt;txp:image id=&quot;1&quot; /&gt;&lt;/div&gt;</textarea>
+					</p>
+					<p>
+						<label for="type">Form type</label><br>
+						<select id="type" name="type">
+							<option value=""></option>
+							<option value="article" selected="selected">article</option>
+							<option value="category">category</option>
+							<option value="comment">comment</option>
+							<option value="file">file</option>
+							<option value="link">link</option>
+							<option value="misc">misc</option>
+							<option value="section">section</option>
+						</select>
 					</p>
 					<p>
 						<input type="submit" value="Save" name="save" class="publish">
