@@ -409,6 +409,7 @@ body#page-setup {
 /* Content -> Write page
    ========================================================================== */
 
+/* TO BE DELETED */
 #article-col-1,
 #article-col-2 {
 	width: 24%;
@@ -564,16 +565,12 @@ body#page-setup {
 }
 
 
-/* Admin -> Preferences page
+/* Admin -> Languages page
    ========================================================================== */
 
 #page-lang .txp-list .modified {
 	color: $color-text-footnote;
 	margin-left: .6em;
-}
-
-#language_control {
-	text-align: left;
 }
 
 #textpack-install {
