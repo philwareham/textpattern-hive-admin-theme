@@ -115,39 +115,71 @@
 			<h1>Columns and grids</h1>
 
 			<h2>Page layout columns <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.6</span></h2>
+			<p>Responsive page layout grid system based on Griddle by Nicholas Galagher. Column widths are stated using the <code>.txp-layout-x-x</code> class on cells - see example below for all variations. <strong>Please note</strong> an outer <code>.txp-layout-grid</code> parent element is need to house the inner <code>.txp-layout-cell</code> child element.</p>
+			<pre class="prettyprint linenums"><code class="language-html">&lt;div class="txp-layout-grid"&gt;
+
+	&lt;div class="txp-layout-cell"&gt;...4 column span - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-cell txp-layout-2-4"&gt;...2 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-cell txp-layout-2-4"&gt;...2 column span - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-cell txp-layout-3-4"&gt;...3 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-cell txp-layout-3-4"&gt;...3 column span - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-cell txp-layout-2-4"&gt;...2 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-cell txp-layout-2-4"&gt;...2 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-cell txp-layout-2-4"&gt;...2 column span - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
 		</div>
 	</div><!--/txp-layout-textbox (so we can demonstrate other grids, continues afterwards) -->
 
 
 	<div class="txp-layout-grid">
 
-		<div class="txp-layout-cell"><div class="box">4 column span</div></div>
+		<div class="txp-layout-cell"><p class="box">4 column span</p></div>
 
-		<div class="txp-layout-cell txp-layout-2-4"><div class="box">2 column span</div></div>
-		<div class="txp-layout-cell txp-layout-2-4"><div class="box">2 column span</div></div>
+		<div class="txp-layout-cell txp-layout-2-4"><p class="box">2 column span</p></div>
+		<div class="txp-layout-cell txp-layout-2-4"><p class="box">2 column span</p></div>
 
-		<div class="txp-layout-cell txp-layout-3-4"><div class="box">3 column span</div></div>
-		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+		<div class="txp-layout-cell txp-layout-3-4"><p class="box">3 column span</p></div>
+		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
 
-		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
-		<div class="txp-layout-cell txp-layout-3-4"><div class="box">3 column span</div></div>
+		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
+		<div class="txp-layout-cell txp-layout-3-4"><p class="box">3 column span</p></div>
 
-		<div class="txp-layout-cell txp-layout-2-4"><div class="box">2 column span</div></div>
-		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
-		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+		<div class="txp-layout-cell txp-layout-2-4"><p class="box">2 column span</p></div>
+		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
+		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
 
-		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
-		<div class="txp-layout-cell txp-layout-2-4"><div class="box">2 column span</div></div>
-		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
+		<div class="txp-layout-cell txp-layout-2-4"><p class="box">2 column span</p></div>
+		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
 
-		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
-		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
-		<div class="txp-layout-cell txp-layout-2-4"><div class="box">2 column span</div></div>
+		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
+		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
+		<div class="txp-layout-cell txp-layout-2-4"><p class="box">2 column span</p></div>
 
-		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
-		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
-		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
-		<div class="txp-layout-cell txp-layout-1-4"><div class="box">1 column span</div></div>
+		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
+		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
+		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
+		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
 
 	</div>
 
