@@ -161,11 +161,6 @@ body {
 	text-align: right;
 }
 
-.txp-buttons,
-.upload-form p {
-	margin-top: 0;
-}
-
 .detail-toggle {
 	margin-top: .5em;
 	text-align: right;
@@ -239,6 +234,8 @@ span.spinner {
 	background: $color-background-box;
 }
 
+.txp-edit,
+.txp-login,
 .edit-form,
 .prefs-form,
 .txp-login {

@@ -32,17 +32,20 @@ html {
 
 /* Clearfix
    ========================================================================== */
-.clearfix:before, .progress-meter ol:before, .txp-footer:before, .edit-form p:before,
-.prefs-form p:before,
-.txp-login p:before, .clearfix:after, .progress-meter ol:after, .txp-footer:after, .edit-form p:after,
-.prefs-form p:after,
-.txp-login p:after {
+.clearfix:before, .progress-meter ol:before, .txp-footer:before, .txp-edit p:before,
+.txp-login p:before,
+.edit-form p:before,
+.prefs-form p:before, .clearfix:after, .progress-meter ol:after, .txp-footer:after, .txp-edit p:after,
+.txp-login p:after,
+.edit-form p:after,
+.prefs-form p:after {
   content: "";
   display: table;
 }
-.clearfix:after, .progress-meter ol:after, .txp-footer:after, .edit-form p:after,
-.prefs-form p:after,
-.txp-login p:after {
+.clearfix:after, .progress-meter ol:after, .txp-footer:after, .txp-edit p:after,
+.txp-login p:after,
+.edit-form p:after,
+.prefs-form p:after {
   clear: both;
 }
 
@@ -1648,11 +1651,6 @@ body {
 .txp-control-panel {
   margin-top: .5em;
   text-align: right;
-}
-
-.txp-buttons,
-.upload-form p {
-  margin-top: 0;
 }
 
 .detail-toggle {
