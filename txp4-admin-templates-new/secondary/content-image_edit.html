@@ -85,7 +85,7 @@
 					<div>
 						<form class="image-replace" method="post" enctype="multipart/form-data" action="#">
 							<p class="edit-image-replace">
-								<input type="file" value="" name="thefile" id="image_replace">
+								<input type="file" name="thefile" id="image_replace">
 								<input type="submit" value="Upload">
 							</p>
 						</form>
@@ -94,7 +94,7 @@
 				<div class="thumbnail-edit">
 					<img class="content-image" src="http://static1.designhive.com/img/cms/53t.jpg" width="184" height="118" alt="53t.jpg (184 &#215; 118)" title="53t.jpg (184 &#215; 118)">
 					<form method="post" action="#" onsubmit="return confirm('Really delete?');">
-						<input type="submit" value="&times;" class="destroy">
+						<input type="submit" value="&times;" class="destroy" title="Delete" aria-label="Delete">
 					</form>
 				</div>
 				<div role="group" class="txp-details thumbnail-upload">
@@ -102,7 +102,7 @@
 					<div>
 						<form class="thumbnail-upload" method="post" enctype="multipart/form-data" action="#">
 							<p class="edit-upload-thumbnail">
-								<input type="file" value="" name="thefile" id="upload_thumbnail">
+								<input type="file" name="thefile" id="upload_thumbnail">
 								<input type="submit" value="Upload">
 							</p>
 						</form>

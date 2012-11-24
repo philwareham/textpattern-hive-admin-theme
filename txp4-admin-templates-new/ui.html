@@ -397,7 +397,7 @@
 			<h2>Pre-formatted code blocks</h2>
 			<p><code class="prettyprint">&lt;pre&gt;&lt;code&gt;...content...&lt;/code&gt;&lt;/pre&gt;</code></p>
 			<pre><code>&lt;div id="messagepane"&gt;
-	&lt;span id="message" class="success"&gt;Article posted. &lt;a class="close"&gt;&amp;times;&lt;/a&gt;&lt;/span&gt;
+	&lt;span id="message" class="success"&gt;Article posted. &lt;a class="close" title="Close" aria-label="Close"&gt;&amp;times;&lt;/a&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
 
 		</div>
@@ -876,8 +876,8 @@
 				</p>
 
 				<h2>Delete buttons <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.6</span></h2>
-				<p><code class="prettyprint">&lt;input type="submit" value="&amp;times;" title="Delete" class="destroy"&gt;</code></p>
-				<p><input type="submit" value="&times;" title="Delete" class="destroy"></p>
+				<p><code class="prettyprint">&lt;input type="submit" value="&amp;times;" class="destroy" title="Delete" aria-label="Delete"&gt;</code></p>
+				<p><input type="submit" value="&times;" class="destroy" title="Delete" aria-label="Delete"></p>
 				<p><span class="information">Changed at 4.6:</span> Added <code>title</code> attribute.</p>
 
 				<h2>Button sets</h2>
