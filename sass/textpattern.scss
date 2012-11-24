@@ -269,6 +269,11 @@ span.spinner {
 	}
 }
 
+.txp-value-fixed {
+	display: inline-block;
+	padding: .23076923076923em 0; // 3px / 13px
+}
+
 /* deprecated @ 4.6 */
 .edit-label, 
 .login-label {
