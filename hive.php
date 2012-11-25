@@ -170,21 +170,27 @@ class hive_theme extends theme
 		}
 		else
 		{
-			$html = '<span role="alert" class="messageflash '.$class.'">'.gTxt($thing[0]).' <a role="button" href="#close" class="close" title="'.gTxt('close').'" aria-label="'.gTxt('close').'">&times;</a></span>';
+			$html = span(
+				gTxt($thing[0]).' <a role="button" href="#close" class="close" title="'.gTxt('close').'" aria-label="'.gTxt('close').'">&times;</a>'
+			, array(
+				'role'  => 'alert',
+				'class' => 'messageflash '.$class,
+			));
+
 			// Try to inject $html into the message pane no matter when _announce()'s output is printed.
 			$js = escape_js($html);
 			$js = <<< EOS
-$(document).ready(function ()
-{
-	$("#messagepane").html("{$js}");
-	$(window).resize(function ()
-	{
-		$("#messagepane").css({
-			left: ($(window).width() - $("#messagepane").outerWidth()) / 2
-		});
-	});
-	$(window).resize();
-});
+				$(document).ready(function ()
+				{
+					$("#messagepane").html("{$js}");
+					$(window).resize(function ()
+					{
+						$("#messagepane").css({
+							left: ($(window).width() - $("#messagepane").outerWidth()) / 2
+						});
+					});
+					$(window).resize();
+				});
 EOS;
 		}
 
@@ -201,6 +207,7 @@ EOS;
 	function manifest()
 	{
 		global $prefs;
+
 		return array(
 			'author'      => 'Team Textpattern',
 			'author_uri'  => 'http://textpattern.com/',
