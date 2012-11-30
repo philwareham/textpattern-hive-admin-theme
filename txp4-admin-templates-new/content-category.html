@@ -131,44 +131,6 @@
 			</div>
 
 
-			<div id="categories_link" class="txp-layout-cell txp-layout-1-4">
-				<div class="categories">
-					<h2>Links&#160;<a target="_blank" href="#" class="pophelp" title="Help" aria-label="Help" rel="help">?</a></h2>
-					<form method="post" action="#" class="action-create link">
-						<p>
-							<label for="link_category_new">Create new category</label><br>
-							<input id="link_category_new" type="text" value="" name="title" size="32">
-						</p>
-						<p class="parent">
-							<label for="link_category_parent">Parent</label><br>
-							<select name="parent_cat">
-								<option value="" selected="selected">&#160;</option>
-								<option value="textpattern">Textpattern</option>
-							</select>
-						</p>
-						<p><input type="submit" value="Create"></p>
-					</form>
-					<form method="post" action="#" id="category_link_form" class="category-tree">
-						<p class="level-0"><input type="checkbox" name="selected[]" value="8" class="checkbox">&#160;<a href="secondary/content-category_edit.html">Textpattern</a>&#160;<a href="#">(3)</a></p>
-						<div class="multi-edit">
-							<select name="edit_method">
-								<option value="" selected="selected">With selected&#8230;</option>
-								<option value="changeparent">changeparent</option>
-								<option value="deleteforce">deleteforce</option>
-								<option value="delete">Delete</option>
-							</select>
-							<div class="multi-option" id="multi-option-changeparent">
-								<select name="new_parent">
-									<option value="" selected="selected">&#160;</option>
-									<option value="textpattern">Textpattern</option>
-								</select>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-
-
 			<div id="categories_image" class="txp-layout-cell txp-layout-1-4">
 				<div class="categories">
 					<h2>Images&#160;<a target="_blank" href="#" class="pophelp" title="Help" aria-label="Help" rel="help">?</a></h2>
@@ -218,6 +180,44 @@
 						<p><input type="submit" value="Create"></p>
 					</form>
 					<p>None exist.</p>
+				</div>
+			</div>
+
+
+			<div id="categories_link" class="txp-layout-cell txp-layout-1-4">
+				<div class="categories">
+					<h2>Links&#160;<a target="_blank" href="#" class="pophelp" title="Help" aria-label="Help" rel="help">?</a></h2>
+					<form method="post" action="#" class="action-create link">
+						<p>
+							<label for="link_category_new">Create new category</label><br>
+							<input id="link_category_new" type="text" value="" name="title" size="32">
+						</p>
+						<p class="parent">
+							<label for="link_category_parent">Parent</label><br>
+							<select name="parent_cat">
+								<option value="" selected="selected">&#160;</option>
+								<option value="textpattern">Textpattern</option>
+							</select>
+						</p>
+						<p><input type="submit" value="Create"></p>
+					</form>
+					<form method="post" action="#" id="category_link_form" class="category-tree">
+						<p class="level-0"><input type="checkbox" name="selected[]" value="8" class="checkbox">&#160;<a href="secondary/content-category_edit.html">Textpattern</a>&#160;<a href="#">(3)</a></p>
+						<div class="multi-edit">
+							<select name="edit_method">
+								<option value="" selected="selected">With selected&#8230;</option>
+								<option value="changeparent">changeparent</option>
+								<option value="deleteforce">deleteforce</option>
+								<option value="delete">Delete</option>
+							</select>
+							<div class="multi-option" id="multi-option-changeparent">
+								<select name="new_parent">
+									<option value="" selected="selected">&#160;</option>
+									<option value="textpattern">Textpattern</option>
+								</select>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 
