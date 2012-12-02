@@ -2071,6 +2071,17 @@ div.code {
   box-sizing: border-box;
 }
 
+/* Deprecated @ 4.6 - use .txp-layout-textbox instead */
+.plugin-column {
+  margin: 0 auto;
+  max-width: 57em;
+}
+.plugin-column p:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* ==========================================================================
    Additional layout for devices < 769px
    ========================================================================== */

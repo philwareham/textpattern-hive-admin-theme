@@ -600,4 +600,14 @@ div.code {
 	@include box-sizing;
 }
 
+/* Deprecated @ 4.6 - use .txp-layout-textbox instead */
+.plugin-column {
+	margin: 0 auto;
+	max-width: 57em;
+
+	& p {
+		@include clearfix;
+	}
+}
+
 @import "responsive";
