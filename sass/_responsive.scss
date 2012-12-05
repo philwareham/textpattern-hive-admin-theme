@@ -93,35 +93,6 @@ body#page-setup {
 /* Content -> Write page < 769px
    ========================================================================== */
 
-/* TO BE REMOVED */
-#page-article .txp-columntable {
-	th,
-	td,
-	tr {
-		display: block;
-	}
-}
-
-/* TO BE REMOVED */
-#article-col-1,
-#article-col-2,
-#article-main,
-#article-tabs {
-	width: 100%;
-	margin: 0 auto;
-	max-width: $standard-column;
-}
-
-/* TO BE REMOVED */
-#article-col-2 {
-	clear: left;
-}
-
-#article-tabs {
-	padding: 0;
-	height: 1.84615384615385em; // 24px / 13px
-}
-
 .view-mode {
 	float: left;
 	margin-right: .8125em;

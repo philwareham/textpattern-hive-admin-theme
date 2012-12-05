@@ -1884,45 +1884,34 @@ body#page-setup {
 
 /* Content -> Write page
    ========================================================================== */
-/* TO BE DELETED */
-#article-col-1,
-#article-col-2 {
-  width: 24%;
-}
-
-#article-tabs {
-  width: 2em;
-  padding-left: 1em;
-}
-
 #view_modes ul {
   list-style: none;
   padding: 0;
 }
-#view_modes .text {
+#view_modes .text a {
   background-image: url("../img/view-text.png");
 }
-.svg #view_modes .text {
+.svg #view_modes .text a {
   background-image: url("../img/view-text.svg");
   -webkit-background-size: 1.5em 1.5em;
   -moz-background-size: 1.5em 1.5em;
   -o-background-size: 1.5em 1.5em;
   background-size: 1.5em 1.5em;
 }
-#view_modes .html {
+#view_modes .html a {
   background-image: url("../img/view-html.png");
 }
-.svg #view_modes .html {
+.svg #view_modes .html a {
   background-image: url("../img/view-html.svg");
   -webkit-background-size: 1.5em 1.5em;
   -moz-background-size: 1.5em 1.5em;
   -o-background-size: 1.5em 1.5em;
   background-size: 1.5em 1.5em;
 }
-#view_modes .preview {
+#view_modes .preview a {
   background-image: url("../img/view-preview.png");
 }
-.svg #view_modes .preview {
+.svg #view_modes .preview a {
   background-image: url("../img/view-preview.svg");
   -webkit-background-size: 1.5em 1.5em;
   -moz-background-size: 1.5em 1.5em;
@@ -1932,30 +1921,26 @@ body#page-setup {
 
 .view-mode {
   font-size: 16px;
-  margin-bottom: .8125em;
   width: 1.5em;
   height: 1.5em;
+}
+.view-mode a {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
+  display: block;
   -moz-border-radius: 0.38462em;
   border-radius: 0.38462em;
+  width: 1.5em;
+  height: 1.5em;
   background-color: #eeeeee;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-.view-mode a {
-  display: block;
-  width: 1.5em;
-  height: 1.5em;
-}
-.view-mode:hover {
+.view-mode a:hover {
   background-color: #fff6d3;
 }
-
-#tab-textup,
-#tab-htmlup,
-#tab-previewup {
+.view-mode.active a {
   background-color: #fff6d3;
 }
 
@@ -1963,10 +1948,10 @@ body#page-setup {
   margin-bottom: 1em;
 }
 
-#article-main #title {
+#main_content #title {
   width: 75%;
 }
-#article-main .author {
+#main_content .author {
   color: #999999;
 }
 
@@ -2162,33 +2147,6 @@ div.code {
 
   /* Content -> Write page < 769px
      ========================================================================== */
-  /* TO BE REMOVED */
-  #page-article .txp-columntable th,
-  #page-article .txp-columntable td,
-  #page-article .txp-columntable tr {
-    display: block;
-  }
-
-  /* TO BE REMOVED */
-  #article-col-1,
-  #article-col-2,
-  #article-main,
-  #article-tabs {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 42em;
-  }
-
-  /* TO BE REMOVED */
-  #article-col-2 {
-    clear: left;
-  }
-
-  #article-tabs {
-    padding: 0;
-    height: 1.84615384615385em;
-  }
-
   .view-mode {
     float: left;
     margin-right: .8125em;

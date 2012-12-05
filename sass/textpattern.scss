@@ -406,71 +406,57 @@ body#page-setup {
 /* Content -> Write page
    ========================================================================== */
 
-/* TO BE DELETED */
-#article-col-1,
-#article-col-2 {
-	width: 24%;
-}
-
-#article-tabs {
-	width: 2em; // 26px / 13px
-	padding-left: 1em;
-}
-
 #view_modes {
 	ul {
 		list-style: none;
 		padding: 0;
 	}
 
-	.text {
+	.text a {
 		@include svg-graphic(view-text, png, 1.5em, 1.5em);
 	}
 
-	.html {
+	.html a {
 		@include svg-graphic(view-html, png, 1.5em, 1.5em);
 	}
 
-	.preview {
+	.preview a {
 		@include svg-graphic(view-preview, png, 1.5em, 1.5em);
 	}
 }
 
 .view-mode {
 	font-size: 16px;
-	margin-bottom: .8125em; // 13px / 16px
 	width: 1.5em; // 24px / 16px
 	height: 1.5em; // 24px / 16px
-	@include hide-text;
-	@include border-radius($border-radius);
-	background: {
-		color: $color-gradient-from;
-		repeat: no-repeat;
-		position: 50% 50%;
-	}
 
 	a {
+		@include hide-text;
 		display: block;
+		@include border-radius($border-radius);
 		width: 1.5em; // 24px / 16px
 		height: 1.5em; // 24px / 16px
+		background: {
+			color: $color-gradient-from;
+			repeat: no-repeat;
+			position: 50% 50%;
+		}
+
+		&:hover {
+			background-color: $color-highlight-box;
+		}
 	}
 
-	&:hover {
+	&.active a {
 		background-color: $color-highlight-box;
 	}
-}
-
-#tab-textup,
-#tab-htmlup,
-#tab-previewup {
-	background-color: $color-highlight-box;
 }
 
 .html .excerpt {
 	margin-bottom: 1em;
 }
 
-#article-main {
+#main_content {
 	#title {
 		width: 75%;
 	}
