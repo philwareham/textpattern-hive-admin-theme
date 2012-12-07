@@ -1885,46 +1885,18 @@ body#page-setup {
 /* Content -> Write page
    ========================================================================== */
 #view_modes ul {
+  float: right;
   list-style: none;
   padding: 0;
 }
-#view_modes .text a {
-  background-image: url("../img/view-text.png");
-}
-.svg #view_modes .text a {
-  background-image: url("../img/view-text.svg");
-  -webkit-background-size: 1.5em 1.5em;
-  -moz-background-size: 1.5em 1.5em;
-  -o-background-size: 1.5em 1.5em;
-  background-size: 1.5em 1.5em;
-}
-#view_modes .html a {
-  background-image: url("../img/view-html.png");
-}
-.svg #view_modes .html a {
-  background-image: url("../img/view-html.svg");
-  -webkit-background-size: 1.5em 1.5em;
-  -moz-background-size: 1.5em 1.5em;
-  -o-background-size: 1.5em 1.5em;
-  background-size: 1.5em 1.5em;
-}
-#view_modes .preview a {
-  background-image: url("../img/view-preview.png");
-}
-.svg #view_modes .preview a {
-  background-image: url("../img/view-preview.svg");
-  -webkit-background-size: 1.5em 1.5em;
-  -moz-background-size: 1.5em 1.5em;
-  -o-background-size: 1.5em 1.5em;
-  background-size: 1.5em 1.5em;
-}
-
-.view-mode {
+#view_modes li {
+  display: inline-block;
   font-size: 16px;
+  margin-left: .5em;
   width: 1.5em;
   height: 1.5em;
 }
-.view-mode a {
+#view_modes a {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
@@ -1937,11 +1909,40 @@ body#page-setup {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-.view-mode a:hover {
+#view_modes a:hover,
+#view_modes li.active a {
   background-color: #fff6d3;
 }
-.view-mode.active a {
-  background-color: #fff6d3;
+
+#tab-text a {
+  background-image: url("../img/view-text.png");
+}
+
+.svg #tab-text a {
+  background-image: url("../img/view-text.svg");
+}
+
+#tab-html a {
+  background-image: url("../img/view-html.png");
+}
+
+.svg #tab-html a {
+  background-image: url("../img/view-html.svg");
+}
+
+#tab-preview a {
+  background-image: url("../img/view-preview.png");
+}
+
+.svg #tab-preview a {
+  background-image: url("../img/view-preview.svg");
+}
+
+.svg #view_modes a {
+  -webkit-background-size: 1.5em 1.5em;
+  -moz-background-size: 1.5em 1.5em;
+  -o-background-size: 1.5em 1.5em;
+  background-size: 1.5em 1.5em;
 }
 
 .html .excerpt {
@@ -1949,7 +1950,7 @@ body#page-setup {
 }
 
 #main_content #title {
-  width: 75%;
+  width: 66%;
 }
 #main_content .author {
   color: #999999;
@@ -2147,12 +2148,6 @@ div.code {
 
   /* Content -> Write page < 769px
      ========================================================================== */
-  .view-mode {
-    float: left;
-    margin-right: .8125em;
-    margin-bottom: 0;
-  }
-
   /* turn off features to optimise small screen size */
   #textile_group,
   #recent_group {

@@ -408,27 +408,18 @@ body#page-setup {
 
 #view_modes {
 	ul {
+		float: right;
 		list-style: none;
 		padding: 0;
 	}
 
-	.text a {
-		@include svg-graphic(view-text, png, 1.5em, 1.5em);
+	li {
+		display: inline-block;
+		font-size: 16px;
+		margin-left: .5em; // 8px / 16px
+		width: 1.5em; // 24px / 16px
+		height: 1.5em; // 24px / 16px
 	}
-
-	.html a {
-		@include svg-graphic(view-html, png, 1.5em, 1.5em);
-	}
-
-	.preview a {
-		@include svg-graphic(view-preview, png, 1.5em, 1.5em);
-	}
-}
-
-.view-mode {
-	font-size: 16px;
-	width: 1.5em; // 24px / 16px
-	height: 1.5em; // 24px / 16px
 
 	a {
 		@include hide-text;
@@ -441,15 +432,40 @@ body#page-setup {
 			repeat: no-repeat;
 			position: 50% 50%;
 		}
-
-		&:hover {
-			background-color: $color-highlight-box;
-		}
 	}
 
-	&.active a {
+	a:hover,
+	li.active a {
 		background-color: $color-highlight-box;
 	}
+}
+
+#tab-text a {
+	background-image: url("../img/view-text.png");
+}
+.svg #tab-text a {
+	background-image: url("../img/view-text.svg");
+}
+
+#tab-html a {
+	background-image: url("../img/view-html.png");
+}
+.svg #tab-html a {
+	background-image: url("../img/view-html.svg");
+}
+
+#tab-preview a {
+	background-image: url("../img/view-preview.png");
+}
+.svg #tab-preview a {
+	background-image: url("../img/view-preview.svg");
+}
+
+.svg #view_modes a {
+	-webkit-background-size: 1.5em 1.5em;
+	-moz-background-size: 1.5em 1.5em;
+	-o-background-size: 1.5em 1.5em;
+	background-size: 1.5em 1.5em;
 }
 
 .html .excerpt {
@@ -458,7 +474,7 @@ body#page-setup {
 
 #main_content {
 	#title {
-		width: 75%;
+		width: 66%;
 	}
 
 	.author {
