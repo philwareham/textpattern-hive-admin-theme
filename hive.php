@@ -12,55 +12,55 @@ class hive_theme extends theme
 		$out[] = '<link rel="stylesheet" href="'.$this->url.'css/textpattern.css">';
 
 		// Start of custom CSS toggles (see README.textile for usage instructions).
-		if(defined('hive_theme_hide_branding'))
+		if (defined('hive_theme_hide_branding'))
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_branding.css">';
 		}
-		if(defined('hive_theme_hide_headings'))
+		if (defined('hive_theme_hide_headings'))
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_headings.css">';
 		}
-		if(defined('hive_theme_hide_preview_tabs_group'))
+		if (defined('hive_theme_hide_preview_tabs_group'))
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_preview_tabs.css">';
 		}
-		if(defined('hive_theme_hide_textfilter_group'))
+		if (defined('hive_theme_hide_textfilter_group'))
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_textfilter_group.css">';
 		}
-		if(defined('hive_theme_hide_advanced_group'))
+		if (defined('hive_theme_hide_advanced_group'))
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_advanced_group.css">';
 		}
-		if(defined('hive_theme_hide_custom_field_group'))
+		if (defined('hive_theme_hide_custom_field_group'))
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_custom_field_group.css">';
 		}
-		if(defined('hive_theme_hide_image_group'))
+		if (defined('hive_theme_hide_image_group'))
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_image_group.css">';
 		}
-		if(defined('hive_theme_hide_keywords_field'))
+		if (defined('hive_theme_hide_keywords_field'))
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_keywords_field.css">';
 		}
-		if(defined('hive_theme_hide_recent_articles_group'))
+		if (defined('hive_theme_hide_recent_articles_group'))
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_recent_articles_group.css">';
 		}
-		if(defined('hive_theme_hide_comments_group'))
+		if (defined('hive_theme_hide_comments_group'))
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_comments_group.css">';
 		}
-		if(defined('hive_theme_hide_expires_field'))
+		if (defined('hive_theme_hide_expires_field'))
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_expires_field.css">';
 		}
-		if(defined('hive_theme_hide_tag_builder_column'))
+		if (defined('hive_theme_hide_tag_builder_column'))
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_tag_builder_column.css">';
 		}
-		if(defined('hive_theme_hide_form_preview'))
+		if (defined('hive_theme_hide_form_preview'))
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_form_preview.css">';
 		}
@@ -148,12 +148,12 @@ class hive_theme extends theme
 		return join(n, $out);
 	}
 
-	function announce($thing=array('', 0), $modal = false)
+	function announce($thing = array('', 0), $modal = false)
 	{
 		return $this->_announce($thing, false, $modal);
 	}
 
-	function announce_async($thing=array('', 0), $modal = false)
+	function announce_async($thing = array('', 0), $modal = false)
 	{
 		return $this->_announce($thing, true, $modal);
 	}
@@ -163,7 +163,10 @@ class hive_theme extends theme
 		// $thing[0]: message text.
 		// $thing[1]: message type, defaults to "success" unless empty or a different flag is set.
 
-		if ($thing === '') return '';
+		if ($thing === '')
+		{
+			return '';
+		}
 
 		if (!is_array($thing) || !isset($thing[1]))
 		{
@@ -172,13 +175,13 @@ class hive_theme extends theme
 
 		switch ($thing[1])
 		{
-			case E_ERROR :
+			case E_ERROR:
 				$class = 'error';
 				break;
-			case E_WARNING :
+			case E_WARNING:
 				$class = 'warning';
 				break;
-			default :
+			default:
 				$class = 'success';
 				break;
 		}
@@ -192,7 +195,7 @@ class hive_theme extends theme
 		{
 			$html = span(
 				gTxt($thing[0]).
-				sp.href('&times;', '#close', array(
+				sp.href('&#215;', '#close', array(
 					'role'       => 'button',
 					'class'      => 'close',
 					'title'      => gTxt('close'),
