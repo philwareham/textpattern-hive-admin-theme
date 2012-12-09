@@ -408,7 +408,6 @@ body#page-setup {
 
 #view_modes {
 	ul {
-		float: right;
 		list-style: none;
 		padding: 0;
 	}
@@ -416,7 +415,7 @@ body#page-setup {
 	li {
 		display: inline-block;
 		font-size: 16px;
-		margin-left: .5em; // 8px / 16px
+		margin-right: .5em; // 8px / 16px
 		width: 1.5em; // 24px / 16px
 		height: 1.5em; // 24px / 16px
 	}
@@ -474,7 +473,7 @@ body#page-setup {
 
 #main_content {
 	#title {
-		width: 66%;
+		width: 75%;
 	}
 
 	.author {

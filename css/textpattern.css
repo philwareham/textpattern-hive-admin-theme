@@ -1885,14 +1885,13 @@ body#page-setup {
 /* Content -> Write page
    ========================================================================== */
 #view_modes ul {
-  float: right;
   list-style: none;
   padding: 0;
 }
 #view_modes li {
   display: inline-block;
   font-size: 16px;
-  margin-left: .5em;
+  margin-right: .5em;
   width: 1.5em;
   height: 1.5em;
 }
@@ -1950,7 +1949,7 @@ body#page-setup {
 }
 
 #main_content #title {
-  width: 66%;
+  width: 75%;
 }
 #main_content .author {
   color: #999999;
