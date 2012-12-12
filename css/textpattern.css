@@ -849,12 +849,6 @@ textarea {
   max-width: 100%;
 }
 
-input[type="search"] {
-  background: url("../img/search.png") no-repeat 0 0;
-  padding-left: 28px;
-  border-right: 0;
-}
-
 input[type="color"] {
   padding: 0;
   height: 1.84615384615385em;
@@ -1217,6 +1211,43 @@ button.destroy:active {
   background-image: -o-linear-gradient(#c5c5c5, #f8f8f8);
   /* CSS3 Compliant */
   background-image: linear-gradient(#c5c5c5, #f8f8f8);
+}
+
+/* Search
+   ========================================================================== */
+input[type="search"] {
+  background: url("../img/search.png") no-repeat 0 0;
+  padding-left: 28px;
+}
+
+input[type="search"].active {
+  background-image: url("../img/search-active.png");
+}
+
+.txp-search {
+  position: relative;
+}
+
+.txp-search-dropdown {
+  position: absolute;
+  list-style: none;
+  left: 0;
+  top: 1.84615384615385em;
+  margin: 0;
+  width: 14.25em;
+  padding: .25em 0;
+  z-index: 10000;
+  border: solid 1px #d4d4d4;
+  border-top: 0;
+  background: #fff6d3;
+  -moz-border-radius: 0 0 0.38462em 0.38462em;
+  border-radius: 0 0 0.38462em 0.38462em;
+  -webkit-box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
+}
+
+.txp-search-dropdown li {
+  padding: .25em .5em;
 }
 
 /* Lists

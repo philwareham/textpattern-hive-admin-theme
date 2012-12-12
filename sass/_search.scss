@@ -1,0 +1,41 @@
+//
+// note: this file is for use with Sass- http://sass-lang.com,
+// don't use it as your live site stylesheet!
+//
+
+
+/* Search
+   ========================================================================== */
+
+input[type="search"] {
+	background: url("../img/search.png") no-repeat 0 0;
+	padding-left: 28px;
+}
+
+input[type="search"].active {
+	background-image: url("../img/search-active.png");
+}
+
+.txp-search {
+	position: relative;
+}
+
+.txp-search-dropdown {
+	position: absolute;
+	list-style: none;
+	left: 0;
+	top: 1.84615384615385em;
+	margin: 0;
+	width: 14.25em;
+	padding: .25em 0;
+	z-index: 10000;
+	border: solid 1px #d4d4d4;
+	border-top: 0;
+	background: $color-highlight-box;
+	@include border-radius(0 0 $border-radius $border-radius);
+	@include box-shadow;
+}
+
+.txp-search-dropdown li {
+	padding: .25em .5em;
+}
