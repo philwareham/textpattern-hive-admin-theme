@@ -83,55 +83,55 @@
 			</div>
 
 			<div id="list_control" class="txp-layout-cell txp-layout-2-4">
-				<form role="search" method="get" action="#" class="txp-search">
-					<input type="search" name="crit" size="16" class="input-medium">
-					<ul class="txp-search-dropdown" style="display:none;">
+				<form method="get" action="#" class="txp-search" role="search">
+					<input type="search" value="" name="crit" size="16" class="input-medium">
+					<ul class="txp-dropdown">
 						<li>
-							<input id="search-all" type="checkbox">
-							<label for="search-all"><strong>Search all</strong></label>
+							<input type="checkbox" name="select_all" value="all" id="search-all" checked="checked" class="checkbox active">
+							<label for="search-all">search_all</label>
 						</li>
 						<li>
-							<input id="search-id" type="checkbox">
+							<input type="checkbox" name="search_method[]" value="id" id="search-id" checked="checked" class="checkbox active">
 							<label for="search-id">ID#</label>
 						</li>
 						<li>
-							<input id="search-title_body_excerpt" type="checkbox">
-							<label for="search-title_body_excerpt">Title, body &amp; excerpt</label>
+							<input type="checkbox" name="search_method[]" value="title_body_excerpt" id="search-title_body_excerpt" checked="checked" class="checkbox active">
+							<label for="search-title_body_excerpt">Title, body & excerpt</label>
 						</li>
 						<li>
-							<input id="search-section" type="checkbox">
+							<input type="checkbox" name="search_method[]" value="section" id="search-section" checked="checked" class="checkbox active">
 							<label for="search-section">Section</label>
 						</li>
 						<li>
-							<input id="search-categories" type="checkbox">
+							<input type="checkbox" name="search_method[]" value="categories" id="search-categories" checked="checked" class="checkbox active">
 							<label for="search-categories">Categories</label>
 						</li>
 						<li>
-							<input id="search-keywords" type="checkbox">
+							<input type="checkbox" name="search_method[]" value="keywords" id="search-keywords" checked="checked" class="checkbox active">
 							<label for="search-keywords">Keywords</label>
 						</li>
 						<li>
-							<input id="search-status" type="checkbox">
+							<input type="checkbox" name="search_method[]" value="status" id="search-status" checked="checked" class="checkbox active">
 							<label for="search-status">Status</label>
 						</li>
 						<li>
-							<input id="search-author" type="checkbox">
+							<input type="checkbox" name="search_method[]" value="author" id="search-author" checked="checked" class="checkbox active">
 							<label for="search-author">Author</label>
 						</li>
 						<li>
-							<input id="search-article_image" type="checkbox">
+							<input type="checkbox" name="search_method[]" value="article_image" id="search-article_image" checked="checked" class="checkbox active">
 							<label for="search-article_image">Article image</label>
 						</li>
 						<li>
-							<input id="search-posted" type="checkbox">
+							<input type="checkbox" name="search_method[]" value="posted" id="search-posted" checked="checked" class="checkbox active">
 							<label for="search-posted">Posted</label>
 						</li>
 						<li>
-							<input id="search-lastmod" type="checkbox">
+							<input type="checkbox" name="search_method[]" value="lastmod" id="search-lastmod" checked="checked" class="checkbox active">
 							<label for="search-lastmod">Modified</label>
 						</li>
 					</ul>
-					<input type="submit" name="search" value="Go">
+					<input type="submit" value="search_articles" name="search">
 				</form>
 			</div>
 
