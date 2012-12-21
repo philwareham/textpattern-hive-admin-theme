@@ -93,7 +93,7 @@ class hive_theme extends theme
 		$out[] = '<script src="modernizr.js"></script>';
 		$out[] = '<script src="'.$this->url.'js/tinynav.min.js"></script>';
 		$out[] = '<script src="'.$this->url.'js/scripts.js"></script>';
-		$out[] = '<!--[if lt IE 9]><script src="'.$this->url.'js/selectivizr.min.js"></script><![endif]-->'.n;
+		$out[] = '<!--[if lt IE 9]><script src="vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->'.n;
 
 		return join(n, $out);
 	}
