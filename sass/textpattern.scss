@@ -7,7 +7,8 @@
 // import Sass partials
 @import "variables", "mixins";
 
-
+// import jQuery UI theme
+@import url("../../../vendors/jquery/ui/css/textpattern/jquery-ui.css");
 
 
 /* Base
@@ -81,7 +82,7 @@ body {
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 10000;
+	z-index: 1000;
 	padding: 0 1.69%;
 	height: 3em;
 	@include box-shadow(0 .15384615384615em .23076923076923em rgba(#000, .15));
@@ -119,7 +120,6 @@ body {
 
 .txp-logout {
 	position: absolute;
-	z-index: 10010;
 	top: -.5em;
 	right: 1.69%;
 }
@@ -375,7 +375,7 @@ body#page-setup {
 		top: 0;
 		left: 0;
 		right: 0;
-		z-index: 10000;
+		z-index: 1000;
 		padding: .5em 1em;
 		@include box-shadow(0 .15384615384615em .23076923076923em rgba(#000, .15));
 		@include gradient-bar(#ffda44, #fabc2b);

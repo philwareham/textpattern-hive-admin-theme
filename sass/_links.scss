@@ -37,7 +37,7 @@ a {
 	padding: 0 .23076923076923em;
 	font-weight: normal;
 	background: #e5e5e5;
-	@include border-radius(.53846153846154em);
+	@include border-radius(50%);
 }
 
 .txp-list thead th a.pophelp {

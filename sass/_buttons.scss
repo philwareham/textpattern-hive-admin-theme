@@ -102,12 +102,6 @@ button.destroy {
 	}
 }
 
-/* search buttons */
-
-.search-form input[type="submit"] {
-	@include border-radius(0 $border-radius $border-radius 0);
-}
-
 /* button sets */
 
 .nav-tertiary,

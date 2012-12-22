@@ -7,6 +7,12 @@
 /* Search
    ========================================================================== */
 
+/* removes inner padding and search cancel button in Safari5+ and Chrome on OS X */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
 input[type="search"] {
 	background: url("../img/search.png") no-repeat 0 0;
 	padding-left: 28px;
@@ -20,7 +26,7 @@ input[type="search"].active {
 	position: relative;
 }
 
-.txp-search-dropdown {
+.txp-dropdown {
 	position: absolute;
 	list-style: none;
 	left: 0;
@@ -36,6 +42,6 @@ input[type="search"].active {
 	@include box-shadow;
 }
 
-.txp-search-dropdown li {
+.txp-dropdown li {
 	padding: .25em .5em;
 }
