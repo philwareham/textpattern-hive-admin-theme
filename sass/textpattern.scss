@@ -183,10 +183,6 @@ div.multi-edit {
 	display: inline-block;
 }
 
-.txp-columntable {
-	width: 100%;
-}
-
 .text-section {
 	padding-top: 5em;
 	background: url("../img/separator.gif") repeat-x 0 2.15384615384615em; // 28px / 13px
@@ -601,7 +597,7 @@ div.code {
 	@include box-sizing;
 }
 
-/* Deprecated @ 4.6 - use .txp-layout-textbox instead */
+/* Deprecated @ 4.6 - use `.txp-layout-textbox` instead */
 .plugin-column {
 	margin: 0 auto;
 	max-width: 57em;

@@ -1247,7 +1247,7 @@ input[type="search"].active {
 
 /* Lists
    ========================================================================== */
-/* addresses paddings set differently */
+/* addresses padding set differently */
 menu,
 ol,
 ul {
@@ -1522,7 +1522,7 @@ body {
   display: inherit;
 }
 
-/* Hide `<ul>` version of navigation on touch devices */
+/* hide `<ul>` version of navigation on touch devices */
 .touch .untinynav {
   display: none;
 }
@@ -1683,10 +1683,6 @@ div.multi-edit {
 .multi-step {
   margin-left: .30769230769231em;
   display: inline-block;
-}
-
-.txp-columntable {
-  width: 100%;
 }
 
 .text-section {
@@ -2074,7 +2070,7 @@ div.code {
   box-sizing: border-box;
 }
 
-/* Deprecated @ 4.6 - use .txp-layout-textbox instead */
+/* Deprecated @ 4.6 - use `.txp-layout-textbox` instead */
 .plugin-column {
   margin: 0 auto;
   max-width: 57em;
