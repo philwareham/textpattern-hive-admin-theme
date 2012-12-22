@@ -82,60 +82,57 @@
 				<h1 class="txp-heading">Articles</h1>
 			</div>
 
-			<div id="list_control" class="txp-layout-cell txp-layout-2-4">
+			<div id="list_control" class="txp-layout-cell">
 				<form method="get" action="#" class="txp-search" role="search">
-					<p>
-						<span>
-							<input type="search" value="" name="crit" size="16" class="input-medium">
-							<ul class="txp-dropdown">
-								<li>
-									<input type="checkbox" name="select_all" value="all" id="search-all" checked="checked" class="checkbox active">
-									<label for="search-all">search_all</label>
-								</li>
-								<li>
-									<input type="checkbox" name="search_method[]" value="id" id="search-id" checked="checked" class="checkbox active">
-									<label for="search-id">ID#</label>
-								</li>
-								<li class="selected">
-									<input type="checkbox" name="search_method[]" value="title_body_excerpt" id="search-title_body_excerpt" checked="checked" class="checkbox active">
-									<label for="search-title_body_excerpt">Title, body & excerpt</label>
-								</li>
-								<li>
-									<input type="checkbox" name="search_method[]" value="section" id="search-section" checked="checked" class="checkbox active">
-									<label for="search-section">Section</label>
-								</li>
-								<li>
-									<input type="checkbox" name="search_method[]" value="categories" id="search-categories" checked="checked" class="checkbox active">
-									<label for="search-categories">Categories</label>
-								</li>
-								<li class="selected">
-									<input type="checkbox" name="search_method[]" value="keywords" id="search-keywords" checked="checked" class="checkbox active">
-									<label for="search-keywords">Keywords</label>
-								</li>
-								<li>
-									<input type="checkbox" name="search_method[]" value="status" id="search-status" checked="checked" class="checkbox active">
-									<label for="search-status">Status</label>
-								</li>
-								<li>
-									<input type="checkbox" name="search_method[]" value="author" id="search-author" checked="checked" class="checkbox active">
-									<label for="search-author">Author</label>
-								</li>
-								<li>
-									<input type="checkbox" name="search_method[]" value="article_image" id="search-article_image" checked="checked" class="checkbox active">
-									<label for="search-article_image">Article image</label>
-								</li>
-								<li>
-									<input type="checkbox" name="search_method[]" value="posted" id="search-posted" checked="checked" class="checkbox active">
-									<label for="search-posted">Posted</label>
-								</li>
-								<li>
-									<input type="checkbox" name="search_method[]" value="lastmod" id="search-lastmod" checked="checked" class="checkbox active">
-									<label for="search-lastmod">Modified</label>
-								</li>
-							</ul>
-						</span>
-						<input type="submit" value="search_articles" name="search">
-					</p>
+					<a class="txp-search-criteria" role="button" href="#" title="Search criteria">Search criteria</a>
+					<input type="search" value="" name="crit" size="16" class="input-medium">
+					<ul class="txp-dropdown">
+						<li>
+							<input type="checkbox" name="select_all" value="all" id="search-all" checked="checked" class="checkbox active">
+							<label for="search-all">search_all</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="id" id="search-id" checked="checked" class="checkbox active">
+							<label for="search-id">ID#</label>
+						</li>
+						<li class="selected">
+							<input type="checkbox" name="search_method[]" value="title_body_excerpt" id="search-title_body_excerpt" checked="checked" class="checkbox active">
+							<label for="search-title_body_excerpt">Title, body &amp; excerpt testing of very long line</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="section" id="search-section" checked="checked" class="checkbox active">
+							<label for="search-section">Section</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="categories" id="search-categories" checked="checked" class="checkbox active">
+							<label for="search-categories">Categories</label>
+						</li>
+						<li class="selected">
+							<input type="checkbox" name="search_method[]" value="keywords" id="search-keywords" checked="checked" class="checkbox active">
+							<label for="search-keywords">Keywords</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="status" id="search-status" checked="checked" class="checkbox active">
+							<label for="search-status">Status</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="author" id="search-author" checked="checked" class="checkbox active">
+							<label for="search-author">Author</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="article_image" id="search-article_image" checked="checked" class="checkbox active">
+							<label for="search-article_image">Article image</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="posted" id="search-posted" checked="checked" class="checkbox active">
+							<label for="search-posted">Posted</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="lastmod" id="search-lastmod" checked="checked" class="checkbox active">
+							<label for="search-lastmod">Modified</label>
+						</li>
+					</ul>
+					<input type="submit" value="search_articles" name="search">
 				</form>
 			</div>
 
