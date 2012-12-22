@@ -382,8 +382,8 @@ svg:not(:root) {
   border-radius: 0.4em;
   padding: 4px;
   background: #fff;
-  -webkit-box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 a:hover .content-image {
   border: solid 1px #0066ff;
@@ -461,8 +461,8 @@ a:hover .content-image {
   padding: 0.53846em 2.84615em 0.53846em 1em;
   max-width: 53.15385em;
   color: #fff;
-  -webkit-box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 #messagepane span.success {
   background: #238c23;
@@ -1237,8 +1237,8 @@ input[type="search"].active {
   background: #fff6d3;
   -moz-border-radius: 0 0 0.4em 0.4em;
   border-radius: 0 0 0.4em 0.4em;
-  -webkit-box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 
 .txp-dropdown li {
@@ -1590,15 +1590,8 @@ body {
   background: #fff6d3;
   -moz-border-radius: 0 0.4em 0.4em 0.4em;
   border-radius: 0 0.4em 0.4em 0.4em;
-  -webkit-box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0.46154em rgba(0, 0, 0, 0.2);
-}
-.dropdown-menu li {
-  border: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  background: none;
-  margin-right: 0;
+  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 .dropdown-menu li:first-child {
   -moz-border-radius: 0 0.4em 0 0;

@@ -98,11 +98,6 @@
 	@include box-shadow;
 
 	li {
-		border: 0;
-		@include border-radius(0);
-		background: none;
-		margin-right: 0;
-
 		&:first-child {
 			@include border-radius(0 $border-radius 0 0);
 		}
