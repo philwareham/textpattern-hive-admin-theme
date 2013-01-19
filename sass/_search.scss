@@ -14,16 +14,25 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 input[type="search"] {
-	background: url("../img/search.png") no-repeat 0 0;
-	padding-left: 28px;
-}
-
-input[type="search"].active {
-	background-image: url("../img/search-active.png");
+	padding-left: 2.5em;
 }
 
 .txp-search {
 	position: relative;
+}
+
+.txp-search-criteria {
+	@include hide-text;
+	display: block;
+	font-size: 16px;
+	width: 1.5em; // 24px / 16px
+	height: 1.5em; // 24px / 16px
+	background-repeat: no-repeat;
+	@include svg-graphic-spite(search, png);
+
+	&:hover {
+		background-position: 0 -1.5em; // -24px
+	}
 }
 
 .txp-dropdown {

@@ -1212,16 +1212,35 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 input[type="search"] {
-  background: url("../img/search.png") no-repeat 0 0;
-  padding-left: 28px;
-}
-
-input[type="search"].active {
-  background-image: url("../img/search-active.png");
+  padding-left: 2.5em;
 }
 
 .txp-search {
   position: relative;
+}
+
+.txp-search-criteria {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  font-size: 16px;
+  width: 1.5em;
+  height: 1.5em;
+  background-repeat: no-repeat;
+}
+.nosvg .txp-search-criteria {
+  background-image: url("../img/search.png");
+}
+.svg .txp-search-criteria {
+  background-image: url("../img/search.svg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.txp-search-criteria:hover {
+  background-position: 0 -1.5em;
 }
 
 .txp-dropdown {
@@ -1485,8 +1504,9 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-repeat: no-repeat;
-  background-position: 0 46%;
+  background: no-repeat 0 46%;
+}
+.nosvg .txp-header h1 {
   background-image: url("../img/textpattern-lrg.png");
 }
 .svg .txp-header h1 {
@@ -1619,6 +1639,9 @@ body {
   left: 1em;
   width: 1.23076923076923em;
   height: .61538461538462em;
+  background-repeat: no-repeat;
+}
+.nosvg .dropdown-menu:before {
   background-image: url("../img/indicator.gif");
 }
 .svg .dropdown-menu:before {
@@ -1840,6 +1863,9 @@ body#page-setup {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
+  background-repeat: no-repeat;
+}
+.nosvg .welcome h1 {
   background-image: url("../img/textpattern-xlrg.png");
 }
 .svg .welcome h1 {
@@ -1919,16 +1945,14 @@ body#page-setup {
   border-radius: 0.4em;
   width: 1.5em;
   height: 1.5em;
-  background-color: #eeeeee;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background: #eeeeee no-repeat 50% 50%;
 }
 #view_modes a:hover,
 #view_modes li.active a {
   background-color: #fff6d3;
 }
 
-#tab-text a {
+.nosvg #tab-text a {
   background-image: url("../img/view-text.png");
 }
 
@@ -1936,7 +1960,7 @@ body#page-setup {
   background-image: url("../img/view-text.svg");
 }
 
-#tab-html a {
+.nosvg #tab-html a {
   background-image: url("../img/view-html.png");
 }
 
@@ -1944,7 +1968,7 @@ body#page-setup {
   background-image: url("../img/view-html.svg");
 }
 
-#tab-preview a {
+.nosvg #tab-preview a {
   background-image: url("../img/view-preview.png");
 }
 
@@ -2127,6 +2151,8 @@ div.code {
   .txp-header h1 {
     max-width: 50%;
     padding-left: 2em;
+  }
+  .nosvg .txp-header h1 {
     background-image: url("../img/textpattern-sml.png");
   }
   .svg .txp-header h1 {

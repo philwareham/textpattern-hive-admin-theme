@@ -17,13 +17,28 @@
 // SVG images with fallback for older browsers (via Modernizr)
 		
 @mixin svg-graphic($imgfilename, $imgtype, $imgwidth, $imgheight) {
-	background-image: url('../img/' + $imgfilename + '.' + $imgtype);
+	.nosvg & {
+		background-image: url('../img/' + $imgfilename + '.' + $imgtype);
+	}
 	.svg & {
 		background-image: url('../img/' + $imgfilename + '.svg');
 		-webkit-background-size: $imgwidth $imgheight;
 		   -moz-background-size: $imgwidth $imgheight;
 		     -o-background-size: $imgwidth $imgheight;
 		        background-size: $imgwidth $imgheight;
+	}
+}
+
+@mixin svg-graphic-spite($imgfilename, $imgtype) {
+	.nosvg & {
+		background-image: url('../img/' + $imgfilename + '.' + $imgtype);
+	}
+	.svg & {
+		background-image: url('../img/' + $imgfilename + '.svg');
+		-webkit-background-size: cover;
+		   -moz-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
 	}
 }
 

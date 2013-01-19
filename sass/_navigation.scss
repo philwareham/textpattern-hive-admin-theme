@@ -127,6 +127,7 @@
 		left: 1em;
 		width: 1.23076923076923em;
 		height: .61538461538462em;
+		background-repeat: no-repeat;
 		@include svg-graphic(indicator, gif, 1.23076923076923em, .61538461538462em);
 	}
 }

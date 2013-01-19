@@ -100,10 +100,7 @@ body {
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
-		background: {
-			repeat: no-repeat;
-			position: 0 46%;
-		}
+		background: no-repeat 0 46%;
 		@include svg-graphic($logo-large-filename, $logo-large-filetype, $logo-large-width, $logo-large-height);
 
 		a {
@@ -351,6 +348,7 @@ body#page-setup {
 		width: 20.3076923076923em; // 264px / 13px
 		height: 4.15384615384615em; // 54px / 13px
 		@include hide-text;
+		background-repeat: no-repeat;
 		@include svg-graphic(textpattern-xlrg, png, 20.3076923076923em, 4.15384615384615em);
 	}
 
@@ -423,11 +421,7 @@ body#page-setup {
 		@include border-radius($border-radius);
 		width: 1.5em; // 24px / 16px
 		height: 1.5em; // 24px / 16px
-		background: {
-			color: $color-gradient-from;
-			repeat: no-repeat;
-			position: 50% 50%;
-		}
+		background: $color-gradient-from no-repeat 50% 50%;
 	}
 
 	a:hover,
@@ -436,21 +430,21 @@ body#page-setup {
 	}
 }
 
-#tab-text a {
+.nosvg #tab-text a {
 	background-image: url("../img/view-text.png");
 }
 .svg #tab-text a {
 	background-image: url("../img/view-text.svg");
 }
 
-#tab-html a {
+.nosvg #tab-html a {
 	background-image: url("../img/view-html.png");
 }
 .svg #tab-html a {
 	background-image: url("../img/view-html.svg");
 }
 
-#tab-preview a {
+.nosvg #tab-preview a {
 	background-image: url("../img/view-preview.png");
 }
 .svg #tab-preview a {
