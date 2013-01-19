@@ -21,3 +21,38 @@ $(function() {
 			.hide();
 	});
 });
+
+
+
+$(function()
+{
+	var $ui = $('.txp-search');
+
+	$ui.find('.txp-search-criteria').on('click', function()
+	{
+		$ui.find('.txp-search-dropdown')
+	}
+
+	// Amended search version using jQuery UI
+	$(".txp-search-criteria")
+		.click(function ()
+		{
+			var menu = $(this).find('.txp-search-dropdown').next().next().show().position({
+				my: "left top",
+				at: "left bottom",
+				of: this
+			});
+
+			$(document).one( "click", function ()
+			{
+				menu.hide();
+			});
+
+			return false;
+		})
+		.parent()
+		.next()
+		.hide()
+		.menu();
+
+});
