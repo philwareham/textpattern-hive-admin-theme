@@ -25,11 +25,11 @@ input[type="search"] {
 .txp-search-criteria {
 	position: absolute;
 	top: 0;
-	left: .25em;
+	left: 0;
 	z-index: 2;
 	@include hide-text;
 	font-size: 16px;
-	width: 1.5em; // 24px / 16px
+	width: 1.75em; // 28px / 16px
 	height: 1.5em; // 24px / 16px
 	background-repeat: no-repeat;
 	@include svg-graphic-spite(search, png);
@@ -39,13 +39,13 @@ input[type="search"] {
 	}
 }
 
-.txp-dropdown {
+.txp-search-dropdown {
 	position: absolute;
 	list-style: none;
 	left: 0;
 	top: 1.84615384615385em;
 	margin: 0;
-	width: 14.25em;
+	width: 12.25em;
 	padding: .25em 0;
 	z-index: 10000;
 	border: solid 1px #d4d4d4;
@@ -55,6 +55,6 @@ input[type="search"] {
 	@include box-shadow;
 }
 
-.txp-dropdown li {
+.txp-search-dropdown li {
 	padding: .25em .5em;
 }

@@ -1223,13 +1223,13 @@ input[type="search"] {
 .txp-search-criteria {
   position: absolute;
   top: 0;
-  left: .25em;
+  left: 0;
   z-index: 2;
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
   font-size: 16px;
-  width: 1.5em;
+  width: 1.75em;
   height: 1.5em;
   background-repeat: no-repeat;
 }
@@ -1247,13 +1247,13 @@ input[type="search"] {
   background-position: 0 -1.5em;
 }
 
-.txp-dropdown {
+.txp-search-dropdown {
   position: absolute;
   list-style: none;
   left: 0;
   top: 1.84615384615385em;
   margin: 0;
-  width: 14.25em;
+  width: 12.25em;
   padding: 0.25em 0;
   z-index: 10000;
   border: solid 1px #d4d4d4;
@@ -1265,7 +1265,7 @@ input[type="search"] {
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 
-.txp-dropdown li {
+.txp-search-dropdown li {
   padding: 0.25em 0.5em;
 }
 
