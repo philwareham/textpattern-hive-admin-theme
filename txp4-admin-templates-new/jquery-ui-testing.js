@@ -137,7 +137,7 @@ $(function ()
 	// Progressbar
 	$(".jquery-ui-progressbar").progressbar({
 		value: 37
-	}).width(500);
+	});
 
 	$(".jquery-ui-progressbar-animate").click(function (event)
 	{
@@ -152,7 +152,7 @@ $(function ()
 	$(".jquery-ui-slider-horizontal").slider({
 		range: true,
 		values: [17, 67]
-	}).width(500);
+	});
 
 	// Slider - vertical
 	$(".jquery-ui-slider-vertical > span").each(function ()
