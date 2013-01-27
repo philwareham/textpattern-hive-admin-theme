@@ -2,16 +2,22 @@ $(function ()
 {
 
 	// Draggable
-	$(".jquery-ui-draggable").draggable();
+	$(".jquery-ui-draggable").draggable({
+		cursor: "move"
+	});
 
 	// Resizable
-	$(".jquery-ui-resizable").resizable();
+	$(".jquery-ui-resizable").resizable({
+		minWidth: 200
+    });
 
 	// Selectable
 	$(".jquery-ui-selectable").selectable();
 
 	// Sortable
-	$(".jquery-ui-sortable").sortable().disableSelection();
+	$(".jquery-ui-sortable").sortable({
+		cursor: "ns-resize"
+	}).disableSelection();
 
 	// Accordion
 	$(".jquery-ui-accordion").accordion({

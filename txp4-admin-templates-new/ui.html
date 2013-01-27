@@ -375,20 +375,20 @@
 			<h1>Alert boxes</h1>
 
 			<h2>System message: success <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-			<p><code class="prettyprint">&lt;p class="alert-block success"&gt;...message...&lt;/p&gt;</code></p>
-			<p class="alert-block success">Success: a suitable success message goes here.</p>
+			<pre class="prettyprint"><code>&lt;p class="alert-block success"&gt;&lt;span class="ui-icon ui-icon-check"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+			<p class="alert-block success"><span class="ui-icon ui-icon-check"></span> <strong>Success:</strong> a suitable success message goes here.</p>
 
 			<h2>System message: warning <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.5</span></h2>
-			<p><code class="prettyprint">&lt;p class="alert-block warning"&gt;...message...&lt;/p&gt;</code></p>
-			<p class="alert-block warning">Warning: a suitable warning message goes here.</p>
+			<pre class="prettyprint"><code>&lt;p class="alert-block warning"&gt;&lt;span class="ui-icon ui-icon-alert"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+			<p class="alert-block warning"><span class="ui-icon ui-icon-alert"></span> <strong>Warning:</strong> a suitable warning message goes here.</p>
 
 			<h2>System message: error <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-			<p><code class="prettyprint">&lt;p class="alert-block error"&gt;...message...&lt;/p&gt;</code></p>
-			<p class="alert-block error">Error: a suitable error message goes here.</p>
+			<pre class="prettyprint"><code>&lt;p class="alert-block error"&gt;&lt;span class="ui-icon ui-icon-closethick"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+			<p class="alert-block error"><span class="ui-icon ui-icon-closethick"></span> <strong>Error:</strong> a suitable error message goes here.</p>
 
 			<h2>System message: information (no semantic meaning) <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
-			<p><code class="prettyprint">&lt;p class="alert-block information"&gt;...message...&lt;/p&gt;</code></p>
-			<p class="alert-block information">Information: a suitable information message goes here.</p>
+			<pre class="prettyprint"><code>&lt;p class="alert-block information"&gt;&lt;span class="ui-icon ui-icon-info"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+			<p class="alert-block information"><span class="ui-icon ui-icon-info"></span> <strong>Information:</strong> a suitable information message goes here.</p>
 
 
 		</div>
@@ -1078,57 +1078,61 @@
 			</p>
 
 			<h2>Interactions: Draggable</h2>
-			<div class="jquery-ui-draggable ui-widget-content">
-				<p><strong>Drag me around!</strong></p>
+			<div class="jquery-ui-draggable ui-widget-content" style="padding:.5em 1em; margin-bottom:1em;">
+				<strong>Drag me around!</strong>
 			</div>
+			<p><a href="http://jqueryui.com/draggable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
 			<h2>Interactions: Resizable</h2>
-			<div class="jquery-ui-resizable ui-widget-content">
-				<p><strong>Resize me!</strong></p>
+			<div class="jquery-ui-resizable ui-widget-content" style="padding:.5em 1em; margin-bottom:1em;">
+				<strong>Resize me!</strong>
 			</div>
+			<p><a href="http://jqueryui.com/resizable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
 			<h2>Interactions: Selectable</h2>
 			<ol class="jquery-ui-selectable plain-list">
-				<li class="ui-widget-content">Item 1</li>
-				<li class="ui-widget-content">Item 2</li>
-				<li class="ui-widget-content">Item 3</li>
-				<li class="ui-widget-content">Item 4</li>
-				<li class="ui-widget-content">Item 5</li>
-				<li class="ui-widget-content">Item 6</li>
-				<li class="ui-widget-content">Item 7</li>
+				<li class="ui-widget-content" style="padding:.5em 1em;">Item 1</li>
+				<li class="ui-widget-content" style="padding:.5em 1em;">Item 2</li>
+				<li class="ui-widget-content" style="padding:.5em 1em;">Item 3</li>
+				<li class="ui-widget-content" style="padding:.5em 1em;">Item 4</li>
+				<li class="ui-widget-content" style="padding:.5em 1em;">Item 5</li>
+				<li class="ui-widget-content" style="padding:.5em 1em;">Item 6</li>
+				<li class="ui-widget-content" style="padding:.5em 1em;">Item 7</li>
 			</ol>
+			<p><a href="http://jqueryui.com/selectable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
 			<h2>Interactions: Sortable</h2>
 			<ul class="jquery-ui-sortable plain-list">
-				<li class="ui-state-default">
-					<span class="ui-icon ui-icon-triangle-2-n-s"></span>
+				<li class="ui-state-default" style="padding:.5em 1em">
+					<span class="ui-icon ui-icon-arrow-2-n-s"></span>
 					Item 1
 				</li>
-				<li class="ui-state-default">
-					<span class="ui-icon ui-icon-triangle-2-n-s"></span>
+				<li class="ui-state-default" style="padding:.5em 1em .5em 1.5em;">
+					<span class="ui-icon ui-icon-arrow-2-n-s"></span>
 					Item 2
 				</li>
-				<li class="ui-state-default">
-					<span class="ui-icon ui-icon-triangle-2-n-s"></span>
+				<li class="ui-state-default" style="padding:.5em 1em .5em 1.5em;">
+					<span class="ui-icon ui-icon-arrow-2-n-s"></span>
 					Item 3
 				</li>
-				<li class="ui-state-default">
-					<span class="ui-icon ui-icon-triangle-2-n-s"></span>
+				<li class="ui-state-default" style="padding:.5em 1em .5em 1.5em;">
+					<span class="ui-icon ui-icon-arrow-2-n-s"></span>
 					Item 4
 				</li>
-				<li class="ui-state-default">
-					<span class="ui-icon ui-icon-triangle-2-n-s"></span>
+				<li class="ui-state-default" style="padding:.5em 1em .5em 1.5em;">
+					<span class="ui-icon ui-icon-arrow-2-n-s"></span>
 					Item 5
 				</li>
-				<li class="ui-state-default">
-					<span class="ui-icon ui-icon-triangle-2-n-s"></span>
+				<li class="ui-state-default" style="padding:.5em 1em .5em 1.5em;">
+					<span class="ui-icon ui-icon-arrow-2-n-s"></span>
 					Item 6
 				</li>
-				<li class="ui-state-default">
-					<span class="ui-icon ui-icon-triangle-2-n-s"></span>
+				<li class="ui-state-default" style="padding:.5em 1em .5em 1.5em;">
+					<span class="ui-icon ui-icon-arrow-2-n-s"></span>
 					Item 7
 				</li>
 			</ul>
+			<p><a href="http://jqueryui.com/sortable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
 			<h2>Widgets: Accordion</h2>
 			<div class="jquery-ui-accordion">
@@ -1324,22 +1328,6 @@
 
 			<h2>Widgets: Tooltip</h2>
 			<p>TO BE COMPLETED</p>
-
-			<h2>Styles: Highlight message</h2>
-			<div class="ui-widget">
-				<p class="ui-state-highlight ui-corner-all"> 
-					<span class="ui-icon ui-icon-info"></span>
-					<strong>Did you know:</strong> Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-				</p>
-			</div>
-
-			<h2>Styles: Error message</h2>
-			<div class="ui-widget">
-				<p class="ui-state-error ui-corner-all"> 
-					<span class="ui-icon ui-icon-alert"></span> 
-					<strong>Error:</strong> Needs more cowbell.
-				</p>
-			</div>
 
 			<h2>Styles: Icons</h2>
 			<ul class="jquery-ui-icons ui-widget ui-helper-clearfix">

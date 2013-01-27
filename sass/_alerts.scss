@@ -42,25 +42,22 @@
 }
 
 .alert-block {
-	border: 1px solid;
-	padding: .53846153846154em 2.84615384615385em;
-	line-height: 1.38461538461538;
-	text-align: center;
+	padding: .5em 1em;
 
 	&.success {
-		border-color: $success-border;
+		border: 1px solid $success-border;
 	}
 
 	&.warning {
-		border-color: $warning-border;
+		border: 1px solid $warning-border;
 	}
 
 	&.error {
-		border-color: $error-border;
+		border: 1px solid $error-border;
 	}
 
 	&.information {
-		border-color: $info-border;
+		border: 1px solid $info-border;
 	}
 }
 
