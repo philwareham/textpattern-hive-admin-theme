@@ -145,6 +145,11 @@ $(function ()
 		value: 37
 	});
 
+	// Progressbar (indeterminate)
+	$(".jquery-ui-progressbar2").progressbar({
+		value: false
+	});
+
 	$(".jquery-ui-progressbar-animate").click(function (event)
 	{
 		var randNum = Math.random() * 90;
