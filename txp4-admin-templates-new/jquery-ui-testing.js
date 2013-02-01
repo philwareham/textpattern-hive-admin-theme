@@ -177,7 +177,23 @@ $(function ()
 		});
 	});
 
+	// Spinner
+	$("#jquery-ui-spinner").spinner({
+		spin: function(event, ui) {
+			if ( ui.value > 10 ) {
+				$( this ).spinner( "value", -10 );
+				return false;
+			} else if ( ui.value < -10 ) {
+				$( this ).spinner( "value", 10 );
+				return false;
+			}
+		}
+	});
+
 	// Tabs
 	$(".jquery-ui-tabs").tabs();
+
+	// Tooltips
+	$(".jquery-ui-tooltip").tooltip();
 
 });
