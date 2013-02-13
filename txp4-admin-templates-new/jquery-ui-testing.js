@@ -107,7 +107,7 @@ $(function ()
 	});
 
 	// Dialog (modal) link
-	$("#jquery-ui-dialog-link").button().click(function ()
+	$("#jquery-ui-dialog-link").click(function ()
 	{
 		$("#jquery-ui-dialog").dialog("open");
 		return false;
@@ -131,7 +131,7 @@ $(function ()
 	});
 
 	// Dialog (modal) link
-	$("#jquery-ui-dialog-modal-link").button().click(function ()
+	$("#jquery-ui-dialog-modal-link").click(function ()
 	{
 		$("#jquery-ui-dialog-modal").dialog("open");
 		return false;
