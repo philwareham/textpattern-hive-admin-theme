@@ -76,8 +76,8 @@
 			display: inline-block;
 			@include border-radius($border-radius $border-radius 0 0);
 			margin: 0 auto;
-			padding: .53846153846154em 2.84615384615385em .53846153846154em 1em;
-			max-width: ($text-column - 3.84615384615385em);
+			padding: .53846em 2.84615em .53846em 1em;
+			max-width: ($text-column - 3.84615em);
 			color: #fff;
 			@include box-shadow;
 		}
@@ -100,11 +100,11 @@
 
 .close {
 	position: absolute;
-	top: .27777777777778em; // 5px / 18px
-	right: .72222222222222em;
+	top: .27778em; // 5px / 18px
+	right: .72222em;
 	text-decoration: none;
 	color: #ccc;
-	font-size: 1.38461538461538em; // 18px / 13px
+	font-size: 1.38461em; // 18px / 13px
 	font-weight: bold;
 
 	.rgba & {

@@ -111,7 +111,7 @@ textarea {
 	margin: 0;
 	border: 1px solid $color-border;
 	@include border-radius(0);
-	padding: .15384615384615em .25em;
+	padding: .15384em .25em;
 }
 
 input[type="color"] {
@@ -119,7 +119,7 @@ input[type="color"] {
 }
 
 textarea {
-	min-height: 4.38461538461538em; // 57px / 13px
+	min-height: 4.38461em; // 57px / 13px
 	resize: vertical;
 	width: 100%;
 	/* removes default vertical scrollbar in IE8-9 */
@@ -152,8 +152,8 @@ select[size="1"] {
 	select[size="1"] {
 		background: $color-background url("data:image/svg+xml,<svg version='1.1' baseProfile='full' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='13px' height='4px' viewBox='0 0 13 4' enable-background='new 0 0 13 4' xml:space='preserve'><polygon fill='#333333' points='3.5,4 0,0 7,0'/></svg>") no-repeat right center;
 		padding-right: 2em;
-		-webkit-background-size: 1em .30769230769231em;
-	            background-size: 1em .30769230769231em;
+		-webkit-background-size: 1em .30769em;
+	            background-size: 1em .30769em;
 	}
 
 }
@@ -245,6 +245,6 @@ input {
 	&.second,
 	&.exp_second {
 		text-align: center;
-		width: 2.46153846153846em; // 32px / 13px
+		width: 2.46153em; // 32px / 13px
 	}
 }

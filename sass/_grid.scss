@@ -85,9 +85,9 @@
 	@include box-sizing;
 	display: inline-block;
 	text-align: left;
-	max-width: 22.6153846153846em; // 294px / 13px
+	max-width: 22.61538em; // 294px / 13px
 	vertical-align: top;
-	margin: 0 .15384615384615em .30769230769231em; // 2px / 13px and 4px / 13px
+	margin: 0 .15384em .30769em; // 2px / 13px and 4px / 13px
 	border: 1px solid $color-border;
 	padding: 0 1em;
 }

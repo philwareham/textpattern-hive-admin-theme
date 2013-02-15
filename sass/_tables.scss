@@ -31,7 +31,7 @@ td {
 
 	th,
 	td {
-		padding: .38461538461538em 1em;
+		padding: .38461em 1em;
 	}
 
 	.multi-edit {
@@ -86,8 +86,8 @@ td {
 
 				&:after {
 					position: absolute;
-					top: .53846153846154em;
-					right: -.76923076923077em;
+					top: .53846em;
+					right: -.76923em;
 					z-index: 10;
 					width: 0;
 					height: 0;
@@ -104,18 +104,18 @@ td {
 
 			&.desc a:after {
 				content: "&#8595;";
-				border-left: .30769230769231em solid transparent;
-				border-right: .30769230769231em solid transparent;
-				border-top: .30769230769231em solid $color-text;
+				border-left: .30769em solid transparent;
+				border-right: .30769em solid transparent;
+				border-top: .30769em solid $color-text;
 				border-bottom: 0;
 			}
 
 			&.asc a:after {
 				content: "&#8593;";
-				border-left: .30769230769231em solid transparent;
-				border-right: .30769230769231em solid transparent;
+				border-left: .30769em solid transparent;
+				border-right: .30769em solid transparent;
 				border-top: 0;
-				border-bottom: .30769230769231em solid $color-text;
+				border-bottom: .30769em solid $color-text;
 			}
 		}
 	}

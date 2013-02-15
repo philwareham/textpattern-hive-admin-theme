@@ -123,22 +123,22 @@
 	&:before {
 		position: absolute;
 		content: "";
-		top: -.61538461538462em;
+		top: -.61538em;
 		left: 1em;
-		width: 1.23076923076923em;
-		height: .61538461538462em;
+		width: 1.23076em;
+		height: .61538em;
 		background-repeat: no-repeat;
-		@include svg-graphic(indicator, gif, 1.23076923076923em, .61538461538462em);
+		@include svg-graphic(indicator, gif, 1.23076em, .61538em);
 	}
 }
 
 .data-dropdown li:hover,
 .data-dropdown li:focus {
 	.dropdown-menu {
-	left: 0;
+		left: 0;
 	}
 }
 
 .tinynav {
-	margin-top: .61538461538462em;
+	margin-top: .61538em;
 }

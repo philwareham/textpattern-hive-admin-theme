@@ -40,18 +40,18 @@ h3.txp-summary a {
 	&:after {
 		position: absolute;
 		content: "&#8594;";
-		top: .69230769230769em;
-		right: .76923076923077em;
+		top: .69230em;
+		right: .76923em;
 		z-index: 10;
 		width: 0;
 		height: 0;
 		display: inline-block;
 		vertical-align: top;
 		opacity: .5;
-		border-left: .30769230769231em solid $color-text;
+		border-left: .30769em solid $color-text;
 		border-right: 0;
-		border-top: .30769230769231em solid transparent;
-		border-bottom: .30769230769231em solid transparent;
+		border-top: .30769em solid transparent;
+		border-bottom: .30769em solid transparent;
 		@include hide-text;
 	}
 
@@ -62,11 +62,11 @@ h3.txp-summary a {
 
 h3.txp-summary.expanded a:after {
 	content: "&#8595;";
-	top: .84615384615385em;
-	right: .69230769230769em;
-	border-left: .30769230769231em solid transparent;
-	border-right: .30769230769231em solid transparent;
-	border-top: .30769230769231em solid $color-text;
+	top: .84615em;
+	right: .69230em;
+	border-left: .30769em solid transparent;
+	border-right: .30769em solid transparent;
+	border-top: .30769em solid $color-text;
 	border-bottom: 0;
 }
 

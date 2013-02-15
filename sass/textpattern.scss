@@ -86,7 +86,7 @@ body {
 	z-index: 1000;
 	padding: 0 1.69%;
 	height: 3em;
-	@include box-shadow(0 .15384615384615em .23076923076923em rgba(#000, .15));
+	@include box-shadow(0 .2em .25em rgba(#000, .15));
 	@include gradient-bar(#ffda44, #fabc2b);
 
 	h1 {
@@ -118,7 +118,7 @@ body {
 
 .txp-logout {
 	position: absolute;
-	top: -.53846153846154em; // 7px / 13px
+	top: -.53846em; // 7px / 13px
 	right: 1.69%;
 }
 
@@ -177,13 +177,13 @@ div.multi-edit {
 }
 
 .multi-step {
-	margin-left: .30769230769231em;
+	margin-left: .30769em;
 	display: inline-block;
 }
 
 .text-section {
 	padding-top: 5em;
-	background: url("../img/separator.gif") repeat-x 0 2.15384615384615em; // 28px / 13px
+	background: url("../img/separator.gif") repeat-x 0 2.15384em; // 28px / 13px
 }
 
 .restricted-area {
@@ -255,14 +255,14 @@ span.spinner {
 .txp-value {
 	input,
 	select {
-		margin-top: -.23076923076923em;
-		margin-bottom: -.23076923076923em;
+		margin-top: -.23076em;
+		margin-bottom: -.23076em;
 	}
 }
 
 .txp-value-fixed {
 	display: inline-block;
-	padding: .23076923076923em 0; // 3px / 13px
+	padding: .23076em 0; // 3px / 13px
 }
 
 /* deprecated @ 4.6 */
@@ -290,8 +290,8 @@ span.spinner {
 
 	input,
 	select {
-		margin-top: -.23076923076923em;
-		margin-bottom: -.23076923076923em;
+		margin-top: -.23076em;
+		margin-bottom: -.23076em;
 	}
 }
 
@@ -340,16 +340,16 @@ body#page-setup {
 /* rules specific to the very first page you'll see */
 .welcome {
 	.txp-setup {
-		max-width: 20.3076923076923em;
+		max-width: 20.30769em;
 	}
 
 	h1 {
 		font-size: 1em;
-		width: 20.3076923076923em; // 264px / 13px
-		height: 4.15384615384615em; // 54px / 13px
+		width: 20.30769em; // 264px / 13px
+		height: 4.15384em; // 54px / 13px
 		@include hide-text;
 		background-repeat: no-repeat;
-		@include svg-graphic(textpattern-xlrg, png, 20.3076923076923em, 4.15384615384615em);
+		@include svg-graphic(textpattern-xlrg, png, 20.30769em, 4.15384em);
 	}
 
 	select {
@@ -372,7 +372,7 @@ body#page-setup {
 		right: 0;
 		z-index: 1000;
 		padding: .5em 1em;
-		@include box-shadow(0 .15384615384615em .23076923076923em rgba(#000, .15));
+		@include box-shadow(0 .2em .25em rgba(#000, .15));
 		@include gradient-bar(#ffda44, #fabc2b);
 	}
 
@@ -586,7 +586,7 @@ tr.active {
 div.code {
 	margin-bottom: 1em;
 	border: 1px solid $color-border;
-	padding: .15384615384615em .38461538461538em;
+	padding: .15384em .38461em;
 	height: 21em;
 	overflow: auto;
 	@include box-sizing;

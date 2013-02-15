@@ -89,7 +89,7 @@ a.publish {
 input[type="submit"].destroy,
 button.destroy {
 	height: 1.5em; // 18px / 12px
-	padding: 0 .33333333333333em;
+	padding: 0 .33333em;
 	@include text-shadow-dark;
 	color: lighten($error-text, 56%);
 	@include gradient-bar(lighten($error-text, 20%), $error-text);
