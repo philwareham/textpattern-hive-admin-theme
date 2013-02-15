@@ -97,25 +97,25 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
-	-webkit-appearance: none;
-	@include border-radius(0);
+	-webkit-appearance: none; // remove iOS Safari default styling
 	@include background-clip;
 	@include box-sizing;
+	max-width: 100%;
+	height: 2em; // 26px / 13px
 	font-family: $font-body;
 	font-size: 1em;
-	line-height: 1.46153846153846; // 19px / 13px
+	line-height: $baseline; // 18px / 13px
+	vertical-align: middle;
 	color: $color-text;
 	background-color: $color-background;
 	margin: 0;
 	border: 1px solid $color-border;
-	padding: .15384615384615em .23076923076923em;
-	height: 1.84615384615385em; // 24px / 13px
-	max-width: 100%;
+	@include border-radius(0);
+	padding: .15384615384615em .25em;
 }
 
 input[type="color"] {
-	padding: 0;
-	height: 1.84615384615385em; // 24px / 13px
+	padding: .25em;
 }
 
 textarea {
@@ -124,8 +124,6 @@ textarea {
 	width: 100%;
 	/* removes default vertical scrollbar in IE8-9 */
 	overflow: auto;
-	/* improves readability and alignment in all browsers */
-	vertical-align: top;
 }
 
 textarea,
@@ -136,7 +134,7 @@ select[multiple] {
 
 select[size="0"],
 select[size="1"] {
-	height: 1.84615384615385em; // 24px / 13px
+	height: 2em; // 26px / 13px
 }
 
 /* addresses select alignment in Safari/Chrome */
@@ -146,7 +144,7 @@ select[size="1"] {
 	select[multiple],
 	select[multiple][size] {
 		background-image: none;
-		padding-right: .23076923076923em;
+		padding-right: .25em;
 	}
 
 	select,

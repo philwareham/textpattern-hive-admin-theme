@@ -823,8 +823,6 @@ input[type="week"],
 select,
 textarea {
   -webkit-appearance: none;
-  -moz-border-radius: 0;
-  border-radius: 0;
   -webkit-background-clip: padding;
   -khtml-background-clip: padding-box;
   -moz-background-clip: padding;
@@ -832,21 +830,23 @@ textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  max-width: 100%;
+  height: 2em;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  line-height: 1.46153846153846;
+  line-height: 1.38462;
+  vertical-align: middle;
   color: #333333;
   background-color: white;
   margin: 0;
   border: 1px solid #cccccc;
-  padding: 0.15385em 0.23077em;
-  height: 1.84615384615385em;
-  max-width: 100%;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 0.15385em 0.25em;
 }
 
 input[type="color"] {
-  padding: 0;
-  height: 1.84615384615385em;
+  padding: .25em;
 }
 
 textarea {
@@ -855,8 +855,6 @@ textarea {
   width: 100%;
   /* removes default vertical scrollbar in IE8-9 */
   overflow: auto;
-  /* improves readability and alignment in all browsers */
-  vertical-align: top;
 }
 
 textarea,
@@ -867,7 +865,7 @@ select[multiple] {
 
 select[size="0"],
 select[size="1"] {
-  height: 1.84615384615385em;
+  height: 2em;
 }
 
 /* addresses select alignment in Safari/Chrome */
@@ -876,7 +874,7 @@ select[size="1"] {
   select[multiple],
   select[multiple][size] {
     background-image: none;
-    padding-right: .23076923076923em;
+    padding-right: .25em;
   }
 
   select,
@@ -988,8 +986,9 @@ input[type="button"],
   height: 2em;
   overflow: visible;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: .92307692307692em;
-  line-height: 1.33333333333333;
+  font-size: 1em;
+  line-height: 1.38462;
+  vertical-align: middle;
   text-decoration: none;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   cursor: pointer;
@@ -1063,12 +1062,13 @@ input[type="button"]:active,
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 2em;
-  font-size: .92307692307692em;
-  line-height: 1.33333333333333;
+  font-size: 1em;
+  line-height: 1.38462;
+  vertical-align: middle;
   border: 1px solid;
   -moz-border-radius: 0.4em;
   border-radius: 0.4em;
-  padding: 0.30769em 0.75em;
+  padding: 0.25em 0.75em;
   display: inline-block;
 }
 
@@ -1531,7 +1531,7 @@ body {
 
 .txp-logout {
   position: absolute;
-  top: -.5em;
+  top: -.53846153846154em;
   right: 1.69%;
 }
 
