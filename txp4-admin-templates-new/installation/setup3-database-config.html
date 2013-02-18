@@ -13,28 +13,28 @@
 </head>
 <body id="page-setup">
 
-	<div role="main" id="txp-main" class="txp-body" aria-label="Main content">
-	<div class="txp-container">
+	<main role="main" id="txp-main" class="txp-body" aria-label="Main content">
+		<div class="txp-container">
 
-		<div class="progress-meter">
-			<p class="txp-accessibility">There are 4 steps to this installation process:</p>
-			<ol>
-				<li>Set database details</li>
-				<li class="active"><strong>Add config file</strong></li>
-				<li>Populate database</li>
-				<li>Go!</li>
-			</ol>
-		</div>
+			<div class="progress-meter">
+				<p class="txp-accessibility">There are 4 steps to this installation process:</p>
+				<ol>
+					<li>Set database details</li>
+					<li class="active"><strong>Add config file</strong></li>
+					<li>Populate database</li>
+					<li>Go!</li>
+				</ol>
+			</div>
 
-	<div class="txp-setup">
+			<div class="txp-setup">
 
-		<h2>Checking database connection</h2>
-		<p><span class="success">Connected</span></p>
-		<p><span class="success">Using <strong>test2</strong> (utf8)</span></p>
+				<h2>Checking database connection</h2>
+				<p><span class="success">Connected</span></p>
+				<p><span class="success">Using <strong>test2</strong> (utf8)</span></p>
 
-		<h2>Creating config.php file</h2>
-		<p><strong>Before you proceed:</strong> Create a file called <code>config.php</code> in the <code>/textpattern/</code> directory and paste the following inside&#8230;</p>
-		<p><textarea name="config" cols="64" rows="16" readonly="readonly" class="code"><?php
+				<h2>Creating config.php file</h2>
+				<p><strong>Before you proceed:</strong> Create a file called <code>config.php</code> in the <code>/textpattern/</code> directory and paste the following inside&#8230;</p>
+				<p><textarea name="config" cols="64" rows="16" readonly="readonly" class="code"><?php
 $txpcfg['db'] = 'test-mysql';
 $txpcfg['user'] = 'test-mysql';
 $txpcfg['pass'] = 'password1';
@@ -43,14 +43,14 @@ $txpcfg['table_prefix'] = '';
 $txpcfg['txpath'] = '/Users/johnqpublic/textpattern';
 $txpcfg['dbcharset'] = 'utf8';
 ?></textarea></p>
-		<form action="setup4-database-populate.html" method="post">
-			<p><input type="submit" value="I did it &#8594;" name="submit" class="publish"></p>
-		</form>
+				<form action="setup4-database-populate.html" method="post">
+					<p><input type="submit" value="I did it &#8594;" name="submit" class="publish"></p>
+				</form>
 
-	</div><!-- /txp-setup -->
+			</div><!-- /txp-setup -->
 
-	</div><!-- /txp-container -->
-	</div><!-- /txp-body -->
+		</div><!-- /txp-container -->
+	</main>
 
 </body>
 </html>

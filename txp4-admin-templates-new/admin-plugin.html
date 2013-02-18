@@ -17,8 +17,6 @@
 </head>
 <body id="page-plugin" class="admin">
 
-	<p class="txp-accessibility"><a href="#txp-main">Skip to main content</a></p>
-
 	<header role="banner" class="txp-header">
 		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
 		<p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
@@ -70,7 +68,8 @@
 		<div id="messagepane"><span role="alert" id="message" class="success">Plugin <strong>smd_browse_by</strong> updated. <a role="button" class="close" title="Close" aria-label="Close">&times;</a></span></div>
 
 	</header><!-- /txp-header -->
-	<div role="main" id="txp-main" class="txp-body" aria-label="Main content">
+
+	<main role="main" id="txp-main" class="txp-body" aria-label="Main content">
 		<h1 class="txp-heading">Plugins</h1>
 
 		<div id="plugin_control" class="txp-control-panel">
@@ -158,7 +157,7 @@
 			</form>
 
 		</div><!-- /txp-container -->
-	</div><!-- /txp-body -->
+	</main><!-- /txp-body -->
 
 	<footer role="contentinfo" class="txp-footer">
 		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.6)</p>

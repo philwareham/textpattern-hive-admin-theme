@@ -13,58 +13,58 @@
 </head>
 <body id="page-setup">
 
-	<div role="main" id="txp-main" class="txp-body" aria-label="Main content">
-	<div class="txp-container">
+	<main role="main" id="txp-main" class="txp-body" aria-label="Main content">
+		<div class="txp-container">
 
-		<div class="progress-meter">
-			<p class="txp-accessibility">There are 4 steps to this installation process:</p>
-			<ol>
-				<li>Set database details</li>
-				<li>Add config file</li>
-				<li class="active"><strong>Populate database</strong></li>
-				<li>Go!</li>
-			</ol>
-		</div>
+			<div class="progress-meter">
+				<p class="txp-accessibility">There are 4 steps to this installation process:</p>
+				<ol>
+					<li>Set database details</li>
+					<li>Add config file</li>
+					<li class="active"><strong>Populate database</strong></li>
+					<li>Go!</li>
+				</ol>
+			</div>
 
-	<div class="txp-setup">
+			<div class="txp-setup">
 
-		<form action="setup5-database-done.html" method="post" class="prefs-form">
-			<h2>Creating database tables</h2>
-			<p>You are about to create and populate database tables. At this stage you will also need to set up an administrator user account.</p>
-			<p>
-				<span class="txp-label"><label for="setup_user_realname">Your full name</label></span>
-				<span class="txp-value"><input type="text" value="" name="RealName" size="32" id="setup_user_realname" required="required"></span>
-			</p>
-			<p>
-				<span class="txp-label"><label for="setup_user_login">Choose a login name</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
-				<span class="txp-value"><input type="text" value="" name="name" size="32" id="setup_user_login" required="required"></span>
-			</p>
-			<p>
-				<span class="txp-label"><label for="setup_user_pass">Choose a password</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
-				<span class="txp-value"><input type="password" value="" name="pass" size="32" id="setup_user_pass" required="required"></span>
-			</p>
-			<p>
-				<span class="txp-label"><label for="setup_user_email">Your e-mail address</label></span>
-				<span class="txp-value"><input type="email" value="" name="email" size="32" id="setup_user_email" required="required"></span>
-			</p>
-			<h2>Site configuration</h2>
-			<p>
-				<span class="txp-label"><label for="setup_admin_theme">Admin-side theme</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
-				<span class="txp-value">
-					<select name="theme">
-						<option value="classic">Core: Classic</option>
-						<option value="hive" selected="selected">Core: Hive</option>
-						<option value="remora">Core: Remora</option>
-					</select>
-				</span>
-			</p>
-			<p><input type="submit" value="Next &#8594;" name="Submit" class="publish"></p>
-		</form>
+				<form action="setup5-database-done.html" method="post" class="prefs-form">
+					<h2>Creating database tables</h2>
+					<p>You are about to create and populate database tables. At this stage you will also need to set up an administrator user account.</p>
+					<p>
+						<span class="txp-label"><label for="setup_user_realname">Your full name</label></span>
+						<span class="txp-value"><input type="text" value="" name="RealName" size="32" id="setup_user_realname" required="required"></span>
+					</p>
+					<p>
+						<span class="txp-label"><label for="setup_user_login">Choose a login name</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+						<span class="txp-value"><input type="text" value="" name="name" size="32" id="setup_user_login" required="required"></span>
+					</p>
+					<p>
+						<span class="txp-label"><label for="setup_user_pass">Choose a password</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+						<span class="txp-value"><input type="password" value="" name="pass" size="32" id="setup_user_pass" required="required"></span>
+					</p>
+					<p>
+						<span class="txp-label"><label for="setup_user_email">Your e-mail address</label></span>
+						<span class="txp-value"><input type="email" value="" name="email" size="32" id="setup_user_email" required="required"></span>
+					</p>
+					<h2>Site configuration</h2>
+					<p>
+						<span class="txp-label"><label for="setup_admin_theme">Admin-side theme</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+						<span class="txp-value">
+							<select name="theme">
+								<option value="classic">Core: Classic</option>
+								<option value="hive" selected="selected">Core: Hive</option>
+								<option value="remora">Core: Remora</option>
+							</select>
+						</span>
+					</p>
+					<p><input type="submit" value="Next &#8594;" name="Submit" class="publish"></p>
+				</form>
 
-	</div><!-- /txp-setup -->
+			</div><!-- /txp-setup -->
 
-	</div><!-- /txp-container -->
-	</div><!-- /txp-body -->
+		</div><!-- /txp-container -->
+	</main>
 
 </body>
 </html>
