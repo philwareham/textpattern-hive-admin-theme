@@ -48,6 +48,7 @@ html {
 
 .clearfix {
 	@include clearfix;
+	border-collapse: collapse;
 }
 
 .clear {
