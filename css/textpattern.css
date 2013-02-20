@@ -34,6 +34,12 @@ html {
 
 /* Clearfix
    ========================================================================== */
+.clearfix, .progress-meter ol, .txp-footer, .txp-edit p,
+.txp-login p,
+.edit-form p,
+.prefs-form p {
+  border-collapse: collapse;
+}
 .clearfix:after, .progress-meter ol:after, .txp-footer:after, .txp-edit p:after,
 .txp-login p:after,
 .edit-form p:after,
@@ -41,7 +47,6 @@ html {
   content: "";
   display: table;
   clear: both;
-  border-collapse: collapse;
 }
 
 .clear {
@@ -994,8 +999,8 @@ input[type="button"],
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   cursor: pointer;
   margin: 0;
-  border: 1px solid #bbbbbb;
-  border-bottom-color: #a2a2a2;
+  border: 1px solid #c4c4c4;
+  border-bottom-color: #aaaaaa;
   -moz-border-radius: 0.4em;
   border-radius: 0.4em;
   padding: 0.25em 0.75em;
@@ -1005,13 +1010,13 @@ input[type="button"],
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
   background-color: #eeeeee;
   /* Safari5.1+, Chrome10+ */
-  background-image: -webkit-linear-gradient(#eeeeee, #bbbbbb);
+  background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
   /* Firefox3.6 */
-  background-image: -moz-linear-gradient(#eeeeee, #bbbbbb);
+  background-image: -moz-linear-gradient(#eeeeee, #dddddd);
   /* Opera11.10+ */
-  background-image: -o-linear-gradient(#eeeeee, #bbbbbb);
+  background-image: -o-linear-gradient(#eeeeee, #dddddd);
   /* CSS3 Compliant */
-  background-image: linear-gradient(#eeeeee, #bbbbbb);
+  background-image: linear-gradient(#eeeeee, #dddddd);
 }
 button:hover,
 input[type="reset"]:hover,
@@ -1022,17 +1027,19 @@ input[type="button"]:hover,
 .navlink:hover,
 .navlink-active:hover,
 .txp-buttons a:hover {
+  border: 1px solid #aaaaaa;
+  border-bottom-color: #919191;
   color: #333333;
   text-decoration: none;
   background-color: #f8f8f8;
   /* Safari5.1+, Chrome10+ */
-  background-image: -webkit-linear-gradient(#f8f8f8, #c5c5c5);
+  background-image: -webkit-linear-gradient(#f8f8f8, #e7e7e7);
   /* Firefox3.6 */
-  background-image: -moz-linear-gradient(#f8f8f8, #c5c5c5);
+  background-image: -moz-linear-gradient(#f8f8f8, #e7e7e7);
   /* Opera11.10+ */
-  background-image: -o-linear-gradient(#f8f8f8, #c5c5c5);
+  background-image: -o-linear-gradient(#f8f8f8, #e7e7e7);
   /* CSS3 Compliant */
-  background-image: linear-gradient(#f8f8f8, #c5c5c5);
+  background-image: linear-gradient(#f8f8f8, #e7e7e7);
 }
 button:active,
 input[type="reset"]:active,
@@ -1043,15 +1050,19 @@ input[type="button"]:active,
 .navlink:active,
 .navlink-active:active,
 .txp-buttons a:active {
-  background-color: #bbbbbb;
+  border: 1px solid #aaaaaa;
+  border-bottom-color: #919191;
+  -webkit-box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  background-color: #e6e6e6;
   /* Safari5.1+, Chrome10+ */
-  background-image: -webkit-linear-gradient(#bbbbbb, #eeeeee);
+  background-image: -webkit-linear-gradient(#e6e6e6, #d5d5d5);
   /* Firefox3.6 */
-  background-image: -moz-linear-gradient(#bbbbbb, #eeeeee);
+  background-image: -moz-linear-gradient(#e6e6e6, #d5d5d5);
   /* Opera11.10+ */
-  background-image: -o-linear-gradient(#bbbbbb, #eeeeee);
+  background-image: -o-linear-gradient(#e6e6e6, #d5d5d5);
   /* CSS3 Compliant */
-  background-image: linear-gradient(#bbbbbb, #eeeeee);
+  background-image: linear-gradient(#e6e6e6, #d5d5d5);
 }
 
 .navlink-disabled {
@@ -1192,15 +1203,46 @@ button.destroy:active {
 }
 
 .nav-tertiary .navlink-active {
-  background-color: #c5c5c5;
+  color: #114eb1;
+  border-color: #a3bef3;
+  border-bottom-color: #769eed;
+  background-color: #e3edfc;
   /* Safari5.1+, Chrome10+ */
-  background-image: -webkit-linear-gradient(#c5c5c5, #f8f8f8);
+  background-image: -webkit-linear-gradient(#e3edfc, #bed4f9);
   /* Firefox3.6 */
-  background-image: -moz-linear-gradient(#c5c5c5, #f8f8f8);
+  background-image: -moz-linear-gradient(#e3edfc, #bed4f9);
   /* Opera11.10+ */
-  background-image: -o-linear-gradient(#c5c5c5, #f8f8f8);
+  background-image: -o-linear-gradient(#e3edfc, #bed4f9);
   /* CSS3 Compliant */
-  background-image: linear-gradient(#c5c5c5, #f8f8f8);
+  background-image: linear-gradient(#e3edfc, #bed4f9);
+}
+.nav-tertiary .navlink-active:hover {
+  border-color: #97b0ef;
+  border-bottom-color: #6b8fe8;
+  background-color: #f1f6fe;
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#f1f6fe, #ccdefa);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#f1f6fe, #ccdefa);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#f1f6fe, #ccdefa);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#f1f6fe, #ccdefa);
+}
+.nav-tertiary .navlink-active:active {
+  border-color: #97b0ef;
+  border-bottom-color: #6b8fe8;
+  -webkit-box-shadow: inset 0 0.2em 0.25em rgba(17, 78, 177, 0.25);
+  box-shadow: inset 0 0.2em 0.25em rgba(17, 78, 177, 0.25);
+  background-color: #d5e4fb;
+  /* Safari5.1+, Chrome10+ */
+  background-image: -webkit-linear-gradient(#d5e4fb, #b0cbf7);
+  /* Firefox3.6 */
+  background-image: -moz-linear-gradient(#d5e4fb, #b0cbf7);
+  /* Opera11.10+ */
+  background-image: -o-linear-gradient(#d5e4fb, #b0cbf7);
+  /* CSS3 Compliant */
+  background-image: linear-gradient(#d5e4fb, #b0cbf7);
 }
 
 /* Search
