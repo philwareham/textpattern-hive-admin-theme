@@ -13,8 +13,8 @@
 .warning,
 .error,
 .information {
-	padding: 0 .23076923076923em;
-	@include border-radius(.23076923076923em); // 3px / 13px
+	@include border-radius(.25em);
+	padding: 0 .25em;
 }
 
 .success {
@@ -42,6 +42,7 @@
 }
 
 .alert-block {
+	@include border-radius(.5em);
 	padding: .5em 1em;
 
 	&.success {

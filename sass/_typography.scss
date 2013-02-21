@@ -79,8 +79,8 @@ dfn[title] {
 
 mark,
 var {
-	padding: 0 .23076em; // 3px / 13px
-	@include border-radius(.23076em); // 3px / 13px
+	padding: 0 .25em;
+	@include border-radius(.25em);
 	color: $color-text;
 	background: $color-highlight-box;
 }
@@ -105,8 +105,8 @@ code,
 kbd,
 samp {
 	border: 1px solid lighten($color-border, 9%);
-	padding: 0 .23076em;
-	@include border-radius(.23076em); // 3px / 13px
+	padding: 0 .25em;
+	@include border-radius(.25em);
 	background: $color-background-box;
 }
 

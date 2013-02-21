@@ -166,7 +166,7 @@ body {
 	border-top: 1px solid lighten($color-highlight-box, 5%);
 	padding: .53846em 1em;
 	background: $color-highlight-box;
-	@include box-shadow(0 .15384615384615em .23076923076923em rgba(#000, .15));
+	@include box-shadow(0 .2em .25em rgba(#000, .15));
 }
 
 .txp-label,
