@@ -190,7 +190,7 @@ a.busy {
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8125em;
-  line-height: 1.38462;
+  line-height: 1.4;
 }
 
 h1 {
@@ -791,6 +791,7 @@ input::-moz-focus-inner {
 .boxshadow select:focus,
 .boxshadow textarea:focus {
   outline: 0;
+  border-color: #0066ff;
   -webkit-box-shadow: 0 0 7px #0066ff;
   box-shadow: 0 0 7px #0066ff;
   /* Opera */
@@ -806,6 +807,7 @@ input::-moz-focus-inner {
 .boxshadow .navlink-active:focus,
 .boxshadow .txp-buttons a:focus {
   outline: 0;
+  border-color: #0066ff;
   -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
   /* Opera */
@@ -837,10 +839,9 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   max-width: 100%;
-  height: 2em;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  line-height: 1.38462;
+  line-height: 1.4;
   vertical-align: middle;
   color: #333333;
   background-color: white;
@@ -848,7 +849,7 @@ textarea {
   border: 1px solid #cccccc;
   -moz-border-radius: 0;
   border-radius: 0;
-  padding: 0.15384em 0.25em;
+  padding: 0.4em 0.25em;
 }
 
 input[type="color"] {
@@ -989,11 +990,10 @@ input[type="button"],
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: auto;
-  height: 2em;
   overflow: visible;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  line-height: 1.38462;
+  line-height: 1.4;
   vertical-align: middle;
   text-decoration: none;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
@@ -1003,7 +1003,7 @@ input[type="button"],
   border-bottom-color: #aaaaaa;
   -moz-border-radius: 0.4em;
   border-radius: 0.4em;
-  padding: 0.25em 0.75em;
+  padding: 0.4em 0.8em;
   display: inline-block;
   color: #333333;
   -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
@@ -1072,6 +1072,7 @@ a.publish {
   font-weight: bold;
   border: 1px solid #f2ab05;
   border-bottom-color: #c08804;
+  padding: .8em;
   background-color: #ffda44;
   /* Safari5.1+, Chrome10+ */
   background-image: -webkit-linear-gradient(#ffda44, #f2ab05);
@@ -1116,8 +1117,10 @@ a.publish:active {
 /* delete buttons */
 input[type="submit"].destroy,
 button.destroy {
-  height: 1.5em;
-  padding: 0 0.33333em;
+  height: 1.53846em;
+  border: 1px solid #db463b;
+  border-bottom-color: #9d261d;
+  padding: 0 0.3077em;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25);
   color: #f9e0df;
   border-top: 1px solid #9d261d;
@@ -1134,6 +1137,8 @@ button.destroy {
 }
 input[type="submit"].destroy:hover,
 button.destroy:hover {
+  border: 1px solid #bf2e23;
+  border-bottom-color: #721c15;
   color: white;
   border-top: 1px solid #c83025;
   border-bottom: 1px solid #94241b;
@@ -1149,17 +1154,19 @@ button.destroy:hover {
 }
 input[type="submit"].destroy:active,
 button.destroy:active {
-  border-top: 1px solid #e36f66;
-  border-bottom: 1px solid #d93e32;
-  background-color: #c83025;
+  border: 1px solid #bf2e23;
+  border-bottom-color: #721c15;
+  border-top: 1px solid #8c221a;
+  border-bottom: 1px solid #581510;
+  background-color: #d93e32;
   /* Safari5.1+, Chrome10+ */
-  background-image: -webkit-linear-gradient(#c83025, #e36f66);
+  background-image: -webkit-linear-gradient(#d93e32, #8c221a);
   /* Firefox3.6 */
-  background-image: -moz-linear-gradient(#c83025, #e36f66);
+  background-image: -moz-linear-gradient(#d93e32, #8c221a);
   /* Opera11.10+ */
-  background-image: -o-linear-gradient(#c83025, #e36f66);
+  background-image: -o-linear-gradient(#d93e32, #8c221a);
   /* CSS3 Compliant */
-  background-image: linear-gradient(#c83025, #e36f66);
+  background-image: linear-gradient(#d93e32, #8c221a);
 }
 
 .navlink-disabled {
@@ -1170,14 +1177,13 @@ button.destroy:active {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: 2em;
   font-size: 1em;
-  line-height: 1.38462;
+  line-height: 1.4;
   vertical-align: middle;
   border: 1px solid;
   -moz-border-radius: 0.4em;
   border-radius: 0.4em;
-  padding: 0.25em 0.75em;
+  padding: 0.4em 0.8em;
   display: inline-block;
 }
 

@@ -57,6 +57,7 @@ input::-moz-focus-inner {
 	textarea {
 		&:focus {
 			outline: 0;
+			border-color: $color-link-hover;
 			@include box-shadow(0 0 7px $color-link-hover);
 			/* Opera */
 			z-index: 1;
@@ -74,6 +75,7 @@ input::-moz-focus-inner {
 	.txp-buttons a {
 		&:focus {
 			outline: 0;
+			border-color: $color-link-hover;
 			@include box-shadow-multi(inset 0 1px 0 0 rgba(#fff, .25), 0 0 7px $color-link-hover);
 			/* Opera */
 			z-index: 1;
@@ -101,7 +103,7 @@ textarea {
 	@include background-clip;
 	@include box-sizing;
 	max-width: 100%;
-	height: 2em; // 26px / 13px
+	//height: 2em; // 26px / 13px
 	font-family: $font-body;
 	font-size: 1em;
 	line-height: $baseline; // 18px / 13px
@@ -111,7 +113,7 @@ textarea {
 	margin: 0;
 	border: 1px solid $color-border;
 	@include border-radius(0);
-	padding: .15384em .25em;
+	padding: .4em .25em;
 }
 
 input[type="color"] {
