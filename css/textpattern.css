@@ -766,13 +766,6 @@ textarea:-moz-placeholder {
   color: #999999;
 }
 
-/* removes inner padding and border in Firefox 4+ */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
 /* better focus glows, if box-shadow is supported */
 .boxshadow input[type="color"]:focus,
 .boxshadow input[type="date"]:focus,

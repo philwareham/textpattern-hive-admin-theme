@@ -30,13 +30,6 @@ textarea:-moz-placeholder {
 	color: $color-text-footnote;
 }
 
-/* removes inner padding and border in Firefox 4+ */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-
 /* better focus glows, if box-shadow is supported */
 .boxshadow {
 	input[type="color"],
