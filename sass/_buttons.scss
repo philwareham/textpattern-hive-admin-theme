@@ -55,37 +55,26 @@ input[type="button"],
 	}
 }
 
-.navlink-disabled {
-	@include background-clip;
-	@include box-sizing;
-	height: 2em; // 26px / 13px
-	font-size: 1em;
-	line-height: $baseline; // 18px / 13px
-	vertical-align: middle;
-	border: 1px solid;
-	@include border-radius($border-radius);
-	padding: .25em .75em;
-	display: inline-block;
-}
-
 /* primary buttons */
 
 input[type="submit"].publish,
 button.publish,
 a.publish {
-	height: 3em; // 36px / 12px
 	font-weight: bold;
-	border: 1px solid #f2ab05;
-	border-bottom-color: darken(#f2ab05, 10%);
-	padding: .75em; // 9px / 12px
-	@include gradient(#ffda44, #f2ab05);
+	border: 1px solid $color-gradient2-to;
+	border-bottom-color: darken($color-gradient2-to, 10%);
+	@include gradient($color-gradient2-from, $color-gradient2-to);
 
 	&:hover {
-		@include gradient(lighten(#ffda44, 10%), lighten(#f2ab05, 10%));
+		border: 1px solid darken($color-gradient2-to, 10%);
+		border-bottom-color: darken($color-gradient2-to, 20%);
+		@include gradient(lighten($color-gradient2-from, 5%), lighten($color-gradient2-to, 5%));
 	}
 
 	&:active {
-		@include gradient(lighten(#f2ab05, 10%), lighten(#ffda44, 10%));
+		border: 1px solid darken($color-gradient2-to, 10%);
+		border-bottom-color: darken($color-gradient2-to, 20%);
+		@include gradient(darken($color-gradient2-from, 4%), darken($color-gradient2-to, 4%));
 	}
 }
 
@@ -107,6 +96,19 @@ button.destroy {
 	&:active {
 		@include gradient-bar(lighten($error-text, 10%), lighten($error-text, 28%));
 	}
+}
+
+.navlink-disabled {
+	@include background-clip;
+	@include box-sizing;
+	height: 2em; // 26px / 13px
+	font-size: 1em;
+	line-height: $baseline; // 18px / 13px
+	vertical-align: middle;
+	border: 1px solid;
+	@include border-radius($border-radius);
+	padding: .25em .75em;
+	display: inline-block;
 }
 
 /* button sets */
@@ -142,7 +144,6 @@ button.destroy {
 	&:active {
 		border-color: lighten(#6b8fe8, 10%);
 		border-bottom-color: #6b8fe8;
-		@include box-shadow(inset 0 .2em .25em rgba($color-link, .25));
 		@include gradient(lighten($color-link, 53%), lighten($color-link, 45%));
 	}
 }
