@@ -88,7 +88,7 @@ body {
 	padding: 0 1.69%;
 	height: 3em;
 	@include box-shadow(0 .2em .25em rgba(#000, .15));
-	@include gradient-bar($color-gradient2-from, #fabc2b);
+	@include gradient-bar($color-gradient2-from, $color-gradient2-to);
 
 	h1 {
 		float: left;
@@ -119,7 +119,7 @@ body {
 
 .txp-logout {
 	position: absolute;
-	top: -.53846em; // 7px / 13px
+	top: -.69231em; // 8px / 13px
 	right: 1.69%;
 }
 
@@ -374,7 +374,7 @@ body#page-setup {
 		z-index: 1000;
 		padding: .5em 1em;
 		@include box-shadow(0 .2em .25em rgba(#000, .15));
-		@include gradient-bar($color-gradient2-from, #fabc2b);
+		@include gradient-bar($color-gradient2-from, $color-gradient2-to);
 	}
 
 	th,

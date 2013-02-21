@@ -62,20 +62,19 @@ button.publish,
 a.publish {
 	//height: 3em; // 39px / 13px
 	font-weight: bold;
-	border: 1px solid $color-gradient2-to;
-	border-bottom-color: darken($color-gradient2-to, 10%);
-	padding: .8em;
-	@include gradient($color-gradient2-from, $color-gradient2-to);
+	border: 1px solid lighten($color-gradient2-to, 10%);
+	border-bottom-color: darken($color-gradient2-to, 4%);
+	@include gradient(lighten($color-gradient2-from, 12%), lighten($color-gradient2-to, 15%));
 
 	&:hover {
-		border: 1px solid darken($color-gradient2-to, 10%);
-		border-bottom-color: darken($color-gradient2-to, 20%);
-		@include gradient(lighten($color-gradient2-from, 5%), lighten($color-gradient2-to, 5%));
+		border: 1px solid $color-gradient2-to;
+		border-bottom-color: darken($color-gradient2-to, 10%);
+		@include gradient(lighten($color-gradient2-from, 16%), lighten($color-gradient2-to, 19%));
 	}
 
 	&:active {
-		border: 1px solid darken($color-gradient2-to, 10%);
-		border-bottom-color: darken($color-gradient2-to, 20%);
+		border: 1px solid $color-gradient2-to;
+		border-bottom-color: darken($color-gradient2-to, 10%);
 		@include gradient(darken($color-gradient2-from, 4%), darken($color-gradient2-to, 4%));
 	}
 }

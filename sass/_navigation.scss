@@ -46,7 +46,7 @@
 	position: relative;
 	display: block;
 	float: left;
-	border-right: 1px solid #fabc2b;
+	border-right: 1px solid $color-gradient2-to;
 	background: #fcdc7f;
 
 	.rgba & {
@@ -54,7 +54,7 @@
 	}
 
 	&:first-child {
-		border-left: 1px solid #fabc2b;
+		border-left: 1px solid $color-gradient2-to;
 	}
 
 	a.dropdown-toggle {
@@ -107,11 +107,11 @@
 		}
 
 		&:hover {
-			background: #feefb0;
+			background: lighten($color-gradient2-from, 21%);
 		}
 
 		&.selected {
-			background: #fee580;
+			background: lighten($color-gradient2-from, 14%);
 		}
 	}
 

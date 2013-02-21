@@ -45,23 +45,23 @@ $color-text-footnote:   #999;
 $color-link:            #114eb1;
 $color-link-hover:      #06f;
 
-// borders
+// default border radii
 
-$color-border:          #ccc;
 $border-radius:         .5em;
 
-// default gradients
-
-$color-gradient-from:   #eee;
-$color-gradient-to:     #ddd;
-$color-gradient2-from:  #ffda44;
-$color-gradient2-to:    #f2ab05;
-
-// accent colours
+// neutral colours
 
 $color-background:      #fff;
 $color-background-box:  #f7f7f7;
-$color-highlight-box:   #fff6d3;
+$color-border:          #ccc;
+$color-gradient-from:   #eee;
+$color-gradient-to:     #ddd;
+
+// accent colours (change these to make a new colourscheme)
+
+$color-gradient2-from:  #ffda44;
+$color-gradient2-to:    #f8c225;
+$color-highlight-box:   lighten($color-gradient2-from, 28%);
 
 // alert colours
 

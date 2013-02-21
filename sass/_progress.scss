@@ -29,9 +29,9 @@
 		border-left: 1px solid lighten($color-border, 9%);
 
 		&.active {
-			@include gradient-bar($color-gradient2-from, #fabc2b);
-			border-right: 1px solid #fabc2b;
-			border-left: 1px solid #fabc2b;
+			@include gradient-bar($color-gradient2-from, $color-gradient2-to);
+			border-right: 1px solid $color-gradient2-to;
+			border-left: 1px solid $color-gradient2-to;
 		}
 
 		&:before {
