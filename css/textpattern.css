@@ -34,12 +34,6 @@ html {
 
 /* Clearfix
    ========================================================================== */
-.clearfix, .progress-meter ol, .txp-footer, .txp-edit p,
-.txp-login p,
-.edit-form p,
-.prefs-form p {
-  border-collapse: collapse;
-}
 .clearfix:after, .progress-meter ol:after, .txp-footer:after, .txp-edit p:after,
 .txp-login p:after,
 .edit-form p:after,
@@ -47,6 +41,7 @@ html {
   content: "";
   display: table;
   clear: both;
+  border-collapse: collapse;
 }
 
 .clear {
@@ -2147,6 +2142,7 @@ div.code {
   content: "";
   display: table;
   clear: both;
+  border-collapse: collapse;
 }
 
 /* ==========================================================================
