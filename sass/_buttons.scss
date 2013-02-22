@@ -33,7 +33,7 @@ input[type="button"],
 	border: 1px solid darken($color-gradient-to, 10%);
 	border-bottom-color: darken($color-gradient-to, 20%);
 	@include border-radius($border-radius);
-	padding: .25em 1em;
+	padding: .25em .75em;
 	display: inline-block;
 	color: $color-text;
 	@include box-shadow(inset 0 1px 0 0 rgba(#fff, .25));
@@ -137,7 +137,6 @@ button.destroy {
 }
 
 .nav-tertiary .navlink-active {
-	color: $color-link;
 	border-color: #a3bef3;
 	border-bottom-color: darken(#a3bef3, 10%);
 	@include gradient(lighten($color-link, 56%), lighten($color-link, 48%));
