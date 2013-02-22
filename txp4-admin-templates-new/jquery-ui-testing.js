@@ -158,11 +158,11 @@ $(function ()
 		modal: true,
 		resizable: false,
 		buttons: {
-			Ok: function ()
+			Cancel: function ()
 			{
 				$(this).dialog("close");
 			},
-			Cancel: function ()
+			Ok: function ()
 			{
 				$(this).dialog("close");
 			}
