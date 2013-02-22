@@ -50,7 +50,6 @@ textarea:-moz-placeholder {
 	textarea {
 		&:focus {
 			outline: 0;
-			border-color: $color-link-hover;
 			@include box-shadow(0 0 7px $color-link-hover);
 			/* Opera */
 			z-index: 1;
@@ -68,7 +67,6 @@ textarea:-moz-placeholder {
 	.txp-buttons a {
 		&:focus {
 			outline: 0;
-			border-color: $color-link-hover;
 			@include box-shadow-multi(inset 0 1px 0 0 rgba(#fff, .25), 0 0 7px $color-link-hover);
 			/* Opera */
 			z-index: 1;
