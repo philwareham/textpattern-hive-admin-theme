@@ -106,10 +106,6 @@ textarea {
 	margin: 0;
 	border: 1px solid $color-border;
 	@include border-radius(0);
-	padding: .4em .25em;
-}
-
-input[type="color"] {
 	padding: .25em;
 }
 
