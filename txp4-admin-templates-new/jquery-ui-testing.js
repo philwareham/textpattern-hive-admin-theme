@@ -70,7 +70,7 @@ $(function ()
 	// Split button
 	$("#split-rerun-example")
 		.button()
-		.click(function()
+		.click(function ()
 		{
 			alert("Running the last action");
 		})
@@ -81,13 +81,15 @@ $(function ()
 				primary: "ui-icon-triangle-1-s"
 			}
 		})
-		.click(function() {
-			var menu = $( this ).parent().next().show().position({
+		.click(function ()
+		{
+			var menu = $(this).parent().next().show().position({
 				my: "left top",
 				at: "left bottom",
 				of: this
 			});
-			$( document ).one( "click", function() {
+			$(document).one( "click", function ()
+			{
 				menu.hide();
 			});
 			return false;
@@ -108,7 +110,7 @@ $(function ()
 				primary: "ui-icon-search"
 			}
 		})
-		.click(function()
+		.click(function ()
 		{
 			alert("Running the last action");
 		})
@@ -119,13 +121,15 @@ $(function ()
 				primary: "ui-icon-triangle-1-s"
 			}
 		})
-		.click(function() {
-			var menu = $( this ).parent().next().show().position({
+		.click(function ()
+		{
+			var menu = $(this).parent().next().show().position({
 				my: "left top",
 				at: "left bottom",
 				of: this
 			});
-			$( document ).one( "click", function() {
+			$(document).one("click", function ()
+			{
 				menu.hide();
 			});
 			return false;
@@ -218,12 +222,16 @@ $(function ()
 
 	// Spinner
 	$("#jquery-ui-spinner").spinner({
-		spin: function(event, ui) {
-			if ( ui.value > 10 ) {
-				$( this ).spinner( "value", -10 );
+		spin: function (event, ui)
+		{
+			if (ui.value > 10)
+			{
+				$(this).spinner("value", -10);
 				return false;
-			} else if ( ui.value < -10 ) {
-				$( this ).spinner( "value", 10 );
+			}
+			else if (ui.value < -10)
+			{
+				$(this).spinner("value", 10);
 				return false;
 			}
 		}
