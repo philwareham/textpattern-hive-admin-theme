@@ -15,8 +15,6 @@
 	<script src="../js/tinynav.min.js"></script>
 	<script src="../js/scripts.js"></script>
 
-	<script src="search.js"></script>
-
 	<!--[if lt IE 9]><script src="/textpattern/vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->
 </head>
 <body id="page-list" class="content">
@@ -83,57 +81,57 @@
 
 			<div id="list_control" class="txp-layout-cell">
 				<form method="get" action="#" class="txp-search" role="search">
-					<div class="txp-search-wrapper">
-						<a class="txp-search-criteria" role="button" href="#" title="Search criteria">Search criteria</a>
-						<ul class="txp-search-dropdown">
-							<li>
-								<input type="checkbox" name="select_all" value="all" id="search-all" checked="checked" class="checkbox active">
-								<label for="search-all">search_all</label>
-							</li>
-							<li>
-								<input type="checkbox" name="search_method[]" value="id" id="search-id" checked="checked" class="checkbox active">
-								<label for="search-id">ID#</label>
-							</li>
-							<li class="selected">
-								<input type="checkbox" name="search_method[]" value="title_body_excerpt" id="search-title_body_excerpt" checked="checked" class="checkbox active">
-								<label for="search-title_body_excerpt">Title, body &amp; excerpt testing of very long line</label>
-							</li>
-							<li>
-								<input type="checkbox" name="search_method[]" value="section" id="search-section" checked="checked" class="checkbox active">
-								<label for="search-section">Section</label>
-							</li>
-							<li>
-								<input type="checkbox" name="search_method[]" value="categories" id="search-categories" checked="checked" class="checkbox active">
-								<label for="search-categories">Categories</label>
-							</li>
-							<li class="selected">
-								<input type="checkbox" name="search_method[]" value="keywords" id="search-keywords" checked="checked" class="checkbox active">
-								<label for="search-keywords">Keywords</label>
-							</li>
-							<li>
-								<input type="checkbox" name="search_method[]" value="status" id="search-status" checked="checked" class="checkbox active">
-								<label for="search-status">Status</label>
-							</li>
-							<li>
-								<input type="checkbox" name="search_method[]" value="author" id="search-author" checked="checked" class="checkbox active">
-								<label for="search-author">Author</label>
-							</li>
-							<li>
-								<input type="checkbox" name="search_method[]" value="article_image" id="search-article_image" checked="checked" class="checkbox active">
-								<label for="search-article_image">Article image</label>
-							</li>
-							<li>
-								<input type="checkbox" name="search_method[]" value="posted" id="search-posted" checked="checked" class="checkbox active">
-								<label for="search-posted">Posted</label>
-							</li>
-							<li>
-								<input type="checkbox" name="search_method[]" value="lastmod" id="search-lastmod" checked="checked" class="checkbox active">
-								<label for="search-lastmod">Modified</label>
-							</li>
-						</ul>
-						<input type="search" value="" name="crit" size="16">
-						<input type="submit" value="search_articles" name="search">
-					</div>
+					<p>
+						<input type="text">
+						<button id="split-search-example">search_articles</button>
+						<button id="split-search-criteria-example">Select an action</button>
+					</p>
+					<ul>
+						<li>
+							<input type="checkbox" name="select_all" value="all" id="search-all" checked="checked" class="checkbox active">
+							<label for="search-all">search_all</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="id" id="search-id" checked="checked" class="checkbox active">
+							<label for="search-id">ID#</label>
+						</li>
+						<li class="selected">
+							<input type="checkbox" name="search_method[]" value="title_body_excerpt" id="search-title_body_excerpt" checked="checked" class="checkbox active">
+							<label for="search-title_body_excerpt">Title, body &amp; excerpt testing of very long line</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="section" id="search-section" checked="checked" class="checkbox active">
+							<label for="search-section">Section</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="categories" id="search-categories" checked="checked" class="checkbox active">
+							<label for="search-categories">Categories</label>
+						</li>
+						<li class="selected">
+							<input type="checkbox" name="search_method[]" value="keywords" id="search-keywords" checked="checked" class="checkbox active">
+							<label for="search-keywords">Keywords</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="status" id="search-status" checked="checked" class="checkbox active">
+							<label for="search-status">Status</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="author" id="search-author" checked="checked" class="checkbox active">
+							<label for="search-author">Author</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="article_image" id="search-article_image" checked="checked" class="checkbox active">
+							<label for="search-article_image">Article image</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="posted" id="search-posted" checked="checked" class="checkbox active">
+							<label for="search-posted">Posted</label>
+						</li>
+						<li>
+							<input type="checkbox" name="search_method[]" value="lastmod" id="search-lastmod" checked="checked" class="checkbox active">
+							<label for="search-lastmod">Modified</label>
+						</li>
+					</ul>
 				</form>
 			</div>
 
@@ -228,17 +226,11 @@
 
 				</form>
 
-				<div id="list_navigation" class="txp-navigation">
-					<form class="nav-form" method="get" action="#">
-						<p class="prev-next">
-							<span class="navlink-disabled">← Prev</span>
-							<select name="page">
-								<option value="1" selected="selected">1/2</option>
-								<option value="2">2/2</option>
-							</select>
-							<a href="#" class="navlink" rel="next">Next →</a>
-						</p>
-					</form>
+				<div class="txp-navigation" id="list_navigation">
+					<p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="?event=list&amp;step=list_change_pageby&amp;qty=15&amp;_txp_token=dc9e71582783df6d3f6ce1b22b3a6d62">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="?event=list&amp;step=list_change_pageby&amp;qty=25&amp;_txp_token=dc9e71582783df6d3f6ce1b22b3a6d62">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="?event=list&amp;step=list_change_pageby&amp;qty=50&amp;_txp_token=dc9e71582783df6d3f6ce1b22b3a6d62">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="?event=list&amp;step=list_change_pageby&amp;qty=100&amp;_txp_token=dc9e71582783df6d3f6ce1b22b3a6d62">100</a></p>
+					<ul class="nav-tertiary prev-next">
+						<li><span class="navlink-disabled" aria-disabled="true">← Prev</span></li><li><a class="navlink-active" href="?event=list&amp;step=list&amp;dir=desc&amp;page=1">1</a></li><li><a class="navlink" href="?event=list&amp;step=list&amp;dir=desc&amp;page=2">2</a></li><li><a class="navlink" rel="next" href="?event=list&amp;step=list&amp;page=2&amp;dir=desc">Next →</a></li>
+					</ul>
 				</div>
 
 			</div>

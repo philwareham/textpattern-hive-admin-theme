@@ -74,6 +74,12 @@ textarea:-moz-placeholder {
 	}
 }
 
+/* removes inner padding and search cancel button in Safari5+ and Chrome on OS X */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
 input[type="color"],
 input[type="date"],
 input[type="datetime"],

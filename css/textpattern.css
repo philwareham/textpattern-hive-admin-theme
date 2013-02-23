@@ -802,6 +802,12 @@ textarea:-moz-placeholder {
   z-index: 1;
 }
 
+/* removes inner padding and search cancel button in Safari5+ and Chrome on OS X */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
 input[type="color"],
 input[type="date"],
 input[type="datetime"],
@@ -1220,72 +1226,6 @@ button.destroy:active {
   background-image: -o-linear-gradient(#d5e4fb, #b0cbf7);
   /* CSS3 Compliant */
   background-image: linear-gradient(#d5e4fb, #b0cbf7);
-}
-
-/* Search
-   ========================================================================== */
-/* removes inner padding and search cancel button in Safari5+ and Chrome on OS X */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-input[type="search"] {
-  padding-left: 2.25em;
-}
-
-.txp-search-wrapper {
-  float: right;
-  position: relative;
-}
-
-.txp-search-criteria {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  text-indent: 110%;
-  white-space: nowrap;
-  overflow: hidden;
-  font-size: 16px;
-  width: 1.75em;
-  height: 1.5em;
-  background-repeat: no-repeat;
-}
-.nosvg .txp-search-criteria {
-  background-image: url("../img/search.png");
-}
-.svg .txp-search-criteria {
-  background-image: url("../img/search.svg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.txp-search-criteria:hover {
-  background-position: 0 -1.5em;
-}
-
-.txp-search-dropdown {
-  position: absolute;
-  list-style: none;
-  left: 0;
-  top: 1.84615em;
-  margin: 0;
-  width: 12.25em;
-  padding: 0.25em 0;
-  z-index: 10000;
-  border: solid 1px #d4d4d4;
-  border-top: 0;
-  background: #fff6d3;
-  -moz-border-radius: 0 0 0.5em 0.5em;
-  border-radius: 0 0 0.5em 0.5em;
-  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-}
-
-.txp-search-dropdown li {
-  padding: 0.25em 0.5em;
 }
 
 /* Lists
@@ -2198,12 +2138,6 @@ div.code {
   /* hide `<ul>` version of navigation on small screen widths */
   .untinynav {
     display: none;
-  }
-
-  /* Search < 769px
-     ========================================================================== */
-  .txp-search-wrapper {
-    float: none;
   }
 
   /* Typography < 769px
