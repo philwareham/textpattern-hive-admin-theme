@@ -136,6 +136,15 @@ $(function ()
 		.menu();
 
 
+	// Options button
+	$("#detail-toggle").button({
+		text: false,
+		icons: {
+			primary: "ui-icon-gear"
+		}
+	});
+
+
 	// Datepicker
 	$(".jquery-ui-datepicker").datepicker().children().show();
 

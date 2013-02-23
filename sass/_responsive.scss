@@ -43,11 +43,6 @@ body#page-setup {
 	text-align: left;
 }
 
-.detail-toggle {
-	margin-top: 0;
-	text-align: left;
-}
-
 
 /* Header < 769px
    ========================================================================== */
@@ -207,6 +202,19 @@ body {
 #page-css {
 	textarea.code {
 		height: 17.46153em; // 227px / 13px
+	}
+}
+
+/* remove float from txp-navigation elements */
+
+.txp-navigation {
+	p {
+		margin: 1em 0 .5em;
+	}
+
+	.pageby,
+	.prev-next {
+		float: none;
 	}
 }
 
