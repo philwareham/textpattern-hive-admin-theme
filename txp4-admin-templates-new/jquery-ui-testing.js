@@ -104,12 +104,7 @@ $(function ()
 
 	// Split button search example
 	$("#split-search-example")
-		.button({
-			text: false,
-			icons: {
-				primary: "ui-icon-search"
-			}
-		})
+		.button()
 		.click(function ()
 		{
 			alert("Running the last action");
