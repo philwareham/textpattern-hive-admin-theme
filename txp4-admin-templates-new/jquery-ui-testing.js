@@ -103,8 +103,13 @@ $(function ()
 
 
 	// Split button search example
-	$("#split-search-example")
-		.button()
+	$(".txp-search-button")
+		.button({
+			text: false,
+			icons: {
+				primary: "ui-icon-search"
+			}
+		})
 		.click(function ()
 		{
 			alert("Running the last action");
