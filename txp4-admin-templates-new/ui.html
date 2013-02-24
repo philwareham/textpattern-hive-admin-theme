@@ -31,8 +31,11 @@
 		.jquery-ui-icons li { margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left; list-style: none; }
 		.jquery-ui-icons span.ui-icon { float: left; margin: 0 4px; }
 		.jquery-ui-slider-vertical span { height: 120px; float: left; margin: 15px; }
+
 		.ui-menu { width: 150px; }
-		.ui-menu:not(.jquery-ui-menu) { position: absolute; }
+		.ui-menu:not(.jquery-ui-menu) { position: absolute; z-index: 1000; }
+
+		.txp-search .txp-search-button { margin-left: -.35em; border-radius: 0; padding-left: 1.75em; padding-right: 1.75em;}
 	</style>
 
 </head>
@@ -158,10 +161,12 @@
 
 			<h2>Interaction colours</h2>
 			<div class="txp-grid">
-				<div class="txp-grid-cell" style="width:8em;background:#dfeafc;">
-					<p>#dfeafc</p>
-				</div><div class="txp-grid-cell" style="width:8em;background:#bed4f9;">
-					<p>#bed4f9</p>
+				<div class="txp-grid-cell" style="width:8em;background:#e3edfc;">
+					<p>#e3edfc</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#c7dbfa;">
+					<p>#c7dbfa</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#b0cbf7;">
+					<p>#b0cbf7</p>
 				</div><div class="txp-grid-cell" style="width:8em;background:#0066ff;color:#ffffff;">
 					<p>#0066ff</p>
 				</div><div class="txp-grid-cell" style="width:8em;background:#114eb1;color:#ffffff;">
@@ -1629,11 +1634,11 @@
 			<p><strong>Please note</strong> that this class only gives a visual impression of disabled elements, any links and/or form elements therein would still be active and clickable. To truly disable form elements use the proper <code>disabled</code> attribute instead, see the <a href="#ui-doc-forms">forms</a> section for more information.</p>
 
 			<h2>Temporary example of search widget</h2>
-			<form role="search" style="float:none;">
+			<form role="search" method="get" action="#" class="txp-search" style="float:none;">
 				<p>
-					<input type="text">
-					<button id="split-search-example">search_articles</button>
-					<button id="split-search-criteria-example">Select an action</button>
+					<input type="text" placeholder="search_articles">
+					<button class="txp-search-button">Search</button>
+					<button>Search criteria</button>
 				</p>
 				<ul>
 					<li>

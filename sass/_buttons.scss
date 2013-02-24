@@ -152,7 +152,7 @@ ul.nav-tertiary {
 .nav-tertiary .navlink-active {
 	border-color: #a3bef3;
 	border-bottom-color: darken(#a3bef3, 10%);
-	@include gradient(lighten($color-link, 56%), lighten($color-link, 48%));
+	@include gradient(lighten($color-link, 56%), lighten($color-link, 50%));
 
 	&:hover {
 		border-color: lighten(#6b8fe8, 10%);
@@ -163,6 +163,6 @@ ul.nav-tertiary {
 	&:active {
 		border-color: lighten(#6b8fe8, 10%);
 		border-bottom-color: #6b8fe8;
-		@include gradient(lighten($color-link, 53%), lighten($color-link, 45%));
+		@include gradient(lighten($color-link, 50%), lighten($color-link, 45%));
 	}
 }
