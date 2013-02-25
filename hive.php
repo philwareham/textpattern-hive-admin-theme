@@ -198,12 +198,15 @@ class hive_theme extends theme
 		{
 			case E_ERROR:
 				$class = 'error';
+				$icon = 'ui-icon-closethick';
 				break;
 			case E_WARNING:
 				$class = 'warning';
+				$icon = 'ui-icon-alert';
 				break;
 			default:
 				$class = 'success';
+				$icon = 'ui-icon-check';
 				break;
 		}
 
@@ -215,13 +218,8 @@ class hive_theme extends theme
 		else
 		{
 			$html = span(
-				gTxt($thing[0]).
-				sp.href('&#215;', '#close', array(
-					'role'       => 'button',
-					'class'      => 'close',
-					'title'      => gTxt('close'),
-					'aria-label' => gTxt('close'),
-				))
+				'<span class="ui-icon '.$icon.'"></span> '.gTxt($thing[0]).
+				sp.href('&#215;', '#close', ' role="button"class="close" title="'.gTxt('close').'" aria-label="'.gTxt('close').'"')
 			, array(
 				'role'  => 'alert',
 				'class' => 'messageflash '.$class,
