@@ -218,7 +218,7 @@ class hive_theme extends theme
 		else
 		{
 			$html = span(
-				'<span class="ui-icon '.$icon.'"></span> '.gTxt($thing[0]).
+				span(null, array('class' => 'ui-icon '.$icon)).' '.gTxt($thing[0]).
 				sp.href('&#215;', '#close', ' role="button"class="close" title="'.gTxt('close').'" aria-label="'.gTxt('close').'"')
 			, array(
 				'role'  => 'alert',
