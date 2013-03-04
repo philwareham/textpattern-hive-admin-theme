@@ -53,6 +53,10 @@ Options are provided to hide certain sections/fields/features from displaying in
 
 @define('hive_theme_hide_expires_field', true);@
 
+*Hide image caption field (image edit page):*
+
+@define('hive_theme_hide_image_caption', true);@
+
 *Hide tag builder column (pages and forms pages):*
 
 @define('hive_theme_hide_tag_builder_column', true);@

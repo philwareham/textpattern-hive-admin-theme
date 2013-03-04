@@ -77,6 +77,10 @@ class hive_theme extends theme
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_expires_field.css">';
 		}
+		if (defined('hive_theme_hide_image_caption'))
+		{
+			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_image_caption.css">';
+		}
 		if (defined('hive_theme_hide_tag_builder_column'))
 		{
 			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_tag_builder_column.css">';
