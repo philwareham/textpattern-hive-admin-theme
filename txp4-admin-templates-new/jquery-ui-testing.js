@@ -16,6 +16,7 @@ $(function ()
 
 	// Sortable
 	$(".jquery-ui-sortable").sortable({
+		placeholder: "ui-sortable-placeholder",
 		cursor: "ns-resize"
 	}).disableSelection();
 
