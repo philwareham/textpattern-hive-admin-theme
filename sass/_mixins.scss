@@ -18,7 +18,7 @@
 // SVG images with fallback for older browsers (via Modernizr)
 		
 @mixin svg-graphic($imgfilename, $imgtype, $imgwidth, $imgheight) {
-	.nosvg & {
+	.no-svg & {
 		background-image: url('../img/' + $imgfilename + '.' + $imgtype);
 	}
 	.svg & {
@@ -31,7 +31,7 @@
 }
 
 @mixin svg-graphic-spite($imgfilename, $imgtype) {
-	.nosvg & {
+	.no-svg & {
 		background-image: url('../img/' + $imgfilename + '.' + $imgtype);
 	}
 	.svg & {
