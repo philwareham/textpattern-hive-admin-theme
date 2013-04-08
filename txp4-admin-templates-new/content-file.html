@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="robots" content="noindex, nofollow">
 	<title>Files - My Site &#124; Textpattern CMS</title>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="/textpattern/vendors/jquery/jquery/jquery.js"></script>
+	<script src="/textpattern/vendors/jquery/ui/js/jquery-ui.js"></script>
 	<script src="textpattern.js"></script>
 	<link rel="stylesheet" href="../css/textpattern.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -13,7 +14,18 @@
 	<script src="/textpattern/vendors/modernizr/modernizr/modernizr.js"></script>
 	<script src="../js/tinynav.min.js"></script>
 	<script src="../js/scripts.js"></script>
+
+	<script src="jquery-ui-testing.js"></script>
+
 	<!--[if lt IE 9]><script src="/textpattern/vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->
+
+	<!-- TEMPORARY -->
+	<style>
+		.ui-menu { width: 150px; }
+		.ui-menu:not(.jquery-ui-menu) { position: absolute; z-index: 1000; }
+
+		.txp-search .txp-search-button { margin-left: -.35em; border-radius: 0; padding-left: 1.75em; padding-right: 1.75em;}
+	</style>
 </head>
 <body id="page-file" class="content">
 
@@ -70,79 +82,108 @@
 	</header><!-- /txp-header -->
 
 	<main role="main" class="txp-body" aria-label="Main content">
-		<h1 class="txp-heading">Files</h1>
 
-		<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
-			<p><label for="file-upload">Upload file</label>&#160;<a target="_blank" href="#" class="pophelp" title="Help" aria-label="Help" rel="help">?</a>&#160;<input type="file" name="thefile" id="file-upload">&#160;<input type="submit" value="Upload"></p>
-		</form>
+		<div class="txp-layout-grid">
 
-		<div id="file_control" class="txp-control-panel">
-			<form method="get" action="#" class="search-form">
-				<p>
-					<label for="file-search">Search</label>
-					<select id="file-search" name="search_method">
-						<option value="id">ID#</option>
-						<option value="filename" selected="selected">Name</option>
-						<option value="title">Title</option>
-						<option value="description">Description</option>
-						<option value="category">Category</option>
-						<option value="author">Author</option>
-					</select>
-					<input type="text" value="" name="crit" size="16">
-					<input type="submit" value="Go" name="search">
+			<div class="txp-layout-cell txp-layout-2-4">
+				<h1 class="txp-heading">Files</h1>
+			</div>
+
+			<div id="list_control" class="txp-layout-cell txp-layout-2-4">
+				<form role="search" method="get" action="#" class="txp-search">
+					<p>
+						<input type="text" placeholder="Search files…">
+						<button class="txp-search-button">Search</button>
+						<button>Search criteria</button>
+					</p>
+					<ul>
+						<li>
+							<input type="checkbox" id="search-crit1" name="search-crit1">
+							<label for="search-crit1">search_all</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit2" name="search-crit2">
+							<label for="search-crit2">ID#</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit3" name="search-crit3">
+							<label for="search-crit3">Name</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit4" name="search-crit4">
+							<label for="search-crit4">Title</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit5" name="search-crit5">
+							<label for="search-crit5">Description</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit6" name="search-crit6">
+							<label for="search-crit6">Category</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit7" name="search-crit7">
+							<label for="search-crit7">Author</label>
+						</li>
+					</ul>
+				</form>
+			</div>
+
+			<div class="txp-layout-cell">
+				<form class="upload-form" method="post" enctype="multipart/form-data" action="#">
+					<label for="file-upload">Upload file</label>&#160;<a target="_blank" href="#" class="pophelp" title="Help" aria-label="Help" rel="help">?</a>&#160;<input type="file" name="thefile" id="file-upload">&#160;<input type="submit" value="Upload">
+				</form>
+				<p class="txp-buttons">
+					<button id="detail-toggle">List options</button>
 				</p>
-			</form>
-		</div>
+			</div>
 
-		<p class="detail-toggle">
-			<input type="checkbox" name="cb_toggle_files_detail" id="cb_toggle_files_detail" value="1" class="checkbox" onclick="toggleClassRemember('files_detail');" checked="checked"> 
-			<label for="cb_toggle_files_detail">Show more detail</label>
-		</p>
+			<div class="txp-layout-cell">
 
-		<div id="file_container" class="txp-container">
+				<form name="longform" id="files_form" class="multi_edit_form" method="post" action="#">
+					<div class="txp-listtables">
 
-			<form name="longform" id="files_form" class="multi_edit_form" method="post" action="#">
-				<div class="txp-listtables">
+						<table class="txp-list">
 
-					<table class="txp-list">
+							<thead>
+								<tr>
+									<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+									<th scope="col" class="id"><a href="#">ID#</a></th>
+									<th scope="col" class="asc name"><a href="#">Name</a></th>
+									<th scope="col" class="title"><a href="#">Title</a></th>
+									<th scope="col" class="files_detail description"><a href="#">Description</a></th>
+									<th scope="col" class="category"><a href="#">Category</a></th>
+									<th scope="col" class="files_detail tag-build">Tags</th>
+									<th scope="col" class="status">Status</th>
+									<th scope="col" class="condition">Condition</th>
+									<th scope="col" class="downloads"><a href="#">Downloads</a></th>
+									<th scope="col" class="author"><a href="#">Author</a></th>
+								</tr>
+							</thead>
 
-						<thead>
-							<tr>
-								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-								<th scope="col" class="id"><a href="#">ID#</a></th>
-								<th scope="col" class="asc name"><a href="#">Name</a></th>
-								<th scope="col" class="title"><a href="#">Title</a></th>
-								<th scope="col" class="files_detail description"><a href="#">Description</a></th>
-								<th scope="col" class="category"><a href="#">Category</a></th>
-								<th scope="col" class="files_detail tag-build">Tags</th>
-								<th scope="col" class="status">Status</th>
-								<th scope="col" class="condition">Condition</th>
-								<th scope="col" class="downloads"><a href="#">Downloads</a></th>
-								<th scope="col" class="author"><a href="#">Author</a></th>
-							</tr>
-						</thead>
+							<tbody>
+								<tr>
+									<td class="multi-edit"><input type="checkbox" value="1" name="selected[]"></td>
+									<th scope="row" class="id"><a href="secondary/content-file_edit.html" title="Edit">1</a>&#160;<span class="articles_detail"><span aria-hidden="true">[</span><a href="#" title="View">Download</a><span aria-hidden="true">]</span></span></th>
+									<td class="name"><a href="secondary/content-file_edit.html" title="Edit">test-file.zip</a></td>
+									<td class="title">A Test File</td>
+									<td class="files_detail description">This is a test file upload description</td>
+									<td class="category">&#160;</td>
+									<td class="files_detail tag-build">
+										<a target="_blank" href="#">Textile</a>
+										&#124; <a target="_blank" href="#">Textpattern</a>
+										&#124; <a target="_blank" href="#">HTML</a>
+									</td>
+									<td class="status">Live</td>
+									<td class="condition"><span class="success">Ok</span></td>
+									<td class="downloads"><a href="#" title="Download">2</a></td>
+									<td class="author"><span title="Phil Wareham">admin</span></td>
+								</tr>
+							</tbody>
 
-						<tbody>
-							<tr>
-								<td class="multi-edit"><input type="checkbox" value="1" name="selected[]"></td>
-								<th scope="row" class="id"><a href="secondary/content-file_edit.html" title="Edit">1</a>&#160;<span class="articles_detail"><span aria-hidden="true">[</span><a href="#" title="View">Download</a><span aria-hidden="true">]</span></span></th>
-								<td class="name"><a href="secondary/content-file_edit.html" title="Edit">test-file.zip</a></td>
-								<td class="title">A Test File</td>
-								<td class="files_detail description">This is a test file upload description</td>
-								<td class="category">&#160;</td>
-								<td class="files_detail tag-build">
-									<a target="_blank" href="#">Textile</a>
-									&#124; <a target="_blank" href="#">Textpattern</a>
-									&#124; <a target="_blank" href="#">HTML</a>
-								</td>
-								<td class="status">Live</td>
-								<td class="condition"><span class="success">Ok</span></td>
-								<td class="downloads"><a href="#" title="Download">2</a></td>
-								<td class="author"><span title="Phil Wareham">admin</span></td>
-							</tr>
-						</tbody>
+						</table>
 
-					</table>
+					</div><!-- /txp-listtables -->
 
 					<div class="multi-edit">
 						<select name="edit_method">
@@ -155,27 +196,16 @@
 						</select>
 					</div>
 
-				</div>
-			</form>
-
-			<div id="file_navigation" class="txp-navigation">
-				<p class="prev-next">1/1</p>
-				<form method="post" action="#" class="pageby">
-					<p>
-						View
-						<select name="qty" onchange="submit(this.form);">
-							<option value="15">15</option>
-							<option value="25">25</option>
-							<option value="50">50</option>
-							<option value="100">100</option>
-						</select>
-						per page
-					</p>
 				</form>
+
+				<div class="txp-navigation" id="file_navigation">
+					<p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
+				</div>
+
 			</div>
 
-		</div><!-- /txp-container -->
-	</main><!-- /txp-body -->
+		</div><!-- /txp-layout-grid -->
+	</main>
 
 	<footer role="contentinfo" class="txp-footer">
 		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.6)</p>

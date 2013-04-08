@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="robots" content="noindex, nofollow">
 	<title>Comments - My Site &#124; Textpattern CMS</title>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="/textpattern/vendors/jquery/jquery/jquery.js"></script>
+	<script src="/textpattern/vendors/jquery/ui/js/jquery-ui.js"></script>
 	<script src="textpattern.js"></script>
 	<link rel="stylesheet" href="../css/textpattern.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -13,7 +14,18 @@
 	<script src="/textpattern/vendors/modernizr/modernizr/modernizr.js"></script>
 	<script src="../js/tinynav.min.js"></script>
 	<script src="../js/scripts.js"></script>
+
+	<script src="jquery-ui-testing.js"></script>
+
 	<!--[if lt IE 9]><script src="/textpattern/vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->
+
+	<!-- TEMPORARY -->
+	<style>
+		.ui-menu { width: 150px; }
+		.ui-menu:not(.jquery-ui-menu) { position: absolute; z-index: 1000; }
+
+		.txp-search .txp-search-button { margin-left: -.35em; border-radius: 0; padding-left: 1.75em; padding-right: 1.75em;}
+	</style>
 </head>
 <body id="page-discuss" class="content">
 
@@ -77,107 +89,125 @@
 				<h1 class="txp-heading">Comments</h1>
 			</div>
 
-			<div class="txp-layout-cell txp-layout-2-4">
-				<p class="txp-buttons">
-					<a href="secondary/content-discuss_ipban.html">List banned IPs</a>
-				</p>
-			</div>
-
-			<div id="discuss_control" class="txp-layout-cell txp-layout-2-4">
-				<form method="get" action="#" class="search-form">
+			<div id="list_control" class="txp-layout-cell txp-layout-2-4">
+				<form role="search" method="get" action="#" class="txp-search">
 					<p>
-						<label for="discuss-search">Search</label>
-						<select id="discuss-search" name="search_method">
-							<option value="id">ID#</option>
-							<option value="parent">Parent</option>
-							<option value="name">Name</option>
-							<option value="message" selected="selected">Message</option>
-							<option value="email">E-mail</option>
-							<option value="website">Website</option>
-							<option value="ip">IP</option>
-						</select>
-						<input type="text" value="" name="crit" size="16">
-						<input type="submit" value="Go" name="search">
+						<input type="text" placeholder="Search comments…">
+						<button class="txp-search-button">Search</button>
+						<button>Search criteria</button>
 					</p>
+					<ul>
+						<li>
+							<input type="checkbox" id="search-crit1" name="search-crit1">
+							<label for="search-crit1">search_all</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit2" name="search-crit2">
+							<label for="search-crit2">ID#</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit3" name="search-crit3">
+							<label for="search-crit3">Parent</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit4" name="search-crit4">
+							<label for="search-crit4">Name</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit5" name="search-crit5">
+							<label for="search-crit5">Message</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit6" name="search-crit6">
+							<label for="search-crit6">Email</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit7" name="search-crit7">
+							<label for="search-crit7">Website</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit8" name="search-crit8">
+							<label for="search-crit8">IP</label>
+						</li>
+					</ul>
 				</form>
 			</div>
 
-			<div class="txp-layout-cell txp-layout-2-4">
-				<p class="detail-toggle">
-					<input type="checkbox" name="cb_toggle_discuss_detail" id="cb_toggle_discuss_detail" value="1" class="checkbox" onclick="toggleClassRemember('discuss_detail');" checked="checked">
-					<label for="cb_toggle_discuss_detail">Show more detail</label>
+			<div class="txp-layout-cell">
+				<form class="cb_show_spam" method="post" action="#">
+					<input type="checkbox" name="cb_show_spam" id="cb_show_spam" value="1" class="checkbox" onclick="setClassRemember('show_spam',1);submit(this.form);" checked="checked">
+					<label for="cb_show_spam">Show spam</label>
+				</form>
+				<p class="txp-buttons">
+					<a href="secondary/content-discuss_ipban.html">List banned IPs</a>
+					<button id="detail-toggle">List options</button>
 				</p>
 			</div>
 
-		<form class="cb_show_spam" method="post" action="#">
-			<p>
-				<input type="checkbox" name="cb_show_spam" id="cb_show_spam" value="1" class="checkbox" onclick="setClassRemember('show_spam',1);submit(this.form);" checked="checked">
-				<label for="cb_show_spam">Show spam</label>
-			</p>
-		</form>
+			<div class="txp-layout-cell">
 
-		<div id="discuss_container" class="txp-container">
+				<form name="longform" id="discuss_form" class="multi_edit_form" method="post" action="#">
+					<div class="txp-listtables">
 
-			<form name="longform" id="discuss_form" class="multi_edit_form" method="post" action="#">
-				<div class="txp-listtables">
+						<table class="txp-list">
 
-					<table class="txp-list">
+							<thead>
+								<tr>
+									<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+									<th scope="col" class="id"><a href="#">ID#</a></th>
+									<th scope="col" class="desc date posted created"><a href="#">Date</a></th>
+									<th scope="col" class="name"><a href="#">Name</a></th>
+									<th scope="col" class="message"><a href="#">Message</a></th>
+									<th scope="col" class="discuss_detail email"><a href="#">E-mail</a></th>
+									<th scope="col" class="discuss_detail website"><a href="#">Website</a></th>
+									<th scope="col" class="discuss_detail ip"><a href="#">IP</a></th>
+									<th scope="col" class="discuss_detail status"><a href="#">Status</a></th>
+									<th scope="col" class="parent"><a href="#">Parent</a></th>
+								</tr>
+							</thead>
 
-						<thead>
-							<tr>
-								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-								<th scope="col" class="id"><a href="#">ID#</a></th>
-								<th scope="col" class="desc date posted created"><a href="#">Date</a></th>
-								<th scope="col" class="name"><a href="#">Name</a></th>
-								<th scope="col" class="message"><a href="#">Message</a></th>
-								<th scope="col" class="discuss_detail email"><a href="#">E-mail</a></th>
-								<th scope="col" class="discuss_detail website"><a href="#">Website</a></th>
-								<th scope="col" class="discuss_detail ip"><a href="#">IP</a></th>
-								<th scope="col" class="discuss_detail status"><a href="#">Status</a></th>
-								<th scope="col" class="parent"><a href="#">Parent</a></th>
-							</tr>
-						</thead>
+							<tbody>
+								<tr class="spam">
+									<td class="multi-edit"><input type="checkbox" value="000003" name="selected[]"></td>
+									<th scope="row" class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000003</a></th>
+									<td class="date posted created">21&#160;Sep&#160;2011 10:13:58</td>
+									<td class="name">Anon</td>
+									<td class="message">test of a spam comment</td>
+									<td class="discuss_detail email">anon@anon.com</td>
+									<td class="discuss_detail website">&#160;</td>
+									<td class="discuss_detail ip">127.0.0.1</td>
+									<td class="discuss_detail status">Spam</td>
+									<td class="parent"><a href="#">Welcome to Your Site!</a></td>
+								</tr>
+								<tr class="moderate">
+									<td class="multi-edit"><input type="checkbox" value="000002" name="selected[]"></td>
+									<th scope="row" class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000002</a></th>
+									<td class="date posted created">21&#160;Sep&#160;2011 10:13:58</td>
+									<td class="name">Phil</td>
+									<td class="message">test of an unmoderated comment</td>
+									<td class="discuss_detail email">phil@anon.com</td>
+									<td class="discuss_detail website">&#160;</td>
+									<td class="discuss_detail ip">127.0.0.1</td>
+									<td class="discuss_detail status">Unmoderated</td>
+									<td class="parent"><a href="#">Welcome to Your Site!</a></td>
+								</tr>
+								<tr class="visible">
+									<td class="multi-edit"><input type="checkbox" value="000001" name="selected[]"></td>
+									<th scope="row" class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000001</a></th>
+									<td class="date posted created">22&#160;Jul&#160;2005 14:11:32</td>
+									<td class="name">Donald Swain</td>
+									<td class="message">I enjoy your site very much.</td>
+									<td class="discuss_detail email">donald.​swain@​example.​com</td>
+									<td class="discuss_detail website">example.​com</td>
+									<td class="discuss_detail ip">127.0.0.1</td>
+									<td class="discuss_detail status"><a href="#" title="View">Visible</a></td>
+									<td class="parent"><a href="#">Welcome to Your Site!</a></td>
+								</tr>
+							</tbody>
 
-						<tbody>
-							<tr class="spam">
-								<td class="multi-edit"><input type="checkbox" value="000003" name="selected[]"></td>
-								<th scope="row" class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000003</a></th>
-								<td class="date posted created">21&#160;Sep&#160;2011 10:13:58</td>
-								<td class="name">Anon</td>
-								<td class="message">test of a spam comment</td>
-								<td class="discuss_detail email">anon@anon.com</td>
-								<td class="discuss_detail website">&#160;</td>
-								<td class="discuss_detail ip">127.0.0.1</td>
-								<td class="discuss_detail status">Spam</td>
-								<td class="parent"><a href="#">Welcome to Your Site!</a></td>
-							</tr>
-							<tr class="moderate">
-								<td class="multi-edit"><input type="checkbox" value="000002" name="selected[]"></td>
-								<th scope="row" class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000002</a></th>
-								<td class="date posted created">21&#160;Sep&#160;2011 10:13:58</td>
-								<td class="name">Phil</td>
-								<td class="message">test of an unmoderated comment</td>
-								<td class="discuss_detail email">phil@anon.com</td>
-								<td class="discuss_detail website">&#160;</td>
-								<td class="discuss_detail ip">127.0.0.1</td>
-								<td class="discuss_detail status">Unmoderated</td>
-								<td class="parent"><a href="#">Welcome to Your Site!</a></td>
-							</tr>
-							<tr class="visible">
-								<td class="multi-edit"><input type="checkbox" value="000001" name="selected[]"></td>
-								<th scope="row" class="id"><a class="action-edit" href="secondary/content-discuss_edit.html" title="Edit">000001</a></th>
-								<td class="date posted created">22&#160;Jul&#160;2005 14:11:32</td>
-								<td class="name">Donald Swain</td>
-								<td class="message">I enjoy your site very much.</td>
-								<td class="discuss_detail email">donald.​swain@​example.​com</td>
-								<td class="discuss_detail website">example.​com</td>
-								<td class="discuss_detail ip">127.0.0.1</td>
-								<td class="discuss_detail status"><a href="#" title="View">Visible</a></td>
-								<td class="parent"><a href="#">Welcome to Your Site!</a></td>
-							</tr>
-						</tbody>
+						</table>
 
-					</table>
+					</div><!-- /txp-listtables -->
 
 					<div class="multi-edit">
 						<select name="edit_method">
@@ -190,27 +220,16 @@
 						</select>
 					</div>
 
-				</div>
-			</form>
-
-			<div id="discuss_navigation" class="txp-navigation">
-				<p class="prev-next">1/1</p>
-				<form method="post" action="#" class="pageby">
-					<p>
-						View
-						<select name="qty" onchange="submit(this.form);">
-							<option value="15">15</option>
-							<option value="25">25</option>
-							<option value="50">50</option>
-							<option value="100">100</option>
-						</select>
-						per page
-					</p>
 				</form>
+
+				<div class="txp-navigation" id="discuss_navigation">
+					<p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
+				</div>
+
 			</div>
 
-		</div><!-- /txp-container -->
-	</main><!-- /txp-body -->
+		</div><!-- /txp-layout-grid -->
+	</main>
 
 	<footer role="contentinfo" class="txp-footer">
 		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.6)</p>
