@@ -82,75 +82,105 @@
 	</header><!-- /txp-header -->
 
 	<main role="main" class="txp-body" aria-label="Main content">
-		<h1 class="txp-heading">Visitor logs</h1>
 
-		<div id="log_control" class="txp-control-panel">
-			<form method="get" action="#" class="search-form">
-				<p>
-					<label for="log-search">Search</label>
-					<select id="log-search" name="search_method">
-						<option value="ip">IP</option>
-						<option value="host">Host</option>
-						<option value="page" selected="selected">Page</option>
-						<option value="refer">Referrer</option>
-						<option value="method">Method</option>
-						<option value="status">Status</option>
-					</select>
-					<input type="text" value="" name="crit" size="16">
-					<input type="submit" value="Go" name="search">
+		<div class="txp-layout-grid">
+
+			<div class="txp-layout-cell txp-layout-2-4">
+				<h1 class="txp-heading">Visitor logs</h1>
+			</div>
+
+			<div id="log_control" class="txp-layout-cell txp-layout-2-4">
+				<form role="search" method="get" action="#" class="txp-search">
+					<p>
+						<input type="text" placeholder="Search visitor logs…">
+						<button class="txp-search-button">Search</button>
+						<button>Search criteria</button>
+					</p>
+					<ul>
+						<li>
+							<input type="checkbox" id="search-crit1" name="search-crit1">
+							<label for="search-crit1">search_all</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit2" name="search-crit2">
+							<label for="search-crit2">IP</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit3" name="search-crit3">
+							<label for="search-crit3">Host</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit4" name="search-crit4">
+							<label for="search-crit4">Page</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit5" name="search-crit5">
+							<label for="search-crit5">Referrer</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit6" name="search-crit6">
+							<label for="search-crit6">Method</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit7" name="search-crit7">
+							<label for="search-crit7">Status</label>
+						</li>
+					</ul>
+				</form>
+			</div>
+
+			<div class="txp-layout-cell">
+				<p class="txp-buttons">
+					<button id="detail-toggle">List options</button>
 				</p>
-			</form>
-		</div>
+			</div>
 
-		<p class="detail-toggle">
-			<input type="checkbox" name="cb_toggle_log_detail" id="cb_toggle_log_detail" value="1" class="checkbox" onclick="toggleClassRemember('log_detail');" checked="checked">
-			<label for="cb_toggle_log_detail">Show more detail</label>
-		</p>
+			<div class="txp-layout-cell">
 
-		<div id="log_container" class="txp-container">
+				<form action="#" id="log_form" class="multi_edit_form" method="post" name="longform">
+					<div class="txp-listtables">
 
-			<form action="#" id="log_form" class="multi_edit_form" method="post" name="longform">
-				<div class="txp-listtables">
+						<table class="txp-list">
 
-					<table class="txp-list">
+							<thead>
+								<tr>
+									<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+									<th scope="col" class="desc date time"><a href="#">Time</a></th>
+									<th scope="col" class="log_detail ip"><a href="#">IP</a></th>
+									<th scope="col" class="host"><a href="#">Host</a></th>
+									<th scope="col" class="page"><a href="#">Page</a></th>
+									<th scope="col" class="refer"><a href="#">Referrer</a></th>
+									<th scope="col" class="log_detail method"><a href="#">Method</a></th>
+									<th scope="col" class="log_detail status"><a href="#">Status</a></th>
+								</tr>
+							</thead>
 
-						<thead>
-							<tr>
-								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-								<th scope="col" class="desc date time"><a href="#">Time</a></th>
-								<th scope="col" class="log_detail ip"><a href="#">IP</a></th>
-								<th scope="col" class="host"><a href="#">Host</a></th>
-								<th scope="col" class="page"><a href="#">Page</a></th>
-								<th scope="col" class="refer"><a href="#">Referrer</a></th>
-								<th scope="col" class="log_detail method"><a href="#">Method</a></th>
-								<th scope="col" class="log_detail status"><a href="#">Status</a></th>
-							</tr>
-						</thead>
+							<tbody>
+								<tr>
+									<td class="multi-edit"><input type="checkbox" value="126" name="selected[]"></td>
+									<th scope="row" class="date time">21&#160;Sep&#160;2011 10:13:58</th>
+									<td class="log_detail ip">127.0.0.1</td>
+									<td class="host">www.anon.​dev</td>
+									<td class="page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site</a></td>
+									<td class="refer">&#160;</td>
+									<td class="log_detail method">POST</td>
+									<td class="log_detail status">302</td>
+								</tr>
+								<tr>
+									<td class="multi-edit"><input type="checkbox" value="127" name="selected[]"></td>
+									<th scope="row" class="date time">21&#160;Sep&#160;2011 10:13:58</th>
+									<td class="log_detail ip">127.0.0.1</td>
+									<td class="host">www.anon.​dev</td>
+									<td class="page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site?​commented=0</a></td>
+									<td class="refer">&#160;</td>
+									<td class="log_detail method">GET</td>
+									<td class="log_detail status">200</td>
+								</tr>
+							</tbody>
 
-						<tbody>
-							<tr>
-								<td class="multi-edit"><input type="checkbox" value="126" name="selected[]"></td>
-								<th scope="row" class="date time">21&#160;Sep&#160;2011 10:13:58</th>
-								<td class="log_detail ip">127.0.0.1</td>
-								<td class="host">www.anon.​dev</td>
-								<td class="page"><strong><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site</a></strong></td>
-								<td class="refer">&#160;</td>
-								<td class="log_detail method">POST</td>
-								<td class="log_detail status">302</td>
-							</tr>
-							<tr>
-								<td class="multi-edit"><input type="checkbox" value="127" name="selected[]"></td>
-								<th scope="row" class="date time">21&#160;Sep&#160;2011 10:13:58</th>
-								<td class="log_detail ip">127.0.0.1</td>
-								<td class="host">www.anon.​dev</td>
-								<td class="page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site?​commented=0</a></td>
-								<td class="refer">&#160;</td>
-								<td class="log_detail method">GET</td>
-								<td class="log_detail status">200</td>
-							</tr>
-						</tbody>
+						</table>
 
-					</table>
+					</div><!-- /txp-listtables -->
 
 					<div class="multi-edit">
 						<select name="edit_method">
@@ -159,26 +189,15 @@
 						</select>
 					</div>
 
-				</div>
-			</form>
-
-			<div id="log_navigation" class="txp-navigation">
-				<p class="prev-next">1/1</p>
-				<form method="post" action="#" class="pageby">
-					<p>
-						View
-						<select name="qty" onchange="submit(this.form);">
-							<option value="15">15</option>
-							<option value="25">25</option>
-							<option value="50">50</option>
-							<option value="100">100</option>
-						</select>
-						per page
-					</p>
 				</form>
+
+				<div class="txp-navigation" id="log_navigation">
+					<p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
+				</div>
+
 			</div>
 
-		</div><!-- /txp-container -->
+		</div><!-- /txp-layout-grid -->
 	</main>
 
 	<footer role="contentinfo" class="txp-footer">

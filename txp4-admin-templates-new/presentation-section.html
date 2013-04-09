@@ -82,121 +82,148 @@
 	</header><!-- /txp-header -->
 
 	<main role="main" class="txp-body" aria-label="Main content">
-		<h1 class="txp-heading">Sections&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></h1>
 
-		<p class="txp-buttons">
-			<a href="secondary/presentation-section_edit.html">Add new section</a>
-		</p>
+		<div class="txp-layout-grid">
 
-		<div id="section_control" class="txp-control-panel">
-			<form id="default_section_form" name="default_section_form" method="post" action="#" class="async">
-				<p>
+			<div class="txp-layout-cell txp-layout-2-4">
+				<h1 class="txp-heading">Sections&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></h1>
+			</div>
+
+			<div id="section_control" class="txp-layout-cell txp-layout-2-4">
+				<form role="search" method="get" action="#" class="txp-search">
+					<p>
+						<input type="text" placeholder="Search sections…">
+						<button class="txp-search-button">Search</button>
+						<button>Search criteria</button>
+					</p>
+					<ul>
+						<li>
+							<input type="checkbox" id="search-crit1" name="search-crit1">
+							<label for="search-crit1">search_all</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit2" name="search-crit2">
+							<label for="search-crit2">Name</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit3" name="search-crit3">
+							<label for="search-crit3">Title</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit4" name="search-crit4">
+							<label for="search-crit4">Page</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit5" name="search-crit5">
+							<label for="search-crit5">Style</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit6" name="search-crit6">
+							<label for="search-crit6">On front page</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit7" name="search-crit7">
+							<label for="search-crit7">Syndicate</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit8" name="search-crit8">
+							<label for="search-crit8">Include in site search</label>
+						</li>
+					</ul>
+				</form>
+			</div>
+
+			<div class="txp-layout-cell">
+				<form id="default_section_form" name="default_section_form" method="post" action="#" class="async">
 					<label>Default publishing section</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a>
 					<select id="default_section" name="default_section">
 						<option value="about">About</option>
 						<option value="articles" selected="selected">Articles</option>
 					</select>
+				</form>
+				<p class="txp-buttons">
+					<a href="secondary/presentation-section_edit.html">Add new section</a>
+					<button id="detail-toggle">List options</button>
 				</p>
-			</form>
+			</div>
 
-			<form method="get" action="#" class="search-form">
-				<p>
-					<label for="section-search">Search</label>
-					<select id="section-search" name="search_method">
-						<option value="name" selected="selected">Name</option>
-						<option value="title">Title</option>
-						<option value="page">Page</option>
-						<option value="css">Style</option>
-						<option value="on_frontpage">On front page</option>
-						<option value="in_rss">Syndicate</option>
-						<option value="searchable">Include in site search</option>
-					</select>
-					<input type="text" value="" name="crit" size="16">
-					<input type="submit" value="Go" name="search">
-				</p>
-			</form>
-		</div>
+			<div class="txp-layout-cell">
 
-		<p class="detail-toggle">
-			<input type="checkbox" name="cb_toggle_section_detail" id="cb_toggle_section_detail" value="1" class="checkbox" onclick="toggleClassRemember('section_detail');" checked="checked">
-			<label for="cb_toggle_section_detail">Show more detail</label>
-		</p>
+				<form action="#" id="section_form" class="multi_edit_form" method="post" name="longform">
+					<div class="txp-listtables">
 
-		<div id="section_container" class="txp-container">
+						<table class="txp-list">
 
-			<form action="#" id="section_form" class="multi_edit_form" method="post" name="longform">
-				<div class="txp-listtables">
+							<thead>
+								<tr>
+									<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+									<th scope="col" class="name"><a href="#">Name</a></th>
+									<th scope="col" class="title"><a href="#">Title</a></th>
+									<th scope="col" class="page"><a href="#">Page</a></th>
+									<th scope="col" class="style"><a href="#">Style</a></th>
+									<th scope="col" class="section_detail frontpage"><a href="#">On front page</a></th>
+									<th scope="col" class="section_detail syndicate"><a href="#">Syndicate</a></th>
+									<th scope="col" class="section_detail searchable"><a href="#">Include in site search</a></th>
+									<th scope="col" class="section_detail article_count"><a href="#">article</a></th>
+								</tr>
+							</thead>
 
-					<table class="txp-list">
+							<tbody>
+								<tr id="txp_section_default">
+									<td class="multi-edit"><input type="checkbox" value="default" name="selected[]"></td>
+									<th scope="row" class="name">
+										<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
+										<span class="section_detail"><span aria-hidden="true">[</span><a href="#">View</a><span aria-hidden="true">]</span></span>
+									</th>
+									<td class="title">default</td>
+									<td class="page">
+										<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
+									</td>
+									<td class="style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
+									<td class="section_detail frontpage">-</td>
+									<td class="section_detail syndicate">-</td>
+									<td class="section_detail searchable">-</td>
+									<td class="section_detail article_count">&#160;</td>
+								</tr>
+								<tr id="txp_section_articles">
+									<td class="multi-edit"><input type="checkbox" value="articles" name="selected[]"></td>
+									<th scope="row" class="name">
+										<a href="secondary/presentation-section_edit.html" title="Edit">articles</a>
+										<span class="section_detail"><span aria-hidden="true">[</span><a href="#">View</a><span aria-hidden="true">]</span></span>
+									</th>
+									<td class="title">Articles</td>
+									<td class="page">
+										<a href="secondary/presentation-section_edit.html" title="Edit">archive</a>
+										<a title="article_count: 16" href="#">(16)</a>
+									</td>
+									<td class="style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
+									<td class="section_detail frontpage"><a href="#" id="txp_column_articles_on_frontpage" class="section_toggle_option async">Yes</a></td>
+									<td class="section_detail syndicate"><a href="#" id="txp_column_articles_in_rss" class="section_toggle_option async">Yes</a></td>
+									<td class="section_detail searchable"><a href="#" id="txp_column_articles_searchable" class="section_toggle_option async">Yes</a></td>
+									<td class="section_detail article_count"><a title="article_count: 16" href="content-list.html">16</a></td>
+								</tr>
+								<tr id="txp_section_about" class="selected">
+									<td class="multi-edit"><input type="checkbox" value="about" name="selected[]" checked="checked"></td>
+									<th scope="row" class="name">
+										<a href="secondary/presentation-section_edit.html" title="Edit">about</a>
+										<span class="section_detail"><span aria-hidden="true">[</span><a href="#">View</a><span aria-hidden="true">]</span></span>
+									</th>
+									<td class="name">About</td>
+									<td class="page">
+										<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
+										(0)
+									</td>
+									<td class="style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
+									<td class="section_detail frontpage"><a href="#" id="txp_column_about_on_frontpage" class="section_toggle_option async">No</a></td>
+									<td class="section_detail syndicate"><a href="#" id="txp_column_about_in_rss" class="section_toggle_option async">No</a></td>
+									<td class="section_detail searchable"><a href="#" id="txp_column_about_searchable" class="section_toggle_option async">Yes</a></td>
+									<td class="section_detail article_count">0</td>
+								</tr>
+							</tbody>
 
-						<thead>
-							<tr>
-								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-								<th scope="col" class="name"><a href="#">Name</a></th>
-								<th scope="col" class="title"><a href="#">Title</a></th>
-								<th scope="col" class="page"><a href="#">Page</a></th>
-								<th scope="col" class="style"><a href="#">Style</a></th>
-								<th scope="col" class="section_detail frontpage"><a href="#">On front page</a></th>
-								<th scope="col" class="section_detail syndicate"><a href="#">Syndicate</a></th>
-								<th scope="col" class="section_detail searchable"><a href="#">Include in site search</a></th>
-								<th scope="col" class="section_detail article_count"><a href="#">article</a></th>
-							</tr>
-						</thead>
+						</table>
 
-						<tbody>
-							<tr id="txp_section_default">
-								<td class="multi-edit"><input type="checkbox" value="default" name="selected[]"></td>
-								<th scope="row" class="name">
-									<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
-									<span class="section_detail"><span aria-hidden="true">[</span><a href="#">View</a><span aria-hidden="true">]</span></span>
-								</th>
-								<td class="title">default</td>
-								<td class="page">
-									<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
-								</td>
-								<td class="style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
-								<td class="section_detail frontpage">-</td>
-								<td class="section_detail syndicate">-</td>
-								<td class="section_detail searchable">-</td>
-								<td class="section_detail article_count">&#160;</td>
-							</tr>
-							<tr id="txp_section_articles">
-								<td class="multi-edit"><input type="checkbox" value="articles" name="selected[]"></td>
-								<th scope="row" class="name">
-									<a href="secondary/presentation-section_edit.html" title="Edit">articles</a>
-									<span class="section_detail"><span aria-hidden="true">[</span><a href="#">View</a><span aria-hidden="true">]</span></span>
-								</th>
-								<td class="title">Articles</td>
-								<td class="page">
-									<a href="secondary/presentation-section_edit.html" title="Edit">archive</a>
-									<a title="article_count: 16" href="#">(16)</a>
-								</td>
-								<td class="style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
-								<td class="section_detail frontpage"><a href="#" id="txp_column_articles_on_frontpage" class="section_toggle_option async">Yes</a></td>
-								<td class="section_detail syndicate"><a href="#" id="txp_column_articles_in_rss" class="section_toggle_option async">Yes</a></td>
-								<td class="section_detail searchable"><a href="#" id="txp_column_articles_searchable" class="section_toggle_option async">Yes</a></td>
-								<td class="section_detail article_count"><a title="article_count: 16" href="content-list.html">16</a></td>
-							</tr>
-							<tr id="txp_section_about" class="selected">
-								<td class="multi-edit"><input type="checkbox" value="about" name="selected[]" checked="checked"></td>
-								<th scope="row" class="name">
-									<a href="secondary/presentation-section_edit.html" title="Edit">about</a>
-									<span class="section_detail"><span aria-hidden="true">[</span><a href="#">View</a><span aria-hidden="true">]</span></span>
-								</th>
-								<td class="name">About</td>
-								<td class="page">
-									<a href="secondary/presentation-section_edit.html" title="Edit">default</a>
-									(0)
-								</td>
-								<td class="style"><a href="secondary/presentation-section_edit.html" title="Edit">default</a></td>
-								<td class="section_detail frontpage"><a href="#" id="txp_column_about_on_frontpage" class="section_toggle_option async">No</a></td>
-								<td class="section_detail syndicate"><a href="#" id="txp_column_about_in_rss" class="section_toggle_option async">No</a></td>
-								<td class="section_detail searchable"><a href="#" id="txp_column_about_searchable" class="section_toggle_option async">Yes</a></td>
-								<td class="section_detail article_count">0</td>
-							</tr>
-						</tbody>
-
-					</table>
+					</div><!-- /txp-listtables -->
 
 					<div class="multi-edit">
 						<select name="edit_method">
@@ -215,28 +242,16 @@
 						<input type="submit" value="Go">
 					</div>
 
-				</div>
-			</form>
-
-			<div id="section_navigation" class="txp-navigation">
-				<p class="prev-next">1/1</p>
-
-				<form method="post" action="#" class="pageby">
-					<p>
-						View
-						<select name="qty" onchange="submit(this.form);">
-							<option value="15">15</option>
-							<option value="25">25</option>
-							<option value="50">50</option>
-							<option value="100">100</option>
-						</select>
-						per page
-					</p>
 				</form>
+
+				<div class="txp-navigation" id="section_navigation">
+					<p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
+				</div>
+
 			</div>
 
-		</div><!-- /txp-container -->
-	</main><!-- /txp-body -->
+		</div><!-- /txp-layout-grid -->
+	</main>
 
 	<footer role="contentinfo" class="txp-footer">
 		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.6)</p>
