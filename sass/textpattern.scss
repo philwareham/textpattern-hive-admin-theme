@@ -48,7 +48,7 @@ html {
    ========================================================================== */
 
 .clearfix {
-	@include clearfix;
+	@include pie-clearfix;
 }
 
 .clear {
@@ -623,7 +623,7 @@ div.code {
 	max-width: 57em;
 
 	& p {
-		@include clearfix;
+		@extend .clearfix;
 	}
 }
 

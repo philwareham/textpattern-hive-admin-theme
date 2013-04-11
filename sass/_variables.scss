@@ -5,9 +5,14 @@
 
 
 /* ==========================================================================
-   Hive theme for Textpattern CMS (v4.6alpha2)
+   Hive theme for Textpattern CMS (v4.6alpha3)
    ========================================================================== */
 
+
+// disable Compass support of IE6 and IE7
+
+$legacy-support-for-ie6:      false;
+$legacy-support-for-ie7:      false;
 
 // logo (logo-large for screen width > 480px, logo-small for screen width < 481px)
 

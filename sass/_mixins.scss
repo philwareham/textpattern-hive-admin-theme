@@ -1,17 +1,36 @@
 //
-// note: this file is for use with Sass- http://sass-lang.com,
+// note: this file is for use with Sass and Compass - http://sass-lang.com, http://compass-style.org
 // don't use it as your live site stylesheet!
 //
 
 
-// clearfix - http://nicolasgallagher.com/micro-clearfix-hack/
+// import all Compass core mixins
 
-@mixin clearfix {
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-		border-collapse: collapse;
+@import "compass";
+
+// import additional Compass plugins
+
+//@import "recipes";
+@import "singularitygs";
+
+
+
+// for developent only: display CSS media query information
+// http://johanbrook.com/design/css/debugging-css-media-queries/
+// example: @include debugmessage("Mobile landscape media query fired");
+
+@mixin debugmessage($message, $color: rgba(255, 255, 0, 0.75)) {
+	&::before {
+		content: $message;
+		font-weight: bold;
+		display: block;
+		text-align: center;
+		background: #{$color};
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 0;
+		z-index: 9999;
 	}
 }
 

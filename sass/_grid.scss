@@ -1,74 +1,143 @@
 //
-// note: this file is for use with Sass- http://sass-lang.com,
+// note: this file is for use with Sass and Compass - http://sass-lang.com, http://compass-style.org
 // don't use it as your live site stylesheet!
 //
 
 
-/* Layout grids
+/* ==========================================================================
+   Singularity Grid System
    ========================================================================== */
 
-/* layout grid container - must only contain `.txp-layout-grid` or `.txp-layout-cell` components as children */
-.txp-layout-grid {
-	display: block;
-	padding: 0;
-	margin: 0 -1em;
-	/* ensure consistent default alignment */
-	text-align: left;
-	/* remove inter-unit whitespace for all non-monospace font-families */
-	letter-spacing: -.34em;
-	/* protect against WebKit bug with optimizelegibility */
-	text-rendering: optimizespeed;
+$grids: add-grid(12);
+$gutters: add-gutter(.5);
+$mobile-first: false;
+
+.txp-layout-grid-1col,
+.txp-layout-grid-2col-cell-1,
+.txp-layout-grid-2col-cell-2,
+.txp-layout-grid-3col-cell-1,
+.txp-layout-grid-3col-cell-2,
+.txp-layout-grid-3col-cell-3,
+.txp-layout-grid-3col-cell-1-2,
+.txp-layout-grid-3col-cell-2-3,
+.txp-layout-grid-4col-cell-1,
+.txp-layout-grid-4col-cell-1alt,
+.txp-layout-grid-4col-cell-2,
+.txp-layout-grid-4col-cell-3,
+.txp-layout-grid-4col-cell-4,
+.txp-layout-grid-4col-cell-4alt,
+.txp-layout-grid-4col-cell-1-2,
+.txp-layout-grid-4col-cell-2-3,
+.txp-layout-grid-4col-cell-3-4,
+.txp-layout-grid-4col-cell-1-2-3,
+.txp-layout-grid-4col-cell-2-3-4 {
+	@include grid-span(12, 1, $options: 'both');
 }
 
-/* Opera hack */
-.opera:-o-prefocus,
-.txp-layout-grid {
-	word-spacing: -.43em;
+@include breakpoint($breakpoint-1) {
+
+	.txp-layout-grid-4col-cell-1 {
+		@include grid-span(6, 1, $options: 'both');
+	}
+
+	.txp-layout-grid-4col-cell-2 {
+		@include grid-span(6, 7);
+	}
+
+	.txp-layout-grid-4col-cell-3 {
+		@include grid-span(6, 1, $options: 'both');
+	}
+
+	.txp-layout-grid-4col-cell-4 {
+		@include grid-span(6, 7);
+	}
+
 }
 
-.txp-layout-grid > div {
-	@include box-sizing;
-	padding: 0 1em;
-	/* reset text defaults */
-	letter-spacing: normal;
-	word-spacing: normal;
-	text-rendering: auto;
+@include breakpoint($breakpoint-2) {
+
+	.txp-layout-grid-2col-cell-1 {
+		@include grid-span(6, 1, $options: 'both');
+	}
+
+	.txp-layout-grid-2col-cell-2 {
+		@include grid-span(6, 7);
+	}
+
+	.txp-layout-grid-3col-cell-1 {
+		@include grid-span(4, 1, $options: 'both');
+	}
+
+	.txp-layout-grid-3col-cell-2 {
+		@include grid-span(4, 5);
+	}
+	
+	.txp-layout-grid-3col-cell-3 {
+		@include grid-span(4, 9);
+	}
+
+	.txp-layout-grid-3col-cell-1-2 {
+		@include grid-span(8, 1, $options: 'both');
+	}
+	
+	.txp-layout-grid-3col-cell-2-3 {
+		@include grid-span(8, 5);
+	}
+
 }
 
-/* layout grid cells - no explicit width by default, apply `.txp-layout-x-y` classes below */
-.txp-layout-cell {
-	display: inline-block;
-	margin: 0;
-	width: 100%;
-	/* controls vertical positioning of units */
-	vertical-align: top;
-	/* keeps unit content correctly aligned */
-	text-align: left;
-}
+@include breakpoint($breakpoint-3) {
 
-/* reset vertical margin on nested layout grids */
-.txp-layout-grid .txp-layout-grid .grid__cell {
-    margin-top: -1em;
-}
+	.txp-layout-grid-4col-cell-1 {
+		@include grid-span(3, 1, $options: 'both');
+	}
 
-/* proportional layout cells */
-.txp-layout-1-4 {
-	width: 25%;
-}
-.txp-layout-2-4 {
-	width: 50%;
-}
-.txp-layout-3-4 {
-	width: 75%;
+	.txp-layout-grid-4col-cell-1alt {
+		@include grid-span(3, 1, $options: 'both');
+	}
+
+	.txp-layout-grid-4col-cell-2 {
+		@include grid-span(3, 4);
+	}
+
+	.txp-layout-grid-4col-cell-3 {
+		@include grid-span(3, 7);
+	}
+
+	.txp-layout-grid-4col-cell-4 {
+		@include grid-span(3, 10);
+	}
+
+	.txp-layout-grid-4col-cell-4alt {
+		@include grid-span(3, 10);
+	}
+
+	.txp-layout-grid-4col-cell-1-2 {
+		@include grid-span(6, 1, $options: 'both');
+	}
+
+	.txp-layout-grid-4col-cell-2-3 {
+		@include grid-span(6, 4);
+	}
+	
+	.txp-layout-grid-4col-cell-3-4 {
+		@include grid-span(6, 7);
+	}
+	
+	.txp-layout-grid-4col-cell-1-2-3 {
+		@include grid-span(9, 1, $options: 'both');
+	}
+	
+	.txp-layout-grid-4col-cell-2-3-4 {
+		@include grid-span(9, 4);
+	}
+
 }
 
 /* text columns (fixed proportion cell) */
 .txp-layout-textbox {
 	margin: 0 auto;
 	max-width: $text-column;
-}
-.txp-layout-grid > div.txp-layout-textbox {
-	padding: 0;
 }
 
 /* Deprecated @ 4.6 - use .txp-layout-textbox instead */
