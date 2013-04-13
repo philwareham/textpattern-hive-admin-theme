@@ -83,21 +83,6 @@
 	text-shadow: -1px -1px 0 rgba(0, 0, 0, .25);
 }
 
-// import font face
-
-@mixin font-face($fontfamily, $fontfile, $fontweight, $fontstyle) {
-	$prefix: "../fonts/" + $fontfile;
-	@font-face {
-	font-family: $fontfamily;
-	src: url($prefix + ".eot?#iefix")  format("embedded-opentype"),
-		 url($prefix + ".woff") format("woff"),
-		 url($prefix + ".ttf")  format("truetype"),
-		 url($prefix + ".svg#" + $fontfile)  format("svg");
-	font-weight: $fontweight;
-	font-style: $fontstyle;
-	}
-}
-
 // standard gradients
 
 @mixin gradient($color-gradient-from, $color-gradient-to) {
