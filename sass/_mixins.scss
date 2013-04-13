@@ -63,10 +63,10 @@
 // text shadows
 
 @mixin text-shadow-light {
-	text-shadow: 1px 1px 0 rgba(255, 255, 255, .4);
+    @include single-text-shadow(rgba(#fff, .4), 1px, 1px, 0);
 }
 @mixin text-shadow-dark {
-	text-shadow: -1px -1px 0 rgba(0, 0, 0, .25);
+    @include single-text-shadow(rgba(#000, .1), -1px, -1px, 0);
 }
 
 // standard gradients

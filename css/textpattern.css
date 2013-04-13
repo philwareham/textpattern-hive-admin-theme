@@ -725,7 +725,7 @@ h3.txp-summary,
   margin: 0;
   padding: 0 2em 0 1em;
   height: 2em;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
   -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
   border-top: 1px solid #dddddd;
@@ -800,7 +800,7 @@ h3.txp-summary.expanded a:after {
   display: inline-block;
   margin: 0 1em 1em 0;
   padding: 1em 1em 1em 4em;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
   -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
   border-top: 1px solid #dddddd;
@@ -1108,7 +1108,7 @@ input[type="button"],
   line-height: 1.4;
   vertical-align: baseline;
   text-decoration: none;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
   cursor: pointer;
   margin: 0;
   border: 1px solid #c4c4c4;
@@ -1235,7 +1235,7 @@ button.destroy {
   border: 1px solid #db463b;
   border-bottom-color: #9d261d;
   padding: 0 .25em;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25);
+  text-shadow: rgba(0, 0, 0, 0.1) -1px -1px 0;
   color: #f9e0df;
   border-top: 1px solid #9d261d;
   border-bottom: 1px solid #691913;
@@ -1499,7 +1499,7 @@ td {
   font-weight: normal;
 }
 .txp-list thead th {
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
   background-color: #eeeeee;
   /* Safari5.1+, Chrome10+ */
   background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
@@ -1706,7 +1706,7 @@ body {
   line-height: 3em;
   text-decoration: none;
   color: black;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
 }
 .dropdown:hover a.dropdown-toggle {
   background: #fcdc7f;
