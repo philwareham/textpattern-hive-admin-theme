@@ -19,7 +19,7 @@
 // example: @include debugmessage("Mobile landscape media query fired");
 
 @mixin debugmessage($message, $color: rgba(255, 255, 0, 0.75)) {
-	&::before {
+	&:before {
 		content: $message;
 		font-weight: bold;
 		display: block;

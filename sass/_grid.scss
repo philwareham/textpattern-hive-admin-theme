@@ -12,6 +12,8 @@ $grids: add-grid(12);
 $gutters: add-gutter(.5);
 $mobile-first: false;
 
+//@include debugmessage("Full size media query fired");
+
 .txp-layout-grid-1col,
 .txp-layout-grid-2col-cell-1,
 .txp-layout-grid-2col-cell-2,
@@ -36,6 +38,8 @@ $mobile-first: false;
 
 @include breakpoint(max-width $breakpoint-1) {
 
+	//@include debugmessage("Medium size media query fired");
+
 	.txp-layout-grid-4col-cell-1 {
 		@include grid-span(6, 1, $options: 'both');
 	}
@@ -55,6 +59,8 @@ $mobile-first: false;
 }
 
 @include breakpoint(max-width $breakpoint-2) {
+
+	//@include debugmessage("Small size media query fired");
 
 	.txp-layout-grid-2col-cell-1 {
 		@include grid-span(6, 1, $options: 'both');
