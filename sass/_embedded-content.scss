@@ -38,7 +38,7 @@ svg:not(:root) {
 
 .content-image {
 	border: solid 1px $color-border;
-	@include border-radius($border-radius);
+	@include border-radius;
 	padding: 4px;
 	background: #fff;
 	@include box-shadow;

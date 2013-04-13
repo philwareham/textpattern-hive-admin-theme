@@ -62,13 +62,6 @@
 	}
 }
 
-// rounded corners all
-
-@mixin border-radius($border-radius) {
-	-moz-border-radius: $border-radius; // Firefox3.6, Camino2.1
-	     border-radius: $border-radius;
-}
-
 // rounded corners top only
 
 @mixin border-top-radius($border-radius) {

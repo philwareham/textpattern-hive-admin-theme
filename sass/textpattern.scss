@@ -252,7 +252,7 @@ span.spinner {
 .txp-edit,
 .txp-login {
 	margin: 0 auto 1em;
-	@include border-radius($border-radius);
+	@include border-radius;
 	padding: 1em 1em 1px 1em;
 	background: $color-background-box;
 }
@@ -340,7 +340,7 @@ span.spinner {
 	margin-left: -1em;
 	margin-bottom: 0;
 	border-top: 1px solid $color-background;
-	@include border-bottom-radius($border-radius);
+	@include border-bottom-radius($default-border-radius);
 	padding: 1em;
 	background: darken($color-background-box, 3%);
 
@@ -443,7 +443,7 @@ body#page-setup {
 	a {
 		@include hide-text;
 		display: block;
-		@include border-radius($border-radius);
+		@include border-radius;
 		width: 1.5em; // 24px / 16px
 		height: 1.5em; // 24px / 16px
 		background: $color-gradient-from no-repeat 50% 50%;

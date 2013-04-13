@@ -75,7 +75,7 @@
 		&.warning,
 		&.error {
 			display: inline-block;
-			@include border-radius($border-radius $border-radius 0 0);
+			@include border-radius($default-border-radius $default-border-radius 0 0);
 			margin: 0 auto;
 			padding: .53846em 2.84615em .53846em 1em;
 			max-width: ($text-column - 3.84615em);

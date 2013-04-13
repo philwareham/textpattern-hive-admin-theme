@@ -32,7 +32,7 @@ input[type="button"],
 	margin: 0;
 	border: 1px solid darken($color-gradient-to, 10%);
 	border-bottom-color: darken($color-gradient-to, 20%);
-	@include border-radius($border-radius);
+	@include border-radius;
 	padding: .25em .75em;
 	display: inline-block;
 	color: $color-text;
@@ -112,7 +112,7 @@ button.destroy {
 	font-size: 1em;
 	line-height: $baseline; // 18px / 13px
 	border: 1px solid;
-	@include border-radius($border-radius);
+	@include border-radius;
 	padding: .25em 1em;
 	display: inline-block;
 }
@@ -138,13 +138,13 @@ ul.nav-tertiary {
 	> :first-child,
 	> :first-child > a,
 	> :first-child > span {
-		@include border-left-radius($border-radius);
+		@include border-left-radius($default-border-radius);
 	}
 
 	> :last-child,
 	> :last-child > a,
 	> :last-child > span {
-		@include border-right-radius($border-radius);
+		@include border-right-radius($default-border-radius);
 	}
 }
 

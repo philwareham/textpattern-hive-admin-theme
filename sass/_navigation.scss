@@ -94,16 +94,16 @@
 	border: solid 1px #d4d4d4;
 	border-top: 0;
 	background: $color-highlight-box;
-	@include border-radius(0 $border-radius $border-radius $border-radius);
+	@include border-radius(0 $default-border-radius $default-border-radius $default-border-radius);
 	@include box-shadow;
 
 	li {
 		&:first-child {
-			@include border-radius(0 $border-radius 0 0);
+			@include border-radius(0 $default-border-radius 0 0);
 		}
 
 		&:last-child {
-			@include border-radius(0 0 $border-radius $border-radius);
+			@include border-radius(0 0 $default-border-radius $default-border-radius);
 		}
 
 		&:hover {
