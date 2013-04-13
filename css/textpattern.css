@@ -1600,6 +1600,8 @@ body {
   max-width: 25%;
   white-space: nowrap;
   overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   background: no-repeat 0 46%;
 }
