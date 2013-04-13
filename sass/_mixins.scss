@@ -139,15 +139,6 @@
 	        box-sizing: $box-sizing;
 }
 
-// background clip
-
-@mixin background-clip {
-	-webkit-background-clip: padding;
-	 -khtml-background-clip: padding-box;
-	   -moz-background-clip: padding;
-	        background-clip: padding-box;
-}
-
 // alternative to the text-indent:-9999px method
 
 @mixin hide-text {

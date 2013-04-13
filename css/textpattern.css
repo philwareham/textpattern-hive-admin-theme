@@ -958,7 +958,6 @@ select,
 textarea {
   -webkit-appearance: none;
   -webkit-background-clip: padding;
-  -khtml-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
   -webkit-box-sizing: border-box;
@@ -1097,7 +1096,6 @@ input[type="button"],
 .txp-buttons a {
   -webkit-appearance: none;
   -webkit-background-clip: padding;
-  -khtml-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
   -webkit-box-sizing: border-box;
@@ -1287,7 +1285,6 @@ button.destroy:active {
 
 .navlink-disabled {
   -webkit-background-clip: padding;
-  -khtml-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
   -webkit-box-sizing: border-box;
