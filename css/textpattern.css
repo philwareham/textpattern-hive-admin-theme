@@ -2250,17 +2250,6 @@ div.code {
 
   /* Layout grid < 768px
      ========================================================================== */
-  /* proportional units */
-  .txp-layout-1-4,
-  .txp-layout-2-4,
-  .txp-layout-3-4 {
-    width: 100%;
-  }
-
-  .txp-layout-grid > div.txp-layout-textbox {
-    padding: 0 1em;
-  }
-
   .txp-control-panel {
     margin-top: 0;
     text-align: left;
@@ -2315,25 +2304,6 @@ div.code {
   #textile_group,
   #recent_group {
     display: none;
-  }
-
-  /* Admin -> Basic/advanced preferences pages < 768px
-     ========================================================================== */
-  #page-prefs .basic th,
-  #page-prefs .basic td,
-  #page-prefs .basic tr,
-  #page-prefs .advanced th,
-  #page-prefs .advanced td,
-  #page-prefs .advanced tr {
-    display: block;
-  }
-  #page-prefs .basic tr,
-  #page-prefs .advanced tr {
-    border-top: 0;
-  }
-  #page-prefs .basic .pref-value,
-  #page-prefs .advanced .pref-value {
-    width: 100%;
   }
 }
 /* ==========================================================================

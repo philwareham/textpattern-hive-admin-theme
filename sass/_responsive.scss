@@ -27,17 +27,6 @@ body#page-setup {
 /* Layout grid < 768px
    ========================================================================== */
 
-/* proportional units */
-.txp-layout-1-4,
-.txp-layout-2-4,
-.txp-layout-3-4 {
-	width: 100%;
-}
-
-.txp-layout-grid > div.txp-layout-textbox {
-	padding: 0 1em;
-}
-
 .txp-control-panel {
 	margin-top: 0;
 	text-align: left;
@@ -91,27 +80,6 @@ body#page-setup {
 #textile_group,
 #recent_group {
 	display: none;
-}
-
-
-/* Admin -> Basic/advanced preferences pages < 768px
-   ========================================================================== */
-
-#page-prefs .basic,
-#page-prefs .advanced {
-	th,
-	td,
-	tr {
-		display: block;
-	}
-
-	tr {
-		border-top: 0;
-	}
-
-	.pref-value {
-		width: 100%;
-	}
 }
 
 }
