@@ -89,19 +89,19 @@ button.destroy {
 	padding: 0 .25em; // 4px / 13px
 	@include text-shadow-dark;
 	color: lighten($error-text, 56%);
-	@include gradient-linear-bordered(lighten($error-text, 20%), $error-text);
+	@include gradient-linear-bar(lighten($error-text, 20%), $error-text);
 
 	&:hover {
 		border: 1px solid lighten($error-text, 8%);
 		border-bottom-color: darken($error-text, 10%);
 		color: $color-text-inverse;
-		@include gradient-linear-bordered(lighten($error-text, 28%), lighten($error-text, 10%));
+		@include gradient-linear-bar(lighten($error-text, 28%), lighten($error-text, 10%));
 	}
 
 	&:active {
 		border: 1px solid lighten($error-text, 8%);
 		border-bottom-color: darken($error-text, 10%);
-		@include gradient-linear-bordered(lighten($error-text, 16%), darken($error-text, 4%));
+		@include gradient-linear-bar(lighten($error-text, 16%), darken($error-text, 4%));
 	}
 }
 

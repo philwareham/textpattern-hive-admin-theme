@@ -25,7 +25,7 @@ h3.txp-summary,
 	height: 2em; // 26px / 13px
 	@include text-shadow-light;
 	@include box-shadow($inset-highlighting);
-	@include gradient-linear-bordered($color-gradient-from, $color-gradient-to)
+	@include gradient-linear-bar($color-gradient-from, $color-gradient-to)
 }
 
 h3.txp-summary a {

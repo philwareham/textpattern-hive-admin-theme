@@ -68,9 +68,9 @@
     @include background-image(radial-gradient($color-gradient-from, $color-gradient-to));
 }
 
-// extra styling to gradients for buttons and alerts
+// linear gradients with borders top and bottom
 
-@mixin gradient-linear-bordered($color-gradient-from, $color-gradient-to) {
+@mixin gradient-linear-bar($color-gradient-from, $color-gradient-to) {
 	border-top: 1px solid $color-gradient-to;
 	border-bottom: 1px solid darken($color-gradient-to, 12%);
 	@include gradient-linear($color-gradient-from, $color-gradient-to);
