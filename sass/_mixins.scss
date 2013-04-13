@@ -48,19 +48,6 @@
 	}
 }
 
-@mixin svg-graphic-spite($imgfilename, $imgtype) {
-	.no-svg & {
-		background-image: url('../img/' + $imgfilename + '.' + $imgtype);
-	}
-	.svg & {
-		background-image: url('../img/' + $imgfilename + '.svg');
-		-webkit-background-size: cover;
-		   -moz-background-size: cover;
-		     -o-background-size: cover;
-		        background-size: cover;
-	}
-}
-
 // drop shadows
 
 @mixin box-shadow($shadow: 0 0 .5em rgba(#000, .2)) {
