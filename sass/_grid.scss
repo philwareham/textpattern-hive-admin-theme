@@ -156,7 +156,7 @@ $mobile-first: false;
 }
 
 .txp-grid-cell {
-	@include box-sizing;
+	@include box-sizing(border-box);
 	display: inline-block;
 	text-align: left;
 	max-width: 22.61538em; // 294px / 13px

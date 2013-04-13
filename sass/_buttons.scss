@@ -18,7 +18,7 @@ input[type="button"],
 .txp-buttons a {
 	-webkit-appearance: none; // remove iOS Safari default styling
 	@include background-clip;
-	@include box-sizing;
+	@include box-sizing(border-box);
 	width: auto;
 	//height: 2em; // 26px / 13px
 	overflow: visible;
@@ -107,7 +107,7 @@ button.destroy {
 
 .navlink-disabled {
 	@include background-clip;
-	@include box-sizing;
+	@include box-sizing(border-box);
 	//height: 2em; // 26px / 13px
 	font-size: 1em;
 	line-height: $baseline; // 18px / 13px

@@ -524,7 +524,7 @@ body#page-setup {
 	margin-bottom: 1em;
 
 	img {
-		@include box-sizing;
+		@include box-sizing(border-box);
 		max-width: 100%;
 		height: auto;
 	}
@@ -614,7 +614,7 @@ div.code {
 	padding: .15384em .38461em;
 	height: 21em;
 	overflow: auto;
-	@include box-sizing;
+	@include box-sizing(border-box);
 }
 
 /* Deprecated @ 4.6 - use `.txp-layout-textbox` instead */

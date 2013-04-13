@@ -131,14 +131,6 @@
 	        transition: $transition;
 }
 
-// box sizing
-
-@mixin box-sizing($box-sizing: border-box) {
-	-webkit-box-sizing: $box-sizing;
-	   -moz-box-sizing: $box-sizing;
-	        box-sizing: $box-sizing;
-}
-
 // alternative to the text-indent:-9999px method
 
 @mixin hide-text {
