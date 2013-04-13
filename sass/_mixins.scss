@@ -130,11 +130,3 @@
 	     -o-transition: $transition;
 	        transition: $transition;
 }
-
-// alternative to the text-indent:-9999px method
-
-@mixin hide-text {
-	text-indent: 110%;
-	white-space: nowrap;
-	overflow: hidden;
-}
