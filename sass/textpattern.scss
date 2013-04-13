@@ -88,7 +88,7 @@ body {
 	padding: 0 1.69%;
 	height: 3em;
 	@include box-shadow(rgba(#000, .15) 0px .2em .25em);
-	@include gradient-bar($color-gradient2-from, $color-gradient2-to);
+	@include gradient-linear-bordered($color-gradient2-from, $color-gradient2-to);
 
 	h1 {
 		float: left;
@@ -398,7 +398,7 @@ body#page-setup {
 		z-index: 1000;
 		padding: .5em 1em;
 		@include box-shadow(rgba(#000, .15) 0px .2em .25em);
-		@include gradient-bar($color-gradient2-from, $color-gradient2-to);
+		@include gradient-linear-bordered($color-gradient2-from, $color-gradient2-to);
 	}
 
 	th,

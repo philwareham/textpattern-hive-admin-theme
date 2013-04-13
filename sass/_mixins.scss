@@ -59,26 +59,21 @@
 
 // standard gradients
 
-@mixin gradient($color-gradient-from, $color-gradient-to) {
-	background: {
-		color: $color-gradient-from;
-		/* Safari5.1+, Chrome10+ */
-		image: -webkit-linear-gradient($color-gradient-from, $color-gradient-to);
-		/* Firefox3.6 */
-		image:    -moz-linear-gradient($color-gradient-from, $color-gradient-to);
-		/* Opera11.10+ */
-		image:      -o-linear-gradient($color-gradient-from, $color-gradient-to);
-		/* CSS3 Compliant */
-		image:         linear-gradient($color-gradient-from, $color-gradient-to);
-	}
+@mixin gradient-linear($color-gradient-from, $color-gradient-to) {
+    background-color: $color-gradient-from;
+    @include background-image(linear-gradient($color-gradient-from, $color-gradient-to));
+}
+@mixin gradient-radial($color-gradient-from, $color-gradient-to) {
+    background-color: $color-gradient-from;
+    @include background-image(radial-gradient($color-gradient-from, $color-gradient-to));
 }
 
 // extra styling to gradients for buttons and alerts
 
-@mixin gradient-bar($color-gradient-from, $color-gradient-to) {
+@mixin gradient-linear-bordered($color-gradient-from, $color-gradient-to) {
 	border-top: 1px solid $color-gradient-to;
 	border-bottom: 1px solid darken($color-gradient-to, 12%);
-	@include gradient($color-gradient-from, $color-gradient-to);
+	@include gradient-linear($color-gradient-from, $color-gradient-to);
 }
 
 // css transitions
