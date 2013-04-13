@@ -5,14 +5,14 @@
 
 
 /* ==========================================================================
-   Additional layout for devices < 769px
+   Additional layout for devices < 768px
    ========================================================================== */
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: $breakpoint1) {
 
 
-/* Layout < 769px
+/* Layout < 768px
    ========================================================================== */
 
 body {
@@ -24,7 +24,7 @@ body#page-setup {
 }
 
 
-/* Layout grid < 769px
+/* Layout grid < 768px
    ========================================================================== */
 
 /* proportional units */
@@ -44,7 +44,7 @@ body#page-setup {
 }
 
 
-/* Header < 769px
+/* Header < 768px
    ========================================================================== */
 
 .txp-header {
@@ -62,7 +62,7 @@ body#page-setup {
 }
 
 
-/* Navigation < 769px
+/* Navigation < 768px
    ========================================================================== */
 
 /* show `<select>` version of navigation on small screen widths (via TinyNav) */
@@ -75,7 +75,7 @@ body#page-setup {
 	display: none;
 }
 
-/* Typography < 769px
+/* Typography < 768px
    ========================================================================== */
 
 .text-section {
@@ -84,7 +84,7 @@ body#page-setup {
 }
 
 
-/* Content -> Write page < 769px
+/* Content -> Write page < 768px
    ========================================================================== */
 
 /* turn off features to optimise small screen size */
@@ -94,7 +94,7 @@ body#page-setup {
 }
 
 
-/* Admin -> Basic/advanced preferences pages < 769px
+/* Admin -> Basic/advanced preferences pages < 768px
    ========================================================================== */
 
 #page-prefs .basic,
@@ -119,11 +119,11 @@ body#page-setup {
 
 
 /* ==========================================================================
-   Additional layout for devices < 546px
+   Additional layout for devices < 547px
    ========================================================================== */
 
 
-@media only screen and (max-width: 545px) {
+@media only screen and (max-width: $breakpoint2) {
 
 body {
 	padding-top: 7.23076em; // 94px / 13px
