@@ -1331,8 +1331,10 @@ ul.nav-tertiary li {
 .prev-next > :first-child > a,
 .prev-next > :first-child > span {
   -moz-border-radius-topleft: 0.5em;
+  -webkit-border-top-left-radius: 0.5em;
   border-top-left-radius: 0.5em;
   -moz-border-radius-bottomleft: 0.5em;
+  -webkit-border-bottom-left-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
 }
 .nav-tertiary > :last-child,
@@ -1342,8 +1344,10 @@ ul.nav-tertiary li {
 .prev-next > :last-child > a,
 .prev-next > :last-child > span {
   -moz-border-radius-topright: 0.5em;
+  -webkit-border-top-right-radius: 0.5em;
   border-top-right-radius: 0.5em;
   -moz-border-radius-bottomright: 0.5em;
+  -webkit-border-bottom-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
 }
 
@@ -1982,10 +1986,12 @@ span.spinner {
   margin-left: -1em;
   margin-bottom: 0;
   border-top: 1px solid white;
-  -moz-border-radius-bottomright: 0.5em;
-  border-bottom-right-radius: 0.5em;
   -moz-border-radius-bottomleft: 0.5em;
+  -webkit-border-bottom-left-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
+  -moz-border-radius-bottomright: 0.5em;
+  -webkit-border-bottom-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
   padding: 1em;
   background: #efefef;
 }

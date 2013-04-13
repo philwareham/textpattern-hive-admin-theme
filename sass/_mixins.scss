@@ -62,62 +62,6 @@
 	}
 }
 
-// rounded corners top only
-
-@mixin border-top-radius($border-radius) {
-	@include border-top-left-radius($border-radius);
-	@include border-top-right-radius($border-radius);
-}
-
-// rounded corners right only
-
-@mixin border-right-radius($border-radius) {
-	@include border-top-right-radius($border-radius);
-	@include border-bottom-right-radius($border-radius);
-}
-
-// rounded corners bottom only
-
-@mixin border-bottom-radius($border-radius) {
-	@include border-bottom-right-radius($border-radius);
-	@include border-bottom-left-radius($border-radius);
-}
-
-// rounded corners left only
-
-@mixin border-left-radius($border-radius) {
-	@include border-top-left-radius($border-radius);
-	@include border-bottom-left-radius($border-radius);
-}
-
-// rounded corners top left only
-
-@mixin border-top-left-radius($border-radius) {
-	-moz-border-radius-topleft: $border-radius;
-	border-top-left-radius: $border-radius;
-}
-
-// rounded corners top right only
-
-@mixin border-top-right-radius($border-radius) {
-	-moz-border-radius-topright: $border-radius;
-	border-top-right-radius: $border-radius;
-}
-
-// rounded corners bottom right only
-
-@mixin border-bottom-right-radius($border-radius) {
-	-moz-border-radius-bottomright: $border-radius;
-	border-bottom-right-radius: $border-radius;
-}
-
-// rounded corners bottom left only
-
-@mixin border-bottom-left-radius($border-radius) {
-	-moz-border-radius-bottomleft: $border-radius;
-	border-bottom-left-radius: $border-radius;
-}
-
 // drop shadows
 
 @mixin box-shadow($shadow: 0 0 .5em rgba(#000, .2)) {

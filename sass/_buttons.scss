@@ -138,13 +138,13 @@ ul.nav-tertiary {
 	> :first-child,
 	> :first-child > a,
 	> :first-child > span {
-		@include border-left-radius($default-border-radius);
+		@include border-left-radius;
 	}
 
 	> :last-child,
 	> :last-child > a,
 	> :last-child > span {
-		@include border-right-radius($default-border-radius);
+		@include border-right-radius;
 	}
 }
 

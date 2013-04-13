@@ -13,7 +13,7 @@
 .warning,
 .error,
 .information {
-	@include border-radius(.25em);
+	@include border-radius($default-border-radius / 2);
 	padding: 0 .25em;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .alert-block {
-	@include border-radius(.5em);
+	@include border-radius;
 	padding: .5em 1em;
 
 	&.success {

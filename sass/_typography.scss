@@ -80,7 +80,7 @@ dfn[title] {
 mark,
 var {
 	padding: 0 .25em;
-	@include border-radius(.25em);
+	@include border-radius($default-border-radius / 2);
 	color: $color-text;
 	background: lighten($color-link, 56%);
 }
@@ -106,7 +106,7 @@ kbd,
 samp {
 	border: 1px solid lighten($color-border, 9%);
 	padding: 0 .25em;
-	@include border-radius(.25em);
+	@include border-radius($default-border-radius / 2);
 	background: $color-background-box;
 }
 

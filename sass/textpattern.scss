@@ -340,7 +340,7 @@ span.spinner {
 	margin-left: -1em;
 	margin-bottom: 0;
 	border-top: 1px solid $color-background;
-	@include border-bottom-radius($default-border-radius);
+	@include border-bottom-radius;
 	padding: 1em;
 	background: darken($color-background-box, 3%);
 
