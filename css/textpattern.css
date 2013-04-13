@@ -506,13 +506,15 @@ svg:not(:root) {
   border-radius: 0.5em;
   padding: 4px;
   background: #fff;
-  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
 }
 a:hover .content-image {
   border: solid 1px #0066ff;
-  -webkit-box-shadow: 0 0 0.5em rgba(0, 102, 255, 0.4);
-  box-shadow: 0 0 0.5em rgba(0, 102, 255, 0.4);
+  -webkit-box-shadow: rgba(0, 102, 255, 0.4) 0px 0px 0.5em;
+  -moz-box-shadow: rgba(0, 102, 255, 0.4) 0px 0px 0.5em;
+  box-shadow: rgba(0, 102, 255, 0.4) 0px 0px 0.5em;
 }
 
 /* Messages
@@ -593,8 +595,9 @@ a:hover .content-image {
   padding: .53846em 2.84615em .53846em 1em;
   max-width: 53.15385em;
   color: #fff;
-  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
 }
 #messagepane span.success {
   background: #238c23;
@@ -726,8 +729,9 @@ h3.txp-summary,
   padding: 0 2em 0 1em;
   height: 2em;
   text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
-  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #bebebe;
   background-color: #eeeeee;
@@ -801,8 +805,9 @@ h3.txp-summary.expanded a:after {
   margin: 0 1em 1em 0;
   padding: 1em 1em 1em 4em;
   text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
-  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #bebebe;
   background-color: #eeeeee;
@@ -912,8 +917,9 @@ textarea:-moz-placeholder {
 .boxshadow select:focus,
 .boxshadow textarea:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 7px #0066ff;
-  box-shadow: 0 0 7px #0066ff;
+  -webkit-box-shadow: #0066ff 0px 0px 7px;
+  -moz-box-shadow: #0066ff 0px 0px 7px;
+  box-shadow: #0066ff 0px 0px 7px;
   /* Opera */
   z-index: 1;
 }
@@ -927,8 +933,9 @@ textarea:-moz-placeholder {
 .boxshadow .navlink-active:focus,
 .boxshadow .txp-buttons a:focus {
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25), #0066ff 0px 0px 7px;
+  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25), #0066ff 0px 0px 7px;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25), #0066ff 0px 0px 7px;
   /* Opera */
   z-index: 1;
 }
@@ -1040,6 +1047,7 @@ textarea[disabled],
   background: #eee !important;
   text-shadow: none !important;
   -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
   box-shadow: none !important;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -1121,8 +1129,9 @@ input[type="button"],
   padding: .25em .75em;
   display: inline-block;
   color: #333333;
-  -webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
   background-color: #eeeeee;
   /* Safari5.1+, Chrome10+ */
   background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
@@ -1167,8 +1176,9 @@ input[type="button"]:active,
 .txp-buttons a:active {
   border: 1px solid #aaaaaa;
   border-bottom-color: #919191;
-  -webkit-box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
+  box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
   background-color: #e6e6e6;
   /* Safari5.1+, Chrome10+ */
   background-image: -webkit-linear-gradient(#e6e6e6, #d5d5d5);
@@ -1601,8 +1611,9 @@ body {
   z-index: 1000;
   padding: 0 1.69%;
   height: 3em;
-  -webkit-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
   border-top: 1px solid #f8c225;
   border-bottom: 1px solid #d9a307;
   background-color: #ffda44;
@@ -1736,8 +1747,9 @@ body {
   -ms-border-radius: 0 0.5em 0.5em 0.5em;
   -o-border-radius: 0 0.5em 0.5em 0.5em;
   border-radius: 0 0.5em 0.5em 0.5em;
-  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
 }
 .dropdown-menu li:first-child {
   -webkit-border-radius: 0 0.5em 0 0;
@@ -2047,8 +2059,9 @@ body#page-setup {
   right: 0;
   z-index: 1000;
   padding: .5em 1em;
-  -webkit-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
+  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
   border-top: 1px solid #f8c225;
   border-bottom: 1px solid #d9a307;
   background-color: #ffda44;
@@ -2391,8 +2404,9 @@ div.code {
     border-top: 1px solid #fffbec;
     padding: .53846em 1em;
     background: #fff6d3;
-    -webkit-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
   }
 
   .txp-label,

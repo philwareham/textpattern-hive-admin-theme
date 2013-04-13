@@ -53,9 +53,10 @@
 
 	ol {
 		margin: 0;
-		-webkit-box-shadow: inset 1.85714em 0px 0px #f6f6f6, inset 1.92857em 0px 0px #e3e3e3;
-		-moz-box-shadow: inset 1.85714em 0px 0px #f6f6f6, inset 1.92857em 0px 0px #e3e3e3;
-		box-shadow: inset 1.85714em 0px 0px #f6f6f6, inset 1.92857em 0px 0px #e3e3e3;
+		@include box-shadow(
+			$shadow-1: inset #f6f6f6 1.85714em 0px 0px,
+			$shadow-2: inset #e3e3e3 1.92857em 0px 0px
+		);
 	}
 
 	li {
