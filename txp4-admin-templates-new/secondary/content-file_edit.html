@@ -102,11 +102,13 @@
 				<div class="file-detail exists">
 					<form method="post" action="#" id="file_details" class="edit-form">
 						<p class="edit-file-status">
-							<span class="txp-label">File status</span>
-							<span class="txp-value">
-								<input type="radio" id="file_status-2" name="file_status" value="2" class="radio"><label for="file_status-2">Hidden</label>
-								<input type="radio" id="file_status-3" name="file_status" value="3" class="radio"><label for="file_status-3">Pending</label>
-								<input type="radio" id="file_status-4" name="file_status" value="4" class="radio active" checked="checked"><label for="file_status-4">Live</label>
+							<span class="edit-label">File status</span>
+							<span class="edit-value">
+								<select name="status">
+									<option value="2">Hidden</option>
+									<option value="3">Pending</option>
+									<option value="4" selected="selected">Live</option>
+								</select>
 							</span>
 						</p>
 						<p class="edit-file-title">
@@ -125,22 +127,24 @@
 							<span class="txp-label"><label for="file_description">Description</label></span>
 							<textarea id="file_description" name="file_description" cols="64" rows="4"></textarea>
 						</p>
-						<section class="file-created">
-							<h3>Timestamp</h3>
-							<p class="edit-file-publish-now"><input type="checkbox" name="publish_now" value="1" id="publish_now" class="checkbox"><label for="publish_now">Set timestamp to now&#8230;</label></p>
-							<p class="edit-file-publish-at">&#8230;or publish at&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></p>
-							<p class="edit-file-published">
-								<span class="txp-label-fixed">Date</span><br>
-								<input type="text" name="year" value="2012" size="4" maxlength="4" class="year" title="Year" placeholder="yyyy"> / 
-								<input type="text" name="month" value="03" size="2" maxlength="2" class="month" title="Month" placeholder="mm"> / 
-								<input type="text" name="day" value="21" size="2" maxlength="2" class="day" title="Day" placeholder="dd">
-							</p>
-							<p class="edit-file-created">
-								<span class="txp-label-fixed">Time</span><br>
-								<input type="text" name="hour" value="10" size="2" maxlength="2" class="hour" title="Hour" placeholder="hh"> : 
-								<input type="text" name="minute" value="07" size="2" maxlength="2" class="minute" title="Minute" placeholder="mm"> : 
-								<input type="text" name="second" value="23" size="2" maxlength="2" class="second" title="Second" placeholder="ss">
-							</p>
+						<section role="region" id="file_created" class="txp-details file-created" aria-labelledby="file_created-label">
+							<h3 id="file_created-label">Timestamp</h3>
+							<div role="group">
+								<p class="edit-file-publish-now"><input type="checkbox" name="publish_now" id="publish_now" class="checkbox" value="1"><label for="publish_now">Set timestamp to now…</label></p>
+								<p class="edit-file-publish-at">…or publish at&nbsp;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">?</a></p>
+								<p class="edit-file-published">
+									<span class="txp-label-fixed">Date</span><br>
+									<input type="text" name="year" value="2013" size="4" maxlength="4" class="year" title="Year" placeholder="yyyy"> / 
+									<input type="text" name="month" value="04" size="2" maxlength="2" class="month" title="Month" placeholder="mm"> / 
+									<input type="text" name="day" value="19" size="2" maxlength="2" class="day" title="Day" placeholder="dd">
+								</p>
+								<p class="edit-file-created">
+									<span class="txp-label-fixed">Time</span><br>
+									<input type="text" name="hour" value="09" size="2" maxlength="2" class="hour" title="Hour" placeholder="hh"> : 
+									<input type="text" name="minute" value="03" size="2" maxlength="2" class="minute" title="Minute" placeholder="mn"> : 
+									<input type="text" name="second" value="24" size="2" maxlength="2" class="second" title="Second" placeholder="ss">
+								</p>
+							</div>
 						</section>
 						<p><input type="submit" value="Save" class="publish"></p>
 					</form>
