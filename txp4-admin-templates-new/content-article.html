@@ -139,16 +139,16 @@
 							</div>
 						</section>
 
-						<section role="region" id="custom_field_group" class="txp-details" aria-labelledby="custom_field_group-label">
-							<h3 id="custom_field_group-label" class="txp-summary"><a href="#custom_field" role="button" aria-controls="custom_field" aria-pressed="false">Custom fields</a></h3>
-							<div role="group" id="custom_field" class="toggle" style="display:none;" aria-expanded="false">
-								<p class="custom-field custom-1">
-									<label for="custom-1">custom1</label><br>
-									<input type="text" value="" name="custom_1" size="32" id="custom-1">
+						<section role="region" id="meta_group" class="txp-details" aria-labelledby="meta_group-label">
+							<h3 id="meta_group-label" class="txp-summary expanded"><a href="#meta" role="button" aria-controls="meta" aria-pressed="true">Meta</a></h3>
+							<div role="group" id="meta" class="toggle" aria-expanded="true">
+								<p class="url-title">
+									<label for="url-title">URL-only title</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=url_title&#38;language=en-gb" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+									<input type="text" value="" name="url_title" size="32" id="url-title">
 								</p>
-								<p class="custom-field custom-2">
-									<label for="custom-2">custom2</label><br>
-									<input type="text" value="" name="custom_2" size="32" id="custom-2">
+								<p class="keywords">
+									<label for="keywords">Keywords</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=keywords&#38;language=en-gb" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+									<textarea id="keywords" name="Keywords" cols="16" rows="4"></textarea>
 								</p>
 							</div>
 						</section>
@@ -163,16 +163,16 @@
 							</div>
 						</section>
 
-						<section role="region" id="meta_group" class="txp-details" aria-labelledby="meta_group-label">
-							<h3 id="meta_group-label" class="txp-summary expanded"><a href="#meta" role="button" aria-controls="meta" aria-pressed="true">Meta</a></h3>
-							<div role="group" id="meta" class="toggle" aria-expanded="true">
-								<p class="keywords">
-									<label for="keywords">Keywords</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=keywords&#38;language=en-gb" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
-									<textarea id="keywords" name="Keywords" cols="16" rows="4"></textarea>
+						<section role="region" id="custom_field_group" class="txp-details" aria-labelledby="custom_field_group-label">
+							<h3 id="custom_field_group-label" class="txp-summary"><a href="#custom_field" role="button" aria-controls="custom_field" aria-pressed="false">Custom fields</a></h3>
+							<div role="group" id="custom_field" class="toggle" style="display:none;" aria-expanded="false">
+								<p class="custom-field custom-1">
+									<label for="custom-1">custom1</label><br>
+									<input type="text" value="" name="custom_1" size="32" id="custom-1">
 								</p>
-								<p class="url-title">
-									<label for="url-title">URL-only title</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=url_title&#38;language=en-gb" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
-									<input type="text" value="" name="url_title" size="32" id="url-title">
+								<p class="custom-field custom-2">
+									<label for="custom-2">custom2</label><br>
+									<input type="text" value="" name="custom_2" size="32" id="custom-2">
 								</p>
 							</div>
 						</section>
@@ -192,9 +192,6 @@
 
 				<div class="txp-layout-cell txp-layout-2-4">
 					<div role="region" id="main_content">
-
-
-
 
 						<div class="jquery-ui-tabs ui-tabs ui-widget ui-widget-content ui-corner-all" style="margin-top:1em;border-bottom:1px solid #ccc;">
 							<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist" style="font-size:11px;line-height:15px;font-weight:normal;">
@@ -256,42 +253,24 @@
 							<a href="#" class="navlink" rel="prev">← Prev</a><span class="navlink-disabled" aria-disabled="true">Next →</span>
 						</p>
 
-						<section role="region" id="write-status" class="txp-details" aria-labelledby="write-status-label">
-							<h3 id="write-status-label">Status</h3>
-							<div role="group">
-								<ul class="plain-list status">
-									<li class="status-1">
-										<input type="radio" name="status" value="1" id="status-1" class="radio" />
-										<label for="status-1">Draft</label>
-									</li>
-									<li class="status-2">
-										<input type="radio" name="status" value="2" id="status-2" class="radio" />
-										<label for="status-2">Hidden</label>
-									</li>
-									<li class="status-3">
-										<input type="radio" name="status" value="3" id="status-3" class="radio" />
-										<label for="status-3">Pending</label>
-									</li>
-									<li class="status-4 active">
-										<input type="radio" name="status" value="4" id="status-4" checked="checked" class="radio active" />
-										<label for="status-4"><strong>Live</strong></label>
-									</li>
-									<li class="status-5">
-										<input type="radio" name="status" value="5" id="status-5" class="radio" />
-										<label for="status-5">Sticky</label>
-									</li>
-								</ul>
-							</div>
-						</section>
-
 						<section role="region" id="write-sort" class="txp-details" aria-labelledby="write-sort-label">
 							<h3 id="write-sort-label">Sort and display</h3>
 							<div role="group">
+								<p class="status">
+									<label for="status">Status</label><br>
+									<select id="status" name="status">
+										<option value="status-1">Draft</option>
+										<option value="status-2">Hidden</option>
+										<option value="status-3">Pending</option>
+										<option value="status-4" selected="selected">Live</option>
+										<option value="status-5">Pending</option>
+									</select>
+								</p>
 								<p class="section">
 									<label for="section">Section</label> <span class="edit section-edit"><span aria-hidden="true">[</span><a href="presentation-section.html">Edit</a><span aria-hidden="true">]</span></span><br>
 									<select id="section" name="Section">
-										<option value="about">about</option>
-										<option value="articles" selected="selected">articles</option>
+										<option value="about">About</option>
+										<option value="articles" selected="selected">Articles</option>
 									</select>
 								</p>
 								<div id="categories_group">
