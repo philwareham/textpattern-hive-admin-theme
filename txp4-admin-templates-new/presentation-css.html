@@ -73,21 +73,19 @@
 	<main role="main" class="txp-body" aria-label="Main content">
 		<h1 class="txp-heading">Styles</h1>
 
-		<div id="css_container" class="txp-layout-grid">
 
-
-			<div id="main_content" class="txp-layout-cell txp-layout-3-4">
-				<form method="post" action="#" id="style_form" class="edit-form">
-					<p>
-						<label for="text">Style name</label><br>
-						<input id="text" type="text" size="16" value="new_style" class="input-medium">
-						<span class="txp-actions">
-							<a id="txp_clone" class="clone" title="Clone this style" href="#">Duplicate</a>
-						</span>
-					</p>
-					<p>
-						<label for="css">Style code</label><br>
-						<textarea id="css" class="code" name="css" cols="64" rows="24">body {
+		<div id="main_content" class="txp-layout-4col-cell-1-2-3">
+			<form method="post" action="#" id="style_form" class="edit-form">
+				<p>
+					<label for="text">Style name</label><br>
+					<input id="text" type="text" size="16" value="new_style" class="input-medium">
+					<span class="txp-actions">
+						<a id="txp_clone" class="clone" title="Clone this style" href="#">Duplicate</a>
+					</span>
+				</p>
+				<p>
+					<label for="css">Style code</label><br>
+					<textarea id="css" class="code" name="css" cols="64" rows="24">body {
 	color: #fff;
 	background: #000;
 }
@@ -95,35 +93,35 @@
 h1 {
 	font-weight: normal;
 }</textarea>
-					</p>
-					<p>
-						<input type="submit" value="Save" class="publish">
-					</p>
-				</form>
-			</div><!-- /#main_content -->
+				</p>
+				<p>
+					<input type="submit" value="Save" class="publish">
+				</p>
+			</form>
+		</div><!-- /#main_content -->
 
 
-			<div id="content_switcher" class="txp-layout-cell txp-layout-1-4">
-				<p class="action-create"><a href="#">Create new style</a></p>
-				<section role="region" id="all_styles" class="txp-details" aria-labelledby="all_styles-label">
-					<h3 id="all_styles-label">All styles</h3>
-					<div role="group">
-						<ul class="switcher-list">
-							<li><a href="#">default</a></li>
-							<li class="active">
-								new_style
-								<form method="post" action="#" onsubmit="return confirm('Really delete?');">
-									<input type="submit" value="&times;" class="destroy" title="Delete" aria-label="Delete">
-								</form>
-							</li>
-							<li><a href="#">new_style_copy</a></li>
-							<li><a href="#">new_style_copy_copy</a></li>
-						</ul>
-					</div>
-				</section>
-			</div><!-- /#content_switcher -->
+		<div id="content_switcher" class="txp-layout-4col-cell-4alt">
+			<p class="action-create"><a href="#">Create new style</a></p>
+			<section role="region" id="all_styles" class="txp-details" aria-labelledby="all_styles-label">
+				<h3 id="all_styles-label">All styles</h3>
+				<div role="group">
+					<ul class="switcher-list">
+						<li><a href="#">default</a></li>
+						<li class="active">
+							new_style
+							<form method="post" action="#" onsubmit="return confirm('Really delete?');">
+								<input type="submit" value="&times;" class="destroy" title="Delete" aria-label="Delete">
+							</form>
+						</li>
+						<li><a href="#">new_style_copy</a></li>
+						<li><a href="#">new_style_copy_copy</a></li>
+					</ul>
+				</div>
+			</section>
+		</div><!-- /#content_switcher -->
 
-		</div><!-- /txp-layout-grid -->
+
 	</main><!-- /txp-body -->
 
 	<footer role="contentinfo" class="txp-footer">

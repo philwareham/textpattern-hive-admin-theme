@@ -9,51 +9,114 @@
    ========================================================================== */
 
 $grids: add-grid(12);
-$gutters: add-gutter(.5);
-$mobile-first: false;
+$gutters: add-gutter(.3);
 
 //@include debugmessage("Full size media query fired");
 
-.txp-layout-grid-1col,
-.txp-layout-grid-2col-cell-1,
-.txp-layout-grid-2col-cell-2,
-.txp-layout-grid-3col-cell-1,
-.txp-layout-grid-3col-cell-2,
-.txp-layout-grid-3col-cell-3,
-.txp-layout-grid-3col-cell-1-2,
-.txp-layout-grid-3col-cell-2-3,
-.txp-layout-grid-4col-cell-1,
-.txp-layout-grid-4col-cell-1alt,
-.txp-layout-grid-4col-cell-2,
-.txp-layout-grid-4col-cell-3,
-.txp-layout-grid-4col-cell-4,
-.txp-layout-grid-4col-cell-4alt,
-.txp-layout-grid-4col-cell-1-2,
-.txp-layout-grid-4col-cell-2-3,
-.txp-layout-grid-4col-cell-3-4,
-.txp-layout-grid-4col-cell-1-2-3,
-.txp-layout-grid-4col-cell-2-3-4 {
+.txp-layout-1col {
 	@include grid-span(12, 1, $options: 'both');
+}
+
+.txp-layout-2col-cell-1 {
+	@include grid-span(6, 1, $options: 'both');
+}
+
+.txp-layout-2col-cell-2 {
+	@include grid-span(6, 7);
+}
+
+.txp-layout-3col-cell-1 {
+	@include grid-span(4, 1, $options: 'both');
+}
+
+.txp-layout-3col-cell-2 {
+	@include grid-span(4, 5);
+}
+
+.txp-layout-3col-cell-3 {
+	@include grid-span(4, 9);
+}
+
+.txp-layout-3col-cell-1-2 {
+	@include grid-span(8, 1, $options: 'both');
+}
+
+.txp-layout-3col-cell-2-3 {
+	@include grid-span(8, 5);
+}
+
+.txp-layout-4col-cell-1 {
+	@include grid-span(3, 1, $options: 'both');
+}
+
+.txp-layout-4col-cell-1alt {
+	@include grid-span(3, 1, $options: 'both');
+}
+
+.txp-layout-4col-cell-2 {
+	@include grid-span(3, 4);
+}
+
+.txp-layout-4col-cell-3 {
+	@include grid-span(3, 7);
+}
+
+.txp-layout-4col-cell-4 {
+	@include grid-span(3, 10);
+}
+
+.txp-layout-4col-cell-4alt {
+	@include grid-span(3, 10);
+}
+
+.txp-layout-4col-cell-1-2 {
+	@include grid-span(6, 1, $options: 'both');
+}
+
+.txp-layout-4col-cell-2-3 {
+	@include grid-span(6, 4);
+}
+
+.txp-layout-4col-cell-3-4 {
+	@include grid-span(6, 7);
+}
+
+.txp-layout-4col-cell-1-2-3 {
+	@include grid-span(9, 1, $options: 'both');
+}
+
+.txp-layout-4col-cell-2-3-4 {
+	@include grid-span(9, 4);
 }
 
 @include breakpoint(max-width $breakpoint-1) {
 
 	//@include debugmessage("Medium size media query fired");
 
-	.txp-layout-grid-4col-cell-1 {
+	.txp-layout-4col-cell-1 {
 		@include grid-span(6, 1, $options: 'both');
 	}
 
-	.txp-layout-grid-4col-cell-2 {
+	.txp-layout-4col-cell-2 {
 		@include grid-span(6, 7);
 	}
 
-	.txp-layout-grid-4col-cell-3 {
+	.txp-layout-4col-cell-3 {
 		@include grid-span(6, 1, $options: 'both');
 	}
 
-	.txp-layout-grid-4col-cell-4 {
+	.txp-layout-4col-cell-4 {
 		@include grid-span(6, 7);
+	}
+
+	.txp-layout-4col-cell-1-2,
+	.txp-layout-4col-cell-2-3,
+	.txp-layout-4col-cell-3-4,
+	.txp-layout-4col-cell-1alt,
+	.txp-layout-4col-cell-4alt,
+	.txp-layout-4col-cell-1-2-3,
+	.txp-layout-4col-cell-2-3-4 {
+		@include grid-span(12, 1, $options: 'both');
 	}
 
 }
@@ -62,92 +125,32 @@ $mobile-first: false;
 
 	//@include debugmessage("Small size media query fired");
 
-	.txp-layout-grid-2col-cell-1 {
-		@include grid-span(6, 1, $options: 'both');
-	}
-
-	.txp-layout-grid-2col-cell-2 {
-		@include grid-span(6, 7);
-	}
-
-	.txp-layout-grid-3col-cell-1 {
-		@include grid-span(4, 1, $options: 'both');
-	}
-
-	.txp-layout-grid-3col-cell-2 {
-		@include grid-span(4, 5);
-	}
-	
-	.txp-layout-grid-3col-cell-3 {
-		@include grid-span(4, 9);
-	}
-
-	.txp-layout-grid-3col-cell-1-2 {
-		@include grid-span(8, 1, $options: 'both');
-	}
-	
-	.txp-layout-grid-3col-cell-2-3 {
-		@include grid-span(8, 5);
+	.txp-layout-2col-cell-1,
+	.txp-layout-2col-cell-2,
+	.txp-layout-3col-cell-1,
+	.txp-layout-3col-cell-2,
+	.txp-layout-3col-cell-3,
+	.txp-layout-3col-cell-1-2,
+	.txp-layout-3col-cell-2-3,
+	.txp-layout-4col-cell-1,
+	.txp-layout-4col-cell-2,
+	.txp-layout-4col-cell-3,
+	.txp-layout-4col-cell-4 {
+		@include grid-span(12, 1, $options: 'both');
 	}
 
 }
 
-/* @include breakpoint($breakpoint-3) {
-
-	.txp-layout-grid-4col-cell-1 {
-		@include grid-span(3, 1, $options: 'both');
-	}
-
-	.txp-layout-grid-4col-cell-1alt {
-		@include grid-span(3, 1, $options: 'both');
-	}
-
-	.txp-layout-grid-4col-cell-2 {
-		@include grid-span(3, 4);
-	}
-
-	.txp-layout-grid-4col-cell-3 {
-		@include grid-span(3, 7);
-	}
-
-	.txp-layout-grid-4col-cell-4 {
-		@include grid-span(3, 10);
-	}
-
-	.txp-layout-grid-4col-cell-4alt {
-		@include grid-span(3, 10);
-	}
-
-	.txp-layout-grid-4col-cell-1-2 {
-		@include grid-span(6, 1, $options: 'both');
-	}
-
-	.txp-layout-grid-4col-cell-2-3 {
-		@include grid-span(6, 4);
-	}
-	
-	.txp-layout-grid-4col-cell-3-4 {
-		@include grid-span(6, 7);
-	}
-	
-	.txp-layout-grid-4col-cell-1-2-3 {
-		@include grid-span(9, 1, $options: 'both');
-	}
-	
-	.txp-layout-grid-4col-cell-2-3-4 {
-		@include grid-span(9, 4);
-	}
-
-} */
-
 /* text columns (fixed proportion cell) */
 .txp-layout-textbox {
+	clear: both;
 	margin: 0 auto;
 	max-width: $text-column;
 }
 
 /* Deprecated @ 4.6 - use .txp-layout-textbox instead */
 .text-column {
+	clear: both;
 	margin: 0 auto;
 	max-width: $text-column;
 }

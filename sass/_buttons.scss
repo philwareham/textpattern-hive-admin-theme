@@ -1,5 +1,5 @@
 //
-// note: this file is for use with Sass- http://sass-lang.com,
+// note: this file is for use with Sass and Compass - http://sass-lang.com, http://compass-style.org
 // don't use it as your live site stylesheet!
 //
 
@@ -163,5 +163,27 @@ ul.nav-tertiary {
 		border-color: lighten(#6b8fe8, 10%);
 		border-bottom-color: #6b8fe8;
 		@include gradient-linear(lighten($color-link, 50%), lighten($color-link, 45%));
+	}
+}
+
+/* better focus glows, if box-shadow is supported */
+.boxshadow {
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.txp-logout a,
+	.action-create a,
+	.navlink,
+	.navlink-active,
+	.txp-buttons a {
+		&:focus {
+			outline: 0;
+			@include box-shadow(
+				$shadow-1: $inset-highlighting,
+				$shadow-2: $color-link-hover 0px 0px 7px);
+			/* Opera */
+			z-index: 1;
+		}
 	}
 }

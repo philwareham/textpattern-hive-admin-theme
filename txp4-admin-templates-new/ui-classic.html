@@ -121,72 +121,84 @@
 
 			<h2>Page layout columns <span class="information" style="font-family:'Lucida Grande','Lucida Sans Unicode','Lucida Sans',Geneva,Verdana,sans-serif;font-size:.5em;font-weight:normal;">new v4.6</span></h2>
 			<p>Responsive page layout grid system based on Griddle by Nicholas Galagher. Column widths are stated using the <code>.txp-layout-x-x</code> class on cells - see example below for all variations. <strong>Please note</strong> an outer <code>.txp-layout-grid</code> parent element is need to house the inner <code>.txp-layout-cell</code> child element.</p>
-			<pre class="prettyprint linenums"><code class="language-html">&lt;div class="txp-layout-grid"&gt;
+			<pre class="prettyprint linenums"><code class="language-html">&lt;div class=""txp-layout-1col"&gt;...Opt1: 1col - content here...&lt;/div&gt;
 
-	&lt;div class="txp-layout-cell"&gt;...4 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-2col-cell-1"&gt;...Opt2: 2col cell1 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-2col-cell-2"&gt;...Opt2: 2col cell2 - content here...&lt;/div&gt;
 
-	&lt;div class="txp-layout-cell txp-layout-2-4"&gt;...2 column span - content here...&lt;/div&gt;
-	&lt;div class="txp-layout-cell txp-layout-2-4"&gt;...2 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-3col-cell-1"&gt;...Opt3: 3col cell1 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-3col-cell-2"&gt;...Opt3: 3col cell2 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-3col-cell-3"&gt;...Opt3: 3col cell3 - content here...&lt;/div&gt;
 
-	&lt;div class="txp-layout-cell txp-layout-3-4"&gt;...3 column span - content here...&lt;/div&gt;
-	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-3col-cell-1-2"&gt;...Opt4: 3col cell1and2 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-3col-cell-3"&gt;...Opt4: 3col cell3 - content here...&lt;/div&gt;
 
-	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
-	&lt;div class="txp-layout-cell txp-layout-3-4"&gt;...3 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-3col-cell-1"&gt;...Opt5: 3col cell1 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-3col-cell-2-3"&gt;...Opt5: 3col cell2and3 - content here...&lt;/div&gt;
 
-	&lt;div class="txp-layout-cell txp-layout-2-4"&gt;...2 column span - content here...&lt;/div&gt;
-	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
-	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-1"&gt;...Opt6: 4col cell1 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-2"&gt;...Opt6: 4col cell2 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-3"&gt;...Opt6: 4col cell3 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-4"&gt;...Opt6: 4col cell4 - content here...&lt;/div&gt;
 
-	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
-	&lt;div class="txp-layout-cell txp-layout-2-4"&gt;...2 column span - content here...&lt;/div&gt;
-	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-1-2"&gt;...Opt7: 4col cell1and2 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-3"&gt;...Opt7: 4col cell3 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-4"&gt;...Opt7: 4col cell4 - content here...&lt;/div&gt;
 
-	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
-	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
-	&lt;div class="txp-layout-cell txp-layout-2-4"&gt;...2 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-1alt"&gt;...Opt8: 4col cell1 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-2-3"&gt;...Opt8: 4col cell2and3 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-4alt"&gt;...Opt8: 4col cell4 - content here...&lt;/div&gt;
 
-	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
-	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
-	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
-	&lt;div class="txp-layout-cell txp-layout-1-4"&gt;...1 column span - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-1"&gt;...Opt9: 4col cell1 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-2"&gt;...Opt9: 4col cell2 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-3-4"&gt;...Opt9: 4col cell3and4 - content here...&lt;/div&gt;
 
-&lt;/div&gt;</code></pre>
+	&lt;div class="txp-layout-4col-cell-1-2-3"&gt;...Opt10: 4col cell1and2and3 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-4alt"&gt;...Opt10: 4col cell4 - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-4col-cell-1alt"&gt;...Opt11: 4col cell1 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-2-3-4"&gt;...Opt11: 4col cell2and3and4 - content here...&lt;/div&gt;</code></pre>
 		</div>
 	</div><!--/txp-layout-textbox (so we can demonstrate other grids, continues afterwards) -->
 
 
-	<div class="txp-layout-grid">
+	<div class="txp-layout-1col"><p class="box">Opt1: 1col</p></div>
 
-		<div class="txp-layout-cell"><p class="box">4 column span</p></div>
+	<div class="txp-layout-2col-cell-1"><p class="box">Opt2: 2col cell1</p></div>
+	<div class="txp-layout-2col-cell-2"><p class="box">Opt2: 2col cell2</p></div>
 
-		<div class="txp-layout-cell txp-layout-2-4"><p class="box">2 column span</p></div>
-		<div class="txp-layout-cell txp-layout-2-4"><p class="box">2 column span</p></div>
+	<div class="txp-layout-3col-cell-1"><p class="box">Opt3: 3col cell1</p></div>
+	<div class="txp-layout-3col-cell-2"><p class="box">Opt3: 3col cell2</p></div>
+	<div class="txp-layout-3col-cell-3"><p class="box">Opt3: 3col cell3</p></div>
 
-		<div class="txp-layout-cell txp-layout-3-4"><p class="box">3 column span</p></div>
-		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
+	<div class="txp-layout-3col-cell-1-2"><p class="box">Opt4: 3col cell1and2</p></div>
+	<div class="txp-layout-3col-cell-3"><p class="box">Opt4: 3col cell3</p></div>
 
-		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
-		<div class="txp-layout-cell txp-layout-3-4"><p class="box">3 column span</p></div>
+	<div class="txp-layout-3col-cell-1"><p class="box">Opt5: 3col cell1</p></div>
+	<div class="txp-layout-3col-cell-2-3"><p class="box">Opt5: 3col cell2and3</p></div>
 
-		<div class="txp-layout-cell txp-layout-2-4"><p class="box">2 column span</p></div>
-		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
-		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
+	<div class="txp-layout-4col-cell-1"><p class="box">Opt6: 4col cell1</p></div>
+	<div class="txp-layout-4col-cell-2"><p class="box">Opt6: 5col cell2</p></div>
+	<div class="txp-layout-4col-cell-3"><p class="box">Opt6: 6col cell3</p></div>
+	<div class="txp-layout-4col-cell-4"><p class="box">Opt6: 7col cell4</p></div>
 
-		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
-		<div class="txp-layout-cell txp-layout-2-4"><p class="box">2 column span</p></div>
-		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
+	<div class="txp-layout-4col-cell-1-2"><p class="box">Opt7: 4col cell1and2</p></div>
+	<div class="txp-layout-4col-cell-3"><p class="box">Opt7: 4col cell3</p></div>
+	<div class="txp-layout-4col-cell-4"><p class="box">Opt7: 4col cell4</p></div>
 
-		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
-		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
-		<div class="txp-layout-cell txp-layout-2-4"><p class="box">2 column span</p></div>
+	<div class="txp-layout-4col-cell-1alt"><p class="box">Opt8: 4col cell1</p></div>
+	<div class="txp-layout-4col-cell-2-3"><p class="box">Opt8: 4col cell2and3</p></div>
+	<div class="txp-layout-4col-cell-4alt"><p class="box">Opt8: 4col cell4</p></div>
 
-		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
-		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
-		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
-		<div class="txp-layout-cell txp-layout-1-4"><p class="box">1 column span</p></div>
+	<div class="txp-layout-4col-cell-1"><p class="box">Opt9: 4col cell1</p></div>
+	<div class="txp-layout-4col-cell-2"><p class="box">Opt9: 4col cell2</p></div>
+	<div class="txp-layout-4col-cell-3-4"><p class="box">Opt9: 4col cell3and4</p></div>
 
-	</div>
+	<div class="txp-layout-4col-cell-1-2-3"><p class="box">Opt10: 4col cell1and2and3</p></div>
+	<div class="txp-layout-4col-cell-4alt"><p class="box">Opt10: 4col cell4</p></div>
+
+	<div class="txp-layout-4col-cell-1alt"><p class="box">Opt11: 4col cell1</p></div>
+	<div class="txp-layout-4col-cell-2-3-4"><p class="box">Opt11: 4col cell2and3and4</p></div>
 
 
 	<div class="txp-layout-textbox">
