@@ -219,7 +219,7 @@
 					<div class="text">
 						<p class="title">
 							<label for="title">Title</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=title&#38;language=en-gb" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
-							<input type="text" id="title" name="Title" value="" size="40">
+							<input type="text" id="title" name="Title" value="Example article title" size="40" style="font-size:16px;font-weight:bold;">
 							<span id="article_partial_article_view" class="txp-actions"><a href="#" class="article-view">View</a></span>
 						</p>
 						<p class="body">
@@ -230,6 +230,12 @@
 							<label for="excerpt">Excerpt</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=excerpt&#38;language=en-gb" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
 							<textarea id="excerpt" name="Excerpt" cols="64" rows="8"></textarea>
 						</p>
+						<p id="write-publish">
+							<input type="submit" value="Publish" name="publish" class="publish" disabled="disabled"> <span class="spinner"></span>
+						</p>
+						<p class="action-create">
+							<a href="#">Create new</a>
+						</p>
 					</div>
 
 				</div><!-- /#main_content -->
@@ -238,18 +244,6 @@
 
 			<div class="txp-layout-4col-cell-4alt">
 				<div id="supporting_content">
-
-					<p id="write-publish">
-						<input type="submit" value="Publish" name="publish" class="publish" disabled="disabled"> <span class="spinner"></span>
-					</p>
-
-					<p class="action-create">
-						<a href="#">Create new</a>
-					</p>
-
-					<p role="navigation" class="nav-tertiary" aria-label="Article navigation">
-						<a href="#" class="navlink" rel="prev">← Prev</a><span class="navlink-disabled" aria-disabled="true">Next →</span>
-					</p>
 
 					<section role="region" id="write-sort" class="txp-details" aria-labelledby="write-sort-label">
 						<h3 id="write-sort-label">Sort and display</h3>
@@ -350,6 +344,11 @@
 					</section>
 
 				</div><!-- /#supporting_content -->
+
+				<p role="navigation" class="nav-tertiary" aria-label="Article navigation">
+					<a href="#" class="navlink" rel="prev">← Prev</a><span class="navlink-disabled" aria-disabled="true">Next →</span>
+				</p>
+
 			</div>
 
 		</form>
