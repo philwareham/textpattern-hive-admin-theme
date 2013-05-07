@@ -1,7 +1,7 @@
 {
 	"name": "philwareham/hive",
-	"description": "Hive admin-side theme for Textpattern CMS v4.6",
-	"keywords": ["textpattern"],
+	"description": "Hive admin-side theme for Textpattern CMS",
+	"keywords": ["textpattern", "admin", "theme"],
 	"homepage": "https://github.com/philwareham/txp-hive-admin-theme",
 	"license": "GPL-2.0",
 	"type": "textpattern-admin-theme",
@@ -19,7 +19,8 @@
 	"autoload": {
 		"files": []
 	},
-	"require": {
-		"rah/textpattern-plugin-installer": "*@dev"
-	}
+	"requires": {
+		"textpattern/lock": "4.6.*@dev,=>4.6.0",
+		"textpattern/installer": "*"
+    }
 }
