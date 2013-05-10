@@ -92,8 +92,10 @@ class hive_theme extends theme
 		// End of custom CSS toggles.
 
 		$out[] = '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">';
-		$out[] = '<meta name="apple-mobile-web-app-capable" content="yes">';
 		$out[] = '<meta name="generator" content="Textpattern CMS">';
+		$out[] = '<meta name="apple-mobile-web-app-capable" content="yes">';
+		$out[] = '<meta name="apple-mobile-web-app-status-bar-style" content="black">';
+		$out[] = '<meta name="apple-mobile-web-app-title" content="'.htmlspecialchars($GLOBALS["prefs"]["sitename"]).'">';
 		$out[] = '<script src="vendors/modernizr/modernizr/modernizr.js"></script>';
 		$out[] = '<script src="'.$this->url.'js/tinynav.min.js"></script>';
 		$out[] = '<script src="'.$this->url.'js/scripts.js"></script>';
