@@ -242,7 +242,7 @@ html {
    ========================================================================== */
 .txp-grid {
   text-align: center;
-  margin-bottom: .69230769230769em;
+  margin-bottom: 0.69230769230769em;
 }
 
 .txp-grid-cell {
@@ -253,7 +253,7 @@ html {
   text-align: left;
   max-width: 22.61538em;
   vertical-align: top;
-  margin: 0 .15384em .30769em;
+  margin: 0 0.15384em 0.30769em;
   border: 1px solid #cccccc;
   padding: 0 1em;
 }
@@ -281,7 +281,7 @@ a.busy {
 .pophelp,
 .pophelpsubtle {
   border: 1px solid #fff;
-  padding: 0 .25em;
+  padding: 0 0.25em;
   font-weight: normal;
   background: #e5e5e5;
   -webkit-border-radius: 50%;
@@ -311,23 +311,23 @@ body {
 h1 {
   font-size: 2em;
   line-height: 1.23076;
-  margin: 0 0 .5em;
+  margin: 0 0 0.5em;
 }
 h1 .pophelp {
-  font-size: .5em;
+  font-size: 0.5em;
 }
 
 h2 {
   font-size: 1.38461em;
-  margin: 0 0 .72222em 0;
+  margin: 0 0 0.72222em 0;
 }
 h2 .pophelp {
-  font-size: .72222em;
+  font-size: 0.72222em;
 }
 
 h3 {
   font-size: 1.15384em;
-  margin: .86666em 0;
+  margin: 0.86666em 0;
 }
 
 h4,
@@ -372,7 +372,7 @@ dfn[title] {
 
 mark,
 var {
-  padding: 0 .25em;
+  padding: 0 0.25em;
   -webkit-border-radius: 0.25em;
   -moz-border-radius: 0.25em;
   -ms-border-radius: 0.25em;
@@ -402,7 +402,7 @@ code,
 kbd,
 samp {
   border: 1px solid #e3e3e3;
-  padding: 0 .25em;
+  padding: 0 0.25em;
   -webkit-border-radius: 0.25em;
   -moz-border-radius: 0.25em;
   -ms-border-radius: 0.25em;
@@ -443,11 +443,11 @@ sup {
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 small,
@@ -541,7 +541,7 @@ a:hover .content-image {
   -ms-border-radius: 0.25em;
   -o-border-radius: 0.25em;
   border-radius: 0.25em;
-  padding: 0 .25em;
+  padding: 0 0.25em;
 }
 
 .success {
@@ -574,7 +574,7 @@ a:hover .content-image {
   -ms-border-radius: 0.5em;
   -o-border-radius: 0.5em;
   border-radius: 0.5em;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 }
 .alert-block.success {
   border: 1px solid #a3d48e;
@@ -604,7 +604,7 @@ a:hover .content-image {
   -o-border-radius: 0.5em 0.5em 0 0;
   border-radius: 0.5em 0.5em 0 0;
   margin: 0 auto;
-  padding: .53846em 2.84615em .53846em 1em;
+  padding: 0.53846em 2.84615em 0.53846em 1em;
   max-width: 53.15385em;
   color: #fff;
   -webkit-box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
@@ -624,8 +624,8 @@ a:hover .content-image {
 /* close icon */
 .close {
   position: absolute;
-  top: .27778em;
-  right: .72222em;
+  top: 0.27778em;
+  right: 0.72222em;
   text-decoration: none;
   color: #ccc;
   font-size: 1.38461em;
@@ -655,7 +655,7 @@ a:hover .content-image {
   }
 
   75% {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -669,7 +669,7 @@ a:hover .content-image {
   }
 
   75% {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -683,7 +683,7 @@ a:hover .content-image {
   }
 
   75% {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -697,7 +697,7 @@ a:hover .content-image {
   }
 
   75% {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -711,7 +711,7 @@ a:hover .content-image {
   }
 
   75% {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -766,17 +766,17 @@ h3.txp-summary a:hover {
 h3.txp-summary a:after {
   position: absolute;
   content: "&#8594;";
-  top: .69230em;
-  right: .76923em;
+  top: 0.69230em;
+  right: 0.76923em;
   z-index: 10;
   width: 0;
   height: 0;
   display: inline-block;
-  opacity: .5;
+  opacity: 0.5;
   border-left: 0.30769em solid #333333;
   border-right: 0;
-  border-top: .30769em solid transparent;
-  border-bottom: .30769em solid transparent;
+  border-top: 0.30769em solid transparent;
+  border-bottom: 0.30769em solid transparent;
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
@@ -787,10 +787,10 @@ h3.txp-summary a:hover:after {
 
 h3.txp-summary.expanded a:after {
   content: "&#8595;";
-  top: .84615em;
-  right: .69230em;
-  border-left: .30769em solid transparent;
-  border-right: .30769em solid transparent;
+  top: 0.84615em;
+  right: 0.69230em;
+  border-left: 0.30769em solid transparent;
+  border-right: 0.30769em solid transparent;
   border-top: 0.30769em solid #333333;
   border-bottom: 0;
 }
@@ -848,15 +848,15 @@ h3.txp-summary.expanded a:after {
   z-index: 2;
   counter-increment: step;
   content: counter(step);
-  top: .4375em;
-  left: .6875em;
+  top: 0.4375em;
+  left: 0.6875em;
   border: 1px solid #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  padding: .25em;
+  padding: 0.25em;
   width: 1.375em;
   text-align: center;
   font-size: 1.23076em;
@@ -872,7 +872,7 @@ h3.txp-summary.expanded a:after {
   height: 0;
   width: 0;
   border-top: 1.75em solid transparent;
-  border-left: .9em solid #ccc;
+  border-left: 0.9em solid #ccc;
   border-bottom: 1.75em solid transparent;
 }
 .progress-meter strong {
@@ -952,7 +952,7 @@ textarea {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
-  padding: .25em;
+  padding: 0.25em;
 }
 
 /* addresses box sizing set to `content-box` and excess padding in IE8-9 */
@@ -973,7 +973,7 @@ select {
   select[multiple],
   select[multiple][size] {
     background-image: none;
-    padding-right: .25em;
+    padding-right: 0.25em;
   }
 
   select,
@@ -981,8 +981,8 @@ select {
   select[size="1"] {
     background: white url("data:image/svg+xml,<svg version='1.1' baseProfile='full' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='13px' height='4px' viewBox='0 0 13 4' enable-background='new 0 0 13 4' xml:space='preserve'><polygon fill='#333333' points='3.5,4 0,0 7,0'/></svg>") no-repeat right center;
     padding-right: 2em;
-    -webkit-background-size: 1em .30769em;
-    background-size: 1em .30769em;
+    -webkit-background-size: 1em 0.30769em;
+    background-size: 1em 0.30769em;
   }
 }
 optgroup {
@@ -1124,7 +1124,7 @@ input[type="button"],
   -ms-border-radius: 0.5em;
   -o-border-radius: 0.5em;
   border-radius: 0.5em;
-  padding: .25em .75em;
+  padding: 0.25em 0.75em;
   display: inline-block;
   color: #333333;
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
@@ -1230,7 +1230,7 @@ button.destroy {
   height: 1.5em;
   border: 1px solid #db463b;
   border-bottom-color: #9d261d;
-  padding: 0 .25em;
+  padding: 0 0.25em;
   text-shadow: rgba(0, 0, 0, 0.1) -1px -1px 0;
   color: #f9e0df;
   border-top: 1px solid #9d261d;
@@ -1288,7 +1288,7 @@ button.destroy:active {
   -ms-border-radius: 0.5em;
   -o-border-radius: 0.5em;
   border-radius: 0.5em;
-  padding: .25em 1em;
+  padding: 0.25em 1em;
   display: inline-block;
 }
 
@@ -1427,7 +1427,7 @@ dt {
 .switcher-list li {
   position: relative;
   border-top: 1px solid #dddddd;
-  padding: .38461em 3em .38461em 1em;
+  padding: 0.38461em 3em 0.38461em 1em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1450,11 +1450,11 @@ dt {
 }
 
 .switcher-action {
-  top: .38461em;
+  top: 0.38461em;
 }
 
 .switcher-list .destroy {
-  top: .46153em;
+  top: 0.46153em;
 }
 
 /* Tables
@@ -1467,7 +1467,7 @@ table {
 
 caption {
   text-align: left;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 /* make table cells align top and left by default, remove any cell padding */
@@ -1483,7 +1483,7 @@ td {
 }
 .txp-list th,
 .txp-list td {
-  padding: .38461em 1em;
+  padding: 0.38461em 1em;
 }
 .txp-list .multi-edit {
   width: 18px;
@@ -1529,7 +1529,7 @@ td {
   position: relative;
   display: block;
   color: #333333;
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 .txp-list thead th a:hover {
   color: #333333;
@@ -1537,13 +1537,13 @@ td {
 }
 .txp-list thead th a:after {
   position: absolute;
-  top: .53846em;
-  right: -.76923em;
+  top: 0.53846em;
+  right: -0.76923em;
   z-index: 10;
   width: 0;
   height: 0;
   display: inline-block;
-  opacity: .5;
+  opacity: 0.5;
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
@@ -1553,15 +1553,15 @@ td {
 }
 .txp-list thead th.desc a:after {
   content: "&#8595;";
-  border-left: .30769em solid transparent;
-  border-right: .30769em solid transparent;
+  border-left: 0.30769em solid transparent;
+  border-right: 0.30769em solid transparent;
   border-top: 0.30769em solid #333333;
   border-bottom: 0;
 }
 .txp-list thead th.asc a:after {
   content: "&#8593;";
-  border-left: .30769em solid transparent;
-  border-right: .30769em solid transparent;
+  border-left: 0.30769em solid transparent;
+  border-right: 0.30769em solid transparent;
   border-top: 0;
   border-bottom: 0.30769em solid #333333;
 }
@@ -1649,7 +1649,7 @@ body {
 
 .txp-logout {
   position: absolute;
-  top: -.53846em;
+  top: -0.53846em;
   right: 1.69%;
 }
 
@@ -1761,15 +1761,15 @@ body {
 }
 .dropdown-menu a {
   display: block;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 }
 .dropdown-menu:before {
   position: absolute;
   content: "";
-  top: -.61538em;
+  top: -0.61538em;
   left: 1em;
   width: 1.23076em;
-  height: .61538em;
+  height: 0.61538em;
   background-repeat: no-repeat;
 }
 .no-svg .dropdown-menu:before {
@@ -1789,7 +1789,7 @@ body {
 }
 
 .tinynav {
-  margin-top: .61538em;
+  margin-top: 0.61538em;
 }
 
 /* Footer
@@ -1817,7 +1817,7 @@ body {
   float: right;
 }
 [role="search"] p {
-  margin: 0 .35em 0 0;
+  margin: 0 0.35em 0 0;
 }
 
 .txp-buttons {
@@ -1829,12 +1829,12 @@ body {
 }
 
 .txp-control-panel {
-  margin-top: .5em;
+  margin-top: 0.5em;
   text-align: right;
 }
 
 .txp-actions a {
-  margin-left: .75em;
+  margin-left: 0.75em;
 }
 
 div.multi-edit {
@@ -1846,7 +1846,7 @@ div.multi-edit {
 }
 
 .multi-step {
-  margin-left: .30769em;
+  margin-left: 0.30769em;
   display: inline-block;
 }
 
@@ -1865,7 +1865,7 @@ div.multi-edit {
 }
 
 .disabled {
-  opacity: .33;
+  opacity: 0.33;
   /* transparency support for IE8 */
   filter: alpha(opacity=33);
 }
@@ -1873,7 +1873,7 @@ div.multi-edit {
 /* list navigators on list pages */
 .txp-navigation p,
 .txp-navigation ul {
-  margin: 0 0 .5em;
+  margin: 0 0 0.5em;
 }
 .txp-navigation .pageby {
   float: left;
@@ -1927,13 +1927,13 @@ span.spinner {
 
 .txp-value input,
 .txp-value select {
-  margin-top: -.23076em;
-  margin-bottom: -.23076em;
+  margin-top: -0.23076em;
+  margin-bottom: -0.23076em;
 }
 
 .txp-value-fixed {
   display: inline-block;
-  padding: .23076em 0;
+  padding: 0.23076em 0;
 }
 
 /* deprecated @ 4.6 */
@@ -1963,8 +1963,8 @@ span.spinner {
 .edit-value select,
 .login-value input,
 .login-value select {
-  margin-top: -.23076em;
-  margin-bottom: -.23076em;
+  margin-top: -0.23076em;
+  margin-bottom: -0.23076em;
 }
 
 /* deprecated @ 4.6 */
@@ -2037,7 +2037,7 @@ body#page-setup {
 /* Tag builder page
    ========================================================================== */
 #tag-event {
-  padding: 2.5em .5em 1em;
+  padding: 2.5em 0.5em 1em;
   overflow-y: scroll;
 }
 #tag-event h3 {
@@ -2046,7 +2046,7 @@ body#page-setup {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
@@ -2062,11 +2062,11 @@ body#page-setup {
 }
 #tag-event th,
 #tag-event td {
-  padding: .5em;
+  padding: 0.5em;
   width: 50%;
 }
 #tag-event p {
-  margin: .5em;
+  margin: 0.5em;
 }
 
 /* Content -> Categories page
@@ -2086,7 +2086,7 @@ body#page-setup {
 #view_modes li {
   display: inline-block;
   font-size: 16px;
-  margin-right: .5em;
+  margin-right: 0.5em;
   width: 1.5em;
   height: 1.5em;
 }
@@ -2214,7 +2214,7 @@ body#page-setup {
    ========================================================================== */
 #page-lang .txp-list .modified {
   color: #999999;
-  margin-left: .6em;
+  margin-left: 0.6em;
 }
 
 #textpack-install {
@@ -2244,7 +2244,7 @@ tr.active .plugin-prefs {
 div.code {
   margin-bottom: 1em;
   border: 1px solid #cccccc;
-  padding: .15384em .38461em;
+  padding: 0.15384em 0.38461em;
   height: 21em;
   overflow: auto;
   -webkit-box-sizing: border-box;
@@ -2358,7 +2358,7 @@ div.code {
     left: 0;
     z-index: 1000;
     border-top: 1px solid #fffbec;
-    padding: .53846em 1em;
+    padding: 0.53846em 1em;
     background: #fff6d3;
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
     -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
@@ -2412,7 +2412,7 @@ div.code {
 
   /* remove float from txp-navigation elements */
   .txp-navigation p {
-    margin: 1em 0 .5em;
+    margin: 1em 0 0.5em;
   }
   .txp-navigation .pageby,
   .txp-navigation .prev-next {

@@ -88,7 +88,7 @@ body {
 	z-index: 1000;
 	padding: 0 1.69%;
 	height: 3em;
-	@include box-shadow(rgba(#000, .15) 0px .2em .25em);
+	@include box-shadow(rgba(#000, 0.15) 0px 0.2em 0.25em);
 	@include gradient-linear-bar($color-gradient2-from, $color-gradient2-to);
 
 	h1 {
@@ -118,7 +118,7 @@ body {
 
 .txp-logout {
 	position: absolute;
-	top: -.53846em; // 7px / 13px
+	top: -0.53846em; // 7px / 13px
 	right: 1.69%;
 }
 
@@ -158,7 +158,7 @@ body {
 	float: right;
 
 	p {
-		margin: 0 .35em 0 0;
+		margin: 0 0.35em 0 0;
 	}
 }
 
@@ -171,12 +171,12 @@ body {
 }
 
 .txp-control-panel {
-	margin-top: .5em;
+	margin-top: 0.5em;
 	text-align: right;
 }
 
 .txp-actions a {
-	margin-left: .75em;
+	margin-left: 0.75em;
 }
 
 div.multi-edit {
@@ -188,7 +188,7 @@ div.multi-edit {
 }
 
 .multi-step {
-	margin-left: .30769em;
+	margin-left: 0.30769em;
 	display: inline-block;
 }
 
@@ -207,7 +207,7 @@ div.multi-edit {
 }
 
 .disabled {
-	opacity: .33;
+	opacity: 0.33;
 	/* transparency support for IE8 */
 	filter: alpha(opacity=33);
 }
@@ -217,7 +217,7 @@ div.multi-edit {
 .txp-navigation {
 	p,
 	ul {
-		margin: 0 0 .5em;
+		margin: 0 0 0.5em;
 	}
 
 	.pageby {
@@ -283,14 +283,14 @@ span.spinner {
 .txp-value {
 	input,
 	select {
-		margin-top: -.23076em;
-		margin-bottom: -.23076em;
+		margin-top: -0.23076em;
+		margin-bottom: -0.23076em;
 	}
 }
 
 .txp-value-fixed {
 	display: inline-block;
-	padding: .23076em 0; // 3px / 13px
+	padding: 0.23076em 0; // 3px / 13px
 }
 
 /* deprecated @ 4.6 */
@@ -318,8 +318,8 @@ span.spinner {
 
 	input,
 	select {
-		margin-top: -.23076em;
-		margin-bottom: -.23076em;
+		margin-top: -0.23076em;
+		margin-bottom: -0.23076em;
 	}
 }
 
@@ -386,7 +386,7 @@ body#page-setup {
    ========================================================================== */
 
 #tag-event {
-	padding: 2.5em .5em 1em;
+	padding: 2.5em 0.5em 1em;
 	overflow-y: scroll;
 
 	h3 {
@@ -395,19 +395,19 @@ body#page-setup {
 		left: 0;
 		right: 0;
 		z-index: 1000;
-		padding: .5em 1em;
-		@include box-shadow(rgba(#000, .15) 0px .2em .25em);
+		padding: 0.5em 1em;
+		@include box-shadow(rgba(#000, 0.15) 0px 0.2em 0.25em);
 		@include gradient-linear-bar($color-gradient2-from, $color-gradient2-to);
 	}
 
 	th,
 	td {
-		padding: .5em;
+		padding: 0.5em;
 		width: 50%;
 	}
 
 	p {
-		margin: .5em;
+		margin: 0.5em;
 	}
 }
 
@@ -434,7 +434,7 @@ body#page-setup {
 	li {
 		display: inline-block;
 		font-size: 16px;
-		margin-right: .5em; // 8px / 16px
+		margin-right: 0.5em; // 8px / 16px
 		width: 1.5em; // 24px / 16px
 		height: 1.5em; // 24px / 16px
 	}
@@ -574,7 +574,7 @@ body#page-setup {
 
 #page-lang .txp-list .modified {
 	color: $color-text-footnote;
-	margin-left: .6em;
+	margin-left: 0.6em;
 }
 
 #textpack-install {
@@ -610,7 +610,7 @@ tr.active {
 div.code {
 	margin-bottom: 1em;
 	border: 1px solid $color-border;
-	padding: .15384em .38461em;
+	padding: 0.15384em 0.38461em;
 	height: 21em;
 	overflow: auto;
 	@include box-sizing(border-box);

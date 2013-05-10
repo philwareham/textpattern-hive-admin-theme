@@ -118,9 +118,9 @@ body {
 	left: 0;
 	z-index: 1000;
 	border-top: 1px solid lighten($color-highlight-box, 5%);
-	padding: .53846em 1em;
+	padding: 0.53846em 1em;
 	background: $color-highlight-box;
-	@include box-shadow(rgba(#000, .15) 0px .2em .25em);
+	@include box-shadow(rgba(#000, 0.15) 0px 0.2em 0.25em);
 }
 
 .txp-label,
@@ -177,7 +177,7 @@ body {
 
 .txp-navigation {
 	p {
-		margin: 1em 0 .5em;
+		margin: 1em 0 0.5em;
 	}
 
 	.pageby,

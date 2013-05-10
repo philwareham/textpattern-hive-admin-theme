@@ -32,9 +32,9 @@ $font-mono:                   Menlo, Consolas, "Liberation Mono", monospace;
 
 // typography grid
 
-$basefont:                    .8125em; // 13px / 16px
+$basefont:                    0.8125em; // 13px / 16px
 $baseline:                    1.4;
-$smallfont:                   .84615384615385em; // 11px / 13px
+$smallfont:                   0.84615384615385em; // 11px / 13px
 
 // layout grid
 
@@ -57,15 +57,15 @@ $color-link-hover:            #06f;
 
 // default border radii
 
-$default-border-radius:       .5em;
+$default-border-radius:       0.5em;
 
 // shadows
 
-$default-box-shadow-color:    rgba(#000, .2);
+$default-box-shadow-color:    rgba(#000, 0.2);
 $default-box-shadow-h-offset: 0px;
 $default-box-shadow-v-offset: 0px;
-$default-box-shadow-blur:     .5em;
-$inset-highlighting:          inset 0px 1px 0px rgba(#fff, .25);
+$default-box-shadow-blur:     0.5em;
+$inset-highlighting:          inset 0px 1px 0px rgba(#fff, 0.25);
 
 // neutral colours
 

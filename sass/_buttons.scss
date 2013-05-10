@@ -33,7 +33,7 @@ input[type="button"],
 	border: 1px solid darken($color-gradient-to, 10%);
 	border-bottom-color: darken($color-gradient-to, 20%);
 	@include border-radius;
-	padding: .25em .75em;
+	padding: 0.25em 0.75em;
 	display: inline-block;
 	color: $color-text;
 	@include box-shadow($inset-highlighting);
@@ -50,7 +50,7 @@ input[type="button"],
 	&:active {
 		border: 1px solid darken($color-gradient-to, 20%);
 		border-bottom-color: darken($color-gradient-to, 30%);
-		@include box-shadow(inset rgba(#000, .15) 0px .2em .25em);
+		@include box-shadow(inset rgba(#000, 0.15) 0px 0.2em 0.25em);
 		@include gradient-linear(darken($color-gradient-from, 3%), darken($color-gradient-to, 3%));
 	}
 }
@@ -86,7 +86,7 @@ button.destroy {
 	height: 1.5em; // 20px / 13px
 	border: 1px solid lighten($error-text, 18%);
 	border-bottom-color: $error-text;
-	padding: 0 .25em; // 4px / 13px
+	padding: 0 0.25em; // 4px / 13px
 	@include text-shadow-dark;
 	color: lighten($error-text, 56%);
 	@include gradient-linear-bar(lighten($error-text, 20%), $error-text);
@@ -113,7 +113,7 @@ button.destroy {
 	line-height: $baseline; // 18px / 13px
 	border: 1px solid;
 	@include border-radius;
-	padding: .25em 1em;
+	padding: 0.25em 1em;
 	display: inline-block;
 }
 

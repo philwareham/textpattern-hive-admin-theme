@@ -16,25 +16,25 @@ body {
 h1 {
 	font-size: 2em; // 26px / 13px
 	line-height: 1.23076; // 32px / 26px
-	margin: 0 0 .5em; // 13px / 26px
+	margin: 0 0 0.5em; // 13px / 26px
 
 	.pophelp {
-		font-size: .5em; // 13px / 26px
+		font-size: 0.5em; // 13px / 26px
 	}
 }
 
 h2 {
 	font-size: 1.38461em; // 18px / 13px
-	margin: 0 0 .72222em 0; // 13px / 18px
+	margin: 0 0 0.72222em 0; // 13px / 18px
 
 	.pophelp {
-		font-size: .72222em; // 13px / 18px
+		font-size: 0.72222em; // 13px / 18px
 	}
 }
 
 h3 {
 	font-size: 1.15384em; // 15px / 13px
-	margin: .86666em 0; // 13px / 15px
+	margin: 0.86666em 0; // 13px / 15px
 }
 
 h4,
@@ -79,7 +79,7 @@ dfn[title] {
 
 mark,
 var {
-	padding: 0 .25em;
+	padding: 0 0.25em;
 	@include border-radius($default-border-radius / 2);
 	color: $color-text;
 	background: lighten($color-link, 56%);
@@ -105,7 +105,7 @@ code,
 kbd,
 samp {
 	border: 1px solid lighten($color-border, 9%);
-	padding: 0 .25em;
+	padding: 0 0.25em;
 	@include border-radius($default-border-radius / 2);
 	background: $color-background-box;
 }
@@ -137,10 +137,10 @@ sup {
 	vertical-align: baseline;
 }
 sup {
-	top: -.5em;
+	top: -0.5em;
 }
 sub {
-	bottom: -.25em;
+	bottom: -0.25em;
 }
 
 small,

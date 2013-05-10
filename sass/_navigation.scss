@@ -50,7 +50,7 @@
 	background: #fcdc7f;
 
 	.rgba & {
-		background: rgba(#fff, .2);
+		background: rgba(#fff, 0.2);
 	}
 
 	&:first-child {
@@ -70,7 +70,7 @@
 		background: #fcdc7f;
 
 		.rgba & {
-			background: rgba(#fff, .2);
+			background: rgba(#fff, 0.2);
 		}
 	}
 }
@@ -80,7 +80,7 @@
 		background: #fcdc7f;
 
 		.rgba & {
-			background: rgba(#fff, .2);
+			background: rgba(#fff, 0.2);
 		}
 	}
 }
@@ -117,18 +117,18 @@
 
 	a {
 		display: block;
-		padding: .5em 1em;
+		padding: 0.5em 1em;
 	}
 
 	&:before {
 		position: absolute;
 		content: "";
-		top: -.61538em;
+		top: -0.61538em;
 		left: 1em;
 		width: 1.23076em;
-		height: .61538em;
+		height: 0.61538em;
 		background-repeat: no-repeat;
-		@include svg-graphic(indicator, gif, 1.23076em, .61538em);
+		@include svg-graphic(indicator, gif, 1.23076em, 0.61538em);
 	}
 }
 
@@ -140,5 +140,5 @@
 }
 
 .tinynav {
-	margin-top: .61538em;
+	margin-top: 0.61538em;
 }
