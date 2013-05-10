@@ -25,26 +25,6 @@ $gutters: add-gutter(.3);
 	@include grid-span(6, 7);
 }
 
-.txp-layout-3col-cell-1 {
-	@include grid-span(4, 1, $options: 'both');
-}
-
-.txp-layout-3col-cell-2 {
-	@include grid-span(4, 5);
-}
-
-.txp-layout-3col-cell-3 {
-	@include grid-span(4, 9);
-}
-
-.txp-layout-3col-cell-1-2 {
-	@include grid-span(8, 1, $options: 'both');
-}
-
-.txp-layout-3col-cell-2-3 {
-	@include grid-span(8, 5);
-}
-
 .txp-layout-4col-cell-1 {
 	@include grid-span(3, 1, $options: 'both');
 }
@@ -127,11 +107,6 @@ $gutters: add-gutter(.3);
 
 	.txp-layout-2col-cell-1,
 	.txp-layout-2col-cell-2,
-	.txp-layout-3col-cell-1,
-	.txp-layout-3col-cell-2,
-	.txp-layout-3col-cell-3,
-	.txp-layout-3col-cell-1-2,
-	.txp-layout-3col-cell-2-3,
 	.txp-layout-4col-cell-1,
 	.txp-layout-4col-cell-2,
 	.txp-layout-4col-cell-3,
