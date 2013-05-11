@@ -7,9 +7,6 @@
 // import Sass partials
 @import "variables", "mixins";
 
-// import jQuery UI theme
-@import url("../../../vendors/jquery/ui/css/textpattern/jquery-ui.css");
-
 
 /* Base
    ========================================================================== */
@@ -88,7 +85,7 @@ body {
 	z-index: 1000;
 	padding: 0 1.69%;
 	height: 3em;
-	@include box-shadow(rgba(#000, 0.15) 0px 0.2em 0.25em);
+	@include box-shadow(0px 0.2em 0.25em rgba(#000, 0.15));
 	@include gradient-linear-bar($color-gradient2-from, $color-gradient2-to);
 
 	h1 {
@@ -454,21 +451,21 @@ body#page-setup {
 	}
 }
 
-.nosvg #tab-text a {
+.no-svg #tab-text a {
 	background-image: url("../img/view-text.png");
 }
 .svg #tab-text a {
 	background-image: url("../img/view-text.svg");
 }
 
-.nosvg #tab-html a {
+.no-svg #tab-html a {
 	background-image: url("../img/view-html.png");
 }
 .svg #tab-html a {
 	background-image: url("../img/view-html.svg");
 }
 
-.nosvg #tab-preview a {
+.no-svg #tab-preview a {
 	background-image: url("../img/view-preview.png");
 }
 .svg #tab-preview a {
