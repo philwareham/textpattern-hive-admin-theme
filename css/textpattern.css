@@ -739,7 +739,7 @@ h3.txp-summary,
   margin: 0;
   padding: 0 2em 0 1em;
   height: 2em;
-  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
@@ -813,7 +813,7 @@ h3.txp-summary.expanded a:after {
   display: inline-block;
   margin: 0 1em 1em 0;
   padding: 1em 1em 1em 4em;
-  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
   -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
   -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
@@ -871,7 +871,7 @@ h3.txp-summary.expanded a:after {
   height: 0;
   width: 0;
   border-top: 1.75em solid transparent;
-  border-left: 0.9em solid #ccc;
+  border-left: 0.9em solid #cccccc;
   border-bottom: 1.75em solid transparent;
 }
 .progress-meter strong {
@@ -1025,7 +1025,8 @@ textarea[disabled],
   cursor: default !important;
   -webkit-user-select: none;
   -khtml-user-select: none;
-  -moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -1113,7 +1114,7 @@ input[type="button"],
   line-height: 1.4;
   vertical-align: baseline;
   text-decoration: none;
-  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
   cursor: pointer;
   margin: 0;
   border: 1px solid #c4c4c4;
@@ -1230,7 +1231,7 @@ button.destroy {
   border: 1px solid #db463b;
   border-bottom-color: #9d261d;
   padding: 0 0.25em;
-  text-shadow: rgba(0, 0, 0, 0.1) -1px -1px 0;
+  text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.1);
   color: #f9e0df;
   border-top: 1px solid #9d261d;
   border-bottom: 1px solid #691913;
@@ -1500,7 +1501,7 @@ td {
   font-weight: normal;
 }
 .txp-list thead th {
-  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
   background-color: #eeeeee;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
   background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
@@ -1704,7 +1705,7 @@ body {
   line-height: 3em;
   text-decoration: none;
   color: black;
-  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
 }
 .dropdown:hover a.dropdown-toggle {
   background: #fcdc7f;
