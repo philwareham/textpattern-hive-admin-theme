@@ -27,7 +27,7 @@ input[type="button"],
 	line-height: $baseline;
 	vertical-align: baseline;
 	text-decoration: none;
-	@include text-shadow-light;
+	@include text-shadow($text-shadow-light);
 	cursor: pointer;
 	margin: 0;
 	border: 1px solid darken($color-gradient-to, 10%);
@@ -50,7 +50,7 @@ input[type="button"],
 	&:active {
 		border: 1px solid darken($color-gradient-to, 20%);
 		border-bottom-color: darken($color-gradient-to, 30%);
-		@include box-shadow(inset rgba(#000, 0.15) 0px 0.2em 0.25em);
+		@include box-shadow(inset 0 0.2em 0.25em rgba(#000, 0.15));
 		@include gradient-linear(darken($color-gradient-from, 3%), darken($color-gradient-to, 3%));
 	}
 }
@@ -87,7 +87,7 @@ button.destroy {
 	border: 1px solid lighten($error-text, 18%);
 	border-bottom-color: $error-text;
 	padding: 0 0.25em; // 4px / 13px
-	@include text-shadow-dark;
+	@include text-shadow($text-shadow-dark);
 	color: lighten($error-text, 56%);
 	@include gradient-linear-bar(lighten($error-text, 20%), $error-text);
 
@@ -179,9 +179,7 @@ ul.nav-tertiary {
 	.txp-buttons a {
 		&:focus {
 			outline: 0;
-			@include box-shadow(
-				$shadow-1: $inset-highlighting,
-				$shadow-2: $color-link-hover 0px 0px 7px);
+			@include box-shadow($inset-highlighting, 0 0 7px $color-link-hover);
 			/* Opera */
 			z-index: 1;
 		}

@@ -149,12 +149,7 @@ textarea[disabled],
 	text-shadow: none !important;
 	@include box-shadow(none !important);
 	cursor: default !important;
-	// @include user-select(none); (for next Compass release)
-	-webkit-user-select: none;
-	 -khtml-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none; 
-	        user-select: none;
+	@include user-select(none);
 }
 
 /* additional input field widths */
@@ -225,7 +220,7 @@ input {
 	textarea {
 		&:focus {
 			outline: 0;
-			@include box-shadow($color-link-hover 0px 0px 7px);
+			@include box-shadow(0 0 7px $color-link-hover);
 			/* Opera */
 			z-index: 1;
 		}

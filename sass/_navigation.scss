@@ -63,7 +63,7 @@
 		line-height: 3em;
 		text-decoration: none;
 		color: darken($color-text, 20%);
-		@include text-shadow-light;
+		@include text-shadow($text-shadow-light);
 	}
 
 	&:hover a.dropdown-toggle {

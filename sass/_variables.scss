@@ -14,6 +14,11 @@
 $legacy-support-for-ie6:      false;
 $legacy-support-for-ie7:      false;
 
+// use the Kellum method for hiding text
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+
+$hide-text-direction:         right;
+
 // logo (logo-large for screen width > 480px, logo-small for screen width < 481px)
 
 $logo-large-filename:         textpattern-lrg;
@@ -62,10 +67,12 @@ $default-border-radius:       0.5em;
 // shadows
 
 $default-box-shadow-color:    rgba(#000, 0.2);
-$default-box-shadow-h-offset: 0px;
-$default-box-shadow-v-offset: 0px;
+$default-box-shadow-h-offset: 0;
+$default-box-shadow-v-offset: 0;
 $default-box-shadow-blur:     0.5em;
-$inset-highlighting:          inset 0px 1px 0px rgba(#fff, 0.25);
+$inset-highlighting:          inset 0 1px 0 rgba(#fff, 0.25);
+$text-shadow-light:           1px 1px 0 rgba(#fff, 0.4);
+$text-shadow-dark:            -1px -1px 0 rgba(#000, 0.1);
 
 // neutral colours
 

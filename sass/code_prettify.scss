@@ -53,10 +53,7 @@
 
 	ol {
 		margin: 0;
-		@include box-shadow(
-			$shadow-1: inset #f6f6f6 1.85714em 0px 0px,
-			$shadow-2: inset #e3e3e3 1.92857em 0px 0px
-		);
+		@include box-shadow(inset 1.85714em 0 0 #f6f6f6, inset 1.92857em 0 0 #e3e3e3);
 	}
 
 	li {

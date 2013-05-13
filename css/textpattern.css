@@ -1,4 +1,3 @@
-@import url("../../../vendors/jquery/ui/css/textpattern/jquery-ui.css");
 /* ==========================================================================
    Hive theme for Textpattern CMS (v4.6alpha3)
    ========================================================================== */
@@ -285,8 +284,6 @@ a.busy {
   background: #e5e5e5;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
 }
 
@@ -374,8 +371,6 @@ var {
   padding: 0 0.25em;
   -webkit-border-radius: 0.25em;
   -moz-border-radius: 0.25em;
-  -ms-border-radius: 0.25em;
-  -o-border-radius: 0.25em;
   border-radius: 0.25em;
   color: #333333;
   background: #e3edfc;
@@ -404,8 +399,6 @@ samp {
   padding: 0 0.25em;
   -webkit-border-radius: 0.25em;
   -moz-border-radius: 0.25em;
-  -ms-border-radius: 0.25em;
-  -o-border-radius: 0.25em;
   border-radius: 0.25em;
   background: #f7f7f7;
 }
@@ -416,8 +409,6 @@ pre {
   padding: 1em;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
-  -ms-border-radius: 0.5em;
-  -o-border-radius: 0.5em;
   border-radius: 0.5em;
   background: #f7f7f7;
   tab-size: 4;
@@ -512,20 +503,18 @@ svg:not(:root) {
   border: solid 1px #cccccc;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
-  -ms-border-radius: 0.5em;
-  -o-border-radius: 0.5em;
   border-radius: 0.5em;
   padding: 4px;
   background: #fff;
-  -webkit-box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 a:hover .content-image {
   border: solid 1px #0066ff;
-  -webkit-box-shadow: rgba(0, 102, 255, 0.4) 0px 0px 0.5em;
-  -moz-box-shadow: rgba(0, 102, 255, 0.4) 0px 0px 0.5em;
-  box-shadow: rgba(0, 102, 255, 0.4) 0px 0px 0.5em;
+  -webkit-box-shadow: 0 0 0.5em rgba(0, 102, 255, 0.4);
+  -moz-box-shadow: 0 0 0.5em rgba(0, 102, 255, 0.4);
+  box-shadow: 0 0 0.5em rgba(0, 102, 255, 0.4);
 }
 
 /* Messages
@@ -537,8 +526,6 @@ a:hover .content-image {
 .information {
   -webkit-border-radius: 0.25em;
   -moz-border-radius: 0.25em;
-  -ms-border-radius: 0.25em;
-  -o-border-radius: 0.25em;
   border-radius: 0.25em;
   padding: 0 0.25em;
 }
@@ -570,8 +557,6 @@ a:hover .content-image {
 .alert-block {
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
-  -ms-border-radius: 0.5em;
-  -o-border-radius: 0.5em;
   border-radius: 0.5em;
   padding: 0.5em 1em;
 }
@@ -597,18 +582,16 @@ a:hover .content-image {
 }
 #messagepane span.success, #messagepane span.warning, #messagepane span.error {
   display: inline-block;
-  -webkit-border-radius: 0.5em 0.5em 0 0;
+  -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em 0.5em 0 0;
-  -ms-border-radius: 0.5em 0.5em 0 0;
-  -o-border-radius: 0.5em 0.5em 0 0;
   border-radius: 0.5em 0.5em 0 0;
   margin: 0 auto;
   padding: 0.53846em 2.84615em 0.53846em 1em;
   max-width: 53.15385em;
   color: #fff;
-  -webkit-box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 #messagepane span.success {
   background: #238c23;
@@ -659,20 +642,6 @@ a:hover .content-image {
 }
 
 @-moz-keyframes messageflash {
-  0% {
-    opacity: 0;
-  }
-
-  50%, 100% {
-    opacity: 1;
-  }
-
-  75% {
-    opacity: 0.5;
-  }
-}
-
-@-ms-keyframes messageflash {
   0% {
     opacity: 0;
   }
@@ -739,18 +708,16 @@ h3.txp-summary,
   margin: 0;
   padding: 0 2em 0 1em;
   height: 2em;
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
-  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #bebebe;
   background-color: #eeeeee;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
   background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
   background-image: -moz-linear-gradient(#eeeeee, #dddddd);
   background-image: -o-linear-gradient(#eeeeee, #dddddd);
-  background-image: -ms-linear-gradient(#eeeeee, #dddddd);
   background-image: linear-gradient(#eeeeee, #dddddd);
 }
 
@@ -813,18 +780,16 @@ h3.txp-summary.expanded a:after {
   display: inline-block;
   margin: 0 1em 1em 0;
   padding: 1em 1em 1em 4em;
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
-  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #bebebe;
   background-color: #eeeeee;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
   background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
   background-image: -moz-linear-gradient(#eeeeee, #dddddd);
   background-image: -o-linear-gradient(#eeeeee, #dddddd);
-  background-image: -ms-linear-gradient(#eeeeee, #dddddd);
   background-image: linear-gradient(#eeeeee, #dddddd);
   border-right: 1px solid #e3e3e3;
   border-left: 1px solid #e3e3e3;
@@ -833,11 +798,9 @@ h3.txp-summary.expanded a:after {
   border-top: 1px solid #f8c225;
   border-bottom: 1px solid #d9a307;
   background-color: #ffda44;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffda44), color-stop(100%, #f8c225));
   background-image: -webkit-linear-gradient(#ffda44, #f8c225);
   background-image: -moz-linear-gradient(#ffda44, #f8c225);
   background-image: -o-linear-gradient(#ffda44, #f8c225);
-  background-image: -ms-linear-gradient(#ffda44, #f8c225);
   background-image: linear-gradient(#ffda44, #f8c225);
   border-right: 1px solid #f8c225;
   border-left: 1px solid #f8c225;
@@ -852,8 +815,6 @@ h3.txp-summary.expanded a:after {
   border: 1px solid #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
   padding: 0.25em;
   width: 1.375em;
@@ -948,8 +909,6 @@ textarea {
   border: 1px solid #cccccc;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
   border-radius: 0;
   padding: 0.25em;
 }
@@ -1023,9 +982,8 @@ textarea[disabled],
   -moz-box-shadow: none !important;
   box-shadow: none !important;
   cursor: default !important;
+  -moz-user-select: -moz-none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
@@ -1082,9 +1040,9 @@ input.month, input.exp_month, input.day, input.exp_day, input.hour, input.exp_ho
 .boxshadow select:focus,
 .boxshadow textarea:focus {
   outline: 0;
-  -webkit-box-shadow: #0066ff 0px 0px 7px;
-  -moz-box-shadow: #0066ff 0px 0px 7px;
-  box-shadow: #0066ff 0px 0px 7px;
+  -webkit-box-shadow: 0 0 7px #0066ff;
+  -moz-box-shadow: 0 0 7px #0066ff;
+  box-shadow: 0 0 7px #0066ff;
   /* Opera */
   z-index: 1;
 }
@@ -1114,28 +1072,24 @@ input[type="button"],
   line-height: 1.4;
   vertical-align: baseline;
   text-decoration: none;
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   cursor: pointer;
   margin: 0;
   border: 1px solid #c4c4c4;
   border-bottom-color: #aaaaaa;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
-  -ms-border-radius: 0.5em;
-  -o-border-radius: 0.5em;
   border-radius: 0.5em;
   padding: 0.25em 0.75em;
   display: inline-block;
   color: #333333;
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
-  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   background-color: #eeeeee;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
   background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
   background-image: -moz-linear-gradient(#eeeeee, #dddddd);
   background-image: -o-linear-gradient(#eeeeee, #dddddd);
-  background-image: -ms-linear-gradient(#eeeeee, #dddddd);
   background-image: linear-gradient(#eeeeee, #dddddd);
 }
 button:hover,
@@ -1152,11 +1106,9 @@ input[type="button"]:hover,
   color: #333333;
   text-decoration: none;
   background-color: #f8f8f8;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f8f8f8), color-stop(100%, #e7e7e7));
   background-image: -webkit-linear-gradient(#f8f8f8, #e7e7e7);
   background-image: -moz-linear-gradient(#f8f8f8, #e7e7e7);
   background-image: -o-linear-gradient(#f8f8f8, #e7e7e7);
-  background-image: -ms-linear-gradient(#f8f8f8, #e7e7e7);
   background-image: linear-gradient(#f8f8f8, #e7e7e7);
 }
 button:active,
@@ -1170,15 +1122,13 @@ input[type="button"]:active,
 .txp-buttons a:active {
   border: 1px solid #aaaaaa;
   border-bottom-color: #919191;
-  -webkit-box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
-  -moz-box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
-  box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
+  -webkit-box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   background-color: #e6e6e6;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e6e6e6), color-stop(100%, #d5d5d5));
   background-image: -webkit-linear-gradient(#e6e6e6, #d5d5d5);
   background-image: -moz-linear-gradient(#e6e6e6, #d5d5d5);
   background-image: -o-linear-gradient(#e6e6e6, #d5d5d5);
-  background-image: -ms-linear-gradient(#e6e6e6, #d5d5d5);
   background-image: linear-gradient(#e6e6e6, #d5d5d5);
 }
 
@@ -1190,11 +1140,9 @@ a.publish {
   border: 1px solid #f8c225;
   border-bottom-color: #d9a307;
   background-color: #ffe168;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffe168), color-stop(100%, #f9cc48));
   background-image: -webkit-linear-gradient(#ffe168, #f9cc48);
   background-image: -moz-linear-gradient(#ffe168, #f9cc48);
   background-image: -o-linear-gradient(#ffe168, #f9cc48);
-  background-image: -ms-linear-gradient(#ffe168, #f9cc48);
   background-image: linear-gradient(#ffe168, #f9cc48);
 }
 input[type="submit"].publish:hover,
@@ -1203,11 +1151,9 @@ a.publish:hover {
   border: 1px solid #e3ab07;
   border-bottom-color: #b68906;
   background-color: #ffe88b;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffe88b), color-stop(100%, #fad56a));
   background-image: -webkit-linear-gradient(#ffe88b, #fad56a);
   background-image: -moz-linear-gradient(#ffe88b, #fad56a);
   background-image: -o-linear-gradient(#ffe88b, #fad56a);
-  background-image: -ms-linear-gradient(#ffe88b, #fad56a);
   background-image: linear-gradient(#ffe88b, #fad56a);
 }
 input[type="submit"].publish:active,
@@ -1216,11 +1162,9 @@ a.publish:active {
   border: 1px solid #e3ab07;
   border-bottom-color: #b68906;
   background-color: #ffdc4e;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffdc4e), color-stop(100%, #f8c52f));
   background-image: -webkit-linear-gradient(#ffdc4e, #f8c52f);
   background-image: -moz-linear-gradient(#ffdc4e, #f8c52f);
   background-image: -o-linear-gradient(#ffdc4e, #f8c52f);
-  background-image: -ms-linear-gradient(#ffdc4e, #f8c52f);
   background-image: linear-gradient(#ffdc4e, #f8c52f);
 }
 
@@ -1231,16 +1175,14 @@ button.destroy {
   border: 1px solid #db463b;
   border-bottom-color: #9d261d;
   padding: 0 0.25em;
-  text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
   color: #f9e0df;
   border-top: 1px solid #9d261d;
   border-bottom: 1px solid #691913;
   background-color: #dc4e44;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dc4e44), color-stop(100%, #9d261d));
   background-image: -webkit-linear-gradient(#dc4e44, #9d261d);
   background-image: -moz-linear-gradient(#dc4e44, #9d261d);
   background-image: -o-linear-gradient(#dc4e44, #9d261d);
-  background-image: -ms-linear-gradient(#dc4e44, #9d261d);
   background-image: linear-gradient(#dc4e44, #9d261d);
 }
 input[type="submit"].destroy:hover,
@@ -1251,11 +1193,9 @@ button.destroy:hover {
   border-top: 1px solid #c83025;
   border-bottom: 1px solid #94241b;
   background-color: #e36f66;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e36f66), color-stop(100%, #c83025));
   background-image: -webkit-linear-gradient(#e36f66, #c83025);
   background-image: -moz-linear-gradient(#e36f66, #c83025);
   background-image: -o-linear-gradient(#e36f66, #c83025);
-  background-image: -ms-linear-gradient(#e36f66, #c83025);
   background-image: linear-gradient(#e36f66, #c83025);
 }
 input[type="submit"].destroy:active,
@@ -1265,11 +1205,9 @@ button.destroy:active {
   border-top: 1px solid #8c221a;
   border-bottom: 1px solid #581510;
   background-color: #d93e32;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d93e32), color-stop(100%, #8c221a));
   background-image: -webkit-linear-gradient(#d93e32, #8c221a);
   background-image: -moz-linear-gradient(#d93e32, #8c221a);
   background-image: -o-linear-gradient(#d93e32, #8c221a);
-  background-image: -ms-linear-gradient(#d93e32, #8c221a);
   background-image: linear-gradient(#d93e32, #8c221a);
 }
 
@@ -1285,8 +1223,6 @@ button.destroy:active {
   border: 1px solid;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
-  -ms-border-radius: 0.5em;
-  -o-border-radius: 0.5em;
   border-radius: 0.5em;
   padding: 0.25em 1em;
   display: inline-block;
@@ -1307,8 +1243,6 @@ ul.nav-tertiary li {
 .prev-next .navlink-disabled {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
   border-radius: 0;
 }
 .nav-tertiary > :first-child,
@@ -1342,33 +1276,27 @@ ul.nav-tertiary li {
   border-color: #a3bef3;
   border-bottom-color: #769eed;
   background-color: #e3edfc;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e3edfc), color-stop(100%, #c7dbfa));
   background-image: -webkit-linear-gradient(#e3edfc, #c7dbfa);
   background-image: -moz-linear-gradient(#e3edfc, #c7dbfa);
   background-image: -o-linear-gradient(#e3edfc, #c7dbfa);
-  background-image: -ms-linear-gradient(#e3edfc, #c7dbfa);
   background-image: linear-gradient(#e3edfc, #c7dbfa);
 }
 .nav-tertiary .navlink-active:hover {
   border-color: #97b0ef;
   border-bottom-color: #6b8fe8;
   background-color: #f1f6fe;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f1f6fe), color-stop(100%, #ccdefa));
   background-image: -webkit-linear-gradient(#f1f6fe, #ccdefa);
   background-image: -moz-linear-gradient(#f1f6fe, #ccdefa);
   background-image: -o-linear-gradient(#f1f6fe, #ccdefa);
-  background-image: -ms-linear-gradient(#f1f6fe, #ccdefa);
   background-image: linear-gradient(#f1f6fe, #ccdefa);
 }
 .nav-tertiary .navlink-active:active {
   border-color: #97b0ef;
   border-bottom-color: #6b8fe8;
   background-color: #c7dbfa;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c7dbfa), color-stop(100%, #b0cbf7));
   background-image: -webkit-linear-gradient(#c7dbfa, #b0cbf7);
   background-image: -moz-linear-gradient(#c7dbfa, #b0cbf7);
   background-image: -o-linear-gradient(#c7dbfa, #b0cbf7);
-  background-image: -ms-linear-gradient(#c7dbfa, #b0cbf7);
   background-image: linear-gradient(#c7dbfa, #b0cbf7);
 }
 
@@ -1383,9 +1311,9 @@ ul.nav-tertiary li {
 .boxshadow .navlink-active:focus,
 .boxshadow .txp-buttons a:focus {
   outline: 0;
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25), #0066ff 0px 0px 7px;
-  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25), #0066ff 0px 0px 7px;
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.25), #0066ff 0px 0px 7px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
   /* Opera */
   z-index: 1;
 }
@@ -1501,13 +1429,11 @@ td {
   font-weight: normal;
 }
 .txp-list thead th {
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
   background-color: #eeeeee;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(100%, #dddddd));
   background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
   background-image: -moz-linear-gradient(#eeeeee, #dddddd);
   background-image: -o-linear-gradient(#eeeeee, #dddddd);
-  background-image: -ms-linear-gradient(#eeeeee, #dddddd);
   background-image: linear-gradient(#eeeeee, #dddddd);
   border-top: 1px solid #dddddd;
   border-right: 1px solid #d0d0d0;
@@ -1515,11 +1441,9 @@ td {
 }
 .txp-list thead th.asc, .txp-list thead th.desc {
   background-color: lightgrey;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d3d3d3), color-stop(100%, #e4e4e4));
   background-image: -webkit-linear-gradient(#d3d3d3, #e4e4e4);
   background-image: -moz-linear-gradient(#d3d3d3, #e4e4e4);
   background-image: -o-linear-gradient(#d3d3d3, #e4e4e4);
-  background-image: -ms-linear-gradient(#d3d3d3, #e4e4e4);
   background-image: linear-gradient(#d3d3d3, #e4e4e4);
 }
 .txp-list thead th:first-child {
@@ -1599,17 +1523,15 @@ body {
   z-index: 1000;
   padding: 0 1.69%;
   height: 3em;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
-  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
+  -webkit-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   border-top: 1px solid #f8c225;
   border-bottom: 1px solid #d9a307;
   background-color: #ffda44;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffda44), color-stop(100%, #f8c225));
   background-image: -webkit-linear-gradient(#ffda44, #f8c225);
   background-image: -moz-linear-gradient(#ffda44, #f8c225);
   background-image: -o-linear-gradient(#ffda44, #f8c225);
-  background-image: -ms-linear-gradient(#ffda44, #f8c225);
   background-image: linear-gradient(#ffda44, #f8c225);
 }
 .txp-header h1 {
@@ -1705,7 +1627,7 @@ body {
   line-height: 3em;
   text-decoration: none;
   color: black;
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
 }
 .dropdown:hover a.dropdown-toggle {
   background: #fcdc7f;
@@ -1730,27 +1652,21 @@ body {
   border: solid 1px #d4d4d4;
   border-top: 0;
   background: #fff6d3;
-  -webkit-border-radius: 0 0.5em 0.5em 0.5em;
+  -webkit-border-radius: 0;
   -moz-border-radius: 0 0.5em 0.5em 0.5em;
-  -ms-border-radius: 0 0.5em 0.5em 0.5em;
-  -o-border-radius: 0 0.5em 0.5em 0.5em;
   border-radius: 0 0.5em 0.5em 0.5em;
-  -webkit-box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 0.5em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 .dropdown-menu li:first-child {
-  -webkit-border-radius: 0 0.5em 0 0;
+  -webkit-border-radius: 0;
   -moz-border-radius: 0 0.5em 0 0;
-  -ms-border-radius: 0 0.5em 0 0;
-  -o-border-radius: 0 0.5em 0 0;
   border-radius: 0 0.5em 0 0;
 }
 .dropdown-menu li:last-child {
-  -webkit-border-radius: 0 0 0.5em 0.5em;
+  -webkit-border-radius: 0;
   -moz-border-radius: 0 0 0.5em 0.5em;
-  -ms-border-radius: 0 0 0.5em 0.5em;
-  -o-border-radius: 0 0 0.5em 0.5em;
   border-radius: 0 0 0.5em 0.5em;
 }
 .dropdown-menu li:hover {
@@ -1904,8 +1820,6 @@ span.spinner {
   margin: 0 auto 1em;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
-  -ms-border-radius: 0.5em;
-  -o-border-radius: 0.5em;
   border-radius: 0.5em;
   padding: 1em 1em 1px 1em;
   background: #f7f7f7;
@@ -2047,17 +1961,15 @@ body#page-setup {
   right: 0;
   z-index: 1000;
   padding: 0.5em 1em;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
-  -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
+  -webkit-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   border-top: 1px solid #f8c225;
   border-bottom: 1px solid #d9a307;
   background-color: #ffda44;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffda44), color-stop(100%, #f8c225));
   background-image: -webkit-linear-gradient(#ffda44, #f8c225);
   background-image: -moz-linear-gradient(#ffda44, #f8c225);
   background-image: -o-linear-gradient(#ffda44, #f8c225);
-  background-image: -ms-linear-gradient(#ffda44, #f8c225);
   background-image: linear-gradient(#ffda44, #f8c225);
 }
 #tag-event th,
@@ -2097,8 +2009,6 @@ body#page-setup {
   display: block;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
-  -ms-border-radius: 0.5em;
-  -o-border-radius: 0.5em;
   border-radius: 0.5em;
   width: 1.5em;
   height: 1.5em;
@@ -2109,7 +2019,7 @@ body#page-setup {
   background-color: #fff6d3;
 }
 
-.nosvg #tab-text a {
+.no-svg #tab-text a {
   background-image: url("../img/view-text.png");
 }
 
@@ -2117,7 +2027,7 @@ body#page-setup {
   background-image: url("../img/view-text.svg");
 }
 
-.nosvg #tab-html a {
+.no-svg #tab-html a {
   background-image: url("../img/view-html.png");
 }
 
@@ -2125,7 +2035,7 @@ body#page-setup {
   background-image: url("../img/view-html.svg");
 }
 
-.nosvg #tab-preview a {
+.no-svg #tab-preview a {
   background-image: url("../img/view-preview.png");
 }
 
@@ -2360,9 +2270,9 @@ div.code {
     border-top: 1px solid #fffbec;
     padding: 0.53846em 1em;
     background: #fff6d3;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
-    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0.2em 0.25em;
+    -webkit-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   }
 
   .txp-label,
@@ -2440,8 +2350,6 @@ div.code {
     border-bottom-width: 1px;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
     border-radius: 0;
   }
   .ui-tabs .ui-tabs-nav li.ui-tabs-active {
