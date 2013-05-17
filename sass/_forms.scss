@@ -149,7 +149,6 @@ textarea[disabled],
 	text-shadow: none !important;
 	@include box-shadow(none !important);
 	cursor: default !important;
-	@include user-select(none);
 }
 
 /* additional input field widths */
