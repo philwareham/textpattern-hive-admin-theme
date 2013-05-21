@@ -72,6 +72,7 @@ textarea {
 	border: 1px solid $color-border;
 	@include border-radius(0);
 	padding: 0.25em;
+	@include transition(box-shadow .2s linear);
 }
 
 input[type="file"] {

@@ -19,6 +19,9 @@ output_style = :expanded
 # The environment mode. Defaults to :production, can also be :development
 environment = :production
 
+# Chrome needs a precision of 7 to round properly
+Sass::Script::Number.precision = 7
+
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
 
