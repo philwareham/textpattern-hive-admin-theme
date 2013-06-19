@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Hive theme for Textpattern CMS (v4.6alpha3)
-   ========================================================================== */
 /* Base
    ========================================================================== */
 /* corrects block display not defined in IE8-9 */
@@ -1578,6 +1575,16 @@ body {
   right: 1.69%;
 }
 
+/* Footer
+   ========================================================================== */
+.mothership {
+  float: left;
+}
+
+.pagejump {
+  float: right;
+}
+
 /* Navigation
    ========================================================================== */
 /* hide `<select>` version of navigation on non-touch devices
@@ -1709,16 +1716,6 @@ body {
 
 .tinynav {
   margin-top: 0.61538em;
-}
-
-/* Footer
-   ========================================================================== */
-.mothership {
-  float: left;
-}
-
-.pagejump {
-  float: right;
 }
 
 /* Miscellaneous/shared layout

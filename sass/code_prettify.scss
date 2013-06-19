@@ -4,8 +4,14 @@
 //
 
 
-// import Sass partials
-@import "variables", "mixins";
+// import all Compass core mixins
+@import "compass";
+
+// import global variables
+@import "core/settings";
+
+// import additional mixins not covered by Compass
+@import "core/helpers";
 
 
 /* Google Code Prettify
