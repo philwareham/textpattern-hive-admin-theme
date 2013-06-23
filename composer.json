@@ -1,6 +1,5 @@
 {
 	"name": "philwareham/hive",
-	"version": "4.6.0-dev",
 	"description": "Hive admin-side theme for Textpattern CMS",
 	"keywords": ["textpattern", "admin", "theme"],
 	"homepage": "https://github.com/philwareham/txp-hive-admin-theme",
@@ -17,11 +16,13 @@
 		"issues": "https://github.com/philwareham/txp-hive-admin-theme/issues",
 		"source": "https://github.com/philwareham/txp-hive-admin-theme"
 	},
-	"autoload": {
-		"files": []
-	},
 	"require": {
 		"textpattern/lock": ">=4.6.0,4.6.*@dev",
 		"textpattern/installer": "*"
-    }
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "4.x-dev"
+		}
+	}
 }
