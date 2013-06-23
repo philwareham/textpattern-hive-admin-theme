@@ -1,4 +1,4 @@
-jQuery(function ()
+$(function ()
 {
 	// To make select navigation menu work (via TinyNav)
 	$('.untinynav').tinyNav({
@@ -6,9 +6,9 @@ jQuery(function ()
 	});
 
 	// External links open new window (target="_blank" replacement)
-	$('[rel="external"]').click(function ()
+	$('a[rel="external"]').on('click.hiveExternalLink', function (e)
 	{
+		e.preventDefault();
 		window.open($(this).attr('href'));
-		return false;
 	});
 });
