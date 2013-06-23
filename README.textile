@@ -61,10 +61,6 @@ Options are provided to hide certain sections/fields/features from displaying in
 
 @define('hive_theme_hide_tag_builder_column', true);@
 
-*Hide form preview button (forms page):*
-
-@define('hive_theme_hide_form_preview', true);@
-
 h2. Development details
 
 Supported browsers: Google Chrome 12+, Internet Explorer 8+, Mozilla Firefox 4+, Apple Safari 5+ and Opera 10+. Development environment requires <a href="http://sass-lang.com" rel="external" title="Go to the Sass website">Sass</a> 3.2+ and <a href="http://compass-style.org" rel="external" title="Go to the Compass website">Compass</a> 0.12.2+, plus the Compass extension <a href="http://singularity.gs" rel="external" title="Go to the Singularity website">Singularity</a> 1.0+.
