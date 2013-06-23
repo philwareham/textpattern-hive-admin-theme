@@ -1,4 +1,4 @@
-jQuery(function ()
+$(function ()
 {
 	// To make select navigation menu work (via TinyNav)
 	$('.untinynav').tinyNav({
