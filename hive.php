@@ -95,7 +95,7 @@ class hive_theme extends theme
 		$out[] = '<meta name="apple-mobile-web-app-title" content="'.htmlspecialchars($GLOBALS["prefs"]["sitename"]).'">';
 		$out[] = '<script src="vendors/modernizr/modernizr/modernizr.js"></script>';
 		$out[] = '<script src="'.$this->url.'js/tinynav.min.js"></script>';
-		$out[] = '<script src="'.$this->url.'js/main.js"></script>';
+		$out[] = '<script src="'.$this->url.'js/scripts.js"></script>';
 		$out[] = '<!--[if lt IE 9]><script src="vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->'.n;
 
 		return join(n, $out);
