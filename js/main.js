@@ -6,7 +6,7 @@ $(function ()
 	});
 
 	// External links open new window (target="_blank" replacement)
-	$('[rel="external"]').click(function ()
+	$('a[rel="external"]').click(function ()
 	{
 		window.open($(this).attr('href'));
 		return false;
