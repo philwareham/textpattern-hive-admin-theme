@@ -15,7 +15,7 @@
 	z-index: 1000;
 	padding: 0 1.69%;
 	height: 3em;
-	@include box-shadow(0 0.2em 0.25em rgba(#000, 0.15));
+	@include box-shadow(0 0.2em 0.25em rgba(#000000, 0.15));
 	@include gradient-linear-bar($color-gradient2-from, $color-gradient2-to);
 
 	h1 {
