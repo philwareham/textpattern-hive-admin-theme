@@ -79,7 +79,7 @@ input[type="file"] {
 	
 }
 
-/* addresses box sizing set to `content-box` and excess padding in IE8-9 */
+/* address box sizing set to `content-box` and excess padding in IE8-9 */
 input[type="checkbox"],
 input[type="radio"] {
 	padding: 0;
@@ -91,7 +91,7 @@ select {
 	text-transform: none;
 }
 
-/* addresses select alignment in Safari/Chrome */
+/* address select alignment in Safari/Chrome */
 @media (-webkit-min-device-pixel-ratio: 0) {
 
 	select[size],
@@ -128,7 +128,7 @@ textarea {
 	min-height: 4.38461em; // 57px / 13px
 	resize: vertical;
 	width: 100%;
-	/* removes default vertical scrollbar in IE8-9 */
+	/* remove default vertical scrollbar in IE8-9 */
 	overflow: auto;
 }
 
