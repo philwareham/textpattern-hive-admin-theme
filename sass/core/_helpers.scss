@@ -56,13 +56,3 @@
 	border-bottom: 1px solid darken($color-gradient-to, 12%);
 	@include gradient-linear($color-gradient-from, $color-gradient-to);
 }
-
-// sticky positioning
-
-@mixin position-sticky {
-	position: -webkit-sticky;
-	position: -moz-sticky;
-	position: -ms-sticky;
-	position: -o-sticky;
-	position: sticky;
-}
