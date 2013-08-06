@@ -22,3 +22,16 @@ html[lang="zh-cn"] {
 html[lang="zh-tw"] {
 	font-family: PMingLiU, sans-serif;
 }
+
+
+/* Support for right-to-left languages
+   ========================================================================== */
+
+.rtl caption {
+	text-align: right;
+}
+
+.rtl th,
+.rtl td {
+	text-align: right;
+}

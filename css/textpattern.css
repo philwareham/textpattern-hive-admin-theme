@@ -448,24 +448,6 @@ hr {
   border-style: solid;
 }
 
-/* Support for non-latin languages
-   ========================================================================== */
-html[lang="ja-jp"] {
-  font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-}
-
-html[lang="ko-kr"] {
-  font-family: GulimChe, Gulim, sans-serif;
-}
-
-html[lang="zh-cn"] {
-  font-family: SimHei, sans-serif;
-}
-
-html[lang="zh-tw"] {
-  font-family: PMingLiU, sans-serif;
-}
-
 /* Embedded content
    ========================================================================== */
 img {
@@ -1498,6 +1480,35 @@ td {
 /* allow overflow scroll on tables */
 .txp-listtables {
   overflow-x: auto;
+}
+
+/* Support for non-latin languages
+   ========================================================================== */
+html[lang="ja-jp"] {
+  font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+}
+
+html[lang="ko-kr"] {
+  font-family: GulimChe, Gulim, sans-serif;
+}
+
+html[lang="zh-cn"] {
+  font-family: SimHei, sans-serif;
+}
+
+html[lang="zh-tw"] {
+  font-family: PMingLiU, sans-serif;
+}
+
+/* Support for right-to-left languages
+   ========================================================================== */
+.rtl caption {
+  text-align: right;
+}
+
+.rtl th,
+.rtl td {
+  text-align: right;
 }
 
 /* Container
