@@ -148,3 +148,7 @@ $gutters: add-gutter(.3);
 	border: 1px solid $color-border;
 	padding: 0 1em;
 }
+
+[dir="rtl"] .txp-grid-cell {
+	text-align: right;
+}

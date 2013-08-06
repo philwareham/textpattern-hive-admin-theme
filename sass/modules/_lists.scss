@@ -14,6 +14,12 @@ ul {
 	padding: 0 0 0 2em;
 }
 
+[dir="rtl"] menu,
+[dir="rtl"] ol,
+[dir="rtl"] ul {
+	padding: 0 2em 0 0;
+}
+
 /* remove margins from nested lists */
 ul ul,
 ol ol,
@@ -25,6 +31,10 @@ dd {
 	margin: 0 0 0 2em;
 }
 
+[dir="rtl"] dd {
+	margin: 0 2em 0 0;
+}
+
 dt {
 	font-weight: bold;
 }
@@ -32,6 +42,10 @@ dt {
 .plain-list {
 	list-style: none;
 	padding-left: 0;
+}
+
+[dir="rtl"] .plain-list {
+	padding-right: 0;
 }
 
 .switcher-list {

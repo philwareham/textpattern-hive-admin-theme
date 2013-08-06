@@ -22,20 +22,3 @@ html[lang="zh-cn"] {
 html[lang="zh-tw"] {
 	font-family: PMingLiU, sans-serif;
 }
-
-
-/* Support for right-to-left languages
-   ========================================================================== */
-
-[dir="rtl"] caption {
-	text-align: right;
-}
-
-[dir="rtl"] th,
-[dir="rtl"] td {
-	text-align: right;
-}
-
-[dir="rtl"] .txp-grid-cell {
-	text-align: right;
-}
