@@ -1758,6 +1758,11 @@ body {
   overflow: hidden;
 }
 
+[dir="rtl"] .txp-accessibility {
+  left: auto;
+  right: -1000em;
+}
+
 [role="search"] {
   float: right;
 }
