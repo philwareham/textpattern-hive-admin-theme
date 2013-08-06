@@ -27,11 +27,11 @@ html[lang="zh-tw"] {
 /* Support for right-to-left languages
    ========================================================================== */
 
-.rtl caption {
+[dir="rtl"] caption {
 	text-align: right;
 }
 
-.rtl th,
-.rtl td {
+[dir="rtl"] th,
+[dir="rtl"] td {
 	text-align: right;
 }
