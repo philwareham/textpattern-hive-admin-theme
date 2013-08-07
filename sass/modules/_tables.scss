@@ -88,6 +88,11 @@ td {
 				color: $color-text;
 				margin-right: 0.5em;
 
+				[dir="rtl"] & {
+					margin-right: 0;
+					margin-left: 0.5em;
+				}
+
 				&:hover {
 					color: $color-text;
 					text-decoration: none;
@@ -103,6 +108,11 @@ td {
 					display: inline-block;
 					opacity: 0.5;
 					@include hide-text;
+
+					[dir="rtl"] & {
+						right: auto;
+						left: -0.76923em;
+					}
 				}
 
 				&:hover:after {

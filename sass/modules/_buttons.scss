@@ -129,6 +129,10 @@ ul.nav-tertiary {
 	}
 }
 
+[dir="rtl"] ul.nav-tertiary {
+	padding: 0;
+}
+
 .nav-tertiary,
 .prev-next {
 	a,
@@ -146,6 +150,23 @@ ul.nav-tertiary {
 	> :last-child > a,
 	> :last-child > span {
 		@include border-right-radius;
+	}
+}
+
+[dir="rtl"] .nav-tertiary,
+[dir="rtl"] .prev-next {
+	> :first-child,
+	> :first-child > a,
+	> :first-child > span {
+		@include border-radius(0);
+		@include border-right-radius;
+	}
+
+	> :last-child,
+	> :last-child > a,
+	> :last-child > span {
+		@include border-radius(0);
+		@include border-left-radius;
 	}
 }
 
