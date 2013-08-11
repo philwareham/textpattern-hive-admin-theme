@@ -151,6 +151,20 @@ span.spinner {
 .txp-value {
 	float: left;
 	width: 50%;
+
+	[dir="rtl"] & {
+		float: right;
+	}
+}
+
+.txp-login {
+	.txp-label {
+		width: 31%;
+	}
+
+	.txp-value {
+		width: 69%;
+	}
 }
 
 .txp-value {
@@ -167,43 +181,23 @@ span.spinner {
 }
 
 /* deprecated @ 4.6 */
-.edit-label, 
-.login-label {
+.edit-label {
 	display: inline-block;
 	float: left;
-}
-
-/* deprecated @ 4.6 */
-.edit-label {
 	width: 42%;
 }
 
 /* deprecated @ 4.6 */
-.login-label {
-	width: 31%;
-}
-
-/* deprecated @ 4.6 */
-.edit-value,
-.login-value {
+.edit-value {
 	display: inline-block;
 	float: right;
+	width: 58%;
 
 	input,
 	select {
 		margin-top: -0.23076em;
 		margin-bottom: -0.23076em;
 	}
-}
-
-/* deprecated @ 4.6 */
-.edit-value {
-	width: 58%;
-}
-
-/* deprecated @ 4.6 */
-.login-value {
-	width: 69%;
 }
 
 /* TBC (for modals @ 4.6) */
