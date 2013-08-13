@@ -2072,9 +2072,12 @@ body#page-setup {
 #view_modes li {
   display: inline-block;
   font-size: 16px;
-  margin-right: 0.5em;
+  margin: 0 0.5em 0 0;
   width: 1.5em;
   height: 1.5em;
+}
+[dir="rtl"] #view_modes li {
+  margin: 0 0 0 0.5em;
 }
 #view_modes a {
   text-indent: 110%;
