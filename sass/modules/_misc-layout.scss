@@ -432,11 +432,11 @@ body#page-setup {
    ========================================================================== */
 
 #page-discuss .txp-list tr.spam {
-    background: lighten($error-background, 2%);
+    background: lighten($color-error-background, 2%);
 }
 
 #page-discuss .txp-list tr.moderate {
-    background: lighten($warning-background, 2%);
+    background: lighten($color-warning-background, 2%);
 }
 
 

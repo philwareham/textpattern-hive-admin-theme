@@ -18,23 +18,23 @@
 }
 
 .success {
-    color: $success-text;
-    background: $success-background;
+    color: $color-success-text;
+    background: $color-success-background;
 }
 
 .warning {
-    color: $warning-text;
-    background: $warning-background;
+    color: $color-warning-text;
+    background: $color-warning-background;
 }
 
 .error {
-    color: $error-text;
-    background: $error-background;
+    color: $color-error-text;
+    background: $color-error-background;
 }
 
 .information {
-    color: $info-text;
-    background: $info-background;
+    color: $color-info-text;
+    background: $color-info-background;
 }
 
 .highlight {
@@ -46,19 +46,19 @@
     padding: 0.5em 1em;
 
     &.success {
-        border: 1px solid $success-border;
+        border: 1px solid $color-success-border;
     }
 
     &.warning {
-        border: 1px solid $warning-border;
+        border: 1px solid $color-warning-border;
     }
 
     &.error {
-        border: 1px solid $error-border;
+        border: 1px solid $color-error-border;
     }
 
     &.information {
-        border: 1px solid $info-border;
+        border: 1px solid $color-info-border;
     }
 }
 
@@ -84,15 +84,15 @@
         }
     
         &.success {
-            background: $success-text;
+            background: $color-success-text;
         }
     
         &.warning {
-            background: $warning-text;
+            background: $color-warning-text;
         }
     
         &.error {
-            background: $error-text;
+            background: $color-error-text;
         }
     }
 }
