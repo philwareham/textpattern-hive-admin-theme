@@ -299,7 +299,7 @@ a.busy {
 /* Typography
    ========================================================================== */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   font-size: 0.8125em;
   line-height: 1.4;
 }
@@ -719,7 +719,7 @@ h3.txp-summary,
   margin: 0;
   padding: 0 2em 0 1em;
   height: 2em;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
@@ -791,7 +791,7 @@ h3.txp-summary.expanded a:after {
   display: inline-block;
   margin: 0 1em 1em 0;
   padding: 1em 1em 1em 4em;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
@@ -868,12 +868,17 @@ legend {
 /* colour placeholder text (WebKit and Mozilla only, so far) */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #999999;
+  color: #888888;
 }
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: #999999;
+  color: #888888;
+}
+
+/* styling for placeholder polyfill fallback */
+.placeholder {
+  color: #888888;
 }
 
 /* remove inner padding and border in Firefox 4+ */
@@ -905,27 +910,32 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
-  -webkit-appearance: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  max-width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  line-height: 1.4;
-  vertical-align: baseline;
-  color: #333333;
-  background-color: white;
-  margin: 0;
-  border: 1px solid #cccccc;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  padding: 0.25em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-transition: box-shadow 0.2s linear;
   -moz-transition: box-shadow 0.2s linear;
   -o-transition: box-shadow 0.2s linear;
   transition: box-shadow 0.2s linear;
+  -webkit-appearance: none;
+  margin: 0;
+  border: 1px solid #cccccc;
+  padding: 0.25em;
+  max-width: 100%;
+  color: #333333;
+  background-color: white;
+  font-size: 100%;
+  font-size: 1em;
+  font-family: sans-serif;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+
+input[type="color"] {
+  padding: 0;
 }
 
 /* address box sizing set to `content-box` and excess padding in IE8-9 */
@@ -938,6 +948,11 @@ input[type="radio"] {
 /* address inconsistent `text-transform` inheritance for `select` in Firefox 4+ and Opera */
 select {
   text-transform: none;
+}
+
+select[size],
+select[multiple] {
+  height: auto;
 }
 
 /* address select alignment in Safari/Chrome */
@@ -959,7 +974,7 @@ select {
   }
 }
 optgroup {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
   color: #333333;
@@ -970,11 +985,11 @@ optgroup::-moz-focus-inner {
 }
 
 textarea {
-  min-height: 4.38461em;
+  height: auto;
+  min-height: 3em;
+  overflow: auto;
   resize: vertical;
   width: 100%;
-  /* remove default vertical scrollbar in IE8-9 */
-  overflow: auto;
 }
 
 /* make sure disable elements really are disabled */
@@ -988,14 +1003,14 @@ select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled],
 .navlink-disabled {
-  opacity: 1;
-  border-color: #dddddd !important;
-  color: #999999 !important;
-  background: #eee !important;
-  text-shadow: none !important;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
+  opacity: 1;
+  border-color: #dddddd !important;
+  color: #888888 !important;
+  background: #eee !important;
+  text-shadow: none !important;
   cursor: default !important;
 }
 
@@ -1050,16 +1065,19 @@ input.month, input.exp_month, input.day, input.exp_day, input.hour, input.exp_ho
 .boxshadow input[type="week"]:focus,
 .boxshadow select:focus,
 .boxshadow textarea:focus {
-  outline: 0;
   -webkit-box-shadow: 0 0 7px #0066ff;
   -moz-box-shadow: 0 0 7px #0066ff;
   box-shadow: 0 0 7px #0066ff;
-  /* Opera */
-  z-index: 1;
+  outline: 0;
 }
 
 /* Buttons
    ========================================================================== */
+/* address inconsistent `text-transform` inheritance for `button` in Chrome, Safari5+, and IE6+ */
+button {
+  text-transform: none;
+}
+
 button,
 input[type="reset"],
 input[type="submit"],
@@ -1069,34 +1087,19 @@ input[type="button"],
 .navlink,
 .navlink-active,
 .txp-buttons a {
-  -webkit-appearance: none;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: auto;
-  overflow: visible;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  line-height: 1.4;
-  vertical-align: baseline;
-  text-decoration: none;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
-  cursor: pointer;
-  margin: 0;
-  border: 1px solid #c4c4c4;
-  border-bottom-color: #aaaaaa;
-  -webkit-border-radius: 0.5em;
-  -moz-border-radius: 0.5em;
-  border-radius: 0.5em;
-  padding: 0.25em 0.75em;
-  display: inline-block;
-  color: #333333;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   background-color: #eeeeee;
   background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
   background-image: -moz-linear-gradient(#eeeeee, #dddddd);
@@ -1106,6 +1109,21 @@ input[type="button"],
   -moz-transition: box-shadow 0.2s linear;
   -o-transition: box-shadow 0.2s linear;
   transition: box-shadow 0.2s linear;
+  -webkit-appearance: none;
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  border: solid 1px #cccccc;
+  padding: 0.25em 0.75em;
+  overflow: visible;
+  color: #333333;
+  cursor: pointer;
+  font-size: 100%;
+  font-size: 1em;
+  font-family: sans-serif;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: baseline;
 }
 button:hover,
 input[type="reset"]:hover,
@@ -1116,15 +1134,13 @@ input[type="button"]:hover,
 .navlink:hover,
 .navlink-active:hover,
 .txp-buttons a:hover {
-  border: 1px solid #aaaaaa;
-  border-bottom-color: #919191;
-  color: #333333;
-  text-decoration: none;
   background-color: #f8f8f8;
   background-image: -webkit-linear-gradient(#f8f8f8, #e8e8e8);
   background-image: -moz-linear-gradient(#f8f8f8, #e8e8e8);
   background-image: -o-linear-gradient(#f8f8f8, #e8e8e8);
   background-image: linear-gradient(#f8f8f8, #e8e8e8);
+  border-color: #aaaaaa;
+  text-decoration: none;
 }
 button:active,
 input[type="reset"]:active,
@@ -1135,8 +1151,6 @@ input[type="button"]:active,
 .navlink:active,
 .navlink-active:active,
 .txp-buttons a:active {
-  border: 1px solid #aaaaaa;
-  border-bottom-color: #919191;
   -webkit-box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
@@ -1145,6 +1159,8 @@ input[type="button"]:active,
   background-image: -moz-linear-gradient(#e6e6e6, #d6d6d6);
   background-image: -o-linear-gradient(#e6e6e6, #d6d6d6);
   background-image: linear-gradient(#e6e6e6, #d6d6d6);
+  border-color: #aaaaaa;
+  color: #1a1a1a;
 }
 
 /* primary buttons */
@@ -1362,12 +1378,10 @@ ul.nav-tertiary li {
 .boxshadow .navlink:focus,
 .boxshadow .navlink-active:focus,
 .boxshadow .txp-buttons a:focus {
-  outline: 0;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
-  /* Opera */
-  z-index: 1;
+  outline: 0;
 }
 
 /* Lists
@@ -1504,7 +1518,7 @@ td {
   font-weight: normal;
 }
 .txp-list thead th {
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
   background-color: #eeeeee;
   background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
   background-image: -moz-linear-gradient(#eeeeee, #dddddd);
@@ -1721,7 +1735,7 @@ body {
   line-height: 3em;
   text-decoration: none;
   color: black;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 .dropdown:hover a.dropdown-toggle {
   background: #fcdc7f;
@@ -2139,7 +2153,7 @@ body#page-setup {
   width: 75%;
 }
 #main_content .author {
-  color: #999999;
+  color: #888888;
 }
 
 #recent_group ul {
@@ -2152,7 +2166,7 @@ body#page-setup {
 /* Content -> Articles page
    ========================================================================== */
 .unpublished {
-  color: #999999;
+  color: #888888;
 }
 
 /* Content -> Images page
@@ -2204,7 +2218,7 @@ body#page-setup {
 /* Admin -> Languages page
    ========================================================================== */
 #page-lang .txp-list .modified {
-  color: #999999;
+  color: #888888;
   margin-left: 0.6em;
 }
 
