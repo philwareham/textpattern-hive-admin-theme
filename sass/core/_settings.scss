@@ -27,7 +27,7 @@ $logo-small-height:           2em; // 26px / 13px
 
 // font families
 
-$font-body:                   Arial, Helvetica, sans-serif;
+$font-body:                   sans-serif;
 $font-mono:                   Menlo, Consolas, "Liberation Mono", monospace;
 
 // typography grid
@@ -51,7 +51,7 @@ $breakpoint-2:                42em; // 546px / 13px
 
 $color-text:                  #333333;
 $color-text-inverse:          #ffffff;
-$color-text-footnote:         #999999;
+$color-text-footnote:         #888888;
 $color-link:                  #114eb1;
 $color-link-hover:            #0066ff;
 
@@ -61,12 +61,12 @@ $default-border-radius:       0.5em;
 
 // shadows
 
-$default-box-shadow-color:    rgba(#000, 0.2);
+$default-box-shadow-color:    rgba(#000000, .2);
 $default-box-shadow-h-offset: 0;
 $default-box-shadow-v-offset: 0;
 $default-box-shadow-blur:     0.5em;
 $inset-highlighting:          inset 0 1px 0 rgba(#ffffff, 0.25);
-$text-shadow-light:           1px 1px 0 rgba(#ffffff, 0.4);
+$text-shadow-light:           1px 1px 0 rgba(#ffffff, 0.5);
 $text-shadow-dark:            -1px -1px 0 rgba(#000000, 0.1);
 
 // neutral colours
@@ -85,15 +85,15 @@ $color-highlight-box:         lighten($color-gradient2-from, 28%);
 
 // alert colours
 
-$success-text:                #238c23;
-$success-background:          #dff0d8;
-$success-border:              darken($success-background, 20%);
-$warning-text:                #cb8f02;
-$warning-background:          #fff6d3;
-$warning-border:              darken($warning-background, 20%);
-$error-text:                  #9d261d;
-$error-background:            #f2dede;
-$error-border:                darken($error-background, 12%);
-$info-text:                   #3a87ad;
-$info-background:             #e7f6fc;
-$info-border:                 darken($info-background, 12%);
+$color-success-text:          #238c23;
+$color-success-background:    #dff0d8;
+$color-success-border:        darken($color-success-background, 20%);
+$color-warning-text:          #cb8f02;
+$color-warning-background:    #fff6d3;
+$color-warning-border:        darken($color-warning-background, 20%);
+$color-error-text:            #9d261d;
+$color-error-background:      #f2dede;
+$color-error-border:          darken($color-error-background, 12%);
+$color-info-text:             #3a87ad;
+$color-info-background:       #e7f6fc;
+$color-info-border:           darken($color-info-background, 12%);
