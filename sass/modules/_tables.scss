@@ -69,6 +69,7 @@ td {
         th {
             @include text-shadow($text-shadow-light);
             @include gradient-linear($color-gradient-from, $color-gradient-to);
+
             border-top: 1px solid $color-gradient-to;
             border-right: 1px solid darken($color-gradient-to, 5%);
             border-bottom: 1px solid darken($color-gradient-to, 10%);
@@ -99,6 +100,8 @@ td {
                 }
 
                 &:after {
+                    @include hide-text;
+
                     position: absolute;
                     top: 0.53846em;
                     right: -0.76923em;
@@ -107,7 +110,6 @@ td {
                     height: 0;
                     display: inline-block;
                     opacity: 0.5;
-                    @include hide-text;
 
                     [dir="rtl"] & {
                         right: auto;

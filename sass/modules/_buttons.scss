@@ -34,8 +34,8 @@ input[type="button"],
     width: auto;
     margin: 0; // address margins set differently in Firefox4+, Safari5+, and Chrome */
     border: solid 1px $color-border;
-    padding: 0.25em 0.75em;
-    //height: 2em; // 26px / 13px
+    padding: 0.5384615em 0.75em;
+    height: 2.3846154em; // 31px / 13px
     overflow: visible; // the overflow property removes extra width in IE
     color: $color-text;
     cursor: pointer;
@@ -67,22 +67,24 @@ input[type="button"],
 input[type="submit"].publish,
 button.publish,
 a.publish {
-    //height: 3em; // 39px / 13px
+    @include gradient-linear(lighten($color-gradient2-from, 7%), lighten($color-gradient2-to, 7%));
+
     font-weight: bold;
     border: 1px solid $color-gradient2-to;
     border-bottom-color: darken($color-gradient2-to, 12%);
-    @include gradient-linear(lighten($color-gradient2-from, 7%), lighten($color-gradient2-to, 7%));
 
     &:hover {
+        @include gradient-linear(lighten($color-gradient2-from, 14%), lighten($color-gradient2-to, 14%));
+
         border: 1px solid darken($color-gradient2-to, 10%);
         border-bottom-color: darken($color-gradient2-to, 19%);
-        @include gradient-linear(lighten($color-gradient2-from, 14%), lighten($color-gradient2-to, 14%));
     }
 
     &:active {
+        @include gradient-linear(lighten($color-gradient2-from, 2%), lighten($color-gradient2-to, 2%));
+
         border: 1px solid darken($color-gradient2-to, 10%);
         border-bottom-color: darken($color-gradient2-to, 19%);
-        @include gradient-linear(lighten($color-gradient2-from, 2%), lighten($color-gradient2-to, 2%));
     }
 }
 
@@ -90,38 +92,42 @@ a.publish {
 
 input[type="submit"].destroy,
 button.destroy {
-    height: 1.5em; // 20px / 13px
+    @include text-shadow($text-shadow-dark);
+    @include gradient-linear-bar(lighten($color-error-text, 20%), $color-error-text);
+
     border: 1px solid lighten($color-error-text, 18%);
     border-bottom-color: $color-error-text;
     padding: 0 0.25em; // 4px / 13px
-    @include text-shadow($text-shadow-dark);
+    height: 1.5384615em; // 20px / 13px
     color: lighten($color-error-text, 56%);
-    @include gradient-linear-bar(lighten($color-error-text, 20%), $color-error-text);
 
     &:hover {
+        @include gradient-linear-bar(lighten($color-error-text, 28%), lighten($color-error-text, 10%));
+
         border: 1px solid lighten($color-error-text, 8%);
         border-bottom-color: darken($color-error-text, 10%);
         color: $color-text-inverse;
-        @include gradient-linear-bar(lighten($color-error-text, 28%), lighten($color-error-text, 10%));
     }
 
     &:active {
+        @include gradient-linear-bar(lighten($color-error-text, 16%), darken($color-error-text, 4%));
+
         border: 1px solid lighten($color-error-text, 8%);
         border-bottom-color: darken($color-error-text, 10%);
-        @include gradient-linear-bar(lighten($color-error-text, 16%), darken($color-error-text, 4%));
     }
 }
 
 .navlink-disabled {
+    @include border-radius;
     @include background-clip;
     @include box-sizing(border-box);
-    //height: 2em; // 26px / 13px
+
+    display: inline-block;
+    border: 1px solid;
+    padding: 0.25em 1em;
+    height: 2.3846154em; // 31px / 13px
     font-size: 1em;
     line-height: $baseline; // 18px / 13px
-    border: 1px solid;
-    @include border-radius;
-    padding: 0.25em 1em;
-    display: inline-block;
 }
 
 /* button sets */
@@ -177,20 +183,23 @@ ul.nav-tertiary {
 }
 
 .nav-tertiary .navlink-active {
-    border-color: #a3bef3;
-    border-bottom-color: darken(#a3bef3, 10%);
     @include gradient-linear(lighten($color-link, 56%), lighten($color-link, 50%));
 
+    border-color: #a3bef3;
+    border-bottom-color: darken(#a3bef3, 10%);
+
     &:hover {
+        @include gradient-linear(lighten($color-link, 59%), lighten($color-link, 51%));
+
         border-color: lighten(#6b8fe8, 10%);
         border-bottom-color: #6b8fe8;
-        @include gradient-linear(lighten($color-link, 59%), lighten($color-link, 51%));
     }
 
     &:active {
+        @include gradient-linear(lighten($color-link, 50%), lighten($color-link, 45%));
+
         border-color: lighten(#6b8fe8, 10%);
         border-bottom-color: #6b8fe8;
-        @include gradient-linear(lighten($color-link, 50%), lighten($color-link, 45%));
     }
 }
 

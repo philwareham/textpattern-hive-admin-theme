@@ -123,8 +123,9 @@ span.spinner {
 
 .txp-edit,
 .txp-login {
-    margin: 0 auto 1em;
     @include border-radius;
+
+    margin: 0 auto 1em;
     padding: 1em 1em 1px 1em;
     background: $color-background-box;
 }
@@ -202,11 +203,12 @@ span.spinner {
 
 /* TBC (for modals @ 4.6) */
 .txp-edit-action {
+    @include border-bottom-radius;
+
     margin-right: -1em;
     margin-left: -1em;
     margin-bottom: 0;
     border-top: 1px solid $color-background;
-    @include border-bottom-radius;
     padding: 1em;
     background: darken($color-background-box, 3%);
 
@@ -235,12 +237,14 @@ body#page-setup {
     }
 
     h1 {
-        font-size: 1em;
+        @include hide-text;
+        @include svg-graphic(textpattern-xlrg, png, 20.30769em, 4.15384em);
+
         width: 20.30769em; // 264px / 13px
         height: 4.15384em; // 54px / 13px
-        @include hide-text;
+        font-size: 1em;
         background-repeat: no-repeat;
-        @include svg-graphic(textpattern-xlrg, png, 20.30769em, 4.15384em);
+
     }
 
     select {
@@ -257,14 +261,15 @@ body#page-setup {
     overflow-y: scroll;
 
     h3 {
+        @include box-shadow(0 0.2em 0.25em rgba(#000000, 0.15));
+        @include gradient-linear-bar($color-gradient2-from, $color-gradient2-to);
+
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         z-index: 1000;
         padding: 0.5em 1em;
-        @include box-shadow(0 0.2em 0.25em rgba(#000000, 0.15));
-        @include gradient-linear-bar($color-gradient2-from, $color-gradient2-to);
     }
 
     th,
@@ -300,10 +305,10 @@ body#page-setup {
 
     li {
         display: inline-block;
-        font-size: 16px;
         margin: 0 0.5em 0 0;
         width: 1.5em; // 24px / 16px
         height: 1.5em; // 24px / 16px
+        font-size: 16px;
 
         [dir="rtl"] & {
             margin: 0 0 0 0.5em;
@@ -312,8 +317,9 @@ body#page-setup {
 
     a {
         @include hide-text;
-        display: block;
         @include border-radius;
+
+        display: block;
         width: 1.5em; // 24px / 16px
         height: 1.5em; // 24px / 16px
         background: $color-gradient-from no-repeat 50% 50%;
@@ -395,6 +401,7 @@ body#page-setup {
 
     img {
         @include box-sizing(border-box);
+
         max-width: 100%;
         height: auto;
     }
@@ -479,12 +486,13 @@ tr.active {
 }
 
 div.code {
+    @include box-sizing(border-box);
+
     margin-bottom: 1em;
     border: 1px solid $color-border;
     padding: 0.15384em 0.38461em;
     height: 21em;
     overflow: auto;
-    @include box-sizing(border-box);
 }
 
 /* Deprecated @ 4.6 - use `.txp-layout-textbox` instead */

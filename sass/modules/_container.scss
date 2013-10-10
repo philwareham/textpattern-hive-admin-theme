@@ -17,6 +17,7 @@ body {
 
 .txp-body {
     @extend .clearfix;
-    max-width: 116em; // 1508px / 13px
+
     margin: 0 auto;
+    max-width: 116em; // 1508px / 13px
 }

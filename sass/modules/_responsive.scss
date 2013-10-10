@@ -40,9 +40,10 @@ body#page-setup {
     padding: 0 1em;
 
     h1 {
+        @include svg-graphic($logo-small-filename, $logo-small-filetype, $logo-small-width, $logo-small-height);
+
         max-width: 50%;
         padding-left: $logo-small-width;
-        @include svg-graphic($logo-small-filename, $logo-small-filetype, $logo-small-width, $logo-small-height);
     }
 }
 
@@ -112,6 +113,8 @@ body {
 
 /* move `<select>` navigation to new row for smaller screens */
 .txp-nav-select {
+    @include box-shadow(0 0.2em 0.25em rgba(#000000, 0.15));
+
     position: absolute;
     top: 2.46153em;
     right: 0;
@@ -120,7 +123,6 @@ body {
     border-top: 1px solid lighten($color-highlight-box, 5%);
     padding: 0.53846em 1em;
     background: $color-highlight-box;
-    @include box-shadow(0 0.2em 0.25em rgba(#000000, 0.15));
 }
 
 .txp-label,
@@ -207,10 +209,11 @@ body {
 /* responsive jQuery UI tabs */
 
 .ui-tabs .ui-tabs-nav li {
+    @include border-radius(0);
+
     float: none;
     margin-top: 2px;
     border-bottom-width: 1px;
-    @include border-radius(0);
 
     &.ui-tabs-active {
         margin-bottom: 0;

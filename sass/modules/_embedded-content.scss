@@ -39,14 +39,16 @@ svg:not(:root) {
 }
 
 .content-image {
-    border: solid 1px $color-border;
     @include border-radius;
-    padding: 4px;
-    background: #fff;
     @include box-shadow;
 
+    border: solid 1px $color-border;
+    padding: 4px;
+    background: #fff;
+
     a:hover & {
-        border: solid 1px $color-link-hover;
         @include box-shadow(0 0 0.5em rgba($color-link-hover, 0.4));
+
+        border: solid 1px $color-link-hover;
     }
 }

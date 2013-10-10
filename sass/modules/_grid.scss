@@ -140,13 +140,14 @@ $gutters: add-gutter(.3);
 
 .txp-grid-cell {
     @include box-sizing(border-box);
+
     display: inline-block;
-    text-align: left;
-    max-width: 22.61538em; // 294px / 13px
-    vertical-align: top;
     margin: 0 0.15384em 0.30769em; // 2px / 13px and 4px / 13px
     border: 1px solid $color-border;
     padding: 0 1em;
+    max-width: 22.61538em; // 294px / 13px
+    text-align: left;
+    vertical-align: top;
 }
 
 [dir="rtl"] .txp-grid-cell {

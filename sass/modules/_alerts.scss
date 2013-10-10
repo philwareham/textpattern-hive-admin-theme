@@ -14,6 +14,7 @@
 .error,
 .information {
     @include border-radius($default-border-radius / 2);
+
     padding: 0 0.25em;
 }
 
@@ -43,6 +44,7 @@
 
 .alert-block {
     @include border-radius;
+
     padding: 0.5em 1em;
 
     &.success {
@@ -74,13 +76,14 @@
         &.success,
         &.warning,
         &.error {
-            display: inline-block;
             @include border-radius($default-border-radius $default-border-radius 0 0);
+            @include box-shadow;
+
+            display: inline-block;
             margin: 0 auto;
             padding: 0.53846em 2.84615em 0.53846em 1em;
             max-width: ($text-column - 3.84615em);
             color: #fff;
-            @include box-shadow;
         }
     
         &.success {
@@ -113,7 +116,6 @@
     }
 
     &:hover {
-        color: $color-text;
         text-decoration: none;
         color: #fff;
         cursor: pointer;
