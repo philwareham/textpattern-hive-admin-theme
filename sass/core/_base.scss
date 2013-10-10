@@ -23,7 +23,8 @@ summary {
 }
 
 /* addresses styling for `hidden` attribute not present in IE8-9 */
-[hidden] {
+[hidden],
+template {
     display: none;
 }
 

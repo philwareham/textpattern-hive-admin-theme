@@ -7,10 +7,10 @@
 /* Typography
    ========================================================================== */
 
+@include establish-baseline;
+
 body {
     font-family: $font-body;
-    font-size: $basefont;
-    line-height: $baseline;
 }
 
 h1 {
@@ -58,11 +58,6 @@ blockquote {
     margin: 1em 0;
     border-left: 3px solid $color-border;
     padding: 0 0 0 1em;
-}
-
-/* set consistent quote types */
-q {
-    quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 /* address styling not present in Safari5 and Chrome */
