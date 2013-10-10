@@ -31,10 +31,10 @@ input[type="button"],
 
     -webkit-appearance: none; // remove iOS Safari default styling
     display: inline-block;
-    width: auto;
     margin: 0; // address margins set differently in Firefox4+, Safari5+, and Chrome */
     border: solid 1px $color-border;
     padding: 0.5384615em 0.75em;
+    width: auto;
     height: 2.3846154em; // 31px / 13px
     overflow: visible; // the overflow property removes extra width in IE
     color: $color-text;
@@ -124,7 +124,7 @@ button.destroy {
 
     display: inline-block;
     border: 1px solid;
-    padding: 0.25em 1em;
+    padding: 0.5384615em 0.75em;
     height: 2.3846154em; // 31px / 13px
     font-size: 1em;
     line-height: $baseline; // 18px / 13px

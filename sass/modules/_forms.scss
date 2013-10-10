@@ -71,8 +71,8 @@ textarea {
     -webkit-appearance: none; // remove iOS Safari default styling
     margin: 0;
     border: 1px solid $color-border;
-    padding: 0.25em;
-    //height: 2em; // 26px / 13px
+    padding: 0.5384615em 0.25em;
+    height: 2.3846154em; // 31px / 13px
     max-width: 100%;
     color: $color-text;
     background-color: $color-background;
@@ -106,7 +106,7 @@ select[multiple] {
 
 select[size="0"],
 select[size="1"] {
-    //height: 2em; // 26px / 13px
+    height: 2.3846154em; // 31px / 13px
 }
 
 /* address select alignment in Safari/Chrome */

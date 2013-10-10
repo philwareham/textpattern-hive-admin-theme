@@ -922,7 +922,8 @@ textarea {
   -webkit-appearance: none;
   margin: 0;
   border: 1px solid #cccccc;
-  padding: 0.25em;
+  padding: 0.5384615em 0.25em;
+  height: 2.3846154em;
   max-width: 100%;
   color: #333333;
   background-color: white;
@@ -952,6 +953,11 @@ select {
 select[size],
 select[multiple] {
   height: auto;
+}
+
+select[size="0"],
+select[size="1"] {
+  height: 2.3846154em;
 }
 
 /* address select alignment in Safari/Chrome */
@@ -1110,10 +1116,10 @@ input[type="button"],
   transition: box-shadow 0.2s linear;
   -webkit-appearance: none;
   display: inline-block;
-  width: auto;
   margin: 0;
   border: solid 1px #cccccc;
   padding: 0.5384615em 0.75em;
+  width: auto;
   height: 2.3846154em;
   overflow: visible;
   color: #333333;
@@ -1254,7 +1260,7 @@ button.destroy:active {
   box-sizing: border-box;
   display: inline-block;
   border: 1px solid;
-  padding: 0.25em 1em;
+  padding: 0.5384615em 0.75em;
   height: 2.3846154em;
   font-size: 1em;
   line-height: 1.4;
