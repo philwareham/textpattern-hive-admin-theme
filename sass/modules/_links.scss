@@ -8,43 +8,43 @@
    ========================================================================== */
 
 a {
-	color: $color-link;
-	text-decoration: none;
+    color: $color-link;
+    text-decoration: none;
 
-	&:focus {
-		outline: thin dotted $color-link-hover;
-	}
+    &:focus {
+        outline: thin dotted $color-link-hover;
+    }
 
-	&:hover {
-		color: $color-link-hover;
-		text-decoration: underline;
-	}
+    &:hover {
+        color: $color-link-hover;
+        text-decoration: underline;
+    }
 
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+    &:hover,
+    &:active {
+        outline: 0;
+    }
 
-	&.busy {
-		visibility: hidden;
-	}
+    &.busy {
+        visibility: hidden;
+    }
 }
 
 .pophelp,
 .pophelpsubtle {
-	border: 1px solid #fff;
-	padding: 0 0.25em;
-	font-weight: normal;
-	background: #e5e5e5;
-	@include border-radius(50%);
+    border: 1px solid #fff;
+    padding: 0 0.25em;
+    font-weight: normal;
+    background: #e5e5e5;
+    @include border-radius(50%);
 }
 
 .txp-list thead th a.pophelp {
-	display: inline;
-	color: $color-link;
+    display: inline;
+    color: $color-link;
 
-	&:hover {
-		color: $color-link-hover;
-		text-decoration: underline;
-	}
+    &:hover {
+        color: $color-link-hover;
+        text-decoration: underline;
+    }
 }

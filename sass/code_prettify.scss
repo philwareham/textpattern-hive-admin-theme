@@ -22,48 +22,48 @@
 .dec,
 .typ,
 .var {
-	color: teal;
+    color: teal;
 }
 .atv,
 .str {
-	color: #d14;
+    color: #d14;
 }
 .clo,
 .opn,
 .pun {
-	color: #93a1a1;
+    color: #93a1a1;
 }
 .com {
-	color: #93a1a1;
+    color: #93a1a1;
 }
 
 .fun {
-	color: #dc322f;
+    color: #dc322f;
 }
 .kwd {
-	color: #1e347b;
+    color: #1e347b;
 }
 .lit {
-	color: #195f91;
+    color: #195f91;
 }
 .pln {
-	color: #48484c;
+    color: #48484c;
 }
 .tag {
-	color: #1e347b;
+    color: #1e347b;
 }
 
 /* Google Code Prettify - line number colouring */
 .linenums {
-	padding-left: 2em;
+    padding-left: 2em;
 
-	ol {
-		margin: 0;
-		@include box-shadow(inset 1.85714em 0 0 #f6f6f6, inset 1.92857em 0 0 #e3e3e3);
-	}
+    ol {
+        margin: 0;
+        @include box-shadow(inset 1.85714em 0 0 #f6f6f6, inset 1.92857em 0 0 #e3e3e3);
+    }
 
-	li {
-		padding-left: 1em;
-		color: darken($color-border, 8%);
-	}
+    li {
+        padding-left: 1em;
+        color: darken($color-border, 8%);
+    }
 }

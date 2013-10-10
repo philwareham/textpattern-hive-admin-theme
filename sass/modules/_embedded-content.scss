@@ -8,45 +8,45 @@
    ========================================================================== */
 
 img {
-	/* remove border when inside `<a>` element in IE8-9 */
-	border: 0;
-	/* remove the gap between images and the bottom of their containers */
-	vertical-align: middle;
+    /* remove border when inside `<a>` element in IE8-9 */
+    border: 0;
+    /* remove the gap between images and the bottom of their containers */
+    vertical-align: middle;
 
-	&.align-left {
-		float: left;
-		margin: 1em 1em 1em 0;
-	}
+    &.align-left {
+        float: left;
+        margin: 1em 1em 1em 0;
+    }
 
-	&.align-right {
-		float: right;
-		margin: 1em 0 1em 1em;
-	}
-	&.align-center {
-		display: block;
-		margin: 1em auto;
-	}
+    &.align-right {
+        float: right;
+        margin: 1em 0 1em 1em;
+    }
+    &.align-center {
+        display: block;
+        margin: 1em auto;
+    }
 }
 
 /* address margin not present in IE 8-9 and Safari 5 */
 figure {
-	margin: 0;
+    margin: 0;
 }
 
 /* correct overflow displayed oddly in IE9 */
 svg:not(:root) {
-	overflow: hidden;
+    overflow: hidden;
 }
 
 .content-image {
-	border: solid 1px $color-border;
-	@include border-radius;
-	padding: 4px;
-	background: #fff;
-	@include box-shadow;
+    border: solid 1px $color-border;
+    @include border-radius;
+    padding: 4px;
+    background: #fff;
+    @include box-shadow;
 
-	a:hover & {
-		border: solid 1px $color-link-hover;
-		@include box-shadow(0 0 0.5em rgba($color-link-hover, 0.4));
-	}
+    a:hover & {
+        border: solid 1px $color-link-hover;
+        @include box-shadow(0 0 0.5em rgba($color-link-hover, 0.4));
+    }
 }

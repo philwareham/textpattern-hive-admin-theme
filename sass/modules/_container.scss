@@ -8,15 +8,15 @@
    ========================================================================== */
 
 body {
-	position: relative;
-	margin: 0;
-	padding: 5em 1.69% 0;
-	color: $color-text;
-	background: $color-background;
+    position: relative;
+    margin: 0;
+    padding: 5em 1.69% 0;
+    color: $color-text;
+    background: $color-background;
 }
 
 .txp-body {
-	@extend .clearfix;
-	max-width: 116em; // 1508px / 13px
-	margin: 0 auto;
+    @extend .clearfix;
+    max-width: 116em; // 1508px / 13px
+    margin: 0 auto;
 }

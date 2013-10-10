@@ -13,146 +13,146 @@
 .warning,
 .error,
 .information {
-	@include border-radius($default-border-radius / 2);
-	padding: 0 0.25em;
+    @include border-radius($default-border-radius / 2);
+    padding: 0 0.25em;
 }
 
 .success {
-	color: $success-text;
-	background: $success-background;
+    color: $success-text;
+    background: $success-background;
 }
 
 .warning {
-	color: $warning-text;
-	background: $warning-background;
+    color: $warning-text;
+    background: $warning-background;
 }
 
 .error {
-	color: $error-text;
-	background: $error-background;
+    color: $error-text;
+    background: $error-background;
 }
 
 .information {
-	color: $info-text;
-	background: $info-background;
+    color: $info-text;
+    background: $info-background;
 }
 
 .highlight {
-	background: $color-highlight-box;
+    background: $color-highlight-box;
 }
 
 .alert-block {
-	@include border-radius;
-	padding: 0.5em 1em;
+    @include border-radius;
+    padding: 0.5em 1em;
 
-	&.success {
-		border: 1px solid $success-border;
-	}
+    &.success {
+        border: 1px solid $success-border;
+    }
 
-	&.warning {
-		border: 1px solid $warning-border;
-	}
+    &.warning {
+        border: 1px solid $warning-border;
+    }
 
-	&.error {
-		border: 1px solid $error-border;
-	}
+    &.error {
+        border: 1px solid $error-border;
+    }
 
-	&.information {
-		border: 1px solid $info-border;
-	}
+    &.information {
+        border: 1px solid $info-border;
+    }
 }
 
 /* alert boxes */
 
 #messagepane {
-	position: fixed;
-	bottom: 0;
-	z-index: 1000;
-	text-align: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    text-align: center;
 
-	span {
-		&.success,
-		&.warning,
-		&.error {
-			display: inline-block;
-			@include border-radius($default-border-radius $default-border-radius 0 0);
-			margin: 0 auto;
-			padding: 0.53846em 2.84615em 0.53846em 1em;
-			max-width: ($text-column - 3.84615em);
-			color: #fff;
-			@include box-shadow;
-		}
-	
-		&.success {
-			background: $success-text;
-		}
-	
-		&.warning {
-			background: $warning-text;
-		}
-	
-		&.error {
-			background: $error-text;
-		}
-	}
+    span {
+        &.success,
+        &.warning,
+        &.error {
+            display: inline-block;
+            @include border-radius($default-border-radius $default-border-radius 0 0);
+            margin: 0 auto;
+            padding: 0.53846em 2.84615em 0.53846em 1em;
+            max-width: ($text-column - 3.84615em);
+            color: #fff;
+            @include box-shadow;
+        }
+    
+        &.success {
+            background: $success-text;
+        }
+    
+        &.warning {
+            background: $warning-text;
+        }
+    
+        &.error {
+            background: $error-text;
+        }
+    }
 }
 
 /* close icon */
 
 .close {
-	position: absolute;
-	top: 0.27778em; // 5px / 18px
-	right: 0.72222em;
-	text-decoration: none;
-	color: #ccc;
-	font-size: 1.38461em; // 18px / 13px
-	font-weight: bold;
+    position: absolute;
+    top: 0.27778em; // 5px / 18px
+    right: 0.72222em;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1.38461em; // 18px / 13px
+    font-weight: bold;
 
-	.rgba & {
-		color: transparentize(#fff, 0.4);
-	}
+    .rgba & {
+        color: transparentize(#fff, 0.4);
+    }
 
-	&:hover {
-		color: $color-text;
-		text-decoration: none;
-		color: #fff;
-		cursor: pointer;
+    &:hover {
+        color: $color-text;
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
 
-		.rgba & {
-			color: transparentize(#fff, 0.2);
-		}
-	}
+        .rgba & {
+            color: transparentize(#fff, 0.2);
+        }
+    }
 }
 
 /* flash the alert */
 
 @-webkit-keyframes messageflash {
-	0% {opacity: 0;}	
-	50%, 100% {opacity: 1;}	
-	75% {opacity: 0.5;}
+    0% {opacity: 0;}    
+    50%, 100% {opacity: 1;}    
+    75% {opacity: 0.5;}
 }
 
 @-moz-keyframes messageflash {
-	0% {opacity: 0;}	
-	50%, 100% {opacity: 1;}	
-	75% {opacity: 0.5;}
+    0% {opacity: 0;}    
+    50%, 100% {opacity: 1;}    
+    75% {opacity: 0.5;}
 }
 
 @-o-keyframes messageflash {
-	0% {opacity: 0;}	
-	50%, 100% {opacity: 1;}	
-	75% {opacity: 0.5;}
+    0% {opacity: 0;}    
+    50%, 100% {opacity: 1;}    
+    75% {opacity: 0.5;}
 }
 
 @keyframes messageflash {
-	0% {opacity: 0;}	
-	50%, 100% {opacity: 1;}	
-	75% {opacity: 0.5;}
+    0% {opacity: 0;}    
+    50%, 100% {opacity: 1;}    
+    75% {opacity: 0.5;}
 }
 
 .messageflash {
-	-webkit-animation: messageflash 1s;
-	   -moz-animation: messageflash 1s;
-		 -o-animation: messageflash 1s;
-			animation: messageflash 1s;
+    -webkit-animation: messageflash 1s;
+       -moz-animation: messageflash 1s;
+         -o-animation: messageflash 1s;
+            animation: messageflash 1s;
 }

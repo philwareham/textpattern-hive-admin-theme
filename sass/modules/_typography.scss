@@ -8,81 +8,81 @@
    ========================================================================== */
 
 body {
-	font-family: $font-body;
-	font-size: $basefont;
-	line-height: $baseline;
+    font-family: $font-body;
+    font-size: $basefont;
+    line-height: $baseline;
 }
 
 h1 {
-	font-size: 2em; // 26px / 13px
-	line-height: 1.23076; // 32px / 26px
-	margin: 0 0 0.5em; // 13px / 26px
+    font-size: 2em; // 26px / 13px
+    line-height: 1.23076; // 32px / 26px
+    margin: 0 0 0.5em; // 13px / 26px
 
-	.pophelp {
-		font-size: 0.5em; // 13px / 26px
-	}
+    .pophelp {
+        font-size: 0.5em; // 13px / 26px
+    }
 }
 
 h2 {
-	font-size: 1.38461em; // 18px / 13px
-	margin: 0 0 0.72222em 0; // 13px / 18px
+    font-size: 1.38461em; // 18px / 13px
+    margin: 0 0 0.72222em 0; // 13px / 18px
 
-	.pophelp {
-		font-size: 0.72222em; // 13px / 18px
-	}
+    .pophelp {
+        font-size: 0.72222em; // 13px / 18px
+    }
 }
 
 h3 {
-	font-size: 1.15384em; // 15px / 13px
-	margin: 0.86666em 0; // 13px / 15px
+    font-size: 1.15384em; // 15px / 13px
+    margin: 0.86666em 0; // 13px / 15px
 }
 
 h4,
 h5,
 h6 {
-	font-size: 1em; // 13px
-	margin: 1em 0;
+    font-size: 1em; // 13px
+    margin: 1em 0;
 }
 
 /* address style set to `bolder` in Firefox4+, Safari5, and Chrome */
 b,
 strong {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 address {
-	margin: 1em 0;
+    margin: 1em 0;
 }
 
 blockquote {
-	margin: 1em 0;
-	border-left: 3px solid $color-border;
-	padding: 0 0 0 1em;
+    margin: 1em 0;
+    border-left: 3px solid $color-border;
+    padding: 0 0 0 1em;
 }
 
 /* set consistent quote types */
 q {
-	quotes: "\201C" "\201D" "\2018" "\2019";
+    quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 /* address styling not present in Safari5 and Chrome */
 dfn {
-	font-style: italic;
+    font-style: italic;
 }
 
 /* address styling not present in IE8-9, Safari5, Chrome */
 abbr[title],
 dfn[title] {
-	border-bottom: 1px dotted;
-	cursor: help;
+    border-bottom: 1px dotted;
+    cursor: help;
 }
 
 mark,
 var {
-	padding: 0 0.25em;
-	@include border-radius($default-border-radius / 2);
-	color: $color-text;
-	background: lighten($color-link, 56%);
+    padding: 0 0.25em;
+    @include border-radius($default-border-radius / 2);
+    color: $color-text;
+    background: lighten($color-link, 56%);
 }
 
 /* correct font size set oddly in Safari5 and Chrome */
@@ -90,7 +90,7 @@ pre,
 code,
 kbd,
 samp {
-	font-size: 1em;
+    font-size: 1em;
 }
 
 pre,
@@ -98,64 +98,64 @@ code,
 kbd,
 samp,
 .code {
-	font-family: $font-mono;
+    font-family: $font-mono;
 }
 
 code,
 kbd,
 samp {
-	border: 1px solid lighten($color-border, 9%);
-	padding: 0 0.25em;
-	@include border-radius($default-border-radius / 2);
-	background: $color-background-box;
+    border: 1px solid lighten($color-border, 9%);
+    padding: 0 0.25em;
+    @include border-radius($default-border-radius / 2);
+    background: $color-background-box;
 }
 
 pre {
-	overflow-x: auto;
-	border: 1px solid lighten($color-border, 9%);
-	padding: 1em;
-	@include border-radius;
-	background: $color-background-box;
-	tab-size: 4; // set tab size to 4 spaces
+    overflow-x: auto;
+    border: 1px solid lighten($color-border, 9%);
+    padding: 1em;
+    @include border-radius;
+    background: $color-background-box;
+    tab-size: 4; // set tab size to 4 spaces
 }
 
 pre code,
 .code code,
 code.body,
 code.excerpt {
-	border: 0;
-	padding: 0;
-	background: none;
+    border: 0;
+    padding: 0;
+    background: none;
 }
 
 code,
 .code {
-	direction: ltr;
+    direction: ltr;
 }
 
 /* prevent `<sub>` and `<sup>` affecting line height in all browsers */
 sub,
 sup {
-	font-size: $smallfont;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+    font-size: $smallfont;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 sup {
-	top: -0.5em;
+    top: -0.5em;
 }
 sub {
-	bottom: -0.25em;
+    bottom: -0.25em;
 }
 
 small,
 figcaption,
 .txp-footer {
-	font-size: $smallfont;
+    font-size: $smallfont;
 }
 
 hr {
-	margin: 1.5em 0;
-	border-color: $color-border;
-	border-style: solid;
+    margin: 1.5em 0;
+    border-color: $color-border;
+    border-style: solid;
 }

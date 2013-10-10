@@ -16,11 +16,11 @@
    ========================================================================== */
 
 body {
-	padding: 4em 1em 0;
+    padding: 4em 1em 0;
 }
 
 body#page-setup {
-	padding: 0 1em 0;
+    padding: 0 1em 0;
 }
 
 
@@ -28,8 +28,8 @@ body#page-setup {
    ========================================================================== */
 
 .txp-control-panel {
-	margin-top: 0;
-	text-align: left;
+    margin-top: 0;
+    text-align: left;
 }
 
 
@@ -37,17 +37,17 @@ body#page-setup {
    ========================================================================== */
 
 .txp-header {
-	padding: 0 1em;
+    padding: 0 1em;
 
-	h1 {
-		max-width: 50%;
-		padding-left: $logo-small-width;
-		@include svg-graphic($logo-small-filename, $logo-small-filetype, $logo-small-width, $logo-small-height);
-	}
+    h1 {
+        max-width: 50%;
+        padding-left: $logo-small-width;
+        @include svg-graphic($logo-small-filename, $logo-small-filetype, $logo-small-width, $logo-small-height);
+    }
 }
 
 .txp-logout {
-	right: 1em;
+    right: 1em;
 }
 
 
@@ -56,20 +56,20 @@ body#page-setup {
 
 /* show `<select>` version of navigation on small screen widths (via TinyNav) */
 .tinynav {
-	display: inherit;
+    display: inherit;
 }
 
 /* hide `<ul>` version of navigation on small screen widths */
 .untinynav {
-	display: none;
+    display: none;
 }
 
 /* Typography < 768px
    ========================================================================== */
 
 .text-section {
-	padding-top: 4em;
-	background-position: 0 1.69230em;
+    padding-top: 4em;
+    background-position: 0 1.69230em;
 }
 
 
@@ -79,7 +79,7 @@ body#page-setup {
 /* turn off features to optimise small screen size */
 #textile_group,
 #recent_group {
-	display: none;
+    display: none;
 }
 
 }
@@ -94,48 +94,48 @@ body#page-setup {
 @media only screen and (max-width: $breakpoint-2) {
 
 body {
-	padding-top: 7.23076em; // 94px / 13px
+    padding-top: 7.23076em; // 94px / 13px
 }
 
 #page-login,
 #page-logout {
-	padding-top: 4em;
+    padding-top: 4em;
 }
 
 .txp-header {
-	position: absolute;
+    position: absolute;
 
-	h1 {
-		max-width: 66%;
-	}
+    h1 {
+        max-width: 66%;
+    }
 }
 
 /* move `<select>` navigation to new row for smaller screens */
 .txp-nav-select {
-	position: absolute;
-	top: 2.46153em;
-	right: 0;
-	left: 0;
-	z-index: 1000;
-	border-top: 1px solid lighten($color-highlight-box, 5%);
-	padding: 0.53846em 1em;
-	background: $color-highlight-box;
-	@include box-shadow(0 0.2em 0.25em rgba(#000000, 0.15));
+    position: absolute;
+    top: 2.46153em;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    border-top: 1px solid lighten($color-highlight-box, 5%);
+    padding: 0.53846em 1em;
+    background: $color-highlight-box;
+    @include box-shadow(0 0.2em 0.25em rgba(#000000, 0.15));
 }
 
 .txp-label,
 .txp-value {
-	float: none;
-	display: block;
-	width: 100%;
+    float: none;
+    display: block;
+    width: 100%;
 }
 
 .txp-value {
-	input,
-	select {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
+    input,
+    select {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
 /* Deprecated @ 4.6 */
@@ -143,88 +143,88 @@ body {
 .edit-value,
 .login-label,
 .login-value {
-	float: none;
-	width: 100%;
+    float: none;
+    width: 100%;
 }
 
 /* Deprecated @ 4.6 */
 .edit-value,
 .login-value {
-	input,
-	select {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
+    input,
+    select {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
 #article-main #body {
-	height: 17.46153em; // 227px / 13px
+    height: 17.46153em; // 227px / 13px
 }
 
 #excerpt {
-	height: 4.38461em; // 57px / 13px
+    height: 4.38461em; // 57px / 13px
 }
 
 #page-page,
 #page-form,
 #page-css {
-	textarea.code {
-		height: 17.46153em; // 227px / 13px
-	}
+    textarea.code {
+        height: 17.46153em; // 227px / 13px
+    }
 }
 
 /* remove float from txp-navigation elements */
 
 .txp-navigation {
-	p {
-		margin: 1em 0 0.5em;
-	}
+    p {
+        margin: 1em 0 0.5em;
+    }
 
-	.pageby,
-	.prev-next {
-		float: none;
-	}
+    .pageby,
+    .prev-next {
+        float: none;
+    }
 }
 
 .progress-meter {
-	ol {
-		display: block;
-		margin-bottom: 1em;
-		text-align: left;
-	}
+    ol {
+        display: block;
+        margin-bottom: 1em;
+        text-align: left;
+    }
 
-	li {
-		float: none;
-		display: block;
-		margin: 0;
+    li {
+        float: none;
+        display: block;
+        margin: 0;
 
-		&:after {
-			display: none;
-		}
-	}
+        &:after {
+            display: none;
+        }
+    }
 }
 
 /* responsive jQuery UI tabs */
 
 .ui-tabs .ui-tabs-nav li {
-	float: none;
-	margin-top: 2px;
-	border-bottom-width: 1px;
-	@include border-radius(0);
+    float: none;
+    margin-top: 2px;
+    border-bottom-width: 1px;
+    @include border-radius(0);
 
-	&.ui-tabs-active {
-		margin-bottom: 0;
-		padding-bottom: 0;
-	}
+    &.ui-tabs-active {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 
-	a {
-		float: none;
-		display: block;
-	}
+    a {
+        float: none;
+        display: block;
+    }
 }
 
 .ui-tabs .ui-tabs-panel {
-	border-top-width: 0;
+    border-top-width: 0;
 }
 
 }

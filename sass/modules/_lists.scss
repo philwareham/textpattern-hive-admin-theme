@@ -17,75 +17,75 @@ ul {
 [dir="rtl"] menu,
 [dir="rtl"] ol,
 [dir="rtl"] ul {
-	padding: 0 2em 0 0;
+    padding: 0 2em 0 0;
 }
 
 /* remove margins from nested lists */
 ul ul,
 ol ol,
 dl dl {
-	margin: 0;
+    margin: 0;
 }
 
 dd {
-	margin: 0 0 0 2em;
+    margin: 0 0 0 2em;
 }
 
 [dir="rtl"] dd {
-	margin: 0 2em 0 0;
+    margin: 0 2em 0 0;
 }
 
 dt {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .plain-list {
-	list-style: none;
-	padding-left: 0;
+    list-style: none;
+    padding-left: 0;
 }
 
 [dir="rtl"] .plain-list {
-	padding-right: 0;
+    padding-right: 0;
 }
 
 .switcher-list {
-	list-style: none;
-	margin: 0 -1em;
-	padding-left: 0;
+    list-style: none;
+    margin: 0 -1em;
+    padding-left: 0;
 
-	li {
-		position: relative;
-		border-top: 1px solid $color-gradient-to;
-		padding: 0.38461em 3em 0.38461em 1em;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
+    li {
+        position: relative;
+        border-top: 1px solid $color-gradient-to;
+        padding: 0.38461em 3em 0.38461em 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
-		&:nth-child(odd) {
-			background: $color-background;
-		}
+        &:nth-child(odd) {
+            background: $color-background;
+        }
 
-		&:first-child {
-			border-top: 0;
-		}
+        &:first-child {
+            border-top: 0;
+        }
 
-		&.active {
-			background: lighten($color-link, 56%);
-		}
-	}
+        &.active {
+            background: lighten($color-link, 56%);
+        }
+    }
 }
 
 .switcher-action,
 .switcher-list .destroy {
-	position: absolute;
-	z-index: 2;
-	right: 1em;
+    position: absolute;
+    z-index: 2;
+    right: 1em;
 }
 
 .switcher-action {
-	top: 0.38461em;
+    top: 0.38461em;
 }
 
 .switcher-list .destroy {
-	top: 0.46153em;
+    top: 0.46153em;
 }

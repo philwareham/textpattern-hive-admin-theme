@@ -10,136 +10,136 @@
 /* hide `<select>` version of navigation on non-touch devices
    also happens via media-queries when screen width is < 768px regardless of touch ability */
 .tinynav {
-	display: none;
+    display: none;
 
-	.touch & {
-		display: inherit;
-	}
+    .touch & {
+        display: inherit;
+    }
 }
 
 /* hide `<ul>` version of navigation on touch devices */
 .touch .untinynav {
-	display: none;
+    display: none;
 }
 
 .untinynav {
-	float: left;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
 
-	ul {
-		list-style: none;
-		padding-right: 0;
-		padding-left: 0;
-	}
+    ul {
+        list-style: none;
+        padding-right: 0;
+        padding-left: 0;
+    }
 
-	a {
-		color: #333;
+    a {
+        color: #333;
 
-		&:hover {
-			text-decoration: none;
-		}
-	}
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 .dropdown {
-	position: relative;
-	display: block;
-	float: left;
-	border-right: 1px solid $color-gradient2-to;
-	background: #fcdc7f;
+    position: relative;
+    display: block;
+    float: left;
+    border-right: 1px solid $color-gradient2-to;
+    background: #fcdc7f;
 
-	.rgba & {
-		background: rgba(#ffffff, 0.2);
-	}
+    .rgba & {
+        background: rgba(#ffffff, 0.2);
+    }
 
-	&:first-child {
-		border-left: 1px solid $color-gradient2-to;
-	}
+    &:first-child {
+        border-left: 1px solid $color-gradient2-to;
+    }
 
-	a.dropdown-toggle {
-		display: block;
-		padding: 0 1em;
-		line-height: 3em;
-		text-decoration: none;
-		color: darken($color-text, 20%);
-		@include text-shadow($text-shadow-light);
-	}
+    a.dropdown-toggle {
+        display: block;
+        padding: 0 1em;
+        line-height: 3em;
+        text-decoration: none;
+        color: darken($color-text, 20%);
+        @include text-shadow($text-shadow-light);
+    }
 
-	&:hover a.dropdown-toggle {
-		background: #fcdc7f;
+    &:hover a.dropdown-toggle {
+        background: #fcdc7f;
 
-		.rgba & {
-			background: rgba(#ffffff, 0.2);
-		}
-	}
+        .rgba & {
+            background: rgba(#ffffff, 0.2);
+        }
+    }
 }
 
 .dropdown.active {
-	a.dropdown-toggle {
-		background: #fcdc7f;
+    a.dropdown-toggle {
+        background: #fcdc7f;
 
-		.rgba & {
-			background: rgba(#ffffff, 0.2);
-		}
-	}
+        .rgba & {
+            background: rgba(#ffffff, 0.2);
+        }
+    }
 }
 
 .dropdown-menu {
-	position: absolute;
-	top: 3em;
-	left: -9999px;
-	z-index: 20000;
-	min-width: 12em;
-	border: solid 1px #d4d4d4;
-	border-top: 0;
-	background: $color-highlight-box;
-	@include border-radius(0 $default-border-radius $default-border-radius $default-border-radius);
-	@include box-shadow;
+    position: absolute;
+    top: 3em;
+    left: -9999px;
+    z-index: 20000;
+    min-width: 12em;
+    border: solid 1px #d4d4d4;
+    border-top: 0;
+    background: $color-highlight-box;
+    @include border-radius(0 $default-border-radius $default-border-radius $default-border-radius);
+    @include box-shadow;
 
-	li {
-		&:first-child {
-			@include border-radius(0 $default-border-radius 0 0);
-		}
+    li {
+        &:first-child {
+            @include border-radius(0 $default-border-radius 0 0);
+        }
 
-		&:last-child {
-			@include border-radius(0 0 $default-border-radius $default-border-radius);
-		}
+        &:last-child {
+            @include border-radius(0 0 $default-border-radius $default-border-radius);
+        }
 
-		&:hover {
-			background: lighten($color-gradient2-from, 21%);
-		}
+        &:hover {
+            background: lighten($color-gradient2-from, 21%);
+        }
 
-		&.selected {
-			background: lighten($color-gradient2-from, 14%);
-		}
-	}
+        &.selected {
+            background: lighten($color-gradient2-from, 14%);
+        }
+    }
 
-	a {
-		display: block;
-		padding: 0.5em 1em;
-	}
+    a {
+        display: block;
+        padding: 0.5em 1em;
+    }
 
-	&:before {
-		position: absolute;
-		content: "";
-		top: -0.61538em;
-		left: 1em;
-		width: 1.23076em;
-		height: 0.61538em;
-		background-repeat: no-repeat;
-		@include svg-graphic(indicator, gif, 1.23076em, 0.61538em);
-	}
+    &:before {
+        position: absolute;
+        content: "";
+        top: -0.61538em;
+        left: 1em;
+        width: 1.23076em;
+        height: 0.61538em;
+        background-repeat: no-repeat;
+        @include svg-graphic(indicator, gif, 1.23076em, 0.61538em);
+    }
 }
 
 .data-dropdown li:hover,
 .data-dropdown li:focus {
-	.dropdown-menu {
-		left: 0;
-	}
+    .dropdown-menu {
+        left: 0;
+    }
 }
 
 .tinynav {
-	margin-top: 0.61538em;
+    margin-top: 0.61538em;
 }

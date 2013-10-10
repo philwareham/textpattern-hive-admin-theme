@@ -19,20 +19,20 @@ main,
 nav,
 section,
 summary {
-	display: block;
+    display: block;
 }
 
 /* addresses styling for `hidden` attribute not present in IE8-9 */
 [hidden] {
-	display: none;
+    display: none;
 }
 
 html {
-	-webkit-tap-highlight-color: rgba(0, 102, 255, 0.5);
-	/* prevents iOS text size adjust after orientation change, without disabling user zoom */
-	-webkit-text-size-adjust: 100%;
-	/* as above, for Windows Phone */
-	-ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 102, 255, 0.5);
+    /* prevents iOS text size adjust after orientation change, without disabling user zoom */
+    -webkit-text-size-adjust: 100%;
+    /* as above, for Windows Phone */
+    -ms-text-size-adjust: 100%;
 }
 
 
@@ -40,9 +40,9 @@ html {
    ========================================================================== */
 
 .clearfix {
-	@include pie-clearfix;
+    @include pie-clearfix;
 }
 
 .clear {
-	clear: both;
+    clear: both;
 }
