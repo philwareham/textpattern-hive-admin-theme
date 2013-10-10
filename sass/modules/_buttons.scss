@@ -7,6 +7,11 @@
 /* Buttons
    ========================================================================== */
 
+/* address inconsistent `text-transform` inheritance for `button` in Chrome, Safari5+, and IE6+ */
+button {
+    text-transform: none;
+}
+
 button,
 input[type="reset"],
 input[type="submit"],
@@ -16,44 +21,45 @@ input[type="button"],
 .navlink,
 .navlink-active,
 .txp-buttons a {
-	-webkit-appearance: none; // remove iOS Safari default styling
-	@include background-clip;
-	@include box-sizing(border-box);
-	width: auto;
-	//height: 2em; // 26px / 13px
-	overflow: visible;
-	font-family: $font-body;
-	font-size: 1em;
-	line-height: $baseline;
-	vertical-align: baseline;
-	text-decoration: none;
-	@include text-shadow($text-shadow-light);
-	cursor: pointer;
-	margin: 0;
-	border: 1px solid darken($color-gradient-to, 10%);
-	border-bottom-color: darken($color-gradient-to, 20%);
-	@include border-radius;
-	padding: 0.25em 0.75em;
-	display: inline-block;
-	color: $color-text;
-	@include box-shadow($inset-highlighting);
-	@include gradient-linear($color-gradient-from, $color-gradient-to);
-	@include transition(box-shadow .2s linear);
+    @include text-shadow($text-shadow-light);
+    @include border-radius;
+    @include box-shadow($inset-highlighting);
+    @include background-clip;
+    @include box-sizing(border-box);
+    @include gradient-linear($color-gradient-from, $color-gradient-to);
+    @include transition(box-shadow .2s linear);
 
-	&:hover {
-		border: 1px solid darken($color-gradient-to, 20%);
-		border-bottom-color: darken($color-gradient-to, 30%);
-		color: $color-text;
-		text-decoration: none;
-		@include gradient-linear(lighten($color-gradient-from, 4%), lighten($color-gradient-to, 4%));
-	}
+    -webkit-appearance: none; // remove iOS Safari default styling
+    display: inline-block;
+    width: auto;
+    margin: 0; // address margins set differently in Firefox4+, Safari5+, and Chrome */
+    border: solid 1px $color-gradient-border;
+    padding: 0.25em 0.75em;
+    //height: 2em; // 26px / 13px
+    overflow: visible; // the overflow property removes extra width in IE
+    color: $color-text;
+    cursor: pointer;
+    font-size: 100%; // correct font size not being inherited in all browsers
+    font-size: 1em;
+    font-family: $font-body;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: baseline;
 
-	&:active {
-		border: 1px solid darken($color-gradient-to, 20%);
-		border-bottom-color: darken($color-gradient-to, 30%);
-		@include box-shadow(inset 0 0.2em 0.25em rgba(#000000, 0.15));
-		@include gradient-linear(darken($color-gradient-from, 3%), darken($color-gradient-to, 3%));
-	}
+    &:hover {
+        @include gradient-linear(lighten($color-gradient-from, 4%), lighten($color-gradient-to, 4%));
+
+        border-color: darken($color-gradient-border, 13%);
+        text-decoration: none;
+    }
+
+    &:active {
+        @include box-shadow(inset 0 0.2em 0.25em rgba(#000000, 0.15));
+        @include gradient-linear(darken($color-gradient-from, 3%), darken($color-gradient-to, 3%));
+
+        border-color: darken($color-gradient-border, 13%);
+        color: darken($color-text, 10%);
+    }
 }
 
 /* primary buttons */
@@ -61,149 +67,148 @@ input[type="button"],
 input[type="submit"].publish,
 button.publish,
 a.publish {
-	//height: 3em; // 39px / 13px
-	font-weight: bold;
-	border: 1px solid $color-gradient2-to;
-	border-bottom-color: darken($color-gradient2-to, 12%);
-	@include gradient-linear(lighten($color-gradient2-from, 7%), lighten($color-gradient2-to, 7%));
+    //height: 3em; // 39px / 13px
+    font-weight: bold;
+    border: 1px solid $color-gradient2-to;
+    border-bottom-color: darken($color-gradient2-to, 12%);
+    @include gradient-linear(lighten($color-gradient2-from, 7%), lighten($color-gradient2-to, 7%));
 
-	&:hover {
-		border: 1px solid darken($color-gradient2-to, 10%);
-		border-bottom-color: darken($color-gradient2-to, 19%);
-		@include gradient-linear(lighten($color-gradient2-from, 14%), lighten($color-gradient2-to, 14%));
-	}
+    &:hover {
+        border: 1px solid darken($color-gradient2-to, 10%);
+        border-bottom-color: darken($color-gradient2-to, 19%);
+        @include gradient-linear(lighten($color-gradient2-from, 14%), lighten($color-gradient2-to, 14%));
+    }
 
-	&:active {
-		border: 1px solid darken($color-gradient2-to, 10%);
-		border-bottom-color: darken($color-gradient2-to, 19%);
-		@include gradient-linear(lighten($color-gradient2-from, 2%), lighten($color-gradient2-to, 2%));
-	}
+    &:active {
+        border: 1px solid darken($color-gradient2-to, 10%);
+        border-bottom-color: darken($color-gradient2-to, 19%);
+        @include gradient-linear(lighten($color-gradient2-from, 2%), lighten($color-gradient2-to, 2%));
+    }
 }
 
 /* delete buttons */
 
 input[type="submit"].destroy,
 button.destroy {
-	height: 1.5em; // 20px / 13px
-	border: 1px solid lighten($error-text, 18%);
-	border-bottom-color: $error-text;
-	padding: 0 0.25em; // 4px / 13px
-	@include text-shadow($text-shadow-dark);
-	color: lighten($error-text, 56%);
-	@include gradient-linear-bar(lighten($error-text, 20%), $error-text);
+    height: 1.5em; // 20px / 13px
+    border: 1px solid lighten($error-text, 18%);
+    border-bottom-color: $error-text;
+    padding: 0 0.25em; // 4px / 13px
+    @include text-shadow($text-shadow-dark);
+    color: lighten($error-text, 56%);
+    @include gradient-linear-bar(lighten($error-text, 20%), $error-text);
 
-	&:hover {
-		border: 1px solid lighten($error-text, 8%);
-		border-bottom-color: darken($error-text, 10%);
-		color: $color-text-inverse;
-		@include gradient-linear-bar(lighten($error-text, 28%), lighten($error-text, 10%));
-	}
+    &:hover {
+        border: 1px solid lighten($error-text, 8%);
+        border-bottom-color: darken($error-text, 10%);
+        color: $color-text-inverse;
+        @include gradient-linear-bar(lighten($error-text, 28%), lighten($error-text, 10%));
+    }
 
-	&:active {
-		border: 1px solid lighten($error-text, 8%);
-		border-bottom-color: darken($error-text, 10%);
-		@include gradient-linear-bar(lighten($error-text, 16%), darken($error-text, 4%));
-	}
+    &:active {
+        border: 1px solid lighten($error-text, 8%);
+        border-bottom-color: darken($error-text, 10%);
+        @include gradient-linear-bar(lighten($error-text, 16%), darken($error-text, 4%));
+    }
 }
 
 .navlink-disabled {
-	@include background-clip;
-	@include box-sizing(border-box);
-	//height: 2em; // 26px / 13px
-	font-size: 1em;
-	line-height: $baseline; // 18px / 13px
-	border: 1px solid;
-	@include border-radius;
-	padding: 0.25em 1em;
-	display: inline-block;
+    @include background-clip;
+    @include box-sizing(border-box);
+    //height: 2em; // 26px / 13px
+    font-size: 1em;
+    line-height: $baseline; // 18px / 13px
+    border: 1px solid;
+    @include border-radius;
+    padding: 0.25em 1em;
+    display: inline-block;
 }
 
 /* button sets */
 
 ul.nav-tertiary {
-	list-style: none;
-	padding: 0;
+    list-style: none;
+    padding: 0;
 
-	li {
-		display: inline;
-	}
+    li {
+        display: inline;
+    }
 }
 
 [dir="rtl"] ul.nav-tertiary {
-	padding: 0;
+    padding: 0;
 }
 
 .nav-tertiary,
 .prev-next {
-	a,
-	.navlink-disabled {
-		@include border-radius(0);
-	}
+    a,
+    .navlink-disabled {
+        @include border-radius(0);
+    }
 
-	> :first-child,
-	> :first-child > a,
-	> :first-child > span {
-		@include border-left-radius;
-	}
+    > :first-child,
+    > :first-child > a,
+    > :first-child > span {
+        @include border-left-radius;
+    }
 
-	> :last-child,
-	> :last-child > a,
-	> :last-child > span {
-		@include border-right-radius;
-	}
+    > :last-child,
+    > :last-child > a,
+    > :last-child > span {
+        @include border-right-radius;
+    }
 }
 
 [dir="rtl"] .nav-tertiary,
 [dir="rtl"] .prev-next {
-	> :first-child,
-	> :first-child > a,
-	> :first-child > span {
-		@include border-radius(0);
-		@include border-right-radius;
-	}
+    > :first-child,
+    > :first-child > a,
+    > :first-child > span {
+        @include border-radius(0);
+        @include border-right-radius;
+    }
 
-	> :last-child,
-	> :last-child > a,
-	> :last-child > span {
-		@include border-radius(0);
-		@include border-left-radius;
-	}
+    > :last-child,
+    > :last-child > a,
+    > :last-child > span {
+        @include border-radius(0);
+        @include border-left-radius;
+    }
 }
 
 .nav-tertiary .navlink-active {
-	border-color: #a3bef3;
-	border-bottom-color: darken(#a3bef3, 10%);
-	@include gradient-linear(lighten($color-link, 56%), lighten($color-link, 50%));
+    border-color: #a3bef3;
+    border-bottom-color: darken(#a3bef3, 10%);
+    @include gradient-linear(lighten($color-link, 56%), lighten($color-link, 50%));
 
-	&:hover {
-		border-color: lighten(#6b8fe8, 10%);
-		border-bottom-color: #6b8fe8;
-		@include gradient-linear(lighten($color-link, 59%), lighten($color-link, 51%));
-	}
+    &:hover {
+        border-color: lighten(#6b8fe8, 10%);
+        border-bottom-color: #6b8fe8;
+        @include gradient-linear(lighten($color-link, 59%), lighten($color-link, 51%));
+    }
 
-	&:active {
-		border-color: lighten(#6b8fe8, 10%);
-		border-bottom-color: #6b8fe8;
-		@include gradient-linear(lighten($color-link, 50%), lighten($color-link, 45%));
-	}
+    &:active {
+        border-color: lighten(#6b8fe8, 10%);
+        border-bottom-color: #6b8fe8;
+        @include gradient-linear(lighten($color-link, 50%), lighten($color-link, 45%));
+    }
 }
 
 /* better focus glows, if box-shadow is supported */
 .boxshadow {
-	button,
-	input[type="button"],
-	input[type="reset"],
-	input[type="submit"],
-	.txp-logout a,
-	.action-create a,
-	.navlink,
-	.navlink-active,
-	.txp-buttons a {
-		&:focus {
-			outline: 0;
-			@include box-shadow($inset-highlighting, 0 0 7px $color-link-hover);
-			/* Opera */
-			z-index: 1;
-		}
-	}
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"],
+    .txp-logout a,
+    .action-create a,
+    .navlink,
+    .navlink-active,
+    .txp-buttons a {
+        &:focus {
+            @include box-shadow($inset-highlighting, 0 0 7px $color-link-hover);
+
+            outline: 0;
+        }
+    }
 }

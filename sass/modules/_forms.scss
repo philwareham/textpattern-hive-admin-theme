@@ -9,38 +9,43 @@
 
 /* define consistent fieldset margin, border and padding */
 fieldset {
-	margin: 1em 0;
-	border: 1px solid $color-border;
-	padding: 1px 1em;
+    margin: 1em 0;
+    border: 1px solid $color-border;
+    padding: 1px 1em;
 }
 
 /* remove padding so people aren't caught out if they zero out fieldsets */
 legend {
-	border: 0;
-	padding: 0;
+    border: 0;
+    padding: 0;
 }
 
 /* colour placeholder text (WebKit and Mozilla only, so far) */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-	color: $color-text-footnote;
+    color: $color-text-footnote;
 }
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-	color: $color-text-footnote;
+    color: $color-text-footnote;
+}
+
+/* styling for placeholder polyfill fallback */
+.placeholder {
+    color: $color-text-footnote;
 }
 
 /* remove inner padding and border in Firefox 4+ */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-	border: 0;
-	padding: 0;
+    border: 0;
+    padding: 0;
 }
 
 /* remove inner padding and search cancel button in Safari5+ and Chrome on OS X */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
+    -webkit-appearance: none;
 }
 
 input[type="color"],
@@ -59,77 +64,90 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
-	-webkit-appearance: none; // remove iOS Safari default styling
-	@include box-sizing(border-box);
-	max-width: 100%;
-	font-family: $font-body;
-	font-size: 1em;
-	line-height: $baseline; // 18px / 13px
-	vertical-align: baseline;
-	color: $color-text;
-	background-color: $color-background;
-	margin: 0;
-	border: 1px solid $color-border;
-	@include border-radius(0);
-	padding: 0.25em;
-	@include transition(box-shadow .2s linear);
+    @include border-radius(0);
+    @include box-sizing(border-box);
+    @include transition(box-shadow .2s linear);
+
+    -webkit-appearance: none; // remove iOS Safari default styling
+    margin: 0;
+    border: 1px solid $color-border;
+    padding: 0.25em;
+    //height: 2em; // 26px / 13px
+    max-width: 100%;
+    color: $color-text;
+    background-color: $color-background;
+    font-size: 100%; // correct font size not being inherited in all browsers
+    font-size: 1em;
+    font-family: $font-body;
+    font-weight: normal;
+    vertical-align: baseline;
 }
 
-input[type="file"] {
-	
+input[type="color"] {
+    padding: 0;
 }
 
 /* address box sizing set to `content-box` and excess padding in IE8-9 */
 input[type="checkbox"],
 input[type="radio"] {
-	padding: 0;
-	box-sizing: border-box;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* address inconsistent `text-transform` inheritance for `select` in Firefox 4+ and Opera */
 select {
-	text-transform: none;
+    text-transform: none;
+}
+
+select[size],
+select[multiple] {
+    height: auto;
+}
+
+select[size="0"],
+select[size="1"] {
+    //height: 2em; // 26px / 13px
 }
 
 /* address select alignment in Safari/Chrome */
 @media (-webkit-min-device-pixel-ratio: 0) {
 
-	select[size],
-	select[multiple],
-	select[multiple][size] {
-		background-image: none;
-		padding-right: 0.25em;
-	}
+    select[size],
+    select[multiple],
+    select[multiple][size] {
+        background-image: none;
+        padding-right: 0.25em;
+    }
 
-	select,
-	select[size="0"],
-	select[size="1"] {
-		background: $color-background url("data:image/svg+xml,<svg version='1.1' baseProfile='full' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='13px' height='4px' viewBox='0 0 13 4' enable-background='new 0 0 13 4' xml:space='preserve'><polygon fill='#333333' points='3.5,4 0,0 7,0'/></svg>") no-repeat right center;
-		padding-right: 2em;
-		-webkit-background-size: 1em 0.30769em;
-		        background-size: 1em 0.30769em;
-	}
+    select,
+    select[size="0"],
+    select[size="1"] {
+        background: $color-background url("data:image/svg+xml,<svg version='1.1' baseProfile='full' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='13px' height='4px' viewBox='0 0 13 4' enable-background='new 0 0 13 4' xml:space='preserve'><polygon fill='#333333' points='3.5,4 0,0 7,0'/></svg>") no-repeat right center;
+        padding-right: 2em;
+        -webkit-background-size: 1em 0.30769em;
+                background-size: 1em 0.30769em;
+    }
 
 }
 
 optgroup {
-	font-family: $font-body; // font family repeated, for Firefox
-	font-style: normal;
-	font-weight: normal;
-	color: $color-text;
+    font-family: $font-body; // font family repeated, for Firefox
+    font-style: normal;
+    font-weight: normal;
+    color: $color-text;
 
-	&::-moz-focus-inner { // kill phantom spacing and dotted border that appears in Firefox
-		border: 0;
-		padding: 0;
-	}
+    &::-moz-focus-inner { // kill phantom spacing and dotted border that appears in Firefox
+        border: 0;
+        padding: 0;
+    }
 }
 
 textarea {
-	min-height: 4.38461em; // 57px / 13px
-	resize: vertical;
-	width: 100%;
-	/* remove default vertical scrollbar in IE8-9 */
-	overflow: auto;
+    height: auto;
+    min-height: 3em;
+    overflow: auto; // remove default vertical scrollbar in IE8-9
+    resize: vertical;
+    width: 100%;
 }
 
 /* make sure disable elements really are disabled */
@@ -143,86 +161,86 @@ select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled],
 .navlink-disabled {
-	opacity: 1; // overrides iOS opacity setting
-	border-color: $color-gradient-to !important;
-	color: $color-text-footnote !important;
-	background: #eee !important;
-	text-shadow: none !important;
-	@include box-shadow(none !important);
-	cursor: default !important;
+    @include box-shadow(none !important);
+
+    opacity: 1; // overrides iOS opacity setting
+    border-color: $color-gradient-to !important;
+    color: $color-text-footnote !important;
+    background: #eee !important;
+    text-shadow: none !important;
+    cursor: default !important;
 }
 
 /* additional input field widths */
 
 input[size="32"] {
-	width: 100%;
-	max-width: 28em; // 364px / 13px
+    width: 100%;
+    max-width: 28em; // 364px / 13px
 }
 
 input.input-large {
-	width: 100%;
+    width: 100%;
 }
 
 input.input-medium {
-	width: 50%;
-	max-width: 14.4em; // 182px / 13px
+    width: 50%;
+    max-width: 14.4em; // 182px / 13px
 }
 
 input.input-small {
-	width: 25%;
-	max-width: 7.6em; // 91px / 13px
+    width: 25%;
+    max-width: 7.6em; // 91px / 13px
 }
 
 input.input-xsmall {
-	width: 16%;
-	width: 4.2em; // 55px / 13px
+    width: 16%;
+    width: 4.2em; // 55px / 13px
 }
 
 input {
-	&.year,
-	&.exp_year {
-		text-align: center;
-		width: 4.2em; // 55px / 13px
-	}
+    &.year,
+    &.exp_year {
+        text-align: center;
+        width: 4.2em; // 55px / 13px
+    }
 
-	&.month,
-	&.exp_month,
-	&.day,
-	&.exp_day,
-	&.hour,
-	&.exp_hour,
-	&.minute,
-	&.exp_minute,
-	&.second,
-	&.exp_second {
-		text-align: center;
-		width: 2.46153em; // 32px / 13px
-	}
+    &.month,
+    &.exp_month,
+    &.day,
+    &.exp_day,
+    &.hour,
+    &.exp_hour,
+    &.minute,
+    &.exp_minute,
+    &.second,
+    &.exp_second {
+        text-align: center;
+        width: 2.46153em; // 32px / 13px
+    }
 }
 
 /* better focus glows, if box-shadow is supported */
 .boxshadow {
-	input[type="color"],
-	input[type="date"],
-	input[type="datetime"],
-	input[type="datetime-local"],
-	input[type="email"],
-	input[type="month"],
-	input[type="number"],
-	input[type="password"],
-	input[type="search"],
-	input[type="tel"],
-	input[type="text"],
-	input[type="time"],
-	input[type="url"],
-	input[type="week"],
-	select,
-	textarea {
-		&:focus {
-			outline: 0;
-			@include box-shadow(0 0 7px $color-link-hover);
-			/* Opera */
-			z-index: 1;
-		}
-	}
+    input[type="color"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"],
+    select,
+    textarea {
+        &:focus {
+            @include box-shadow(0 0 7px $color-link-hover);
+
+            outline: 0;
+        }
+    }
 }
