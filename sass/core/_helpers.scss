@@ -3,13 +3,11 @@
 @mixin svg-graphic($imgfilename, $imgtype, $imgwidth, $imgheight) {
     .no-svg & {
         background-image: url('../img/' + $imgfilename + '.' + $imgtype);
+        background-size: $imgwidth $imgheight;
     }
     .svg & {
         background-image: url('../img/' + $imgfilename + '.svg');
-        -webkit-background-size: $imgwidth $imgheight;
-           -moz-background-size: $imgwidth $imgheight;
-             -o-background-size: $imgwidth $imgheight;
-                background-size: $imgwidth $imgheight;
+        background-size: $imgwidth $imgheight;
     }
 }
 
@@ -30,4 +28,21 @@
     border-top: 1px solid $color-gradient-to;
     border-bottom: 1px solid darken($color-gradient-to, 12%);
     @include gradient-linear($color-gradient-from, $color-gradient-to);
+}
+
+// form placeholders
+
+@mixin placeholder($color-placeholder){
+    &::-webkit-input-placeholder { // Safari >= 5, Chrome, Opera >= 11.6
+        color: $color-placeholder;
+    }
+    &:-moz-placeholder { // Firefox < 19
+        color: $color-placeholder;
+    }
+    &::-moz-placeholder { // Firefox >= 19
+        color: $color-placeholder;
+    }
+    &:-ms-input-placeholder {
+        color: $color-placeholder; // IE >= 10
+    }
 }

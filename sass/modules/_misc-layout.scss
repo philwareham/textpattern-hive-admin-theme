@@ -106,7 +106,6 @@ span.spinner {
     (min-resolution: 2dppx) {
     span.spinner {
         background-image: url("../img/spinner@2x.gif") !important;
-        -webkit-background-size: 13px 13px;
         background-size: 13px 13px;
     }
 }
@@ -347,9 +346,6 @@ body#page-setup {
 }
 
 .svg #view_modes a {
-    -webkit-background-size: 1.5em 1.5em;
-    -moz-background-size: 1.5em 1.5em;
-    -o-background-size: 1.5em 1.5em;
     background-size: 1.5em 1.5em;
 }
 
