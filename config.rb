@@ -1,6 +1,6 @@
 # Require any additional Compass plugins here:
 
-# Singularity GS (includes Breakpoint) - https://github.com/Team-Sass/Singularity
+# Singularity GS - https://github.com/Team-Sass/Singularity
 require "singularitygs"
 
 
