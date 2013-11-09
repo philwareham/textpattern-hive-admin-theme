@@ -68,7 +68,7 @@ textarea {
     background-color: $color-background;
     font-size: 100%; // correct font size not being inherited in all browsers
     font-size: 1em;
-    font-family: $font-body;
+    font-family: $font-sans-serif;
     font-weight: normal;
     vertical-align: baseline;
 }
@@ -120,7 +120,7 @@ select[size="1"] {
 }
 
 optgroup {
-    font-family: $font-body; // font family repeated, for Firefox
+    font-family: $font-sans-serif; // font family repeated, for Firefox
     font-style: normal;
     font-weight: normal;
     color: $color-text;
