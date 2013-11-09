@@ -1,7 +1,6 @@
-// disable Compass support of IE6 and IE7
+// disable Compass support for IE < 8
 
-$legacy-support-for-ie6:      false;
-$legacy-support-for-ie7:      false;
+$browser-minimum-versions:     (ie: '8');
 
 // use the Kellum method for hiding text
 // http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
@@ -74,7 +73,7 @@ $color-border:                darken($color-gradient-from, 13.5%);
 
 $color-gradient2-from:        #ffda44;
 $color-gradient2-to:          darken($color-gradient2-from, 15%);
-$color-highlight-box:         lighten($color-gradient2-from, 28%);
+$color-highlight-box:         #fff9e1;
 
 // alert colours
 
