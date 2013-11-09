@@ -2,21 +2,20 @@
    ========================================================================== */
 
 a {
-    color: $color-link;
     text-decoration: none;
+    color: $color-link;
+    background: transparent; // remove the gray background color from active links in IE10
 
-    &:focus {
-        outline: thin dotted $color-link-hover;
-    }
-
-    &:hover {
-        color: $color-link-hover;
-        text-decoration: underline;
-    }
-
+    // improve readability when focused and also mouse hovered in all browsers
     &:hover,
     &:active {
         outline: 0;
+        text-decoration: underline;
+        color: $color-link-hover;
+    }
+
+    &:focus {
+        outline: thin dotted $color-link-hover;
     }
 
     &.busy {

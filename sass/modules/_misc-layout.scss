@@ -1,6 +1,15 @@
 /* Miscellaneous/shared layout
    ========================================================================== */
 
+/* address differences between Firefox and other browsers */
+hr {
+    @include box-sizing(content-box);
+
+    border: 0; // remove the default `hr` border
+    border-bottom: 1px solid $color-border;
+    height: 0;
+}
+
 /* hide text but still allow screen reader access */
 .txp-accessibility {
     position: absolute;
@@ -320,7 +329,7 @@ body#page-setup {
 
     a:hover,
     li.active a {
-        background-color: $color-highlight-box;
+        background-color: $color-highlight2-box;
     }
 }
 

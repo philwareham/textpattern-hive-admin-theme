@@ -7,9 +7,9 @@
 .warning,
 .error,
 .information {
-    @include border-radius($default-border-radius / 2);
+    @include border-radius(0.2307692em); // 3px / 13px
 
-    padding: 0 0.25em;
+    padding: 1px 0.2307692em; // 3px / 13px
 }
 
 .success {
@@ -33,28 +33,27 @@
 }
 
 .highlight {
-    background: $color-highlight-box;
+    background: $color-highlight2-box;
 }
 
 .alert-block {
-    @include border-radius;
-
-    padding: 0.5em 1em;
+    border: 1px solid;
+    padding: 0.5384615em 1em; // 7px / 13px
 
     &.success {
-        border: 1px solid $color-success-border;
+        border-color: $color-success-border;
     }
 
     &.warning {
-        border: 1px solid $color-warning-border;
+        border-color: $color-warning-border;
     }
 
     &.error {
-        border: 1px solid $color-error-border;
+        border-color: $color-error-border;
     }
 
     &.information {
-        border: 1px solid $color-info-border;
+        border-color: $color-info-border;
     }
 }
 

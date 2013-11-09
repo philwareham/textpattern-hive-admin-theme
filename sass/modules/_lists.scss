@@ -64,7 +64,7 @@ dt {
         }
 
         &.active {
-            background: lighten($color-link, 56%);
+            background: $color-highlight-box;
         }
     }
 }

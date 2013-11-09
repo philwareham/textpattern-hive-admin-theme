@@ -7,17 +7,6 @@ $browser-minimum-versions:     (ie: '8');
 
 $hide-text-direction:         right;
 
-// logo (logo-large for screen width > 480px, logo-small for screen width < 481px)
-
-$logo-large-filename:         textpattern-lrg;
-$logo-large-filetype:         png;
-$logo-large-width:            9.84615384615385em; // 128px / 13px
-$logo-large-height:           2em; // 26px / 13px
-$logo-small-filename:         textpattern-sml;
-$logo-small-filetype:         png;
-$logo-small-width:            2em; // 26px / 13px
-$logo-small-height:           2em; // 26px / 13px
-
 // font families
 
 $font-sans-serif:             sans-serif;
@@ -42,14 +31,15 @@ $breakpoint-2:                42em; // 546px / 13px
 // text colours
 
 $color-text:                  #333333;
-$color-text-inverse:          #ffffff;
 $color-text-footnote:         #888888;
+$color-text-inverse:          #ffffff;
 $color-link:                  #114eb1;
 $color-link-hover:            #0066ff;
 
-// default border radii
+// borders
 
-$default-border-radius:       0.5em;
+$color-border:                #cccccc;
+$default-border-radius:       0.5384615em; // 7px / 13px
 
 // shadows
 
@@ -67,13 +57,14 @@ $color-background:            #ffffff;
 $color-background-box:        #f7f7f7;
 $color-gradient-from:         #eeeeee;
 $color-gradient-to:           darken($color-gradient-from, 6.5%);
-$color-border:                darken($color-gradient-from, 13.5%);
+$color-gradient-border:       darken($color-gradient-from, 13.5%);
+$color-highlight-box:         lighten($color-link, 57%);
 
 // accent colours (change these to make a new colourscheme)
 
 $color-gradient2-from:        #ffda44;
 $color-gradient2-to:          darken($color-gradient2-from, 15%);
-$color-highlight-box:         #fff9e1;
+$color-highlight2-box:        #fff9e1;
 
 // alert colours
 
@@ -89,3 +80,14 @@ $color-error-border:          darken($color-error-background, 12%);
 $color-info-text:             #3a87ad;
 $color-info-background:       #e7f6fc;
 $color-info-border:           darken($color-info-background, 12%);
+
+// logo (logo-large for screen width > 480px, logo-small for screen width < 481px)
+
+$logo-large-filename:         textpattern-lrg;
+$logo-large-filetype:         png;
+$logo-large-width:            9.84615384615385em; // 128px / 13px
+$logo-large-height:           2em; // 26px / 13px
+$logo-small-filename:         textpattern-sml;
+$logo-small-filetype:         png;
+$logo-small-width:            2em; // 26px / 13px
+$logo-small-height:           2em; // 26px / 13px

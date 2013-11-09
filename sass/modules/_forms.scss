@@ -14,6 +14,25 @@ legend {
     padding: 0;
 }
 
+button,
+input,
+select,
+textarea,
+.txp-logout a,
+.action-create a,
+.navlink,
+.navlink-active,
+.txp-buttons a {
+    /* correct font size not being inherited in all browsers */
+    font-size: 100%;
+    @include adjust-font-size-to(13px, 0.8);
+
+    /* address margins set differently in Firefox4+, Safari5+, and Chrome */
+    margin: 0;
+    font-family: $font-sans-serif;
+    vertical-align: baseline;
+}
+
 /* colour placeholder text */
 input,
 textarea {
@@ -59,18 +78,11 @@ textarea {
     @include transition(box-shadow 0.2s linear);
 
     -webkit-appearance: none; // remove iOS Safari default styling
-    margin: 0;
     border: 1px solid $color-border;
-    padding: 0.5384615em 0.25em;
-    height: 2.3846154em; // 31px / 13px
+    padding: 0.5384615em 0.3076923em; // 7px / 13px + 4px / 13px
+    height: 2.4615384em; // 32px / 13px
     max-width: 100%;
-    color: $color-text;
-    background-color: $color-background;
-    font-size: 100%; // correct font size not being inherited in all browsers
-    font-size: 1em;
-    font-family: $font-sans-serif;
-    font-weight: normal;
-    vertical-align: baseline;
+    background: #ffffff;
 }
 
 input[type="color"] {
@@ -96,7 +108,7 @@ select[multiple] {
 
 select[size="0"],
 select[size="1"] {
-    height: 2.3846154em; // 31px / 13px
+    height: 2.4615384em; // 32px / 13px
 }
 
 /* address select alignment in Safari/Chrome */
@@ -106,7 +118,7 @@ select[size="1"] {
     select[multiple],
     select[multiple][size] {
         background-image: none;
-        padding-right: 0.25em;
+        padding-right: 0.3076923em; // 4px / 13px
     }
 
     select,
@@ -208,7 +220,7 @@ input {
     }
 }
 
-/* better focus glows, if box-shadow is supported */
+/* better focus glows, if `box-shadow` is supported */
 .boxshadow {
     input[type="color"],
     input[type="date"],

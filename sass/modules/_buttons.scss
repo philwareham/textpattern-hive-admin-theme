@@ -25,25 +25,20 @@ input[type="button"],
 
     -webkit-appearance: none; // remove iOS Safari default styling
     display: inline-block;
-    margin: 0; // address margins set differently in Firefox4+, Safari5+, and Chrome */
-    border: solid 1px $color-border;
+    border: solid 1px $color-gradient-border;
     padding: 0.5384615em 0.75em;
     width: auto;
-    height: 2.3846154em; // 31px / 13px
+    height: 2.4615384em; // 32px / 13px
     overflow: visible; // the overflow property removes extra width in IE
-    color: $color-text;
-    cursor: pointer;
-    font-size: 100%; // correct font size not being inherited in all browsers
-    font-size: 1em;
-    font-family: $font-sans-serif;
     font-weight: normal;
     text-align: center;
-    vertical-align: baseline;
+    color: $color-text;
+    cursor: pointer;
 
     &:hover {
         @include gradient-linear(lighten($color-gradient-from, 4%), lighten($color-gradient-to, 4%));
 
-        border-color: darken($color-border, 13%);
+        border-color: darken($color-gradient-border, 13%);
         text-decoration: none;
     }
 
@@ -51,8 +46,9 @@ input[type="button"],
         @include box-shadow(inset 0 0.2em 0.25em rgba(#000000, 0.15));
         @include gradient-linear(darken($color-gradient-from, 3%), darken($color-gradient-to, 3%));
 
-        border-color: darken($color-border, 13%);
+        border-color: darken($color-gradient-border, 13%);
         color: darken($color-text, 10%);
+        text-decoration: none;
     }
 }
 
@@ -65,20 +61,17 @@ a.publish {
 
     font-weight: bold;
     border: 1px solid $color-gradient2-to;
-    border-bottom-color: darken($color-gradient2-to, 12%);
 
     &:hover {
         @include gradient-linear(lighten($color-gradient2-from, 14%), lighten($color-gradient2-to, 14%));
 
         border: 1px solid darken($color-gradient2-to, 10%);
-        border-bottom-color: darken($color-gradient2-to, 19%);
     }
 
     &:active {
         @include gradient-linear(lighten($color-gradient2-from, 2%), lighten($color-gradient2-to, 2%));
 
         border: 1px solid darken($color-gradient2-to, 10%);
-        border-bottom-color: darken($color-gradient2-to, 19%);
     }
 }
 
@@ -87,27 +80,24 @@ a.publish {
 input[type="submit"].destroy,
 button.destroy {
     @include text-shadow($text-shadow-dark);
-    @include gradient-linear-bar(lighten($color-error-text, 20%), $color-error-text);
+    @include gradient-linear(lighten($color-error-text, 10%), $color-error-text);
 
-    border: 1px solid lighten($color-error-text, 18%);
-    border-bottom-color: $color-error-text;
-    padding: 0 0.25em; // 4px / 13px
+    border-color: darken($color-error-text, 5%);
+    padding: 0 0.3076923em; // 4px / 13px
     height: 1.5384615em; // 20px / 13px
-    color: lighten($color-error-text, 56%);
+    color: #ffffff;
 
     &:hover {
-        @include gradient-linear-bar(lighten($color-error-text, 28%), lighten($color-error-text, 10%));
+        @include gradient-linear(lighten($color-error-text, 18%), lighten($color-error-text, 8%));
 
-        border: 1px solid lighten($color-error-text, 8%);
-        border-bottom-color: darken($color-error-text, 10%);
-        color: $color-text-inverse;
+        border-color: darken($color-error-text, 12%);
     }
 
     &:active {
-        @include gradient-linear-bar(lighten($color-error-text, 16%), darken($color-error-text, 4%));
+        @include gradient-linear($color-error-text, lighten($color-error-text, 8%));
 
-        border: 1px solid lighten($color-error-text, 8%);
-        border-bottom-color: darken($color-error-text, 10%);
+        border-color: darken($color-error-text, 12%);
+        color: darken(#ffffff, 10%);
     }
 }
 
@@ -177,27 +167,24 @@ ul.nav-tertiary {
 }
 
 .nav-tertiary .navlink-active {
-    @include gradient-linear(lighten($color-link, 56%), lighten($color-link, 50%));
+    @include gradient-linear(#e3edfc, #c7dbfa);
 
     border-color: #a3bef3;
-    border-bottom-color: darken(#a3bef3, 10%);
 
     &:hover {
-        @include gradient-linear(lighten($color-link, 59%), lighten($color-link, 51%));
+        @include gradient-linear(#f1f6fe, #ccdefa);
 
-        border-color: lighten(#6b8fe8, 10%);
-        border-bottom-color: #6b8fe8;
+        border-color: #6b8fe8;
     }
 
     &:active {
-        @include gradient-linear(lighten($color-link, 50%), lighten($color-link, 45%));
+        @include gradient-linear(#c7dbfa, #b0cbf7);
 
-        border-color: lighten(#6b8fe8, 10%);
-        border-bottom-color: #6b8fe8;
+        border-color: #6b8fe8;
     }
 }
 
-/* better focus glows, if box-shadow is supported */
+/* better focus glows, if `box-shadow` is supported */
 .boxshadow {
     button,
     input[type="button"],
