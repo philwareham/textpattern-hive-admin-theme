@@ -1,0 +1,29 @@
+{
+    "name": "txp-hive-admin-theme",
+    "version": "4.6.0-beta.3",
+    "author": {
+        "name": "Phil Wareham",
+        "url": "http://twitter.com/philwareham"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/philwareham/txp-hive-admin-theme.git"
+    },
+    "bugs": {
+        "url": "https://github.com/philwareham/txp-hive-admin-theme/issues"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-cli": "~0.1",
+        "grunt-contrib-compass": "0.6.0",
+        "grunt-contrib-concat": "0.3.0",
+        "grunt-contrib-copy": "0.4.1",
+        "grunt-contrib-cssmin": "0.6.2",
+        "grunt-contrib-jshint": "0.7.1",
+        "grunt-contrib-uglify": "0.2.5",
+        "grunt-contrib-watch": "0.5.3"
+    }
+    "scripts": {
+        "test": "grunt travis --verbose"
+    }
+}
