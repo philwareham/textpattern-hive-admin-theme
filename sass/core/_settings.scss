@@ -33,8 +33,13 @@ $breakpoint-2:                42em; // 546px / 13px
 $color-text:                  #333333;
 $color-text-footnote:         #888888;
 $color-text-inverse:          #ffffff;
+
+// interaction colours
+
 $color-link:                  #114eb1;
 $color-link-hover:            #0066ff;
+$color-selecting:             lighten($color-link, 50%);
+$color-selected:              lighten($color-link, 56%);
 
 // borders
 
@@ -58,13 +63,12 @@ $color-background-box:        #f7f7f7;
 $color-gradient-from:         #eeeeee;
 $color-gradient-to:           darken($color-gradient-from, 6.5%);
 $color-gradient-border:       darken($color-gradient-from, 13.5%);
-$color-highlight-box:         lighten($color-link, 57%);
 
 // accent colours (change these to make a new colourscheme)
 
 $color-gradient2-from:        #ffda44;
 $color-gradient2-to:          darken($color-gradient2-from, 15%);
-$color-highlight2-box:        #fff9e1;
+$color-highlight-box:         #fff9e1;
 
 // alert colours
 

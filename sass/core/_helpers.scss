@@ -1,3 +1,10 @@
+// import all Compass core mixins
+@import "compass";
+
+// import Singularity Grid System (includes Breakpoint module)
+@import "singularitygs";
+
+
 // SVG images with fallback for older browsers (via Modernizr)
         
 @mixin svg-graphic($imgfilename, $imgtype, $imgwidth, $imgheight) {

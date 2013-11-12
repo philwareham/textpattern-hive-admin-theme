@@ -1,16 +1,13 @@
-// import all Compass core mixins
-@import "compass";
-
-// import Singularity Grid System (includes Breakpoint module)
-@import "singularitygs";
-
 // import global variables
+
 @import "core/settings";
 
-// import additional mixins not covered by Compass
+// import Compass, Compass Plugins and any additional mixins
+
 @import "core/helpers";
 
 // global modules
+
 @import "core/base";
 @import "modules/grid";
 @import "modules/links";
@@ -26,6 +23,7 @@
 @import "modules/tables";
 
 // layout modules
+
 @import "modules/container";
 @import "modules/header";
 @import "modules/footer";
