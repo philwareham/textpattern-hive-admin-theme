@@ -139,13 +139,19 @@ sub {
 
 small,
 figcaption,
+tfoot,
 .txp-footer,
 .footnote {
-    font-size: $smallfont;
+    @include adjust-font-size-to(11px, 0.8);
 }
 
 figcaption,
 tfoot,
 .footnote {
     color: $color-text-footnote;
+}
+
+figcaption {
+    margin-top: 0.5em;
+    font-style: italic;
 }
