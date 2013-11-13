@@ -247,7 +247,12 @@ html {
 }
 
 .txp-grid-cell {
+  /* Capability css3-boxsizing is prefixed with -moz because 15.124933% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-box-sizing: border-box;
+  /* Capability css3-boxsizing is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css3-boxsizing is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block;
@@ -284,8 +289,9 @@ a.busy {
 
 .pophelp,
 .pophelpsubtle {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 50%;
   border: 1px solid #fff;
   padding: 0 0.25em;
@@ -372,8 +378,9 @@ dfn[title] {
 
 mark,
 var {
-  -moz-border-radius: 0.2307692em;
-  -webkit-border-radius: 0.2307692em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0.2307692em;
   padding: 1px 0.2307692em;
   color: #333333;
@@ -393,8 +400,9 @@ kbd,
 samp {
   font-size: 0.9230769em;
   line-height: 1.5em;
-  -moz-border-radius: 0.25em;
-  -webkit-border-radius: 0.25em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0.25em;
   border: 1px solid #e3e3e3;
   padding: 1px 0.25em;
@@ -404,8 +412,9 @@ samp {
 pre {
   font-size: 0.9230769em;
   line-height: 1.5em;
-  -moz-border-radius: 0.25em;
-  -webkit-border-radius: 0.25em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0.25em;
   overflow-x: auto;
   margin: 1.0833333em 0;
@@ -522,10 +531,14 @@ svg:not(:root) {
 }
 
 .content-image {
-  -moz-border-radius: 0.5384615em;
-  -webkit-border-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0.5384615em;
-  -moz-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  /* Capability css-boxshadow is not prefixed with -moz because 0.320541% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   border: solid 1px #cccccc;
@@ -533,7 +546,10 @@ svg:not(:root) {
   background: #fff;
 }
 a:hover .content-image {
-  -moz-box-shadow: 0 0 0.5em rgba(0, 102, 255, 0.4);
+  /* Capability css-boxshadow is not prefixed with -moz because 0.320541% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: 0 0 0.5em rgba(0, 102, 255, 0.4);
   box-shadow: 0 0 0.5em rgba(0, 102, 255, 0.4);
   border: solid 1px #0066ff;
@@ -546,8 +562,9 @@ a:hover .content-image {
 .warning,
 .error,
 .information {
-  -moz-border-radius: 0.2307692em;
-  -webkit-border-radius: 0.2307692em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0.2307692em;
   padding: 1px 0.2307692em;
 }
@@ -601,10 +618,14 @@ a:hover .content-image {
   text-align: center;
 }
 #messagepane span.success, #messagepane span.warning, #messagepane span.error {
-  -moz-border-radius: 0.5384615em 0.5384615em 0 0;
-  -webkit-border-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0.5384615em 0.5384615em 0 0;
-  -moz-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  /* Capability css-boxshadow is not prefixed with -moz because 0.320541% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   display: inline-block;
@@ -717,16 +738,27 @@ a:hover .content-image {
 h3.txp-summary,
 .txp-details > h3 {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  /* Capability css-boxshadow is not prefixed with -moz because 0.320541% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #cccccc;
   background-color: #eeeeee;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#eeeeee, #dddddd);
-  background-image: -o-linear-gradient(#eeeeee, #dddddd);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
   background-image: linear-gradient(#eeeeee, #dddddd);
   position: relative;
@@ -794,16 +826,27 @@ h3.txp-summary.expanded a:after {
 }
 .progress-meter li {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  /* Capability css-boxshadow is not prefixed with -moz because 0.320541% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #cccccc;
   background-color: #eeeeee;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#eeeeee, #dddddd);
-  background-image: -o-linear-gradient(#eeeeee, #dddddd);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
   background-image: linear-gradient(#eeeeee, #dddddd);
   position: relative;
@@ -817,18 +860,27 @@ h3.txp-summary.expanded a:after {
   border-top: 1px solid #f6c600;
   border-bottom: 1px solid #cccccc;
   background-color: #ffda44;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZGE0NCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y2YzYwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#ffda44, #f6c600);
-  background-image: -o-linear-gradient(#ffda44, #f6c600);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#ffda44, #f6c600);
   background-image: linear-gradient(#ffda44, #f6c600);
   border-right: 1px solid #f6c600;
   border-left: 1px solid #f6c600;
 }
 .progress-meter li:before {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 50%;
   position: absolute;
   z-index: 2;
@@ -947,14 +999,24 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0;
+  /* Capability css3-boxsizing is prefixed with -moz because 15.124933% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-box-sizing: border-box;
+  /* Capability css3-boxsizing is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css3-boxsizing is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  /* Capability css-transitions is prefixed with -moz because 1.109565% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   -moz-transition: box-shadow 0.2s linear;
-  -o-transition: box-shadow 0.2s linear;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-transitions is prefixed with -webkit because 15.774513% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-transition: box-shadow 0.2s linear;
   transition: box-shadow 0.2s linear;
   -webkit-appearance: none;
@@ -1038,7 +1100,10 @@ select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled],
 .navlink-disabled {
-  -moz-box-shadow: none !important;
+  /* Capability css-boxshadow is not prefixed with -moz because 0.320541% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   opacity: 1;
@@ -1100,7 +1165,10 @@ input.month, input.exp_month, input.day, input.exp_day, input.hour, input.exp_ho
 .boxshadow input[type="week"]:focus,
 .boxshadow select:focus,
 .boxshadow textarea:focus {
-  -moz-box-shadow: 0 0 7px #0066ff;
+  /* Capability css-boxshadow is not prefixed with -moz because 0.320541% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: 0 0 7px #0066ff;
   box-shadow: 0 0 7px #0066ff;
   outline: 0;
@@ -1123,28 +1191,53 @@ input[type="button"],
 .navlink-active,
 .txp-buttons a {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
-  -moz-border-radius: 0.5384615em;
-  -webkit-border-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0.5384615em;
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  /* Capability css-boxshadow is not prefixed with -moz because 0.320541% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  /* Capability background-img-opts is prefixed with -moz because 0.271227% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-background-clip: padding;
-  -o-background-clip: padding-box;
+  /* Capability background-img-opts is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability background-img-opts is prefixed with -webkit because 1.9497763% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-background-clip: padding;
   background-clip: padding-box;
+  /* Capability css3-boxsizing is prefixed with -moz because 15.124933% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-box-sizing: border-box;
+  /* Capability css3-boxsizing is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css3-boxsizing is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #eeeeee;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#eeeeee, #dddddd);
-  background-image: -o-linear-gradient(#eeeeee, #dddddd);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
   background-image: linear-gradient(#eeeeee, #dddddd);
+  /* Capability css-transitions is prefixed with -moz because 1.109565% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   -moz-transition: box-shadow 0.2s linear;
-  -o-transition: box-shadow 0.2s linear;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-transitions is prefixed with -webkit because 15.774513% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-transition: box-shadow 0.2s linear;
   transition: box-shadow 0.2s linear;
   -webkit-appearance: none;
@@ -1169,10 +1262,18 @@ input[type="button"]:hover,
 .navlink-active:hover,
 .txp-buttons a:hover {
   background-color: #f8f8f8;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y4ZjhmOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#f8f8f8, #e8e8e8);
-  background-image: -o-linear-gradient(#f8f8f8, #e8e8e8);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#f8f8f8, #e8e8e8);
   background-image: linear-gradient(#f8f8f8, #e8e8e8);
   border-color: #aaaaaa;
@@ -1187,14 +1288,25 @@ input[type="button"]:active,
 .navlink:active,
 .navlink-active:active,
 .txp-buttons a:active {
-  -moz-box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  /* Capability css-boxshadow is not prefixed with -moz because 0.320541% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   background-color: #e6e6e6;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U2ZTZlNiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q2ZDZkNiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#e6e6e6, #d6d6d6);
-  background-image: -o-linear-gradient(#e6e6e6, #d6d6d6);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#e6e6e6, #d6d6d6);
   background-image: linear-gradient(#e6e6e6, #d6d6d6);
   border-color: #aaaaaa;
@@ -1207,10 +1319,18 @@ input[type="submit"].publish,
 button.publish,
 a.publish {
   background-color: #ffe168;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZTE2OCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZDIxYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#ffe168, #ffd21b);
-  background-image: -o-linear-gradient(#ffe168, #ffd21b);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#ffe168, #ffd21b);
   background-image: linear-gradient(#ffe168, #ffd21b);
   font-weight: bold;
@@ -1220,10 +1340,18 @@ input[type="submit"].publish:hover,
 button.publish:hover,
 a.publish:hover {
   background-color: #ffe88b;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZTg4YiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZDkzZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#ffe88b, #ffd93f);
-  background-image: -o-linear-gradient(#ffe88b, #ffd93f);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#ffe88b, #ffd93f);
   background-image: linear-gradient(#ffe88b, #ffd93f);
   border: 1px solid #c39d00;
@@ -1232,10 +1360,18 @@ input[type="submit"].publish:active,
 button.publish:active,
 a.publish:active {
   background-color: #ffdc4e;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZGM0ZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmY2QwMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#ffdc4e, #ffcd02);
-  background-image: -o-linear-gradient(#ffdc4e, #ffcd02);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#ffdc4e, #ffcd02);
   background-image: linear-gradient(#ffdc4e, #ffcd02);
   border: 1px solid #c39d00;
@@ -1246,10 +1382,18 @@ input[type="submit"].destroy,
 button.destroy {
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
   background-color: #c83025;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M4MzAyNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzlkMjYxZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#c83025, #9d261d);
-  background-image: -o-linear-gradient(#c83025, #9d261d);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#c83025, #9d261d);
   background-image: linear-gradient(#c83025, #9d261d);
   border-color: #872119;
@@ -1260,10 +1404,18 @@ button.destroy {
 input[type="submit"].destroy:hover,
 button.destroy:hover {
   background-color: #db463b;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RiNDYzYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2JmMmUyMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#db463b, #bf2e23);
-  background-image: -o-linear-gradient(#db463b, #bf2e23);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#db463b, #bf2e23);
   background-image: linear-gradient(#db463b, #bf2e23);
   border-color: #691913;
@@ -1271,10 +1423,18 @@ button.destroy:hover {
 input[type="submit"].destroy:active,
 button.destroy:active {
   background-color: #9d261d;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzlkMjYxZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2JmMmUyMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#9d261d, #bf2e23);
-  background-image: -o-linear-gradient(#9d261d, #bf2e23);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#9d261d, #bf2e23);
   background-image: linear-gradient(#9d261d, #bf2e23);
   border-color: #691913;
@@ -1282,14 +1442,24 @@ button.destroy:active {
 }
 
 .navlink-disabled {
-  -moz-border-radius: 0.5384615em;
-  -webkit-border-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0.5384615em;
+  /* Capability background-img-opts is prefixed with -moz because 0.271227% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-background-clip: padding;
-  -o-background-clip: padding-box;
+  /* Capability background-img-opts is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability background-img-opts is prefixed with -webkit because 1.9497763% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-background-clip: padding;
   background-clip: padding-box;
+  /* Capability css3-boxsizing is prefixed with -moz because 15.124933% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-box-sizing: border-box;
+  /* Capability css3-boxsizing is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css3-boxsizing is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block;
@@ -1315,8 +1485,9 @@ ul.nav-tertiary li {
 .nav-tertiary .navlink-disabled,
 .prev-next a,
 .prev-next .navlink-disabled {
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0;
 }
 .nav-tertiary > :first-child,
@@ -1325,11 +1496,13 @@ ul.nav-tertiary li {
 .prev-next > :first-child,
 .prev-next > :first-child > a,
 .prev-next > :first-child > span {
-  -moz-border-radius-topleft: 0.5384615em;
-  -webkit-border-top-left-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-top-left-radius: 0.5384615em;
-  -moz-border-radius-bottomleft: 0.5384615em;
-  -webkit-border-bottom-left-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-bottom-left-radius: 0.5384615em;
 }
 .nav-tertiary > :last-child,
@@ -1338,11 +1511,13 @@ ul.nav-tertiary li {
 .prev-next > :last-child,
 .prev-next > :last-child > a,
 .prev-next > :last-child > span {
-  -moz-border-radius-topright: 0.5384615em;
-  -webkit-border-top-right-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-top-right-radius: 0.5384615em;
-  -moz-border-radius-bottomright: 0.5384615em;
-  -webkit-border-bottom-right-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-bottom-right-radius: 0.5384615em;
 }
 
@@ -1352,14 +1527,17 @@ ul.nav-tertiary li {
 [dir="rtl"] .prev-next > :first-child,
 [dir="rtl"] .prev-next > :first-child > a,
 [dir="rtl"] .prev-next > :first-child > span {
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0;
-  -moz-border-radius-topright: 0.5384615em;
-  -webkit-border-top-right-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-top-right-radius: 0.5384615em;
-  -moz-border-radius-bottomright: 0.5384615em;
-  -webkit-border-bottom-right-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-bottom-right-radius: 0.5384615em;
 }
 [dir="rtl"] .nav-tertiary > :last-child,
@@ -1368,43 +1546,70 @@ ul.nav-tertiary li {
 [dir="rtl"] .prev-next > :last-child,
 [dir="rtl"] .prev-next > :last-child > a,
 [dir="rtl"] .prev-next > :last-child > span {
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0;
-  -moz-border-radius-topleft: 0.5384615em;
-  -webkit-border-top-left-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-top-left-radius: 0.5384615em;
-  -moz-border-radius-bottomleft: 0.5384615em;
-  -webkit-border-bottom-left-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-bottom-left-radius: 0.5384615em;
 }
 
 .nav-tertiary .navlink-active {
   background-color: #e3edfc;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UzZWRmYyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2M3ZGJmYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#e3edfc, #c7dbfa);
-  background-image: -o-linear-gradient(#e3edfc, #c7dbfa);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#e3edfc, #c7dbfa);
   background-image: linear-gradient(#e3edfc, #c7dbfa);
   border-color: #a3bef3;
 }
 .nav-tertiary .navlink-active:hover {
   background-color: #f1f6fe;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxZjZmZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2NjZGVmYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#f1f6fe, #ccdefa);
-  background-image: -o-linear-gradient(#f1f6fe, #ccdefa);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#f1f6fe, #ccdefa);
   background-image: linear-gradient(#f1f6fe, #ccdefa);
   border-color: #6b8fe8;
 }
 .nav-tertiary .navlink-active:active {
   background-color: #c7dbfa;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M3ZGJmYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2IwY2JmNyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#c7dbfa, #b0cbf7);
-  background-image: -o-linear-gradient(#c7dbfa, #b0cbf7);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#c7dbfa, #b0cbf7);
   background-image: linear-gradient(#c7dbfa, #b0cbf7);
   border-color: #6b8fe8;
@@ -1420,7 +1625,10 @@ ul.nav-tertiary li {
 .boxshadow .navlink:focus,
 .boxshadow .navlink-active:focus,
 .boxshadow .txp-buttons a:focus {
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
+  /* Capability css-boxshadow is not prefixed with -moz because 0.320541% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 0 7px #0066ff;
   outline: 0;
@@ -1562,10 +1770,18 @@ td {
 .txp-list thead th {
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
   background-color: #eeeeee;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkZGRkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#eeeeee, #dddddd);
-  background-image: -o-linear-gradient(#eeeeee, #dddddd);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#eeeeee, #dddddd);
   background-image: linear-gradient(#eeeeee, #dddddd);
   border-top: 1px solid #dddddd;
@@ -1574,10 +1790,18 @@ td {
 }
 .txp-list thead th.asc, .txp-list thead th.desc {
   background-color: lightgrey;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2QzZDNkMyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U0ZTRlNCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#d3d3d3, #e4e4e4);
-  background-image: -o-linear-gradient(#d3d3d3, #e4e4e4);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#d3d3d3, #e4e4e4);
   background-image: linear-gradient(#d3d3d3, #e4e4e4);
 }
@@ -1659,16 +1883,27 @@ body {
 /* Header
    ========================================================================== */
 .txp-header {
-  -moz-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  /* Capability css-boxshadow is not prefixed with -moz because 0.320541% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   border-top: 1px solid #f6c600;
   border-bottom: 1px solid #cccccc;
   background-color: #ffda44;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZGE0NCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y2YzYwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#ffda44, #f6c600);
-  background-image: -o-linear-gradient(#ffda44, #f6c600);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#ffda44, #f6c600);
   background-image: linear-gradient(#ffda44, #f6c600);
   position: fixed;
@@ -1797,10 +2032,14 @@ body {
 }
 
 .dropdown-menu {
-  -moz-border-radius: 0 0.5384615em 0.5384615em 0.5384615em;
-  -webkit-border-radius: 0;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0 0.5384615em 0.5384615em 0.5384615em;
-  -moz-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+  /* Capability css-boxshadow is not prefixed with -moz because 0.320541% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -1813,13 +2052,15 @@ body {
   background: #fff9e1;
 }
 .dropdown-menu li:first-child {
-  -moz-border-radius: 0 0.5384615em 0 0;
-  -webkit-border-radius: 0;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0 0.5384615em 0 0;
 }
 .dropdown-menu li:last-child {
-  -moz-border-radius: 0 0 0.5384615em 0.5384615em;
-  -webkit-border-radius: 0;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0 0 0.5384615em 0.5384615em;
 }
 .dropdown-menu li:hover {
@@ -1863,7 +2104,12 @@ body {
    ========================================================================== */
 /* address differences between Firefox and other browsers */
 hr {
+  /* Capability css3-boxsizing is prefixed with -moz because 15.124933% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-box-sizing: content-box;
+  /* Capability css3-boxsizing is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css3-boxsizing is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   border: 0;
@@ -1972,8 +2218,9 @@ span.spinner {
    ========================================================================== */
 .txp-edit,
 .txp-login {
-  -moz-border-radius: 0.5384615em;
-  -webkit-border-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0.5384615em;
   margin: 0 auto 1em;
   padding: 1em 1em 1px 1em;
@@ -2037,11 +2284,13 @@ span.spinner {
 
 /* TBC (for modals @ 4.6) */
 .txp-edit-action {
-  -moz-border-radius-bottomleft: 0.5384615em;
-  -webkit-border-bottom-left-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-bottom-left-radius: 0.5384615em;
-  -moz-border-radius-bottomright: 0.5384615em;
-  -webkit-border-bottom-right-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-bottom-right-radius: 0.5384615em;
   margin-right: -1em;
   margin-left: -1em;
@@ -2097,16 +2346,27 @@ body#page-setup {
   overflow-y: scroll;
 }
 #tag-event h3 {
-  -moz-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+  /* Capability css-boxshadow is not prefixed with -moz because 0.320541% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   border-top: 1px solid #f6c600;
   border-bottom: 1px solid #cccccc;
   background-color: #ffda44;
+  /* Content for ie 9.
+  Min version: 8.
+  User threshold to keep: 10%. If ie 9 are omitted: 4.94898%. */
+  /* Creating new -svg context. */
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZGE0NCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y2YzYwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.380792% of users need it which is more than the threshold of 1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#ffda44, #f6c600);
-  background-image: -o-linear-gradient(#ffda44, #f6c600);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability css-gradients is prefixed with -webkit because 15.765821% of users need it which is more than the threshold of 1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#ffda44, #f6c600);
   background-image: linear-gradient(#ffda44, #f6c600);
   position: fixed;
@@ -2153,8 +2413,9 @@ body#page-setup {
   text-indent: 110%;
   white-space: nowrap;
   overflow: hidden;
-  -moz-border-radius: 0.5384615em;
-  -webkit-border-radius: 0.5384615em;
+  /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+  /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
   border-radius: 0.5384615em;
   display: block;
   width: 1.5em;
@@ -2225,7 +2486,12 @@ body#page-setup {
   margin-bottom: 1em;
 }
 .fullsize-image img {
+  /* Capability css3-boxsizing is prefixed with -moz because 15.124933% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-box-sizing: border-box;
+  /* Capability css3-boxsizing is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css3-boxsizing is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   max-width: 100%;
@@ -2296,7 +2562,12 @@ tr.active .plugin-prefs {
 }
 
 div.code {
+  /* Capability css3-boxsizing is prefixed with -moz because 15.124933% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-box-sizing: border-box;
+  /* Capability css3-boxsizing is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css3-boxsizing is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom: 1em;
@@ -2404,7 +2675,10 @@ div.code {
 
   /* move `<select>` navigation to new row for smaller screens */
   .txp-nav-select {
-    -moz-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
+    /* Capability css-boxshadow is not prefixed with -moz because 0.320541% of users are affected which is less than the threshold of 1. */
+    /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+    /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 1%. */
+    /* Creating new -webkit context. */
     -webkit-box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
     box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
     position: absolute;
@@ -2487,8 +2761,9 @@ div.code {
 
   /* responsive jQuery UI tabs */
   .ui-tabs .ui-tabs-nav li {
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
+    /* Capability border-radius is not prefixed with -moz because 0.427388% of users are affected which is less than the threshold of 1. */
+    /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 1. */
+    /* Capability border-radius is not prefixed with -webkit because 0.19652% of users are affected which is less than the threshold of 1. */
     border-radius: 0;
     float: none;
     margin-top: 2px;

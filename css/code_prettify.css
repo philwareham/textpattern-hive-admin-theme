@@ -49,7 +49,12 @@
 }
 .linenums ol {
   margin: 0;
+  /* Capability css-boxshadow is prefixed with -moz because 0.320541% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-box-shadow: inset 1.85714em 0 0 #f6f6f6, inset 1.92857em 0 0 #e3e3e3;
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.78065% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: inset 1.85714em 0 0 #f6f6f6, inset 1.92857em 0 0 #e3e3e3;
   box-shadow: inset 1.85714em 0 0 #f6f6f6, inset 1.92857em 0 0 #e3e3e3;
 }
