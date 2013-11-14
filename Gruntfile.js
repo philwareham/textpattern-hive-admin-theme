@@ -6,6 +6,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
 
     grunt.initConfig({
@@ -77,6 +78,21 @@ module.exports = function (grunt) {
                 dest: 'assets/css/',
                 ext: '.min.css'
             }
+        },
+
+        uglify: {
+            dist: {
+                options: {
+                    mangle: false,
+                    preserveComments: 'some'
+                },
+
+                files: [
+                    {
+                        'assets/js/main.js': ['src/assets/js/main.js']
+                    }
+                ]
+            }
         }
 
     });
@@ -84,6 +100,6 @@ module.exports = function (grunt) {
     grunt.registerTask('test', ['jshint']);
     grunt.registerTask('sass', ['compass', 'cssmin']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['jshint', 'sass', 'copy:img']);
-    //grunt.registerTask('travis', ['jshint', 'compass']);
+    grunt.registerTask('build', ['jshint', 'sass', 'copy:img', 'uglify']);
+    grunt.registerTask('travis', ['jshint', 'compass']);
 };
