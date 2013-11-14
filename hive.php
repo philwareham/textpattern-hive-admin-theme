@@ -31,7 +31,7 @@ class hive_theme extends theme
 	function html_head()
 	{
 		$out[] = '<link rel="stylesheet" href="vendors/jquery/ui/css/textpattern/jquery-ui.css">';
-		$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/textpattern.css">';
+		$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/textpattern.min.css">';
 
 		// Start of custom CSS toggles (see README.textile for usage instructions).
 		if (defined('hive_theme_hide_branding'))
