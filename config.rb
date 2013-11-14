@@ -10,7 +10,7 @@ http_path = "../"
 project_path = "src"
 
 sass_path = "src/assets/sass"
-css_path = "tmp/assets/css"
+css_path = "assets/css"
 images_dir = "img"
 fonts_dir = "fonts"
 
