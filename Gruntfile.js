@@ -25,6 +25,14 @@ module.exports = function (grunt) {
             }
         },
 
+        copy: {
+            img: {
+                files: [
+                    {expand: true, cwd: 'src/assets/img/', src: ['**'], dest: 'assets/img/'}
+                ]
+            }
+        },
+
         cssmin: {
             main: {
                 expand: true,
@@ -39,6 +47,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('sass', ['compass', 'cssmin']);
-    grunt.registerTask('build', ['sass']);
+    grunt.registerTask('build', ['sass', 'copy:img']);
     //grunt.registerTask('travis', ['jshint', 'compass']);
 };
