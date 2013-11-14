@@ -3,13 +3,15 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
         watch: {
             sass: {
-                files: 'sass/**',
+                files: 'src/assets/sass/**',
                 tasks: ['sass']
             }
         },
@@ -21,11 +23,22 @@ module.exports = function (grunt) {
                     force: true
                 }
             }
+        },
+
+        cssmin: {
+            main: {
+                expand: true,
+                cwd: 'assets/css/',
+                src: ['*.css', '!*.min.css'],
+                dest: 'assets/css/',
+                ext: '.min.css'
+            }
         }
 
     });
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('sass', ['compass']);
+    grunt.registerTask('sass', ['compass', 'cssmin']);
     grunt.registerTask('build', ['sass']);
+    //grunt.registerTask('travis', ['jshint', 'compass']);
 };
