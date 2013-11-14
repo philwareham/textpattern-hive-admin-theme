@@ -7,7 +7,6 @@ require "singularitygs"
 
 # Set this to the root of your project when deployed:
 http_path = "../"
-project_path = "src"
 
 sass_path = "src/assets/sass"
 css_path = "assets/css"
