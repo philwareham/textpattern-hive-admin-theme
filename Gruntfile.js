@@ -3,8 +3,10 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -13,6 +15,11 @@ module.exports = function (grunt) {
             sass: {
                 files: 'src/assets/sass/**',
                 tasks: ['sass']
+            },
+
+            js: {
+                files: 'src/assets/js/*.js',
+                tasks: ['jshint', 'copy', 'uglify']
             }
         },
 
@@ -33,6 +40,35 @@ module.exports = function (grunt) {
             }
         },
 
+        jshint: {
+            files: ['Gruntfile.js', 'src/assets/js/*.js'],
+            options: {
+                bitwise: true,
+                camelcase: true,
+                curly: true,
+                eqeqeq: true,
+                es3: true,
+                forin: true,
+                immed: true,
+                indent: 4,
+                latedef: true,
+                noarg: true,
+                noempty: true,
+                nonew: true,
+                quotmark: 'single',
+                undef: true,
+                unused: true,
+                strict: true,
+                trailing: true,
+                browser: true,
+                globals: {
+                    $: false,
+                    jQuery: false,
+                    module: true
+                }
+            }
+        },
+
         cssmin: {
             main: {
                 expand: true,
@@ -45,8 +81,9 @@ module.exports = function (grunt) {
 
     });
 
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('test', ['jshint']);
     grunt.registerTask('sass', ['compass', 'cssmin']);
-    grunt.registerTask('build', ['sass', 'copy:img']);
+    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('build', ['jshint', 'sass', 'copy:img']);
     //grunt.registerTask('travis', ['jshint', 'compass']);
 };
