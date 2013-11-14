@@ -36,20 +36,3 @@
     border-bottom: 1px solid $color-gradient-border;
     @include gradient-linear($color-gradient-from, $color-gradient-to);
 }
-
-// form placeholders
-
-@mixin placeholder($color-placeholder){
-    &::-webkit-input-placeholder { // Safari >= 5, Chrome, Opera >= 11.6
-        color: $color-placeholder;
-    }
-    &:-moz-placeholder { // Firefox < 19
-        color: $color-placeholder;
-    }
-    &::-moz-placeholder { // Firefox >= 19
-        color: $color-placeholder;
-    }
-    &:-ms-input-placeholder {
-        color: $color-placeholder; // IE >= 10
-    }
-}
