@@ -31,67 +31,66 @@ class hive_theme extends theme
 	function html_head()
 	{
 		$out[] = '<link rel="stylesheet" href="vendors/jquery/ui/css/textpattern/jquery-ui.css">';
-		$out[] = '<link rel="stylesheet" href="'.$this->url.'css/textpattern.css">';
+		$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/textpattern.css">';
 
 		// Start of custom CSS toggles (see README.textile for usage instructions).
 		if (defined('hive_theme_hide_branding'))
 		{
-			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_branding.css">';
+			$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_branding.css">';
 		}
 		if (defined('hive_theme_hide_headings'))
 		{
-			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_headings.css">';
+			$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_headings.css">';
 		}
 		if (defined('hive_theme_hide_preview_tabs_group'))
 		{
-			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_preview_tabs.css">';
+			$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_preview_tabs.css">';
 		}
 		if (defined('hive_theme_hide_textfilter_group'))
 		{
-			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_textfilter_group.css">';
+			$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_textfilter_group.css">';
 		}
 		if (defined('hive_theme_hide_advanced_group'))
 		{
-			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_advanced_group.css">';
+			$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_advanced_group.css">';
 		}
 		if (defined('hive_theme_hide_custom_field_group'))
 		{
-			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_custom_field_group.css">';
+			$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_custom_field_group.css">';
 		}
 		if (defined('hive_theme_hide_image_group'))
 		{
-			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_image_group.css">';
+			$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_image_group.css">';
 		}
 		if (defined('hive_theme_hide_keywords_field'))
 		{
-			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_keywords_field.css">';
+			$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_keywords_field.css">';
 		}
 		if (defined('hive_theme_hide_recent_articles_group'))
 		{
-			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_recent_articles_group.css">';
+			$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_recent_articles_group.css">';
 		}
 		if (defined('hive_theme_hide_comments_group'))
 		{
-			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_comments_group.css">';
+			$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_comments_group.css">';
 		}
 		if (defined('hive_theme_hide_expires_field'))
 		{
-			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_expires_field.css">';
+			$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_expires_field.css">';
 		}
 		if (defined('hive_theme_hide_image_caption'))
 		{
-			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_image_caption.css">';
+			$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_image_caption.css">';
 		}
 		if (defined('hive_theme_hide_tag_builder_column'))
 		{
-			$out[] = '<link rel="stylesheet" href="'.$this->url.'css/custom/hide_tag_builder_column.css">';
+			$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_tag_builder_column.css">';
 		}
 		// End of custom CSS toggles.
 
 		$out[] = '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">';
 		$out[] = '<meta name="generator" content="Textpattern CMS">';
 		$out[] = '<meta name="apple-mobile-web-app-capable" content="yes">';
-		$out[] = '<meta name="apple-mobile-web-app-status-bar-style" content="black">';
 		$out[] = '<meta name="apple-mobile-web-app-title" content="'.htmlspecialchars($GLOBALS["prefs"]["sitename"]).'">';
 		$out[] = '<script src="vendors/modernizr/modernizr/modernizr.js"></script>';
 		$out[] = '<script src="'.$this->url.'js/tinynav.min.js"></script>';
