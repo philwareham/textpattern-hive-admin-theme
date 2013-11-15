@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 
             js: {
                 files: 'src/assets/js/*.js',
-                tasks: ['jshint', 'uglify']
+                tasks: ['jshint', 'copy', 'uglify']
             }
         },
 
@@ -36,7 +36,8 @@ module.exports = function (grunt) {
         copy: {
             img: {
                 files: [
-                    {expand: true, cwd: 'src/assets/img/', src: ['**'], dest: 'assets/img/'}
+                    {expand: true, cwd: 'src/', src: ['*'], dest: 'dist/', filter: 'isFile'},
+                    {expand: true, cwd: 'src/assets/img/', src: ['**'], dest: 'dist/assets/img/'}
                 ]
             }
         },
@@ -73,9 +74,9 @@ module.exports = function (grunt) {
         cssmin: {
             main: {
                 expand: true,
-                cwd: 'assets/css/',
+                cwd: 'dist/assets/css/',
                 src: ['*.css', '!*.min.css'],
-                dest: 'assets/css/',
+                dest: 'dist/assets/css/',
                 ext: '.min.css'
             }
         },
@@ -89,7 +90,7 @@ module.exports = function (grunt) {
 
                 files: [
                     {
-                        'assets/js/main.js': ['src/assets/js/main.js']
+                        'dist/assets/js/main.js': ['src/assets/js/main.js']
                     }
                 ]
             }
@@ -100,6 +101,6 @@ module.exports = function (grunt) {
     grunt.registerTask('test', ['jshint']);
     grunt.registerTask('sass', ['compass', 'cssmin']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['jshint', 'sass', 'copy:img', 'uglify']);
+    grunt.registerTask('build', ['jshint', 'sass', 'copy', 'uglify']);
     grunt.registerTask('travis', ['jshint', 'compass']);
 };
