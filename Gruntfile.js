@@ -34,10 +34,10 @@ module.exports = function (grunt) {
         },
 
         copy: {
-            img: {
+            dist: {
                 files: [
-                    {expand: true, cwd: 'src/', src: ['*'], dest: 'dist/', filter: 'isFile'},
-                    {expand: true, cwd: 'src/assets/img/', src: ['**'], dest: 'dist/assets/img/'}
+                    {expand: true, cwd: 'src/', src: ['*'], dest: 'dist/hive/', filter: 'isFile'},
+                    {expand: true, cwd: 'src/assets/img/', src: ['**'], dest: 'dist/hive/assets/img/'}
                 ]
             }
         },
@@ -74,9 +74,9 @@ module.exports = function (grunt) {
         cssmin: {
             main: {
                 expand: true,
-                cwd: 'dist/assets/css/',
+                cwd: 'dist/hive/assets/css/',
                 src: ['*.css', '!*.min.css'],
-                dest: 'dist/assets/css/',
+                dest: 'dist/hive/assets/css/',
                 ext: '.min.css'
             }
         },
@@ -90,7 +90,7 @@ module.exports = function (grunt) {
 
                 files: [
                     {
-                        'dist/assets/js/main.js': ['src/assets/js/main.js']
+                        'dist/hive/assets/js/main.js': ['src/assets/js/main.js']
                     }
                 ]
             }

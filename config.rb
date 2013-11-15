@@ -10,7 +10,7 @@ http_path = "../"
 project_path = "src"
 
 sass_path = "src/assets/sass"
-css_path = "dist/assets/css"
+css_path = "dist/hive/assets/css"
 images_dir = "src/assets/img"
 fonts_dir = "src/assets/fonts"
 
