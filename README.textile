@@ -2,70 +2,45 @@ h1. Hive admin-side theme for Textpattern CMS
 
 !https://travis-ci.org/philwareham/txp-hive-admin-theme.png?branch=master!:https://travis-ci.org/philwareham/txp-hive-admin-theme
 
-*Please note 1:* You'll need to be using the "latest SVN releases of Textpattern":http://code.google.com/p/textpattern/ in order to use this admin theme - we have done extensive work on improving the Textpattern admin-side code structure since v4.5 which directly relates to features used within this theme.
+Hive admin-side theme for Textpattern CMS v4.6. *Currently under development.*
 
-*Please note 2:* This theme is currently under development, and as such parts of the code are probably unfinished/unformated/untested/broken - please check the "GitHub project":https://github.com/philwareham/txp-hive-admin-theme/commits/master regularly for the latest revisions.
+h2. Requirements
 
-You are free to modify this theme, reuse code herein, and distribute all its supporting files as long as licences are respected (see below).
+Building this repository requires:
 
-h2. Installation instructions
+* "Node.js":http://nodejs.org/ >=0.8.0
+* "Ruby":http://www.ruby-lang.org/en/
+* "Bundler":http://bundler.io/
+* "Grunt":http://gruntjs.com/ ~0.4.0
 
-# Upload the directory 'hive' into your Textpattern installation -> theme directory.
-# Log in to your Textpattern admin area. Navigate to admin -> preferences -> advanced.
-# Select 'Hive' from the 'Admin-side theme' dropdown list. Save the preferences.
-# You can also install the theme easily using the "smd_admin_themes":http://stefdawson.com/sw/plugins/smd_admin_themes plugin.
+h2. Setup
 
-h2. Custom CSS toggles
+h3. Installing required tools
 
-Options are provided to hide certain sections/fields/features from displaying in the admin pages. To use them simply add any of the rules below to your textpattern -> config.php file, before the closing @?>@ line.
+The project uses "Grunt":http://gruntjs.com/ to run tasks and "Sass":http://sass-lang.com/ for CSS pre-processing. First make sure you have base dependencies installed: "Ruby":http://www.ruby-lang.org/en/, "Node.js":http://nodejs.org/, "Bundler":http://bundler.io/ and "Grunt":http://gruntjs.com/. You can install Node and Ruby using their installers, Bunder with gem and the Grunt with npm:
 
-*Hide Textpattern branding:*
+bc. $ gem install bundler
+$ npm install -g grunt-cli
 
-@define('hive_theme_hide_branding', true);@
+Consult the tools' documentation for more instructions.
 
-*Hide page headings:*
+h3. Installing dependencies
 
-@define('hive_theme_hide_headings', true);@
+After you have the base dependencies taken care of, you can install the project's dependencies. Navigate to the project's directory, and run the dependency managers:
 
-*Hide preview tabs group (write/edit page):*
+bc. $ cd txp-hive-admin-theme
+$ npm install
+$ bundle install
 
-@define('hive_theme_hide_preview_tabs_group', true);@
+*npm* installs Node modules for Grunt and *bundle* takes care of Ruby gems.
 
-*Hide text filter group (write/edit page):*
+h2. Building
 
-@define('hive_theme_hide_textfilter_group', true);@
+This repository hosts sources and needs to be built before it can be used. After you have installed all dependencies, you will be able to run tasks using Grunt, including building:
 
-*Hide advanced group (write/edit page):*
+bc. $ grunt [task]
 
-@define('hive_theme_hide_advanced_group', true);@
-
-*Hide recent articles group (write/edit page):*
-
-@define('hive_theme_hide_recent_articles_group', true);@
-
-*Hide keywords field (write/edit page):*
-
-@define('hive_theme_hide_keywords_field', true);@
-
-*Hide comments group (write/edit page):*
-
-@define('hive_theme_hide_comments_group', true);@
-
-*Hide expires fields (write/edit page):*
-
-@define('hive_theme_hide_expires_field', true);@
-
-*Hide image caption field (image edit page):*
-
-@define('hive_theme_hide_image_caption', true);@
-
-*Hide tag builder column (pages and forms pages):*
-
-@define('hive_theme_hide_tag_builder_column', true);@
-
-h2. Development details
-
-Supported browsers: Google Chrome 22+, Internet Explorer 8+, Mozilla Firefox 16+, Apple Safari 5+ (other browsers/versions will probably work fine, within reason, but those are the minimum browsers I routinely test against). Development environment requires <a href="http://sass-lang.com" rel="external" title="Go to the Sass website">Sass</a> and <a href="http://compass-style.org" rel="external" title="Go to the Compass website">Compass</a>, plus the Compass extension <a href="http://singularity.gs" rel="external" title="Go to the Singularity website">Singularity</a>.
+Where the @[task]@ is either @test@, @build@ or @watch@. Watch will launch a task that watches for file changes. The project is automatically built if a source file is modified. The build task builds the project.
 
 h2. License
 
