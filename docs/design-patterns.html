@@ -2,16 +2,12 @@
 <html lang="en-gb" dir="ltr">
 <head>
 	<meta charset="utf-8">
-	<meta name="robots" content="noindex, nofollow">
 	<title>Hive theme design patterns 4.6 &#124; Textpattern CMS</title>
 	<script src="/textpattern/vendors/jquery/jquery/jquery.js"></script>
 	<script src="/textpattern/vendors/jquery/ui/js/jquery-ui.js"></script>
 	<link rel="stylesheet" href="/textpattern/vendors/jquery/ui/css/textpattern/jquery-ui.css">
 	<link rel="stylesheet" href="../dist/hive/assets/css/textpattern.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="generator" content="Textpattern CMS">
-	<meta name="author" content="Phil Wareham (http://twitter.com/philwareham)">
 	<script src="/textpattern/vendors/modernizr/modernizr/modernizr.js"></script>
 	<script src="../js/scripts.js"></script>
 	<!--[if lt IE 9]><script src="/textpattern/vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->
@@ -39,58 +35,6 @@
 
 </head>
 <body id="page-article" class="content">
-
-	<header role="banner" class="txp-header">
-		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
-		<p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
-
-		<nav role="navigation" aria-label="Navigation">
-			<ul class="data-dropdown untinynav">
-				<li class="dropdown active"><a class="dropdown-toggle" href="content-article.html">Content</a>
-					<ul class="dropdown-menu">
-						<li><a href="content-category.html">Categories</a></li>
-						<li class="selected"><a href="content-article.html">Write</a></li>
-						<li><a href="content-list.html">Articles</a></li>
-						<li><a href="content-image.html">Images</a></li>
-						<li><a href="content-file.html">Files</a></li>
-						<li><a href="content-link.html">Links</a></li>
-						<li><a href="content-discuss.html">Comments</a></li>
-					</ul>
-				</li>
-				<li class="dropdown"><a class="dropdown-toggle" href="presentation-page.html">Presentation</a>
-					<ul class="dropdown-menu">
-						<li><a href="presentation-section.html">Sections</a></li>
-						<li><a href="presentation-page.html">Pages</a></li>
-						<li><a href="presentation-form.html">Forms</a></li>
-						<li><a href="presentation-css.html">Styles</a></li>
-					</ul>
-				</li>
-				<li class="dropdown"><a class="dropdown-toggle" href="admin-admin.html">Admin</a>
-					<ul class="dropdown-menu">
-						<li><a href="admin-diag.html">Diagnostics</a></li>
-						<li><a href="admin-prefs.html">Preferences</a></li>
-						<li><a href="admin-languages.html">Languages</a></li>
-						<li><a href="admin-admin.html">Users</a></li>
-						<li><a href="admin-log.html">Visitor logs</a></li>
-						<li><a href="admin-plugin.html">Plugins</a></li>
-						<li><a href="admin-import.html">Import</a></li>
-					</ul>
-				</li>
-				<li class="dropdown"><a class="dropdown-toggle" href="#">Extensions</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Extension 1</a></li>
-						<li><a href="#">Extension 2</a></li>
-						<li><a href="#">Extension 3</a></li>
-						<li><a href="#">Extension 4</a></li>
-						<li><a href="#">Extension 5</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-
-		<div id="messagepane"></div>
-
-	</header><!-- /txp-header -->
 
 	<main role="main" class="txp-body" aria-label="Main content">
 
@@ -129,47 +73,48 @@
 			<h2>Neutral colours</h2>
 			<div class="txp-grid">
 				<div class="txp-grid-cell" style="width:8em;background:#f7f7f7;">
-					<p>#f7f7f7</p>
+					<p><code>#f7f7f7</code></p>
 				</div><div class="txp-grid-cell" style="width:8em;background:#eeeeee;">
-					<p>#eeeeee</p>
+					<p><code>#eeeeee</code></p>
 				</div><div class="txp-grid-cell" style="width:8em;background:#dddddd;">
-					<p>#dddddd</p>
+					<p><code>#dddddd</code></p>
 				</div><div class="txp-grid-cell" style="width:8em;background:#cccccc;">
-					<p>#cccccc</p>
-				</div><div class="txp-grid-cell" style="width:8em;background:#999999;color:#ffffff;">
-					<p>#999999</p>
-				</div><div class="txp-grid-cell" style="width:8em;background:#333333;color:#ffffff;">
-					<p>#333333</p>
+					<p><code>#cccccc</code></p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#999999;">
+					<p><code>#999999</code></p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#333333;">
+					<p><code>#333333</code></p>
 				</div>
 			</div>
 
 			<h2>Accent colours</h2>
 			<div class="txp-grid">
-				<div class="txp-grid-cell" style="width:8em;background:#fff6d3;">
-					<p>#fff6d3</p>
+
+				<div class="txp-grid-cell" style="width:8em;background:#fff9e1;">
+					<p><code>#fff9e1</code></p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#fff6d3;">
+					<p><code>#fff6d3</code></p>
 				</div><div class="txp-grid-cell" style="width:8em;background:#ffefaf;">
-					<p>#ffefaf</p>
+					<p><code>#ffefaf</code></p>
 				</div><div class="txp-grid-cell" style="width:8em;background:#ffe88b;">
-					<p>#ffe88b</p>
+					<p><code>#ffe88b</code></p>
 				</div><div class="txp-grid-cell" style="width:8em;background:#ffda44;">
-					<p>#ffda44</p>
-				</div><div class="txp-grid-cell" style="width:8em;background:#f8c225;">
-					<p>#f8c225</p>
+					<p><code>#ffda44</code></p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#f6c600;">
+					<p><code>#f6c600</code></p>
 				</div>
 			</div>
 
 			<h2>Interaction colours</h2>
 			<div class="txp-grid">
 				<div class="txp-grid-cell" style="width:8em;background:#e3edfc;">
-					<p>#e3edfc</p>
+					<p><code>#e3edfc</code></p>
 				</div><div class="txp-grid-cell" style="width:8em;background:#c7dbfa;">
-					<p>#c7dbfa</p>
-				</div><div class="txp-grid-cell" style="width:8em;background:#b0cbf7;">
-					<p>#b0cbf7</p>
-				</div><div class="txp-grid-cell" style="width:8em;background:#0066ff;color:#ffffff;">
-					<p>#0066ff</p>
-				</div><div class="txp-grid-cell" style="width:8em;background:#114eb1;color:#ffffff;">
-					<p>#114eb1</p>
+					<p><code>#c7dbfa</code></p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#0066ff;">
+					<p><code>#0066ff</code></p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#114eb1;">
+					<p><code>#114eb1</code></p>
 				</div>
 			</div>
 		</div>
@@ -1697,11 +1642,6 @@
 
 	</div><!-- /txp-container -->
 	</main><!-- /txp-body -->
-
-	<footer role="contentinfo" class="txp-footer">
-		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.6)</p>
-		<p class="pagejump"><a href="#">&#8593; Back to top</a></p>
-	</footer><!-- /txp-footer -->
 
 	<!-- just for UI doc -->
 	<script>
