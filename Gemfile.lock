@@ -5,14 +5,12 @@ GEM
       compass (>= 0.12.1)
       sass (>= 3.2.0)
     chunky_png (1.2.9)
-    compass (0.13.alpha.10)
+    compass (0.13.alpha.4)
       chunky_png (~> 1.2)
-      json
-      listen (~> 1.1.0)
-      sass (~> 3.3.0.rc.1)
-    json (1.8.1)
-    listen (1.1.6)
-    sass (3.3.0.rc.1)
+      listen (<= 0.9.9)
+      sass (~> 3.2.5)
+    listen (0.7.3)
+    sass (3.2.10)
     singularitygs (1.1.2)
       breakpoint (>= 2.0.1)
       compass (>= 0.12.2)
@@ -22,5 +20,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  compass (= 0.13.alpha.10)
+  compass (= 0.13.alpha.4)
+  sass (= 3.2.10)
   singularitygs (= 1.1.2)
