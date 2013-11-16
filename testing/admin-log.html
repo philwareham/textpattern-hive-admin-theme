@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Visitor logs - My Site &#124; Textpattern CMS</title>
+	<script src="/textpattern/vendors/jquery/jquery/jquery.js"></script>
+	<script src="/textpattern/vendors/jquery/ui/js/jquery-ui.js"></script>
+	<link rel="stylesheet" href="/textpattern/vendors/jquery/ui/css/textpattern/jquery-ui.css">
+	<link rel="stylesheet" href="../css/textpattern.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="generator" content="Textpattern CMS">
+	<script src="/textpattern/vendors/modernizr/modernizr/modernizr.js"></script>
+	<script src="../js/tinynav.min.js"></script>
+	<script src="../js/scripts.js"></script>
+
+	<script src="jquery-ui-testing.js"></script>
+
+	<!--[if lt IE 9]><script src="/textpattern/vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->
+
+	<!-- TEMPORARY -->
+	<style>
+		.ui-menu { width: 150px; }
+		.ui-menu:not(.jquery-ui-menu) { position: absolute; z-index: 1000; }
+
+		.txp-search .txp-search-button { margin-left: -.35em; border-radius: 0; padding-left: 1.75em; padding-right: 1.75em;}
+	</style>
+</head>
+<body id="page-log" class="admin">
+
+	<header role="banner" class="txp-header">
+		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
+		<p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
+
+		<nav role="navigation" aria-label="Navigation">
+			<ul class="data-dropdown untinynav">
+				<li class="dropdown"><a class="dropdown-toggle" href="content-article.html">Content</a>
+					<ul class="dropdown-menu">
+						<li><a href="content-category.html">Categories</a></li>
+						<li><a href="content-article.html">Write</a></li>
+						<li><a href="content-list.html">Articles</a></li>
+						<li><a href="content-image.html">Images</a></li>
+						<li><a href="content-file.html">Files</a></li>
+						<li><a href="content-link.html">Links</a></li>
+						<li><a href="content-discuss.html">Comments</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" href="presentation-page.html">Presentation</a>
+					<ul class="dropdown-menu">
+						<li><a href="presentation-section.html">Sections</a></li>
+						<li><a href="presentation-page.html">Pages</a></li>
+						<li><a href="presentation-form.html">Forms</a></li>
+						<li><a href="presentation-css.html">Styles</a></li>
+					</ul>
+				</li>
+				<li class="dropdown active"><a class="dropdown-toggle" href="admin-admin.html">Admin</a>
+					<ul class="dropdown-menu">
+						<li><a href="admin-diag.html">Diagnostics</a></li>
+						<li><a href="admin-prefs.html">Preferences</a></li>
+						<li><a href="admin-languages.html">Languages</a></li>
+						<li><a href="admin-admin.html">Users</a></li>
+						<li class="selected"><a href="admin-log.html">Visitor logs</a></li>
+						<li><a href="admin-plugin.html">Plugins</a></li>
+						<li><a href="admin-import.html">Import</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" href="#">Extensions</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Extension 1</a></li>
+						<li><a href="#">Extension 2</a></li>
+						<li><a href="#">Extension 3</a></li>
+						<li><a href="#">Extension 4</a></li>
+						<li><a href="#">Extension 5</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<div id="messagepane"></div>
+
+	</header><!-- /txp-header -->
+
+	<main role="main" class="txp-body" aria-label="Main content">
+
+		<div class="txp-layout-grid">
+
+			<div class="txp-layout-cell txp-layout-2-4">
+				<h1 class="txp-heading">Visitor logs</h1>
+			</div>
+
+			<div id="log_control" class="txp-layout-cell txp-layout-2-4">
+				<form role="search" method="get" action="#" class="txp-search">
+					<p>
+						<input type="text" placeholder="Search visitor logs…">
+						<button class="txp-search-button">Search</button>
+						<button>Search criteria</button>
+					</p>
+					<ul>
+						<li>
+							<input type="checkbox" id="search-crit1" name="search-crit1">
+							<label for="search-crit1">search_all</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit2" name="search-crit2">
+							<label for="search-crit2">IP</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit3" name="search-crit3">
+							<label for="search-crit3">Host</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit4" name="search-crit4">
+							<label for="search-crit4">Page</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit5" name="search-crit5">
+							<label for="search-crit5">Referrer</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit6" name="search-crit6">
+							<label for="search-crit6">Method</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit7" name="search-crit7">
+							<label for="search-crit7">Status</label>
+						</li>
+					</ul>
+				</form>
+			</div>
+
+			<div class="txp-layout-cell">
+				<p class="txp-buttons">
+					<button id="detail-toggle">List options</button>
+				</p>
+			</div>
+
+			<div class="txp-layout-cell">
+
+				<form action="#" id="log_form" class="multi_edit_form" method="post" name="longform">
+					<div class="txp-listtables">
+
+						<table class="txp-list">
+
+							<thead>
+								<tr>
+									<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+									<th scope="col" class="desc date time"><a href="#">Time</a></th>
+									<th scope="col" class="log_detail ip"><a href="#">IP</a></th>
+									<th scope="col" class="host"><a href="#">Host</a></th>
+									<th scope="col" class="page"><a href="#">Page</a></th>
+									<th scope="col" class="refer"><a href="#">Referrer</a></th>
+									<th scope="col" class="log_detail method"><a href="#">Method</a></th>
+									<th scope="col" class="log_detail status"><a href="#">Status</a></th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td class="multi-edit"><input type="checkbox" value="126" name="selected[]"></td>
+									<th scope="row" class="date time">21&#160;Sep&#160;2011 10:13:58</th>
+									<td class="log_detail ip">127.0.0.1</td>
+									<td class="host">www.anon.​dev</td>
+									<td class="page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site</a></td>
+									<td class="refer">&#160;</td>
+									<td class="log_detail method">POST</td>
+									<td class="log_detail status">302</td>
+								</tr>
+								<tr>
+									<td class="multi-edit"><input type="checkbox" value="127" name="selected[]"></td>
+									<th scope="row" class="date time">21&#160;Sep&#160;2011 10:13:58</th>
+									<td class="log_detail ip">127.0.0.1</td>
+									<td class="host">www.anon.​dev</td>
+									<td class="page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site?​commented=0</a></td>
+									<td class="refer">&#160;</td>
+									<td class="log_detail method">GET</td>
+									<td class="log_detail status">200</td>
+								</tr>
+							</tbody>
+
+						</table>
+
+					</div><!-- /txp-listtables -->
+
+					<div class="multi-edit">
+						<select name="edit_method">
+							<option value="" selected="selected">With selected&#8230;</option>
+							<option value="delete">Delete</option>
+						</select>
+					</div>
+
+				</form>
+
+				<div class="txp-navigation" id="log_navigation">
+					<p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
+				</div>
+
+			</div>
+
+		</div><!-- /txp-layout-grid -->
+	</main>
+
+	<footer role="contentinfo" class="txp-footer">
+		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.6)</p>
+		<p class="pagejump"><a href="#">&#8593; Back to top</a></p>
+	</footer><!-- /txp-footer -->
+
+</body>
+</html>

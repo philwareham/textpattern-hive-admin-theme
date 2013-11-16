@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Setup &#124; Textpattern CMS</title>
+	<script src="/textpattern/vendors/jquery/jquery/jquery.js"></script>
+	<script src="/textpattern/vendors/jquery/ui/js/jquery-ui.js"></script>
+	<link rel="stylesheet" href="/textpattern/vendors/jquery/ui/css/textpattern/jquery-ui.css">
+	<link rel="stylesheet" href="../../css/textpattern.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<script src="/textpattern/vendors/modernizr/modernizr/modernizr.js"></script>
+	<!--[if lt IE 9]><script src="/textpattern/vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->
+</head>
+<body id="page-setup">
+
+	<main role="main" class="txp-body" aria-label="Main content">
+		<div class="txp-container">
+
+			<div class="progress-meter">
+				<p class="txp-accessibility">There are 4 steps to this installation process:</p>
+				<ol>
+					<li>Set database details</li>
+					<li class="active"><strong>Add config file</strong></li>
+					<li>Populate database</li>
+					<li>Go!</li>
+				</ol>
+			</div>
+
+			<div class="txp-setup">
+
+				<h2>Checking database connection</h2>
+				<p><span class="success">Connected</span></p>
+				<p><span class="success">Using <strong>test2</strong> (utf8)</span></p>
+
+				<h2>Creating config.php file</h2>
+				<p><strong>Before you proceed:</strong> Create a file called <code>config.php</code> in the <code>/textpattern/</code> directory and paste the following inside&#8230;</p>
+				<p><textarea name="config" cols="64" rows="16" readonly="readonly" class="code"><?php
+$txpcfg['db'] = 'test-mysql';
+$txpcfg['user'] = 'test-mysql';
+$txpcfg['pass'] = 'password1';
+$txpcfg['host'] = 'localhost';
+$txpcfg['table_prefix'] = '';
+$txpcfg['txpath'] = '/Users/johnqpublic/textpattern';
+$txpcfg['dbcharset'] = 'utf8';
+?></textarea></p>
+				<form action="setup4-database-populate.html" method="post">
+					<p><input type="submit" value="I did it &#8594;" name="submit" class="publish"></p>
+				</form>
+
+			</div><!-- /txp-setup -->
+
+		</div><!-- /txp-container -->
+	</main>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Build tag &#124; Textpattern CMS</title>
+	<script src="/textpattern/vendors/jquery/jquery/jquery.js"></script>
+	<script src="/textpattern/vendors/jquery/ui/js/jquery-ui.js"></script>
+	<link rel="stylesheet" href="/textpattern/vendors/jquery/ui/css/textpattern/jquery-ui.css">
+	<link rel="stylesheet" href="../../css/textpattern.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="generator" content="Textpattern CMS">
+	<script src="/textpattern/vendors/modernizr/modernizr/modernizr.js"></script>
+	<script src="../../js/tinynav.min.js"></script>
+	<script src="../../js/scripts.js"></script>
+	<!--[if lt IE 9]><script src="/textpattern/vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->
+</head>
+<body id="tag-event">
+	<form method="post" action="#">
+		<table id="tagbuilder">
+			<tr>
+				<td colspan="2"><h3>Category 1</h3></td>
+			</tr>
+			<tr>
+				<td class="cell-label">Title</td>
+				<td>
+					<select name="title">
+						<option value="" selected="selected"></option>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="cell-label">Link to a list of other articles in this category?</td>
+				<td>
+					<select name="link">
+						<option value="" selected="selected"></option>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="cell-label">Section</td>
+				<td>
+					<select name="section">
+						<option value="" selected="selected"></option>
+						<option value="about">About</option>
+						<option value="articles">Articles</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="cell-label">Link to current section?</td>
+				<td>
+					<select name="this_section">
+						<option value="" selected="selected"></option>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="cell-label">Wrap tag</td>
+				<td><input type="text" value="" name="wraptag" size="32"></td>
+			</tr>
+			<tr>
+				<td class="cell-label">CSS class</td>
+				<td><input type="text" value="" name="class" size="32"></td>
+			</tr>
+			<tr>
+				<td>&#160;</td>
+				<td><input type="submit" value="Build tag"/></td>
+			</tr>
+		</table>
+	</form>
+	<p id="tagbuilder-output"><textarea name="tag" cols="40" rows="5">&lt;txp:category1 /&gt;</textarea></p>
+</body>
+</html>

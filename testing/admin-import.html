@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Import content from other publishing tools - My Site &#124; Textpattern CMS</title>
+	<script src="/textpattern/vendors/jquery/jquery/jquery.js"></script>
+	<script src="/textpattern/vendors/jquery/ui/js/jquery-ui.js"></script>
+	<link rel="stylesheet" href="/textpattern/vendors/jquery/ui/css/textpattern/jquery-ui.css">
+	<link rel="stylesheet" href="../css/textpattern.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="generator" content="Textpattern CMS">
+	<script src="/textpattern/vendors/modernizr/modernizr/modernizr.js"></script>
+	<script src="../js/tinynav.min.js"></script>
+	<script src="../js/scripts.js"></script>
+	<!--[if lt IE 9]><script src="/textpattern/vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->
+</head>
+<body id="page-import" class="admin">
+
+	<header role="banner" class="txp-header">
+		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
+		<p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
+
+		<nav role="navigation" aria-label="Navigation">
+			<ul class="data-dropdown untinynav">
+				<li class="dropdown"><a class="dropdown-toggle" href="content-article.html">Content</a>
+					<ul class="dropdown-menu">
+						<li><a href="content-category.html">Categories</a></li>
+						<li><a href="content-article.html">Write</a></li>
+						<li><a href="content-list.html">Articles</a></li>
+						<li><a href="content-image.html">Images</a></li>
+						<li><a href="content-file.html">Files</a></li>
+						<li><a href="content-link.html">Links</a></li>
+						<li><a href="content-discuss.html">Comments</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" href="presentation-page.html">Presentation</a>
+					<ul class="dropdown-menu">
+						<li><a href="presentation-section.html">Sections</a></li>
+						<li><a href="presentation-page.html">Pages</a></li>
+						<li><a href="presentation-form.html">Forms</a></li>
+						<li><a href="presentation-css.html">Styles</a></li>
+					</ul>
+				</li>
+				<li class="dropdown active"><a class="dropdown-toggle" href="admin-admin.html">Admin</a>
+					<ul class="dropdown-menu">
+						<li><a href="admin-diag.html">Diagnostics</a></li>
+						<li><a href="admin-prefs.html">Preferences</a></li>
+						<li><a href="admin-languages.html">Languages</a></li>
+						<li><a href="admin-admin.html">Users</a></li>
+						<li><a href="admin-log.html">Visitor logs</a></li>
+						<li><a href="admin-plugin.html">Plugins</a></li>
+						<li class="selected"><a href="admin-import.html">Import</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" href="#">Extensions</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Extension 1</a></li>
+						<li><a href="#">Extension 2</a></li>
+						<li><a href="#">Extension 3</a></li>
+						<li><a href="#">Extension 4</a></li>
+						<li><a href="#">Extension 5</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<div id="messagepane"></div>
+
+	</header><!-- /txp-header -->
+	<main role="main" class="txp-body" aria-label="Main content">
+		<h1 class="txp-heading">Import</h1>
+
+		<div id="import_container" class="txp-container">
+
+			<form method="post" action="#" id="import">
+				<div class="txp-edit">
+					<h2>Import content from other publishing tools</h2>
+					<p class="edit-import-from">
+						<span class="txp-label"><label for="import_from">Import from</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+						<span class="txp-value">
+							<select id="import_from" name="import_tool" onchange="showHideFields(this.value);">
+								<option value=""></option>
+								<option value="mt">Movable Type (File)</option>
+								<option value="mtdb">Movable Type (MySQL DB)</option>
+								<option value="blogger">Blogger</option>
+								<option value="b2">b2</option>
+								<option value="wp">WordPress</option>
+							</select>
+						</span>
+					</p>
+					<p class="edit-import-section">
+						<span class="txp-label"><label for="import_section">Section to import into</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+						<span class="txp-value">
+							<select id="import_section" name="import_section">
+								<option value="" selected="selected"></option>
+								<option value="about">about</option>
+								<option value="articles">articles</option>
+							</select>
+						</span>
+					</p>
+					<p class="edit-import-status">
+						<span class="txp-label"><label for="import_status">Default article status</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+						<span class="txp-value">
+							<select id="import_status">
+								<option value="4">Live</option>
+								<option value="1">Draft</option>
+								<option value="2">Hidden</option>
+								<option value="3">Pending</option>
+							</select>
+						</span>
+					</p>
+					<p class="edit-import-comment">
+						<span class="txp-label"><label for="import_comment">Default comments invite</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+						<span class="txp-value"><input type="text" value="Comments" name="import_comments_invite" id="import_comment" size="32"></span>
+					</p>
+					<div id="databased">
+						<h2>Database data</h2>
+						<p class="edit-import-database">
+							<span class="txp-label"><label for="import_database">Database name</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+							<span class="txp-value"><input type="text" value="" name="importdb" id="import_database" size="32"></span>
+						</p>
+						<p class="edit-import-login">
+							<span class="txp-label"><label for="import_login">MySQL user</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+							<span class="txp-value"><input type="text" value="" name="importdblogin" id="import_login" size="32"></span>
+						</p>
+						<p class="edit-import-password">
+							<span class="txp-label"><label for="import_password">MySQL password</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+							<span class="txp-value"><input type="text" value="" name="importdbpass" id="import_password" size="32"></span>
+						</p>
+						<p class="edit-import-host">
+							<span class="txp-label"><label for="import_host">MySQL host</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+							<span class="txp-value"><input type="text" value="" name="importdbhost" id="import_host" size="32"></span>
+						</p>
+					</div>
+					<div id="mtblogid">
+						<p class="edit-import-blogid">
+							<span class="txp-label"><label for="import_blogid">Weblog ID</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+							<span class="txp-value"><input type="text" value="" name="import_blog_id" id="import_blogid" size="32"></span>
+						</p>
+					</div>
+					<div id="wponly">
+						<p class="edit-import-wpprefix">
+							<span class="txp-label"><label for="import_wpprefix">Tables prefix (if any)</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+							<span class="txp-value"><input type="text" value="wp_" name="wpdbprefix" id="import_wpprefix" size="32"></span>
+						</p>
+						<p class="edit-import-wpdbcharset">
+							<span class="txp-label"><label for="import_wpdbcharset">Database character set</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+							<span class="txp-value">
+								<select id="import_wpdbcharset" name="wpdbcharset">
+									<option value="utf8" selected="selected">utf8</option>
+									<option value="latin1">latin1</option>
+								</select>
+							</span>
+						</p>
+					</div>
+					<p><input type="submit" value="Continue" name="choose" class="publish"></p>
+				</div>
+			</form>
+
+		</div><!-- /txp-container -->
+	</main><!-- /txp-body -->
+
+	<footer role="contentinfo" class="txp-footer">
+		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.6)</p>
+		<p class="pagejump"><a href="#">&#8593; Back to top</a></p>
+	</footer><!-- /txp-footer -->
+
+</body>
+</html>

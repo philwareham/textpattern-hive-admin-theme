@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Edit section - My Site &#124; Textpattern CMS</title>
+	<script src="/textpattern/vendors/jquery/jquery/jquery.js"></script>
+	<script src="/textpattern/vendors/jquery/ui/js/jquery-ui.js"></script>
+	<link rel="stylesheet" href="/textpattern/vendors/jquery/ui/css/textpattern/jquery-ui.css">
+	<link rel="stylesheet" href="../../css/textpattern.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="generator" content="Textpattern CMS">
+	<script src="/textpattern/vendors/modernizr/modernizr/modernizr.js"></script>
+	<script src="../../js/tinynav.min.js"></script>
+	<script src="../../js/scripts.js"></script>
+	<!--[if lt IE 9]><script src="/textpattern/vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->
+</head>
+<body id="page-category" class="content">
+
+	<header role="banner" class="txp-header">
+		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
+		<p class="txp-logout"><a href="../login.html" onclick="return verify('Are you sure?')">Logout</a></p>
+
+		<nav role="navigation" aria-label="Navigation">
+			<ul class="data-dropdown untinynav">
+				<li class="dropdown"><a class="dropdown-toggle" href="../content-article.html">Content</a>
+					<ul class="dropdown-menu">
+						<li><a href="../content-category.html">Categories</a></li>
+						<li><a href="../content-article.html">Write</a></li>
+						<li><a href="../content-list.html">Articles</a></li>
+						<li><a href="../content-image.html">Images</a></li>
+						<li><a href="../content-file.html">Files</a></li>
+						<li><a href="../content-link.html">Links</a></li>
+						<li><a href="../content-discuss.html">Comments</a></li>
+					</ul>
+				</li>
+				<li class="dropdown active"><a class="dropdown-toggle" href="../presentation-page.html">Presentation</a>
+					<ul class="dropdown-menu">
+						<li class="selected"><a href="../presentation-section.html">Sections</a></li>
+						<li><a href="../presentation-page.html">Pages</a></li>
+						<li><a href="../presentation-form.html">Forms</a></li>
+						<li><a href="../presentation-css.html">Styles</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" href="../admin-admin.html">Admin</a>
+					<ul class="dropdown-menu">
+						<li><a href="../admin-diag.html">Diagnostics</a></li>
+						<li><a href="../admin-prefs.html">Preferences</a></li>
+						<li><a href="../admin-languages.html">Languages</a></li>
+						<li><a href="../admin-admin.html">Users</a></li>
+						<li><a href="../admin-log.html">Visitor logs</a></li>
+						<li><a href="../admin-plugin.html">Plugins</a></li>
+						<li><a href="../admin-import.html">Import</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" href="#">Extensions</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Extension 1</a></li>
+						<li><a href="#">Extension 2</a></li>
+						<li><a href="#">Extension 3</a></li>
+						<li><a href="#">Extension 4</a></li>
+						<li><a href="#">Extension 5</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<div id="messagepane"></div>
+
+	</header><!-- /txp-header -->
+
+	<main role="main" class="txp-body" aria-label="Main content">
+
+		<div id="section_container" class="txp-container">
+
+			<form method="post" action="#" id="section_details" class="edit-form">
+				<section class="txp-edit">
+					<h2>Edit section</h2>
+					<p class="edit-section-name">
+						<span class="txp-label"><label for="section_name">Section name</label></span>
+						<span class="txp-value"><input type="text" value="about" name="name" id="section_name" size="32"></span>
+					</p>
+					<p class="edit-section-title">
+						<span class="txp-label"><label for="section_title">Section title</label></span>
+						<span class="txp-value"><input type="text" value="About" name="title" id="section_title" size="32"></span>
+					</p>
+					<p class="edit-section-page">
+						<span class="txp-label"><label for="section_page">Uses page</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+						<span class="txp-value">
+							<select id="section_page" name="section_page">
+								<option value="archive">archive</option>
+								<option value="default" selected="selected">default</option>
+								<option value="error_default">error_default</option>
+								<option value="test page">test page</option>
+							</select>
+						</span>
+					</p>
+					<p class="edit-section-css">
+						<span class="txp-label"><label for="section_css">Uses style</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+						<span class="txp-value">
+							<select id="section_css" name="css">
+								<option value="default" selected="selected">default</option>
+								<option value="new_style">new_style</option>
+							</select>
+						</span>
+					</p>
+					<p class="edit-on-front-page">
+						<span class="txp-label">On front page&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+						<span class="txp-value">
+							<input type="radio" id="about-on_front_page-0" name="on_front_page" value="0" class="radio active" checked="checked"><label for="about-on_front_page-0">No</label>
+							<input type="radio" id="about-on_front_page-1" name="on_front_page" value="1" class="radio"><label for="about-on_front_page-1">Yes</label>
+						</span>
+					</p>
+					<p class="edit-syndicate">
+						<span class="txp-label">Syndicate&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+						<span class="txp-value">
+							<input type="radio" id="about-in_rss-0" name="in_rss" value="0" class="radio active" checked="checked"><label for="about-in_rss-0">No</label>
+							<input type="radio" id="about-in_rss-1" name="in_rss" value="1" class="radio"><label for="about-in_rss-1">Yes</label>
+						</span>
+					</p>
+					<p class="edit-include-in-search">
+						<span class="txp-label">Include in site search&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+						<span class="txp-value">
+							<input type="radio" id="about-searchable-0" name="searchable" value="0" class="radio"><label for="about-searchable-0">No</label>
+							<input type="radio" id="about-searchable-1" name="searchable" value="1" class="radio active" checked="checked"><label for="about-searchable-1">Yes</label>
+						</span>
+					</p>
+					<p><input type="submit" value="Save" class="publish"></p>
+				</section>
+			</form>
+
+		</div><!-- /txp-container -->
+	</main>
+
+	<footer role="contentinfo" class="txp-footer">
+		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.6)</p>
+		<p class="pagejump"><a href="#">&#8593; Back to top</a></p>
+	</footer><!-- /txp-footer -->
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Links - My Site &#124; Textpattern CMS</title>
+	<script src="/textpattern/vendors/jquery/jquery/jquery.js"></script>
+	<script src="/textpattern/vendors/jquery/ui/js/jquery-ui.js"></script>
+	<link rel="stylesheet" href="/textpattern/vendors/jquery/ui/css/textpattern/jquery-ui.css">
+	<link rel="stylesheet" href="../css/textpattern.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="generator" content="Textpattern CMS">
+	<script src="/textpattern/vendors/modernizr/modernizr/modernizr.js"></script>
+	<script src="../js/tinynav.min.js"></script>
+	<script src="../js/scripts.js"></script>
+
+	<script src="jquery-ui-testing.js"></script>
+
+	<!--[if lt IE 9]><script src="/textpattern/vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->
+
+	<!-- TEMPORARY -->
+	<style>
+		.ui-menu { width: 150px; }
+		.ui-menu:not(.jquery-ui-menu) { position: absolute; z-index: 1000; }
+
+		.txp-search .txp-search-button { margin-left: -.35em; border-radius: 0; padding-left: 1.75em; padding-right: 1.75em;}
+	</style>
+</head>
+<body id="page-link" class="content">
+
+	<header role="banner" class="txp-header">
+		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
+		<p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
+
+		<nav role="navigation" aria-label="Navigation">
+			<ul class="data-dropdown untinynav">
+				<li class="dropdown active"><a class="dropdown-toggle" href="content-article.html">Content</a>
+					<ul class="dropdown-menu">
+						<li><a href="content-category.html">Categories</a></li>
+						<li><a href="content-article.html">Write</a></li>
+						<li><a href="content-list.html">Articles</a></li>
+						<li><a href="content-image.html">Images</a></li>
+						<li><a href="content-file.html">Files</a></li>
+						<li class="selected"><a href="content-link.html">Links</a></li>
+						<li><a href="content-discuss.html">Comments</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" href="presentation-page.html">Presentation</a>
+					<ul class="dropdown-menu">
+						<li><a href="presentation-section.html">Sections</a></li>
+						<li><a href="presentation-page.html">Pages</a></li>
+						<li><a href="presentation-form.html">Forms</a></li>
+						<li><a href="presentation-css.html">Styles</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" href="admin-admin.html">Admin</a>
+					<ul class="dropdown-menu">
+						<li><a href="admin-diag.html">Diagnostics</a></li>
+						<li><a href="admin-prefs.html">Preferences</a></li>
+						<li><a href="admin-languages.html">Languages</a></li>
+						<li><a href="admin-admin.html">Users</a></li>
+						<li><a href="admin-log.html">Visitor logs</a></li>
+						<li><a href="admin-plugin.html">Plugins</a></li>
+						<li><a href="admin-import.html">Import</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" href="#">Extensions</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Extension 1</a></li>
+						<li><a href="#">Extension 2</a></li>
+						<li><a href="#">Extension 3</a></li>
+						<li><a href="#">Extension 4</a></li>
+						<li><a href="#">Extension 5</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<div id="messagepane"></div>
+
+	</header><!-- /txp-header -->
+
+	<main role="main" class="txp-body" aria-label="Main content">
+
+		<div class="txp-layout-grid">
+
+			<div class="txp-layout-cell txp-layout-2-4">
+				<h1 class="txp-heading">Links</h1>
+			</div>
+
+			<div id="link_control" class="txp-layout-cell txp-layout-2-4">
+				<form role="search" method="get" action="#" class="txp-search">
+					<p>
+						<input type="text" placeholder="Search links…">
+						<button class="txp-search-button">Search</button>
+						<button>Search criteria</button>
+					</p>
+					<ul>
+						<li>
+							<input type="checkbox" id="search-crit1" name="search-crit1">
+							<label for="search-crit1">search_all</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit2" name="search-crit2">
+							<label for="search-crit2">ID#</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit3" name="search-crit3">
+							<label for="search-crit3">Name</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit4" name="search-crit4">
+							<label for="search-crit4">Description</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit5" name="search-crit5">
+							<label for="search-crit5">URL</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit6" name="search-crit6">
+							<label for="search-crit6">Category</label>
+						</li>
+						<li>
+							<input type="checkbox" id="search-crit7" name="search-crit7">
+							<label for="search-crit7">Author</label>
+						</li>
+					</ul>
+				</form>
+			</div>
+
+			<div class="txp-layout-cell">
+				<p class="txp-buttons">
+					<a href="secondary/content-link_edit.html">Add new link</a>
+					<button id="detail-toggle">List options</button>
+				</p>
+			</div>
+
+			<div class="txp-layout-cell">
+
+				<form action="#" id="links_form" class="multi_edit_form" method="post" name="longform">
+					<div class="txp-listtables">
+
+						<table class="txp-list">
+
+							<thead>
+								<tr>
+									<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+									<th scope="col" class="desc id"><a href="#">ID#</a></th>
+									<th scope="col" class="name"><a href="#">Name</a></th>
+									<th scope="col" class="links_detail description"><a href="#">Description</a></th>
+									<th scope="col" class="category"><a href="#">Category</a></th>
+									<th scope="col" class="url"><a href="#">URL</a></th>
+									<th scope="col" class="links_detail date created"><a href="#">Date</a></th>
+									<th scope="col" class="author"><a href="#">Author</a></th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td class="multi-edit"><input type="checkbox" value="2" name="selected[]"></td>
+									<th scope="row" class="id"><a href="secondary/content-link_edit.html" title="Edit">2</a></th>
+									<td class="name"><a href="secondary/content-link_edit.html" title="Edit">TextBook</a></td>
+									<td class="links_detail description">&#160;</td>
+									<td class="category"><span title="Textpattern">textpattern</span></td>
+									<td class="url"><a rel="external" target="_blank" href="http://textpattern.net/">http://textpattern.net/</a></td>
+									<td class="links_detail date created">20&#160;Jul&#160;2005 12:54:41</td>
+									<td class="author"><span title="Phil Wareham">admin</span></td>
+								</tr>
+								<tr>
+									<td class="multi-edit"><input type="checkbox" value="1" name="selected[]"></td>
+									<th scope="row" class="id"><a href="secondary/content-link_edit.html" title="Edit">1</a></th>
+									<td class="name"><a href="secondary/content-link_edit.html" title="Edit">Textpattern</a></td>
+									<td class="links_detail description">&#160;</td>
+									<td class="category"><span title="Textpattern">textpattern</span></td>
+									<td class="url"><a rel="external" target="_blank" href="http://textpattern.com/">http://textpattern.com/</a></td>
+									<td class="links_detail date created">20&#160;Jul&#160;2005 12:54:26</td>
+									<td class="author"><span title="Phil Wareham">admin</span></td>
+								</tr>
+								<tr>
+									<td class="multi-edit"><input type="checkbox" value="3" name="selected[]"></td>
+									<th scope="row" class="id"><a href="secondary/content-link_edit.html" title="Edit">3</a></th>
+									<td class="name"><a href="secondary/content-link_edit.html" title="Edit">Textpattern Resources</a></td>
+									<td class="links_detail description">An example link description.</td>
+									<td class="category"><span title="Textpattern">textpattern</span></td>
+									<td class="url"><a rel="external" target="_blank" href="http://textpattern.org/">http://textpattern.org/</a></td>
+									<td class="links_detail date created">20&#160;Jul&#160;2005 12:55:04</td>
+									<td class="author"><span title="Phil Wareham">admin</span></td>
+								</tr>
+							</tbody>
+
+						</table>
+
+					</div><!-- /txp-listtables -->
+
+					<div class="multi-edit">
+						<select name="edit_method">
+							<option value="" selected="selected">With selected&#8230;</option>
+							<option value="changecategory">Change category</option>
+							<option value="changeauthor">Change author</option>
+							<option value="delete">Delete</option>
+						</select>
+					</div>
+
+				</form>
+
+				<div class="txp-navigation" id="link_navigation">
+					<p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
+				</div>
+
+			</div>
+
+		</div><!-- /txp-layout-grid -->
+	</main>
+
+	<footer role="contentinfo" class="txp-footer">
+		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.6)</p>
+		<p class="pagejump"><a href="#">&#8593; Back to top</a></p>
+	</footer><!-- /txp-footer -->
+
+</body>
+</html>

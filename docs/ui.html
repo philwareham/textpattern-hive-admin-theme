@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Hive theme design patterns 4.6 &#124; Textpattern CMS</title>
+	<script src="/textpattern/vendors/jquery/jquery/jquery.js"></script>
+	<script src="/textpattern/vendors/jquery/ui/js/jquery-ui.js"></script>
+	<link rel="stylesheet" href="/textpattern/vendors/jquery/ui/css/textpattern/jquery-ui.css">
+	<link rel="stylesheet" href="../css/textpattern.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="generator" content="Textpattern CMS">
+	<meta name="author" content="Phil Wareham (http://twitter.com/philwareham)">
+	<script src="/textpattern/vendors/modernizr/modernizr/modernizr.js"></script>
+	<script src="../js/tinynav.min.js"></script>
+	<script src="../js/scripts.js"></script>
+	<!--[if lt IE 9]><script src="/textpattern/vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->
+
+	<!-- just for UI doc -->
+	<link rel="stylesheet" href="../css/code_prettify.css">
+	<script src="google-code-prettify/prettify.min.js"></script>
+	<script src="jquery-ui-testing.js"></script>
+
+	<!-- INLINE STYLE JUST FOR DESIGN PATTERNS DOC - NOT IN ACTUAL SITE -->
+	<style>
+		.box { padding: 1em; margin-bottom: 1em; background: #ccc;}
+
+		/* jQuery UI stuff */
+		.jquery-ui-icons { margin: 0 0 1em 0; padding: 0;}
+		.jquery-ui-icons li { margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left; list-style: none; }
+		.jquery-ui-icons span.ui-icon { float: left; margin: 0 4px; }
+		.jquery-ui-slider-vertical span { height: 120px; float: left; margin: 15px; }
+
+		.ui-menu { width: 150px; }
+		.ui-menu:not(.jquery-ui-menu) { position: absolute; z-index: 1000; }
+
+		.txp-search .txp-search-button { margin-left: -.35em; border-radius: 0; padding-left: 1.75em; padding-right: 1.75em;}
+	</style>
+
+</head>
+<body id="page-article" class="content">
+
+	<header role="banner" class="txp-header">
+		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
+		<p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
+
+		<nav role="navigation" aria-label="Navigation">
+			<ul class="data-dropdown untinynav">
+				<li class="dropdown active"><a class="dropdown-toggle" href="content-article.html">Content</a>
+					<ul class="dropdown-menu">
+						<li><a href="content-category.html">Categories</a></li>
+						<li class="selected"><a href="content-article.html">Write</a></li>
+						<li><a href="content-list.html">Articles</a></li>
+						<li><a href="content-image.html">Images</a></li>
+						<li><a href="content-file.html">Files</a></li>
+						<li><a href="content-link.html">Links</a></li>
+						<li><a href="content-discuss.html">Comments</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" href="presentation-page.html">Presentation</a>
+					<ul class="dropdown-menu">
+						<li><a href="presentation-section.html">Sections</a></li>
+						<li><a href="presentation-page.html">Pages</a></li>
+						<li><a href="presentation-form.html">Forms</a></li>
+						<li><a href="presentation-css.html">Styles</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" href="admin-admin.html">Admin</a>
+					<ul class="dropdown-menu">
+						<li><a href="admin-diag.html">Diagnostics</a></li>
+						<li><a href="admin-prefs.html">Preferences</a></li>
+						<li><a href="admin-languages.html">Languages</a></li>
+						<li><a href="admin-admin.html">Users</a></li>
+						<li><a href="admin-log.html">Visitor logs</a></li>
+						<li><a href="admin-plugin.html">Plugins</a></li>
+						<li><a href="admin-import.html">Import</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a class="dropdown-toggle" href="#">Extensions</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Extension 1</a></li>
+						<li><a href="#">Extension 2</a></li>
+						<li><a href="#">Extension 3</a></li>
+						<li><a href="#">Extension 4</a></li>
+						<li><a href="#">Extension 5</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<div id="messagepane"></div>
+
+	</header><!-- /txp-header -->
+
+	<main role="main" class="txp-body" aria-label="Main content">
+
+	<div class="txp-container">
+
+	<div class="txp-layout-textbox">
+		<h1>Hive theme design patterns <span class="information">4.6</span></h1>
+		<p>The purpose of this guide is to document UI elements used within this theme in order to streamline development, avoid conflicts and inconsistencies, and as a reference for admin theme authors and plugin authors. <strong>Note:</strong> minimum version of Internet Explorer supported will be IE8.</p>
+		<p><a href="ui-classic.html">Switch to the Classic/Remora theme design patterns document →</a></p>
+		<p><a href="ui-rtl.html">Switch to RTL layout →</a></p>
+
+		<ol>
+			<li><a href="#ui-doc-colours">Colourways</a></li>
+			<li><a href="#ui-doc-layouts">Columns and grids</a></li>
+			<li><a href="#ui-doc-headings">Headings</a></li>
+			<li><a href="#ui-doc-paragraphs">Paragraphs</a></li>
+			<li><a href="#ui-doc-textsemantics">Text-level semantics</a></li>
+			<li><a href="#ui-doc-labels">Inline text labels</a></li>
+			<li><a href="#ui-doc-alerts">Alert boxes</a></li>
+			<li><a href="#ui-doc-blocksemantics">Block text-level semantics</a></li>
+			<li><a href="#ui-doc-media">Embedded content</a></li>
+			<li><a href="#ui-doc-lists">Lists</a></li>
+			<li><a href="#ui-doc-tables">Tables</a></li>
+			<li><a href="#ui-doc-progress">Progress meters</a></li>
+			<li><a href="#ui-doc-summarydetails">Summary/details boxes</a></li>
+			<li><a href="#ui-doc-forms">Forms</a></li>
+			<li><a href="#ui-doc-buttons">Buttons</a></li>
+			<li><a href="#ui-doc-edit-panes">Edit panes and panels</a></li>
+			<li><a href="#ui-doc-jquery-ui">jQuery UI widgets</a></li>
+			<li><a href="#ui-doc-misc">Miscellaneous</a></li>
+		</ol>
+
+
+		<div class="text-section" id="ui-doc-colours">
+			<h1>Colourways</h1>
+
+			<h2>Neutral colours</h2>
+			<div class="txp-grid">
+				<div class="txp-grid-cell" style="width:8em;background:#f7f7f7;">
+					<p>#f7f7f7</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#eeeeee;">
+					<p>#eeeeee</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#dddddd;">
+					<p>#dddddd</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#cccccc;">
+					<p>#cccccc</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#999999;color:#ffffff;">
+					<p>#999999</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#333333;color:#ffffff;">
+					<p>#333333</p>
+				</div>
+			</div>
+
+			<h2>Accent colours</h2>
+			<div class="txp-grid">
+				<div class="txp-grid-cell" style="width:8em;background:#fff6d3;">
+					<p>#fff6d3</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#ffefaf;">
+					<p>#ffefaf</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#ffe88b;">
+					<p>#ffe88b</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#ffda44;">
+					<p>#ffda44</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#f8c225;">
+					<p>#f8c225</p>
+				</div>
+			</div>
+
+			<h2>Interaction colours</h2>
+			<div class="txp-grid">
+				<div class="txp-grid-cell" style="width:8em;background:#e3edfc;">
+					<p>#e3edfc</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#c7dbfa;">
+					<p>#c7dbfa</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#b0cbf7;">
+					<p>#b0cbf7</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#0066ff;color:#ffffff;">
+					<p>#0066ff</p>
+				</div><div class="txp-grid-cell" style="width:8em;background:#114eb1;color:#ffffff;">
+					<p>#114eb1</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="text-section" id="ui-doc-layouts">
+			<h1>Columns and grids</h1>
+
+			<h2>Page layout columns <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.6</span></h2>
+			<p>Responsive page layout grid system based on <a href="https://github.com/Team-Sass/Singularity" rel="external" title="Go to the Singularity GitHub project">Singularity</a>.</p>
+			<pre class="prettyprint linenums"><code class="language-html">&lt;div class=""txp-layout-1col"&gt;...Opt1: 1col - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-2col-cell-1"&gt;...Opt2: 2col cell1 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-2col-cell-2"&gt;...Opt2: 2col cell2 - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-4col-cell-1"&gt;...Opt6: 4col cell1 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-2"&gt;...Opt6: 4col cell2 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-3"&gt;...Opt6: 4col cell3 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-4"&gt;...Opt6: 4col cell4 - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-4col-cell-1-2"&gt;...Opt7: 4col cell1and2 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-3"&gt;...Opt7: 4col cell3 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-4"&gt;...Opt7: 4col cell4 - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-4col-cell-1alt"&gt;...Opt8: 4col cell1 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-2-3"&gt;...Opt8: 4col cell2and3 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-4alt"&gt;...Opt8: 4col cell4 - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-4col-cell-1"&gt;...Opt9: 4col cell1 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-2"&gt;...Opt9: 4col cell2 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-3-4"&gt;...Opt9: 4col cell3and4 - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-4col-cell-1-2-3"&gt;...Opt10: 4col cell1and2and3 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-4alt"&gt;...Opt10: 4col cell4 - content here...&lt;/div&gt;
+
+	&lt;div class="txp-layout-4col-cell-1alt"&gt;...Opt11: 4col cell1 - content here...&lt;/div&gt;
+	&lt;div class="txp-layout-4col-cell-2-3-4"&gt;...Opt11: 4col cell2and3and4 - content here...&lt;/div&gt;</code></pre>
+		</div>
+	</div><!--/txp-layout-textbox (so we can demonstrate other grids, continues afterwards) -->
+
+
+	<div class="txp-layout-1col"><p class="box">Opt1: 1col</p></div>
+
+	<div class="txp-layout-2col-cell-1"><p class="box">Opt2: 2col cell1</p></div>
+	<div class="txp-layout-2col-cell-2"><p class="box">Opt2: 2col cell2</p></div>
+
+	<div class="txp-layout-4col-cell-1"><p class="box">Opt6: 4col cell1</p></div>
+	<div class="txp-layout-4col-cell-2"><p class="box">Opt6: 5col cell2</p></div>
+	<div class="txp-layout-4col-cell-3"><p class="box">Opt6: 6col cell3</p></div>
+	<div class="txp-layout-4col-cell-4"><p class="box">Opt6: 7col cell4</p></div>
+
+	<div class="txp-layout-4col-cell-1-2"><p class="box">Opt7: 4col cell1and2</p></div>
+	<div class="txp-layout-4col-cell-3"><p class="box">Opt7: 4col cell3</p></div>
+	<div class="txp-layout-4col-cell-4"><p class="box">Opt7: 4col cell4</p></div>
+
+	<div class="txp-layout-4col-cell-1alt"><p class="box">Opt8: 4col cell1</p></div>
+	<div class="txp-layout-4col-cell-2-3"><p class="box">Opt8: 4col cell2and3</p></div>
+	<div class="txp-layout-4col-cell-4alt"><p class="box">Opt8: 4col cell4</p></div>
+
+	<div class="txp-layout-4col-cell-1"><p class="box">Opt9: 4col cell1</p></div>
+	<div class="txp-layout-4col-cell-2"><p class="box">Opt9: 4col cell2</p></div>
+	<div class="txp-layout-4col-cell-3-4"><p class="box">Opt9: 4col cell3and4</p></div>
+
+	<div class="txp-layout-4col-cell-1-2-3"><p class="box">Opt10: 4col cell1and2and3</p></div>
+	<div class="txp-layout-4col-cell-4alt"><p class="box">Opt10: 4col cell4</p></div>
+
+	<div class="txp-layout-4col-cell-1alt"><p class="box">Opt11: 4col cell1</p></div>
+	<div class="txp-layout-4col-cell-2-3-4"><p class="box">Opt11: 4col cell2and3and4</p></div>
+
+
+	<div class="txp-layout-textbox">
+		<div>
+			<h2>Text columns <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.6</span></h2>
+			<p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate. <strong>Please note</strong> this replaces the old <code>.plugin-help</code> <span class="information">4.4.x</span> and <code>.text-column</code> <span class="information">4.5</span> classes.</p>
+			<pre class="prettyprint linenums"><code class="language-html">&lt;div class="txp-layout-textbox"&gt;
+	&lt;p&gt;...content here...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+			<div class="box">Text column (independent of grid columns)</div>
+
+			<h2>Inline grids <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<pre class="prettyprint linenums"><code>&lt;div class="txp-grid"&gt;
+	&lt;div class="txp-grid-cell" [width, see below]>
+		&lt;p>Grid item 1&lt;/p>
+	&lt;/div>&lt;div class="txp-grid-cell" [width, see notes]>
+		&lt;p>Grid item 2&lt;/p>
+	&lt;/div>&lt;div class="txp-grid-cell highlight" [width, see notes]>
+		&lt;p>Grid item 3&lt;/p>
+	&lt;/div>&lt;div class="txp-grid-cell" [width, see notes]>
+		&lt;p>Grid item 4&lt;/p>
+	&lt;/div>
+	...etc...
+&lt;/div&gt;</code></pre>
+
+			<div class="txp-grid">
+				<div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell highlight" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div><div class="txp-grid-cell" style="width:10em;">
+					<p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+				</div>
+			</div>
+
+			<p>Rudimentary inline grid type layouts—works best if inner content is of equal quantity (such as a grid of images). If you want to utilise this layout then there are some prerequisites:</p>
+			<ol>
+				<li>You must define a specific width for each <code>.txp-grid-cell</code>, either as a <code>class</code> attribute or <code>style</code> attribute, otherwise the cell width fits to the block content within it.</li>
+				<li>The <code>.txp-grid-cell</code> should have a maximum width of no more than 294px (or its equivalent em measurement).</li>
+				<li>As this layout uses <code>inline-block</code>, you will need to collapse the white space between each <code>.txp-grid-cell</code> to negate any unwanted margin between the cells.</li>
+			</ol>
+			<p>Once CSS3 flexbox module is more settled and has improved browser support, this layout type can be made more robust.</p>
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-headings">
+			<h1>Headings <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.5</span></h1>
+
+			<p><code class="prettyprint">&lt;h1 class="txp-heading"&gt;</code></p>
+			<h1 class="txp-heading">h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 heading 1</h1>
+			<p>Top level headings in the Textpattern admin area, we advise adding the <code>class="txp-heading"</code> attribute which allows advanced users to optionally hide headings throughout the admin area.</p>
+			<p><code class="prettyprint">&lt;h2&gt;</code></p>
+			<h2>h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2</h2>
+			<p><code class="prettyprint">&lt;h3&gt;</code></p>
+			<h3>h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3</h3>
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-paragraphs">
+			<h1>Paragraphs</h1>
+
+			<p><code class="prettyprint">&lt;p&gt;</code></p>
+			<p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet elit vitae arcu interdum ullamcorper.</strong> Nullam ultrices, nisi quis scelerisque convallis, augue neque tempor enim, et mattis justo nibh eu elit.</p>
+			<p>Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci.</p>
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-textsemantics">
+			<h1>Text-level semantics</h1>
+
+			<p><code class="prettyprint">&lt;a&gt;</code></p>
+			<p>The <a href="#">a element</a> example</p>
+
+			<p><code class="prettyprint">&lt;abbr&gt;</code></p>
+			<p>The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples</p>
+
+			<p><code class="prettyprint">&lt;b&gt;</code></p>
+			<p>The <b>b element</b> example</p>
+
+			<p><code class="prettyprint">&lt;cite&gt;</code></p>
+			<p>The <cite>cite element</cite> example</p>
+
+			<p><code class="prettyprint">&lt;code&gt;</code></p>
+			<p>The <code>code element</code> example</p>
+
+			<p><code class="prettyprint">&lt;del&gt;</code></p>
+			<p>The <del>del element</del> example</p>
+
+			<p><code class="prettyprint">&lt;dfn&gt;</code></p>
+			<p>The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples</p>
+
+			<p><code class="prettyprint">&lt;em&gt;</code></p>
+			<p>The <em>em element</em> example</p>
+
+			<p><code class="prettyprint">&lt;i&gt;</code></p>
+			<p>The <i>i element</i> example</p>
+
+			<p><code class="prettyprint">&lt;ins&gt;</code></p>
+			<p>The <ins>ins element</ins> example</p>
+
+			<p><code class="prettyprint">&lt;kbd&gt;</code></p>
+			<p>The <kbd>kbd element</kbd> example</p>
+
+			<p><code class="prettyprint">&lt;mark&gt;</code></p>
+			<p>The <mark>mark element</mark> example</p>
+
+			<p><code class="prettyprint">&lt;q&gt;</code></p>
+			<p>The <q>q element <q>inside</q> a q element</q></p>
+
+			<p><code class="prettyprint">&lt;s&gt;</code></p>
+			<p>The <s>s element</s> example</p>
+
+			<p><code class="prettyprint">&lt;samp&gt;</code></p>
+			<p>The <samp>samp element</samp> example</p>
+
+			<p><code class="prettyprint">&lt;small&gt;</code></p>
+			<p>The <small>small element</small> example</p>
+
+			<p><code class="prettyprint">&lt;span&gt;</code></p>
+			<p>The <span>span element</span> example</p>
+
+			<p><code class="prettyprint">&lt;strong&gt;</code></p>
+			<p>The <strong>strong element</strong> example</p>
+
+			<p><code class="prettyprint">&lt;sub&gt;</code></p>
+			<p>The <sub>sub element</sub> example</p>
+
+			<p><code class="prettyprint">&lt;sup&gt;</code></p>
+			<p>The <sup>sup element</sup> example</p>
+
+			<p><code class="prettyprint">&lt;u&gt;</code></p>
+			<p>The <u>u element</u> example</p>
+
+			<p><code class="prettyprint">&lt;var&gt;</code></p>
+			<p>The <var>var element</var> example</p>
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-labels">
+			<h1>Inline text labels</h1>
+
+			<h2>Safe <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code class="prettyprint">&lt;span class="success"&gt;...message...&lt;/span&gt;</code></p>
+			<p><code class="prettyprint">&lt;strong class="success"&gt;...message...&lt;/strong&gt;</code></p>
+			<p>This is an example of a <span class="success">span success label</span> and a <strong class="success">strong success label</strong>.</p>
+
+			<h2>Warning <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code class="prettyprint">&lt;span class="warning"&gt;...message...&lt;/span&gt;</code></p>
+			<p><code class="prettyprint">&lt;strong class="warning"&gt;...message...&lt;/strong&gt;</code></p>
+			<p>This is an example of a <span class="warning">span warning label</span> and a <strong class="warning">strong warning label</strong>.</p>
+
+			<h2>Danger <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code class="prettyprint">&lt;span class="error"&gt;...message...&lt;/span&gt;</code></p>
+			<p><code class="prettyprint">&lt;strong class="error"&gt;...message...&lt;/strong&gt;</code></p>
+			<p>This is an example of a <span class="error">span error label</span> and a <strong class="error">strong error label</strong>.</p>
+
+			<h2>Information (no semantic meaning) <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code class="prettyprint">&lt;span class="information"&gt;...message...&lt;/span&gt;</code></p>
+			<p><code class="prettyprint">&lt;strong class="information"&gt;...message...&lt;/strong&gt;</code></p>
+			<p>This is an example of a <span class="information">span information label</span> and a <strong class="information">strong information label</strong>.</p>
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-alerts">
+			<h1>Alert boxes</h1>
+
+			<h2>System message: success <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<pre class="prettyprint"><code>&lt;p class="alert-block success"&gt;&lt;span class="ui-icon ui-icon-check"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+			<p class="alert-block success"><span class="ui-icon ui-icon-check"></span> <strong>Success:</strong> a suitable success message goes here.</p>
+
+			<h2>System message: warning <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.5</span></h2>
+			<pre class="prettyprint"><code>&lt;p class="alert-block warning"&gt;&lt;span class="ui-icon ui-icon-alert"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+			<p class="alert-block warning"><span class="ui-icon ui-icon-alert"></span> <strong>Warning:</strong> a suitable warning message goes here.</p>
+
+			<h2>System message: error <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<pre class="prettyprint"><code>&lt;p class="alert-block error"&gt;&lt;span class="ui-icon ui-icon-closethick"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+			<p class="alert-block error"><span class="ui-icon ui-icon-closethick"></span> <strong>Error:</strong> a suitable error message goes here.</p>
+
+			<h2>System message: information (no semantic meaning) <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<pre class="prettyprint"><code>&lt;p class="alert-block information"&gt;&lt;span class="ui-icon ui-icon-info"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+			<p class="alert-block information"><span class="ui-icon ui-icon-info"></span> <strong>Information:</strong> a suitable information message goes here.</p>
+
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-blocksemantics">
+			<h1>Block text-level semantics</h1>
+
+			<h2>Pre-formatted text blocks</h2>
+			<p><code class="prettyprint">&lt;pre&gt;...content...&lt;/pre&gt;</code></p>
+			<pre>This is an example of a non-code
+	pre-formatted text block
+		preserving white spaces</pre>
+
+			<h2>Pre-formatted code blocks</h2>
+			<p><code class="prettyprint">&lt;pre&gt;&lt;code&gt;...content...&lt;/code&gt;&lt;/pre&gt;</code></p>
+			<pre><code>&lt;div id="messagepane"&gt;
+	&lt;span id="message" class="success"&gt;Article posted. &lt;a class="close" title="Close" aria-label="Close"&gt;&amp;times;&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-media">
+			<h1>Embedded content</h1>
+
+			<h2>Image (unstyled)</h2>
+			<p><code class="prettyprint">&lt;img src="" alt=""&gt;</code></p>
+			<p><img src="http://placehold.it/160/fabc2b/333333" alt="Alt text"></p>
+
+			<h2>Image (styled) <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code class="prettyprint">&lt;img src="" alt="" class="content-image"&gt;</code></p>
+			<p><img src="http://placehold.it/160/fabc2b/333333" alt="Alt text" class="content-image"></p>
+
+			<h2>Image (styled) with link <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code class="prettyprint">&lt;a href="" title=""&gt;&lt;img src="" alt="" class="content-image"&gt;&lt;/a&gt;</code></p>
+			<p><a href="#" title="Title text"><img src="http://placehold.it/160/fabc2b/333333" alt="Alt text" class="content-image"></a></p>
+
+			<h2>Left ranged image <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code class="prettyprint">&lt;img src="" alt="" class="align-left"&gt;</code></p>
+			<p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="align-left" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder"> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
+			<p>Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
+
+			<h2>Right ranged image <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code class="prettyprint">&lt;img src="" alt="" class="align-right"&gt;</code></p>
+			<p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="align-right" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder"> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
+			<p>Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
+
+			<h2>Centred image <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code class="prettyprint">&lt;img src="" alt="" class="align-center"&gt;</code></p>
+			<p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="align-center" src="http://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder"> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet.</p>
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-lists">
+			<h1>Lists</h1>
+
+			<h2>Ordered</h2>
+			<p><code class="prettyprint">&lt;ol&gt;</code></p>
+			<ol>
+				<li>this is an example</li>
+				<li>of a numbered</li>
+				<li>(ordered) list
+					<ol>
+						<li>and a second level</li>
+						<li>numbered list example</li>
+					</ol>
+				</li>
+			</ol>
+
+			<h2>Unordered</h2>
+			<p><code class="prettyprint">&lt;ul&gt;</code></p>
+			<ul>
+				<li>this is an example</li>
+				<li>of a bulletpoint</li>
+				<li>(unordered) list
+					<ul>
+						<li>and a second level</li>
+						<li>bulletpoint list example</li>
+					</ul>
+				</li>
+			</ul>
+
+			<h2>Plain</h2>
+			<p><code class="prettyprint">&lt;ul class="plain-list"&gt;</code></p>
+			<ul class="plain-list">
+				<li>this is an example</li>
+				<li>of a plain</li>
+				<li>(unstyled) list
+					<ul>
+						<li>and a second level</li>
+						<li>bulletpoint list example</li>
+					</ul>
+				</li>
+			</ul>
+
+			<h2>Description</h2>
+			<p><code class="prettyprint">&lt;dl&gt;</code></p>
+			<dl>
+				<dt>This is a definition list term 1</dt>
+				<dd>Definition of term 1 here</dd>
+				<dd>Another definition of term 1
+					<dl>
+						<dt>A sub term</dt>
+						<dd>With</dd>
+						<dd>Subs</dd>
+					</dl>
+				</dd>
+			</dl>
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-tables">
+			<h1>Tables <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.6</span></h1>
+
+			<pre class="prettyprint linenums"><code>&lt;div class="txp-listtables"&gt;
+	&lt;table class="txp-list"&gt;
+		&lt;thead&gt;
+			&lt;tr&gt;
+				&lt;th scope="col"&gt;...&lt;/th&gt;
+				&lt;th scope="col"&gt;...&lt;/th&gt;
+				&lt;th scope="col"&gt;...&lt;/th&gt;
+			&lt;/tr&gt;
+		&lt;/thead&gt;
+		&lt;tfoot&gt;
+			&lt;tr&gt;
+				&lt;td colspan="3"&gt;...&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tfoot&gt;
+		&lt;tbody&gt;
+			&lt;tr&gt;
+				&lt;th scope="row"&gt;...&lt;/th&gt;
+				&lt;td&gt;...&lt;/td&gt;
+				&lt;td&gt;...&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;th scope="row"&gt;...&lt;/th&gt;
+				&lt;td&gt;...&lt;/td&gt;
+				&lt;td&gt;...&lt;/td&gt;
+			&lt;/tr&gt;
+		&lt;/tbody&gt;
+	&lt;/table&gt;
+&lt;/div&gt;</code></pre>
+			<div class="txp-listtables">
+				<table class="txp-list">
+					<thead>
+						<tr>
+							<th scope="col">Planet</th>
+							<th scope="col">Population</th>
+							<th scope="col">Government</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td colspan="3">This is the tfoot (optional)</td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<th scope="row">Diso</th>
+							<td>4.1 B</td>
+							<td>Democracy</td>
+						</tr>
+						<tr>
+							<th scope="row">Lave</th>
+							<td>2.5 B</td>
+							<td>Dictatorship</td>
+						</tr>
+						<tr>
+							<th scope="row">Leesti</th>
+							<td>5.0 B</td>
+							<td>Corporate State</td>
+						</tr>
+						<tr>
+							<th scope="row">Reorte</th>
+							<td>3.1 B</td>
+							<td>Dictatorship</td>
+						</tr>
+						<tr>
+							<th scope="row">Zaonce</th>
+							<td>5.3 B</td>
+							<td>Corporate State</td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- /txp-listtables -->
+
+			<p><span class="information">Changed at 4.6:</span> Added <code>scope</code> attribute to columns and rows. Each <code>&lt;tbody&gt;</code> row now has a <code>&lt;th&gt;</code> cell.</p>
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-progress">
+			<h1>Progress meters <span class="information" style="font-size:.5em;font-weight:normal;">new v4.5</span></h1>
+
+			<pre class="prettyprint linenums"><code>&lt;div class="progress-meter"&gt;
+	&lt;p class="txp-accessibility"&gt;There are 4 steps to this installation process:&lt;/p&gt;
+	&lt;ol&gt;
+		&lt;li class="active"&gt;&lt;strong&gt;Add database details&lt;/strong&gt;&lt;/li&gt;
+		&lt;li&gt;Add config.php file&lt;/li&gt;
+		&lt;li&gt;Create database&lt;/li&gt;
+		&lt;li&gt;Go!&lt;/li&gt;
+	&lt;/ol&gt;
+&lt;/div&gt;</code></pre>
+
+			<div class="progress-meter">
+				<p class="txp-accessibility">There are 4 steps to this installation process:</p>
+				<ol>
+					<li class="active"><strong>Add database details</strong></li>
+					<li>Add config.php file</li>
+					<li>Create database</li>
+					<li>Go!</li>
+				</ol>
+			</div>
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-summarydetails">
+			<h1>Summary/details boxes <span class="warning" style="font-size:.5em;font-weight:normal;">changed v4.6</span></h1>
+
+			<h2>Collapsible</h2>
+			<pre class="prettyprint linenums"><code>&lt;section role="region" id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label"&gt;
+	&lt;h3 id="regionname1_group-label" class="txp-summary expanded"&gt;&lt;a href="#name-of-details" role="button" aria-controls="name-of-details" aria-pressed="true"&gt;Heading (lever)&lt;/a&gt;&lt;/h3&gt;
+	&lt;div role="group" id="name-of-details" class="toggle" aria-expanded="true"&gt;
+		&lt;p&gt;...content...&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+			<section role="region" id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label">
+				<h3 id="regionname1_group-label" class="txp-summary expanded"><a href="#name-of-details" role="button" aria-controls="name-of-details" aria-pressed="true">Heading (lever)</a></h3>
+				<div role="group" id="name-of-details" class="toggle" aria-expanded="true">
+					<form action="#">
+						<p>
+							<label for="text-std1">Form element within a collapsible details box</label>&#160;<a href="#" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+							<input type="text" id="text-std1" name="text-std1" size="32">
+						</p>
+					</form>
+					<p>Standard paragraph text within a collapsible details box.</p>
+					<ul>
+						<li>Unordered list</li>
+						<li>items within</li>
+						<li>a collapsible details box</li>
+					</ul>
+					<ol>
+						<li>Ordered list</li>
+						<li>items within</li>
+						<li>a collapsible details box</li>
+					</ol>
+					<ul class="plain-list">
+						<li>Plain (unstyled) list</li>
+						<li>items within</li>
+						<li>a collapsible details box</li>
+					</ul>
+				</div>
+			</section>
+
+			<p>The WAI-ARIA attribute states and <code>expanded</code> class are managed via JavaScript. <strong>Note:</strong> may eventually be changed to use HTML5 <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> tags when browser support is better.</p>
+
+			<h2>Non-collapsible</h2>
+			<pre class="prettyprint linenums"><code>&lt;section role="region" id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label"&gt;
+	&lt;h3 id="regionname1_group-label"&gt;Heading&lt;/h3&gt;
+	&lt;div role="group"&gt;
+		&lt;p&gt;...content...&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+			<section role="region" id="regionname2_group" class="txp-details" aria-labelledby="regionname2_group-label">
+				<h3 id="regionname2_group-label">Heading</h3>
+				<div role="group">
+					<form action="#">
+						<p>
+							<label for="text-std2">Form element within a non-collapsible details box</label>&#160;<a href="#" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+							<input type="text" id="text-std2" name="text-std2" size="32">
+						</p>
+					</form>
+					<p>Standard paragraph text within a non-collapsible details box.</p>
+					<ul>
+						<li>Unordered list</li>
+						<li>items within</li>
+						<li>a non-collapsible details box</li>
+					</ul>
+					<ol>
+						<li>Ordered list</li>
+						<li>items within</li>
+						<li>a non-collapsible details box</li>
+					</ol>
+					<ul class="plain-list">
+						<li>Plain (unstyled) list</li>
+						<li>items within</li>
+						<li>a non-collapsible details box</li>
+					</ul>
+				</div>
+			</section>
+
+			<p><strong>Note:</strong> this replaces the <code>&lt;fieldset&gt;</code> boxes used in v4.5 and below.</p>
+
+
+		</div>
+
+
+		<form action="#">
+
+			<div class="text-section" id="ui-doc-forms">
+				<h1>Forms</h1>
+
+
+				<h2>Textareas</h2>
+				<p>
+					<label for="textarea">Textarea</label><br>
+					<textarea id="textarea" name="textarea" cols="64" rows="5"></textarea>
+				</p>
+
+				<h2>Text fields large <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+				<p><code class="prettyprint">&lt;input type="text" id="" name="" size="64" class="input-large"&gt;</code></p>
+				<p>
+					<label for="text-lrg">Text (large) with pophelp</label>&#160;<a href="#" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+					<input type="text" id="text-lrg" name="text-lrg" size="64" class="input-large">
+				</p>
+
+				<h2>Text fields standard</h2>
+				<p><code class="prettyprint">&lt;input type="text" id="" name="" size="32"&gt;</code></p>
+				<p>
+					<label for="text-std">Text (standard) with pophelp</label>&#160;<a href="#" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+					<input type="text" id="text-std" name="text-std" size="32">
+				</p>
+
+				<h2>Text fields medium <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+				<p><code class="prettyprint">&lt;input type="text" id="" name="" size="16" class="input-medium"&gt;</code></p>
+				<p>
+					<label for="text-med">Text medium</label><br>
+					<input type="text" id="text-med" name="text-med" size="16" class="input-medium">
+				</p>
+
+				<h2>Text fields small <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+				<p><code class="prettyprint">&lt;input type="text" id="" name="" size="8" class="input-small"&gt;</code></p>
+				<p>
+					<label for="text-sml">Text (small)</label><br>
+					<input type="text" id="text-sml" name="text-sml" size="8" class="input-small">
+				</p>
+
+				<h2>Text fields extra small <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+				<p><code class="prettyprint">&lt;input type="text" id="" name="" size="4" class="input-xsmall"&gt;</code></p>
+				<p>
+					<label for="text-xsml">Text (extra small)</label><br>
+					<input type="text" id="text-xsml" name="text-xsml" size="4" class="input-xsmall">
+				</p>
+
+				<h2>Password fields</h2>
+				<p><code class="prettyprint">&lt;input type="password" id="" name="" size="32"&gt;</code></p>
+				<p>
+					<label for="password">Password</label><br>
+					<input type="password" id="password" name="password" size="32">
+				</p>
+
+				<h2>Date fields</h2>
+				<pre class="prettyprint linenums"><code>&lt;p&gt;
+	&lt;span class="txp-label-fixed"&gt;Date&lt;/span&gt;&lt;br&gt;
+	&lt;input type="text" name="year" value="" size="4" maxlength="4" class="year" title="Year" placeholder="yyyy"&gt; / 
+	&lt;input type="text" name="month" value="" size="2" maxlength="2" class="month" title="Month" placeholder="mm"&gt; / 
+	&lt;input type="text" name="day" value="" size="2" maxlength="2" class="day" title="Day" placeholder="dd"&gt;
+&lt;/p&gt;</code></pre>
+				<p>
+					<span class="txp-label-fixed">Date</span><br>
+					<input type="text" name="year" value="" size="4" maxlength="4" title="Year" class="year" placeholder="yyyy"> / 
+					<input type="text" name="month" value="" size="2" maxlength="2" title="Month" class="month" placeholder="mm"> / 
+					<input type="text" name="day" value="" size="2" maxlength="2" title="Day" class="day" placeholder="dd">
+				</p>
+
+				<h2>Time fields</h2>
+				<pre class="prettyprint linenums"><code>&lt;p&gt;
+	&lt;span class="txp-label-fixed"&gt;Date&lt;/span&gt;&lt;br&gt;
+	&lt;input type="text" name="hour" value="" size="2" maxlength="2" class="hour" title="Hour" placeholder="hh"&gt; : 
+	&lt;input type="text" name="minute" value="" size="2" maxlength="2" class="minute" title="Minute" placeholder="mm"&gt; : 
+	&lt;input type="text" name="second" value="" size="2" maxlength="2" class="second" title="Second" placeholder="ss"&gt;
+&lt;/p&gt;</code></pre>
+				<p>
+					<span class="txp-label-fixed">Time</span><br>
+					<input type="text" name="hour" value="" size="2" maxlength="2" title="Hour" class="hour" placeholder="hh"> : 
+					<input type="text" name="minute" value="" size="2" maxlength="2" title="Minute" class="minute" placeholder="mm"> : 
+					<input type="text" name="second" value="" size="2" maxlength="2" title="Second" class="second" placeholder="ss">
+				</p>
+
+				<h2>Checkboxes and radiobuttons</h2>
+				<p>
+					<input type="checkbox" id="test_checkbox_1" name="test_checkbox_1">
+					<label for="test_checkbox_1">Test checkbox 1</label>
+					&nbsp;
+					<input type="checkbox" id="test_checkbox_2" name="test_checkbox_2">
+					<label for="test_checkbox_2">Test checkbox 2</label>
+					&nbsp;
+					<input type="checkbox" id="test_checkbox_3" name="test_checkbox_3" disabled="disabled">
+					<label for="test_checkbox_3">Test checkbox 3 (disabled)</label>
+				</p>
+				<p>
+					<input type="radio" id="test_radio_1" name="test_radio_group">
+					<label for="test_radio_1">Test radio 1</label>
+					&nbsp;
+					<input type="radio" id="test_radio_2" name="test_radio_group">
+					<label for="test_radio_2">Test radio 2</label>
+					&nbsp;
+					<input type="radio" id="test_radio_3" name="test_radio_group" disabled="disabled">
+					<label for="test_radio_3">Test radio 3 (disabled)</label>
+				</p>
+
+				<h2>Selects</h2>
+				<p>
+					<label for="select_dd">Select drop-down</label><br>
+					<select id="select_dd" name="select_dd">
+						<optgroup label="Group 1">
+							<option value="1">Some text goes here</option>
+							<option value="2">Another choice could be here</option>
+							<option value="3">Yet another item to be chosen</option>
+						</optgroup>
+						<optgroup label="Group 2">
+							<option value="4">Some text goes here</option>
+							<option value="5">Another choice could be here</option>
+							<option value="6">Yet another item to be chosen</option>
+						</optgroup>
+						<optgroup label="Group 3">
+							<option value="7">Some text goes here</option>
+							<option value="8">Another choice could be here</option>
+							<option value="9">Yet another item to be chosen</option>
+						</optgroup>
+					</select>
+					<input type="text" id="text_inline" name="text_inline" size="16" class="input-medium">
+					<input type="button" value="Hello">
+				</p>
+				<p>
+					<label for="select_multi">Select multiple</label><br>
+					<select id="select_multi" name="select_multi" multiple="multiple" size="10">
+						<optgroup label="Group 1">
+							<option value="1">Some text goes here</option>
+							<option value="2">Another choice could be here</option>
+							<option value="3">Yet another item to be chosen</option>
+						</optgroup>
+						<optgroup label="Group 2">
+							<option value="4">Some text goes here</option>
+							<option value="5">Another choice could be here</option>
+							<option value="6">Yet another item to be chosen</option>
+						</optgroup>
+						<optgroup label="Group 3">
+							<option value="7">Some text goes here</option>
+							<option value="8">Another choice could be here</option>
+							<option value="9">Yet another item to be chosen</option>
+						</optgroup>
+					</select>
+				</p>
+
+				<h2>Disabled form elements</h2>
+				<p>
+					<label for="select_dd2">Select drop-down</label><br>
+					<select id="select_dd2" name="select_dd2" disabled="disabled">
+						<optgroup label="Group 1">
+							<option value="1">Some text goes here</option>
+							<option value="2">Another choice could be here</option>
+							<option value="3">Yet another item to be chosen</option>
+						</optgroup>
+						<optgroup label="Group 2">
+							<option value="4">Some text goes here</option>
+							<option value="5">Another choice could be here</option>
+							<option value="6">Yet another item to be chosen</option>
+						</optgroup>
+						<optgroup label="Group 3">
+							<option value="7">Some text goes here</option>
+							<option value="8">Another choice could be here</option>
+							<option value="9">Yet another item to be chosen</option>
+						</optgroup>
+					</select>
+					<input type="text" id="text_inline2" name="text_inline2" size="16" class="input-medium" disabled="disabled">
+					<input type="button" value="Hello" disabled="disabled">
+				</p>
+
+			</div>
+
+
+			<div class="text-section" id="ui-doc-buttons">
+				<h1>Buttons</h1>
+
+				<h2>Primary and standard buttons</h2>
+				<p><code class="prettyprint">&lt;input type="submit" value="" class="publish"&gt;</code></p>
+				<p><code class="prettyprint">&lt;input type="submit" value="Input Submit"&gt;</code></p>
+				<p><code class="prettyprint">&lt;input type="button" value="Input Button"&gt;</code></p>
+				<p><code class="prettyprint">&lt;button&gt;Button Tag&lt;/button&gt;</code></p>
+				<p><code class="prettyprint">&lt;a href="" class="navlink"&gt;Link (navlink)&lt;/a&gt;</code></p>
+				<p>
+					<input type="submit" value="Input Submit (Primary)" class="publish">
+					<input type="submit" value="Input Submit">
+					<input type="button" value="Input Button">
+					<button>Button Tag</button>
+					<a href="#" class="navlink">Link (navlink)</a>
+				</p>
+
+				<h2>Delete buttons <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.6</span></h2>
+				<p><code class="prettyprint">&lt;input type="submit" value="&amp;times;" class="destroy" title="Delete" aria-label="Delete"&gt;</code></p>
+				<p><input type="submit" value="&times;" class="destroy" title="Delete" aria-label="Delete"></p>
+				<p><span class="information">Changed at 4.6:</span> Added <code>title</code> attribute.</p>
+
+				<h2>Button sets</h2>
+				<pre class="prettyprint linenums"><code>&lt;p class="nav-tertiary"&gt;
+	&lt;a href="#" class="navlink-active"&gt;Page 1&lt;/a&gt;&lt;a href="#" class="navlink">Page 2&lt;/a&gt;&lt;a href="#" class="navlink"&gt;Page 3&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+				<p class="nav-tertiary">
+					<a href="#" class="navlink-active">Page 1</a><a href="#" class="navlink">Page 2</a><a href="#" class="navlink">Page 3</a>
+				</p>
+
+				<h2>Previous/next buttons</h2>
+				<pre class="prettyprint linenums"><code>&lt;p class="prev-next"&gt;
+	&lt;span class="navlink-disabled" aria-disabled="true"&gt;← Prev&lt;/span&gt;&lt;a href="#" class="navlink"&gt;Next →&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+				<p class="prev-next">
+					<span class="navlink-disabled" aria-disabled="true">← Prev</span><a href="#" class="navlink">Next →</a>
+				</p>
+
+			</div>
+
+		</form>
+
+
+		<div class="text-section" id="ui-doc-edit-panes">
+			<h1>Edit panes and panels</h1>
+
+			<h2>Edit panes (modal) <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.6</span></h2>
+			<pre class="prettyprint linenums"><code>&lt;form method="post" action="#" class="edit-form"&gt;
+	&lt;section class="txp-edit"&gt;
+		&lt;h2&gt;Edit pane (modal) title&lt;/h2&gt;
+
+		&lt;p class="edit-example-1"&gt;
+			&lt;span class="txp-label"&gt;&lt;label for="example_1"&gt;Long text (with pophelp)&lt;/label&gt;&#160;&lt;a target="_blank" href="#" class="pophelp" title="Help" aria-label="Help" rel="help"&gt;?&lt;/a&gt;&lt;/span&gt;
+			&lt;span class="txp-value"&gt;&lt;input type="text" value="" name="example_1" id="example_1" size="32"&gt;&lt;/span&gt;
+		&lt;/p&gt;
+		&lt;p class="edit-example-2"&gt;
+			&lt;span class="txp-label"&gt;&lt;label for="example_2"&gt;Medium text&lt;/label&gt;&lt;/span&gt;
+			&lt;span class="txp-value"&gt;&lt;input type="text" value="" name="example_2" id="example_2" size="8" class="input-medium"&gt;&lt;/span&gt;
+		&lt;/p&gt;
+		&lt;p class="edit-example-3"&gt;
+			&lt;span class="txp-label"&gt;&lt;label for="example_3"&gt;Select&lt;/label&gt;&lt;/span&gt;
+			&lt;span class="txp-value"&gt;
+				&lt;select name="example_3" id="example_3"&gt;
+					&lt;option value="" selected="selected"&gt;&#160;&lt;/option&gt;
+					&lt;option value="option1"&gt;Option 1&lt;/option&gt;
+					&lt;option value="option2"&gt;Option 2&lt;/option&gt;
+				&lt;/select&gt;
+			&lt;/span&gt;
+		&lt;/p&gt;
+		&lt;p class="edit-example-4"&gt;
+			&lt;span class="txp-label"&gt;Radio buttons (with pophelp)&#160;&lt;a target="_blank" href="#" class="pophelp" title="Help" aria-label="Help" rel="help"&gt;?&lt;/a&gt;&lt;/span&gt;
+			&lt;span class="txp-value"&gt;
+				&lt;input type="radio" id="example_4_0" name="example_4" value="0" class="radio active" checked="checked"&gt;&lt;label for="example_4_0"&gt;No&lt;/label&gt;
+				&lt;input type="radio" id="example_4_1" name="example_4" value="1" class="radio"&gt;&lt;label for="example_4_1"&gt;Yes&lt;/label&gt;
+			&lt;/span&gt;
+		&lt;/p&gt;
+		&lt;p class="edit-example-5"&gt;
+			&lt;span class="txp-label"&gt;&lt;label for="example_5"&gt;Textarea (with pophelp)&lt;/label&gt;&#160;&lt;a target="_blank" href="#" class="pophelp" title="Help" aria-label="Help" rel="help"&gt;?&lt;/a&gt;&lt;/span&gt;
+			&lt;textarea name="example_5" id="example_5" cols="64" rows="7"&gt;&lt;/textarea&gt;
+		&lt;/p&gt;
+		&lt;p class="txp-edit-action"&gt;&lt;button&gt;Cancel&lt;/button&gt; &lt;input type="submit" value="Save" class="publish"&gt;&lt;/p&gt;
+
+	&lt;/section&gt;
+&lt;/form&gt;</code></pre>
+
+			<form method="post" action="#" class="edit-form">
+				<section class="txp-edit">
+					<h2>Edit pane (modal) title</h2>
+					<p class="edit-example-1">
+						<span class="txp-label"><label for="example_1">Long text (with pophelp)</label>&#160;<a target="_blank" href="#" class="pophelp" title="Help" aria-label="Help" rel="help">?</a></span>
+						<span class="txp-value"><input type="text" value="" name="example_1" id="example_1" size="32"></span>
+					</p>
+					<p class="edit-example-2">
+						<span class="txp-label"><label for="example_2">Medium text</label></span>
+						<span class="txp-value"><input type="text" value="" name="example_2" id="example_2" size="8" class="input-medium"></span>
+					</p>
+					<p class="edit-example-3">
+						<span class="txp-label"><label for="example_3">Select</label></span>
+						<span class="txp-value">
+							<select name="example_3" id="example_3">
+								<option value="" selected="selected">&#160;</option>
+								<option value="option1">Option 1</option>
+								<option value="option2">Option 2</option>
+							</select>
+						</span>
+					</p>
+					<p class="edit-example-4">
+						<span class="txp-label">Radio buttons (with pophelp)&#160;<a target="_blank" href="#" class="pophelp" title="Help" aria-label="Help" rel="help">?</a></span>
+						<span class="txp-value">
+							<input type="radio" id="example_4_0" name="example_4" value="0" class="radio active" checked="checked"><label for="example_4_0">No</label>
+							<input type="radio" id="example_4_1" name="example_4" value="1" class="radio"><label for="example_4_1">Yes</label>
+						</span>
+					</p>
+					<p class="edit-example-5">
+						<span class="txp-label"><label for="example_5">Textarea (with pophelp)</label>&#160;<a target="_blank" href="#" class="pophelp" title="Help" aria-label="Help" rel="help">?</a></span>
+						<textarea name="example_5" id="example_5" cols="64" rows="7"></textarea>
+					</p>
+					<p class="txp-edit-action"><button>Cancel</button> <input type="submit" value="Save" class="publish"></p>
+				</section>
+			</form>
+
+			<h2>Edit panels (non-modal) <span class="warning" style="font-size:.72222222222222em;font-weight:normal;">changed v4.6</span></h2>
+			<pre class="prettyprint linenums"><code>&lt;form method="post" action="#" class="prefs-form"&gt;
+	&lt;h2&gt;Edit panel (non-modal) title&lt;/h2&gt;
+
+	&lt;p class="prefs-example-1"&gt;
+		&lt;span class="txp-label"&gt;&lt;label for="prefs_example_1"&gt;Long text&lt;/label&gt;&lt;/span&gt;
+		&lt;span class="txp-value"&gt;&lt;input type="text" value="" name="prefs_example_1" id="prefs_example_1" size="32"&gt;&lt;/span&gt;
+	&lt;/p&gt;
+	&lt;p class="prefs-example-2"&gt;
+		&lt;span class="txp-label"&gt;&lt;label for="prefs_example_2"&gt;Medium text&lt;/label&gt;&lt;/span&gt;
+		&lt;span class="txp-value"&gt;&lt;input type="text" value="" name="prefs_example_2" id="prefs_example_2" size="8" class="input-medium"&gt;&lt;/span&gt;
+	&lt;/p&gt;
+	&lt;p class="prefs-example-3"&gt;
+		&lt;span class="txp-label"&gt;&lt;label for="prefs_example_3"&gt;Select&lt;/label&gt;&lt;/span&gt;
+		&lt;span class="txp-value"&gt;
+			&lt;select name="prefs_example_3" id="prefs_example_3"&gt;
+				&lt;option value="" selected="selected"&gt;&#160;&lt;/option&gt;
+				&lt;option value="option1"&gt;Option 1&lt;/option&gt;
+				&lt;option value="option2"&gt;Option 2&lt;/option&gt;
+			&lt;/select&gt;
+		&lt;/span&gt;
+	&lt;/p&gt;
+	&lt;p class="prefs-example-4"&gt;
+		&lt;span class="txp-label"&gt;Radio buttons&lt;/span&gt;
+		&lt;span class="txp-value"&gt;
+			&lt;input type="radio" id="prefs_example_4_0" name="prefs_example_4" value="0" class="radio active" checked="checked"&gt;&lt;label for="prefs_example_4_0"&gt;No&lt;/label&gt;
+			&lt;input type="radio" id="prefs_example_4_1" name="prefs_example_4" value="1" class="radio"&gt;&lt;label for="prefs_example_4_1"&gt;Yes&lt;/label&gt;
+		&lt;/span&gt;
+	&lt;/p&gt;
+	&lt;p class="prefs-example-5"&gt;
+		&lt;span class="txp-label"&gt;&lt;label for="prefs_example_5"&gt;Textarea&lt;/label&gt;&lt;/span&gt;
+		&lt;textarea name="prefs_example_5" id="prefs_example_5" cols="64" rows="7"&gt;&lt;/textarea&gt;
+	&lt;/p&gt;
+	...etc...
+	&lt;p&gt;&lt;input type="submit" value="Save" class="publish"&gt;&lt;/p&gt;
+
+&lt;/form&gt;</code></pre>
+
+			<form method="post" action="#" class="prefs-form">
+				<h2>Edit panel (non-modal) title</h2>
+				<p class="prefs-example-1">
+					<span class="txp-label"><label for="prefs_example_1">Long text</label></span>
+					<span class="txp-value"><input type="text" value="" name="prefs_example_1" id="prefs_example_1" size="32"></span>
+				</p>
+				<p class="prefs-example-2">
+					<span class="txp-label"><label for="prefs_example_2">Medium text</label></span>
+					<span class="txp-value"><input type="text" value="" name="prefs_example_2" id="prefs_example_2" size="8" class="input-medium"></span>
+				</p>
+				<p class="prefs-example-3">
+					<span class="txp-label"><label for="prefs_example_3">Select</label></span>
+					<span class="txp-value">
+						<select name="prefs_example_3" id="prefs_example_3">
+							<option value="" selected="selected">&#160;</option>
+							<option value="option1">Option 1</option>
+							<option value="option2">Option 2</option>
+						</select>
+					</span>
+				</p>
+				<p class="prefs-example-4">
+					<span class="txp-label">Radio buttons</span>
+					<span class="txp-value">
+						<input type="radio" id="prefs_example_4_0" name="prefs_example_4" value="0" class="radio active" checked="checked"><label for="prefs_example_4_0">No</label>
+						<input type="radio" id="prefs_example_4_1" name="prefs_example_4" value="1" class="radio"><label for="prefs_example_4_1">Yes</label>
+					</span>
+				</p>
+				<p class="prefs-example-5">
+					<span class="txp-label"><label for="prefs_example_5">Textarea</label></span>
+					<textarea name="prefs_example_5" id="prefs_example_5" cols="64" rows="7"></textarea>
+				</p>
+				<p><input type="submit" value="Save" class="publish"></p>
+			</form>
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-jquery-ui">
+			<h1>jQuery UI widgets <span class="warning" style="font-size:.5em;font-weight:normal;">new v4.6</span></h1>
+			<p>Collection of all the available <a href="http://jqueryui.com/" rel="external" title="Go to the jQuery User Interface website">jQuery UI</a> widgets.</p>
+
+			<h2>Interactions: Draggable</h2>
+			<div class="jquery-ui-draggable ui-widget-content" style="padding:.5em 1em; margin-bottom:1em;">
+				<strong>Drag me around!</strong>
+			</div>
+			<p><a href="http://jqueryui.com/draggable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Interactions: Resizable</h2>
+			<div class="jquery-ui-resizable ui-widget-content" style="padding:.5em 1em; margin-bottom:1em;">
+				<strong>Resize me!</strong>
+			</div>
+			<p><a href="http://jqueryui.com/resizable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Interactions: Selectable</h2>
+			<ol class="jquery-ui-selectable plain-list">
+				<li class="ui-widget-content" style="padding:.5em 1em; border-bottom:0;">Item 1</li>
+				<li class="ui-widget-content" style="padding:.5em 1em; border-bottom:0;">Item 2</li>
+				<li class="ui-widget-content" style="padding:.5em 1em; border-bottom:0;">Item 3</li>
+				<li class="ui-widget-content" style="padding:.5em 1em; border-bottom:0;">Item 4</li>
+				<li class="ui-widget-content" style="padding:.5em 1em; border-bottom:0;">Item 5</li>
+				<li class="ui-widget-content" style="padding:.5em 1em; border-bottom:0;">Item 6</li>
+				<li class="ui-widget-content" style="padding:.5em 1em;">Item 7</li>
+			</ol>
+			<p><a href="http://jqueryui.com/selectable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Interactions: Sortable</h2>
+			<ul class="jquery-ui-sortable plain-list">
+				<li class="ui-widget-content" style="padding:.5em 1em .5em .5em; margin:2px 0;">
+					<span class="ui-icon ui-icon-arrow-2-n-s"></span>
+					Item 1
+				</li>
+				<li class="ui-widget-content" style="padding:.5em 1em .5em .5em; margin:2px 0;">
+					<span class="ui-icon ui-icon-arrow-2-n-s"></span>
+					Item 2
+				</li>
+				<li class="ui-widget-content" style="padding:.5em 1em .5em .5em; margin:2px 0;">
+					<span class="ui-icon ui-icon-arrow-2-n-s"></span>
+					Item 3
+				</li>
+				<li class="ui-widget-content" style="padding:.5em 1em .5em .5em; margin:2px 0;">
+					<span class="ui-icon ui-icon-arrow-2-n-s"></span>
+					Item 4
+				</li>
+				<li class="ui-widget-content" style="padding:.5em 1em .5em .5em; margin:2px 0;">
+					<span class="ui-icon ui-icon-arrow-2-n-s"></span>
+					Item 5
+				</li>
+				<li class="ui-widget-content" style="padding:.5em 1em .5em .5em; margin:2px 0;">
+					<span class="ui-icon ui-icon-arrow-2-n-s"></span>
+					Item 6
+				</li>
+				<li class="ui-widget-content" style="padding:.5em 1em .5em .5em; margin:2px 0;">
+					<span class="ui-icon ui-icon-arrow-2-n-s"></span>
+					Item 7
+				</li>
+			</ul>
+			<p><a href="http://jqueryui.com/sortable/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Widgets: Accordion</h2>
+			<div class="jquery-ui-accordion">
+				<h3><a href="#">Section 1</a></h3>
+				<div>
+					<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+				</div>
+
+				<h3><a href="#">Section 2</a></h3>
+				<div>
+					<p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna.</p>
+				</div>
+
+				<h3><a href="#">Section 3</a></h3>
+				<div>
+					<p> Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.</p>
+					<ul>
+						<li>List item one</li>
+						<li>List item two</li>
+						<li>List item three</li>
+					</ul>
+				</div>
+
+				<h3><a href="#">Section 4</a></h3>
+				<div>
+					<p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est.</p>
+					<p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+				</div>
+			</div>
+			<p><a href="http://jqueryui.com/accordion/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Widgets: Autocomplete</h2>
+			<p>
+				<label for="autocomplete-country">Countries</label><br>
+				<input type="text" id="autocomplete-country">
+			</p>
+			<p><a href="http://jqueryui.com/autocomplete/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Widgets: Button</h2>
+
+			<h3>Default functionality buttons</h3>
+			<p>
+				<a href="#" class="jquery-ui-button">&lt;a&gt; button</a>
+				<button class="jquery-ui-button">&lt;button&gt; button</button>
+				<input type="button" class="jquery-ui-button" value="Input button">
+				<input type="submit" class="jquery-ui-button" value="Submit button">
+			</p>
+
+			<h3>Checkboxes as buttons</h3>
+			<p>
+				<input type="checkbox" class="jquery-ui-button" id="check">
+				<label for="check">Toggle</label>
+			</p>
+			<p class="jquery-ui-buttonset">
+				<input type="checkbox" id="check1">
+				<label for="check1">B</label>
+				<input type="checkbox" id="check2">
+				<label for="check2">I</label>
+				<input type="checkbox" id="check3">
+				<label for="check3">U</label>
+			</p>
+
+			<h3>Radios as buttons</h3>
+			<p class="jquery-ui-buttonset">
+				<input type="radio" id="radio1" name="radio" checked="checked">
+				<label for="radio1">Yes</label>
+				<input type="radio" id="radio2" name="radio">
+				<label for="radio2">Maybe</label>
+				<input type="radio" id="radio3" name="radio">
+				<label for="radio3">No</label>
+			</p>
+
+			<h3>Icon buttons</h3>
+			<p>
+				<button class="jquery-ui-button-icon-only">&lt;button&gt; icon only</button>
+				<button class="jquery-ui-button-icon-left">&lt;button&gt; icon on the left</button>
+				<button class="jquery-ui-button-icon-right">&lt;button&gt; icon on the right</button>
+				<button class="jquery-ui-button-icon-two">&lt;button&gt; two icons</button>
+				<button class="jquery-ui-button-icon-two-only">&lt;button&gt; two icons and no text</button>
+			</p>
+			<p>
+				<a href="#" class="jquery-ui-button-icon-only">&lt;a&gt; icon only</a>
+				<a href="#" class="jquery-ui-button-icon-left">&lt;a&gt; icon on the left</a>
+				<a href="#" class="jquery-ui-button-icon-two-only">&lt;a&gt; two icons and no text</a>
+			</p>
+
+			<h3>Split buttons</h3>
+			<div>
+				<p>
+					<button id="split-rerun-example">Run last action</button>
+					<button id="split-select-example">Select an action</button>
+				</p>
+				<ul>
+					<li><a href="#">Open&hellip;</a></li>
+					<li><a href="#">Save</a></li>
+					<li><a href="#">Delete</a></li>
+				</ul>
+			</div>
+
+			<p><a href="http://jqueryui.com/button/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Widgets: Datepicker</h2>
+			<div class="jquery-ui-datepicker"></div>
+			<p><a href="http://jqueryui.com/datepicker/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Widgets: Dialog</h2>
+
+			<p><a href="#" id="jquery-ui-dialog-link">Open basic dialog&hellip;</a></p>
+			<!-- Dialog box (basic) -->
+			<div id="jquery-ui-dialog" title="Basic dialog example">
+				<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+			</div>
+
+			<p><a href="#" id="jquery-ui-dialog-modal-link">Open modal dialog&hellip;</a></p>
+			<!-- Dialog box (modal) -->
+			<div id="jquery-ui-dialog-modal" title="Modal dialog example">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <a href="#">sed do eiusmod</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+
+			<p><a href="http://jqueryui.com/dialog/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Widgets: Menu</h2>
+
+			<h3>Menu vertical</h3>
+			<ul class="jquery-ui-menu">
+				<li class="ui-state-disabled"><a href="#">Aberdeen</a></li>
+				<li><a href="#">Ada</a></li>
+				<li><a href="#">Adamsville</a></li>
+				<li><a href="#">Addyston</a></li>
+				<li>
+					<a href="#">Delphi</a>
+					<ul>
+						<li class="ui-state-disabled"><a href="#">Ada</a></li>
+						<li><a href="#">Saarland</a></li>
+						<li><a href="#">Salzburg</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Saarland</a></li>
+				<li>
+					<a href="#">Salzburg</a>
+					<ul>
+						<li>
+							<a href="#">Delphi</a>
+							<ul>
+								<li><a href="#">Ada</a></li>
+								<li><a href="#">Saarland</a></li>
+								<li><a href="#">Salzburg</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Delphi</a>
+							<ul>
+								<li><a href="#">Ada</a></li>
+								<li><a href="#">Saarland</a></li>
+								<li><a href="#">Salzburg</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Perch</a></li>
+					</ul>
+				</li>
+				<li class="ui-state-disabled"><a href="#">Amesville</a></li>
+			</ul>
+
+			<h3>Menu Horizontal</h3>
+			<p class="warning">Current jQuery UI release (v1.10.1) does not provide horizontal menus - this is a planned feature coming soon. <a href="http://wiki.jqueryui.com/w/page/38666403/Menubar" rel="external">More info</a>.</p>
+
+			<p><a href="http://jqueryui.com/menu/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Widget: Progressbar</h2>
+			<h3>Determinate value</h3>
+			<div class="jquery-ui-progressbar"></div>
+			<p><a class="jquery-ui-progressbar-animate" href="#">Animate to random number</a></p>
+			<h3>Indeterminate value</h3>
+			<div class="jquery-ui-progressbar2"></div>
+			<p><a href="http://jqueryui.com/progressbar/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Widgets: Slider</h2>
+			<h3>Slider - horizontal</h3>
+			<div class="jquery-ui-slider-horizontal"></div>
+
+			<h3>Slider - vertical</h3>
+			<div class="jquery-ui-slider-vertical clearfix">
+				<span>88</span>
+				<span>77</span>
+				<span>55</span>
+				<span>33</span>
+				<span>40</span>
+				<span>45</span>
+				<span>70</span>
+			</div>
+
+			<p><a href="http://jqueryui.com/slider/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Widgets: Spinner</h2>
+			<p>
+				<label for="jquery-ui-spinner">Select a value:</label>
+				<input type="text" id="jquery-ui-spinner" name="value">
+			</p>
+			<p><a href="http://jqueryui.com/spinner/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Widgets: Tabs</h2>
+			<div class="jquery-ui-tabs">
+				<ul>
+					<li><a href="#tabgroup1-tab1">First</a></li>
+					<li><a href="#tabgroup1-tab2">Second</a></li>
+					<li><a href="#tabgroup1-tab3">Third</a></li>
+				</ul>
+				<div id="tabgroup1-tab1">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget diam nec urna hendrerit tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquam ligula non nulla cursus volutpat.</p>
+					<p>Aliquam malesuada felis nec turpis auctor interdum. Cras et lobortis dolor. Nam sodales, dolor eu cursus faucibus, justo leo vestibulum turpis, id malesuada erat ipsum et leo. Integer id aliquam augue. Proin quis risus magna. Vivamus eget accumsan mauris. Vivamus justo ligula, blandit et consequat nec, vulputate a elit. Morbi feugiat metus in ante scelerisque a pulvinar quam condimentum. Suspendisse potenti. Pellentesque convallis scelerisque nunc eget dapibus. Pellentesque ut enim justo. Fusce egestas urna sed nulla placerat iaculis. Cras dignissim tincidunt molestie. Suspendisse rutrum dignissim tortor quis mollis. Sed tempor feugiat ligula in imperdiet. Quisque molestie viverra erat in adipiscing.</p>
+				</div>
+				<div id="tabgroup1-tab2">
+					<p>Donec porta malesuada massa, at fermentum nunc tincidunt ac. Integer nisi ligula, sodales bibendum interdum id, sodales sit amet orci. In rhoncus libero in purus vestibulum consequat. Aenean vel purus molestie leo pharetra sagittis. In hac habitasse platea dictumst. Quisque bibendum, metus a egestas convallis, est orci dapibus odio, vel pretium ante erat quis ipsum. Praesent at est in odio rhoncus cursus in sollicitudin velit. Aenean auctor molestie hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec volutpat nisl eget nisi consequat pretium. Nullam dui purus, commodo a vestibulum nec, semper varius nulla.</p>
+				</div>
+				<div id="tabgroup1-tab3">
+					<p>Mauris tempor urna non quam tincidunt aliquam. Proin venenatis metus eu purus interdum a vehicula ipsum sollicitudin. Mauris sed dignissim odio. Nam id odio sed diam dapibus dignissim. Nulla vestibulum nisl ac magna scelerisque adipiscing. Nam pellentesque sapien vulputate nisi scelerisque ut vehicula orci luctus. Sed rhoncus tempor metus vitae egestas. Proin pharetra tristique justo ac rutrum. Vestibulum ac pharetra dolor. Cras nibh arcu, bibendum eget luctus id, rhoncus nec augue. Integer ornare rhoncus nulla, eu aliquam mi ornare ullamcorper. Praesent egestas auctor orci, non rhoncus sapien eleifend at. Quisque eget purus sem, ut dignissim ligula. Etiam sollicitudin dui libero, id ullamcorper metus.</p>
+				</div>
+			</div>
+			<p><a href="http://jqueryui.com/tabs/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Widgets: Tooltip</h2>
+			<p>Here is an example of a <a class="jquery-ui-tooltip" href="#" title="This is a tooltip, it can be of any length (within practical reason).">link with a tooltip</a>, mouseover to reveal it.</p>
+			<p><a href="http://jqueryui.com/tooltip/" rel="external" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+			<h2>Styles: Icons</h2>
+			<ul class="jquery-ui-icons ui-widget ui-helper-clearfix">
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-n"><span class="ui-icon ui-icon-carat-1-n"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-ne"><span class="ui-icon ui-icon-carat-1-ne"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-e"><span class="ui-icon ui-icon-carat-1-e"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-se"><span class="ui-icon ui-icon-carat-1-se"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-s"><span class="ui-icon ui-icon-carat-1-s"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-sw"><span class="ui-icon ui-icon-carat-1-sw"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-w"><span class="ui-icon ui-icon-carat-1-w"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-carat-1-nw"><span class="ui-icon ui-icon-carat-1-nw"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-carat-2-n-s"><span class="ui-icon ui-icon-carat-2-n-s"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-carat-2-e-w"><span class="ui-icon ui-icon-carat-2-e-w"></span></li>
+
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-n"><span class="ui-icon ui-icon-triangle-1-n"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-ne"><span class="ui-icon ui-icon-triangle-1-ne"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-e"><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-se"><span class="ui-icon ui-icon-triangle-1-se"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-s"><span class="ui-icon ui-icon-triangle-1-s"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-sw"><span class="ui-icon ui-icon-triangle-1-sw"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-w"><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-1-nw"><span class="ui-icon ui-icon-triangle-1-nw"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-2-n-s"><span class="ui-icon ui-icon-triangle-2-n-s"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-triangle-2-e-w"><span class="ui-icon ui-icon-triangle-2-e-w"></span></li>
+
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-n"><span class="ui-icon ui-icon-arrow-1-n"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-ne"><span class="ui-icon ui-icon-arrow-1-ne"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-e"><span class="ui-icon ui-icon-arrow-1-e"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-se"><span class="ui-icon ui-icon-arrow-1-se"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-s"><span class="ui-icon ui-icon-arrow-1-s"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-sw"><span class="ui-icon ui-icon-arrow-1-sw"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-w"><span class="ui-icon ui-icon-arrow-1-w"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-1-nw"><span class="ui-icon ui-icon-arrow-1-nw"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-2-n-s"><span class="ui-icon ui-icon-arrow-2-n-s"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-2-ne-sw"><span class="ui-icon ui-icon-arrow-2-ne-sw"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-2-e-w"><span class="ui-icon ui-icon-arrow-2-e-w"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-2-se-nw"><span class="ui-icon ui-icon-arrow-2-se-nw"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowstop-1-n"><span class="ui-icon ui-icon-arrowstop-1-n"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowstop-1-e"><span class="ui-icon ui-icon-arrowstop-1-e"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowstop-1-s"><span class="ui-icon ui-icon-arrowstop-1-s"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowstop-1-w"><span class="ui-icon ui-icon-arrowstop-1-w"></span></li>
+
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-n"><span class="ui-icon ui-icon-arrowthick-1-n"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-ne"><span class="ui-icon ui-icon-arrowthick-1-ne"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-e"><span class="ui-icon ui-icon-arrowthick-1-e"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-se"><span class="ui-icon ui-icon-arrowthick-1-se"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-s"><span class="ui-icon ui-icon-arrowthick-1-s"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-sw"><span class="ui-icon ui-icon-arrowthick-1-sw"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-w"><span class="ui-icon ui-icon-arrowthick-1-w"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-1-nw"><span class="ui-icon ui-icon-arrowthick-1-nw"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-2-n-s"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-2-ne-sw"><span class="ui-icon ui-icon-arrowthick-2-ne-sw"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-2-e-w"><span class="ui-icon ui-icon-arrowthick-2-e-w"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthick-2-se-nw"><span class="ui-icon ui-icon-arrowthick-2-se-nw"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthickstop-1-n"><span class="ui-icon ui-icon-arrowthickstop-1-n"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthickstop-1-e"><span class="ui-icon ui-icon-arrowthickstop-1-e"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthickstop-1-s"><span class="ui-icon ui-icon-arrowthickstop-1-s"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowthickstop-1-w"><span class="ui-icon ui-icon-arrowthickstop-1-w"></span></li>
+
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturnthick-1-w"><span class="ui-icon ui-icon-arrowreturnthick-1-w"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturnthick-1-n"><span class="ui-icon ui-icon-arrowreturnthick-1-n"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturnthick-1-e"><span class="ui-icon ui-icon-arrowreturnthick-1-e"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturnthick-1-s"><span class="ui-icon ui-icon-arrowreturnthick-1-s"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturn-1-w"><span class="ui-icon ui-icon-arrowreturn-1-w"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturn-1-n"><span class="ui-icon ui-icon-arrowreturn-1-n"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturn-1-e"><span class="ui-icon ui-icon-arrowreturn-1-e"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowreturn-1-s"><span class="ui-icon ui-icon-arrowreturn-1-s"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowrefresh-1-w"><span class="ui-icon ui-icon-arrowrefresh-1-w"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowrefresh-1-n"><span class="ui-icon ui-icon-arrowrefresh-1-n"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowrefresh-1-e"><span class="ui-icon ui-icon-arrowrefresh-1-e"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrowrefresh-1-s"><span class="ui-icon ui-icon-arrowrefresh-1-s"></span></li>
+
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-4"><span class="ui-icon ui-icon-arrow-4"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-arrow-4-diag"><span class="ui-icon ui-icon-arrow-4-diag"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-extlink"><span class="ui-icon ui-icon-extlink"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-newwin"><span class="ui-icon ui-icon-newwin"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-refresh"><span class="ui-icon ui-icon-refresh"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-shuffle"><span class="ui-icon ui-icon-shuffle"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-transfer-e-w"><span class="ui-icon ui-icon-transfer-e-w"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-transferthick-e-w"><span class="ui-icon ui-icon-transferthick-e-w"></span></li>
+
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-folder-collapsed"><span class="ui-icon ui-icon-folder-collapsed"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-folder-open"><span class="ui-icon ui-icon-folder-open"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-document"><span class="ui-icon ui-icon-document"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-document-b"><span class="ui-icon ui-icon-document-b"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-note"><span class="ui-icon ui-icon-note"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-mail-closed"><span class="ui-icon ui-icon-mail-closed"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-mail-open"><span class="ui-icon ui-icon-mail-open"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-suitcase"><span class="ui-icon ui-icon-suitcase"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-comment"><span class="ui-icon ui-icon-comment"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-person"><span class="ui-icon ui-icon-person"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-print"><span class="ui-icon ui-icon-print"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-trash"><span class="ui-icon ui-icon-trash"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-locked"><span class="ui-icon ui-icon-locked"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-unlocked"><span class="ui-icon ui-icon-unlocked"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-bookmark"><span class="ui-icon ui-icon-bookmark"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-tag"><span class="ui-icon ui-icon-tag"></span></li>
+
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-home"><span class="ui-icon ui-icon-home"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-flag"><span class="ui-icon ui-icon-flag"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-calculator"><span class="ui-icon ui-icon-calculator"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-cart"><span class="ui-icon ui-icon-cart"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-pencil"><span class="ui-icon ui-icon-pencil"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-clock"><span class="ui-icon ui-icon-clock"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-disk"><span class="ui-icon ui-icon-disk"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-calendar"><span class="ui-icon ui-icon-calendar"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-zoomin"><span class="ui-icon ui-icon-zoomin"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-zoomout"><span class="ui-icon ui-icon-zoomout"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-search"><span class="ui-icon ui-icon-search"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-wrench"><span class="ui-icon ui-icon-wrench"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-gear"><span class="ui-icon ui-icon-gear"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-heart"><span class="ui-icon ui-icon-heart"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-star"><span class="ui-icon ui-icon-star"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-link"><span class="ui-icon ui-icon-link"></span></li>
+
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-cancel"><span class="ui-icon ui-icon-cancel"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-plus"><span class="ui-icon ui-icon-plus"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-plusthick"><span class="ui-icon ui-icon-plusthick"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-minus"><span class="ui-icon ui-icon-minus"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-minusthick"><span class="ui-icon ui-icon-minusthick"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-close"><span class="ui-icon ui-icon-close"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-closethick"><span class="ui-icon ui-icon-closethick"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-key"><span class="ui-icon ui-icon-key"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-lightbulb"><span class="ui-icon ui-icon-lightbulb"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-scissors"><span class="ui-icon ui-icon-scissors"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-clipboard"><span class="ui-icon ui-icon-clipboard"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-copy"><span class="ui-icon ui-icon-copy"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-contact"><span class="ui-icon ui-icon-contact"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-image"><span class="ui-icon ui-icon-image"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-video"><span class="ui-icon ui-icon-video"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-script"><span class="ui-icon ui-icon-script"></span></li>
+
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-alert"><span class="ui-icon ui-icon-alert"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-info"><span class="ui-icon ui-icon-info"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-notice"><span class="ui-icon ui-icon-notice"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-help"><span class="ui-icon ui-icon-help"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-check"><span class="ui-icon ui-icon-check"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-bullet"><span class="ui-icon ui-icon-bullet"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-radio-off"><span class="ui-icon ui-icon-radio-off"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-radio-on"><span class="ui-icon ui-icon-radio-on"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-pin-w"><span class="ui-icon ui-icon-pin-w"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-pin-s"><span class="ui-icon ui-icon-pin-s"></span></li>
+
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-play"><span class="ui-icon ui-icon-play"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-pause"><span class="ui-icon ui-icon-pause"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-seek-next"><span class="ui-icon ui-icon-seek-next"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-seek-prev"><span class="ui-icon ui-icon-seek-prev"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-seek-end"><span class="ui-icon ui-icon-seek-end"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-seek-start"><span class="ui-icon ui-icon-seek-start"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-stop"><span class="ui-icon ui-icon-stop"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-eject"><span class="ui-icon ui-icon-eject"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-volume-off"><span class="ui-icon ui-icon-volume-off"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-volume-on"><span class="ui-icon ui-icon-volume-on"></span></li>
+
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-power"><span class="ui-icon ui-icon-power"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-signal-diag"><span class="ui-icon ui-icon-signal-diag"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-signal"><span class="ui-icon ui-icon-signal"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-battery-0"><span class="ui-icon ui-icon-battery-0"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-battery-1"><span class="ui-icon ui-icon-battery-1"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-battery-2"><span class="ui-icon ui-icon-battery-2"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-battery-3"><span class="ui-icon ui-icon-battery-3"></span></li>
+
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-plus"><span class="ui-icon ui-icon-circle-plus"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-minus"><span class="ui-icon ui-icon-circle-minus"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-close"><span class="ui-icon ui-icon-circle-close"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-triangle-e"><span class="ui-icon ui-icon-circle-triangle-e"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-triangle-s"><span class="ui-icon ui-icon-circle-triangle-s"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-triangle-w"><span class="ui-icon ui-icon-circle-triangle-w"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-triangle-n"><span class="ui-icon ui-icon-circle-triangle-n"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-arrow-e"><span class="ui-icon ui-icon-circle-arrow-e"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-arrow-s"><span class="ui-icon ui-icon-circle-arrow-s"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-arrow-w"><span class="ui-icon ui-icon-circle-arrow-w"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-arrow-n"><span class="ui-icon ui-icon-circle-arrow-n"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-zoomin"><span class="ui-icon ui-icon-circle-zoomin"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-zoomout"><span class="ui-icon ui-icon-circle-zoomout"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circle-check"><span class="ui-icon ui-icon-circle-check"></span></li>
+
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circlesmall-plus"><span class="ui-icon ui-icon-circlesmall-plus"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circlesmall-minus"><span class="ui-icon ui-icon-circlesmall-minus"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-circlesmall-close"><span class="ui-icon ui-icon-circlesmall-close"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-squaresmall-plus"><span class="ui-icon ui-icon-squaresmall-plus"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-squaresmall-minus"><span class="ui-icon ui-icon-squaresmall-minus"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-squaresmall-close"><span class="ui-icon ui-icon-squaresmall-close"></span></li>
+
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-grip-dotted-vertical"><span class="ui-icon ui-icon-grip-dotted-vertical"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-grip-dotted-horizontal"><span class="ui-icon ui-icon-grip-dotted-horizontal"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-grip-solid-vertical"><span class="ui-icon ui-icon-grip-solid-vertical"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-grip-solid-horizontal"><span class="ui-icon ui-icon-grip-solid-horizontal"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-gripsmall-diagonal-se"><span class="ui-icon ui-icon-gripsmall-diagonal-se"></span></li>
+				<li class="ui-state-default ui-corner-all" title=".ui-icon-grip-diagonal-se"><span class="ui-icon ui-icon-grip-diagonal-se"></span></li>
+			</ul>
+
+			<h3>Additions to standard jQuery UI icon set</h3>
+			<ul class="jquery-ui-icons ui-widget ui-helper-clearfix">
+				<li class="ui-state-default" title=".ui-extra-icon-code"><span class="ui-icon ui-extra-icon-code"></span></li>
+				<li class="ui-state-default" title=".ui-extra-icon-time"><span class="ui-icon ui-extra-icon-time"></span></li>
+				<li class="ui-state-default" title=".ui-extra-icon-list"><span class="ui-icon ui-extra-icon-list"></span></li>
+				<li class="ui-state-default" title=".ui-extra-icon-grid"><span class="ui-icon ui-extra-icon-grid"></span></li>
+				<li class="ui-state-default" title=".ui-extra-icon-download"><span class="ui-icon ui-extra-icon-download"></span></li>
+				<li class="ui-state-default" title=".ui-extra-icon-upload"><span class="ui-icon ui-extra-icon-upload"></span></li>
+				<li class="ui-state-default" title=".ui-extra-icon-attach"><span class="ui-icon ui-extra-icon-attach"></span></li>
+			</ul>
+
+			<h2>Styles: Overlay and shadow</h2>
+			<p><span class="warning">Not currently used in jQuery UI widgets.</span></p>
+			<div style="position: relative; width: 70%; height: 200px; padding:1% 4%; overflow:hidden;" class="fakewindowcontain">
+				<p>Lorem ipsum dolor sit amet, Nulla nec tortor. Donec id elit quis purus consectetur consequat.</p>
+				<p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci.</p>
+				<p>Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat.</p>
+				<p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam.</p>
+				<p>Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante.</p>
+				<p>Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi.</p>
+
+				<!-- ui-dialog -->
+				<div class="ui-overlay">
+					<div class="ui-widget-overlay"></div>
+					<div class="ui-widget-shadow ui-corner-all" style="position:absolute; top:30px; left:50px; z-index:1002; width:302px; height:152px;"></div>
+				</div>
+				<div class="ui-widget ui-widget-content ui-corner-all" style="position:absolute; top:30px; left:50px; z-index:1003; padding:10px; width:280px; height:130px;">
+					<div class="ui-dialog-content ui-widget-content" style="background:none; border:0;">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="text-section" id="ui-doc-misc">
+			<h1>Miscellaneous</h1>
+
+			<h2>Accessibility text <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.6</span></h2>
+			<p><code class="prettyprint">&lt;p class="txp-accessibility"&gt;...content...&lt;/p&gt;</code></p>
+			<p>Accessibility text is hidden from the page but available to screen readers as an aid to those with visual impairments. This is accomplished via CSS <code>visibility: hidden;</code> <strong>not</strong> via <code>display: hidden;</code> (which would hide the text from most screen readers too).</p>
+
+			<h2>AJAX spinner <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code class="prettyprint">&lt;span class="spinner"&gt;&lt;/span&gt;</code></p>
+			<p><span class="spinner"></span></p>
+
+			<h2>Disabled non-form elements <span class="information" style="font-size:.72222222222222em;font-weight:normal;">new v4.5</span></h2>
+			<p><code class="prettyprint">&lt;p class="disabled" aria-disabled="true"&gt;...message...&lt;/p&gt;</code></p>
+			<p class="disabled" aria-disabled="true">This is an example of an element greyed out via a <code>.disabled</code> class.</p>
+			<p><strong>Please note</strong> that this class only gives a visual impression of disabled elements, any links and/or form elements therein would still be active and clickable. To truly disable form elements use the proper <code>disabled</code> attribute instead, see the <a href="#ui-doc-forms">forms</a> section for more information.</p>
+
+			<h2>Temporary example of search widget</h2>
+			<form role="search" method="get" action="#" class="txp-search" style="float:none;">
+				<p>
+					<input type="text" placeholder="search_articles">
+					<button class="txp-search-button">Search</button>
+					<button>Search criteria</button>
+				</p>
+				<ul>
+					<li>
+						<input type="checkbox" id="search-crit1" name="search-crit1">
+						<label for="search-crit1">search_all</label>
+					</li>
+					<li>
+						<input type="checkbox" id="search-crit2" name="search-crit2">
+						<label for="search-crit2">ID#</label>
+					</li>
+					<li>
+						<input type="checkbox" id="search-crit3" name="search-crit3">
+						<label for="search-crit3">Title, body &amp; excerpt testing of very long line</label>
+					</li>
+					<li>
+						<input type="checkbox" id="search-crit4" name="search-crit4">
+						<label for="search-crit4">Section</label>
+					</li>
+					<li>
+						<input type="checkbox" id="search-crit5" name="search-crit5">
+						<label for="search-crit5">Categories</label>
+					</li>
+					<li>
+						<input type="checkbox" id="search-crit6" name="search-crit6">
+						<label for="search-crit6">Keywords</label>
+					</li>
+					<li>
+						<input type="checkbox" id="search-crit7" name="search-crit7">
+						<label for="search-crit7">Status</label>
+					</li>
+					<li>
+						<input type="checkbox" id="search-crit8" name="search-crit8">
+						<label for="search-crit8">Author</label>
+					</li>
+					<li>
+						<input type="checkbox" id="search-crit9" name="search-crit9">
+						<label for="search-crit9">Article image</label>
+					</li>
+					<li>
+						<input type="checkbox" id="search-crit10" name="search-crit10">
+						<label for="search-crit10">Posted</label>
+					</li>
+					<li>
+						<input type="checkbox" id="search-crit11" name="search-crit11">
+						<label for="search-crit11">Modified</label>
+					</li>
+				</ul>
+			</form>
+
+		</div>
+
+
+	</div><!-- /txp-layout-textbox -->
+
+	</div><!-- /txp-container -->
+	</main><!-- /txp-body -->
+
+	<footer role="contentinfo" class="txp-footer">
+		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.6)</p>
+		<p class="pagejump"><a href="#">&#8593; Back to top</a></p>
+	</footer><!-- /txp-footer -->
+
+	<!-- just for UI doc -->
+	<script>
+		window.prettyPrint && prettyPrint();
+	</script>
+
+</body>
+</html>
