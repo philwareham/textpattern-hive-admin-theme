@@ -1,169 +1,169 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
 <head>
-	<meta charset="utf-8">
-	<meta name="robots" content="noindex, nofollow">
-	<title>Plugins - My Site &#124; Textpattern CMS</title>
-	<script src="/textpattern/vendors/jquery/jquery/jquery.js"></script>
-	<script src="/textpattern/vendors/jquery/ui/js/jquery-ui.js"></script>
-	<link rel="stylesheet" href="/textpattern/vendors/jquery/ui/css/textpattern/jquery-ui.css">
-	<link rel="stylesheet" href="../css/textpattern.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="generator" content="Textpattern CMS">
-	<script src="/textpattern/vendors/modernizr/modernizr/modernizr.js"></script>
-	<script src="../js/tinynav.min.js"></script>
-	<script src="../js/scripts.js"></script>
-	<!--[if lt IE 9]><script src="/textpattern/vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Plugins - My Site &#124; Textpattern CMS</title>
+    <script src="/textpattern/vendors/jquery/jquery/jquery.js"></script>
+    <script src="/textpattern/vendors/jquery/ui/js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/textpattern/vendors/jquery/ui/css/textpattern/jquery-ui.css">
+    <link rel="stylesheet" href="../css/textpattern.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="generator" content="Textpattern CMS">
+    <script src="../docs/assets/js/modernizr.js"></script>
+    <script src="../js/tinynav.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    <!--[if lt IE 9]><script src="../doc/assets/js/selectivizr.min.js"></script><![endif]-->
 </head>
 <body id="page-plugin" class="admin">
 
-	<header role="banner" class="txp-header">
-		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
-		<p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
+    <header role="banner" class="txp-header">
+        <h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
+        <p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
 
-		<nav role="navigation" aria-label="Navigation">
-			<ul class="data-dropdown untinynav">
-				<li class="dropdown"><a class="dropdown-toggle" href="content-article.html">Content</a>
-					<ul class="dropdown-menu">
-						<li><a href="content-category.html">Categories</a></li>
-						<li><a href="content-article.html">Write</a></li>
-						<li><a href="content-list.html">Articles</a></li>
-						<li><a href="content-image.html">Images</a></li>
-						<li><a href="content-file.html">Files</a></li>
-						<li><a href="content-link.html">Links</a></li>
-						<li><a href="content-discuss.html">Comments</a></li>
-					</ul>
-				</li>
-				<li class="dropdown"><a class="dropdown-toggle" href="presentation-page.html">Presentation</a>
-					<ul class="dropdown-menu">
-						<li><a href="presentation-section.html">Sections</a></li>
-						<li><a href="presentation-page.html">Pages</a></li>
-						<li><a href="presentation-form.html">Forms</a></li>
-						<li><a href="presentation-css.html">Styles</a></li>
-					</ul>
-				</li>
-				<li class="dropdown active"><a class="dropdown-toggle" href="admin-admin.html">Admin</a>
-					<ul class="dropdown-menu">
-						<li><a href="admin-diag.html">Diagnostics</a></li>
-						<li><a href="admin-prefs.html">Preferences</a></li>
-						<li><a href="admin-languages.html">Languages</a></li>
-						<li><a href="admin-admin.html">Users</a></li>
-						<li><a href="admin-log.html">Visitor logs</a></li>
-						<li class="selected"><a href="admin-plugin.html">Plugins</a></li>
-						<li><a href="admin-import.html">Import</a></li>
-					</ul>
-				</li>
-				<li class="dropdown"><a class="dropdown-toggle" href="#">Extensions</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Extension 1</a></li>
-						<li><a href="#">Extension 2</a></li>
-						<li><a href="#">Extension 3</a></li>
-						<li><a href="#">Extension 4</a></li>
-						<li><a href="#">Extension 5</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
+        <nav role="navigation" aria-label="Navigation">
+            <ul class="data-dropdown untinynav">
+                <li class="dropdown"><a class="dropdown-toggle" href="content-article.html">Content</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="content-category.html">Categories</a></li>
+                        <li><a href="content-article.html">Write</a></li>
+                        <li><a href="content-list.html">Articles</a></li>
+                        <li><a href="content-image.html">Images</a></li>
+                        <li><a href="content-file.html">Files</a></li>
+                        <li><a href="content-link.html">Links</a></li>
+                        <li><a href="content-discuss.html">Comments</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" href="presentation-page.html">Presentation</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="presentation-section.html">Sections</a></li>
+                        <li><a href="presentation-page.html">Pages</a></li>
+                        <li><a href="presentation-form.html">Forms</a></li>
+                        <li><a href="presentation-css.html">Styles</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown active"><a class="dropdown-toggle" href="admin-admin.html">Admin</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="admin-diag.html">Diagnostics</a></li>
+                        <li><a href="admin-prefs.html">Preferences</a></li>
+                        <li><a href="admin-languages.html">Languages</a></li>
+                        <li><a href="admin-admin.html">Users</a></li>
+                        <li><a href="admin-log.html">Visitor logs</a></li>
+                        <li class="selected"><a href="admin-plugin.html">Plugins</a></li>
+                        <li><a href="admin-import.html">Import</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" href="#">Extensions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Extension 1</a></li>
+                        <li><a href="#">Extension 2</a></li>
+                        <li><a href="#">Extension 3</a></li>
+                        <li><a href="#">Extension 4</a></li>
+                        <li><a href="#">Extension 5</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
 
-		<div id="messagepane"><span role="alert" id="message" class="success"><span class="ui-icon ui-icon-check"></span> Plugin <strong>smd_browse_by</strong> updated. <a role="button" class="close" title="Close" aria-label="Close">&times;</a></span></div>
+        <div id="messagepane"><span role="alert" id="message" class="success"><span class="ui-icon ui-icon-check"></span> Plugin <strong>smd_browse_by</strong> updated. <a role="button" class="close" title="Close" aria-label="Close">&times;</a></span></div>
 
-	</header><!-- /txp-header -->
+    </header><!-- /txp-header -->
 
-	<main role="main" class="txp-body" aria-label="Main content">
-		<h1 class="txp-heading">Plugins</h1>
+    <main role="main" class="txp-body" aria-label="Main content">
+        <h1 class="txp-heading">Plugins</h1>
 
-		<div id="plugin_control" class="txp-control-panel">
-			<form method="post" action="#" id="plugin_install_form" class="plugin-data">
-				<p>
-					<label for="plugin-install">Install plugin</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help" title="Help" aria-label="Help">?</a><br>
-					<textarea id="plugin-install" class="code" name="plugin" cols="64" rows="2"></textarea>
-				</p>
-				<p><input type="submit" value="Upload" name="install_new"></p>
-			</form>
-		</div>
+        <div id="plugin_control" class="txp-control-panel">
+            <form method="post" action="#" id="plugin_install_form" class="plugin-data">
+                <p>
+                    <label for="plugin-install">Install plugin</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help" title="Help" aria-label="Help">?</a><br>
+                    <textarea id="plugin-install" class="code" name="plugin" cols="64" rows="2"></textarea>
+                </p>
+                <p><input type="submit" value="Upload" name="install_new"></p>
+            </form>
+        </div>
 
-		<div id="plugin_container" class="txp-container">
+        <div id="plugin_container" class="txp-container">
 
-			<form action="#" id="plugin_form" class="multi_edit_form" method="post" name="longform">
-				<div class="txp-listtables">
+            <form action="#" id="plugin_form" class="multi_edit_form" method="post" name="longform">
+                <div class="txp-listtables">
 
-					<table class="txp-list">
+                    <table class="txp-list">
 
-						<thead>
-							<tr>
-								<th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-								<th scope="col" class="asc name"><a href="#">Plugin</a></th>
-								<th scope="col" class="author"><a href="#">Author</a></th>
-								<th scope="col" class="version"><a href="#">Version</a></th>
-								<th scope="col" class="modified"><a href="#">Modified</a></th>
-								<th scope="col" class="description">Description</th>
-								<th scope="col" class="status"><a href="#">Active</a></th>
-								<th scope="col" class="load-order"><a href="#">Order</a></th>
-								<th scope="col" class="manage actions">Manage</th>
-							</tr>
-						</thead>
+                        <thead>
+                            <tr>
+                                <th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                                <th scope="col" class="asc name"><a href="#">Plugin</a></th>
+                                <th scope="col" class="author"><a href="#">Author</a></th>
+                                <th scope="col" class="version"><a href="#">Version</a></th>
+                                <th scope="col" class="modified"><a href="#">Modified</a></th>
+                                <th scope="col" class="description">Description</th>
+                                <th scope="col" class="status"><a href="#">Active</a></th>
+                                <th scope="col" class="load-order"><a href="#">Order</a></th>
+                                <th scope="col" class="manage actions">Manage</th>
+                            </tr>
+                        </thead>
 
-						<tbody>
-							<tr class="active">
-								<td class="multi-edit"><input type="checkbox" value="rah_external_output" name="selected[]"></td>
-								<th scope="row" class="name"><a href="secondary/admin-plugin_edit.html" title="Edit">rah_external_output</a></th>
-								<td class="author"><a href="http://rahforum.biz" rel="external">Jukka Svahn</a></td>
-								<td class="version">0.9</td>
-								<td class="modified">&#160;</td>
-								<td class="description">Output external content-type snippets</td>
-								<td class="status"><a href="#" title="disable">Yes</a></td>
-								<td class="load-order">5</td>
-								<td class="manage"><a class="plugin-help" href="secondary/admin-plugin_help.html">Help</a><span>&#160;&#124;&#160;</span><a class="plugin-prefs" href="#">Options</a></td>
-							</tr>
-							<tr>
-								<td class="multi-edit"><input type="checkbox" value="smd_browse_by" name="selected[]"></td>
-								<th scope="row" class="name"><a href="secondary/admin-plugin_edit.html" title="Edit">smd_browse_by</a></th>
-								<td class="author"><a href="http://stefdawson.com/" rel="external">Stef Dawson</a></td>
-								<td class="version">0.10</td>
-								<td class="modified"><span class="warning">Yes</span></td>
-								<td class="description">Browse by Category (+article Section) in admin side</td>
-								<td class="status"><a href="#" title="enable">No</a></td>
-								<td class="load-order">5</td>
-								<td class="manage"><a class="plugin-help" href="secondary/admin-plugin_help.html">Help</a></td>
-							</tr>
-						</tbody>
+                        <tbody>
+                            <tr class="active">
+                                <td class="multi-edit"><input type="checkbox" value="rah_external_output" name="selected[]"></td>
+                                <th scope="row" class="name"><a href="secondary/admin-plugin_edit.html" title="Edit">rah_external_output</a></th>
+                                <td class="author"><a href="http://rahforum.biz" rel="external">Jukka Svahn</a></td>
+                                <td class="version">0.9</td>
+                                <td class="modified">&#160;</td>
+                                <td class="description">Output external content-type snippets</td>
+                                <td class="status"><a href="#" title="disable">Yes</a></td>
+                                <td class="load-order">5</td>
+                                <td class="manage"><a class="plugin-help" href="secondary/admin-plugin_help.html">Help</a><span>&#160;&#124;&#160;</span><a class="plugin-prefs" href="#">Options</a></td>
+                            </tr>
+                            <tr>
+                                <td class="multi-edit"><input type="checkbox" value="smd_browse_by" name="selected[]"></td>
+                                <th scope="row" class="name"><a href="secondary/admin-plugin_edit.html" title="Edit">smd_browse_by</a></th>
+                                <td class="author"><a href="http://stefdawson.com/" rel="external">Stef Dawson</a></td>
+                                <td class="version">0.10</td>
+                                <td class="modified"><span class="warning">Yes</span></td>
+                                <td class="description">Browse by Category (+article Section) in admin side</td>
+                                <td class="status"><a href="#" title="enable">No</a></td>
+                                <td class="load-order">5</td>
+                                <td class="manage"><a class="plugin-help" href="secondary/admin-plugin_help.html">Help</a></td>
+                            </tr>
+                        </tbody>
 
-					</table>
-				</div><!-- /txp-listtables -->
+                    </table>
+                </div><!-- /txp-listtables -->
 
-				<div class="multi-edit">
-					<select name="edit_method">
-						<option value="" selected="selected">With selected&#8230;</option>
-						<option value="changestatus">Change status</option>
-						<option value="changeorder">Change order</option>
-						<option value="delete">Delete</option>
-					</select>
-					<div class="multi-option" id="multi-option-changeorder">
-						<select name="order">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5" selected="selected">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-						</select>
-					</div>
-					<input type="submit" value="Go">
-				</div>
+                <div class="multi-edit">
+                    <select name="edit_method">
+                        <option value="" selected="selected">With selected&#8230;</option>
+                        <option value="changestatus">Change status</option>
+                        <option value="changeorder">Change order</option>
+                        <option value="delete">Delete</option>
+                    </select>
+                    <div class="multi-option" id="multi-option-changeorder">
+                        <select name="order">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5" selected="selected">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Go">
+                </div>
 
-			</form>
+            </form>
 
-		</div><!-- /txp-container -->
-	</main><!-- /txp-body -->
+        </div><!-- /txp-container -->
+    </main><!-- /txp-body -->
 
-	<footer role="contentinfo" class="txp-footer">
-		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.6)</p>
-		<p class="pagejump"><a href="#">&#8593; Back to top</a></p>
-	</footer><!-- /txp-footer -->
+    <footer role="contentinfo" class="txp-footer">
+        <p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.6)</p>
+        <p class="pagejump"><a href="#">&#8593; Back to top</a></p>
+    </footer><!-- /txp-footer -->
 
 </body>
 </html>

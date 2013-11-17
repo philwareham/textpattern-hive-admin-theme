@@ -1,203 +1,202 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr">
 <head>
-	<meta charset="utf-8">
-	<meta name="robots" content="noindex, nofollow">
-	<title>Users - My Site &#124; Textpattern CMS</title>
-	<script src="/textpattern/vendors/jquery/jquery/jquery.js"></script>
-	<script src="/textpattern/vendors/jquery/ui/js/jquery-ui.js"></script>
-	<link rel="stylesheet" href="/textpattern/vendors/jquery/ui/css/textpattern/jquery-ui.css">
-	<link rel="stylesheet" href="../css/textpattern.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="generator" content="Textpattern CMS">
-	<script src="/textpattern/vendors/modernizr/modernizr/modernizr.js"></script>
-	<script src="../js/tinynav.min.js"></script>
-	<script src="../js/scripts.js"></script>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Users - My Site &#124; Textpattern CMS</title>
+    <script src="/textpattern/vendors/jquery/jquery/jquery.js"></script>
+    <script src="/textpattern/vendors/jquery/ui/js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/textpattern/vendors/jquery/ui/css/textpattern/jquery-ui.css">
+    <link rel="stylesheet" href="../css/textpattern.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="generator" content="Textpattern CMS">
+    <script src="../docs/assets/js/modernizr.js"></script>
+    <script src="../js/scripts.js"></script>
 
-	<script src="jquery-ui-testing.js"></script>
+    <script src="jquery-ui-testing.js"></script>
 
-	<!--[if lt IE 9]><script src="/textpattern/vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="../doc/assets/js/selectivizr.min.js"></script><![endif]-->
 
-	<!-- TEMPORARY -->
-	<style>
-		.ui-menu { width: 150px; }
-		.ui-menu:not(.jquery-ui-menu) { position: absolute; z-index: 1000; }
+    <!-- TEMPORARY -->
+    <style>
+        .ui-menu { width: 150px; }
+        .ui-menu:not(.jquery-ui-menu) { position: absolute; z-index: 1000; }
 
-		.txp-search .txp-search-button { margin-left: -.35em; border-radius: 0; padding-left: 1.75em; padding-right: 1.75em;}
-	</style>
+        .txp-search .txp-search-button { margin-left: -.35em; border-radius: 0; padding-left: 1.75em; padding-right: 1.75em;}
+    </style>
 </head>
 <body id="page-admin" class="admin">
 
-	<header role="banner" class="txp-header">
-		<h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
-		<p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
+    <header role="banner" class="txp-header">
+        <h1><a href="http://www.philwareham.co.uk/" title="View site" rel="external">My site</a></h1>
+        <p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Logout</a></p>
 
-		<nav role="navigation" aria-label="Navigation">
-			<ul class="data-dropdown untinynav">
-				<li class="dropdown"><a class="dropdown-toggle" href="content-article.html">Content</a>
-					<ul class="dropdown-menu">
-						<li><a href="content-category.html">Categories</a></li>
-						<li><a href="content-article.html">Write</a></li>
-						<li><a href="content-list.html">Articles</a></li>
-						<li><a href="content-image.html">Images</a></li>
-						<li><a href="content-file.html">Files</a></li>
-						<li><a href="content-link.html">Links</a></li>
-						<li><a href="content-discuss.html">Comments</a></li>
-					</ul>
-				</li>
-				<li class="dropdown"><a class="dropdown-toggle" href="presentation-page.html">Presentation</a>
-					<ul class="dropdown-menu">
-						<li><a href="presentation-section.html">Sections</a></li>
-						<li><a href="presentation-page.html">Pages</a></li>
-						<li><a href="presentation-form.html">Forms</a></li>
-						<li><a href="presentation-css.html">Styles</a></li>
-					</ul>
-				</li>
-				<li class="dropdown active"><a class="dropdown-toggle" href="admin-admin.html">Admin</a>
-					<ul class="dropdown-menu">
-						<li><a href="admin-diag.html">Diagnostics</a></li>
-						<li><a href="admin-prefs.html">Preferences</a></li>
-						<li><a href="admin-languages.html">Languages</a></li>
-						<li class="selected"><a href="admin-admin.html">Users</a></li>
-						<li><a href="admin-log.html">Visitor logs</a></li>
-						<li><a href="admin-plugin.html">Plugins</a></li>
-						<li><a href="admin-import.html">Import</a></li>
-					</ul>
-				</li>
-				<li class="dropdown"><a class="dropdown-toggle" href="#">Extensions</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Extension 1</a></li>
-						<li><a href="#">Extension 2</a></li>
-						<li><a href="#">Extension 3</a></li>
-						<li><a href="#">Extension 4</a></li>
-						<li><a href="#">Extension 5</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
+        <nav role="navigation" aria-label="Navigation">
+            <ul class="data-dropdown untinynav">
+                <li class="dropdown"><a class="dropdown-toggle" href="content-article.html">Content</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="content-category.html">Categories</a></li>
+                        <li><a href="content-article.html">Write</a></li>
+                        <li><a href="content-list.html">Articles</a></li>
+                        <li><a href="content-image.html">Images</a></li>
+                        <li><a href="content-file.html">Files</a></li>
+                        <li><a href="content-link.html">Links</a></li>
+                        <li><a href="content-discuss.html">Comments</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" href="presentation-page.html">Presentation</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="presentation-section.html">Sections</a></li>
+                        <li><a href="presentation-page.html">Pages</a></li>
+                        <li><a href="presentation-form.html">Forms</a></li>
+                        <li><a href="presentation-css.html">Styles</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown active"><a class="dropdown-toggle" href="admin-admin.html">Admin</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="admin-diag.html">Diagnostics</a></li>
+                        <li><a href="admin-prefs.html">Preferences</a></li>
+                        <li><a href="admin-languages.html">Languages</a></li>
+                        <li class="selected"><a href="admin-admin.html">Users</a></li>
+                        <li><a href="admin-log.html">Visitor logs</a></li>
+                        <li><a href="admin-plugin.html">Plugins</a></li>
+                        <li><a href="admin-import.html">Import</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" href="#">Extensions</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Extension 1</a></li>
+                        <li><a href="#">Extension 2</a></li>
+                        <li><a href="#">Extension 3</a></li>
+                        <li><a href="#">Extension 4</a></li>
+                        <li><a href="#">Extension 5</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
 
-		<div id="messagepane"><span role="alert" id="message" class="error"><span class="ui-icon ui-icon-closethick"></span> Username not found <a role="button" class="close" title="Close" aria-label="Close">&times;</a></span></div>
+        <div id="messagepane"><span role="alert" id="message" class="error"><span class="ui-icon ui-icon-closethick"></span> Username not found <a role="button" class="close" title="Close" aria-label="Close">&times;</a></span></div>
 
-	</header><!-- /txp-header -->
+    </header><!-- /txp-header -->
 
-	<main role="main" class="txp-body" aria-label="Main content">
+    <main role="main" class="txp-body" aria-label="Main content">
 
-		<div class="txp-layout-grid">
+        <div class="txp-layout-grid">
 
-			<div class="txp-layout-cell txp-layout-2-4">
-				<h1 class="txp-heading">Users</h1>
-			</div>
+            <div class="txp-layout-cell txp-layout-2-4">
+                <h1 class="txp-heading">Users</h1>
+            </div>
 
-			<div id="users_control" class="txp-layout-cell txp-layout-2-4">
-				<form role="search" method="get" action="#" class="txp-search">
-					<p>
-						<input type="text" placeholder="Search users…">
-						<button class="txp-search-button">Search</button>
-						<button>Search criteria</button>
-					</p>
-					<ul>
-						<li>
-							<input type="checkbox" id="search-crit1" name="search-crit1">
-							<label for="search-crit1">search_all</label>
-						</li>
-						<li>
-							<input type="checkbox" id="search-crit2" name="search-crit2">
-							<label for="search-crit2">ID#</label>
-						</li>
-						<li>
-							<input type="checkbox" id="search-crit3" name="search-crit3">
-							<label for="search-crit3">Login</label>
-						</li>
-						<li>
-							<input type="checkbox" id="search-crit4" name="search-crit4">
-							<label for="search-crit4">Real name</label>
-						</li>
-						<li>
-							<input type="checkbox" id="search-crit5" name="search-crit5">
-							<label for="search-crit5">Email</label>
-						</li>
-						<li>
-							<input type="checkbox" id="search-crit6" name="search-crit6">
-							<label for="search-crit6">Privileges</label>
-						</li>
-					</ul>
-				</form>
-			</div>
+            <div id="users_control" class="txp-layout-cell txp-layout-2-4">
+                <form role="search" method="get" action="#" class="txp-search">
+                    <p>
+                        <input type="text" placeholder="Search users…">
+                        <button class="txp-search-button">Search</button>
+                        <button>Search criteria</button>
+                    </p>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="search-crit1" name="search-crit1">
+                            <label for="search-crit1">search_all</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="search-crit2" name="search-crit2">
+                            <label for="search-crit2">ID#</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="search-crit3" name="search-crit3">
+                            <label for="search-crit3">Login</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="search-crit4" name="search-crit4">
+                            <label for="search-crit4">Real name</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="search-crit5" name="search-crit5">
+                            <label for="search-crit5">Email</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="search-crit6" name="search-crit6">
+                            <label for="search-crit6">Privileges</label>
+                        </li>
+                    </ul>
+                </form>
+            </div>
 
-			<div class="txp-layout-cell">
-				<p class="txp-buttons">
-					<a href="secondary/admin-password_edit.html">Change your password</a>
-					<a href="secondary/admin-admin_edit.html">Add new author</a>
-					<button id="detail-toggle">List options</button>
-				</p>
-			</div>
+            <div class="txp-layout-cell">
+                <p class="txp-buttons">
+                    <a href="secondary/admin-password_edit.html">Change your password</a>
+                    <a href="secondary/admin-admin_edit.html">Add new author</a>
+                    <button id="detail-toggle">List options</button>
+                </p>
+            </div>
 
-			<div class="txp-layout-cell">
+            <div class="txp-layout-cell">
 
-				<form action="#" id="users_form" class="multi_edit_form" method="post" name="longform">
-					<div class="txp-listtables">
+                <form action="#" id="users_form" class="multi_edit_form" method="post" name="longform">
+                    <div class="txp-listtables">
 
-						<table class="txp-list">
+                        <table class="txp-list">
 
-							<thead>
-								<tr>
-									<th title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-									<th class="asc name login-name"><a href="#">Login</a></th>
-									<th class="name real-name"><a href="#">Real name</a></th>
-									<th class="email"><a href="#">E-mail</a></th>
-									<th class="privs"><a href="#">Privileges</a></th>
-									<th class="date last-login modified"><a href="#">Last login</a></th>
-								</tr>
-							</thead>
+                            <thead>
+                                <tr>
+                                    <th title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                                    <th class="asc name login-name"><a href="#">Login</a></th>
+                                    <th class="name real-name"><a href="#">Real name</a></th>
+                                    <th class="email"><a href="#">E-mail</a></th>
+                                    <th class="privs"><a href="#">Privileges</a></th>
+                                    <th class="date last-login modified"><a href="#">Last login</a></th>
+                                </tr>
+                            </thead>
 
-							<tbody>
-								<tr>
-									<td class="multi-edit">&#160;</td>
-									<td class="name login-name"><a href="secondary/admin-admin_edit.html" title="Edit">admin</a></td>
-									<td class="name real-name">Phil Wareham</td>
-									<td class="email"><a href="mailto:phil@designhive.com">phil@designhive.com</a></td>
-									<td class="privs">Publisher</td>
-									<td class="date last-login modified">Jun&#160;2012</td>
-								</tr>
-								<tr>
-									<td class="multi-edit"><input type="checkbox" value="testuser" name="selected[]" class="checkbox"></td>
-									<td class="name login-name"><a href="secondary/admin-admin_edit.html" title="Edit">anon</a></td>
-									<td class="name real-name">A Non</td>
-									<td class="email"><a href="mailto:anon@anon.com">anon@anon.com</a></td>
-									<td class="privs">Freelancer</td>
-									<td class="date last-login modified">&#160;</td>
-								</tr>
-							</tbody>
+                            <tbody>
+                                <tr>
+                                    <td class="multi-edit">&#160;</td>
+                                    <td class="name login-name"><a href="secondary/admin-admin_edit.html" title="Edit">admin</a></td>
+                                    <td class="name real-name">Phil Wareham</td>
+                                    <td class="email"><a href="mailto:phil@designhive.com">phil@designhive.com</a></td>
+                                    <td class="privs">Publisher</td>
+                                    <td class="date last-login modified">Jun&#160;2012</td>
+                                </tr>
+                                <tr>
+                                    <td class="multi-edit"><input type="checkbox" value="testuser" name="selected[]" class="checkbox"></td>
+                                    <td class="name login-name"><a href="secondary/admin-admin_edit.html" title="Edit">anon</a></td>
+                                    <td class="name real-name">A Non</td>
+                                    <td class="email"><a href="mailto:anon@anon.com">anon@anon.com</a></td>
+                                    <td class="privs">Freelancer</td>
+                                    <td class="date last-login modified">&#160;</td>
+                                </tr>
+                            </tbody>
 
-						</table>
+                        </table>
 
-					</div><!-- /txp-listtables -->
+                    </div><!-- /txp-listtables -->
 
-					<div class="multi-edit">
-						<select name="edit_method">
-							<option value="" selected="selected">With selected&#8230;</option>
-							<option value="changeprivilege">Change privilege</option>
-							<option value="resetpassword">Reset password</option>
-							<option value="delete">Delete</option>
-						</select>
-					</div>
+                    <div class="multi-edit">
+                        <select name="edit_method">
+                            <option value="" selected="selected">With selected&#8230;</option>
+                            <option value="changeprivilege">Change privilege</option>
+                            <option value="resetpassword">Reset password</option>
+                            <option value="delete">Delete</option>
+                        </select>
+                    </div>
 
-				</form>
+                </form>
 
-				<div class="txp-navigation" id="users_navigation">
-					<p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
-				</div>
+                <div class="txp-navigation" id="users_navigation">
+                    <p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
+                </div>
 
-			</div>
+            </div>
 
-		</div><!-- /txp-layout-grid -->
-	</main>
+        </div><!-- /txp-layout-grid -->
+    </main>
 
-	<footer role="contentinfo" class="txp-footer">
-		<p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.6)</p>
-		<p class="pagejump"><a href="#">&#8593; Back to top</a></p>
-	</footer><!-- /txp-footer -->
+    <footer role="contentinfo" class="txp-footer">
+        <p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.6)</p>
+        <p class="pagejump"><a href="#">&#8593; Back to top</a></p>
+    </footer><!-- /txp-footer -->
 
 </body>
 </html>
