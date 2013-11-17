@@ -90,7 +90,14 @@ module.exports = function (grunt) {
 
                 files: [
                     {
-                        'dist/hive/assets/js/main.js': ['src/assets/js/main.js']
+                        'dist/hive/assets/js/main.js': ['src/assets/js/main.js'],
+                        'docs/assets/js/prettify/prettify.js': ['bower_components/google-code-prettify/src/prettify.js']
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/google-code-prettify/src/',
+                        src: 'lang-*.js',
+                        dest: 'docs/assets/js/prettify/'
                     }
                 ]
             }
