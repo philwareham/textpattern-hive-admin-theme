@@ -19,7 +19,6 @@ input[type="button"],
     @include border-radius;
     @include box-shadow($inset-highlighting);
     @include background-clip;
-    @include box-sizing(border-box);
     @include gradient-linear($color-gradient-from, $color-gradient-to);
     @include transition(box-shadow 0.2s linear);
 
@@ -85,7 +84,7 @@ button.destroy {
 
     border-color: darken($color-error-text, 5%);
     padding: 0 0.3076923em; // 4px / 13px
-    height: 1.5384615em; // 20px / 13px
+    height: 1.4615385em; // 19px / 13px
     color: #ffffff;
 
     &:hover {
