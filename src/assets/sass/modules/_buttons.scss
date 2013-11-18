@@ -39,6 +39,7 @@ input[type="button"],
         @include gradient-linear(lighten($color-gradient-from, 4%), lighten($color-gradient-to, 4%));
 
         border-color: darken($color-gradient-border, 13%);
+        color: $color-text;
         text-decoration: none;
     }
 
@@ -109,7 +110,7 @@ button.destroy {
     display: inline-block;
     border: 1px solid;
     padding: 0.5384615em 0.75em;
-    height: 2.3846154em; // 31px / 13px
+    height: 2.4615384em; // 32px / 13px
 }
 
 /* button sets */
