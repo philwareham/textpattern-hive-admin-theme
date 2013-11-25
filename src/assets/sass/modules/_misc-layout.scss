@@ -77,9 +77,7 @@ div.multi-edit {
 }
 
 .disabled {
-    opacity: 0.33;
-    /* transparency support for IE8 */
-    filter: alpha(opacity=33);
+    @include opacity(0.33);
 }
 
 /* list navigators on list pages */

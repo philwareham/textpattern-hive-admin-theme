@@ -121,33 +121,12 @@
 
 /* flash the alert */
 
-@-webkit-keyframes messageflash {
-    0% {opacity: 0;}    
-    50%, 100% {opacity: 1;}    
-    75% {opacity: 0.5;}
-}
-
-@-moz-keyframes messageflash {
-    0% {opacity: 0;}    
-    50%, 100% {opacity: 1;}    
-    75% {opacity: 0.5;}
-}
-
-@-o-keyframes messageflash {
-    0% {opacity: 0;}    
-    50%, 100% {opacity: 1;}    
-    75% {opacity: 0.5;}
-}
-
-@keyframes messageflash {
+@include keyframes(messageflash) {
     0% {opacity: 0;}    
     50%, 100% {opacity: 1;}    
     75% {opacity: 0.5;}
 }
 
 .messageflash {
-    -webkit-animation: messageflash 1s;
-       -moz-animation: messageflash 1s;
-         -o-animation: messageflash 1s;
-            animation: messageflash 1s;
+    @include animation(messageflash 1s);
 }
