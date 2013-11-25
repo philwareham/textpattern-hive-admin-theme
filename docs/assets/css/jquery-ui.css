@@ -37,13 +37,12 @@
 }
 
 .ui-helper-zfix {
-  position: absolute;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  filter: Alpha(Opacity=0);
 }
 
 .ui-front {
@@ -58,7 +57,7 @@
 
 .ui-widget-content {
   border: 1px solid #cccccc;
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .ui-widget-header {
@@ -86,12 +85,12 @@ a.ui-state-default:focus {
 
 .ui-state-hover,
 .ui-state-focus {
-  border-color: #999999;
+  border-color: #aaaaaa;
   background-color: #f7f7f7;
 }
 
 .ui-state-active {
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .ui-selecting {
@@ -120,16 +119,16 @@ a.ui-state-default:focus {
 }
 
 .ui-priority-secondary {
-  font-weight: normal;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=66);
   opacity: 0.66;
-  filter: Alpha(Opacity=66);
+  font-weight: normal;
 }
 
 .ui-state-disabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=33);
+  opacity: 0.33;
   background-image: none;
   cursor: default !important;
-  opacity: 0.33;
-  filter: Alpha(Opacity=33);
 }
 .ui-state-disabled a {
   text-decoration: none;
@@ -158,11 +157,11 @@ a.ui-state-default:focus {
   -webkit-border-radius: 0.5384615em;
   -moz-border-radius: 0.5384615em;
   border-radius: 0.5384615em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=33);
+  opacity: 0.33;
   margin: -0.5em 0 0 -0.5em;
   padding: 0.5em;
   background-color: #999999;
-  opacity: 0.33;
-  filter: Alpha(Opacity=33);
 }
 
 /* ==========================================================================
