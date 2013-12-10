@@ -355,11 +355,11 @@ a.ui-state-default:focus {
   -webkit-appearance: none;
   position: relative;
   display: inline-block;
+  overflow: visible;
   margin: 0 0.1em 0 0;
   border: solid 1px #cccccc;
-  padding: 0;
+  padding: 0.5384615em 0.75em;
   height: 2.4615384em;
-  overflow: visible;
   font-family: sans-serif;
   text-align: center;
   vertical-align: baseline;
@@ -850,6 +850,62 @@ html[dir="rtl"] .ui-datepicker-group-middle .ui-datepicker-header {
   .ui-progressbar-indeterminate .ui-progressbar-value {
     background-image: url("images/ui-progressbar-indeterminate@2x.gif") !important;
   }
+}
+
+/* Selectmenu - http://jqueryui.com/selectmenu/
+   ========================================================================== */
+.ui-selectmenu-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.ui-selectmenu-menu .ui-menu {
+  padding-bottom: 1px;
+  overflow: auto;
+}
+
+.ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup {
+  margin: 0.5em 0 0 0;
+  padding: 2px 0.4em;
+  border: 0;
+  height: auto;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.ui-selectmenu-open {
+  display: block;
+}
+
+.ui-selectmenu-button {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ui-selectmenu-button span.ui-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.5em;
+  left: auto;
+  margin-top: -8px;
+}
+
+.ui-selectmenu-button span.ui-selectmenu-text {
+  display: block;
+  text-align: left;
+  padding: 0.4em 2.1em 0.4em 1em;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Slider - http://jqueryui.com/slider/
