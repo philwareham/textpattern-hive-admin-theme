@@ -30,6 +30,13 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
+/* disable IE10 double-tap zoom for certain elements */
+a,
+input,
+button {
+    -ms-touch-action: none !important;
+}
+
 
 /* Clearfix
    ========================================================================== */
