@@ -6,7 +6,7 @@
 
 
 // SVG images with fallback for older browsers (via Modernizr)
-        
+
 @mixin svg-graphic($imgfilename, $imgtype, $imgwidth, $imgheight) {
     .no-svg & {
         background-image: url('../img/' + $imgfilename + '.' + $imgtype);

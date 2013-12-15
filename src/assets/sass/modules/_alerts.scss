@@ -78,15 +78,15 @@
             max-width: ($text-column - 3.84615em);
             color: #fff;
         }
-    
+
         &.success {
             background: $color-success-text;
         }
-    
+
         &.warning {
             background: $color-warning-text;
         }
-    
+
         &.error {
             background: $color-error-text;
         }
@@ -122,8 +122,8 @@
 /* flash the alert */
 
 @include keyframes(messageflash) {
-    0% {opacity: 0;}    
-    50%, 100% {opacity: 1;}    
+    0% {opacity: 0;}
+    50%, 100% {opacity: 1;}
     75% {opacity: 0.5;}
 }
 
