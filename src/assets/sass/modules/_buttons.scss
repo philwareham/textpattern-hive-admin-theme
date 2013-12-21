@@ -54,6 +54,7 @@ input[type="button"],
     &:focus {
         @include box-shadow($inset-highlighting, 0 0 7px $color-link-focus);
 
+        border-color: $color-link-hover;
         outline: 0;
     }
 }
@@ -78,6 +79,10 @@ a.publish {
         @include gradient-linear(lighten($color-gradient2-from, 2%), lighten($color-gradient2-to, 2%));
 
         border: 1px solid darken($color-gradient2-to, 10%);
+    }
+
+    &:focus {
+        border-color: $color-link-hover;
     }
 }
 
@@ -104,6 +109,10 @@ button.destroy {
 
         border-color: darken($color-error-text, 12%);
         color: darken(#ffffff, 10%);
+    }
+
+    &:focus {
+        border-color: $color-link-hover;
     }
 }
 
@@ -185,22 +194,5 @@ ul.nav-tertiary {
         @include gradient-linear(#c7dbfa, #b0cbf7);
 
         border-color: #6b8fe8;
-    }
-}
-
-/* focus fallback for browsers that don't support `box-shadow` */
-.no-boxshadow {
-    button,
-    input[type="button"],
-    input[type="reset"],
-    input[type="submit"],
-    .txp-logout a,
-    .action-create a,
-    .navlink,
-    .navlink-active,
-    .txp-buttons a {
-        &:focus {
-            outline: thin dotted $color-link-focus;
-        }
     }
 }
