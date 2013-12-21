@@ -87,6 +87,12 @@ textarea {
     height: 2.4615384em; // 32px / 13px
     max-width: 100%;
     background: #ffffff;
+
+    &:focus {
+        @include box-shadow(0 0 7px $color-link-focus);
+
+        outline: 0;
+    }
 }
 
 input[type="color"] {
@@ -223,8 +229,8 @@ input {
     }
 }
 
-/* better focus glows, if `box-shadow` is supported */
-.boxshadow {
+/* focus fallback for browsers that don't support `box-shadow` */
+.no-boxshadow {
     input[type="color"],
     input[type="date"],
     input[type="datetime"],
@@ -242,9 +248,7 @@ input {
     select,
     textarea {
         &:focus {
-            @include box-shadow(0 0 7px $color-link-focus);
-
-            outline: 0;
+            outline: thin dotted $color-link-focus;
         }
     }
 }

@@ -50,6 +50,12 @@ input[type="button"],
         color: darken($color-text, 10%);
         text-decoration: none;
     }
+
+    &:focus {
+        @include box-shadow($inset-highlighting, 0 0 7px $color-link-focus);
+
+        outline: 0;
+    }
 }
 
 /* primary buttons */
@@ -182,8 +188,8 @@ ul.nav-tertiary {
     }
 }
 
-/* better focus glows, if `box-shadow` is supported */
-.boxshadow {
+/* focus fallback for browsers that don't support `box-shadow` */
+.no-boxshadow {
     button,
     input[type="button"],
     input[type="reset"],
@@ -194,9 +200,7 @@ ul.nav-tertiary {
     .navlink-active,
     .txp-buttons a {
         &:focus {
-            @include box-shadow($inset-highlighting, 0 0 7px $color-link-focus);
-
-            outline: 0;
+            outline: thin dotted $color-link-focus;
         }
     }
 }
