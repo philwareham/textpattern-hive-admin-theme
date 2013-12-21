@@ -242,7 +242,7 @@ input {
     select,
     textarea {
         &:focus {
-            @include box-shadow(0 0 7px $color-link-hover);
+            @include box-shadow(0 0 7px $color-link-focus);
 
             outline: 0;
         }

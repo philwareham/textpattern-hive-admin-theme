@@ -194,7 +194,7 @@ ul.nav-tertiary {
     .navlink-active,
     .txp-buttons a {
         &:focus {
-            @include box-shadow($inset-highlighting, 0 0 7px $color-link-hover);
+            @include box-shadow($inset-highlighting, 0 0 7px $color-link-focus);
 
             outline: 0;
         }

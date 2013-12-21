@@ -42,8 +42,10 @@ svg:not(:root) {
     background: #fff;
 
     a:hover & {
-        @include box-shadow(0 0 0.5em rgba($color-link-hover, 0.4));
-
         border: solid 1px $color-link-hover;
+    }
+
+    a:focus & {
+        @include box-shadow(0 0 0.5em rgba($color-link-focus, 0.4));
     }
 }
