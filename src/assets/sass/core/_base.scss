@@ -30,11 +30,11 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
-/* disable IE10 double-tap zoom for certain elements */
+/* remove tap delay in IE10+ */
 a,
 input,
 button {
-    -ms-touch-action: none !important;
+    -ms-touch-action: none;
 }
 
 
