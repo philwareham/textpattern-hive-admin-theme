@@ -35,11 +35,11 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
-/* remove tap delay in IE10+ */
+/* remove tap delay in IE10+ (and proposed for other browsers) */
 a,
 input,
 button {
-    -ms-touch-action: none;
+    @include touch-action;
 }
 
 
