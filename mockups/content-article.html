@@ -125,7 +125,7 @@
                             <p class="override-form">
                                 <label for="override-form">Override form</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=override_form&#38;language=en-gb" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
                                 <select id="override-form" name="override_form">
-                                    <option value="" selected="selected"></option>
+                                    <option value="" selected="selected">&#160;</option>
                                     <option value="article_listing">article_listing</option>
                                     <option value="comments_display">comments_display</option>
                                     <option value="lofi">lofi</option>
@@ -190,34 +190,17 @@
             <div class="txp-layout-4col-cell-2-3">
                 <div role="region" id="main_content">
 
-                    <div class="jquery-ui-tabs ui-tabs ui-widget ui-widget-content ui-corner-all" style="margin-top:1em;border-bottom:1px solid #ccc;">
-                        <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist" style="font-size:11px;line-height:15px;font-weight:normal;">
-                            <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" aria-controls="tabgroup1-tab1" aria-labelledby="ui-id-30" aria-selected="true">
-                                <a href="#" class="ui-tabs-anchor" role="presentation" id="ui-id-30" title="Edit article text">Text</a>
-                            </li>
-                            <li class="ui-state-default ui-corner-top" role="tab" aria-controls="tabgroup1-tab2" aria-labelledby="ui-id-31" aria-selected="false">
-                                <a href="#" class="ui-tabs-anchor" role="presentation" id="ui-id-31" title="View HTML markup">HTML</a>
-                            </li>
-                            <li class="ui-state-default ui-corner-top" role="tab" aria-controls="tabgroup1-tab3" aria-labelledby="ui-id-32" aria-selected="false">
-                                <a href="#" class="ui-tabs-anchor" role="presentation" id="ui-id-32" title="Preview article">Preview</a>
-                            </li>
+                    <div id="view_modes">
+                        <ul>
+                            <li id="tab-text" class="active"><a data-view-mode="text" role="button" aria-pressed="true" title="Edit article text" href="#">Text</a></li>
+                            <li id="tab-html"><a data-view-mode="html" role="button" aria-pressed="false" title="View HTML markup" href="#">HTML</a></li>
+                            <li id="tab-preview"><a data-view-mode="preview" role="button" aria-pressed="false" title="Preview article" href="#">Preview</a></li>
                         </ul>
                     </div>
 
-
-
-
-                    <!-- <div id="view_modes">
-                        <ul>
-                            <li id="tab-text" class="active"><a data-view-mode="text" role="button" aria-pressed="true" title="Edit article text" href="#">Edit article text</a></li>
-                            <li id="tab-html"><a data-view-mode="html" role="button" aria-pressed="false" title="View HTML markup" href="#">View HTML markup</a></li>
-                            <li id="tab-preview"><a data-view-mode="preview" role="button" aria-pressed="false" title="Preview article" href="#">Preview article</a></li>
-                        </ul>
-                    </div> -->
-
                     <div class="text">
                         <p class="title">
-                            <label for="title">Title</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=title&amp;language=en-gb" role="button" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br />
+                            <label for="title">Title</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=title&amp;language=en-gb" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br />
                             <input type="text" id="title" name="Title" value="Example article title" size="48">
                             <span id="article_partial_article_clone" class="txp-actions"><a id="txp_clone" class="article-clone" href="#">Duplicate</a></span>
                             <span id="article_partial_article_view" class="txp-actions"><a class="article-view" href="#">View</a></span>
@@ -274,7 +257,7 @@
                                 <p class="category category-1">
                                     <label for="category-1">Category 1</label> <span class="edit category-edit"><span aria-hidden="true">[</span><a href="content-category.html">Edit</a><span aria-hidden="true">]</span></span><br>
                                     <select id="category-1" name="Category1">
-                                        <option value="" selected="selected">&nbsp;</option>
+                                        <option value="" selected="selected">&#160;</option>
                                         <option value="hope-for-the-future">Hope for the Future</option>
                                         <option value="meaningful-labor">Meaningful Labor</option>
                                         <option value="reciprocal-affection">Reciprocal Affection</option>
@@ -283,7 +266,7 @@
                                 <p class="category category-2">
                                     <label for="category-2">Category 2</label><br>
                                     <select id="category-2" name="Category2">
-                                        <option value="" selected="selected">&nbsp;</option>
+                                        <option value="" selected="selected">&#160;</option>
                                         <option value="hope-for-the-future">Hope for the Future</option>
                                         <option value="meaningful-labor">Meaningful Labor</option>
                                         <option value="reciprocal-affection">Reciprocal Affection</option>
