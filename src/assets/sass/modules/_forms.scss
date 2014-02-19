@@ -46,11 +46,6 @@ textarea {
     }
 }
 
-/* styling for placeholder polyfill fallback */
-.placeholder {
-    color: $color-text-footnote;
-}
-
 /* remove inner padding and border in Firefox 4+ */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -107,7 +102,7 @@ input[type="number"]::-webkit-outer-spin-button {
     height: auto;
 }
 
-/* address box sizing set to `content-box` and excess padding in IE 8-9 */
+/* address excess padding in IE 8-9 */
 input[type="checkbox"],
 input[type="radio"] {
     padding: 0;

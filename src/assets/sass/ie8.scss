@@ -66,6 +66,16 @@
     @include grid-span(9, 4);
 }
 
+/* fallbacks for lack of RGBa/opacity support in IE 8 */
+
+.close {
+    color: #ccc;
+
+    &:hover {
+        color: #ffffff;
+    }
+}
+
 /* fallbacks for lack of SVG support in IE 8 */
 
 .welcome h1 {

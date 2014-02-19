@@ -74,9 +74,9 @@
 
             display: inline-block;
             margin: 0 auto;
-            padding: 0.53846em 2.84615em 0.53846em 1em;
-            max-width: ($text-column - 3.84615em);
-            color: #fff;
+            padding: 0.5384615em 2.8461538em 0.5384615em 1em;
+            max-width: ($text-column - 3.8461538em);
+            color: #ffffff;
         }
 
         &.success {
@@ -97,25 +97,17 @@
 
 .close {
     position: absolute;
-    top: 0.27778em; // 5px / 18px
-    right: 0.72222em;
+    top: 0.2777778em; // 5px / 18px
+    right: 0.7222222em;
     text-decoration: none;
-    color: #ccc;
+    color: transparentize(#ffffff, 0.4);
     font-size: 1.38461em; // 18px / 13px
     font-weight: bold;
 
-    .rgba & {
-        color: transparentize(#fff, 0.4);
-    }
-
     &:hover {
         text-decoration: none;
-        color: #fff;
+        color: transparentize(#ffffff, 0.2);
         cursor: pointer;
-
-        .rgba & {
-            color: transparentize(#fff, 0.2);
-        }
     }
 }
 

@@ -313,16 +313,13 @@ body#page-setup {
         width: 1.5em; // 24px / 16px
         height: 1.5em; // 24px / 16px
         background: $color-gradient-from no-repeat 50% 50%;
+        background-size: 1.5em 1.5em;
     }
 
     a:hover,
     li.active a {
         background-color: $color-highlight-box;
     }
-}
-
-#view_modes a {
-    background-size: 1.5em 1.5em;
 }
 
 #tab-text a {
