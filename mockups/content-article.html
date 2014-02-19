@@ -123,7 +123,7 @@
                                 </select>
                             </p>
                             <p class="override-form">
-                                <label for="override-form">Override form</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=override_form&#38;language=en-gb" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+                                <label for="override-form">Override form</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=override_form&#38;language=en-gb" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
                                 <select id="override-form" name="override_form">
                                     <option value="" selected="selected"></option>
                                     <option value="article_listing">article_listing</option>
@@ -140,11 +140,11 @@
                         <h3 id="meta_group-label" class="txp-summary expanded"><a href="#meta" role="button" aria-controls="meta" aria-pressed="true">Meta</a></h3>
                         <div role="group" id="meta" class="toggle" aria-expanded="true">
                             <p class="url-title">
-                                <label for="url-title">URL-only title</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=url_title&#38;language=en-gb" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+                                <label for="url-title">URL-only title</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=url_title&#38;language=en-gb" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
                                 <input type="text" value="" name="url_title" size="32" id="url-title">
                             </p>
                             <p class="keywords">
-                                <label for="keywords">Keywords</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=keywords&#38;language=en-gb" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+                                <label for="keywords">Keywords</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=keywords&#38;language=en-gb" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
                                 <textarea id="keywords" name="Keywords" cols="16" rows="4"></textarea>
                             </p>
                         </div>
@@ -154,7 +154,7 @@
                         <h3 id="image_group-label" class="txp-summary expanded"><a href="#image" role="button" aria-controls="image" aria-pressed="true">Article image</a></h3>
                         <div role="group" id="image" class="toggle" aria-expanded="true">
                             <p class="article-image">
-                                <label for="article-image">Article image</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=article_image&#38;language=en-gb" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+                                <label for="article-image">Article image</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=article_image&#38;language=en-gb" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
                                 <input type="text" value="" name="Image" size="32" id="article-image">
                             </p>
                         </div>
@@ -217,16 +217,17 @@
 
                     <div class="text">
                         <p class="title">
-                            <label for="title">Title</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=title&#38;language=en-gb" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
-                            <input type="text" id="title" name="Title" value="Example article title" size="40">
-                            <span id="article_partial_article_view" class="txp-actions"><a href="#" class="article-view">View</a></span>
+                            <label for="title">Title</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=title&amp;language=en-gb" role="button" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br />
+                            <input type="text" id="title" name="Title" value="Example article title" size="48">
+                            <span id="article_partial_article_clone" class="txp-actions"><a id="txp_clone" class="article-clone" href="#">Duplicate</a></span>
+                            <span id="article_partial_article_view" class="txp-actions"><a class="article-view" href="#">View</a></span>
                         </p>
                         <p class="body">
-                            <label for="body">Body</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=body&#38;language=en-gb" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+                            <label for="body">Body</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=body&#38;language=en-gb" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
                             <textarea id="body" name="Body" cols="64" rows="24"></textarea>
                         </p>
                         <p class="excerpt">
-                            <label for="excerpt">Excerpt</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=excerpt&#38;language=en-gb" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
+                            <label for="excerpt">Excerpt</label>&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=excerpt&#38;language=en-gb" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a><br>
                             <textarea id="excerpt" name="Excerpt" cols="64" rows="8"></textarea>
                         </p>
                         <p class="author">
@@ -319,7 +320,7 @@
                                         <input type="checkbox" name="publish_now" value="1" id="publish_now" class="checkbox">
                                         <label for="publish_now">Set timestamp to now&#8230;</label>
                                     </p>
-                                    <p class="publish-at">&#8230;or publish at&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=timestamp&#38;language=en-gb" class="pophelp" title="Help" aria-label="Help" rel="help">?</a></p>
+                                    <p class="publish-at">&#8230;or publish at&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=timestamp&#38;language=en-gb" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">?</a></p>
                                     <p class="date posted created"><span class="txp-label-fixed">Date</span><br>
                                         <input type="text" name="year" value="2011" size="4" maxlength="4" class="edit year" title="Year" placeholder="yyyy"> /
                                         <input type="text" name="month" value="07" size="2" maxlength="2" class="edit month" title="Month" placeholder="mm"> /

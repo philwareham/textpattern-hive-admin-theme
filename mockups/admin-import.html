@@ -77,7 +77,7 @@
                 <div class="txp-edit">
                     <h2>Import content from other publishing tools</h2>
                     <p class="edit-import-from">
-                        <span class="txp-label"><label for="import_from">Import from</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+                        <span class="txp-label"><label for="import_from">Import from</label>&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">?</a></span>
                         <span class="txp-value">
                             <select id="import_from" name="import_tool" onchange="showHideFields(this.value);">
                                 <option value=""></option>
@@ -90,7 +90,7 @@
                         </span>
                     </p>
                     <p class="edit-import-section">
-                        <span class="txp-label"><label for="import_section">Section to import into</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+                        <span class="txp-label"><label for="import_section">Section to import into</label>&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">?</a></span>
                         <span class="txp-value">
                             <select id="import_section" name="import_section">
                                 <option value="" selected="selected"></option>
@@ -100,7 +100,7 @@
                         </span>
                     </p>
                     <p class="edit-import-status">
-                        <span class="txp-label"><label for="import_status">Default article status</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+                        <span class="txp-label"><label for="import_status">Default article status</label>&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">?</a></span>
                         <span class="txp-value">
                             <select id="import_status">
                                 <option value="4">Live</option>
@@ -111,41 +111,41 @@
                         </span>
                     </p>
                     <p class="edit-import-comment">
-                        <span class="txp-label"><label for="import_comment">Default comments invite</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+                        <span class="txp-label"><label for="import_comment">Default comments invite</label>&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">?</a></span>
                         <span class="txp-value"><input type="text" value="Comments" name="import_comments_invite" id="import_comment" size="32"></span>
                     </p>
                     <div id="databased">
                         <h2>Database data</h2>
                         <p class="edit-import-database">
-                            <span class="txp-label"><label for="import_database">Database name</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+                            <span class="txp-label"><label for="import_database">Database name</label>&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">?</a></span>
                             <span class="txp-value"><input type="text" value="" name="importdb" id="import_database" size="32"></span>
                         </p>
                         <p class="edit-import-login">
-                            <span class="txp-label"><label for="import_login">MySQL user</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+                            <span class="txp-label"><label for="import_login">MySQL user</label>&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">?</a></span>
                             <span class="txp-value"><input type="text" value="" name="importdblogin" id="import_login" size="32"></span>
                         </p>
                         <p class="edit-import-password">
-                            <span class="txp-label"><label for="import_password">MySQL password</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+                            <span class="txp-label"><label for="import_password">MySQL password</label>&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">?</a></span>
                             <span class="txp-value"><input type="text" value="" name="importdbpass" id="import_password" size="32"></span>
                         </p>
                         <p class="edit-import-host">
-                            <span class="txp-label"><label for="import_host">MySQL host</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+                            <span class="txp-label"><label for="import_host">MySQL host</label>&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">?</a></span>
                             <span class="txp-value"><input type="text" value="" name="importdbhost" id="import_host" size="32"></span>
                         </p>
                     </div>
                     <div id="mtblogid">
                         <p class="edit-import-blogid">
-                            <span class="txp-label"><label for="import_blogid">Weblog ID</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+                            <span class="txp-label"><label for="import_blogid">Weblog ID</label>&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">?</a></span>
                             <span class="txp-value"><input type="text" value="" name="import_blog_id" id="import_blogid" size="32"></span>
                         </p>
                     </div>
                     <div id="wponly">
                         <p class="edit-import-wpprefix">
-                            <span class="txp-label"><label for="import_wpprefix">Tables prefix (if any)</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+                            <span class="txp-label"><label for="import_wpprefix">Tables prefix (if any)</label>&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">?</a></span>
                             <span class="txp-value"><input type="text" value="wp_" name="wpdbprefix" id="import_wpprefix" size="32"></span>
                         </p>
                         <p class="edit-import-wpdbcharset">
-                            <span class="txp-label"><label for="import_wpdbcharset">Database character set</label>&#160;<a rel="help" target="_blank" href="#" class="pophelp" title="Help" aria-label="Help">?</a></span>
+                            <span class="txp-label"><label for="import_wpdbcharset">Database character set</label>&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">?</a></span>
                             <span class="txp-value">
                                 <select id="import_wpdbcharset" name="wpdbcharset">
                                     <option value="utf8" selected="selected">utf8</option>
