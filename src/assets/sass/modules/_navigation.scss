@@ -42,11 +42,7 @@
     display: block;
     float: left;
     border-right: 1px solid $color-gradient2-to;
-    background: #fcdc7f;
-
-    .rgba & {
-        background: rgba(#ffffff, 0.2);
-    }
+    background: rgba(#ffffff, 0.2);
 
     &:first-child {
         border-left: 1px solid $color-gradient2-to;
@@ -63,21 +59,11 @@
     }
 
     &:hover a.dropdown-toggle {
-        background: #fcdc7f;
-
-        .rgba & {
-            background: rgba(#ffffff, 0.2);
-        }
+        background: rgba(#ffffff, 0.2);
     }
-}
 
-.dropdown.active {
-    a.dropdown-toggle {
-        background: #fcdc7f;
-
-        .rgba & {
-            background: rgba(#ffffff, 0.2);
-        }
+    &.active a.dropdown-toggle {
+        background: rgba(#ffffff, 0.2);
     }
 }
 

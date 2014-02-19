@@ -76,6 +76,18 @@
     }
 }
 
+.dropdown {
+    background: #fcdc7f;
+
+    &:hover a.dropdown-toggle {
+        background: #fcdc7f;
+    }
+
+    &.active a.dropdown-toggle {
+        background: #fcdc7f;
+    }
+}
+
 /* fallbacks for lack of SVG support in IE 8 */
 
 .welcome h1 {
