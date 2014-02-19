@@ -4,7 +4,7 @@
  * Textpattern Content Management System
  * http://textpattern.com
  *
- * Copyright (C) 2013 The Textpattern Development Team
+ * Copyright (C) 2014 The Textpattern Development Team
  *
  * This file is part of Textpattern.
  *
@@ -30,7 +30,7 @@ class hive_theme extends theme
 {
 	function html_head()
 	{
-		$out[] = '<link rel="stylesheet" href="vendors/jquery/ui/css/textpattern/jquery-ui.css">';
+		$out[] = '<link rel="stylesheet" href="vendors/jquery/ui/css/textpattern/jquery-ui.min.css">';
 		$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/textpattern.min.css">';
 
 		// Start of custom CSS toggles (see README.textile for usage instructions).
@@ -95,7 +95,11 @@ class hive_theme extends theme
 		$out[] = '<meta name="apple-mobile-web-app-title" content="'.htmlspecialchars($GLOBALS["prefs"]["sitename"]).'">';
 		$out[] = '<script src="vendors/modernizr/modernizr/modernizr.js"></script>';
 		$out[] = '<script src="'.$this->url.'assets/js/main.js"></script>';
-		$out[] = '<!--[if lt IE 9]><script src="vendors/keithclark/selectivizr/selectivizr.min.js"></script><![endif]-->'.n;
+		$out[] = '<!--[if lt IE 9]>';
+		$out[] = '<script src="vendors/keithclark/selectivizr/selectivizr.min.js"></script>';
+		$out[] = '<link rel="stylesheet" href="vendors/jquery/ui/css/textpattern/jquery-ui-ie8.min.css">';
+		$out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/ie8.min.css">';
+		$out[] = '<![endif]-->'.n;
 
 		return join(n, $out);
 	}

@@ -15,10 +15,11 @@ ul {
 }
 
 /* remove margins from nested lists */
-ul ul,
-ol ol,
-dl dl {
-    margin: 0;
+li {
+    > ul,
+    > ol {
+        margin: 0;
+    }
 }
 
 dd {
@@ -30,16 +31,16 @@ dd {
 }
 
 dt {
-    font-weight: bold;
+    font-style: italic;
 }
 
 .plain-list {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
 }
 
-[dir="rtl"] .plain-list {
-    padding-right: 0;
+[dir="rtl"] .plain-list { // required for specificity
+    padding: 0;
 }
 
 .switcher-list {

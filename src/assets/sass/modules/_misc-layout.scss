@@ -99,22 +99,11 @@ div.multi-edit {
 
 /* AJAX spinner */
 span.spinner {
+    @include hires-graphic(spinner, gif, 13px, 13px);
+
     display: inline-block;
     width: 13px;
     height: 13px;
-    background-image: url("../img/spinner.gif");
-}
-@media print,
-    (-webkit-min-device-pixel-ratio: 2),
-    (min--moz-device-pixel-ratio: 2),
-    (-o-min-device-pixel-ratio: 2/1),
-    (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    span.spinner {
-        background-image: url("../img/spinner@2x.gif") !important;
-        background-size: 13px 13px;
-    }
 }
 
 
@@ -238,13 +227,12 @@ body#page-setup {
 
     h1 {
         @include hide-text;
-        @include svg-graphic(textpattern-xlrg, png, 20.30769em, 4.15384em);
 
         width: 20.30769em; // 264px / 13px
         height: 4.15384em; // 54px / 13px
         font-size: 1em;
-        background-repeat: no-repeat;
-
+        background: url("../img/textpattern-xlrg.svg") no-repeat;
+        background-size: 20.30769em 4.15384em;
     }
 
     select {
@@ -262,13 +250,15 @@ body#page-setup {
 
     h3 {
         @include box-shadow(0 0.2em 0.25em rgba(#000000, 0.15));
-        @include gradient-linear-bar($color-gradient2-from, $color-gradient2-to);
+        @include gradient-linear($color-gradient2-from, $color-gradient2-to);
 
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         z-index: 1000;
+        border-top: 1px solid $color-gradient2-to;
+        border-bottom: 1px solid darken($color-gradient2-to, 6%);
         padding: 0.5em 1em;
     }
 
@@ -331,29 +321,20 @@ body#page-setup {
     }
 }
 
-.no-svg #tab-text a {
-    background-image: url("../img/view-text.png");
+#view_modes a {
+    background-size: 1.5em 1.5em;
 }
-.svg #tab-text a {
+
+#tab-text a {
     background-image: url("../img/view-text.svg");
 }
 
-.no-svg #tab-html a {
-    background-image: url("../img/view-html.png");
-}
-.svg #tab-html a {
+#tab-html a {
     background-image: url("../img/view-html.svg");
 }
 
-.no-svg #tab-preview a {
-    background-image: url("../img/view-preview.png");
-}
-.svg #tab-preview a {
+#tab-preview a {
     background-image: url("../img/view-preview.svg");
-}
-
-.svg #view_modes a {
-    background-size: 1.5em 1.5em;
 }
 
 .html .excerpt {

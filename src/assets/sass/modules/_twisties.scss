@@ -12,13 +12,15 @@ h3.txp-summary,
 .txp-details > h3 {
     @include text-shadow($text-shadow-light);
     @include box-shadow($inset-highlighting);
-    @include gradient-linear-bar($color-gradient-from, $color-gradient-to);
+    @include gradient-linear($color-gradient-from, $color-gradient-to);
 
     position: relative;
     font-size: 1em; // 13px
     font-weight: bold;
     line-height: 2em; // 26px / 13px
     margin: 0;
+    border-top: 1px solid $color-gradient-to;
+    border-bottom: 1px solid $color-gradient-border;
     padding: 0 2em 0 1em;
     height: 2em; // 26px / 13px
 }

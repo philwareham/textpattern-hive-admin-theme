@@ -15,20 +15,22 @@
     li {
         @include text-shadow($text-shadow-light);
         @include box-shadow($inset-highlighting);
-        @include gradient-linear-bar($color-gradient-from, $color-gradient-to);
+        @include gradient-linear($color-gradient-from, $color-gradient-to);
 
         position: relative;
         display: inline-block;
         margin: 0 1em 1em 0;
+        border-top: 1px solid $color-gradient-to;
         border-right: 1px solid lighten($color-border, 9%);
+        border-bottom: 1px solid $color-gradient-border;
         border-left: 1px solid lighten($color-border, 9%);
         padding: 1em 1em 1em 4em;
 
         &.active {
-            @include gradient-linear-bar($color-gradient2-from, $color-gradient2-to);
+            @include gradient-linear($color-gradient2-from, $color-gradient2-to);
 
-            border-right: 1px solid $color-gradient2-to;
-            border-left: 1px solid $color-gradient2-to;
+            border: 1px solid $color-gradient2-to;
+            border-bottom-color: darken($color-gradient2-to, 6%);
         }
 
         &:before {

@@ -1,28 +1,15 @@
 module.exports = function (grunt) {
     'use strict';
 
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
-        watch: {
-            sass: {
-                files: 'src/assets/sass/**',
-                tasks: ['sass']
-            },
-
-            js: {
-                files: 'src/assets/js/*.js',
-                tasks: ['jshint', 'copy', 'uglify']
-            }
-        },
 
         compass: {
             dev: {
@@ -39,6 +26,16 @@ module.exports = function (grunt) {
                     {expand: true, cwd: 'src/', src: ['*'], dest: 'dist/hive/', filter: 'isFile'},
                     {expand: true, cwd: 'src/assets/img/', src: ['**'], dest: 'dist/hive/assets/img/'}
                 ]
+            }
+        },
+
+        cssmin: {
+            main: {
+                expand: true,
+                cwd: 'dist/hive/assets/css/',
+                src: ['*.css', '!*.min.css'],
+                dest: 'dist/hive/assets/css/',
+                ext: '.min.css'
             }
         },
 
@@ -66,18 +63,10 @@ module.exports = function (grunt) {
                 globals: {
                     $: false,
                     jQuery: false,
-                    module: true
+                    module: true,
+                    responsiveNav: true,
+                    prettyPrint: true
                 }
-            }
-        },
-
-        cssmin: {
-            main: {
-                expand: true,
-                cwd: 'dist/hive/assets/css/',
-                src: ['*.css', '!*.min.css'],
-                dest: 'dist/hive/assets/css/',
-                ext: '.min.css'
             }
         },
 
@@ -91,6 +80,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         'dist/hive/assets/js/main.js': ['src/assets/js/main.js'],
+                        'dist/hive/assets/js/responsivenav.js': ['bower_components/responsive-nav/responsive-nav.js'],
                         'docs/assets/js/prettify/prettify.js': ['bower_components/google-code-prettify/src/prettify.js']
                     },
                     {
@@ -101,13 +91,25 @@ module.exports = function (grunt) {
                     }
                 ]
             }
+        },
+
+        watch: {
+            sass: {
+                files: 'src/assets/sass/**',
+                tasks: ['sass']
+            },
+
+            js: {
+                files: 'src/assets/js/*.js',
+                tasks: ['jshint', 'copy', 'uglify']
+            }
         }
 
     });
 
-    grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('sass', ['compass', 'cssmin']);
-    grunt.registerTask('default', ['watch']);
     grunt.registerTask('build', ['jshint', 'sass', 'copy', 'uglify']);
+    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('sass', ['compass', 'cssmin']);
+    grunt.registerTask('test', ['jshint']);
     grunt.registerTask('travis', ['jshint', 'compass']);
 };

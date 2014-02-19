@@ -3,27 +3,29 @@
 
 .txp-header {
     @include box-shadow(0 0.2em 0.25em rgba(#000000, 0.15));
-    @include gradient-linear-bar($color-gradient2-from, $color-gradient2-to);
+    @include gradient-linear($color-gradient2-from, $color-gradient2-to);
 
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+    border-top: 1px solid $color-gradient2-to;
+    border-bottom: 1px solid darken($color-gradient2-to, 6%);
     padding: 0 1.69%;
     height: 3em;
 
     h1 {
         @include ellipsis;
-        @include svg-graphic($logo-large-filename, $logo-large-filetype, $logo-large-width, $logo-large-height);
 
         float: left;
         margin: 0;
-        padding-left: $logo-large-width;
+        padding-left: 9.84615384615385em; // 128px / 13px
         max-width: 25%;
         font-size: 1em; // 13px
         line-height: 3em;
-        background: no-repeat 0 46%;
+        background: url("../img/textpattern-lrg.svg") no-repeat 0 46%;
+        background-size: 9.84615384615385em 2em; // 128px / 13px + 26px / 13px
 
         a {
             margin-right: 1em;

@@ -118,15 +118,15 @@
     }
 
     &:before {
-        @include svg-graphic(indicator, gif, 1.23076em, 0.61538em);
-
         position: absolute;
         content: "";
         top: -0.61538em;
         left: 1em;
+        z-index: 2;
         width: 1.23076em;
         height: 0.61538em;
-        background-repeat: no-repeat;
+        background: url("../img/indicator.svg") no-repeat;
+        background-size: 1.23076em 0.61538em;
     }
 }
 

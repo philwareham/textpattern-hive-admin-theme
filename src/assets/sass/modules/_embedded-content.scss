@@ -2,7 +2,7 @@
    ========================================================================== */
 
 img {
-    /* remove border when inside `<a>` element in IE8-9 */
+    /* remove border when inside `<a>` element in IE 8-10 */
     border: 0;
     /* remove the gap between images and the bottom of their containers */
     vertical-align: middle;
@@ -23,12 +23,12 @@ img {
     }
 }
 
-/* address margin not present in IE 8-9 and Safari 5 */
+/* address margin not present in IE 8-9, Safari 5 */
 figure {
     margin: 0;
 }
 
-/* correct overflow displayed oddly in IE9 */
+/* correct overflow not hidden in IE 9-11 */
 svg:not(:root) {
     overflow: hidden;
 }

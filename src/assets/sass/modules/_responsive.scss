@@ -34,10 +34,11 @@ body#page-setup {
     padding: 0 1em;
 
     h1 {
-        @include svg-graphic($logo-small-filename, $logo-small-filetype, $logo-small-width, $logo-small-height);
+        background: url("../img/textpattern-sml.svg");
+        background-size: 2em 2em;
 
         max-width: 50%;
-        padding-left: $logo-small-width;
+        padding-left: 2em;
     }
 }
 
