@@ -1,0 +1,180 @@
+/* Navigation
+   ========================================================================== */
+
+.main-navigation-wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: $container-max-width;
+}
+
+.main-navigation {
+    .js & {
+        clip: rect(0 0 0 0);
+        max-height: 0;
+        display: block;
+    }
+
+    ul {
+        list-style: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .section-links > li a,
+    .section-links > li li a {
+        @include adjust-font-size-to(14px, 1);
+
+        font-family: $font-heading;
+    }
+
+    // section link li
+    li {
+        border-top: 1px dashed $color-selecting;
+
+        &:first-child {
+            border-top: 0;
+        }
+    }
+
+    a {
+        display: block;
+        padding: 0.5em 5%;
+        color: $color-selected;
+
+        &:hover,
+        &:active {
+            color: $color-text-inverse;
+            text-decoration: none;
+        }
+    }
+
+    // subsection links
+    li li {
+        border: 0;
+
+        a {
+            padding: 0 5% 0.5em 10%;
+        }
+    }
+
+    form {
+        margin: 0.5em 5%;
+    }
+
+    .active {
+        background-color: $color-general-dark;
+    }
+
+    &.opened {
+        max-height: 9999px;
+    }
+
+    &.disable-pointer-events {
+        pointer-events: none !important;
+    }
+}
+
+.nav-toggle {
+    @include hide-text;
+
+    -webkit-touch-callout: none; // disables the default bubble shown when you touch and hold a touch target
+    position: absolute;
+    top: -34px;
+    right: 5%;
+    z-index: 5;
+    border: 1px solid $color-general;
+    width: 32px;
+    height: 32px;
+    background: url("../img/icon32-sprite.svg") no-repeat -320px 0px;
+    background-size: 352px 32px;
+}
+
+// navigation menu reduced desktop version
+@include breakpoint($breakpoint-2) {
+    .main-navigation-wrapper {
+        width: 90%;
+    }
+
+    .main-navigation {
+        .js & {
+            max-height: none;
+        }
+
+        // section link li
+        .section-links > li:not(.nav-form-search) {
+            position: relative;
+            float: left;
+            border-top: 0;
+            border-right: 1px dashed $color-selecting;
+
+            &:first-child {
+                border-left: 1px dashed $color-selecting;
+            }
+        }
+
+        li.nav-form-search {
+            border: 0;
+        }
+
+        a,
+        li li a {
+            padding: 0.4em 0.7142857em; // 7px / 14px + 10px / 14px
+        }
+
+        // subsection links
+        .subsection-links {
+            @include box-shadow(rgba(#000000, 0.2) 0 3px 3px);
+
+            position: absolute;
+            top: 2.35714285714286em;
+            left: -9999px;
+            z-index: 10;
+            list-style: none;
+            border-top: 1px solid darken($color-general, 8%);
+            padding: 0.4em 0;
+            min-width: 14em;
+            background-color: $color-general;
+        }
+
+        .section-links li:hover .subsection-links {
+            left: -1px;
+        }
+
+        form {
+            margin: 0;
+        }
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+}
+
+// navigation menu full desktop version
+@include breakpoint($breakpoint-3) {
+    .main-navigation a.has-dropdown {
+        position: relative;
+        padding-right: 1.7142857em;
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            z-index: 5;
+            display: block;
+            border: solid 0.4em;
+            border-color: lighten($color-general, 20%) transparent transparent transparent;
+            margin-right: 0.75em;
+            margin-top: -0.2em;
+            width: 0;
+            height: 0;
+            content: "";
+        }
+
+        &:hover:after,
+        &:active:after {
+            border-color: lighten($color-general, 40%) transparent transparent transparent;
+        }
+    }
+}
