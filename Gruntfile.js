@@ -61,8 +61,7 @@ module.exports = function (grunt) {
                 trailing: true,
                 browser: true,
                 globals: {
-                    $: false,
-                    jQuery: false,
+                    jQuery: true,
                     module: true,
                     responsiveNav: true,
                     prettyPrint: true

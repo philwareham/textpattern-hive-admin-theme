@@ -1,3 +1,3 @@
-var nav = responsiveNav('.main-navigation', {
+responsiveNav('.main-navigation', {
     navClass: 'main-navigation'
 });
