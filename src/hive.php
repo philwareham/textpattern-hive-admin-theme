@@ -109,8 +109,9 @@ class hive_theme extends theme
 		global $txp_user;
 		$out[] = hed(
 			href(htmlspecialchars($GLOBALS["prefs"]["sitename"]), hu, array(
-				'rel'   => 'external',
-				'title' => gTxt('tab_view_site'),
+				'rel'    => 'external',
+                'target' => '_blank',
+				'title'  => gTxt('tab_view_site'),
 			))
 			, 1);
 
@@ -164,8 +165,9 @@ class hive_theme extends theme
 	{
 		$out[] = graf(
 			href('Textpattern CMS', 'http://textpattern.com', array(
-				'rel'   => 'external',
-				'title' => gTxt('go_txp_com'),
+				'rel'    => 'external',
+                'target' => '_blank',
+				'title'  => gTxt('go_txp_com'),
 			)).
 			' (v'.txp_version.')'
 			, array('class' => 'mothership'));
