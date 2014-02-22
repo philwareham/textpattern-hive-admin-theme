@@ -128,8 +128,6 @@ class hive_theme extends theme
 			foreach ($this->menu as $tab)
 			{
 				$class = ($tab['active']) ? ' active' : '';
-				$out[] = '<li class="dropdown'.$class.'"><a class="dropdown-toggle" href="?event='.$tab["event"].'">'.$tab["label"].'</a>';
-
 				$out[] = '<li class="dropdown'.$class.'">'.
 					href($tab["label"], array('event' => $tab['event']), ' class="dropdown-toggle"');
 
