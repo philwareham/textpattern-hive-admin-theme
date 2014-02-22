@@ -118,10 +118,6 @@ class hive_theme extends theme
 
 		if ($txp_user)
 		{
-			$out[] = graf(
-				href(gTxt('logout'), 'index.php?logout=1', ' onclick="return verify(\''.gTxt('are_you_sure').'\')"')
-				, array('class' => 'txp-logout'));
-
 			$out[] = '<nav role="navigation" aria-label="'.gTxt('navigation').'">';
 			$out[] = '<div class="txp-nav">';
 			$out[] = '<ul class="data-dropdown">';
@@ -153,6 +149,9 @@ class hive_theme extends theme
 			$out[] = '</ul>';
 			$out[] = '</div>';
 			$out[] = '</nav>';
+			$out[] = graf(
+				href(gTxt('logout'), 'index.php?logout=1', ' onclick="return verify(\''.gTxt('are_you_sure').'\')"')
+				, array('class' => 'txp-logout'));
 		}
 
 		$out[] = '<div id="messagepane">'.$this->announce($this->message).'</div>';
