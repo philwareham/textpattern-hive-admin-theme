@@ -1,3 +1,3 @@
-responsiveNav('.main-navigation', {
-    navClass: 'main-navigation'
+responsiveNav('.txp-nav', {
+    navClass: '.txp-nav'
 });

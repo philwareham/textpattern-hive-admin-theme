@@ -12,7 +12,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="generator" content="Textpattern CMS">
     <script src="../docs/assets/js/modernizr.js"></script>
-    <script src="../dist/hive/assets/js/main.js"></script>
+    <script src="../dist/hive/assets/js/responsivenav.js"></script>
     <!--[if lt IE 9]><script src="../doc/assets/js/selectivizr.min.js"></script><![endif]-->
 </head>
 <body id="page-category" class="content">
@@ -225,6 +225,12 @@
         <p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external" target="_blank">Textpattern CMS</a> (v4.6)</p>
         <p class="pagejump"><a href="#">&#8593; Back to top</a></p>
     </footer><!-- /txp-footer -->
+
+    <script>
+        var nav = responsiveNav('.txp-nav', {
+            navClass: '.txp-nav'
+        });
+    </script>
 
 </body>
 </html>
