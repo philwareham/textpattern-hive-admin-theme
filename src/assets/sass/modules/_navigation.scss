@@ -1,22 +1,17 @@
 /* Navigation
    ========================================================================== */
 
-/* hide `<select>` version of navigation on non-touch devices
+/* hide 'responsive-nav.js' version of navigation on non-touch devices
    also happens via media-queries when screen width is < 768px regardless of touch ability */
-.tinynav {
-    display: none;
+//.tinynav {
+//    display: none;
+//
+//    .touch & {
+//        display: inherit;
+//    }
+//}
 
-    .touch & {
-        display: inherit;
-    }
-}
-
-/* hide `<ul>` version of navigation on touch devices */
-.touch .untinynav {
-    display: none;
-}
-
-.untinynav {
+.txp-nav {
     float: left;
     list-style: none;
     margin: 0;
@@ -24,6 +19,7 @@
 
     ul {
         list-style: none;
+        margin: 0;
         padding-right: 0;
         padding-left: 0;
     }

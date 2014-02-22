@@ -118,7 +118,7 @@ class hive_theme extends theme
 
 		if ($txp_user)
 		{
-			$out[] = '<nav role="navigation" aria-label="'.gTxt('navigation').'">';
+			$out[] = '<nav role="navigation" class="txp-nav" aria-label="'.gTxt('navigation').'">';
 			$out[] = '<ul class="data-dropdown">';
 
 			foreach ($this->menu as $tab)
