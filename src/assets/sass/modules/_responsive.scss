@@ -98,20 +98,6 @@ body {
     }
 }
 
-/* move `<select>` navigation to new row for smaller screens */
-.txp-nav-select {
-    @include box-shadow(0 0.2em 0.25em rgba(#000000, 0.15));
-
-    position: absolute;
-    top: 2.46153em;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-    border-top: 1px solid lighten($color-highlight-box, 5%);
-    padding: 0.53846em 1em;
-    background: $color-highlight-box;
-}
-
 .txp-label,
 .txp-value {
     float: none;
