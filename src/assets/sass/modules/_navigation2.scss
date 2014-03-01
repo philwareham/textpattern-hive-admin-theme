@@ -1,26 +1,7 @@
 /* Navigation
    ========================================================================== */
 
-.main-navigation-wrapper {
-    position: relative;
-    margin: 0 auto;
-    max-width: $container-max-width;
-}
-
 .main-navigation {
-    .js & {
-        clip: rect(0 0 0 0);
-        max-height: 0;
-        display: block;
-    }
-
-    ul {
-        list-style: none;
-        display: block;
-        margin: 0;
-        padding: 0;
-    }
-
     .section-links > li a,
     .section-links > li li a {
         @include adjust-font-size-to(14px, 1);

@@ -1,37 +1,41 @@
 /* Navigation
    ========================================================================== */
 
-/* hide 'responsive-nav.js' version of navigation on non-touch devices
-   also happens via media-queries when screen width is < 768px regardless of touch ability */
-//.tinynav {
-//    display: none;
-//
-//    .touch & {
-//        display: inherit;
-//    }
-//}
-
 .txp-nav {
     float: left;
     list-style: none;
     margin: 0;
-    padding-left: 0;
 
     ul {
         list-style: none;
         margin: 0;
-        padding-right: 0;
-        padding-left: 0;
+        padding: 0;
     }
 
     a {
-        color: #333;
+        color: #333333;
 
         &:hover {
             text-decoration: none;
         }
     }
 }
+
+
+
+.nav-toggle {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+@include breakpoint($breakpoint-2) {
 
 .dropdown {
     position: relative;
@@ -119,6 +123,37 @@
     }
 }
 
-.tinynav {
-    margin-top: 0.61538em;
+
+
+}
+
+
+@media only screen and (max-width: $breakpoint-2) {
+    h1 {
+        @include hide-text;
+
+        width: 0.7692308em;
+    }
+
+    .txp-nav {
+        .js & {
+            clip: rect(0 0 0 0);
+            max-height: 0;
+            display: block;
+        }
+    }
+
+    .nav-toggle {
+        @include hide-text;
+
+        -webkit-touch-callout: none; // disables the default bubble shown when you touch and hold a touch target
+        font-size: 16px;
+        float: left;
+        display: block;
+        margin-top: 0.1875em;
+        width: 2em;
+        height: 2em;
+        background-image: url("../img/hamburger.svg");
+        background-size: 2em 2em;
+    }
 }
