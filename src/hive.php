@@ -21,8 +21,7 @@
  * along with Textpattern. If not, see <http://www.gnu.org/licenses/>.
  */
 
-if (!defined('txpinterface'))
-{
+if (!defined('txpinterface')) {
     die('txpinterface is undefined.');
 }
 
@@ -34,56 +33,43 @@ class hive_theme extends theme
         $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/textpattern.min.css">';
 
         // Start of custom CSS toggles (see README.textile for usage instructions).
-        if (defined('hive_theme_hide_branding'))
-        {
+        if (defined('hive_theme_hide_branding')) {
             $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_branding.css">';
         }
-        if (defined('hive_theme_hide_headings'))
-        {
+        if (defined('hive_theme_hide_headings')) {
             $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_headings.css">';
         }
-        if (defined('hive_theme_hide_preview_tabs_group'))
-        {
+        if (defined('hive_theme_hide_preview_tabs_group')) {
             $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_preview_tabs.css">';
         }
-        if (defined('hive_theme_hide_textfilter_group'))
-        {
+        if (defined('hive_theme_hide_textfilter_group')) {
             $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_textfilter_group.css">';
         }
-        if (defined('hive_theme_hide_advanced_group'))
-        {
+        if (defined('hive_theme_hide_advanced_group')) {
             $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_advanced_group.css">';
         }
-        if (defined('hive_theme_hide_custom_field_group'))
-        {
+        if (defined('hive_theme_hide_custom_field_group')) {
             $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_custom_field_group.css">';
         }
-        if (defined('hive_theme_hide_image_group'))
-        {
+        if (defined('hive_theme_hide_image_group')) {
             $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_image_group.css">';
         }
-        if (defined('hive_theme_hide_keywords_field'))
-        {
+        if (defined('hive_theme_hide_keywords_field')) {
             $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_keywords_field.css">';
         }
-        if (defined('hive_theme_hide_recent_articles_group'))
-        {
+        if (defined('hive_theme_hide_recent_articles_group')) {
             $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_recent_articles_group.css">';
         }
-        if (defined('hive_theme_hide_comments_group'))
-        {
+        if (defined('hive_theme_hide_comments_group')) {
             $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_comments_group.css">';
         }
-        if (defined('hive_theme_hide_expires_field'))
-        {
+        if (defined('hive_theme_hide_expires_field')) {
             $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_expires_field.css">';
         }
-        if (defined('hive_theme_hide_image_caption'))
-        {
+        if (defined('hive_theme_hide_image_caption')) {
             $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_image_caption.css">';
         }
-        if (defined('hive_theme_hide_tag_builder_column'))
-        {
+        if (defined('hive_theme_hide_tag_builder_column')) {
             $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_tag_builder_column.css">';
         }
         // End of custom CSS toggles.
@@ -116,23 +102,19 @@ class hive_theme extends theme
             ))
             , 1);
 
-        if ($txp_user)
-        {
+        if ($txp_user) {
             $out[] = '<nav role="navigation" class="txp-nav" aria-label="'.gTxt('navigation').'">';
             $out[] = '<ul class="data-dropdown">';
 
-            foreach ($this->menu as $tab)
-            {
+            foreach ($this->menu as $tab) {
                 $class = ($tab['active']) ? ' active' : '';
                 $out[] = '<li class="dropdown'.$class.'">'.
                     href($tab["label"], array('event' => $tab['event']), ' class="dropdown-toggle"');
 
-                if (!empty($tab['items']))
-                {
+                if (!empty($tab['items'])) {
                     $out[] = '<ul class="dropdown-menu">';
 
-                    foreach ($tab['items'] as $item)
-                    {
+                    foreach ($tab['items'] as $item) {
                         $class = ($item['active']) ? ' class="selected"' : '';
                         $out[] = '<li'.$class.'>'.
                             href($item["label"], array('event' => $item['event'])).
@@ -188,18 +170,15 @@ class hive_theme extends theme
         // $thing[0]: message text.
         // $thing[1]: message type, defaults to "success" unless empty or a different flag is set.
 
-        if ($thing === '')
-        {
+        if ($thing === '') {
             return '';
         }
 
-        if (!is_array($thing) || !isset($thing[1]))
-        {
+        if (!is_array($thing) || !isset($thing[1])) {
             $thing = array($thing, 0);
         }
 
-        switch ($thing[1])
-        {
+        switch ($thing[1]) {
             case E_ERROR:
                 $class = 'error';
                 $icon = 'ui-icon-closethick';
@@ -214,13 +193,10 @@ class hive_theme extends theme
                 break;
         }
 
-        if ($modal)
-        {
+        if ($modal) {
             $html = ''; // TODO: Say what?
             $js = 'window.alert("'.escape_js(strip_tags($thing[0])).'")';
-        }
-        else
-        {
+        } else {
             $html = span(
                 span(null, array('class' => 'ui-icon '.$icon)).' '.gTxt($thing[0]).
                 sp.href('&#215;', '#close', ' role="button" class="close" title="'.gTxt('close').'" aria-label="'.gTxt('close').'"')
@@ -232,11 +208,9 @@ class hive_theme extends theme
             // Try to inject $html into the message pane no matter when _announce()'s output is printed.
             $js = escape_js($html);
             $js = <<< EOS
-                $(document).ready(function ()
-                {
+                $(document).ready(function () {
                     $("#messagepane").html("{$js}");
-                    $(window).resize(function ()
-                    {
+                    $(window).resize(function () {
                         $("#messagepane").css({
                             left: ($(window).width() - $("#messagepane").outerWidth()) / 2
                         });
@@ -246,12 +220,9 @@ class hive_theme extends theme
 EOS;
         }
 
-        if ($async)
-        {
+        if ($async) {
             return $js;
-        }
-        else
-        {
+        } else {
             return script_js(str_replace('</', '<\/', $js), $html);
         }
     }
