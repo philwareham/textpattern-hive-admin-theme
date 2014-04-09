@@ -39,17 +39,17 @@ h3.txp-summary a {
 
         position: absolute;
         content: "&#8594;";
-        top: 0.69230em;
-        right: 0.76923em;
+        top: 0.6923077em;
+        right: 0.7692308em;
         z-index: 10;
         width: 0;
         height: 0;
         display: inline-block;
         opacity: 0.5;
-        border-left: 0.30769em solid $color-text;
+        border-left: 0.3076923em solid $color-text;
         border-right: 0;
-        border-top: 0.30769em solid transparent;
-        border-bottom: 0.30769em solid transparent;
+        border-top: 0.3076923em solid transparent;
+        border-bottom: 0.3076923em solid transparent;
     }
 
     &:hover:after {
@@ -59,11 +59,11 @@ h3.txp-summary a {
 
 h3.txp-summary.expanded a:after {
     content: "&#8595;";
-    top: 0.84615em;
-    right: 0.69230em;
-    border-left: 0.30769em solid transparent;
-    border-right: 0.30769em solid transparent;
-    border-top: 0.30769em solid $color-text;
+    top: 0.8461538em;
+    right: 0.6923077em;
+    border-left: 0.3076923em solid transparent;
+    border-right: 0.3076923em solid transparent;
+    border-top: 0.3076923em solid $color-text;
     border-bottom: 0;
 }
 

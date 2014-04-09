@@ -1,6 +1,11 @@
 /* Tables
    ========================================================================== */
 
+/* allow overflow scroll on tables */
+.txp-listtables {
+    overflow-x: auto;
+}
+
 /* consistent tables */
 table {
     border-collapse: collapse;
@@ -34,7 +39,7 @@ td {
 
     th,
     td {
-        padding: 0.38461em 1em;
+        padding: 0.3846154em 1em;
     }
 
     .multi-edit {
@@ -97,8 +102,8 @@ td {
                     @include hide-text;
 
                     position: absolute;
-                    top: 0.53846em;
-                    right: -0.76923em;
+                    top: 0.5384615em;
+                    right: -0.7692308em;
                     z-index: 10;
                     width: 0;
                     height: 0;
@@ -107,7 +112,7 @@ td {
 
                     [dir="rtl"] & {
                         right: auto;
-                        left: -0.76923em;
+                        left: -0.7692308em;
                     }
                 }
 
@@ -118,18 +123,18 @@ td {
 
             &.desc a:after {
                 content: "&#8595;";
-                border-left: 0.30769em solid transparent;
-                border-right: 0.30769em solid transparent;
-                border-top: 0.30769em solid $color-text;
+                border-left: 0.3076923em solid transparent;
+                border-right: 0.3076923em solid transparent;
+                border-top: 0.3076923em solid $color-text;
                 border-bottom: 0;
             }
 
             &.asc a:after {
                 content: "&#8593;";
-                border-left: 0.30769em solid transparent;
-                border-right: 0.30769em solid transparent;
+                border-left: 0.3076923em solid transparent;
+                border-right: 0.3076923em solid transparent;
                 border-top: 0;
-                border-bottom: 0.30769em solid $color-text;
+                border-bottom: 0.3076923em solid $color-text;
             }
         }
     }
@@ -137,9 +142,4 @@ td {
     .id {
         white-space: nowrap;
     }
-}
-
-/* allow overflow scroll on tables */
-.txp-listtables {
-    overflow-x: auto;
 }

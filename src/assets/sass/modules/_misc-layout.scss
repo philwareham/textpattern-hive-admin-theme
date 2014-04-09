@@ -58,13 +58,13 @@ div.multi-edit {
 }
 
 .multi-step {
-    margin-left: 0.30769em;
+    margin-left: 0.30769231em;
     display: inline-block;
 }
 
 .text-section {
     padding-top: 5em;
-    background: url("../img/separator.gif") repeat-x 0 2.15384em; // 28px / 13px
+    background: url("../img/separator.gif") repeat-x 0 2.1538462em; // 28px / 13px
 }
 
 .restricted-area {
@@ -160,14 +160,14 @@ span.spinner {
 .txp-value {
     input,
     select {
-        margin-top: -0.23076em;
-        margin-bottom: -0.23076em;
+        margin-top: -0.2307692em;
+        margin-bottom: -0.2307692em;
     }
 }
 
 .txp-value-fixed {
     display: inline-block;
-    padding: 0.23076em 0; // 3px / 13px
+    padding: 0.2307692em 0; // 3px / 13px
 }
 
 /* deprecated @ 4.6 */
@@ -185,8 +185,8 @@ span.spinner {
 
     input,
     select {
-        margin-top: -0.23076em;
-        margin-bottom: -0.23076em;
+        margin-top: -0.2307692em;
+        margin-bottom: -0.2307692em;
     }
 }
 
@@ -222,14 +222,14 @@ body#page-setup {
 /* rules specific to the very first page you'll see */
 .welcome {
     .txp-setup {
-        max-width: 20.30769em;
+        max-width: 20.3076923em;
     }
 
     h1 {
         @include hide-text;
 
-        width: 20.30769em; // 264px / 13px
-        height: 4.15384em; // 54px / 13px
+        width: 20.3076923em; // 264px / 13px
+        height: 4.1538462em; // 54px / 13px
         font-size: 1em;
         background: url("../img/textpattern-xlrg.svg") no-repeat;
         background-size: 20.30769em 4.15384em;
@@ -465,7 +465,7 @@ div.code {
 
     margin-bottom: 1em;
     border: 1px solid $color-border;
-    padding: 0.15384em 0.38461em;
+    padding: 0.1538462em 0.3846154em;
     height: 21em;
     overflow: auto;
 }
