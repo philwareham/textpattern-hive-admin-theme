@@ -27,8 +27,9 @@ $grid-gutter:                 1em; // 13px
 $standard-column:             42em; // 520px / 13px
 $text-column:                 57em; // 741px / 13px
 
-// breakpoints (using desktop first in this project)
+// layout grid (using desktop first in this project)
 
+$container-max-width:         116em; // 1508px / 13px
 $breakpoint-1:                59em; // 767px / 13px
 $breakpoint-2:                42em; // 546px / 13px
 

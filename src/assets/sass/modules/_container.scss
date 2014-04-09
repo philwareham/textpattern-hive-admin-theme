@@ -13,5 +13,5 @@ body {
     @extend .clearfix;
 
     margin: 0 auto;
-    max-width: 116em; // 1508px / 13px
+    max-width: $container-max-width;
 }
