@@ -116,11 +116,6 @@ code.excerpt {
     background: none;
 }
 
-[dir="rtl"] code,
-[dir="rtl"] .code {
-    direction: ltr;
-}
-
 /* prevent `<sub>` and `<sup>` affecting line height in all browsers */
 sub,
 sup.footnote, // override Textile class
