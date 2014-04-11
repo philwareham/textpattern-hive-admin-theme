@@ -1,15 +1,19 @@
 /* Singularity Grid System
    ========================================================================== */
 
-$grids: add-grid(12);
-$gutters: add-gutter(0.3);
+@include add-grid(12);
+@include add-gutter(0.3);
 
 .txp-layout-1col {
-    @include grid-span(12, 1, $options: 'both');
+    @include grid-span(12, 1);
+
+    clear: both;
 }
 
 .txp-layout-2col-cell-1 {
-    @include grid-span(6, 1, $options: 'both');
+    @include grid-span(6, 1);
+
+    clear: both;
 }
 
 .txp-layout-2col-cell-2 {
@@ -17,11 +21,15 @@ $gutters: add-gutter(0.3);
 }
 
 .txp-layout-4col-cell-1 {
-    @include grid-span(3, 1, $options: 'both');
+    @include grid-span(3, 1);
+
+    clear: both;
 }
 
 .txp-layout-4col-cell-1alt {
-    @include grid-span(3, 1, $options: 'both');
+    @include grid-span(3, 1);
+
+    clear: both;
 }
 
 .txp-layout-4col-cell-2 {
@@ -41,7 +49,9 @@ $gutters: add-gutter(0.3);
 }
 
 .txp-layout-4col-cell-1-2 {
-    @include grid-span(6, 1, $options: 'both');
+    @include grid-span(6, 1);
+
+    clear: both;
 }
 
 .txp-layout-4col-cell-2-3 {
@@ -53,7 +63,9 @@ $gutters: add-gutter(0.3);
 }
 
 .txp-layout-4col-cell-1-2-3 {
-    @include grid-span(9, 1, $options: 'both');
+    @include grid-span(9, 1);
+
+    clear: both;
 }
 
 .txp-layout-4col-cell-2-3-4 {
@@ -63,7 +75,9 @@ $gutters: add-gutter(0.3);
 @include breakpoint(max-width $breakpoint-1) {
 
     .txp-layout-4col-cell-1 {
-        @include grid-span(6, 1, $options: 'both');
+        @include grid-span(6, 1);
+
+        clear: both;
     }
 
     .txp-layout-4col-cell-2 {
@@ -71,7 +85,9 @@ $gutters: add-gutter(0.3);
     }
 
     .txp-layout-4col-cell-3 {
-        @include grid-span(6, 1, $options: 'both');
+        @include grid-span(6, 1);
+
+        clear: both;
     }
 
     .txp-layout-4col-cell-4 {
@@ -85,7 +101,9 @@ $gutters: add-gutter(0.3);
     .txp-layout-4col-cell-4alt,
     .txp-layout-4col-cell-1-2-3,
     .txp-layout-4col-cell-2-3-4 {
-        @include grid-span(12, 1, $options: 'both');
+        @include grid-span(12, 1);
+
+        clear: both;
     }
 
 }
@@ -98,7 +116,9 @@ $gutters: add-gutter(0.3);
     .txp-layout-4col-cell-2,
     .txp-layout-4col-cell-3,
     .txp-layout-4col-cell-4 {
-        @include grid-span(12, 1, $options: 'both');
+        @include grid-span(12, 1);
+
+        clear: both;
     }
 
 }
@@ -123,17 +143,17 @@ $gutters: add-gutter(0.3);
 
 .txp-grid {
     text-align: center;
-    margin-bottom: 0.69230769230769em; // 9px / 13px
+    margin-bottom: 0.6923077em; // 9px / 13px
 }
 
 .txp-grid-cell {
     @include box-sizing(border-box);
 
     display: inline-block;
-    margin: 0 0.15384em 0.30769em; // 2px / 13px and 4px / 13px
+    margin: 0 0.1538462em 0.3076923em; // 2px / 13px and 4px / 13px
     border: 1px solid $color-border;
     padding: 0 1em;
-    max-width: 22.61538em; // 294px / 13px
+    max-width: 22.6153846em; // 294px / 13px
     text-align: left;
     vertical-align: top;
 }
