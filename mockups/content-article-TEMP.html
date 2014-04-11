@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Write - My site &#124; Textpattern CMS</title>
+    <script src="../docs/assets/js/jquery.js"></script>
+    <script src="../docs/assets/js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../docs/assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="../dist/hive/assets/css/textpattern.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="generator" content="Textpattern CMS">
+    <meta name="application-name" content="My site">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="My site">
+    <script src="../docs/assets/js/modernizr.js"></script>
+    <script src="theme/hive/js/scripts.js"></script>
+    <!--[if lt IE 9]>
+        <script src="../doc/assets/js/selectivizr.min.js"></script>
+        <link rel="stylesheet" href="../docs/assets/css/jquery-ui-ie8.min.css">
+        <link rel="stylesheet" href="../dist/hive/assets/css/ie8.css">
+    <![endif]-->
+</head>
+<body id="page-article" class="not-ready content">
+
+    <header role="banner" class="txp-header">
+        <h1><a rel="external" title="View site" href="http://www.philwareham.co.uk/">My site</a></h1>
+        <p class="txp-logout"><a onclick="return verify('Are you sure?')" href="#">Logout</a></p>
+
+        <nav role="navigation" aria-label="Navigation">
+            <div class="txp-nav">
+                <ul class="data-dropdown">
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle" href="#">Content</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Categories</a></li>
+                            <li class="active"><a href="#">Write</a></li>
+                            <li><a href="#">Articles</a></li>
+                            <li><a href="#">Images</a></li>
+                            <li><a href="#">Files</a></li>
+                            <li><a href="#">Links</a></li>
+                            <li><a href="#">Comments</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#">Presentation</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Sections</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="#">Forms</a></li>
+                            <li><a href="#">Styles</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-toggle" href="#">Admin</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Diagnostics</a></li>
+                            <li><a href="#">Preferences</a></li>
+                            <li><a href="#">Languages</a></li>
+                            <li><a href="#">Users</a></li>
+                            <li><a href="#">Plugins</a></li>
+                            <li><a href="#">Import</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="txp-nav-select">
+                <select>
+                    <optgroup label="Content">
+                        <option value="?event=category">Categories</option>
+                        <option value="?event=article" selected="selected">Write</option>
+                        <option value="?event=list">Articles</option>
+                        <option value="?event=image">Images</option>
+                        <option value="?event=file">Files</option>
+                        <option value="?event=link">Links</option>
+                        <option value="?event=discuss">Comments</option>
+                    </optgroup>
+                    <optgroup label="Presentation">
+                        <option value="?event=section">Sections</option>
+                        <option value="?event=page">Pages</option>
+                        <option value="?event=form">Forms</option>
+                        <option value="?event=css">Styles</option>
+                    </optgroup>
+                    <optgroup label="Admin">
+                        <option value="?event=diag">Diagnostics</option>
+                        <option value="?event=prefs">Preferences</option>
+                        <option value="?event=lang">Languages</option>
+                        <option value="?event=admin">Users</option>
+                        <option value="?event=plugin">Plugins</option>
+                        <option value="?event=import">Import</option>
+                    </optgroup>
+                </select>
+            </div>
+        </nav>
+
+        <div id="messagepane"></div>
+
+    </header><!-- /txp-header -->
+
+    <main role="main" class="txp-body" aria-label="Main content">
+        <h1 class="txp-heading txp-accessibility">Write</h1>
+
+        <form id="article_form" name="article_form" method="post" action="index.php">
+            <div id="article_container" class="txp-layout-grid">
+                <div class="txp-layout-cell txp-layout-1-4">
+                    <div id="configuration_content">
+                        <section role="region" id="textfilter_group" class="txp-details" aria-labelledby="textfilter_group-label">
+                            <h3 id="textfilter_group-label" class="txp-summary"><a role="button" data-txp-token="a1c481dccca829186578b4e32b426a8f" data-txp-pane="article_textfilter_help" href="#textfilter_help">Text formatting help</a></h3>
+                            <div role="group" id="textfilter_help" class="toggle" style="display: none">
+                                <ul class="textile plain-list">
+                                    <li>Heading: <strong>h<em>n</em>.</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=header&amp;language=en-gb">?</a></li>
+                                    <li>Blockquote: <strong>bq.</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=blockquote&amp;language=en-gb">?</a></li>
+                                    <li>Numeric list: <strong>#</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=numeric&amp;language=en-gb">?</a></li>
+                                    <li>Bulleted list: <strong>*</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=bulleted&amp;language=en-gb">?</a></li>
+                                    <li>Definition list: <strong>; :</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=definition&amp;language=en-gb">?</a></li>
+                                </ul>
+                                <ul class="textile plain-list">
+                                    <li>_<em>emphasis</em>_&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=italic&amp;language=en-gb">?</a></li>
+                                    <li>*<strong>strong</strong>*&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=bold&amp;language=en-gb">?</a></li>
+                                    <li>??<cite>citation</cite>??&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 500, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=cite&amp;language=en-gb">?</a></li>
+                                    <li>-deleted text-&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=delete&amp;language=en-gb">?</a></li>
+                                    <li>+inserted text+&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=insert&amp;language=en-gb">?</a></li>
+                                    <li>^superscript^&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=super&amp;language=en-gb">?</a></li>
+                                    <li>~subscript~&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=subscript&amp;language=en-gb">?</a></li>
+                                </ul>
+                                <p class="textile">"linktext":url&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 500); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=link&amp;language=en-gb">?</a></p>
+                                <p class="textile">!imageurl!&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 500, 500); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=image&amp;language=en-gb">?</a></p>
+                                <p><a id="textile-docs-link" target="_blank" href="http://textpattern.com/textile-sandbox">More</a></p>
+                            </div>
+                        </section>
+                        <section role="region" id="advanced_group" class="txp-details" aria-labelledby="advanced_group-label">
+                            <h3 id="advanced_group-label" class="txp-summary"><a role="button" data-txp-token="bf6d803bcdae9c0e80b1e186c9a800b1" data-txp-pane="article_advanced" href="#advanced">Advanced options</a></h3>
+                            <div role="group" id="advanced" class="toggle" style="display: none">
+                                <p class="markup markup-body"><label for="markup-body">Article markup</label><br />
+                                    <select name="textile_body" id="markup-body">
+<option value="0">Leave text untouched</option>
+<option value="2">Convert linebreaks</option>
+<option value="1" selected="selected">Use Textile</option>
+</select></p>
+<p class="markup markup-excerpt"><label for="markup-excerpt">Excerpt markup</label><br />
+<select name="textile_excerpt" id="markup-excerpt">
+<option value="0">Leave text untouched</option>
+<option value="2">Convert linebreaks</option>
+<option value="1" selected="selected">Use Textile</option>
+</select></p>
+<p class="override-form"><label for="override-form">Override form</label>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=override_form&amp;language=en-gb">?</a><br />
+<select name="override_form" id="override-form">
+<option value="" selected="selected">&#160;</option>
+<option value="article_listing">article_listing</option>
+<option value="search_results">search_results</option>
+</select></p>
+</div>
+</section>
+<section role="region" id="meta_group" class="txp-details" aria-labelledby="meta_group-label">
+<h3 id="meta_group-label" class="txp-summary"><a role="button" data-txp-token="82a99cdffa42e1aad81741b399425d40" data-txp-pane="article_meta" href="#meta">Meta</a></h3>
+<div role="group" id="meta" class="toggle" style="display: none">
+<p class="url-title"><label for="url-title">URL-only title</label>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=url_title&amp;language=en-gb">?</a><br />
+<input type="text" name="url_title" size="32" id="url-title" value="" /></p>
+<p class="keywords"><label for="keywords">Keywords</label>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=keywords&amp;language=en-gb">?</a><br />
+<textarea id="keywords" name="Keywords" cols="16" rows="4"></textarea></p>
+</div>
+</section>
+<section role="region" id="image_group" class="txp-details" aria-labelledby="image_group-label">
+<h3 id="image_group-label" class="txp-summary"><a role="button" data-txp-token="b1b1cf9425c8b814c0a6fb03635e9c02" data-txp-pane="article_image" href="#image">Article image</a></h3>
+<div role="group" id="image" class="toggle" style="display: none">
+<p class="article-image"><label for="article-image">Article image</label>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=article_image&amp;language=en-gb">?</a><br />
+<input type="text" name="Image" size="32" id="article-image" value="" /></p>
+</div>
+</section>
+<section role="region" id="custom_field_group" class="txp-details" aria-labelledby="custom_field_group-label">
+<h3 id="custom_field_group-label" class="txp-summary"><a role="button" data-txp-token="d31ea13732909b7905ae07033a61b2e7" data-txp-pane="article_custom_field" href="#custom_field">Custom fields</a></h3>
+<div role="group" id="custom_field" class="toggle" style="display: none">
+<p class="custom-field custom-1"><label for="custom-1">custom1</label><br />
+<input type="text" name="custom_1" size="32" id="custom-1" value="" /></p>
+<p class="custom-field custom-2"><label for="custom-2">custom2</label><br />
+<input type="text" name="custom_2" size="32" id="custom-2" value="" /></p>
+</div>
+</section>
+<section role="region" id="recent_group" class="txp-details" aria-labelledby="recent_group-label">
+<h3 id="recent_group-label" class="txp-summary"><a role="button" data-txp-token="be8b6e2a8472bbcda592261f69e7dc87" data-txp-pane="article_recent" href="#recent">Recent articles</a></h3>
+<div role="group" id="recent" class="toggle" style="display: none"><ul class="recent plain-list">
+<li class="recent-article"><a href="?event=article&#38;step=edit&#38;ID=1">Welcome to your site</a></li></ul>
+</div>
+</section>
+</div>
+</div>
+<div class="txp-layout-cell txp-layout-2-4">
+<div role="region" id="main_content">
+<div id="view_modes">
+<ul>
+<li id="tab-text" class="active"><a data-view-mode="text" role="button" aria-pressed="true" title="Edit article text" href="#">Text</a></li>
+<li id="tab-html"><a data-view-mode="html" role="button" aria-pressed="false" title="View HTML markup" href="#">HTML</a></li>
+<li id="tab-preview"><a data-view-mode="preview" role="button" aria-pressed="false" title="Preview article" href="#">Preview</a></li></ul>
+</div>
+<div class="text">
+<p class="title"><label for="title">Title</label>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=title&amp;language=en-gb">?</a><br />
+<input type="text" id="title" name="Title" value="" size="48" /></p>
+<p class="body"><label for="body">Body</label>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=body&amp;language=en-gb">?</a><br />
+<textarea id="body" name="Body" cols="64" rows="24"></textarea></p>
+<p class="excerpt"><label for="excerpt">Excerpt</label>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=excerpt&amp;language=en-gb">?</a><br />
+<textarea id="excerpt" name="Excerpt" cols="64" rows="8"></textarea></p>
+</div>
+</div>
+</div>
+<div class="txp-layout-cell txp-layout-1-4">
+<div id="supporting_content">
+<p id="write-publish">
+<input type="submit" name="publish" class="publish" value="Publish" /></p>
+<section role="region" id="write-sort" class="txp-details" aria-labelledby="write-sort-label">
+<h3 id="write-sort-label">Sort and display</h3>
+<div role="group">
+<p class="status"><label for="status">Status</label><br />
+<select name="Status" id="status">
+<option value="1">Draft</option>
+<option value="2">Hidden</option>
+<option value="3">Pending</option>
+<option value="4" selected="selected">Live</option>
+<option value="5">Sticky</option>
+</select></p>
+<p class="section"><label for="section">Section</label>&#160;<span class="section-edit"><span aria-hidden="true">[</span><a title="Edit" href="?event=section&amp;_txp_token=938ad4433851156eed22f7b7dfdf7dcd">Edit</a><span aria-hidden="true">]</span></span><br />
+<select name="Section" id="section">
+<option value="about">About</option>
+<option value="articles" selected="selected">Articles</option>
+</select></p>
+<div id="categories_group">
+<p class="category category-1"><label for="category-1">Category 1</label>&#160;<span class="category-edit"><span aria-hidden="true">[</span><a title="Edit" href="?event=category&amp;_txp_token=938ad4433851156eed22f7b7dfdf7dcd">Edit</a><span aria-hidden="true">]</span></span><br />
+<select id="category-1" name="Category1">
+<option value="" selected="selected">&#160;</option>
+<option value="hope-for-the-future" data-level="0">Hope for the future</option>
+<option value="meaningful-labor" data-level="0">Meaningful labor</option>
+<option value="reciprocal-affection" data-level="0">Reciprocal affection</option>
+</select></p>
+<p class="category category-2"><label for="category-2">Category 2</label><br />
+<select id="category-2" name="Category2">
+<option value="" selected="selected">&#160;</option>
+<option value="hope-for-the-future" data-level="0">Hope for the future</option>
+<option value="meaningful-labor" data-level="0">Meaningful labor</option>
+<option value="reciprocal-affection" data-level="0">Reciprocal affection</option>
+</select></p>
+</div>
+</div>
+</section>
+<section role="region" id="comments_group" class="txp-details" aria-labelledby="comments_group-label">
+<h3 id="comments_group-label" class="txp-summary"><a role="button" data-txp-token="42bc7b97d4dd30c34fc5eba6777acd65" data-txp-pane="article_comments" href="#comments">Comment options</a></h3>
+<div role="group" id="comments" class="toggle" style="display: none">
+<div id="write-comments">
+<p class="comment-annotate">
+<input type="radio" name="Annotate" id="Annotate-0" class="radio" value="0" />
+<label for="Annotate-0">Off</label>
+<input type="radio" name="Annotate" id="Annotate-1" class="radio" value="1" />
+<label for="Annotate-1">On</label></p>
+<p class="comment-invite"><label for="comment-invite">Invitation</label><br />
+<input type="text" name="AnnotateInvite" size="32" id="comment-invite" value="Comment" /></p>
+</div>
+</div>
+</section>
+<section role="region" id="dates_group" class="txp-details" aria-labelledby="dates_group-label">
+<h3 id="dates_group-label" class="txp-summary"><a role="button" data-txp-token="9aea019da40c3db3745a608b62d13f6c" data-txp-pane="article_dates" href="#dates">Date and time</a></h3>
+<div role="group" id="dates" class="toggle" style="display: none">
+<section role="region" id="write-timestamp" class="txp-details" aria-labelledby="write-timestamp-label">
+<h3 id="write-timestamp-label">Timestamp</h3>
+<div role="group">
+<p class="publish-now">
+<input type="checkbox" name="publish_now" id="publish_now" class="checkbox" value="1" />
+<label for="publish_now">Set timestamp to now</label></p>
+<p class="publish-at">…or publish at&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="http://rpc.textpattern.com/help/?item=timestamp&amp;language=en-gb">?</a></p>
+<p class="date posted created"><span class="txp-label-fixed">Date</span><br />
+<input type="text" name="year" value="2014" size="4" maxlength="4" class="year" title="Year" placeholder="yyyy" /> / 
+<input type="text" name="month" value="04" size="2" maxlength="2" class="month" title="Month" placeholder="mm" /> / 
+<input type="text" name="day" value="11" size="2" maxlength="2" class="day" title="Day" placeholder="dd" /></p>
+<p class="time posted created"><span class="txp-label-fixed">Time</span><br />
+<input type="text" name="hour" value="16" size="2" maxlength="2" class="hour" title="Hour" placeholder="hh" /> : 
+<input type="text" name="minute" value="36" size="2" maxlength="2" class="minute" title="Minute" placeholder="mn" /> : 
+<input type="text" name="second" value="28" size="2" maxlength="2" class="second" title="Second" placeholder="ss" /></p>
+</div>
+</section>
+<section role="region" id="write-expires" class="txp-details" aria-labelledby="write-expires-label">
+<h3 id="write-expires-label">Expires</h3>
+<div role="group">
+<p class="date expires"><span class="txp-label-fixed">Date</span><br />
+<input type="text" name="exp_year" size="4" maxlength="4" class="exp_year" title="Year" placeholder="yyyy" /> / 
+<input type="text" name="exp_month" size="2" maxlength="2" class="exp_month" title="Month" placeholder="mm" /> / 
+<input type="text" name="exp_day" size="2" maxlength="2" class="exp_day" title="Day" placeholder="dd" /></p>
+<p class="time expires"><span class="txp-label-fixed">Time</span><br />
+<input type="text" name="exp_hour" size="2" maxlength="2" class="exp_hour" title="Hour" placeholder="hh" /> : 
+<input type="text" name="exp_minute" size="2" maxlength="2" class="exp_minute" title="Minute" placeholder="mn" /> : 
+<input type="text" name="exp_second" size="2" maxlength="2" class="exp_second" title="Second" placeholder="ss" /></p>
+</div>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</form>
+</main><!-- /txp-body -->
+<footer role="contentinfo" class="txp-footer">
+<p class="mothership"><a rel="external" title="Go to the Textpattern website" href="http://textpattern.com">Textpattern CMS</a> (v4.6-dev)</p>
+
+<p class="pagejump"><a href="#">↑ Back to top</a></p>
+<script>
+textpattern.textarray = {"form_submission_error":"Sorry, the form could not be submitted. Please try again later.","are_you_sure":"Are you sure?","cookies_must_be_enabled":"Browser cookies must be enabled to use Textpattern.","ok":"ok","save":"Save","publish":"Publish"}
+</script>
+</footer><!-- /txp-footer -->
+</body>
+</html>
