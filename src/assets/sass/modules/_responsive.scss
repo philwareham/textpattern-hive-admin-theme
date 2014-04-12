@@ -179,6 +179,20 @@ body {
     }
 }
 
+[dir="rtl"] .progress-meter {
+    ol {
+        text-align: right;
+    }
+
+    li {
+        margin: 0;
+
+        &:after {
+            display: none;
+        }
+    }
+}
+
 /* responsive jQuery UI tabs */
 
 .ui-tabs .ui-tabs-nav li {

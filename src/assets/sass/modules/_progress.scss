@@ -69,3 +69,26 @@
         font-weight: normal;
     }
 }
+
+[dir="rtl"] .progress-meter {
+    ol {
+        padding: 0;
+    }
+
+    li {
+        margin: 0 0 1em 1em;
+        padding: 1em 4em 1em 1em;
+
+        &:before {
+            left: auto;
+            right: 0.6875em; // 12px / 16px
+        }
+
+        &:after {
+            left: auto;
+            right: 100%;
+            border-left: 0;
+            border-right: 0.9em solid $color-border;
+        }
+    }
+}
