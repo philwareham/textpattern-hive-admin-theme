@@ -1,5 +1,7 @@
 $(function ()
 {
+    // spoof RTL on English language `<label>` tags (this isn't needed when viewing in proper RTL languages)
+    $('[dir="rtl"] label').attr('dir', 'rtl');
 
     // Draggable
     $(".jquery-ui-draggable").draggable({

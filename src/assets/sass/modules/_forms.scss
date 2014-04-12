@@ -108,10 +108,23 @@ input[type="radio"] {
     padding: 0;
 
     & + label {
-        margin-right: 0.5em;
+        margin: 0 0.5em 0 0;
 
         &:last-of-type {
-            margin-right: 0;
+            margin: 0;
+        }
+    }
+}
+
+[dir="rtl"] {
+    input[type="checkbox"],
+    input[type="radio"] {
+        & + label {
+            margin: 0 0 0 0.5em;
+    
+            &:last-of-type {
+                margin: 0;
+            }
         }
     }
 }
