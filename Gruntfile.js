@@ -61,9 +61,9 @@ module.exports = function (grunt) {
                 trailing: true,
                 browser: true,
                 globals: {
-                    jQuery: true,
+                    $: false,
+                    jQuery: false,
                     module: true,
-                    responsiveNav: true,
                     prettyPrint: true
                 }
             }
@@ -79,7 +79,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         'dist/hive/assets/js/main.js': ['src/assets/js/main.js'],
-                        'dist/hive/assets/js/responsivenav.js': ['bower_components/responsive-nav/responsive-nav.js'],
+                        'dist/hive/assets/js/dropdown.js': ['bower_components/bootstrap/js/dropdown.js'],
                         'docs/assets/js/prettify/prettify.js': ['bower_components/google-code-prettify/src/prettify.js']
                     },
                     {

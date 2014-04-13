@@ -1,3 +1,6 @@
-responsiveNav('.txp-nav', {
-    navClass: '.txp-nav'
+$(function ()
+{
+    'use strict';
+
+    $('.dropdown-toggle').dropdown();
 });
