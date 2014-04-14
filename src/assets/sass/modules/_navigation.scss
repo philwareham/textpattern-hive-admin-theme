@@ -23,7 +23,7 @@
 
 
 
-.txp-nav-toggle {
+button.txp-nav-toggle {
     display: none;
 }
 
@@ -143,17 +143,24 @@
         }
     }
 
-    .txp-nav-toggle {
+    button.txp-nav-toggle {
+        @include text-shadow(none);
+        @include border-radius(0);
+        @include box-shadow(none);
         @include hide-text;
 
-        -webkit-touch-callout: none; // disables the default bubble shown when you touch and hold a touch target
+        border: 0;
+        padding: 0;
         font-size: 16px;
-        float: left;
-        display: block;
+        display: inline-block;
         margin-top: 0.1875em;
         width: 2em;
         height: 2em;
-        background-image: url("../img/hamburger.svg");
+        background: transparent url("../img/hamburger.svg");
         background-size: 2em 2em;
+
+        &:focus {
+            outline: thin dotted $color-link-focus;
+        }
     }
 }
