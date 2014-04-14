@@ -1,6 +1,10 @@
 /* Navigation
    ========================================================================== */
 
+button.txp-nav-toggle {
+    display: none;
+}
+
 .txp-nav {
     float: left;
     list-style: none;
@@ -20,22 +24,6 @@
         }
     }
 }
-
-
-
-button.txp-nav-toggle {
-    display: none;
-}
-
-
-
-
-
-
-
-
-
-@include breakpoint($breakpoint-2) {
 
 .dropdown {
     position: relative;
@@ -58,14 +46,33 @@ button.txp-nav-toggle {
         color: darken($color-text, 20%);
     }
 
-    &:hover a.dropdown-toggle {
+    a.dropdown-toggle:hover {
         background: rgba(#ffffff, 0.2);
     }
 
     &.selected a.dropdown-toggle {
         background: rgba(#ffffff, 0.2);
+
+        &:hover {
+            background: rgba(#ffffff, 0.33);
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@include breakpoint($breakpoint-2) {
 
 .dropdown-menu {
     @include border-radius(0 $default-border-radius $default-border-radius $default-border-radius);
@@ -73,7 +80,8 @@ button.txp-nav-toggle {
 
     position: absolute;
     top: 3em;
-    left: -9999px;
+    left: 0;
+    display: none;
     z-index: 20000;
     min-width: 12em;
     border: solid 1px #d4d4d4;
@@ -116,11 +124,8 @@ button.txp-nav-toggle {
     }
 }
 
-.data-dropdown li:hover,
-.data-dropdown li:focus {
-    .dropdown-menu {
-        left: 0;
-    }
+.open > .dropdown-menu {
+    display: block;
 }
 
 
@@ -133,14 +138,6 @@ button.txp-nav-toggle {
         @include hide-text;
 
         width: 0.7692308em;
-    }
-
-    .txp-nav {
-        .js & {
-            clip: rect(0 0 0 0);
-            max-height: 0;
-            display: block;
-        }
     }
 
     button.txp-nav-toggle {
