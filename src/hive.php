@@ -109,7 +109,7 @@ class hive_theme extends theme
                 $txpnavdrop++;
                 $class = ($tab['active']) ? ' selected' : '';
                 $out[] = '<li class="dropdown'.$class.'">'.
-                    n.href($tab['label'], array('event' => $tab['event']),
+                    n.href($tab['label'], '#',
                     ' class="dropdown-toggle" id="txp-nav-drop'.$txpnavdrop.'" role="button" aria-controls="txp-nav-drop'.$txpnavdrop.'-menu" data-toggle="dropdown"');
 
                 if (!empty($tab['items'])) {
