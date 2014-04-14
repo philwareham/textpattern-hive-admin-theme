@@ -56,7 +56,7 @@
     }
 }
 
-.nav-toggle {
+.txp-nav-toggle {
     @include hide-text;
 
     -webkit-touch-callout: none; // disables the default bubble shown when you touch and hold a touch target
@@ -127,7 +127,7 @@
         }
     }
 
-    .nav-toggle {
+    .txp-nav-toggle {
         display: none;
     }
 }
