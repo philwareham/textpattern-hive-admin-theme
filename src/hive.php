@@ -102,20 +102,20 @@ class hive_theme extends theme
             , 1);
 
         if ($txp_user) {
-            $out[] = '<nav role="navigation" class="txp-nav" aria-label="'.gTxt('navigation').'">';
+            $out[] = '<nav class="txp-nav" role="navigation" aria-label="'.gTxt('navigation').'">';
             $out[] = '<ul class="data-dropdown">';
 
             foreach ($this->menu as $tab) {
                 $class = ($tab['active']) ? ' active' : '';
                 $out[] = '<li class="dropdown'.$class.'">'.
-                    href($tab["label"], array('event' => $tab['event']), ' class="dropdown-toggle"');
+                    href($tab["label"], array('event' => $tab['event']), ' class="dropdown-toggle" role="button" data-toggle="dropdown"');
 
                 if (!empty($tab['items'])) {
-                    $out[] = '<ul class="dropdown-menu">';
+                    $out[] = '<ul class="dropdown-menu" role="menu">';
 
                     foreach ($tab['items'] as $item) {
                         $class = ($item['active']) ? ' class="selected"' : '';
-                        $out[] = '<li'.$class.'>'.
+                        $out[] = '<li'.$class.' role="presentation">'.
                             href($item["label"], array('event' => $item['event'])).
                             '</li>';
                     }
