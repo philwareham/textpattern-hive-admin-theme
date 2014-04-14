@@ -21,12 +21,16 @@ h3.txp-summary,
     margin: 0;
     border-top: 1px solid $color-gradient-to;
     border-bottom: 1px solid $color-gradient-border;
-    padding: 0 2em 0 1em;
     height: 2em; // 26px / 13px
+}
+
+.txp-details > h3:not(.txp-summary) {
+    padding: 0 2em 0 1em;
 }
 
 h3.txp-summary a {
     display: block;
+    padding: 0 2em 0 1em;
     color: $color-text;
 
     &:hover {
