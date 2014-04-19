@@ -1,7 +1,16 @@
 /* Messages
    ========================================================================== */
 
-/* label colours */
+/**
+ * Alert labels.
+ *
+ * Example HTML:
+ *
+ * <span class="success">
+ * <span class="error">
+ * <strong class="success">
+ * <strong class="error">
+ */
 
 .success,
 .warning,
@@ -32,9 +41,31 @@
     background: $color-info-background;
 }
 
+/**
+ * Highlight background.
+ *
+ * Example HTML:
+ *
+ * <table>
+ *     <tr>
+ *         <td class="highlight></td>
+ *         <td></td>
+ *     </tr>
+ * </table>
+ */
+
 .highlight {
     background: $color-highlight-box;
 }
+
+/**
+ * Alert boxes.
+ *
+ * Example HTML:
+ *
+ * <p class="alert-block success">
+ * <p class="alert-block error">
+ */
 
 .alert-block {
     border: 1px solid;
@@ -57,7 +88,17 @@
     }
 }
 
-/* alert boxes */
+/**
+ * System messages.
+ *
+ * Example HTML:
+ *
+ * <div id="messagepane">
+ *     <span role="alert" class="error">
+ *         Content
+ *     </span>
+ * </div>
+ */
 
 #messagepane {
     position: fixed;
@@ -93,7 +134,13 @@
     }
 }
 
-/* close icon */
+/*
+ * Message close icon.
+ *
+ * Example HTML:
+ *
+ * <a role="button" class="close" aria-label="Close">&times;</a>
+ */
 
 .close {
     position: absolute;
@@ -111,7 +158,9 @@
     }
 }
 
-/* flash the alert */
+/*
+ * Flash the alert message using CSS animation.
+ */
 
 @include keyframes(messageflash) {
     0% {opacity: 0;}

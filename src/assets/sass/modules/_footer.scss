@@ -19,9 +19,25 @@
     @extend .clearfix;
 }
 
+/**
+ * Link to Textpattern official website.
+ *
+ * Example HTML:
+ *
+ * <p class="mothership">
+ */
+
 .mothership {
     float: left;
 }
+
+/**
+ * Link back to top of page.
+ *
+ * Example HTML:
+ *
+ * <p class="pagejump">
+ */
 
 .pagejump {
     float: right;
