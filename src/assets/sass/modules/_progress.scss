@@ -1,6 +1,20 @@
 /* Progress meter (only used in setup pages)
    ========================================================================== */
 
+/**
+ * Alert labels.
+ *
+ * Example HTML:
+ *
+ * <div class="progress-meter">
+ *     <ol>
+ *         <li class="active"><strong>Item 1</strong></li>
+ *         <li>Item 2</li>
+ *         <li>Item 3</li>
+ *     </ol>
+ * </div>
+ */
+
 .progress-meter {
     ol {
         @extend .clearfix;
@@ -69,6 +83,10 @@
         font-weight: normal;
     }
 }
+
+/**
+ * Swap margin/padding/numerical/arrow positions in RTL languages.
+ */
 
 [dir="rtl"] .progress-meter {
     ol {

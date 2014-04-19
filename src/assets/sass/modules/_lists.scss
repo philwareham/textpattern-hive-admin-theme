@@ -1,12 +1,19 @@
 /* Lists
    ========================================================================== */
 
-/* address padding set differently */
+/**
+ * Address paddings set differently.
+ */
+
 menu,
 ol,
 ul {
     padding: 0 0 0 2em;
 }
+
+/**
+ * Swap padding positions in RTL languages.
+ */
 
 [dir="rtl"] menu,
 [dir="rtl"] ol,
@@ -14,7 +21,10 @@ ul {
     padding: 0 2em 0 0;
 }
 
-/* remove margins from nested lists */
+/**
+ * Remove margins from nested lists.
+ */
+
 li {
     > ul,
     > ol {
@@ -22,26 +32,65 @@ li {
     }
 }
 
+/**
+ * Address margins set differently.
+ */
+
 dd {
     margin: 0 0 0 2em;
 }
+
+/**
+ * Swap margin positions in RTL languages.
+ */
 
 [dir="rtl"] dd {
     margin: 0 2em 0 0;
 }
 
+/**
+ * Italicise definition terms.
+ */
+
 dt {
     font-style: italic;
 }
+
+/**
+ * Have a list with no bullets/numerals.
+ *
+ * Example HTML:
+ *
+ * <ul class="plain-list">
+ * <ol class="plain-list">
+ */
 
 .plain-list {
     list-style: none;
     padding: 0;
 }
 
-[dir="rtl"] .plain-list { // required for specificity
+/**
+ * Ensure padding stays removed in RTL languages.
+ *
+ * Required for specificity.
+ */
+
+[dir="rtl"] .plain-list {
     padding: 0;
 }
+
+/**
+ * Switcher lists, to swap between diffrent page templates/form templates/etc.
+ *
+ * Example HTML:
+ *
+ * <ul class="switcher-list">
+ *     <li class="active"></li>
+ *     <li><a></a></li>
+ *     <li><a></a></li>
+ * </ul>
+ */
 
 .switcher-list {
     list-style: none;
@@ -69,6 +118,10 @@ dt {
         }
     }
 }
+
+/**
+ * 'Destroy' buttons within switcher lists.
+ */
 
 .switcher-action,
 .switcher-list .destroy {

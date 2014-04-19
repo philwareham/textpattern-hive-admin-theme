@@ -1,33 +1,60 @@
 /* Tables
    ========================================================================== */
 
-/* allow overflow scroll on tables */
+/**
+ * Allow overflow scroll on tables.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-listtables">
+ *     <table></table>
+ * </div>
+ */
+
 .txp-listtables {
     overflow-x: auto;
 }
 
-/* consistent tables */
+/**
+ * Consistent tables.
+ */
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+/**
+ * Styling of table captions.
+ */
 
 caption {
     text-align: left;
     margin-bottom: 0.5em;
 }
 
+/**
+ * Swap caption alignment in RTL languages.
+ */
+
 [dir="rtl"] caption {
     text-align: right;
 }
 
-/* make table cells align top and left by default, remove any cell padding */
+/**
+ * Make table cells align top and left by default.
+ */
+
 th,
 td {
     vertical-align: top;
     text-align: left;
     padding: 0;
 }
+
+/**
+ * Swap table cell text alignments in RTL languages.
+ */
 
 [dir="rtl"] th,
 [dir="rtl"] td {
