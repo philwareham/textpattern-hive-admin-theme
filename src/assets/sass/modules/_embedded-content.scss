@@ -1,12 +1,39 @@
 /* Embedded content
    ========================================================================== */
 
-img {
-    /* remove border when inside `<a>` element in IE 8-10 */
-    border: 0;
-    /* remove the gap between images and the bottom of their containers */
-    vertical-align: middle;
+/**
+ * Make embedded elements responsive.
+ */
 
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/**
+ * 1. Remove the gap between images and the bottom of their containers.
+ * 2. Remove border when inside `a` element in IE 8-10.
+ */
+
+img {
+    /* 1 */
+    vertical-align: middle;
+    /* 2 */
+    border: 0;
+}
+
+/**
+ * Image alignment (compatible with Textile markup syntax).
+ *
+ * Example HTML:
+ *
+ * <img class="align-left">
+ * <img class="align-right">
+ * <img class="align-center">
+ */
+
+img {
     &.align-left {
         float: left;
         margin: 1em 1em 1em 0;
@@ -23,15 +50,29 @@ img {
     }
 }
 
-/* address margin not present in IE 8-9, Safari 5 */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
 figure {
     margin: 0;
 }
 
-/* correct overflow not hidden in IE 9-11 */
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
 svg:not(:root) {
     overflow: hidden;
 }
+
+/**
+ * Content images.
+ *
+ * Example HTML:
+ *
+ * <img class="content-image">
+ */
 
 .content-image {
     @include border-radius;
@@ -40,7 +81,19 @@ svg:not(:root) {
     border: solid 1px $color-border;
     padding: 4px;
     background: #ffffff;
+}
 
+/**
+ * Content images with links.
+ *
+ * Example HTML:
+ *
+ * <a>
+ *     <img class="content-image">
+ * </a>
+ */
+
+.content-image {
     a:hover & {
         border-color: $color-link-hover;
     }

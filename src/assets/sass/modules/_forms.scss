@@ -1,19 +1,37 @@
 /* Forms
    ========================================================================== */
 
-/* define consistent fieldset margin, border and padding */
+/**
+ * 1. Define consistent fieldset border, margin, and padding.
+ * 2. Address width being affected by wide descendants in Chrome, Firefox.
+ */
+
 fieldset {
+    /* 1 */
     margin: 1em 0;
     border: 1px solid $color-border;
     padding: 1px 1em;
-    min-width: 0; // address width being affected by wide descendants in Chrome and Firefox
+    /* 2 */
+    min-width: 0;
 }
 
-/* remove padding so people aren't caught out if they zero out fieldsets */
-legend {
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {    
+    /* 1 */
     border: 0;
+    /* 2 */
     padding: 0;
 }
+
+/**
+ * 1. Correct font properties not being inherited.
+ * 2. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * 3. Prevent elements from spilling out of their parent.
+ */
 
 button,
 input,
@@ -28,17 +46,22 @@ textarea,
 .txp-buttons a {
     @include box-sizing(border-box);
 
-    /* correct font size not being inherited in all browsers */
+    /* 1 */
     font-size: 100%;
     @include adjust-font-size-to(13px, 0.8);
 
-    margin: 0; // address margins set differently in Firefox 4+, Safari 5+, Chrome
-    max-width: 100%; // prevent elements from spilling out of their parent
+    /* 2 */
+    margin: 0;
+    /* 3 */
+    max-width: 100%;
     font-family: $font-sans-serif;
     vertical-align: baseline;
 }
 
-/* colour placeholder text */
+/**
+ * Colour for placeholder text.
+ */
+
 input,
 textarea {
     @include input-placeholder {
@@ -46,18 +69,32 @@ textarea {
     }
 }
 
-/* remove inner padding and border in Firefox 4+ */
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
 
-/* remove inner padding and search cancel button in Safari 5+ and Chrome on OS X */
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
+
+/**
+ * Styling of form input fields.
+ *
+ * 1. Remove iOS Safari default styling.
+ */
 
 input[type="color"],
 input[type="date"],
@@ -78,7 +115,8 @@ textarea {
     @include border-radius(0);
     @include transition(box-shadow 0.1s linear);
 
-    -webkit-appearance: none; // remove iOS Safari default styling
+    /* 1 */
+    -webkit-appearance: none;
     border: 1px solid $color-border;
     padding: 0.5384615em 0.3076923em; // 7px / 13px + 4px / 13px
     height: 2.4615384em; // 32px / 13px
@@ -92,29 +130,49 @@ textarea {
     }
 }
 
+/**
+ * Remove padding from `color` fields.
+ */
+
 input[type="color"] {
     padding: 0;
 }
 
-/* fix the cursor style for Chrome's increment/decrement buttons */
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     height: auto;
 }
 
-/* address excess padding in IE 8-9 */
+/**
+ * 1. Remove excess padding in IE 8/9/10.
+ * 2. Correct margins for inline checkbox/radio labels.
+ */
+
 input[type="checkbox"],
 input[type="radio"] {
+    /* 1 */
     padding: 0;
 
     & + label {
+        /* 2 */
         margin: 0 0.5em 0 0;
 
         &:last-of-type {
+            /* 2 */
             margin: 0;
         }
     }
 }
+
+/**
+ * Swap margin positions in RTL languages.
+ */
 
 [dir="rtl"] {
     input[type="checkbox"],
@@ -129,23 +187,37 @@ input[type="radio"] {
     }
 }
 
-/* address inconsistent `text-transform` inheritance for `select` in Firefox 4+ */
+/**
+ * Correct `select` style inheritance in Firefox.
+ */
+
 select {
     text-transform: none;
 }
+
+/**
+ * Override height set in a previous rule and allow auto heght.
+ */
 
 select[size],
 select[multiple] {
     height: auto;
 }
 
+/**
+ * Override height set in rule above and restrict to one line field.
+ */
+
 select[size="0"],
 select[size="1"] {
     height: 2.4615384em; // 32px / 13px
 }
 
-/* address `<select>` alignment in Safari, Chrome */
 @media (-webkit-min-device-pixel-ratio: 0) {
+
+/**
+ * Address `select` alignment in Safari, Chrome, Opera.
+ */
 
     select[size],
     select[multiple],
@@ -153,6 +225,11 @@ select[size="1"] {
         padding-right: 0.3076923em; // 4px / 13px
         background-image: none;
     }
+
+/**
+ * Use indicator icon to signify the downdown ability of `select` in Safari,
+ * Chrome, Opera.
+ */
 
     select,
     select[size="0"],
@@ -163,6 +240,10 @@ select[size="1"] {
     }
 
 }
+
+/**
+ * Normalise styling of `optgroup`.
+ */
 
 optgroup {
     font-style: normal;
@@ -175,17 +256,31 @@ optgroup {
     }
 }
 
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9/10/11.
+ * 2. Restrict to vertical resizing to prevent layout breakage.
+ */
+
 textarea {
     height: auto;
     min-height: 3em;
-    overflow: auto; // remove default vertical scrollbar in IE 8-11
+    /* 1 */
+    overflow: auto;
+    /* 2 */
     resize: vertical;
     width: 100%;
 }
 
-/* make sure disable elements really are disabled */
+/**
+ * Make sure disabled elements really are disabled and styled appropriately.
+ *
+ * 1. Override default iOS opacity setting.
+ * 2. Re-set default cursor for disabled elements.
+ */
+
 button[disabled],
-html input[disabled], // `html` is a workaround for Android 4 bug
+button[disabled],
+input[disabled],
 input[type="button"][disabled],
 input[type="reset"][disabled],
 input[type="submit"][disabled],
@@ -196,15 +291,27 @@ textarea[disabled],
 .navlink-disabled {
     @include box-shadow(none !important);
 
-    opacity: 1; // overrides iOS opacity setting
+    /* 1 */
+    opacity: 1;
     border-color: $color-gradient-to !important;
     color: #aaaaaa !important;
     background: #eeeeee !important;
     text-shadow: none !important;
+    /* 2 */
     cursor: default !important;
 }
 
-/* additional input field widths */
+/**
+ * Width display options for `input` fields.
+ *
+ * Example HTML:
+ *
+ * <input size="32">
+ * <input class="large">
+ * <input class="medium">
+ * <input class="small">
+ * <input class="xsmall">
+ */
 
 input[size="32"] {
     width: 100%;
@@ -229,6 +336,36 @@ input.input-xsmall {
     width: 16%;
     width: 4.2307692em; // 55px / 13px
 }
+
+/**
+ * Width display options for date and time `input` fields.
+ *
+ * Note: These are not using the HTML5 input type contexts.
+ *
+ * Example HTML:
+ *
+ * <p><span class="txp-label-fixed">Date</span><br>
+ *     <input type="text" size="4" maxlength="4" class="year" placeholder="yyyy"> /
+ *     <input type="text" size="2" maxlength="2" class="month" placeholder="mm"> /
+ *     <input type="text" size="2" maxlength="2" class="day" placeholder="dd">
+ * </p>
+ * <p><span class="txp-label-fixed">Time</span><br>
+ *     <input type="text" size="2" maxlength="2" class="hour" placeholder="hh"> :
+ *     <input type="text" size="2" maxlength="2" class="minute" placeholder="mm"> :
+ *     <input type="text" size="2" maxlength="2" class="second" placeholder="ss">
+ * </p>
+ *
+ * <p><span class="txp-label-fixed">Date</span><br>
+ *     <input type="text" size="4" maxlength="4" class="exp_year" placeholder="yyyy"> /
+ *     <input type="text" size="2" maxlength="2" class="exp_month" placeholder="mm"> /
+ *     <input type="text" size="2" maxlength="2" class="exp_day" placeholder="dd">
+ * </p>
+ * <p><span class="txp-label-fixed">Time</span><br>
+ *     <input type="text" size="2" maxlength="2" class="exp_hour" placeholder="hh"> :
+ *     <input type="text" size="2" maxlength="2" class="exp_minute" placeholder="mm"> :
+ *     <input type="text" size="2" maxlength="2" class="exp_second" placeholder="ss">
+ * </p>
+ */
 
 input {
     &.year,

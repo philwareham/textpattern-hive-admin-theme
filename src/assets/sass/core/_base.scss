@@ -1,6 +1,12 @@
-/* correct `block` display not defined for any HTML5 element in IE 8-9
-   correct `block` display not defined for `details` or `summary` in IE 10-11 and Firefox
-   correct `block` display not defined for `main` in IE 11 */
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
 article,
 aside,
 details,
@@ -15,47 +21,66 @@ summary {
     display: block;
 }
 
-/* correct `<summary>` not showing as clickable */
-summary {
-    cursor: pointer;
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+    /* 1 */
+    display: inline-block;
+    /* 2 */
+    vertical-align: baseline;
 }
 
-/* address `[hidden]` styling not present in IE 8-10
-   hide the `template` element in IE 8-11, Safari, Firefox < 22 */
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+
 [hidden],
 template {
     display: none;
 }
 
-/* set correct display for `progress` in IE 8-9
-   improve vertical alignment of `progress` in Chrome, Firefox, Opera */
-progress {
-    display: inline-block;
-    vertical-align: baseline;
-}
+/**
+ * Remove tap delay in IE 10+ (and proposed for other browsers).
+ */
 
-html {
-    -webkit-tap-highlight-color: rgba($color-link-hover, 0.5);
-    /* prevent iOS text size adjust after orientation change, without disabling user zoom */
-    -webkit-text-size-adjust: 100%;
-    /* as above, for Windows Phone */
-    -ms-text-size-adjust: 100%;
-}
-
-/* remove tap delay in IE 10+ (and proposed for other browsers) */
 a,
 input,
 button {
     @include touch-action;
 }
 
+/**
+ * Correct `summary` not showing as clickable.
+ */
 
-/* Clearfix
+summary {
+    cursor: pointer;
+}
+
+
+/* Float clearing
    ========================================================================== */
+
+/**
+ * Clearfix using the 'A new micro cleafix hack' method.
+ *
+ * More info: http://nicolasgallagher.com/micro-clearfix-hack/
+ */
 
 .clearfix {
     @include pie-clearfix;
 }
+
+/**
+ * Basic float clearer.
+ */
 
 .clear {
     clear: both;

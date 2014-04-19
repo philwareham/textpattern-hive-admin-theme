@@ -3,9 +3,25 @@
 
 @include establish-baseline;
 
+/**
+ * Global font and colour.
+ */
+
 body {
     font-family: $font-sans-serif;
 }
+
+/**
+ * `h1` headings.
+ *
+ * Example HTML:
+ *
+ * <h1>Heading</h1>
+ * <h1>
+ *     Heading
+ *     <a class="pophelp">i</a>
+ * </h1>
+ */
 
 h1 {
     font-size: 2em; // 26px / 13px
@@ -17,6 +33,18 @@ h1 {
     }
 }
 
+/**
+ * `h2` headings.
+ *
+ * Example HTML:
+ *
+ * <h2>Heading</h2>
+ * <h2>
+ *     Heading
+ *     <a class="pophelp">i</a>
+ * </h2>
+ */
+
 h2 {
     font-size: 1.3846154em; // 18px / 13px
     margin: 0 0 0.72222em 0; // 13px / 18px
@@ -26,10 +54,18 @@ h2 {
     }
 }
 
+/**
+ * `h3` headings.
+ */
+
 h3 {
     font-size: 1.1538462em; // 15px / 13px
     margin: 0.8666667em 0; // 13px / 15px
 }
+
+/**
+ * Normalise `h4`, `h5` and `h6` headings (these are effectively unused).
+ */
 
 h4,
 h5,
@@ -38,15 +74,26 @@ h6 {
     margin: 1em 0;
 }
 
-/* address style set to `bolder` in Firefox 4+, Safari, Chrome */
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
 b,
 strong {
     font-weight: bold;
 }
 
+/**
+ * Add vertical margin to addresses.
+ */
+
 address {
     margin: 1em 0;
 }
+
+/**
+ * Additional styling for blockquotes.
+ */
 
 blockquote {
     margin: 1em 0;
@@ -54,17 +101,27 @@ blockquote {
     padding: 0 0 0 1em;
 }
 
-/* address styling not present in Safari, Chrome */
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
 dfn {
     font-style: italic;
 }
 
-/* address styling not present in IE 8-9, Safari 5, Chrome */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
 abbr[title],
 dfn[title] {
     border-bottom: 1px dotted;
     cursor: help;
 }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
 
 mark,
 var {
@@ -74,6 +131,10 @@ var {
     color: $color-text;
     background: $color-selected;
 }
+
+/**
+ * Harmonise size and style of computer text.
+ */
 
 pre,
 code,
@@ -94,17 +155,34 @@ samp {
     background: $color-background-box;
 }
 
+/**
+ * Additional stylng for preformatted text/code.
+ *
+ * 1. Don't wrap long words.
+ * 2. Contain overflow in all browsers.
+ * 3. Set tab size to 4 spaces.
+ */
+
 pre {
     @include adjust-font-size-to(12px, 0.9);
     @include border-radius(0.25em); // 3px / 12px
 
+    /* 1 */
+    word-wrap: normal;
+    /* 2 */
     overflow-x: auto;
     margin: 1.0833333em 0; // 13px / 12px
     border: 1px solid lighten($color-border, 9%);
     padding: 0.5833333em 1.0833333em; // 7px / 12px + 13px / 12px
     background: $color-background-box;
-    tab-size: 4; // set tab size to 4 spaces
+    /* 3 */
+    tab-size: 4;
 }
+
+/**
+ * Override `code` styling for code display within preformatted text areas and
+ * form text areas.
+ */
 
 pre code,
 .code code,
@@ -116,7 +194,10 @@ code.excerpt {
     background: none;
 }
 
-/* prevent `<sub>` and `<sup>` affecting line height in all browsers */
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
 sub,
 sup.footnote, // override Textile class
 sup {
@@ -125,12 +206,18 @@ sup {
     position: relative;
     vertical-align: baseline;
 }
+
 sup {
     top: -0.5em;
 }
+
 sub {
     bottom: -0.3333333em;
 }
+
+/**
+ * Harmonise size and style of small text.
+ */
 
 small,
 figcaption,

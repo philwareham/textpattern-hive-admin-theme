@@ -1,13 +1,35 @@
 /* Container
    ========================================================================== */
 
+/**
+ * 1. Make body position relative so subsequent items can be positioned
+ *    absolutely if desired.
+ * 2. Remove default margin.
+ */
+
 body {
+    /* 1 */
     position: relative;
+    /* 2 */
     margin: 0;
     padding: 5em 1.69% 0;
     color: $color-text;
     background: $color-background;
 }
+
+/**
+ * Main content area.
+ *
+ * Example HTML:
+ *
+ * <body>
+ *     <header class="txp-header"></header>
+ *     <main class="txp-body">
+ *         Content
+ *     </main>
+ *     <footer class="txp-footer"></footer>
+ * </body>
+ */
 
 .txp-body {
     @extend .clearfix;

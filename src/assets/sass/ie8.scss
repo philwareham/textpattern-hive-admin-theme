@@ -5,7 +5,14 @@
 @import "core/helpers";
 
 
-/* fallbacks for lack of RGBa/opacity support in IE 8 */
+
+/* ==========================================================================
+   Fallbacks for unsupported browser features
+   ========================================================================== */
+
+/**
+ * Fallback for lack of `opacity` support.
+ */
 
 .close {
     color: #cccccc;
@@ -31,7 +38,9 @@
     }
 }
 
-/* fallbacks for lack of SVG support in IE 8 */
+/**
+ * PNG fallback for lack of SVG support.
+ */
 
 .welcome h1 {
     background-image: url("../img/textpattern-xlrg.png");
@@ -57,7 +66,11 @@
     background-image: url("../img/view-preview.png");
 }
 
-/* Fix for reponsive embedded content in IE 8 */
+
+
+/* ==========================================================================
+   Fix for reponsive embedded content in IE 8
+   ========================================================================== */
 
 img,
 video {

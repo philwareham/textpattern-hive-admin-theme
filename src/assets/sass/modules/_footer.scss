@@ -1,6 +1,20 @@
 /* Footer
    ========================================================================== */
 
+/**
+ * Footer content area.
+ *
+ * Example HTML:
+ *
+ * <body>
+ *     <header class="txp-header"></header>
+ *     <main class="txp-body">
+ *         Content
+ *     </main>
+ *     <footer class="txp-footer"></footer>
+ * </body>
+ */
+
 .txp-footer {
     @extend .clearfix;
 }

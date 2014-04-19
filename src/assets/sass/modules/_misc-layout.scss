@@ -1,6 +1,20 @@
 /* Miscellaneous/shared layout
    ========================================================================== */
 
+/**
+ * 1. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ * 2. As 2 above, for Windows Phone.
+ */
+
+html {
+    -webkit-tap-highlight-color: rgba($color-link-hover, 0.5);
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+    -ms-text-size-adjust: 100%;
+}
+
 /* address differences between Firefox and other browsers */
 hr {
     @include box-sizing(content-box);

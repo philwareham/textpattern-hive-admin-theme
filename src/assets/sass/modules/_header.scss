@@ -1,6 +1,20 @@
 /* Header
    ========================================================================== */
 
+/**
+ * Header content area.
+ *
+ * Example HTML:
+ *
+ * <body>
+ *     <header class="txp-header"></header>
+ *     <main class="txp-body">
+ *         Content
+ *     </main>
+ *     <footer class="txp-footer"></footer>
+ * </body>
+ */
+
 .txp-header {
     @include box-shadow(0 0.2em 0.25em rgba(#000000, 0.15));
     @include gradient-linear($color-gradient2-from, $color-gradient2-to);
