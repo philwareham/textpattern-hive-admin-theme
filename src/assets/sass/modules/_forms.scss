@@ -249,11 +249,6 @@ optgroup {
     font-style: normal;
     font-weight: bold;
     color: $color-text;
-
-    &::-moz-focus-inner { // kill phantom spacing and dotted border that appears in Firefox
-        border: 0;
-        padding: 0;
-    }
 }
 
 /**
