@@ -1,8 +1,11 @@
-/* Progress meter (only used in setup pages)
+/* Progress meter (only used in core for setup pages)
    ========================================================================== */
 
 /**
  * Alert labels.
+ *
+ * Utilises CSS counters to increment the progress steps, more info -
+ * https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Counters
  *
  * Example HTML:
  *
@@ -40,6 +43,7 @@
         border-left: 1px solid lighten($color-border, 9%);
         padding: 1em 1em 1em 4em;
 
+        // highlight the currently active step
         &.active {
             @include gradient-linear($color-gradient2-from, $color-gradient2-to);
 
@@ -47,12 +51,13 @@
             border-bottom-color: darken($color-gradient2-to, 6%);
         }
 
+        // numerical indication of step
         &:before {
             @include border-radius(50%);
 
             position: absolute;
             z-index: 2;
-            counter-increment: step; // increment the step on each occurance of this (pesudo) element
+            counter-increment: step; // increment the step on each occurance of this (pseudo) element
             content: counter(step); // write out value of the increment
             top: 0.4375em; // 7px / 16px
             left: 0.6875em; // 12px / 16px
@@ -65,6 +70,7 @@
             background: $color-border;
         }
 
+        // arrows at right-hand side of boxes
         &:after {
             position: absolute;
             top: 0;
