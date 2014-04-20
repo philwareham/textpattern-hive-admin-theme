@@ -1,12 +1,38 @@
 /* Twisties
    ========================================================================== */
 
+/**
+ * Collapsible and non-collapsible summary/details boxes.
+ *
+ * Example HTML:
+ *
+ * <section class="txp-details">
+ *     <h3 class="txp-summary expanded">
+ *         <a>Heading (lever)</a>
+ *     </h3>
+ *     <div class="toggle">
+ *         Content
+ *     </div>
+ * </section>
+ *
+ * <section class="txp-details">
+ *     <h3>Heading</h3>
+ *     <div>
+ *         Content
+ *     </div>
+ * </section>
+ */
+
 .txp-details {
     margin: 1em 0;
     border: 1px solid lighten($color-border, 9%);
     border-top: 0;
     background: $color-background-box;
 }
+
+/**
+ * Styling for details headings.
+ */
 
 h3.txp-summary,
 .txp-details > h3 {
@@ -24,9 +50,19 @@ h3.txp-summary,
     height: 2em; // 26px / 13px
 }
 
+/**
+ * Padding for non-collapsible details headings.
+ *
+ * For collapsible details headings the padding is done via the `a` tag.
+ */
+
 .txp-details > h3:not(.txp-summary) {
-    padding: 0 2em 0 1em;
+    padding: 0 1em;
 }
+
+/**
+ * Additonal styling for lever details headings.
+ */
 
 h3.txp-summary a {
     display: block;
@@ -61,6 +97,10 @@ h3.txp-summary a {
     }
 }
 
+/**
+ * Additonal styling for lever details headings - expanded state.
+ */
+
 h3.txp-summary.expanded a:after {
     content: "&#8595;";
     top: 0.8461538em;
@@ -70,6 +110,10 @@ h3.txp-summary.expanded a:after {
     border-top: 0.3076923em solid $color-text;
     border-bottom: 0;
 }
+
+/**
+ * Pad left and right of inner details content container.
+ */
 
 .toggle,
 .txp-details > div {
