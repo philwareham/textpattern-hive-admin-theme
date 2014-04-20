@@ -31,7 +31,7 @@
 }
 
 /**
- * Styling for details headings.
+ * Styling for summary headings.
  */
 
 h3.txp-summary,
@@ -53,7 +53,7 @@ h3.txp-summary,
 /**
  * Padding for non-collapsible details headings.
  *
- * For collapsible details headings the padding is done via the `a` tag.
+ * For collapsible summary headings the padding is done via the `a` tag.
  */
 
 .txp-details > h3:not(.txp-summary) {
@@ -61,7 +61,7 @@ h3.txp-summary,
 }
 
 /**
- * Additonal styling for lever details headings.
+ * Additonal styling for lever summary headings.
  */
 
 h3.txp-summary a {
@@ -98,7 +98,7 @@ h3.txp-summary a {
 }
 
 /**
- * Additonal styling for lever details headings - expanded state.
+ * Additonal styling for lever summary headings - expanded state.
  */
 
 h3.txp-summary.expanded a:after {
