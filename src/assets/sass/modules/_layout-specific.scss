@@ -1,266 +1,4 @@
-/* Miscellaneous/shared layout
-   ========================================================================== */
-
-/**
- * 1. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- * 2. As 2 above, for Windows Phone.
- */
-
-html {
-    -webkit-tap-highlight-color: rgba($color-link-hover, 0.5);
-    /* 1 */
-    -webkit-text-size-adjust: 100%;
-    /* 2 */
-    -ms-text-size-adjust: 100%;
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-
-hr {
-    @include box-sizing(content-box);
-
-    border: 0; // remove the default `hr` border
-    border-bottom: 1px solid $color-border;
-    height: 0;
-}
-
-/**
- * Hide text but still allow screen reader access.
- *
- * Example HTML:
- *
- * <h1 class="txp-accessibility">
- */
-
-.txp-accessibility {
-    position: absolute;
-    left: -1000em;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-}
-
-/**
- * Swap absolute positions in RTL languages.
- *
- * This avoids browser scrollbar displaying incorrectly.
- */
-
-[dir="rtl"] .txp-accessibility {
-    left: auto;
-    right: -1000em;
-}
-
-[role="search"] {
-    float: right;
-
-    p {
-        margin: 0 0.35em 0 0;
-    }
-}
-
-.txp-buttons {
-    margin-top: 0;
-}
-
-#detail-toggle {
-    float: right;
-}
-
-.txp-control-panel {
-    margin-top: 0.5em;
-    text-align: right;
-}
-
-.txp-actions a {
-    margin-left: 0.75em;
-}
-
-div.multi-edit {
-    margin: 1em 0;
-}
-
-.multi-option {
-    display: none;
-}
-
-.multi-step {
-    margin-left: 0.30769231em;
-    display: inline-block;
-}
-
-.text-section {
-    padding-top: 5em;
-    background: url("../img/separator.gif") repeat-x 0 2.1538462em; // 28px / 13px
-}
-
-.restricted-area {
-    font-size: 2em; // 26px / 13px
-    text-align: center;
-}
-
-.empty {
-    display: none;
-}
-
-.disabled {
-    opacity: 0.33;
-}
-
-/* List navigators on list pages.
- *
- * Anchor elements kept to one line to prevent space between buttons.
- *
- * @see .nav-tertiary
- *
- * Example HTML:
- *
- * <div class="txp-navigation" id="image_navigation">
- *     <p class="nav-tertiary pageby">
- *         <a class="navlink-active">15</a><a class="navlink">25</a><a class="navlink">50</a>
- *     </p>
- *     <ul class="nav-tertiary prev-next">
- *         Content
- *     </ul>
- * </div>
- */
-
-.txp-navigation {
-    p,
-    ul {
-        margin: 0 0 0.5em;
-    }
-
-    .pageby {
-        float: left;
-    }
-
-    .prev-next {
-        float: right;
-    }
-}
-
-/**
- * AJAX spinners.
- *
- * Example HTML:
- *
- * <span class="spinner"></span>
- */
-
-span.spinner {
-    @include hires-graphic(spinner, gif, 13px, 13px);
-
-    display: inline-block;
-    width: 13px;
-    height: 13px;
-}
-
-
-/* Edit and login panes
-   ========================================================================== */
-
-.txp-edit,
-.txp-login {
-    @include border-radius;
-
-    margin: 0 auto 1em;
-    padding: 1em 1em 1px 1em;
-    background: $color-background-box;
-}
-
-.txp-edit,
-.txp-login,
-.edit-form,
-.prefs-form,
-.txp-login {
-    p {
-        @extend .clearfix;
-    }
-}
-
-.txp-edit {
-    max-width: ($text-column - 2em);
-}
-
-.txp-login {
-    max-width: 35em;
-}
-
-.txp-label,
-.txp-value {
-    float: left;
-    width: 50%;
-
-    [dir="rtl"] & {
-        float: right;
-    }
-}
-
-.txp-login {
-    .txp-label {
-        width: 31%;
-    }
-
-    .txp-value {
-        width: 69%;
-    }
-}
-
-.txp-value {
-    input,
-    select {
-        margin-top: -0.2307692em;
-        margin-bottom: -0.2307692em;
-    }
-}
-
-.txp-value-fixed {
-    display: inline-block;
-    padding: 0.2307692em 0; // 3px / 13px
-}
-
-/* deprecated @ 4.6 */
-.edit-label {
-    display: inline-block;
-    float: left;
-    width: 42%;
-}
-
-/* deprecated @ 4.6 */
-.edit-value {
-    display: inline-block;
-    float: right;
-    width: 58%;
-
-    input,
-    select {
-        margin-top: -0.2307692em;
-        margin-bottom: -0.2307692em;
-    }
-}
-
-/* TBC (for modals @ 4.6) */
-.txp-edit-action {
-    @include border-bottom-radius;
-
-    margin-right: -1em;
-    margin-left: -1em;
-    margin-bottom: 0;
-    border-top: 1px solid $color-background;
-    padding: 1em;
-    background: darken($color-background-box, 3%);
-
-    input[type="submit"] {
-        float: right;
-    }
-}
-
-
-/* Setup pages
+/* Setup pages - additional layout
    ========================================================================== */
 
 body#page-setup {
@@ -294,7 +32,7 @@ body#page-setup {
 }
 
 
-/* Tag builder page
+/* Tag builder page - additional layout
    ========================================================================== */
 
 #tag-event {
@@ -327,7 +65,7 @@ body#page-setup {
 }
 
 
-/* Content -> Categories page
+/* Content -> Categories page - additional layout
    ========================================================================== */
 
 .categories {
@@ -337,7 +75,7 @@ body#page-setup {
 }
 
 
-/* Content -> Write page
+/* Content -> Write page - additional layout
    ========================================================================== */
 
 #view_modes {
@@ -412,7 +150,7 @@ body#page-setup {
 }
 
 
-/* Content -> Articles page
+/* Content -> Articles page - additional layout
    ========================================================================== */
 
 .unpublished {
@@ -420,7 +158,7 @@ body#page-setup {
 }
 
 
-/* Content -> Images page
+/* Content -> Images page - additional layout
    ========================================================================== */
 
 .fullsize-image {
@@ -455,7 +193,7 @@ body#page-setup {
 }
 
 
-/* Content -> Files page
+/* Content -> Files page - additional layout
    ========================================================================== */
 
 .edit-file-replace input[type="submit"] {
@@ -463,7 +201,7 @@ body#page-setup {
 }
 
 
-/* Content -> Comments page
+/* Content -> Comments page - additional layout
    ========================================================================== */
 
 #page-discuss .txp-list tr.spam {
@@ -475,7 +213,7 @@ body#page-setup {
 }
 
 
-/* Admin -> Languages page
+/* Admin -> Languages page - additional layout
    ========================================================================== */
 
 #page-lang .txp-list .modified {
@@ -488,7 +226,7 @@ body#page-setup {
 }
 
 
-/* Admin -> Plugins page
+/* Admin -> Plugins page - additional layout
    ========================================================================== */
 
 tr {
