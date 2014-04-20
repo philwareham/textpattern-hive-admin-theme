@@ -61,6 +61,39 @@ td {
     text-align: right;
 }
 
+/**
+ * Listing tables.
+ *
+ * Example HTML:
+ *
+ * <table class="txp-list">
+ *     <thead>
+ *         <tr>
+ *             <th class="multi-edit" scope="col"></th>
+ *             <th class="asc scope="col"></th>
+ *             <th scope="col"></th>
+ *         </tr>
+ *     </thead>
+ *     <tfoot>
+ *         <tr>
+ *             <td colspan="3"></td>
+ *         </tr>
+ *     </tfoot>
+ *     <tbody>
+ *         <tr>
+ *             <th class="multi-edit" scope="row"></th>
+ *             <td></td>
+ *             <td></td>
+ *         </tr>
+ *         <tr class="selected">
+ *             <th class="multi-edit" scope="row"></th>
+ *             <td></td>
+ *             <td></td>
+ *         </tr>
+ *     </tbody>
+ * </table>
+ */
+
 .txp-list {
     width: 100%;
 
