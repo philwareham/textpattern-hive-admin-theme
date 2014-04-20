@@ -254,6 +254,7 @@ optgroup {
 /**
  * 1. Remove default vertical scrollbar in IE 8/9/10/11.
  * 2. Restrict to vertical resizing to prevent layout breakage.
+ * 3. Larger leading on text areas for legibility.
  */
 
 textarea {
@@ -264,6 +265,8 @@ textarea {
     /* 2 */
     resize: vertical;
     width: 100%;
+    /* 3 */
+    line-height: 18px;
 }
 
 /**
