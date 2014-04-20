@@ -7,10 +7,10 @@
  * Example HTML:
  *
  * <body>
- *     <header class="txp-header"></header>
- *     <main class="txp-body">
+ *     <header class="txp-header">
  *         Content
- *     </main>
+ *     </header>
+ *     <main class="txp-body"></main>
  *     <footer class="txp-footer"></footer>
  * </body>
  */
@@ -28,8 +28,18 @@
     border-bottom: 1px solid darken($color-gradient2-to, 6%);
     padding: 0 1.69%;
     height: 3em;
+}
 
-    h1 {
+/**
+ * Site heading and Textpattern logo.
+ *
+ * Example HTML:
+ *
+ * <header class="txp-header">
+ *      <h1><a>My site</a></h1>
+ */
+
+.txp-header h1 {
         @include ellipsis;
 
         float: left;
