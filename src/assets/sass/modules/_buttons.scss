@@ -117,6 +117,7 @@ a.publish {
 input[type="submit"].destroy,
 button.destroy {
     @include text-shadow($text-shadow-dark);
+    @include border-radius(50%);
     @include gradient-linear(lighten($color-error-text, 10%), $color-error-text);
 
     border-color: darken($color-error-text, 5%);
