@@ -1,6 +1,14 @@
 /* Navigation
    ========================================================================== */
 
+/**
+ * Hide the navigation menu toggle button on desktop layout.
+ *
+ * Example HTML:
+ *
+ * <button class="txp-nav-toggle">
+ */
+
 button.txp-nav-toggle {
     display: none;
 }
@@ -41,7 +49,7 @@ button.txp-nav-toggle {
 
         display: block;
         padding: 0 1em;
-        line-height: 3em;
+        line-height: 2.69230769230769em; // 35px / 13px
         text-decoration: none;
         color: darken($color-text, 20%);
     }
@@ -58,8 +66,6 @@ button.txp-nav-toggle {
         }
     }
 }
-
-
 
 
 
@@ -129,16 +135,18 @@ button.txp-nav-toggle {
 }
 
 
-
 }
 
 
 @media only screen and (max-width: $breakpoint-2) {
-    h1 {
-        @include hide-text;
 
-        width: 0.7692308em;
-    }
+/**
+ * Show the navigation menu toggle button on mobile layout.
+ *
+ * Example HTML:
+ *
+ * <button class="txp-nav-toggle">
+ */
 
     button.txp-nav-toggle {
         @include text-shadow(none);
@@ -150,7 +158,7 @@ button.txp-nav-toggle {
         padding: 0;
         font-size: 16px;
         display: inline-block;
-        margin-top: 0.1875em;
+        margin-top: 0.125em; // 2px / 16px
         width: 2em;
         height: 2em;
         background: transparent url("../img/hamburger.svg");
