@@ -98,9 +98,15 @@ body#page-setup {
 
 @media only screen and (max-width: $breakpoint-2) {
 
-body {
-    padding-top: 7.23076em; // 94px / 13px
-}
+/**
+ * Hide the header site name text on mobile layout.
+ */
+
+    .txp-header h1 {
+        @include hide-text;
+
+        width: 0.7692308em;
+    }
 
 #page-login,
 #page-logout {
