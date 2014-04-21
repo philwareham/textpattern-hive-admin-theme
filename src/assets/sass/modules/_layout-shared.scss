@@ -107,7 +107,14 @@ div.multi-edit {
 }
 
 .disabled {
+    background-image: none;
     opacity: 0.33;
+    cursor: default !important;
+
+    a {
+        text-decoration: none;
+        cursor: default;
+    }
 }
 
 /* List navigators on list pages.
