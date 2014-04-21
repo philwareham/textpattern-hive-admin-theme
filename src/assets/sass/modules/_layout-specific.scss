@@ -1,22 +1,39 @@
 /* Setup pages - additional layout
    ========================================================================== */
 
+/**
+ * Reduced top padding of setup pages.
+ */
+
 body#page-setup {
     padding: 1em 2em 0;
 }
+
+/**
+ * Column width and margins of setup pages.
+ */
 
 .txp-setup {
     margin: 1em auto 2em;
     max-width: $standard-column;
 }
 
-/* rules specific to the very first page you'll see */
+/**
+ * Rules specific to the very first setup page you'll see.
+ *
+ * 1. Column width of welcome message.
+ * 2. Large Textpattern logo.
+ * 3. `select` spans entire column width.
+ */
+
 .welcome {
     .txp-setup {
+        /* 1 */
         max-width: 20.3076923em;
     }
 
     h1 {
+        /* 2 */
         @include hide-text;
 
         width: 20.3076923em; // 264px / 13px
@@ -27,6 +44,7 @@ body#page-setup {
     }
 
     select {
+        /* 3 */
         width: 100%;
     }
 }
@@ -153,6 +171,10 @@ body#page-setup {
 /* Content -> Articles page - additional layout
    ========================================================================== */
 
+/**
+ * Grey-out text for unpublished articles in the list.
+ */
+
 .unpublished {
     color: $color-text-footnote;
 }
@@ -204,9 +226,17 @@ body#page-setup {
 /* Content -> Comments page - additional layout
    ========================================================================== */
 
+/**
+ * Red background highlight for spam comment rows in the list.
+ */
+
 #page-discuss .txp-list tr.spam {
     background: lighten($color-error-background, 2%);
 }
+
+/**
+ * Yellow background highlight for unmoderated comment rows in the list.
+ */
 
 #page-discuss .txp-list tr.moderate {
     background: lighten($color-warning-background, 2%);
