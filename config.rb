@@ -11,8 +11,6 @@ project_path = "src"
 
 sass_path = "src/assets/sass"
 css_path = "dist/hive/assets/css"
-images_dir = "img"
-fonts_dir = "fonts"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
