@@ -1,6 +1,7 @@
 module.exports = function (grunt) {
     'use strict';
 
+    // Load Grunt plugins.
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -11,6 +12,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        // Use 'config.rb' file to configure Compass.
         compass: {
             dev: {
                 options: {
@@ -20,6 +22,7 @@ module.exports = function (grunt) {
             }
         },
 
+        // Copy files from `src/` to `dist/hive/assets/`.
         copy: {
             dist: {
                 files: [
@@ -29,6 +32,7 @@ module.exports = function (grunt) {
             }
         },
 
+        // Minified versions of CSS files within `dist/hive/assets/css/`.
         cssmin: {
             main: {
                 expand: true,
@@ -39,6 +43,7 @@ module.exports = function (grunt) {
             }
         },
 
+        // Check code quality of Gruntfile.js and theme-specific JavaScript using JSHint.
         jshint: {
             files: ['Gruntfile.js', 'src/assets/js/*.js'],
             options: {
@@ -68,8 +73,10 @@ module.exports = function (grunt) {
             }
         },
 
+        // Uglify and copy JavaScript files from `bower-components`.
         uglify: {
             dist: {
+                // Preserve all comments that start with a bang (!) or include a closure compiler style.
                 options: {
                     mangle: false,
                     preserveComments: 'some'
@@ -90,6 +97,7 @@ module.exports = function (grunt) {
             }
         },
 
+        // Directories watched and tasks performed by invoking `grunt watch`.
         watch: {
             sass: {
                 files: 'src/assets/sass/**',
@@ -104,6 +112,7 @@ module.exports = function (grunt) {
 
     });
 
+    // Register tasks.
     grunt.registerTask('build', ['jshint', 'sass', 'copy', 'uglify']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('sass', ['compass', 'cssmin']);
