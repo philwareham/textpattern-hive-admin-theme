@@ -6,90 +6,90 @@
 @media only screen and (max-width: $breakpoint-1) {
 
 
-/* Layout < 768px
-   ========================================================================== */
+    /* Layout < 768px
+       ========================================================================== */
 
-/**
- * Adjust right/left padding of body.
- */
+    /**
+     * Adjust right/left padding of body.
+     */
 
-body {
-    padding: 4em 1em 0;
-}
+    body {
+        padding: 4em 1em 0;
+    }
 
-body#page-setup {
-    padding: 0 1em 0;
-}
-
-
-/* Layout grid < 768px
-   ========================================================================== */
-
-.txp-control-panel {
-    margin-top: 0;
-    text-align: left;
-}
+    body#page-setup {
+        padding: 0 1em 0;
+    }
 
 
-/* Header < 768px
-   ========================================================================== */
+    /* Layout grid < 768px
+       ========================================================================== */
 
-/**
- * Adjust right/left padding of header area.
- */
-
-.txp-header {
-    padding: 0 1em;
-}
-
-/**
- * Smaller version of Textpattern logo.
- */
-
-.txp-header h1 {
-    background-image: url("../img/textpattern-sml.svg");
-    background-size: 2em 2em;
-    max-width: 50%;
-    padding-left: 2em;
-}
-
-/**
- * Adjust right absolute position of logout button.
- */
-
-.txp-logout {
-    right: 1em;
-}
+    .txp-control-panel {
+        margin-top: 0;
+        text-align: left;
+    }
 
 
-/* Navigation < 768px
-   ========================================================================== */
+    /* Header < 768px
+       ========================================================================== */
 
-/**
- * TODO?
- */
+    /**
+     * Adjust right/left padding of header area.
+     */
+
+    .txp-header {
+        padding: 0 1em;
+    }
+
+    /**
+     * Smaller version of Textpattern logo.
+     */
+
+    .txp-header h1 {
+        background-image: url("../img/textpattern-sml.svg");
+        background-size: 2em 2em;
+        max-width: 50%;
+        padding-left: 2em;
+    }
+
+    /**
+     * Adjust right absolute position of logout button.
+     */
+
+    .txp-logout {
+        right: 1em;
+    }
 
 
-/* Typography < 768px
-   ========================================================================== */
+    /* Navigation < 768px
+       ========================================================================== */
 
-.text-section {
-    padding-top: 4em;
-    background-position: 0 1.69230em;
-}
+    /**
+     * TODO?
+     */
 
 
-/* Content -> Write page < 768px
-   ========================================================================== */
+    /* Typography < 768px
+       ========================================================================== */
 
-/**
- * Turn off features to optimise small screen size.
- */
+    .text-section {
+        padding-top: 4em;
+        background-position: 0 1.69230em;
+    }
 
-#textile_group,
-#recent_group {
-    display: none;
-}
+
+    /* Content -> Write page < 768px
+       ========================================================================== */
+
+    /**
+     * Turn off features to optimise small screen size.
+     */
+
+    #textile_group,
+    #recent_group {
+        display: none;
+    }
 
 }
 
@@ -102,9 +102,9 @@ body#page-setup {
 
 @media only screen and (max-width: $breakpoint-2) {
 
-/**
- * Hide the header site name text on mobile layout.
- */
+    /**
+     * Hide the header site name text on mobile layout.
+     */
 
     .txp-header h1 {
         @include hide-text;
@@ -112,136 +112,145 @@ body#page-setup {
         width: 0.7692308em;
     }
 
-#page-login,
-#page-logout {
-    padding-top: 4em;
-}
+    .txp-header {
+        position: absolute;
 
-.txp-header {
-    position: absolute;
-
-    h1 {
-        max-width: 66%;
+        h1 {
+            max-width: 66%;
+        }
     }
-}
 
-.txp-label,
-.txp-value {
-    float: none;
-    display: block;
-    width: 100%;
-}
-
-.txp-value {
-    input,
-    select {
-        margin-top: 0;
-        margin-bottom: 0;
+    .txp-label,
+    .txp-value {
+        float: none;
+        display: block;
+        width: 100%;
     }
-}
 
-/* Deprecated @ 4.6 */
-.edit-label,
-.edit-value,
-.login-label,
-.login-value {
-    float: none;
-    width: 100%;
-}
-
-/* Deprecated @ 4.6 */
-.edit-value,
-.login-value {
-    input,
-    select {
-        margin-top: 0;
-        margin-bottom: 0;
+    .txp-value {
+        input,
+        select {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
-}
 
-#article-main #body {
-    height: 17.46153em; // 227px / 13px
-}
+    /* Deprecated @ 4.6 */
+    .edit-label,
+    .edit-value,
+    .login-label,
+    .login-value {
+        float: none;
+        width: 100%;
+    }
 
-#excerpt {
-    height: 4.38461em; // 57px / 13px
-}
+    /* Deprecated @ 4.6 */
+    .edit-value,
+    .login-value {
+        input,
+        select {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
 
-#page-page,
-#page-form,
-#page-css {
-    textarea.code {
+    #article-main #body {
         height: 17.46153em; // 227px / 13px
     }
-}
 
-/* remove float from txp-navigation elements */
-
-.txp-navigation {
-    p {
-        margin: 1em 0 0.5em;
+    #excerpt {
+        height: 4.38461em; // 57px / 13px
     }
 
-    .pageby,
-    .prev-next {
-        float: none;
-    }
-}
-
-.progress-meter {
-    ol {
-        display: block;
-        margin-bottom: 1em;
-        text-align: left;
-    }
-
-    li {
-        float: none;
-        display: block;
-        margin: 0;
-
-        &:after {
-            display: none;
+    #page-page,
+    #page-form,
+    #page-css {
+        textarea.code {
+            height: 17.46153em; // 227px / 13px
         }
     }
-}
 
-[dir="rtl"] .progress-meter {
-    ol {
-        text-align: right;
-    }
+    /* remove float from txp-navigation elements */
 
-    li {
-        margin: 0;
+    .txp-navigation {
+        p {
+            margin: 1em 0 0.5em;
+        }
 
-        &:after {
-            display: none;
+        .pageby,
+        .prev-next {
+            float: none;
         }
     }
-}
 
-/* responsive jQuery UI tabs */
+    /**
+     * Collapse progress meters responsively.
+     */
 
-.ui-tabs .ui-tabs-nav li {
-    @include border-radius(0);
+    .progress-meter {
+        ol {
+            display: block;
+            margin-bottom: 1em;
+            text-align: left;
+        }
 
-    float: none;
-    margin-top: 2px;
-    border-bottom-width: 1px;
+        li {
+            float: none;
+            display: block;
+            margin: 0;
 
-    &.ui-tabs-active {
-        margin-bottom: 0;
-        padding-bottom: 0;
+            &:after {
+                display: none;
+            }
+        }
     }
 
-    a {
+    /**
+     * Override specifity on collapsed progress meters in RTL languages.
+     */
+
+    [dir="rtl"] .progress-meter {
+        ol {
+            text-align: right;
+        }
+
+        li {
+            margin: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    /**
+     * Collapse jQuery UI tabs responsively.
+     */
+
+    .ui-tabs .ui-tabs-nav li {
+        @include border-radius(0);
+
         float: none;
-        display: block;
-    }
-}
+        margin-top: 2px;
+        border-bottom-width: 1px;
 
-.ui-tabs .ui-tabs-panel {
-    border-top-width: 0;
-}
+        &.ui-tabs-active {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        a {
+            float: none;
+            display: block;
+        }
+    }
+
+    /**
+     * Remove top border from jQuery UI tabs panel.
+     */
+
+    .ui-tabs .ui-tabs-panel {
+        border-top-width: 0;
+    }
 
 }
