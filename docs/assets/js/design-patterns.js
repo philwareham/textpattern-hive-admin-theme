@@ -226,7 +226,7 @@ $(function ()
     });
 
     // Selectmenu
-    $('.jquery-ui-selectmenu').selectmenu();
+//    $('.jquery-ui-selectmenu').selectmenu();
 
     // Slider - horizontal
     $('.jquery-ui-slider-horizontal').slider({
