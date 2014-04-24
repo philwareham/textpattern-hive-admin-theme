@@ -339,6 +339,10 @@ span.spinner {
 /* Edit and login panes
    ========================================================================== */
 
+/**
+ * Styling of edit panes.
+ */
+
 .txp-edit,
 .txp-login {
     @include border-radius;
@@ -347,6 +351,24 @@ span.spinner {
     padding: 1em 1em 1px 1em;
     background: $color-background-box;
 }
+
+/**
+ * Maximum width of edit panes.
+ */
+
+.txp-edit {
+    max-width: ($text-column - 2em);
+}
+
+/**
+ * Maximum width of login panes.
+ */
+
+.txp-login {
+    max-width: 35em;
+}
+
+// Clearfix form paragraphs (adds to cleafix rules in _base.scss via @extend).
 
 .txp-edit,
 .txp-login,
@@ -358,23 +380,44 @@ span.spinner {
     }
 }
 
-.txp-edit {
-    max-width: ($text-column - 2em);
-}
-
-.txp-login {
-    max-width: 35em;
-}
+/**
+ * Label/value inline two-column layouts within edit/login panes.
+ *
+ * Note: this is collapsed to a one-column format on mobile layouts.
+ *
+ * Example HTML:
+ *
+ * <p>
+ *     <span class="txp-label">
+ *         <label>Label</label> <a class="pophelp">i</a>
+ *     </span>
+ *     <span class="txp-value">
+ *         <input type="text" size="32">
+ *     </span>
+ * </p>
+ */
 
 .txp-label,
 .txp-value {
     float: left;
     width: 50%;
+}
 
+/**
+ * Swap label/value text alignment in RTL languages.
+ */
+
+.txp-label,
+.txp-value {
     [dir="rtl"] & {
         float: right;
     }
 }
+
+/**
+ * Slightly different label/value column widths for login panel, since it's
+ * thinner than the standard edit pane width.
+ */
 
 .txp-login {
     .txp-label {
@@ -386,27 +429,58 @@ span.spinner {
     }
 }
 
+/**
+ * Vertically align values with their labels.
+ */
+
 .txp-value {
     input,
     select {
-        margin-top: -0.2307692em;
-        margin-bottom: -0.2307692em;
+        margin-top: -0.46153846153846em; // 6px / 13px
+        margin-bottom: -0.23076923076923em; // 3px / 13px
     }
 }
 
+/**
+ * Keeps non-editable values on same baseline, to prevent content jumping.
+ *
+ * Appears on:
+ *
+ * Forms page.
+ *
+ * Example HTML:
+ *
+ * <p>
+ *     <span class="txp-label-fixed">Form name</span><br>
+ *     <span class="txp-value-fixed">default</span>
+ * </p>
+ */
+
 .txp-value-fixed {
     display: inline-block;
-    padding: 0.2307692em 0; // 3px / 13px
+    padding: 0.46153846153846em 0; // 6px / 13px
 }
 
-/* deprecated @ 4.6 */
+/**
+ * Label columns within edit/login panes - OLD.
+ *
+ * @deprecated in 4.6.0
+ * @see        .txp-label
+ */
+
 .edit-label {
     display: inline-block;
     float: left;
     width: 42%;
 }
 
-/* deprecated @ 4.6 */
+/**
+ * Value columns within edit/login panes - OLD.
+ *
+ * @deprecated in 4.6.0
+ * @see        .txp-value
+ */
+
 .edit-value {
     display: inline-block;
     float: right;
@@ -419,7 +493,10 @@ span.spinner {
     }
 }
 
-/* TBC (for modals @ 4.6) */
+/**
+ * TODO: Modal window edit panes (TBC).
+ */
+
 .txp-edit-action {
     @include border-bottom-radius;
 
