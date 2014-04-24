@@ -54,6 +54,12 @@ hr {
     right: -1000em;
 }
 
+/**
+ * TODO: Search widget at top of lists.
+ *
+ * Appears on: listing pages.
+ */
+
 [role="search"] {
     float: right;
 
@@ -62,45 +68,204 @@ hr {
     }
 }
 
+/**
+ * TODO: Primary buttons at top of listings.
+ *
+ * Appears on:
+ *
+ * List pages.
+ *
+ * Example HTML:
+ *
+ * TODO
+ */
+
 .txp-buttons {
     margin-top: 0;
 }
 
+/**
+ * TODO: Details toggle at top of listings.
+ *
+ * Appears on:
+ *
+ * List pages.
+ *
+ * Example HTML:
+ *
+ * TODO
+ */
+
 #detail-toggle {
     float: right;
 }
+
+/**
+ * TODO: Additonal forms at top of listings.
+ *
+ * Appears on:
+ *
+ * Languages list page, plugins list page.
+ *
+ * Example HTML:
+ *
+ * TODO
+ */
 
 .txp-control-panel {
     margin-top: 0.5em;
     text-align: right;
 }
 
+/**
+ * Additonal links ('Duplicate', 'View', etc.) on some pages.
+ *
+ * Appears on:
+ *
+ * Article write/edit page, pages page, forms page, styles page.
+ *
+ * Example HTML:
+ *
+ * <p class="title">
+ *     <label>Label</label><br>
+ *     <input type="text">
+ *     <span class="txp-actions"><a>Duplicate</a></span>
+ *     <span class="txp-actions"><a>View</a></span>
+ * </p>
+ */
+
 .txp-actions a {
     margin-left: 0.75em;
 }
+
+/**
+ * Parent container for multi-edit `select` widget at bottom of listings.
+ *
+ * Appears on:
+ *
+ * List pages.
+ *
+ * Example HTML:
+ *
+ * <div class="multi-edit">
+ *     <select>
+ *         <option selected="selected">With selected...</option>
+ *         <option>Change author</option>
+ *         <option>Duplicate</option>
+ *         <option>Delete</option>
+ *     </select>
+ * </div>
+ */
 
 div.multi-edit {
     margin: 1em 0;
 }
 
+/**
+ * Hide secondary `select` element on multi-edit `select` widget.
+ *
+ * Display is controlled via JavaScript (hidden by default until an action is
+ * selected by user, then overrode by `.multi-step`).
+ *
+ * Appears on:
+ *
+ * List pages.
+ *
+ * Example HTML:
+ *
+ * <div class="multi-edit">
+ *     <select>
+ *         <option selected="selected">With selected...</option>
+ *         <option>Change author</option>
+ *         <option>Duplicate</option>
+ *         <option>Delete</option>
+ *     </select>
+ *     <div class="multi-option">
+ *         <select name="order">
+ *             <option value="1">1</option>
+ *             <option value="2">1</option>
+ *             <option value="3" selected="selected">5</option>
+ *         </select>
+ *     </div>
+ *     <input type="submit" value="Go">
+ * </div>
+ */
+
 .multi-option {
     display: none;
 }
 
-.multi-step {
+/**
+ * Show secondary `select` element on multi-edit `select` widget.
+ *
+ * Display is controlled via JavaScript (class not present until an action is
+ * selected by user, then overrides `.multi-edit`).
+ *
+ * Appears on:
+ *
+ * List pages.
+ *
+ * Example HTML:
+ *
+ * <div class="multi-edit">
+ *     <select>
+ *         <option selected="selected">With selected...</option>
+ *         <option>Change author</option>
+ *         <option>Duplicate</option>
+ *         <option>Delete</option>
+ *     </select>
+ *     <div class="multi-option multi-step">
+ *         <select name="order">
+ *             <option value="1">1</option>
+ *             <option value="2">1</option>
+ *             <option value="3" selected="selected">5</option>
+ *         </select>
+ *     </div>
+ *     <input type="submit" value="Go">
+ * </div>
+ */
+
+.multi-option.multi-step {
     margin-left: 0.30769231em;
     display: inline-block;
 }
 
+/**
+ * When text sections are linked with anchors, make sure there is ample padding 
+ * above so they don't become obscured by sticky `header` area.
+ *
+ * Appears on:
+ *
+ * Plugin help pages, miscellaneous text pages.
+ *
+ * Example HTML:
+ *
+ * <section class="text-section" id="help-section02">
+ */
+
 .text-section {
-    padding-top: 5em;
-    background: url("../img/separator.gif") repeat-x 0 2.1538462em; // 28px / 13px
+    padding-top: 4em;
+    background: url("../img/separator.gif") repeat-x 0 2em; // 26px / 13px
 }
+
+/**
+ * System permissions 'keep out' messages.
+ */
 
 .restricted-area {
     font-size: 2em; // 26px / 13px
     text-align: center;
 }
+
+/**
+ * Hide empty containers from view (and from screen readers).
+ *
+ * TODO: this is a dirty solution - should be improved in HTML strucure.
+ *
+ * Example HTML:
+ *
+ * <section id="comments_group" class="txp-details empty"></section>
+ */
 
 .empty {
     display: none;
