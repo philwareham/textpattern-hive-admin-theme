@@ -383,7 +383,7 @@ span.spinner {
 /**
  * Label/value inline two-column layouts within edit/login panes.
  *
- * Note: this is collapsed to a one-column format on mobile layouts.
+ * Note: this is collapsed to a one-column format on mobile layout.
  *
  * Example HTML:
  *
@@ -430,7 +430,7 @@ span.spinner {
 }
 
 /**
- * Vertically align values with their labels.
+ * Vertically inline align values with their labels.
  */
 
 .txp-value {
@@ -464,7 +464,7 @@ span.spinner {
 }
 
 /**
- * Label columns within edit/login panes - OLD.
+ * Label columns within edit panes - OLD.
  *
  * @deprecated in 4.6.0
  * @see        .txp-label
@@ -477,7 +477,7 @@ span.spinner {
 }
 
 /**
- * Value columns within edit/login panes - OLD.
+ * Value columns within edit panes - OLD.
  *
  * @deprecated in 4.6.0
  * @see        .txp-value
