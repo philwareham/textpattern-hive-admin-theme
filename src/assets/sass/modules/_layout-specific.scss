@@ -96,6 +96,12 @@ body#page-setup {
 /* Content -> Write page - additional layout
    ========================================================================== */
 
+/**
+ * View mode tabs on write pages.
+ *
+ * TODO: This all needs to be refactored into same style as jQuery UI tabs.
+ */
+
 #view_modes {
     ul {
         list-style: none;
@@ -131,6 +137,12 @@ body#page-setup {
     }
 }
 
+/**
+ * Icons for view mode tabs on write pages.
+ *
+ * TODO: These are to be removed in favour of textual tabs.
+ */
+
 #tab-text a {
     background-image: url("../img/view-text.svg");
 }
@@ -154,16 +166,6 @@ body#page-setup {
 
     .author {
         color: $color-text-footnote;
-    }
-}
-
-#recent_group {
-    ul {
-        list-style: decimal-leading-zero;
-    }
-
-    li {
-        margin-left: 2em;
     }
 }
 
