@@ -103,6 +103,11 @@
         width: 0.7692308em;
     }
 
+    /**
+     * TODO: Need to confirm this is still needed once I've finished the new
+     * navigation menu.
+     */
+
     .txp-header {
         position: absolute;
 
@@ -111,6 +116,23 @@
         }
     }
 
+    /**
+     * Label/value one-column layouts within edit/login panes.
+     *
+     * Collapsed from two-column format on desktop layout.
+     *
+     * Example HTML:
+     *
+     * <p>
+     *     <span class="txp-label">
+     *         <label>Label</label> <a class="pophelp">i</a>
+     *     </span>
+     *     <span class="txp-value">
+     *         <input type="text" size="32">
+     *     </span>
+     * </p>
+     */
+
     .txp-label,
     .txp-value {
         float: none;
@@ -118,40 +140,64 @@
         width: 100%;
     }
 
+    /**
+     * Remove inline alignment margin values when collapsed.
+     */
+
     .txp-value {
         input,
         select {
-            margin-top: 0;
-            margin-bottom: 0;
+            margin: 0;
         }
     }
 
-    /* Deprecated @ 4.6 */
+    /**
+     * Label/value one-column layouts within edit panes - OLD.
+     *
+     * @deprecated in 4.6.0
+     * @see        .txp-label
+     * @see        .txp-value
+     */
+
     .edit-label,
-    .edit-value,
-    .login-label,
-    .login-value {
+    .edit-value {
         float: none;
         width: 100%;
     }
 
-    /* Deprecated @ 4.6 */
-    .edit-value,
-    .login-value {
+    /**
+     * Remove inline alignment margin values when collapsed - OLD.
+     *
+     * @deprecated in 4.6.0
+     * @see        .txp-value
+     */
+
+    .edit-value {
         input,
         select {
-            margin-top: 0;
-            margin-bottom: 0;
+            margin: 0;
         }
     }
+
+    /**
+     * TODO: Would be unnecessary if we use auto-resizing text areas.
+     */
 
     #article-main #body {
         height: 17.46153em; // 227px / 13px
     }
 
+    /**
+     * TODO: Would be unnecessary if we use auto-resizing text areas.
+     */
+
     #excerpt {
         height: 4.38461em; // 57px / 13px
     }
+
+    /**
+     * TODO: Would be unnecessary if we use auto-resizing text areas.
+     */
 
     #page-page,
     #page-form,
@@ -161,13 +207,11 @@
         }
     }
 
-    /* remove float from txp-navigation elements */
+    /**
+     * Remove float from `.txp-navigation` elements.
+     */
 
     .txp-navigation {
-        p {
-            margin: 1em 0 0.5em;
-        }
-
         .pageby,
         .prev-next {
             float: none;
