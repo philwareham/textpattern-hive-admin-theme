@@ -73,6 +73,10 @@
 /* Content -> Categories page - additional layout
    ========================================================================== */
 
+/**
+ * TODO: Refactor categories into a listing-type format like other UI in system.
+ */
+
 .categories {
     margin-bottom: 1em;
     padding: 1em 1em 1px;
@@ -280,12 +284,14 @@ div.code {
     overflow: auto;
 }
 
-/* Deprecated @ 4.6 - use `.txp-layout-textbox` instead */
+/**
+ * Plugin help columns (fixed proportion cell) - OLD.
+ *
+ * @deprecated in 4.6.0
+ * @see        .txp-layout-textbox
+ */
+
 .plugin-column {
     margin: 0 auto;
     max-width: 57em;
-
-    & p {
-        @extend .clearfix;
-    }
 }
