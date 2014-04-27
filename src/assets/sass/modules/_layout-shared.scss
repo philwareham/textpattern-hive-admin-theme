@@ -340,10 +340,11 @@ span.spinner {
    ========================================================================== */
 
 /**
- * Styling of edit panes.
+ * Styling of edit/tagbuilder/login panes.
  */
 
 .txp-edit,
+.txp-tagbuilder,
 .txp-login {
     @include border-radius;
 
@@ -353,10 +354,11 @@ span.spinner {
 }
 
 /**
- * Maximum width of edit panes.
+ * Maximum width of edit/tagbuilder panes.
  */
 
-.txp-edit {
+.txp-edit,
+.txp-tagbuilder, {
     max-width: ($text-column - 2em);
 }
 
@@ -371,6 +373,7 @@ span.spinner {
 // Clearfix form paragraphs (adds to cleafix rules in _base.scss via @extend).
 
 .txp-edit,
+.txp-tagbuilder,
 .txp-login,
 .edit-form,
 .prefs-form {

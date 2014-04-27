@@ -2,10 +2,14 @@
    ========================================================================== */
 
 /**
- * Reduced top padding of setup pages.
+ * Reduced `body` top padding of setup pages.
+ *
+ * Example HTML:
+ *
+ * <body id="page-setup">
  */
 
-body#page-setup {
+#page-setup {
     padding: 1em 2em 0;
 }
 
@@ -53,33 +57,16 @@ body#page-setup {
 /* Tag builder page - additional layout
    ========================================================================== */
 
+/**
+ * Reduced `body` top padding of setup pages.
+ *
+ * Example HTML:
+ *
+ * <body id="tag-event">
+ */
+
 #tag-event {
-    padding: 2.5em 0.5em 1em;
-    overflow-y: scroll;
-
-    h3 {
-        @include box-shadow(0 0.2em 0.25em rgba(#000000, 0.15));
-        @include gradient-linear($color-gradient2-from, $color-gradient2-to);
-
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        border-top: 1px solid $color-gradient2-to;
-        border-bottom: 1px solid darken($color-gradient2-to, 6%);
-        padding: 0.5em 1em;
-    }
-
-    th,
-    td {
-        padding: 0.5em;
-        width: 50%;
-    }
-
-    p {
-        margin: 0.5em;
-    }
+    padding: 0;
 }
 
 
