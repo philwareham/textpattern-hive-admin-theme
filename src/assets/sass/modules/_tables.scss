@@ -2,7 +2,8 @@
    ========================================================================== */
 
 /**
- * Allow overflow scroll on tables.
+ * 1. Make sure list tables clear any preceeding grid cell floats.
+ * 2. Allow overflow scroll on tables.
  *
  * Example HTML:
  *
@@ -12,6 +13,9 @@
  */
 
 .txp-listtables {
+    /* 1 */
+    clear: both;
+    /* 2 */
     overflow-x: auto;
 }
 
@@ -103,7 +107,7 @@ td {
     }
 
     .multi-edit {
-        width: 18px;
+        width: 13px;
     }
 
     tbody {

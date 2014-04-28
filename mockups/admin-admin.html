@@ -155,115 +155,108 @@
 
     <main role="main" class="txp-body" aria-label="Main content">
 
-        <div class="txp-layout-grid">
+        <div class="txp-layout-2col-cell-1">
+            <h1 class="txp-heading">Users</h1>
+        </div>
 
-            <div class="txp-layout-cell txp-layout-2-4">
-                <h1 class="txp-heading">Users</h1>
-            </div>
-
-            <div id="users_control" class="txp-layout-cell txp-layout-2-4">
-                <form role="search" method="get" action="#" class="txp-search">
-                    <p>
-                        <input type="text" placeholder="Search users…">
-                        <button class="txp-search-button">Search</button>
-                        <button>Search criteria</button>
-                    </p>
-                    <ul>
-                        <li>
-                            <input type="checkbox" id="search-crit1" name="search-crit1">
-                            <label for="search-crit1">search_all</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit2" name="search-crit2">
-                            <label for="search-crit2">ID#</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit3" name="search-crit3">
-                            <label for="search-crit3">Login</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit4" name="search-crit4">
-                            <label for="search-crit4">Real name</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit5" name="search-crit5">
-                            <label for="search-crit5">Email</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit6" name="search-crit6">
-                            <label for="search-crit6">Privileges</label>
-                        </li>
-                    </ul>
-                </form>
-            </div>
-
-            <div class="txp-layout-cell">
-                <p class="txp-buttons">
-                    <a href="secondary/admin-password_edit.html">Change your password</a>
-                    <a href="secondary/admin-admin_edit.html">Add new author</a>
-                    <button id="detail-toggle">List options</button>
+        <div id="users_control" class="txp-layout-2col-cell-2">
+            <form role="search" method="get" action="#" class="txp-search">
+                <p>
+                    <input type="text" placeholder="Search users…">
+                    <button class="txp-search-button">Search</button>
+                    <button>Search criteria</button>
                 </p>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="search-crit1" name="search-crit1">
+                        <label for="search-crit1">search_all</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit2" name="search-crit2">
+                        <label for="search-crit2">ID#</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit3" name="search-crit3">
+                        <label for="search-crit3">Login</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit4" name="search-crit4">
+                        <label for="search-crit4">Real name</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit5" name="search-crit5">
+                        <label for="search-crit5">Email</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit6" name="search-crit6">
+                        <label for="search-crit6">Privileges</label>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        <div class="txp-layout-1col">
+            <p class="txp-buttons">
+                <a href="secondary/admin-password_edit.html">Change your password</a>
+                <a href="secondary/admin-admin_edit.html">Add new author</a>
+                <button class="txp-button-details">List options</button>
+            </p>
+        </div>
+
+        <form action="#" id="users_form" class="multi_edit_form" method="post" name="longform">
+            <div class="txp-listtables">
+
+                <table class="txp-list">
+
+                    <thead>
+                        <tr>
+                            <th title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                            <th class="asc name login-name"><a href="#">Login</a></th>
+                            <th class="name real-name"><a href="#">Real name</a></th>
+                            <th class="email"><a href="#">E-mail</a></th>
+                            <th class="privs"><a href="#">Privileges</a></th>
+                            <th class="date last-login modified"><a href="#">Last login</a></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="multi-edit">&#160;</td>
+                            <td class="name login-name"><a href="secondary/admin-admin_edit.html" title="Edit">admin</a></td>
+                            <td class="name real-name">Phil Wareham</td>
+                            <td class="email"><a href="mailto:phil@designhive.com">phil@designhive.com</a></td>
+                            <td class="privs">Publisher</td>
+                            <td class="date last-login modified">Jun&#160;2012</td>
+                        </tr>
+                        <tr>
+                            <td class="multi-edit"><input type="checkbox" value="testuser" name="selected[]" class="checkbox"></td>
+                            <td class="name login-name"><a href="secondary/admin-admin_edit.html" title="Edit">anon</a></td>
+                            <td class="name real-name">A Non</td>
+                            <td class="email"><a href="mailto:anon@anon.com">anon@anon.com</a></td>
+                            <td class="privs">Freelancer</td>
+                            <td class="date last-login modified">&#160;</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div><!-- /txp-listtables -->
+
+            <div class="multi-edit">
+                <select name="edit_method">
+                    <option value="" selected="selected">With selected&#8230;</option>
+                    <option value="changeprivilege">Change privilege</option>
+                    <option value="resetpassword">Reset password</option>
+                    <option value="delete">Delete</option>
+                </select>
             </div>
 
-            <div class="txp-layout-cell">
+        </form>
 
-                <form action="#" id="users_form" class="multi_edit_form" method="post" name="longform">
-                    <div class="txp-listtables">
+        <div class="txp-navigation" id="users_navigation">
+            <p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
+        </div>
 
-                        <table class="txp-list">
-
-                            <thead>
-                                <tr>
-                                    <th title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-                                    <th class="asc name login-name"><a href="#">Login</a></th>
-                                    <th class="name real-name"><a href="#">Real name</a></th>
-                                    <th class="email"><a href="#">E-mail</a></th>
-                                    <th class="privs"><a href="#">Privileges</a></th>
-                                    <th class="date last-login modified"><a href="#">Last login</a></th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td class="multi-edit">&#160;</td>
-                                    <td class="name login-name"><a href="secondary/admin-admin_edit.html" title="Edit">admin</a></td>
-                                    <td class="name real-name">Phil Wareham</td>
-                                    <td class="email"><a href="mailto:phil@designhive.com">phil@designhive.com</a></td>
-                                    <td class="privs">Publisher</td>
-                                    <td class="date last-login modified">Jun&#160;2012</td>
-                                </tr>
-                                <tr>
-                                    <td class="multi-edit"><input type="checkbox" value="testuser" name="selected[]" class="checkbox"></td>
-                                    <td class="name login-name"><a href="secondary/admin-admin_edit.html" title="Edit">anon</a></td>
-                                    <td class="name real-name">A Non</td>
-                                    <td class="email"><a href="mailto:anon@anon.com">anon@anon.com</a></td>
-                                    <td class="privs">Freelancer</td>
-                                    <td class="date last-login modified">&#160;</td>
-                                </tr>
-                            </tbody>
-
-                        </table>
-
-                    </div><!-- /txp-listtables -->
-
-                    <div class="multi-edit">
-                        <select name="edit_method">
-                            <option value="" selected="selected">With selected&#8230;</option>
-                            <option value="changeprivilege">Change privilege</option>
-                            <option value="resetpassword">Reset password</option>
-                            <option value="delete">Delete</option>
-                        </select>
-                    </div>
-
-                </form>
-
-                <div class="txp-navigation" id="users_navigation">
-                    <p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
-                </div>
-
-            </div>
-
-        </div><!-- /txp-layout-grid -->
     </main>
 
     <footer role="contentinfo" class="txp-footer">

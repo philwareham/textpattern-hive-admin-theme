@@ -155,165 +155,158 @@
 
     <main role="main" class="txp-body" aria-label="Main content">
 
-        <div class="txp-layout-grid">
+        <div class="txp-layout-2col-cell-1">
+            <h1 class="txp-heading">Articles</h1>
+        </div>
 
-            <div class="txp-layout-cell txp-layout-2-4">
-                <h1 class="txp-heading">Articles</h1>
-            </div>
-
-            <div id="list_control" class="txp-layout-cell txp-layout-2-4">
-                <form role="search" method="get" action="#" class="txp-search">
-                    <p>
-                        <input type="text" placeholder="Search articles…">
-                        <button class="txp-search-button">Search</button>
-                        <button>Search criteria</button>
-                    </p>
-                    <ul>
-                        <li>
-                            <input type="checkbox" id="search-crit1" name="search-crit1">
-                            <label for="search-crit1">search_all</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit2" name="search-crit2">
-                            <label for="search-crit2">ID#</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit3" name="search-crit3">
-                            <label for="search-crit3">Title, body &amp; excerpt testing of very long line</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit4" name="search-crit4">
-                            <label for="search-crit4">Section</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit5" name="search-crit5">
-                            <label for="search-crit5">Categories</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit6" name="search-crit6">
-                            <label for="search-crit6">Keywords</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit7" name="search-crit7">
-                            <label for="search-crit7">Status</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit8" name="search-crit8">
-                            <label for="search-crit8">Author</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit9" name="search-crit9">
-                            <label for="search-crit9">Article image</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit10" name="search-crit10">
-                            <label for="search-crit10">Posted</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit11" name="search-crit11">
-                            <label for="search-crit11">Modified</label>
-                        </li>
-                    </ul>
-                </form>
-            </div>
-
-            <div class="txp-layout-cell">
-                <p class="txp-buttons">
-                    <a href="content-article.html">Add new article</a>
-                    <button id="detail-toggle">List options</button>
+        <div id="list_control" class="txp-layout-2col-cell-2">
+            <form role="search" method="get" action="#" class="txp-search">
+                <p>
+                    <input type="text" placeholder="Search articles…">
+                    <button class="txp-search-button">Search</button>
+                    <button>Search criteria</button>
                 </p>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="search-crit1" name="search-crit1">
+                        <label for="search-crit1">search_all</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit2" name="search-crit2">
+                        <label for="search-crit2">ID#</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit3" name="search-crit3">
+                        <label for="search-crit3">Title, body &amp; excerpt testing of very long line</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit4" name="search-crit4">
+                        <label for="search-crit4">Section</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit5" name="search-crit5">
+                        <label for="search-crit5">Categories</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit6" name="search-crit6">
+                        <label for="search-crit6">Keywords</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit7" name="search-crit7">
+                        <label for="search-crit7">Status</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit8" name="search-crit8">
+                        <label for="search-crit8">Author</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit9" name="search-crit9">
+                        <label for="search-crit9">Article image</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit10" name="search-crit10">
+                        <label for="search-crit10">Posted</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit11" name="search-crit11">
+                        <label for="search-crit11">Modified</label>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        <div class="txp-layout-1col">
+            <p class="txp-buttons">
+                <a href="content-article.html">Add new article</a>
+                <button class="txp-button-details">List options</button>
+            </p>
+        </div>
+
+        <form name="longform" id="articles_form" class="multi_edit_form" method="post" action="#">
+            <div class="txp-listtables">
+
+                <table class="txp-list">
+
+                    <thead>
+                        <tr>
+                            <th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                            <th scope="col" class="id actions"><a href="#">ID#</a></th>
+                            <th scope="col" class="title"><a href="#">Title</a></th>
+                            <th scope="col" class="desc date posted created"><a href="#">Posted</a></th>
+                            <th scope="col" class="articles_detail date modified"><a href="#">Modified</a></th>
+                            <th scope="col" class="articles_detail date expires"><a href="#">Expires</a></th>
+                            <th scope="col" class="section"><a href="#">Section</a></th>
+                            <th scope="col" class="articles_detail category category1"><a href="#">Category 1</a></th>
+                            <th scope="col" class="articles_detail category category2"><a href="#">Category 2</a></th>
+                            <th scope="col" class="status"><a href="#">Status</a></th>
+                            <th scope="col" class="author"><a href="#">Author</a></th>
+                            <th scope="col" class="articles_detail comments"><a href="#">Comments</a></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="multi-edit"><input type="checkbox" value="2" name="selected[]" class="checkbox"></td>
+                            <th scope="row" class="id"><a href="#">2</a>&#160;<span class="articles_detail"><span aria-hidden="true">[</span><a href="#" title="View">View</a><span aria-hidden="true">]</span></span></th>
+                            <td class="title"><a href="#">test article 2 title</a></td>
+                            <td class="date posted created">03&#160;Jul&#160;2011 12:27:33</td>
+                            <td class="articles_detail date modified">03&#160;Jul&#160;2011 12:27:33</td>
+                            <td class="articles_detail date expires">&#160;</td>
+                            <td class="section"><span title="Articles">articles</span></td>
+                            <td class="articles_detail category category1">&#160;</td>
+                            <td class="articles_detail category category2">&#160;</td>
+                            <td class="status"><a href="#" title="View">Live</a></td>
+                            <td class="author"><span title="Phil Wareham">admin</span></td>
+                            <td class="articles_detail comments">
+                                <span class="comments-status">On</span>
+                                <span class="comments-manage"><a title="Manage" href="#">(1)</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                            <th scope="row" class="id"><a href="#">1</a>&#160;<span class="articles_detail"><span aria-hidden="true">[</span><a href="#" title="View">View</a><span aria-hidden="true">]</span></span></th>
+                            <td class="title"><a href="#">Welcome to Your Site!</a></td>
+                            <td class="date posted created">29&#160;Jun&#160;2011 19:07:55</td>
+                            <td class="articles_detail date modified">29&#160;Jun&#160;2011 19:07:55</td>
+                            <td class="articles_detail date expires">&#160;</td>
+                            <td class="section"><span title="Articles">articles</span></td>
+                            <td class="articles_detail category category1"><span title="Hope for the Future">hope-for-the-future</span></td>
+                            <td class="articles_detail category category2"><span title="Meaningful Labor">meaningful-labor</span></td>
+                            <td class="status"><a href="#" title="View">Live</a></td>
+                            <td class="author"><span title="Phil Wareham">admin</span></td>
+                            <td class="articles_detail comments">
+                                <span class="comments-status">Expired</span>
+                                <span class="comments-manage">(0)</span>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div><!-- /txp-listtables -->
+
+            <div class="multi-edit">
+                <select name="edit_method">
+                    <option value="" selected="selected">With selected&#8230;</option>
+                    <option value="changesection">Change section</option>
+                    <option value="changecategory1">Change category1</option>
+                    <option value="changecategory2">Change category2</option>
+                    <option value="changestatus">Change status</option>
+                    <option value="changecomments">Change comments</option>
+                    <option value="changeauthor">Change author</option>
+                    <option value="delete">Delete</option>
+                </select>
             </div>
 
-            <div class="txp-layout-cell">
+        </form>
 
-                <form name="longform" id="articles_form" class="multi_edit_form" method="post" action="#">
-                    <div class="txp-listtables">
+        <div class="txp-navigation" id="list_navigation">
+            <p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
+            <ul class="nav-tertiary prev-next">
+                <li><span class="navlink-disabled" aria-disabled="true">← Prev</span></li><li><a class="navlink-active" href="#">1</a></li><li><a class="navlink" href="#">2</a></li><li><a class="navlink" rel="next" href="#">Next →</a></li>
+            </ul>
+        </div>
 
-                        <table class="txp-list">
-
-                            <thead>
-                                <tr>
-                                    <th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-                                    <th scope="col" class="id actions"><a href="#">ID#</a></th>
-                                    <th scope="col" class="title"><a href="#">Title</a></th>
-                                    <th scope="col" class="desc date posted created"><a href="#">Posted</a></th>
-                                    <th scope="col" class="articles_detail date modified"><a href="#">Modified</a></th>
-                                    <th scope="col" class="articles_detail date expires"><a href="#">Expires</a></th>
-                                    <th scope="col" class="section"><a href="#">Section</a></th>
-                                    <th scope="col" class="articles_detail category category1"><a href="#">Category 1</a></th>
-                                    <th scope="col" class="articles_detail category category2"><a href="#">Category 2</a></th>
-                                    <th scope="col" class="status"><a href="#">Status</a></th>
-                                    <th scope="col" class="author"><a href="#">Author</a></th>
-                                    <th scope="col" class="articles_detail comments"><a href="#">Comments</a></th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td class="multi-edit"><input type="checkbox" value="2" name="selected[]" class="checkbox"></td>
-                                    <th scope="row" class="id"><a href="#">2</a>&#160;<span class="articles_detail"><span aria-hidden="true">[</span><a href="#" title="View">View</a><span aria-hidden="true">]</span></span></th>
-                                    <td class="title"><a href="#">test article 2 title</a></td>
-                                    <td class="date posted created">03&#160;Jul&#160;2011 12:27:33</td>
-                                    <td class="articles_detail date modified">03&#160;Jul&#160;2011 12:27:33</td>
-                                    <td class="articles_detail date expires">&#160;</td>
-                                    <td class="section"><span title="Articles">articles</span></td>
-                                    <td class="articles_detail category category1">&#160;</td>
-                                    <td class="articles_detail category category2">&#160;</td>
-                                    <td class="status"><a href="#" title="View">Live</a></td>
-                                    <td class="author"><span title="Phil Wareham">admin</span></td>
-                                    <td class="articles_detail comments">
-                                        <span class="comments-status">On</span>
-                                        <span class="comments-manage"><a title="Manage" href="#">(1)</a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
-                                    <th scope="row" class="id"><a href="#">1</a>&#160;<span class="articles_detail"><span aria-hidden="true">[</span><a href="#" title="View">View</a><span aria-hidden="true">]</span></span></th>
-                                    <td class="title"><a href="#">Welcome to Your Site!</a></td>
-                                    <td class="date posted created">29&#160;Jun&#160;2011 19:07:55</td>
-                                    <td class="articles_detail date modified">29&#160;Jun&#160;2011 19:07:55</td>
-                                    <td class="articles_detail date expires">&#160;</td>
-                                    <td class="section"><span title="Articles">articles</span></td>
-                                    <td class="articles_detail category category1"><span title="Hope for the Future">hope-for-the-future</span></td>
-                                    <td class="articles_detail category category2"><span title="Meaningful Labor">meaningful-labor</span></td>
-                                    <td class="status"><a href="#" title="View">Live</a></td>
-                                    <td class="author"><span title="Phil Wareham">admin</span></td>
-                                    <td class="articles_detail comments">
-                                        <span class="comments-status">Expired</span>
-                                        <span class="comments-manage">(0)</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-
-                        </table>
-
-                    </div><!-- /txp-listtables -->
-
-                    <div class="multi-edit">
-                        <select name="edit_method">
-                            <option value="" selected="selected">With selected&#8230;</option>
-                            <option value="changesection">Change section</option>
-                            <option value="changecategory1">Change category1</option>
-                            <option value="changecategory2">Change category2</option>
-                            <option value="changestatus">Change status</option>
-                            <option value="changecomments">Change comments</option>
-                            <option value="changeauthor">Change author</option>
-                            <option value="delete">Delete</option>
-                        </select>
-                    </div>
-
-                </form>
-
-                <div class="txp-navigation" id="list_navigation">
-                    <p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
-                    <ul class="nav-tertiary prev-next">
-                        <li><span class="navlink-disabled" aria-disabled="true">← Prev</span></li><li><a class="navlink-active" href="#">1</a></li><li><a class="navlink" href="#">2</a></li><li><a class="navlink" rel="next" href="#">Next →</a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div><!-- /txp-layout-grid -->
     </main>
 
     <footer role="contentinfo" class="txp-footer">

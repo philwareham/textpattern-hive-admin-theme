@@ -155,134 +155,127 @@
 
     <main role="main" class="txp-body" aria-label="Main content">
 
-        <div class="txp-layout-grid">
+        <div class="txp-layout-2col-cell-1">
+            <h1 class="txp-heading">Links</h1>
+        </div>
 
-            <div class="txp-layout-cell txp-layout-2-4">
-                <h1 class="txp-heading">Links</h1>
-            </div>
-
-            <div id="link_control" class="txp-layout-cell txp-layout-2-4">
-                <form role="search" method="get" action="#" class="txp-search">
-                    <p>
-                        <input type="text" placeholder="Search links…">
-                        <button class="txp-search-button">Search</button>
-                        <button>Search criteria</button>
-                    </p>
-                    <ul>
-                        <li>
-                            <input type="checkbox" id="search-crit1" name="search-crit1">
-                            <label for="search-crit1">search_all</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit2" name="search-crit2">
-                            <label for="search-crit2">ID#</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit3" name="search-crit3">
-                            <label for="search-crit3">Name</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit4" name="search-crit4">
-                            <label for="search-crit4">Description</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit5" name="search-crit5">
-                            <label for="search-crit5">URL</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit6" name="search-crit6">
-                            <label for="search-crit6">Category</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="search-crit7" name="search-crit7">
-                            <label for="search-crit7">Author</label>
-                        </li>
-                    </ul>
-                </form>
-            </div>
-
-            <div class="txp-layout-cell">
-                <p class="txp-buttons">
-                    <a href="secondary/content-link_edit.html">Add new link</a>
-                    <button id="detail-toggle">List options</button>
+        <div id="link_control" class="txp-layout-2col-cell-2">
+            <form role="search" method="get" action="#" class="txp-search">
+                <p>
+                    <input type="text" placeholder="Search links…">
+                    <button class="txp-search-button">Search</button>
+                    <button>Search criteria</button>
                 </p>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="search-crit1" name="search-crit1">
+                        <label for="search-crit1">search_all</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit2" name="search-crit2">
+                        <label for="search-crit2">ID#</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit3" name="search-crit3">
+                        <label for="search-crit3">Name</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit4" name="search-crit4">
+                        <label for="search-crit4">Description</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit5" name="search-crit5">
+                        <label for="search-crit5">URL</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit6" name="search-crit6">
+                        <label for="search-crit6">Category</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="search-crit7" name="search-crit7">
+                        <label for="search-crit7">Author</label>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        <div class="txp-layout-1col">
+            <p class="txp-buttons">
+                <a href="secondary/content-link_edit.html">Add new link</a>
+                <button class="txp-button-details">List options</button>
+            </p>
+        </div>
+
+        <form action="#" id="links_form" class="multi_edit_form" method="post" name="longform">
+            <div class="txp-listtables">
+
+                <table class="txp-list">
+
+                    <thead>
+                        <tr>
+                            <th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                            <th scope="col" class="desc id"><a href="#">ID#</a></th>
+                            <th scope="col" class="name"><a href="#">Name</a></th>
+                            <th scope="col" class="links_detail description"><a href="#">Description</a></th>
+                            <th scope="col" class="category"><a href="#">Category</a></th>
+                            <th scope="col" class="url"><a href="#">URL</a></th>
+                            <th scope="col" class="links_detail date created"><a href="#">Date</a></th>
+                            <th scope="col" class="author"><a href="#">Author</a></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="multi-edit"><input type="checkbox" value="2" name="selected[]"></td>
+                            <th scope="row" class="id"><a href="secondary/content-link_edit.html" title="Edit">2</a></th>
+                            <td class="name"><a href="secondary/content-link_edit.html" title="Edit">TextBook</a></td>
+                            <td class="links_detail description">&#160;</td>
+                            <td class="category"><span title="Textpattern">textpattern</span></td>
+                            <td class="url"><a rel="external" target="_blank" href="http://textpattern.net/">http://textpattern.net/</a></td>
+                            <td class="links_detail date created">20&#160;Jul&#160;2005 12:54:41</td>
+                            <td class="author"><span title="Phil Wareham">admin</span></td>
+                        </tr>
+                        <tr>
+                            <td class="multi-edit"><input type="checkbox" value="1" name="selected[]"></td>
+                            <th scope="row" class="id"><a href="secondary/content-link_edit.html" title="Edit">1</a></th>
+                            <td class="name"><a href="secondary/content-link_edit.html" title="Edit">Textpattern</a></td>
+                            <td class="links_detail description">&#160;</td>
+                            <td class="category"><span title="Textpattern">textpattern</span></td>
+                            <td class="url"><a rel="external" target="_blank" href="http://textpattern.com/">http://textpattern.com/</a></td>
+                            <td class="links_detail date created">20&#160;Jul&#160;2005 12:54:26</td>
+                            <td class="author"><span title="Phil Wareham">admin</span></td>
+                        </tr>
+                        <tr>
+                            <td class="multi-edit"><input type="checkbox" value="3" name="selected[]"></td>
+                            <th scope="row" class="id"><a href="secondary/content-link_edit.html" title="Edit">3</a></th>
+                            <td class="name"><a href="secondary/content-link_edit.html" title="Edit">Textpattern Resources</a></td>
+                            <td class="links_detail description">An example link description.</td>
+                            <td class="category"><span title="Textpattern">textpattern</span></td>
+                            <td class="url"><a rel="external" target="_blank" href="http://textpattern.org/">http://textpattern.org/</a></td>
+                            <td class="links_detail date created">20&#160;Jul&#160;2005 12:55:04</td>
+                            <td class="author"><span title="Phil Wareham">admin</span></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div><!-- /txp-listtables -->
+
+            <div class="multi-edit">
+                <select name="edit_method">
+                    <option value="" selected="selected">With selected&#8230;</option>
+                    <option value="changecategory">Change category</option>
+                    <option value="changeauthor">Change author</option>
+                    <option value="delete">Delete</option>
+                </select>
             </div>
 
-            <div class="txp-layout-cell">
+        </form>
 
-                <form action="#" id="links_form" class="multi_edit_form" method="post" name="longform">
-                    <div class="txp-listtables">
+        <div class="txp-navigation" id="link_navigation">
+            <p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
+        </div>
 
-                        <table class="txp-list">
-
-                            <thead>
-                                <tr>
-                                    <th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-                                    <th scope="col" class="desc id"><a href="#">ID#</a></th>
-                                    <th scope="col" class="name"><a href="#">Name</a></th>
-                                    <th scope="col" class="links_detail description"><a href="#">Description</a></th>
-                                    <th scope="col" class="category"><a href="#">Category</a></th>
-                                    <th scope="col" class="url"><a href="#">URL</a></th>
-                                    <th scope="col" class="links_detail date created"><a href="#">Date</a></th>
-                                    <th scope="col" class="author"><a href="#">Author</a></th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td class="multi-edit"><input type="checkbox" value="2" name="selected[]"></td>
-                                    <th scope="row" class="id"><a href="secondary/content-link_edit.html" title="Edit">2</a></th>
-                                    <td class="name"><a href="secondary/content-link_edit.html" title="Edit">TextBook</a></td>
-                                    <td class="links_detail description">&#160;</td>
-                                    <td class="category"><span title="Textpattern">textpattern</span></td>
-                                    <td class="url"><a rel="external" target="_blank" href="http://textpattern.net/">http://textpattern.net/</a></td>
-                                    <td class="links_detail date created">20&#160;Jul&#160;2005 12:54:41</td>
-                                    <td class="author"><span title="Phil Wareham">admin</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="multi-edit"><input type="checkbox" value="1" name="selected[]"></td>
-                                    <th scope="row" class="id"><a href="secondary/content-link_edit.html" title="Edit">1</a></th>
-                                    <td class="name"><a href="secondary/content-link_edit.html" title="Edit">Textpattern</a></td>
-                                    <td class="links_detail description">&#160;</td>
-                                    <td class="category"><span title="Textpattern">textpattern</span></td>
-                                    <td class="url"><a rel="external" target="_blank" href="http://textpattern.com/">http://textpattern.com/</a></td>
-                                    <td class="links_detail date created">20&#160;Jul&#160;2005 12:54:26</td>
-                                    <td class="author"><span title="Phil Wareham">admin</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="multi-edit"><input type="checkbox" value="3" name="selected[]"></td>
-                                    <th scope="row" class="id"><a href="secondary/content-link_edit.html" title="Edit">3</a></th>
-                                    <td class="name"><a href="secondary/content-link_edit.html" title="Edit">Textpattern Resources</a></td>
-                                    <td class="links_detail description">An example link description.</td>
-                                    <td class="category"><span title="Textpattern">textpattern</span></td>
-                                    <td class="url"><a rel="external" target="_blank" href="http://textpattern.org/">http://textpattern.org/</a></td>
-                                    <td class="links_detail date created">20&#160;Jul&#160;2005 12:55:04</td>
-                                    <td class="author"><span title="Phil Wareham">admin</span></td>
-                                </tr>
-                            </tbody>
-
-                        </table>
-
-                    </div><!-- /txp-listtables -->
-
-                    <div class="multi-edit">
-                        <select name="edit_method">
-                            <option value="" selected="selected">With selected&#8230;</option>
-                            <option value="changecategory">Change category</option>
-                            <option value="changeauthor">Change author</option>
-                            <option value="delete">Delete</option>
-                        </select>
-                    </div>
-
-                </form>
-
-                <div class="txp-navigation" id="link_navigation">
-                    <p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
-                </div>
-
-            </div>
-
-        </div><!-- /txp-layout-grid -->
     </main>
 
     <footer role="contentinfo" class="txp-footer">
