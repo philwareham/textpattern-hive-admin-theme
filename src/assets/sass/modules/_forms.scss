@@ -48,7 +48,7 @@ textarea,
 
     /* 1 */
     font-size: 100%;
-    @include adjust-font-size-to(13px, 0.8);
+    @include adjust-font-size-to(13px, 0.9); // 18px `line-height`
 
     /* 2 */
     margin: 0;
@@ -118,8 +118,8 @@ textarea {
     /* 1 */
     -webkit-appearance: none;
     border: 1px solid $color-border;
-    padding: 0.5384615em 0.3076923em; // 7px / 13px + 4px / 13px
-    height: 2.4615384em; // 32px / 13px
+    padding: 0.30769231em; // 4px / 13px
+    height: 2.1538462em; // 28px / 13px
     background: #ffffff;
 
     &:focus {
@@ -253,7 +253,6 @@ optgroup {
 /**
  * 1. Remove default vertical scrollbar in IE 8/9/10/11.
  * 2. Restrict to vertical resizing to prevent layout breakage.
- * 3. Larger leading on text areas for legibility.
  */
 
 textarea {
@@ -264,8 +263,6 @@ textarea {
     /* 2 */
     resize: vertical;
     width: 100%;
-    /* 3 */
-    line-height: 18px;
 }
 
 /**
@@ -368,7 +365,7 @@ input {
     &.year,
     &.exp_year {
         text-align: center;
-        width: 4.2307692em; // 55px / 13px
+        width: 4.0769231em; // 53px / 13px
     }
 
     &.month,

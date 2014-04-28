@@ -39,9 +39,9 @@ input[type="button"],
     -webkit-appearance: none;
     display: inline-block;
     border: solid 1px $color-gradient-border;
-    padding: 0.5384615em 0.75em;
+    padding: 0.30769231em 0.61538462em; // 4px / 13px + 8px / 13px
     width: auto;
-    height: 2.4615384em; // 32px / 13px
+    height: 2.1538462em; // 28px / 13px
     font-weight: normal;
     text-align: center;
     color: $color-text;
