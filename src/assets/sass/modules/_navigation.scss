@@ -13,6 +13,14 @@ button.txp-nav-toggle {
     display: none;
 }
 
+/**
+ * Base styling for the navigation menu.
+ *
+ * Example HTML:
+ *
+ * <nav class="txp-nav">
+ */
+
 .txp-nav {
     float: left;
     list-style: none;
@@ -32,6 +40,47 @@ button.txp-nav-toggle {
         }
     }
 }
+
+/**
+ * Primary-level navigation menu items (dropdown toggles).
+ *
+ * Example HTML:
+ *
+ * <nav class="txp-nav">
+ *     <ul class="data-dropdown">
+ *         <li class="dropdown selected">
+ *             <a class="dropdown-toggle">
+ *                 Content
+ *             </a>
+ *             <ul class="dropdown-menu">
+ *                 <li><a></a></li>
+ *                 <li class="selected"><a></a></li>
+ *                 <li><a></a></li>
+ *             </ul>
+ *         </li>
+ *         <li class="dropdown">
+ *             <a class="dropdown-toggle">
+ *                 Presentation
+ *             </a>
+ *             <ul class="dropdown-menu">
+ *                 <li><a></a></li>
+ *                 <li><a></a></li>
+ *                 <li><a></a></li>
+ *             </ul>
+ *         </li>
+ *         <li class="dropdown open">
+ *             <a class="dropdown-toggle">
+ *                 Admin
+ *             </a>
+ *             <ul class="dropdown-menu">
+ *                 <li><a></a></li>
+ *                 <li><a></a></li>
+ *                 <li><a></a></li>
+ *             </ul>
+ *         </li>
+ *     </ul>
+ * </nav>
+ */
 
 .dropdown {
     position: relative;
@@ -67,18 +116,46 @@ button.txp-nav-toggle {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-@include breakpoint($breakpoint-2) {
+/**
+ * Secondary-level navigation menu items (dropdown menus).
+ *
+ * Example HTML:
+ *
+ * <nav class="txp-nav">
+ *     <ul class="data-dropdown">
+ *         <li class="dropdown selected">
+ *             <a class="dropdown-toggle">
+ *                 Content
+ *             </a>
+ *             <ul class="dropdown-menu">
+ *                 <li><a></a></li>
+ *                 <li><a></a></li>
+ *                 <li class="selected"><a></a></li>
+ *             </ul>
+ *         </li>
+ *         <li class="dropdown">
+ *             <a class="dropdown-toggle">
+ *                 Presentation
+ *             </a>
+ *             <ul class="dropdown-menu">
+ *                 <li><a></a></li>
+ *                 <li><a></a></li>
+ *                 <li><a></a></li>
+ *             </ul>
+ *         </li>
+ *         <li class="dropdown open">
+ *             <a class="dropdown-toggle">
+ *                 Admin
+ *             </a>
+ *             <ul class="dropdown-menu">
+ *                 <li><a></a></li>
+ *                 <li><a></a></li>
+ *                 <li><a></a></li>
+ *             </ul>
+ *         </li>
+ *     </ul>
+ * </nav>
+ */
 
 .dropdown-menu {
     @include border-radius(0 $default-border-radius $default-border-radius $default-border-radius);
@@ -130,14 +207,30 @@ button.txp-nav-toggle {
     }
 }
 
+/**
+ * Show dropdown menu when downdown toggle clicked.
+ *
+ * Example HTML:
+ *
+ * <li class="dropdown open">
+ *     <a class="dropdown-toggle">
+ *         Admin
+ *     </a>
+ *     <ul class="dropdown-menu">
+ *         <li><a></a></li>
+ *         <li><a></a></li>
+ *         <li><a></a></li>
+ *     </ul>
+ * </li>
+ */
+
 .open > .dropdown-menu {
     display: block;
 }
 
 
-}
 
-
+// TODO: Move this to the `_responsive.scss` file when finalised.
 @media only screen and (max-width: $breakpoint-2) {
 
 /**
