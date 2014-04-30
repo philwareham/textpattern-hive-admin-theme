@@ -261,4 +261,36 @@ button.txp-nav-toggle {
             outline: thin dotted $color-link-focus;
         }
     }
+
+/**
+ * Hide the navigation menu by default on mobile layout.
+ */
+
+    .txp-nav .data-dropdown {
+        display: none;
+    }
+
+/**
+ * Show the navigation menu when toggled on mobile layout.
+ */
+
+    .txp-nav.in .data-dropdown {
+        display: block;
+    }
+
+/**
+ * Primary-level navigation menu items (dropdown toggles).
+ */
+
+    a.dropdown-toggle {
+        padding: 0.5em 5%;
+    }
+
+/**
+ * Secondary-level navigation menu items (dropdown menus).
+ */
+
+    .dropdown-menu a {
+        padding: 0 5% 0.5em 10%;
+    }
 }
