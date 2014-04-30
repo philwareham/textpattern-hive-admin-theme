@@ -74,8 +74,8 @@ td {
  *     <thead>
  *         <tr>
  *             <th class="multi-edit" scope="col"></th>
- *             <th class="asc scope="col"></th>
- *             <th scope="col"></th>
+ *             <th class="asc scope="col"><a></a></th>
+ *             <th scope="col"><a></a></th>
  *         </tr>
  *     </thead>
  *     <tfoot>
@@ -103,7 +103,7 @@ td {
 
     th,
     td {
-        padding: 0.3846154em 1em;
+        padding: 0.3846154em 1em; // 5px / 13px + 13px
     }
 
     .multi-edit {
@@ -150,7 +150,8 @@ td {
                 position: relative;
                 display: block;
                 color: $color-text;
-                margin-right: 0.5em;
+                margin: -0.3846154em -1em; // improved click area
+                padding: 0.3846154em 1em; // 5px / 13px + 13px
 
                 [dir="rtl"] & {
                     margin-right: 0;

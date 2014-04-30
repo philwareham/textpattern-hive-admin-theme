@@ -69,6 +69,9 @@ a {
 
 .txp-list thead th a.pophelp {
     display: inline;
+    margin: 0;
+    border-color: $color-border;
+    padding: 0 0.4em;
     color: $color-link;
 
     &:hover {
