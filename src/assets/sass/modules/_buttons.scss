@@ -256,4 +256,8 @@ ul.nav-tertiary {
 
         border-color: #6b8fe8;
     }
+
+    &:focus {
+        border-color: $color-link-hover;
+    }
 }
