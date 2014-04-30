@@ -123,9 +123,9 @@ textarea {
     background: #ffffff;
 
     &:focus {
-        @include box-shadow(0 0 7px $color-link-focus);
+        @include box-shadow(0 0 7px $color-link-focus-glow);
 
-        border-color: $color-link-hover;
+        border-color: $color-link-focus;
         outline: 0;
     }
 }

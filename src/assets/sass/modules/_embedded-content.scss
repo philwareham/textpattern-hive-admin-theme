@@ -99,7 +99,7 @@ svg:not(:root) {
     }
 
     a:focus & {
-        @include box-shadow(0 0 7px $color-link-focus);
+        @include box-shadow(0 0 7px $color-link-focus-glow);
 
         border-color: $color-link-focus;
     }

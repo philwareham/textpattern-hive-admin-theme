@@ -66,9 +66,9 @@ input[type="button"],
     }
 
     &:focus {
-        @include box-shadow($inset-highlighting, 0 0 7px $color-link-focus);
+        @include box-shadow($inset-highlighting, 0 0 7px $color-link-focus-glow);
 
-        border-color: $color-link-hover;
+        border-color: $color-link-focus;
         outline: 0;
     }
 }
@@ -102,7 +102,7 @@ a.publish {
     }
 
     &:focus {
-        border-color: $color-link-hover;
+        border-color: $color-link-focus;
     }
 }
 
@@ -139,7 +139,7 @@ button.destroy {
     }
 
     &:focus {
-        border-color: $color-link-hover;
+        border-color: $color-link-focus;
     }
 }
 
@@ -258,6 +258,6 @@ ul.nav-tertiary {
     }
 
     &:focus {
-        border-color: $color-link-hover;
+        border-color: $color-link-focus;
     }
 }
