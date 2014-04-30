@@ -176,6 +176,10 @@
 /* Content -> Images page - additional layout
    ========================================================================== */
 
+td.thumbnail a {
+   outline: 0;
+}
+
 .fullsize-image {
     text-align: center;
     margin-bottom: 1em;
