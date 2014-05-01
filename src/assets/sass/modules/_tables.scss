@@ -106,10 +106,6 @@ td {
         padding: 0.3846154em 1em; // 5px / 13px + 13px
     }
 
-    .multi-edit {
-        width: 13px;
-    }
-
     tbody {
         tr {
             border: 1px solid $color-gradient-to;
@@ -128,36 +124,30 @@ td {
         }
     }
 
-    thead {
-        th {
-            @include text-shadow($text-shadow-light);
-            @include gradient-linear($color-gradient-from, $color-gradient-to);
+    thead th {
+        @include text-shadow($text-shadow-light);
+        @include gradient-linear($color-gradient-from, $color-gradient-to);
 
-            border-top: 1px solid $color-gradient-to;
-            border-right: 1px solid darken($color-gradient-to, 5%);
-            border-bottom: 1px solid $color-gradient-border;
+        border-top: 1px solid $color-gradient-to;
+        border-right: 1px solid darken($color-gradient-to, 5%);
+        border-bottom: 1px solid $color-gradient-border;
 
-            &:first-child {
-                border-left: 1px solid $color-gradient-to;
-            }
+        &:first-child {
+            border-left: 1px solid $color-gradient-to;
+        }
 
-            a {
-                position: relative;
-                display: block;
+        a {
+            position: relative;
+            display: block;
+            color: $color-text;
+            margin: -0.3846154em -1em; // improved click area
+            padding: 0.3846154em 1em; // 5px / 13px + 13px
+
+            &:hover {
                 color: $color-text;
-                margin: -0.3846154em -1em; // improved click area
-                padding: 0.3846154em 1em; // 5px / 13px + 13px
-
-                &:hover {
-                    color: $color-text;
-                    text-decoration: none;
-                }
+                text-decoration: none;
             }
         }
-    }
-
-    .id {
-        white-space: nowrap;
     }
 }
 
@@ -217,4 +207,16 @@ td {
         border-top: 0;
         border-bottom: 0.3076923em solid $color-text;
     }
+}
+
+/**
+ * Additional rules for certain types of table column.
+ */
+
+.txp-list-col-multi-edit {
+    width: 13px;
+}
+
+.txp-list-col-id {
+    white-space: nowrap;
 }
