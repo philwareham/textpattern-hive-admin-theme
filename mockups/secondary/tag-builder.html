@@ -21,65 +21,65 @@
     <![endif]-->
 </head>
 <body id="tag-event">
-    <form method="post" action="#">
-        <table id="tagbuilder">
-            <tr>
-                <td colspan="2"><h3>Category 1</h3></td>
-            </tr>
-            <tr>
-                <td class="cell-label">Title</td>
-                <td>
-                    <select name="title">
-                        <option value="" selected="selected">&#160;</option>
-                        <option value="1">Yes</option>
-                        <option value="0">No</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td class="cell-label">Link to a list of other articles in this category?</td>
-                <td>
-                    <select name="link">
-                        <option value="" selected="selected">&#160;</option>
-                        <option value="1">Yes</option>
-                        <option value="0">No</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td class="cell-label">Section</td>
-                <td>
-                    <select name="section">
-                        <option value="" selected="selected">&#160;</option>
-                        <option value="about">About</option>
-                        <option value="articles">Articles</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td class="cell-label">Link to current section?</td>
-                <td>
-                    <select name="this_section">
-                        <option value="" selected="selected">&#160;</option>
-                        <option value="1">Yes</option>
-                        <option value="0">No</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td class="cell-label">Wrap tag</td>
-                <td><input type="text" value="" name="wraptag" size="32"></td>
-            </tr>
-            <tr>
-                <td class="cell-label">CSS class</td>
-                <td><input type="text" value="" name="class" size="32"></td>
-            </tr>
-            <tr>
-                <td>&#160;</td>
-                <td><input type="submit" value="Build tag"/></td>
-            </tr>
-        </table>
+
+    <form method="post" action="#" class="txp-tagbuilder">
+        <h2>Category 1&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></h2>
+        <p>
+            <span class="txp-label"><label for="txp-tag-title">Title</label></span>
+            <span class="txp-value">
+                <select name="txp-tag-title" id="txp-tag-title">
+                    <option value="" selected="selected">&#160;</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </span>
+        </p>
+        <p>
+            <span class="txp-label"><label for="txp-tag-link">Link to a list of other articles in this category?</label></span>
+            <span class="txp-value">
+                <select name="txp-tag-link" id="txp-tag-link">
+                    <option value="" selected="selected">&#160;</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </span>
+        </p>
+        <p>
+            <span class="txp-label"><label for="txp-tag-section">Section</label></span>
+            <span class="txp-value">
+                <select name="txp-tag-section" id="txp-tag-section">
+                    <option value="" selected="selected">&#160;</option>
+                    <option value="about">About</option>
+                    <option value="articles">Articles</option>
+                </select>
+            </span>
+        </p>
+        <p>
+            <span class="txp-label"><label for="txp-tag-this_section">Link to current section?</label></span>
+            <span class="txp-value">
+                <select name="txp-tag-this_section" id="txp-tag-this_section">
+                    <option value="" selected="selected">&#160;</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </span>
+        </p>
+        <p>
+            <span class="txp-label"><label for="txp-tag-wraptag">Wrap tag</label></span>
+            <span class="txp-value"><input type="text" value="" name="txp-tag-wraptag" id="txp-tag-wraptag" size="32"></span>
+        </p>
+        <p>
+            <span class="txp-label"><label for="txp-tag-class">CSS class</label></span>
+            <span class="txp-value"><input type="text" value="" name="txp-tag-class" id="txp-tag-class" size="32"></span>
+        </p>
+        <p>
+            <input type="submit" value="Build tag" class="publish">
+        </p>
     </form>
-    <p id="tagbuilder-output"><textarea name="tag" cols="40" rows="5">&lt;txp:category1 /&gt;</textarea></p>
+
+    <p>
+        <textarea name="txp-tagbuilder-output" id="txp-tagbuilder-output" cols="64" rows="5" readonly>&lt;txp:category1 /&gt;</textarea>
+    </p>
+
 </body>
 </html>
