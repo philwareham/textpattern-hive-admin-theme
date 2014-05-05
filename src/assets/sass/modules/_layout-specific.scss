@@ -58,7 +58,9 @@
    ========================================================================== */
 
 /**
- * Reduced `body` top padding of setup pages.
+ * Remove `body` padding of tag builder popup panes.
+ *
+ * TODO: Change this from a popup window to a jQuery UI dialog window.
  *
  * Example HTML:
  *
@@ -66,7 +68,7 @@
  */
 
 #tag-event {
-    padding: 0;
+    padding-top: 1em;
 }
 
 
