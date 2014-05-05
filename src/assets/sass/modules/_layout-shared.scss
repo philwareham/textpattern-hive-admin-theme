@@ -346,8 +346,6 @@ span.spinner {
 .txp-edit,
 .txp-tagbuilder,
 .txp-login {
-    @include border-radius;
-
     margin: 0 auto 1em;
     padding: 1em 1em 1px 1em;
     background: $color-background-box;
