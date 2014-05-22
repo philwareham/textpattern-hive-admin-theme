@@ -20,7 +20,7 @@ fieldset {
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
 
-legend {    
+legend {
     /* 1 */
     border: 0;
     /* 2 */
@@ -179,7 +179,7 @@ input[type="radio"] {
     input[type="radio"] {
         & + label {
             margin: 0 0 0 0.5em;
-    
+
             &:last-of-type {
                 margin: 0;
             }
