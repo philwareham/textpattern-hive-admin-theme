@@ -75,7 +75,11 @@ summary {
  */
 
 .clearfix {
-    @include pie-clearfix;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
 
 /**
