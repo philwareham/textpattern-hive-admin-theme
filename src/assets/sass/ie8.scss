@@ -11,6 +11,14 @@
    ========================================================================== */
 
 /**
+ * Don't allow site to collapse smaller than large breakpoint.
+ */
+
+.txp-body {
+    min-width: $breakpoint-1;
+}
+
+/**
  * Fallback for lack of `opacity` support.
  */
 
