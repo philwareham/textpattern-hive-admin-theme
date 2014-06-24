@@ -167,10 +167,11 @@
    ========================================================================== */
 
 /**
- * Grey-out text for unpublished articles in the list.
+ * Grey-out text for unpublished articles/non-modified dates in the list.
  */
 
-.unpublished {
+.unpublished,
+.not-modified {
     color: $color-text-footnote;
 }
 
@@ -246,7 +247,6 @@ td.thumbnail a {
    ========================================================================== */
 
 #page-lang .txp-list .modified {
-    color: $color-text-footnote;
     margin-left: 0.6em;
 }
 
