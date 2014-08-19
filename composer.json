@@ -1,28 +1,26 @@
 {
-    "name": "philwareham/hive",
-    "description": "Hive admin-side theme for Textpattern CMS",
-    "keywords": ["textpattern", "admin", "theme"],
-    "homepage": "https://github.com/philwareham/txp-hive-admin-theme",
-    "license": "GPL-2.0",
-    "type": "textpattern-admin-theme",
-    "authors": [
-        {
-            "name": "Phil Wareham",
-            "homepage": "http://twitter.com/philwareham",
-            "role": "Developer"
-        }
-    ],
-    "support": {
-        "issues": "https://github.com/philwareham/txp-hive-admin-theme/issues",
-        "source": "https://github.com/philwareham/txp-hive-admin-theme"
-    },
+  "name": "philwareham/hive",
+  "description": "Hive admin-side theme for Textpattern CMS",
+  "keywords": ["textpattern", "admin", "theme"],
+  "homepage": "https://github.com/philwareham/txp-hive-admin-theme",
+  "license": "GPL-2.0",
+  "type": "textpattern-admin-theme",
+  "authors": [{
+    "name": "Phil Wareham",
+    "homepage": "http://twitter.com/philwareham",
+    "role": "Developer"
+  }],
+  "support": {
+    "issues": "https://github.com/philwareham/txp-hive-admin-theme/issues",
+    "source": "https://github.com/philwareham/txp-hive-admin-theme"
+  },
     "require": {
-        "textpattern/lock": ">=4.6.0,4.6.*@dev",
-        "textpattern/installer": "*"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "4.x-dev"
-        }
+    "textpattern/lock": ">=4.6.0,4.6.*@dev",
+    "textpattern/installer": "*"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "4.x-dev"
     }
+  }
 }
