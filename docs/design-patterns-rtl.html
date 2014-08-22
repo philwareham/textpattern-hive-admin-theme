@@ -1255,43 +1255,85 @@
 
             <h2 id="ui-doc-jquery-ui--menu">Widgets: Menu</h2>
             <ul class="jquery-ui-menu">
-                <li class="ui-state-disabled"><a href="#">Aberdeen</a></li>
-                <li><a href="#">Ada</a></li>
-                <li><a href="#">Adamsville</a></li>
-                <li><a href="#">Addyston</a></li>
+                <li class="ui-state-disabled">
+                    <a href="#">Aberdeen</a>
+                </li>
+                <li>
+                    <a href="#">Ada</a>
+                </li>
+                <li>
+                    <a href="#">Adamsville</a>
+                </li>
+                <li>-</li>
+                <li>
+                    <a href="#">Addyston</a>
+                </li>
                 <li>
                     <a href="#">Delphi</a>
                     <ul>
-                        <li class="ui-state-disabled"><a href="#">Ada</a></li>
-                        <li><a href="#">Saarland</a></li>
-                        <li><a href="#">Salzburg</a></li>
+                        <li class="ui-state-disabled">
+                            <a href="#">Ada</a>
+                        </li>
+                        <li>
+                            <a href="#">Saarland</a>
+                        </li>
+                        <li>
+                            <a href="#">Salzburg</a>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="#">Saarland</a></li>
+                <li>
+                    <a href="#">Saarland</a>
+                </li>
                 <li>
                     <a href="#">Salzburg</a>
                     <ul>
                         <li>
                             <a href="#">Delphi</a>
                             <ul>
-                                <li><a href="#">Ada</a></li>
-                                <li><a href="#">Saarland</a></li>
-                                <li><a href="#">Salzburg</a></li>
+                                <li>
+                                    <a href="#">Ada</a>
+                                </li>
+                                <li>
+                                    <a href="#">Saarland</a>
+                                </li>
+                                <li>
+                                    <a href="#">Salzburg</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
                             <a href="#">Delphi</a>
                             <ul>
-                                <li><a href="#">Ada</a></li>
-                                <li><a href="#">Saarland</a></li>
-                                <li><a href="#">Salzburg</a></li>
+                                <li>
+                                    <a href="#">Ada</a>
+                                </li>
+                                <li>
+                                    <a href="#">Saarland</a>
+                                </li>
+                                <li>
+                                    <a href="#">Salzburg</a>
+                                </li>
                             </ul>
                         </li>
-                        <li><a href="#">Perch</a></li>
+                        <li>
+                            <a href="#">Perch</a>
+                        </li>
                     </ul>
                 </li>
-                <li class="ui-state-disabled"><a href="#">Amesville</a></li>
+                <li class="ui-state-disabled">
+                    <a href="#">Amesville</a>
+                    <ul>
+                        <li>
+                            <a href="#">Ada</a>
+                        </li>
+                        <li>
+                            <a href="#">Saarland</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
+            <p><span class="warning"><strong>Note:</strong> Currently jQuery UI does not support horizontal menus.</span></p>
             <p><a rel="external" href="http://jqueryui.com/menu/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
             <h2 id="ui-doc-jquery-ui--progressbar">Widget: Progressbar</h2>
@@ -1303,53 +1345,65 @@
             <p><a rel="external" href="http://jqueryui.com/progressbar/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
             <h2 id="ui-doc-jquery-ui--selectmenu">Widgets: Selectmenu</h2>
-            <p><span class="warning"><strong>Note:</strong> Upcoming feature - NOT IMPLEMENTED YET.</span></p>
-
             <h3>Selectmenu - standard</h3>
             <p>
-                <label for="selectmenu1">Disabled select</label><br>
-                <select class="jquery-ui-selectmenu" name="selectmenu1" id="selectmenu1">
-                    <option value="Slower">Slower</option>
-                    <option value="Slow">Slow</option>
-                    <option value="Medium" selected="selected">Medium</option>
-                    <option value="Fast">Fast</option>
-                    <option value="Faster">Faster</option>
+                <label for="jquery-ui-selectmenu1">Select a speed</label><br>
+                <select class="jquery-ui-selectmenu" id="jquery-ui-selectmenu1" name="jquery-ui-selectmenu1">
+                    <option>Slower</option>
+                    <option>Slow</option>
+                    <option selected="selected">Medium</option>
+                    <option>Fast</option>
+                    <option>Faster</option>
+                </select>
+                <input id="text_inline1" name="text_inline1" type="text">
+                <input type="button" value="Hello">
+            </p>
+
+            <h3>Selectmenu - with option groups</h3>
+            <p>
+                <label for="jquery-ui-selectmenu2">Select a file</label><br>
+                <select class="jquery-ui-selectmenu" id="jquery-ui-selectmenu2" name="jquery-ui-selectmenu2">
+                    <optgroup label="Scripts">
+                        <option value="jquery">jQuery.js</option>
+                        <option value="jqueryui">ui.jQuery.js</option>
+                    </optgroup>
+                    <optgroup label="Other files">
+                        <option value="somefile">Some unknown file</option>
+                        <option value="someotherfile">Some other file with a very long option text</option>
+                    </optgroup>
                 </select>
             </p>
 
-            <h3>Selectmenu - disabled</h3>
+            <h3>Selectmenu - with disabled options</h3>
             <p>
-                <label for="selectmenu-disabled1">Disabled select</label><br>
-                <select class="jquery-ui-selectmenu" name="selectmenu-disabled1" id="selectmenu-disabled1" disabled="disabled">
-                    <option value="Slower">Slower</option>
-                    <option value="Slow">Slow</option>
-                    <option value="Medium" selected="selected">Medium</option>
-                    <option value="Fast">Fast</option>
-                    <option value="Faster">Faster</option>
-                </select>
-            </p>
-
-            <h3>Selectmenu - disabled options</h3>
-            <p>
-                <label for="selectmenu-disabled2">Disabled options</label><br>
-                <select class="jquery-ui-selectmenu" name="selectmenu-disabled2" id="selectmenu-disabled2">
-                    <option value="0">0</option>
-                    <option value="1" disabled="disabled">1</option>
+                <label for="jquery-ui-selectmenu3">Select a number</label><br>
+                <select class="jquery-ui-selectmenu" id="jquery-ui-selectmenu3" name="jquery-ui-selectmenu3">
+                    <option value="1">1</option>
                     <option value="2" selected="selected">2</option>
                     <option value="3">3</option>
-                    <option value="4" disabled="disabled">4</option>
+                    <option value="4">4</option>
                     <option value="5">5</option>
                     <option value="6">6</option>
-                    <option value="7">7</option>
+                    <option value="7" disabled="disabled">7</option>
                     <option value="8" disabled="disabled">8</option>
                     <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15" disabled="disabled">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
                 </select>
             </p>
 
-            <h3>Selectmenu - disabled optgroup</h3>
+            <h3>Selectmenu - with disabled optgroup</h3>
             <p>
-                <label for="selectmenu-disabled3">Disabled optgroup</label><br>
-                <select class="jquery-ui-selectmenu" name="selectmenu-disabled3" id="selectmenu-disabled3">
+                <label for="jquery-ui-selectmenu4">Select a file 2</label><br>
+                <select class="jquery-ui-selectmenu" id="jquery-ui-selectmenu4" name="jquery-ui-selectmenu4">
                     <optgroup label="Scripts" disabled="disabled">
                         <option value="jquery">jQuery.js</option>
                         <option value="jqueryui">ui.jQuery.js</option>
@@ -1360,7 +1414,7 @@
                     </optgroup>
                 </select>
             </p>
-            <p><a rel="external" href="http://jqueryui.com/selectmenu/" title="Go to the jQuery UI documentation">Full documentation - NOT IMPLEMENTED YET</a></p>
+            <p><a rel="external" href="http://jqueryui.com/selectmenu/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
             <h2 id="ui-doc-jquery-ui--slider">Widgets: Slider</h2>
             <h3>Slider - horizontal</h3>
