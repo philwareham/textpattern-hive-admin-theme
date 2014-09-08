@@ -40,8 +40,6 @@
  */
 
 .txp-header h1 {
-    @include ellipsis;
-
     float: left;
     margin: 0;
     padding-left: 9.846154em; // 128px / 13px
@@ -50,6 +48,9 @@
     line-height: 2.69230769230769em; // 35px / 13px
     background: url("../img/textpattern-lrg.svg") 0 46% no-repeat;
     background-size: 9.846154em 2em; // 128px / 13px + 26px / 13px
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 
     a {
         margin-right: 1em;

@@ -92,19 +92,7 @@
         @include hide-text;
 
         width: 0.7692308em;
-    }
-
-    /**
-     * TODO: Need to confirm this is still needed once I've finished the new
-     * navigation menu.
-     */
-
-    .txp-header {
-        position: absolute;
-
-        h1 {
-            max-width: 66%;
-        }
+        text-overflow: clip;
     }
 
     /**

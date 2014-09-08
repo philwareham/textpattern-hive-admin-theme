@@ -101,9 +101,9 @@ dt {
         position: relative;
         border-top: 1px solid $color-gradient-to;
         padding: 0.3846154em 3em 0.3846154em 1em;
+        text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
 
         &:nth-child(odd) {
             background: $color-background;
