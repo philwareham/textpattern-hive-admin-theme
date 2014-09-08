@@ -153,8 +153,19 @@
 }
 
 #main_content {
+    .text input {
+        font-size: 16px;
+    }
+
+    .text textarea {
+        font-size: 16px;
+        line-height: 1.5em; // 24px / 16px
+    }
+
     #title {
         width: 66%;
+        font-size: 1.25em; // 20px / 16px
+        font-weight: bold;
     }
 
     .author {
