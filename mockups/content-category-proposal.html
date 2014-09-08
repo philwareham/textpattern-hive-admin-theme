@@ -144,7 +144,7 @@
         <section class="txp-layout-4col-cell-1" role="region">
             <h2>Articles&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></h2>
 
-            <form method="post" action="#" class="article">
+            <form method="post" action="#">
                 <p>
                     <label for="article_category_new">Create new category</label><br>
                     <input id="article_category_new" type="text" value="" name="title" size="32">
@@ -161,14 +161,14 @@
                 <p><input type="submit" value="Create"></p>
             </form>
 
-            <form action="#" id="links_form" class="multi_edit_form" method="post" name="longform">
+            <form action="#" id="category_article_form" class="multi_edit_form" method="post" name="longform">
                 <div class="txp-listtables">
 
                     <table class="txp-list">
 
                         <thead>
                             <tr>
-                                <th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                                <th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="article-select_all" id="article-select_all"></th>
                                 <th scope="col" class="category-name"><a href="#">Name</a></th>
                             </tr>
                         </thead>
@@ -227,7 +227,7 @@
 
             <h2>Images&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></h2>
 
-            <form method="post" action="#" class="image">
+            <form method="post" action="#">
                 <p>
                     <label for="image_category_new">Create new category</label><br>
                     <input id="image_category_new" type="text" value="" name="title" size="32">
@@ -242,14 +242,14 @@
                 <p><input type="submit" value="Create"></p>
             </form>
 
-            <form action="#" id="links_form" class="multi_edit_form" method="post" name="longform">
+            <form action="#" id="category_image_form" class="multi_edit_form" method="post" name="longform">
                 <div class="txp-listtables">
 
                     <table class="txp-list">
 
                         <thead>
                             <tr>
-                                <th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                                <th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="image-select_all" id="image-select_all"></th>
                                 <th scope="col" class="category-name"><a href="#">Name</a></th>
                             </tr>
                         </thead>
@@ -257,7 +257,7 @@
                         <tbody>
                             <tr>
                                 <td class="multi-edit"><input type="checkbox" value="2" name="selected[]"></td>
-                                <td class="category-name"><a href="secondary/content-category_edit.html" title="Edit">Site Design</a>&#160;<a href="#">(2)</td>
+                                <td class="category-name"><a href="secondary/content-category_edit.html" title="Edit">Site Design</a>&#160;<a href="#">(2)</a></td>
                             </tr>
                         </tbody>
 
@@ -280,7 +280,7 @@
 
             <h2>Files&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></h2>
 
-            <form method="post" action="#" class="file">
+            <form method="post" action="#">
                 <p>
                     <label for="file_category_new">Create new category</label><br>
                     <input id="file_category_new" type="text" value="" name="title" size="32">
@@ -295,14 +295,14 @@
 
             <h2>Links&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></h2>
 
-            <form method="post" action="#" class="link">
+            <form method="post" action="#">
                 <p>
                     <label for="link_category_new">Create new category</label><br>
                     <input id="link_category_new" type="text" value="" name="title" size="32">
                 </p>
                 <p class="parent">
                     <label for="link_category_parent">Parent</label><br>
-                    <select name="parent_cat">
+                    <select name="parent_cat" id="link_category_parent">
                         <option value="" selected="selected">&#160;</option>
                         <option value="textpattern">Textpattern</option>
                     </select>
@@ -310,14 +310,14 @@
                 <p><input type="submit" value="Create"></p>
             </form>
 
-            <form action="#" id="links_form" class="multi_edit_form" method="post" name="longform">
+            <form action="#" id="category_link_form" class="multi_edit_form" method="post" name="longform">
                 <div class="txp-listtables">
 
                     <table class="txp-list">
 
                         <thead>
                             <tr>
-                                <th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                                <th scope="col" title="Toggle all/none selected" class="multi-edit"><input type="checkbox" value="0" name="link-select_all" id="link-select_all"></th>
                                 <th scope="col" class="category-name"><a href="#">Name</a></th>
                             </tr>
                         </thead>
@@ -347,7 +347,7 @@
                 </div>
             </form>
 
-        </div>
+        </section>
 
     </main>
 
