@@ -299,6 +299,9 @@ $(function ()
         position: {
             my: 'right top',
             at: 'left top-1'
+        },
+        icons: {
+            submenu: 'ui-icon-carat-1-w'
         }
     });
 
