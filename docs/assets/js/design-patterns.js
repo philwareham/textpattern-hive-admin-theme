@@ -334,6 +334,19 @@ $(function ()
     $('.jquery-ui-selectmenu').selectmenu();
 
     /**
+     * Selectmenu RTL.
+     *
+     * Flip positioning of selectmenu dropdowns when in RTL langauges.
+     */
+
+    $('[dir="rtl"] .jquery-ui-selectmenu').selectmenu({
+        position: {
+            my: 'left top',
+            at: 'right bottom'
+        }
+    });
+
+    /**
      * Slider - horizontal.
      */
 
