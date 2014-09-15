@@ -61,6 +61,19 @@ $(function ()
     });
 
     /**
+     * Accordion RTL.
+     *
+     * Flip positioning of submenus when in RTL langauges.
+     */
+
+    $('[dir="rtl"] .jquery-ui-accordion').accordion({
+        icons: {
+            'header': 'ui-icon-triangle-1-w',
+            'activeHeader': 'ui-icon-triangle-1-s'
+        }
+    });
+
+    /**
      * Autocomplete.
      */
 
