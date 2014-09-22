@@ -254,11 +254,19 @@
                 margin-bottom: 0;
                 padding-bottom: 0;
             }
+
+            [dir="rtl"] & {
+                float: none;
+            }
         }
 
         .ui-tabs-anchor {
             float: none;
             display: block;
+
+            [dir="rtl"] & {
+                float: none;
+            }
         }
     }
 

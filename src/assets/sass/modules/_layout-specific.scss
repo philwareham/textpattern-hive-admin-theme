@@ -150,7 +150,7 @@
  * View mode tabs RTL support.
  */
 
-html[dir="rtl"] #view_modes ul {
+[dir="rtl"] #view_modes ul {
     li,
     a {
         float: right;
