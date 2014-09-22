@@ -60,9 +60,11 @@ td {
  * Swap table cell text alignments in RTL languages.
  */
 
-[dir="rtl"] th,
-[dir="rtl"] td {
-    text-align: right;
+[dir="rtl"] {
+    th,
+    td {
+        text-align: right;
+    }
 }
 
 /**
