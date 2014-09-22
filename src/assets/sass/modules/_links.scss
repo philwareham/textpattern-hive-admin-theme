@@ -79,3 +79,11 @@ a {
         text-decoration: underline;
     }
 }
+
+/**
+ * Reduce risk of render glitches in links on RTL languages.
+ */
+
+[dir="rtl"] a {
+    unicode-bidi: embed;
+}
