@@ -131,31 +131,3 @@
         display: none;
     }
 }
-
-// navigation menu full desktop version
-@include breakpoint($breakpoint-3) {
-    .main-navigation a.has-dropdown {
-        position: relative;
-        padding-right: 1.7142857em;
-
-        &:after {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            z-index: 5;
-            display: block;
-            border: solid 0.4em;
-            border-color: lighten($color-general, 20%) transparent transparent transparent;
-            margin-right: 0.75em;
-            margin-top: -0.2em;
-            width: 0;
-            height: 0;
-            content: "";
-        }
-
-        &:hover:after,
-        &:active:after {
-            border-color: lighten($color-general, 40%) transparent transparent transparent;
-        }
-    }
-}

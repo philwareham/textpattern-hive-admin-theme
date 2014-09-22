@@ -221,7 +221,7 @@ button.txp-nav-toggle {
     display: none;
     z-index: 20000;
     min-width: 12em;
-    border: solid 1px #d4d4d4;
+    border: 1px solid #d4d4d4;
     border-top: 0;
     background: $color-highlight-box;
 
@@ -249,15 +249,16 @@ button.txp-nav-toggle {
     }
 
     &:before {
+        font-size: 16px;
         position: absolute;
         content: "";
-        top: -0.61538em;
-        left: 1em;
+        top: -0.5em; // 8px / 16px
+        left: 0.75em; // 12px / 16px;
         z-index: 2;
-        width: 1.23076em;
-        height: 0.61538em;
+        width: 1em;
+        height: 0.5em;
         background: url("../img/indicator.svg") no-repeat;
-        background-size: 1.23076em 0.61538em;
+        background-size: 1em 0.5em;
     }
 }
 
@@ -301,11 +302,11 @@ button.txp-nav-toggle {
         @include box-shadow(none);
         @include hide-text;
 
-        border: 0;
-        padding: 0;
         font-size: 16px;
         display: inline-block;
         margin-top: 0.125em; // 2px / 16px
+        border: 0;
+        padding: 0;
         width: 2em;
         height: 2em;
         background: transparent url("../img/hamburger.svg");
@@ -329,7 +330,39 @@ button.txp-nav-toggle {
  */
 
     .txp-nav.in .data-dropdown {
+        @include box-shadow;
+
+        position: absolute;
+        top: 3em;
+        left: 0;
+        right: 0;
         display: block;
+        background: $color-highlight-box;
+
+        &:before {
+            font-size: 16px;
+            position: absolute;
+            content: "";
+            top: -0.5em; // 8px / 16px
+            left: 3.625em; // 58px / 16px;
+            z-index: 2;
+            width: 1em;
+            height: 0.5em;
+            background: url("../img/indicator.svg") no-repeat;
+            background-size: 1em 0.5em;
+        }
+    }
+
+
+
+    .txp-nav > ul > li {
+        float: none;
+        border: 0;
+        border-bottom: 1px solid #d4d4d4;
+
+        &:first-child {
+            border-left: 0;
+        }
     }
 
 /**
