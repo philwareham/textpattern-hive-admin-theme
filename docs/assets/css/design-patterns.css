@@ -14,6 +14,10 @@
   padding: 0;
 }
 
+[dir="rtl"] .jquery-ui-icons {
+  padding: 0;
+}
+
 .jquery-ui-icons li {
   margin: 2px;
   position: relative;
@@ -23,15 +27,27 @@
   list-style: none;
 }
 
+[dir="rtl"] .jquery-ui-icons li  {
+  float: right;
+}
+
 .jquery-ui-icons span.ui-icon {
   float: left;
   margin: 0 4px;
+}
+
+[dir="rtl"] .jquery-ui-icons span.ui-icon  {
+  float: right;
 }
 
 .jquery-ui-slider-vertical span {
   height: 120px;
   float: left;
   margin: 15px;
+}
+
+[dir="rtl"] .jquery-ui-slider-vertical span {
+  float: right;
 }
 
 .ui-menu {
