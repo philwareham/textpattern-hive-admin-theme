@@ -82,7 +82,7 @@ button.txp-nav-toggle {
  * </nav>
  */
 
-.dropdown {
+.txp-nav > ul > li {
     position: relative;
     display: block;
     float: left;
@@ -93,7 +93,7 @@ button.txp-nav-toggle {
         border-left: 1px solid $color-gradient2-to;
     }
 
-    a.dropdown-toggle {
+    > a {
         @include text-shadow($text-shadow-light);
 
         display: block;
@@ -101,13 +101,13 @@ button.txp-nav-toggle {
         line-height: 2.69230769230769em; // 35px / 13px
         text-decoration: none;
         color: darken($color-text, 20%);
+
+        &:hover {
+            background: rgba(#ffffff, 0.2);
+        }
     }
 
-    a.dropdown-toggle:hover {
-        background: rgba(#ffffff, 0.2);
-    }
-
-    &.selected a.dropdown-toggle {
+    &.selected > a {
         background: rgba(#ffffff, 0.2);
 
         &:hover {
