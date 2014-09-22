@@ -122,6 +122,50 @@ button.txp-nav-toggle {
 }
 
 /**
+ * Indicator symbols on closed dropdown toggle links.
+ */
+
+.txp-nav > ul > li > a.dropdown-toggle {
+    position: relative;
+    padding-right: 1.61538461538462em; // 21px / 13px
+
+    &:after {
+        @include hide-text;
+
+        font-size: 16px;
+        position: absolute;
+        content: "&#8595;";
+        top: 1em;
+        right: 0.5625em; // 9px / 16px
+        z-index: 10;
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+        border-left: 0.25em solid transparent;
+        border-right: 0.25em solid transparent;
+        border-top: 0.25em solid $color-text;
+        border-bottom: 0;
+    }
+
+    &:hover:after,
+    &:active:after {
+        opacity: 1;
+    }
+}
+
+/**
+ * Indicator symbols on open dropdown toggle links.
+ */
+
+.txp-nav > ul > li.open > a.dropdown-toggle:after {
+    content: "&#8593;";
+    border-left: 0.25em solid transparent;
+    border-right: 0.25em solid transparent;
+    border-top: 0;
+    border-bottom: 0.25em solid $color-text;
+}
+
+/**
  * Secondary-level navigation menu items (dropdown menus).
  *
  * Example HTML:
