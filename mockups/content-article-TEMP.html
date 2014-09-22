@@ -145,6 +145,7 @@
                 <h1 class="txp-heading">Write</h1>
 
                 <div role="region" id="main_content">
+
                     <div id="view_modes">
                         <ul>
                             <li id="tab-text" class="active"><a data-view-mode="text" role="button" aria-pressed="true" title="Edit article text" href="#">Text</a></li>
@@ -189,27 +190,30 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                     </div>
 
                     <p class="author">
-                        <small>Posted by: textpattern · 08 Sep 2014 · 14:11:01</small>
+                        <small>Posted by: textpattern · 20 Apr 2014 · 16:43:39<br>
+                            Last modified by: textpattern · 08 Sep 2014 · 16:44:08</small>
                     </p>
 
                     <p id="write-publish">
                         <input type="submit" value="Publish" name="publish" class="publish" disabled="disabled">
                         <span class="spinner"></span>
                     </p>
-                </div>
 
-            </div>
+                </div><!-- /#main_content -->
+
+            </div><!-- /.txp-layout-4col-cell-1-2-3 -->
 
             <div class="txp-layout-4col-cell-4alt">
-                <div id="supporting_content">
 
-                    <p class="action-create">
-                        <a href="index.php?event=article">Create new</a>
-                    </p>
+                <p class="action-create">
+                    <a href="index.php?event=article">Create new</a>
+                </p>
 
-                    <p role="navigation" class="nav-tertiary">
-                        <a class="navlink" rel="prev" href="?event=article&amp;step=edit&amp;ID=1">← Prev</a><span class="navlink-disabled" aria-disabled="true">Next →</span>
-                    </p>
+                <p role="navigation" class="nav-tertiary">
+                    <a class="navlink" rel="prev" href="?event=article&amp;step=edit&amp;ID=1">← Prev</a><span class="navlink-disabled" aria-disabled="true">Next →</span>
+                </p>
+
+                <div role="region" id="supporting_content">
 
                     <section role="region" id="write-sort" class="txp-details" aria-labelledby="write-sort-label">
                         <h3 id="write-sort-label">Sort and display</h3>
@@ -249,24 +253,6 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                         <option value="meaningful-labor" data-level="0">Meaningful labor</option>
                                         <option value="reciprocal-affection" data-level="0">Reciprocal affection</option>
                                     </select>
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section role="region" id="comments_group" class="txp-details" aria-labelledby="comments_group-label">
-                        <h3 id="comments_group-label" class="txp-summary"><a role="button" data-txp-token="f4667a1c99be2a02d86af15d82f527be" data-txp-pane="article_comments" href="#comments">Comment options</a></h3>
-                        <div role="group" id="comments" class="toggle">
-                            <div id="write-comments">
-                                <p class="comment-annotate">
-                                    <input type="radio" name="Annotate" id="Annotate-0" class="radio" value="0" />
-                                    <label for="Annotate-0">Off</label>
-                                    <input type="radio" name="Annotate" id="Annotate-1" class="radio" value="1" />
-                                    <label for="Annotate-1">On</label>
-                                </p>
-                                <p class="comment-invite">
-                                    <label for="comment-invite">Invitation</label><br />
-                                    <input type="text" name="AnnotateInvite" size="32" id="comment-invite" value="Comment" />
                                 </p>
                             </div>
                         </div>
@@ -326,26 +312,21 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         </div>
                     </section>
 
-                    <section role="region" id="textfilter_group" class="txp-details" aria-labelledby="textfilter_group-label">
-                        <h3 id="textfilter_group-label" class="txp-summary"><a role="button" data-txp-token="35316908d6fe01398052480d87f7e6c4" data-txp-pane="article_textfilter_help" href="#textfilter_help">Text formatting help</a></h3>
-                        <div role="group" id="textfilter_help" class="toggle">
-                            <ul class="textile plain-list">
-                                <li>Heading: <strong>h<em>n</em>.</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>Blockquote: <strong>bq.</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>Numeric list: <strong>#</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#b">i</a></li>
-                                <li>Bulleted list: <strong>*</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>Definition list: <strong>; :</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>_<em>emphasis</em>_&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>*<strong>strong</strong>*&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>??<cite>citation</cite>??&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 500, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>-deleted text-&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>+inserted text+&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>^superscript^&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>~subscript~&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>"linktext":url&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 500); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>!imageurl!&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 500, 500); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                            </ul>
-                            <p><a id="textile-docs-link" rel="external" target="_blank" href="http://textpattern.com/textile-sandbox">More</a></p>
+                    <section role="region" id="comments_group" class="txp-details" aria-labelledby="comments_group-label">
+                        <h3 id="comments_group-label" class="txp-summary"><a role="button" data-txp-token="f4667a1c99be2a02d86af15d82f527be" data-txp-pane="article_comments" href="#comments">Comment options</a></h3>
+                        <div role="group" id="comments" class="toggle">
+                            <div id="write-comments">
+                                <p class="comment-annotate">
+                                    <input type="radio" name="Annotate" id="Annotate-0" class="radio" value="0" />
+                                    <label for="Annotate-0">Off</label>
+                                    <input type="radio" name="Annotate" id="Annotate-1" class="radio" value="1" />
+                                    <label for="Annotate-1">On</label>
+                                </p>
+                                <p class="comment-invite">
+                                    <label for="comment-invite">Invitation</label><br />
+                                    <input type="text" name="AnnotateInvite" size="32" id="comment-invite" value="Comment" />
+                                </p>
+                            </div>
                         </div>
                     </section>
 
@@ -417,6 +398,29 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         </div>
                     </section>
 
+                    <section role="region" id="textfilter_group" class="txp-details" aria-labelledby="textfilter_group-label">
+                        <h3 id="textfilter_group-label" class="txp-summary"><a role="button" data-txp-token="35316908d6fe01398052480d87f7e6c4" data-txp-pane="article_textfilter_help" href="#textfilter_help">Text formatting help</a></h3>
+                        <div role="group" id="textfilter_help" class="toggle">
+                            <ul class="textile plain-list">
+                                <li>Heading: <strong>h<em>n</em>.</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                <li>Blockquote: <strong>bq.</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                <li>Numeric list: <strong>#</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#b">i</a></li>
+                                <li>Bulleted list: <strong>*</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                <li>Definition list: <strong>; :</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                <li>_<em>emphasis</em>_&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                <li>*<strong>strong</strong>*&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                <li>??<cite>citation</cite>??&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 500, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                <li>-deleted text-&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                <li>+inserted text+&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                <li>^superscript^&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                <li>~subscript~&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                <li>"linktext":url&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 500); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                <li>!imageurl!&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 500, 500); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                            </ul>
+                            <p><a id="textile-docs-link" rel="external" target="_blank" href="http://textpattern.com/textile-sandbox">More</a></p>
+                        </div>
+                    </section>
+
                     <section role="region" id="recent_group" class="txp-details" aria-labelledby="recent_group-label">
                         <h3 id="recent_group-label" class="txp-summary"><a role="button" data-txp-token="b844b657e16952dae28ddc6fef9dae2f" data-txp-pane="article_recent" href="#recent">Recent articles</a></h3>
                         <div role="group" id="recent" class="toggle" style="display: none">
@@ -427,8 +431,9 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         </div>
                     </section>
 
-                </div>
-            </div>
+                </div><!-- /#supporting_content -->
+
+            </div><!-- /.txp-layout-4col-cell-4alt -->
         </form>
     </main>
 
