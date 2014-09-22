@@ -147,6 +147,17 @@
 }
 
 /**
+ * View mode tabs RTL support.
+ */
+
+html[dir="rtl"] #view_modes ul {
+    li,
+    a {
+        float: right;
+    }
+}
+
+/**
  * Write page excerpt field when in HTML preview.
  */
 
