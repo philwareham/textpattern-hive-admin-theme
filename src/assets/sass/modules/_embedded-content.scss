@@ -51,6 +51,22 @@ img {
 }
 
 /**
+ * Swap image alignment right/left positions in RTL languages.
+ */
+
+[dir="rtl"] img {
+    &.align-left {
+        float: right;
+        margin: 1em 0 1em 1em;
+    }
+
+    &.align-right {
+        float: left;
+        margin: 1em 1em 1em 0;
+    }
+}
+
+/**
  * Address margin not present in IE 8/9 and Safari.
  */
 
