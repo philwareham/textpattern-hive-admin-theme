@@ -248,6 +248,7 @@ button.txp-nav-toggle {
         padding: 0.5em 1em;
     }
 
+    // Indicator pointer.
     &:before {
         font-size: 16px;
         position: absolute;
@@ -339,6 +340,7 @@ button.txp-nav-toggle {
         display: block;
         background: $color-highlight-box;
 
+        // Indicator pointer.
         &:before {
             font-size: 16px;
             position: absolute;
@@ -366,7 +368,7 @@ button.txp-nav-toggle {
     }
 
 /**
- * Primary-level navigation menu items (dropdown toggles).
+ * Primary-level navigation menu items (submenu toggles).
  */
 
     a.dropdown-toggle {
@@ -374,10 +376,20 @@ button.txp-nav-toggle {
     }
 
 /**
- * Secondary-level navigation menu items (dropdown menus).
+ * Secondary-level navigation menu items (submenus).
  */
 
-    .dropdown-menu a {
-        padding: 0 5% 0.5em 10%;
+    .dropdown-menu {
+        position: static;
+        min-width: 0;
+
+        a {
+            padding: 0 5% 0.5em 10%;
+        }
+
+        // Remove indicator pointer.
+        &:before {
+            display: none;
+        }
     }
 }
