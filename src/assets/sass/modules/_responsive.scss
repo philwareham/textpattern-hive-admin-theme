@@ -217,7 +217,9 @@
      */
 
     .txp-label,
-    .txp-value {
+    .txp-value,
+    .txp-login .txp-label,
+    .txp-login .txp-value {
         float: none;
         display: block;
         width: 100%;
@@ -260,6 +262,14 @@
         select {
             margin: 0;
         }
+    }
+
+    /**
+     * Maximum width of login panes.
+     */
+
+    .txp-login {
+        max-width: 28em;
     }
 
     /**
