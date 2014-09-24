@@ -111,7 +111,7 @@
 
         font-size: 16px;
         display: inline-block;
-        margin-top: 0.125em; // 2px / 16px
+        margin-top: 0.0625em; // 1px / 16px
         border: 0;
         padding: 0;
         width: 2em;
@@ -121,6 +121,10 @@
 
         &:focus {
             outline: thin dotted $color-link-focus;
+        }
+
+        &:not(.collapsed) {
+            background-color: rgba(255, 255, 255, 0.33);
         }
     }
 

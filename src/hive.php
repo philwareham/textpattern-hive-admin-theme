@@ -102,7 +102,7 @@ class hive_theme extends theme
             , 1);
 
         if ($txp_user) {
-            $out[] = '<button class="txp-nav-toggle" type="button" data-toggle="collapse" data-target=".txp-nav"><span class="txp-accessibility">'.gTxt('navigation').'</span></button>';
+            $out[] = '<button class="txp-nav-toggle collapsed" type="button" data-toggle="collapse" data-target=".txp-nav"><span class="txp-accessibility">'.gTxt('navigation').'</span></button>';
             $out[] = '<nav class="txp-nav" role="navigation" aria-label="'.gTxt('navigation').'">';
             $out[] = '<ul class="data-dropdown">';
 
