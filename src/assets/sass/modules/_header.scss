@@ -31,6 +31,17 @@
 }
 
 /**
+ * No header on login pages.
+ */
+
+#page-login,
+#page-logout {
+    .txp-header {
+        display: none;
+    }
+}
+
+/**
  * Site heading and Textpattern logo.
  *
  * Example HTML:
