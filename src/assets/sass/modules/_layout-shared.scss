@@ -439,6 +439,18 @@ span.spinner {
 }
 
 /**
+ * Vertically inline align values with their labels.
+ *
+ * TODO: This is temporary until we confirm using this UI.
+ */
+
+.txp-value .jquery-ui-buttonset {
+    display: inline-block;
+    margin-top: -0.4615385em; // 6px / 13px
+    margin-bottom: -0.2307692em; // 3px / 13px
+}
+
+/**
  * Keeps non-editable values on same baseline, to prevent content jumping.
  *
  * TODO: check this actually does align properly.

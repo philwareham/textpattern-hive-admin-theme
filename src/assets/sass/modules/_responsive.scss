@@ -230,6 +230,7 @@
      */
 
     .txp-value {
+        .jquery-ui-buttonset, // TODO: This is temporary until we confirm using this UI.
         input,
         select {
             margin: 0;

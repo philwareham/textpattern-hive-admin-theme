@@ -14,7 +14,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="My site">
     <script src="../docs/assets/js/modernizr.js"></script>
+    <script src="../docs/assets/js/jquery.js"></script>
+    <script src="../docs/assets/js/jquery-ui.js"></script>
     <script src="../dist/hive/assets/js/main.js"></script>
+    <script src="../docs/assets/js/design-patterns.js"></script>
     <!--[if lt IE 9]>
         <script src="../doc/assets/js/selectivizr.min.js"></script>
         <link rel="stylesheet" href="../docs/assets/css/jquery-ui-ie8.min.css">
@@ -660,19 +663,23 @@
                             <p id="prefs-auto_dst">
                                 <span class="txp-label">Automatically adjust <abbr title="Daylight Saving Time">DST</abbr> setting? <a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></span>
                                 <span class="txp-value">
-                                    <input type="radio" id="auto_dst-0" name="auto_dst" value="0" class="radio active" checked="checked">
-                                    <label for="auto_dst-0">No</label>
-                                    <input type="radio" id="auto_dst-1" name="auto_dst" value="1" class="radio">
-                                    <label for="auto_dst-1">Yes</label>
+                                    <span class="jquery-ui-buttonset">
+                                        <input type="radio" id="auto_dst-0" name="auto_dst" value="0" class="radio active" checked="checked">
+                                        <label for="auto_dst-0">No</label>
+                                        <input type="radio" id="auto_dst-1" name="auto_dst" value="1" class="radio">
+                                        <label for="auto_dst-1">Yes</label>
+                                    </span>
                                 </span>
                             </p>
                             <p id="prefs-is_dst">
                                 <span class="txp-label"><abbr title="Daylight Saving Time">DST</abbr> enabled? <a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></span>
                                 <span class="txp-value">
-                                    <input type="radio" id="is_dst-0" name="is_dst" value="0" class="radio active" checked="checked">
-                                    <label for="is_dst-0">No</label>
-                                    <input type="radio" id="is_dst-1" name="is_dst" value="1" class="radio">
-                                    <label for="is_dst-1">Yes</label>
+                                    <span class="jquery-ui-buttonset">
+                                        <input type="radio" id="is_dst-0" name="is_dst" value="0" class="radio active" checked="checked">
+                                        <label for="is_dst-0">No</label>
+                                        <input type="radio" id="is_dst-1" name="is_dst" value="1" class="radio">
+                                        <label for="is_dst-1">Yes</label>
+                                    </span>
                                 </span>
                             </p>
                             <p id="prefs-dateformat">
@@ -770,10 +777,12 @@
                             <p id="prefs-use_comments">
                                 <span class="txp-label">Accept comments? <a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></span>
                                 <span class="txp-value">
-                                    <input type="radio" id="use_comments-0" name="use_comments" value="0" class="radio">
-                                    <label for="use_comments-0">No</label>
-                                    <input type="radio" id="use_comments-1" name="use_comments" value="1" class="radio active" checked="checked">
-                                    <label for="use_comments-1">Yes</label>
+                                    <span class="jquery-ui-buttonset">
+                                        <input type="radio" id="use_comments-0" name="use_comments" value="0" class="radio">
+                                        <label for="use_comments-0">No</label>
+                                        <input type="radio" id="use_comments-1" name="use_comments" value="1" class="radio active" checked="checked">
+                                        <label for="use_comments-1">Yes</label>
+                                    </span>
                                 </span>
                             </p>
                         </div>
