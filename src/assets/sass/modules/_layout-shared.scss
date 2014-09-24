@@ -362,7 +362,7 @@ span.spinner {
  */
 
 .txp-login {
-    max-width: 35em;
+    max-width: 28em;
 }
 
 // Clearfix form paragraphs (adds to cleafix rules in _base.scss via @extend).
@@ -417,12 +417,15 @@ span.spinner {
  */
 
 .txp-login {
-    .txp-label {
-        width: 31%;
+    .txp-label,
+    .txp-value {
+        float: none;
+        display: block;
+        width: 100%;
     }
 
-    .txp-value {
-        width: 69%;
+    .txp-value input {
+        margin: 0;
     }
 }
 
