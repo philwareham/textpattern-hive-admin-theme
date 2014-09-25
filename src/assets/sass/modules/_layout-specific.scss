@@ -1,15 +1,18 @@
-/* Setup pages - additional layout
+/* Setup and login pages - additional layout
    ========================================================================== */
 
 /**
- * Reduced `body` top padding of setup pages.
+ * Reduced `body` top padding of setup/login pages.
  *
  * Example HTML:
  *
  * <body id="page-setup">
+ * <body id="page-login">
  */
 
-#page-setup {
+#page-setup,
+#page-login,
+#page-logout {
     padding: 1em 1.69% 0;
 }
 
@@ -18,71 +21,30 @@
  */
 
 .txp-setup {
-    margin: 1em auto 2em;
+    margin: 1em auto;
     max-width: $standard-column;
-}
 
-/**
- * Rules specific to the very first setup page you'll see.
- *
- * 1. Column width of welcome message.
- * 2. Large Textpattern logo.
- * 3. `select` spans entire column width.
- */
-
-.welcome {
-    .txp-setup {
-        /* 1 */
+    // Column width of welcome message page.
+    .welcome & {
         max-width: 20.30769230769231em; // 264px / 13px
     }
-
-    h1 {
-        /* 2 */
-        @include hide-text;
-
-        width: 20.30769230769231em; // 264px / 13px
-        height: 4.15384615384615em; // 54px / 13px
-        font-size: 1em;
-        background: url("../img/textpattern-xlrg.svg") no-repeat;
-        background-size: 20.30769230769231em 4.15384615384615em;
-    }
-
-    select {
-        /* 3 */
-        width: 100%;
-    }
-}
-
-
-/* Login pages - additional layout
-   ========================================================================== */
-
-/**
- * Reduced `body` top padding of login pages.
- *
- * Example HTML:
- *
- * <body id="page-login">
- */
-
-#page-login,
-#page-logout {
-    padding: 1em 1.69% 0;
 }
 
 /**
- * Rules specific to the login/logout/reset password pages.
- *
- * 1. Column width and margins of login pages.
- * 2. Large Textpattern logo.
+ * Column width and margins of login pages.
  */
 
 .txp-login {
-    /* 1 */
-    margin: 1em auto 2em;
-    /* 1 */
+    margin: 1em auto;
     max-width: 20.30769230769231em; // 264px / 13px
+}
 
+/**
+ * Large Textpattern logo replaces `h1`.
+ */
+
+.welcome,
+.txp-login {
     h1 {
         /* 2 */
         @include hide-text;
@@ -93,6 +55,14 @@
         background: url("../img/textpattern-xlrg.svg") no-repeat;
         background-size: 20.30769230769231em 4.15384615384615em;
     }
+}
+
+/**
+ * Welcome page `select` spans entire column width.
+ */
+
+.welcome select {
+    width: 100%;
 }
 
 /**
