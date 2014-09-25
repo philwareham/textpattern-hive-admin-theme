@@ -333,7 +333,7 @@ span.spinner {
 }
 
 
-/* Edit and login panes
+/* Edit panes
    ========================================================================== */
 
 /**
@@ -341,8 +341,7 @@ span.spinner {
  */
 
 .txp-edit,
-.txp-tagbuilder,
-.txp-login {
+.txp-tagbuilder {
     margin: 0 auto 1em;
     padding: 1em 1em 1px 1em;
     background: $color-background-box;
@@ -355,14 +354,6 @@ span.spinner {
 .txp-edit,
 .txp-tagbuilder, {
     max-width: ($text-column - 2em);
-}
-
-/**
- * Maximum width of login panes.
- */
-
-.txp-login {
-    max-width: 28em;
 }
 
 // Clearfix form paragraphs (adds to cleafix rules in _base.scss via @extend).
@@ -408,24 +399,6 @@ span.spinner {
 .txp-value {
     [dir="rtl"] & {
         float: right;
-    }
-}
-
-/**
- * Slightly different label/value column widths for login panel, since it's
- * thinner than the standard edit pane width.
- */
-
-.txp-login {
-    .txp-label,
-    .txp-value {
-        float: none;
-        display: block;
-        width: 100%;
-    }
-
-    .txp-value input {
-        margin: 0;
     }
 }
 

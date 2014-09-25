@@ -10,7 +10,7 @@
  */
 
 #page-setup {
-    padding: 1em 2em 0;
+    padding: 1em 1.69% 0;
 }
 
 /**
@@ -33,23 +33,83 @@
 .welcome {
     .txp-setup {
         /* 1 */
-        max-width: 20.3076923em;
+        max-width: 20.30769230769231em; // 264px / 13px
     }
 
     h1 {
         /* 2 */
         @include hide-text;
 
-        width: 20.3076923em; // 264px / 13px
-        height: 4.1538462em; // 54px / 13px
+        width: 20.30769230769231em; // 264px / 13px
+        height: 4.15384615384615em; // 54px / 13px
         font-size: 1em;
         background: url("../img/textpattern-xlrg.svg") no-repeat;
-        background-size: 20.30769em 4.15384em;
+        background-size: 20.30769230769231em 4.15384615384615em;
     }
 
     select {
         /* 3 */
         width: 100%;
+    }
+}
+
+
+/* Login pages - additional layout
+   ========================================================================== */
+
+/**
+ * Reduced `body` top padding of login pages.
+ *
+ * Example HTML:
+ *
+ * <body id="page-login">
+ */
+
+#page-login,
+#page-logout {
+    padding: 1em 1.69% 0;
+}
+
+/**
+ * Rules specific to the login/logout/reset password pages.
+ *
+ * 1. Column width and margins of login pages.
+ * 2. Large Textpattern logo.
+ */
+
+.txp-login {
+    /* 1 */
+    margin: 1em auto 2em;
+    /* 1 */
+    max-width: 20.30769230769231em; // 264px / 13px
+
+    h1 {
+        /* 2 */
+        @include hide-text;
+
+        width: 20.30769230769231em; // 264px / 13px
+        height: 4.15384615384615em; // 54px / 13px
+        font-size: 1em;
+        background: url("../img/textpattern-xlrg.svg") no-repeat;
+        background-size: 20.30769230769231em 4.15384615384615em;
+    }
+}
+
+/**
+ * Different label/value layout for login panel, since it's thinner than the
+ * standard edit pane width.
+ */
+
+.txp-login {
+    .txp-label,
+    .txp-value {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+
+    .txp-value input {
+        margin: 0;
     }
 }
 
