@@ -31,13 +31,24 @@
 }
 
 /**
- * No header on login pages.
+ * Hide header content area on login pages.
+ *
+ * Move offscreen - don't `display:none` as we need to show #messagepane content.
+ * `h1` is OK to hide though (otherwise it affects page tabbing).
  */
 
 #page-login,
 #page-logout {
     .txp-header {
-        display: none;
+        position: absolute;
+        right: auto;
+        left: -1000em;
+        height: 1px;
+        width: 1px;
+
+        h1 {
+            display: none;
+        }
     }
 }
 
