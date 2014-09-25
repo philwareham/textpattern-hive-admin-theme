@@ -139,10 +139,62 @@
     </header><!-- /txp-header -->
 
     <main role="main" class="txp-body" aria-label="Main content">
-        <h1 class="txp-heading">Pages</h1>
 
 
-        <div id="tagbuild_links" class="txp-layout-4col-cell-1alt">
+        <div role="region" id="main_content" class="txp-layout-4col-cell-1-2-3">
+            <h1 class="txp-heading">Pages</h1>
+            <form method="post" action="#" id="page_form">
+                <p>
+                    <label for="text">Page name</label><br>
+                    <input id="text" type="text" size="16" value="new_page" class="input-medium">
+                    <span class="txp-actions">
+                        <a id="txp_clone" class="clone" title="Clone this page" href="#">Duplicate</a>
+                    </span>
+                </p>
+                <p>
+                    <label for="html">Page code</label><br>
+                    <textarea class="code" id="html" name="html" cols="64" rows="24" dir="ltr">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Amazing Website&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Welcome to my &lt;em&gt;amazing&lt;/em&gt; website!&lt;/h1&gt;
+        &lt;p&gt;Under construction. Please come back soon.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Save" name="save" class="publish">
+                </p>
+            </form>
+        </div><!-- /#main_content -->
+
+
+        <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
+            <p class="action-create"><a href="#">Create new page</a></p>
+            <section role="region" id="" class="txp-details" aria-labelledby="file_forms_group-label">
+                <h3 id="link_forms_group-label">All pages</h3>
+                <div>
+                    <ul class="switcher-list">
+                        <li><a href="#">archive</a></li>
+                        <li><a href="#">default</a></li>
+                        <li><a href="#">error_default</a></li>
+                        <li class="active">
+                            new_page
+                            <form method="post" action="#" onsubmit="return confirm('Really delete?');">
+                                <input type="submit" value="&times;" class="destroy" title="Delete" aria-label="Delete">
+                            </form>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+        </div><!-- /#content_switcher -->
+
+
+<!-- TAGBUILDER NEEDS TO BECOME A MODAL --------------------------
+        <div id="tagbuild_links">
             <h2>Tag builder</h2>
 
             <section role="region" id="article-tags_group" class="txp-details" aria-labelledby="article-tags_group-label">
@@ -226,57 +278,6 @@
             </section>
 
         </div><!-- /#tagbuild_links -->
-
-
-        <div role="region" id="main_content" class="txp-layout-4col-cell-2-3">
-            <form method="post" action="#" id="page_form">
-                <p>
-                    <label for="text">Page name</label><br>
-                    <input id="text" type="text" size="16" value="new_page" class="input-medium">
-                    <span class="txp-actions">
-                        <a id="txp_clone" class="clone" title="Clone this page" href="#">Duplicate</a>
-                    </span>
-                </p>
-                <p>
-                    <label for="html">Page code</label><br>
-                    <textarea class="code" id="html" name="html" cols="64" rows="24" dir="ltr">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt;Amazing Website&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;Welcome to my &lt;em&gt;amazing&lt;/em&gt; website!&lt;/h1&gt;
-        &lt;p&gt;Under construction. Please come back soon.&lt;/p&gt;
-    &lt;/body&gt;
-&lt;/html&gt;</textarea>
-                </p>
-                <p>
-                    <input type="submit" value="Save" name="save" class="publish">
-                </p>
-            </form>
-        </div><!-- /#main_content -->
-
-
-        <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
-            <p class="action-create"><a href="#">Create new page</a></p>
-            <section role="region" id="" class="txp-details" aria-labelledby="file_forms_group-label">
-                <h3 id="link_forms_group-label">All pages</h3>
-                <div>
-                    <ul class="switcher-list">
-                        <li><a href="#">archive</a></li>
-                        <li><a href="#">default</a></li>
-                        <li><a href="#">error_default</a></li>
-                        <li class="active">
-                            new_page
-                            <form method="post" action="#" onsubmit="return confirm('Really delete?');">
-                                <input type="submit" value="&times;" class="destroy" title="Delete" aria-label="Delete">
-                            </form>
-                        </li>
-
-                    </ul>
-                </div>
-            </section>
-        </div><!-- /#content_switcher -->
 
 
     </main><!-- /txp-body -->

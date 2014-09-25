@@ -139,10 +139,116 @@
     </header><!-- /txp-header -->
 
     <main role="main" class="txp-body" aria-label="Main content">
-        <h1 class="txp-heading">Forms</h1>
 
 
-        <div id="tagbuild_links" class="txp-layout-4col-cell-1alt">
+        <div role="region" id="main_content" class="txp-layout-4col-cell-1-2-3">
+            <h1 class="txp-heading">Forms</h1>
+            <form action="#" method="post" id="form_form">
+                <p>
+                    <label for="text">Form name</label><br>
+                    <input id="text" type="text" size="16" value="default" class="input-medium" readonly>
+                    <span class="txp-actions">
+                        <a id="txp_clone" class="clone" title="Clone this form" href="#">Duplicate</a>
+                        <a href="#" class="article-view" title="Preview this form">Preview</a>
+                    </span>
+                </p>
+                <p>
+                    <label for="form">Form code</label><br>
+                    <textarea class="code" id="form" name="Form" cols="64" rows="24" dir="ltr">&lt;txp:if_individual_article&gt;
+    &lt;h1 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h1&gt;
+&lt;txp:else /&gt;
+    &lt;h3 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h3&gt;
+&lt;/txp:if_individual_article&gt;
+
+&lt;p class=&quot;published&quot;&gt;&lt;txp:posted /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;entry-content&quot;&gt;
+    &lt;txp:body /&gt;
+&lt;/div&gt;
+
+&lt;address class=&quot;vcard author&quot;&gt;&amp;#8212; &lt;span class=&quot;fn&quot;&gt;&lt;txp:author /&gt;&lt;/span&gt;&lt;/address&gt;
+
+&lt;p class=&quot;tags&quot;&gt;&lt;txp:category1 title=&quot;1&quot; link=&quot;1&quot; /&gt;, &lt;txp:category2 title=&quot;1&quot; link=&quot;1&quot; /&gt;&lt;/p&gt;
+
+&lt;txp:comments_invite wraptag=&quot;p&quot; /&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;txp:image id=&quot;1&quot; /&gt;&lt;/div&gt;</textarea>
+                </p>
+                <p>
+                    <label for="type">Form type</label><br>
+                    <select id="type" name="type">
+                        <option value="">&#160;</option>
+                        <option value="article" selected="selected">article</option>
+                        <option value="category">category</option>
+                        <option value="comment">comment</option>
+                        <option value="file">file</option>
+                        <option value="link">link</option>
+                        <option value="misc">misc</option>
+                        <option value="section">section</option>
+                    </select>
+                </p>
+                <p>
+                    <input type="submit" value="Save" name="save" class="publish">
+                </p>
+            </form>
+        </div><!-- /#main_content -->
+
+
+        <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
+            <form method="post" action="#" id="allforms_form">
+                <p class="action-create"><a href="#">Create new form</a></p>
+                <section role="region" id="article_forms_group" class="txp-details" aria-labelledby="article_forms_group-label">
+                    <h3 id="article_forms_group-label" class="txp-summary expanded"><a href="#article_forms" role="button" aria-controls="article_forms" aria-pressed="true">Article forms</a></h3>
+                    <div role="group" id="article_forms" class="toggle" aria-expanded="true">
+                        <ul class="switcher-list">
+                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="article_listing"></span><a href="#">article_listing</a></li>
+                            <li><a href="#">comments_display</a></li>
+                            <li class="active">default</li>
+                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="search_results"></span><a href="#">search_results</a></li>
+                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="single"></span><a href="#">single</a></li>
+                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="search_results"></span><a href="#">test_of_a_extremely_long_form_name_that_overflows_out_of_container</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section role="region" id="comment_forms_group" class="txp-details" aria-labelledby="comment_forms_group-label">
+                    <h3 id="comment_forms_group-label" class="txp-summary expanded"><a href="#comment_forms" role="button" aria-controls="comment_forms" aria-pressed="true">Comment forms</a></h3>
+                    <div role="group" id="comment_forms" class="toggle" aria-expanded="true">
+                        <ul class="switcher-list">
+                            <li><a href="#">comments</a></li>
+                            <li><a href="#">comment_form</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section role="region" id="file_forms_group" class="txp-details" aria-labelledby="file_forms_group-label">
+                    <h3 id="file_forms_group-label" class="txp-summary expanded"><a href="#file_forms" role="button" aria-controls="file_forms" aria-pressed="true">File forms</a></h3>
+                    <div role="group" id="file_forms" class="toggle" aria-expanded="true">
+                        <ul class="switcher-list">
+                            <li><a href="#">files</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section role="region" id="link_forms_group" class="txp-details" aria-labelledby="link_forms_group-label">
+                    <h3 id="link_forms_group-label" class="txp-summary expanded"><a href="#link_forms" role="button" aria-controls="link_forms" aria-pressed="true">Link forms</a></h3>
+                    <div role="group" id="link_forms" class="toggle" aria-expanded="true">
+                        <ul class="switcher-list">
+                            <li><a href="#">Links</a></li>
+                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="plainlinks"></span><a href="#">plainlinks</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <div class="multi-edit">
+                    <select name="edit_method">
+                        <option value="" selected="selected">With selected&#8230;</option>
+                        <option value="changetype">changetype</option>
+                        <option value="delete">Delete</option>
+                    </select>
+                </div>
+            </form>
+        </div><!-- /#content_switcher -->
+
+
+<!-- TAGBUILDER NEEDS TO BECOME A MODAL --------------------------
+        <div id="tagbuild_links">
             <h2>Tag builder</h2>
 
             <section role="region" id="article-tags_group" class="txp-details" aria-labelledby="article-tags_group-label">
@@ -267,111 +373,6 @@
             </section>
 
         </div><!-- /#tagbuild_links -->
-
-
-        <div role="region" id="main_content" class="txp-layout-4col-cell-2-3">
-            <form action="#" method="post" id="form_form">
-                <p>
-                    <label for="text">Form name</label><br>
-                    <input id="text" type="text" size="16" value="default" class="input-medium" readonly>
-                    <span class="txp-actions">
-                        <a id="txp_clone" class="clone" title="Clone this form" href="#">Duplicate</a>
-                        <a href="#" class="article-view" title="Preview this form">Preview</a>
-                    </span>
-                </p>
-                <p>
-                    <label for="form">Form code</label><br>
-                    <textarea class="code" id="form" name="Form" cols="64" rows="24" dir="ltr">&lt;txp:if_individual_article&gt;
-    &lt;h1 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h1&gt;
-&lt;txp:else /&gt;
-    &lt;h3 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h3&gt;
-&lt;/txp:if_individual_article&gt;
-
-&lt;p class=&quot;published&quot;&gt;&lt;txp:posted /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;entry-content&quot;&gt;
-    &lt;txp:body /&gt;
-&lt;/div&gt;
-
-&lt;address class=&quot;vcard author&quot;&gt;&amp;#8212; &lt;span class=&quot;fn&quot;&gt;&lt;txp:author /&gt;&lt;/span&gt;&lt;/address&gt;
-
-&lt;p class=&quot;tags&quot;&gt;&lt;txp:category1 title=&quot;1&quot; link=&quot;1&quot; /&gt;, &lt;txp:category2 title=&quot;1&quot; link=&quot;1&quot; /&gt;&lt;/p&gt;
-
-&lt;txp:comments_invite wraptag=&quot;p&quot; /&gt;
-
-&lt;div class=&quot;divider&quot;&gt;&lt;txp:image id=&quot;1&quot; /&gt;&lt;/div&gt;</textarea>
-                </p>
-                <p>
-                    <label for="type">Form type</label><br>
-                    <select id="type" name="type">
-                        <option value="">&#160;</option>
-                        <option value="article" selected="selected">article</option>
-                        <option value="category">category</option>
-                        <option value="comment">comment</option>
-                        <option value="file">file</option>
-                        <option value="link">link</option>
-                        <option value="misc">misc</option>
-                        <option value="section">section</option>
-                    </select>
-                </p>
-                <p>
-                    <input type="submit" value="Save" name="save" class="publish">
-                </p>
-            </form>
-        </div><!-- /#main_content -->
-
-
-        <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
-            <form method="post" action="#" id="allforms_form">
-                <p class="action-create"><a href="#">Create new form</a></p>
-                <section role="region" id="article_forms_group" class="txp-details" aria-labelledby="article_forms_group-label">
-                    <h3 id="article_forms_group-label" class="txp-summary expanded"><a href="#article_forms" role="button" aria-controls="article_forms" aria-pressed="true">Article forms</a></h3>
-                    <div role="group" id="article_forms" class="toggle" aria-expanded="true">
-                        <ul class="switcher-list">
-                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="article_listing"></span><a href="#">article_listing</a></li>
-                            <li><a href="#">comments_display</a></li>
-                            <li class="active">default</li>
-                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="search_results"></span><a href="#">search_results</a></li>
-                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="single"></span><a href="#">single</a></li>
-                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="search_results"></span><a href="#">test_of_a_extremely_long_form_name_that_overflows_out_of_container</a></li>
-                        </ul>
-                    </div>
-                </section>
-                <section role="region" id="comment_forms_group" class="txp-details" aria-labelledby="comment_forms_group-label">
-                    <h3 id="comment_forms_group-label" class="txp-summary expanded"><a href="#comment_forms" role="button" aria-controls="comment_forms" aria-pressed="true">Comment forms</a></h3>
-                    <div role="group" id="comment_forms" class="toggle" aria-expanded="true">
-                        <ul class="switcher-list">
-                            <li><a href="#">comments</a></li>
-                            <li><a href="#">comment_form</a></li>
-                        </ul>
-                    </div>
-                </section>
-                <section role="region" id="file_forms_group" class="txp-details" aria-labelledby="file_forms_group-label">
-                    <h3 id="file_forms_group-label" class="txp-summary expanded"><a href="#file_forms" role="button" aria-controls="file_forms" aria-pressed="true">File forms</a></h3>
-                    <div role="group" id="file_forms" class="toggle" aria-expanded="true">
-                        <ul class="switcher-list">
-                            <li><a href="#">files</a></li>
-                        </ul>
-                    </div>
-                </section>
-                <section role="region" id="link_forms_group" class="txp-details" aria-labelledby="link_forms_group-label">
-                    <h3 id="link_forms_group-label" class="txp-summary expanded"><a href="#link_forms" role="button" aria-controls="link_forms" aria-pressed="true">Link forms</a></h3>
-                    <div role="group" id="link_forms" class="toggle" aria-expanded="true">
-                        <ul class="switcher-list">
-                            <li><a href="#">Links</a></li>
-                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="plainlinks"></span><a href="#">plainlinks</a></li>
-                        </ul>
-                    </div>
-                </section>
-                <div class="multi-edit">
-                    <select name="edit_method">
-                        <option value="" selected="selected">With selected&#8230;</option>
-                        <option value="changetype">changetype</option>
-                        <option value="delete">Delete</option>
-                    </select>
-                </div>
-            </form>
-        </div><!-- /#content_switcher -->
 
 
     </main><!-- /txp-body -->
