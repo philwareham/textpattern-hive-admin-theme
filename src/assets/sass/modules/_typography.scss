@@ -125,9 +125,9 @@ dfn[title] {
 
 mark,
 var {
-    @include border-radius(0.2307692em); // 3px / 13px
+    @include border-radius(0.23076923076923em); // 3px / 13px
 
-    padding: 1px 0.2307692em; // 3px / 13px
+    padding: 1px 0.23076923076923em; // 3px / 13px
     color: $color-text;
     background: $color-selected;
 }
@@ -147,11 +147,10 @@ samp,
 code,
 kbd,
 samp {
-    @include adjust-font-size-to(12px, 0.9);
-    @include border-radius(0.25em); // 3px / 12px
+    @include border-radius(0.23076923076923em); // 3px / 13px
 
     border: 1px solid lighten($color-border, 9%);
-    padding: 1px 0.25em;
+    padding: 1px 0.23076923076923em; // 3px / 13px
     background: $color-background-box;
 }
 
@@ -164,16 +163,15 @@ samp {
  */
 
 pre {
-    @include adjust-font-size-to(12px, 0.9);
-    @include border-radius(0.25em); // 3px / 12px
+    @include border-radius(0.23076923076923em); // 3px / 13px
 
     /* 1 */
     word-wrap: normal;
     /* 2 */
     overflow-x: auto;
-    margin: 1.0833333em 0; // 13px / 12px
+    margin: 1em 0;
     border: 1px solid lighten($color-border, 9%);
-    padding: 0.5833333em 1.0833333em; // 7px / 12px + 13px / 12px
+    padding: 0.53846153846154em 1em; // 7px / 13px + 13px
     background: $color-background-box;
     /* 3 */
     tab-size: 4;
@@ -188,7 +186,8 @@ pre code,
 .code code,
 code.body,
 code.excerpt {
-    font-size: 1em; // keep size at 12px
+    @include border-radius(none);
+
     border: 0;
     padding: 0;
     background: none;
