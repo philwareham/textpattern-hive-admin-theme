@@ -189,11 +189,11 @@ $(function ()
         .click(function ()
         {
             var menu = $(this).parent().next().show().position({
-                my: 'left top',
-                at: 'left bottom',
+                my: 'right top',
+                at: 'right bottom',
                 of: this
             });
-            $(document).one('click', function ()
+            $(document).one('click blur', function ()
             {
                 menu.hide();
             });

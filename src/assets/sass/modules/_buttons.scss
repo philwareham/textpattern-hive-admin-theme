@@ -263,15 +263,22 @@ ul.nav-tertiary {
 }
 
 /**
- * TODO: Search widget split buttons - needs more work.
+ * Search widget 'search' button.
  *
  * Example HTML:
  *
- * TODO
+ * <form class="txp-search">
+ *     <input type="search" size="16" class="txp-search-input">
+ *     <span class="txp-search-buttons">
+ *         <button class="txp-search-button">Search</button>
+ *         <button class="txp-search-options">Search options</button>
+ *     </span>
+ * </form>
  */
 
-.txp-search .txp-search-button {
+.txp-search button.txp-search-button {
+    margin-left: -0.35em;
     border-radius: 0;
-    padding-left: 1.75em;
-    padding-right: 1.75em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 }
