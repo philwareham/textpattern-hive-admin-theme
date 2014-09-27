@@ -76,7 +76,18 @@ hr {
     .ui-menu {
         position: absolute;
         z-index: 100;
-        width: 13em;
+        width: 18em;
+    }
+
+    .ui-menu-item {
+        padding: 0 0 0 0.75em;
+    }
+
+    label {
+        width: 85%;
+        padding: 0.30769231em 0.5em;
+        display: inline-block;
+        cursor: pointer;
     }
 }
 

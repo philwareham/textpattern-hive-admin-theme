@@ -148,6 +148,56 @@
         </div>
 
         <div id="list_control" class="txp-layout-2col-cell-2">
+
+
+            <form method="get" action="index.php" class="txp-search" role="search">
+                <p>
+                    <input type="search" name="crit" size="16" class="input-medium" placeholder="search_articles">
+                    <span class="txp-search-buttons">
+                        <button class="txp-search-button">Search</button>
+                        <button class="txp-search-options">search_options</button>
+                    </span>
+                </p>
+                <ul class="txp-dropdown">
+                    <li>
+                        <input type="checkbox" name="select_all" id="search-all0" class="checkbox" value="all">
+                        <label for="search-all0">search_all</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="search_method[]" id="search-id0" checked="checked" class="checkbox active" value="id">
+                        <label for="search-id0">ID#</label>
+                    </li>
+                    <li>
+<input type="checkbox" name="search_method[]" id="search-title_body_excerpt0" class="checkbox" value="title_body_excerpt">
+<label for="search-title_body_excerpt0">Title, body and excerpt</label></li>
+<li>
+<input type="checkbox" name="search_method[]" id="search-section0" class="checkbox" value="section" />
+<label for="search-section0">Section</label></li>
+<li>
+<input type="checkbox" name="search_method[]" id="search-keywords0" class="checkbox" value="keywords" />
+<label for="search-keywords0">Keywords</label></li>
+<li>
+<input type="checkbox" name="search_method[]" id="search-categories0" class="checkbox" value="categories" />
+<label for="search-categories0">Categories</label></li>
+<li>
+<input type="checkbox" name="search_method[]" id="search-status0" class="checkbox" value="status" />
+<label for="search-status0">Status</label></li>
+<li>
+<input type="checkbox" name="search_method[]" id="search-author0" class="checkbox" value="author" />
+<label for="search-author0">Author</label></li>
+<li>
+<input type="checkbox" name="search_method[]" id="search-article_image0" class="checkbox" value="article_image" />
+<label for="search-article_image0">Article image</label></li>
+<li>
+<input type="checkbox" name="search_method[]" id="search-posted0" class="checkbox" value="posted" />
+<label for="search-posted0">Posted</label></li>
+<li>
+<input type="checkbox" name="search_method[]" id="search-lastmod0" class="checkbox" value="lastmod" />
+<label for="search-lastmod0">Modified</label></li></ul>
+<input type="hidden" name="_txp_token" value="4754596b410cce59fde9f45efcd8f896" />
+</form>
+
+
             <form role="search" method="get" action="#" class="txp-search">
                 <p>
                     <input type="search" placeholder="Search articles…">
