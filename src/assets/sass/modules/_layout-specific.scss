@@ -26,7 +26,7 @@
 
     // Column width of welcome message page.
     .welcome & {
-        max-width: 20.30769230769231em; // 264px / 13px
+        max-width: 20.3076923em; // 264px / 13px
     }
 }
 
@@ -36,7 +36,7 @@
 
 .txp-login {
     margin: 1em auto;
-    max-width: 20.30769230769231em; // 264px / 13px
+    max-width: 20.3076923em; // 264px / 13px
 }
 
 /**
@@ -49,11 +49,11 @@
         /* 2 */
         @include hide-text;
 
-        width: 20.30769230769231em; // 264px / 13px
-        height: 4.15384615384615em; // 54px / 13px
-        font-size: 1em;
-        background: url("../img/textpattern-xlrg.svg") no-repeat;
-        background-size: 20.30769230769231em 4.15384615384615em;
+        width: 16.5em; // 264px / 16px
+        height: 3.375em; // 54px / 16px
+        font-size: 16px;
+        background: url("../img/textpattern.svg") no-repeat;
+        background-size: 16.5em 3.375em;
     }
 }
 

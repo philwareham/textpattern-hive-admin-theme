@@ -50,16 +50,16 @@
  * PNG fallback for lack of SVG support.
  */
 
-.welcome h1 {
-    background-image: url("../img/textpattern-xlrg.png");
+.welcome,
+.txp-login {
+    h1 {
+        background-image: url("../img/textpattern.png");
+    }
 }
 
-.txp-header h1 {
-    background-image: url("../img/textpattern-lrg.png");
-}
-
+.txp-header h1,
 .dropdown-menu:before {
-    background-image: url("../img/indicator.gif");
+    background-image: url("../img/sprite.gif");
 }
 
 

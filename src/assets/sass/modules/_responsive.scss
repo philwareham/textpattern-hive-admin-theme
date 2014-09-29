@@ -40,10 +40,7 @@
      */
 
     .txp-header h1 {
-        background-image: url("../img/textpattern-sml.svg");
-        background-size: 2em 2em;
-        max-width: 50%;
-        padding-left: 2em;
+        width: 1.625em; // 26px / 16px
     }
 
     /**
@@ -95,17 +92,6 @@
     }
 
     /**
-     * Hide the header site name text on mobile layout.
-     */
-
-    .txp-header h1 {
-        @include hide-text;
-
-        width: 0.7692308em;
-        text-overflow: clip;
-    }
-
-    /**
      * Show the navigation menu toggle button on mobile layout.
      *
      * Example HTML:
@@ -126,8 +112,8 @@
         padding: 0;
         width: 2em;
         height: 2em;
-        background: transparent url("../img/hamburger.svg");
-        background-size: 2em 2em;
+        background: transparent url("../img/sprite.svg") -10em 0;
+        background-size: 13em 2em; // 208px / 16px + 32px / 16px
 
         &:focus {
             outline: thin dotted $color-link-focus;
@@ -170,8 +156,8 @@
             z-index: 2;
             width: 1em;
             height: 0.5em;
-            background: url("../img/indicator.svg") no-repeat;
-            background-size: 1em 0.5em;
+            background: url("../img/sprite.svg") no-repeat -12em 0;
+            background-size: 13em 2em; // 208px / 16px + 32px / 16px
         }
     }
 

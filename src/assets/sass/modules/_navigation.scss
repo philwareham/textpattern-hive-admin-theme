@@ -258,8 +258,8 @@ button.txp-nav-toggle {
         z-index: 2;
         width: 1em;
         height: 0.5em;
-        background: url("../img/indicator.svg") no-repeat;
-        background-size: 1em 0.5em;
+        background: url("../img/sprite.svg") no-repeat -12em 0;
+        background-size: 13em 2em; // 208px / 16px + 32px / 16px
     }
 }
 
