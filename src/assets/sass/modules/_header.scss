@@ -34,7 +34,7 @@
  * Hide header content area on login pages.
  *
  * Move offscreen - don't `display:none` as we need to show #messagepane content.
- * `h1` is OK to hide though (otherwise it affects page tabbing).
+ * `.txp-view-site` is OK to hide though (otherwise it affects page tabbing).
  */
 
 #page-login,
@@ -45,15 +45,15 @@
         left: -1000em;
         height: 1px;
         width: 1px;
+    }
 
-        h1 {
-            display: none;
-        }
+    .txp-view-site {
+        display: none;
     }
 }
 
 /**
- * Site heading and Textpattern logo.
+ * Textpattern logo.
  *
  * Example HTML:
  *
@@ -71,6 +71,32 @@
     font-size: 16px;
     background: url("../img/sprite.svg") no-repeat;
     background-size: 13em 2em; // 208px / 16px + 32px / 16px
+}
+
+/**
+ * 'View site' link.
+ *
+ * Example HTML:
+ *
+ * <p class="txp-view-site">
+ *      <a>My site</a>
+ * </p>
+ */
+
+.txp-view-site {
+    float: left;
+    margin: 0 0.5em;
+    font-size: 16px;
+
+    a {
+        @include hide-text;
+
+        display: block;
+        width: 2em;
+        height: 2em;
+        background: url("../img/sprite.svg") no-repeat -8em 0;
+        background-size: 13em 2em; // 208px / 16px + 32px / 16px
+    }
 }
 
 /**
