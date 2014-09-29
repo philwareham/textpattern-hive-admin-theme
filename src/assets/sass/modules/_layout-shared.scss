@@ -363,7 +363,7 @@ span.spinner {
  * Styling of edit/tagbuilder panes.
  *
  * 1. Maximum width of edit/tagbuilder panes.
- * 2. Remove margin above leading `h2` in panes.
+ * 2. Remove margin above `h2` within panes.
  */
 
 .txp-edit,
@@ -374,7 +374,7 @@ span.spinner {
     max-width: ($text-column - 2em);
     background: $color-background-box;
 
-    + h2 {
+    h2 {
         /* 2 */
         margin-top: 0;
     }
@@ -397,7 +397,7 @@ span.spinner {
 }
 
 /**
- * Label/value inline two-column layouts within edit/login panes.
+ * Label/value inline two-column layouts within panes.
  *
  * Note: this is collapsed to a one-column format on mobile layout.
  *
@@ -478,7 +478,7 @@ span.spinner {
 }
 
 /**
- * Label columns within edit panes - OLD.
+ * Label columns within panes - OLD.
  *
  * @deprecated in 4.6.0
  * @see        .txp-label
@@ -491,7 +491,7 @@ span.spinner {
 }
 
 /**
- * Value columns within edit panes - OLD.
+ * Value columns within panes - OLD.
  *
  * @deprecated in 4.6.0
  * @see        .txp-value
@@ -510,7 +510,7 @@ span.spinner {
 }
 
 /**
- * TODO: Modal window edit panes (TBC).
+ * TODO: Modal window panes (TBC).
  */
 
 .txp-edit-action {
