@@ -98,6 +98,7 @@ class hive_theme extends theme
             href(gTxt('tab_view_site'), hu, array(
                 'rel'    => 'external',
                 'target' => '_blank',
+                'title'  => gTxt('tab_view_site'),
             ))
             , array('class' => 'txp-view-site'));
 
