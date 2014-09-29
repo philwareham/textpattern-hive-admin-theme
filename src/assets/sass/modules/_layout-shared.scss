@@ -356,30 +356,35 @@ span.spinner {
 }
 
 
-/* Edit panes
+/* Panes
    ========================================================================== */
 
 /**
- * Styling of edit/tagbuilder/login panes.
+ * Styling of edit/tagbuilder panes.
+ *
+ * 1. Maximum width of edit/tagbuilder panes.
+ * 2. Remove margin above leading `h2` in panes.
  */
 
 .txp-edit,
 .txp-tagbuilder {
     margin: 0 auto 1em;
     padding: 1em 1em 1px 1em;
+    /* 1 */
+    max-width: ($text-column - 2em);
     background: $color-background-box;
+
+    + h2 {
+        /* 2 */
+        margin-top: 0;
+    }
 }
 
 /**
- * Maximum width of edit/tagbuilder panes.
+ * Clearfix form paragraphs in panes.
+ *
+ * Adds to cleafix rules in Sass '_base.scss' file via `@extend`.
  */
-
-.txp-edit,
-.txp-tagbuilder, {
-    max-width: ($text-column - 2em);
-}
-
-// Clearfix form paragraphs (adds to cleafix rules in _base.scss via @extend).
 
 .txp-edit,
 .txp-tagbuilder,
