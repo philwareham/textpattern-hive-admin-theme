@@ -14,13 +14,13 @@
      */
 
     body {
-        padding: 4em 1em 0;
+        padding: 4em 1.5384615em 0; // 52px + 20px / 13px
     }
 
     #page-setup,
     #page-login,
     #page-logout {
-        padding: 1em 1em 0;
+        padding: 1em 1.5384615em 0; // 13px + 20px / 13px
     }
 
 
@@ -32,7 +32,7 @@
      */
 
     .txp-header {
-        padding: 0 1em;
+        padding: 0 1.5384615em; // 20px / 13px
     }
 
     /**
@@ -51,7 +51,7 @@
      */
 
     .txp-logout {
-        right: 1em;
+        right: 1.5384615em; // 20px / 13px
     }
 
 
