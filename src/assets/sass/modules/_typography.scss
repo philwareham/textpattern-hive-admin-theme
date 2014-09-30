@@ -178,6 +178,15 @@ pre {
 }
 
 /**
+ * Don't wrap lines of `textarea` code onto new lines.
+ */
+
+textarea.code {
+    word-wrap: normal;
+    white-space: pre;
+}
+
+/**
  * Override `code` styling for code display within preformatted text areas and
  * form text areas.
  */
