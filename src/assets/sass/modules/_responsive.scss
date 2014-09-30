@@ -239,30 +239,22 @@
     }
 
     /**
-     * TODO: Would be unnecessary if we use auto-resizing text areas.
+     * Reduce height of write -> body text area.
      */
 
-    #article-main #body {
-        height: 17.46153em; // 227px / 13px
+    #page-article #body {
+        height: 18.75em; // 300px / 16px
     }
 
     /**
-     * TODO: Would be unnecessary if we use auto-resizing text areas.
-     */
-
-    #excerpt {
-        height: 4.38461em; // 57px / 13px
-    }
-
-    /**
-     * TODO: Would be unnecessary if we use auto-resizing text areas.
+     * Reduce height of code text areas.
      */
 
     #page-page,
     #page-form,
     #page-css {
         textarea.code {
-            height: 17.46153em; // 227px / 13px
+            height: 20em; // 260px / 13px
         }
     }
 
