@@ -4,7 +4,7 @@
 /**
  * 1. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
- * 2. As 2 above, for Windows Phone.
+ * 2. As above, for Windows Phone.
  */
 
 html {
@@ -155,7 +155,15 @@ hr {
  */
 
 .txp-actions a {
-    margin-left: 0.75em;
+    margin: 0 0 0 0.75em;
+}
+
+/**
+ * Swap margin positions in RTL languages.
+ */
+
+[dir="rtl"] .txp-actions a {
+    margin: 0 0.75em 0 0;
 }
 
 /**
