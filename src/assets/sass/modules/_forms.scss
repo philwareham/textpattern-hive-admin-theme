@@ -118,8 +118,8 @@ textarea {
     /* 1 */
     -webkit-appearance: none;
     border: 1px solid $color-border;
-    padding: 0.30769231em; // 4px / 13px
-    height: 2.1538462em; // 28px / 13px
+    padding: 0.30769230769231em; // 4px / 13px
+    height: 2.15384615384615em; // 28px / 13px
     background: #ffffff;
 
     &:focus {
@@ -210,7 +210,7 @@ select[multiple] {
 
 select[size="0"],
 select[size="1"] {
-    height: 2.4615384em; // 32px / 13px
+    height: 2.15384615384615em; // 28px / 13px
 }
 
 @media (-webkit-min-device-pixel-ratio: 0) {
@@ -222,7 +222,7 @@ select[size="1"] {
     select[size],
     select[multiple],
     select[multiple][size] {
-        padding-right: 0.3076923em; // 4px / 13px
+        padding-right: 0.30769230769231em; // 4px / 13px
         background-image: none;
     }
 
@@ -236,7 +236,7 @@ select[size="1"] {
     select[size="1"] {
         padding-right: 2em;
         background: $color-background url("data:image/svg+xml,<svg version='1.1' baseProfile='full' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='13px' height='4px' viewBox='0 0 13 4' enable-background='new 0 0 13 4' xml:space='preserve'><polygon fill='#333333' points='3.5,4 0,0 7,0'/></svg>") right center no-repeat;
-        background-size: 1em 0.3076923em;
+        background-size: 1em 0.30769230769231em;
     }
 
 }
@@ -319,17 +319,17 @@ input.input-large {
 
 input.input-medium {
     width: 50%;
-    max-width: 14.4615385em; // 188px / 13px
+    max-width: 14.46153846153846em; // 188px / 13px
 }
 
 input.input-small {
     width: 25%;
-    max-width: 7.6153846em; // 99px / 13px
+    max-width: 7.61538461538462em; // 99px / 13px
 }
 
 input.input-xsmall {
     width: 16%;
-    width: 4.2307692em; // 55px / 13px
+    width: 4.23076923076923em; // 55px / 13px
 }
 
 /**
@@ -366,7 +366,7 @@ input {
     &.year,
     &.exp_year {
         text-align: center;
-        width: 4.0769231em; // 53px / 13px
+        width: 4.07692307692308em; // 53px / 13px
     }
 
     &.month,
@@ -380,6 +380,6 @@ input {
     &.second,
     &.exp_second {
         text-align: center;
-        width: 2.4615385em; // 32px / 13px
+        width: 2.46153846153846em; // 32px / 13px
     }
 }

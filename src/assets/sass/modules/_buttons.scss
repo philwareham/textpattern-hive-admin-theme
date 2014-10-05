@@ -39,9 +39,9 @@ input[type="button"],
     -webkit-appearance: none;
     display: inline-block;
     border: solid 1px $color-gradient-border;
-    padding: 0.30769231em 0.61538462em; // 4px / 13px + 8px / 13px
+    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     width: auto;
-    height: 2.1538462em; // 28px / 13px
+    height: 2.15384615384615em; // 28px / 13px
     font-weight: normal;
     text-align: center;
     color: $color-text;
@@ -121,8 +121,8 @@ button.destroy {
     @include gradient-linear(lighten($color-error-text, 10%), $color-error-text);
 
     border-color: darken($color-error-text, 5%);
-    padding: 0 0.3076923em; // 4px / 13px
-    height: 1.53846154em; // 20px / 13px
+    padding: 0 0.30769230769231em; // 4px / 13px
+    height: 1.53846153846154em; // 20px / 13px
     color: #ffffff;
 
     &:hover {
@@ -161,8 +161,8 @@ button.destroy {
 
     display: inline-block;
     border: 1px solid;
-    padding: 0.30769231em 0.61538462em; // 4px / 13px + 8px / 13px
-    height: 2.1538462em; // 28px / 13px
+    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
+    height: 2.15384615384615em; // 28px / 13px
 }
 
 /**

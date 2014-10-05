@@ -26,7 +26,7 @@
 
     // Column width of welcome message page.
     .welcome & {
-        max-width: 20.3076923em; // 264px / 13px
+        max-width: 20.30769230769231em; // 264px / 13px
     }
 }
 
@@ -36,7 +36,7 @@
 
 .txp-login {
     margin: 1em auto;
-    max-width: 20.3076923em; // 264px / 13px
+    max-width: 20.30769230769231em; // 264px / 13px
 }
 
 /**
@@ -333,7 +333,7 @@ div.code {
 
     margin-bottom: 1em;
     border: 1px solid $color-border;
-    padding: 0.1538462em 0.3846154em;
+    padding: 0.15384615384615em 0.38461538461538em;
     height: 21em;
     overflow: auto;
 }
@@ -347,5 +347,5 @@ div.code {
 
 .plugin-column {
     margin: 0 auto;
-    max-width: 57em;
+    max-width: $text-column;
 }

@@ -24,8 +24,8 @@ body {
  */
 
 h1 {
-    font-size: 2em; // 26px / 13px
-    line-height: 1.2307692; // 32px / 26px
+    font-size: 26px;
+    line-height: 1.23076923076923; // 32px / 26px
     margin: 0 0 0.5em; // 13px / 26px
 
     .pophelp {
@@ -46,11 +46,11 @@ h1 {
  */
 
 h2 {
-    font-size: 1.3846154em; // 18px / 13px
-    margin: 0.5em 0 0.72222em; // 9px / 18px + 13px / 18px
+    font-size: 18px;
+    margin: 0.5em 0 0.72222222222222em; // 9px / 18px + 13px / 18px
 
     .pophelp {
-        font-size: 0.7222222em; // 13px / 18px
+        font-size: 0.72222222222222em; // 13px / 18px
     }
 }
 
@@ -59,8 +59,8 @@ h2 {
  */
 
 h3 {
-    font-size: 1.1538462em; // 15px / 13px
-    margin: 0.8666667em 0; // 13px / 15px
+    font-size: 15px;
+    margin: 0.86666666666667em 0; // 13px / 15px
 }
 
 /**
@@ -125,9 +125,9 @@ dfn[title] {
 
 mark,
 var {
-    @include border-radius(0.2307692em); // 3px / 13px
+    @include border-radius(0.23076923076923em); // 3px / 13px
 
-    padding: 1px 0.2307692em; // 3px / 13px
+    padding: 1px 0.23076923076923em; // 3px / 13px
     color: $color-text;
     background: $color-selected;
 }
@@ -147,10 +147,10 @@ samp,
 code,
 kbd,
 samp {
-    @include border-radius(0.2307692em); // 3px / 13px
+    @include border-radius(0.23076923076923em); // 3px / 13px
 
     border: 1px solid lighten($color-border, 9%);
-    padding: 1px 0.2307692em; // 3px / 13px
+    padding: 1px 0.23076923076923em; // 3px / 13px
     background: $color-background-box;
 }
 
@@ -163,7 +163,7 @@ samp {
  */
 
 pre {
-    @include border-radius(0.2307692em); // 3px / 13px
+    @include border-radius(0.23076923076923em); // 3px / 13px
 
     /* 1 */
     word-wrap: normal;
@@ -220,7 +220,7 @@ sup {
 }
 
 sub {
-    bottom: -0.3333333em;
+    bottom: -0.33333333333333em;
 }
 
 /**

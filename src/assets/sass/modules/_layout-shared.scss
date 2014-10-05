@@ -85,7 +85,7 @@ hr {
 
     label {
         width: 85%;
-        padding: 0.30769231em 0.5em;
+        padding: 0.30769230769231em 0.5em;
         display: inline-block;
         cursor: pointer;
     }
@@ -254,7 +254,7 @@ div.multi-edit {
  */
 
 .multi-option.multi-step {
-    margin-left: 0.30769231em;
+    margin-left: 0.30769230769231em; // 4px / 13px
     display: inline-block;
 }
 
@@ -446,8 +446,8 @@ span.spinner {
 .txp-value {
     input,
     select {
-        margin-top: -0.4615385em; // 6px / 13px
-        margin-bottom: -0.2307692em; // 3px / 13px
+        margin-top: -0.46153846153846em; // 6px / 13px
+        margin-bottom: -0.23076923076923em; // 3px / 13px
     }
 }
 
@@ -459,8 +459,8 @@ span.spinner {
 
 .txp-value .jquery-ui-buttonset {
     display: inline-block;
-    margin-top: -0.4615385em; // 6px / 13px
-    margin-bottom: -0.2307692em; // 3px / 13px
+    margin-top: -0.46153846153846em; // 6px / 13px
+    margin-bottom: -0.23076923076923em; // 3px / 13px
 }
 
 /**
@@ -482,7 +482,7 @@ span.spinner {
 
 .txp-value-fixed {
     display: inline-block;
-    padding: 0.4615385em 0; // 6px / 13px
+    padding: 0.46153846153846em 0; // 6px / 13px
 }
 
 /**
@@ -512,8 +512,8 @@ span.spinner {
 
     input,
     select {
-        margin-top: -0.4615385em; // 6px / 13px
-        margin-bottom: -0.2307692em; // 3px / 13px
+        margin-top: -0.46153846153846em; // 6px / 13px
+        margin-bottom: -0.23076923076923em; // 3px / 13px
     }
 }
 
