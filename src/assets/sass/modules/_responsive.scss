@@ -109,8 +109,9 @@
         @include box-shadow(none);
         @include hide-text;
 
+        float: left;
         font-size: 16px;
-        display: inline-block;
+        display: block;
         margin: 0.0625em 0 0;
         border: 0;
         padding: 0;
@@ -156,7 +157,7 @@
             position: absolute;
             content: "";
             top: -0.5em; // 8px / 16px
-            left: 6.1875em; // 99px / 16px;
+            left: 3.9375em; // 99px / 16px;
             z-index: 2;
             width: 1em;
             height: 0.5em;

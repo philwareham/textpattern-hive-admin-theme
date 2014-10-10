@@ -89,7 +89,8 @@
     text-overflow: ellipsis;
 
     a {
-        color: darken($color-text, 20%);
+        color: $color-text;
+        font-weight: bold;
     }
 }
 
