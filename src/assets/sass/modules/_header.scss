@@ -70,6 +70,30 @@
 }
 
 /**
+ * 'View site' link.
+ *
+ * Example HTML:
+ *
+ * <p class="txp-view-site">
+ *      <a>My site</a>
+ * </p>
+ */
+
+.txp-view-site {
+    float: left;
+    margin: 0 1em;
+    max-width: 24%;
+    line-height: 2.69230769230769em; // 35px / 13px
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    a {
+        color: darken($color-text, 20%);
+    }
+}
+
+/**
  * Positioning of logout button.
  *
  * Example HTML:

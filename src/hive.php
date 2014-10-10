@@ -127,7 +127,7 @@ class hive_theme extends theme
             $out[] = '</ul>';
             $out[] = '</nav>';
             $out[] = graf(
-                href(gTxt('tab_view_site'), hu, array(
+                href(htmlspecialchars($GLOBALS["prefs"]["sitename"]), hu, array(
                     'rel'    => 'external',
                     'target' => '_blank',
                     'title'  => gTxt('tab_view_site'),
