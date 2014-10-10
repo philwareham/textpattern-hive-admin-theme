@@ -149,13 +149,15 @@
         </div>
 
         <div id="discuss_control" class="txp-layout-2col-cell-2">
-            <form role="search" method="get" action="#" class="txp-search">
+            <form class="txp-search" role="search" method="get" action="#">
                 <p>
-                    <input type="search" placeholder="Search comments…">
-                    <button class="txp-search-button">Search</button>
-                    <button>Search criteria</button>
+                    <input class="txp-search-input" type="search" name="crit" size="16" placeholder="Search comments…">
+                    <span class="txp-search-buttons">
+                        <button class="txp-search-button">Search</button>
+                        <button class="txp-search-options">Search criteria</button>
+                    </span>
                 </p>
-                <ul>
+                <ul class="txp-dropdown">
                     <li>
                         <input type="checkbox" id="search-crit1" name="search-crit1">
                         <label for="search-crit1">search_all</label>
