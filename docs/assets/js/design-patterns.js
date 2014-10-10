@@ -168,42 +168,44 @@ $(function ()
      * Split button search example.
      */
 
-    $('.txp-search-button')
-        .button({
-            text: false,
-            icons: {
-                primary: 'ui-icon-search'
-            }
-        })
-        .click(function ()
+    var search = $('.txp-search');
+
+    search.find('.txp-search-button').button({
+        text: false,
+        icons: {
+            primary: 'ui-icon-search'
+        }
+    })
+    .click(function ()
+    {
+        alert('Running the last action');
+    });
+
+    search.find('.txp-search-options').button({
+        text: false,
+        icons: {
+            primary: 'ui-icon-triangle-1-s'
+        }
+    })
+    .click(function (e)
+    {
+        var menu = search.find('.txp-dropdown').toggle().position({
+            my: 'right top',
+            at: 'right bottom',
+            of: this
+        });
+        $(document).one('click blur', function ()
         {
-            alert('Running the last action');
-        })
-        .next()
-        .button({
-            text: false,
-            icons: {
-                primary: 'ui-icon-triangle-1-s'
-            }
-        })
-        .click(function ()
-        {
-            var menu = $(this).parent().next().show().position({
-                my: 'right top',
-                at: 'right bottom',
-                of: this
-            });
-            $(document).one('click blur', function ()
-            {
-                menu.hide();
-            });
-            return false;
-        })
-        .parent()
-        .buttonset()
-        .next()
-        .hide()
-        .menu();
+            menu.hide();
+        });
+        return false;
+    });
+
+    search.find('.txp-search-buttons').buttonset();
+
+    search.find('.txp-dropdown').hide().menu().click(function(e) {
+        e.stopPropagation();
+    });
 
     /**
      * Options button.
