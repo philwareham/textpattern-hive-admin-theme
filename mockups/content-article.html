@@ -282,15 +282,10 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
 
                     <section role="region" id="dates_group" class="txp-details" aria-labelledby="dates_group-label">
                         <h3 id="dates_group-label" class="txp-summary"><a role="button" data-txp-pane="article_dates" href="#dates">Date and time</a></h3>
-                        <div role="group" id="dates" class="toggle" style="display: none">
-                            <section role="region" id="write-timestamp" class="txp-details" aria-labelledby="write-timestamp-label">
-                                <h3 id="write-timestamp-label">Timestamp</h3>
+                        <div role="group" id="dates" class="toggle">
+                            <section role="region" id="write-timestamp" aria-labelledby="write-timestamp-label">
+                                <h4 id="write-timestamp-label">Publish date <a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></h4>
                                 <div role="group">
-                                    <p class="publish-now">
-                                        <input type="checkbox" name="publish_now" id="publish_now" class="checkbox" value="1">
-                                        <label for="publish_now">Set timestamp to now</label>
-                                    </p>
-                                    <p class="publish-at">…or publish at&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></p>
                                     <p class="date posted created">
                                         <span class="txp-label-fixed">Date</span><br>
                                         <input type="text" name="year" value="2014" size="4" maxlength="4" class="year" title="Year" placeholder="yyyy">
@@ -307,11 +302,15 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                         :
                                         <input type="text" name="second" value="07" size="2" maxlength="2" class="second" title="Second" placeholder="ss">
                                     </p>
+                                    <p class="publish-now">
+                                        <input type="checkbox" name="publish_now" id="publish_now" class="checkbox" value="1">
+                                        <label for="publish_now">Set timestamp to now</label>
+                                    </p>
                                 </div>
                             </section>
 
-                            <section role="region" id="write-expires" class="txp-details" aria-labelledby="write-expires-label">
-                                <h3 id="write-expires-label">Expires</h3>
+                            <section role="region" id="write-expires" aria-labelledby="write-expires-label">
+                                <h4 id="write-expires-label">Expiration date</h4>
                                 <div role="group">
                                     <p class="date expires">
                                         <span class="txp-label-fixed">Date</span><br>
