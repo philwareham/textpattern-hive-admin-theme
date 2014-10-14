@@ -231,13 +231,15 @@ small,
 figcaption,
 tfoot,
 .txp-footer,
-.footnote {
+.footnote,
+.form-footnote {
     @include adjust-font-size-to(11px, 0.8);
 }
 
 figcaption,
 tfoot,
-.footnote {
+.footnote,
+.form-footnote {
     color: $color-text-footnote;
 }
 

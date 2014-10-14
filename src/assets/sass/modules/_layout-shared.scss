@@ -535,3 +535,21 @@ span.spinner {
         float: right;
     }
 }
+
+/**
+ * Form field inline help texts.
+ *
+ * 1. Pull footnotes closer to form fields.
+ * 2. Limit maxiumum width of footnotes, for legibility.
+ *
+ * Example HTML:
+ *
+ * TODO
+ */
+
+.form-footnote {
+    /* 1 */
+    margin-top: -0.5em;
+    /* 2 */
+    max-width: 56em;
+}
