@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Edit image - My Site &#124; Textpattern CMS</title>
+    <script src="../../docs/assets/js/jquery.js"></script>
+    <script src="../../docs/assets/js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../docs/assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../dist/hive/assets/css/textpattern.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="generator" content="Textpattern CMS">
+    <meta name="application-name" content="My site">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="My site">
+    <script src="../../docs/assets/js/modernizr.js"></script>
+    <script src="../../dist/hive/assets/js/main.js"></script>
+    <!--[if lt IE 9]>
+        <script src="../../doc/assets/js/selectivizr.min.js"></script>
+        <link rel="stylesheet" href="../../docs/assets/css/jquery-ui-ie8.min.css">
+        <link rel="stylesheet" href="../../dist/hive/assets/css/ie8.css">
+    <![endif]-->
+</head>
+<body id="page-image" class="content">
+
+    <header role="banner" class="txp-header">
+        <h1>Textpattern</h1>
+
+        <button class="txp-nav-toggle collapsed" type="button" data-toggle="collapse" data-target=".txp-nav">
+            <span class="txp-accessibility">Navigation</span>
+        </button>
+
+        <nav class="txp-nav" role="navigation" aria-label="Navigation">
+            <ul class="data-dropdown">
+                <li class="dropdown selected">
+                    <a class="dropdown-toggle" id="txp-nav-drop1" role="button" aria-controls="txp-nav-drop1-menu" data-toggle="dropdown" href="#">
+                        Content
+                    </a>
+                    <ul class="dropdown-menu" id="txp-nav-drop1-menu" role="menu" aria-labelledby="txp-nav-drop1">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../content-category.html">Categories</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../content-article.html">Write</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../content-list.html">Articles</a>
+                        </li>
+                        <li class="selected" role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../content-image.html">Images</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../content-file.html">Files</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../content-link.html">Links</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../content-discuss.html">Comments</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" id="txp-nav-drop2" role="button" aria-controls="txp-nav-drop2-menu" data-toggle="dropdown" href="#">
+                        Presentation
+                    </a>
+                    <ul class="dropdown-menu" id="txp-nav-drop2-menu" role="menu" aria-labelledby="txp-nav-drop2">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../presentation-section.html">Sections</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../presentation-page.html">Pages</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../presentation-form.html">Forms</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../presentation-css.html">Styles</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" id="txp-nav-drop3" role="button" aria-controls="txp-nav-drop3-menu" data-toggle="dropdown" href="#">
+                        Admin
+                    </a>
+                    <ul class="dropdown-menu" id="txp-nav-drop3-menu" role="menu" aria-labelledby="txp-nav-drop3">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../admin-diag.html">Diagnostics</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../admin-prefs.html">Preferences</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../admin-languages.html">Languages</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../admin-admin.html">Users</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../admin-log.html">Visitor logs</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../admin-plugin.html">Plugins</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../admin-import.html">Import</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" id="txp-nav-drop4" role="button" aria-controls="txp-nav-drop4-menu" data-toggle="dropdown" href="#">
+                        Extensions
+                    </a>
+                    <ul class="dropdown-menu" id="txp-nav-drop4-menu" role="menu" aria-labelledby="txp-nav-drop4">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../#">Extension 1</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../#">Extension 2</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../#">Extension 3</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../#">Extension 4</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="../#">Extension 5</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="txp-view-site"><a rel="external" target="_blank" href="#" title="View site">View site</a></p>
+        <p class="txp-logout"><a href="../login.html" onclick="return verify('Are you sure?')">Log out</a></p>
+
+        <div id="messagepane"></div>
+
+    </header><!-- /txp-header -->
+
+    <main role="main" class="txp-body" aria-label="Main content">
+
+        <div id="image_container" class="txp-container">
+
+            <div class="fullsize-image">
+                <img class="content-image" src="http://static1.designhive.com/img/cms/53.jpg" alt="53.jpg (460 &#215; 294)" title="53.jpg (460 &#215; 294)">
+            </div>
+            <section class="txp-edit">
+                <h2>Edit image</h2>
+                <div role="group" class="txp-details replace-image">
+                    <h3>Replace image&nbsp;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></h3>
+                    <div>
+                        <form class="image-replace" method="post" enctype="multipart/form-data" action="#">
+                            <p class="edit-image-replace">
+                                <input type="file" name="thefile" id="image_replace">
+                                <input type="submit" value="Upload">
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                <div class="thumbnail-edit">
+                    <img class="content-image" src="http://static1.designhive.com/img/cms/53t.jpg" width="184" height="118" alt="53t.jpg (184 &#215; 118)" title="53t.jpg (184 &#215; 118)">
+                    <form method="post" action="#" onsubmit="return confirm('Really delete?');">
+                        <input type="submit" value="&times;" class="destroy" title="Delete" aria-label="Delete">
+                    </form>
+                </div>
+                <div role="group" class="txp-details thumbnail-upload">
+                    <h3>Upload thumbnail&nbsp;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></h3>
+                    <div>
+                        <form class="thumbnail-upload" method="post" enctype="multipart/form-data" action="#">
+                            <p class="edit-upload-thumbnail">
+                                <input type="file" name="thefile" id="upload_thumbnail">
+                                <input type="submit" value="Upload">
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                <section class="thumbnail-alter">
+                    <h3>Create thumbnail&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></h3>
+                    <form method="post" action="#" id="thumbnail_alter_form" class="edit-form">
+                        <p class="edit-alter-thumbnail">
+                            <label for="width">Width</label>
+                            <input type="text" value="100" name="width" size="4" class="input-xsmall" id="width">
+                            <label for="height">Height</label>
+                            <input type="text" value="67" name="height" size="4" class="input-xsmall" id="height">
+                            <label for="crop">Crop</label>
+                            <input type="checkbox" name="crop" value="1" id="crop" class="checkbox">
+                            <input type="submit" value="Create">
+                        </p>
+                    </form>
+                </section>
+                <div class="image-detail">
+                    <form method="post" action="#" id="image_details_form" class="edit-form">
+                        <p class="edit-image-name">
+                            <span class="txp-label"><label for="image_name">Image name</label></span>
+                            <span class="txp-value"><input type="text" value="child-with-carrots.jpg" id="image_name" name="name" size="32"></span>
+                        </p>
+                        <p class="edit-image-category">
+                            <span class="txp-label"><label for="image_category">Category</label></span>
+                            <span class="txp-value">
+                                <select id="image_category" name="category">
+                                    <option value="">&#160;</option>
+                                    <option value="site-design" selected="selected">Site Design</option>
+                                </select>
+                            </span>
+                        </p>
+                        <p class="edit-image-alt-text">
+                            <span class="txp-label"><label for="image_alt_text">Alternate text</label></span>
+                            <span class="txp-value"><input type="text" value="Child with carrots" name="alt" id="image_alt_text" size="32"></span>
+                        </p>
+                        <p class="edit-image-caption">
+                            <span class="txp-label"><label for="image_caption">Caption</label></span>
+                            <textarea id="image_caption" name="caption" cols="64" rows="4">Example image with thumbnail</textarea>
+                        </p>
+                        <p><input type="submit" value="Save" class="publish"></p>
+                    </form>
+                </div>
+            </section>
+
+        </div><!-- /txp-container -->
+    </main>
+
+    <footer role="contentinfo" class="txp-footer">
+        <p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external" target="_blank">Textpattern CMS</a> (v4.6)</p>
+        <p class="pagejump"><a href="#">&#8593; Back to top</a></p>
+    </footer><!-- /txp-footer -->
+
+</body>
+</html>
