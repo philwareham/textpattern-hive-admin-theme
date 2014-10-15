@@ -539,15 +539,15 @@ span.spinner {
 /**
  * Form field inline help texts.
  *
- * 1. Pull footnotes closer to form fields.
- * 2. Limit maxiumum width of footnotes, for legibility.
+ * 1. Pull instructions closer to form fields.
+ * 2. Limit maxiumum width of instructions, for legibility.
  *
  * Example HTML:
  *
  * TODO
  */
 
-.form-footnote {
+.txp-instructions {
     /* 1 */
     margin-top: -0.5em;
     /* 2 */
