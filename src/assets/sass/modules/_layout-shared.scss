@@ -537,17 +537,38 @@ span.spinner {
 }
 
 /**
+ * Form fields.
+ *
+ * Textpattern form fields can have optional inline help texts applied to them.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-form-field">
+ *     <label class="txp-form-field-label"></label> <a class="pophelp">i</a><br>
+ *     <input class="txp-form-field-input">
+ * </div>
+ *
+ * <div class="txp-form-field">
+ *     <label class="txp-form-field-label"></label> <a class="pophelp">i</a><br>
+ *     <div class="txp-form-field-instructions">
+ *         Some intructions on how to fill out this form field (optional).
+ *     </div>
+ *     <input class="txp-form-field-input">
+ * </div>
+ */
+
+.txp-form-field {
+    margin: 1em 0;
+}
+
+/**
  * Form field inline help texts.
  *
  * 1. Pull instructions closer to form fields.
  * 2. Limit maxiumum width of instructions, for legibility.
- *
- * Example HTML:
- *
- * TODO
  */
 
-.txp-instructions {
+.txp-form-field-instructions {
     /* 1 */
     margin-top: -0.5em;
     /* 2 */

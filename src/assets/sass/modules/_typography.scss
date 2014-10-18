@@ -231,7 +231,7 @@ small,
 figcaption,
 tfoot,
 .footnote,
-.txp-instructions,
+.txp-form-field-instructions,
 .txp-footer {
     @include adjust-font-size-to(11px, 0.8);
 }
@@ -239,7 +239,7 @@ tfoot,
 figcaption,
 tfoot,
 .footnote,
-.txp-instructions {
+.txp-form-field-instructions {
     color: $color-text-footnote;
 }
 
