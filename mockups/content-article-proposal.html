@@ -283,45 +283,20 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                     <section role="region" id="dates_group" class="txp-details" aria-labelledby="dates_group-label">
                         <h3 id="dates_group-label" class="txp-summary"><a role="button" data-txp-pane="article_dates" href="#dates">Date and time</a></h3>
                         <div role="group" id="dates" class="toggle">
-                            <section role="region" id="write-timestamp" aria-labelledby="write-timestamp-label">
-                                <h4 id="write-timestamp-label">Publish date <a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></h4>
-                                <div role="group">
-                                    <p class="date posted created">
-                                        <label for="publish-date">Date</label><br>
-                                        <input type="date" name="publish-date" id="publish-date" value="2014" size="10" maxlength="10" placeholder="dd/mm/yyyy">
-                                    </p>
-                                    <p class="time posted created">
-                                        <label for="publish-time">Time</label><br>
-                                        <input type="text" name="hour" value="15" size="8" maxlength="8" placeholder="hh:mm:ss">
-                                    </p>
-                                    <p class="publish-now">
-                                        <input type="checkbox" name="publish_now" id="publish_now" class="checkbox" value="1">
-                                        <label for="publish_now">Set timestamp to now</label>
-                                    </p>
-                                </div>
-                            </section>
-
-                            <section role="region" id="write-expires" aria-labelledby="write-expires-label">
-                                <h4 id="write-expires-label">Expiration date</h4>
-                                <div role="group">
-                                    <p class="date expires">
-                                        <span class="txp-label-fixed">Date</span><br>
-                                        <input type="text" name="exp_year" size="4" maxlength="4" class="exp_year" title="Year" placeholder="yyyy">
-                                        /
-                                        <input type="text" name="exp_month" size="2" maxlength="2" class="exp_month" title="Month" placeholder="mm">
-                                        /
-                                        <input type="text" name="exp_day" size="2" maxlength="2" class="exp_day" title="Day" placeholder="dd">
-                                    </p>
-                                    <p class="time expires">
-                                        <span class="txp-label-fixed">Time</span><br>
-                                        <input type="text" name="exp_hour" size="2" maxlength="2" class="exp_hour" title="Hour" placeholder="hh">
-                                        :
-                                        <input type="text" name="exp_minute" size="2" maxlength="2" class="exp_minute" title="Minute" placeholder="mn">
-                                        :
-                                        <input type="text" name="exp_second" size="2" maxlength="2" class="exp_second" title="Second" placeholder="ss">
-                                    </p>
-                                </div>
-                            </section>
+                            <p class="posted created">
+                                <label for="publish-date">Publish date <a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label><br>
+                                <input class="txp-date-input" type="date" name="publish-date" id="publish-date" size="10" maxlength="10" placeholder="DD/MM/YYYY">
+                                <input class="txp-time-input" type="time" name="publish-time" id="publish-time" size="8" maxlength="8" placeholder="HH:MM:SS">
+                            </p>
+                            <p class="publish-now">
+                                <input type="checkbox" name="publish_now" id="publish_now" class="checkbox" value="1">
+                                <label for="publish_now">Set timestamp to now</label>
+                            </p>
+                            <p class="posted created">
+                                <label for="expires-date">Expiration date <a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label><br>
+                                <input class="txp-date-input" type="date" name="expires-date" id="expires-date" size="10" maxlength="10" placeholder="DD/MM/YYYY">
+                                <input class="txp-time-input" type="time" name="expires-time" id="expires-time" size="8" maxlength="8" placeholder="HH:MM:SS">
+                            </p>
                         </div>
                     </section>
 
