@@ -37,8 +37,7 @@
  * `.txp-view-site` is OK to hide though (otherwise it affects page tabbing).
  */
 
-#page-login,
-#page-logout {
+.login-pane {
     .txp-header {
         position: absolute;
         right: auto;

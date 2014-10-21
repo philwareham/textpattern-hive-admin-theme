@@ -7,12 +7,11 @@
  * Example HTML:
  *
  * <body id="page-setup">
- * <body id="page-login">
+ * <body class="login-pane">
  */
 
 #page-setup,
-#page-login,
-#page-logout {
+.login-pane {
     padding: 1em 2.1% 0;
 }
 

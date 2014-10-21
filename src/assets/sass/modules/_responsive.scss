@@ -18,8 +18,7 @@
     }
 
     #page-setup,
-    #page-login,
-    #page-logout {
+    .login-pane {
         padding: 1em 1.53846153846154em 0; // 13px + 20px / 13px
     }
 
@@ -59,7 +58,7 @@
 
         a {
             @include hide-text;
-    
+
             display: block;
             width: 2em;
             height: 2em;
