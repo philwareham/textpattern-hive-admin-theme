@@ -551,7 +551,7 @@ span.spinner {
  * <div class="txp-form-field">
  *     <label class="txp-form-field-label"></label> <a class="pophelp">i</a><br>
  *     <div class="txp-form-field-instructions">
- *         Some intructions on how to fill out this form field (optional).
+ *         <p>(Optional) intructions on how to fill out this form field.</p>
  *     </div>
  *     <input class="txp-form-field-input">
  * </div>
@@ -570,7 +570,7 @@ span.spinner {
 
 .txp-form-field-instructions {
     /* 1 */
-    margin-top: -0.5em;
+    margin-top: -0.45454545454545em; // 5px / 11px
     /* 2 */
-    max-width: 56em;
+    max-width: 56em; // 616px / 11px
 }
