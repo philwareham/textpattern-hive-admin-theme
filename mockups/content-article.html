@@ -164,17 +164,12 @@
                     </div>
 
                     <div class="text">
-
                         <p class="title">
                             <label for="title">Title</label>&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a><br>
                             <input type="text" id="title" name="Title" value="Example article title" size="48">
                             <span id="article_partial_article_clone" class="txp-actions"><a id="txp_clone" class="article-clone" href="#">Duplicate</a></span>
                             <span id="article_partial_article_view" class="txp-actions"><a class="article-view" href="#">View</a></span>
                         </p>
-                        <div class="txp-instructions">
-                            <p>Add a brief, recognisable title for this article.</p>
-                        </div>
-
                         <p class="body">
                             <label for="body">Body</label>&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a><br>
                             <textarea id="body" name="Body" cols="64" rows="24">h3. What do you want to do next?
@@ -197,18 +192,10 @@ There are a host of "Frequently Asked Questions":http://textpattern.com/faq/ to 
 
 If all else fails, there's a whole crowd of friendly, helpful people over at the "Textpattern support forum":http://forum.textpattern.com/. Come and pay a visit!</textarea>
                         </p>
-                        <div class="txp-instructions">
-                            <p>The main content of an article is contained within the article body.</p>
-                        </div>
-
                         <p class="excerpt">
                             <label for="excerpt">Excerpt</label>&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a><br>
                             <textarea id="excerpt" name="Excerpt" cols="64" rows="4">Example of an article excerpt here.</textarea>
                         </p>
-                        <div class="txp-instructions">
-                            <p>Article excerpts are optional. Excerpts could be used as a short summary of the article that is displayed as part of a table of contents, used in place of the full article body in the site's RSS/Atom feeds, or a number of other uses.</p>
-                        </div>
-
                     </div>
 
                     <p id="write-publish">
@@ -281,11 +268,16 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                     </section>
 
                     <section role="region" id="dates_group" class="txp-details" aria-labelledby="dates_group-label">
-                        <h3 id="dates_group-label" class="txp-summary"><a role="button" data-txp-pane="article_dates" href="#dates">Date and time</a></h3>
+                        <h3 id="dates_group-label" class="txp-summary expanded"><a role="button" data-txp-pane="article_dates" href="#dates">Date and time</a></h3>
                         <div role="group" id="dates" class="toggle">
-                            <section role="region" id="write-timestamp" aria-labelledby="write-timestamp-label">
-                                <h4 id="write-timestamp-label">Publish date <a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></h4>
+                            <section role="region" id="write-timestamp" class="txp-details" aria-labelledby="write-timestamp-label">
+                                <h3 id="write-timestamp-label">Timestamp</h3>
                                 <div role="group">
+                                    <p class="publish-now">
+                                        <input type="checkbox" name="publish_now" id="publish_now" class="checkbox" value="1">
+                                        <label for="publish_now">Set timestamp to now</label>
+                                    </p>
+                                    <p class="publish-at">…or publish at&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></p>
                                     <p class="date posted created">
                                         <span class="txp-label-fixed">Date</span><br>
                                         <input type="text" name="year" value="2014" size="4" maxlength="4" class="year" title="Year" placeholder="yyyy">
@@ -302,15 +294,11 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                         :
                                         <input type="text" name="second" value="07" size="2" maxlength="2" class="second" title="Second" placeholder="ss">
                                     </p>
-                                    <p class="publish-now">
-                                        <input type="checkbox" name="publish_now" id="publish_now" class="checkbox" value="1">
-                                        <label for="publish_now">Set timestamp to now</label>
-                                    </p>
                                 </div>
                             </section>
 
-                            <section role="region" id="write-expires" aria-labelledby="write-expires-label">
-                                <h4 id="write-expires-label">Expiration date</h4>
+                            <section role="region" id="write-expires" class="txp-details" aria-labelledby="write-expires-label">
+                                <h3 id="write-expires-label">Expires</h3>
                                 <div role="group">
                                     <p class="date expires">
                                         <span class="txp-label-fixed">Date</span><br>
@@ -388,11 +376,6 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                 <label for="url-title">URL-only title</label>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a><br>
                                 <input type="text" name="url_title" size="32" id="url-title">
                             </p>
-                            <div class="footnote">
-                                <p>If you would like to have a specific title attached to the permalink URL for your article, enter it here. If it is left blank, the URL title will be automatically generated from the actual article title.</p>
-                                <p>This is particularly useful if the title of your article uses non-ASCII characters.</p>
-                            </div>
-
                             <p class="keywords">
                                 <label for="keywords">Keywords</label>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a><br>
                                 <textarea id="keywords" name="Keywords" cols="16" rows="4"></textarea>
