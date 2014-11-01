@@ -1,0 +1,261 @@
+// import Compass, Compass Plugins and any additional mixins
+@import "core/helpers";
+
+// import global variables
+@import "core/settings";
+
+
+
+/* ==========================================================================
+   ONLY for use in design patterns - classes NOT USED in actual site builds.
+   ========================================================================== */
+
+/**
+ * Make sure code examples use black text within information blocks.
+ */
+
+.information code {
+    color: #333333;
+}
+
+
+/* Colour palette.
+   ========================================================================== */
+
+/**
+ * Generate the colour swatches dynamically.
+ *
+ * More info: http://www.guyroutledge.co.uk/blog/style-guide-colours-with-sass/
+ */
+
+$colors: (
+    'text':               $color-text,
+    'text-footnote':      $color-text-footnote,
+    'gradient-from':      $color-gradient-from,
+    'gradient-to':        $color-gradient-to,
+    'gradient-border':    $color-gradient-border,
+    'border':             $color-border,
+    'link':               $color-link,
+    'link-hover':         $color-link-hover,
+    'link-focus':         $color-link-focus,
+    'link-focus-glow':    $color-link-focus-glow,
+    'link-visited':       $color-link-visited,
+    'link-selecting':     $color-selecting,
+    'link-selected':      $color-selected,
+    'background':         $color-background,
+    'background-box':     $color-background-box,
+    'highlight-box':      $color-highlight-box,
+    'success-text':       $color-success-text,
+    'success-background': $color-success-background,
+    'warning-text':       $color-warning-text,
+    'warning-background': $color-warning-background,
+    'error-text':         $color-error-text,
+    'error-background':   $color-error-background,
+    'info-text':          $color-info-text,
+    'info-background':    $color-info-background
+);
+
+.design-patterns--color {
+    position: relative;
+    display: block;
+    border: 1px solid #cccccc;
+    height: 2.375em; // 38px / 16px
+
+    &:after {
+        @include adjust-font-size-to(14px, 0.875);
+
+        position: absolute;
+        top: 0.5em;
+        padding: 1px 0.2142857em; // 3px / 14px
+        font-family: $font-mono;
+        background-color: #ffffff; // IE 8 support.
+        background-color: rgba(255, 255, 255, 0.66);
+    }
+}
+
+@each $name, $color in $colors {
+    .design-patterns--color-#{$name} {
+        background: $color;
+
+        &:after {
+            content: "#{$color}";
+        }
+    }
+}
+
+
+/* Layout grid examples.
+   ========================================================================== */
+
+.design-patterns--box {
+    margin-top: 0;
+    padding: 1em;
+    background: #aaaaaa;
+}
+
+/**
+ * Ensure information blocks clear any preceding grid cell floats.
+ */
+
+#section-grid .information {
+    clear: both;
+}
+
+
+/* jQuery UI styling specific to design patterns.
+   ========================================================================== */
+
+/**
+ * The list of all available icons.
+ */
+
+.jquery-ui-icons {
+    margin: 0;
+    padding: 0;
+}
+
+.jquery-ui-icons li {
+    margin: 2px;
+    position: relative;
+    padding: 4px 0;
+    cursor: pointer;
+    float: left;
+    list-style: none;
+}
+
+[dir="rtl"] .jquery-ui-icons li  {
+    float: right;
+}
+
+.jquery-ui-icons span.ui-icon {
+    float: left;
+    margin: 0 4px;
+}
+
+[dir="rtl"] .jquery-ui-icons span.ui-icon  {
+    float: right;
+}
+
+/**
+ * The vertical slider example.
+ */
+
+.jquery-ui-slider-vertical span {
+    height: 120px;
+    float: left;
+    margin: 15px;
+}
+
+[dir="rtl"] .jquery-ui-slider-vertical span {
+    float: right;
+}
+
+/**
+ * Declare a width for jQuery UI menus.
+ */
+
+.ui-menu {
+    width: 150px;
+}
+
+/**
+ * Absolute positioning for miscellaneous jQuery UI menus.
+ */
+
+.ui-menu:not(.jquery-ui-menu) {
+    position: absolute;
+    z-index: 1000;
+}
+
+
+/* Google Code Prettify
+   ========================================================================== */
+
+/**
+ * Colouring for code language syntax.
+ */
+
+/* html/xml attribute name */
+.atn,
+/* decimal */
+.dec,
+/* type */
+.typ,
+/* variable */
+.var {
+    color: teal;
+}
+
+/* html/xml attribute value */
+.atv,
+/* string */
+.str {
+    color: #dd1144;
+}
+
+/* closure */
+.clo,
+/* opening */
+.opn {
+    color: #93a1a1;
+}
+
+/* punctuation */
+.pun {
+    color: #000;
+}
+
+/* comment */
+.com {
+    color: #93a1a1;
+}
+
+/* function */
+.fun {
+    color: #dc322f;
+}
+
+/* keyword */
+.kwd {
+    color: #1e347b;
+    font-weight: bold;
+}
+
+/* literal */
+.lit {
+    color: #195f91;
+}
+
+/* plaintext */
+.pln {
+    color: #48484c;
+}
+
+/* html/xml tag */
+.tag {
+    color: #1e347b;
+}
+
+/**
+ * Colouring for optional code line numbers.
+ *
+ * Example HTML:
+ *
+ * <pre class="linenums">
+ */
+
+.linenums {
+    padding-left: 2em;
+
+    ol {
+        @include box-shadow(inset 1.9166667em 0 0 $color-background-box, inset 2em 0 0 lighten($color-border, 9%));
+
+        margin: 0;
+        padding: 0 0 0 2em;
+    }
+
+    li {
+        padding-left: 1em;
+        color: darken($color-border, 8%);
+    }
+}
