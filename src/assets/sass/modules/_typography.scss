@@ -47,6 +47,7 @@ h1 {
 
 h2 {
     font-size: 18px;
+    line-height: 1.33333333333333; // 24px / 18px
     margin: 0.5em 0 0.72222222222222em; // 9px / 18px + 13px / 18px
 
     .pophelp {
@@ -60,6 +61,7 @@ h2 {
 
 h3 {
     font-size: 15px;
+    line-height: 1.4; // 21px / 15px
     margin: 0.86666666666667em 0; // 13px / 15px
 }
 
