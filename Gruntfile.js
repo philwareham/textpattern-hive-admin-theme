@@ -25,6 +25,12 @@ module.exports = function (grunt)
 
         // Copy files from `src/` to `dist/hive/assets/`.
         copy: {
+            css: {
+                files: [
+                    {expand: true, cwd: 'tmp/assets/css/', src: ['**', '!design-patterns.css'], dest: 'dist/hive/assets/css/'},
+                    {expand: true, cwd: 'tmp/assets/css/', src: ['design-patterns.css'], dest: 'docs/assets/css/'}
+                ]
+            },
             dist: {
                 files: [
                     {expand: true, cwd: 'src/', src: ['*'], dest: 'dist/hive/', filter: 'isFile'},
@@ -114,9 +120,9 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['jshint', 'sass', 'copy', 'uglify']);
+    grunt.registerTask('build', ['jshint', 'sass', 'copy:dist', 'uglify']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('sass', ['compass', 'cssmin']);
+    grunt.registerTask('sass', ['compass', 'copy:css', 'cssmin']);
     grunt.registerTask('test', ['jshint']);
     grunt.registerTask('travis', ['jshint', 'compass']);
 };
