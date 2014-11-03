@@ -45,6 +45,8 @@ $colors: (
     'background':         $color-background,
     'background-box':     $color-background-box,
     'highlight-box':      $color-highlight-box,
+    'gradient2-from':     $color-gradient2-from,
+    'gradient2-to':       $color-gradient2-to,
     'success-text':       $color-success-text,
     'success-background': $color-success-background,
     'warning-text':       $color-warning-text,
@@ -58,15 +60,14 @@ $colors: (
 .design-patterns--color {
     position: relative;
     display: block;
-    border: 1px solid #cccccc;
-    height: 2.375em; // 38px / 16px
+    margin: 1em 0;
+    border: 1px solid $color-border;
+    height: 3em; // 39px / 13px
 
     &:after {
-        @include adjust-font-size-to(14px, 0.875);
-
         position: absolute;
-        top: 0.5em;
-        padding: 1px 0.2142857em; // 3px / 14px
+        top: 0.69230769230769em; // 9px / 13px
+        padding: 1px 0.23076923076923em; // 3px / 13px
         font-family: $font-mono;
         background-color: #ffffff; // IE 8 support.
         background-color: rgba(255, 255, 255, 0.66);
