@@ -69,9 +69,6 @@ class hive_theme extends theme
         if (defined('hive_theme_hide_image_caption')) {
             $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_image_caption.css">';
         }
-        if (defined('hive_theme_hide_tag_builder_column')) {
-            $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/custom/hide_tag_builder_column.css">';
-        }
         // End of custom CSS toggles.
 
         $out[] = '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">';
