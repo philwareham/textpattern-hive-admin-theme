@@ -45,10 +45,10 @@
 
         // highlight the currently active step
         &.active {
-            @include gradient-linear($color-gradient2-from, $color-gradient2-to);
+            @include gradient-linear($color-accent-gradient-from, $color-accent-gradient-to);
 
-            border: 1px solid $color-gradient2-to;
-            border-bottom-color: darken($color-gradient2-to, 6%);
+            border: 1px solid $color-accent-gradient-to;
+            border-bottom-color: darken($color-accent-gradient-to, 6%);
         }
 
         // numerical indication of step

@@ -17,15 +17,15 @@
 
 .txp-header {
     @include box-shadow(0 0.2em 0.25em rgba(#000000, 0.15));
-    @include gradient-linear($color-gradient2-from, $color-gradient2-to);
+    @include gradient-linear($color-accent-gradient-from, $color-accent-gradient-to);
 
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    border-top: 1px solid $color-gradient2-to;
-    border-bottom: 1px solid darken($color-gradient2-to, 6%);
+    border-top: 1px solid $color-accent-gradient-to;
+    border-bottom: 1px solid darken($color-accent-gradient-to, 6%);
     padding: 0 2.1%;
     height: 2.69230769230769em; // 35px / 13px
 }

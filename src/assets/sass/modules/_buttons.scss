@@ -84,21 +84,21 @@ input[type="button"],
 input[type="submit"].publish,
 button.publish,
 a.publish {
-    @include gradient-linear(lighten($color-gradient2-from, 7%), lighten($color-gradient2-to, 7%));
+    @include gradient-linear(lighten($color-accent-gradient-from, 7%), lighten($color-accent-gradient-to, 7%));
 
     font-weight: bold;
-    border: 1px solid $color-gradient2-to;
+    border: 1px solid $color-accent-gradient-to;
 
     &:hover {
-        @include gradient-linear(lighten($color-gradient2-from, 14%), lighten($color-gradient2-to, 14%));
+        @include gradient-linear(lighten($color-accent-gradient-from, 14%), lighten($color-accent-gradient-to, 14%));
 
-        border: 1px solid darken($color-gradient2-to, 10%);
+        border: 1px solid darken($color-accent-gradient-to, 10%);
     }
 
     &:active {
-        @include gradient-linear(lighten($color-gradient2-from, 2%), lighten($color-gradient2-to, 2%));
+        @include gradient-linear(lighten($color-accent-gradient-from, 2%), lighten($color-accent-gradient-to, 2%));
 
-        border: 1px solid darken($color-gradient2-to, 10%);
+        border: 1px solid darken($color-accent-gradient-to, 10%);
     }
 
     &:focus {

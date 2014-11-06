@@ -91,11 +91,11 @@ button.txp-nav-toggle {
     position: relative;
     display: block;
     float: left;
-    border-right: 1px solid $color-gradient2-to;
+    border-right: 1px solid $color-accent-gradient-to;
     background: rgba(#ffffff, 0.2);
 
     &:first-child {
-        border-left: 1px solid $color-gradient2-to;
+        border-left: 1px solid $color-accent-gradient-to;
     }
 
     > a {
@@ -235,11 +235,11 @@ button.txp-nav-toggle {
         }
 
         &:hover {
-            background: lighten($color-gradient2-from, 21%);
+            background: lighten($color-accent-gradient-from, 21%);
         }
 
         &.selected {
-            background: lighten($color-gradient2-from, 14%);
+            background: lighten($color-accent-gradient-from, 14%);
         }
     }
 
