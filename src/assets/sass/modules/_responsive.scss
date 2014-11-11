@@ -341,9 +341,9 @@
     .ui-tabs .ui-tabs-nav {
         li {
             @include box-shadow(none);
-            @include border-radius(0);
 
             float: none;
+            margin: 0;
             margin-top: 2px;
             border-bottom-width: 1px;
 
