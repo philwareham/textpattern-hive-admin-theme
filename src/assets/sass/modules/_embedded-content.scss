@@ -91,10 +91,10 @@ svg:not(:root) {
  */
 
 .content-image {
-    @include border-radius;
     @include box-shadow;
 
     border: solid 1px $color-border;
+    border-radius: $default-border-radius;
     padding: 4px;
     background: #ffffff;
 }

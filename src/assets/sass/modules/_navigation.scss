@@ -212,7 +212,6 @@ button.txp-nav-toggle {
  */
 
 .dropdown-menu {
-    @include border-radius(0 $default-border-radius $default-border-radius $default-border-radius);
     @include box-shadow;
 
     position: absolute;
@@ -223,15 +222,16 @@ button.txp-nav-toggle {
     min-width: 12em;
     border: 1px solid #d4d4d4;
     border-top: 0;
+    border-radius: 0 $default-border-radius $default-border-radius $default-border-radius;
     background: $color-highlight-box;
 
     li {
         &:first-child {
-            @include border-radius(0 $default-border-radius 0 0);
+            border-radius: 0 $default-border-radius 0 0;
         }
 
         &:last-child {
-            @include border-radius(0 0 $default-border-radius $default-border-radius);
+            border-radius: 0 0 $default-border-radius $default-border-radius;
         }
 
         &:hover {

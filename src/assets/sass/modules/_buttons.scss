@@ -29,7 +29,6 @@ input[type="button"],
 .navlink-active,
 .txp-buttons a {
     @include text-shadow($text-shadow-light);
-    @include border-radius;
     @include box-shadow($inset-highlighting);
     @include background-clip;
     @include gradient-linear($color-gradient-from, $color-gradient-to);
@@ -39,6 +38,7 @@ input[type="button"],
     -webkit-appearance: none;
     display: inline-block;
     border: solid 1px $color-gradient-border;
+    border-radius: $default-border-radius;
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     width: auto;
     height: 2.15384615384615em; // 28px / 13px
@@ -117,10 +117,10 @@ a.publish {
 input[type="submit"].destroy,
 button.destroy {
     @include text-shadow($text-shadow-dark);
-    @include border-radius(50%);
     @include gradient-linear(lighten($color-error-text, 10%), $color-error-text);
 
     border-color: darken($color-error-text, 5%);
+    border-radius: 50%;
     padding: 0 0.30769230769231em; // 4px / 13px
     height: 1.53846153846154em; // 20px / 13px
     color: #ffffff;
@@ -155,12 +155,12 @@ button.destroy {
  */
 
 .navlink-disabled {
-    @include border-radius;
     @include background-clip;
     @include box-sizing(border-box);
 
     display: inline-block;
     border: 1px solid;
+    border-radius: $default-border-radius;
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     height: 2.15384615384615em; // 28px / 13px
 }
@@ -197,19 +197,20 @@ ul.nav-tertiary {
 .prev-next {
     a,
     .navlink-disabled {
-        @include border-radius(0);
+        border-radius: 0;
     }
 
     > :first-child,
     > :first-child > a,
     > :first-child > span {
-        @include border-left-radius;
+        border-radius: $default-border-radius 0 0 $default-border-radius;
     }
 
     > :last-child,
     > :last-child > a,
     > :last-child > span {
-        @include border-right-radius;
+        border-radius: 0 $default-border-radius $default-border-radius 0;
+
     }
 }
 
@@ -218,15 +219,13 @@ ul.nav-tertiary {
     > :first-child,
     > :first-child > a,
     > :first-child > span {
-        @include border-radius(0);
-        @include border-right-radius;
+        border-radius: 0 $default-border-radius $default-border-radius 0;
     }
 
     > :last-child,
     > :last-child > a,
     > :last-child > span {
-        @include border-radius(0);
-        @include border-left-radius;
+        border-radius: $default-border-radius 0 0 $default-border-radius;
     }
 }
 

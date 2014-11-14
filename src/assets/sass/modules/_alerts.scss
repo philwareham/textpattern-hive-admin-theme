@@ -16,8 +16,7 @@
 .warning,
 .error,
 .information {
-    @include border-radius(0.2307692em); // 3px / 13px
-
+    border-radius: 0.23076923076923em; // 3px / 13px
     padding: 1px 0.23076923076923em; // 3px / 13px
 }
 
@@ -110,11 +109,11 @@
         &.success,
         &.warning,
         &.error {
-            @include border-radius($default-border-radius $default-border-radius 0 0);
             @include box-shadow;
 
             display: inline-block;
             margin: 0 auto;
+            border-radius: $default-border-radius $default-border-radius 0 0;
             padding: 0.53846153846154em 2.84615384615385em 0.53846153846154em 1em;
             max-width: ($text-column - 3.84615384615385em);
             color: #ffffff;

@@ -127,8 +127,7 @@ dfn[title] {
 
 mark,
 var {
-    @include border-radius(0.23076923076923em); // 3px / 13px
-
+    border-radius: 0.23076923076923em; // 3px / 13px
     padding: 1px 0.23076923076923em; // 3px / 13px
     color: $color-text;
     background: $color-selected;
@@ -149,9 +148,8 @@ samp,
 code,
 kbd,
 samp {
-    @include border-radius(0.23076923076923em); // 3px / 13px
-
     border: 1px solid lighten($color-border, 9%);
+    border-radius: 0.23076923076923em; // 3px / 13px
     padding: 1px 0.23076923076923em; // 3px / 13px
     background: $color-background-box;
 }
@@ -165,14 +163,13 @@ samp {
  */
 
 pre {
-    @include border-radius(0.23076923076923em); // 3px / 13px
-
     /* 1 */
     word-wrap: normal;
     /* 2 */
     overflow-x: auto;
     margin: 1em 0;
     border: 1px solid lighten($color-border, 9%);
+    border-radius: 0.23076923076923em; // 3px / 13px
     padding: 0.53846153846154em 1em; // 7px / 13px + 13px
     background: $color-background-box;
     /* 3 */
@@ -197,9 +194,8 @@ pre code,
 .code code,
 code.body,
 code.excerpt {
-    @include border-radius(none);
-
     border: 0;
+    border-radius: 0;
     padding: 0;
     background: none;
 }

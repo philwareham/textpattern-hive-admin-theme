@@ -104,7 +104,6 @@
 
     button.txp-nav-toggle {
         @include text-shadow(none);
-        @include border-radius(0);
         @include box-shadow(none);
         @include hide-text;
 
@@ -113,6 +112,7 @@
         display: block;
         margin: 0.0625em 0 0;
         border: 0;
+        border-radius: 0;
         padding: 0;
         width: 2em;
         height: 2em;
@@ -182,12 +182,12 @@
      */
 
     .dropdown-menu {
-        @include border-radius(none);
         @include box-shadow(none);
 
         position: static;
         min-width: 0;
         border: 0;
+        border-radius: 0;
 
         a {
             padding: 0.5em 2em;
