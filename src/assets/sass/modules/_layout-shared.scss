@@ -146,24 +146,31 @@ hr {
  *
  * Example HTML:
  *
- * <p class="title">
- *     <label>Label</label><br>
- *     <input type="text">
- *     <span class="txp-actions"><a>Duplicate</a></span>
- *     <span class="txp-actions"><a>View</a></span>
- * </p>
+ * <span class="txp-actions">
+ *     <a>View</a>
+ *     <a>Duplicate</a>
+ * </span>
  */
 
-.txp-actions a {
-    margin: 0 0 0 0.75em;
+.txp-actions {
+    float: right;
+    margin-top: 0.30769230769231em; // 4px / 13px
+
+    a {
+        margin: 0 0 0 0.75em;
+    }
 }
 
 /**
- * Swap margin positions in RTL languages.
+ * Swap float/margin positions in RTL languages.
  */
 
-[dir="rtl"] .txp-actions a {
-    margin: 0 0.75em 0 0;
+[dir="rtl"] .txp-actions {
+    float: left;
+
+    a {
+        margin: 0 0.75em 0 0;
+    }
 }
 
 /**

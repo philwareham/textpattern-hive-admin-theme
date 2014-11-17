@@ -375,32 +375,4 @@
         border-top-width: 0;
     }
 
-
-    /* Content -> Write page < 547px
-       ========================================================================== */
-
-    /**
-     * Make title field full width.
-     */
-
-    #main_content #title {
-        width: 100%;
-    }
-
-    /**
-     * Move action links below title field.
-     */
-
-    .title .txp-actions {
-        a {
-            display: inline-block;
-            margin-top: 0.75em;
-        }
-
-        &:first-of-type a {
-            margin-right: 0;
-            margin-left: 0;
-        }
-    }
-
 }

@@ -148,9 +148,6 @@
                 <p>
                     <label for="text">Page name</label><br>
                     <input id="text" type="text" size="16" value="new_page" class="input-medium">
-                    <span class="txp-actions">
-                        <a id="txp_clone" class="clone" title="Clone this page" href="#">Duplicate</a>
-                    </span>
                 </p>
                 <p>
                     <label for="html">Page code</label><br>
@@ -165,15 +162,23 @@
     &lt;/body&gt;
 &lt;/html&gt;</textarea>
                 </p>
-                <p>
-                    <input type="submit" value="Save" name="save" class="publish">
-                </p>
             </form>
         </div><!-- /#main_content -->
 
 
         <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
-            <p class="action-create"><a href="#">Create new page</a></p>
+            <p>
+                <input type="submit" value="Save" name="save" class="publish">
+                <span class="txp-actions">
+                    <a class="txp-clone" id="txp_clone" href="#">Duplicate</a>
+                </span>
+            </p>
+
+            <hr>
+
+            <p class="action-create">
+                <a href="#">Create new page</a>
+            </p>
             <section role="region" id="all_pages" class="txp-details" aria-labelledby="all_pages-label">
                 <h3 id="all_pages-label">All pages</h3>
                 <div>

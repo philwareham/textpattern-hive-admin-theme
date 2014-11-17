@@ -211,11 +211,6 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
 
                     </div>
 
-                    <p id="write-publish">
-                        <input type="submit" value="Publish" name="publish" class="publish" disabled="disabled">
-                        <span class="spinner"></span>
-                    </p>
-
                     <p class="author">
                         <small>Posted by: textpattern · 20 Apr 2014 · 16:43:39<br>
                             Last modified by: textpattern · 08 Sep 2014 · 16:44:08</small>
@@ -227,12 +222,23 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
 
             <div class="txp-layout-4col-cell-4alt">
 
-                <p class="action-create">
-                    <a href="index.php?event=article">Create new</a>
+                <p id="write-publish">
+                    <input type="submit" value="Publish" name="publish" class="publish" disabled="disabled">
+                    <span class="spinner"></span>
+                    <span class="txp-actions">
+                        <a class="txp-article-view" href="#">View</a>
+                        <a class="txp-clone" id="txp_clone" href="#">Duplicate</a>
+                    </span>
                 </p>
+
+                <hr>
 
                 <p role="navigation" class="nav-tertiary prev-next">
                     <a class="navlink" rel="prev" href="?event=article&amp;step=edit&amp;ID=1">Previous</a><span class="navlink-disabled" aria-disabled="true">Next</span>
+                </p>
+
+                <p class="action-create">
+                    <a href="index.php?event=article">Create new</a>
                 </p>
 
                 <div role="region" id="supporting_content">

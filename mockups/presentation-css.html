@@ -140,17 +140,14 @@
     </header><!-- /txp-header -->
 
     <main role="main" class="txp-body" aria-label="Main content">
-        <h1 class="txp-heading">Styles</h1>
 
 
         <div role="region" id="main_content" class="txp-layout-4col-cell-1-2-3">
+            <h1 class="txp-heading">Styles</h1>
             <form method="post" action="#" id="style_form" class="edit-form">
                 <p>
                     <label for="text">Style name</label><br>
                     <input id="text" type="text" size="16" value="new_style" class="input-medium">
-                    <span class="txp-actions">
-                        <a id="txp_clone" class="clone" title="Clone this style" href="#">Duplicate</a>
-                    </span>
                 </p>
                 <p>
                     <label for="css">Style code</label><br>
@@ -163,15 +160,23 @@ h1 {
     font-weight: normal;
 }</textarea>
                 </p>
-                <p>
-                    <input type="submit" value="Save" class="publish">
-                </p>
             </form>
         </div><!-- /#main_content -->
 
 
         <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
-            <p class="action-create"><a href="#">Create new style</a></p>
+            <p>
+                <input type="submit" value="Save" class="publish">
+                <span class="txp-actions">
+                    <a class="txp-clone" id="txp_clone" href="#">Duplicate</a>
+                </span>
+            </p>
+
+            <hr>
+
+            <p class="action-create">
+                <a href="#">Create new style</a>
+            </p>
             <section role="region" id="all_styles" class="txp-details" aria-labelledby="all_styles-label">
                 <h3 id="all_styles-label">All styles</h3>
                 <div role="group">

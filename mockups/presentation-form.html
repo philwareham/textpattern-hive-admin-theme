@@ -148,10 +148,6 @@
                 <p>
                     <label for="text">Form name</label><br>
                     <input id="text" type="text" size="16" value="default" class="input-medium" readonly>
-                    <span class="txp-actions">
-                        <a id="txp_clone" class="clone" title="Clone this form" href="#">Duplicate</a>
-                        <a href="#" class="article-view" title="Preview this form">Preview</a>
-                    </span>
                 </p>
                 <p>
                     <label for="form">Form code</label><br>
@@ -188,16 +184,25 @@
                         <option value="section">section</option>
                     </select>
                 </p>
-                <p>
-                    <input type="submit" value="Save" name="save" class="publish">
-                </p>
             </form>
         </div><!-- /#main_content -->
 
 
         <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
+            <p>
+                <input type="submit" value="Save" name="save" class="publish">
+                <span class="txp-actions">
+                    <a class="txp-form-preview" href="#">Preview</a>
+                    <a class="txp-clone" id="txp_clone" href="#">Duplicate</a>
+                </span>
+            </p>
+
+            <hr>
+
             <form method="post" action="#" id="allforms_form">
-                <p class="action-create"><a href="#">Create new form</a></p>
+                <p class="action-create">
+                    <a href="#">Create new form</a>
+                </p>
                 <section role="region" id="article_forms_group" class="txp-details" aria-labelledby="article_forms_group-label">
                     <h3 id="article_forms_group-label" class="txp-summary expanded"><a href="#article_forms" role="button" aria-controls="article_forms" aria-pressed="true">Article forms</a></h3>
                     <div role="group" id="article_forms" class="toggle" aria-expanded="true">
