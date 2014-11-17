@@ -164,13 +164,13 @@
                     </div>
 
                     <div class="text">
-                        <p class="title">
-                            <label for="title">Title&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                            <input type="text" id="title" name="Title" value="Example article title" size="48">
-                        </p>
-                        <p class="body">
-                            <label for="body">Body&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                            <textarea id="body" name="Body" cols="64" rows="24">h3. What do you want to do next?
+                        <div class="txp-form-field title">
+                            <label class="txp-form-field-label" for="title">Title&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
+                            <input class="txp-form-field-input" type="text" id="title" name="Title" value="Example article title" size="48">
+                        </div>
+                        <div class="txp-form-field body">
+                            <label class="txp-form-field-label" for="body">Body&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
+                            <textarea class="txp-form-field-input" id="body" name="Body" cols="64" rows="24">h3. What do you want to do next?
 
 * Modify or even delete this article? The "article list":/textpattern/index.php?event=list is the place to start.
 * Change this site's name, or modify the style of the URLs? It's all up to your "preferences":/textpattern/index.php?event=prefs.
@@ -189,11 +189,11 @@ There are a host of "Frequently Asked Questions":http://textpattern.com/faq/ to 
 "Textpattern tags":http://textpattern.com/textpattern-tag-reference, their attributes and values are explained and sampled within the "Textpattern User Documentation":http://textpattern.net/, where you will also find valuable tips and tutorials.
 
 If all else fails, there's a whole crowd of friendly, helpful people over at the "Textpattern support forum":http://forum.textpattern.com/. Come and pay a visit!</textarea>
-                        </p>
-                        <p class="excerpt">
-                            <label for="excerpt">Excerpt&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                            <textarea id="excerpt" name="Excerpt" cols="64" rows="4">Example of an article excerpt here.</textarea>
-                        </p>
+                        </div>
+                        <div class="txp-form-field excerpt">
+                            <label class="txp-form-field-label" for="excerpt">Excerpt&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
+                            <textarea class="txp-form-field-input" id="excerpt" name="Excerpt" cols="64" rows="4">Example of an article excerpt here.</textarea>
+                        </div>
                     </div>
 
                     <p class="author">
@@ -211,19 +211,18 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                     <input type="submit" value="Publish" name="publish" class="publish" disabled="disabled">
                     <span class="spinner"></span>
                 </p>
-                <p class="txp-actions">
-                    <a class="txp-article-view" href="#">View</a>
+
+                <p class="txp-create">
                     <a class="txp-clone" id="txp_clone" href="#">Duplicate</a>
+                    <a class="txp-new" href="index.php?event=article">Create new</a>
                 </p>
 
                 <hr class="txp-divide">
 
-                <p role="navigation" class="nav-tertiary prev-next">
-                    <a class="navlink" rel="prev" href="?event=article&amp;step=edit&amp;ID=1">Previous</a><span class="navlink-disabled" aria-disabled="true">Next</span>
-                </p>
-
-                <p class="action-create">
-                    <a href="index.php?event=article">Create new</a>
+                <p class="txp-article-nav">
+                    <a class="txp-article-view" href="#">View</a>
+                    <a class="txp-article-prev" rel="prev" href="?event=article&amp;step=edit&amp;ID=1">Previous</a>
+                    <span class="txp-article-next" aria-disabled="true">Next</span>
                 </p>
 
                 <div role="region" id="supporting_content">
@@ -231,42 +230,42 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                     <section role="region" id="write-sort" class="txp-details" aria-labelledby="write-sort-label">
                         <h3 id="write-sort-label">Sort and display</h3>
                         <div role="group">
-                            <p class="status">
-                                <label for="status">Status</label>
-                                <select name="Status" id="status">
+                            <div class="txp-form-field status">
+                                <label class="txp-form-field-label" for="status">Status</label>
+                                <select class="txp-form-field-input" id="status" name="Status">
                                     <option value="1">Draft</option>
                                     <option value="2">Hidden</option>
                                     <option value="3">Pending</option>
                                     <option value="4" selected="selected">Live</option>
                                     <option value="5">Sticky</option>
                                 </select>
-                            </p>
-                            <p class="section">
-                                <label for="section">Section</label>&#160;<span class="section-edit"><span aria-hidden="true">[</span><a title="Edit" href="#">Edit</a><span aria-hidden="true">]</span></span>
-                                <select name="Section" id="section">
+                            </div>
+                            <div class="txp-form-field section">
+                                <label class="txp-form-field-label" for="section">Section&#160;<span class="section-edit"><span aria-hidden="true">[</span><a title="Edit" href="#">Edit</a><span aria-hidden="true">]</span></span></label>
+                                <select class="txp-form-field-input" id="section" name="Section">
                                     <option value="about">About</option>
                                     <option value="articles" selected="selected">Articles</option>
                                 </select>
                             </p>
                             <div id="categories_group">
-                                <p class="category category-1">
-                                    <label for="category-1">Category 1</label>&#160;<span class="category-edit"><span aria-hidden="true">[</span><a title="Edit" href="#">Edit</a><span aria-hidden="true">]</span></span>
-                                    <select id="category-1" name="Category1">
+                                <div class="txp-form-field category category-1">
+                                    <label class="txp-form-field-label" for="category-1">Category 1&#160;<span class="category-edit"><span aria-hidden="true">[</span><a title="Edit" href="#">Edit</a><span aria-hidden="true">]</span></span></label>
+                                    <select class="txp-form-field-input" id="category-1" name="Category1">
                                         <option value="" selected="selected">&#160;</option>
                                         <option value="hope-for-the-future" data-level="0">Hope for the future</option>
                                         <option value="meaningful-labor" data-level="0">Meaningful labor</option>
                                         <option value="reciprocal-affection" data-level="0">Reciprocal affection</option>
                                     </select>
-                                </p>
-                                <p class="category category-2">
-                                    <label for="category-2">Category 2</label>
-                                    <select id="category-2" name="Category2">
+                                </div>
+                                <div class="txp-form-field category category-2">
+                                    <label class="txp-form-field-label" for="category-2">Category 2</label>
+                                    <select class="txp-form-field-input" id="category-2" name="Category2">
                                         <option value="" selected="selected">&#160;</option>
                                         <option value="hope-for-the-future" data-level="0">Hope for the future</option>
                                         <option value="meaningful-labor" data-level="0">Meaningful labor</option>
                                         <option value="reciprocal-affection" data-level="0">Reciprocal affection</option>
                                     </select>
-                                </p>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -335,10 +334,10 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                     <input type="radio" name="Annotate" id="Annotate-1" class="radio" value="1">
                                     <label for="Annotate-1">On</label>
                                 </p>
-                                <p class="comment-invite">
-                                    <label for="comment-invite">Invitation</label>
-                                    <input type="text" name="AnnotateInvite" size="32" id="comment-invite" value="Comment">
-                                </p>
+                                <div class="txp-form-field comment-invite">
+                                    <label class="txp-form-field-label" for="comment-invite">Invitation</label>
+                                    <input class="txp-form-field-input" type="text" name="AnnotateInvite" size="32" id="comment-invite" value="Comment">
+                                </div>
                             </div>
                         </div>
                     </section>

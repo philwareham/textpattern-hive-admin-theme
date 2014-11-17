@@ -209,29 +209,6 @@
     }
 }
 
-/**
- * Previous/next article buttons on write page.
- *
- * Example HTML:
- *
- * <p class="nav-tertiary prev-next">
- *     Content
- * </p>
- */
-
-#page-article .prev-next {
-    margin-top: 0.46153846153846em; // 6px / 13px
-    float: right;
-}
-
-/**
- * Swap float/margin positions in RTL languages.
- */
-
-[dir="rtl"] #page-article .prev-next {
-    float: left;
-}
-
 
 /* Content -> Articles page - additional layout
    ========================================================================== */
