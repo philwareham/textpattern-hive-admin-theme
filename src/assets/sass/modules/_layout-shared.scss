@@ -177,6 +177,22 @@ hr {
 }
 
 /**
+ * AJAX spinners.
+ *
+ * Example HTML:
+ *
+ * <span class="spinner"></span>
+ */
+
+span.spinner {
+    @include hires-graphic(spinner, gif, 13px, 13px);
+
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+}
+
+/**
  * Additonal links ('Duplicate', 'View', etc.) on some pages.
  *
  * Appears on:
@@ -392,22 +408,6 @@ div.multi-edit {
     .prev-next {
         float: right;
     }
-}
-
-/**
- * AJAX spinners.
- *
- * Example HTML:
- *
- * <span class="spinner"></span>
- */
-
-span.spinner {
-    @include hires-graphic(spinner, gif, 13px, 13px);
-
-    display: inline-block;
-    width: 13px;
-    height: 13px;
 }
 
 
