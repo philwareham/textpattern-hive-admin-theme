@@ -460,7 +460,7 @@ div.multi-edit {
  *
  * <p>
  *     <span class="txp-label">
- *         <label>Label</label> <a class="pophelp">i</a>
+ *         <label>Label <a class="pophelp">i</a></label>
  *     </span>
  *     <span class="txp-value">
  *         <input type="text" size="32">
@@ -522,7 +522,7 @@ div.multi-edit {
  * Example HTML:
  *
  * <p>
- *     <span class="txp-label-fixed">Form name</span><br>
+ *     <span class="txp-label-fixed">Form name</span>
  *     <span class="txp-value-fixed">default</span>
  * </p>
  */
@@ -589,12 +589,12 @@ div.multi-edit {
  * Example HTML:
  *
  * <div class="txp-form-field">
- *     <label class="txp-form-field-label"></label> <a class="pophelp">i</a><br>
+ *     <label class="txp-form-field-label"> <a class="pophelp">i</a></label>
  *     <input class="txp-form-field-input">
  * </div>
  *
  * <div class="txp-form-field">
- *     <label class="txp-form-field-label"></label> <a class="pophelp">i</a><br>
+ *     <label class="txp-form-field-label"> <a class="pophelp">i</a></label>
  *     <div class="txp-form-field-instructions">
  *         <p>(Optional) intructions on how to fill out this form field.</p>
  *     </div>
