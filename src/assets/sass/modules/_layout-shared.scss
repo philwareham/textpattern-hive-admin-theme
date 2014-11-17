@@ -193,7 +193,7 @@ span.spinner {
 }
 
 /**
- * Additonal links ('Duplicate', 'View', etc.) on some pages.
+ * TODO: Additonal links ('Duplicate', 'View', etc.) on some pages.
  *
  * Appears on:
  *
@@ -436,7 +436,7 @@ div.multi-edit {
 }
 
 /**
- * Clearfix form paragraphs in panes.
+ * TODO: Clearfix form paragraphs in panes.
  *
  * Adds to cleafix rules in Sass '_base.scss' file via `@extend`.
  */
@@ -452,7 +452,7 @@ div.multi-edit {
 }
 
 /**
- * Label/value inline two-column layouts within panes.
+ * TODO: Label/value inline two-column layouts within panes.
  *
  * Note: this is collapsed to a one-column format on mobile layout.
  *
@@ -604,6 +604,16 @@ div.multi-edit {
 
 .txp-form-field {
     margin: 1em 0;
+}
+
+/**
+ * Make sure form field labels appear above form field inputs (and above
+ * the optional instructions `div`).
+ */
+
+.txp-form-field-label {
+    display: block;
+    background-color: red;
 }
 
 /**
