@@ -268,19 +268,15 @@
      */
 
     #page-article #body {
-        height: 18.75em; // 300px / 16px
+        max-height: 18.75em; // 300px / 16px
     }
 
     /**
      * Reduce height of code text areas.
      */
 
-    #page-page,
-    #page-form,
-    #page-css {
-        textarea.code {
-            height: 20em; // 260px / 13px
-        }
+    textarea.code {
+        max-height: 20em; // 260px / 13px
     }
 
     /**
