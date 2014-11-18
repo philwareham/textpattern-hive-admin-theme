@@ -185,13 +185,14 @@ hr {
  *
  * Example HTML:
  *
- * <p class="txp-create">
+ * <p class="txp-actions">
+ *     <a class="txp-article-view">View</a>
  *     <a class="txp-clone">Duplicate</a>
  *     <a class="txp-new">Create new</a>
  * </p>
  */
 
-.txp-create {
+.txp-actions {
     float: right;
     margin-top: 1.30769230769231em; // 17px / 13px
 
@@ -204,7 +205,7 @@ hr {
  * Swap float/margin positions in RTL languages.
  */
 
-[dir="rtl"] .txp-create {
+[dir="rtl"] .txp-actions {
     float: left;
 
     a {
