@@ -177,6 +177,42 @@ hr {
 }
 
 /**
+ * TODO: Additonal links ('Duplicate', 'View', etc.) on some pages.
+ *
+ * Appears on:
+ *
+ * Article write/edit page, pages page, forms page, styles page.
+ *
+ * Example HTML:
+ *
+ * <p class="txp-create">
+ *     <a class="txp-clone">Duplicate</a>
+ *     <a class="txp-new">Create new</a>
+ * </p>
+ */
+
+.txp-create {
+    float: right;
+    margin-top: 1.30769230769231em; // 17px / 13px
+
+    a {
+        margin: 0 0 0 0.75em;
+    }
+}
+
+/**
+ * Swap float/margin positions in RTL languages.
+ */
+
+[dir="rtl"] .txp-create {
+    float: left;
+
+    a {
+        margin: 0 0.75em 0 0;
+    }
+}
+
+/**
  * AJAX spinners.
  *
  * Example HTML:
@@ -190,42 +226,6 @@ span.spinner {
     display: inline-block;
     width: 13px;
     height: 13px;
-}
-
-/**
- * TODO: Additonal links ('Duplicate', 'View', etc.) on some pages.
- *
- * Appears on:
- *
- * Article write/edit page, pages page, forms page, styles page.
- *
- * Example HTML:
- *
- * <p class="txp-actions">
- *     <a>View</a>
- *     <a>Duplicate</a>
- * </p>
- */
-
-.txp-actions {
-    float: right;
-    margin-top: 1.30769230769231em; // 17px / 13px
-
-    a {
-        margin: 0 0 0 0.75em;
-    }
-}
-
-/**
- * Swap float/margin positions in RTL languages.
- */
-
-[dir="rtl"] .txp-actions {
-    float: left;
-
-    a {
-        margin: 0 0.75em 0 0;
-    }
 }
 
 /**
@@ -613,7 +613,7 @@ div.multi-edit {
 
 .txp-form-field-label {
     display: block;
-    background-color: red;
+    //background-color: red; // TEMPORARY FOR DEV
 }
 
 /**
