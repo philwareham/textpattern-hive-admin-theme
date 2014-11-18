@@ -128,11 +128,9 @@ class hive_theme extends theme
                     'rel'    => 'external',
                     'target' => '_blank',
                     'title'  => gTxt('tab_view_site'),
-                ))
-                , array('class' => 'txp-view-site'));
+                )), array('class' => 'txp-view-site'));
             $out[] = graf(
-                href(gTxt('logout'), 'index.php?logout=1', ' onclick="return verify(\''.gTxt('are_you_sure').'\')"')
-                , array('class' => 'txp-logout'));
+                href(gTxt('logout'), 'index.php?logout=1', ' onclick="return verify(\''.gTxt('are_you_sure').'\')"'), array('class' => 'txp-logout'));
         }
 
         $out[] = '<div id="messagepane">'.$this->announce($this->message).'</div>';
@@ -148,8 +146,7 @@ class hive_theme extends theme
                 'target' => '_blank',
                 'title'  => gTxt('go_txp_com'),
             )).
-            ' (v'.txp_version.')'
-            , array('class' => 'mothership'));
+            ' (v'.txp_version.')', array('class' => 'mothership'));
 
         $out[] = graf(href(gTxt('back_to_top'), '#'), array('class' => 'pagejump'));
 
@@ -200,8 +197,7 @@ class hive_theme extends theme
         } else {
             $html = span(
                 span(null, array('class' => 'ui-icon '.$icon)).' '.gTxt($thing[0]).
-                sp.href('&#215;', '#close', ' role="button" class="close" title="'.gTxt('close').'" aria-label="'.gTxt('close').'"')
-            , array(
+                sp.href('&#215;', '#close', ' role="button" class="close" title="'.gTxt('close').'" aria-label="'.gTxt('close').'"'), array(
                 'role'  => 'alert',
                 'class' => 'messageflash '.$class,
             ));
