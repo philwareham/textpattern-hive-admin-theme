@@ -67,14 +67,14 @@ hr {
 }
 
 /**
- * TODO: Search widget at top of lists.
+ * Search widget at top of lists.
  *
  * Appears on: listing pages.
  *
  * Example HTML:
  *
  * <form class="txp-search">
- *     <input type="search" size="16" class="txp-search-input">
+ *     <input class="txp-search-input" type="search" size="24">
  *     <span class="txp-search-buttons">
  *         <button class="txp-search-button">Search</button>
  *         <button class="txp-search-options">Search criteria</button>
@@ -83,12 +83,13 @@ hr {
  */
 
 .txp-search {
-    //float: right;
+    float: right;
+    margin: 1em 0 0;
 
     .ui-menu {
         position: absolute;
         z-index: 100;
-        width: 18em;
+        width: 18em; // 234px / 13px
     }
 
     .ui-menu-item {
@@ -132,7 +133,7 @@ hr {
  */
 
 .txp-button-details {
-    float: right;
+    //float: right;
 }
 
 /**
