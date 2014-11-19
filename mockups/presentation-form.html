@@ -144,7 +144,7 @@
 
         <div role="region" id="main_content" class="txp-layout-4col-cell-1-2-3">
             <h1 class="txp-heading">Forms</h1>
-            <form action="#" method="post" id="form_form">
+            <form id="form_form" action="#" method="post">
                 <p>
                     <label for="text">Form name</label>
                     <input id="text" type="text" size="16" value="default" class="input-medium" readonly>
@@ -190,19 +190,17 @@
 
         <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
             <p class="txp-save">
-                <input type="submit" value="Save" name="save" class="publish">
+                <input type="submit" value="Save" name="save" class="publish" form="form_form">
             </p>
             <p class="txp-actions">
                 <a class="txp-form-preview" href="#">Preview</a>
                 <a class="txp-clone" id="txp_clone" href="#">Duplicate</a>
+                <a class="txp-new" href="#">Create new</a>
             </p>
 
             <hr class="txp-divide">
 
             <form method="post" action="#" id="allforms_form">
-                <p class="action-create">
-                    <a href="#">Create new form</a>
-                </p>
                 <section role="region" id="article_forms_group" class="txp-details" aria-labelledby="article_forms_group-label">
                     <h3 id="article_forms_group-label" class="txp-summary expanded"><a href="#article_forms" role="button" aria-controls="article_forms" aria-pressed="true">Article forms</a></h3>
                     <div role="group" id="article_forms" class="toggle" aria-expanded="true">
@@ -377,7 +375,7 @@
                 </div>
             </section>
 
-        </div><!-- /#tagbuild_links -->
+        </div> -->
 
     </main><!-- /txp-body -->
 

@@ -144,7 +144,7 @@
 
         <div role="region" id="main_content" class="txp-layout-4col-cell-1-2-3">
             <h1 class="txp-heading">Pages</h1>
-            <form method="post" action="#" id="page_form">
+            <form id="page_form" method="post" action="#">
                 <p>
                     <label for="text">Page name</label>
                     <input id="text" type="text" size="16" value="new_page" class="input-medium">
@@ -168,17 +168,15 @@
 
         <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
             <p class="txp-save">
-                <input type="submit" value="Save" name="save" class="publish">
+                <input class="publish" type="submit" value="Save" name="save" form="page_form">
             </p>
             <p class="txp-actions">
                 <a class="txp-clone" id="txp_clone" href="#">Duplicate</a>
+                <a class="txp-new" href="#">Create new</a>
             </p>
 
             <hr class="txp-divide">
 
-            <p class="action-create">
-                <a href="#">Create new page</a>
-            </p>
             <section role="region" id="all_pages" class="txp-details" aria-labelledby="all_pages-label">
                 <h3 id="all_pages-label">All pages</h3>
                 <div>
@@ -282,7 +280,7 @@
                 </div>
             </section>
 
-        </div><!-- /#tagbuild_links -->
+        </div> -->
 
     </main><!-- /txp-body -->
 
