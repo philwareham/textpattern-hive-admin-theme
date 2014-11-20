@@ -208,39 +208,6 @@ $(function ()
     });
 
     /**
-     * Options button.
-     */
-
-    $('.txp-button-details').button({
-        text: false,
-        icons: {
-            primary: 'ui-icon-gear'
-        }
-    });
-
-    /**
-     * List view button.
-     */
-
-    $('.txp-button-list').button({
-        text: false,
-        icons: {
-            primary: 'ui-extra-icon-list'
-        }
-    });
-
-    /**
-     * Grid view button.
-     */
-
-    $('.txp-button-grid').button({
-        text: false,
-        icons: {
-            primary: 'ui-extra-icon-grid'
-        }
-    });
-
-    /**
      * Datepicker.
      */
 

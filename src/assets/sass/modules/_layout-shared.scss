@@ -113,27 +113,19 @@ hr {
  *
  * Example HTML:
  *
- * TODO
+ * <p class="txp-buttons">
+ *     Content
+ * </p>
+ *
+ * <form class="txp-uploader-form">
+ *     Content
+ * </form>
  */
 
-.txp-buttons {
-    margin-top: 0;
-}
-
-/**
- * TODO: List display options link at top of listings.
- *
- * Appears on:
- *
- * List pages.
- *
- * Example HTML:
- *
- * TODO
- */
-
-.txp-list-option {
-    float: right;
+.txp-buttons,
+.txp-uploader-form {
+    float: left;
+    margin: 0 0 1em;
 }
 
 /**
@@ -195,10 +187,11 @@ hr {
 
 .txp-actions {
     float: right;
-    margin-top: 1.30769230769231em; // 17px / 13px
+    margin-top: 0.61538461538462em; // 8px / 13px
 
     a {
-        margin: 0 0 0 0.75em;
+        display: inline-block;
+        margin: 0 0 0 1em;
     }
 }
 
@@ -210,8 +203,16 @@ hr {
     float: left;
 
     a {
-        margin: 0 0.75em 0 0;
+        margin: 0 1em 0 0;
     }
+}
+
+/**
+ * Slightly adjust top margin on `.txp-actions` after `.txp-save`.
+ */
+
+.txp-save + .txp-actions {
+    margin-top: 1.30769230769231em; // 17px / 13px
 }
 
 /**
