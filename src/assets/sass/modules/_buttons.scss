@@ -107,39 +107,32 @@ a.publish {
 }
 
 /**
- * Additional styling for delete buttons.
+ * Additional styling for delete (destroy) buttons.
  *
  * Example HTML:
  *
- * <input type="submit" class="destroy">
+ * <button class="destroy" type="submit">
+ *     <span class="ui-icon ui-icon-minus">Destroy</span>
+ * </button>
  */
 
-input[type="submit"].destroy,
 button.destroy {
-    @include text-shadow($text-shadow-dark);
-    @include gradient-linear(lighten($color-error-text, 10%), $color-error-text);
+    @include text-shadow(none);
+    @include box-shadow(none);
 
-    border-color: darken($color-error-text, 5%);
-    border-radius: 50%;
-    padding: 0 0.30769230769231em; // 4px / 13px
-    height: 1.53846153846154em; // 20px / 13px
-    color: #ffffff;
+    border: 0;
+    border-radius: 0;
+    padding: 0.07692307692308em 0 0 0; // 1px / 13px
+    height: auto;
+    background: none;
 
-    &:hover {
-        @include gradient-linear(lighten($color-error-text, 18%), lighten($color-error-text, 8%));
-
-        border-color: darken($color-error-text, 12%);
-    }
-
-    &:active {
-        @include gradient-linear($color-error-text, lighten($color-error-text, 8%));
-
-        border-color: darken($color-error-text, 12%);
-        color: darken(#ffffff, 10%);
+    &:hover span,
+    &:active span {
+        @include filter(#{"brightness(0.85)"}); // TODO: temporary workaround for Sass/Compass bug when using @include filter(brightness(0.8));
     }
 
     &:focus {
-        border-color: $color-link-focus;
+        outline: thin dotted $color-link-focus;
     }
 }
 

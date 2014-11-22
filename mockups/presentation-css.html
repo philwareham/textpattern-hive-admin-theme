@@ -181,11 +181,21 @@ h1 {
                         <li class="active">
                             new_style
                             <form method="post" action="#" onsubmit="return confirm('Really delete?');">
-                                <input type="submit" value="&times;" class="destroy" title="Delete" aria-label="Delete">
+                                <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-minus">Delete</span></button>
                             </form>
                         </li>
-                        <li><a href="#">new_style_copy</a></li>
-                        <li><a href="#">new_style_copy_copy</a></li>
+                        <li>
+                            <a href="#">new_style_copy</a>
+                            <form method="post" action="#" onsubmit="return confirm('Really delete?');">
+                                <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-minus">Delete</span></button>
+                            </form>
+                        </li>
+                        <li>
+                            <a href="#">new_style_copy_copy</a>
+                            <form method="post" action="#" onsubmit="return confirm('Really delete?');">
+                                <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-minus">Delete</span></button>
+                            </form>
+                        </li>
                     </ul>
                 </div>
             </section>
