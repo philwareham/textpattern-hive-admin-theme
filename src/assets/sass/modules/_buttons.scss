@@ -112,7 +112,7 @@ a.publish {
  * Example HTML:
  *
  * <button class="destroy" type="submit">
- *     <span class="ui-icon ui-icon-minus">Destroy</span>
+ *     <span class="ui-icon ui-icon-close">Destroy</span>
  * </button>
  */
 
@@ -125,11 +125,6 @@ button.destroy {
     padding: 0.07692307692308em 0 0 0; // 1px / 13px
     height: auto;
     background: none;
-
-    &:hover span,
-    &:active span {
-        @include filter(#{"brightness(0.85)"}); // TODO: temporary workaround for Sass/Compass bug when using @include filter(brightness(0.8));
-    }
 
     &:focus {
         outline: thin dotted $color-link-focus;
