@@ -142,21 +142,18 @@
     <main class="txp-body" role="main" aria-label="Main content">
         <h1 class="txp-heading">Plugins</h1>
 
-        <div id="plugin_control" class="txp-control-panel">
+        <div class="txp-control-panel">
             <form method="post" action="#" id="plugin_install_form" class="plugin-data">
-                <p>
-                    <label for="plugin-install">Install plugin&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" title="Help" aria-label="Help">i</a></label>
-                    <textarea class="code" id="plugin-install" name="plugin" cols="64" rows="2" dir="ltr"></textarea>
-                </p>
-                <p><input type="submit" value="Upload" name="install_new"></p>
+                <label for="plugin-install">Install plugin&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" title="Help" aria-label="Help">i</a></label>
+                <textarea class="code" id="plugin-install" name="plugin" cols="64" rows="2" dir="ltr"></textarea>
+                <input type="submit" value="Upload" name="install_new">
             </form>
         </div>
 
         <div id="plugin_container" class="txp-container">
 
-            <form action="#" id="plugin_form" class="multi_edit_form" method="post" name="longform">
+            <form class="multi_edit_form" id="plugin_form" name="longform" method="post" action="#">
                 <div class="txp-listtables">
-
                     <table class="txp-list">
 
                         <thead>

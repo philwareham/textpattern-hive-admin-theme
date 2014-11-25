@@ -200,6 +200,15 @@
     }
 
     /**
+     * Search widget at top of lists.
+     */
+
+    .txp-search,
+    [dir="rtl"] .txp-search {
+        float: none;
+    }
+
+    /**
      * Label/value one-column layouts within panes.
      *
      * Collapsed from two-column format on desktop layout.

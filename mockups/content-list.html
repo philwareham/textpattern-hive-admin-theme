@@ -148,8 +148,7 @@
             <h1 class="txp-heading">Articles</h1>
         </div>
 
-        <div class="txp-layout-2col-cell-2" id="list_control">
-
+        <div class="txp-layout-2col-cell-2">
             <form class="txp-search" role="search" method="get" action="#">
                 <input class="txp-search-input" type="search" name="crit" size="24" placeholder="Search articles…">
                 <span class="txp-search-buttons">
@@ -195,21 +194,20 @@
                     </li>
                 </ul>
             </form>
-
         </div>
 
         <div class="txp-layout-1col">
-            <p class="txp-buttons">
-                <a href="content-article.html">Add new article</a>
-            </p>
-
-            <p class="txp-actions">
-                <a class="txp-list-option" href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
-            </p>
+            <div class="txp-control-panel">
+                <a class="txp-button" href="content-article.html">Add new article</a>
+            </div>
+            <div class="txp-list-options">
+                <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+            </div>
 
             <form class="multi_edit_form" id="articles_form" name="longform" method="post" action="#">
                 <div class="txp-listtables">
                     <table class="txp-list">
+
                         <thead>
                             <tr>
                                 <th scope="col" class="txp-list-col-multi-edit" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
@@ -263,6 +261,7 @@
                                 </td>
                             </tr>
                         </tbody>
+
                     </table>
                 </div><!-- /txp-listtables -->
 

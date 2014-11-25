@@ -199,17 +199,17 @@
         </div>
 
         <div class="txp-layout-1col">
-            <p class="txp-buttons">
-                <a href="content-article.html">Add new article</a>
-            </p>
-
-            <p class="txp-actions">
-                <a class="txp-list-option" href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
-            </p>
+            <div class="txp-control-panel">
+                <a class="txp-button" href="content-article.html">Add new article</a>
+            </div>
+            <div class="txp-list-options">
+                <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+            </div>
 
             <form class="multi_edit_form" id="articles_form" name="longform" method="post" action="#">
                 <div class="txp-listtables">
                     <table class="txp-list">
+
                         <thead>
                             <tr>
                                 <th scope="col" class="txp-list-col-multi-edit" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
@@ -263,6 +263,7 @@
                                 </td>
                             </tr>
                         </tbody>
+
                     </table>
                 </div><!-- /txp-listtables -->
 

@@ -185,71 +185,69 @@
         </div>
 
         <div class="txp-layout-1col">
-            <p class="txp-buttons">
-                <a href="secondary/admin-password_edit.html">Change your password</a>
-                <a href="secondary/admin-admin_edit.html">Add new author</a>
-            </p>
-
-            <p class="txp-actions">
-                <a class="txp-list-option" href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
-            </p>
-        </div>
-
-        <form action="#" id="users_form" class="multi_edit_form" method="post" name="longform">
-            <div class="txp-listtables">
-
-                <table class="txp-list">
-
-                    <thead>
-                        <tr>
-                            <th scope="col" class="txp-list-col-multi-edit" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-                            <th scope="col" class="txp-list-col-login-name name asc"><a href="#">Login</a></th>
-                            <th scope="col" class="txp-list-col-real-name name"><a href="#">Real name</a></th>
-                            <th scope="col" class="txp-list-col-email"><a href="#">E-mail</a></th>
-                            <th scope="col" class="txp-list-col-privs"><a href="#">Privileges</a></th>
-                            <th scope="col" class="txp-list-col-last-login date"><a href="#">Last login</a></th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td class="txp-list-col-multi-edit">&#160;</td>
-                            <td class="txp-list-col-login-name name"><a href="secondary/admin-admin_edit.html" title="Edit">admin</a></td>
-                            <td class="txp-list-col-real-name name">Phil Wareham</td>
-                            <td class="txp-list-col-email"><a href="mailto:phil@designhive.com">phil@designhive.com</a></td>
-                            <td class="txp-list-col-privs">Publisher</td>
-                            <td class="txp-list-col-last-login date">Jun&#160;2012</td>
-                        </tr>
-                        <tr>
-                            <td class="txp-list-col-multi-edit"><input type="checkbox" value="testuser" name="selected[]" class="checkbox"></td>
-                            <td class="txp-list-col-login-name name"><a href="secondary/admin-admin_edit.html" title="Edit">anon</a></td>
-                            <td class="txp-list-col-real-name name">A Non</td>
-                            <td class="txp-list-col-email"><a href="mailto:anon@anon.com">anon@anon.com</a></td>
-                            <td class="txp-list-col-privs">Freelancer</td>
-                            <td class="txp-list-col-last-login date">&#160;</td>
-                        </tr>
-                    </tbody>
-
-                </table>
-
-            </div><!-- /txp-listtables -->
-
-            <div class="multi-edit">
-                <select name="edit_method">
-                    <option value="" selected="selected">With selected&#8230;</option>
-                    <option value="changeprivilege">Change privilege</option>
-                    <option value="resetpassword">Reset password</option>
-                    <option value="delete">Delete</option>
-                </select>
+            <div class="txp-control-panel">
+                <a class="txp-button" href="secondary/admin-password_edit.html">Change your password</a>
+                <a class="txp-button" href="secondary/admin-admin_edit.html">Add new author</a>
+            </div>
+            <div class="txp-list-options">
+                <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
             </div>
 
-        </form>
+            <form class="multi_edit_form" id="users_form" name="longform" method="post" action="#">
+                <div class="txp-listtables">
+                    <table class="txp-list">
 
-        <div class="txp-navigation" id="users_navigation">
-            <p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
-        </div>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="txp-list-col-multi-edit" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                                <th scope="col" class="txp-list-col-login-name name asc"><a href="#">Login</a></th>
+                                <th scope="col" class="txp-list-col-real-name name"><a href="#">Real name</a></th>
+                                <th scope="col" class="txp-list-col-email"><a href="#">E-mail</a></th>
+                                <th scope="col" class="txp-list-col-privs"><a href="#">Privileges</a></th>
+                                <th scope="col" class="txp-list-col-last-login date"><a href="#">Last login</a></th>
+                            </tr>
+                        </thead>
 
-    </main><!-- /txp-body -->
+                        <tbody>
+                            <tr>
+                                <td class="txp-list-col-multi-edit">&#160;</td>
+                                <td class="txp-list-col-login-name name"><a href="secondary/admin-admin_edit.html" title="Edit">admin</a></td>
+                                <td class="txp-list-col-real-name name">Phil Wareham</td>
+                                <td class="txp-list-col-email"><a href="mailto:phil@designhive.com">phil@designhive.com</a></td>
+                                <td class="txp-list-col-privs">Publisher</td>
+                                <td class="txp-list-col-last-login date">Jun&#160;2012</td>
+                            </tr>
+                            <tr>
+                                <td class="txp-list-col-multi-edit"><input type="checkbox" value="testuser" name="selected[]" class="checkbox"></td>
+                                <td class="txp-list-col-login-name name"><a href="secondary/admin-admin_edit.html" title="Edit">anon</a></td>
+                                <td class="txp-list-col-real-name name">A Non</td>
+                                <td class="txp-list-col-email"><a href="mailto:anon@anon.com">anon@anon.com</a></td>
+                                <td class="txp-list-col-privs">Freelancer</td>
+                                <td class="txp-list-col-last-login date">&#160;</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div><!-- /txp-listtables -->
+
+                <div class="multi-edit">
+                    <select name="edit_method">
+                        <option value="" selected="selected">With selected&#8230;</option>
+                        <option value="changeprivilege">Change privilege</option>
+                        <option value="resetpassword">Reset password</option>
+                        <option value="delete">Delete</option>
+                    </select>
+                </div>
+
+            </form>
+
+            <div class="txp-navigation" id="users_navigation">
+                <p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
+            </div>
+
+        </div><!-- /txp-layout-1col -->
+    </main><!-- /txp-body
 
     <footer class="txp-footer" role="contentinfo">
         <p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external" target="_blank">Textpattern CMS</a> (v4.6)</p>

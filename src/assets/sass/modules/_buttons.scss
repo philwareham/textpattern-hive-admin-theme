@@ -23,11 +23,10 @@ button,
 input[type="reset"],
 input[type="submit"],
 input[type="button"],
+.txp-button,
 .txp-logout a,
-.action-create a,
 .navlink,
-.navlink-active,
-.txp-buttons a {
+.navlink-active {
     @include text-shadow($text-shadow-light);
     @include box-shadow($inset-highlighting);
     @include background-clip;

@@ -38,12 +38,11 @@ input,
 optgroup,
 select,
 textarea,
+.txp-button,
 .txp-logout a,
-.action-create a,
 .navlink,
 .navlink-active,
-.navlink-disabled,
-.txp-buttons a {
+.navlink-disabled {
     @include box-sizing(border-box);
 
     /* 1 */

@@ -189,69 +189,67 @@
         </div>
 
         <div class="txp-layout-1col">
-            <p class="txp-actions">
-                <a class="txp-list-option" href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
-            </p>
-        </div>
-
-        <form action="#" id="log_form" class="multi_edit_form" method="post" name="longform">
-            <div class="txp-listtables">
-
-                <table class="txp-list">
-
-                    <thead>
-                        <tr>
-                            <th scope="col" class="txp-list-col-multi-edit" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-                            <th scope="col" class="txp-list-col-time date desc"><a href="#">Time</a></th>
-                            <th scope="col" class="txp-list-col-ip log_detail"><a href="#">IP</a></th>
-                            <th scope="col" class="txp-list-col-host"><a href="#">Host</a></th>
-                            <th scope="col" class="txp-list-col-page"><a href="#">Page</a></th>
-                            <th scope="col" class="txp-list-col-refer"><a href="#">Referrer</a></th>
-                            <th scope="col" class="txp-list-col-method log_detail"><a href="#">Method</a></th>
-                            <th scope="col" class="txp-list-col-status log_detail"><a href="#">Status</a></th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td class="txp-list-col-multi-edit"><input type="checkbox" value="126" name="selected[]"></td>
-                            <th scope="row" class="txp-list-col-time date">21&#160;Sep&#160;2011 10:13:58</th>
-                            <td class="txp-list-col-ip log_detail">127.0.0.1</td>
-                            <td class="txp-list-col-host">www.anon.​dev</td>
-                            <td class="txp-list-col-page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site</a></td>
-                            <td class="txp-list-col-refer">&#160;</td>
-                            <td class="txp-list-col-method log_detail">POST</td>
-                            <td class="txp-list-col-status log_detail">302</td>
-                        </tr>
-                        <tr>
-                            <td class="txp-list-col-multi-edit"><input type="checkbox" value="127" name="selected[]"></td>
-                            <th scope="row" class="txp-list-col-time date">21&#160;Sep&#160;2011 10:13:58</th>
-                            <td class="txp-list-col-ip log_detail">127.0.0.1</td>
-                            <td class="txp-list-col-host">www.anon.​dev</td>
-                            <td class="txp-list-col-page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site?​commented=0</a></td>
-                            <td class="txp-list-col-refer">&#160;</td>
-                            <td class="txp-list-col-method log_detail">GET</td>
-                            <td class="txp-list-col-status log_detail">200</td>
-                        </tr>
-                    </tbody>
-
-                </table>
-
-            </div><!-- /txp-listtables -->
-
-            <div class="multi-edit">
-                <select name="edit_method">
-                    <option value="" selected="selected">With selected&#8230;</option>
-                    <option value="delete">Delete</option>
-                </select>
+            <div class="txp-list-options">
+                <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
             </div>
 
-        </form>
+            <form class="multi_edit_form" id="log_form" name="longform" method="post" action="#">
+                <div class="txp-listtables">
+                    <table class="txp-list">
 
-        <div class="txp-navigation" id="log_navigation">
-            <p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
-        </div>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="txp-list-col-multi-edit" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                                <th scope="col" class="txp-list-col-time date desc"><a href="#">Time</a></th>
+                                <th scope="col" class="txp-list-col-ip log_detail"><a href="#">IP</a></th>
+                                <th scope="col" class="txp-list-col-host"><a href="#">Host</a></th>
+                                <th scope="col" class="txp-list-col-page"><a href="#">Page</a></th>
+                                <th scope="col" class="txp-list-col-refer"><a href="#">Referrer</a></th>
+                                <th scope="col" class="txp-list-col-method log_detail"><a href="#">Method</a></th>
+                                <th scope="col" class="txp-list-col-status log_detail"><a href="#">Status</a></th>
+                            </tr>
+                        </thead>
 
+                        <tbody>
+                            <tr>
+                                <td class="txp-list-col-multi-edit"><input type="checkbox" value="126" name="selected[]"></td>
+                                <th scope="row" class="txp-list-col-time date">21&#160;Sep&#160;2011 10:13:58</th>
+                                <td class="txp-list-col-ip log_detail">127.0.0.1</td>
+                                <td class="txp-list-col-host">www.anon.​dev</td>
+                                <td class="txp-list-col-page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site</a></td>
+                                <td class="txp-list-col-refer">&#160;</td>
+                                <td class="txp-list-col-method log_detail">POST</td>
+                                <td class="txp-list-col-status log_detail">302</td>
+                            </tr>
+                            <tr>
+                                <td class="txp-list-col-multi-edit"><input type="checkbox" value="127" name="selected[]"></td>
+                                <th scope="row" class="txp-list-col-time date">21&#160;Sep&#160;2011 10:13:58</th>
+                                <td class="txp-list-col-ip log_detail">127.0.0.1</td>
+                                <td class="txp-list-col-host">www.anon.​dev</td>
+                                <td class="txp-list-col-page"><a href="#" target="_blank">articles/​1/​welcome-​to-​your-​site?​commented=0</a></td>
+                                <td class="txp-list-col-refer">&#160;</td>
+                                <td class="txp-list-col-method log_detail">GET</td>
+                                <td class="txp-list-col-status log_detail">200</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div><!-- /txp-listtables -->
+
+                <div class="multi-edit">
+                    <select name="edit_method">
+                        <option value="" selected="selected">With selected&#8230;</option>
+                        <option value="delete">Delete</option>
+                    </select>
+                </div>
+
+            </form>
+
+            <div class="txp-navigation" id="log_navigation">
+                <p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
+            </div>
+
+        </div><!-- /txp-layout-1col -->
     </main><!-- /txp-body -->
 
     <footer class="txp-footer" role="contentinfo">
