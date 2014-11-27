@@ -64,24 +64,6 @@
     width: 100%;
 }
 
-/**
- * Different label/value layout for login panel, since it's thinner than the
- * standard edit pane width.
- */
-
-.txp-login {
-    .txp-label,
-    .txp-value {
-        float: none;
-        display: block;
-        width: 100%;
-    }
-
-    .txp-value input {
-        margin: 0;
-    }
-}
-
 
 /* Tag builder page - additional layout
    ========================================================================== */
