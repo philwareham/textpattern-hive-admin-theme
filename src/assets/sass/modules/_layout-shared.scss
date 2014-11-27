@@ -591,6 +591,12 @@ div.multi-edit {
 
 .txp-form-field {
     margin: 1em 0;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }
 
 /**
