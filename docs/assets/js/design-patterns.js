@@ -63,7 +63,7 @@ $(function ()
     /**
      * Accordion RTL.
      *
-     * Flip positioning of submenus when in RTL langauges.
+     * Flip positioning of accordion state icons when in RTL langauges.
      */
 
     $('[dir="rtl"] .jquery-ui-accordion').accordion({
