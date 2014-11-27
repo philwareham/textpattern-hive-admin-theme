@@ -145,13 +145,13 @@
         <div role="region" id="main_content" class="txp-layout-4col-cell-1-2-3">
             <h1 class="txp-heading">Pages</h1>
             <form id="page_form" method="post" action="#">
-                <p>
-                    <label for="text">Page name</label>
-                    <input id="text" type="text" size="16" value="new_page" class="input-medium">
-                </p>
-                <p>
-                    <label for="html">Page code</label>
-                    <textarea class="code" id="html" name="html" cols="64" rows="24" dir="ltr">&lt;!DOCTYPE html&gt;
+                <div class="txp-form-field">
+                    <label class="txp-form-field-label" for="text">Page name</label>
+                    <input class="txp-form-field-input input-medium" id="text" type="text" size="16" value="new_page">
+                </div>
+                <div class="txp-form-field">
+                    <label class="txp-form-field-label" for="html">Page code</label>
+                    <textarea class="txp-form-field-input code" id="html" name="html" cols="64" rows="24" dir="ltr">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;Amazing Website&lt;/title&gt;
@@ -161,7 +161,7 @@
         &lt;p&gt;Under construction. Please come back soon.&lt;/p&gt;
     &lt;/body&gt;
 &lt;/html&gt;</textarea>
-                </p>
+                </div>
             </form>
         </div><!-- /#main_content -->
 

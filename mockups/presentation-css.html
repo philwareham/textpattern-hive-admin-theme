@@ -145,13 +145,13 @@
         <div role="region" id="main_content" class="txp-layout-4col-cell-1-2-3">
             <h1 class="txp-heading">Styles</h1>
             <form id="style_form" method="post" action="#">
-                <p>
-                    <label for="text">Style name</label>
-                    <input id="text" type="text" size="16" value="new_style" class="input-medium">
-                </p>
-                <p>
-                    <label for="css">Style code</label>
-                    <textarea class="code" id="css" name="css" cols="64" rows="24" dir="ltr">body {
+                <div class="txp-form-field">
+                    <label class="txp-form-field-label" for="text">Style name</label>
+                    <input class="txp-form-field-input input-medium" id="text" type="text" size="16" value="new_style">
+                </div>
+                <div class="txp-form-field">
+                    <label class="txp-form-field-label" for="css">Style code</label>
+                    <textarea class="txp-form-field-input code" id="css" name="css" cols="64" rows="24" dir="ltr">body {
     color: #fff;
     background: #000;
 }
@@ -159,14 +159,14 @@
 h1 {
     font-weight: normal;
 }</textarea>
-                </p>
+                </div>
             </form>
         </div><!-- /#main_content -->
 
 
         <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
             <p class="txp-save">
-                <input type="submit" value="Save" class="publish" form="style_form">
+                <input class="publish" type="submit" value="Save" form="style_form">
             </p>
             <p class="txp-actions">
                 <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new</a>

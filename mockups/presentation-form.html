@@ -145,13 +145,13 @@
         <div role="region" id="main_content" class="txp-layout-4col-cell-1-2-3">
             <h1 class="txp-heading">Forms</h1>
             <form id="form_form" action="#" method="post">
-                <p>
-                    <label for="text">Form name</label>
-                    <input id="text" type="text" size="16" value="default" class="input-medium" readonly>
-                </p>
-                <p>
-                    <label for="form">Form code</label>
-                    <textarea class="code" id="form" name="Form" cols="64" rows="24" dir="ltr">&lt;txp:if_individual_article&gt;
+                <div class="txp-form-field">
+                    <label class="txp-form-field-label" for="text">Form name</label>
+                    <input class="txp-form-field-input input-medium" id="text" type="text" size="16" value="default" readonly>
+                </div>
+                <div class="txp-form-field">
+                    <label class="txp-form-field-label" for="form">Form code</label>
+                    <textarea class="txp-form-field-input code" id="form" name="Form" cols="64" rows="24" dir="ltr">&lt;txp:if_individual_article&gt;
     &lt;h1 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h1&gt;
 &lt;txp:else /&gt;
     &lt;h3 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h3&gt;
@@ -170,10 +170,10 @@
 &lt;txp:comments_invite wraptag=&quot;p&quot; /&gt;
 
 &lt;div class=&quot;divider&quot;&gt;&lt;txp:image id=&quot;1&quot; /&gt;&lt;/div&gt;</textarea>
-                </p>
-                <p>
-                    <label for="type">Form type</label>
-                    <select id="type" name="type">
+                </div>
+                <div class="txp-form-field">
+                    <label class="txp-form-field-label" for="type">Form type</label>
+                    <select class="txp-form-field-input" id="type" name="type">
                         <option value="">&#160;</option>
                         <option value="article" selected="selected">article</option>
                         <option value="category">category</option>
@@ -183,14 +183,14 @@
                         <option value="misc">misc</option>
                         <option value="section">section</option>
                     </select>
-                </p>
+                </div>
             </form>
         </div><!-- /#main_content -->
 
 
         <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
             <p class="txp-save">
-                <input type="submit" value="Save" name="save" class="publish" form="form_form">
+                <input class="publish" type="submit" value="Save" name="save" form="form_form">
             </p>
             <p class="txp-actions">
                 <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new</a>
