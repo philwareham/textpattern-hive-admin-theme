@@ -218,8 +218,6 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                     <a class="txp-article-view" href="#"><span class="ui-icon ui-icon-notice"></span> View</a>
                 </p>
 
-                <hr class="txp-divide">
-
                 <!--<p class="txp-article-nav">
                     <a class="txp-article-prev" rel="prev" href="?event=article&amp;step=edit&amp;ID=1">Previous</a>
                     <span class="txp-article-next" aria-disabled="true">Next</span>
@@ -271,21 +269,25 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                     </section>
 
                     <section class="txp-details" id="dates_group" role="region" aria-labelledby="dates_group-label">
-                        <h3 class="txp-summary" id="dates_group-label">
+                        <h3 class="txp-summary expanded" id="dates_group-label">
                             <a role="button" data-txp-pane="article_dates" href="#dates">Date and time</a>
                         </h3>
                         <div class="toggle" id="dates" role="group">
                             <div class="txp-form-field posted created">
                                 <label class="txp-form-field-label" for="publish-date">Publish date&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                                <input class="txp-form-field-input date" id="publish-date" name="publish-date" type="text" size="10" maxlength="10" placeholder="DD/MM/YYYY">
-                                <input class="txp-form-field-input time" id="publish-time" name="publish-time" type="text" size="8" maxlength="8" placeholder="HH:MM:SS"><br>
+                                <input class="txp-form-field-input date" id="publish-date" name="publish-date" type="text" size="10" maxlength="10" placeholder="DD/MM/YYYY" style="width:7.5em;">
+                                <a class="txp-datepicker-button" href="#"><span class="ui-icon ui-icon-calendar"></span></a>
+                                <input class="txp-form-field-input time" id="publish-time" name="publish-time" type="text" size="8" maxlength="8" placeholder="HH:MM:SS" style="width:6.1em;">
+                            </div>
+                            <div class="txp-form-field posted created-now">
                                 <input class="checkbox" type="checkbox" name="publish_now" id="publish_now" value="1">
                                 <label for="publish_now">Set timestamp to now</label>
                             </div>
                             <div class="txp-form-field posted created">
                                 <label class="txp-form-field-label" for="expires-date">Expiration date&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                                <input class="txp-form-field-input date" id="expires-date" name="expires-date" type="text" size="10" maxlength="10" placeholder="DD/MM/YYYY">
-                                <input class="txp-form-field-input time" id="expires-time" name="expires-time" type="text" size="8" maxlength="8" placeholder="HH:MM:SS">
+                                <input class="txp-form-field-input date" id="expires-date" name="expires-date" type="text" size="10" maxlength="10" placeholder="DD/MM/YYYY" style="width:7.5em;">
+                                <a class="txp-datepicker-button" href="#"><span class="ui-icon ui-icon-calendar"></span></a>
+                                <input class="txp-form-field-input time" id="expires-time" name="expires-time" type="text" size="8" maxlength="8" placeholder="HH:MM:SS" style="width:6.1em;">
                             </div>
                         </div>
                     </section>
@@ -296,12 +298,12 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         </h3>
                         <div class="toggle" id="comments" role="group">
                             <div id="write-comments">
-                                <p class="comment-annotate jquery-ui-buttonset">
+                                <div class="txp-form-field comment-annotate jquery-ui-buttonset">
                                     <input class="radio" id="Annotate-0" name="Annotate" type="radio" value="0" checked="checked">
                                     <label for="Annotate-0">Off</label>
                                     <input class="radio" id="Annotate-1" name="Annotate" type="radio" value="1">
                                     <label for="Annotate-1">On</label>
-                                </p>
+                                </div>
                                 <div class="txp-form-field comment-invite">
                                     <label class="txp-form-field-label" for="comment-invite">Invitation</label>
                                     <input class="txp-form-field-input" type="text" name="AnnotateInvite" size="32" id="comment-invite" value="Comment">
@@ -311,34 +313,34 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                     </section>
 
                     <section class="txp-details" id="advanced_group" role="region" aria-labelledby="advanced_group-label">
-                        <h3 class="txp-summary" id="advanced_group-label">
+                        <h3 class="txp-summary expanded" id="advanced_group-label">
                             <a role="button" data-txp-pane="article_advanced" href="#advanced">Advanced options</a>
                         </h3>
-                        <div class="toggle" id="advanced" role="group" style="display: none">
-                            <p class="markup markup-body">
-                                <label for="markup-body">Article markup</label>
-                                <select id="markup-body" name="textile_body">
+                        <div class="toggle" id="advanced" role="group">
+                            <div class="txp-form-field markup markup-body">
+                                <label class="txp-form-field-label" for="markup-body">Article markup</label>
+                                <select class="txp-form-field-input" id="markup-body" name="textile_body">
                                     <option value="0">Leave text untouched</option>
                                     <option value="2">Convert linebreaks</option>
                                     <option value="1" selected="selected">Use Textile</option>
                                 </select>
-                            </p>
-                            <p class="markup markup-excerpt">
-                                <label for="markup-excerpt">Excerpt markup</label>
-                                <select id="markup-excerpt" name="textile_excerpt">
+                            </div>
+                            <div class="txp-form-field markup markup-excerpt">
+                                <label class="txp-form-field-label" for="markup-excerpt">Excerpt markup</label>
+                                <select class="txp-form-field-input" id="markup-excerpt" name="textile_excerpt">
                                     <option value="0">Leave text untouched</option>
                                     <option value="2">Convert linebreaks</option>
                                     <option value="1" selected="selected">Use Textile</option>
                                 </select>
-                            </p>
-                            <p class="override-form">
-                                <label for="override-form">Override form&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                                <select id="override-form" name="override_form">
+                            </div>
+                            <div class="txp-form-field override-form">
+                                <label class="txp-form-field-label" for="override-form">Override form&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
+                                <select class="txp-form-field-input" id="override-form" name="override_form">
                                     <option value="" selected="selected">&#160;</option>
                                     <option value="article_listing">article_listing</option>
                                     <option value="search_results">search_results</option>
                                 </select>
-                            </p>
+                            </div>
                         </div>
                     </section>
 
@@ -359,10 +361,10 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                     </section>
 
                     <section class="txp-details" id="image_group" role="region" aria-labelledby="image_group-label">
-                        <h3 class="txp-summary" id="image_group-label">
+                        <h3 class="txp-summary expanded" id="image_group-label">
                             <a role="button" data-txp-pane="article_image" href="#image">Article image</a>
                         </h3>
-                        <div class="toggle" id="image" role="group" style="display:none;">
+                        <div class="toggle" id="image" role="group">
                             <div class="txp-form-field article-image">
                                 <label class="txp-form-field-label" for="article-image">Article image&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
                                 <input class="txp-form-field-input" id="article-image" name="Image" type="text" size="32">
@@ -371,10 +373,10 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                     </section>
 
                     <section class="txp-details" id="custom_field_group" role="region" aria-labelledby="custom_field_group-label">
-                        <h3 class="txp-summary" id="custom_field_group-label">
+                        <h3 class="txp-summary expanded" id="custom_field_group-label">
                             <a role="button" data-txp-pane="article_custom_field" href="#custom_field">Custom fields</a>
                         </h3>
-                        <div class="toggle" id="custom_field" role="group" style="display:none;">
+                        <div class="toggle" id="custom_field" role="group">
                             <div class="txp-form-field custom-field custom-1">
                                 <label class="txp-form-field-label" for="custom-1">custom1</label>
                                 <input class="txp-form-field-input" id="custom-1" name="custom_1" type="text" size="32">
@@ -388,10 +390,10 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
 
 <!-- TEXTFILTER HELP NEEDS TO BECOME A MODAL
                     <section class="txp-details" id="textfilter_group" role="region" aria-labelledby="textfilter_group-label">
-                        <h3 class="txp-summary expanded" id="textfilter_group-label">
+                        <h3 class="txp-summary" id="textfilter_group-label">
                             <a role="button" data-txp-pane="article_textfilter_help" href="#textfilter_help">Text formatting help</a>
                         </h3>
-                        <div class="toggle" id="textfilter_help" role="group">
+                        <div class="toggle" id="textfilter_help" role="group" style="display:none;">
                             <ul class="textile plain-list">
                                 <li>Heading: <strong>h<em>n</em>.</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
                                 <li>Blockquote: <strong>bq.</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
