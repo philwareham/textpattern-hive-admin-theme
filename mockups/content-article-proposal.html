@@ -275,16 +275,70 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         <div class="toggle" id="dates" role="group">
                             <div class="txp-form-field posted created">
                                 <label class="txp-form-field-label" for="year">Publish date&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                                <input class="input-year" id="year" name="year" type="number" size="4" maxlength="4" title="Year" aria-label="Year" placeholder="yyyy" value="2014" style="width:5.25em;">
-                                <input class="input-month" id="month" name="month" type="number" size="2" maxlength="2" title="Month" aria-label="Month" placeholder="mm" value="09" style="width:4.1em;">
-                                <input class="input-day" id="day" name="day" type="number" size="2" maxlength="2" title="Day" aria-label="Day" placeholder="dd" value="08" style="width:4.1em;">
+                                <input class="input-year" id="year" name="year"
+                                    type="number"
+                                    min="0000"
+                                    max="9999"
+                                    step="1"
+                                    title="Year"
+                                    aria-label="Year"
+                                    placeholder="yyyy"
+                                    value="2014"
+                                    style="width:5.25em;">
+                                <input class="input-month" id="month" name="month"
+                                    type="number"
+                                    min="01"
+                                    max="12"
+                                    step="1"
+                                    title="Month"
+                                    aria-label="Month"
+                                    placeholder="mm"
+                                    value="09"
+                                    style="width:4.1em;">
+                                <input class="input-day" id="day" name="day"
+                                    type="number"
+                                    min="01"
+                                    max="31"
+                                    step="1"
+                                    title="Day"
+                                    aria-label="Day"
+                                    placeholder="dd"
+                                    value="08"
+                                    style="width:4.1em;">
                                 <a class="txp-datepicker-button" href="#" title="Datepicker" aria-label="Datepicker"><span class="ui-icon ui-icon-calendar">Datepicker</span></a>
                             </div>
                             <div class="txp-form-field posted created">
                                 <label class="txp-form-field-label" for="hour">Publish time</label>
-                                <input class="input-hour" id="hour" name="hour" type="number" size="2" maxlength="2" title="Hour" aria-label="Hour" placeholder="hh" value="15" style="width:4.1em;">
-                                <input class="input-minute" id="minute" name="minute" type="number" size="2" maxlength="2" title="Minute" aria-label="Minute" placeholder="mn" value="20" style="width:4.1em;">
-                                <input class="input-second" id="second" name="second" type="number" size="2" maxlength="2" title="Second" aria-label="Second" placeholder="ss" value="07" style="width:4.1em;">
+                                <input class="input-hour" id="hour" name="hour"
+                                    type="number"
+                                    min="00"
+                                    max="23"
+                                    step="1"
+                                    title="Hour"
+                                    aria-label="Hour"
+                                    placeholder="hh"
+                                    value="15"
+                                    style="width:4.1em;">
+                                <input class="input-minute" id="minute" name="minute"
+                                    type="number"
+                                    min="00"
+                                    max="59"
+                                    step="1"
+                                    title="Minute"
+                                    aria-label="Minute"
+                                    placeholder="mn"
+                                    value="20"
+                                    style="width:4.1em;">
+                                <input class="input-second" id="second" name="second"
+                                    type="number"
+                                    min="00"
+                                    max="59"
+                                    step="1"
+                                    title="Second"
+                                    aria-label="Second"
+                                    placeholder="ss"
+                                    value="07"
+                                    style="width:4.1em;">
                             </div>
                             <div class="txp-form-field posted created-now">
                                 <input class="checkbox" type="checkbox" name="publish_now" id="publish_now" value="1">
@@ -292,16 +346,64 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                             </div>
                             <div class="txp-form-field posted created">
                                 <label class="txp-form-field-label" for="exp_year">Expiration date&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                                <input class="input-year" id="exp_year" name="exp_year" type="number" size="4" maxlength="4" title="Year" aria-label="Year" placeholder="yyyy" style="width:5.25em;">
-                                <input class="input-month" id="exp_month" name="exp_month" type="number" size="2" maxlength="2" title="Month" aria-label="Month" placeholder="mm" style="width:4.1em;">
-                                <input class="input-day" id="exp_day" name="exp_day" type="number" size="2" maxlength="2" title="Day" aria-label="Day" placeholder="dd" style="width:4.1em;">
+                                <input class="input-year" id="exp_year" name="exp_year"
+                                    type="number"
+                                    min="0000"
+                                    max="9999"
+                                    step="1"
+                                    title="Year"
+                                    aria-label="Year"
+                                    placeholder="yyyy"
+                                    style="width:5.25em;">
+                                <input class="input-month" id="exp_month" name="exp_month"
+                                    type="number"
+                                    min="01"
+                                    max="12"
+                                    step="1"
+                                    title="Month"
+                                    aria-label="Month"
+                                    placeholder="mm"
+                                    style="width:4.1em;">
+                                <input class="input-day" id="exp_day" name="exp_day"
+                                    type="number"
+                                    min="01"
+                                    max="31"
+                                    step="1"
+                                    title="Day"
+                                    aria-label="Day"
+                                    placeholder="dd"
+                                    style="width:4.1em;">
                                 <a class="txp-datepicker-button" href="#" title="Datepicker" aria-label="Datepicker"><span class="ui-icon ui-icon-calendar">Datepicker</span></a>
                             </div>
                             <div class="txp-form-field posted created">
                                 <label class="txp-form-field-label" for="exp_hour">Expiration time</label>
-                                <input class="input-hour" id="exp_hour" name="exp_hour" type="number" size="2" maxlength="2" title="Hour" aria-label="Hour" placeholder="hh" style="width:4.25em;">
-                                <input class="input-minute" id="exp_minute" name="exp_minute" type="number" size="2" maxlength="2" title="Minute" aria-label="Minute" placeholder="mn" style="width:4.1em;">
-                                <input class="input-second" id="exp_second" name="exp_second" type="number" size="2" maxlength="2" title="Second" aria-label="Second" placeholder="ss" style="width:4.1em;">
+                                <input class="input-hour" id="exp_hour" name="exp_hour"
+                                    type="number"
+                                    min="00"
+                                    max="23"
+                                    step="1"
+                                    title="Hour"
+                                    aria-label="Hour"
+                                    placeholder="hh"
+                                    style="width:4.1em;">
+                                <input class="input-minute" id="exp_minute" name="exp_minute"
+                                    type="number"
+                                    min="00"
+                                    max="59"
+                                    step="1"
+                                    title="Minute"
+                                    aria-label="Minute"
+                                    placeholder="mn"
+                                    style="width:4.1em;">
+                                <input class="input-second" id="exp_second" name="exp_second"
+                                    type="number"
+                                    min="00"
+                                    max="59"
+                                    step="1"
+                                    title="Second"
+                                    aria-label="Second"
+                                    placeholder="ss"
+                                    style="width:4.1em;">
                             </div>
                         </div>
                     </section>
