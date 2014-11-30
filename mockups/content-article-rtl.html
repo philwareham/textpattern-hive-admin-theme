@@ -275,7 +275,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         <div class="toggle" id="dates" role="group">
                             <div class="txp-form-field date posted">
                                 <label class="txp-form-field-label" for="year">Publish date&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                                <input class="input-year" id="year" name="year"
+                                <input class="txp-form-field-input input-year" id="year" name="year"
                                     type="text"
                                     size="4"
                                     maxlength="4"
@@ -284,10 +284,9 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                     title="Year"
                                     aria-label="Year"
                                     placeholder="yyyy"
-                                    value="2014"
-                                    style="width:4.15em;">
+                                    value="2014">
                                 <span role="separator">/</span>
-                                <input class="input-month" id="month" name="month"
+                                <input class="txp-form-field-input input-month" id="month" name="month"
                                     type="text"
                                     size="2"
                                     maxlength="2"
@@ -296,10 +295,9 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                     title="Month"
                                     aria-label="Month"
                                     placeholder="mm"
-                                    value="09"
-                                    style="width:2.5em;">
+                                    value="09">
                                 <span role="separator">/</span>
-                                <input class="input-day" id="day" name="day"
+                                <input class="txp-form-field-input input-day" id="day" name="day"
                                     type="text"
                                     size="2"
                                     maxlength="2"
@@ -308,13 +306,12 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                     title="Day"
                                     aria-label="Day"
                                     placeholder="dd"
-                                    value="08"
-                                    style="width:2.5em;">
+                                    value="08">
                                 <a class="txp-datepicker-button" href="#" title="Datepicker" aria-label="Datepicker"><span class="ui-icon ui-icon-calendar">Datepicker</span></a>
                             </div>
                             <div class="txp-form-field time posted">
                                 <label class="txp-form-field-label" for="hour">Publish time</label>
-                                <input class="input-hour" id="hour" name="hour"
+                                <input class="txp-form-field-input input-hour" id="hour" name="hour"
                                     type="text"
                                     size="2"
                                     maxlength="2"
@@ -323,10 +320,9 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                     title="Hour"
                                     aria-label="Hour"
                                     placeholder="hh"
-                                    value="15"
-                                    style="width:2.5em;">
+                                    value="15">
                                 <span role="separator">:</span>
-                                <input class="input-minute" id="minute" name="minute"
+                                <input class="txp-form-field-input input-minute" id="minute" name="minute"
                                     type="text"
                                     size="2"
                                     maxlength="2"
@@ -334,11 +330,10 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                     pattern="([0-5][0-9])"
                                     title="Minute"
                                     aria-label="Minute"
-                                    placeholder="mn"
-                                    value="20"
-                                    style="width:2.5em;">
+                                    placeholder="mm"
+                                    value="20">
                                 <span role="separator">:</span>
-                                <input class="input-second" id="second" name="second"
+                                <input class="txp-form-field-input input-second" id="second" name="second"
                                     type="text"
                                     size="2"
                                     maxlength="2"
@@ -347,8 +342,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                     title="Second"
                                     aria-label="Second"
                                     placeholder="ss"
-                                    value="07"
-                                    style="width:2.5em;">
+                                    value="07">
                             </div>
                             <div class="txp-form-field posted-now">
                                 <input class="checkbox" type="checkbox" name="publish_now" id="publish_now" value="1">
@@ -356,7 +350,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                             </div>
                             <div class="txp-form-field date expires">
                                 <label class="txp-form-field-label" for="exp_year">Expiration date&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                                <input class="input-year" id="exp_year" name="exp_year"
+                                <input class="txp-form-field-input input-year" id="exp_year" name="exp_year"
                                     type="text"
                                     size="4"
                                     maxlength="4"
@@ -364,10 +358,9 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                     pattern="[0-9]{4}"
                                     title="Year"
                                     aria-label="Year"
-                                    placeholder="yyyy"
-                                    style="width:4.15em;">
+                                    placeholder="yyyy">
                                 <span role="separator">/</span>
-                                <input class="input-month" id="exp_month" name="exp_month"
+                                <input class="txp-form-field-input input-month" id="exp_month" name="exp_month"
                                     type="text"
                                     size="2"
                                     maxlength="2"
@@ -375,10 +368,9 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                     pattern="(0[1-9]|1[012])"
                                     title="Month"
                                     aria-label="Month"
-                                    placeholder="mm"
-                                    style="width:2.5em;">
+                                    placeholder="mm">
                                 <span role="separator">/</span>
-                                <input class="input-day" id="exp_day" name="exp_day"
+                                <input class="txp-form-field-input input-day" id="exp_day" name="exp_day"
                                     type="text"
                                     size="2"
                                     maxlength="2"
@@ -386,13 +378,12 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                     pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])"
                                     title="Day"
                                     aria-label="Day"
-                                    placeholder="dd"
-                                    style="width:2.5em;">
+                                    placeholder="dd">
                                 <a class="txp-datepicker-button" href="#" title="Datepicker" aria-label="Datepicker"><span class="ui-icon ui-icon-calendar">Datepicker</span></a>
                             </div>
                             <div class="txp-form-field time expires">
                                 <label class="txp-form-field-label" for="exp_hour">Expiration time</label>
-                                <input class="input-hour" id="exp_hour" name="exp_hour"
+                                <input class="txp-form-field-input input-hour" id="exp_hour" name="exp_hour"
                                     type="text"
                                     size="2"
                                     maxlength="2"
@@ -400,10 +391,9 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                     pattern="(0[0-9]|1[0-9]|2[0-3])"
                                     title="Hour"
                                     aria-label="Hour"
-                                    placeholder="hh"
-                                    style="width:2.5em;">
+                                    placeholder="hh">
                                 <span role="separator">:</span>
-                                <input class="input-minute" id="exp_minute" name="exp_minute"
+                                <input class="txp-form-field-input input-minute" id="exp_minute" name="exp_minute"
                                     type="text"
                                     size="2"
                                     maxlength="2"
@@ -411,10 +401,9 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                     pattern="([0-5][0-9])"
                                     title="Minute"
                                     aria-label="Minute"
-                                    placeholder="mn"
-                                    style="width:2.5em;">
+                                    placeholder="mm">
                                 <span role="separator">:</span>
-                                <input class="input-second" id="exp_second" name="exp_second"
+                                <input class="txp-form-field-input input-second" id="exp_second" name="exp_second"
                                     type="text"
                                     size="2"
                                     maxlength="2"
@@ -422,8 +411,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                     pattern="([0-5][0-9])"
                                     title="Second"
                                     aria-label="Second"
-                                    placeholder="ss"
-                                    style="width:2.5em;">
+                                    placeholder="ss">
                             </div>
                         </div>
                     </section>
