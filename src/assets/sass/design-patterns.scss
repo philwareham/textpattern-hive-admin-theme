@@ -245,7 +245,7 @@ $colors: (
     padding-left: 2em;
 
     ol {
-        @include box-shadow(inset 1.9166667em 0 0 $color-background-box, inset 2em 0 0 lighten($color-border, 9%));
+        @include box-shadow(inset 1.92307692307692em 0 0 $color-background-box, inset 2em 0 0 lighten($color-border, 9%));
 
         margin: 0;
         padding: 0 0 0 2em;
