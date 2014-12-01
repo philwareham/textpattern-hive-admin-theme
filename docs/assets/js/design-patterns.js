@@ -214,6 +214,37 @@ $(function ()
     $('.jquery-ui-datepicker').datepicker().children().show();
 
     /**
+     * Test of datepicker with seperate input fields for day/month/year.
+     * NEEDS WORK!
+     */
+
+    $('.input-day').datepicker({
+        showOn: 'button',
+        beforeShow: function (dateText, picker)
+        {
+            var year     = $(this).siblings('.input-year').val();
+            var month    = $(this).siblings('.input-month').val();
+            var day      = $(this).val();
+            var showDate = year + '/' + month + '/' + day;
+
+            return {defaultDate: showDate};
+        },
+        buttonImageOnly: false,
+        dateFormat: 'yy/mm/dd',
+        onClose: function (dateText, picker)
+        {
+            var pickerDate = $(this).datepicker('getDate');
+            var year  = pickerDate.getFullYear();
+            var month = pickerDate.getMonth() + 1;
+            var day   = pickerDate.getDate();
+
+            $(this).siblings('.input-year').val(year);
+            $(this).siblings('.input-month').val(month);
+            $(this).val(day);
+        }
+    });
+
+    /**
      * Dialog (basic).
      */
 
