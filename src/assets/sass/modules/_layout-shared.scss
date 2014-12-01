@@ -613,9 +613,9 @@ div.multi-edit {
  * the optional instructions `div`).
  */
 
-.txp-form-field-label {
-    display: block;
-    //background-color: red; // TEMPORARY FOR DEV
+.txp-form-field-label:after {
+    content: "\a"; // renders a `br` tag
+    white-space: pre;
 }
 
 /**
