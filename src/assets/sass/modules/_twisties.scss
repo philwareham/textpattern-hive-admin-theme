@@ -76,6 +76,7 @@ h3.txp-summary a {
 
     &:after {
         @include hide-text;
+        @include triangle($color-text, 0.5em, 0.25em, 90);
 
         font-size: 16px;
         position: absolute;
@@ -83,13 +84,7 @@ h3.txp-summary a {
         top: 0.5625em; // 9px / 16px
         right: 0.625em; // 10px / 16px
         z-index: 10;
-        width: 0;
-        height: 0;
         opacity: 0.5;
-        border-left: 0.25em solid $color-text;
-        border-right: 0;
-        border-top: 0.25em solid transparent;
-        border-bottom: 0.25em solid transparent;
     }
 
     &:hover:after {
@@ -102,13 +97,11 @@ h3.txp-summary a {
  */
 
 h3.txp-summary.expanded a:after {
+    @include triangle($color-text, 0.25em, 0.5em, 180);
+
     content: "&#8595;";
     top: 0.6875em; // 11px / 16px
     right: 0.5625em; // 9px / 16px
-    border-left: 0.25em solid transparent;
-    border-right: 0.25em solid transparent;
-    border-top: 0.25em solid $color-text;
-    border-bottom: 0;
 }
 
 /**

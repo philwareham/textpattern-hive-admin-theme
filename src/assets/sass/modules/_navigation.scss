@@ -131,6 +131,7 @@ button.txp-nav-toggle {
 
     &:after {
         @include hide-text;
+        @include triangle($color-text, 0.25em, 0.5em, 180);
 
         font-size: 16px;
         position: absolute;
@@ -138,13 +139,7 @@ button.txp-nav-toggle {
         top: 1em;
         right: 0.5625em; // 9px / 16px
         z-index: 10;
-        width: 0;
-        height: 0;
         opacity: 0.5;
-        border-left: 0.25em solid transparent;
-        border-right: 0.25em solid transparent;
-        border-top: 0.25em solid $color-text;
-        border-bottom: 0;
     }
 
     &:hover:after,
@@ -158,11 +153,9 @@ button.txp-nav-toggle {
  */
 
 .txp-nav > ul > li.open > a.dropdown-toggle:after {
+    @include triangle($color-text, 0.25em, 0.5em, 0);
+
     content: "&#8593;";
-    border-left: 0.25em solid transparent;
-    border-right: 0.25em solid transparent;
-    border-top: 0;
-    border-bottom: 0.25em solid $color-text;
 }
 
 /**

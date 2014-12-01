@@ -156,8 +156,6 @@ td {
 /**
  * Backgrounds and indicator icons on currently active sortable `thead th`.
  *
- * 1. Icon arrows are drawn using CSS border trianglar shapes technique.
- *
  * Example HTML:
  *
  * <th class="asc scope="col"><a></a></th>
@@ -172,18 +170,16 @@ td {
         a:after {
             @include hide-text;
 
+            font-size: 16px;
             position: absolute;
-            top: 0.53846153846154em; // 7px / 13px
             top: 45%;
-            right: 0.38461538461538em; // 5px / 13px
+            right: 0.3125em; // 5px / 16px
             z-index: 10;
-            width: 0;
-            height: 0;
             opacity: 0.5;
 
             [dir="rtl"] & {
                 right: auto;
-                left: 0.38461538461538em; // 5px / 13px
+                left: 0.3125em; // 5px / 16px
             }
         }
 
@@ -193,21 +189,15 @@ td {
     }
 
     &.desc a:after {
+        @include triangle($color-text, 0.25em, 0.5em, 180);
+
         content: "&#8595;";
-        /* 1 */
-        border-left: 0.30769230769231em solid transparent; // 4px / 13px
-        border-right: 0.30769230769231em solid transparent; // 4px / 13px
-        border-top: 0.30769230769231em solid $color-text; // 4px / 13px
-        border-bottom: 0;
     }
 
     &.asc a:after {
+        @include triangle($color-text, 0.25em, 0.5em, 0);
+
         content: "&#8593;";
-        /* 1 */
-        border-left: 0.30769230769231em solid transparent; // 4px / 13px
-        border-right: 0.30769230769231em solid transparent; // 4px / 13px
-        border-top: 0;
-        border-bottom: 0.30769230769231em solid $color-text; // 4px / 13px
     }
 }
 
