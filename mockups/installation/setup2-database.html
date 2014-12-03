@@ -33,38 +33,38 @@
 
             <div class="txp-setup">
 
-                <form action="setup2-database-error.html" method="post" class="prefs-form">
+                <form class="prefs-form" method="post" action="setup2-database-error.html">
                     <h1>Inevitably, we need a few details&#8230;</h1>
                     <h2>MySQL</h2>
                     <p>Note that the database you specify must already exist, Textpattern will not create it.</p>
                     <p>
                         <span class="txp-label"><label for="setup_mysql_login">MySQL login</label></span>
-                        <span class="txp-value"><input type="text" value="" name="duser" id="setup_mysql_login" size="32"></span>
+                        <span class="txp-value"><input id="setup_mysql_login" name="duser" type="text" size="32"></span>
                     </p>
                     <p>
                         <span class="txp-label"><label for="setup_mysql_pass">MySQL password</label></span>
-                        <span class="txp-value"><input type="text" value="" name="dpass" id="setup_mysql_pass" size="32"></span>
+                        <span class="txp-value"><input id="setup_mysql_pass" name="dpass" type="text" size="32"></span>
                     </p>
                     <p>
                         <span class="txp-label"><label for="setup_mysql_server">MySQL server</label></span>
-                        <span class="txp-value"><input type="text" value="localhost" name="dhost" id="setup_mysql_server" size="32" required="required"></span>
+                        <span class="txp-value"><input id="setup_mysql_server" name="dhost" type="text" value="localhost" size="32" required="required"></span>
                     </p>
                     <p>
                         <span class="txp-label"><label for="setup_mysql_db">MySQL database</label></span>
-                        <span class="txp-value"><input type="text" value="" name="ddb" id="setup_mysql_db" size="32" required="required"></span>
+                        <span class="txp-value"><input id="setup_mysql_db" name="ddb" type="text" size="32" required="required"></span>
                     </p>
                     <p>
                         <span class="txp-label"><label for="setup_table_prefix">Table prefix (optional)&#160;<a rel="help" target="_blank" href="http://rpc.textpattern.com/help/?item=table_prefix&#38;language=en-gb" role="button" class="pophelp" title="Help" aria-label="Help">i</a></label></span>
-                        <span class="txp-value"><input type="text" value="" name="dprefix" id="setup_table_prefix"></span>
+                        <span class="txp-value"><input id="setup_table_prefix" name="dprefix" type="text"></span>
                     </p>
                     <h2>Site URL</h2>
                     <p>Please enter the web-reachable address of your site.</p>
                     <p>
                         <span class="txp-label"><label for="setup_siteurl">http(s)://&#160;<a rel="help" target="_blank" href="http://rpc.textpattern.com/help/?item=siteurl&#38;language=en-gb" role="button" class="pophelp" title="Help" aria-label="Help">i</a></label></span>
-                        <span class="txp-value"><input type="text" value="" name="siteurl" id="setup_siteurl" size="32" required="required"></span>
+                        <span class="txp-value"><input id="setup_siteurl" name="siteurl" type="text" size="32" required="required"></span>
                     </p>
                     <p>
-                        <input type="submit" value="Next &#8594;" name="Submit" class="publish">
+                        <input class="publish" name="Submit" type="submit" value="Next &#8594;">
                     </p>
                 </form>
 

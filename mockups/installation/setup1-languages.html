@@ -16,18 +16,18 @@
         <link rel="stylesheet" href="../../dist/hive/assets/css/ie8.css">
     <![endif]-->
 </head>
-<body id="page-setup" class="welcome">
+<body class="welcome" id="page-setup">
 
     <main class="txp-body" role="main" aria-label="Main content">
         <div class="txp-container">
 
             <div class="txp-setup">
 
-                <form action="setup2-database.html" method="post" class="prefs-form">
+                <form class="prefs-form" method="post" action="setup2-database.html">
                     <h1>Welcome to Textpattern CMS</h1>
                     <p>
                         <label for="setup_language">Please choose a language:</label>
-                        <select name="lang" id="setup_language">
+                        <select id="setup_language" name="lang">
                             <option value="ar-dz">جزائري عربي</option>
                             <option value="bg-bg">Български</option>
                             <option value="bs-ba">Bosanski (Bosna i Hercegovina)</option>
@@ -71,7 +71,7 @@
                             <option value="zh-tw">中文(繁體)</option>
                         </select>
                     </p>
-                    <p><input type="submit" value="Submit" name="Submit" class="publish"></p>
+                    <p><input class="publish" name="Submit" type="submit" value="Submit"></p>
                 </form>
 
             </div><!-- /txp-setup -->
