@@ -15,13 +15,16 @@
     <meta name="apple-mobile-web-app-title" content="My site">
     <script src="../../docs/assets/js/modernizr.js"></script>
     <script src="../../dist/hive/assets/js/main.js"></script>
+
+    <script src="../../docs/assets/js/design-patterns.js"></script>
+
     <!--[if lt IE 9]>
         <script src="../../doc/assets/js/selectivizr.min.js"></script>
         <link rel="stylesheet" href="../../docs/assets/css/jquery-ui-ie8.min.css">
         <link rel="stylesheet" href="../../dist/hive/assets/css/ie8.css">
     <![endif]-->
 </head>
-<body id="page-file" class="content">
+<body class="content" id="page-file">
 
     <header class="txp-header" role="banner">
         <h1>Textpattern</h1>
@@ -140,39 +143,38 @@
     </header><!-- /txp-header -->
 
     <main class="txp-body" role="main" aria-label="Main content">
+        <div class="txp-container" id="link_container">
 
-        <div id="link_container" class="txp-container">
-
-            <form method="post" action="#" id="link_details" class="edit-form">
+            <form class="edit-form" id="link_details" method="post" action="#">
                 <section class="txp-edit">
                     <h2>Edit link</h2>
-                    <p class="edit-linkname">
+                    <div class="txp-form-field edit-link-name">
                         <span class="txp-label"><label for="linkname">Title</label></span>
-                        <span class="txp-value"><input type="text" value="Txp Resources" name="linkname" id="linkname" size="32"></span>
-                    </p>
-                    <p class="edit-linksort">
-                        <span class="txp-label"><label for="linksort">Sort value&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></label></span>
-                        <span class="txp-value"><input type="text" value="Txp Resources" name="linksort" id="linksort" size="32"></span>
-                    </p>
-                    <p class="edit-link-url">
-                        <span class="txp-label"><label for="url">URL&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></label></span>
-                        <span class="txp-value"><input type="text" value="http://textpattern.org/" name="url" id="url" size="32"></span>
-                    </p>
-                    <p class="edit-link-category">
-                        <span class="txp-label"><label for="link_category">Category&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-value"><input id="linkname" name="linkname" type="text" size="32" value="Txp Resources"></span>
+                    </div>
+                    <div class="txp-form-field edit-link-sort">
+                        <span class="txp-label"><label for="linksort">Sort value&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-value"><input id="linksort" name="linksort" type="text" size="32" value="Txp Resources"></span>
+                    </div>
+                    <div class="txp-form-field edit-link-url">
+                        <span class="txp-label"><label for="url">URL&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-value"><input id="url" name="url" type="text" size="32" value="http://textpattern.org/"></span>
+                    </div>
+                    <div class="txp-form-field edit-link-category">
+                        <span class="txp-label"><label for="link_category">Category&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
                         <span class="txp-value">
-                            <select id="link_category"  name="category">
+                            <select id="link_category" name="category">
                                 <option value="">&#160;</option>
                                 <option value="textpattern" selected="selected">Textpattern</option>
                             </select>
                             <span aria-hidden="true">[</span><a href="#" title="Edit">Edit</a><span aria-hidden="true">]</span>
                         </span>
-                    </p>
-                    <p class="edit-link-description">
-                        <span class="txp-label"><label for="link_description">Description&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help">i</a></label></span>
+                    </div>
+                    <div class="txp-form-field edit-link-name">
+                        <span class="txp-label"><label for="link_description">Description&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
                         <textarea id="link_description" name="description" cols="64" rows="8"></textarea>
-                    </p>
-                    <p><input type="submit" value="Save" class="publish"></p>
+                    </div>
+                    <p><input class="publish" type="submit" value="Save"></p>
                 </section>
             </form>
 
