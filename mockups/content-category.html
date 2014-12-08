@@ -148,16 +148,16 @@
             <h1 class="txp-heading">Categories</h1>
         </div>
 
-        <section id="categories_article" class="txp-layout-4col-cell-1" role="region">
-            <h2>Articles&#160;<a target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">i</a></h2>
-            <form method="post" action="#" class="article">
+        <section class="txp-layout-4col-cell-1" id="categories_article" role="region">
+            <h2>Articles&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></h2>
+            <form class="article" method="post" action="#">
                 <p>
                     <label for="article_category_new">Create new category</label>
-                    <input id="article_category_new" type="text" value="" name="title" size="32">
+                    <input id="article_category_new" name="title" type="text" size="32">
                 </p>
                 <p class="parent">
                     <label for="article_category_parent">Parent</label>
-                    <select name="parent_cat" id="article_category_parent">
+                    <select id="article_category_parent" name="parent_cat">
                         <option value="" selected="selected">&#160;</option>
                         <option value="hope-for-the-future">Hope for the Future</option>
                         <option value="meaningful-labor">Meaningful Labor</option>
@@ -166,15 +166,15 @@
                 </p>
                 <p><input type="submit" value="Create"></p>
             </form>
-            <form method="post" action="#" id="category_article_form" class="category-tree">
-                <p class="level-0"><input type="checkbox" name="selected[]" value="5" class="checkbox">&#160;<a href="secondary/content-category_edit.html">Hope for the Future</a>&#160;<a href="#">(1)</a></p>
-                <p class="level-1"><input type="checkbox" name="selected[]" value="14" class="checkbox">&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 1-1</a>&#160;(0)</p>
-                <p class="level-2"><input type="checkbox" name="selected[]" value="16" class="checkbox">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 2-1</a>&#160;(0)</p>
-                <p class="level-3"><input type="checkbox" name="selected[]" value="17" class="checkbox">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 3-1</a>&#160;(0)</p>
-                <p class="level-1"><input type="checkbox" name="selected[]" value="15" class="checkbox">&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 1-2</a>&#160;(0)</p>
-                <p class="level-1"><input type="checkbox" name="selected[]" value="18" class="checkbox">&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 1-3</a>&#160;(0)</p>
-                <p class="level-0"><input type="checkbox" name="selected[]" value="6" class="checkbox">&#160;<a href="secondary/content-category_edit.html">Meaningful Labor</a>&#160;<a href="#">(1)</a></p>
-                <p class="level-0"><input type="checkbox" name="selected[]" value="7" class="checkbox">&#160;<a href="secondary/content-category_edit.html">Reciprocal Affection</a>&#160;(0)</p>
+            <form class="category-tree" id="category_article_form" method="post" action="#">
+                <p class="level-0"><input class="checkbox" name="selected[]" type="checkbox" value="5">&#160;<a href="secondary/content-category_edit.html">Hope for the Future</a>&#160;<a href="#">(1)</a></p>
+                <p class="level-1"><input class="checkbox" name="selected[]" type="checkbox" value="14">&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 1-1</a>&#160;(0)</p>
+                <p class="level-2"><input class="checkbox" name="selected[]" type="checkbox" value="16">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 2-1</a>&#160;(0)</p>
+                <p class="level-3"><input class="checkbox" name="selected[]" type="checkbox" value="17">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 3-1</a>&#160;(0)</p>
+                <p class="level-1"><input class="checkbox" name="selected[]" type="checkbox" value="15">&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 1-2</a>&#160;(0)</p>
+                <p class="level-1"><input class="checkbox" name="selected[]" type="checkbox" value="18">&#160;&#160;&#160;&#160;&#160;<a href="secondary/content-category_edit.html">test category nested 1-3</a>&#160;(0)</p>
+                <p class="level-0"><input class="checkbox" name="selected[]" type="checkbox" value="6">&#160;<a href="secondary/content-category_edit.html">Meaningful Labor</a>&#160;<a href="#">(1)</a></p>
+                <p class="level-0"><input class="checkbox" name="selected[]" type="checkbox" value="7">&#160;<a href="secondary/content-category_edit.html">Reciprocal Affection</a>&#160;(0)</p>
                 <div class="multi-edit">
                     <select name="edit_method">
                         <option value="" selected="selected">With selected&#8230;</option>
@@ -182,7 +182,7 @@
                         <option value="deleteforce">deleteforce</option>
                         <option value="delete">Delete</option>
                     </select>
-                    <div class="multi-option" id="multi-option-changeparent">
+                    <div id="multi-option-changeparent" class="multi-option">
                         <select name="new_parent">
                             <option value="" selected="selected">&#160;</option>
                             <option value="hope-for-the-future">Hope for the Future</option>
@@ -195,24 +195,24 @@
             </form>
         </section>
 
-        <section id="categories_image" class="txp-layout-4col-cell-2" role="region">
-            <h2>Images&#160;<a target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">i</a></h2>
-            <form method="post" action="#" class="image">
+        <section class="txp-layout-4col-cell-2" id="categories_image" role="region">
+            <h2>Images&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></h2>
+            <form class="image" method="post" action="#">
                 <p>
                     <label for="image_category_new">Create new category</label>
-                    <input id="image_category_new" type="text" value="" name="title" size="32">
+                    <input id="image_category_new" name="title" type="text" size="32">
                 </p>
                 <p class="parent">
                     <label for="image_category_parent">Parent</label>
-                    <select name="parent_cat" id="image_category_parent">
+                    <select id="image_category_parent" name="parent_cat">
                         <option value="" selected="selected">&#160;</option>
                         <option value="site-design">Site Design</option>
                     </select>
                 </p>
                 <p><input type="submit" value="Create"></p>
             </form>
-            <form method="post" action="#" id="category_image_form" class="category-tree">
-                <p class="level-0"><input type="checkbox" name="selected[]" value="9" class="checkbox">&#160;<a href="secondary/content-category_edit.html">Site Design</a>&#160;<a href="#">(2)</a></p>
+            <form class="category-tree" id="category_image_form" method="post" action="#">
+                <p class="level-0"><input class="checkbox" name="selected[]" type="checkbox" value="9">&#160;<a href="secondary/content-category_edit.html">Site Design</a>&#160;<a href="#">(2)</a></p>
                 <div class="multi-edit">
                     <select name="edit_method">
                         <option value="" selected="selected">With selected&#8230;</option>
@@ -230,36 +230,36 @@
             </form>
         </section>
 
-        <section id="categories_file" class="txp-layout-4col-cell-3" role="region">
-            <h2>Files&#160;<a target="_blank" href="http://rpc.textpattern.com/help/?item=file_category&#38;language=en-gb" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">i</a></h2>
-            <form method="post" action="#" class="file">
+        <section class="txp-layout-4col-cell-3" id="categories_file" role="region">
+            <h2>Files&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></h2>
+            <form class="file" method="post" action="#">
                 <p>
                     <label for="file_category_new">Create new category</label>
-                    <input id="file_category_new" type="text" value="" name="title" size="32">
+                    <input id="file_category_new" name="title" type="text" size="32">
                 </p>
                 <p><input type="submit" value="Create"></p>
             </form>
             <p>None exist.</p>
         </section>
 
-        <section id="categories_link" class="txp-layout-4col-cell-4" role="region">
-            <h2>Links&#160;<a target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help">i</a></h2>
-            <form method="post" action="#" class="link">
+        <section class="txp-layout-4col-cell-4" id="categories_link" role="region">
+            <h2>Links&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></h2>
+            <form class="link" method="post" action="#">
                 <p>
                     <label for="link_category_new">Create new category</label>
-                    <input id="link_category_new" type="text" value="" name="title" size="32">
+                    <input id="link_category_new" name="title" type="text" size="32">
                 </p>
                 <p class="parent">
                     <label for="link_category_parent">Parent</label>
-                    <select name="parent_cat" id="link_category_parent">
+                    <select id="link_category_parent" name="parent_cat">
                         <option value="" selected="selected">&#160;</option>
                         <option value="textpattern">Textpattern</option>
                     </select>
                 </p>
                 <p><input type="submit" value="Create"></p>
             </form>
-            <form method="post" action="#" id="category_link_form" class="category-tree">
-                <p class="level-0"><input type="checkbox" name="selected[]" value="8" class="checkbox">&#160;<a href="secondary/content-category_edit.html">Textpattern</a>&#160;<a href="#">(3)</a></p>
+            <form class="category-tree" id="category_link_form" method="post" action="#">
+                <p class="level-0"><input class="checkbox" name="selected[]" type="checkbox" value="8">&#160;<a href="secondary/content-category_edit.html">Textpattern</a>&#160;<a href="#">(3)</a></p>
                 <div class="multi-edit">
                     <select name="edit_method">
                         <option value="" selected="selected">With selected&#8230;</option>

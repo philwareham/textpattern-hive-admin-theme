@@ -143,15 +143,15 @@
     </header><!-- /txp-header -->
 
     <main class="txp-body" role="main" aria-label="Main content">
-        <div id="discuss_container" class="txp-container">
+        <div class="txp-container" id="discuss_container">
 
-            <form method="post" action="#" id="discuss_edit_form" class="edit-form">
+            <form class="edit-form" id="discuss_edit_form" method="post" action="#">
                 <section class="txp-edit">
                     <h2>Edit comment</h2>
                     <p class="edit-status">
                         <span class="txp-label"><label for="status">Status</label></span>
                         <span class="txp-value">
-                            <select name="visible" id="status">
+                            <select id="status" name="visible">
                                 <option value="1" selected="selected">Visible</option>
                                 <option value="-1">Spam</option>
                                 <option value="0">Unmoderated</option>
@@ -160,7 +160,7 @@
                     </p>
                     <p class="edit-name">
                         <span class="txp-label"><label for="name">Name</label></span>
-                        <span class="txp-value"><input type="text" value="Donald Swain" name="name" id="name" size="32"></span>
+                        <span class="txp-value"><input id="name" name="name" type="text" size="32" value="Donald Swain"></span>
                     </p>
                     <p class="edit-ip">
                         <span class="txp-label">IP</span>
@@ -168,11 +168,11 @@
                     </p>
                     <p class="edit-email">
                         <span class="txp-label"><label for="email">E-mail</label></span>
-                        <span class="txp-value"><input type="email" value="donald.swain@example.com" name="email" id="email" size="32"></span>
+                        <span class="txp-value"><input id="email" name="email" type="email" size="32" value="donald.swain@example.com"></span>
                     </p>
                     <p class="edit-website">
                         <span class="txp-label"><label for="website">Website</label></span>
-                        <span class="txp-value"><input type="text" value="example.com" name="web" id="website" size="32"></span>
+                        <span class="txp-value"><input id="website" name="web" type="text" size="32" value="example.com"></span>
                     </p>
                     <p class="edit-date">
                         <span class="txp-label">Date</span>
@@ -180,9 +180,9 @@
                     </p>
                     <p class="edit-message">
                         <span class="txp-label"><label for="commentmessage">Message</label></span>
-                        <textarea name="message" id="commentmessage" cols="64" rows="16">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea>
+                        <textarea id="commentmessage" name="message" cols="64" rows="16">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea>
                     </p>
-                    <p><input type="submit" value="Save" name="step" class="publish"></p>
+                    <p><input class="publish" type="submit" value="Save" name="step"></p>
                 </section>
             </form>
 

@@ -143,19 +143,19 @@
     </header><!-- /txp-header -->
 
     <main class="txp-body" role="main" aria-label="Main content">
-        <div id="image_container" class="txp-container">
+        <div class="txp-container" id="image_container">
 
             <div class="fullsize-image">
                 <img class="content-image" src="http://static1.designhive.com/img/cms/53.jpg" alt="53.jpg (460 &#215; 294)" title="53.jpg (460 &#215; 294)">
             </div>
             <section class="txp-edit">
                 <h2>Edit image</h2>
-                <div role="group" class="txp-details replace-image">
+                <div class="txp-details replace-image" role="group">
                     <h3>Replace image&nbsp;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></h3>
                     <div>
                         <form class="image-replace" method="post" enctype="multipart/form-data" action="#">
                             <p class="edit-image-replace">
-                                <input type="file" name="thefile" id="image_replace">
+                                <input id="image_replace" name="thefile" type="file">
                                 <input type="submit" value="Upload">
                             </p>
                         </form>
@@ -164,15 +164,15 @@
                 <div class="thumbnail-edit">
                     <img class="content-image" src="http://static1.designhive.com/img/cms/53t.jpg" width="184" height="118" alt="53t.jpg (184 &#215; 118)" title="53t.jpg (184 &#215; 118)">
                     <form method="post" action="#" onsubmit="return confirm('Really delete?');">
-                        <input type="submit" value="&times;" class="destroy" title="Delete" aria-label="Delete">
+                        <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
                     </form>
                 </div>
-                <div role="group" class="txp-details thumbnail-upload">
+                <div class="txp-details thumbnail-upload" role="group">
                     <h3>Upload thumbnail&nbsp;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></h3>
                     <div>
                         <form class="thumbnail-upload" method="post" enctype="multipart/form-data" action="#">
                             <p class="edit-upload-thumbnail">
-                                <input type="file" name="thefile" id="upload_thumbnail">
+                                <input id="upload_thumbnail" name="thefile" type="file">
                                 <input type="submit" value="Upload">
                             </p>
                         </form>
@@ -180,23 +180,23 @@
                 </div>
                 <section class="thumbnail-alter">
                     <h3>Create thumbnail&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></h3>
-                    <form method="post" action="#" id="thumbnail_alter_form" class="edit-form">
+                    <form class="edit-form" id="thumbnail_alter_form" method="post" action="#">
                         <p class="edit-alter-thumbnail">
                             <label for="width">Width</label>
-                            <input type="text" value="100" name="width" size="4" class="input-xsmall" id="width">
+                            <input class="input-xsmall" id="width" name="width" type="text" size="4" value="100">
                             <label for="height">Height</label>
-                            <input type="text" value="67" name="height" size="4" class="input-xsmall" id="height">
+                            <input class="input-xsmall" id="height" name="height" type="text" size="4" value="67">
                             <label for="crop">Crop</label>
-                            <input type="checkbox" name="crop" value="1" id="crop" class="checkbox">
+                            <input class="checkbox" id="crop" name="crop" type="checkbox" value="1">
                             <input type="submit" value="Create">
                         </p>
                     </form>
                 </section>
                 <div class="image-detail">
-                    <form method="post" action="#" id="image_details_form" class="edit-form">
+                    <form class="edit-form" id="image_details_form" method="post" action="#">
                         <p class="edit-image-name">
                             <span class="txp-label"><label for="image_name">Image name</label></span>
-                            <span class="txp-value"><input type="text" value="child-with-carrots.jpg" id="image_name" name="name" size="32"></span>
+                            <span class="txp-value"><input id="image_name" name="name" type="text" size="32" value="child-with-carrots.jpg"></span>
                         </p>
                         <p class="edit-image-category">
                             <span class="txp-label"><label for="image_category">Category</label></span>
@@ -209,13 +209,13 @@
                         </p>
                         <p class="edit-image-alt-text">
                             <span class="txp-label"><label for="image_alt_text">Alternate text</label></span>
-                            <span class="txp-value"><input type="text" value="Child with carrots" name="alt" id="image_alt_text" size="32"></span>
+                            <span class="txp-value"><input id="image_alt_text" name="alt" type="text" size="32" value="Child with carrots"></span>
                         </p>
                         <p class="edit-image-caption">
                             <span class="txp-label"><label for="image_caption">Caption</label></span>
                             <textarea id="image_caption" name="caption" cols="64" rows="4">Example image with thumbnail</textarea>
                         </p>
-                        <p><input type="submit" value="Save" class="publish"></p>
+                        <p><input class="publish" type="submit" value="Save"></p>
                     </form>
                 </div>
             </section>

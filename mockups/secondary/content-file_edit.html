@@ -143,7 +143,7 @@
     </header><!-- /txp-header -->
 
     <main class="txp-body" role="main" aria-label="Main content">
-        <div id="file_container" class="txp-container">
+        <div class="txp-container" id="file_container">
 
             <section class="txp-edit">
                 <h2>Edit file</h2>
@@ -159,19 +159,19 @@
                     <span class="txp-label">Download count</span>
                     <span class="txp-value">2</span>
                 </p>
-                <div role="group" class="txp-details replace-file">
+                <div class="txp-details replace-file" role="group">
                     <h3>Replace file&nbsp;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></h3>
                     <div>
                         <form class="upload-form" method="post" enctype="multipart/form-data" action="#">
                             <p class="edit-file-replace">
-                                <input type="file" name="thefile" id="file_replace">
+                                <input id="file_replace" name="thefile" type="file">
                                 <input type="submit" value="Upload">
                             </p>
                         </form>
                     </div>
                 </div>
                 <div class="file-detail exists">
-                    <form method="post" action="#" id="file_details" class="edit-form">
+                    <form class="edit-form" id="file_details" method="post" action="#">
                         <p class="edit-file-status">
                             <span class="txp-label"><label for="file_status">File status</label></span>
                             <span class="txp-value">
@@ -184,12 +184,12 @@
                         </p>
                         <p class="edit-file-title">
                             <span class="txp-label"><label for="file_title">Title</label></span>
-                            <span class="txp-value"><input type="text" value="" name="file_title" id="file_title" size="32"></span>
+                            <span class="txp-value"><input id="file_title" name="file_title" type="text" size="32"></span>
                         </p>
                         <p class="edit-file-category">
                             <span class="txp-label"><label for="file_category">Category</label></span>
                             <span class="txp-value">
-                                <select id="file_category"  name="file_category">
+                                <select id="file_category" name="file_category">
                                     <option value="" selected="selected">&#160;</option>
                                 </select>
                             </span>
@@ -198,29 +198,89 @@
                             <span class="txp-label"><label for="file_description">Description</label></span>
                             <textarea id="file_description" name="file_description" cols="64" rows="4"></textarea>
                         </p>
-                        <section role="region" id="file_created" class="txp-details file-created" aria-labelledby="file_created-label">
-                            <h3 id="file_created-label">Timestamp</h3>
-                            <div role="group">
-                                <p class="edit-file-publish-now">
-                                    <input type="checkbox" name="publish_now" id="publish_now" class="checkbox" value="1">
-                                    <label for="publish_now">Set timestamp to now…</label>
-                                </p>
-                                <p class="edit-file-publish-at">…or publish at&nbsp;<a role="button" rel="help" target="_blank" role="button" class="pophelp" title="Help" aria-label="Help" href="#">i</a></p>
-                                <p class="edit-file-published">
-                                    <span class="txp-label-fixed">Date</span>
-                                    <input type="text" name="year" value="2013" size="4" maxlength="4" class="year" title="Year" placeholder="yyyy"> /
-                                    <input type="text" name="month" value="04" size="2" maxlength="2" class="month" title="Month" placeholder="mm"> /
-                                    <input type="text" name="day" value="19" size="2" maxlength="2" class="day" title="Day" placeholder="dd">
-                                </p>
-                                <p class="edit-file-created">
-                                    <span class="txp-label-fixed">Time</span>
-                                    <input type="text" name="hour" value="09" size="2" maxlength="2" class="hour" title="Hour" placeholder="hh"> :
-                                    <input type="text" name="minute" value="03" size="2" maxlength="2" class="minute" title="Minute" placeholder="mn"> :
-                                    <input type="text" name="second" value="24" size="2" maxlength="2" class="second" title="Second" placeholder="ss">
-                                </p>
+                        <section class="txp-details" id="file_created" role="region" aria-labelledby="file_created-label">
+                            <h3 class="txp-summary expanded" id="file_created-label">
+                                <a role="button" data-txp-pane="article_dates" href="#dates">Timestamp</a>
+                            </h3>
+                            <div class="toggle" id="dates" role="group">
+                                <div class="txp-form-field date edit-file-posted">
+                                    <label class="txp-form-field-label" for="year">Publish date&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 0, 0); return false;" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
+                                    <input class="txp-form-field-input input-year" id="year" name="year"
+                                        type="text"
+                                        size="4"
+                                        maxlength="4"
+                                        inputmode="numeric"
+                                        pattern="[0-9]{4}"
+                                        title="Year"
+                                        aria-label="Year"
+                                        placeholder="yyyy"
+                                        value="2014">
+                                    <span role="separator">/</span>
+                                    <input class="txp-form-field-input input-month" id="month" name="month"
+                                        type="text"
+                                        size="2"
+                                        maxlength="2"
+                                        inputmode="numeric"
+                                        pattern="(0[1-9]|1[012])"
+                                        title="Month"
+                                        aria-label="Month"
+                                        placeholder="mm"
+                                        value="09">
+                                    <span role="separator">/</span>
+                                    <input class="txp-form-field-input input-day" id="day" name="day"
+                                        type="text"
+                                        size="2"
+                                        maxlength="2"
+                                        inputmode="numeric"
+                                        pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])"
+                                        title="Day"
+                                        aria-label="Day"
+                                        placeholder="dd"
+                                        value="08">
+                                    <a class="txp-datepicker-button" href="#" title="Datepicker" aria-label="Datepicker"><span class="ui-icon ui-icon-calendar">Datepicker</span></a>
+                                </div>
+                                <div class="txp-form-field time edit-file-posted">
+                                    <label class="txp-form-field-label" for="hour">Publish time</label>
+                                    <input class="txp-form-field-input input-hour" id="hour" name="hour"
+                                        type="text"
+                                        size="2"
+                                        maxlength="2"
+                                        inputmode="numeric"
+                                        pattern="(0[0-9]|1[0-9]|2[0-3])"
+                                        title="Hour"
+                                        aria-label="Hour"
+                                        placeholder="hh"
+                                        value="15">
+                                    <span role="separator">:</span>
+                                    <input class="txp-form-field-input input-minute" id="minute" name="minute"
+                                        type="text"
+                                        size="2"
+                                        maxlength="2"
+                                        inputmode="numeric"
+                                        pattern="([0-5][0-9])"
+                                        title="Minute"
+                                        aria-label="Minute"
+                                        placeholder="mm"
+                                        value="20">
+                                    <span role="separator">:</span>
+                                    <input class="txp-form-field-input input-second" id="second" name="second"
+                                        type="text"
+                                        size="2"
+                                        maxlength="2"
+                                        inputmode="numeric"
+                                        pattern="([0-5][0-9])"
+                                        title="Second"
+                                        aria-label="Second"
+                                        placeholder="ss"
+                                        value="07">
+                                </div>
+                                <div class="txp-form-field posted-now">
+                                    <input class="checkbox" type="checkbox" name="publish_now" id="publish_now" value="1">
+                                    <label for="publish_now">Set timestamp to now</label>
+                                </div>
                             </div>
                         </section>
-                        <p><input type="submit" value="Save" class="publish"></p>
+                        <p><input class="publish" type="submit" value="Save"></p>
                     </form>
                 </div>
             </section>

@@ -148,40 +148,40 @@
             <h1 class="txp-heading">Links</h1>
         </div>
 
-        <div id="link_control" class="txp-layout-2col-cell-2">
+        <div class="txp-layout-2col-cell-2" id="link_control">
             <form class="txp-search" role="search" method="get" action="#">
-                <input class="txp-search-input" type="search" name="crit" size="24" placeholder="Search links…">
+                <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search links…">
                 <span class="txp-search-buttons">
                     <button class="txp-search-button">Search</button>
                     <button class="txp-search-options">Search criteria</button>
                 </span>
                 <ul class="txp-dropdown">
                     <li>
-                        <input type="checkbox" id="search-crit1" name="search-crit1">
+                        <input id="search-crit1" name="search-crit1" type="checkbox">
                         <label for="search-crit1">Search all</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="search-crit2" name="search-crit2">
+                        <input id="search-crit2" name="search-crit2" type="checkbox">
                         <label for="search-crit2">ID#</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="search-crit3" name="search-crit3">
+                        <input id="search-crit3" name="search-crit3" type="checkbox">
                         <label for="search-crit3">Name</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="search-crit4" name="search-crit4">
+                        <input id="search-crit4" name="search-crit4" type="checkbox">
                         <label for="search-crit4">Description</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="search-crit5" name="search-crit5">
+                        <input id="search-crit5" name="search-crit5" type="checkbox">
                         <label for="search-crit5">URL</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="search-crit6" name="search-crit6">
+                        <input id="search-crit6" name="search-crit6" type="checkbox">
                         <label for="search-crit6">Category</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="search-crit7" name="search-crit7">
+                        <input id="search-crit7" name="search-crit7" type="checkbox">
                         <label for="search-crit7">Author</label>
                     </li>
                 </ul>
@@ -202,21 +202,21 @@
 
                         <thead>
                             <tr>
-                                <th scope="col" class="txp-list-col-multi-edit" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-                                <th scope="col" class="txp-list-col-id desc"><a href="#">ID#</a></th>
-                                <th scope="col" class="txp-list-col-name"><a href="#">Name</a></th>
-                                <th scope="col" class="txp-list-col-description links_detail"><a href="#">Description</a></th>
-                                <th scope="col" class="txp-list-col-category category"><a href="#">Category</a></th>
-                                <th scope="col" class="txp-list-col-url"><a href="#">URL</a></th>
-                                <th scope="col" class="txp-list-col-created date links_detail"><a href="#">Date</a></th>
-                                <th scope="col" class="txp-list-col-author name"><a href="#">Author</a></th>
+                                <th class="txp-list-col-multi-edit" scope="col" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                                <th class="txp-list-col-id desc" scope="col"><a href="#">ID#</a></th>
+                                <th class="txp-list-col-name" scope="col"><a href="#">Name</a></th>
+                                <th class="txp-list-col-description links_detail" scope="col"><a href="#">Description</a></th>
+                                <th class="txp-list-col-category category" scope="col"><a href="#">Category</a></th>
+                                <th class="txp-list-col-url" scope="col"><a href="#">URL</a></th>
+                                <th class="txp-list-col-created date links_detail" scope="col"><a href="#">Date</a></th>
+                                <th class="txp-list-col-author name" scope="col"><a href="#">Author</a></th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr>
                                 <td class="txp-list-col-multi-edit"><input type="checkbox" value="2" name="selected[]"></td>
-                                <th scope="txp-list-col-row" class="id"><a href="secondary/content-link_edit.html" title="Edit">2</a></th>
+                                <th class="txp-list-col-id" scope="row"><a href="secondary/content-link_edit.html" title="Edit">2</a></th>
                                 <td class="txp-list-col-name"><a href="secondary/content-link_edit.html" title="Edit">TextBook</a></td>
                                 <td class="txp-list-col-description links_detail">&#160;</td>
                                 <td class="txp-list-col-category category"><span title="Textpattern">textpattern</span></td>
@@ -226,7 +226,7 @@
                             </tr>
                             <tr>
                                 <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]"></td>
-                                <th scope="txp-list-col-row" class="id"><a href="secondary/content-link_edit.html" title="Edit">1</a></th>
+                                <th class="txp-list-col-id" scope="row"><a href="secondary/content-link_edit.html" title="Edit">1</a></th>
                                 <td class="txp-list-col-name"><a href="secondary/content-link_edit.html" title="Edit">Textpattern</a></td>
                                 <td class="txp-list-col-description links_detail">&#160;</td>
                                 <td class="txp-list-col-category category"><span title="Textpattern">textpattern</span></td>
@@ -236,7 +236,7 @@
                             </tr>
                             <tr>
                                 <td class="txp-list-col-multi-edit"><input type="checkbox" value="3" name="selected[]"></td>
-                                <th scope="txp-list-col-row" class="id"><a href="secondary/content-link_edit.html" title="Edit">3</a></th>
+                                <th class="txp-list-col-id" scope="row"><a href="secondary/content-link_edit.html" title="Edit">3</a></th>
                                 <td class="txp-list-col-name"><a href="secondary/content-link_edit.html" title="Edit">Textpattern Resources</a></td>
                                 <td class="txp-list-col-description links_detail">An example link description.</td>
                                 <td class="txp-list-col-category category"><span title="Textpattern">textpattern</span></td>

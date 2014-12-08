@@ -138,7 +138,7 @@
         <p class="txp-view-site"><a rel="external" target="_blank" href="#" title="View site">View site</a></p>
         <p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Log out</a></p>
 
-        <div id="messagepane"><span role="alert" id="message" class="success"><span class="ui-icon ui-icon-check"></span> Plugin <strong>smd_browse_by</strong> updated. <a role="button" class="close" title="Close" aria-label="Close">&times;</a></span></div>
+        <div id="messagepane"><span class="success" id="message" role="alert"><span class="ui-icon ui-icon-check"></span> Plugin <strong>smd_browse_by</strong> updated. <a role="button" class="close" title="Close" aria-label="Close">&times;</a></span></div>
 
     </header><!-- /txp-header -->
 
@@ -146,14 +146,14 @@
         <h1 class="txp-heading">Plugins</h1>
 
         <div class="txp-control-panel">
-            <form method="post" action="#" id="plugin_install_form" class="plugin-data">
-                <label for="plugin-install">Install plugin&#160;<a rel="help" target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" title="Help" aria-label="Help">i</a></label>
+            <form class="plugin-data" id="plugin_install_form" method="post" action="#">
+                <label for="plugin-install">Install plugin&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help" title="Help" aria-label="Help">i</a></label>
                 <textarea class="code" id="plugin-install" name="plugin" cols="64" rows="2" dir="ltr"></textarea>
-                <input type="submit" value="Upload" name="install_new">
+                <input name="install_new" type="submit" value="Upload">
             </form>
         </div>
 
-        <div id="plugin_container" class="txp-container">
+        <div class="txp-container" id="plugin_container">
 
             <form class="multi_edit_form" id="plugin_form" name="longform" method="post" action="#">
                 <div class="txp-listtables">
@@ -161,22 +161,22 @@
 
                         <thead>
                             <tr>
-                                <th scope="col" class="txp-list-col-multi-edit" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-                                <th scope="col" class="txp-list-col-name asc"><a href="#">Plugin</a></th>
-                                <th scope="col" class="txp-list-col-author"><a href="#">Author</a></th>
-                                <th scope="col" class="txp-list-col-version"><a href="#">Version</a></th>
-                                <th scope="col" class="txp-list-col-modified"><a href="#">Modified</a></th>
-                                <th scope="col" class="txp-list-col-description">Description</th>
-                                <th scope="col" class="txp-list-col-status"><a href="#">Active</a></th>
-                                <th scope="col" class="txp-list-col-load-order"><a href="#">Order</a></th>
-                                <th scope="col" class="txp-list-col-manage">Manage</th>
+                                <th class="txp-list-col-multi-edit" scope="col" title="Toggle all/none selected"><input id="select_all" name="select_all" type="checkbox" value="0"></th>
+                                <th class="txp-list-col-name asc" scope="col"><a href="#">Plugin</a></th>
+                                <th class="txp-list-col-author" scope="col"><a href="#">Author</a></th>
+                                <th class="txp-list-col-version" scope="col"><a href="#">Version</a></th>
+                                <th class="txp-list-col-modified" scope="col"><a href="#">Modified</a></th>
+                                <th class="txp-list-col-description" scope="col">Description</th>
+                                <th class="txp-list-col-status" scope="col"><a href="#">Active</a></th>
+                                <th class="txp-list-col-load-order" scope="col"><a href="#">Order</a></th>
+                                <th class="txp-list-col-manage" scope="col">Manage</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr class="active">
                                 <td class="txp-list-col-multi-edit"><input type="checkbox" value="rah_external_output" name="selected[]"></td>
-                                <th scope="row" class="txp-list-col-name"><a href="secondary/admin-plugin_edit.html" title="Edit">rah_external_output</a></th>
+                                <th class="txp-list-col-name" scope="row"><a href="secondary/admin-plugin_edit.html" title="Edit">rah_external_output</a></th>
                                 <td class="txp-list-col-author"><a href="http://rahforum.biz" rel="external">Jukka Svahn</a></td>
                                 <td class="txp-list-col-version">0.9</td>
                                 <td class="txp-list-col-modified">&#160;</td>
@@ -187,7 +187,7 @@
                             </tr>
                             <tr>
                                 <td class="txp-list-col-multi-edit"><input type="checkbox" value="smd_browse_by" name="selected[]"></td>
-                                <th scope="txp-list-col-row" class="name"><a href="secondary/admin-plugin_edit.html" title="Edit">smd_browse_by</a></th>
+                                <th class="txp-list-col-name" scope="row"><a href="secondary/admin-plugin_edit.html" title="Edit">smd_browse_by</a></th>
                                 <td class="txp-list-col-author"><a href="http://stefdawson.com/" rel="external">Stef Dawson</a></td>
                                 <td class="txp-list-col-version">0.10</td>
                                 <td class="txp-list-col-modified"><span class="warning">Yes</span></td>

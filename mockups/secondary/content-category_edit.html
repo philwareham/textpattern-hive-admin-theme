@@ -143,30 +143,30 @@
     </header><!-- /txp-header -->
 
     <main class="txp-body" role="main" aria-label="Main content">
-        <div id="category_container" class="txp-container">
+        <div class="txp-container" id="category_container">
 
-            <form method="post" action="#" class="edit-form">
+            <form class="edit-form" method="post" action="#">
                 <section class="txp-edit">
                     <h2>Edit category</h2>
-                    <p class="edit-category-name">
+                    <div class="txp-form-field edit-category-name">
                         <span class="txp-label"><label for="category_name">Article category name</label></span>
-                        <span class="txp-value"><input type="text" value="hope-for-the-future" name="name" id="category_name" size="32"></span>
-                    </p>
-                    <p class="edit-category-parent">
+                        <span class="txp-value"><input id="category_name" name="name" type="text" size="32" value="hope-for-the-future"></span>
+                    </div>
+                    <div class="txp-form-field edit-category-parent">
                         <span class="txp-label"><label for="category_parent">Parent</label></span>
                         <span class="txp-value">
-                            <select name="parent" id="category_parent">
+                            <select id="category_parent" name="parent">
                                 <option value="" selected="selected">&#160;</option>
                                 <option value="meaningful-labor">Meaningful Labor</option>
                                 <option value="reciprocal-affection">Reciprocal Affection</option>
                             </select>
                         </span>
-                    </p>
-                    <p class="edit-category-title">
+                    </div>
+                    <div class="txp-form-field edit-category-title">
                         <span class="txp-label"><label for="category_title">Article category title</label></span>
-                        <span class="txp-value"><input type="text" value="Hope for the Future" name="title" id="category_title" size="32"></span>
-                    </p>
-                    <p><input type="submit" value="Save" class="publish"></p>
+                        <span class="txp-value"><input id="category_title" name="title" type="text" size="32" value="Hope for the Future"></span>
+                    </div>
+                    <p><input class="publish" type="submit" value="Save"></p>
                 </section>
             </form>
 
