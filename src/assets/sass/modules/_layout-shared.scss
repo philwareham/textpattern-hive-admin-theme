@@ -93,11 +93,18 @@ hr {
         padding: 0 0 0 0.75em;
     }
 
-    label {
-        width: 85%;
-        padding: 0.30769230769231em 0.5em;
-        display: inline-block;
-        cursor: pointer;
+    .txp-dropdown {
+        input {
+            vertical-align: -0.38461538461538em; // 5px / 13px
+        }
+
+        label {
+            width: 85%;
+            padding: 0.30769230769231em 0.5em;
+            display: inline-block;
+            vertical-align: text-top;
+            cursor: pointer;
+        }
     }
 }
 
