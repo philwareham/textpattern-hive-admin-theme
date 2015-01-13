@@ -517,8 +517,6 @@ div.multi-edit {
 /**
  * Keeps non-editable values on same baseline, to prevent content jumping.
  *
- * TODO: check this actually does align properly.
- *
  * Appears on:
  *
  * Forms page.
@@ -532,8 +530,10 @@ div.multi-edit {
  */
 
 .txp-value-fixed {
+    @include adjust-font-size-to(13px, 0.9); // 18px `line-height`
+
     display: inline-block;
-    padding: 0.46153846153846em 0; // 6px / 13px
+    padding: 0.38461538461538em 0; // 5px / 13px
 }
 
 /**
