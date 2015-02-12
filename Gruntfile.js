@@ -42,6 +42,9 @@ module.exports = function (grunt)
         // Minified versions of CSS files within `dist/hive/assets/css/`.
         cssmin: {
             main: {
+                options: {
+                    rebase: false
+                },
                 expand: true,
                 cwd: 'dist/hive/assets/css/',
                 src: ['*.css', '!*.min.css'],
