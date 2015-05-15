@@ -9,6 +9,7 @@ module.exports = function (grunt)
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-scss-lint');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -83,6 +84,18 @@ module.exports = function (grunt)
             }
         },
 
+        // Validate Sass files via scss-lint.
+        scsslint: {
+            all: ['src/assets/sass/**/*.scss'],
+            options: {
+                bundleExec: true,
+                colorizeOutput: false,
+                config: '.scss-lint.yml',
+                force: true,
+                reporterOutput: 'scss-lint-report.xml'
+            }
+        },
+
         // Uglify and copy JavaScript files from `bower-components`.
         uglify: {
             dist: {
@@ -125,7 +138,7 @@ module.exports = function (grunt)
     // Register tasks.
     grunt.registerTask('build', ['jshint', 'sass', 'copy:dist', 'uglify']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('sass', ['compass', 'copy:css', 'cssmin']);
+    grunt.registerTask('sass', ['scsslint', 'compass', 'copy:css', 'cssmin']);
     grunt.registerTask('test', ['jshint']);
     grunt.registerTask('travis', ['jshint', 'compass']);
 };
