@@ -135,7 +135,7 @@ button.txp-nav-toggle {
 
         font-size: 16px;
         position: absolute;
-        content: "&#8595;";
+        content: "\2193";
         top: 1em;
         right: 0.5625em; // 9px / 16px
         z-index: 10;
@@ -155,7 +155,7 @@ button.txp-nav-toggle {
 .txp-nav > ul > li.open > a.dropdown-toggle:after {
     @include triangle($color-text, 0.25em, 0.5em, 0);
 
-    content: "&#8593;";
+    content: "\2191";
 }
 
 /**

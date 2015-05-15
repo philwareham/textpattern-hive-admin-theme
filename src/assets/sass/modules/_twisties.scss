@@ -80,7 +80,7 @@ h3.txp-summary a {
 
         font-size: 16px;
         position: absolute;
-        content: "&#8594;";
+        content: "\2193";
         top: 0.5625em; // 9px / 16px
         right: 0.625em; // 10px / 16px
         z-index: 10;
@@ -99,7 +99,7 @@ h3.txp-summary a {
 h3.txp-summary.expanded a:after {
     @include triangle($color-text, 0.25em, 0.5em, 180);
 
-    content: "&#8595;";
+    content: "\2191";
     top: 0.6875em; // 11px / 16px
     right: 0.5625em; // 9px / 16px
 }

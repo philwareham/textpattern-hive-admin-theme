@@ -76,7 +76,7 @@
 
             font-size: 16px;
             position: absolute;
-            content: "&#8594";
+            content: "\2192";
             top: -1px;
             left: 100%;
             z-index: 2;
@@ -109,7 +109,7 @@
         &:after {
             @include triangle($color-border, 3em, 0.75em, 270);
 
-            content: "&#8592";
+            content: "\2190";
             left: auto;
             right: 100%;
         }

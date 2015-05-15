@@ -191,13 +191,13 @@ td {
     &.desc a:after {
         @include triangle($color-text, 0.25em, 0.5em, 180);
 
-        content: "&#8595;";
+        content: "\2193";
     }
 
     &.asc a:after {
         @include triangle($color-text, 0.25em, 0.5em, 0);
 
-        content: "&#8593;";
+        content: "\2191";
     }
 }
 
