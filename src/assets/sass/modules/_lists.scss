@@ -68,8 +68,8 @@ dt {
  */
 
 .plain-list {
-    list-style: none;
     padding: 0;
+    list-style: none;
 }
 
 /**
@@ -128,8 +128,8 @@ dt {
 .switcher-action,
 .switcher-list .destroy {
     position: absolute;
-    z-index: 2;
     right: 1em;
+    z-index: 2;
 }
 
 .switcher-action {

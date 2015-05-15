@@ -108,7 +108,6 @@
         @include hide-text;
 
         float: left;
-        font-size: 16px;
         display: block;
         margin: 0.0625em 0 0;
         border: 0;
@@ -118,6 +117,7 @@
         height: 2em;
         background: transparent url("../img/sprite.svg") -10em 0;
         background-size: 13em 2em; // 208px / 16px + 32px / 16px
+        font-size: 16px;
 
         &:focus {
             outline: thin dotted $color-link-focus;
@@ -145,16 +145,14 @@
 
         position: absolute;
         top: 3em;
-        left: 0;
         right: 0;
+        left: 0;
         display: block;
         background: $color-highlight-box;
 
         // Indicator pointer.
         &:before {
-            font-size: 16px;
             position: absolute;
-            content: "";
             top: -0.5em; // 8px / 16px
             left: 3.9375em; // 99px / 16px;
             z-index: 2;
@@ -162,6 +160,8 @@
             height: 0.5em;
             background: url("../img/sprite.svg") no-repeat -12em 0;
             background-size: 13em 2em; // 208px / 16px + 32px / 16px
+            font-size: 16px;
+            content: "";
         }
     }
 
@@ -185,9 +185,9 @@
         @include box-shadow(none);
 
         position: static;
-        min-width: 0;
         border: 0;
         border-radius: 0;
+        min-width: 0;
 
         a {
             padding: 0.5em 2em;
@@ -227,8 +227,8 @@
 
     .txp-label,
     .txp-value {
-        float: none;
         display: block;
+        float: none;
         width: 100%;
     }
 
@@ -311,8 +311,8 @@
         }
 
         li {
-            float: none;
             display: block;
+            float: none;
             margin: 0;
 
             &:after {
@@ -363,8 +363,8 @@
         }
 
         .ui-tabs-anchor {
-            float: none;
             display: block;
+            float: none;
 
             [dir="rtl"] & {
                 float: none;

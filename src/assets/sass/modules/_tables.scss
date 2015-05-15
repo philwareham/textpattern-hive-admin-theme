@@ -141,9 +141,9 @@ td {
         a {
             position: relative;
             display: block;
-            color: $color-text;
             margin: -0.38461538461538em -1em; // improved click area
             padding: 0.38461538461538em 1em; // 5px / 13px + 13px
+            color: $color-text;
 
             &:hover {
                 color: $color-text;

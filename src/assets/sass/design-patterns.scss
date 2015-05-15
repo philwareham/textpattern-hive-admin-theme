@@ -112,15 +112,15 @@ $colors: (
 }
 
 .jquery-ui-icons li {
-    margin: 2px;
     position: relative;
-    padding: 4px 0;
-    cursor: pointer;
     float: left;
+    margin: 2px;
+    padding: 4px 0;
     list-style: none;
+    cursor: pointer;
 }
 
-[dir="rtl"] .jquery-ui-icons li  {
+[dir="rtl"] .jquery-ui-icons li {
     float: right;
 }
 
@@ -129,7 +129,7 @@ $colors: (
     margin: 0 4px;
 }
 
-[dir="rtl"] .jquery-ui-icons span.ui-icon  {
+[dir="rtl"] .jquery-ui-icons span.ui-icon {
     float: right;
 }
 
@@ -138,9 +138,9 @@ $colors: (
  */
 
 .jquery-ui-slider-vertical span {
-    height: 120px;
     float: left;
     margin: 15px;
+    height: 120px;
 }
 
 [dir="rtl"] .jquery-ui-slider-vertical span {
@@ -180,7 +180,7 @@ $colors: (
 .typ,
 /* variable */
 .var {
-    color: teal;
+    color: #008080;
 }
 
 /* html/xml attribute value */
@@ -199,7 +199,7 @@ $colors: (
 
 /* punctuation */
 .pun {
-    color: #000;
+    color: #000000;
 }
 
 /* comment */

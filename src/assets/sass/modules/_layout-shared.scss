@@ -39,8 +39,8 @@ hr {
 .txp-accessibility {
     position: absolute;
     left: -1000em;
-    height: 1px;
     width: 1px;
+    height: 1px;
     overflow: hidden;
 }
 
@@ -51,8 +51,8 @@ hr {
  */
 
 [dir="rtl"] .txp-accessibility {
-    left: auto;
     right: -1000em;
+    left: auto;
 }
 
 /**
@@ -99,9 +99,9 @@ hr {
         }
 
         label {
-            width: 85%;
-            padding: 0.30769230769231em 0.5em;
             display: inline-block;
+            padding: 0.30769230769231em 0.5em;
+            width: 85%;
             vertical-align: text-top;
             cursor: pointer;
         }
@@ -437,7 +437,7 @@ div.multi-edit {
 .txp-edit,
 .txp-tagbuilder {
     margin: 0 auto 1em;
-    padding: 1em 1em 1px 1em;
+    padding: 1em 1em 1px;
     /* 1 */
     max-width: ($text-column - 2em);
     background: $color-background-box;

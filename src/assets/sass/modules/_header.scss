@@ -21,8 +21,8 @@
 
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
     z-index: 1000;
     border-top: 1px solid $color-accent-gradient-to;
     border-bottom: 1px solid darken($color-accent-gradient-to, 6%);
@@ -42,8 +42,8 @@
         position: absolute;
         right: auto;
         left: -1000em;
-        height: 1px;
         width: 1px;
+        height: 1px;
     }
 }
 

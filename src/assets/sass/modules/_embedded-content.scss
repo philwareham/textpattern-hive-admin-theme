@@ -12,18 +12,11 @@ video {
 }
 
 /**
+ * Images.
+ *
  * 1. Remove the gap between images and the bottom of their containers.
  * 2. Remove border when inside `a` element in IE 8-10.
- */
-
-img {
-    /* 1 */
-    vertical-align: middle;
-    /* 2 */
-    border: 0;
-}
-
-/**
+ *
  * Image alignment (compatible with Textile markup syntax).
  *
  * Example HTML:
@@ -34,6 +27,11 @@ img {
  */
 
 img {
+    /* 1 */
+    vertical-align: middle;
+    /* 2 */
+    border: 0;
+
     &.align-left {
         float: left;
         margin: 1em 1em 1em 0;
@@ -83,11 +81,14 @@ svg:not(:root) {
 }
 
 /**
- * Content images.
+ * Content images and content images with links.
  *
  * Example HTML:
  *
  * <img class="content-image">
+ * <a>
+ *     <img class="content-image">
+ * </a>
  */
 
 .content-image {
@@ -97,19 +98,7 @@ svg:not(:root) {
     border-radius: $default-border-radius;
     padding: 4px;
     background: #ffffff;
-}
 
-/**
- * Content images with links.
- *
- * Example HTML:
- *
- * <a>
- *     <img class="content-image">
- * </a>
- */
-
-.content-image {
     a:hover & {
         border-color: $color-link-hover;
     }
