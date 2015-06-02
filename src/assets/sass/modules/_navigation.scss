@@ -33,7 +33,7 @@ button.txp-nav-toggle {
     }
 
     a {
-        color: #333333;
+        color: $color-text;
 
         &:hover {
             text-decoration: none;
@@ -92,7 +92,7 @@ button.txp-nav-toggle {
     display: block;
     float: left;
     border-right: 1px solid $color-accent-gradient-to;
-    background: rgba(#ffffff, 0.2);
+    background: rgba($color-text-inverse, 0.2);
 
     &:first-child {
         border-left: 1px solid $color-accent-gradient-to;
@@ -108,15 +108,15 @@ button.txp-nav-toggle {
         color: darken($color-text, 20%);
 
         &:hover {
-            background: rgba(#ffffff, 0.2);
+            background: rgba($color-text-inverse, 0.2);
         }
     }
 
     &.selected > a {
-        background: rgba(#ffffff, 0.2);
+        background: rgba($color-text-inverse, 0.2);
 
         &:hover {
-            background: rgba(#ffffff, 0.33);
+            background: rgba($color-text-inverse, 0.33);
         }
     }
 }

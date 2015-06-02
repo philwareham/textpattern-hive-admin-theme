@@ -118,7 +118,7 @@ textarea {
     border-radius: 0;
     padding: 0.30769230769231em; // 4px / 13px
     height: 2.15384615384615em; // 28px / 13px
-    background: #ffffff;
+    background: $color-background;
 
     &:focus {
         @include box-shadow(0 0 7px $color-link-focus-glow);

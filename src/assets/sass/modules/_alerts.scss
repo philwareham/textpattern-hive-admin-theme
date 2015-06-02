@@ -116,7 +116,7 @@
             border-radius: $default-border-radius $default-border-radius 0 0;
             padding: 0.53846153846154em 2.84615384615385em 0.53846153846154em 1em;
             max-width: ($text-column - 3.84615384615385em);
-            color: #ffffff;
+            color: $color-text-inverse;
         }
 
         &.success {
@@ -146,13 +146,13 @@
     top: 0.27777777777778em; // 5px / 18px
     right: 0.72222222222222em; // 13px / 18px
     text-decoration: none;
-    color: transparentize(#ffffff, 0.4);
+    color: transparentize($color-text-inverse, 0.4);
     font-size: 18px;
     font-weight: bold;
 
     &:hover {
         text-decoration: none;
-        color: transparentize(#ffffff, 0.2);
+        color: transparentize($color-text-inverse, 0.2);
         cursor: pointer;
     }
 }

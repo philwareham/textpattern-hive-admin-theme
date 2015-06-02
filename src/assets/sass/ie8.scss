@@ -26,10 +26,10 @@
  */
 
 .close {
-    color: #cccccc;
+    color: lighten($color-text, 25%);
 
     &:hover {
-        color: #ffffff;
+        color: lighten($color-text, 75%);
     }
 }
 
