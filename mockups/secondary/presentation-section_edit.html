@@ -149,15 +149,19 @@
                 <section class="txp-edit">
                     <h2>Edit section</h2>
                     <div class="txp-form-field edit-section-name">
-                        <span class="txp-label"><label for="section_name">Section name</label></span>
+                        <span class="txp-label"><label class="txp-form-field-label" for="section_name">Section name</label></span>
                         <span class="txp-value"><input id="section_name" name="name" type="text" size="32" value="about"></span>
                     </div>
                     <div class="txp-form-field edit-section-longtitle">
-                        <span class="txp-label"><label for="section_title">Section title</label></span>
+                        <span class="txp-label"><label class="txp-form-field-label" for="section_title">Section title</label></span>
                         <span class="txp-value"><input id="section_title" name="title" type="text" size="32" value="About"></span>
                     </div>
+                    <div class="txp-form-field edit-section-description">
+                        <span class="txp-label"><label class="txp-form-field-label" for="section_description">Section description&nbsp;<a class="pophelp" rel="help" target="_blank" title="Help" aria-label="Help" role="button" onclick="popWin(this.href, 0, 0); return false;" href="#">i</a></label></span>
+                        <span class="txp-value"><textarea name="description" id="section_description" rows="4" cols="64"></textarea></span>
+                    </div>
                     <div class="txp-form-field edit-section-uses-page">
-                        <span class="txp-label"><label for="section_page">Uses page&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label class="txp-form-field-label" for="section_page">Uses page&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
                         <span class="txp-value">
                             <select id="section_page" name="section_page">
                                 <option value="archive">archive</option>
@@ -168,7 +172,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field edit-section-uses-css">
-                        <span class="txp-label"><label for="section_css">Uses style&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label class="txp-form-field-label" for="section_css">Uses style&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
                         <span class="txp-value">
                             <select id="section_css" name="css">
                                 <option value="default" selected="selected">default</option>
@@ -177,7 +181,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field edit-section-on-frontpage">
-                        <span class="txp-label">On front page&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Section appears on front page?&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio active" id="about-on_front_page-0" name="on_front_page" type="radio" value="0" checked="checked">
                             <label for="about-on_front_page-0">No</label>
@@ -186,7 +190,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field edit-section-syndicate">
-                        <span class="txp-label">Syndicate&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Syndicate articles in this section?&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio active" id="about-in_rss-0" name="in_rss" type="radio" value="0" checked="checked">
                             <label for="about-in_rss-0">No</label>
@@ -195,7 +199,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field edit-section-searchable">
-                        <span class="txp-label">Include in site search&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Include this section in site search?&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio" id="about-searchable-0" name="searchable" type="radio" value="0">
                             <label for="about-searchable-0">No</label>
