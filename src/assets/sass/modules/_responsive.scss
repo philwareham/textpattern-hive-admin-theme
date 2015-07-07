@@ -237,7 +237,7 @@
      */
 
     .txp-value {
-        .jquery-ui-buttonset, // TODO: This is temporary until we confirm using this UI.
+        .jquery-ui-buttonset, // This is an optional jQuery UI widget (not used in core layouts).
         input,
         select {
             margin: 0;

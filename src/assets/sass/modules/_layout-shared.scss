@@ -512,7 +512,18 @@ div.multi-edit {
 /**
  * Vertically inline align values with their labels.
  *
- * TODO: This is temporary until we confirm using this UI.
+ * This is an optional jQuery UI widget (not used in core layouts).
+ *
+ * Example HTML:
+ *
+ * <span class="txp-value">
+ *     <span class="jquery-ui-buttonset">
+ *         <input class="radio active" type="radio" value="0" checked="checked">
+ *         <label>No</label>
+ *         <input class="radio" name="auto_dst" type="radio" value="1">
+ *         <label>Yes</label>
+ *     </span>
+ * </span>
  */
 
 .txp-value .jquery-ui-buttonset {
