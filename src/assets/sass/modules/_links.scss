@@ -9,6 +9,7 @@
  * 4. Remove the grey background colour from active links in IE 10.
  * 5. Expanded CSS level 3 `text-decoration` property in supported browsers,
  *    older browsers will fallback to legacy `text-decoration` property.
+ * 6. Hide `.busy` class links when processing AJAX.
  */
 
 a {
@@ -34,7 +35,7 @@ a {
     }
 
     &.busy {
-        visibility: hidden;
+        visibility: hidden; /* 6 */
     }
 }
 
