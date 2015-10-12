@@ -81,7 +81,7 @@ hr {
 
 .txp-search {
     float: right;
-    margin: 1em 0 0;
+    margin: 1em 0;
 
     .ui-menu {
         position: absolute;
@@ -261,7 +261,7 @@ span.spinner {
  */
 
 div.multi-edit {
-    margin: 1em 0;
+    margin: 1em 0 0;
 }
 
 /**
@@ -409,11 +409,6 @@ div.multi-edit {
  */
 
 .txp-navigation {
-    p,
-    ul {
-        margin: 0 0 0.5em;
-    }
-
     .pageby {
         float: left;
     }
