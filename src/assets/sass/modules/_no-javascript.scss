@@ -1,5 +1,5 @@
 /**
- * Hide JavaScript-reliant features when JavaScript unavailabe.
+ * Hide JavaScript-reliant UI when JavaScript unavailabe.
  */
 
 .no-js {
@@ -8,5 +8,15 @@
     .multi-edit,
     .txp-list-col-multi-edit {
         display: none;
+    }
+}
+
+/**
+ * Show essential UI regardless, when JavaScript is unavailable.
+ */
+
+.no-js {
+    .toggle {
+        display: block !important;
     }
 }
