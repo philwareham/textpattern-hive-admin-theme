@@ -308,7 +308,7 @@ tr.active {
  * Remove margin above first `p` in plugin upload form, for layout consistency.
  */
 
-.plugin-data ~ p {
+.plugin-data p:first-child {
     margin-top: 0;
 }
 
