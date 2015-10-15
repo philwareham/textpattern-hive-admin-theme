@@ -143,11 +143,13 @@
     <div id="messagepane"></div>
 
     <main class="txp-body" aria-label="Main content">
-        <h1 class="txp-heading">Diagnostics</h1>
+        <div class="txp-layout-2col-cell-1">
+            <h1 class="txp-heading">Diagnostics</h1>
+        </div>
 
-        <div class="txp-container" id="diag_container">
+        <div class="txp-layout-1col" id="diag_container">
 
-            <div id="pre_flight_check">
+            <div class="txp-layout-2col-cell-1" id="pre_flight_check">
                 <h2>Pre-flight check</h2>
                 <p><span class="information">New Textpattern CMS version 4.4.1 <a href="http://textpattern.com/download" rel="external" title="Go to the Textpattern CMS download area">available for download</a></span>&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></p>
                 <p><span class="warning">/Users/pwareham/Sites/ SVN/TextPattern CMS/textpattern/setup/ still exists</span>&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></p>
@@ -158,7 +160,7 @@
                     /Users/pwareham/Sites/ SVN/TextPattern CMS/textpattern/include/txp_article.php</span>&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></p>
             </div>
 
-            <div id="diagnostics">
+            <div class="txp-layout-2col-cell-2" id="diagnostics">
                 <h2>Diagnostic info</h2>
                 <p><textarea class="code" id="diagnostics-detail" cols="64" rows="24" dir="ltr" readonly>Diagnostic information would go here...</textarea></p>
                 <form method="post" action="#">
@@ -172,7 +174,7 @@
                 </form>
             </div>
 
-        </div><!-- /txp-container -->
+        </div><!-- /txp-layout-1col -->
     </main><!-- /txp-body -->
 
     <footer class="txp-footer" role="contentinfo">
