@@ -17,6 +17,12 @@
 
 .txp-footer {
     @extend .clearfix;
+
+    position: absolute;
+    right: 2.1%;
+    bottom: 1.5em;
+    left: 2.1%;
+    height: 1em;
 }
 
 /**
@@ -29,6 +35,7 @@
 
 .mothership {
     float: left;
+    margin: 0;
 }
 
 /**
@@ -41,4 +48,5 @@
 
 .pagejump {
     float: right;
+    margin: 0;
 }

@@ -8,11 +8,13 @@
  */
 
 body {
+    box-sizing: border-box;
     /* 1 */
     position: relative;
     /* 2 */
     margin: 0;
-    padding: 4em 2.1% 0;
+    padding: 4em 2.1% 2.5em;
+    min-height: 100%;
     color: $color-text;
     background: $color-background;
 }
