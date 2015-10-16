@@ -31,7 +31,7 @@
 }
 
 /**
- * Hide header content area on login pages.
+ * Hide header content area on login panels.
  *
  * Move offscreen - don't `display:none` as we need to show #messagepane content.
  * `.txp-view-site` is OK to hide though (otherwise it affects page tabbing).
