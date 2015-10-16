@@ -677,7 +677,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-auto_dst">
-                        <span class="txp-label">Automatically adjust <abbr title="Daylight Saving Time">DST</abbr> setting? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Automatically adjust Daylight Saving Time (DST) setting? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio active" id="auto_dst-0" name="auto_dst" type="radio" value="0" checked="checked">
                             <label for="auto_dst-0">No</label>
@@ -686,7 +686,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-is_dst">
-                        <span class="txp-label"><abbr title="Daylight Saving Time">DST</abbr> enabled? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Daylight Savings Time (DST) enabled? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio active" id="is_dst-0" name="is_dst" type="radio" value="0" checked="checked">
                             <label for="is_dst-0">No</label>
@@ -751,7 +751,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-permlink_mode">
-                        <span class="txp-label"><label for="permlink_mode">Permanent link mode <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="permlink_mode">URL pattern <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
                         <span class="txp-value">
                             <select id="permlink_mode" name="permlink_mode">
                                 <option value="messy">?=messy</option>
@@ -805,15 +805,19 @@
                     </div>
                     <div class="txp-form-field" id="prefs-file_base_path">
                         <span class="txp-label"><label for="file_base_path">File directory path <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
-                        <span class="txp-value"><input id="file_base_path" name="file_base_path" type="text" size="32" value="/Users/pwareham/Sites/ git/textpattern4-forked/files"></span>
+                        <span class="txp-value"><input id="file_base_path" name="file_base_path" type="text" size="32" value="/example/textpattern4-forked/files"></span>
                     </div>
                     <div class="txp-form-field" id="prefs-file_max_upload_size">
                         <span class="txp-label"><label for="file_max_upload_size">Maximum file size of uploads (in bytes) <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
                         <span class="txp-value"><input id="file_max_upload_size" name="file_max_upload_size" type="text" size="32" value="2000000"></span>
                     </div>
+                    <div class="txp-form-field" id="prefs-skin_base_path">
+                        <span class="txp-label"><label class="txp-form-field-label" for="skin_base_path">Skin base path <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-value"><input id="skin_base_path" name="skin_base_path" type="text" size="32" value="/example/textpattern/themes"></span>
+                    </div>
                     <div class="txp-form-field" id="prefs-tempdir">
                         <span class="txp-label"><label for="tempdir">Temporary directory path <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
-                        <span class="txp-value"><input id="tempdir" name="tempdir" type="text" size="32" value="/Users/pwareham/Sites/ git/textpattern4-forked/textpattern/tmp"></span>
+                        <span class="txp-value"><input id="tempdir" name="tempdir" type="text" size="32" value="/example/textpattern4-forked/textpattern/tmp"></span>
                     </div>
                     <div class="txp-form-field" id="prefs-plugin_cache_dir">
                         <span class="txp-label"><label for="plugin_cache_dir">Plugin cache directory path <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
@@ -824,7 +828,7 @@
                         <span class="txp-value"><input id="smtp_from" name="smtp_from" type="text" size="32"></span>
                     </div>
                     <div class="txp-form-field" id="prefs-publisher_email">
-                        <span class="txp-label"><label for="publisher_email">Send login info from this email address <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="publisher_email">Send login details from this email address <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
                         <span class="txp-value"><input id="publisher_email" name="publisher_email" type="text" size="32"></span>
                     </div>
                     <div class="txp-form-field" id="prefs-override_emailcharset">
@@ -846,7 +850,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-default_event">
-                        <span class="txp-label"><label for="default_event">Default admin tab <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="default_event">Default administration panel <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
                         <span class="txp-value">
                             <select class="default-events" id="default_event" name="default_event">
                                 <optgroup label="Content">
@@ -889,7 +893,19 @@
                 </section><!-- /prefs_group_admin -->
 
                 <section class="txp-prefs-group" id="prefs_group_publish" aria-labelledby="prefs_group_publish-label">
-                    <h2 id="prefs_group_publish-label">Publish</h3>
+                    <h2 id="prefs_group_publish-label">Publish</h2>
+                    <div class="txp-form-field" id="prefs-default_publish_status">
+                        <span class="txp-label"><label class="txp-form-field-label" for="default_publish_status">Default publishing status <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-value">
+                            <select id="default_publish_status" name="default_publish_status">
+                                <option value="1">Draft</option>
+                                <option value="2">Hidden</option>
+                                <option value="3">Pending</option>
+                                <option value="4" selected="selected">Live</option>
+                                <option value="5">Sticky</option>
+                            </select>
+                        </span>
+                    </div>
                     <div class="txp-form-field" id="prefs-title_no_widow">
                         <span class="txp-label">Prevent widowed words in article titles? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
@@ -900,7 +916,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-articles_use_excerpts">
-                        <span class="txp-label">Articles use excerpts? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Use excerpts on articles? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio" id="articles_use_excerpts-0" name="articles_use_excerpts" type="radio" value="0">
                             <label for="articles_use_excerpts-0">No</label>
@@ -954,7 +970,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-lastmod_keepalive">
-                        <span class="txp-label">Compensate for persistent connection mod_deflate bug? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Compensate for persistent connection <code>mod_deflate</code> bug? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio active" id="lastmod_keepalive-0" name="lastmod_keepalive" type="radio" value="0" checked="checked">
                             <label for="lastmod_keepalive-0">No</label>
@@ -963,21 +979,12 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-ping_weblogsdotcom">
-                        <span class="txp-label">Ping ping-o-matic.com? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Ping pingomatic.com? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio active" id="ping_weblogsdotcom-0" name="ping_weblogsdotcom" type="radio" value="0" checked="checked">
                             <label for="ping_weblogsdotcom-0">No</label>
                             <input class="radio" id="ping_weblogsdotcom-1" name="ping_weblogsdotcom" type="radio" value="1">
                             <label for="ping_weblogsdotcom-1">Yes</label>
-                        </span>
-                    </div>
-                    <div class="txp-form-field" id="prefs-ping_textpattern_com">
-                        <span class="txp-label">Ping textpattern.com? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
-                        <span class="txp-value">
-                            <input class="radio" id="ping_textpattern_com-0" name="ping_textpattern_com" type="radio" value="0">
-                            <label for="ping_textpattern_com-0">No</label>
-                            <input class="radio active" id="ping_textpattern_com-1" name="ping_textpattern_com" type="radio" value="1" checked="checked">
-                            <label for="ping_textpattern_com-1">Yes</label>
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-use_textile">
@@ -1088,7 +1095,7 @@
                 <section class="txp-prefs-group" id="prefs_group_comments" aria-labelledby="prefs_group_comments-label">
                     <h2 id="prefs_group_comments-label">Comments</h2>
                     <div class="txp-form-field" id="prefs-comments_on_default">
-                        <span class="txp-label">On by default? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Comments on by default? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio active" id="comments_on_default-0" name="comments_on_default" type="radio" value="0" checked="checked">
                             <label for="comments_on_default-0">No</label>
@@ -1097,7 +1104,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-comments_default_invite">
-                        <span class="txp-label"><label for="comments_default_invite">Default invite <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="comments_default_invite">Default comments invite <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
                         <span class="txp-value"><input id="comments_default_invite" name="comments_default_invite" type="text" size="32" value="Comment"></span>
                     </div>
                     <div class="txp-form-field" id="prefs-comments_moderate">
@@ -1110,7 +1117,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-comments_disabled_after">
-                        <span class="txp-label"><label for="comments_disabled_after">Disabled after <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="comments_disabled_after">Comments disabled after <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
                         <span class="txp-value">
                             <select id="comments_disabled_after" name="comments_disabled_after">
                                 <option value="0">never</option>
@@ -1198,7 +1205,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-comments_require_name">
-                        <span class="txp-label">Require user’s name? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Comments require commenter’s name? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio" id="comments_require_name-0" name="comments_require_name" type="radio" value="0">
                             <label for="comments_require_name-0">No</label>
@@ -1207,7 +1214,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-comments_require_email">
-                        <span class="txp-label">Require user’s email address? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Comments require commenter’s email address? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio" id="comments_require_email-0" name="comments_require_email" type="radio" value="0">
                             <label for="comments_require_email-0">No</label>
@@ -1216,7 +1223,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-never_display_email">
-                        <span class="txp-label">Hide email address? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Hide commenter email address? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio active" id="never_display_email-0" name="never_display_email" type="radio" value="0" checked="checked">
                             <label for="never_display_email-0">No</label>
@@ -1225,7 +1232,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-comment_nofollow">
-                        <span class="txp-label">Apply rel="nofollow" to comments? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Apply <code>rel="nofollow"</code> to comments? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio" id="comment_nofollow-0" name="comment_nofollow" type="radio" value="0">
                             <label for="comment_nofollow-0">No</label>
@@ -1234,7 +1241,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-comments_disallow_images">
-                        <span class="txp-label">Strip user images? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Strip commenter images from comments? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio active" id="comments_disallow_images-0" name="comments_disallow_images" type="radio" value="0" checked="checked">
                             <label for="comments_disallow_images-0">No</label>
@@ -1243,7 +1250,7 @@
                         </span>
                     </div>
                     <div class="txp-form-field" id="prefs-comments_use_fat_textile">
-                        <span class="txp-label">Allow more Textile markup? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
+                        <span class="txp-label">Allow more Textile markup in comments? <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></span>
                         <span class="txp-value">
                             <input class="radio active" id="comments_use_fat_textile-0" name="comments_use_fat_textile" type="radio" value="0" checked="checked">
                             <label for="comments_use_fat_textile-0">No</label>
@@ -1260,43 +1267,43 @@
                 <section class="txp-prefs-group" id="prefs_group_custom" aria-labelledby="prefs_group_custom-label">
                     <h2 id="prefs_group_custom-label">Custom fields</h2>
                     <div class="txp-form-field" id="prefs-custom_1_set">
-                        <span class="txp-label"><label for="custom_1_set">Custom field 1 name <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="custom_1_set">Custom field 1 name</label></span>
                         <span class="txp-value"><input id="custom_1_set" name="custom_1_set" type="text" size="32" value="custom1"></span>
                     </div>
                     <div class="txp-form-field" id="prefs-custom_2_set">
-                        <span class="txp-label"><label for="custom_2_set">Custom field 2 name <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="custom_2_set">Custom field 2 name</label></span>
                         <span class="txp-value"><input id="custom_2_set" name="custom_2_set" type="text" size="32" value="custom2"></span>
                     </div>
                     <div class="txp-form-field" id="prefs-custom_3_set">
-                        <span class="txp-label"><label for="custom_3_set">Custom field 3 name <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="custom_3_set">Custom field 3 name</label></span>
                         <span class="txp-value"><input id="custom_3_set" name="custom_3_set" type="text" size="32"></span>
                     </div>
                     <div class="txp-form-field" id="prefs-custom_4_set">
-                        <span class="txp-label"><label for="custom_4_set">Custom field 4 name <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="custom_4_set">Custom field 4 name</label></span>
                         <span class="txp-value"><input id="custom_4_set" name="custom_4_set" type="text" size="32"></span>
                     </div>
                     <div class="txp-form-field" id="prefs-custom_5_set">
-                        <span class="txp-label"><label for="custom_5_set">Custom field 5 name <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="custom_5_set">Custom field 5 name</label></span>
                         <span class="txp-value"><input id="custom_5_set" name="custom_5_set" type="text" size="32"></span>
                     </div>
                     <div class="txp-form-field" id="prefs-custom_6_set">
-                        <span class="txp-label"><label for="custom_6_set">Custom field 6 name <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="custom_6_set">Custom field 6 name</label></span>
                         <span class="txp-value"><input id="custom_6_set" name="custom_6_set" type="text" size="32"></span>
                     </div>
                     <div class="txp-form-field" id="prefs-custom_7_set">
-                        <span class="txp-label"><label for="custom_7_set">Custom field 7 name <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="custom_7_set">Custom field 7 name</label></span>
                         <span class="txp-value"><input id="custom_7_set" name="custom_7_set" type="text" size="32"></span>
                     </div>
                     <div class="txp-form-field" id="prefs-custom_8_set">
-                        <span class="txp-label"><label for="custom_8_set">Custom field 8 name <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="custom_8_set">Custom field 8 name</label></span>
                         <span class="txp-value"><input id="custom_8_set" name="custom_8_set" type="text" size="32"></span>
                     </div>
                     <div class="txp-form-field" id="prefs-custom_9_set">
-                        <span class="txp-label"><label for="custom_9_set">Custom field 9 name <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="custom_9_set">Custom field 9 name</label></span>
                         <span class="txp-value"><input id="custom_9_set" name="custom_9_set" type="text" size="32"></span>
                     </div>
                     <div class="txp-form-field" id="prefs-custom_10_set">
-                        <span class="txp-label"><label for="custom_10_set">Custom field 10 name <a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></span>
+                        <span class="txp-label"><label for="custom_10_set">Custom field 10 name</label></span>
                         <span class="txp-value"><input id="custom_10_set" name="custom_10_set" type="text" size="32"></span>
                     </div>
                 </section><!-- /prefs_group_custom -->
