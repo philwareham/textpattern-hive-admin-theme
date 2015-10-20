@@ -21,8 +21,7 @@ html {
  */
 
 hr {
-    @include box-sizing(content-box);
-
+    box-sizing: content-box;
     clear: both; // make sure any floats above `hr` are cleared
     border: 0; // remove the default `hr` border
     border-bottom: 1px solid $color-border;

@@ -43,7 +43,7 @@ textarea,
 .navlink,
 .navlink-active,
 .navlink-disabled {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 
     /* 1 */
     font-size: 100%;

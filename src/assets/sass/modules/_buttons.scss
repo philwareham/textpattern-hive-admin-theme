@@ -141,8 +141,8 @@ button.destroy {
 
 .navlink-disabled {
     @include background-clip;
-    @include box-sizing(border-box);
 
+    box-sizing: border-box;
     display: inline-block;
     border: 1px solid;
     border-radius: $default-border-radius;

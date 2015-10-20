@@ -230,8 +230,7 @@ td.thumbnail a {
     margin-bottom: 1em;
 
     img {
-        @include box-sizing(border-box);
-
+        box-sizing: border-box;
         max-width: 100%;
         height: auto;
     }
@@ -315,8 +314,7 @@ tr.active {
 }
 
 div.code {
-    @include box-sizing(border-box);
-
+    box-sizing: border-box;
     margin-bottom: 1em;
     border: 1px solid $color-border;
     padding: 0.15384615384615em 0.38461538461538em;
