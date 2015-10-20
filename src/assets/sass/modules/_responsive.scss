@@ -112,8 +112,6 @@
      */
 
     button.txp-nav-toggle {
-        @include text-shadow(none);
-        @include box-shadow(none);
         @include hide-text;
 
         display: block;
@@ -126,6 +124,8 @@
         height: 2em;
         background: transparent url("../img/sprite.svg") -10em 0;
         background-size: 13em 2em; // 208px / 16px + 32px / 16px
+        text-shadow: none;
+        box-shadow: none;
         font-size: 16px;
 
         &:focus {
@@ -150,14 +150,13 @@
      */
 
     .txp-nav.in .data-dropdown {
-        @include box-shadow;
-
         position: absolute;
         top: 3em;
         right: 0;
         left: 0;
         display: block;
         background: $color-highlight-box;
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 
         // Indicator pointer.
         &:before {
@@ -191,12 +190,11 @@
      */
 
     .dropdown-menu {
-        @include box-shadow(none);
-
         position: static;
         border: 0;
         border-radius: 0;
         min-width: 0;
+        box-shadow: none;
 
         a {
             padding: 0.5em 2em;
@@ -355,12 +353,11 @@
 
     .ui-tabs .ui-tabs-nav {
         li {
-            @include box-shadow(none);
-
             float: none;
             margin: 0;
             margin-top: 2px;
             border-bottom-width: 1px;
+            box-shadow: none;
 
             &.ui-tabs-active {
                 margin-bottom: 0;

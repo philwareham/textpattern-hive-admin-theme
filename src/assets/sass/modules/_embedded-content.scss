@@ -92,20 +92,18 @@ svg:not(:root) {
  */
 
 .content-image {
-    @include box-shadow;
-
     border: solid 1px $color-border;
     border-radius: $default-border-radius;
     padding: 4px;
     background: #ffffff;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 
     a:hover & {
         border-color: $color-link-hover;
     }
 
     a:focus & {
-        @include box-shadow(0 0 7px $color-link-focus-glow);
-
         border-color: $color-link-focus;
+        box-shadow: 0 0 7px $color-link-focus-glow;
     }
 }

@@ -36,8 +36,6 @@
 
 h3.txp-summary,
 .txp-details > h3 {
-    @include text-shadow($text-shadow-light);
-    @include box-shadow($inset-highlighting);
     @include gradient-linear($color-gradient-from, $color-gradient-to);
 
     position: relative;
@@ -48,6 +46,8 @@ h3.txp-summary,
     border-top: 1px solid $color-gradient-to;
     border-bottom: 1px solid $color-gradient-border;
     height: 2em; // 26px / 13px
+    box-shadow: $inset-highlighting;
+    text-shadow: $text-shadow-light;
 }
 
 /**

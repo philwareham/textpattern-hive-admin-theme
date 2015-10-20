@@ -121,9 +121,8 @@ textarea {
     background: $color-background;
 
     &:focus {
-        @include box-shadow(0 0 7px $color-link-focus-glow);
-
         border-color: $color-link-focus;
+        box-shadow: 0 0 7px $color-link-focus-glow;
         outline: 0;
     }
 }
@@ -285,11 +284,10 @@ select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled],
 .navlink-disabled {
-    @include box-shadow(none !important);
-
     border-color: $color-gradient-to !important;
     color: #aaaaaa !important;
     background: #eeeeee !important;
+    box-shadow: none !important;
     text-shadow: none !important;
     /* 1 */
     opacity: 1;

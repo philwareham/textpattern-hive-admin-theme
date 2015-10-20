@@ -16,7 +16,6 @@
  */
 
 .txp-header {
-    @include box-shadow(0 0.2em 0.25em rgba(#000000, 0.15));
     @include gradient-linear($color-accent-gradient-from, $color-accent-gradient-to);
 
     position: fixed;
@@ -28,6 +27,7 @@
     border-bottom: 1px solid darken($color-accent-gradient-to, 6%);
     padding: 0 2.1%;
     height: 2.69230769230769em; // 35px / 13px
+    box-shadow: 0 0.2em 0.25em rgba(#000000, 0.15);
 }
 
 /**

@@ -99,13 +99,12 @@ button.txp-nav-toggle {
     }
 
     > a {
-        @include text-shadow($text-shadow-light);
-
         display: block;
         padding: 0 1em;
         line-height: 2.69230769230769em; // 35px / 13px
-        text-decoration: none;
         color: darken($color-text, 20%);
+        text-shadow: $text-shadow-light;
+        text-decoration: none;
 
         &:hover {
             background: rgba($color-text-inverse, 0.2);
@@ -205,8 +204,6 @@ button.txp-nav-toggle {
  */
 
 .dropdown-menu {
-    @include box-shadow;
-
     position: absolute;
     top: 3em;
     left: 0;
@@ -217,6 +214,7 @@ button.txp-nav-toggle {
     border-radius: 0 $default-border-radius $default-border-radius;
     min-width: 12em;
     background: $color-highlight-box;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 
     li {
         &:first-child {
