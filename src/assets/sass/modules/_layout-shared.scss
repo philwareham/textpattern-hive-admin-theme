@@ -483,20 +483,10 @@ div.multi-edit {
 
 .txp-label,
 .txp-value {
-    float: left;
-    width: 50%;
+    -webkit-flex: 1; // Safari 7/8
+    -ms-flex: 1 1 0%; // IE 10
+    flex: 1; // Modern browsers (2014/2015 W3C spec)
     max-width: 29em;
-}
-
-/**
- * Swap label/value text alignment in RTL languages.
- */
-
-.txp-label,
-.txp-value {
-    [dir="rtl"] & {
-        float: right;
-    }
 }
 
 /**
@@ -557,55 +547,6 @@ div.multi-edit {
 }
 
 /**
- * Label columns within panes - OLD.
- *
- * @deprecated in 4.6.0
- * @see        .txp-label
- */
-
-.edit-label {
-    display: inline-block;
-    float: left;
-    width: 42%;
-}
-
-/**
- * Value columns within panes - OLD.
- *
- * @deprecated in 4.6.0
- * @see        .txp-value
- */
-
-.edit-value {
-    display: inline-block;
-    float: right;
-    width: 58%;
-
-    input,
-    select {
-        margin-top: -0.46153846153846em; // 6px / 13px
-        margin-bottom: -0.23076923076923em; // 3px / 13px
-    }
-}
-
-/**
- * TODO: Modal window panes (TBC).
- */
-
-.txp-edit-action {
-    margin-right: -1em;
-    margin-left: -1em;
-    margin-bottom: 0;
-    border-top: 1px solid $color-background;
-    padding: 1em;
-    background: darken($color-background-box, 3%);
-
-    input[type="submit"] {
-        float: right;
-    }
-}
-
-/**
  * Form fields.
  *
  * Textpattern form fields can have optional inline help texts applied to them.
@@ -628,22 +569,24 @@ div.multi-edit {
 
 .txp-form-field {
     margin: 1em 0;
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+    display: -webkit-flex; // Safari 7/8
+    display: -ms-flexbox; // IE 10
+    display: flex; // Modern browsers (2014/2015 W3C spec)
 }
 
 /**
- * Make sure form field labels appear above form field inputs (and above
- * the optional instructions `div`).
+ * Don't flex form fields in for main content panes, login panes and
+ * details panes.
  */
 
-.txp-form-field-label:after {
-    content: "\a"; // renders a `br` tag
-    white-space: pre;
+.txp-layout-4col-cell-1-2-3,
+.txp-login,
+.txp-details {
+    .txp-form-field,
+    .txp-input,
+    .txp-value {
+        display: block;
+    }
 }
 
 /**

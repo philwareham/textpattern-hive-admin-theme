@@ -321,15 +321,3 @@ div.code {
     height: 21em;
     overflow: auto;
 }
-
-/**
- * Plugin help columns (fixed proportion cell) - OLD.
- *
- * @deprecated in 4.6.0
- * @see        .txp-layout-textbox
- */
-
-.plugin-column {
-    margin: 0 auto;
-    max-width: $text-column;
-}

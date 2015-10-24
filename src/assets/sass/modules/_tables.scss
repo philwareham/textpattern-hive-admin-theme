@@ -210,31 +210,9 @@ td {
 }
 
 /**
- * Consistent width for table multi-edit checkbox columns - OLD.
- *
- * @deprecated in 4.6.0
- * @see        .txp-list-col-multi-edit
- */
-
-.txp-list .multi-edit {
-    width: 13px;
-}
-
-/**
  * Avoid wrapping of content in table '#ID' columns.
  */
 
 .txp-list-col-id {
-    white-space: nowrap;
-}
-
-/**
- * Avoid wrapping of content in table '#ID' columns - OLD.
- *
- * @deprecated in 4.6.0
- * @see        .txp-list-col-id
- */
-
-.txp-list .id {
     white-space: nowrap;
 }

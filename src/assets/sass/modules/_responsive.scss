@@ -208,6 +208,14 @@
     }
 
     /**
+     * Collapse 2 column form fields to 1 column.
+     */
+
+    .txp-form-field {
+        display: block;
+    }
+
+    /**
      * Label/value one-column layouts within panes.
      *
      * Collapsed from two-column format on desktop layout.
@@ -227,8 +235,6 @@
     .txp-label,
     .txp-value {
         display: block;
-        float: none;
-        width: 100%;
     }
 
     /**
@@ -237,34 +243,6 @@
 
     .txp-value {
         .jquery-ui-buttonset, // This is an optional jQuery UI widget (not used in core layouts).
-        input,
-        select {
-            margin: 0;
-        }
-    }
-
-    /**
-     * Label/value one-column layouts within panes - OLD.
-     *
-     * @deprecated in 4.6.0
-     * @see        .txp-label
-     * @see        .txp-value
-     */
-
-    .edit-label,
-    .edit-value {
-        float: none;
-        width: 100%;
-    }
-
-    /**
-     * Remove inline alignment margin values when collapsed - OLD.
-     *
-     * @deprecated in 4.6.0
-     * @see        .txp-value
-     */
-
-    .edit-value {
         input,
         select {
             margin: 0;
