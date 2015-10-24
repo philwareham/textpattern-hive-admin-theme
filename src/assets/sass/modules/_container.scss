@@ -8,13 +8,19 @@
  */
 
 body {
+    display: -webkit-flex; // Safari 7/8
+    display: -ms-flexbox; // IE 10
+    display: flex; // Modern browsers (2014/2015 W3C spec)
+    -webkit-flex-direction: column; // Safari 7/8
+    -ms-flex-direction: column; // IE 10
+    flex-direction: column; // Modern browsers (2014/2015 W3C spec)
     box-sizing: border-box;
     /* 1 */
     position: relative;
     /* 2 */
     margin: 0;
-    padding: 4em 2.1% 2.5em;
-    min-height: 100%;
+    padding: 4em 2.1% 0;
+    min-height: 100vh;
     color: $color-text;
     background: $color-background;
 }
@@ -35,6 +41,10 @@ body {
 
 .txp-body {
     @extend .clearfix;
+
+    -webkit-flex: 1 0 auto; // Safari 7/8
+    -ms-flex: 1 0 auto; // IE 10
+    flex: 1 0 auto; // Modern browsers (2014/2015 W3C spec)
 
     margin: 0 auto;
     max-width: $container-max-width;
