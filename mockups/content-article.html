@@ -157,12 +157,14 @@
 
                     <div class="text">
                         <div class="txp-form-field title">
-                            <label class="txp-form-field-label" for="title">Title&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                            <input class="txp-form-field-input" id="title" name="Title" type="text" size="64" spellcheck="true" value="Example article title">
+                            <span class="txp-label"><label for="title">Title&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></span>
+                            <span class="txp-input">
+                                <input id="title" name="Title" type="text" size="64" spellcheck="true" value="Example article title">
+                            </span>
                         </div>
                         <div class="txp-form-field body">
-                            <label class="txp-form-field-label" for="body">Body&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                            <textarea class="txp-form-field-input" id="body" name="Body" cols="64" rows="24" spellcheck="true">h3. What do you want to do next?
+                            <span class="txp-label"><label for="body">Body&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></span>
+                            <span class="txp-input"><textarea id="body" name="Body" cols="64" rows="24" spellcheck="true">h3. What do you want to do next?
 
 * Modify or even delete this article? The "article list":/textpattern/index.php?event=list is the place to start.
 * Change this site's name, or modify the style of the URLs? It's all up to your "preferences":/textpattern/index.php?event=prefs.
@@ -180,11 +182,14 @@ There are a host of "Frequently Asked Questions":http://textpattern.com/faq/ to 
 
 "Textpattern tags":http://textpattern.com/textpattern-tag-reference, their attributes and values are explained and sampled within the "Textpattern User Documentation":http://textpattern.net/, where you will also find valuable tips and tutorials.
 
-If all else fails, there's a whole crowd of friendly, helpful people over at the "Textpattern support forum":http://forum.textpattern.com/. Come and pay a visit!</textarea>
+If all else fails, there's a whole crowd of friendly, helpful people over at the "Textpattern support forum":http://forum.textpattern.com/. Come and pay a visit!</textarea></span>
                         </div>
                         <div class="txp-form-field excerpt">
-                            <label class="txp-form-field-label" for="excerpt">Excerpt&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                            <textarea class="txp-form-field-input" id="excerpt" name="Excerpt" cols="64" rows="4" spellcheck="true">Example of an article excerpt here.</textarea>
+                            <span class="txp-label"><label class="txp-form-field-label" for="excerpt">Excerpt&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></span>
+                            <div class="txp-form-field-instructions">
+                                <p>Optional excerpt used as a short summary of the article, and often displayed on landing pages.</p>
+                            </div>
+                            <span class="txp-input"><textarea class="txp-form-field-input" id="excerpt" name="Excerpt" cols="64" rows="4" spellcheck="true">Example of an article excerpt here.</textarea></span>
                         </div>
                     </div>
 
@@ -221,21 +226,25 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         <h3 id="write-sort-label">Sort and display</h3>
                         <div role="group">
                             <div class="txp-form-field status">
-                                <label class="txp-form-field-label" for="status">Status</label>
-                                <select class="txp-form-field-input" id="status" name="Status">
-                                    <option value="1">Draft</option>
-                                    <option value="2">Hidden</option>
-                                    <option value="3">Pending</option>
-                                    <option value="4" selected="selected">Live</option>
-                                    <option value="5">Sticky</option>
-                                </select>
+                                <span class="txp-label"><label class="txp-form-field-label" for="status">Status</label></span>
+                                <span class="txp-input">
+                                    <select id="status" name="Status">
+                                        <option value="1">Draft</option>
+                                        <option value="2">Hidden</option>
+                                        <option value="3">Pending</option>
+                                        <option value="4" selected="selected">Live</option>
+                                        <option value="5">Sticky</option>
+                                    </select>
+                                </span>
                             </div>
                             <div class="txp-form-field section">
-                                <label class="txp-form-field-label" for="section">Section&#160;<span class="section-edit"><span aria-hidden="true">[</span><a title="Edit" href="#">Edit</a><span aria-hidden="true">]</span></span></label>
-                                <select class="txp-form-field-input" id="section" name="Section">
-                                    <option value="about">About</option>
-                                    <option value="articles" selected="selected">Articles</option>
-                                </select>
+                                <span class="txp-label"><label for="section">Section&#160;<span class="section-edit"><span aria-hidden="true">[</span><a title="Edit" href="#">Edit</a><span aria-hidden="true">]</span></span></label></span>
+                                <span class="txp-input">
+                                    <select id="section" name="Section">
+                                        <option value="about">About</option>
+                                        <option value="articles" selected="selected">Articles</option>
+                                    </select>
+                                </span>
                             </div>
                             <div id="categories_group">
                                 <div class="txp-form-field category category-1">
@@ -469,6 +478,9 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         <div class="toggle" id="meta" role="group">
                             <div class="txp-form-field url-title">
                                 <label class="txp-form-field-label" for="url-title">URL-only title&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
+                                <div class="txp-form-field-instructions">
+                                    <p>Leave blank to have the article's permalink URL automatically generated from the Title.</p>
+                                </div>
                                 <input class="txp-form-field-input" id="url-title" name="url_title" type="text" size="32">
                             </div>
                             <div class="txp-form-field description">
