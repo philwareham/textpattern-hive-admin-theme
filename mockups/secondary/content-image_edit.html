@@ -133,55 +133,64 @@
     <div id="messagepane"></div>
 
     <main class="txp-body" aria-label="Main content">
-        <div class="txp-container" id="image_container">
+        <h1 class="txp-heading">Edit image</h1>
+
+        <div class="txp-layout-4col-cell-1-2-3">
 
             <div class="fullsize-image">
                 <img class="content-image" src="http://placehold.it/600x400/eeeeee/333333" alt="1.jpg (600 &#215; 400)" title="1.jpg (600 &#215; 400)">
             </div>
+
+            <form class="upload-form" method="post" action="#">
+                <div class="txp-form-field">
+                    <span class="txp-label"><label for="image-upload">Replace image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></span>
+                    <span class="txp-input">
+                        <input type="file" name="thefile" id="image_replace">
+                        <input type="submit" value="Upload">
+                    </span>
+                </div>
+            </form>
+
+            <hr>
+
+            <section class="thumbnail-alter">
+                <h3>Create thumbnail&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></h3>
+                <form class="edit-form" id="thumbnail_alter_form" method="post" action="#">
+                    <p class="edit-alter-thumbnail">
+                        <label for="width">Width</label>
+                        <input class="input-xsmall" id="width" name="width" type="text" size="4" value="100">
+                        <label for="height">Height</label>
+                        <input class="input-xsmall" id="height" name="height" type="text" size="4" value="67">
+                        <label for="crop">Crop</label>
+                        <input class="checkbox" id="crop" name="crop" type="checkbox" value="1">
+                        <input type="submit" value="Create">
+                    </p>
+                </form>
+            </section>
+
+            <div class="thumbnail-image">
+                <img class="content-image" src="http://placehold.it/240x160/eeeeee/333333" alt="1t.jpg (240 &#215; 160)" title="1t.jpg (240 &#215; 160)">
+                <form method="post" action="#" onsubmit="return confirm('Really delete?');">
+                    <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
+                </form>
+            </div>
+
+            <form class="upload-form" method="post" action="#">
+                <div class="txp-form-field">
+                    <span class="txp-label"><label for="image-upload">Replace thumbnail&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></span>
+                    <span class="txp-input">
+                        <input type="file" name="thefile" id="upload_thumbnail">
+                        <input type="submit" value="Upload">
+                    </span>
+                </div>
+            </form>
+
+        </div><!-- /.txp-layout-4col-cell-1-2-3 -->
+
+        <div class="txp-layout-4col-cell-4alt">
+
             <section class="txp-edit">
-                <h2>Edit image</h2>
-                <div class="txp-details replace-image" role="group">
-                    <h3>Replace image&nbsp;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></h3>
-                    <div>
-                        <form class="image-replace" method="post" enctype="multipart/form-data" action="#">
-                            <p class="edit-image-replace">
-                                <input id="image_replace" name="thefile" type="file">
-                                <input type="submit" value="Upload">
-                            </p>
-                        </form>
-                    </div>
-                </div>
-                <div class="thumbnail-edit">
-                    <img class="content-image" src="http://placehold.it/240x160/eeeeee/333333" alt="1t.jpg (240 &#215; 160)" title="1t.jpg (240 &#215; 160)">
-                    <form method="post" action="#" onsubmit="return confirm('Really delete?');">
-                        <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
-                    </form>
-                </div>
-                <div class="txp-details thumbnail-upload" role="group">
-                    <h3>Upload thumbnail&nbsp;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></h3>
-                    <div>
-                        <form class="thumbnail-upload" method="post" enctype="multipart/form-data" action="#">
-                            <p class="edit-upload-thumbnail">
-                                <input id="upload_thumbnail" name="thefile" type="file">
-                                <input type="submit" value="Upload">
-                            </p>
-                        </form>
-                    </div>
-                </div>
-                <section class="thumbnail-alter">
-                    <h3>Create thumbnail&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></h3>
-                    <form class="edit-form" id="thumbnail_alter_form" method="post" action="#">
-                        <p class="edit-alter-thumbnail">
-                            <label for="width">Width</label>
-                            <input class="input-xsmall" id="width" name="width" type="text" size="4" value="100">
-                            <label for="height">Height</label>
-                            <input class="input-xsmall" id="height" name="height" type="text" size="4" value="67">
-                            <label for="crop">Crop</label>
-                            <input class="checkbox" id="crop" name="crop" type="checkbox" value="1">
-                            <input type="submit" value="Create">
-                        </p>
-                    </form>
-                </section>
+                <h2>Image details</h2>
                 <div class="image-detail">
                     <form class="edit-form" id="image_details_form" method="post" action="#">
                         <p class="edit-image-name">
@@ -210,7 +219,7 @@
                 </div>
             </section>
 
-        </div><!-- /txp-container -->
+        </div><!-- /.txp-layout-4col-cell-4alt -->
     </main><!-- /txp-body -->
 
     <footer class="txp-footer" role="contentinfo">

@@ -225,17 +225,6 @@ td.thumbnail a {
     outline: 0;
 }
 
-.fullsize-image {
-    text-align: center;
-    margin-bottom: 1em;
-
-    img {
-        box-sizing: border-box;
-        max-width: 100%;
-        height: auto;
-    }
-}
-
 .thumbnail-edit {
     overflow-x: auto;
     margin-bottom: 1em;
@@ -245,22 +234,6 @@ td.thumbnail a {
         vertical-align: top;
         margin-top: 5px;
     }
-}
-
-.edit-image-replace,
-.edit-upload-thumbnail,
-.edit-alter-thumbnail {
-    input[type="submit"] {
-        float: right;
-    }
-}
-
-
-/* Content -> Files panel - additional layout
-   ========================================================================== */
-
-.edit-file-replace input[type="submit"] {
-    float: right;
 }
 
 
