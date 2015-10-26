@@ -401,6 +401,8 @@ div.multi-edit {
  *
  * Anchor elements kept to one line to prevent space between buttons.
  *
+ * TODO: check if this would be better via flexbox instead?
+ *
  * @see .nav-tertiary
  *
  * Example HTML:
@@ -422,6 +424,20 @@ div.multi-edit {
 
     .prev-next {
         float: right;
+    }
+}
+
+/**
+ * Swap margin positions in RTL languages.
+ */
+
+[dir="rtl"] .txp-navigation {
+    .pageby {
+        float: right;
+    }
+
+    .prev-next {
+        float: left;
     }
 }
 
