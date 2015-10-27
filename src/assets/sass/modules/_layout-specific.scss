@@ -221,19 +221,26 @@
 /* Content -> Images panel - additional layout
    ========================================================================== */
 
-td.thumbnail a {
-    outline: 0;
+.thumbnail-alter input {
+    margin: 0 0.30769230769231em 0 0;
+
+    &:last-child {
+        margin: 0;
+    }
 }
 
-.thumbnail-edit {
-    overflow-x: auto;
-    margin-bottom: 1em;
+[dir="rtl"] .thumbnail-alter input {
+    margin: 0 0 0 0.30769230769231em;
 
-    form {
-        display: inline-block;
-        vertical-align: top;
-        margin-top: 5px;
+    &:last-child {
+        margin: 0;
     }
+}
+
+.thumbnail-image form {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
 }
 
 
