@@ -32,19 +32,23 @@
         <form class="txp-login" id="login_form" method="post" action="content-article.html">
             <h1 id="txp-login-heading">Log in to Textpattern</h1>
             <div class="txp-form-field login-name">
-                <label class="txp-form-field-label" for="login_name">Name</label>
-                <input class="txp-form-field-input" id="login_name" name="p_userid" type="text" size="32">
+                <span class="txp-label"><label for="login_name">Name</label></span>
+                <span class="txp-value"><input id="login_name" name="p_userid" type="text" size="32"></span>
             </div>
             <div class="txp-form-field login-password">
-                <label class="txp-form-field-label" for="login_password">Password</label>
-                <input class="txp-form-field-input" id="login_password" name="p_password" type="password" size="32">
+                <span class="txp-label"><label for="login_password">Password</label></span>
+                <span class="txp-value"><input id="login_password" name="p_password" type="password" size="32"></span>
             </div>
             <div class="txp-form-field login-stay">
                 <input class="checkbox active" id="login_stay" name="stay" type="checkbox" value="1" checked="checked">
                 <label for="login_stay">Remain logged in with this browser&#160;<a rel="help" target="_blank" href="http://rpc.textpattern.com/help/?item=remember_login&#38;language=en-gb" role="button" class="pophelp" title="Help" aria-label="Help">i</a></label>
             </div>
-            <p><input class="publish" type="submit" value="Log in"></p>
-            <p class="login-forgot"><a href="reset-password.html">Forgot password?</a></p>
+            <div class="txp-form-field login-button">
+                <input class="publish" type="submit" value="Log in">
+            </div>
+            <div class="txp-form-field login-forgot">
+                <a href="reset-password.html">Forgot password?</a>
+            </div>
         </form>
 
     </main><!-- /txp-body -->
