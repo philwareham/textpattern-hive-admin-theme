@@ -86,6 +86,8 @@ a.publish {
 
     font-weight: bold;
     border: 1px solid $color-accent-gradient-to;
+    padding: 0.61538461538462em 1em; // 8px / 13px + 13px
+    height: 2.76923076923077em; // 36px / 13px
 
     &:hover {
         @include gradient-linear(lighten($color-accent-gradient-from, 14%), lighten($color-accent-gradient-to, 14%));
