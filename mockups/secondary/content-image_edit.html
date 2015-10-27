@@ -166,24 +166,24 @@
                         <input type="submit" value="Create">
                     </p>
                 </form>
-            </section>
 
-            <div class="thumbnail-image">
-                <img class="content-image" src="http://placehold.it/240x160/eeeeee/333333" alt="1t.jpg (240 &#215; 160)" title="1t.jpg (240 &#215; 160)">
-                <form method="post" action="#" onsubmit="return confirm('Really delete?');">
-                    <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
-                </form>
-            </div>
-
-            <form class="upload-form" method="post" action="#">
-                <div class="txp-form-field">
-                    <span class="txp-label"><label for="image-upload">Replace thumbnail&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></span>
-                    <span class="txp-input">
-                        <input type="file" name="thefile" id="upload_thumbnail">
-                        <input type="submit" value="Upload">
-                    </span>
+                <div class="thumbnail-image">
+                    <img class="content-image" src="http://placehold.it/240x160/eeeeee/333333" alt="1t.jpg (240 &#215; 160)" title="1t.jpg (240 &#215; 160)">
+                    <form method="post" action="#" onsubmit="return confirm('Really delete?');">
+                        <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
+                    </form>
                 </div>
-            </form>
+
+                <form class="upload-form" method="post" action="#">
+                    <div class="txp-form-field">
+                        <span class="txp-label"><label for="image-upload">Replace thumbnail&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></span>
+                        <span class="txp-input">
+                            <input type="file" name="thefile" id="upload_thumbnail">
+                            <input type="submit" value="Upload">
+                        </span>
+                    </div>
+                </form>
+            </section>
 
         </div><!-- /.txp-layout-4col-cell-1-2-3 -->
 
@@ -193,11 +193,11 @@
                 <h2>Image details</h2>
                 <div class="image-detail">
                     <form class="edit-form" id="image_details_form" method="post" action="#">
-                        <p class="edit-image-name">
+                        <div class="txp-form-field edit-image-name">
                             <span class="txp-label"><label for="image_name">Image name</label></span>
                             <span class="txp-value"><input id="image_name" name="name" type="text" size="32" value="child-with-carrots.jpg"></span>
-                        </p>
-                        <p class="edit-image-category">
+                        </div>
+                        <div class="txp-form-field edit-image-category">
                             <span class="txp-label"><label for="image_category">Category</label></span>
                             <span class="txp-value">
                                 <select id="image_category" name="category">
@@ -205,15 +205,15 @@
                                     <option value="site-design" selected="selected">Site Design</option>
                                 </select>
                             </span>
-                        </p>
-                        <p class="edit-image-alt-text">
+                        </div>
+                        <div class="txp-form-field edit-image-alt-text">
                             <span class="txp-label"><label for="image_alt_text">Alternate text</label></span>
                             <span class="txp-value"><input id="image_alt_text" name="alt" type="text" size="32" value="Child with carrots"></span>
-                        </p>
-                        <p class="edit-image-caption">
+                        </div>
+                        <div class="txp-form-field edit-image-caption">
                             <span class="txp-label"><label for="image_caption">Caption</label></span>
-                            <textarea id="image_caption" name="caption" cols="64" rows="4">Example image with thumbnail</textarea>
-                        </p>
+                            <span class="txp-value"><textarea id="image_caption" name="caption" cols="64" rows="4">Example image with thumbnail</textarea></span>
+                        </div>
                         <p><input class="publish" type="submit" value="Save"></p>
                     </form>
                 </div>
