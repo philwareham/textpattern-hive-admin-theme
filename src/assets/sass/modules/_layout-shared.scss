@@ -581,7 +581,8 @@ div.multi-edit {
     -ms-flex: none; // IE 10
     flex: none; // Modern browsers (2014/2015 W3C spec)
     display: block;
-    max-width: none;
+    max-width: inherit;
+    min-height: inherit;
 }
 
 /**
