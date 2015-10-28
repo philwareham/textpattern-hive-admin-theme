@@ -179,8 +179,7 @@ ul.nav-tertiary {
     padding: 0;
 }
 
-.nav-tertiary,
-.prev-next {
+.nav-tertiary {
     a,
     .navlink-disabled {
         border-radius: 0;
@@ -200,8 +199,7 @@ ul.nav-tertiary {
     }
 }
 
-[dir="rtl"] .nav-tertiary,
-[dir="rtl"] .prev-next {
+[dir="rtl"] .nav-tertiary {
     > :first-child,
     > :first-child > a,
     > :first-child > span {
