@@ -575,7 +575,7 @@ div.multi-edit {
  */
 
 .txp-form-field-textarea,
-.txp-form-field-textarea .txp-input,
+.txp-form-field-textarea .txp-label,
 .txp-form-field-textarea .txp-value {
     -webkit-flex: none; // Safari 7/8
     -ms-flex: none; // IE 10
@@ -585,15 +585,16 @@ div.multi-edit {
 }
 
 /**
- * Don't flex form fields in for main content panes, login panes and
- * details panes.
+ * Don't flex form fields in for main content panes, login panes, details panes
+ * and file upload forms.
  */
 
 .txp-layout-4col-cell-1-2-3,
 .txp-login,
-.txp-details {
+.txp-details,
+.upload-form {
     .txp-form-field,
-    .txp-input,
+    .txp-label,
     .txp-value {
         display: block;
     }
