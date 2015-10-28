@@ -487,14 +487,14 @@ div.multi-edit {
  *
  * Example HTML:
  *
- * <p>
+ * <div class="txp-form-field">
  *     <span class="txp-label">
  *         <label>Label <a class="pophelp">i</a></label>
  *     </span>
  *     <span class="txp-value">
  *         <input type="text" size="32">
  *     </span>
- * </p>
+ * </div>
  */
 
 .txp-label,
@@ -502,11 +502,12 @@ div.multi-edit {
     -webkit-flex: 1; // Safari 7/8
     -ms-flex: 1 1 0%; // IE 10
     flex: 1; // Modern browsers (2014/2015 W3C spec)
-    max-width: 29em;
+    min-height: 2.1538462em; // 28px / 13px
+    max-width: 29em; // 377px / 13px
 }
 
 /**
- * Keeps non-editable values on same baseline, to prevent content jumping.
+ * TODO: Keeps non-editable values on same baseline, to prevent content jumping.
  *
  * Appears on:
  *
@@ -514,10 +515,10 @@ div.multi-edit {
  *
  * Example HTML:
  *
- * <p>
+ * <div class="txp-form-field">
  *     <span class="txp-label-fixed">Form name</span>
  *     <span class="txp-value-fixed">default</span>
- * </p>
+ * </div>
  */
 
 .txp-value-fixed {
@@ -556,7 +557,31 @@ div.multi-edit {
     -ms-flex-align: baseline; // IE 10
     align-items: baseline; // Modern browsers (2014/2015 W3C spec)
     margin: 1em 0;
-    min-height: 2.1538462em; // 28px / 13px
+}
+
+/**
+ * TODO: Don't flex or constrain form fields for textareas.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-form-field txp-form-field-textarea">
+ *     <span class="txp-label">
+ *         <label>Label <a class="pophelp">i</a></label>
+ *     </span>
+ *     <span class="txp-value">
+ *         <textarea></textarea>
+ *     </span>
+ * </div>
+ */
+
+.txp-form-field-textarea,
+.txp-form-field-textarea .txp-input,
+.txp-form-field-textarea .txp-value {
+    -webkit-flex: none; // Safari 7/8
+    -ms-flex: none; // IE 10
+    flex: none; // Modern browsers (2014/2015 W3C spec)
+    display: block;
+    max-width: none;
 }
 
 /**
