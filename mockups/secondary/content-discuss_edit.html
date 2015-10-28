@@ -138,7 +138,7 @@
             <form class="edit-form" id="discuss_edit_form" method="post" action="#">
                 <section class="txp-edit">
                     <h2>Edit comment</h2>
-                    <p class="edit-status">
+                    <div class="txp-form-field edit-status">
                         <span class="txp-label"><label for="status">Status</label></span>
                         <span class="txp-value">
                             <select id="status" name="visible">
@@ -147,31 +147,31 @@
                                 <option value="0">Unmoderated</option>
                             </select>
                         </span>
-                    </p>
-                    <p class="edit-name">
+                    </div>
+                    <div class="txp-form-field edit-name">
                         <span class="txp-label"><label for="name">Name</label></span>
                         <span class="txp-value"><input id="name" name="name" type="text" size="32" value="Donald Swain"></span>
-                    </p>
-                    <p class="edit-ip">
+                    </div>
+                    <div class="txp-form-field edit-ip">
                         <span class="txp-label">IP</span>
                         <span class="txp-value">127.0.0.1 <span aria-hidden="true">[</span><a class="action-ban" href="#">Ban</a><span aria-hidden="true">]</span></span>
-                    </p>
-                    <p class="edit-email">
+                    </div>
+                    <div class="txp-form-field edit-email">
                         <span class="txp-label"><label for="email">E-mail</label></span>
                         <span class="txp-value"><input id="email" name="email" type="email" size="32" value="donald.swain@example.com"></span>
-                    </p>
-                    <p class="edit-website">
+                    </div>
+                    <div class="txp-form-field edit-website">
                         <span class="txp-label"><label for="website">Website</label></span>
                         <span class="txp-value"><input id="website" name="web" type="text" size="32" value="example.com"></span>
-                    </p>
-                    <p class="edit-date">
+                    </div>
+                    <div class="txp-form-field edit-date">
                         <span class="txp-label">Date</span>
                         <span class="txp-value">22 Jul 2005 14:11:32</span>
-                    </p>
-                    <p class="edit-message">
+                    </div>
+                    <div class="txp-form-field edit-message">
                         <span class="txp-label"><label for="commentmessage">Message</label></span>
                         <textarea id="commentmessage" name="message" cols="64" rows="16">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea>
-                    </p>
+                    </div>
                     <p><input class="publish" type="submit" value="Save" name="step"></p>
                 </section>
             </form>
