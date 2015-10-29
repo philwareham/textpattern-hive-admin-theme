@@ -137,6 +137,17 @@
 
             <section class="txp-edit">
                 <h2>Edit file</h2>
+
+                <form class="upload-form upload-file" method="post" action="#">
+                    <div class="txp-form-field replace-file">
+                        <span class="txp-label"><label for="image-upload">Replace file&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></span>
+                        <span class="txp-input">
+                            <input id="file_replace" type="file" name="thefile">
+                            <input type="submit" value="Upload">
+                        </span>
+                    </div>
+                </form>
+
                 <div class="txp-form-field edit-file-condition">
                     <span class="txp-label">Condition</span>
                     <span class="txp-value"><span class="success">Ok</span></span>
@@ -149,16 +160,6 @@
                     <span class="txp-label">Download count</span>
                     <span class="txp-value">2</span>
                 </div>
-
-                <form class="upload-form upload-file" method="post" action="#">
-                    <div class="txp-form-field replace-file">
-                        <span class="txp-label"><label for="image-upload">Replace file&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></span>
-                        <span class="txp-input">
-                            <input id="file_replace" type="file" name="thefile">
-                            <input type="submit" value="Upload">
-                        </span>
-                    </div>
-                </form>
 
                 <div class="file-detail exists">
                     <form class="edit-form" id="file_details" method="post" action="#">
