@@ -401,29 +401,39 @@ div.multi-edit {
  *
  * Anchor elements kept to one line to prevent space between buttons.
  *
- * TODO: check if this would be better via flexbox instead?
- *
- * @see .nav-tertiary
- *
  * Example HTML:
  *
  * <div class="txp-navigation" id="image_navigation">
  *     <p class="nav-tertiary pageby">
  *         <a class="navlink-active">15</a><a class="navlink">25</a><a class="navlink">50</a>
  *     </p>
- *     <ul class="nav-tertiary prev-next">
- *         Content
- *     </ul>
+ *     <nav class="prev-next">
+ *         <span class="disabled"><span class="ui-icon ui-icon-arrowthick-1-w">← Prev</span></span>
+ *         <form>
+ *             <label>Page</label>
+ *             <input class="current-page">
+ *             of <span class="total-pages">2</span>
+ *         </form>
+ *         <a><span class="ui-icon ui-icon-arrowthick-1-e">Next →</span></a>
+ *     </nav>
  * </div>
  */
 
 .txp-navigation {
-    .pageby {
-        float: left;
-    }
+    @extend .clearfix;
+}
 
-    .prev-next {
-        float: right;
+.pageby {
+    float: left;
+    margin: 1em 0;
+}
+
+.prev-next {
+    float: right;
+    margin: 1em 0;
+
+    form {
+        display: inline-block;
     }
 }
 
@@ -431,7 +441,7 @@ div.multi-edit {
  * Swap margin positions in RTL languages.
  */
 
-[dir="rtl"] .txp-navigation {
+[dir="rtl"] {
     .pageby {
         float: right;
     }

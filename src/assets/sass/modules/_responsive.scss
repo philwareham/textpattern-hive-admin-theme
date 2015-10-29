@@ -267,14 +267,12 @@
     }
 
     /**
-     * Remove float from `.txp-navigation` elements.
+     * Remove float from list navigators on list panels.
      */
 
-    .txp-navigation {
-        .pageby,
-        .prev-next {
-            float: none;
-        }
+    .pageby,
+    .prev-next {
+        float: none;
     }
 
     /**

@@ -273,10 +273,19 @@
             </form>
 
             <div class="txp-navigation" id="list_navigation">
-                <p class="nav-tertiary pageby"><a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a></p>
-                <ul class="nav-tertiary prev-next">
-                    <li><span class="navlink-disabled" aria-disabled="true">Previous</span></li><li><a class="navlink-active" href="#">1</a></li><li><a class="navlink" href="#">2</a></li><li><a class="navlink" rel="next" href="#">Next</a></li>
-                </ul>
+                <div class="nav-tertiary pageby">
+                    <a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a>
+                </div>
+
+                <nav class="prev-next">
+                    <span class="disabled" aria-disabled="true" aria-label="← Prev"><span class="ui-icon ui-icon-arrowthick-1-w">← Prev</span></span>
+                    <form method="get" action="index.php">
+                        <label for="current-page">Page</label>
+                        <input class="current-page" id="current-page" name="page" type="text" size="4" inputmode="numeric" pattern="[0-9]+" value="1" />
+                        of <span class="total-pages">2</span>
+                    </form>
+                    <a rel="next" title="Next →" aria-label="Next →" href="#"><span class="ui-icon ui-icon-arrowthick-1-e">Next →</span></a>
+                </nav>
             </div>
 
         </div><!-- /txp-layout-1col -->

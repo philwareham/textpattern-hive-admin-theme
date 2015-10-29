@@ -152,17 +152,16 @@ button.destroy {
 }
 
 /**
- * Button sets - either `.nav-tertiary` or `.prev-next` depending on context.
+ * Tertiary button sets.
  *
  * Anchor elements kept to one line to prevent space between buttons.
+ *
+ * TODO: check if this would be better via flexbox instead?
  *
  * Example HTML:
  *
  * <p class="nav-tertiary">
  *     <a class="navlink-active">Page 1</a><a class="navlink">Page 2</a>
- * </p>
- * <p class="prev-next">
- *     <a class="navlink">Previous</a><a class="navlink">Next</a>
  * </p>
  */
 
