@@ -9,7 +9,9 @@
 
 
 
-// global modules
+/* ==========================================================================
+   Global
+   ========================================================================== */
 
 @import "core/base";
 @import "modules/grid";
@@ -25,7 +27,11 @@
 @import "modules/lists";
 @import "modules/tables";
 
-// layout modules
+
+
+/* ==========================================================================
+   Layout modules
+   ========================================================================== */
 
 @import "modules/container";
 @import "modules/header";
@@ -33,4 +39,61 @@
 @import "modules/navigation";
 @import "modules/layout-shared";
 @import "modules/layout-specific";
+
+
+
+/* ==========================================================================
+   jQuery UI core
+   ========================================================================== */
+
+@import "modules/jquery-ui/core";
+
+
+
+/* ==========================================================================
+   jQuery UI Interactions
+   ========================================================================== */
+
+// comment out any components that are not required
+@import "modules/jquery-ui/draggable";
+@import "modules/jquery-ui/resizable";
+@import "modules/jquery-ui/selectable";
+@import "modules/jquery-ui/sortable";
+
+
+
+/* ==========================================================================
+   jQuery UI Widgets
+   ========================================================================== */
+
+// comment out any components that are not required
+@import "modules/jquery-ui/accordion";
+@import "modules/jquery-ui/autocomplete";
+@import "modules/jquery-ui/button";
+@import "modules/jquery-ui/datepicker";
+@import "modules/jquery-ui/dialog";
+@import "modules/jquery-ui/menu";
+@import "modules/jquery-ui/progressbar";
+@import "modules/jquery-ui/selectmenu";
+@import "modules/jquery-ui/slider";
+@import "modules/jquery-ui/spinner";
+@import "modules/jquery-ui/tabs";
+@import "modules/jquery-ui/tooltip";
+
+
+
+/* ==========================================================================
+   jQuery UI Icons
+   ========================================================================== */
+
+// comment out any components that are not required
+@import "modules/jquery-ui/icons";
+@import "modules/jquery-ui/icons-additions"; // requires icons module
+
+
+
+/* ==========================================================================
+   Responsive layout
+   ========================================================================== */
+
 @import "modules/responsive";
