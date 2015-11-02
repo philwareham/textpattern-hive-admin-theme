@@ -29,8 +29,8 @@ class hive_theme extends \Textpattern\Admin\Theme
 {
     function html_head()
     {
-        $out[] = '<link rel="stylesheet" href="vendors/jquery/ui/css/textpattern/jquery-ui.min.css">';
         $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/textpattern.min.css">';
+        $out[] = '<link rel="stylesheet" href="'.$this->url.'assets/css/jquery-ui.min.css">';
 
         // Start of custom CSS toggles (see README.textile for usage instructions).
         if (defined('hive_theme_hide_branding')) {
