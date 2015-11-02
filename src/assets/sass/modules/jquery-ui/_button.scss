@@ -1,0 +1,318 @@
+/* Button
+   ========================================================================== */
+
+/**
+ * jQuery UI Button.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/button/
+ *
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Remove iOS Safari default styling.
+ * 3. The `overflow` property removes extra width in IE.
+ * 4. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ *
+ * Example HTML:
+ *
+ * <a class="ui-button ui-button-text-only">
+ *     <span class="ui-button-text">Button</span>
+ * </a>
+ */
+
+.ui-button {
+    @include gradient-linear($color-gradient-from, $color-gradient-to);
+
+    transition: box-shadow 0.1s linear;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    /* 1 */
+    font-size: 100%;
+    font-size: 1em;
+    line-height: 1.3846154em; // 18px / 13px
+    /* 2 */
+    -webkit-appearance: none;
+    position: relative;
+    display: inline-block;
+    /* 3 */
+    overflow: visible;
+    margin: 0 0.1em 0 0;
+    border: solid 1px $color-gradient-border;
+    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
+    height: 2.1538462em; // 28px / 13px
+    font-family: $font-sans-serif;
+    text-align: center;
+    vertical-align: baseline;
+    color: $color-text;
+    box-shadow: $inset-highlighting;
+    text-shadow: $text-shadow-light;
+    /* 4 */
+    cursor: pointer;
+
+    &:hover {
+        @include gradient-linear(lighten($color-gradient-from, 4%), lighten($color-gradient-to, 4%));
+
+        border-color: darken($color-gradient-border, 13%);
+        text-decoration: none;
+    }
+
+    &:active {
+        @include gradient-linear(darken($color-gradient-from, 3%), darken($color-gradient-to, 3%));
+
+        border-color: darken($color-gradient-border, 13%);
+        color: darken($color-text, 10%);
+        box-shadow: inset 0 0.2em 0.25em rgba(#000000, 0.15);
+        text-decoration: none;
+    }
+
+    &:focus {
+        border-color: $color-link-focus;
+        box-shadow: $inset-highlighting, 0 0 7px $color-link-focus-glow;
+        outline: 0;
+    }
+}
+
+/**
+ * Remove some styling from `a` links as buttons.
+ */
+
+a.ui-button {
+    color: $color-text;
+    text-decoration: none;
+}
+
+/**
+ * Focus styling for buttons.
+ *
+ * 1. `!important` required to override specificity.
+ */
+
+.ui-button.ui-state-focus {
+    /* 1 */
+    border-color: $color-link-focus !important;
+    box-shadow: $inset-highlighting, 0 0 7px $color-link-focus-glow;
+    outline: 0;
+}
+
+/**
+ * Single-icon-only button.
+ *
+ * To make room for the icon, a width needs to be set here.
+ *
+ * Example HTML:
+ *
+ * <a class="ui-button ui-button-icon-only">
+ *     <span class="ui-button-icon-primary ui-icon ui-icon-locked"></span>
+ *     <span class="ui-button-text">Button one icon, no text</span>
+ * </a>
+ */
+
+.ui-button-icon-only {
+    width: 2.2em;
+}
+
+/**
+ * `button` elements seem to need a little more width.
+ *
+ * Example HTML:
+ *
+ * <button class="ui-button ui-button-icon-only">
+ *     <span class="ui-button-icon-primary ui-icon ui-icon-locked"></span>
+ *     <span class="ui-button-text">Button one icon, no text</span>
+ * </button>
+ */
+
+button.ui-button-icon-only {
+    width: 2.4em;
+}
+
+/**
+ * Double-icon-only button.
+ *
+ * To make room for the icon, a width needs to be set here.
+ *
+ * Example HTML:
+ *
+ * <a class="ui-button ui-button-icons-only">
+ *     <span class="ui-button-icon-primary ui-icon ui-icon-locked"></span>
+ *     <span class="ui-button-text">Button two icons, no text</span>
+ *     <span class="ui-button-icon-secondary ui-icon ui-icon-disk"></span>
+ * </a>
+ */
+
+.ui-button-icons-only {
+    width: 3.4em;
+}
+
+/**
+ * `button` elements seem to need a little more width.
+ *
+ * Example HTML:
+ *
+ * <button class="ui-button ui-button-icons-only">
+ *     <span class="ui-button-icon-primary ui-icon ui-icon-locked"></span>
+ *     <span class="ui-button-text">Button two icons, no text</span>
+ *     <span class="ui-button-icon-secondary ui-icon ui-icon-disk"></span>
+ * </button>
+ */
+
+button.ui-button-icons-only {
+    width: 3.7em;
+}
+
+/**
+ * Button rounded corners all.
+ */
+
+.ui-button.ui-corner-all {
+    border-radius: $default-border-radius;
+}
+
+/**
+ * Button rounded corners on right only.
+ */
+
+.ui-button.ui-corner-right {
+    border-radius: 0 $default-border-radius $default-border-radius 0;
+}
+
+/**
+ * Button rounded corners on left only.
+ */
+
+.ui-button.ui-corner-left {
+    border-radius: $default-border-radius 0 0 $default-border-radius;
+}
+
+/**
+ * Button text element.
+ */
+
+.ui-button .ui-button-text {
+    display: block;
+}
+
+.ui-button-text-only .ui-button-text {
+    padding: 0;
+}
+
+.ui-button-icon-only .ui-button-text,
+.ui-button-icons-only .ui-button-text {
+    padding: 0;
+    text-indent: -9999px;
+}
+
+.ui-button-text-icon-primary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+    padding-left: 16px;
+}
+
+.ui-button-text-icon-secondary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+    padding-right: 16px;
+}
+
+/**
+ * Button icon element(s).
+ */
+
+.ui-button-icon-only .ui-icon,
+.ui-button-text-icon-primary .ui-icon,
+.ui-button-text-icon-secondary .ui-icon,
+.ui-button-text-icons .ui-icon,
+.ui-button-icons-only .ui-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.ui-button-icon-only .ui-icon {
+    left: 50%;
+    margin-left: -8px;
+}
+
+.ui-button-text-icon-primary .ui-button-icon-primary,
+.ui-button-text-icons .ui-button-icon-primary,
+.ui-button-icons-only .ui-button-icon-primary {
+    left: 0.5em;
+}
+
+.ui-button-text-icon-secondary .ui-button-icon-secondary,
+.ui-button-text-icons .ui-button-icon-secondary,
+.ui-button-icons-only .ui-button-icon-secondary {
+    right: 0.5em;
+}
+
+/**
+ * Button sets.
+ *
+ * Example HTML:
+ *
+ * <p class="ui-buttonset">
+ *     <input id="check1" type="checkbox" class="ui-helper-hidden-accessible">
+ *     <label for="check1" class="ui-button ui-button-text-only ui-corner-left">
+ *         <span class="ui-button-text">A</span>
+ *     </label>
+ *     <input id="check2" type="checkbox" class="ui-helper-hidden-accessible">
+ *     <label for="check2" class="ui-button ui-button-text-only ui-state-active" aria-pressed="true">
+ *         <span class="ui-button-text">B</span>
+ *     </label>
+ *     <input id="check3" type="checkbox" class="ui-helper-hidden-accessible">
+ *     <label for="check3" class="ui-button ui-button-text-only ui-corner-right">
+ *         <span class="ui-button-text">C</span>
+ *     </label>
+ * </p>
+ */
+
+.ui-buttonset {
+    margin-right: 0.35em;
+
+    .ui-button {
+        margin-right: -0.35em;
+    }
+}
+
+/**
+ * Checkboxes as buttons - pressed state.
+ *
+ * Example HTML:
+ *
+ * <input class="ui-helper-hidden-accessible" id="check" type="checkbox">
+ * <label for="check" class="ui-button ui-button-text-only ui-state-active">
+ *     <span class="ui-button-text">Toggle</span>
+ * </label>
+ */
+
+label.ui-state-active {
+    &.ui-button {
+        @include gradient-linear($color-selected, $color-selecting);
+
+        border-color: lighten($color-link, 42%);
+    }
+
+    &.ui-button:hover {
+        @include gradient-linear(lighten($color-selected, 3%), lighten($color-selecting, 2%));
+
+        border-color: lighten($color-link, 27%);
+    }
+
+    &.ui-button:active {
+        @include gradient-linear($color-selecting, darken($color-selecting, 5%));
+
+        border-color: lighten($color-link, 27%);
+    }
+}
+
+/**
+ * Button RTL support.
+ */
+
+[dir="rtl"] .ui-buttonset {
+    margin-right: 0;
+    margin-left: 0.5em;
+
+    .ui-button {
+        margin-right: 0;
+        margin-left: -0.35em;
+    }
+}

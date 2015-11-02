@@ -1,0 +1,159 @@
+/* Menu
+   ========================================================================== */
+
+/**
+ * jQuery UI Menu.
+ *
+ * Menus are vertical format only. Horizontal format menus are not provided by
+ * jQuery UI.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/menu/
+ *
+ * 1. Correct font size not being inherited in all browsers.
+ *
+ * Example HTML:
+ *
+ * <ul class="ui-menu">
+ *     <li class="ui-state-disabled ui-menu-item">
+ *         <a>Item 1 (disabled)</a>
+ *     </li>
+ *     <li class="ui-menu-item">
+ *         <a>Item 2</a>
+ *     </li>
+ *     <li class="ui-menu-item">
+ *         <a>
+ *             <span class="ui-menu-icon ui-icon ui-icon-caret-1-e"></span>
+ *             Item 3
+ *         </a>
+ *         <ul class="ui-menu">
+ *             <li class="ui-menu-item">
+ *                 <a>Item 3 subitem 1</a>
+ *             </li>
+ *             <li class="ui-menu-item">
+ *                 <a>Item 3 subitem 2</a>
+ *             </li>
+ *         </ul>
+ *     </li>
+ *     <li class="ui-menu-item">
+ *         <a>
+ *             <span class="ui-menu-icon ui-icon ui-icon-caret-1-e"></span>
+ *             Item 4
+ *         </a>
+ *         <ul class="ui-menu">
+ *             <li class="ui-menu-item">
+ *                 <span class="ui-menu-icon ui-icon ui-icon-caret-1-e"></span>
+ *                 <a>Item 4 subitem 1</a>
+ *                 <ul class="ui-menu">
+ *                     <li class="ui-menu-item">
+ *                         <a>Item 4 subitem 1 subsubitem 1</a>
+ *                     </li>
+ *                     <li class="ui-menu-item">
+ *                         <a>Item 4 subitem 1 subsubitem 2</a>
+ *                     </li>
+ *                 </ul>
+ *             </li>
+ *             <li class="ui-menu-item">
+ *                 <a>Item 3 subitem 2</a>
+ *             </li>
+ *         </ul>
+ *     </li>
+ * </ul>
+ */
+
+.ui-menu {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    /* 1 */
+    font-size: 100%;
+    font-size: 1em;
+    line-height: 1.38461538461538em; // 18px / 13px
+
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+    outline: 0;
+    list-style: none;
+
+    .ui-menu {
+        position: absolute;
+    }
+
+    .ui-menu-item {
+        position: relative;
+        margin: 0;
+        padding: 0.30769230769231em 1em 0.30769230769231em 0.30769230769231em; // 4px / 13px
+        cursor: pointer;
+        /* support: IE 10, see #8844 */
+        list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+
+        a {
+            color: $color-text;
+            text-decoration: none;
+        }
+    }
+
+    .ui-menu-divider {
+        margin: 0.30769230769231em 0; // 4px / 13px
+        border-width: 1px 0 0;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+    }
+
+    .ui-state-focus,
+    .ui-state-active {
+        background-color: $color-selecting;
+    }
+
+    // left-aligned
+    .ui-icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0.25em;
+        margin: auto 0;
+    }
+
+    // right-aligned
+    .ui-menu-icon {
+        right: 0;
+        left: auto;
+    }
+}
+
+/**
+ * Allow additional icons in menu items.
+ */
+
+.ui-menu-icons {
+    position: relative;
+
+    .ui-menu-item {
+        padding-left: 2em;
+    }
+}
+
+/**
+ * Menu RTL support (needs further improvements in upstream project).
+ */
+
+[dir="rtl"] .ui-menu {
+    padding: 0;
+
+    .ui-menu-item {
+        padding: 0.30769230769231em 0.30769230769231em 0.30769230769231em 1em; // 4px / 13px
+    }
+
+    // left-aligned (flipped to right)
+    .ui-icon {
+        right: 0.25em;
+        left: auto;
+    }
+
+    // right-aligned (flipped to left)
+    .ui-menu-icon {
+        right: auto;
+        left: 0;
+    }
+}

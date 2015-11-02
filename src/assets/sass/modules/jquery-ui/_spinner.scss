@@ -1,0 +1,82 @@
+/* Spinner
+   ========================================================================== */
+
+/**
+ * jQuery UI Spinner.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/spinner/
+ *
+ * Example HTML:
+ *
+ * <span class="ui-spinner">
+ *     <input type="text" class="ui-spinner-input">
+ *     <a class="ui-spinner-button ui-spinner-up ui-button ui-button-text-only">
+ *         <span class="ui-button-text">
+ *             <span class="ui-icon ui-icon-triangle-1-n">+</span>
+ *         </span>
+ *     </a>
+ *     <a class="ui-spinner-button ui-spinner-down ui-button ui-button-text-only">
+ *         <span class="ui-button-text">
+ *             <span class="ui-icon ui-icon-triangle-1-s">-</span>
+ *         </span>
+ *     </a>
+ * </span>
+ */
+
+.ui-spinner {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    padding: 0;
+    vertical-align: baseline;
+
+    .ui-spinner-input {
+        padding-right: 24px;
+    }
+
+    .ui-icon {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -8px;
+    }
+}
+
+.ui-spinner-button {
+    position: absolute;
+    right: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 42%;
+    font-size: 0.53846153846154em; // 7px / 13px
+    line-height: 1.57142857142857em; // 11px / 7px
+    overflow: hidden;
+    cursor: default;
+}
+
+.ui-spinner-up {
+    top: 0;
+}
+
+.ui-spinner-down {
+    bottom: 0;
+}
+
+/**
+ * Spinner RTL support.
+ */
+
+[dir="rtl"] {
+    .ui-spinner .ui-spinner-input {
+        padding-right: 4px;
+        padding-left: 24px;
+    }
+
+    .ui-spinner-button {
+        right: auto;
+        left: 0;
+    }
+}

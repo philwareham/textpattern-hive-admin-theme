@@ -1,0 +1,105 @@
+/* Slider
+   ========================================================================== */
+
+/**
+ * jQuery UI Slider.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/slider/
+ *
+ * Example HTML:
+ *
+ * <div class="ui-slider ui-slider-horizontal">
+ *     <div class="ui-slider-range" style="left: 17%; width: 50%;"></div>
+ *     <a class="ui-slider-handle" style="left: 17%;"></a>
+ *     <a class="ui-slider-handle" style="left: 67%;"></a>
+ * </div>
+ */
+
+.ui-slider {
+    position: relative;
+    text-align: left;
+
+    .ui-slider-handle {
+        touch-action: none;
+        position: absolute;
+        z-index: 2;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        cursor: default;
+        background-color: $color-background;
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+    }
+
+    .ui-slider-range {
+        position: absolute;
+        z-index: 1;
+        display: block;
+        border: 0;
+        background-position: 0 0;
+        font-size: 0.7em;
+    }
+}
+
+/**
+ * Slider - horizontal format.
+ *
+ * Example HTML:
+ *
+ * <div class="ui-slider ui-slider-horizontal">
+ */
+
+.ui-slider-horizontal {
+    margin-bottom: 1em;
+    height: 12px;
+
+    .ui-slider-handle {
+        top: -5px;
+        margin-left: -10px;
+    }
+
+    .ui-slider-range {
+        top: 0;
+        height: 100%;
+    }
+
+    .ui-slider-range-min {
+        left: 0;
+    }
+
+    .ui-slider-range-max {
+        right: 0;
+    }
+}
+
+/**
+ * Slider - vertical format.
+ *
+ * Example HTML:
+ *
+ * <div class="ui-slider ui-slider-vertical">
+ */
+
+.ui-slider-vertical {
+    width: 12px;
+    height: 100px;
+
+    .ui-slider-handle {
+        left: -20px;
+        margin-bottom: -10px;
+    }
+
+    .ui-slider-range {
+        left: 0;
+        width: 100%;
+    }
+
+    .ui-slider-range-min {
+        bottom: 0;
+    }
+
+    .ui-slider-range-max {
+        top: 0;
+    }
+}
