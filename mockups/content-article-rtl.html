@@ -156,13 +156,13 @@
                     <div class="text">
                         <div class="txp-form-field title">
                             <span class="txp-label"><label for="title">Title&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></span>
-                            <span class="txp-input">
+                            <span class="txp-value">
                                 <input id="title" name="Title" type="text" size="64" spellcheck="true" value="Example article title">
                             </span>
                         </div>
                         <div class="txp-form-field body">
                             <span class="txp-label"><label for="body">Body&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></span>
-                            <span class="txp-input"><textarea id="body" name="Body" cols="64" rows="24" spellcheck="true">h3. What do you want to do next?
+                            <span class="txp-value"><textarea id="body" name="Body" cols="64" rows="24" spellcheck="true">h3. What do you want to do next?
 
 * Modify or even delete this article? The "article list":/textpattern/index.php?event=list is the place to start.
 * Change this site's name, or modify the style of the URLs? It's all up to your "preferences":/textpattern/index.php?event=prefs.
@@ -187,7 +187,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                             <div class="txp-form-field-instructions">
                                 <p>Optional excerpt used as a short summary of the article, and often displayed on landing pages.</p>
                             </div>
-                            <span class="txp-input"><textarea class="txp-form-field-input" id="excerpt" name="Excerpt" cols="64" rows="4" spellcheck="true">Example of an article excerpt here.</textarea></span>
+                            <span class="txp-value"><textarea class="txp-form-field-input" id="excerpt" name="Excerpt" cols="64" rows="4" spellcheck="true">Example of an article excerpt here.</textarea></span>
                         </div>
                     </div>
 
@@ -224,7 +224,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         <div role="group">
                             <div class="txp-form-field status">
                                 <span class="txp-label"><label class="txp-form-field-label" for="status">Status</label></span>
-                                <span class="txp-input">
+                                <span class="txp-value">
                                     <select id="status" name="Status">
                                         <option value="1">Draft</option>
                                         <option value="2">Hidden</option>
@@ -236,7 +236,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                             </div>
                             <div class="txp-form-field section">
                                 <span class="txp-label"><label for="section">Section&#160;<span class="section-edit"><span aria-hidden="true">[</span><a title="Edit" href="#">Edit</a><span aria-hidden="true">]</span></span></label></span>
-                                <span class="txp-input">
+                                <span class="txp-value">
                                     <select id="section" name="Section">
                                         <option value="about">About</option>
                                         <option value="articles" selected="selected">Articles</option>
@@ -246,7 +246,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                             <div id="categories_group">
                                 <div class="txp-form-field category category-1">
                                     <span class="txp-label"><label for="category-1">Category 1&#160;<span class="category-edit"><span aria-hidden="true">[</span><a title="Edit" href="#">Edit</a><span aria-hidden="true">]</span></span></label></span>
-                                    <span class="txp-input">
+                                    <span class="txp-value">
                                         <select id="category-1" name="Category1">
                                             <option value="" selected="selected">&#160;</option>
                                             <option value="hope-for-the-future" data-level="0">Hope for the future</option>
@@ -257,7 +257,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                 </div>
                                 <div class="txp-form-field category category-2">
                                     <span class="txp-label"><label for="category-2">Category 2</label></span>
-                                    <span class="txp-input">
+                                    <span class="txp-value">
                                         <select class="txp-form-field-input" id="category-2" name="Category2">
                                             <option value="" selected="selected">&#160;</option>
                                             <option value="hope-for-the-future" data-level="0">Hope for the future</option>
@@ -277,7 +277,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         <div class="toggle" id="dates" role="group">
                             <div class="txp-form-field date posted">
                                 <span class="txp-label"><label for="year">Publish date&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></span>
-                                <span class="txp-input">
+                                <span class="txp-value">
                                     <input class="txp-form-field-input input-year" id="year" name="year"
                                         type="text"
                                         size="4"
@@ -315,7 +315,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                             </div>
                             <div class="txp-form-field time posted">
                                 <span class="txp-label"><label class="txp-form-field-label" for="hour">Publish time</label></span>
-                                <span class="txp-input">
+                                <span class="txp-value">
                                     <input class="txp-form-field-input input-hour" id="hour" name="hour"
                                         type="text"
                                         size="2"
@@ -356,7 +356,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                             </div>
                             <div class="txp-form-field date expires">
                                 <span class="txp-label"><label class="txp-form-field-label" for="exp_year">Expiration date&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></span>
-                                <span class="txp-input">
+                                <span class="txp-value">
                                     <input class="txp-form-field-input input-year" id="exp_year" name="exp_year"
                                         type="text"
                                         size="4"
@@ -391,7 +391,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                             </div>
                             <div class="txp-form-field time expires">
                                 <span class="txp-label"><label class="txp-form-field-label" for="exp_hour">Expiration time</label></span>
-                                <span class="txp-input">
+                                <span class="txp-value">
                                     <input class="txp-form-field-input input-hour" id="exp_hour" name="exp_hour"
                                         type="text"
                                         size="2"
@@ -450,7 +450,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         </h3>
                         <div class="toggle" id="advanced" role="group">
                             <div class="txp-form-field markup markup-body">
-                                <span class="txp-input"><label class="txp-form-field-label" for="markup-body">Article markup</label></span>
+                                <span class="txp-value"><label class="txp-form-field-label" for="markup-body">Article markup</label></span>
                                 <span class="txp-value">
                                     <select class="txp-form-field-input" id="markup-body" name="textile_body">
                                         <option value="0">Leave text untouched</option>
@@ -460,7 +460,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                 </span>
                             </div>
                             <div class="txp-form-field markup markup-excerpt">
-                                <span class="txp-input"><label class="txp-form-field-label" for="markup-excerpt">Excerpt markup</label>
+                                <span class="txp-value"><label class="txp-form-field-label" for="markup-excerpt">Excerpt markup</label>
                                 <span class="txp-value">
                                     <select class="txp-form-field-input" id="markup-excerpt" name="textile_excerpt">
                                         <option value="0">Leave text untouched</option>
@@ -470,7 +470,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                 </span>
                             </div>
                             <div class="txp-form-field override-form">
-                                <span class="txp-input"><label class="txp-form-field-label" for="override-form">Override form&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
+                                <span class="txp-value"><label class="txp-form-field-label" for="override-form">Override form&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
                                 <span class="txp-value">
                                     <select class="txp-form-field-input" id="override-form" name="override_form">
                                         <option value="" selected="selected">&#160;</option>
@@ -511,7 +511,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         </h3>
                         <div class="toggle" id="image" role="group">
                             <div class="txp-form-field article-image">
-                                <span class="txp-input"><label for="article-image">Article image&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></span>
+                                <span class="txp-value"><label for="article-image">Article image&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></span>
                                 <span class="txp-value"><input id="article-image" name="Image" type="text" size="32"></span>
                             </div>
                         </div>
@@ -523,11 +523,11 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         </h3>
                         <div class="toggle" id="custom_field" role="group">
                             <div class="txp-form-field custom-field custom-1">
-                                <span class="txp-input"><label for="custom-1">custom1</label></span>
+                                <span class="txp-value"><label for="custom-1">custom1</label></span>
                                 <span class="txp-value"><input id="custom-1" name="custom_1" type="text" size="32"></span>
                             </div>
                             <div class="txp-form-field custom-field custom-2">
-                                <span class="txp-input"><label for="custom-2">custom2</label></span>
+                                <span class="txp-value"><label for="custom-2">custom2</label></span>
                                 <span class="txp-value"><input id="custom-2" name="custom_2" type="text" size="32"></span>
                             </div>
                         </div>
