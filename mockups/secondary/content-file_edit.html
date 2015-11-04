@@ -194,75 +194,79 @@
                             </h3>
                             <div class="toggle" id="dates" role="group">
                                 <div class="txp-form-field date edit-file-posted">
-                                    <label class="txp-form-field-label" for="year">Publish date&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                                    <input class="txp-form-field-input input-year" id="year" name="year"
-                                        type="text"
-                                        size="4"
-                                        maxlength="4"
-                                        inputmode="numeric"
-                                        pattern="[0-9]{4}"
-                                        title="Year"
-                                        aria-label="Year"
-                                        placeholder="yyyy"
-                                        value="2014">
-                                    <span role="separator">/</span>
-                                    <input class="txp-form-field-input input-month" id="month" name="month"
-                                        type="text"
-                                        size="2"
-                                        maxlength="2"
-                                        inputmode="numeric"
-                                        pattern="(0[1-9]|1[012])"
-                                        title="Month"
-                                        aria-label="Month"
-                                        placeholder="mm"
-                                        value="09">
-                                    <span role="separator">/</span>
-                                    <input class="txp-form-field-input input-day" id="day" name="day"
-                                        type="text"
-                                        size="2"
-                                        maxlength="2"
-                                        inputmode="numeric"
-                                        pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])"
-                                        title="Day"
-                                        aria-label="Day"
-                                        placeholder="dd"
-                                        value="08">
-                                    <a class="txp-datepicker-button" href="#" title="Datepicker" aria-label="Datepicker"><span class="ui-icon ui-icon-calendar">Datepicker</span></a>
+                                    <span class="txp-label"><label for="year">Publish date&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></span>
+                                    <span class="txp-value">
+                                        <input class="input-year" id="year" name="year"
+                                            type="text"
+                                            size="4"
+                                            maxlength="4"
+                                            inputmode="numeric"
+                                            pattern="[0-9]{4}"
+                                            title="Year"
+                                            aria-label="Year"
+                                            placeholder="yyyy"
+                                            value="2014">
+                                        <span role="separator">/</span>
+                                        <input class="input-month" id="month" name="month"
+                                            type="text"
+                                            size="2"
+                                            maxlength="2"
+                                            inputmode="numeric"
+                                            pattern="(0[1-9]|1[012])"
+                                            title="Month"
+                                            aria-label="Month"
+                                            placeholder="mm"
+                                            value="09">
+                                        <span role="separator">/</span>
+                                        <input class="input-day" id="day" name="day"
+                                            type="text"
+                                            size="2"
+                                            maxlength="2"
+                                            inputmode="numeric"
+                                            pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])"
+                                            title="Day"
+                                            aria-label="Day"
+                                            placeholder="dd"
+                                            value="08">
+                                        <a class="txp-datepicker-button" href="#" title="Datepicker" aria-label="Datepicker"><span class="ui-icon ui-icon-calendar">Datepicker</span></a>
+                                    </span>
                                 </div>
                                 <div class="txp-form-field time edit-file-posted">
-                                    <label class="txp-form-field-label" for="hour">Publish time</label>
-                                    <input class="txp-form-field-input input-hour" id="hour" name="hour"
-                                        type="text"
-                                        size="2"
-                                        maxlength="2"
-                                        inputmode="numeric"
-                                        pattern="(0[0-9]|1[0-9]|2[0-3])"
-                                        title="Hour"
-                                        aria-label="Hour"
-                                        placeholder="hh"
-                                        value="15">
-                                    <span role="separator">:</span>
-                                    <input class="txp-form-field-input input-minute" id="minute" name="minute"
-                                        type="text"
-                                        size="2"
-                                        maxlength="2"
-                                        inputmode="numeric"
-                                        pattern="([0-5][0-9])"
-                                        title="Minute"
-                                        aria-label="Minute"
-                                        placeholder="mm"
-                                        value="20">
-                                    <span role="separator">:</span>
-                                    <input class="txp-form-field-input input-second" id="second" name="second"
-                                        type="text"
-                                        size="2"
-                                        maxlength="2"
-                                        inputmode="numeric"
-                                        pattern="([0-5][0-9])"
-                                        title="Second"
-                                        aria-label="Second"
-                                        placeholder="ss"
-                                        value="07">
+                                    <span class="txp-label"><label for="hour">Publish time</label></span>
+                                    <span class="txp-value">
+                                        <input class="input-hour" id="hour" name="hour"
+                                            type="text"
+                                            size="2"
+                                            maxlength="2"
+                                            inputmode="numeric"
+                                            pattern="(0[0-9]|1[0-9]|2[0-3])"
+                                            title="Hour"
+                                            aria-label="Hour"
+                                            placeholder="hh"
+                                            value="15">
+                                        <span role="separator">:</span>
+                                        <input class="input-minute" id="minute" name="minute"
+                                            type="text"
+                                            size="2"
+                                            maxlength="2"
+                                            inputmode="numeric"
+                                            pattern="([0-5][0-9])"
+                                            title="Minute"
+                                            aria-label="Minute"
+                                            placeholder="mm"
+                                            value="20">
+                                        <span role="separator">:</span>
+                                        <input class="input-second" id="second" name="second"
+                                            type="text"
+                                            size="2"
+                                            maxlength="2"
+                                            inputmode="numeric"
+                                            pattern="([0-5][0-9])"
+                                            title="Second"
+                                            aria-label="Second"
+                                            placeholder="ss"
+                                            value="07">
+                                    </span>
                                 </div>
                                 <div class="txp-form-field posted-now">
                                     <input class="checkbox" type="checkbox" name="publish_now" id="publish_now" value="1">

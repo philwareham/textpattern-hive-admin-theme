@@ -338,24 +338,29 @@ input.input-xsmall {
  * Example HTML:
  *
  * <div class="txp-form-field date posted">
- *     <label class="txp-form-field-label">Publish date</label>
- *     <input class="txp-form-field-input input-year">
- *     <span role="separator">/</span>
- *     <input class="txp-form-field-input input-month">
- *     <span role="separator">/</span>
- *     <input class="txp-form-field-input input-day">
- *     <a class="txp-datepicker-button">
- *         <span class="ui-icon ui-icon-calendar">Datepicker</span>
- *     </a>
+ *     <span class="txp-label">
+ *         <label>Publish date</label>
+ *     </span>
+ *     <span class="txp-value">
+ *         <input class="input-year">
+ *         <span role="separator">/</span>
+ *         <input class="input-month">
+ *         <span role="separator">/</span>
+ *         <input class="input-day">
+ *     </span>
  * </div>
  *
  * <div class="txp-form-field time posted">
- *     <label class="txp-form-field-label">Publish time</label>
- *     <input class="txp-form-field-input input-hour">
- *     <span role="separator">:</span>
- *     <input class="txp-form-field-input input-minute">
- *     <span role="separator">:</span>
- *     <input class="txp-form-field-input input-second">
+ *     <span class="txp-label">
+ *         <label>Publish time</label>
+ *     </span>
+ *     <span class="txp-value">
+ *         <input class="input-hour">
+ *         <span role="separator">:</span>
+ *         <input class="input-minute">
+ *         <span role="separator">:</span>
+ *         <input class="input-second">
+ *     </span>
  * </div>
  */
 
