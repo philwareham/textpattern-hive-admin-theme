@@ -138,55 +138,55 @@
 
                 <form class="upload-form upload-file" method="post" action="#">
                     <div class="txp-form-field replace-file">
-                        <span class="txp-label"><label for="image-upload">Replace file&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></span>
-                        <span class="txp-value">
+                        <div class="txp-form-field-label"><label for="image-upload">Replace file&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
+                        <div class="txp-form-field-value">
                             <input id="file_replace" type="file" name="thefile">
                             <input type="submit" value="Upload">
-                        </span>
+                        </div>
                     </div>
                 </form>
 
                 <div class="txp-form-field edit-file-condition">
-                    <span class="txp-label">Condition</span>
-                    <span class="txp-value"><span class="success">Ok</span></span>
+                    <div class="txp-form-field-label">Condition</div>
+                    <div class="txp-form-field-value"><span class="success">Ok</span></div>
                 </div>
                 <div class="txp-form-field edit-file-name">
-                    <span class="txp-label">Name</span>
-                    <span class="txp-value"><a href="#" title="Download">test-file.zip</a></span>
+                    <div class="txp-form-field-label">Name</div>
+                    <div class="txp-form-field-value"><a href="#" title="Download">test-file.zip</a></div>
                 </div>
                 <div class="txp-form-field edit-file-download-count">
-                    <span class="txp-label">Download count</span>
-                    <span class="txp-value">2</span>
+                    <div class="txp-form-field-label">Download count</div>
+                    <div class="txp-form-field-value">2</div>
                 </div>
 
                 <div class="file-detail exists">
                     <form class="edit-form" id="file_details" method="post" action="#">
                         <div class="txp-form-field edit-file-status">
-                            <span class="txp-label"><label for="file_status">File status</label></span>
-                            <span class="txp-value">
+                            <div class="txp-form-field-label"><label for="file_status">File status</label></div>
+                            <div class="txp-form-field-value">
                                 <select name="status" id="file_status">
                                     <option value="2">Hidden</option>
                                     <option value="3">Pending</option>
                                     <option value="4" selected="selected">Live</option>
                                 </select>
-                            </span>
+                            </div>
                         </div>
                         <div class="txp-form-field edit-file-title">
-                            <span class="txp-label"><label for="file_title">Title</label></span>
-                            <span class="txp-value"><input id="file_title" name="file_title" type="text" size="32"></span>
+                            <div class="txp-form-field-label"><label for="file_title">Title</label></div>
+                            <div class="txp-form-field-value"><input id="file_title" name="file_title" type="text" size="32"></div>
                         </div>
                         <div class="txp-form-field edit-file-category">
-                            <span class="txp-label"><label for="file_category">Category</label></span>
-                            <span class="txp-value">
+                            <div class="txp-form-field-label"><label for="file_category">Category</label></div>
+                            <div class="txp-form-field-value">
                                 <select id="file_category" name="file_category">
                                     <option value="" selected="selected">&#160;</option>
                                 </select>
                                 <span aria-hidden="true">[</span><a href="#" title="Edit">Edit</a><span aria-hidden="true">]</span>
-                            </span>
+                            </div>
                         </div>
                         <div class="txp-form-field txp-form-field-textarea edit-file-description">
-                            <span class="txp-label"><label for="file_description">Description</label></span>
-                            <span class="txp-label"><textarea id="file_description" name="file_description" cols="64" rows="4"></textarea></span>
+                            <div class="txp-form-field-label"><label for="file_description">Description</label></div>
+                            <div class="txp-form-field-label"><textarea id="file_description" name="file_description" cols="64" rows="4"></textarea></div>
                         </div>
                         <section class="txp-details" id="file_created" aria-labelledby="file_created-label">
                             <h3 class="txp-summary expanded" id="file_created-label">
@@ -194,8 +194,8 @@
                             </h3>
                             <div class="toggle" id="dates" role="group">
                                 <div class="txp-form-field date edit-file-posted">
-                                    <span class="txp-label"><label for="year">Publish date&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></span>
-                                    <span class="txp-value">
+                                    <div class="txp-form-field-label"><label for="year">Publish date&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
+                                    <div class="txp-form-field-value">
                                         <input class="input-year" id="year" name="year"
                                             type="text"
                                             size="4"
@@ -229,11 +229,11 @@
                                             placeholder="dd"
                                             value="08">
                                         <a class="txp-datepicker-button" href="#" title="Datepicker" aria-label="Datepicker"><span class="ui-icon ui-icon-calendar">Datepicker</span></a>
-                                    </span>
+                                    </div>
                                 </div>
                                 <div class="txp-form-field time edit-file-posted">
-                                    <span class="txp-label"><label for="hour">Publish time</label></span>
-                                    <span class="txp-value">
+                                    <div class="txp-form-field-label"><label for="hour">Publish time</label></div>
+                                    <div class="txp-form-field-value">
                                         <input class="input-hour" id="hour" name="hour"
                                             type="text"
                                             size="2"
@@ -266,7 +266,7 @@
                                             aria-label="Second"
                                             placeholder="ss"
                                             value="07">
-                                    </span>
+                                    </div>
                                 </div>
                                 <div class="txp-form-field posted-now">
                                     <input class="checkbox" type="checkbox" name="publish_now" id="publish_now" value="1">

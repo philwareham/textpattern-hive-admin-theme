@@ -223,17 +223,17 @@
      * Example HTML:
      *
      * <p>
-     *     <span class="txp-label">
+     *     <div class="txp-form-field-label">
      *         <label>Label <a class="pophelp">i</a></label>
      *     </span>
-     *     <span class="txp-value">
+     *     <div class="txp-form-field-value">
      *         <input type="text" size="32">
      *     </span>
      * </p>
      */
 
-    .txp-label,
-    .txp-value {
+    .txp-form-field-label,
+    .txp-form-field-value {
         display: block;
         min-height: inherit;
     }
@@ -242,7 +242,7 @@
      * Remove inline alignment margin values when collapsed.
      */
 
-    .txp-value {
+    .txp-form-field-value {
         .jquery-ui-buttonset, // This is an optional jQuery UI widget (not used in core layouts).
         input,
         select {

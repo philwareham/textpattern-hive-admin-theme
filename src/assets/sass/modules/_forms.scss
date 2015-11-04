@@ -338,10 +338,10 @@ input.input-xsmall {
  * Example HTML:
  *
  * <div class="txp-form-field date posted">
- *     <span class="txp-label">
+ *     <div class="txp-form-field-label">
  *         <label>Publish date</label>
  *     </span>
- *     <span class="txp-value">
+ *     <div class="txp-form-field-value">
  *         <input class="input-year">
  *         <span role="separator">/</span>
  *         <input class="input-month">
@@ -351,10 +351,10 @@ input.input-xsmall {
  * </div>
  *
  * <div class="txp-form-field time posted">
- *     <span class="txp-label">
+ *     <div class="txp-form-field-label">
  *         <label>Publish time</label>
  *     </span>
- *     <span class="txp-value">
+ *     <div class="txp-form-field-value">
  *         <input class="input-hour">
  *         <span role="separator">:</span>
  *         <input class="input-minute">

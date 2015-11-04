@@ -491,54 +491,6 @@ div.multi-edit {
 }
 
 /**
- * TODO: Label/value inline two-column layouts within panes.
- *
- * Note: this is collapsed to a one-column format on mobile layout.
- *
- * Example HTML:
- *
- * <div class="txp-form-field">
- *     <span class="txp-label">
- *         <label>Label <a class="pophelp">i</a></label>
- *     </span>
- *     <span class="txp-value">
- *         <input type="text" size="32">
- *     </span>
- * </div>
- */
-
-.txp-label,
-.txp-value {
-    -webkit-flex: 1; // Safari 7/8
-    -ms-flex: 1 1 0%; // IE 10
-    flex: 1; // Modern browsers (2014/2015 W3C spec)
-    min-height: 2.1538462em; // 28px / 13px
-    max-width: 29em; // 377px / 13px
-}
-
-/**
- * TODO: Keeps non-editable values on same baseline, to prevent content jumping.
- *
- * Appears on:
- *
- * Forms panel.
- *
- * Example HTML:
- *
- * <div class="txp-form-field">
- *     <span class="txp-label-fixed">Form name</span>
- *     <span class="txp-value-fixed">default</span>
- * </div>
- */
-
-.txp-value-fixed {
-    @include adjust-font-size-to(13px, 0.9); // 18px `line-height`
-
-    display: inline-block;
-    padding: 0.38461538461538em 0; // 5px / 13px
-}
-
-/**
  * Form fields.
  *
  * Textpattern form fields can have optional inline help texts applied to them.
@@ -546,24 +498,24 @@ div.multi-edit {
  * Example HTML:
  *
  * <div class="txp-form-field">
- *     <span class="txp-label">
+ *     <div class="txp-form-field-label">
  *         <label> <a class="pophelp">i</a></label>
- *     </span>
- *     <span class="txp-value">
+ *     </div>
+ *     <div class="txp-form-field-value">
  *         <input>
- *     </span>
+ *     </div>
  * </div>
  *
  * <div class="txp-form-field">
- *     <span class="txp-label">
+ *     <div class="txp-form-field-label">
  *         <label> <a class="pophelp">i</a></label>
- *     </span>
+ *     </div>
  *     <div class="txp-form-field-instructions">
  *         <p>(Optional) intructions on how to fill out this form field.</p>
  *     </div>
- *     <span class="txp-value">
+ *     <div class="txp-form-field-value">
  *         <input>
- *     </span>
+ *     </div>
  * </div>
  */
 
@@ -578,23 +530,49 @@ div.multi-edit {
 }
 
 /**
- * TODO: Don't flex or constrain form fields for textareas.
+ * Label/value form field pairings.
+ *
+ * Note: this is always collapsed to a one-column format on mobile layout.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-form-field">
+ *     <div class="txp-form-field-label">
+ *         <label>Label <a class="pophelp">i</a></label>
+ *     </div>
+ *     <div class="txp-form-field-value">
+ *         <input type="text" size="32">
+ *     </div>
+ * </div>
+ */
+
+.txp-form-field-label,
+.txp-form-field-value {
+    -webkit-flex: 1; // Safari 7/8
+    -ms-flex: 1 1 0%; // IE 10
+    flex: 1; // Modern browsers (2014/2015 W3C spec)
+    min-height: 2.1538462em; // 28px / 13px
+    max-width: 29em; // 377px / 13px
+}
+
+/**
+ * Don't flex or constrain form fields for textareas.
  *
  * Example HTML:
  *
  * <div class="txp-form-field txp-form-field-textarea">
- *     <span class="txp-label">
+ *     <div class="txp-form-field-label">
  *         <label>Label <a class="pophelp">i</a></label>
- *     </span>
- *     <span class="txp-value">
+ *     </div>
+ *     <div class="txp-form-field-value">
  *         <textarea></textarea>
- *     </span>
+ *     </div>
  * </div>
  */
 
 .txp-form-field-textarea,
-.txp-form-field-textarea .txp-label,
-.txp-form-field-textarea .txp-value {
+.txp-form-field-textarea .txp-form-field-label,
+.txp-form-field-textarea .txp-form-field-value {
     -webkit-flex: none; // Safari 7/8
     -ms-flex: none; // IE 10
     flex: none; // Modern browsers (2014/2015 W3C spec)
@@ -604,8 +582,10 @@ div.multi-edit {
 }
 
 /**
- * Don't flex form fields in for main content panes, login panes, details panes
- * and file upload forms.
+ * Don't flex form fields for main content panes, login panes, details panes and
+ * file upload forms.
+ *
+ * TODO: txp-details should only be 'unflexed' when in a single column.
  */
 
 .txp-layout-4col-cell-1-2-3,
@@ -613,8 +593,8 @@ div.multi-edit {
 .txp-details,
 .upload-form {
     .txp-form-field,
-    .txp-label,
-    .txp-value {
+    .txp-form-field-label,
+    .txp-form-field-value {
         display: block;
     }
 }
@@ -624,6 +604,16 @@ div.multi-edit {
  *
  * 1. Pull instructions closer to form fields.
  * 2. Limit maxiumum width of instructions, for legibility.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-form-field>
+ *     <div class="txp-form-field-label"></div>
+ *     <div class="txp-form-field-instructions">
+ *         <p>(Optional) intructions on how to fill out this form field.</p>
+ *     </div>
+ *     <div class="txp-form-field-value"></div>
+ * </div>
  */
 
 .txp-form-field-instructions {
