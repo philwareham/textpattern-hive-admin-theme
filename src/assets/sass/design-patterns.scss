@@ -254,3 +254,23 @@ $colors: (
         color: darken($color-border, 8%);
     }
 }
+
+/**
+ * Additional information tags on design patterns doc headings.
+ *
+ * Example HTML:
+ *
+ * <h2>Title <span>new v4.6</span></h2>
+ */
+
+.text-secton {
+    h1 span {
+        font-size: 0.5em; // 13px / 26px
+        font-weight: normal;
+    }
+
+    h2 span {
+        font-size: 0.72222222222222em; // 13px / 18px
+        font-weight: normal;
+    }
+}
