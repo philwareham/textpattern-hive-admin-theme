@@ -54,7 +54,7 @@
                     <li><a href="#ui-doc-jquery-ui--selectmenu">Widgets: Selectmenu</a></li>
                     <li><a href="#ui-doc-jquery-ui--slider">Widgets: Slider</a></li>
                     <li><a href="#ui-doc-jquery-ui--spinner">Widgets: Spinner</a></li>
-                    <li><a href="#ui-doc-jquery-ui--tabs">Widgets: Tabs</a></li>
+                    <li><a href="#ui-doc-jquery-ui--tabs">Widgets: Tabs (horizontal)</a></li>
                     <li><a href="#ui-doc-jquery-ui--tooltip">Widgets: Tooltip</a></li>
                     <li><a href="#ui-doc-jquery-ui--icons">Styles: Icons</a></li>
                     <li><a href="#ui-doc-jquery-ui--overlay">Styles: Overlay and shadow</a></li>
@@ -711,8 +711,8 @@
                 <div class="toggle" id="name-of-details" role="group" aria-expanded="true">
                     <form action="#">
                         <div class="txp-form-field">
-                            <div class="txp-form-label"><label for="text-std1">Form element within a collapsible details box&#160;<a class="pophelp" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
-                            <div class="txp-form-value"><input id="text-std1" name="text-std1" type="text" size="32"></div>
+                            <div class="txp-form-field-label"><label for="text-std1">Form element within a collapsible details box&#160;<a class="pophelp" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
+                            <div class="txp-form-field-value"><input id="text-std1" name="text-std1" type="text" size="32"></div>
                         </div>
                     </form>
                     <p>Standard paragraph text within a collapsible details box.</p>
@@ -748,8 +748,8 @@
                 <div role="group">
                     <form action="#">
                         <div class="txp-form-field">
-                            <div class="txp-form-label"><label for="text-std2">Form element within a non-collapsible details box&#160;<a class="pophelp" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
-                            <div class="txp-form-value"><input id="text-std2" name="text-std2" type="text" size="32"></div>
+                            <div class="txp-form-field-label"><label for="text-std2">Form element within a non-collapsible details box&#160;<a class="pophelp" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
+                            <div class="txp-form-field-value"><input id="text-std2" name="text-std2" type="text" size="32"></div>
                         </div>
                     </form>
                     <p>Standard paragraph text within a non-collapsible details box.</p>
@@ -785,50 +785,50 @@
 
                 <h2>Textareas</h2>
                 <div class="txp-form-field txp-form-field-textarea">
-                    <div class="txp-form-label"><label for="textarea">Textarea</label></div>
-                    <div class="txp-form-value"><textarea id="textarea" name="textarea" cols="64" rows="5"></textarea></div>
+                    <div class="txp-form-field-label"><label for="textarea">Textarea</label></div>
+                    <div class="txp-form-field-value"><textarea id="textarea" name="textarea" cols="64" rows="5"></textarea></div>
                 </div>
 
                 <h2>Text fields large <span class="information">new v4.5</span></h2>
                 <p><code class="prettyprint" dir="ltr">&lt;input class="input-large" id="" name="" size="64" type="text"&gt;</code></p>
                 <div class="txp-form-field">
-                    <div class="txp-form-label"><label for="text-lrg">Text (large) with pophelp&#160;<a class="pophelp" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
-                    <div class="txp-form-value"><input class="input-large" id="text-lrg" name="text-lrg" type="text" size="64"></div>
+                    <div class="txp-form-field-label"><label for="text-lrg">Text (large) with pophelp&#160;<a class="pophelp" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
+                    <div class="txp-form-field-value"><input class="input-large" id="text-lrg" name="text-lrg" type="text" size="64"></div>
                 </div>
 
                 <h2>Text fields standard</h2>
                 <p><code class="prettyprint" dir="ltr">&lt;input id="" name="" type="text" size="32"&gt;</code></p>
                 <div class="txp-form-field">
-                    <div class="txp-form-label"><label for="text-std">Text (standard) with pophelp&#160;<a class="pophelp" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
-                    <div class="txp-form-value"><input id="text-std" name="text-std" type="text" size="32"></div>
+                    <div class="txp-form-field-label"><label for="text-std">Text (standard) with pophelp&#160;<a class="pophelp" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
+                    <div class="txp-form-field-value"><input id="text-std" name="text-std" type="text" size="32"></div>
                 </div>
 
                 <h2>Text fields medium <span class="information">new v4.5</span></h2>
                 <p><code class="prettyprint" dir="ltr">&lt;input class="input-medium" id="" name="" type="text" size="16"&gt;</code></p>
                 <div class="txp-form-field">
-                    <div class="txp-form-label"><label for="text-med">Text medium</label></div>
-                    <div class="txp-form-value"><input class="input-medium" id="text-med" name="text-med" type="text" size="16"></div>
+                    <div class="txp-form-field-label"><label for="text-med">Text medium</label></div>
+                    <div class="txp-form-field-value"><input class="input-medium" id="text-med" name="text-med" type="text" size="16"></div>
                 </div>
 
                 <h2>Text fields small <span class="information">new v4.5</span></h2>
                 <p><code class="prettyprint" dir="ltr">&lt;input class="input-small" id="" name="" type="text" size="8"&gt;</code></p>
                 <div class="txp-form-field">
-                    <div class="txp-form-label"><label for="text-sml">Text (small)</label></div>
-                    <div class="txp-form-value"><input class="input-small" id="text-sml" name="text-sml" type="text" size="8"></div>
+                    <div class="txp-form-field-label"><label for="text-sml">Text (small)</label></div>
+                    <div class="txp-form-field-value"><input class="input-small" id="text-sml" name="text-sml" type="text" size="8"></div>
                 </div>
 
                 <h2>Text fields extra small <span class="information">new v4.5</span></h2>
                 <p><code class="prettyprint" dir="ltr">&lt;input class="input-xsmall" id="" name="" type="text" size="4"&gt;</code></p>
                 <div class="txp-form-field">
-                    <div class="txp-form-label"><label for="text-xsml">Text (extra small)</label></div>
-                    <div class="txp-form-value"><input class="input-xsmall" id="text-xsml" name="text-xsml" type="text" size="4"></div>
+                    <div class="txp-form-field-label"><label for="text-xsml">Text (extra small)</label></div>
+                    <div class="txp-form-field-value"><input class="input-xsmall" id="text-xsml" name="text-xsml" type="text" size="4"></div>
                 </div>
 
                 <h2>Password fields</h2>
                 <p><code class="prettyprint" dir="ltr">&lt;input id="" name="" type="password" size="32"&gt;</code></p>
                 <div class="txp-form-field">
-                    <div class="txp-form-label"><label for="password">Password</label></div>
-                    <div class="txp-form-value"><input id="password" name="password" type="password" size="32"></div>
+                    <div class="txp-form-field-label"><label for="password">Password</label></div>
+                    <div class="txp-form-field-value"><input id="password" name="password" type="password" size="32"></div>
                 </div>
 
                 <h2>Date fields</h2>
@@ -1538,7 +1538,7 @@
             </p>
             <p><a rel="external" href="https://jqueryui.com/spinner/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
-            <h2 id="ui-doc-jquery-ui--tabs">Widgets: Tabs</h2>
+            <h2 id="ui-doc-jquery-ui--tabs">Widgets: Tabs (horizontal)</h2>
             <div class="jquery-ui-tabs">
                 <ul>
                     <li><a href="#tabgroup1-tab1">First</a></li>

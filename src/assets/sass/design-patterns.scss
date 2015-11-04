@@ -263,14 +263,12 @@ $colors: (
  * <h2>Title <span>new v4.6</span></h2>
  */
 
-.text-secton {
-    h1 span {
-        font-size: 0.5em; // 13px / 26px
-        font-weight: normal;
-    }
+.text-section h1 span {
+    font-size: 0.5em; // 13px / 26px
+    font-weight: normal;
+}
 
-    h2 span {
-        font-size: 0.72222222222222em; // 13px / 18px
-        font-weight: normal;
-    }
+h2 span {
+    font-size: 0.72222222222222em; // 13px / 18px
+    font-weight: normal;
 }
