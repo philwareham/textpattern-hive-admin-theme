@@ -132,45 +132,43 @@
 
     <main class="txp-body" aria-label="Main content">
 
-        <form class="edit-form" id="discuss_edit_form" method="post" action="#">
-            <section class="txp-edit">
-                <h2>Edit comment</h2>
-                <div class="txp-form-field edit-status">
-                    <div class="txp-form-field-label"><label for="status">Status</label></div>
-                    <div class="txp-form-field-value">
-                        <select id="status" name="visible">
-                            <option value="1" selected="selected">Visible</option>
-                            <option value="-1">Spam</option>
-                            <option value="0">Unmoderated</option>
-                        </select>
-                    </div>
+        <form class="txp-edit" id="discuss_edit_form" method="post" action="#">
+            <h2>Edit comment</h2>
+            <div class="txp-form-field edit-status">
+                <div class="txp-form-field-label"><label for="status">Status</label></div>
+                <div class="txp-form-field-value">
+                    <select id="status" name="visible">
+                        <option value="1" selected="selected">Visible</option>
+                        <option value="-1">Spam</option>
+                        <option value="0">Unmoderated</option>
+                    </select>
                 </div>
-                <div class="txp-form-field edit-name">
-                    <div class="txp-form-field-label"><label for="name">Name</label></div>
-                    <div class="txp-form-field-value"><input id="name" name="name" type="text" size="32" value="Donald Swain"></div>
-                </div>
-                <div class="txp-form-field edit-ip">
-                    <div class="txp-form-field-label">IP</div>
-                    <div class="txp-form-field-value">127.0.0.1 <span aria-hidden="true">[</span><a class="action-ban" href="#">Ban</a><span aria-hidden="true">]</span></div>
-                </div>
-                <div class="txp-form-field edit-email">
-                    <div class="txp-form-field-label"><label for="email">E-mail</label></div>
-                    <div class="txp-form-field-value"><input id="email" name="email" type="email" size="32" value="donald.swain@example.com"></div>
-                </div>
-                <div class="txp-form-field edit-website">
-                    <div class="txp-form-field-label"><label for="website">Website</label></div>
-                    <div class="txp-form-field-value"><input id="website" name="web" type="text" size="32" value="example.com"></div>
-                </div>
-                <div class="txp-form-field edit-date">
-                    <div class="txp-form-field-label">Date</div>
-                    <div class="txp-form-field-value">22 Jul 2005 14:11:32</div>
-                </div>
-                <div class="txp-form-field txp-form-field-textarea edit-message">
-                    <div class="txp-form-field-label"><label for="commentmessage">Message</label></div>
-                    <div class="txp-form-field-value"><textarea id="commentmessage" name="message" cols="64" rows="16">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea></div>
-                </div>
-                <p><input class="publish" type="submit" value="Save" name="step"></p>
-            </section>
+            </div>
+            <div class="txp-form-field edit-name">
+                <div class="txp-form-field-label"><label for="name">Name</label></div>
+                <div class="txp-form-field-value"><input id="name" name="name" type="text" size="32" value="Donald Swain"></div>
+            </div>
+            <div class="txp-form-field edit-ip">
+                <div class="txp-form-field-label">IP</div>
+                <div class="txp-form-field-value">127.0.0.1 <span aria-hidden="true">[</span><a class="action-ban" href="#">Ban</a><span aria-hidden="true">]</span></div>
+            </div>
+            <div class="txp-form-field edit-email">
+                <div class="txp-form-field-label"><label for="email">E-mail</label></div>
+                <div class="txp-form-field-value"><input id="email" name="email" type="email" size="32" value="donald.swain@example.com"></div>
+            </div>
+            <div class="txp-form-field edit-website">
+                <div class="txp-form-field-label"><label for="website">Website</label></div>
+                <div class="txp-form-field-value"><input id="website" name="web" type="text" size="32" value="example.com"></div>
+            </div>
+            <div class="txp-form-field edit-date">
+                <div class="txp-form-field-label">Date</div>
+                <div class="txp-form-field-value">22 Jul 2005 14:11:32</div>
+            </div>
+            <div class="txp-form-field txp-form-field-textarea edit-message">
+                <div class="txp-form-field-label"><label for="commentmessage">Message</label></div>
+                <div class="txp-form-field-value"><textarea id="commentmessage" name="message" cols="64" rows="16">&lt;p&gt;I enjoy your site very much.&lt;/p&gt;</textarea></div>
+            </div>
+            <p><input class="publish" type="submit" value="Save" name="step"></p>
         </form>
 
     </main><!-- /txp-body -->

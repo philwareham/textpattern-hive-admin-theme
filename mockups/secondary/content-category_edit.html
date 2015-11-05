@@ -132,33 +132,31 @@
 
     <main class="txp-body" aria-label="Main content">
 
-        <form class="edit-form" method="post" action="#">
-            <section class="txp-edit">
-                <h2>Edit category</h2>
-                <div class="txp-form-field edit-category-name">
-                    <div class="txp-form-field-label"><label for="category_name">Article category name</label></div>
-                    <div class="txp-form-field-value"><input id="category_name" name="name" type="text" size="32" value="hope-for-the-future"></div>
+        <form class="txp-edit" method="post" action="#">
+            <h2>Edit category</h2>
+            <div class="txp-form-field edit-category-name">
+                <div class="txp-form-field-label"><label for="category_name">Article category name</label></div>
+                <div class="txp-form-field-value"><input id="category_name" name="name" type="text" size="32" value="hope-for-the-future"></div>
+            </div>
+            <div class="txp-form-field edit-category-parent">
+                <div class="txp-form-field-label"><label for="category_parent">Parent</label></div>
+                <div class="txp-form-field-value">
+                    <select id="category_parent" name="parent">
+                        <option value="" selected="selected">&#160;</option>
+                        <option value="meaningful-labor">Meaningful Labor</option>
+                        <option value="reciprocal-affection">Reciprocal Affection</option>
+                    </select>
                 </div>
-                <div class="txp-form-field edit-category-parent">
-                    <div class="txp-form-field-label"><label for="category_parent">Parent</label></div>
-                    <div class="txp-form-field-value">
-                        <select id="category_parent" name="parent">
-                            <option value="" selected="selected">&#160;</option>
-                            <option value="meaningful-labor">Meaningful Labor</option>
-                            <option value="reciprocal-affection">Reciprocal Affection</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="txp-form-field edit-category-title">
-                    <div class="txp-form-field-label"><label for="category_title">Article category title</label></div>
-                    <div class="txp-form-field-value"><input id="category_title" name="title" type="text" size="32" value="Hope for the Future"></div>
-                </div>
-                <div class="txp-form-field txp-form-field-textarea edit-category-description">
-                    <div class="txp-form-field-label"><label for="category_description">Article category description&nbsp;<a class="pophelp" rel="help" target="_blank" title="Help" aria-label="Help" role="button" href="#">i</a></label></div>
-                    <div class="txp-form-field-value"><textarea name="description" id="category_description" rows="4" cols="64"></textarea></div>
-                </div>
-                <p><input class="publish" type="submit" value="Save"></p>
-            </section>
+            </div>
+            <div class="txp-form-field edit-category-title">
+                <div class="txp-form-field-label"><label for="category_title">Article category title</label></div>
+                <div class="txp-form-field-value"><input id="category_title" name="title" type="text" size="32" value="Hope for the Future"></div>
+            </div>
+            <div class="txp-form-field txp-form-field-textarea edit-category-description">
+                <div class="txp-form-field-label"><label for="category_description">Article category description&nbsp;<a class="pophelp" rel="help" target="_blank" title="Help" aria-label="Help" role="button" href="#">i</a></label></div>
+                <div class="txp-form-field-value"><textarea name="description" id="category_description" rows="4" cols="64"></textarea></div>
+            </div>
+            <p><input class="publish" type="submit" value="Save"></p>
         </form>
 
     </main><!-- /txp-body -->

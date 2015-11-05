@@ -132,37 +132,35 @@
 
     <main class="txp-body" aria-label="Main content">
 
-        <form class="edit-form" id="user_edit" method="post" action="#">
-            <section class="txp-edit">
-                <h2>Add new author</h2>
-                <div class="txp-form-field edit-admin-login-name">
-                    <div class="txp-form-field-label"><label for="login_name">Login&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></div>
-                    <div class="txp-form-field-value"><input id="login_name" name="name" type="text" size="32"></div>
+        <form class="txp-edit" id="user_edit" method="post" action="#">
+            <h2>Add new author</h2>
+            <div class="txp-form-field edit-admin-login-name">
+                <div class="txp-form-field-label"><label for="login_name">Login&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></div>
+                <div class="txp-form-field-value"><input id="login_name" name="name" type="text" size="32"></div>
+            </div>
+            <div class="txp-form-field edit-admin-name">
+                <div class="txp-form-field-label"><label for="real_name">Real name</label></div>
+                <div class="txp-form-field-value"><input id="real_name" name="RealName" type="text" size="32"></div>
+            </div>
+            <div class="txp-form-field edit-admin-email">
+                <div class="txp-form-field-label"><label for="login_email">E-mail</label></div>
+                <div class="txp-form-field-value"><input id="login_email" name="email" type="email" size="32"></div>
+            </div>
+            <div class="txp-form-field edit-admin-privileges">
+                <div class="txp-form-field-label"><label for="privileges">Privileges&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></div>
+                <div class="txp-form-field-value">
+                    <select id="privileges" name="privs">
+                        <option value="1">Publisher</option>
+                        <option value="2">Managing Editor</option>
+                        <option value="3">Copy Editor</option>
+                        <option value="4">Staff Writer</option>
+                        <option value="5">Freelancer</option>
+                        <option value="6">Designer</option>
+                        <option value="0" selected="selected">None</option>
+                    </select>
                 </div>
-                <div class="txp-form-field edit-admin-name">
-                    <div class="txp-form-field-label"><label for="real_name">Real name</label></div>
-                    <div class="txp-form-field-value"><input id="real_name" name="RealName" type="text" size="32"></div>
-                </div>
-                <div class="txp-form-field edit-admin-email">
-                    <div class="txp-form-field-label"><label for="login_email">E-mail</label></div>
-                    <div class="txp-form-field-value"><input id="login_email" name="email" type="email" size="32"></div>
-                </div>
-                <div class="txp-form-field edit-admin-privileges">
-                    <div class="txp-form-field-label"><label for="privileges">Privileges&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></label></div>
-                    <div class="txp-form-field-value">
-                        <select id="privileges" name="privs">
-                            <option value="1">Publisher</option>
-                            <option value="2">Managing Editor</option>
-                            <option value="3">Copy Editor</option>
-                            <option value="4">Staff Writer</option>
-                            <option value="5">Freelancer</option>
-                            <option value="6">Designer</option>
-                            <option value="0" selected="selected">None</option>
-                        </select>
-                    </div>
-                </div>
-                <p><input class="publish" type="submit" value="Save"></p>
-            </section>
+            </div>
+            <p><input class="publish" type="submit" value="Save"></p>
         </form>
 
     </main><!-- /txp-body -->
