@@ -140,7 +140,22 @@
                 <div class="txp-form-field">
                     <div class="txp-form-field-label"><label for="text">Form name</label></div>
                     <div class="txp-form-field-value">
-                        <input class="input-medium" id="text" type="text" size="16" value="default" readonly>
+                        <input class="input-medium" id="text" type="text" size="16" disabled="disabled" value="default">
+                    </div>
+                </div>
+                <div class="txp-form-field">
+                    <div class="txp-form-field-label"><label for="type">Form type</label></div>
+                    <div class="txp-form-field-value">
+                        <select id="type" name="type" disabled="disabled">
+                            <option value="">&#160;</option>
+                            <option value="article" selected="selected">article</option>
+                            <option value="category">category</option>
+                            <option value="comment">comment</option>
+                            <option value="file">file</option>
+                            <option value="link">link</option>
+                            <option value="misc">misc</option>
+                            <option value="section">section</option>
+                        </select>
                     </div>
                 </div>
                 <div class="txp-form-field">
@@ -165,21 +180,6 @@
 &lt;txp:comments_invite wraptag=&quot;p&quot; /&gt;
 
 &lt;div class=&quot;divider&quot;&gt;&lt;txp:image id=&quot;1&quot; /&gt;&lt;/div&gt;</textarea>
-                    </div>
-                </div>
-                <div class="txp-form-field">
-                    <div class="txp-form-field-label"><label for="type">Form type</label></div>
-                    <div class="txp-form-field-value">
-                        <select id="type" name="type">
-                            <option value="">&#160;</option>
-                            <option value="article" selected="selected">article</option>
-                            <option value="category">category</option>
-                            <option value="comment">comment</option>
-                            <option value="file">file</option>
-                            <option value="link">link</option>
-                            <option value="misc">misc</option>
-                            <option value="section">section</option>
-                        </select>
                     </div>
                 </div>
             </form>
