@@ -36,7 +36,7 @@
             <li><a href="#ui-doc-summarydetails">Summary/details boxes</a></li>
             <li><a href="#ui-doc-forms">Forms</a></li>
             <li><a href="#ui-doc-buttons">Buttons</a></li>
-            <li><a href="#ui-doc-edit-panes">Edit panes and panels</a></li>
+            <li><a href="#ui-doc-edit-panes">Edit panes</a></li>
             <li>
                 <a href="#ui-doc-jquery-ui">jQuery UI widgets</a>
                 <ol>
@@ -1012,90 +1012,10 @@
 
 
         <div class="text-section" id="ui-doc-edit-panes">
-            <h1>Edit panes and panels</h1>
+            <h1>Edit panes <span class="warning">changed v4.6</span></h1>
 
-            <h2>Edit panes (modal) <span class="warning">changed v4.6</span></h2>
-            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;form method="post" action="#" class="edit-form"&gt;
-    &lt;section class="txp-edit"&gt;
-        &lt;h2&gt;Edit pane (modal) title&lt;/h2&gt;
-
-        &lt;div class="txp-form-field edit-example-1"&gt;
-            &lt;div class="txp-form-field-label"&gt;&lt;label for="example_1"&gt;Long text (with pophelp)&#160;&lt;a target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help"&gt;?&lt;/a&gt;&lt;/label&gt;&lt;/div&gt;
-            &lt;div class="txp-form-field-value"&gt;&lt;input id="example_1" name="example_1" type="text" size="32"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="txp-form-field edit-example-2"&gt;
-            &lt;div class="txp-form-field-label"&gt;&lt;label for="example_2"&gt;Medium text&lt;/label&gt;&lt;/div&gt;
-            &lt;div class="txp-form-field-value"&gt;&lt;input class="input-medium" id="example_2" name="example_2" type="text" size="8"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="txp-form-field edit-example-3"&gt;
-            &lt;div class="txp-form-field-label"&gt;&lt;label for="example_3"&gt;Select&lt;/label&gt;&lt;/div&gt;
-            &lt;div class="txp-form-field-value"&gt;
-                &lt;select id="example_3" name="example_3"&gt;
-                    &lt;option value="" selected="selected"&gt;&#160;&lt;/option&gt;
-                    &lt;option value="option1"&gt;Option 1&lt;/option&gt;
-                    &lt;option value="option2"&gt;Option 2&lt;/option&gt;
-                &lt;/select&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="txp-form-field edit-example-4"&gt;
-            &lt;div class="txp-form-field-label"&gt;Radio buttons (with pophelp)&#160;&lt;a target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help"&gt;?&lt;/a&gt;&lt;/div&gt;
-            &lt;div class="txp-form-field-value"&gt;
-                &lt;input class="radio active" id="example_4_0" name="example_4" type="radio" value="0" checked="checked"&gt;
-                &lt;label for="example_4_0"&gt;No&lt;/label&gt;
-                &lt;input class="radio" id="example_4_1" name="example_4" type="radio" value="1"&gt;
-                &lt;label for="example_4_1"&gt;Yes&lt;/label&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="txp-form-field txp-form-field-textarea edit-example-5"&gt;
-            &lt;div class="txp-form-field-label"&gt;&lt;label for="example_5"&gt;Textarea (with pophelp)&#160;&lt;a target="_blank" href="#" role="button" class="pophelp" title="Help" aria-label="Help" rel="help"&gt;?&lt;/a&gt;&lt;/label&gt;&lt;/div&gt;
-            &lt;div class="txp-form-field-value"&gt;&lt;textarea id="example_5" name="example_5" cols="64" rows="7"&gt;&lt;/textarea&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;p class="txp-edit-action"&gt;&lt;button&gt;Cancel&lt;/button&gt; &lt;input class="publish" type="submit" value="Save"&gt;&lt;/p&gt;
-
-    &lt;/section&gt;
-&lt;/form&gt;</code></pre>
-
-            <form method="post" action="#" class="edit-form">
-                <section class="txp-edit">
-                    <h2>Edit pane (modal) title</h2>
-                    <div class="txp-form-field edit-example-1">
-                        <div class="txp-form-field-label"><label for="example_1">Long text (with pophelp)&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
-                        <div class="txp-form-field-value"><input id="example_1" name="example_1" type="text" size="32"></div>
-                    </div>
-                    <div class="txp-form-field edit-example-2">
-                        <div class="txp-form-field-label"><label for="example_2">Medium text</label></div>
-                        <div class="txp-form-field-value"><input class="input-medium" id="example_2" name="example_2" type="text" size="8"></div>
-                    </div>
-                    <div class="txp-form-field edit-example-3">
-                        <div class="txp-form-field-label"><label for="example_3">Select</label></div>
-                        <div class="txp-form-field-value">
-                            <select id="example_3" name="example_3">
-                                <option value="" selected="selected">&#160;</option>
-                                <option value="option1">Option 1</option>
-                                <option value="option2">Option 2</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="txp-form-field edit-example-4">
-                        <div class="txp-form-field-label">Radio buttons (with pophelp)&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></div>
-                        <div class="txp-form-field-value">
-                            <input class="radio active" id="example_4_0" name="example_4" type="radio" value="0" checked="checked">
-                            <label for="example_4_0">No</label>
-                            <input class="radio" id="example_4_1" name="example_4" type="radio" value="1">
-                            <label for="example_4_1">Yes</label>
-                        </div>
-                    </div>
-                    <div class="txp-form-field txp-form-field-textarea edit-example-5">
-                        <div class="txp-form-field-label"><label for="example_5">Textarea (with pophelp)&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
-                        <div class="txp-form-field-value"><textarea id="example_5" name="example_5" cols="64" rows="7"></textarea></div>
-                    </div>
-                    <p class="txp-edit-action"><button>Cancel</button> <input class="publish" type="submit" value="Save"></p>
-                </section>
-            </form>
-
-            <h2>Edit panels (non-modal) <span class="warning">changed v4.6</span></h2>
             <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;form method="post" action="#" class="prefs-form"&gt;
-    &lt;h2&gt;Edit panel (non-modal) title&lt;/h2&gt;
+    &lt;h2&gt;Edit panel title&lt;/h2&gt;
 
     &lt;div class="txp-form-field prefs-example-1"&gt;
         &lt;div class="txp-form-field-label"&gt;&lt;label for="prefs_example_1"&gt;Long text&lt;/label&gt;&lt;/div&gt;
@@ -1134,7 +1054,7 @@
 &lt;/form&gt;</code></pre>
 
             <form method="post" action="#" class="prefs-form">
-                <h2>Edit panel (non-modal) title</h2>
+                <h2>Edit panel title</h2>
                 <div class="txp-form-field prefs-example-1">
                     <div class="txp-form-field-label"><label for="prefs_example_1">Long text</label></div>
                     <div class="txp-form-field-value"><input id="prefs_example_1" name="prefs_example_1" type="text" size="32"></div>
