@@ -5,17 +5,17 @@
  * Progress meter lists.
  *
  * Utilises CSS counters to increment the progress steps, more info -
- * https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Counters
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
  *
  * Example HTML:
  *
- * <div class="progress-meter">
+ * <aside class="progress-meter">
  *     <ol>
  *         <li class="active"><strong>Item 1</strong></li>
  *         <li>Item 2</li>
  *         <li>Item 3</li>
  *     </ol>
- * </div>
+ * </aside>
  */
 
 .progress-meter {
