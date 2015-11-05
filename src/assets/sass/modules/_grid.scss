@@ -28,22 +28,19 @@
     clear: both;
 }
 
-.txp-layout-2col-cell-1 {
+.txp-layout-2col-cell-1,
+.txp-layout-4col-cell-1-2 {
     @include grid-span(6, 1);
 
     clear: both;
 }
 
-.txp-layout-2col-cell-2 {
+.txp-layout-2col-cell-2,
+.txp-layout-4col-cell-3-4 {
     @include grid-span(6, 7);
 }
 
-.txp-layout-4col-cell-1 {
-    @include grid-span(3, 1);
-
-    clear: both;
-}
-
+.txp-layout-4col-cell-1,
 .txp-layout-4col-cell-1alt {
     @include grid-span(3, 1);
 
@@ -58,26 +55,13 @@
     @include grid-span(3, 7);
 }
 
-.txp-layout-4col-cell-4 {
-    @include grid-span(3, 10);
-}
-
+.txp-layout-4col-cell-4,
 .txp-layout-4col-cell-4alt {
     @include grid-span(3, 10);
 }
 
-.txp-layout-4col-cell-1-2 {
-    @include grid-span(6, 1);
-
-    clear: both;
-}
-
 .txp-layout-4col-cell-2-3 {
     @include grid-span(6, 4);
-}
-
-.txp-layout-4col-cell-3-4 {
-    @include grid-span(6, 7);
 }
 
 .txp-layout-4col-cell-1-2-3 {
@@ -99,22 +83,14 @@
 
 @include breakpoint(max-width $breakpoint-1) {
 
-    .txp-layout-4col-cell-1 {
-        @include grid-span(6, 1);
-
-        clear: both;
-    }
-
-    .txp-layout-4col-cell-2 {
-        @include grid-span(6, 7);
-    }
-
+    .txp-layout-4col-cell-1,
     .txp-layout-4col-cell-3 {
         @include grid-span(6, 1);
 
         clear: both;
     }
 
+    .txp-layout-4col-cell-2,
     .txp-layout-4col-cell-4 {
         @include grid-span(6, 7);
     }
