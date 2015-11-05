@@ -138,12 +138,15 @@
             <h1 class="txp-heading">Forms</h1>
             <form id="form_form" action="#" method="post">
                 <div class="txp-form-field">
-                    <label for="text">Form name</label>
-                    <input class="input-medium" id="text" type="text" size="16" value="default" readonly>
+                    <div class="txp-form-field-label"><label for="text">Form name</label></div>
+                    <div class="txp-form-field-value">
+                        <input class="input-medium" id="text" type="text" size="16" value="default" readonly>
+                    </div>
                 </div>
                 <div class="txp-form-field">
-                    <label for="form">Form code</label>
-                    <textarea class="code" id="form" name="Form" cols="64" rows="24" dir="ltr">&lt;txp:if_individual_article&gt;
+                    <div class="txp-form-field-label"><label for="form">Form code</label></div>
+                    <div class="txp-form-field-value">
+                        <textarea class="code" id="form" name="Form" cols="64" rows="24" dir="ltr">&lt;txp:if_individual_article&gt;
     &lt;h1 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h1&gt;
 &lt;txp:else /&gt;
     &lt;h3 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h3&gt;
@@ -162,19 +165,22 @@
 &lt;txp:comments_invite wraptag=&quot;p&quot; /&gt;
 
 &lt;div class=&quot;divider&quot;&gt;&lt;txp:image id=&quot;1&quot; /&gt;&lt;/div&gt;</textarea>
+                    </div>
                 </div>
                 <div class="txp-form-field">
-                    <label for="type">Form type</label>
-                    <select id="type" name="type">
-                        <option value="">&#160;</option>
-                        <option value="article" selected="selected">article</option>
-                        <option value="category">category</option>
-                        <option value="comment">comment</option>
-                        <option value="file">file</option>
-                        <option value="link">link</option>
-                        <option value="misc">misc</option>
-                        <option value="section">section</option>
-                    </select>
+                    <div class="txp-form-field-label"><label for="type">Form type</label></div>
+                    <div class="txp-form-field-value">
+                        <select id="type" name="type">
+                            <option value="">&#160;</option>
+                            <option value="article" selected="selected">article</option>
+                            <option value="category">category</option>
+                            <option value="comment">comment</option>
+                            <option value="file">file</option>
+                            <option value="link">link</option>
+                            <option value="misc">misc</option>
+                            <option value="section">section</option>
+                        </select>
+                    </div>
                 </div>
             </form>
         </div><!-- /#main_content -->
