@@ -23,7 +23,7 @@
     margin: 1em auto;
     max-width: $standard-column;
 
-    // Column width of welcome message page.
+    // Column width of 'welcome' setup panel.
     .welcome & {
         max-width: 20.30769230769231em; // 264px / 13px
     }
@@ -43,7 +43,7 @@
  */
 
 .welcome,
-.txp-login {
+.login {
     h1 {
         /* 2 */
         @include hide-text;
@@ -62,24 +62,6 @@
 
 .welcome select {
     width: 100%;
-}
-
-
-/* Tag builder panel - additional layout
-   ========================================================================== */
-
-/**
- * Remove `body` padding of tag builder popup panes.
- *
- * TODO: Change this from a popup window to a jQuery UI dialog window.
- *
- * Example HTML:
- *
- * <body id="tag-event">
- */
-
-#tag-event {
-    padding-top: 1em;
 }
 
 
@@ -287,10 +269,6 @@ tr.active {
     .plugin-prefs {
         visibility: visible;
     }
-}
-
-#plugin-code {
-    height: 23em;
 }
 
 div.code {

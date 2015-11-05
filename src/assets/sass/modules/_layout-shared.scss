@@ -143,6 +143,13 @@ hr {
 
     form {
         display: inline-block;
+
+        .txp-form-field,
+        .txp-form-field-label,
+        .txp-form-field-value {
+            display: inline-block;
+            min-height: inherit;
+        }
     }
 
     textarea {
@@ -456,14 +463,13 @@ div.multi-edit {
    ========================================================================== */
 
 /**
- * Styling of edit/tagbuilder panes.
+ * Styling of edit panels.
  *
- * 1. Maximum width of edit/tagbuilder panes.
- * 2. Remove margin above `h2` within panes.
+ * 1. Maximum width of edit panels.
+ * 2. Remove margin above `h2` within panels.
  */
 
-.txp-edit,
-.txp-tagbuilder {
+.txp-edit {
     margin: 0 auto 1em;
     padding: 1em 1em 1px;
     /* 1 */
@@ -476,22 +482,12 @@ div.multi-edit {
     }
 }
 
-/**
- * TODO: Clearfix form paragraphs in panes.
- *
- * Adds to clearfix rules in Sass '_base.scss' file via `@extend`.
- */
 
-.txp-edit,
-.txp-tagbuilder,
-.edit-form {
-    p {
-        @extend .clearfix;
-    }
-}
+/* Form fields.
+   ========================================================================== */
 
 /**
- * Form fields.
+ * Form field containers.
  *
  * Textpattern form fields can have optional inline help texts applied to them.
  *
@@ -589,9 +585,10 @@ div.multi-edit {
  */
 
 .txp-layout-4col-cell-1-2-3,
-.txp-login,
 .txp-details,
-.upload-form {
+.upload-form,
+.welcome,
+.login {
     .txp-form-field,
     .txp-form-field-label,
     .txp-form-field-value {
