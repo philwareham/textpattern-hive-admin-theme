@@ -23,6 +23,7 @@
     box-sizing: border-box;
     position: relative;
     width: 100%;
+    max-width: 28em;
     height: 1.38461538461538em; // 18px / 13px
     background-color: darken($color-border, 16%);
 
