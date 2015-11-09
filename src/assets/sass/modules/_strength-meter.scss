@@ -26,6 +26,10 @@
     height: 1.38461538461538em; // 18px / 13px
     background-color: darken($color-border, 16%);
 
+    &:empty {
+        background-color: transparent;
+    }
+
     .bar {
         position: absolute;
         z-index: 2;
