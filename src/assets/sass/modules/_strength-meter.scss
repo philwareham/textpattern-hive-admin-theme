@@ -50,22 +50,22 @@
  * Strength level colours.
  */
 
-.poor {
+.password-strength-0 {
     background-color: $color-error-text;
 }
 
-.weak {
+.password-strength-1 {
     background-color: lighten(saturate(adjust-hue($color-error-text, 22.5282), 15.8767), 1.9608);
 }
 
-.fair {
+.password-strength-2 {
     background-color: $color-warning-text;
 }
 
-.good {
+.password-strength-3 {
     background-color: darken(desaturate(adjust-hue($color-warning-text, 28.6596), 22.7848), 9.0196);
 }
 
-.strong {
+.password-strength-4 {
     background-color: $color-success-text;
 }
