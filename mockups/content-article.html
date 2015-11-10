@@ -160,7 +160,7 @@
                                 <input id="title" name="Title" type="text" size="64" spellcheck="true" value="Example article title">
                             </div>
                         </div>
-                        <div class="txp-form-field body">
+                        <div class="txp-form-field txp-form-field-textarea body">
                             <div class="txp-form-field-label"><label for="body">Body&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
                             <div class="txp-form-field-value"><textarea id="body" name="Body" cols="64" rows="24" spellcheck="true">h3. What do you want to do next?
 
@@ -182,7 +182,7 @@ There are a host of "Frequently Asked Questions":http://textpattern.com/faq/ to 
 
 If all else fails, there's a whole crowd of friendly, helpful people over at the "Textpattern support forum":http://forum.textpattern.com/. Come and pay a visit!</textarea></div>
                         </div>
-                        <div class="txp-form-field excerpt">
+                        <div class="txp-form-field txp-form-field-textarea excerpt">
                             <div class="txp-form-field-label"><label for="excerpt">Excerpt&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
                             <div class="txp-form-field-instructions">
                                 <p>Optional excerpt used as a short summary of the article, and often displayed on landing pages.</p>
@@ -235,17 +235,18 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                 </div>
                             </div>
                             <div class="txp-form-field section">
-                                <div class="txp-form-field-label"><label for="section">Section&#160;<span class="section-edit"><span aria-hidden="true">[</span><a title="Edit" href="#">Edit</a><span aria-hidden="true">]</span></span></label></div>
+                                <div class="txp-form-field-label"><label for="section">Section</label></div>
                                 <div class="txp-form-field-value">
                                     <select id="section" name="Section">
                                         <option value="about">About</option>
                                         <option value="articles" selected="selected">Articles</option>
                                     </select>
+                                    <span class="section-edit"><span aria-hidden="true">[</span><a title="Edit" href="#">Edit</a><span aria-hidden="true">]</span></span>
                                 </div>
                             </div>
                             <div id="categories_group">
                                 <div class="txp-form-field category category-1">
-                                    <div class="txp-form-field-label"><label for="category-1">Category 1&#160;<span class="category-edit"><span aria-hidden="true">[</span><a title="Edit" href="#">Edit</a><span aria-hidden="true">]</span></span></label></div>
+                                    <div class="txp-form-field-label"><label for="category-1">Category 1</label></div>
                                     <div class="txp-form-field-value">
                                         <select id="category-1" name="Category1">
                                             <option value="" selected="selected">&#160;</option>
@@ -253,6 +254,7 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                             <option value="meaningful-labor" data-level="0">Meaningful labor</option>
                                             <option value="reciprocal-affection" data-level="0">Reciprocal affection</option>
                                         </select>
+                                        <span class="category-edit"><span aria-hidden="true">[</span><a title="Edit" href="#">Edit</a><span aria-hidden="true">]</span></span>
                                     </div>
                                 </div>
                                 <div class="txp-form-field category category-2">
@@ -438,8 +440,8 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                                 <label for="Annotate-1">On</label>
                             </div>
                             <div class="txp-form-field comment-invite">
-                                <label for="comment-invite">Invitation</label>
-                                <input type="text" name="AnnotateInvite" size="32" id="comment-invite" value="Comment">
+                                <div class="txp-form-field-label"><label for="comment-invite">Invitation</label></div>
+                                <div class="txp-form-field-value"><input type="text" name="AnnotateInvite" size="32" id="comment-invite" value="Comment"></div>
                             </div>
                         </div>
                     </section>
@@ -488,19 +490,19 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         </h3>
                         <div class="toggle" id="meta" role="group">
                             <div class="txp-form-field url-title">
-                                <label for="url-title">URL-only title&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
+                                <div class="txp-form-field-label"><label for="url-title">URL-only title&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
                                 <div class="txp-form-field-instructions">
                                     <p>Leave blank to have the article's permalink URL automatically generated from the Title.</p>
                                 </div>
-                                <input id="url-title" name="url_title" type="text" size="32">
+                                <div class="txp-form-field-value"><input id="url-title" name="url_title" type="text" size="32"></div>
                             </div>
-                            <div class="txp-form-field description">
-                                <label for="description">Description&#160;<a class="pophelp" rel="help" target="_blank" title="Help" aria-label="Help" role="button" href="#">i</a></label>
-                                <textarea id="description" name="description" cols="16" rows="4"></textarea>
+                            <div class="txp-form-field txp-form-field-textarea description">
+                                <div class="txp-form-field-label"><label for="description">Description&#160;<a class="pophelp" rel="help" target="_blank" title="Help" aria-label="Help" role="button" href="#">i</a></label></div>
+                                <div class="txp-form-field-value"><textarea id="description" name="description" cols="16" rows="4"></textarea></div>
                             </div>
-                            <div class="txp-form-field keywords">
-                                <label for="keywords">Keywords&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label>
-                                <textarea id="keywords" name="Keywords" cols="16" rows="4"></textarea>
+                            <div class="txp-form-field txp-form-field-textarea keywords">
+                                <div class="txp-form-field-label"><label for="keywords">Keywords&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
+                                <div class="txp-form-field-value"><textarea id="keywords" name="Keywords" cols="16" rows="4"></textarea></div>
                             </div>
                         </div>
                     </section>
