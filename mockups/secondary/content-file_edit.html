@@ -132,14 +132,14 @@
 
     <main class="txp-body" aria-label="Main content">
 
-        <section class="txp-edit">
+        <div class="txp-edit">
             <h2>Edit file</h2>
 
-            <form class="upload-form upload-file" method="post" action="#">
-                <div class="txp-form-field replace-file">
-                    <div class="txp-form-field-label"><label for="image-upload">Replace file&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
+            <form class="upload-form replace-file" method="post" action="#">
+                <div class="txp-form-field file-uploader">
+                    <div class="txp-form-field-label"><label for="file_replace">Replace file&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
                     <div class="txp-form-field-value">
-                        <input id="file_replace" type="file" name="thefile">
+                        <input id="file_replace" name="thefile" type="file">
                         <input type="submit" value="Upload">
                     </div>
                 </div>
@@ -275,8 +275,8 @@
                     </section>
                     <p><input class="publish" type="submit" value="Save"></p>
                 </form>
-            </div>
-        </section>
+            </div><!-- /file-detail exists -->
+        </div><!-- /txp-edit -->
 
     </main><!-- /txp-body -->
 
