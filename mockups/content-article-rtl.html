@@ -135,9 +135,10 @@
 
     </header><!-- /txp-header -->
 
-    <div id="messagepane"></div>
-
     <main class="txp-body" aria-label="Main content">
+
+        <div id="messagepane"></div>
+
         <form class="async busy" id="article_form" name="article_form" method="post" action="#">
 
             <div class="txp-layout-4col-cell-1-2-3">
@@ -147,9 +148,9 @@
 
                     <div id="view_modes">
                         <ul>
-                            <li class="active" id="tab-text"><a data-view-mode="text" role="button" aria-pressed="true" title="Edit article text" href="#">Text</a></li>
-                            <li id="tab-html"><a data-view-mode="html" role="button" aria-pressed="false" title="View HTML markup" href="#">HTML</a></li>
-                            <li id="tab-preview"><a data-view-mode="preview" role="button" aria-pressed="false" title="Preview article" href="#">Preview</a></li>
+                            <li class="active" id="tab-text"><a data-view-mode="text" role="button" aria-pressed="true" title="Edit article text" href="content-article-rtl.html">Text</a></li>
+                            <li id="tab-html"><a data-view-mode="html" role="button" aria-pressed="false" title="View HTML markup" href="content-article-html.html">HTML</a></li>
+                            <li id="tab-preview"><a data-view-mode="preview" role="button" aria-pressed="false" title="Preview article" href="content-article-preview.html">Preview</a></li>
                         </ul>
                     </div>
 
@@ -272,11 +273,11 @@ If all else fails, there's a whole crowd of friendly, helpful people over at the
                         </div>
                     </section>
 
-                    <section class="txp-details" id="dates_group" aria-labelledby="dates_group-label">
-                        <h3 class="txp-summary expanded" id="dates_group-label">
+                    <section class="txp-details" id="txp-dates-group" aria-labelledby="txp-dates-group-label">
+                        <h3 class="txp-summary expanded" id="txp-dates-group-label">
                             <a role="button" data-txp-pane="article_dates" href="#dates">Date and time</a>
                         </h3>
-                        <div class="toggle" id="dates" role="group">
+                        <div class="toggle" id="txp-dates-group-content" role="group">
                             <div class="txp-form-field date posted">
                                 <div class="txp-form-field-label"><label for="year">Publish date&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
                                 <div class="txp-form-field-value">
