@@ -167,18 +167,20 @@
  */
 
 #main_content {
-    input {
-        font-size: 16px;
-    }
+    .text {
+        input {
+            font-size: 16px;
+        }
 
-    textarea {
-        font-size: 16px;
-        line-height: 1.5em; // 24px / 16px
-    }
+        textarea {
+            font-size: 16px;
+            line-height: 1.5em; // 24px / 16px
+        }
 
-    .title input {
-        font-size: 20px;
-        font-weight: bold;
+        .title input {
+            font-size: 20px;
+            font-weight: bold;
+        }
     }
 
     .author {
