@@ -167,17 +167,16 @@
  */
 
 #main_content {
-    .text input {
+    input {
         font-size: 16px;
     }
 
-    .text textarea {
+    textarea {
         font-size: 16px;
         line-height: 1.5em; // 24px / 16px
     }
 
-    #title {
-        font-size: 1.25em; // 20px / 16px
+    .title {
         font-weight: bold;
     }
 
