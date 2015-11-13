@@ -208,7 +208,7 @@
     }
 
     /**
-     * Collapse 2 column form fields to 1 column.
+     * Collapse 2 column form fields to 1 column (remove flexbox).
      */
 
      .txp-edit,
@@ -221,18 +221,7 @@
     /**
      * Label/value one-column layouts within panes.
      *
-     * Collapsed from two-column format on desktop layout.
-     *
-     * Example HTML:
-     *
-     * <p>
-     *     <div class="txp-form-field-label">
-     *         <label>Label <a class="pophelp">i</a></label>
-     *     </span>
-     *     <div class="txp-form-field-value">
-     *         <input type="text" size="32">
-     *     </span>
-     * </p>
+     * Collapsed from two-column format on desktop layout (remove flexbox).
      */
 
      .txp-edit,
