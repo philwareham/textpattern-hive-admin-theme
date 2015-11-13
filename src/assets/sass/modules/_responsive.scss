@@ -213,7 +213,7 @@
 
      .txp-edit,
      .txp-prefs-group {
-        .txp-form-field {
+        .txp-form-field:not(.txp-form-field-textarea) {
             display: block;
         }
     }

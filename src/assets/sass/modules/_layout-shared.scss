@@ -549,7 +549,7 @@ div.multi-edit {
 
 .txp-edit,
 .txp-prefs-group {
-    .txp-form-field {
+    .txp-form-field:not(.txp-form-field-textarea) {
         display: -webkit-flex; // Safari 7/8
         display: -ms-flexbox; // IE 10
         display: flex; // Modern browsers (2014/2015 W3C spec)
@@ -582,15 +582,15 @@ div.multi-edit {
  * </div>
  */
 
-.txp-form-field-textarea,
-.txp-form-field-textarea .txp-form-field-label,
-.txp-form-field-textarea .txp-form-field-value {
-    -webkit-flex: none; // Safari 7/8
-    -ms-flex: none; // IE 10
-    flex: none; // Modern browsers (2014/2015 W3C spec)
-    display: block;
-    max-width: inherit;
-    min-height: inherit;
+.txp-form-field-textarea {
+    .txp-form-field-label,
+    .txp-form-field-value {
+        -webkit-flex: none; // Safari 7/8
+        -ms-flex: none; // IE 10
+        flex: none; // Modern browsers (2014/2015 W3C spec)
+        max-width: inherit;
+        min-height: inherit;
+    }
 }
 
 /**
