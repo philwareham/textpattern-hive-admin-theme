@@ -211,8 +211,11 @@
      * Collapse 2 column form fields to 1 column.
      */
 
-    .txp-form-field {
-        display: block;
+     .txp-edit,
+     .txp-prefs-group {
+        .txp-form-field {
+            display: block;
+        }
     }
 
     /**
@@ -232,10 +235,15 @@
      * </p>
      */
 
-    .txp-form-field-label,
-    .txp-form-field-value {
-        display: block;
-        min-height: inherit;
+     .txp-edit,
+     .txp-prefs-group {
+        .txp-form-field-label,
+        .txp-form-field-value {
+            -webkit-flex: none; // Safari 7/8
+            -ms-flex: none; // IE 10
+            flex: none; // Modern browsers (2014/2015 W3C spec)
+            min-height: inherit;
+        }
     }
 
     /**

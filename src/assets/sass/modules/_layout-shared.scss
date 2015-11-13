@@ -509,12 +509,6 @@ div.multi-edit {
  */
 
 .txp-form-field {
-    display: -webkit-flex; // Safari 7/8
-    display: -ms-flexbox; // IE 10
-    display: flex; // Modern browsers (2014/2015 W3C spec)
-    -webkit-align-items: baseline; // Safari 7/8
-    -ms-flex-align: baseline; // IE 10
-    align-items: baseline; // Modern browsers (2014/2015 W3C spec)
     margin: 1em 0;
 }
 
@@ -537,15 +531,44 @@ div.multi-edit {
 
 .txp-form-field-label,
 .txp-form-field-value {
-    -webkit-flex: 1; // Safari 7/8
-    -ms-flex: 1 1 0%; // IE 10
-    flex: 1; // Modern browsers (2014/2015 W3C spec)
-    min-height: 2.1538462em; // 28px / 13px
     max-width: 29em; // 377px / 13px
 }
 
 /**
- * Don't flex or constrain form fields for textareas.
+ * Inline form field pairings on edit panels and preferences group panels.
+ *
+ * Example HTML:
+ *
+ * <form class="txp-edit">
+ *     <div class="txp-form-field">
+ *         <div class="txp-form-field-label"></div>
+ *         <div class="txp-form-field-value"></div>
+ *     </div>
+ * </form>
+ */
+
+.txp-edit,
+.txp-prefs-group {
+    .txp-form-field {
+        display: -webkit-flex; // Safari 7/8
+        display: -ms-flexbox; // IE 10
+        display: flex; // Modern browsers (2014/2015 W3C spec)
+        -webkit-align-items: baseline; // Safari 7/8
+        -ms-flex-align: baseline; // IE 10
+        align-items: baseline; // Modern browsers (2014/2015 W3C spec)
+    }
+
+    .txp-form-field-label,
+    .txp-form-field-value {
+        -webkit-flex: 1; // Safari 7/8
+        -ms-flex: 1 1 0%; // IE 10
+        flex: 1; // Modern browsers (2014/2015 W3C spec)
+        min-height: 2.1538462em; // 28px / 13px
+    }
+}
+
+/**
+ * Don't inline or constrain form fields for textareas.
  *
  * Example HTML:
  *
@@ -568,30 +591,6 @@ div.multi-edit {
     display: block;
     max-width: inherit;
     min-height: inherit;
-}
-
-/**
- * Don't flex form fields for main content panes, login panes, details panes and
- * file upload forms.
- *
- * TODO: txp-details should only be 'unflexed' when in a single column.
- */
-
-.txp-layout-4col-cell-1-2-3,
-.txp-layout-4col-cell-4alt
-.txp-details,
-.welcome,
-.login {
-    .txp-form-field,
-    .txp-form-field-label,
-    .txp-form-field-value {
-        -webkit-flex: none; // Safari 7/8
-        -ms-flex: none; // IE 10
-        flex: none; // Modern browsers (2014/2015 W3C spec)
-        display: block;
-        max-width: inherit;
-        min-height: inherit;
-    }
 }
 
 /**
