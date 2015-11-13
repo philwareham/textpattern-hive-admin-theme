@@ -594,6 +594,18 @@ div.multi-edit {
 }
 
 /**
+ *  Don't constrain form fields when in 3 column layout spans.
+ */
+
+.txp-layout-4col-cell-1-2-3,
+.txp-layout-4col-cell-2-3-4 {
+    .txp-form-field-label,
+    .txp-form-field-value {
+        max-width: inherit;
+    }
+}
+
+/**
  * Form field inline help texts.
  *
  * 1. Pull instructions closer to form fields.
