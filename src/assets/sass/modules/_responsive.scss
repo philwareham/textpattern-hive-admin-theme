@@ -316,7 +316,7 @@
      * Collapse jQuery UI tabs responsively.
      */
 
-    .ui-tabs .ui-tabs-nav {
+    .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
         li {
             float: none;
             margin: 0;
