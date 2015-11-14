@@ -315,6 +315,14 @@ $(function ()
 
     $('.jquery-ui-tabs').tabs();
 
+    // Vertical tabs on preferences panel.
+
+    var prefsGroup = $('#all_preferences div');
+
+    prefsGroup.closest('form').tabs().removeClass('ui-widget ui-widget-content ui-corner-all').addClass('ui-tabs-vertical');
+    prefsGroup.addClass('ui-tabs-vertical');
+    prefsGroup.find('li').removeClass('ui-corner-top');
+
     // Tooltips.
 
     $('.jquery-ui-tooltip').tooltip();
