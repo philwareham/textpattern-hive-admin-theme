@@ -317,11 +317,12 @@ $(function ()
 
     // Vertical tabs on preferences panel.
 
-    var prefsGroup = $('#all_preferences div');
+    var prefsGroup = $('#prefs_form');
 
-    prefsGroup.closest('form').tabs().removeClass('ui-widget ui-widget-content ui-corner-all').addClass('ui-tabs-vertical');
-    prefsGroup.addClass('ui-tabs-vertical');
-    prefsGroup.find('li').removeClass('ui-corner-top');
+    prefsGroup.tabs().removeClass('ui-widget ui-widget-content ui-corner-all').addClass('ui-tabs-vertical');
+    prefsGroup.find('.switcher-list').removeClass('ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all');
+    prefsGroup.find('.switcher-list li').removeClass('ui-state-default ui-corner-top');
+    prefsGroup.find('.txp-prefs-group').removeClass('ui-widget-content ui-corner-bottom');
 
     // Tooltips.
 

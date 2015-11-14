@@ -37,7 +37,7 @@
  * </div>
  */
 
-.ui-tabs {
+.ui-tabs:not(.ui-tabs-vertical) {
      /* 1 */
     position: relative;
     border: 0;
@@ -118,5 +118,7 @@
  */
 
 .ui-tabs-vertical {
-
+    .ui-tabs-nav .ui-tabs-active {
+        background: $color-selected;
+    }
 }
