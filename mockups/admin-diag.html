@@ -151,16 +151,16 @@
 
             <div id="diagnostics">
                 <h2>Diagnostic info</h2>
-                <textarea class="code" id="diagnostics-detail" cols="64" rows="24" dir="ltr" readonly>Diagnostic information would go here...</textarea>
                 <form method="post" action="index.php">
                     <div class="txp-form-field diagnostic-details-level">
                         <label for="diag_detail_level">Detail</label>
-                        <select id="diag_detail_level" name="step" data-submit-on="change">
+                        <select id="diag_detail_level" name="step">
                             <option value="low" selected="selected">Low</option>
                             <option value="high">High</option>
                         </select>
                     </div>
                 </form>
+                <textarea class="code" id="diagnostics-detail" cols="64" rows="24" dir="ltr" readonly>Diagnostic information would go here...</textarea>
             </div>
 
         </div><!-- /txp-layout-1col -->
