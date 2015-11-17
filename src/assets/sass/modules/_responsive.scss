@@ -248,22 +248,6 @@
     }
 
     /**
-     * Reduce height of write -> body text area.
-     */
-
-    #page-article #body {
-        max-height: 18.75em; // 300px / 16px
-    }
-
-    /**
-     * Reduce height of code text areas.
-     */
-
-    textarea.code {
-        max-height: 20em; // 260px / 13px
-    }
-
-    /**
      * Remove float from list navigators on list panels.
      */
 
