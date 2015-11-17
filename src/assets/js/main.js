@@ -4,5 +4,5 @@
 $(function ()
 {
     'use strict';
-    autosize($('textarea'));
+    autosize($('textarea:not(.code)'));
 });
