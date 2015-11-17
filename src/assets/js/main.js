@@ -1,4 +1,5 @@
-// Appended after third-party JavaScript.
+/*! ========================================================================
+ * Appended after third-party JavaScript. */
 
 $(function ()
 {

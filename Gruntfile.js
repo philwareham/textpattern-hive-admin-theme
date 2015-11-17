@@ -81,7 +81,8 @@ module.exports = function (grunt)
                     $: false,
                     module: true,
                     autosize: true,
-                    prettyPrint: true
+                    prettyPrint: true,
+                    require: true
                 }
             }
         },
@@ -101,6 +102,10 @@ module.exports = function (grunt)
         // Uglify and copy JavaScript files from `bower-components`.
         uglify: {
             dist: {
+                // Preserve all comments that start with a bang (!) or include a closure compiler style.
+                options: {
+                    preserveComments: require('uglify-save-license')
+                },
                 files: [
                     {
                         'dist/hive/assets/js/main.js':
@@ -119,6 +124,13 @@ module.exports = function (grunt)
                         dest: 'docs/assets/js/prettify/'
                     }
                 ]
+            },
+            minify: {
+                expand: true,
+                cwd: 'dist/hive/assets/js/',
+                src: ['*.js', '!*.min.js'],
+                dest: 'dist/hive/assets/js/',
+                ext: '.min.js'
             }
         },
 
@@ -138,7 +150,7 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['jshint', 'sass', 'copy:dist', 'uglify']);
+    grunt.registerTask('build', ['jshint', 'sass', 'copy:dist', 'uglify:dist', 'uglify:minify']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('sass', ['scsslint', 'compass', 'copy:css', 'cssmin']);
     grunt.registerTask('test', ['jshint']);
