@@ -107,7 +107,12 @@ module.exports = function (grunt)
 
                 files: [
                     {
-                        'dist/hive/assets/js/main.js': ['bower_components/bootstrap/js/dropdown.js', 'bower_components/bootstrap/js/collapse.js'],
+                        'dist/hive/assets/js/main.js':
+                        [
+                            'bower_components/bootstrap/js/dropdown.js',
+                            'bower_components/bootstrap/js/collapse.js',
+                            'node_modules/autosize/dist/autosize.js'
+                        ],
                         'docs/assets/js/prettify/prettify.js': ['bower_components/google-code-prettify/src/prettify.js']
                     },
                     {

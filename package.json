@@ -12,6 +12,9 @@
     "grunt-contrib-watch": "0.6.1",
     "grunt-scss-lint": "0.3.8"
   },
+  "dependencies": {
+    "autosize": "3.0.14"
+  },
   "scripts": {
     "test": "grunt travis --verbose"
   },
