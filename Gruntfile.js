@@ -77,8 +77,10 @@ module.exports = function (grunt)
                 trailing: true,
                 browser: true,
                 globals: {
-                    jQuery: true,
+                    jQuery: false,
+                    $: false,
                     module: true,
+                    autosize: true,
                     prettyPrint: true
                 }
             }
@@ -99,19 +101,14 @@ module.exports = function (grunt)
         // Uglify and copy JavaScript files from `bower-components`.
         uglify: {
             dist: {
-                // Preserve all comments that start with a bang (!) or include a closure compiler style.
-                options: {
-                    mangle: false,
-                    preserveComments: 'some'
-                },
-
                 files: [
                     {
                         'dist/hive/assets/js/main.js':
                         [
                             'bower_components/bootstrap/js/dropdown.js',
                             'bower_components/bootstrap/js/collapse.js',
-                            'node_modules/autosize/dist/autosize.js'
+                            'node_modules/autosize/dist/autosize.js',
+                            'src/assets/js/main.js'
                         ],
                         'docs/assets/js/prettify/prettify.js': ['bower_components/google-code-prettify/src/prettify.js']
                     },
