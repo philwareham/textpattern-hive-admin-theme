@@ -25,7 +25,7 @@
     z-index: 1000;
     border-top: 1px solid $color-accent-gradient-to;
     border-bottom: 1px solid darken($color-accent-gradient-to, 6%);
-    padding: 0 2.1%;
+    padding: 0 2.75%;
     height: 2.69230769230769em; // 35px / 13px
     box-shadow: 0 0.2em 0.25em rgba(#000000, 0.15);
 }
@@ -81,7 +81,7 @@
 .txp-view-site {
     float: left;
     margin: 0 1em;
-    max-width: 24%;
+    max-width: 22%;
     line-height: 2.69230769230769em; // 35px / 13px
     white-space: nowrap;
     overflow: hidden;
@@ -104,5 +104,5 @@
 .txp-logout {
     position: absolute;
     top: -0.76923076923077em; // 10px / 13px
-    right: 2.1%;
+    right: 2.75%;
 }
