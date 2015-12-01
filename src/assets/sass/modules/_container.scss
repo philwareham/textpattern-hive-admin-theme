@@ -49,9 +49,3 @@ body {
         flex: 1;
     }
 }
-
-@supports not (display: flex) {
-    .txp-footer {
-        clear: both;
-    }
-}
