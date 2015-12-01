@@ -8,19 +8,12 @@
  */
 
 body {
-    display: -webkit-flex; // Safari 7/8
-    display: -ms-flexbox; // IE 10
-    display: flex; // Modern browsers (2014/2015 W3C spec)
-    -webkit-flex-direction: column; // Safari 7/8
-    -ms-flex-direction: column; // IE 10
-    flex-direction: column; // Modern browsers (2014/2015 W3C spec)
     box-sizing: border-box;
     /* 1 */
     position: relative;
     /* 2 */
     margin: 0;
     padding: 4em 2.75% 0;
-    min-height: 100vh;
     color: $color-text;
     background: $color-background;
 }
@@ -40,10 +33,25 @@ body {
  */
 
 .txp-body {
-    -webkit-flex: 1; // Safari 7/8
-    -ms-flex: 1 1 0%; // IE 10
-    flex: 1; // Modern browsers (2014/2015 W3C spec)
     margin: 0 auto;
     width: 100%;
     max-width: $container-max-width;
+}
+
+@supports (display: flex) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .txp-body {
+        flex: 1;
+    }
+}
+
+@supports not (display: flex) {
+    .txp-footer {
+        clear: both;
+    }
 }
