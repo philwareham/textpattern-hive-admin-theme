@@ -121,4 +121,12 @@
     .ui-tabs-nav .ui-tabs-active {
         background: $color-selected;
     }
+
+    .ui-tabs-nav .ui-state-focus {
+        outline: none;
+
+        a {
+            outline: thin dotted $color-link-focus;
+        }
+    }
 }
