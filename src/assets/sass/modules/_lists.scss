@@ -102,10 +102,6 @@ dt {
     li {
         position: relative;
         border-top: 1px solid $color-gradient-to;
-        padding: 0.38461538461538em 3em 0.38461538461538em 1em;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
 
         &:nth-child(odd) {
             background: $color-background;
@@ -117,6 +113,14 @@ dt {
 
         &.active {
             background: $color-selected;
+        }
+
+        a {
+            display: block;
+            padding: 0.38461538461538em 2.5em 0.38461538461538em 1em;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
     }
 }
