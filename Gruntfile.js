@@ -11,21 +11,27 @@ module.exports = function (grunt)
         // Set up paths.
         paths: {
             src: {
-                src: 'src/',
+                dir: 'src/',
                 sass: 'src/assets/sass/',
                 img: 'src/assets/img/',
                 js: 'src/assets/js/'
             },
+            tmp: {
+                css: 'tmp/assets/css/'
+            },
             dest: {
-                dist: 'dist/hive/',
+                dir: 'dist/hive/',
                 css: 'dist/hive/assets/css/',
                 img: 'dist/hive/assets/img/',
                 js: 'dist/hive/assets/js/'
             }
         },
 
-        // Clean distribution directory to start afresh.
-        clean: ['<%= paths.dest.dist %>'],
+        // Clean distribution and temporary directories to start afresh.
+        clean: [
+            'dist/',
+            'tmp/'
+        ],
 
         // Use 'config.rb' file to configure Compass.
         compass: {
@@ -41,13 +47,13 @@ module.exports = function (grunt)
         copy: {
             css: {
                 files: [
-                    {expand: true, cwd: 'tmp/assets/css/', src: ['**', '!design-patterns.css'], dest: '<%= paths.dest.css %>'},
-                    {expand: true, cwd: 'tmp/assets/css/', src: ['design-patterns.css'], dest: 'docs/assets/css/'}
+                    {expand: true, cwd: '<%= paths.tmp.css %>', src: ['**', '!design-patterns.css'], dest: '<%= paths.dest.css %>'},
+                    {expand: true, cwd: '<%= paths.tmp.css %>', src: ['design-patterns.css'], dest: 'docs/assets/css/'}
                 ]
             },
             dist: {
                 files: [
-                    {expand: true, cwd: '<%= paths.src.src %>', src: ['*'], dest: '<%= paths.dest.dist %>', filter: 'isFile'},
+                    {expand: true, cwd: '<%= paths.src.dir %>', src: ['*'], dest: '<%= paths.dest.dir %>', filter: 'isFile'},
                     {expand: true, cwd: '<%= paths.src.img %>', src: ['**'], dest: '<%= paths.dest.img %>'}
                 ]
             }
@@ -123,7 +129,7 @@ module.exports = function (grunt)
                             'bower_components/bootstrap/js/dropdown.js',
                             'bower_components/bootstrap/js/collapse.js',
                             'node_modules/autosize/dist/autosize.js',
-                            'src/assets/js/main.js'
+                            '<%= paths.src.js %>main.js'
                         ],
                         'docs/assets/js/prettify/prettify.js': ['bower_components/google-code-prettify/src/prettify.js']
                     },
