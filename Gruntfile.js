@@ -2,17 +2,30 @@ module.exports = function (grunt)
 {
     'use strict';
 
-    // Load Grunt plugins.
-    grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-scss-lint');
+    // Load all Grunt tasks.
+    require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        // Set up paths.
+        paths: {
+            src: {
+                src: 'src/',
+                sass: 'src/assets/sass/',
+                img: 'src/assets/img/',
+                js: 'src/assets/js/'
+            },
+            dest: {
+                dist: 'dist/hive/',
+                css: 'dist/hive/assets/css/',
+                img: 'dist/hive/assets/img/',
+                js: 'dist/hive/assets/js/'
+            }
+        },
+
+        // Clean distribution directory to start afresh.
+        clean: ['<%= paths.dest.dist %>'],
 
         // Use 'config.rb' file to configure Compass.
         compass: {
@@ -28,35 +41,32 @@ module.exports = function (grunt)
         copy: {
             css: {
                 files: [
-                    {expand: true, cwd: 'tmp/assets/css/', src: ['**', '!design-patterns.css'], dest: 'dist/hive/assets/css/'},
+                    {expand: true, cwd: 'tmp/assets/css/', src: ['**', '!design-patterns.css'], dest: '<%= paths.dest.css %>'},
                     {expand: true, cwd: 'tmp/assets/css/', src: ['design-patterns.css'], dest: 'docs/assets/css/'}
                 ]
             },
             dist: {
                 files: [
-                    {expand: true, cwd: 'src/', src: ['*'], dest: 'dist/hive/', filter: 'isFile'},
-                    {expand: true, cwd: 'src/assets/img/', src: ['**'], dest: 'dist/hive/assets/img/'}
+                    {expand: true, cwd: '<%= paths.src.src %>', src: ['*'], dest: '<%= paths.dest.dist %>', filter: 'isFile'},
+                    {expand: true, cwd: '<%= paths.src.img %>', src: ['**'], dest: '<%= paths.dest.img %>'}
                 ]
             }
         },
 
-        // Minified versions of CSS files within `dist/hive/assets/css/`.
+        // Minified versions of CSS files.
         cssmin: {
-            main: {
-                options: {
-                    rebase: false
-                },
+            files: {
                 expand: true,
-                cwd: 'dist/hive/assets/css/',
+                cwd: '<%= paths.dest.css %>',
                 src: ['*.css', '!*.min.css'],
-                dest: 'dist/hive/assets/css/',
+                dest: '<%= paths.dest.css %>',
                 ext: '.min.css'
             }
         },
 
         // Check code quality of Gruntfile.js and theme-specific JavaScript using JSHint.
         jshint: {
-            files: ['Gruntfile.js', 'src/assets/js/*.js'],
+            files: ['Gruntfile.js', '<%= paths.src.js %>*.js'],
             options: {
                 bitwise: true,
                 camelcase: true,
@@ -89,7 +99,7 @@ module.exports = function (grunt)
 
         // Validate Sass files via scss-lint.
         scsslint: {
-            all: ['src/assets/sass/**/*.scss'],
+            all: ['<%= paths.src.sass %>**/*.scss'],
             options: {
                 bundleExec: true,
                 colorizeOutput: false,
@@ -108,7 +118,7 @@ module.exports = function (grunt)
                 },
                 files: [
                     {
-                        'dist/hive/assets/js/main.js':
+                        '<%= paths.dest.js %>main.js':
                         [
                             'bower_components/bootstrap/js/dropdown.js',
                             'bower_components/bootstrap/js/collapse.js',
@@ -127,9 +137,9 @@ module.exports = function (grunt)
             },
             minify: {
                 expand: true,
-                cwd: 'dist/hive/assets/js/',
+                cwd: '<%= paths.dest.js %>',
                 src: ['*.js', '!*.min.js'],
-                dest: 'dist/hive/assets/js/',
+                dest: '<%= paths.dest.js %>',
                 ext: '.min.js'
             }
         },
@@ -137,12 +147,12 @@ module.exports = function (grunt)
         // Directories watched and tasks performed by invoking `grunt watch`.
         watch: {
             sass: {
-                files: 'src/assets/sass/**',
+                files: '<%= paths.src.sass %>**',
                 tasks: ['sass']
             },
 
             js: {
-                files: 'src/assets/js/*.js',
+                files: '<%= paths.src.js %>*.js',
                 tasks: ['jshint', 'copy', 'uglify']
             }
         }
@@ -150,7 +160,7 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['jshint', 'sass', 'copy:dist', 'uglify:dist', 'uglify:minify']);
+    grunt.registerTask('build', ['clean', 'jshint', 'sass', 'copy:dist', 'uglify:dist', 'uglify:minify']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('sass', ['scsslint', 'compass', 'copy:css', 'cssmin']);
     grunt.registerTask('test', ['jshint']);
