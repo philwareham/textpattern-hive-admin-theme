@@ -103,16 +103,12 @@ module.exports = function (grunt)
             }
         },
 
-        // Validate Sass files via scss-lint.
-        scsslint: {
-            all: ['<%= paths.src.sass %>**/*.scss'],
+        // Validate Sass files via sass-lint.
+        sasslint: {
             options: {
-                bundleExec: true,
-                colorizeOutput: false,
-                config: '.scss-lint.yml',
-                force: true,
-                reporterOutput: 'scss-lint-report.xml'
-            }
+                configFile: '.sass-lint.yml'
+            },
+            target: ['<%= paths.src.sass %>**/*.scss']
         },
 
         // Uglify and copy JavaScript files from `bower-components`.
@@ -168,7 +164,7 @@ module.exports = function (grunt)
     // Register tasks.
     grunt.registerTask('build', ['clean', 'jshint', 'sass', 'copy:dist', 'uglify:dist', 'uglify:minify']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('sass', ['scsslint', 'compass', 'copy:css', 'cssmin']);
+    grunt.registerTask('sass', ['sasslint', 'compass', 'copy:css', 'cssmin']);
     grunt.registerTask('test', ['jshint']);
     grunt.registerTask('travis', ['jshint', 'compass']);
 };
