@@ -56,17 +56,6 @@ textarea,
 }
 
 /**
- * Colour for placeholder text.
- */
-
-input,
-textarea {
-    @include input-placeholder {
-        color: #999999;
-    }
-}
-
-/**
  * Remove inner padding and border in Firefox 4+.
  */
 
