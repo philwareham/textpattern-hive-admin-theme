@@ -67,8 +67,7 @@
     padding: 0;
     outline: 0;
     /* 1 */
-    font-size: 100%;
-    font-size: 1em;
+    font-size: $base-font-size;
     line-height: 1.38461538461538em; // 18px / 13px
     list-style: none;
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);

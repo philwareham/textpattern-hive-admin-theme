@@ -49,8 +49,8 @@ textarea,
     margin: 0;
     font-family: $font-sans-serif;
     /* 3 */
-    font-size: 100%;
-    @include adjust-font-size-to(13px, 0.9); // 18px `line-height`
+    font-size: $base-font-size;
+    line-height: 1.38461538461538em; // 18px / 13px
     vertical-align: baseline;
     box-sizing: border-box;
 }

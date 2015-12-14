@@ -34,8 +34,7 @@
     color: $color-text;
     font-family: $font-sans-serif;
     /* 1 */
-    font-size: 100%;
-    font-size: 1em;
+    font-size: $base-font-size;
     line-height: 1.3846154em; // 18px / 13px
     text-align: center;
     text-shadow: $text-shadow-light;
