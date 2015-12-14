@@ -236,8 +236,6 @@
     .txp-prefs-group {
         .txp-form-field-label,
         .txp-form-field-value {
-            -webkit-flex: none; // Safari 7/8
-            -ms-flex: none; // IE 10
             flex: none;
             min-height: inherit;
         }

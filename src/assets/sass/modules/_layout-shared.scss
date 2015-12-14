@@ -407,7 +407,8 @@ div.multi-edit {
     }
 }
 
-/* List navigators on list panels.
+/**
+ * List navigators on list panels.
  *
  * Anchor elements kept to one line to prevent space between buttons.
  *
@@ -587,12 +588,8 @@ div.multi-edit {
 .txp-edit,
 .txp-prefs-group {
     .txp-form-field:not(.txp-form-field-textarea) {
-        display: -webkit-flex; // Safari 7/8
-        display: -ms-flexbox; // IE 10
-        display: flex; // Modern browsers (2014/2015 W3C spec)
-        -webkit-align-items: baseline; // Safari 7/8
-        -ms-flex-align: baseline; // IE 10
-        align-items: baseline; // Modern browsers (2014/2015 W3C spec)
+        display: flex;
+        align-items: baseline;
     }
 
     .txp-form-field-label,
@@ -624,9 +621,7 @@ div.multi-edit {
     .txp-form-field-value {
         max-width: inherit;
         min-height: inherit;
-        -webkit-flex: none; // Safari 7/8
-        -ms-flex: none; // IE 10
-        flex: none; // Modern browsers (2014/2015 W3C spec)
+        flex: none;
     }
 }
 
