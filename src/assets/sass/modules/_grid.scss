@@ -140,9 +140,9 @@
  */
 
 .txp-layout-textbox {
-    clear: both;
-    margin: 0 auto;
     max-width: $text-column;
+    margin: 0 auto;
+    clear: both;
 }
 
 
@@ -173,19 +173,19 @@
  */
 
 .txp-grid {
-    text-align: center;
     margin-bottom: 0.6923077em; // 9px / 13px
+    text-align: center;
 }
 
 .txp-grid-cell {
-    box-sizing: border-box;
     display: inline-block;
-    margin: 0 0.1538462em 0.3076923em; // 2px / 13px and 4px / 13px
-    border: 1px solid $color-border;
-    padding: 0 1em;
     max-width: 22.6153846em; // 294px / 13px
+    margin: 0 0.1538462em 0.3076923em; // 2px / 13px and 4px / 13px
+    padding: 0 1em;
+    border: 1px solid $color-border;
     text-align: left;
     vertical-align: top;
+    box-sizing: border-box;
 }
 
 /**

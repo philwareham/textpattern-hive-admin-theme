@@ -8,14 +8,14 @@
  */
 
 body {
-    box-sizing: border-box;
     /* 1 */
     position: relative;
     /* 2 */
     margin: 0;
     padding: 4em 2.75% 0;
-    color: $color-text;
     background: $color-background;
+    color: $color-text;
+    box-sizing: border-box;
 }
 
 /**
@@ -33,9 +33,9 @@ body {
  */
 
 .txp-body {
-    margin: 0 auto;
     width: 100%;
     max-width: $container-max-width;
+    margin: 0 auto;
 }
 
 @supports (display: flex) {

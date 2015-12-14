@@ -15,11 +15,11 @@
 
 .ui-helper-hidden-accessible {
     position: absolute;
-    margin: -1px;
-    border: 0;
-    padding: 0;
     width: 1px;
     height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
     overflow: hidden;
     clip: rect(0 0 0 0);
 }
@@ -30,13 +30,13 @@
 
 .ui-helper-reset {
     margin: 0;
-    border: 0;
     padding: 0;
+    border: 0;
     outline: 0;
     font-size: 100%;
     line-height: 1.53846153846154em; // 20px / 13px
-    text-decoration: none;
     list-style: none;
+    text-decoration: none;
 }
 
 /**
@@ -44,10 +44,10 @@
  */
 
 .ui-helper-clearfix:after {
-    content: "";
     display: table;
     clear: both;
     border-collapse: collapse;
+    content: "";
 }
 
 /**
@@ -112,8 +112,8 @@
 
 .ui-state-default {
     border: 1px solid $color-border;
-    color: $color-text;
     background-color: darken($color-background-box, 2%);
+    color: $color-text;
 }
 
 /**
@@ -179,8 +179,8 @@ a.ui-state-default:focus {
 
 .ui-state-error {
     border: 1px solid $color-error-border;
-    color: $color-error-text;
     background-color: $color-error-background;
+    color: $color-error-text;
 }
 
 /**
@@ -206,9 +206,9 @@ a.ui-state-default:focus {
 
 .ui-state-disabled {
     background-image: none;
+    cursor: default !important;
     opacity: 0.33;
     pointer-events: none;
-    cursor: default !important;
 
     a {
         text-decoration: none;
@@ -232,10 +232,10 @@ a.ui-state-default:focus {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1001;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.75);
+    z-index: 1001;
 }
 
 
@@ -252,7 +252,7 @@ a.ui-state-default:focus {
 
 .ui-widget-shadow {
     margin: -0.5em 0 0 -0.5em;
-    border-radius: $default-border-radius;
     padding: 0.5em;
+    border-radius: $default-border-radius;
     background: rgba(0, 0, 0, 0.75);
 }

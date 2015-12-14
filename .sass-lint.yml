@@ -84,10 +84,7 @@ rules:
     - style: lowercase
 
   # Enforce a convention for ids.
-  id-name-format:
-    - 1
-    - allow-leading-underscore: false
-      convention: hyphenatedlowercase
+  id-name-format: 0
 
   # Enforce an indentation size (in spaces) and ensure that tabs and spaces are not mixed.
   indentation:
@@ -126,7 +123,7 @@ rules:
   no-debug: 1
 
   # Enforce that duplicate properties are not allowed within the same block.
-  no-duplicate-properties: 1
+  no-duplicate-properties: 0
 
   # Enforce that rulesets are not empty.
   no-empty-rulesets: 1

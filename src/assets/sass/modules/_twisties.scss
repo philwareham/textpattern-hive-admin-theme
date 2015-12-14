@@ -39,15 +39,15 @@ h3.txp-summary,
     @include gradient-linear($color-gradient-from, $color-gradient-to);
 
     position: relative;
-    font-size: 1em; // 13px
-    font-weight: bold;
-    line-height: 2em; // 26px / 13px
+    height: 2em; // 26px / 13px
     margin: 0;
     border-top: 1px solid $color-gradient-to;
     border-bottom: 1px solid $color-gradient-border;
-    height: 2em; // 26px / 13px
-    box-shadow: $inset-highlighting;
+    font-size: 1em; // 13px
+    font-weight: bold;
+    line-height: 2em; // 26px / 13px
     text-shadow: $text-shadow-light;
+    box-shadow: $inset-highlighting;
 }
 
 /**
@@ -78,13 +78,13 @@ h3.txp-summary a {
         @include hide-text;
         @include triangle($color-text, 0.5em, 0.25em, 90);
 
-        font-size: 16px;
         position: absolute;
-        content: "\2193";
         top: 0.5625em; // 9px / 16px
         right: 0.625em; // 10px / 16px
-        z-index: 10;
+        font-size: 16px;
+        content: "\2193";
         opacity: 0.5;
+        z-index: 10;
     }
 
     &:hover:after {
@@ -99,9 +99,9 @@ h3.txp-summary a {
 h3.txp-summary.expanded a:after {
     @include triangle($color-text, 0.25em, 0.5em, 180);
 
-    content: "\2191";
     top: 0.6875em; // 11px / 16px
     right: 0.5625em; // 9px / 16px
+    content: "\2191";
 }
 
 /**

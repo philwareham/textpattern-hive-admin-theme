@@ -37,23 +37,23 @@
  */
 
 .ui-selectmenu-button {
-    transition: box-shadow 0.1s linear;
-    position: relative;
     display: inline-block;
-    overflow: hidden;
-    vertical-align: top;
+    position: relative;
+    transition: box-shadow 0.1s linear;
+    background-color: $color-background;
     /* 1 */
     font-size: 100%;
     font-size: 1em;
     line-height: 1.38461538461538em; // 18px / 13px
     text-decoration: none;
-    background-color: $color-background;
     cursor: pointer;
+    overflow: hidden;
+    vertical-align: top;
 
     &:focus {
         border-color: $color-link-focus;
-        box-shadow: 0 0 7px $color-link-focus-glow;
         outline: 0;
+        box-shadow: 0 0 7px $color-link-focus-glow;
     }
 
     span.ui-icon {
@@ -75,10 +75,10 @@
 }
 
 .ui-selectmenu-menu {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
-    display: none;
     margin: 0;
     padding: 0;
 
@@ -87,10 +87,10 @@
         overflow-x: hidden;
 
         .ui-selectmenu-optgroup {
-            margin: 0.5em 0 0;
-            border-top: 1px solid $color-border;
-            padding: 2px 0.30769230769231em; // 4px / 13px
             height: auto;
+            margin: 0.5em 0 0;
+            padding: 2px 0.30769230769231em; // 4px / 13px
+            border-top: 1px solid $color-border;
             font-size: 1em;
             font-weight: bold;
             line-height: 1.5;

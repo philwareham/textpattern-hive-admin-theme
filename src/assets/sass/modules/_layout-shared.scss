@@ -2,15 +2,13 @@
    ========================================================================== */
 
 /**
- * 1. Prevent automatic text size adjustments on mobile devices.
+ * 1. Prevent text size adjust after mobile device orientation change.
  */
 
 html {
     -webkit-tap-highlight-color: rgba($color-link-hover, 0.5);
     /* 1 */
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 /**
@@ -18,11 +16,11 @@ html {
  */
 
 hr {
-    box-sizing: content-box;
+    height: 0;
     clear: both; // make sure any floats above `hr` are cleared
     border: 0; // remove the default `hr` border
     border-bottom: 1px solid $color-border;
-    height: 0;
+    box-sizing: content-box;
 }
 
 /**
@@ -79,13 +77,13 @@ hr {
  */
 
 .txp-search {
-    float: right;
     margin: 1em 0;
+    float: right;
 
     .ui-menu {
         position: absolute;
-        z-index: 100;
         width: 18em; // 234px / 13px
+        z-index: 100;
     }
 
     .ui-menu-item {
@@ -99,10 +97,10 @@ hr {
 
         label {
             display: inline-block;
-            padding: 0.30769230769231em 0.5em;
             width: 85%;
-            vertical-align: text-top;
+            padding: 0.30769230769231em 0.5em;
             cursor: pointer;
+            vertical-align: text-top;
         }
     }
 }
@@ -130,8 +128,8 @@ hr {
  */
 
 .txp-control-panel {
-    float: left;
     margin-bottom: 1em;
+    float: left;
 
     > * {
         margin: 0 1em 0 0;
@@ -179,8 +177,8 @@ hr {
  */
 
 .txp-list-options {
-    float: right;
     margin: 0.46153846153846em 0 1em; // 6px / 13px, 13px
+    float: right;
 
     > * {
         margin: 0 0 0 1em;
@@ -336,8 +334,8 @@ div.multi-edit {
  */
 
 .multi-option.multi-step {
-    margin-left: 0.30769230769231em; // 4px / 13px
     display: inline-block;
+    margin-left: 0.30769230769231em; // 4px / 13px
 }
 
 /**
@@ -368,8 +366,8 @@ div.multi-edit {
 
 .text-section {
     margin-top: 3em;
-    border-top: 2px solid $color-border;
     padding-top: 3em;
+    border-top: 2px solid $color-border;
 }
 
 /**
@@ -401,8 +399,8 @@ div.multi-edit {
 
 .disabled {
     background-image: none;
-    opacity: 0.33;
     cursor: default !important;
+    opacity: 0.33;
 
     a {
         text-decoration: none;
@@ -437,13 +435,13 @@ div.multi-edit {
 }
 
 .pageby {
-    float: left;
     margin: 1em 0;
+    float: left;
 }
 
 .prev-next {
-    float: right;
     margin: 1em 0;
+    float: right;
 
     form {
         display: inline-block;
@@ -476,10 +474,10 @@ div.multi-edit {
  */
 
 .txp-edit {
+    max-width: ($text-column - 2em);
     margin: 0 auto 1em;
     padding: 1em 1em 1px;
     /* 1 */
-    max-width: ($text-column - 2em);
     background: $color-background-box;
 
     h2 {
@@ -494,8 +492,8 @@ div.multi-edit {
 
 .txp-edit-actions {
     margin: 1em -1em;
-    border-top: 2px solid $color-background;
     padding: 1em 1em 0;
+    border-top: 2px solid $color-background;
     text-align: right;
 
     > * {
@@ -600,10 +598,10 @@ div.multi-edit {
 
     .txp-form-field-label,
     .txp-form-field-value {
+        min-height: 2.1538462em; // 28px / 13px
         -webkit-flex: 1; // Safari 7/8
         -ms-flex: 1 1 0%; // IE 10
         flex: 1; // Modern browsers (2014/2015 W3C spec)
-        min-height: 2.1538462em; // 28px / 13px
     }
 }
 
@@ -625,11 +623,11 @@ div.multi-edit {
 .txp-form-field-textarea {
     .txp-form-field-label,
     .txp-form-field-value {
+        max-width: inherit;
+        min-height: inherit;
         -webkit-flex: none; // Safari 7/8
         -ms-flex: none; // IE 10
         flex: none; // Modern browsers (2014/2015 W3C spec)
-        max-width: inherit;
-        min-height: inherit;
     }
 }
 
@@ -648,8 +646,8 @@ div.multi-edit {
 /**
  * Form field inline help texts.
  *
- * 1. Pull instructions closer to form fields.
- * 2. Limit maxiumum width of instructions, for legibility.
+ * 1. Limit maxiumum width of instructions, for legibility.
+ * 2. Pull instructions closer to form fields.
  *
  * Example HTML:
  *
@@ -664,7 +662,7 @@ div.multi-edit {
 
 .txp-form-field-instructions {
     /* 1 */
-    margin-top: -0.45454545454545em; // 5px / 11px
-    /* 2 */
     max-width: 56em; // 616px / 11px
+    /* 2 */
+    margin-top: -0.45454545454545em; // 5px / 11px
 }

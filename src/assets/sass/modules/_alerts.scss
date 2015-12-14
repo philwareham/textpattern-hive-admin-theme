@@ -16,28 +16,28 @@
 .warning,
 .error,
 .information {
-    border-radius: 0.23076923076923em; // 3px / 13px
     padding: 1px 0.23076923076923em; // 3px / 13px
+    border-radius: 0.23076923076923em; // 3px / 13px
 }
 
 .success {
-    color: $color-success-text;
     background: $color-success-background;
+    color: $color-success-text;
 }
 
 .warning {
-    color: $color-warning-text;
     background: $color-warning-background;
+    color: $color-warning-text;
 }
 
 .error {
-    color: $color-error-text;
     background: $color-error-background;
+    color: $color-error-text;
 }
 
 .information {
-    color: $color-info-text;
     background: $color-info-background;
+    color: $color-info-text;
 }
 
 /**
@@ -67,9 +67,9 @@
  */
 
 .alert-block {
+    padding: 0.53846153846154em 1em; // 7px / 13px
     clear: both;
     border: 1px solid;
-    padding: 0.53846153846154em 1em; // 7px / 13px
 
     &.success {
         border-color: $color-success-border;
@@ -103,18 +103,18 @@
 #messagepane {
     position: fixed;
     bottom: 0;
-    z-index: 1000;
     text-align: center;
+    z-index: 1000;
 
     span {
         &.success,
         &.warning,
         &.error {
             display: inline-block;
-            margin: 0 auto;
-            border-radius: $default-border-radius $default-border-radius 0 0;
-            padding: 0.53846153846154em 2.84615384615385em 0.53846153846154em 1em;
             max-width: ($text-column - 3.84615384615385em);
+            margin: 0 auto;
+            padding: 0.53846153846154em 2.84615384615385em 0.53846153846154em 1em;
+            border-radius: $default-border-radius $default-border-radius 0 0;
             color: $color-text-inverse;
             box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
         }
@@ -145,14 +145,14 @@
     position: absolute;
     top: 0.27777777777778em; // 5px / 18px
     right: 0.72222222222222em; // 13px / 18px
-    text-decoration: none;
     color: transparentize($color-text-inverse, 0.4);
     font-size: 18px;
     font-weight: bold;
+    text-decoration: none;
 
     &:hover {
-        text-decoration: none;
         color: transparentize($color-text-inverse, 0.2);
+        text-decoration: none;
         cursor: pointer;
     }
 }
@@ -162,9 +162,18 @@
  */
 
 @include keyframes(messageflash) {
-    0% {opacity: 0;}
-    50%, 100% {opacity: 1;}
-    75% {opacity: 0.5;}
+    0% {
+        opacity: 0;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
 }
 
 .messageflash {

@@ -33,8 +33,8 @@ table {
  */
 
 caption {
-    text-align: left;
     margin-bottom: 0.5em;
+    text-align: left;
 }
 
 /**
@@ -51,9 +51,9 @@ caption {
 
 th,
 td {
-    vertical-align: top;
-    text-align: left;
     padding: 0;
+    text-align: left;
+    vertical-align: top;
 }
 
 /**
@@ -139,8 +139,8 @@ td {
         }
 
         a {
-            position: relative;
             display: block;
+            position: relative;
             margin: -0.38461538461538em -1em; // improved click area
             padding: 0.38461538461538em 1em; // 5px / 13px + 13px
             color: $color-text;
@@ -170,12 +170,12 @@ td {
         a:after {
             @include hide-text;
 
-            font-size: 16px;
             position: absolute;
             top: 45%;
             right: 0.3125em; // 5px / 16px
-            z-index: 10;
+            font-size: 16px;
             opacity: 0.5;
+            z-index: 10;
 
             [dir="rtl"] & {
                 right: auto;

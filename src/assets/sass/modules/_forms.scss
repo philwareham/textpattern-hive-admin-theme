@@ -2,35 +2,35 @@
    ========================================================================== */
 
 /**
- * 1. Define consistent fieldset border, margin, and padding.
- * 2. Address width being affected by wide descendants in Chrome, Firefox.
+ * 1. Address width being affected by wide descendants in Chrome, Firefox.
+ * 2. Define consistent fieldset border, margin, and padding.
  */
 
 fieldset {
     /* 1 */
-    margin: 1em 0;
-    border: 1px solid $color-border;
-    padding: 1px 1em;
-    /* 2 */
     min-width: 0;
+    /* 2 */
+    margin: 1em 0;
+    padding: 1px 1em;
+    border: 1px solid $color-border;
 }
 
 /**
- * 1. Correct `color` not being inherited in IE 10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 1. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 2. Correct `color` not being inherited in IE 10/11.
  */
 
 legend {
     /* 1 */
-    border: 0;
-    /* 2 */
     padding: 0;
+    /* 2 */
+    border: 0;
 }
 
 /**
- * 1. Correct font properties not being inherited.
+ * 1. Prevent elements from spilling out of their parent.
  * 2. Address margins set differently in Firefox 4+, Safari, and Chrome.
- * 3. Prevent elements from spilling out of their parent.
+ * 3. Correct font properties not being inherited.
  */
 
 button,
@@ -43,18 +43,16 @@ textarea,
 .navlink,
 .navlink-active,
 .navlink-disabled {
-    box-sizing: border-box;
-
     /* 1 */
-    font-size: 100%;
-    @include adjust-font-size-to(13px, 0.9); // 18px `line-height`
-
+    max-width: 100%;
     /* 2 */
     margin: 0;
-    /* 3 */
-    max-width: 100%;
     font-family: $font-sans-serif;
+    /* 3 */
+    font-size: 100%;
+    @include adjust-font-size-to(13px, 0.9); // 18px `line-height`
     vertical-align: baseline;
+    box-sizing: border-box;
 }
 
 /**
@@ -74,8 +72,8 @@ textarea {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-    border: 0;
     padding: 0;
+    border: 0;
 }
 
 /**
@@ -91,7 +89,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Styling of form input fields.
  *
- * 1. Remove iOS Safari default styling.
+ * 1. Remove browser-specific default styling.
  */
 
 input[type="color"],
@@ -110,19 +108,19 @@ input[type="url"],
 input[type="week"],
 select,
 textarea {
+    height: 2.15384615384615em; // 28px / 13px
+    padding: 0.30769230769231em; // 4px / 13px
     transition: box-shadow 0.1s linear;
-    /* 1 */
-    -webkit-appearance: none;
     border: 1px solid $color-border;
     border-radius: 0;
-    padding: 0.30769230769231em; // 4px / 13px
-    height: 2.15384615384615em; // 28px / 13px
     background: $color-background;
+    /* 1 */
+    appearance: none;
 
     &:focus {
         border-color: $color-link-focus;
-        box-shadow: 0 0 7px $color-link-focus-glow;
         outline: 0;
+        box-shadow: 0 0 7px $color-link-focus-glow;
     }
 }
 
@@ -242,15 +240,15 @@ select[size="1"] {
  */
 
 optgroup {
+    color: $color-text;
     font-style: normal;
     font-weight: bold;
-    color: $color-text;
 }
 
 /**
  * 1. Remove default vertical scrollbar in IE 10/11.
- * 2. Restrict to vertical resizing to prevent layout breakage.
- * 3. Remove unwanted space below `textarea` in Safari, Chrome, Opera.
+ * 2. Remove unwanted space below `textarea` in Safari, Chrome, Opera.
+ * 3. Restrict to vertical resizing to prevent layout breakage.
  */
 
 textarea {
@@ -260,16 +258,16 @@ textarea {
     /* 1 */
     overflow: auto;
     /* 2 */
-    resize: vertical;
-    /* 3 */
     vertical-align: top;
+    /* 3 */
+    resize: vertical;
 }
 
 /**
  * Make sure disabled elements really are disabled and styled appropriately.
  *
- * 1. Override default iOS opacity setting.
- * 2. Re-set default cursor for disabled elements.
+ * 1. Re-set default cursor for disabled elements.
+ * 2. Override default iOS opacity setting.
  */
 
 button[disabled],
@@ -284,14 +282,14 @@ select[disabled] optgroup,
 textarea[disabled],
 .navlink-disabled {
     border-color: $color-gradient-to !important;
-    color: #aaaaaa !important;
     background: #eeeeee !important;
-    box-shadow: none !important;
+    color: #aaaaaa !important;
     text-shadow: none !important;
+    box-shadow: none !important;
     /* 1 */
-    opacity: 1;
-    /* 2 */
     cursor: default !important;
+    /* 2 */
+    opacity: 1;
 }
 
 /**
@@ -366,8 +364,8 @@ input.input-xsmall {
 
 input {
     &.input-year {
-        text-align: center;
         width: 4.07692307692308em; // 53px / 13px
+        text-align: center;
     }
 
     &.input-month,
@@ -375,7 +373,7 @@ input {
     &.input-hour,
     &.input-minute,
     &.input-second {
-        text-align: center;
         width: 2.46153846153846em; // 32px / 13px
+        text-align: center;
     }
 }

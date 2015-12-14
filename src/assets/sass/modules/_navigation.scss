@@ -22,14 +22,14 @@ button.txp-nav-toggle {
  */
 
 .txp-nav {
+    margin: 0;
     float: left;
     list-style: none;
-    margin: 0;
 
     ul {
-        list-style: none;
         margin: 0;
         padding: 0;
+        list-style: none;
     }
 
     a {
@@ -88,8 +88,8 @@ button.txp-nav-toggle {
  */
 
 .txp-nav > ul > li {
-    position: relative;
     display: block;
+    position: relative;
     float: left;
     border-right: 1px solid $color-accent-gradient-to;
     background: rgba($color-text-inverse, 0.2);
@@ -101,10 +101,10 @@ button.txp-nav-toggle {
     > a {
         display: block;
         padding: 0 1em;
-        line-height: 2.69230769230769em; // 35px / 13px
         color: darken($color-text, 20%);
-        text-shadow: $text-shadow-light;
+        line-height: 2.69230769230769em; // 35px / 13px
         text-decoration: none;
+        text-shadow: $text-shadow-light;
 
         &:hover {
             background: rgba($color-text-inverse, 0.3);
@@ -132,13 +132,13 @@ button.txp-nav-toggle {
         @include hide-text;
         @include triangle($color-text, 0.25em, 0.5em, 180);
 
-        font-size: 16px;
         position: absolute;
-        content: "\2193";
         top: 1em;
         right: 0.5625em; // 9px / 16px
-        z-index: 10;
+        font-size: 16px;
+        content: "\2193";
         opacity: 0.5;
+        z-index: 10;
     }
 
     &:hover:after,
@@ -204,17 +204,17 @@ button.txp-nav-toggle {
  */
 
 .dropdown-menu {
+    display: none;
     position: absolute;
     top: 3em;
     left: 0;
-    z-index: 20000;
-    display: none;
+    min-width: 12em;
     border: 1px solid #d4d4d4;
     border-top: 0;
     border-radius: 0 $default-border-radius $default-border-radius;
-    min-width: 12em;
     background: $color-highlight-box;
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+    z-index: 20000;
 
     li {
         &:first-child {
@@ -241,16 +241,16 @@ button.txp-nav-toggle {
 
     // Indicator pointer.
     &:before {
-        font-size: 16px;
         position: absolute;
-        content: "";
         top: -0.5em; // 8px / 16px
         left: 0.75em; // 12px / 16px;
-        z-index: 2;
         width: 1em;
         height: 0.5em;
         background: url("../img/sprite.svg") no-repeat -12em 0;
         background-size: 13em 2em; // 208px / 16px + 32px / 16px
+        font-size: 16px;
+        content: "";
+        z-index: 2;
     }
 }
 

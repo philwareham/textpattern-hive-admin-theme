@@ -8,10 +8,10 @@
  * https://jqueryui.com/button/
  *
  * 1. Correct font size not being inherited in all browsers.
- * 2. Remove iOS Safari default styling.
- * 3. The `overflow` property removes extra width in IE.
- * 4. Improve usability and consistency of cursor style between image-type
+ * 2. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
+ * 3. The `overflow` property removes extra width in IE.
+ * 4. Remove iOS Safari default styling.
  *
  * Example HTML:
  *
@@ -23,31 +23,31 @@
 .ui-button {
     @include gradient-linear($color-gradient-from, $color-gradient-to);
 
+    display: inline-block;
+    position: relative;
+    height: 2.1538462em; // 28px / 13px
+    margin: 0 0.1em 0 0;
+    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     transition: box-shadow 0.1s linear;
-    box-sizing: border-box;
+    border: solid 1px $color-gradient-border;
     background-clip: padding-box;
+    color: $color-text;
+    font-family: $font-sans-serif;
     /* 1 */
     font-size: 100%;
     font-size: 1em;
     line-height: 1.3846154em; // 18px / 13px
+    text-align: center;
+    text-shadow: $text-shadow-light;
+    box-shadow: $inset-highlighting;
     /* 2 */
-    -webkit-appearance: none;
-    position: relative;
-    display: inline-block;
+    cursor: pointer;
     /* 3 */
     overflow: visible;
-    margin: 0 0.1em 0 0;
-    border: solid 1px $color-gradient-border;
-    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
-    height: 2.1538462em; // 28px / 13px
-    font-family: $font-sans-serif;
-    text-align: center;
     vertical-align: baseline;
-    color: $color-text;
-    box-shadow: $inset-highlighting;
-    text-shadow: $text-shadow-light;
+    box-sizing: border-box;
     /* 4 */
-    cursor: pointer;
+    appearance: none;
 
     &:hover {
         @include gradient-linear(lighten($color-gradient-from, 4%), lighten($color-gradient-to, 4%));
@@ -61,14 +61,14 @@
 
         border-color: darken($color-gradient-border, 13%);
         color: darken($color-text, 10%);
-        box-shadow: inset 0 0.2em 0.25em rgba(#000000, 0.15);
         text-decoration: none;
+        box-shadow: inset 0 0.2em 0.25em rgba(#000000, 0.15);
     }
 
     &:focus {
         border-color: $color-link-focus;
-        box-shadow: $inset-highlighting, 0 0 7px $color-link-focus-glow;
         outline: 0;
+        box-shadow: $inset-highlighting, 0 0 7px $color-link-focus-glow;
     }
 }
 
@@ -90,8 +90,8 @@ a.ui-button {
 .ui-button.ui-state-focus {
     /* 1 */
     border-color: $color-link-focus !important;
-    box-shadow: $inset-highlighting, 0 0 7px $color-link-focus-glow;
     outline: 0;
+    box-shadow: $inset-highlighting, 0 0 7px $color-link-focus-glow;
 }
 
 /**

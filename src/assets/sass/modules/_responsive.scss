@@ -106,18 +106,18 @@
         @include hide-text;
 
         display: block;
-        float: left;
-        margin: 0.0625em 0 0;
-        border: 0;
-        border-radius: 0;
-        padding: 0;
         width: 2em;
         height: 2em;
+        margin: 0.0625em 0 0;
+        padding: 0;
+        float: left;
+        border: 0;
+        border-radius: 0;
         background: transparent url("../img/sprite.svg") -10em 0;
         background-size: 13em 2em; // 208px / 16px + 32px / 16px
+        font-size: 16px;
         text-shadow: none;
         box-shadow: none;
-        font-size: 16px;
 
         &:focus {
             outline: thin dotted $color-link-focus;
@@ -141,11 +141,11 @@
      */
 
     .txp-nav.in .data-dropdown {
+        display: block;
         position: absolute;
         top: 3em;
         right: 0;
         left: 0;
-        display: block;
         background: $color-highlight-box;
         box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 
@@ -154,13 +154,13 @@
             position: absolute;
             top: -0.5em; // 8px / 16px
             left: 4.28em; // 68px / 16px;
-            z-index: 2;
             width: 1em;
             height: 0.5em;
             background: url("../img/sprite.svg") no-repeat -12em 0;
             background-size: 13em 2em; // 208px / 16px + 32px / 16px
             font-size: 16px;
             content: "";
+            z-index: 2;
         }
     }
 
@@ -190,9 +190,9 @@
 
     .dropdown-menu {
         position: static;
+        min-width: 0;
         border: 0;
         border-radius: 0;
-        min-width: 0;
         box-shadow: none;
 
         a {
@@ -219,8 +219,8 @@
      * Collapse 2 column form fields to 1 column (remove flexbox).
      */
 
-     .txp-edit,
-     .txp-prefs-group {
+    .txp-edit,
+    .txp-prefs-group {
         .txp-form-field:not(.txp-form-field-textarea) {
             display: block;
         }
@@ -232,13 +232,13 @@
      * Collapsed from two-column format on desktop layout (remove flexbox).
      */
 
-     .txp-edit,
-     .txp-prefs-group {
+    .txp-edit,
+    .txp-prefs-group {
         .txp-form-field-label,
         .txp-form-field-value {
             -webkit-flex: none; // Safari 7/8
             -ms-flex: none; // IE 10
-            flex: none; // Modern browsers (2014/2015 W3C spec)
+            flex: none;
             min-height: inherit;
         }
     }
@@ -248,9 +248,10 @@
      */
 
     .txp-form-field-value {
-        .jquery-ui-buttonset, // This is an optional jQuery UI widget (not used in core layouts).
         input,
-        select {
+        select,
+        // This is an optional jQuery UI widget (not used in core layouts).
+        .jquery-ui-buttonset {
             margin: 0;
         }
     }
@@ -277,8 +278,8 @@
 
         li {
             display: block;
-            float: none;
             margin: 0;
+            float: none;
 
             &:after {
                 display: none;
@@ -310,9 +311,9 @@
 
     .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
         li {
-            float: none;
             margin: 0;
             margin-top: 2px;
+            float: none;
             border-bottom-width: 1px;
             box-shadow: none;
 

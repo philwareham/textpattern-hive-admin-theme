@@ -2,21 +2,21 @@
    ========================================================================== */
 
 /**
- * 1. Address `overflow` set to `hidden` in IE 10/11.
- * 2. Correct `button` style inheritance in Firefox, IE 10/11, and Opera.
+ * 1. Correct `button` style inheritance in Firefox, IE 10/11, and Opera.
+ * 2. Address `overflow` set to `hidden` in IE 10/11.
  */
 
 button {
     /* 1 */
-    overflow: visible;
-    /* 2 */
     text-transform: none;
+    /* 2 */
+    overflow: visible;
 }
 
 /**
- * 1. Remove iOS Safari default styling.
- * 2. Improve usability and consistency of cursor style between image-type
+ * 1. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
+ * 2. Remove iOS Safari default styling.
  */
 
 button,
@@ -29,23 +29,23 @@ input[type="button"],
 .navlink-active {
     @include gradient-linear($color-gradient-from, $color-gradient-to);
 
-    transition: box-shadow 0.1s linear;
-    /* 1 */
-    -webkit-appearance: none;
-    background-clip: padding-box;
     display: inline-block;
-    border: solid 1px $color-gradient-border;
-    border-radius: $default-border-radius;
-    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     width: auto;
     height: 2.15384615384615em; // 28px / 13px
+    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
+    transition: box-shadow 0.1s linear;
+    border: solid 1px $color-gradient-border;
+    border-radius: $default-border-radius;
+    background-clip: padding-box;
+    color: $color-text;
     font-weight: normal;
     text-align: center;
-    color: $color-text;
-    box-shadow: $inset-highlighting;
     text-shadow: $text-shadow-light;
-    /* 2 */
+    box-shadow: $inset-highlighting;
+    /* 1 */
     cursor: pointer;
+    /* 2 */
+    appearance: none;
 
     &:hover {
         @include gradient-linear(lighten($color-gradient-from, 4%), lighten($color-gradient-to, 4%));
@@ -60,14 +60,14 @@ input[type="button"],
 
         border-color: darken($color-gradient-border, 13%);
         color: darken($color-text, 10%);
-        box-shadow: inset 0 0.2em 0.25em rgba(#000000, 0.15);
         text-decoration: none;
+        box-shadow: inset 0 0.2em 0.25em rgba(#000000, 0.15);
     }
 
     &:focus {
         border-color: $color-link-focus;
-        box-shadow: $inset-highlighting, 0 0 7px $color-link-focus-glow;
         outline: 0;
+        box-shadow: $inset-highlighting, 0 0 7px $color-link-focus-glow;
     }
 }
 
@@ -84,10 +84,10 @@ button.publish,
 a.publish {
     @include gradient-linear(lighten($color-accent-gradient-from, 7%), lighten($color-accent-gradient-to, 7%));
 
-    font-weight: bold;
-    border: 1px solid $color-accent-gradient-to;
-    padding: 0.61538461538462em 1em; // 8px / 13px + 13px
     height: 2.76923076923077em; // 36px / 13px
+    padding: 0.61538461538462em 1em; // 8px / 13px + 13px
+    border: 1px solid $color-accent-gradient-to;
+    font-weight: bold;
 
     &:hover {
         @include gradient-linear(lighten($color-accent-gradient-from, 14%), lighten($color-accent-gradient-to, 14%));
@@ -117,13 +117,13 @@ a.publish {
  */
 
 button.destroy {
+    height: auto;
+    padding: 0.07692307692308em 0 0; // 1px / 13px
     border: 0;
     border-radius: 0;
-    padding: 0.07692307692308em 0 0; // 1px / 13px
-    height: auto;
     background: none;
-    box-shadow: none;
     text-shadow: none;
+    box-shadow: none;
 
     &:focus {
         outline: thin dotted $color-link-focus;
@@ -142,13 +142,13 @@ button.destroy {
  */
 
 .navlink-disabled {
-    box-sizing: border-box;
-    background-clip: padding-box;
     display: inline-block;
+    height: 2.15384615384615em; // 28px / 13px
+    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     border: 1px solid;
     border-radius: $default-border-radius;
-    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
-    height: 2.15384615384615em; // 28px / 13px
+    background-clip: padding-box;
+    box-sizing: border-box;
 }
 
 /**
@@ -166,8 +166,8 @@ button.destroy {
  */
 
 ul.nav-tertiary {
-    list-style: none;
     padding: 0;
+    list-style: none;
 
     li {
         display: inline;
@@ -260,7 +260,7 @@ ul.nav-tertiary {
 
 .txp-search button.txp-search-button {
     margin-left: -0.35em;
-    border-radius: 0;
-    padding-left: 1.5em;
     padding-right: 1.5em;
+    padding-left: 1.5em;
+    border-radius: 0;
 }

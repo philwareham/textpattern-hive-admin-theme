@@ -18,8 +18,7 @@
     $hdfilename: $hdfile + "@2x." + $hdtype;
     background-image: url("../img/" + $filename);
     background-size: $hdwidth $hdheight;
-    @media (min-resolution: 1.25dppx),
-        (min-resolution: 120dpi) {
+    @media (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
         background-image: url("../img/" + $hdfilename);
     }
 }

@@ -25,10 +25,10 @@
  */
 
 .ui-spinner {
-    position: relative;
     display: inline-block;
-    border: 0;
+    position: relative;
     padding: 0;
+    border: 0;
     vertical-align: baseline;
 
     .ui-spinner-input {
@@ -44,17 +44,17 @@
 }
 
 .ui-spinner-button {
+    display: block;
     position: absolute;
     right: 0;
-    display: block;
-    margin: 0;
-    padding: 0;
     width: 18px;
     height: 42%;
+    margin: 0;
+    padding: 0;
     font-size: 0.53846153846154em; // 7px / 13px
     line-height: 1.57142857142857em; // 11px / 7px
-    overflow: hidden;
     cursor: default;
+    overflow: hidden;
 }
 
 .ui-spinner-up {

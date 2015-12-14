@@ -20,12 +20,12 @@
  */
 
 .strength-meter {
-    box-sizing: border-box;
     position: relative;
     width: 100%;
     max-width: 28em;
     height: 1.38461538461538em; // 18px / 13px
     background-color: darken($color-border, 16%);
+    box-sizing: border-box;
 
     &:empty {
         background-color: transparent;
@@ -33,17 +33,17 @@
 
     .bar {
         position: absolute;
-        z-index: 2;
         left: 0;
         height: 1.38461538461538em; // 18px / 13px
+        z-index: 2;
     }
 
     .indicator {
         position: absolute;
-        z-index: 3;
         padding: 0.15384615384615em 0.38461538461538em; // 2px / 13px + 5px / 13px
-        line-height: 1;
         color: $color-text-inverse;
+        line-height: 1;
+        z-index: 3;
     }
 }
 
