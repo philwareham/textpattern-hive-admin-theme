@@ -72,11 +72,16 @@
         // arrows at right-hand side of boxes
         &:after {
             @include hide-text;
-            @include triangle($color-border, 3em, 0.75em, 90);
 
+            display: block;
             position: absolute;
             top: -1px;
             left: 100%;
+            width: 0;
+            height: 0;
+            border: 0 solid transparent;
+            border-width: 1.5em 0 1.5em 0.75em;
+            border-left-color: #cccccc;
             font-size: 16px;
             content: "\2192";
             z-index: 2;
@@ -107,10 +112,11 @@
         }
 
         &:after {
-            @include triangle($color-border, 3em, 0.75em, 270);
-
             right: 100%;
             left: auto;
+            border: 0 solid transparent;
+            border-width: 1.5em 0.75em 1.5em 0;
+            border-right-color: #cccccc;
             content: "\2190";
         }
     }

@@ -170,9 +170,12 @@ td {
         a:after {
             @include hide-text;
 
+            display: block;
             position: absolute;
             top: 45%;
             right: 0.3125em; // 5px / 16px
+            width: 0;
+            height: 0;
             font-size: 16px;
             opacity: 0.5;
             z-index: 10;
@@ -189,14 +192,16 @@ td {
     }
 
     &.desc a:after {
-        @include triangle($color-text, 0.25em, 0.5em, 180);
-
+        border: 0 solid transparent;
+        border-width: 0.25em 0.25em 0;
+        border-top-color: #333333;
         content: "\2193";
     }
 
     &.asc a:after {
-        @include triangle($color-text, 0.25em, 0.5em, 0);
-
+        border: 0 solid transparent;
+        border-width: 0 0.25em 0.25em;
+        border-bottom-color: #333333;
         content: "\2191";
     }
 }

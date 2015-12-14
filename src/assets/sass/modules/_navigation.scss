@@ -130,11 +130,16 @@ button.txp-nav-toggle {
 
     &:after {
         @include hide-text;
-        @include triangle($color-text, 0.25em, 0.5em, 180);
 
+        display: block;
         position: absolute;
         top: 1em;
         right: 0.5625em; // 9px / 16px
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        border-width: 0.25em 0.25em 0;
+        border-top-color: #333333;
         font-size: 16px;
         content: "\2193";
         opacity: 0.5;
@@ -152,8 +157,9 @@ button.txp-nav-toggle {
  */
 
 .txp-nav > ul > li.open > a.dropdown-toggle:after {
-    @include triangle($color-text, 0.25em, 0.5em, 0);
-
+    border: 0 solid transparent;
+    border-width: 0 0.25em 0.25em;
+    border-bottom-color: #333333;
     content: "\2191";
 }
 
