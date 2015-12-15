@@ -43,6 +43,15 @@ module.exports = function (grunt)
             }
         },
 
+        // Run some tasks in parallel to speed up the build process.
+        concurrent: {
+            dist: [
+                'css',
+                'copy:dist',
+                'uglify:dist'
+            ]
+        },
+
         // Copy files from `src/` to `dist/hive/assets/`.
         copy: {
             css: {
@@ -179,9 +188,9 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['clean', 'jshint', 'sass', 'copy:dist', 'uglify:dist', 'uglify:minify']);
+    grunt.registerTask('build', ['clean', 'jshint', 'concurrent', 'uglify:minify']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('sass', ['sasslint', 'compass', 'copy:css', 'postcss', 'cssmin']);
+    grunt.registerTask('css', ['sasslint', 'compass', 'copy:css', 'postcss', 'cssmin']);
     grunt.registerTask('test', ['jshint']);
     grunt.registerTask('travis', ['jshint', 'compass']);
 };
