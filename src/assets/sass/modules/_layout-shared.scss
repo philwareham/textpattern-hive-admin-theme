@@ -594,10 +594,8 @@ div.multi-edit {
 
     .txp-form-field-label,
     .txp-form-field-value {
-        min-height: 2.1538462em; // 28px / 13px
-        -webkit-flex: 1; // Safari 7/8
-        -ms-flex: 1 1 0%; // IE 10
-        flex: 1; // Modern browsers (2014/2015 W3C spec)
+        flex: 1 1 0%;
+        min-height: 2.15384615384615em; // 28px / 13px
     }
 }
 
@@ -619,9 +617,9 @@ div.multi-edit {
 .txp-form-field-textarea {
     .txp-form-field-label,
     .txp-form-field-value {
+        flex: none;
         max-width: inherit;
         min-height: inherit;
-        flex: none;
     }
 }
 
