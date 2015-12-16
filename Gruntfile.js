@@ -175,7 +175,7 @@ module.exports = function (grunt)
         // Directories watched and tasks performed by invoking `grunt watch`.
         watch: {
             sass: {
-                files: '<%= paths.src.sass %>**',
+                files: '<%= paths.src.sass %>**/*.scss',
                 tasks: ['sass']
             },
 
