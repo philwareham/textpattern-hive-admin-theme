@@ -19,6 +19,10 @@ module.exports = function (grunt)
             tmp: {
                 css: 'tmp/assets/css/'
             },
+            docs: {
+                css: 'docs/assets/css/',
+                js: 'docs/assets/js/'
+            },
             dest: {
                 dir: 'dist/hive/',
                 css: 'dist/hive/assets/css/',
@@ -30,40 +34,36 @@ module.exports = function (grunt)
         // Clean distribution and temporary directories to start afresh.
         clean: [
             'dist/',
+            'docs/assets/css/',
             'tmp/'
         ],
-
-        // Use 'config.rb' file to configure Compass.
-        compass: {
-            dev: {
-                options: {
-                    config: 'config.rb',
-                    force: true
-                }
-            }
-        },
 
         // Run some tasks in parallel to speed up the build process.
         concurrent: {
             dist: [
                 'css',
-                'copy:dist',
+                'copy',
                 'uglify:dist'
             ]
         },
 
         // Copy files from `src/` to `dist/hive/assets/`.
         copy: {
-            css: {
-                files: [
-                    {expand: true, cwd: '<%= paths.tmp.css %>', src: ['**', '!design-patterns.css'], dest: '<%= paths.dest.css %>'},
-                    {expand: true, cwd: '<%= paths.tmp.css %>', src: ['design-patterns.css'], dest: 'docs/assets/css/'}
-                ]
-            },
             dist: {
                 files: [
-                    {expand: true, cwd: '<%= paths.src.dir %>', src: ['*'], dest: '<%= paths.dest.dir %>', filter: 'isFile'},
-                    {expand: true, cwd: '<%= paths.src.img %>', src: ['**'], dest: '<%= paths.dest.img %>'}
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.dir %>',
+                        src: '*',
+                        dest: '<%= paths.dest.dir %>',
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.img %>',
+                        src: '**',
+                        dest: '<%= paths.dest.img %>'
+                    }
                 ]
             }
         },
@@ -81,7 +81,10 @@ module.exports = function (grunt)
 
         // Check code quality of Gruntfile.js and theme-specific JavaScript using JSHint.
         jshint: {
-            files: ['Gruntfile.js', '<%= paths.src.js %>*.js'],
+            files: [
+                'Gruntfile.js',
+                '<%= paths.src.js %>**/*.js'
+            ],
             options: {
                 bitwise: true,
                 camelcase: true,
@@ -121,11 +124,38 @@ module.exports = function (grunt)
                     })
                 ]
             },
-            files: {
-                expand: true,
-                cwd: '<%= paths.dest.css %>',
-                src: ['*.css', '!*.min.css'],
-                dest: '<%= paths.dest.css %>'
+            files: [
+                {
+                    expand: true,
+                    cwd: '<%= paths.dest.css %>',
+                    src: ['*.css', '!*.min.css'],
+                    dest: '<%= paths.dest.css %>'
+                },
+                {
+                    '<%= paths.docs.css %>design-patterns.css': '<%= paths.docs.css %>design-patterns.css'
+                }
+            ]
+        },
+
+        // Sass configuration.
+        sass: {
+            options: {
+                includePaths: ['node_modules/foundation-sites/scss'],
+                outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
+                sourceMap: false
+            },
+            dist: {
+                files: [
+                    //{
+                    //    expand: true,
+                    //    cwd: '<%= paths.src.css %>',
+                    //    src: ['**', '!design-patterns.scss'],
+                    //    dest: '<%= paths.dest.css %>'
+                    //}//,
+                    {
+                        '<%= paths.docs.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'
+                    }
+                ]
             }
         },
 
@@ -153,13 +183,13 @@ module.exports = function (grunt)
                             'node_modules/autosize/dist/autosize.js',
                             '<%= paths.src.js %>main.js'
                         ],
-                        'docs/assets/js/prettify/prettify.js': ['bower_components/google-code-prettify/src/prettify.js']
+                        '<%= paths.docs.js %>prettify/prettify.js': 'bower_components/google-code-prettify/src/prettify.js'
                     },
                     {
                         expand: true,
                         cwd: 'bower_components/google-code-prettify/src/',
                         src: 'lang-*.js',
-                        dest: 'docs/assets/js/prettify/'
+                        dest: '<%= paths.docs.js %>prettify/'
                     }
                 ]
             },
@@ -176,11 +206,10 @@ module.exports = function (grunt)
         watch: {
             sass: {
                 files: '<%= paths.src.sass %>**/*.scss',
-                tasks: ['sass']
+                tasks: ['css']
             },
-
             js: {
-                files: '<%= paths.src.js %>*.js',
+                files: '<%= paths.src.js %>**/*.js',
                 tasks: ['jshint', 'copy', 'uglify']
             }
         }
@@ -188,9 +217,8 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['clean', 'jshint', 'concurrent', 'uglify:minify']);
+    grunt.registerTask('build', ['clean', 'concurrent', 'uglify:minify']);
+    grunt.registerTask('css', ['sasslint', 'sass', 'postcss', 'cssmin']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('css', ['sasslint', 'compass', 'copy:css', 'postcss', 'cssmin']);
-    grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('travis', ['jshint', 'compass']);
+    grunt.registerTask('travis', ['jshint', 'build']);
 };
