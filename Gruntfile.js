@@ -123,7 +123,7 @@ module.exports = function (grunt)
             dist: {
                 files: [
                     {'<%= paths.dest.css %>textpattern.css': '<%= paths.dest.css %>textpattern.css'},
-                    {'<%= paths.docs.css %>design-patterns.css': '<%= paths.docs.css %>design-patterns.css'},
+                    {'<%= paths.docs.css %>design-patterns.css': '<%= paths.docs.css %>design-patterns.css'}
                 ]
             }
         },
