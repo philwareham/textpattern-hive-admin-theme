@@ -16,9 +16,6 @@ module.exports = function (grunt)
                 img: 'src/assets/img/',
                 js: 'src/assets/js/'
             },
-            tmp: {
-                css: 'tmp/assets/css/'
-            },
             docs: {
                 css: 'docs/assets/css/',
                 js: 'docs/assets/js/'
@@ -34,8 +31,7 @@ module.exports = function (grunt)
         // Clean distribution and temporary directories to start afresh.
         clean: [
             'dist/',
-            'docs/assets/css/',
-            'tmp/'
+            'docs/assets/css/'
         ],
 
         // Run some tasks in parallel to speed up the build process.
@@ -124,37 +120,24 @@ module.exports = function (grunt)
                     })
                 ]
             },
-            files: [
-                {
-                    expand: true,
-                    cwd: '<%= paths.dest.css %>',
-                    src: ['*.css', '!*.min.css'],
-                    dest: '<%= paths.dest.css %>'
-                },
-                {
-                    '<%= paths.docs.css %>design-patterns.css': '<%= paths.docs.css %>design-patterns.css'
-                }
-            ]
+            dist: {
+                files: [
+                    {'<%= paths.dest.css %>textpattern.css': '<%= paths.dest.css %>textpattern.css'},
+                    {'<%= paths.docs.css %>design-patterns.css': '<%= paths.docs.css %>design-patterns.css'},
+                ]
+            }
         },
 
         // Sass configuration.
         sass: {
-            options: {
-                includePaths: ['node_modules/foundation-sites/scss'],
+            options: require('eyeglass')({
                 outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
                 sourceMap: false
-            },
+            }),
             dist: {
                 files: [
-                    //{
-                    //    expand: true,
-                    //    cwd: '<%= paths.src.css %>',
-                    //    src: ['**', '!design-patterns.scss'],
-                    //    dest: '<%= paths.dest.css %>'
-                    //}//,
-                    {
-                        '<%= paths.docs.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'
-                    }
+                    {'<%= paths.dest.css %>textpattern.css': '<%= paths.src.sass %>textpattern.scss'},
+                    {'<%= paths.docs.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'}
                 ]
             }
         },
