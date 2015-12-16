@@ -38,7 +38,8 @@ template {
 a,
 input,
 button {
-  touch-action: none;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 /**
@@ -542,7 +543,8 @@ pre {
   /* 2 */
   overflow-x: auto;
   /* 3 */
-  tab-size: 4;
+  -moz-tab-size: 4;
+       tab-size: 4;
 }
 
 /**
@@ -893,6 +895,18 @@ a:focus .content-image {
 /*
  * Flash the alert message using CSS animation.
  */
+@-webkit-keyframes messageflash {
+  0% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+}
 @keyframes messageflash {
   0% {
     opacity: 0;
@@ -907,7 +921,8 @@ a:focus .content-image {
 }
 
 .messageflash {
-  animation: messageflash 1s;
+  -webkit-animation: messageflash 1s;
+          animation: messageflash 1s;
 }
 
 /* Twisties
@@ -1309,7 +1324,9 @@ textarea {
   border-radius: 0;
   background: #ffffff;
   /* 1 */
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 input[type="color"]:focus,
@@ -1607,7 +1624,9 @@ input[type="button"],
   /* 1 */
   cursor: pointer;
   /* 2 */
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 button:hover,
@@ -2223,14 +2242,20 @@ body {
   margin: 0 auto;
 }
 
-@supports (display: flex) {
+@supports ((display: -webkit-flex) or (display: -ms-flexbox) or (display: flex)) {
   body {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     min-height: 100vh;
   }
   .txp-body {
-    flex: 1 1 0%;
+    -webkit-flex: 1 1 0%;
+        -ms-flex: 1 1 0%;
+            flex: 1 1 0%;
   }
 }
 
@@ -2658,7 +2683,9 @@ button.txp-nav-toggle {
  */
 html {
   /* 1 */
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
 }
 
 /**
@@ -2881,7 +2908,7 @@ span.spinner {
   height: 13px;
 }
 
-@media (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   span.spinner {
     background-image: url("../img/spinner@2x.gif");
   }
@@ -3203,15 +3230,21 @@ div.multi-edit {
  */
 .txp-edit .txp-form-field:not(.txp-form-field-textarea),
 .txp-prefs-group .txp-form-field:not(.txp-form-field-textarea) {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .txp-edit .txp-form-field-label,
 .txp-edit .txp-form-field-value,
 .txp-prefs-group .txp-form-field-label,
 .txp-prefs-group .txp-form-field-value {
-  flex: 1 1 0%;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
   min-height: 2.15384615384615em;
 }
 
@@ -3231,7 +3264,9 @@ div.multi-edit {
  */
 .txp-form-field-textarea .txp-form-field-label,
 .txp-form-field-textarea .txp-form-field-value {
-  flex: none;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
   max-width: inherit;
   min-height: inherit;
 }
@@ -3772,7 +3807,8 @@ a.ui-state-default:focus {
 }
 
 .ui-draggable-handle {
-  touch-action: none;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 /**
@@ -3807,7 +3843,8 @@ a.ui-state-default:focus {
   display: block;
   position: absolute;
   font-size: 0.1px;
-  touch-action: none;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 /**
@@ -3903,7 +3940,8 @@ a.ui-state-default:focus {
  * </ol>
  */
 .ui-selectable {
-  touch-action: none;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 /**
@@ -3943,7 +3981,8 @@ a.ui-state-default:focus {
 }
 
 .ui-sortable-handle {
-  touch-action: none;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 .ui-sortable-placeholder {
@@ -4096,7 +4135,9 @@ a.ui-state-default:focus {
   vertical-align: baseline;
   box-sizing: border-box;
   /* 4 */
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .ui-button:hover {
@@ -4944,7 +4985,7 @@ label.ui-state-active.ui-button:active {
   background-color: #cce0ff;
 }
 
-@media (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   .ui-progressbar-value {
     background-image: url("../img/ui-progressbar@2x.gif");
   }
@@ -4967,7 +5008,7 @@ label.ui-state-active.ui-button:active {
   background-color: #cccccc;
 }
 
-@media (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   .ui-progressbar-indeterminate .ui-progressbar-value {
     background-image: url("../img/ui-progressbar-indeterminate@2x.gif");
   }
@@ -5122,7 +5163,8 @@ label.ui-state-active.ui-button:active {
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   cursor: default;
   z-index: 2;
-  touch-action: none;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 .ui-slider .ui-slider-range {
@@ -6477,7 +6519,9 @@ label.ui-state-active.ui-button:active {
   .txp-edit .txp-form-field-value,
   .txp-prefs-group .txp-form-field-label,
   .txp-prefs-group .txp-form-field-value {
-    flex: none;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none;
     min-height: inherit;
   }
   /**
