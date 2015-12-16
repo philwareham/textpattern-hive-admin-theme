@@ -137,7 +137,14 @@ module.exports = function (grunt)
             dist: {
                 files: [
                     {'<%= paths.dest.css %>textpattern.css': '<%= paths.src.sass %>textpattern.scss'},
-                    {'<%= paths.docs.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'}
+                    {'<%= paths.docs.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'},
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.sass %>custom/',
+                        src: '*',
+                        dest: '<%= paths.dest.css %>custom/',
+                        ext: '.css'
+                    }
                 ]
             }
         },
