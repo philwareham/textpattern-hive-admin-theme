@@ -107,15 +107,15 @@ button.txp-nav-toggle {
         text-shadow: $text-shadow-light;
 
         &:hover {
-            background: rgba($color-text-inverse, 0.3);
+            background: rgba($color-text-inverse, 0.2);
         }
     }
 
     &.selected > a {
-        background: rgba($color-text-inverse, 0.3);
+        background: rgba($color-text-inverse, 0.2);
 
         &:hover {
-            background: rgba($color-text-inverse, 0.6);
+            background: rgba($color-text-inverse, 0.33);
         }
     }
 }
