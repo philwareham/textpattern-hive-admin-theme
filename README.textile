@@ -2,26 +2,28 @@ h1. Hive admin-side theme for Textpattern CMS
 
 !https://travis-ci.org/philwareham/txp-hive-admin-theme.svg?branch=master!:https://travis-ci.org/philwareham/txp-hive-admin-theme !https://david-dm.org/philwareham/txp-hive-admin-theme/status.svg(Dependency Status)!:https://david-dm.org/philwareham/txp-hive-admin-theme#info=dependencies !https://david-dm.org/philwareham/txp-hive-admin-theme/dev-status.svg(devDependency Status)!:https://david-dm.org/philwareham/txp-hive-admin-theme#info=devDependencies
 
-Hive admin-side theme for Textpattern CMS v4.6 - built with Sass and Compass. *Currently under development.*
+This project is the source for the default admin theme that ships as standard with "Textpattern CMS":http://textpattern.com as of v4.6.0 onwards.
+
+h2. Supported web browsers
+
+* Internet Explorer 10 onwards.
+* Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases.
 
 h2. Requirements
 
-Building this repository requires:
+Building this source repository requires:
 
 * "Node.js":http://nodejs.org/ >=0.10.0
-* "Ruby":http://www.ruby-lang.org/en/
-* "Bundler":http://bundler.io/
 * "Grunt":http://gruntjs.com/ ~0.4.0
 * "Bower":http://bower.io/ >=1.0.0
 
-h2. Setup
+h2. Build setup
 
 h3. Installing required tools
 
-The project uses "Grunt":http://gruntjs.com/ to run tasks and "Sass":http://sass-lang.com/ for CSS pre-processing. First make sure you have base dependencies installed: "Ruby":http://www.ruby-lang.org/en/, "Node.js":http://nodejs.org/, "Bundler":http://bundler.io/, "Grunt":http://gruntjs.com/ and "Bower":http://bower.io/. You can install Node and Ruby using their installers, Bundler with gem and the rest with npm:
+The project uses "Grunt":http://gruntjs.com/ to run tasks and "Sass":http://sass-lang.com/ for CSS pre-processing. First make sure you have base dependencies installed: "Node.js":http://nodejs.org/, "Grunt":http://gruntjs.com/ and "Bower":http://bower.io/. You can install Node using the "installer":https://nodejs.org and Grunt and Bower with npm:
 
-bc. $ gem install bundler
-$ npm install -g bower grunt-cli
+bc. $ npm install -g bower grunt-cli
 
 Consult the tools' documentation for more instructions. You might need to use @sudo npm install -g bower grunt-cli@ instead when installing on certain Unix-based systems.
 
@@ -31,10 +33,9 @@ After you have the base dependencies taken care of, you can install the project'
 
 bc. $ cd txp-hive-admin-theme
 $ npm install
-$ bundle install
 $ bower install
 
-*npm* installs Node modules for Grunt, *bundle* takes care of Ruby gems, and *bower* manages client-side scripts. You might need to use @sudo npm install@ instead when installing on certain Unix-based systems.
+*npm* installs Node modules for Grunt and *bower* manages client-side scripts. You might need to use @sudo npm install@ instead when installing on certain Unix-based systems.
 
 h2. Building
 
@@ -42,10 +43,14 @@ This repository hosts sources and needs to be built before it can be used. After
 
 bc. $ grunt [task]
 
-Where the @[task]@ is either @build@, @test@ or @watch@.
+Where the @[task]@ is either @build@ or @watch@.
 
 * The @build@ task builds the project.
 * The @watch@ task will launch a task that watches for file changes; the project is then automatically built if a source file is modified.
+
+h2. Pre-built version
+
+We provide a pre-built version of the theme files within the @dist@ directory in case you don't want to build it yourself.
 
 h2. License
 
