@@ -215,9 +215,9 @@ sub,
 // override Textile class
 sup.footnote,
 sup {
-    @include adjust-font-size-to(9px, 0);
-
     position: relative;
+    font-size: 0.69230769230769em; // 9px / 13px
+    line-height: 0;
     vertical-align: baseline;
 }
 
@@ -239,7 +239,8 @@ tfoot,
 .footnote,
 .txp-form-field-instructions,
 .txp-footer {
-    @include adjust-font-size-to(11px, 0.8); // 16px line height
+    font-size: 0.84615384615385em; // 11px / 13px
+    line-height: 0.8; // 16px / 20px
 }
 
 figcaption,

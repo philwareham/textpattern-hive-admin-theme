@@ -96,12 +96,12 @@
 
 
 #view_modes ul {
-    @include adjust-font-size-to(11px, 0.8);
-
     margin: 0;
     padding: 0;
     border-bottom: 1px solid $color-border;
     background: none;
+    font-size: 0.84615384615385em; // 11px / 13px
+    line-height: 0.8; // 16px / 20px
 
     &:after {
         display: table;
