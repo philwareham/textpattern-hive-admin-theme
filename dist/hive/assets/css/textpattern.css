@@ -2242,7 +2242,7 @@ body {
   margin: 0 auto;
 }
 
-@supports ((display: -webkit-flex) or (display: -ms-flexbox) or (display: flex)) {
+@supports (display: flex) {
   body {
     /* autoprefixer: off */
     display: flex;

@@ -117,7 +117,8 @@ module.exports = function (grunt)
                 processors: [
                     require('autoprefixer')({
                         browsers: ['last 2 versions']
-                    })
+                    }),
+                    require('./autoprefixer-supports-fix')
                 ]
             },
             dist: {
