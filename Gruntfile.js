@@ -157,7 +157,7 @@ module.exports = function (grunt)
             target: ['<%= paths.src.sass %>**/*.scss']
         },
 
-        // Uglify and copy JavaScript files from `bower-components`.
+        // Uglify and copy JavaScript files from `bower-components` and `node_modules`.
         uglify: {
             dist: {
                 // Preserve all comments that start with a bang (!) or include a closure compiler style.
@@ -168,8 +168,8 @@ module.exports = function (grunt)
                     {
                         '<%= paths.dest.js %>main.js':
                         [
-                            'bower_components/bootstrap/js/dropdown.js',
-                            'bower_components/bootstrap/js/collapse.js',
+                            'node_modules/bootstrap/js/dropdown.js',
+                            'node_modules/bootstrap/js/collapse.js',
                             'node_modules/autosize/dist/autosize.js',
                             '<%= paths.src.js %>main.js'
                         ],
