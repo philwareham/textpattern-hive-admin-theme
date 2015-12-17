@@ -1,5 +1,5 @@
 // Fix for Autoprefixer `@supports` `flex` bug.
-var postcss = require('grunt-postcss');
+var postcss = require('postcss');
 
 module.exports = postcss.plugin('flexbox-cleaner', function () {
     return function (css) {
