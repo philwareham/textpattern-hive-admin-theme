@@ -86,10 +86,15 @@ svg:not(:root) {
  * Example HTML:
  *
  * <img class="content-image">
- * <a>
+ *
+ * <a class="content-image-link">
  *     <img class="content-image">
  * </a>
  */
+
+.content-image-link:focus {
+    outline: 0;
+}
 
 .content-image {
     border: solid 1px $color-border;
