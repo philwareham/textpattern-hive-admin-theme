@@ -77,10 +77,6 @@ module.exports = function (grunt)
 
         // Check code quality of Gruntfile.js and theme-specific JavaScript using JSHint.
         jshint: {
-            files: [
-                'Gruntfile.js',
-                '<%= paths.src.js %>**/*.js'
-            ],
             options: {
                 bitwise: true,
                 camelcase: true,
@@ -108,7 +104,11 @@ module.exports = function (grunt)
                     prettyPrint: true,
                     require: true
                 }
-            }
+            },
+            files: [
+                'Gruntfile.js',
+                '<%= paths.src.js %>**/*.js'
+            ]
         },
 
         // Add vendor prefixed styles and other post-processing transformations.
