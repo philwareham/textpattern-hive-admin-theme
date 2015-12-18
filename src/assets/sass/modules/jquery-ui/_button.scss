@@ -28,7 +28,6 @@
     height: 2.1538462em; // 28px / 13px
     margin: 0 0.1em 0 0;
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
-    transition: box-shadow 0.1s linear;
     border: solid 1px $color-gradient-border;
     background-clip: padding-box;
     color: $color-text;
@@ -67,7 +66,7 @@
     &:focus {
         border-color: $color-link-focus;
         outline: 0;
-        box-shadow: $inset-highlighting, 0 0 7px $color-link-focus-glow;
+        box-shadow: $inset-highlighting;
     }
 }
 
@@ -90,7 +89,7 @@ a.ui-button {
     /* 1 */
     border-color: $color-link-focus !important;
     outline: 0;
-    box-shadow: $inset-highlighting, 0 0 7px $color-link-focus-glow;
+    box-shadow: $inset-highlighting;
 }
 
 /**

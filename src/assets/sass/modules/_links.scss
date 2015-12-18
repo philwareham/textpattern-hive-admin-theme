@@ -31,7 +31,7 @@ a {
     }
 
     &:focus {
-        outline: thin dotted $color-link-focus;
+        outline: thin solid $color-link-focus;
     }
 
     &.busy {

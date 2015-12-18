@@ -99,7 +99,6 @@ select,
 textarea {
     height: 2.15384615384615em; // 28px / 13px
     padding: 0.30769230769231em; // 4px / 13px
-    transition: box-shadow 0.1s linear;
     border: 1px solid $color-border;
     border-radius: 0;
     background: $color-background;
@@ -109,7 +108,6 @@ textarea {
     &:focus {
         border-color: $color-link-focus;
         outline: 0;
-        box-shadow: 0 0 7px $color-link-focus-glow;
     }
 }
 

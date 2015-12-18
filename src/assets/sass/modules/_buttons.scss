@@ -33,7 +33,6 @@ input[type="button"],
     width: auto;
     height: 2.15384615384615em; // 28px / 13px
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
-    transition: box-shadow 0.1s linear;
     border: solid 1px $color-gradient-border;
     border-radius: $default-border-radius;
     background-clip: padding-box;
@@ -67,7 +66,7 @@ input[type="button"],
     &:focus {
         border-color: $color-link-focus;
         outline: 0;
-        box-shadow: $inset-highlighting, 0 0 7px $color-link-focus-glow;
+        box-shadow: $inset-highlighting;
     }
 }
 
@@ -126,7 +125,7 @@ button.destroy {
     box-shadow: none;
 
     &:focus {
-        outline: thin dotted $color-link-focus;
+        outline: thin solid $color-link-focus;
     }
 }
 

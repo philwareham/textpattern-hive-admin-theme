@@ -39,7 +39,6 @@
 .ui-selectmenu-button {
     display: inline-block;
     position: relative;
-    transition: box-shadow 0.1s linear;
     background-color: $color-background;
     /* 1 */
     font-size: $base-font-size;
@@ -52,7 +51,6 @@
     &:focus {
         border-color: $color-link-focus;
         outline: 0;
-        box-shadow: 0 0 7px $color-link-focus-glow;
     }
 
     span.ui-icon {

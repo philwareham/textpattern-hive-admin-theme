@@ -120,7 +120,7 @@
         box-shadow: none;
 
         &:focus {
-            outline: thin dotted $color-link-focus;
+            outline: thin solid $color-link-focus;
         }
 
         &:not(.collapsed) {
