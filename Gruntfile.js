@@ -39,7 +39,8 @@ module.exports = function (grunt)
             dist: [
                 'css',
                 'copy',
-                'uglify:dist'
+                'uglify:dist',
+                'devUpdate'
             ]
         },
 
@@ -72,6 +73,20 @@ module.exports = function (grunt)
                 src: ['*.css', '!*.min.css'],
                 dest: '<%= paths.dest.css %>',
                 ext: '.min.css'
+            }
+        },
+
+        // Report on any available updates for dependencies.
+        devUpdate: {
+            main: {
+                options: {
+                    updateType: 'report',
+                    reportUpdated: false, // Don't report up-to-date packages.
+                    packages: {
+                        dependencies: true,
+                        devDependencies: true
+                    }
+                }
             }
         },
 
@@ -154,7 +169,7 @@ module.exports = function (grunt)
             options: {
                 configFile: '.sass-lint.yml'
             },
-            target: ['<%= paths.src.sass %>**/*.scss']
+            target: '<%= paths.src.sass %>**/*.scss'
         },
 
         // Uglify and copy JavaScript files from `bower-components` and `node_modules`.
