@@ -229,7 +229,7 @@ EOS;
             'author'      => 'Team Textpattern',
             'author_uri'  => 'http://textpattern.com/',
             'version'     => $prefs['version'],
-            'description' => 'Textpattern Hive Theme',
+            'description' => 'Textpattern Hive Theme (Classic Yellow)',
             'help'        => 'https://github.com/philwareham/txp-hive-admin-theme',
         );
     }
