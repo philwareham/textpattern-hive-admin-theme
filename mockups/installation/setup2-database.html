@@ -41,7 +41,12 @@
                 </div>
                 <div class="txp-form-field">
                     <div class="txp-form-field-label"><label for="setup_mysql_pass">MySQL password</label></div>
-                    <div class="txp-form-field-value"><input id="setup_mysql_pass" name="dpass" type="text" size="32"></div>
+                    <div class="txp-form-field-value"><input class="txp-maskable" id="setup_mysql_pass" name="dpass" type="password" size="32">
+                        <div class="show-password">
+                            <input class="checkbox" id="show_password" name="unmask" type="checkbox" value="1">
+                            <label for="show_password">Show password</label>
+                        </div>
+                    </div>
                 </div>
                 <div class="txp-form-field">
                     <div class="txp-form-field-label"><label for="setup_mysql_server">MySQL server</label></div>

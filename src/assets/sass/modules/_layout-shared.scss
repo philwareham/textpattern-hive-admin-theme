@@ -559,7 +559,8 @@ span.spinner {
 }
 
 /**
- * Inline form field pairings on edit panels and preferences group panels.
+ * Inline form field pairings on edit panels, preferences group panels and
+ * setup panels.
  *
  * Example HTML:
  *
@@ -572,7 +573,8 @@ span.spinner {
  */
 
 .txp-edit,
-.txp-prefs-group {
+.txp-prefs-group,
+.setup {
     .txp-form-field:not(.txp-form-field-textarea) {
         display: flex;
         align-items: baseline;
