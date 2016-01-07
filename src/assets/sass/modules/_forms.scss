@@ -44,6 +44,7 @@ textarea,
     max-width: 100%;
     /* 2 */
     margin: 0;
+    color: $color-text-form;
     font-family: $font-sans-serif;
     /* 3 */
     font-size: $base-font-size;
@@ -98,7 +99,7 @@ textarea {
     padding: 0.30769230769231em; // 4px / 13px
     border: 1px solid $color-border;
     border-radius: 0;
-    background: $color-background;
+    background: $color-background-form;
     /* 1 */
     appearance: none;
 
@@ -266,8 +267,8 @@ select[disabled] optgroup,
 textarea[disabled],
 .navlink-disabled {
     border-color: $color-gradient-to !important;
-    background: #eeeeee !important;
-    color: #aaaaaa !important;
+    background: $color-background-form-disabled !important;
+    color: $color-text-form-disabled !important;
     text-shadow: none !important;
     box-shadow: none !important;
     /* 1 */
