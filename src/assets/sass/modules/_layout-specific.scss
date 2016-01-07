@@ -228,6 +228,19 @@
 }
 
 
+/* Content -> Files panel - additional layout
+   ========================================================================== */
+
+/**
+ * Make sure form for selecting existing files is on a new line.
+ */
+
+.txp-control-panel .assign-existing-form {
+    margin-top: 1em;
+    display: block;
+}
+
+
 /* Content -> Comments panel - additional layout
    ========================================================================== */
 
