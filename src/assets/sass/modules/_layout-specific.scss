@@ -205,6 +205,10 @@
 /* Content -> Images panel - additional layout
    ========================================================================== */
 
+.has-thumbnail a:focus {
+    outline: 0;
+}
+
 .thumbnail-alter input {
     margin: 0 0.30769230769231em 0 0;
 
