@@ -21,7 +21,6 @@ $color-text-inverse:             #ffffff !default;
 $color-link:                     #004cbf !default;
 $color-link-hover:               #0066ff !default;
 $color-link-focus:               $color-link-hover !default;
-$color-link-focus-glow:          tint($color-link-focus, 50%) !default;
 $color-link-visited:             shade($color-link, 33%) !default;
 $color-selecting:                tint($color-link-hover, 80%) !default;
 $color-selected:                 tint($color-link-hover, 90%) !default;
