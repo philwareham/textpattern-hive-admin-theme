@@ -119,7 +119,7 @@
         background-color: darken($color-background-box, 2%);
         list-style: none;
         white-space: nowrap;
-        box-shadow: inset 0 -0.25em 0.5em rgba(102, 102, 102, 0.15);
+        box-shadow: inset 0 -0.25em 0.5em rgba(#666666, 0.15);
 
         &:hover,
         &:focus {
@@ -240,8 +240,8 @@
  */
 
 .txp-control-panel .assign-existing-form {
-    margin-top: 1em;
     display: block;
+    margin-top: 1em;
 }
 
 
