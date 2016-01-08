@@ -81,7 +81,7 @@
  * Cells for 4 column span variations become 1 column layout.
  */
 
-@include breakpoint(max-width $breakpoint-1) {
+@include breakpoint(max-width $break-large) {
 
     .txp-layout-4col-cell-1,
     .txp-layout-4col-cell-3 {
@@ -116,7 +116,7 @@
  * Cells for 4 column layout become 1 column layout.
  */
 
-@include breakpoint(max-width $breakpoint-2) {
+@include breakpoint(max-width $break-small) {
 
     .txp-layout-2col-cell-1,
     .txp-layout-2col-cell-2,

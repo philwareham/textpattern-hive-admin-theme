@@ -3,7 +3,7 @@
    ========================================================================== */
 
 
-@media (max-width: $breakpoint-1) {
+@media (max-width: $break-large) {
 
 
     /* Layout < 768px
@@ -84,7 +84,7 @@
    ========================================================================== */
 
 
-@media (max-width: $breakpoint-2) {
+@media (max-width: $break-small) {
 
     /**
      * Non-fixed header on mobile layout (because mobile nav menu couldn't scroll otherwise).
