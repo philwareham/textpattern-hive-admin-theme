@@ -194,14 +194,14 @@ td {
     &.desc a:after {
         border: 0 solid transparent;
         border-width: 0.25em 0.25em 0;
-        border-top-color: #333333;
+        border-top-color: $color-text;
         content: "\2193";
     }
 
     &.asc a:after {
         border: 0 solid transparent;
         border-width: 0 0.25em 0.25em;
-        border-bottom-color: #333333;
+        border-bottom-color: $color-text;
         content: "\2191";
     }
 }
