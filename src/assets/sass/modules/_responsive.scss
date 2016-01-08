@@ -112,7 +112,9 @@
         padding: 0;
         float: left;
         border: 0;
-        border-radius: 0;
+        @if $border-radius > 0 {
+            border-radius: 0;
+        }
         background: transparent url("../img/sprite.svg") -10em 0;
         background-size: 13em 2em; // 208px / 16px + 32px / 16px
         font-size: 16px;
@@ -192,7 +194,9 @@
         position: static;
         min-width: 0;
         border: 0;
-        border-radius: 0;
+        @if $border-radius > 0 {
+            border-radius: 0;
+        }
         box-shadow: none;
 
         a {

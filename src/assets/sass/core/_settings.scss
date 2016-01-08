@@ -1,35 +1,35 @@
 // font families
 
-$font-sans-serif:     Helvetica, Arial, sans-serif !default;
-$font-mono:           Menlo, Consolas, Monaco, monospace !default;
+$font-sans-serif:            Helvetica, Arial, sans-serif !default;
+$font-mono:                  Menlo, Consolas, Monaco, monospace !default;
 
 // typography grid
 
-$base-font-size:      13px !default;
-$base-line-height:    20px !default;
-$small-font-size:     11px !default;
-$small-line-height:   16px !default;
+$base-font-size:             13px !default;
+$base-line-height:           20px !default;
+$small-font-size:            11px !default;
+$small-line-height:          16px !default;
 
 // layout grid
 
-$grid-gutter:         1em !default; // 13px
-$standard-column:     42em !default; // 520px / 13px
-$text-column:         57em !default; // 741px / 13px
+$grid-gutter:                1em !default; // 13px
+$standard-column:            42em !default; // 520px / 13px
+$text-column:                57em !default; // 741px / 13px
 
 // layout grid (using desktop first in this project)
 
-$container-max-width: 116em !default; // 1508px / 13px
-$break-large:         60em !default; // 960px / 16px (breakpoints are 16px = 1em measurements)
-$break-small:         47em !default; // 752px / 16px (breakpoints are 16px = 1em measurements)
+$container-max-width:        116em !default; // 1508px / 13px
+$break-large:                60em !default; // 960px / 16px (breakpoints are 16px = 1em measurements)
+$break-small:                47em !default; // 752px / 16px (breakpoints are 16px = 1em measurements)
 
 // borders
 
-$border-radius:       0.5em !default;
+$border-radius:              0.5em !default;
 
 // shadows
 
-$standard-shadow:     0 0 0.5em rgba(#000000, 0.2) !default;
-$inset-highlighting:  inset 0 1px 0 rgba(#ffffff, 0.25) !default;
-$inset-lowlighting:   inset 0 0.2em 0.25em rgba(#000000, 0.15) !default;
-$text-shadow-light:   1px 1px 0 rgba(#ffffff, 0.5) !default;
-$text-shadow-dark:    -1px -1px 0 rgba(#000000, 0.1) !default;
+$standard-shadow:            0 0 0.5em rgba(#000000, 0.2) !default;
+$inset-highlighting:         inset 0 1px 0 rgba(#ffffff, 0.25) !default;
+$inset-lowlighting:          inset 0 0.2em 0.25em rgba(#000000, 0.15) !default;
+$text-shadow-light:          1px 1px 0 rgba(#ffffff, 0.5) !default;
+$text-shadow-dark:           -1px -1px 0 rgba(#000000, 0.1) !default;

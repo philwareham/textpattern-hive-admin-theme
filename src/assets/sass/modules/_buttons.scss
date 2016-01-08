@@ -118,7 +118,9 @@ button.destroy {
     height: auto;
     padding: 0.07692307692308em 0 0; // 1px / 13px
     border: 0;
-    border-radius: 0;
+    @if $border-radius > 0 {
+        border-radius: 0;
+    }
     background: none;
     text-shadow: none;
     box-shadow: none;
@@ -144,7 +146,9 @@ button.destroy {
     height: 2.15384615384615em; // 28px / 13px
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     border: 1px solid;
-    border-radius: $border-radius;
+    @if $border-radius > 0 {
+        border-radius: $border-radius;
+    }
     background-clip: padding-box;
     box-sizing: border-box;
 }
@@ -176,37 +180,38 @@ ul.nav-tertiary {
     padding: 0;
 }
 
-.nav-tertiary {
-    a,
-    .navlink-disabled {
-        border-radius: 0;
+@if $border-radius > 0 {
+    .nav-tertiary {
+        a,
+        .navlink-disabled {
+            border-radius: 0;
+        }
+
+        > :first-child,
+        > :first-child > a,
+        > :first-child > span {
+            border-radius: $border-radius 0 0 $border-radius;
+        }
+
+        > :last-child,
+        > :last-child > a,
+        > :last-child > span {
+            border-radius: 0 $border-radius $border-radius 0;
+        }
     }
 
-    > :first-child,
-    > :first-child > a,
-    > :first-child > span {
-        border-radius: $border-radius 0 0 $border-radius;
-    }
+    [dir="rtl"] .nav-tertiary {
+        > :first-child,
+        > :first-child > a,
+        > :first-child > span {
+            border-radius: 0 $border-radius $border-radius 0;
+        }
 
-    > :last-child,
-    > :last-child > a,
-    > :last-child > span {
-        border-radius: 0 $border-radius $border-radius 0;
-
-    }
-}
-
-[dir="rtl"] .nav-tertiary {
-    > :first-child,
-    > :first-child > a,
-    > :first-child > span {
-        border-radius: 0 $border-radius $border-radius 0;
-    }
-
-    > :last-child,
-    > :last-child > a,
-    > :last-child > span {
-        border-radius: $border-radius 0 0 $border-radius;
+        > :last-child,
+        > :last-child > a,
+        > :last-child > span {
+            border-radius: $border-radius 0 0 $border-radius;
+        }
     }
 }
 
@@ -260,5 +265,7 @@ ul.nav-tertiary {
     margin-left: -0.35em;
     padding-right: 1.5em;
     padding-left: 1.5em;
-    border-radius: 0;
+    @if $border-radius > 0 {
+        border-radius: 0;
+    }
 }

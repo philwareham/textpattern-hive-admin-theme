@@ -135,7 +135,9 @@ dfn[title] {
 mark,
 var {
     padding: 1px 0.23076923076923em; // 3px / 13px
-    border-radius: 0.23076923076923em; // 3px / 13px
+    @if $border-radius > 0 {
+        border-radius: $border-radius / 2;
+    }
     background: $color-selected;
     color: $color-text;
 }
@@ -157,7 +159,9 @@ kbd,
 samp {
     padding: 1px 0.23076923076923em; // 3px / 13px
     border: 1px solid lighten($color-border, 9%);
-    border-radius: 0.23076923076923em; // 3px / 13px
+    @if $border-radius > 0 {
+        border-radius: $border-radius / 2;
+    }
     background: $color-background-box;
 }
 
@@ -173,7 +177,9 @@ pre {
     margin: 1em 0;
     padding: 0.53846153846154em 1em; // 7px / 13px + 13px
     border: 1px solid lighten($color-border, 9%);
-    border-radius: 0.23076923076923em; // 3px / 13px
+    @if $border-radius > 0 {
+        border-radius: $border-radius / 2;
+    }
     background: $color-background-box;
     /* 1 */
     word-wrap: normal;
@@ -203,7 +209,9 @@ code.body,
 code.excerpt {
     padding: 0;
     border: 0;
-    border-radius: 0;
+    @if $border-radius > 0 {
+        border-radius: 0;
+    }
     background: none;
 }
 

@@ -116,7 +116,9 @@
             max-width: ($text-column - 3.84615384615385em);
             margin: 0 auto;
             padding: 0.53846153846154em 2.84615384615385em 0.53846153846154em 1em;
-            border-radius: $border-radius $border-radius 0 0;
+            @if $border-radius > 0 {
+                border-radius: $border-radius $border-radius 0 0;
+            }
             color: $color-text-inverse;
             box-shadow: $standard-shadow;
         }

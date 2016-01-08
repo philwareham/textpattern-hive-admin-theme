@@ -158,6 +158,8 @@ button.ui-button-icons-only {
     width: 3.7em;
 }
 
+@if $border-radius > 0 {
+
 /**
  * Button rounded corners all.
  */
@@ -180,6 +182,8 @@ button.ui-button-icons-only {
 
 .ui-button.ui-corner-left {
     border-radius: $border-radius 0 0 $border-radius;
+}
+
 }
 
 /**
