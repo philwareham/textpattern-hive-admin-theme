@@ -151,7 +151,7 @@ module.exports = function (grunt)
             }),
             dist: {
                 files: [
-                    {'<%= paths.dest.css %>textpattern.css': '<%= paths.src.sass %>textpattern.scss'},
+                    {'<%= paths.dest.css %>textpattern.css': '<%= paths.src.sass %>hive-default.scss'},
                     {'<%= paths.docs.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'},
                     {
                         expand: true,
