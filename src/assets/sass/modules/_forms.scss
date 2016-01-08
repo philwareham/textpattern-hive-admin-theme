@@ -266,7 +266,7 @@ select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled],
 .navlink-disabled {
-    border-color: $color-gradient-to !important;
+    border-color: $color-border-light !important;
     background: $color-background-form-disabled !important;
     color: $color-text-form-disabled !important;
     text-shadow: none !important;
