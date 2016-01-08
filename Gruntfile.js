@@ -169,7 +169,7 @@ module.exports = function (grunt)
             options: {
                 configFile: '.sass-lint.yml'
             },
-            target: '<%= paths.src.sass %>**/*.scss'
+            target: ['<%= paths.src.sass %>**/*.scss']
         },
 
         // Uglify and copy JavaScript files from `bower-components` and `node_modules`.
