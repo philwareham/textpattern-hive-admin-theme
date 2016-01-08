@@ -147,7 +147,7 @@
         right: 0;
         left: 0;
         background: $color-highlight-box;
-        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+        box-shadow: $standard-shadow;
 
         // Indicator pointer.
         &:before {
@@ -169,7 +169,7 @@
     .txp-nav > ul > li {
         float: none;
         border: 0;
-        border-bottom: 1px solid #d4d4d4;
+        border-bottom: 1px solid $color-border-light;
 
         &:first-child {
             border-left: 0;

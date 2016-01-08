@@ -234,7 +234,7 @@ a.ui-state-default:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(#000000, 0.75);
     z-index: 1001;
 }
 
@@ -253,6 +253,6 @@ a.ui-state-default:focus {
 .ui-widget-shadow {
     margin: -0.5em 0 0 -0.5em;
     padding: 0.5em;
-    border-radius: $default-border-radius;
-    background: rgba(0, 0, 0, 0.75);
+    border-radius: $border-radius;
+    background: rgba(#000000, 0.75);
 }

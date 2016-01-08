@@ -215,20 +215,20 @@ button.txp-nav-toggle {
     top: 3em;
     left: 0;
     min-width: 12em;
-    border: 1px solid #d4d4d4;
+    border: 1px solid $color-border-light;
     border-top: 0;
-    border-radius: 0 $default-border-radius $default-border-radius;
+    border-radius: 0 $border-radius $border-radius;
     background: $color-highlight-box;
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+    box-shadow: $standard-shadow;
     z-index: 20000;
 
     li {
         &:first-child {
-            border-radius: 0 $default-border-radius 0 0;
+            border-radius: 0 $border-radius 0 0;
         }
 
         &:last-child {
-            border-radius: 0 0 $default-border-radius $default-border-radius;
+            border-radius: 0 0 $border-radius $border-radius;
         }
 
         &:hover {

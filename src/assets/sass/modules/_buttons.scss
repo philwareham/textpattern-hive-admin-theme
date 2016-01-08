@@ -34,7 +34,7 @@ input[type="button"],
     height: 2.15384615384615em; // 28px / 13px
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     border: solid 1px $color-gradient-border;
-    border-radius: $default-border-radius;
+    border-radius: $border-radius;
     background-clip: padding-box;
     color: $color-text;
     font-weight: normal;
@@ -145,7 +145,7 @@ button.destroy {
     height: 2.15384615384615em; // 28px / 13px
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     border: 1px solid;
-    border-radius: $default-border-radius;
+    border-radius: $border-radius;
     background-clip: padding-box;
     box-sizing: border-box;
 }
@@ -186,13 +186,13 @@ ul.nav-tertiary {
     > :first-child,
     > :first-child > a,
     > :first-child > span {
-        border-radius: $default-border-radius 0 0 $default-border-radius;
+        border-radius: $border-radius 0 0 $border-radius;
     }
 
     > :last-child,
     > :last-child > a,
     > :last-child > span {
-        border-radius: 0 $default-border-radius $default-border-radius 0;
+        border-radius: 0 $border-radius $border-radius 0;
 
     }
 }
@@ -201,13 +201,13 @@ ul.nav-tertiary {
     > :first-child,
     > :first-child > a,
     > :first-child > span {
-        border-radius: 0 $default-border-radius $default-border-radius 0;
+        border-radius: 0 $border-radius $border-radius 0;
     }
 
     > :last-child,
     > :last-child > a,
     > :last-child > span {
-        border-radius: $default-border-radius 0 0 $default-border-radius;
+        border-radius: $border-radius 0 0 $border-radius;
     }
 }
 

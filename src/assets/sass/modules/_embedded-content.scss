@@ -93,7 +93,7 @@ svg:not(:root) {
 .content-image {
     border: solid 1px $color-border;
     background: $color-background;
-    box-shadow: 0 0 0.5em rgba(#000000, 0.2);
+    box-shadow: $standard-shadow;
 
     a:hover & {
         border-color: $color-link-hover;

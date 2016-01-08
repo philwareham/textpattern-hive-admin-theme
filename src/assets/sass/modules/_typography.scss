@@ -36,7 +36,7 @@ h1 {
     line-height: 1.23076923076923; // 32px / 26px
 
     .pophelp {
-        font-size: 0.5em; // 13px / 26px
+        font-size: $base-font-size;
     }
 }
 
@@ -58,7 +58,7 @@ h2 {
     line-height: 1.33333333333333; // 24px / 18px
 
     .pophelp {
-        font-size: 0.72222222222222em; // 13px / 18px
+        font-size: $base-font-size;
     }
 }
 
@@ -80,7 +80,7 @@ h4,
 h5,
 h6 {
     margin: 1em 0;
-    font-size: 1em; // 13px
+    font-size: $base-font-size;
 }
 
 /**
@@ -239,8 +239,8 @@ tfoot,
 .footnote,
 .txp-form-field-instructions,
 .txp-footer {
-    font-size: 0.84615384615385em; // 11px / 13px
-    line-height: 0.8; // 16px / 20px
+    font-size: $small-font-size;
+    line-height: $small-line-height;
 }
 
 figcaption,

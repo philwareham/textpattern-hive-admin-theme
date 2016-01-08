@@ -100,8 +100,8 @@
     padding: 0;
     border-bottom: 1px solid $color-border;
     background: none;
-    font-size: 0.84615384615385em; // 11px / 13px
-    line-height: 0.8; // 16px / 20px
+    font-size: $small-font-size;
+    line-height: $small-line-height;
 
     &:after {
         display: table;

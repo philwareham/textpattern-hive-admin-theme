@@ -421,7 +421,7 @@ h1 {
 }
 
 h1 .pophelp {
-  font-size: 0.5em;
+  font-size: 13px;
 }
 
 /**
@@ -442,7 +442,7 @@ h2 {
 }
 
 h2 .pophelp {
-  font-size: 0.72222222222222em;
+  font-size: 13px;
 }
 
 /**
@@ -461,7 +461,7 @@ h4,
 h5,
 h6 {
   margin: 1em 0;
-  font-size: 1em;
+  font-size: 13px;
 }
 
 /**
@@ -608,8 +608,8 @@ tfoot,
 .footnote,
 .txp-form-field-instructions,
 .txp-footer {
-  font-size: 0.84615384615385em;
-  line-height: 0.8;
+  font-size: 11px;
+  line-height: 16px;
 }
 
 figcaption,
@@ -975,7 +975,7 @@ h3.txp-summary,
   margin: 0;
   border-top: 1px solid #dddddd;
   border-bottom: 1px solid #cccccc;
-  font-size: 1em;
+  font-size: 13px;
   font-weight: bold;
   line-height: 2em;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
@@ -1106,7 +1106,7 @@ h3.txp-summary.expanded a:after {
   border: 1px solid #ffffff;
   border-radius: 50%;
   background: #cccccc;
-  font-size: 1.23076em;
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
   content: counter(step);
@@ -3379,8 +3379,8 @@ span.spinner {
   padding: 0;
   border-bottom: 1px solid #cccccc;
   background: none;
-  font-size: 0.84615384615385em;
-  line-height: 0.8;
+  font-size: 11px;
+  line-height: 16px;
 }
 
 #view_modes ul:after {
@@ -5102,7 +5102,7 @@ label.ui-state-active.ui-button:active {
   margin: 0.5em 0 0;
   padding: 2px 0.30769230769231em;
   border-top: 1px solid #cccccc;
-  font-size: 1em;
+  font-size: 13px;
   font-weight: bold;
   line-height: 1.5;
 }

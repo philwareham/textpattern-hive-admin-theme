@@ -43,7 +43,7 @@ h3.txp-summary,
     margin: 0;
     border-top: 1px solid $color-gradient-to;
     border-bottom: 1px solid $color-gradient-border;
-    font-size: 1em; // 13px
+    font-size: $base-font-size;
     font-weight: bold;
     line-height: 2em; // 26px / 13px
     text-shadow: $text-shadow-light;
