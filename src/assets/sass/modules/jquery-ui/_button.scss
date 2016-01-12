@@ -160,29 +160,17 @@ button.ui-button-icons-only {
 
 @if $border-radius > 0 {
 
-/**
- * Button rounded corners all.
- */
+    .ui-button.ui-corner-all {
+        border-radius: $border-radius;
+    }
 
-.ui-button.ui-corner-all {
-    border-radius: $border-radius;
-}
+    .ui-button.ui-corner-right {
+        border-radius: 0 $border-radius $border-radius 0;
+    }
 
-/**
- * Button rounded corners on right only.
- */
-
-.ui-button.ui-corner-right {
-    border-radius: 0 $border-radius $border-radius 0;
-}
-
-/**
- * Button rounded corners on left only.
- */
-
-.ui-button.ui-corner-left {
-    border-radius: $border-radius 0 0 $border-radius;
-}
+    .ui-button.ui-corner-left {
+        border-radius: $border-radius 0 0 $border-radius;
+    }
 
 }
 
