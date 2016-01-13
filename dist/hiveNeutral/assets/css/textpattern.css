@@ -736,7 +736,6 @@ svg:not(:root) {
 .content-image {
   border: solid 1px #cccccc;
   background: #ffffff;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 
 a:hover .content-image {
@@ -856,7 +855,6 @@ a:focus .content-image {
   margin: 0 auto;
   padding: 0.53846153846154em 2.84615384615385em 0.53846153846154em 1em;
   color: #ffffff;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 
 #messagepane span.success {
@@ -971,8 +969,6 @@ h3.txp-summary,
   font-size: 13px;
   font-weight: bold;
   line-height: 2em;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 /**
@@ -1078,8 +1074,6 @@ h3.txp-summary.expanded a:after {
   border-right: 1px solid #e3e3e3;
   border-bottom: 1px solid #cccccc;
   border-left: 1px solid #e3e3e3;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .progress-meter li.active {
@@ -1489,8 +1483,6 @@ textarea[disabled],
   border-color: #d4d4d4 !important;
   background: #eeeeee !important;
   color: #aaaaaa !important;
-  text-shadow: none !important;
-  box-shadow: none !important;
   /* 1 */
   cursor: default !important;
   /* 2 */
@@ -1612,8 +1604,6 @@ input[type="button"],
   color: #333333;
   font-weight: normal;
   text-align: center;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   /* 1 */
   cursor: pointer;
   /* 2 */
@@ -1648,7 +1638,6 @@ input[type="button"]:active,
   border-color: #aaaaaa;
   color: #1a1a1a;
   text-decoration: none;
-  box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
 }
 
 button:focus,
@@ -1714,8 +1703,6 @@ button.destroy {
   padding: 0.07692307692308em 0 0;
   border: 0;
   background: none;
-  text-shadow: none;
-  box-shadow: none;
 }
 
 button.destroy:focus {
@@ -2070,7 +2057,6 @@ td {
   border-top: 1px solid #eeeeee;
   border-right: 1px solid #e1e1e1;
   border-bottom: 1px solid #cccccc;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .txp-list thead th:first-child {
@@ -2233,7 +2219,6 @@ body {
   padding: 0 2.75%;
   border-top: 1px solid #cccccc;
   border-bottom: 1px solid #bdbdbd;
-  box-shadow: 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   z-index: 1000;
 }
 
@@ -2454,7 +2439,6 @@ button.txp-nav-toggle {
   color: black;
   line-height: 2.69230769230769em;
   text-decoration: none;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .txp-nav > ul > li > a:hover {
@@ -2565,7 +2549,6 @@ button.txp-nav-toggle {
   border: 1px solid #d4d4d4;
   border-top: 0;
   background: #f7f7f7;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   z-index: 20000;
 }
 
@@ -3339,7 +3322,6 @@ span.spinner {
   background-color: #f2f2f2;
   list-style: none;
   white-space: nowrap;
-  box-shadow: inset 0 -0.25em 0.5em rgba(102, 102, 102, 0.15);
 }
 
 #view_modes ul li:hover, #view_modes ul li:focus {
@@ -3351,7 +3333,6 @@ span.spinner {
   margin-bottom: -1px;
   padding-bottom: 1px;
   background-color: white;
-  box-shadow: none;
 }
 
 #view_modes ul a {
@@ -4063,8 +4044,6 @@ a.ui-state-default:focus {
   font-size: 13px;
   line-height: 1.3846154em;
   text-align: center;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
   /* 2 */
   cursor: pointer;
   /* 3 */
@@ -4088,13 +4067,11 @@ a.ui-state-default:focus {
   border-color: #aaaaaa;
   color: #1a1a1a;
   text-decoration: none;
-  box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
 }
 
 .ui-button:focus {
   border-color: #0066ff;
   outline: 0;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 /**
@@ -4114,7 +4091,6 @@ a.ui-button {
   /* 1 */
   border-color: #0066ff !important;
   outline: 0;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 /**
@@ -4387,7 +4363,6 @@ label.ui-state-active.ui-button:active {
   display: none;
   width: 17em;
   padding: 0.2em 0.2em 0;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 
 .ui-datepicker .ui-datepicker-header {
@@ -4613,7 +4588,6 @@ label.ui-state-active.ui-button:active {
   top: 0;
   left: 0;
   padding: 0.2em;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   z-index: 1002;
 }
 
@@ -4792,7 +4766,6 @@ label.ui-state-active.ui-button:active {
   font-size: 13px;
   line-height: 1.38461538461538em;
   list-style: none;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
 }
 
 .ui-menu .ui-menu {
@@ -5069,7 +5042,6 @@ label.ui-state-active.ui-button:active {
   height: 20px;
   border-radius: 50%;
   background-color: #ffffff;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   cursor: default;
   z-index: 2;
   -ms-touch-action: none;
@@ -5280,13 +5252,11 @@ label.ui-state-active.ui-button:active {
   border-bottom-width: 0;
   list-style: none;
   white-space: nowrap;
-  box-shadow: inset 0 -0.2em 0.4em rgba(102, 102, 102, 0.15);
 }
 
 .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li.ui-tabs-active {
   margin-bottom: -1px;
   padding-bottom: 1px;
-  box-shadow: none;
 }
 
 .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
@@ -5366,7 +5336,6 @@ label.ui-state-active.ui-button:active {
   position: absolute;
   max-width: 22em;
   padding: 0.5em 1em;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   z-index: 9999;
 }
 
@@ -6334,8 +6303,6 @@ label.ui-state-active.ui-button:active {
     background: transparent url("../img/sprite.svg") -10em 0;
     background-size: 13em 2em;
     font-size: 16px;
-    text-shadow: none;
-    box-shadow: none;
   }
   button.txp-nav-toggle:focus {
     outline: thin solid #0066ff;
@@ -6359,7 +6326,6 @@ label.ui-state-active.ui-button:active {
     right: 0;
     left: 0;
     background: #f7f7f7;
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   }
   .txp-nav.in .data-dropdown:before {
     position: absolute;
@@ -6394,7 +6360,6 @@ label.ui-state-active.ui-button:active {
     position: static;
     min-width: 0;
     border: 0;
-    box-shadow: none;
   }
   .dropdown-menu a {
     padding: 0.5em 2em 0.5em 3em;
@@ -6482,7 +6447,6 @@ label.ui-state-active.ui-button:active {
     margin-top: 2px;
     float: none;
     border-bottom-width: 1px;
-    box-shadow: none;
   }
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li.ui-tabs-active {
     margin-bottom: 0;

@@ -36,8 +36,10 @@
     font-size: $base-font-size;
     line-height: 1.3846154em; // 18px / 13px
     text-align: center;
-    text-shadow: $text-shadow-light;
-    box-shadow: $inset-highlighting;
+    @if $flat-theme < 1 {
+        text-shadow: $text-shadow-light;
+        box-shadow: $inset-highlighting;
+    }
     /* 2 */
     cursor: pointer;
     /* 3 */
@@ -60,13 +62,17 @@
         border-color: darken($color-gradient-border, 13%);
         color: darken($color-text, 10%);
         text-decoration: none;
-        box-shadow: $inset-lowlighting;
+        @if $flat-theme < 1 {
+            box-shadow: $inset-lowlighting;
+        }
     }
 
     &:focus {
         border-color: $color-link-focus;
         outline: 0;
-        box-shadow: $inset-highlighting;
+        @if $flat-theme < 1 {
+            box-shadow: $inset-highlighting;
+        }
     }
 }
 
@@ -89,7 +95,9 @@ a.ui-button {
     /* 1 */
     border-color: $color-link-focus !important;
     outline: 0;
-    box-shadow: $inset-highlighting;
+    @if $flat-theme < 1 {
+        box-shadow: $inset-highlighting;
+    }
 }
 
 /**

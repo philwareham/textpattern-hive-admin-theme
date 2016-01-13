@@ -27,10 +27,10 @@ module.exports = function (grunt)
                 js: 'dist/hive/assets/js/'
             },
             dest2: { // Neutral theme
-                dir: 'dist/hive-neutral/',
-                css: 'dist/hive-neutral/assets/css/',
-                img: 'dist/hive-neutral/assets/img/',
-                js: 'dist/hive-neutral/assets/js/'
+                dir: 'dist/hiveNeutral/',
+                css: 'dist/hiveNeutral/assets/css/',
+                img: 'dist/hiveNeutral/assets/img/',
+                js: 'dist/hiveNeutral/assets/js/'
             }
         },
 
@@ -74,7 +74,7 @@ module.exports = function (grunt)
                     },
                     {
                         expand: true,
-                        cwd: '<%= paths.src.dir %>hive-neutral',
+                        cwd: '<%= paths.src.dir %>hiveNeutral',
                         src: '**',
                         dest: '<%= paths.dest2.dir %>',
                         filter: 'isFile'
@@ -87,7 +87,7 @@ module.exports = function (grunt)
                     },
                     {
                         expand: true,
-                        cwd: 'src/assets/img-hive-neutral/',
+                        cwd: 'src/assets/img-hiveNeutral/',
                         src: '**',
                         dest: '<%= paths.dest2.img %>'
                     }

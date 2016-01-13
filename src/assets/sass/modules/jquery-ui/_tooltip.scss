@@ -21,6 +21,8 @@
     position: absolute;
     max-width: 22em;
     padding: 0.5em 1em;
-    box-shadow: $standard-shadow;
+    @if $flat-theme < 1 {
+        box-shadow: $standard-shadow;
+    }
     z-index: 9999;
 }

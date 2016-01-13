@@ -120,7 +120,9 @@
                 border-radius: $border-radius $border-radius 0 0;
             }
             color: $color-text-inverse;
-            box-shadow: $standard-shadow;
+            @if $flat-theme < 1 {
+                box-shadow: $standard-shadow;
+            }
         }
 
         &.success {

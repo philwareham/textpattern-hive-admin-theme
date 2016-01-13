@@ -46,8 +46,10 @@ h3.txp-summary,
     font-size: $base-font-size;
     font-weight: bold;
     line-height: 2em; // 26px / 13px
-    text-shadow: $text-shadow-light;
-    box-shadow: $inset-highlighting;
+    @if $flat-theme < 1 {
+        text-shadow: $text-shadow-light;
+        box-shadow: $inset-highlighting;
+    }
 }
 
 /**

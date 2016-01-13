@@ -82,7 +82,9 @@
     display: none;
     width: 17em;
     padding: 0.2em 0.2em 0;
-    box-shadow: $standard-shadow;
+    @if $flat-theme < 1 {
+        box-shadow: $standard-shadow;
+    }
 
     .ui-datepicker-header {
         position: relative;

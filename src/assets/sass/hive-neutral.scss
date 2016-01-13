@@ -1,9 +1,10 @@
 // Neutral Grey colourscheme (overrides Classic Yellow defaults)
 
+$flat-theme:                 1;
 $color-gradient-from:        #eeeeee;
 $color-gradient-to:          $color-gradient-from; // nullify gradient (use flat colours)
 $color-accent-gradient-from: #cccccc;
-$color-accent-gradient-to:   $color-accent-gradient-from; // nullify gradient (use flat colours)
+$color-accent-gradient-to:   #cccccc; // nullify gradient (use flat colours)
 $border-radius:              0;
 
 // import the default Hive (Classic Yellow) theme

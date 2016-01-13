@@ -93,7 +93,9 @@ svg:not(:root) {
 .content-image {
     border: solid 1px $color-border;
     background: $color-background;
-    box-shadow: $standard-shadow;
+    @if $flat-theme < 1 {
+        box-shadow: $standard-shadow;
+    }
 
     a:hover & {
         border-color: $color-link-hover;

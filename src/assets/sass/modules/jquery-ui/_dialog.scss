@@ -38,7 +38,9 @@
     top: 0;
     left: 0;
     padding: 0.2em;
-    box-shadow: $standard-shadow;
+    @if $flat-theme < 1 {
+        box-shadow: $standard-shadow;
+    }
     z-index: 1002;
 
     .ui-dialog-titlebar {

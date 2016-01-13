@@ -70,7 +70,9 @@
     font-size: $base-font-size;
     line-height: 1.38461538461538em; // 18px / 13px
     list-style: none;
-    box-shadow: $standard-shadow;
+    @if $flat-theme < 1 {
+        box-shadow: $standard-shadow;
+    }
 
     .ui-menu {
         position: absolute;

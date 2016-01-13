@@ -269,8 +269,10 @@ textarea[disabled],
     border-color: $color-border-light !important;
     background: $color-background-form-disabled !important;
     color: $color-text-form-disabled !important;
-    text-shadow: none !important;
-    box-shadow: none !important;
+    @if $flat-theme < 1 {
+        text-shadow: none !important;
+        box-shadow: none !important;
+    }
     /* 1 */
     cursor: default !important;
     /* 2 */

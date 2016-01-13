@@ -119,7 +119,9 @@
         background-color: darken($color-background-box, 2%);
         list-style: none;
         white-space: nowrap;
-        box-shadow: inset 0 -0.25em 0.5em rgba(#666666, 0.15);
+        @if $flat-theme < 1 {
+            box-shadow: inset 0 -0.25em 0.5em rgba(#666666, 0.15);
+        }
 
         &:hover,
         &:focus {
@@ -131,7 +133,9 @@
             margin-bottom: -1px;
             padding-bottom: 1px;
             background-color: lighten($color-background-box, 3%);
-            box-shadow: none;
+            @if $flat-theme < 1 {
+                box-shadow: none;
+            }
         }
     }
 

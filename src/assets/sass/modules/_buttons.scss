@@ -39,8 +39,10 @@ input[type="button"],
     color: $color-text;
     font-weight: normal;
     text-align: center;
-    text-shadow: $text-shadow-light;
-    box-shadow: $inset-highlighting;
+    @if $flat-theme < 1 {
+        text-shadow: $text-shadow-light;
+        box-shadow: $inset-highlighting;
+    }
     /* 1 */
     cursor: pointer;
     /* 2 */
@@ -60,7 +62,9 @@ input[type="button"],
         border-color: darken($color-gradient-border, 13%);
         color: darken($color-text, 10%);
         text-decoration: none;
-        box-shadow: $inset-lowlighting;
+        @if $flat-theme < 1 {
+            box-shadow: $inset-lowlighting;
+        }
     }
 
     &:focus {
@@ -122,8 +126,10 @@ button.destroy {
         border-radius: 0;
     }
     background: none;
-    text-shadow: none;
-    box-shadow: none;
+    @if $flat-theme < 1 {
+        text-shadow: none;
+        box-shadow: none;
+    }
 
     &:focus {
         outline: thin solid $color-link-focus;

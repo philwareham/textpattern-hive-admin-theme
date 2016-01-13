@@ -118,8 +118,10 @@
         background: transparent url("../img/sprite.svg") -10em 0;
         background-size: 13em 2em; // 208px / 16px + 32px / 16px
         font-size: 16px;
-        text-shadow: none;
-        box-shadow: none;
+        @if $flat-theme < 1 {
+            text-shadow: none;
+            box-shadow: none;
+        }
 
         &:focus {
             outline: thin solid $color-link-focus;
@@ -149,7 +151,9 @@
         right: 0;
         left: 0;
         background: $color-highlight-box;
-        box-shadow: $standard-shadow;
+        @if $flat-theme < 1 {
+            box-shadow: $standard-shadow;
+        }
 
         // Indicator pointer.
         &:before {
@@ -197,7 +201,9 @@
         @if $border-radius > 0 {
             border-radius: 0;
         }
-        box-shadow: none;
+        @if $flat-theme < 1 {
+            box-shadow: none;
+        }
 
         a {
             padding: 0.5em 2em 0.5em 3em;
@@ -317,7 +323,9 @@
             margin-top: 2px;
             float: none;
             border-bottom-width: 1px;
-            box-shadow: none;
+            @if $flat-theme < 1 {
+                box-shadow: none;
+            }
 
             &.ui-tabs-active {
                 margin-bottom: 0;
