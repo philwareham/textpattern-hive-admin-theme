@@ -84,7 +84,7 @@ input[type="button"],
 input[type="submit"].publish,
 button.publish,
 a.publish {
-    @include gradient-linear(lighten($color-accent-gradient-from, 7%), lighten($color-accent-gradient-to, 7%));
+    @include gradient-linear($color-button-primary-gradient-from, $color-button-primary-gradient-to);
 
     height: 2.76923076923077em; // 36px / 13px
     padding: 0.61538461538462em 1em; // 8px / 13px + 13px
@@ -92,15 +92,15 @@ a.publish {
     font-weight: bold;
 
     &:hover {
-        @include gradient-linear(lighten($color-accent-gradient-from, 14%), lighten($color-accent-gradient-to, 14%));
+        @include gradient-linear(lighten($color-button-primary-gradient-from, 7%), lighten($color-button-primary-gradient-to, 7%));
 
-        border: 1px solid darken($color-accent-gradient-to, 10%);
+        border: 1px solid darken($color-button-primary-gradient-to, 17%);
     }
 
     &:active {
-        @include gradient-linear(lighten($color-accent-gradient-from, 2%), lighten($color-accent-gradient-to, 2%));
+        @include gradient-linear(darken($color-button-primary-gradient-from, 5%), darken($color-button-primary-gradient-to, 5%));
 
-        border: 1px solid darken($color-accent-gradient-to, 10%);
+        border: 1px solid darken($color-button-primary-gradient-to, 17%);
     }
 
     &:focus {
