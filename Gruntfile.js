@@ -56,8 +56,8 @@ module.exports = function (grunt)
                 files: [
                     {
                         expand: true,
-                        cwd: '<%= paths.src.dir %>',
-                        src: '*',
+                        cwd: '<%= paths.src.dir %>hive',
+                        src: '**',
                         dest: '<%= paths.dest1.dir %>',
                         filter: 'isFile'
                     },
@@ -71,6 +71,13 @@ module.exports = function (grunt)
                         cwd: 'src/assets/img-hive/',
                         src: '**',
                         dest: '<%= paths.dest1.img %>'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.dir %>hive-neutral',
+                        src: '**',
+                        dest: '<%= paths.dest2.dir %>',
+                        filter: 'isFile'
                     },
                     {
                         expand: true,
@@ -90,11 +97,18 @@ module.exports = function (grunt)
 
         // Minified versions of CSS files.
         cssmin: {
-            files: {
+            dest1: {
                 expand: true,
                 cwd: '<%= paths.dest1.css %>',
                 src: ['*.css', '!*.min.css'],
                 dest: '<%= paths.dest1.css %>',
+                ext: '.min.css'
+            },
+            dest2: {
+                expand: true,
+                cwd: '<%= paths.dest2.css %>',
+                src: ['*.css', '!*.min.css'],
+                dest: '<%= paths.dest2.css %>',
                 ext: '.min.css'
             }
         },
@@ -161,6 +175,7 @@ module.exports = function (grunt)
             dist: {
                 files: [
                     {'<%= paths.dest1.css %>textpattern.css': '<%= paths.dest1.css %>textpattern.css'},
+                    {'<%= paths.dest2.css %>textpattern.css': '<%= paths.dest2.css %>textpattern.css'},
                     {'<%= paths.docs.css %>design-patterns.css': '<%= paths.docs.css %>design-patterns.css'}
                 ]
             }
@@ -175,12 +190,20 @@ module.exports = function (grunt)
             dist: {
                 files: [
                     {'<%= paths.dest1.css %>textpattern.css': '<%= paths.src.sass %>hive-default.scss'},
+                    {'<%= paths.dest2.css %>textpattern.css': '<%= paths.src.sass %>hive-neutral.scss'},
                     {'<%= paths.docs.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'},
                     {
                         expand: true,
                         cwd: '<%= paths.src.sass %>custom/',
                         src: '*',
                         dest: '<%= paths.dest1.css %>custom/',
+                        ext: '.css'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.sass %>custom/',
+                        src: '*',
+                        dest: '<%= paths.dest2.css %>custom/',
                         ext: '.css'
                     }
                 ]
@@ -211,6 +234,13 @@ module.exports = function (grunt)
                             'node_modules/autosize/dist/autosize.js',
                             '<%= paths.src.js %>main.js'
                         ],
+                        '<%= paths.dest2.js %>main.js':
+                        [
+                            'node_modules/bootstrap/js/dropdown.js',
+                            'node_modules/bootstrap/js/collapse.js',
+                            'node_modules/autosize/dist/autosize.js',
+                            '<%= paths.src.js %>main.js'
+                        ],
                         '<%= paths.docs.js %>prettify/prettify.js': 'bower_components/google-code-prettify/src/prettify.js'
                     },
                     {
@@ -222,11 +252,22 @@ module.exports = function (grunt)
                 ]
             },
             minify: {
-                expand: true,
-                cwd: '<%= paths.dest1.js %>',
-                src: ['*.js', '!*.min.js'],
-                dest: '<%= paths.dest1.js %>',
-                ext: '.min.js'
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= paths.dest1.js %>',
+                        src: ['*.js', '!*.min.js'],
+                        dest: '<%= paths.dest1.js %>',
+                        ext: '.min.js'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= paths.dest2.js %>',
+                        src: ['*.js', '!*.min.js'],
+                        dest: '<%= paths.dest2.js %>',
+                        ext: '.min.js'
+                    }
+                ]
             }
         },
 
