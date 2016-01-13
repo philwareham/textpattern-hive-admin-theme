@@ -6469,3 +6469,9 @@ label.ui-state-active.ui-button:active {
     border-top-width: 0;
   }
 }
+
+.txp-list tbody tr,
+.txp-list thead th,
+.txp-list thead th:first-child {
+  border-color: #cccccc;
+}

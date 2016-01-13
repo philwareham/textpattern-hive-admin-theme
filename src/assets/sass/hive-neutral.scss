@@ -9,3 +9,11 @@ $border-radius:              0;
 
 // import the default Hive (Classic Yellow) theme
 @import "hive-default";
+
+.txp-list {
+    tbody tr,
+    thead th,
+    thead th:first-child {
+        border-color: $color-border;
+    }
+}
