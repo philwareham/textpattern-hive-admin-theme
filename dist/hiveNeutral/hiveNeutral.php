@@ -226,10 +226,11 @@ EOS;
         global $prefs;
 
         return array(
+            'title'       => 'Hive (Flat Neutral)',
+            'description' => 'Textpattern Hive (Flat Neutral) admin theme',
+            'version'     => $prefs['version'],
             'author'      => 'Team Textpattern',
             'author_uri'  => 'http://textpattern.com/',
-            'version'     => $prefs['version'],
-            'description' => 'Textpattern Hive Theme (Neutral Grey)',
             'help'        => 'https://github.com/philwareham/txp-hive-admin-theme',
         );
     }
