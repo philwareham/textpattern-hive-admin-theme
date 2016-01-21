@@ -1895,6 +1895,7 @@ dt {
 .switcher-list li {
   position: relative;
   border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid transparent;
 }
 
 .switcher-list li:nth-child(odd) {
