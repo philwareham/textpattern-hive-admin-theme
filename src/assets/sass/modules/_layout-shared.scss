@@ -574,7 +574,7 @@ span.spinner {
 
 .txp-edit,
 .txp-prefs-group,
-.setup {
+.setup:not(.welcome) {
     .txp-form-field:not(.txp-form-field-textarea) {
         display: flex;
         align-items: baseline;
