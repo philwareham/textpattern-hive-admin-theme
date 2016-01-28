@@ -36,7 +36,7 @@ input[type="button"],
     border: solid 1px $color-gradient-border;
     border-radius: $border-radius;
     background-clip: padding-box;
-    color: $color-text;
+    color: $color-text-button;
     font-weight: normal;
     text-align: center;
     @if $flat-theme < 1 {
@@ -52,7 +52,7 @@ input[type="button"],
         @include gradient-linear(lighten($color-gradient-from, 4%), lighten($color-gradient-to, 4%));
 
         border-color: darken($color-gradient-border, 13%);
-        color: $color-text;
+        color: $color-text-button-hover;
         text-decoration: none;
     }
 
@@ -60,7 +60,7 @@ input[type="button"],
         @include gradient-linear(darken($color-gradient-from, 3%), darken($color-gradient-to, 3%));
 
         border-color: darken($color-gradient-border, 13%);
-        color: darken($color-text, 10%);
+        color: $color-text-button-active;
         text-decoration: none;
         @if $flat-theme < 1 {
             box-shadow: $inset-lowlighting;

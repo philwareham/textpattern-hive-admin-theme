@@ -11,6 +11,9 @@
 // text colours
 
 $color-text:                         #333333 !default;
+$color-text-button:                  $color-text !default;
+$color-text-button-hover:            $color-text-button !default;
+$color-text-button-active:           darken($color-text-button, 10%) !default;
 $color-text-form:                    #000000 !default;
 $color-text-form-disabled:           #aaaaaa !default;
 $color-text-footnote:                #777777 !default;

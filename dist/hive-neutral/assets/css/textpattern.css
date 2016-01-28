@@ -1601,7 +1601,7 @@ input[type="button"],
   border: solid 1px #cccccc;
   border-radius: 0;
   background-clip: padding-box;
-  color: #333333;
+  color: #ffffff;
   font-weight: normal;
   text-align: center;
   /* 1 */
@@ -1622,7 +1622,7 @@ input[type="button"]:hover,
 .navlink-active:hover {
   background-color: #f8f8f8;
   border-color: #aaaaaa;
-  color: #333333;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -1636,7 +1636,7 @@ input[type="button"]:active,
 .navlink-active:active {
   background-color: #e6e6e6;
   border-color: #aaaaaa;
-  color: #1a1a1a;
+  color: #e6e6e6;
   text-decoration: none;
 }
 
@@ -1662,25 +1662,25 @@ input[type="button"]:focus,
 input[type="submit"].publish,
 button.publish,
 a.publish {
-  background-color: #dedede;
+  background-color: #9fbb58;
   height: 2.76923076923077em;
   padding: 0.61538461538462em 1em;
-  border: 1px solid #cccccc;
+  border: 1px solid #8eaa45;
   font-weight: bold;
 }
 
 input[type="submit"].publish:hover,
 button.publish:hover,
 a.publish:hover {
-  background-color: #f0f0f0;
-  border: 1px solid #b3b3b3;
+  background-color: #aec571;
+  border: 1px solid #6f8636;
 }
 
 input[type="submit"].publish:active,
 button.publish:active,
 a.publish:active {
-  background-color: #d1d1d1;
-  border: 1px solid #b3b3b3;
+  background-color: #94b148;
+  border: 1px solid #6f8636;
 }
 
 input[type="submit"].publish:focus,
