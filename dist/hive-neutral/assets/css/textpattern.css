@@ -510,7 +510,7 @@ dfn[title] {
 mark,
 var {
   padding: 1px 0.23076923076923em;
-  border-radius: 0.25em;
+  border-radius: 0.15em;
   background: #e6f0ff;
   color: #333333;
 }
@@ -531,7 +531,7 @@ kbd,
 samp {
   padding: 1px 0.23076923076923em;
   border: 1px solid #e3e3e3;
-  border-radius: 0.25em;
+  border-radius: 0.15em;
   background: #f7f7f7;
 }
 
@@ -546,7 +546,7 @@ pre {
   margin: 1em 0;
   padding: 0.53846153846154em 1em;
   border: 1px solid #e3e3e3;
-  border-radius: 0.25em;
+  border-radius: 0.15em;
   background: #f7f7f7;
   /* 1 */
   word-wrap: normal;
@@ -767,7 +767,7 @@ a:focus .content-image {
 .error,
 .information {
   padding: 1px 0.23076923076923em;
-  border-radius: 0.25em;
+  border-radius: 0.15em;
 }
 
 .success {
@@ -859,7 +859,7 @@ a:focus .content-image {
   max-width: 53.1538461538em;
   margin: 0 auto;
   padding: 0.53846153846154em 2.84615384615385em 0.53846153846154em 1em;
-  border-radius: 0.5em 0.5em 0 0;
+  border-radius: 0.3em 0.3em 0 0;
   color: #ffffff;
 }
 
@@ -1609,7 +1609,7 @@ input[type="button"],
   height: 2.15384615384615em;
   padding: 0.30769230769231em 0.61538461538462em;
   border: solid 1px #3c93e0;
-  border-radius: 0.5em;
+  border-radius: 0.3em;
   background-clip: padding-box;
   color: #ffffff;
   font-weight: normal;
@@ -1735,7 +1735,7 @@ button.destroy:focus {
   height: 2.15384615384615em;
   padding: 0.30769230769231em 0.61538461538462em;
   border: 1px solid;
-  border-radius: 0.5em;
+  border-radius: 0.3em;
   background-clip: padding-box;
   box-sizing: border-box;
 }
@@ -1774,25 +1774,25 @@ ul.nav-tertiary li {
 .nav-tertiary > :first-child,
 .nav-tertiary > :first-child > a,
 .nav-tertiary > :first-child > span {
-  border-radius: 0.5em 0 0 0.5em;
+  border-radius: 0.3em 0 0 0.3em;
 }
 
 .nav-tertiary > :last-child,
 .nav-tertiary > :last-child > a,
 .nav-tertiary > :last-child > span {
-  border-radius: 0 0.5em 0.5em 0;
+  border-radius: 0 0.3em 0.3em 0;
 }
 
 [dir="rtl"] .nav-tertiary > :first-child,
 [dir="rtl"] .nav-tertiary > :first-child > a,
 [dir="rtl"] .nav-tertiary > :first-child > span {
-  border-radius: 0 0.5em 0.5em 0;
+  border-radius: 0 0.3em 0.3em 0;
 }
 
 [dir="rtl"] .nav-tertiary > :last-child,
 [dir="rtl"] .nav-tertiary > :last-child > a,
 [dir="rtl"] .nav-tertiary > :last-child > span {
-  border-radius: 0.5em 0 0 0.5em;
+  border-radius: 0.3em 0 0 0.3em;
 }
 
 /**
@@ -2592,17 +2592,17 @@ button.txp-nav-toggle {
   min-width: 12em;
   border: 1px solid #d4d4d4;
   border-top: 0;
-  border-radius: 0 0.5em 0.5em;
+  border-radius: 0 0.3em 0.3em;
   background: #f7f7f7;
   z-index: 20000;
 }
 
 .dropdown-menu li:first-child {
-  border-radius: 0 0.5em 0 0;
+  border-radius: 0 0.3em 0 0;
 }
 
 .dropdown-menu li:last-child {
-  border-radius: 0 0 0.5em 0.5em;
+  border-radius: 0 0 0.3em 0.3em;
 }
 
 .dropdown-menu li:hover {
@@ -3755,7 +3755,7 @@ a.ui-state-default:focus {
 .ui-widget-shadow {
   margin: -0.5em 0 0 -0.5em;
   padding: 0.5em;
-  border-radius: 0.5em;
+  border-radius: 0.3em;
   background: rgba(0, 0, 0, 0.75);
 }
 
@@ -4211,15 +4211,15 @@ button.ui-button-icons-only {
 }
 
 .ui-button.ui-corner-all {
-  border-radius: 0.5em;
+  border-radius: 0.3em;
 }
 
 .ui-button.ui-corner-right {
-  border-radius: 0 0.5em 0.5em 0;
+  border-radius: 0 0.3em 0.3em 0;
 }
 
 .ui-button.ui-corner-left {
-  border-radius: 0.5em 0 0 0.5em;
+  border-radius: 0.3em 0 0 0.3em;
 }
 
 /**
@@ -4443,7 +4443,7 @@ label.ui-state-active.ui-button:active {
   top: 0.2em;
   width: 1.8em;
   height: 1.8em;
-  border-radius: 0.5em;
+  border-radius: 0.3em;
   background-color: transparent;
 }
 
