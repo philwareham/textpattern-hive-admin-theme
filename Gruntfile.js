@@ -27,10 +27,10 @@ module.exports = function (grunt)
                 js: 'dist/hive/assets/js/'
             },
             dest2: { // Neutral theme
-                dir: 'dist/hive-neutral/',
-                css: 'dist/hive-neutral/assets/css/',
-                img: 'dist/hive-neutral/assets/img/',
-                js: 'dist/hive-neutral/assets/js/'
+                dir: 'dist/hiveneutral/',
+                css: 'dist/hiveneutral/assets/css/',
+                img: 'dist/hiveneutral/assets/img/',
+                js: 'dist/hiveneutral/assets/js/'
             }
         },
 
