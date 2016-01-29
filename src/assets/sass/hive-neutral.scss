@@ -1,17 +1,19 @@
 // Neutral Grey colourscheme (overrides Classic Yellow defaults)
 
-$flat-theme:                         1;
-$font-body:                          "PT Serif", Georgia, serif;
-$color-text-button:                  #ffffff;
-$color-gradient-from:                #eeeeee;
-$color-gradient-to:                  #eeeeee; // nullify gradient (use flat colours)
-$color-accent-gradient-from:         #cccccc;
-$color-accent-gradient-to:           #cccccc; // nullify gradient (use flat colours)
-$color-button-gradient-from:         #5ba4e5;
-$color-button-gradient-to:           #5ba4e5; // nullify gradient (use flat colours)
-$color-button-primary-gradient-from: #9fbb58;
-$color-button-primary-gradient-to:   #9fbb58; // nullify gradient (use flat colours)
-$border-radius:                      0.3em;
+$flat-theme:                          1;
+$font-body:                           "PT Serif", Georgia, serif;
+$color-text-button:                   #ffffff;
+$color-gradient-from:                 #eeeeee;
+$color-gradient-to:                   #eeeeee; // nullify gradient (use flat colours)
+$color-accent-gradient-from:          #c7e0f6;
+$color-accent-gradient-to:            #c7e0f6; // nullify gradient (use flat colours)
+$color-button-gradient-from:          #5ba4e5;
+$color-button-gradient-to:            #5ba4e5; // nullify gradient (use flat colours)
+$color-button-primary-gradient-from:  #9fbb58;
+$color-button-primary-gradient-to:    #9fbb58; // nullify gradient (use flat colours)
+$color-selecting:                     $color-accent-gradient-from;
+$color-selected:                      lighten($color-accent-gradient-from, 10%);
+$border-radius:                       0.3em;
 
 // import the default Hive (Classic Yellow) theme
 @import "hive-default";
