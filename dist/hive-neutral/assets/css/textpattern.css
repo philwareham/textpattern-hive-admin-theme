@@ -400,7 +400,7 @@ html {
  * Global font and colour.
  */
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "PT Serif", Georgia, serif;
 }
 
 /**
@@ -510,6 +510,7 @@ dfn[title] {
 mark,
 var {
   padding: 1px 0.23076923076923em;
+  border-radius: 0.25em;
   background: #e6f0ff;
   color: #333333;
 }
@@ -530,6 +531,7 @@ kbd,
 samp {
   padding: 1px 0.23076923076923em;
   border: 1px solid #e3e3e3;
+  border-radius: 0.25em;
   background: #f7f7f7;
 }
 
@@ -544,6 +546,7 @@ pre {
   margin: 1em 0;
   padding: 0.53846153846154em 1em;
   border: 1px solid #e3e3e3;
+  border-radius: 0.25em;
   background: #f7f7f7;
   /* 1 */
   word-wrap: normal;
@@ -572,6 +575,7 @@ code.body,
 code.excerpt {
   padding: 0;
   border: 0;
+  border-radius: 0;
   background: none;
 }
 
@@ -763,6 +767,7 @@ a:focus .content-image {
 .error,
 .information {
   padding: 1px 0.23076923076923em;
+  border-radius: 0.25em;
 }
 
 .success {
@@ -854,6 +859,7 @@ a:focus .content-image {
   max-width: 53.1538461538em;
   margin: 0 auto;
   padding: 0.53846153846154em 2.84615384615385em 0.53846153846154em 1em;
+  border-radius: 0.5em 0.5em 0 0;
   color: #ffffff;
 }
 
@@ -965,7 +971,7 @@ h3.txp-summary,
   height: 2em;
   margin: 0;
   border-top: 1px solid #eeeeee;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid gainsboro;
   font-size: 13px;
   font-weight: bold;
   line-height: 2em;
@@ -1072,7 +1078,7 @@ h3.txp-summary.expanded a:after {
   padding: 1em 1em 1em 4em;
   border-top: 1px solid #eeeeee;
   border-right: 1px solid #e3e3e3;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid gainsboro;
   border-left: 1px solid #e3e3e3;
 }
 
@@ -1593,13 +1599,13 @@ input[type="button"],
 .txp-logout a,
 .navlink,
 .navlink-active {
-  background-color: #eeeeee;
+  background-color: #5ba4e5;
   display: inline-block;
   width: auto;
   height: 2.15384615384615em;
   padding: 0.30769230769231em 0.61538461538462em;
-  border: solid 1px #cccccc;
-  border-radius: 0;
+  border: solid 1px #3c93e0;
+  border-radius: 0.5em;
   background-clip: padding-box;
   color: #ffffff;
   font-weight: normal;
@@ -1620,8 +1626,8 @@ input[type="button"]:hover,
 .txp-logout a:hover,
 .navlink:hover,
 .navlink-active:hover {
-  background-color: #f8f8f8;
-  border-color: #aaaaaa;
+  background-color: #6daee8;
+  border-color: #1e72bc;
   color: #ffffff;
   text-decoration: none;
 }
@@ -1634,8 +1640,8 @@ input[type="button"]:active,
 .txp-logout a:active,
 .navlink:active,
 .navlink-active:active {
-  background-color: #e6e6e6;
-  border-color: #aaaaaa;
+  background-color: #4e9de3;
+  border-color: #1e72bc;
   color: #e6e6e6;
   text-decoration: none;
 }
@@ -1702,6 +1708,7 @@ button.destroy {
   height: auto;
   padding: 0.07692307692308em 0 0;
   border: 0;
+  border-radius: 0;
   background: none;
 }
 
@@ -1724,6 +1731,7 @@ button.destroy:focus {
   height: 2.15384615384615em;
   padding: 0.30769230769231em 0.61538461538462em;
   border: 1px solid;
+  border-radius: 0.5em;
   background-clip: padding-box;
   box-sizing: border-box;
 }
@@ -1752,6 +1760,35 @@ ul.nav-tertiary li {
 
 [dir="rtl"] ul.nav-tertiary {
   padding: 0;
+}
+
+.nav-tertiary a,
+.nav-tertiary .navlink-disabled {
+  border-radius: 0;
+}
+
+.nav-tertiary > :first-child,
+.nav-tertiary > :first-child > a,
+.nav-tertiary > :first-child > span {
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+.nav-tertiary > :last-child,
+.nav-tertiary > :last-child > a,
+.nav-tertiary > :last-child > span {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+[dir="rtl"] .nav-tertiary > :first-child,
+[dir="rtl"] .nav-tertiary > :first-child > a,
+[dir="rtl"] .nav-tertiary > :first-child > span {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+[dir="rtl"] .nav-tertiary > :last-child,
+[dir="rtl"] .nav-tertiary > :last-child > a,
+[dir="rtl"] .nav-tertiary > :last-child > span {
+  border-radius: 0.5em 0 0 0.5em;
 }
 
 /**
@@ -1802,6 +1839,7 @@ ul.nav-tertiary li {
   margin-left: -0.28em;
   padding-right: 1.5em;
   padding-left: 1.5em;
+  border-radius: 0;
 }
 
 /* Lists
@@ -2057,7 +2095,7 @@ td {
   background-color: #eeeeee;
   border-top: 1px solid #eeeeee;
   border-right: 1px solid #e1e1e1;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid gainsboro;
 }
 
 .txp-list thead th:first-child {
@@ -2550,8 +2588,17 @@ button.txp-nav-toggle {
   min-width: 12em;
   border: 1px solid #d4d4d4;
   border-top: 0;
+  border-radius: 0 0.5em 0.5em;
   background: #f7f7f7;
   z-index: 20000;
+}
+
+.dropdown-menu li:first-child {
+  border-radius: 0 0.5em 0 0;
+}
+
+.dropdown-menu li:last-child {
+  border-radius: 0 0 0.5em 0.5em;
 }
 
 .dropdown-menu li:hover {
@@ -3704,6 +3751,7 @@ a.ui-state-default:focus {
 .ui-widget-shadow {
   margin: -0.5em 0 0 -0.5em;
   padding: 0.5em;
+  border-radius: 0.5em;
   background: rgba(0, 0, 0, 0.75);
 }
 
@@ -4032,15 +4080,15 @@ a.ui-state-default:focus {
  * </a>
  */
 .ui-button {
-  background-color: #eeeeee;
+  background-color: #5ba4e5;
   display: inline-block;
   position: relative;
   height: 2.1538462em;
   margin: 0 0.1em 0 0;
   padding: 0.30769230769231em 0.61538461538462em;
-  border: solid 1px #cccccc;
+  border: solid 1px #3c93e0;
   background-clip: padding-box;
-  color: #333333;
+  color: #ffffff;
   font-family: Helvetica, Arial, sans-serif;
   /* 1 */
   font-size: 13px;
@@ -4059,15 +4107,16 @@ a.ui-state-default:focus {
 }
 
 .ui-button:hover {
-  background-color: #f8f8f8;
-  border-color: #aaaaaa;
+  background-color: #6daee8;
+  border-color: #1e72bc;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .ui-button:active {
-  background-color: #e6e6e6;
-  border-color: #aaaaaa;
-  color: #1a1a1a;
+  background-color: #4e9de3;
+  border-color: #1e72bc;
+  color: #e6e6e6;
   text-decoration: none;
 }
 
@@ -4080,7 +4129,7 @@ a.ui-state-default:focus {
  * Remove some styling from `a` links as buttons.
  */
 a.ui-button {
-  color: #333333;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -4155,6 +4204,18 @@ button.ui-button-icon-only {
  */
 button.ui-button-icons-only {
   width: 3.7em;
+}
+
+.ui-button.ui-corner-all {
+  border-radius: 0.5em;
+}
+
+.ui-button.ui-corner-right {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+.ui-button.ui-corner-left {
+  border-radius: 0.5em 0 0 0.5em;
 }
 
 /**
@@ -4378,6 +4439,7 @@ label.ui-state-active.ui-button:active {
   top: 0.2em;
   width: 1.8em;
   height: 1.8em;
+  border-radius: 0.5em;
   background-color: transparent;
 }
 
@@ -6302,6 +6364,7 @@ label.ui-state-active.ui-button:active {
     padding: 0;
     float: left;
     border: 0;
+    border-radius: 0;
     background: transparent url("../img/sprite.svg") -10em 0;
     background-size: 13em 2em;
     font-size: 16px;
@@ -6362,6 +6425,7 @@ label.ui-state-active.ui-button:active {
     position: static;
     min-width: 0;
     border: 0;
+    border-radius: 0;
   }
   .dropdown-menu a {
     padding: 0.5em 2em 0.5em 3em;
@@ -6476,4 +6540,8 @@ label.ui-state-active.ui-button:active {
 .txp-list thead th,
 .txp-list thead th:first-child {
   border-color: #cccccc;
+}
+
+.ui-button .ui-icon {
+  background-image: url("../img/ui-icon-sprite-ffffff.svg");
 }

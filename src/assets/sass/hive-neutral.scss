@@ -1,14 +1,16 @@
 // Neutral Grey colourscheme (overrides Classic Yellow defaults)
 
 $flat-theme:                         1;
+$font-body:                          "PT Serif", Georgia, serif;
 $color-text-button:                  #ffffff;
 $color-gradient-from:                #eeeeee;
-$color-gradient-to:                  $color-gradient-from; // nullify gradient (use flat colours)
+$color-gradient-to:                  #eeeeee; // nullify gradient (use flat colours)
 $color-accent-gradient-from:         #cccccc;
 $color-accent-gradient-to:           #cccccc; // nullify gradient (use flat colours)
+$color-button-gradient-from:         #5ba4e5;
+$color-button-gradient-to:           #5ba4e5; // nullify gradient (use flat colours)
 $color-button-primary-gradient-from: #9fbb58;
-$color-button-primary-gradient-to:   $color-button-primary-gradient-from;
-$border-radius:                      0;
+$color-button-primary-gradient-to:   #9fbb58; // nullify gradient (use flat colours)
 
 // import the default Hive (Classic Yellow) theme
 @import "hive-default";
@@ -19,4 +21,8 @@ $border-radius:                      0;
     thead th:first-child {
         border-color: $color-border;
     }
+}
+
+.ui-button .ui-icon {
+    background-image: url("../img/ui-icon-sprite-ffffff.svg");
 }

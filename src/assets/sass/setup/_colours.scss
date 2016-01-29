@@ -41,7 +41,7 @@ $color-background-form:              #ffffff !default;
 $color-background-form-disabled:     #eeeeee !default;
 $color-gradient-from:                #eeeeee !default;
 $color-gradient-to:                  darken($color-gradient-from, 6.5%) !default;
-$color-gradient-border:              darken($color-gradient-from, 13.5%) !default;
+$color-gradient-border:              darken($color-gradient-to, 7%) !default;
 
 // accent colours
 
@@ -49,8 +49,15 @@ $color-accent-gradient-from:         #ffda44 !default;
 $color-accent-gradient-to:           darken($color-accent-gradient-from, 15%) !default;
 $color-highlight-box:                tint($color-accent-gradient-from, 84%) !default;
 $color-strong-highlight-box:         tint($color-accent-gradient-from, 36%) !default;
+
+// button colours
+
+$color-button-gradient-from:         $color-gradient-from !default;
+$color-button-gradient-to:           darken($color-button-gradient-from, 6.5%) !default;
+$color-button-border:                darken($color-button-gradient-to, 7%) !default;
 $color-button-primary-gradient-from: lighten($color-accent-gradient-from, 7%) !default;
-$color-button-primary-gradient-to:   lighten($color-accent-gradient-to, 7%) !default;
+$color-button-primary-gradient-to:   darken($color-button-primary-gradient-from, 15%) !default;
+$color-button-primary-border:        darken($color-button-primary-gradient-to, 7%) !default;
 
 // alert colours
 

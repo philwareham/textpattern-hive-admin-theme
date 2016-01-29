@@ -21,17 +21,17 @@
  */
 
 .ui-button {
-    @include gradient-linear($color-gradient-from, $color-gradient-to);
+    @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
 
     display: inline-block;
     position: relative;
     height: 2.1538462em; // 28px / 13px
     margin: 0 0.1em 0 0;
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
-    border: solid 1px $color-gradient-border;
+    border: solid 1px $color-button-border;
     background-clip: padding-box;
-    color: $color-text;
-    font-family: $font-sans-serif;
+    color: $color-text-button;
+    font-family: $font-form;
     /* 1 */
     font-size: $base-font-size;
     line-height: 1.3846154em; // 18px / 13px
@@ -50,17 +50,18 @@
     appearance: none;
 
     &:hover {
-        @include gradient-linear(lighten($color-gradient-from, 4%), lighten($color-gradient-to, 4%));
+        @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
 
-        border-color: darken($color-gradient-border, 13%);
+        border-color: darken($color-button-border, 13%);
+        color: $color-text-button-hover;
         text-decoration: none;
     }
 
     &:active {
-        @include gradient-linear(darken($color-gradient-from, 3%), darken($color-gradient-to, 3%));
+        @include gradient-linear(darken($color-button-gradient-from, 3%), darken($color-button-gradient-to, 3%));
 
-        border-color: darken($color-gradient-border, 13%);
-        color: darken($color-text, 10%);
+        border-color: darken($color-button-border, 13%);
+        color: $color-text-button-active;
         text-decoration: none;
         @if $flat-theme < 1 {
             box-shadow: $inset-lowlighting;
@@ -81,7 +82,7 @@
  */
 
 a.ui-button {
-    color: $color-text;
+    color: $color-text-button;
     text-decoration: none;
 }
 

@@ -27,13 +27,13 @@ input[type="button"],
 .txp-logout a,
 .navlink,
 .navlink-active {
-    @include gradient-linear($color-gradient-from, $color-gradient-to);
+    @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
 
     display: inline-block;
     width: auto;
     height: 2.15384615384615em; // 28px / 13px
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
-    border: solid 1px $color-gradient-border;
+    border: solid 1px $color-button-border;
     border-radius: $border-radius;
     background-clip: padding-box;
     color: $color-text-button;
@@ -49,17 +49,17 @@ input[type="button"],
     appearance: none;
 
     &:hover {
-        @include gradient-linear(lighten($color-gradient-from, 4%), lighten($color-gradient-to, 4%));
+        @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
 
-        border-color: darken($color-gradient-border, 13%);
+        border-color: darken($color-button-border, 13%);
         color: $color-text-button-hover;
         text-decoration: none;
     }
 
     &:active {
-        @include gradient-linear(darken($color-gradient-from, 3%), darken($color-gradient-to, 3%));
+        @include gradient-linear(darken($color-button-gradient-from, 3%), darken($color-button-gradient-to, 3%));
 
-        border-color: darken($color-gradient-border, 13%);
+        border-color: darken($color-button-border, 13%);
         color: $color-text-button-active;
         text-decoration: none;
         @if $flat-theme < 1 {
@@ -88,19 +88,19 @@ a.publish {
 
     height: 2.76923076923077em; // 36px / 13px
     padding: 0.61538461538462em 1em; // 8px / 13px + 13px
-    border: 1px solid darken($color-button-primary-gradient-to, 7%);
+    border: 1px solid $color-button-primary-border;
     font-weight: bold;
 
     &:hover {
         @include gradient-linear(lighten($color-button-primary-gradient-from, 7%), lighten($color-button-primary-gradient-to, 7%));
 
-        border: 1px solid darken($color-button-primary-gradient-to, 17%);
+        border: 1px solid darken($color-button-primary-border, 10%);
     }
 
     &:active {
         @include gradient-linear(darken($color-button-primary-gradient-from, 5%), darken($color-button-primary-gradient-to, 5%));
 
-        border: 1px solid darken($color-button-primary-gradient-to, 17%);
+        border: 1px solid darken($color-button-primary-border, 10%);
     }
 
     &:focus {
