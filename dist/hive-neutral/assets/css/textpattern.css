@@ -511,7 +511,7 @@ mark,
 var {
   padding: 1px 0.23076923076923em;
   border-radius: 0.15em;
-  background: #f3f8fd;
+  background: #e6f1fb;
   color: #333333;
 }
 
@@ -1672,25 +1672,25 @@ input[type="button"]:focus,
 input[type="submit"].publish,
 button.publish,
 a.publish {
-  background-color: #9fbb58;
+  background-color: #9fc158;
   height: 2.76923076923077em;
   padding: 0.61538461538462em 1em;
-  border: 1px solid #8eaa45;
+  border: 1px solid #8eb342;
   font-weight: bold;
 }
 
 input[type="submit"].publish:hover,
 button.publish:hover,
 a.publish:hover {
-  background-color: #aec571;
-  border: 1px solid #6f8636;
+  background-color: #aecb72;
+  border: 1px solid #718e35;
 }
 
 input[type="submit"].publish:active,
 button.publish:active,
 a.publish:active {
-  background-color: #94b148;
-  border: 1px solid #6f8636;
+  background-color: #94ba45;
+  border: 1px solid #718e35;
 }
 
 input[type="submit"].publish:focus,
@@ -1805,21 +1805,18 @@ ul.nav-tertiary li {
  * </p>
  */
 .nav-tertiary .navlink-active {
-  background-color: #c7e0f6;
-  background-image: linear-gradient(#f3f8fd, #c7e0f6);
-  border-color: #96c0ff;
+  background-color: #9dc8ef;
+  border-color: #6faee7;
 }
 
 .nav-tertiary .navlink-active:hover {
-  background-color: #d0e5f7;
-  background-image: linear-gradient(white, #d0e5f7);
-  border-color: #4a92ff;
+  background-color: #a6cdf0;
+  border-color: #2d89dd;
 }
 
 .nav-tertiary .navlink-active:active {
-  background-color: #b1d4f2;
-  background-image: linear-gradient(#c7e0f6, #b1d4f2);
-  border-color: #4a92ff;
+  background-color: #87bceb;
+  border-color: #2d89dd;
 }
 
 .nav-tertiary .navlink-active:focus {
@@ -1949,7 +1946,7 @@ dt {
 }
 
 .switcher-list li.active {
-  background: #f3f8fd;
+  background: #e6f1fb;
 }
 
 .switcher-list li a {
@@ -2088,7 +2085,7 @@ td {
 }
 
 .txp-list tbody tr.selected {
-  background: #f3f8fd;
+  background: #e6f1fb;
 }
 
 .txp-list tbody th {
@@ -3672,7 +3669,7 @@ a.ui-state-default:focus {
  * Highlight colour for jQuery UI widgets currently in 'selected' state.
  */
 .ui-selected {
-  background-color: #f3f8fd;
+  background-color: #e6f1fb;
 }
 
 /* Interaction cues
@@ -4318,21 +4315,19 @@ button.ui-button-icons-only {
  * </label>
  */
 label.ui-state-active.ui-button {
-  background-color: #c7e0f6;
-  background-image: linear-gradient(#f3f8fd, #c7e0f6);
-  border-color: #96c0ff;
+  background-color: #9dc8ef;
+  border-color: #6faee7;
 }
 
 label.ui-state-active.ui-button:hover {
-  background-color: #d0e5f7;
-  background-image: linear-gradient(white, #d0e5f7);
-  border-color: #4a92ff;
+  background-color: #a6cdf0;
+  background-image: linear-gradient(#aacff1, #a6cdf0);
+  border-color: #2d89dd;
 }
 
 label.ui-state-active.ui-button:active {
-  background-color: #b1d4f2;
-  background-image: linear-gradient(#c7e0f6, #b1d4f2);
-  border-color: #4a92ff;
+  background-color: #87bceb;
+  border-color: #2d89dd;
 }
 
 /**
@@ -4505,7 +4500,7 @@ label.ui-state-active.ui-button:active {
 
 .ui-datepicker td a.ui-state-active {
   border-color: #96c0ff;
-  background-color: #f3f8fd;
+  background-color: #e6f1fb;
 }
 
 .ui-datepicker td a.ui-state-highlight:hover {
@@ -5372,7 +5367,7 @@ label.ui-state-active.ui-button:active {
  * Additonal styling for tabs vertical.
  */
 .ui-tabs-vertical .ui-tabs-nav .ui-tabs-active {
-  background: #f3f8fd;
+  background: #e6f1fb;
 }
 
 .ui-tabs-vertical .ui-tabs-nav .ui-state-focus {

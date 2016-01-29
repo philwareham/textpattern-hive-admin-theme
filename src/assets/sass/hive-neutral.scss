@@ -9,10 +9,12 @@ $color-accent-gradient-from:          #c7e0f6;
 $color-accent-gradient-to:            #c7e0f6; // nullify gradient (use flat colours)
 $color-button-gradient-from:          #5ba4e5;
 $color-button-gradient-to:            #5ba4e5; // nullify gradient (use flat colours)
-$color-button-primary-gradient-from:  #9fbb58;
-$color-button-primary-gradient-to:    #9fbb58; // nullify gradient (use flat colours)
+$color-button-primary-gradient-from:  #9fc158;
+$color-button-primary-gradient-to:    #9fc158; // nullify gradient (use flat colours)
+$color-button-selected-gradient-from: #9dc8ef;
+$color-button-selected-gradient-to:   #9dc8ef; // nullify gradient (use flat colours)
 $color-selecting:                     $color-accent-gradient-from;
-$color-selected:                      lighten($color-accent-gradient-from, 10%);
+$color-selected:                      lighten($color-accent-gradient-from, 7%);
 $border-radius:                       0.3em;
 
 // import the default Hive (Classic Yellow) theme

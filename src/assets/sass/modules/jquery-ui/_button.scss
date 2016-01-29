@@ -290,15 +290,15 @@ label.ui-state-active {
     }
 
     &.ui-button:hover {
-        @include gradient-linear(lighten($color-selected, 3%), lighten($color-selecting, 2%));
+        @include gradient-linear(lighten($color-button-selected-gradient-from, 3%), lighten($color-button-selected-gradient-to, 2%));
 
-        border-color: lighten($color-link, 27%);
+        border-color: darken($color-button-selected-border, 15%);
     }
 
     &.ui-button:active {
-        @include gradient-linear($color-selecting, darken($color-selecting, 5%));
+        @include gradient-linear(darken($color-button-selected-gradient-from, 5%), darken($color-button-selected-gradient-to, 5%));
 
-        border-color: lighten($color-link, 27%);
+        border-color: darken($color-button-selected-border, 15%);
     }
 }
 
