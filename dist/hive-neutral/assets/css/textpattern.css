@@ -956,9 +956,13 @@ a:focus .content-image {
  */
 .txp-details {
   margin: 1em 0;
-  border: 1px solid #e3e3e3;
-  border-top: 0;
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
   background: #f7f7f7;
+}
+
+.txp-details > div {
+  border-bottom: 1px solid #cccccc;
 }
 
 /**
@@ -970,8 +974,8 @@ h3.txp-summary,
   position: relative;
   height: 2em;
   margin: 0;
-  border-top: 1px solid #eeeeee;
-  border-bottom: 1px solid gainsboro;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
   font-size: 13px;
   font-weight: bold;
   line-height: 2em;

@@ -958,9 +958,13 @@ a:focus .content-image {
  */
 .txp-details {
   margin: 1em 0;
-  border: 1px solid #e3e3e3;
-  border-top: 0;
+  border-right: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
   background: #f7f7f7;
+}
+
+.txp-details > div {
+  border-bottom: 1px solid #e3e3e3;
 }
 
 /**
