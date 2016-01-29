@@ -232,9 +232,9 @@ ul.nav-tertiary {
  */
 
 .nav-tertiary .navlink-active {
-    @include gradient-linear($color-selected, $color-selecting);
+    @include gradient-linear($color-button-selected-gradient-from, $color-button-selected-gradient-to);
 
-    border-color: lighten($color-link, 42%);
+    border-color: $color-button-selected-border;
 
     &:hover {
         @include gradient-linear(lighten($color-selected, 3%), lighten($color-selecting, 2%));

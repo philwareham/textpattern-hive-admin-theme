@@ -284,9 +284,9 @@ button.ui-button-icons-only {
 
 label.ui-state-active {
     &.ui-button {
-        @include gradient-linear($color-selected, $color-selecting);
+        @include gradient-linear($color-button-selected-gradient-from, $color-button-selected-gradient-to);
 
-        border-color: lighten($color-link, 42%);
+        border-color: $color-button-selected-border;
     }
 
     &.ui-button:hover {
