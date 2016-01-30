@@ -2,7 +2,6 @@
 
 $flat-theme:                          1;
 $color-text-button:                   #ffffff;
-$color-link-focus:                    #0033ff;
 $color-gradient-from:                 #eeeeee;
 $color-gradient-to:                   #eeeeee; // nullify gradient (use flat colours)
 $color-accent-gradient-from:          #c7e0f6;
@@ -35,7 +34,7 @@ $border-radius:                       0.3em;
 
 .dropdown-menu {
     border-radius: 0;
-    background: $color-background;
+    background: #ffffff;
 
     li {
         &:hover {
@@ -46,4 +45,10 @@ $border-radius:                       0.3em;
             background: $color-selecting;
         }
     }
+}
+
+table,
+.switcher-list,
+.ui-menu {
+    background: #ffffff;
 }

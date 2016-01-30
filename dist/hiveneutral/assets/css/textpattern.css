@@ -330,7 +330,7 @@ a:hover, a:active {
 }
 
 a:focus {
-  outline: thin solid #0033ff;
+  outline: thin solid #0066ff;
 }
 
 a.busy {
@@ -355,7 +355,7 @@ a.busy {
 
 .pophelp:focus,
 .pophelpsubtle:focus {
-  border-color: #0033ff;
+  border-color: #0066ff;
   outline: 0;
 }
 
@@ -376,7 +376,7 @@ a.busy {
 }
 
 .txp-list thead th a.pophelp:focus {
-  border-color: #0033ff;
+  border-color: #0066ff;
 }
 
 /**
@@ -747,7 +747,7 @@ a:hover .content-image {
 }
 
 a:focus .content-image {
-  border-color: #0033ff;
+  border-color: #0066ff;
 }
 
 /* Messages
@@ -1345,7 +1345,7 @@ input[type="url"]:focus,
 input[type="week"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #0033ff;
+  border-color: #0066ff;
   outline: 0;
 }
 
@@ -1658,7 +1658,7 @@ input[type="button"]:focus,
 .txp-logout a:focus,
 .navlink:focus,
 .navlink-active:focus {
-  border-color: #0033ff;
+  border-color: #0066ff;
   outline: 0;
 }
 
@@ -1696,7 +1696,7 @@ a.publish:active {
 input[type="submit"].publish:focus,
 button.publish:focus,
 a.publish:focus {
-  border-color: #0033ff;
+  border-color: #0066ff;
 }
 
 /**
@@ -1717,7 +1717,7 @@ button.destroy {
 }
 
 button.destroy:focus {
-  outline: thin solid #0033ff;
+  outline: thin solid #0066ff;
 }
 
 /**
@@ -1820,7 +1820,7 @@ ul.nav-tertiary li {
 }
 
 .nav-tertiary .navlink-active:focus {
-  border-color: #0033ff;
+  border-color: #0066ff;
 }
 
 /**
@@ -4122,7 +4122,7 @@ a.ui-state-default:focus {
 }
 
 .ui-button:focus {
-  border-color: #0033ff;
+  border-color: #0066ff;
   outline: 0;
 }
 
@@ -4141,7 +4141,7 @@ a.ui-button {
  */
 .ui-button.ui-state-focus {
   /* 1 */
-  border-color: #0033ff !important;
+  border-color: #0066ff !important;
   outline: 0;
 }
 
@@ -5011,7 +5011,7 @@ label.ui-state-active.ui-button:active {
 }
 
 .ui-selectmenu-button:focus {
-  border-color: #0033ff;
+  border-color: #0066ff;
   outline: 0;
 }
 
@@ -5375,7 +5375,7 @@ label.ui-state-active.ui-button:active {
 }
 
 .ui-tabs-vertical .ui-tabs-nav .ui-state-focus a {
-  outline: thin solid #0033ff;
+  outline: thin solid #0066ff;
 }
 
 /* Tooltip
@@ -6369,7 +6369,7 @@ label.ui-state-active.ui-button:active {
     font-size: 16px;
   }
   button.txp-nav-toggle:focus {
-    outline: thin solid #0033ff;
+    outline: thin solid #0066ff;
   }
   button.txp-nav-toggle:not(.collapsed) {
     background-color: rgba(255, 255, 255, 0.33);
@@ -6547,7 +6547,7 @@ label.ui-state-active.ui-button:active {
 
 .dropdown-menu {
   border-radius: 0;
-  background: #f7f7f7;
+  background: #ffffff;
 }
 
 .dropdown-menu li:hover {
@@ -6556,4 +6556,10 @@ label.ui-state-active.ui-button:active {
 
 .dropdown-menu li.selected {
   background: #d4e7f8;
+}
+
+table,
+.switcher-list,
+.ui-menu {
+  background: #ffffff;
 }
