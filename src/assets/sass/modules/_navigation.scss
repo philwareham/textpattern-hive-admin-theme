@@ -92,7 +92,7 @@ button.txp-nav-toggle {
     position: relative;
     float: left;
     border-right: 1px solid $color-accent-gradient-to;
-    background: rgba($color-text-inverse, 0.2);
+    background: rgba($color-text-inverse, 0.25);
 
     &:first-child {
         border-left: 1px solid $color-accent-gradient-to;
@@ -109,15 +109,15 @@ button.txp-nav-toggle {
         }
 
         &:hover {
-            background: rgba($color-text-inverse, 0.2);
+            background: rgba($color-text-inverse, 0.25);
         }
     }
 
     &.selected > a {
-        background: rgba($color-text-inverse, 0.2);
+        background: rgba($color-text-inverse, 0.25);
 
         &:hover {
-            background: rgba($color-text-inverse, 0.33);
+            background: rgba($color-text-inverse, 0.4);
         }
     }
 }
@@ -217,14 +217,17 @@ button.txp-nav-toggle {
     top: 3em;
     left: 0;
     min-width: 12em;
-    border: 1px solid $color-border-light;
-    border-top: 0;
+    border: 1px solid;
     @if $border-radius > 0 {
         border-radius: 0 $border-radius $border-radius;
     }
     background: $color-highlight-box;
     @if $flat-theme < 1 {
+        border-top: 0;
+        border-color: $color-border-light;
         box-shadow: $standard-shadow;
+    } @else {
+        border-color: $color-border;
     }
     z-index: 20000;
 

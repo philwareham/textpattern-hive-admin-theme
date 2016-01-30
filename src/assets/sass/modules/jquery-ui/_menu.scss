@@ -65,6 +65,9 @@
     display: block;
     margin: 0;
     padding: 0;
+    @if $flat-theme < 1 {
+        border-color: $color-border-light;
+    }
     outline: 0;
     /* 1 */
     font-size: $base-font-size;
@@ -100,7 +103,7 @@
 
     .ui-state-focus,
     .ui-state-active {
-        background-color: $color-selecting;
+        background-color: $color-selected;
     }
 
     // left-aligned

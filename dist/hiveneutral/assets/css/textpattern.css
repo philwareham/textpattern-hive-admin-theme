@@ -511,7 +511,7 @@ mark,
 var {
   padding: 1px 0.23076923076923em;
   border-radius: 0.15em;
-  background: #e6f1fb;
+  background: #eaf3fc;
   color: #333333;
 }
 
@@ -803,7 +803,7 @@ a:focus .content-image {
  * </table>
  */
 .highlight {
-  background: #f6fafe;
+  background: #fff9e1;
 }
 
 /**
@@ -1946,7 +1946,7 @@ dt {
 }
 
 .switcher-list li.active {
-  background: #e6f1fb;
+  background: #eaf3fc;
 }
 
 .switcher-list li a {
@@ -2085,7 +2085,7 @@ td {
 }
 
 .txp-list tbody tr.selected {
-  background: #e6f1fb;
+  background: #eaf3fc;
 }
 
 .txp-list tbody th {
@@ -2467,7 +2467,7 @@ button.txp-nav-toggle {
   position: relative;
   float: left;
   border-right: 1px solid #c7e0f6;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .txp-nav > ul > li:first-child {
@@ -2483,15 +2483,15 @@ button.txp-nav-toggle {
 }
 
 .txp-nav > ul > li > a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .txp-nav > ul > li.selected > a {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .txp-nav > ul > li.selected > a:hover {
-  background: rgba(255, 255, 255, 0.33);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 /**
@@ -2587,10 +2587,10 @@ button.txp-nav-toggle {
   top: 3em;
   left: 0;
   min-width: 12em;
-  border: 1px solid #d4d4d4;
-  border-top: 0;
+  border: 1px solid;
   border-radius: 0 0.3em 0.3em;
-  background: #f6fafe;
+  background: #fff9e1;
+  border-color: #cccccc;
   z-index: 20000;
 }
 
@@ -3662,14 +3662,14 @@ a.ui-state-default:focus {
  * Highlight colour for jQuery UI widgets currently in 'selecting' state.
  */
 .ui-selecting {
-  background-color: #c7e0f6;
+  background-color: #d4e7f8;
 }
 
 /**
  * Highlight colour for jQuery UI widgets currently in 'selected' state.
  */
 .ui-selected {
-  background-color: #e6f1fb;
+  background-color: #eaf3fc;
 }
 
 /* Interaction cues
@@ -4500,7 +4500,7 @@ label.ui-state-active.ui-button:active {
 
 .ui-datepicker td a.ui-state-active {
   border-color: #96c0ff;
-  background-color: #e6f1fb;
+  background-color: #eaf3fc;
 }
 
 .ui-datepicker td a.ui-state-highlight:hover {
@@ -4857,7 +4857,7 @@ label.ui-state-active.ui-button:active {
 
 .ui-menu .ui-state-focus,
 .ui-menu .ui-state-active {
-  background-color: #c7e0f6;
+  background-color: #eaf3fc;
 }
 
 .ui-menu .ui-icon {
@@ -4929,7 +4929,7 @@ label.ui-state-active.ui-button:active {
   background-image: url("../img/ui-progressbar.gif");
   background-size: 16px 16px;
   height: 16px;
-  background-color: #c7e0f6;
+  background-color: #d4e7f8;
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
@@ -5367,7 +5367,7 @@ label.ui-state-active.ui-button:active {
  * Additonal styling for tabs vertical.
  */
 .ui-tabs-vertical .ui-tabs-nav .ui-tabs-active {
-  background: #e6f1fb;
+  background: #eaf3fc;
 }
 
 .ui-tabs-vertical .ui-tabs-nav .ui-state-focus {
@@ -6389,7 +6389,7 @@ label.ui-state-active.ui-button:active {
     top: 3em;
     right: 0;
     left: 0;
-    background: #f6fafe;
+    background: #fff9e1;
   }
   .txp-nav.in .data-dropdown:before {
     position: absolute;
@@ -6543,4 +6543,17 @@ label.ui-state-active.ui-button:active {
 
 .ui-button .ui-icon {
   background-image: url("../img/ui-icon-sprite-ffffff.svg");
+}
+
+.dropdown-menu {
+  border-radius: 0;
+  background: #ffffff;
+}
+
+.dropdown-menu li:hover {
+  background: #eaf3fc;
+}
+
+.dropdown-menu li.selected {
+  background: #d4e7f8;
 }

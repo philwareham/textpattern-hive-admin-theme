@@ -6,14 +6,14 @@ $color-gradient-from:                 #eeeeee;
 $color-gradient-to:                   #eeeeee; // nullify gradient (use flat colours)
 $color-accent-gradient-from:          #c7e0f6;
 $color-accent-gradient-to:            #c7e0f6; // nullify gradient (use flat colours)
+$color-selecting:                     lighten($color-accent-gradient-from, 3%);
+$color-selected:                      lighten($color-accent-gradient-from, 8%);
 $color-button-gradient-from:          #5ba4e5;
 $color-button-gradient-to:            #5ba4e5; // nullify gradient (use flat colours)
 $color-button-primary-gradient-from:  #9fc158;
 $color-button-primary-gradient-to:    #9fc158; // nullify gradient (use flat colours)
 $color-button-selected-gradient-from: #9dc8ef;
 $color-button-selected-gradient-to:   #9dc8ef; // nullify gradient (use flat colours)
-$color-selecting:                     $color-accent-gradient-from;
-$color-selected:                      lighten($color-accent-gradient-from, 7%);
 $border-radius:                       0.3em;
 
 // import the default Hive (Classic Yellow) theme
@@ -29,4 +29,19 @@ $border-radius:                       0.3em;
 
 .ui-button .ui-icon {
     background-image: url("../img/ui-icon-sprite-ffffff.svg");
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    background: $color-background;
+
+    li {
+        &:hover {
+            background: $color-selected;
+        }
+
+        &.selected {
+            background: $color-selecting;
+        }
+    }
 }
