@@ -2,12 +2,14 @@
 
 $flat-theme:                          1;
 $color-text-button:                   #ffffff;
+$color-link-focus:                    #0033ff;
 $color-gradient-from:                 #eeeeee;
 $color-gradient-to:                   #eeeeee; // nullify gradient (use flat colours)
 $color-accent-gradient-from:          #c7e0f6;
 $color-accent-gradient-to:            #c7e0f6; // nullify gradient (use flat colours)
 $color-selecting:                     lighten($color-accent-gradient-from, 3%);
 $color-selected:                      lighten($color-accent-gradient-from, 8%);
+$color-background:                    #f7f7f7;
 $color-button-gradient-from:          #5ba4e5;
 $color-button-gradient-to:            #5ba4e5; // nullify gradient (use flat colours)
 $color-button-primary-gradient-from:  #9fc158;

@@ -330,7 +330,7 @@ a:hover, a:active {
 }
 
 a:focus {
-  outline: thin solid #0066ff;
+  outline: thin solid #0033ff;
 }
 
 a.busy {
@@ -355,7 +355,7 @@ a.busy {
 
 .pophelp:focus,
 .pophelpsubtle:focus {
-  border-color: #0066ff;
+  border-color: #0033ff;
   outline: 0;
 }
 
@@ -376,7 +376,7 @@ a.busy {
 }
 
 .txp-list thead th a.pophelp:focus {
-  border-color: #0066ff;
+  border-color: #0033ff;
 }
 
 /**
@@ -739,7 +739,7 @@ svg:not(:root) {
  */
 .content-image {
   border: solid 1px #cccccc;
-  background: #ffffff;
+  background: #f7f7f7;
 }
 
 a:hover .content-image {
@@ -747,7 +747,7 @@ a:hover .content-image {
 }
 
 a:focus .content-image {
-  border-color: #0066ff;
+  border-color: #0033ff;
 }
 
 /* Messages
@@ -1098,7 +1098,7 @@ h3.txp-summary.expanded a:after {
   left: 0.6875em;
   width: 1.375em;
   padding: 0.25em;
-  border: 1px solid #ffffff;
+  border: 1px solid #f7f7f7;
   border-radius: 50%;
   background: #cccccc;
   font-size: 16px;
@@ -1345,7 +1345,7 @@ input[type="url"]:focus,
 input[type="week"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #0066ff;
+  border-color: #0033ff;
   outline: 0;
 }
 
@@ -1658,7 +1658,7 @@ input[type="button"]:focus,
 .txp-logout a:focus,
 .navlink:focus,
 .navlink-active:focus {
-  border-color: #0066ff;
+  border-color: #0033ff;
   outline: 0;
 }
 
@@ -1696,7 +1696,7 @@ a.publish:active {
 input[type="submit"].publish:focus,
 button.publish:focus,
 a.publish:focus {
-  border-color: #0066ff;
+  border-color: #0033ff;
 }
 
 /**
@@ -1717,7 +1717,7 @@ button.destroy {
 }
 
 button.destroy:focus {
-  outline: thin solid #0066ff;
+  outline: thin solid #0033ff;
 }
 
 /**
@@ -1820,7 +1820,7 @@ ul.nav-tertiary li {
 }
 
 .nav-tertiary .navlink-active:focus {
-  border-color: #0066ff;
+  border-color: #0033ff;
 }
 
 /**
@@ -1938,7 +1938,7 @@ dt {
 }
 
 .switcher-list li:nth-child(odd) {
-  background: #ffffff;
+  background: #f7f7f7;
 }
 
 .switcher-list li:first-child {
@@ -2197,7 +2197,7 @@ body {
   /* 2 */
   margin: 0;
   padding: 4em 2.75% 0;
-  background: #ffffff;
+  background: #f7f7f7;
   color: #333333;
   box-sizing: border-box;
 }
@@ -3101,7 +3101,7 @@ span.spinner {
 .txp-edit-actions {
   margin: 1em -1em;
   padding: 1em 1em 0;
-  border-top: 2px solid #ffffff;
+  border-top: 2px solid #f7f7f7;
   text-align: right;
 }
 
@@ -3611,7 +3611,7 @@ div.code {
  */
 .ui-widget-content {
   border: 1px solid #cccccc;
-  background-color: #ffffff;
+  background-color: #f7f7f7;
 }
 
 /**
@@ -4122,7 +4122,7 @@ a.ui-state-default:focus {
 }
 
 .ui-button:focus {
-  border-color: #0066ff;
+  border-color: #0033ff;
   outline: 0;
 }
 
@@ -4141,7 +4141,7 @@ a.ui-button {
  */
 .ui-button.ui-state-focus {
   /* 1 */
-  border-color: #0066ff !important;
+  border-color: #0033ff !important;
   outline: 0;
 }
 
@@ -5000,7 +5000,7 @@ label.ui-state-active.ui-button:active {
 .ui-selectmenu-button {
   display: inline-block;
   position: relative;
-  background-color: #ffffff;
+  background-color: #f7f7f7;
   /* 1 */
   font-size: 13px;
   line-height: 1.38461538461538em;
@@ -5011,7 +5011,7 @@ label.ui-state-active.ui-button:active {
 }
 
 .ui-selectmenu-button:focus {
-  border-color: #0066ff;
+  border-color: #0033ff;
   outline: 0;
 }
 
@@ -5104,7 +5104,7 @@ label.ui-state-active.ui-button:active {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #f7f7f7;
   cursor: default;
   z-index: 2;
   -ms-touch-action: none;
@@ -5375,7 +5375,7 @@ label.ui-state-active.ui-button:active {
 }
 
 .ui-tabs-vertical .ui-tabs-nav .ui-state-focus a {
-  outline: thin solid #0066ff;
+  outline: thin solid #0033ff;
 }
 
 /* Tooltip
@@ -6369,7 +6369,7 @@ label.ui-state-active.ui-button:active {
     font-size: 16px;
   }
   button.txp-nav-toggle:focus {
-    outline: thin solid #0066ff;
+    outline: thin solid #0033ff;
   }
   button.txp-nav-toggle:not(.collapsed) {
     background-color: rgba(255, 255, 255, 0.33);
@@ -6547,7 +6547,7 @@ label.ui-state-active.ui-button:active {
 
 .dropdown-menu {
   border-radius: 0;
-  background: #ffffff;
+  background: #f7f7f7;
 }
 
 .dropdown-menu li:hover {
