@@ -1418,7 +1418,7 @@ select {
 }
 
 /**
- * Override height set in a previous rule and allow auto heght.
+ * Override height set in a previous rule and allow auto height.
  */
 select[size],
 select[multiple] {
@@ -1460,7 +1460,7 @@ select[size="1"] {
  * Normalize styling of `optgroup`.
  */
 optgroup {
-  color: #333333;
+  color: #000000;
   font-style: normal;
   font-weight: bold;
 }
