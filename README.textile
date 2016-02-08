@@ -1,6 +1,6 @@
 h1. Hive admin-side theme for Textpattern CMS
 
-!https://travis-ci.org/philwareham/txp-hive-admin-theme.svg?branch=master!:https://travis-ci.org/philwareham/txp-hive-admin-theme !https://david-dm.org/philwareham/txp-hive-admin-theme/status.svg(Dependency Status)!:https://david-dm.org/philwareham/txp-hive-admin-theme#info=dependencies !https://david-dm.org/philwareham/txp-hive-admin-theme/dev-status.svg(devDependency Status)!:https://david-dm.org/philwareham/txp-hive-admin-theme#info=devDependencies
+!https://travis-ci.org/philwareham/textpattern-hive-admin-theme.svg?branch=master!:https://travis-ci.org/philwareham/textpattern-hive-admin-theme !https://david-dm.org/philwareham/textpattern-hive-admin-theme/status.svg(Dependency Status)!:https://david-dm.org/philwareham/textpattern-hive-admin-theme#info=dependencies !https://david-dm.org/philwareham/textpattern-hive-admin-theme/dev-status.svg(devDependency Status)!:https://david-dm.org/philwareham/textpattern-hive-admin-theme#info=devDependencies
 
 This project is the source for the default admin theme that ships as standard with "Textpattern CMS":http://textpattern.com as of v4.6.0 onwards.
 
@@ -30,7 +30,7 @@ h3. Installing dependencies
 
 After you have the base dependencies taken care of, you can install the project's dependencies. Navigate to the project's directory, and run the dependency managers:
 
-bc. $ cd txp-hive-admin-theme
+bc. $ cd textpattern-hive-admin-theme
 $ npm install
 
 *npm* installs Node modules for Grunt. You might need to use @sudo npm install@ instead when installing on certain Unix-based systems.
