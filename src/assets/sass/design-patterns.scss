@@ -162,98 +162,6 @@ $colors: (
     z-index: 1000;
 }
 
-
-/* Google Code Prettify
-   ========================================================================== */
-
-/**
- * Colouring for code language syntax.
- */
-
-/* html/xml attribute name */
-.atn,
-/* decimal */
-.dec,
-/* type */
-.typ,
-/* variable */
-.var {
-    color: #008080;
-}
-
-/* html/xml attribute value */
-.atv,
-/* string */
-.str {
-    color: #dd1144;
-}
-
-/* closure */
-.clo,
-/* opening */
-.opn {
-    color: #93a1a1;
-}
-
-/* punctuation */
-.pun {
-    color: #000000;
-}
-
-/* comment */
-.com {
-    color: #93a1a1;
-}
-
-/* function */
-.fun {
-    color: #dc322f;
-}
-
-/* keyword */
-.kwd {
-    color: #1e347b;
-    font-weight: bold;
-}
-
-/* literal */
-.lit {
-    color: #195f91;
-}
-
-/* plaintext */
-.pln {
-    color: #48484c;
-}
-
-/* html/xml tag */
-.tag {
-    color: #1e347b;
-}
-
-/**
- * Colouring for optional code line numbers.
- *
- * Example HTML:
- *
- * <pre class="linenums">
- */
-
-.linenums {
-    padding-left: 2em;
-
-    ol {
-        margin: 0;
-        padding: 0 0 0 2em;
-        box-shadow: inset 1.92307692307692em 0 0 $color-background-box, inset 2em 0 0 lighten($color-border, 9%);
-    }
-
-    li {
-        padding-left: 1em;
-        color: darken($color-border, 8%);
-    }
-}
-
 /**
  * Additional information tags on design patterns doc headings.
  *
@@ -266,4 +174,159 @@ $colors: (
 h2 span {
     font-size: $base-font-size;
     font-weight: normal;
+}
+
+
+/* Code highlighting (via Prism.js)
+   ========================================================================== */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    text-align: left;
+    word-spacing: normal;
+    word-break: normal;
+    direction: ltr;
+    hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1.1428571em; // 16px / 14px
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #708090;
+}
+
+.token.punctuation {
+    color: #999999;
+}
+
+.namespace {
+    opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #990055;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #669900;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    background: hsla(0, 0%, 100%, 0.5);
+    color: #a67f59;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #0077aa;
+}
+
+.token.function {
+    color: #dd4a68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #ee9900;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+/*
+ * Line numbers (plugin).
+ */
+
+pre.line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+    position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    top: 0;
+    left: -3.8em;
+    width: 3em; // Works for line-numbers below 1000 lines
+    border-right: 1px solid #999999;
+    font-size: 100%;
+    letter-spacing: -1px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.line-numbers-rows > span {
+    display: block;
+    pointer-events: none;
+    counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+    display: block;
+    padding-right: 0.8em;
+    color: #999999;
+    text-align: right;
+    content: counter(linenumber);
+}
+
+/*
+ * Language indicator (plugin).
+ */
+
+div.prism-show-language {
+    position: relative;
+}
+
+div.prism-show-language > div.prism-show-language-label {
+    display: inline-block;
+    position: absolute;
+    top: -0.75em;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    padding: 0 0.3333333em; // 4px / 12px
+    border-radius: 0 0.3333333em; // 4px / 12px
+    background-color: $color-text-footnote;
+    color: #ffffff;
+    font-size: $small-font-size;
+    z-index: 1;
 }

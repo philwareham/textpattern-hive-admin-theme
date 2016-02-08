@@ -241,13 +241,15 @@ module.exports = function (grunt)
                             'node_modules/autosize/dist/autosize.js',
                             '<%= paths.src.js %>main.js'
                         ],
-                        '<%= paths.docs.js %>prettify/prettify.js': 'bower_components/google-code-prettify/src/prettify.js'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'bower_components/google-code-prettify/src/',
-                        src: 'lang-*.js',
-                        dest: '<%= paths.docs.js %>prettify/'
+                        '<%= paths.docs.js %>prism.js': [
+                            'node_modules/prismjs/prism.js',
+                            // Add any plugins
+                            'node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js',
+                            'node_modules/prismjs/plugins/show-language/prism-show-language.js',
+                            // Add any additional languages
+                            'node_modules/prismjs/components/prism-scss.js',
+                            'node_modules/prismjs/components/prism-textile.js'
+                        ]
                     }
                 ]
             },

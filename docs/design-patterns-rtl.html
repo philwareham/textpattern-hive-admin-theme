@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/design-patterns.css">
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/jquery-ui.js"></script>
-    <script src="assets/js/prettify/prettify.js"></script>
+    <script src="assets/js/prism.js"></script>
     <script src="assets/js/design-patterns.js"></script>
 </head>
 <body>
@@ -174,7 +174,7 @@
 
             <h2>Page layout columns <span class="information">new v4.6</span></h2>
             <p>Responsive page layout grid system based on <a rel="external" href="https://github.com/Team-Sass/Singularity" title="Go to the Singularity GitHub project">Singularity</a>.</p>
-            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;div class="txp-layout-1col"&gt;...Opt1: 1col - content here...&lt;/div&gt;
+            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-layout-1col"&gt;...Opt1: 1col - content here...&lt;/div&gt;
 
 &lt;div class="txp-layout-2col-cell-1"&gt;...Opt2: 2col cell1 - content here...&lt;/div&gt;
 &lt;div class="txp-layout-2col-cell-2"&gt;...Opt2: 2col cell2 - content here...&lt;/div&gt;
@@ -278,13 +278,13 @@
         <div>
             <h2>Text columns <span class="warning">changed v4.6</span></h2>
             <p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate. <strong>Please note</strong> this replaces the old <code dir="ltr">.plugin-help</code> <span class="information">4.4.x</span> and <code dir="ltr">.text-column</code> <span class="information">4.5</span> classes.</p>
-            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;div class="txp-layout-textbox"&gt;
+            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-layout-textbox"&gt;
     &lt;p&gt;...content here...&lt;/p&gt;
 &lt;/div&gt;</code></pre>
             <div class="design-patterns--box">Text column (independent of grid columns)</div>
 
             <h2>Inline grids <span class="information">new v4.5</span></h2>
-            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;div class="txp-grid"&gt;
+            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-grid"&gt;
     &lt;div class="txp-grid-cell" [width, see below]&gt;
         &lt;p&gt;Grid item 1&lt;/p&gt;
     &lt;/div&gt;&lt;div class="txp-grid-cell" [width, see notes]&gt;
@@ -333,12 +333,12 @@
         <div class="text-section" id="ui-doc-headings">
             <h1>Headings <span class="warning">changed v4.5</span></h1>
 
-            <p><code class="prettyprint" dir="ltr">&lt;h1 class="txp-heading"&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;h1 class="txp-heading"&gt;</code></p>
             <h1 class="txp-heading">h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 heading 1</h1>
             <p>Top level headings in the Textpattern admin area, we advise adding the <code dir="ltr">class="txp-heading"</code> attribute which allows advanced users to optionally hide headings throughout the admin area.</p>
-            <p><code class="prettyprint" dir="ltr">&lt;h2&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;h2&gt;</code></p>
             <h2>h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2</h2>
-            <p><code class="prettyprint" dir="ltr">&lt;h3&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;h3&gt;</code></p>
             <h3>h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3</h3>
 
         </div>
@@ -347,7 +347,7 @@
         <div class="text-section" id="ui-doc-paragraphs">
             <h1>Paragraphs</h1>
 
-            <p><code class="prettyprint" dir="ltr">&lt;p&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;p&gt;</code></p>
             <p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam sit amet elit vitae arcu interdum ullamcorper.</strong> Nullam ultrices, nisi quis scelerisque convallis, augue neque tempor enim, et mattis justo nibh eu elit.</p>
             <p>Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci.</p>
 
@@ -357,70 +357,70 @@
         <div class="text-section" id="ui-doc-textsemantics">
             <h1>Text-level semantics</h1>
 
-            <p><code class="prettyprint" dir="ltr">&lt;a&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;a&gt;</code></p>
             <p>The <a href="#">a element</a> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;abbr&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;abbr&gt;</code></p>
             <p>The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;b&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;b&gt;</code></p>
             <p>The <b>b element</b> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;cite&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;cite&gt;</code></p>
             <p>The <cite>cite element</cite> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;code&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;code&gt;</code></p>
             <p>The <code dir="ltr">code element</code> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;del&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;del&gt;</code></p>
             <p>The <del>del element</del> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;dfn&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;dfn&gt;</code></p>
             <p>The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;em&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;em&gt;</code></p>
             <p>The <em>em element</em> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;i&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;i&gt;</code></p>
             <p>The <i>i element</i> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;ins&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;ins&gt;</code></p>
             <p>The <ins>ins element</ins> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;kbd&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;kbd&gt;</code></p>
             <p>The <kbd>kbd element</kbd> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;mark&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;mark&gt;</code></p>
             <p>The <mark>mark element</mark> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;q&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;q&gt;</code></p>
             <p>The <q>q element <q>inside</q> a q element</q></p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;s&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;s&gt;</code></p>
             <p>The <s>s element</s> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;samp&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;samp&gt;</code></p>
             <p>The <samp>samp element</samp> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;small&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;small&gt;</code></p>
             <p>The <small>small element</small> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;span&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;span&gt;</code></p>
             <p>The <span>span element</span> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;strong&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;strong&gt;</code></p>
             <p>The <strong>strong element</strong> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;sub&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;sub&gt;</code></p>
             <p>The <sub>sub element</sub> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;sup&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;sup&gt;</code></p>
             <p>The <sup>sup element</sup> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;u&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;u&gt;</code></p>
             <p>The <u>u element</u> example</p>
 
-            <p><code class="prettyprint" dir="ltr">&lt;var&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;var&gt;</code></p>
             <p>The <var>var element</var> example</p>
 
         </div>
@@ -430,23 +430,23 @@
             <h1>Inline text labels</h1>
 
             <h2>Safe <span class="information">new v4.5</span></h2>
-            <p><code class="prettyprint" dir="ltr">&lt;span class="success"&gt;...message...&lt;/span&gt;</code></p>
-            <p><code class="prettyprint" dir="ltr">&lt;strong class="success"&gt;...message...&lt;/strong&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;span class="success"&gt;...message...&lt;/span&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;strong class="success"&gt;...message...&lt;/strong&gt;</code></p>
             <p>This is an example of a <span class="success">span success label</span> and a <strong class="success">strong success label</strong>.</p>
 
             <h2>Warning <span class="information">new v4.5</span></h2>
-            <p><code class="prettyprint" dir="ltr">&lt;span class="warning"&gt;...message...&lt;/span&gt;</code></p>
-            <p><code class="prettyprint" dir="ltr">&lt;strong class="warning"&gt;...message...&lt;/strong&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;span class="warning"&gt;...message...&lt;/span&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;strong class="warning"&gt;...message...&lt;/strong&gt;</code></p>
             <p>This is an example of a <span class="warning">span warning label</span> and a <strong class="warning">strong warning label</strong>.</p>
 
             <h2>Danger <span class="information">new v4.5</span></h2>
-            <p><code class="prettyprint" dir="ltr">&lt;span class="error"&gt;...message...&lt;/span&gt;</code></p>
-            <p><code class="prettyprint" dir="ltr">&lt;strong class="error"&gt;...message...&lt;/strong&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;span class="error"&gt;...message...&lt;/span&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;strong class="error"&gt;...message...&lt;/strong&gt;</code></p>
             <p>This is an example of a <span class="error">span error label</span> and a <strong class="error">strong error label</strong>.</p>
 
             <h2>Information (no semantic meaning) <span class="information">new v4.5</span></h2>
-            <p><code class="prettyprint" dir="ltr">&lt;span class="information"&gt;...message...&lt;/span&gt;</code></p>
-            <p><code class="prettyprint" dir="ltr">&lt;strong class="information"&gt;...message...&lt;/strong&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;span class="information"&gt;...message...&lt;/span&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;strong class="information"&gt;...message...&lt;/strong&gt;</code></p>
             <p>This is an example of a <span class="information">span information label</span> and a <strong class="information">strong information label</strong>.</p>
 
         </div>
@@ -456,19 +456,19 @@
             <h1>Alert boxes</h1>
 
             <h2>System message: success <span class="information">new v4.5</span></h2>
-            <pre class="prettyprint" dir="ltr"><code class="language-html">&lt;p class="alert-block success"&gt;&lt;span class="ui-icon ui-icon-check"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+            <pre dir="ltr"><code class="language-markup">&lt;p class="alert-block success"&gt;&lt;span class="ui-icon ui-icon-check"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
             <p class="alert-block success"><span class="ui-icon ui-icon-check"></span> <strong>Success:</strong> a suitable success message goes here.</p>
 
             <h2>System message: warning <span class="warning">changed v4.5</span></h2>
-            <pre class="prettyprint" dir="ltr"><code class="language-html">&lt;p class="alert-block warning"&gt;&lt;span class="ui-icon ui-icon-alert"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+            <pre dir="ltr"><code class="language-markup">&lt;p class="alert-block warning"&gt;&lt;span class="ui-icon ui-icon-alert"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
             <p class="alert-block warning"><span class="ui-icon ui-icon-alert"></span> <strong>Warning:</strong> a suitable warning message goes here.</p>
 
             <h2>System message: error <span class="information">new v4.5</span></h2>
-            <pre class="prettyprint" dir="ltr"><code class="language-html">&lt;p class="alert-block error"&gt;&lt;span class="ui-icon ui-icon-closethick"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+            <pre dir="ltr"><code class="language-markup">&lt;p class="alert-block error"&gt;&lt;span class="ui-icon ui-icon-closethick"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
             <p class="alert-block error"><span class="ui-icon ui-icon-closethick"></span> <strong>Error:</strong> a suitable error message goes here.</p>
 
             <h2>System message: information (no semantic meaning) <span class="information">new v4.5</span></h2>
-            <pre class="prettyprint" dir="ltr"><code class="language-html">&lt;p class="alert-block information"&gt;&lt;span class="ui-icon ui-icon-info"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+            <pre dir="ltr"><code class="language-markup">&lt;p class="alert-block information"&gt;&lt;span class="ui-icon ui-icon-info"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
             <p class="alert-block information"><span class="ui-icon ui-icon-info"></span> <strong>Information:</strong> a suitable information message goes here.</p>
 
 
@@ -479,14 +479,14 @@
             <h1>Block text-level semantics</h1>
 
             <h2>Pre-formatted text blocks</h2>
-            <p><code class="prettyprint" dir="ltr">&lt;pre dir="auto"&gt;...content...&lt;/pre&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;pre dir="auto"&gt;...content...&lt;/pre&gt;</code></p>
             <pre dir="auto">This is an example of a non-code
     pre-formatted text block
         preserving white spaces</pre>
             <p><span class="information">Changed at 4.6:</span> Added <code dir="ltr">dir="auto"</code> attribute, which allows the browser to determine whether text direction should be <abbr title="Left To Right">LTR</abbr> or <abbr title="Right To Left">RTL</abbr> depending on content.</p>
 
             <h2>Pre-formatted code blocks</h2>
-            <p><code class="prettyprint" dir="ltr">&lt;pre dir="ltr"&gt;&lt;code&gt;...content...&lt;/code&gt;&lt;/pre&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;pre dir="ltr"&gt;&lt;code&gt;...content...&lt;/code&gt;&lt;/pre&gt;</code></p>
             <pre dir="ltr"><code>&lt;div id="messagepane" role="alert"&gt;
     &lt;span class="success" id="message"&gt;Article posted. &lt;a class="close" title="Close" aria-label="Close"&gt;&amp;&lt;span role="presentation"&gt;times;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
@@ -499,29 +499,29 @@
             <h1>Embedded content</h1>
 
             <h2>Image (unstyled)</h2>
-            <p><code class="prettyprint" dir="ltr">&lt;img src="" alt=""&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;img src="" alt=""&gt;</code></p>
             <p><img src="https://placehold.it/160/fabc2b/333333" alt="Alt text"></p>
 
             <h2>Image (styled) <span class="information">new v4.5</span></h2>
-            <p><code class="prettyprint" dir="ltr">&lt;img class="content-image" src="" alt=""&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;img class="content-image" src="" alt=""&gt;</code></p>
             <p><img class="content-image" src="https://placehold.it/160/fabc2b/333333" alt="Alt text"></p>
 
             <h2>Image (styled) with link <span class="information">new v4.5</span></h2>
-            <p><code class="prettyprint" dir="ltr">&lt;a href="" title=""&gt;&lt;img class="content-image" src="" alt=""&gt;&lt;/a&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;a href="" title=""&gt;&lt;img class="content-image" src="" alt=""&gt;&lt;/a&gt;</code></p>
             <p><a class="content-image-link" href="#" title="Title text"><img class="content-image" src="https://placehold.it/160/fabc2b/333333" alt="Alt text"></a></p>
 
             <h2>Left ranged image <span class="information">new v4.5</span></h2>
-            <p><code class="prettyprint" dir="ltr">&lt;img class="align-left" src="" alt=""&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;img class="align-left" src="" alt=""&gt;</code></p>
             <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="align-left" src="https://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder"> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
             <p>Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
 
             <h2>Right ranged image <span class="information">new v4.5</span></h2>
-            <p><code class="prettyprint" dir="ltr">&lt;img class="align-right" src="" alt=""&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;img class="align-right" src="" alt=""&gt;</code></p>
             <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="align-right" src="https://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder"> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor.</p>
             <p>Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet. Curabitur neque mauris, porta vel, lacinia quis, placerat ultrices, orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In lectus nisl, porttitor eget, fermentum et, viverra a, odio. Sed semper. Praesent vulputate nibh eget nisi. Sed ligula. Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis.</p>
 
             <h2>Centred image <span class="information">new v4.5</span></h2>
-            <p><code class="prettyprint" dir="ltr">&lt;img class="align-center" src="" alt=""&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;img class="align-center" src="" alt=""&gt;</code></p>
             <p>Aenean vehicula posuere neque. Nam nibh lectus, laoreet non, convallis sed, vulputate consectetuer, enim. Pellentesque arcu. Vestibulum consequat nisi a ipsum vulputate vehicula. Aliquam lacus diam, ultricies vel, interdum eget, posuere non, tellus. Donec vel ligula. Sed felis. <img class="align-center" src="https://placehold.it/128/fabc2b/333333" title="128x128px placeholder" alt="128x128px placeholder"> Quisque ultrices gravida pede. Mauris accumsan vulputate tellus. Phasellus condimentum bibendum dolor. Mauris sed ipsum. Phasellus in diam. Nam sapien ligula, consectetuer id, hendrerit in, cursus sed, leo. Nam tincidunt rhoncus urna. Aliquam id massa ut nibh bibendum imperdiet.</p>
 
         </div>
@@ -531,7 +531,7 @@
             <h1>Lists</h1>
 
             <h2>Ordered</h2>
-            <p><code class="prettyprint" dir="ltr">&lt;ol&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;ol&gt;</code></p>
             <ol>
                 <li>this is an example</li>
                 <li>of a numbered</li>
@@ -544,7 +544,7 @@
             </ol>
 
             <h2>Unordered</h2>
-            <p><code class="prettyprint" dir="ltr">&lt;ul&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;ul&gt;</code></p>
             <ul>
                 <li>this is an example</li>
                 <li>of a bulletpoint</li>
@@ -557,7 +557,7 @@
             </ul>
 
             <h2>Plain</h2>
-            <p><code class="prettyprint" dir="ltr">&lt;ul class="plain-list"&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;ul class="plain-list"&gt;</code></p>
             <ul class="plain-list">
                 <li>this is an example</li>
                 <li>of a plain</li>
@@ -570,7 +570,7 @@
             </ul>
 
             <h2>Description</h2>
-            <p><code class="prettyprint" dir="ltr">&lt;dl&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;dl&gt;</code></p>
             <dl>
                 <dt>This is a definition list term 1</dt>
                 <dd>Definition of term 1 here</dd>
@@ -589,7 +589,7 @@
         <div class="text-section" id="ui-doc-tables">
             <h1>Tables <span class="warning">changed v4.6</span></h1>
 
-            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;div class="txp-listtables"&gt;
+            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-listtables"&gt;
     &lt;table class="txp-list"&gt;
         &lt;thead&gt;
             &lt;tr&gt;
@@ -674,7 +674,7 @@
         <div class="text-section" id="ui-doc-progress">
             <h1>Progress meters <span class="information">new v4.5</span></h1>
 
-            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;aside class="progress-meter"&gt;
+            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;aside class="progress-meter"&gt;
     &lt;p class="txp-accessibility"&gt;There are 4 steps to this installation process:&lt;/p&gt;
     &lt;ol&gt;
         &lt;li class="active"&gt;&lt;strong&gt;Add database details&lt;/strong&gt;&lt;/li&gt;
@@ -701,7 +701,7 @@
             <h1>Summary/details boxes <span class="warning">changed v4.6</span></h1>
 
             <h2>Collapsible</h2>
-            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;section class="txp-details" id="regionname1_group" aria-labelledby="regionname1_group-label"&gt;
+            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;section class="txp-details" id="regionname1_group" aria-labelledby="regionname1_group-label"&gt;
     &lt;h3 class="txp-summary expanded" id="regionname1_group-label"&gt;&lt;a href="#name-of-details" role="button" aria-controls="name-of-details" aria-pressed="true"&gt;Heading (lever)&lt;/a&gt;&lt;/h3&gt;
     &lt;div class="toggle" id="name-of-details" role="group" aria-expanded="true"&gt;
         ...content...
@@ -738,7 +738,7 @@
             <p>The WAI-ARIA attribute states and <code dir="ltr">expanded</code> class are managed via JavaScript. <strong>Note:</strong> may eventually be changed to use HTML5 <code dir="ltr">&lt;details&gt;</code> and <code dir="ltr">&lt;summary&gt;</code> tags when browser support is better.</p>
 
             <h2>Non-collapsible</h2>
-            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;section id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label"&gt;
+            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;section id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label"&gt;
     &lt;h3 id="regionname1_group-label"&gt;Heading&lt;/h3&gt;
     &lt;div role="group"&gt;
         ...content...
@@ -791,49 +791,49 @@
                 </div>
 
                 <h2>Text fields large <span class="information">new v4.5</span></h2>
-                <p><code class="prettyprint" dir="ltr">&lt;input class="input-large" id="" name="" size="64" type="text"&gt;</code></p>
+                <p><code class="language-markup" dir="ltr">&lt;input class="input-large" id="" name="" size="64" type="text"&gt;</code></p>
                 <div class="txp-form-field">
                     <div class="txp-form-field-label"><label for="text-lrg">Text (large) with pophelp&#160;<a class="pophelp" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
                     <div class="txp-form-field-value"><input class="input-large" id="text-lrg" name="text-lrg" type="text" size="64"></div>
                 </div>
 
                 <h2>Text fields standard</h2>
-                <p><code class="prettyprint" dir="ltr">&lt;input id="" name="" type="text" size="32"&gt;</code></p>
+                <p><code class="language-markup" dir="ltr">&lt;input id="" name="" type="text" size="32"&gt;</code></p>
                 <div class="txp-form-field">
                     <div class="txp-form-field-label"><label for="text-std">Text (standard) with pophelp&#160;<a class="pophelp" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
                     <div class="txp-form-field-value"><input id="text-std" name="text-std" type="text" size="32"></div>
                 </div>
 
                 <h2>Text fields medium <span class="information">new v4.5</span></h2>
-                <p><code class="prettyprint" dir="ltr">&lt;input class="input-medium" id="" name="" type="text" size="16"&gt;</code></p>
+                <p><code class="language-markup" dir="ltr">&lt;input class="input-medium" id="" name="" type="text" size="16"&gt;</code></p>
                 <div class="txp-form-field">
                     <div class="txp-form-field-label"><label for="text-med">Text medium</label></div>
                     <div class="txp-form-field-value"><input class="input-medium" id="text-med" name="text-med" type="text" size="16"></div>
                 </div>
 
                 <h2>Text fields small <span class="information">new v4.5</span></h2>
-                <p><code class="prettyprint" dir="ltr">&lt;input class="input-small" id="" name="" type="text" size="8"&gt;</code></p>
+                <p><code class="language-markup" dir="ltr">&lt;input class="input-small" id="" name="" type="text" size="8"&gt;</code></p>
                 <div class="txp-form-field">
                     <div class="txp-form-field-label"><label for="text-sml">Text (small)</label></div>
                     <div class="txp-form-field-value"><input class="input-small" id="text-sml" name="text-sml" type="text" size="8"></div>
                 </div>
 
                 <h2>Text fields extra small <span class="information">new v4.5</span></h2>
-                <p><code class="prettyprint" dir="ltr">&lt;input class="input-xsmall" id="" name="" type="text" size="4"&gt;</code></p>
+                <p><code class="language-markup" dir="ltr">&lt;input class="input-xsmall" id="" name="" type="text" size="4"&gt;</code></p>
                 <div class="txp-form-field">
                     <div class="txp-form-field-label"><label for="text-xsml">Text (extra small)</label></div>
                     <div class="txp-form-field-value"><input class="input-xsmall" id="text-xsml" name="text-xsml" type="text" size="4"></div>
                 </div>
 
                 <h2>Password fields</h2>
-                <p><code class="prettyprint" dir="ltr">&lt;input id="" name="" type="password" size="32"&gt;</code></p>
+                <p><code class="language-markup" dir="ltr">&lt;input id="" name="" type="password" size="32"&gt;</code></p>
                 <div class="txp-form-field">
                     <div class="txp-form-field-label"><label for="password">Password</label></div>
                     <div class="txp-form-field-value"><input id="password" name="password" type="password" size="32"></div>
                 </div>
 
                 <h2>Date fields</h2>
-                <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;div class="txp-form-field"&gt;
+                <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-form-field"&gt;
     &lt;div class="txp-form-field-label"&gt;Date&lt;/div&gt;
     &lt;div class="txp-form-field-value"&gt;
         &lt;input class="year" id="year" name="year" type="text" size="4" maxlength="4" title="Year" placeholder="yyyy"&gt;
@@ -855,7 +855,7 @@
                 </div>
 
                 <h2>Time fields</h2>
-                <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;div class="txp-form-field"&gt;
+                <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-form-field"&gt;
     &lt;div class="txp-form-field-label"&gt;Time&lt;/div&gt;
     &lt;div class="txp-form-field-value"&gt;
         &lt;input class="hour" id="hour" name="hour" type="text" size="2" maxlength="2" title="Hour" placeholder="hh"&gt;
@@ -971,11 +971,11 @@
                 <h1>Buttons</h1>
 
                 <h2>Primary and standard buttons</h2>
-                <p><code class="prettyprint" dir="ltr">&lt;input class="publish" type="submit" value=""&gt;</code></p>
-                <p><code class="prettyprint" dir="ltr">&lt;input type="submit" value="Input Submit"&gt;</code></p>
-                <p><code class="prettyprint" dir="ltr">&lt;input type="button" value="Input Button"&gt;</code></p>
-                <p><code class="prettyprint" dir="ltr">&lt;button&gt;Button Tag&lt;/button&gt;</code></p>
-                <p><code class="prettyprint" dir="ltr">&lt;a class="navlink" href=""&gt;Link (navlink)&lt;/a&gt;</code></p>
+                <p><code class="language-markup" dir="ltr">&lt;input class="publish" type="submit" value=""&gt;</code></p>
+                <p><code class="language-markup" dir="ltr">&lt;input type="submit" value="Input Submit"&gt;</code></p>
+                <p><code class="language-markup" dir="ltr">&lt;input type="button" value="Input Button"&gt;</code></p>
+                <p><code class="language-markup" dir="ltr">&lt;button&gt;Button Tag&lt;/button&gt;</code></p>
+                <p><code class="language-markup" dir="ltr">&lt;a class="navlink" href=""&gt;Link (navlink)&lt;/a&gt;</code></p>
                 <p>
                     <input class="publish" type="submit" value="Input Submit (Primary)">
                     <input type="submit" value="Input Submit">
@@ -985,26 +985,18 @@
                 </p>
 
                 <h2>Delete buttons <span class="warning">changed v4.6</span></h2>
-                <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;button class="destroy" type="submit" title="Delete"&gt;
+                <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;button class="destroy" type="submit" title="Delete"&gt;
     &lt;span class="ui-icon ui-icon-close"&gt;Delete&lt;/span&gt;
 &lt;/button&gt;</code></pre>
                 <p><button class="destroy" type="submit" title="Delete"><span class="ui-icon ui-icon-close">Delete</span></button></p>
                 <p><span class="information">Changed at 4.6:</span> Using <code dir="ltr">button</code> tag.</p>
 
                 <h2>Button sets</h2>
-                <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;p class="nav-tertiary"&gt;
+                <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;p class="nav-tertiary"&gt;
     &lt;a class="navlink-active" href="#"&gt;Page 1&lt;/a&gt;&lt;a class="navlink" href="#">Page 2&lt;/a&gt;&lt;a class="navlink" href="#"&gt;Page 3&lt;/a&gt;
 &lt;/p&gt;</code></pre>
                 <p class="nav-tertiary">
                     <a class="navlink-active" href="#">Page 1</a><a class="navlink" href="#">Page 2</a><a class="navlink" href="#">Page 3</a>
-                </p>
-
-                <h2>Previous/next buttons</h2>
-                <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;p class="prev-next"&gt;
-    &lt;span class="navlink-disabled" aria-disabled="true"&gt;Previous&lt;/span&gt;&lt;a class="navlink" href="#"&gt;Next&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-                <p class="prev-next">
-                    <span class="navlink-disabled" aria-disabled="true">Previous</span><a class="navlink" href="#">Next</a>
                 </p>
 
             </div>
@@ -1015,7 +1007,7 @@
         <div class="text-section" id="ui-doc-edit-panes">
             <h1>Edit panes <span class="warning">changed v4.6</span></h1>
 
-            <pre class="prettyprint linenums" dir="ltr"><code class="language-html">&lt;form method="post" action="#" class="prefs-form"&gt;
+            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;form method="post" action="#" class="prefs-form"&gt;
     &lt;h2&gt;Edit panel title&lt;/h2&gt;
 
     &lt;div class="txp-form-field prefs-example-1"&gt;
@@ -1725,15 +1717,15 @@
             <h1>Miscellaneous</h1>
 
             <h2>Accessibility text <span class="information">new v4.6</span></h2>
-            <p><code class="prettyprint" dir="ltr">&lt;p class="txp-accessibility"&gt;...content...&lt;/p&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;p class="txp-accessibility"&gt;...content...&lt;/p&gt;</code></p>
             <p>Accessibility text is hidden from the page but available to screen readers as an aid to those with visual impairments. This is accomplished via CSS <code dir="ltr">visibility: hidden;</code> <strong>not</strong> via <code dir="ltr">display: hidden;</code> (which would hide the text from most screen readers too).</p>
 
             <h2>AJAX spinner <span class="information">new v4.5</span></h2>
-            <p><code class="prettyprint" dir="ltr">&lt;span class="spinner"&gt;&lt;/span&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;span class="spinner"&gt;&lt;/span&gt;</code></p>
             <p><span class="spinner"></span></p>
 
             <h2>Disabled non-form elements <span class="information">new v4.5</span></h2>
-            <p><code class="prettyprint" dir="ltr">&lt;p class="disabled" aria-disabled="true"&gt;...message...&lt;/p&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;p class="disabled" aria-disabled="true"&gt;...message...&lt;/p&gt;</code></p>
             <p class="disabled" aria-disabled="true">This is an example of an element greyed out via a <code dir="ltr">.disabled</code> class.</p>
             <p><strong>Please note</strong> that this class only gives a visual impression of disabled elements, any links and/or form elements therein would still be active and clickable. To truly disable form elements use the proper <code dir="ltr">disabled</code> attribute instead, see the <a href="#ui-doc-forms">forms</a> section for more information.</p>
 
@@ -1743,10 +1735,5 @@
     </div><!-- /txp-layout-textbox -->
 
     </main><!-- /txp-body -->
-
-    <!-- Just for Design Patterns doc -->
-    <script>
-        prettyPrint();
-    </script>
 </body>
 </html>
