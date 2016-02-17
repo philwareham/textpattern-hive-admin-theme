@@ -100,14 +100,14 @@ module.exports = function (grunt)
             dest1: {
                 expand: true,
                 cwd: '<%= paths.dest1.css %>',
-                src: ['*.css', '!*.min.css'],
+                src: '*.css',
                 dest: '<%= paths.dest1.css %>',
                 ext: '.min.css'
             },
             dest2: {
                 expand: true,
                 cwd: '<%= paths.dest2.css %>',
-                src: ['*.css', '!*.min.css'],
+                src: '*.css',
                 dest: '<%= paths.dest2.css %>',
                 ext: '.min.css'
             }
