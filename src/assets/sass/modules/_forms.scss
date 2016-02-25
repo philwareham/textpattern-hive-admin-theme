@@ -234,6 +234,14 @@ textarea {
 }
 
 /**
+ * Ensure code text areas are always rendered left-to-right.
+ */
+
+textarea.code {
+    direction: ltr;
+}
+
+/**
  * Make sure disabled elements really are disabled and styled appropriately.
  *
  * 1. Re-set default cursor for disabled elements.

@@ -190,15 +190,6 @@ pre {
 }
 
 /**
- * Don't wrap lines of `textarea` code onto new lines.
- */
-
-textarea.code {
-    white-space: pre;
-    word-wrap: normal;
-}
-
-/**
  * Override `code` styling for code display within preformatted text areas and
  * form text areas.
  */
@@ -213,6 +204,13 @@ code.excerpt {
         border-radius: 0;
     }
     background: none;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    direction: ltr;
+    hyphens: none;
 }
 
 /**
