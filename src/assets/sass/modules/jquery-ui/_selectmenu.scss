@@ -39,6 +39,7 @@
 .ui-selectmenu-button {
     display: inline-block;
     position: relative;
+    //width: 14em; TODO: check this when jQuery UI 1.12.0 releases
     background-color: $color-background;
     /* 1 */
     font-size: $base-font-size;
@@ -69,6 +70,11 @@
         white-space: nowrap;
         overflow: hidden;
     }
+}
+
+.ui-selectmenu-icon.ui-icon {
+    float: right;
+    margin-top: 0;
 }
 
 .ui-selectmenu-menu {
