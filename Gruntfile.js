@@ -245,10 +245,7 @@ module.exports = function (grunt)
                             'node_modules/prismjs/prism.js',
                             // Add any plugins
                             'node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js',
-                            'node_modules/prismjs/plugins/show-language/prism-show-language.js',
-                            // Add any additional languages
-                            'node_modules/prismjs/components/prism-scss.js',
-                            'node_modules/prismjs/components/prism-textile.js'
+                            'node_modules/prismjs/plugins/show-language/prism-show-language.js'
                         ]
                     }
                 ]

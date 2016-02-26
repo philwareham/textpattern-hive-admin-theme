@@ -175,3 +175,29 @@ h2 span {
     font-size: $base-font-size;
     font-weight: normal;
 }
+
+/**
+ * Prism language indicator (plugin).
+ */
+
+div.prism-show-language {
+    position: relative;
+}
+
+div.prism-show-language > div.prism-show-language-label {
+    display: inline-block;
+    position: absolute;
+    top: -0.75em;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    padding: 0 0.2727274em; // 3px / 11px
+    border-radius: 0 0.2727274em; // 3px / 11px
+    background-color: $color-text-footnote;
+    color: #ffffff;
+    font-family: $font-body;
+    font-size: $small-font-size;
+    z-index: 1;
+}
