@@ -174,6 +174,7 @@
 
             <h2>Page layout columns <span class="information">new v4.6</span></h2>
             <p>Responsive page layout grid system based on <a rel="external" href="https://github.com/Team-Sass/Singularity" title="Go to the Singularity GitHub project">Singularity</a>.</p>
+            <p><strong>Code:</strong></p>
             <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-layout-1col"&gt;...Opt1: 1col - content here...&lt;/div&gt;
 
 &lt;div class="txp-layout-2col-cell-1"&gt;...Opt2: 2col cell1 - content here...&lt;/div&gt;
@@ -201,6 +202,7 @@
 
 &lt;div class="txp-layout-4col-cell-1alt"&gt;...Opt8: 4col cell1 - content here...&lt;/div&gt;
 &lt;div class="txp-layout-4col-cell-2-3-4"&gt;...Opt8: 4col cell2and3and4 - content here...&lt;/div&gt;</code></pre>
+            <p><strong>Example:</strong></p>
         </div>
     </div><!-- /txp-layout-textbox (so we can demonstrate other grids, continues afterwards) -->
 
@@ -278,12 +280,22 @@
         <div>
             <h2>Text columns <span class="warning">changed v4.6</span></h2>
             <p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate. <strong>Please note</strong> this replaces the old <code dir="ltr">.plugin-help</code> <span class="information">4.4.x</span> and <code dir="ltr">.text-column</code> <span class="information">4.5</span> classes.</p>
+            <p><strong>Code:</strong></p>
             <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-layout-textbox"&gt;
     &lt;p&gt;...content here...&lt;/p&gt;
 &lt;/div&gt;</code></pre>
+            <p><strong>Example:</strong></p>
             <div class="design-patterns--box">Text column (independent of grid columns)</div>
 
             <h2>Inline grids <span class="information">new v4.5</span></h2>
+            <p>Rudimentary inline grid type layouts—works best if inner content is of equal quantity (such as a grid of images). If you want to utilise this layout then there are some prerequisites:</p>
+            <ol>
+                <li>You must define a specific width for each <code dir="ltr">.txp-grid-cell</code>, either as a <code dir="ltr">class</code> attribute or <code dir="ltr">style</code> attribute, otherwise the cell width fits to the block content within it.</li>
+                <li>The <code dir="ltr">.txp-grid-cell</code> should have a maximum width of no more than 294px (or its equivalent em measurement).</li>
+                <li>As this layout uses <code dir="ltr">inline-block</code>, you will need to collapse the white space between each <code dir="ltr">.txp-grid-cell</code> to negate any unwanted margin between the cells.</li>
+            </ol>
+            <p>Once CSS3 flexbox module is more settled and has improved browser support, this layout type can be made more robust.</p>
+            <p><strong>Code:</strong></p>
             <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-grid"&gt;
     &lt;div class="txp-grid-cell" [width, see below]&gt;
         &lt;p&gt;Grid item 1&lt;/p&gt;
@@ -296,7 +308,7 @@
     &lt;/div&gt;
     ...etc...
 &lt;/div&gt;</code></pre>
-
+            <p><strong>Example:</strong></p>
             <div class="txp-grid">
                 <div class="txp-grid-cell" style="width:10em;">
                     <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
@@ -319,26 +331,27 @@
                 </div>
             </div>
 
-            <p>Rudimentary inline grid type layouts—works best if inner content is of equal quantity (such as a grid of images). If you want to utilise this layout then there are some prerequisites:</p>
-            <ol>
-                <li>You must define a specific width for each <code dir="ltr">.txp-grid-cell</code>, either as a <code dir="ltr">class</code> attribute or <code dir="ltr">style</code> attribute, otherwise the cell width fits to the block content within it.</li>
-                <li>The <code dir="ltr">.txp-grid-cell</code> should have a maximum width of no more than 294px (or its equivalent em measurement).</li>
-                <li>As this layout uses <code dir="ltr">inline-block</code>, you will need to collapse the white space between each <code dir="ltr">.txp-grid-cell</code> to negate any unwanted margin between the cells.</li>
-            </ol>
-            <p>Once CSS3 flexbox module is more settled and has improved browser support, this layout type can be made more robust.</p>
-
         </div>
 
 
         <div class="text-section" id="ui-doc-headings">
             <h1>Headings <span class="warning">changed v4.5</span></h1>
 
+            <p><strong>Example:</strong></p>
             <p><code class="language-markup" dir="ltr">&lt;h1 class="txp-heading"&gt;</code></p>
+            <p><strong>Example:</strong></p>
             <h1 class="txp-heading">h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 Heading 1 h1 heading 1</h1>
+            <p><strong>Notes:</strong></p>
             <p>Top level headings in the Textpattern admin area, we advise adding the <code dir="ltr">class="txp-heading"</code> attribute which allows advanced users to optionally hide headings throughout the admin area.</p>
+
+            <p><strong>Code:</strong></p>
             <p><code class="language-markup" dir="ltr">&lt;h2&gt;</code></p>
+            <p><strong>Example:</strong></p>
             <h2>h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2 h2 Heading 2</h2>
+
+            <p><strong>Code:</strong></p>
             <p><code class="language-markup" dir="ltr">&lt;h3&gt;</code></p>
+            <p><strong>Example:</strong></p>
             <h3>h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3 h3 Heading 3</h3>
 
         </div>
@@ -456,21 +469,28 @@
             <h1>Alert boxes</h1>
 
             <h2>System message: success <span class="information">new v4.5</span></h2>
+            <p><strong>Code:</strong></p>
             <pre dir="ltr"><code class="language-markup">&lt;p class="alert-block success"&gt;&lt;span class="ui-icon ui-icon-check"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+            <p><strong>Example:</strong></p>
             <p class="alert-block success"><span class="ui-icon ui-icon-check"></span> <strong>Success:</strong> a suitable success message goes here.</p>
 
             <h2>System message: warning <span class="warning">changed v4.5</span></h2>
+            <p><strong>Code:</strong></p>
             <pre dir="ltr"><code class="language-markup">&lt;p class="alert-block warning"&gt;&lt;span class="ui-icon ui-icon-alert"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+            <p><strong>Example:</strong></p>
             <p class="alert-block warning"><span class="ui-icon ui-icon-alert"></span> <strong>Warning:</strong> a suitable warning message goes here.</p>
 
             <h2>System message: error <span class="information">new v4.5</span></h2>
+            <p><strong>Code:</strong></p>
             <pre dir="ltr"><code class="language-markup">&lt;p class="alert-block error"&gt;&lt;span class="ui-icon ui-icon-closethick"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+            <p><strong>Example:</strong></p>
             <p class="alert-block error"><span class="ui-icon ui-icon-closethick"></span> <strong>Error:</strong> a suitable error message goes here.</p>
 
             <h2>System message: information (no semantic meaning) <span class="information">new v4.5</span></h2>
+            <p><strong>Code:</strong></p>
             <pre dir="ltr"><code class="language-markup">&lt;p class="alert-block information"&gt;&lt;span class="ui-icon ui-icon-info"&gt;&lt;/span&gt; ...message...&lt;/p&gt;</code></pre>
+            <p><strong>Example:</strong></p>
             <p class="alert-block information"><span class="ui-icon ui-icon-info"></span> <strong>Information:</strong> a suitable information message goes here.</p>
-
 
         </div>
 
@@ -479,18 +499,41 @@
             <h1>Block text-level semantics</h1>
 
             <h2>Pre-formatted text blocks</h2>
+            <p><strong>Code:</strong></p>
             <p><code class="language-markup" dir="ltr">&lt;pre dir="auto"&gt;...content...&lt;/pre&gt;</code></p>
+            <p><strong>Example:</strong></p>
             <pre dir="auto">This is an example of a non-code
     pre-formatted text block
         preserving white spaces</pre>
             <p><span class="information">Changed at 4.6:</span> Added <code dir="ltr">dir="auto"</code> attribute, which allows the browser to determine whether text direction should be <abbr title="Left To Right">LTR</abbr> or <abbr title="Right To Left">RTL</abbr> depending on content.</p>
 
             <h2>Pre-formatted code blocks</h2>
+            <p><strong>Code:</strong></p>
             <p><code class="language-markup" dir="ltr">&lt;pre dir="ltr"&gt;&lt;code&gt;...content...&lt;/code&gt;&lt;/pre&gt;</code></p>
+            <p><strong>Example:</strong></p>
             <pre dir="ltr"><code>&lt;div id="messagepane" role="alert"&gt;
     &lt;span class="success" id="message"&gt;Article posted. &lt;a class="close" title="Close" aria-label="Close"&gt;&amp;&lt;span role="presentation"&gt;times;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
             <p><span class="information">Changed at 4.6:</span> Added <code dir="ltr">dir="ltr"</code> attribute, which ensures computer code text direction is <abbr title="Left To Right">LTR</abbr>.</p>
+
+            <h2>Pre-formatted code blocks with syntax highlighting <span class="information">new v4.5</span></h2>
+            <p>Uses <a rel="external" href="http://prismjs.com/" title="Go to the Prism website">Prism</a> to provide syntax highlighting and optional line numbering (omit <code dir="ltr">class="line-numbers"</code> if not desired). We include support for the following languages:</p>
+            <ul>
+                <li><code class="language-css" dir="ltr">class="language-markup"</code> (HTML)</li>
+                <li><code class="language-css" dir="ltr">class="language-css"</code> (CSS)</li>
+                <li><code class="language-css" dir="ltr">class="language-clike"</code> (C-like)</li>
+                <li><code class="language-css" dir="ltr">class="language-javascript"</code> (JavaScript)</li>
+                <li><code class="language-css" dir="ltr">class="language-json"</code> (JSON)</li>
+                <li><code class="language-css" dir="ltr">class="language-php"</code> (PHP)</li>
+                <li><code class="language-css" dir="ltr">class="language-markdown"</code> (Markdown)</li>
+                <li><code class="language-css" dir="ltr">class="language-textile"</code> (Textile)</li>
+            </ul>
+            <p><strong>Code:</strong></p>
+            <p><code class="language-markup" dir="ltr">&lt;pre class="line-numbers" dir="ltr"&gt;&lt;code class="language-markup"&gt;...content...&lt;/code&gt;&lt;/pre&gt;</code></p>
+            <p><strong>Example:</strong></p>
+            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div id="messagepane" role="alert"&gt;
+    &lt;span class="success" id="message"&gt;Article posted. &lt;a class="close" title="Close" aria-label="Close"&gt;&amp;&lt;span role="presentation"&gt;times;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
 
         </div>
 
