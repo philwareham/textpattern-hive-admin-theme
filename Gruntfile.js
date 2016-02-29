@@ -244,7 +244,6 @@ module.exports = function (grunt)
                         '<%= paths.docs.js %>prism.js': [
                             'node_modules/prismjs/prism.js',
                             // Add any plugins
-                            'node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js',
                             'node_modules/prismjs/plugins/show-language/prism-show-language.js'
                         ]
                     }
