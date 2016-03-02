@@ -16,6 +16,7 @@ html {
 
 hr {
     height: 0;
+    margin: 1.5em 0;
     clear: both; // make sure any floats above `hr` are cleared
     border: 0; // remove the default `hr` border
     border-bottom: 1px solid $color-border;

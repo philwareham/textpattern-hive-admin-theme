@@ -135,10 +135,6 @@
         <div class="txp-layout-4col-cell-1-2-3">
             <h1 class="txp-heading">Edit image</h1>
 
-            <div class="fullsize-image">
-                <img class="content-image" src="http://placehold.it/600x400/eeeeee/333333" alt="1.jpg (600 &#215; 400)" title="1.jpg (600 &#215; 400)">
-            </div>
-
             <form class="upload-form image-replace" method="post" action="#">
                 <div class="txp-form-field file-uploader">
                     <div class="txp-form-field-label"><label for="image-upload">Replace image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
@@ -149,10 +145,25 @@
                 </div>
             </form>
 
+            <div class="fullsize-image">
+                <img class="content-image" src="http://placehold.it/600x400/eeeeee/333333" alt="1.jpg (600 &#215; 400)" title="1.jpg (600 &#215; 400)">
+            </div>
+
             <hr>
 
             <section class="thumbnail-alter">
                 <h3>Create thumbnail&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help">i</a></h3>
+
+                <form class="upload-form thumbnail-upload" method="post" action="#">
+                    <div class="txp-form-field file-uploader">
+                        <div class="txp-form-field-label"><label for="thumbnail-upload">Upload thumbnail&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
+                        <div class="txp-form-field-value">
+                            <input id="thumbnail-upload" name="thefile" type="file">
+                            <input type="submit" value="Upload">
+                        </div>
+                    </div>
+                </form>
+
                 <form id="thumbnail_alter_form" method="post" action="#">
                     <p class="edit-alter-thumbnail">
                         <label for="width">Width</label>
@@ -172,15 +183,6 @@
                     </form>
                 </div>
 
-                <form class="upload-form thumbnail-upload" method="post" action="#">
-                    <div class="txp-form-field file-uploader">
-                        <div class="txp-form-field-label"><label for="thumbnail-upload">Upload thumbnail&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label></div>
-                        <div class="txp-form-field-value">
-                            <input id="thumbnail-upload" name="thefile" type="file">
-                            <input type="submit" value="Upload">
-                        </div>
-                    </div>
-                </form>
             </section>
 
         </div><!-- /.txp-layout-4col-cell-1-2-3 -->
