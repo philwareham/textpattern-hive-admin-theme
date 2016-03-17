@@ -662,8 +662,7 @@ video {
 /**
  * Images.
  *
- * 1. Remove potential border when inside `a` element.
- * 2. Remove the gap between images and the bottom of their containers.
+ * 1. Remove the gap between images and the bottom of their containers.
  *
  * Image alignment (compatible with Textile markup syntax).
  *
@@ -675,8 +674,6 @@ video {
  */
 img {
   /* 1 */
-  border: 0;
-  /* 2 */
   vertical-align: middle;
 }
 
