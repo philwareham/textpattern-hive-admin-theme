@@ -68,7 +68,7 @@
     @if $flat-theme < 1 {
         border-color: $color-border-light;
     }
-    outline: 0;
+    outline-width: 0;
     /* 1 */
     font-size: $base-font-size;
     line-height: 1.38461538461538em; // 18px / 13px

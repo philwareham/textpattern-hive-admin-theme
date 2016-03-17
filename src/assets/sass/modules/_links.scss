@@ -24,7 +24,7 @@ a {
 
     &:hover,
     &:active {
-        outline: 0;
+        outline-width: 0;
         color: $color-link-hover;
         text-decoration: underline;
         text-decoration: $color-link solid underline; /* 5 */
@@ -56,7 +56,7 @@ a {
 
     &:focus {
         border-color: $color-link-focus;
-        outline: 0;
+        outline-width: 0;
     }
 }
 
