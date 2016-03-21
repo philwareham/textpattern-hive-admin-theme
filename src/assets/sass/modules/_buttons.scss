@@ -20,9 +20,9 @@ button {
  */
 
 button,
-input[type="reset"],
-input[type="submit"],
-input[type="button"],
+[type="reset"],
+[type="submit"],
+[type="button"],
 .txp-button,
 .txp-logout a,
 .navlink,
@@ -81,7 +81,7 @@ input[type="button"],
  * <input type="submit" class="publish">
  */
 
-input[type="submit"].publish,
+[type="submit"].publish,
 button.publish,
 a.publish {
     @include gradient-linear($color-button-primary-gradient-from, $color-button-primary-gradient-to);
