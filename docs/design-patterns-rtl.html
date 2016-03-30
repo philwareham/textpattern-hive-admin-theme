@@ -176,7 +176,7 @@
             <h2>Page layout columns <span class="information">new v4.6</span></h2>
             <p>Responsive page layout grid system based on <a rel="external" href="https://github.com/Team-Sass/Singularity" title="Go to the Singularity GitHub project">Singularity</a>.</p>
             <p>Code:</p>
-            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-layout-1col"&gt;...Opt1: 1col - content here...&lt;/div&gt;
+            <pre dir="ltr"><code class="language-markup">&lt;div class="txp-layout-1col"&gt;...Opt1: 1col - content here...&lt;/div&gt;
 
 &lt;div class="txp-layout-2col-cell-1"&gt;...Opt2: 2col cell1 - content here...&lt;/div&gt;
 &lt;div class="txp-layout-2col-cell-2"&gt;...Opt2: 2col cell2 - content here...&lt;/div&gt;
@@ -282,7 +282,7 @@
             <h2>Text columns <span class="warning">changed v4.6</span></h2>
             <p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate. <strong>Please note</strong> this replaces the old <code dir="ltr">.plugin-help</code> <span class="information">4.4.x</span> and <code dir="ltr">.text-column</code> <span class="information">4.5</span> classes.</p>
             <p>Code:</p>
-            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-layout-textbox"&gt;
+            <pre dir="ltr"><code class="language-markup">&lt;div class="txp-layout-textbox"&gt;
     &lt;p&gt;...content here...&lt;/p&gt;
 &lt;/div&gt;</code></pre>
             <p>Example:</p>
@@ -297,7 +297,7 @@
             </ol>
             <p>Once CSS3 flexbox module is more settled and has improved browser support, this layout type can be made more robust.</p>
             <p>Code:</p>
-            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-grid"&gt;
+            <pre dir="ltr"><code class="language-markup">&lt;div class="txp-grid"&gt;
     &lt;div class="txp-grid-cell" [width, see below]&gt;
         &lt;p&gt;Grid item 1&lt;/p&gt;
     &lt;/div&gt;&lt;div class="txp-grid-cell" [width, see notes]&gt;
@@ -596,7 +596,7 @@
             <p><span class="information">Changed at 4.6:</span> Added <code dir="ltr">dir="ltr"</code> attribute, which ensures computer code text direction is <abbr title="Left To Right">LTR</abbr>.</p>
 
             <h2>Pre-formatted code blocks with syntax highlighting <span class="information">new v4.5</span></h2>
-            <p>Uses <a rel="external" href="http://prismjs.com/" title="Go to the Prism website">Prism</a> to provide syntax highlighting and optional line numbering (omit <code dir="ltr">class="line-numbers"</code> if not desired). We include support for the following languages:</p>
+            <p>Uses <a rel="external" href="http://prismjs.com/" title="Go to the Prism website">Prism</a> to provide syntax highlighting. We include support for the following languages:</p>
             <ul>
                 <li><code class="language-css" dir="ltr">class="language-markup"</code> (HTML)</li>
                 <li><code class="language-css" dir="ltr">class="language-css"</code> (CSS)</li>
@@ -608,9 +608,9 @@
                 <li><code class="language-css" dir="ltr">class="language-textile"</code> (Textile)</li>
             </ul>
             <p>Code:</p>
-            <p><code class="language-markup" dir="ltr">&lt;pre class="line-numbers" dir="ltr"&gt;&lt;code class="language-markup"&gt;...content...&lt;/code&gt;&lt;/pre&gt;</code></p>
+            <p><code class="language-markup" dir="ltr">&lt;pre dir="ltr"&gt;&lt;code class="language-markup"&gt;...content...&lt;/code&gt;&lt;/pre&gt;</code></p>
             <p>Example:</p>
-            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div id="messagepane" role="alert"&gt;
+            <pre dir="ltr"><code class="language-markup">&lt;div id="messagepane" role="alert"&gt;
     &lt;span class="success" id="message"&gt;Article posted. &lt;a class="close" title="Close" aria-label="Close"&gt;&amp;&lt;span role="presentation"&gt;times;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
 
@@ -731,7 +731,7 @@
         <div class="text-section" id="ui-doc-tables">
             <h1>Tables <span class="warning">changed v4.6</span></h1>
             <p><strong>Code:</strong></p>
-            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-listtables"&gt;
+            <pre dir="ltr"><code class="language-markup">&lt;div class="txp-listtables"&gt;
     &lt;table class="txp-list"&gt;
         &lt;thead&gt;
             &lt;tr&gt;
@@ -817,7 +817,7 @@
         <div class="text-section" id="ui-doc-progress">
             <h1>Progress meters <span class="information">new v4.5</span></h1>
             <p><strong>Code:</strong></p>
-            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;aside class="progress-meter"&gt;
+            <pre dir="ltr"><code class="language-markup">&lt;aside class="progress-meter"&gt;
     &lt;p class="txp-accessibility"&gt;There are 4 steps to this installation process:&lt;/p&gt;
     &lt;ol&gt;
         &lt;li class="active"&gt;&lt;strong&gt;Add database details&lt;/strong&gt;&lt;/li&gt;
@@ -845,7 +845,7 @@
 
             <h2>Collapsible</h2>
             <p><strong>Code:</strong></p>
-            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;section class="txp-details" id="regionname1_group" aria-labelledby="regionname1_group-label"&gt;
+            <pre dir="ltr"><code class="language-markup">&lt;section class="txp-details" id="regionname1_group" aria-labelledby="regionname1_group-label"&gt;
     &lt;h3 class="txp-summary expanded" id="regionname1_group-label"&gt;&lt;a href="#name-of-details" role="button" aria-controls="name-of-details" aria-pressed="true"&gt;Heading (lever)&lt;/a&gt;&lt;/h3&gt;
     &lt;div class="toggle" id="name-of-details" role="group" aria-expanded="true"&gt;
         ...content...
@@ -884,7 +884,7 @@
 
             <h2>Non-collapsible</h2>
             <p><strong>Code:</strong></p>
-            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;section id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label"&gt;
+            <pre dir="ltr"><code class="language-markup">&lt;section id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label"&gt;
     &lt;h3 id="regionname1_group-label"&gt;Heading&lt;/h3&gt;
     &lt;div role="group"&gt;
         ...content...
@@ -993,7 +993,8 @@
                 </div>
 
                 <h2>Date fields</h2>
-                <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-form-field"&gt;
+                <p><strong>Code:</strong></p>
+                <pre dir="ltr"><code class="language-markup">&lt;div class="txp-form-field"&gt;
     &lt;div class="txp-form-field-label"&gt;Date&lt;/div&gt;
     &lt;div class="txp-form-field-value"&gt;
         &lt;input class="year" id="year" name="year" type="text" size="4" maxlength="4" title="Year" placeholder="yyyy"&gt;
@@ -1003,6 +1004,7 @@
         &lt;input class="day" id="day" name="day" type="text" size="2" maxlength="2" title="Day" placeholder="dd"&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+                <p><strong>Example:</strong></p>
                 <div class="txp-form-field">
                     <div class="txp-form-field-label"><label for="year">Date</label></div>
                     <div class="txp-form-field-value">
@@ -1015,7 +1017,8 @@
                 </div>
 
                 <h2>Time fields</h2>
-                <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;div class="txp-form-field"&gt;
+                <p><strong>Code:</strong></p>
+                <pre dir="ltr"><code class="language-markup">&lt;div class="txp-form-field"&gt;
     &lt;div class="txp-form-field-label"&gt;Time&lt;/div&gt;
     &lt;div class="txp-form-field-value"&gt;
         &lt;input class="hour" id="hour" name="hour" type="text" size="2" maxlength="2" title="Hour" placeholder="hh"&gt;
@@ -1025,6 +1028,7 @@
         &lt;input class="second" id="second" name="second" type="text" size="2" maxlength="2" title="Second" placeholder="ss"&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+                <p><strong>Example:</strong></p>
                 <div class="txp-form-field">
                     <div class="txp-form-field-label"><label for="hour">Time</label></div>
                     <div class="txp-form-field-value">
@@ -1036,7 +1040,11 @@
                     </div>
                 </div>
 
-                <h2>Checkboxes and radiobuttons</h2>
+                <h2>Checkboxes</h2>
+                <p><strong>Code:</strong></p>
+                <pre dir="ltr"><code class="language-markup">&lt;input type="checkbox" id="test_checkbox_1" name="test_checkbox_1"&gt;
+&lt;label for="test_checkbox_1"&gt;Test checkbox 1&lt;/label&gt;</code></pre>
+                <p><strong>Example:</strong></p>
                 <div class="txp-form-field">
                     <input type="checkbox" id="test_checkbox_1" name="test_checkbox_1">
                     <label for="test_checkbox_1">Test checkbox 1</label>
@@ -1045,6 +1053,12 @@
                     <input type="checkbox" id="test_checkbox_3" name="test_checkbox_3" disabled="disabled">
                     <label for="test_checkbox_3">Test checkbox 3 (disabled)</label>
                 </div>
+
+                <h2>Radiobuttons</h2>
+                <p><strong>Code:</strong></p>
+                <pre dir="ltr"><code class="language-markup">&lt;input type="radio" id="test_radio_1" name="test_radio_group"&gt;
+&lt;label for="test_radio_1"&gt;Test radio 1&lt;/label&gt;</code></pre>
+                <p><strong>Example:</strong></p>
                 <div class="txp-form-field">
                     <input type="radio" id="test_radio_1" name="test_radio_group">
                     <label for="test_radio_1">Test radio 1</label>
@@ -1055,6 +1069,16 @@
                 </div>
 
                 <h2>Selects</h2>
+                <h3>Single select</h3>
+                <p><strong>Code:</strong></p>
+                <pre dir="ltr"><code class="language-markup">&lt;select id="" name=""&gt;
+    &lt;optgroup label="Group 1"&gt;
+        &lt;option value="1"&gt;Some text goes here&lt;/option&gt;
+        &lt;option value="2"&gt;Another choice could be here&lt;/option&gt;
+        &lt;option value="3"&gt;Yet another item to be chosen&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+                <p><strong>Example:</strong></p>
                 <div class="txp-form-field">
                     <label for="select_dd">Select drop-down</label>
                     <select id="select_dd" name="select_dd">
@@ -1077,6 +1101,17 @@
                     <input class="input-medium" id="text_inline" name="text_inline" type="text" size="16">
                     <input type="button" value="Hello">
                 </div>
+
+                <h3>Multiple select</h3>
+                <p><strong>Code:</strong></p>
+                <pre dir="ltr"><code class="language-markup">&lt;select id="" name="" multiple="multiple" size="10"&gt;
+    &lt;optgroup label="Group 1"&gt;
+        &lt;option value="1"&gt;Some text goes here&lt;/option&gt;
+        &lt;option value="2"&gt;Another choice could be here&lt;/option&gt;
+        &lt;option value="3"&gt;Yet another item to be chosen&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+                <p><strong>Example:</strong></p>
                 <div class="txp-form-field">
                     <div class="txp-form-field-label"><label for="select_multi">Select multiple</label></div>
                     <div class="txp-form-field-value">
@@ -1101,6 +1136,11 @@
                 </div>
 
                 <h2>Disabled form elements</h2>
+                <p><strong>Code:</strong></p>
+                <pre dir="ltr"><code class="language-markup">&lt;select disabled="disabled"&gt;
+&lt;input type="text" disabled="disabled"&gt;
+&lt;input type="button" disabled="disabled"&gt;</code></pre>
+                <p><strong>Example:</strong></p>
                 <div class="txp-form-field">
                     <label for="select_dd2">Select drop-down</label>
                     <select id="select_dd2" name="select_dd2" disabled="disabled">
@@ -1131,11 +1171,13 @@
                 <h1>Buttons</h1>
 
                 <h2>Primary and standard buttons</h2>
-                <p><code class="language-markup" dir="ltr">&lt;input class="publish" type="submit" value=""&gt;</code></p>
-                <p><code class="language-markup" dir="ltr">&lt;input type="submit" value="Input Submit"&gt;</code></p>
-                <p><code class="language-markup" dir="ltr">&lt;input type="button" value="Input Button"&gt;</code></p>
-                <p><code class="language-markup" dir="ltr">&lt;button&gt;Button Tag&lt;/button&gt;</code></p>
-                <p><code class="language-markup" dir="ltr">&lt;a class="navlink" href=""&gt;Link (navlink)&lt;/a&gt;</code></p>
+                <p><strong>Code:</strong></p>
+                <pre dir="ltr"><code class="language-markup">&lt;input class="publish" type="submit" value=""&gt;
+&lt;input type="submit" value="Input Submit"&gt;
+&lt;input type="button" value="Input Button"&gt;
+&lt;button&gt;Button Tag&lt;/button&gt;
+&lt;a class="navlink" href=""&gt;Link (navlink)&lt;/a&gt;</code></pre>
+                <p><strong>Example:</strong></p>
                 <p>
                     <input class="publish" type="submit" value="Input Submit (Primary)">
                     <input type="submit" value="Input Submit">
@@ -1145,16 +1187,21 @@
                 </p>
 
                 <h2>Delete buttons <span class="warning">changed v4.6</span></h2>
-                <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;button class="destroy" type="submit" title="Delete"&gt;
+                <p><strong>Code:</strong></p>
+                <pre dir="ltr"><code class="language-markup">&lt;button class="destroy" type="submit" title="Delete"&gt;
     &lt;span class="ui-icon ui-icon-close"&gt;Delete&lt;/span&gt;
 &lt;/button&gt;</code></pre>
+                <p><strong>Example:</strong></p>
                 <p><button class="destroy" type="submit" title="Delete"><span class="ui-icon ui-icon-close">Delete</span></button></p>
+                <p><strong>Notes:</strong></p>
                 <p><span class="information">Changed at 4.6:</span> Using <code dir="ltr">button</code> tag.</p>
 
                 <h2>Button sets</h2>
-                <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;p class="nav-tertiary"&gt;
+                <p><strong>Code:</strong></p>
+                <pre dir="ltr"><code class="language-markup">&lt;p class="nav-tertiary"&gt;
     &lt;a class="navlink-active" href="#"&gt;Page 1&lt;/a&gt;&lt;a class="navlink" href="#">Page 2&lt;/a&gt;&lt;a class="navlink" href="#"&gt;Page 3&lt;/a&gt;
 &lt;/p&gt;</code></pre>
+                <p><strong>Example:</strong></p>
                 <p class="nav-tertiary">
                     <a class="navlink-active" href="#">Page 1</a><a class="navlink" href="#">Page 2</a><a class="navlink" href="#">Page 3</a>
                 </p>
@@ -1166,8 +1213,8 @@
 
         <div class="text-section" id="ui-doc-edit-panes">
             <h1>Edit panes <span class="warning">changed v4.6</span></h1>
-
-            <pre class="line-numbers" dir="ltr"><code class="language-markup">&lt;form method="post" action="#" class="prefs-form"&gt;
+            <p><strong>Code:</strong></p>
+            <pre dir="ltr"><code class="language-markup">&lt;form method="post" action="#" class="prefs-form"&gt;
     &lt;h2&gt;Edit panel title&lt;/h2&gt;
 
     &lt;div class="txp-form-field prefs-example-1"&gt;
@@ -1205,7 +1252,7 @@
     &lt;p class="txp-save"&gt;&lt;input class="publish" type="submit" value="Save"&gt;&lt;/p&gt;
 
 &lt;/form&gt;</code></pre>
-
+            <p><strong>Example:</strong></p>
             <form method="post" action="#" class="prefs-form">
                 <h2>Edit panel title</h2>
                 <div class="txp-form-field prefs-example-1">
@@ -1875,17 +1922,24 @@
             <h1>Miscellaneous</h1>
 
             <h2>Accessibility text <span class="information">new v4.6</span></h2>
+            <p><strong>Code:</strong></p>
             <p><code class="language-markup" dir="ltr">&lt;p class="txp-accessibility"&gt;...content...&lt;/p&gt;</code></p>
+            <p><strong>Notes:</strong></p>
             <p>Accessibility text is hidden from the page but available to screen readers as an aid to those with visual impairments. This is accomplished via CSS <code dir="ltr">visibility: hidden;</code> <strong>not</strong> via <code dir="ltr">display: hidden;</code> (which would hide the text from most screen readers too).</p>
 
             <h2>AJAX spinner <span class="information">new v4.5</span></h2>
+            <p><strong>Code:</strong></p>
             <p><code class="language-markup" dir="ltr">&lt;span class="spinner"&gt;&lt;/span&gt;</code></p>
+            <p><strong>Example:</strong></p>
             <p><span class="spinner"></span></p>
 
             <h2>Disabled non-form elements <span class="information">new v4.5</span></h2>
+            <p><strong>Code:</strong></p>
             <p><code class="language-markup" dir="ltr">&lt;p class="disabled" aria-disabled="true"&gt;...message...&lt;/p&gt;</code></p>
+            <p><strong>Example:</strong></p>
             <p class="disabled" aria-disabled="true">This is an example of an element greyed out via a <code dir="ltr">.disabled</code> class.</p>
-            <p><strong>Please note</strong> that this class only gives a visual impression of disabled elements, any links and/or form elements therein would still be active and clickable. To truly disable form elements use the proper <code dir="ltr">disabled</code> attribute instead, see the <a href="#ui-doc-forms">forms</a> section for more information.</p>
+            <p><strong>Notes:</strong></p>
+            <p>This class <strong>only gives a visual impression of disabled elements</strong>, any links and/or form elements therein would still be active and clickable. To truly disable form elements use the proper <code dir="ltr">disabled</code> attribute instead, see the <a href="#ui-doc-forms">forms</a> section for more information.</p>
 
         </div>
 
