@@ -53,6 +53,16 @@
 
 
 /* ==========================================================================
+   jQuery UI icons
+   ========================================================================== */
+
+// comment out any components that are not required
+@import "modules/jquery-ui/icons";
+@import "modules/jquery-ui/icons-additions"; // requires icons module
+
+
+
+/* ==========================================================================
    jQuery UI interactions
    ========================================================================== */
 
@@ -83,16 +93,6 @@
 @import "modules/jquery-ui/spinner";
 @import "modules/jquery-ui/tabs";
 @import "modules/jquery-ui/tooltip";
-
-
-
-/* ==========================================================================
-   jQuery UI icons
-   ========================================================================== */
-
-// comment out any components that are not required
-@import "modules/jquery-ui/icons";
-@import "modules/jquery-ui/icons-additions"; // requires icons module
 
 
 

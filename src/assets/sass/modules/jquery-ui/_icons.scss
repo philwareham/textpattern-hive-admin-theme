@@ -15,6 +15,7 @@
 
 .ui-icon {
     display: inline-block;
+    position: relative;
     width: 16px;
     height: 16px;
     background-image: url("../img/ui-icon-sprite-333333.svg");
@@ -25,10 +26,24 @@
     vertical-align: text-bottom;
 }
 
+.ui-widget-icon-block {
+    display: block;
+    left: 50%;
+    margin-left: -8px;
+}
+
+/**
+ * Default state icons.
+ */
+
 .ui-state-default .ui-icon,
 .destroy .ui-icon {
     background-image: url("../img/ui-icon-sprite-555555.svg");
 }
+
+/**
+ * Weighted content icons and interaction state icons.
+ */
 
 .ui-widget-content .ui-icon,
 .ui-widget-header .ui-icon,
@@ -68,6 +83,7 @@
  */
 
 .ui-state-highlight .ui-icon,
+.ui-button .ui-state-highlight.ui-icon,
 .warning .ui-icon {
     background-image: url("../img/ui-icon-sprite-warning.svg");
 }
