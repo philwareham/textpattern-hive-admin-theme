@@ -58,17 +58,11 @@
  *
  * <p class="ui-buttonset">
  *     <input id="check1" type="checkbox" class="ui-helper-hidden-accessible">
- *     <label for="check1" class="ui-button ui-button-text-only ui-corner-left">
- *         <span class="ui-button-text">A</span>
- *     </label>
+ *     <label for="check1" class="ui-button ui-button-text-only ui-corner-left">A</label>
  *     <input id="check2" type="checkbox" class="ui-helper-hidden-accessible">
- *     <label for="check2" class="ui-button ui-button-text-only ui-state-active" aria-pressed="true">
- *         <span class="ui-button-text">B</span>
- *     </label>
+ *     <label for="check2" class="ui-button ui-button-text-only ui-state-active" aria-pressed="true">B</label>
  *     <input id="check3" type="checkbox" class="ui-helper-hidden-accessible">
- *     <label for="check3" class="ui-button ui-button-text-only ui-corner-right">
- *         <span class="ui-button-text">C</span>
- *     </label>
+ *     <label for="check3" class="ui-button ui-button-text-only ui-corner-right">C</label>
  * </p>
  */
 
@@ -77,6 +71,21 @@
 
     .ui-button {
         margin-right: -0.28em;
+    }
+}
+
+@if $border-radius > 0 {
+
+    .ui-buttonset .ui-button.ui-corner-all {
+        border-radius: 0;
+    }
+
+    .ui-buttonset > .ui-button:first-of-type {
+        border-radius: $border-radius 0 0 $border-radius;
+    }
+
+    .ui-buttonset > .ui-button:last-of-type {
+        border-radius: 0 $border-radius $border-radius 0;
     }
 }
 
@@ -91,6 +100,14 @@
     .ui-button {
         margin-right: 0;
         margin-left: -0.28em;
+    }
+
+    > .ui-button:first-of-type {
+        border-radius: 0 $border-radius $border-radius 0;
+    }
+
+    > .ui-button:last-of-type {
+        border-radius: $border-radius 0 0 $border-radius;
     }
 }
 
