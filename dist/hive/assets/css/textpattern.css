@@ -3852,13 +3852,12 @@ a.ui-state-default:focus {
  * <div class="ui-widget-overlay"></div>
  */
 .ui-widget-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.75);
-  z-index: 1001;
 }
 
 /* Shadows
@@ -3871,10 +3870,7 @@ a.ui-state-default:focus {
  * <div class="ui-widget-shadow"></div>
  */
 .ui-widget-shadow {
-  margin: -0.5em 0 0 -0.5em;
-  padding: 0.5em;
-  border-radius: 0.5em;
-  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 5px #666666;
 }
 
 /* ==========================================================================
@@ -4472,6 +4468,137 @@ label.ui-state-active.ui-button:active {
 [dir="rtl"] .ui-buttonset .ui-button {
   margin-right: 0;
   margin-left: -0.28em;
+}
+
+/* Checkboxradio
+   ========================================================================== */
+/**
+ * jQuery UI Checkboxradio.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/checkboxradio/
+ *
+ * Example HTML:
+ *
+ * <fieldset>
+ *     <legend>Select a Location:</legend>
+ *     <label for="radio-1">New York</label>
+ *     <input id="radio-1" name="radio-1" type="radio">
+ *     <label for="radio-2">Paris</label>
+ *     <input id="radio-2" name="radio-1" type="radio">
+ *     <label for="radio-3">London</label>
+ *     <input id="radio-3" name="radio-1" type="radio">
+ * </fieldset>
+ */
+.ui-checkboxradio-label .ui-icon-background {
+  border: 0;
+  border-radius: 0.12em;
+  box-shadow: inset 1px 1px 1px #cccccc;
+}
+
+.ui-checkboxradio-radio-label .ui-icon-background {
+  width: 16px;
+  height: 16px;
+  border: 0;
+  border-radius: 1em;
+  overflow: visible;
+}
+
+.ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon, .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
+  width: 8px;
+  height: 8px;
+  border-width: 4px;
+  border-style: solid;
+  background-image: none;
+}
+
+.ui-checkboxradio-disabled {
+  pointer-events: none;
+}
+
+/* Controlgroup
+   ========================================================================== */
+/**
+ * jQuery UI Controlgroup.
+ *
+ * Some classes and HTML elements generally added via JavaScript, more info -
+ * https://jqueryui.com/controlgroup/
+ *
+ * Example HTML:
+ *
+ * <fieldset>
+ *     <legend>Favourite drink</legend>
+ *     <div id="radio">
+ *         <input id="tea" name="drink" type="radio">
+ *         <label for="tea">Tea</label>
+ *         <input id="coffee" name="drink" type="radio" checked="checked">
+ *         <label for="coffee">Coffee</label>
+ *         <input id="tequila" name="drink" type="radio">
+ *         <label for="tequila">Tequila</label>
+ *     </div>
+ * </fieldset>
+ */
+.ui-controlgroup {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ui-controlgroup > .ui-controlgroup-item {
+  margin-right: 0;
+  margin-left: 0;
+  float: left;
+}
+
+.ui-controlgroup > .ui-controlgroup-item:focus, .ui-controlgroup > .ui-controlgroup-item.ui-visual-focus {
+  z-index: 9999;
+}
+
+.ui-controlgroup .ui-controlgroup-label {
+  padding: 0.4em 1em;
+}
+
+.ui-controlgroup .ui-controlgroup-label span {
+  font-size: 80%;
+}
+
+.ui-controlgroup-horizontal .ui-controlgroup-label + .ui-controlgroup-item {
+  border-left: 0;
+}
+
+.ui-controlgroup-horizontal .ui-controlgroup-label.ui-widget-content {
+  border-right: 0;
+}
+
+.ui-controlgroup-vertical > .ui-controlgroup-item {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  float: none;
+  text-align: left;
+}
+
+.ui-controlgroup-vertical .ui-controlgroup-item {
+  box-sizing: border-box;
+}
+
+.ui-controlgroup-vertical .ui-controlgroup-label + .ui-controlgroup-item {
+  border-top: 0;
+}
+
+.ui-controlgroup-vertical .ui-controlgroup-label.ui-widget-content {
+  border-bottom: 0;
+}
+
+/**
+ * Spinner specific style fixes.
+ */
+.ui-controlgroup-vertical .ui-spinner-input {
+  width: calc(100% - 2.4em);
+}
+
+.ui-controlgroup-vertical .ui-spinner .ui-spinner-up {
+  border-top-style: solid;
 }
 
 /* Datepicker

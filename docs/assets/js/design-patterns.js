@@ -173,6 +173,14 @@ $(function ()
         e.stopPropagation();
     });
 
+    // Checkboxradio.
+
+    $('#jquery-ui-checkboxradio [type="radio"]').checkboxradio();
+
+    // Controlgroup.
+
+    $('#jquery-ui-controlgroup').controlgroup();
+
     // Datepicker.
 
     $('.jquery-ui-datepicker').datepicker().children().show();

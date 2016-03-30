@@ -47,6 +47,8 @@
                     <li><a href="#ui-doc-jquery-ui--accordion">Widgets: Accordion</a></li>
                     <li><a href="#ui-doc-jquery-ui--autocomplete">Widgets: Autocomplete</a></li>
                     <li><a href="#ui-doc-jquery-ui--button">Widgets: Button</a></li>
+                    <li><a href="#ui-doc-jquery-ui--checkboxradio">Widgets: Checkboxradio</a></li>
+                    <li><a href="#ui-doc-jquery-ui--controlgroup">Widgets: Controlgroup</a></li>
                     <li><a href="#ui-doc-jquery-ui--datepicker">Widgets: Datepicker</a></li>
                     <li><a href="#ui-doc-jquery-ui--dialog">Widgets: Dialog</a></li>
                     <li><a href="#ui-doc-jquery-ui--menu">Widgets: Menu</a></li>
@@ -57,7 +59,6 @@
                     <li><a href="#ui-doc-jquery-ui--tabs">Widgets: Tabs</a></li>
                     <li><a href="#ui-doc-jquery-ui--tooltip">Widgets: Tooltip</a></li>
                     <li><a href="#ui-doc-jquery-ui--icons">Styles: Icons</a></li>
-                    <li><a href="#ui-doc-jquery-ui--overlay">Styles: Overlay and shadow</a></li>
                 </ol>
             </li>
             <li><a href="#ui-doc-misc">Miscellaneous</a></li>
@@ -1288,6 +1289,32 @@
 
             <p><a rel="external" href="https://jqueryui.com/button/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
+            <h2 id="ui-doc-jquery-ui--checkboxradio">Widgets: Checkboxradio</h2>
+            <fieldset id="jquery-ui-checkboxradio">
+                <legend>Select a Location</legend>
+                <label for="radio-1">New York</label>
+                <input id="radio-1" name="radio-1" type="radio">
+                <label for="radio-2">Paris</label>
+                <input id="radio-2" name="radio-1" type="radio">
+                <label for="radio-3">London</label>
+                <input id="radio-3" name="radio-1" type="radio">
+            </fieldset>
+            <p><a rel="external" href="https://jqueryui.com/checkboxradio/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
+            <h2 id="ui-doc-jquery-ui--controlgroup">Widgets: Controlgroup</h2>
+            <fieldset id="jquery-ui-controlgroup">
+                <legend>Favourite drink</legend>
+                <div id="radio">
+                    <input id="tea" name="drink" type="radio">
+                    <label for="tea">Tea</label>
+                    <input id="coffee" name="drink" type="radio" checked="checked">
+                    <label for="coffee">Coffee</label>
+                    <input id="tequila" name="drink" type="radio">
+                    <label for="tequila">Tequila</label>
+                </div>
+            </fieldset>
+            <p><a rel="external" href="https://jqueryui.com/controlgroup/" title="Go to the jQuery UI documentation">Full documentation</a></p>
+
             <h2 id="ui-doc-jquery-ui--datepicker">Widgets: Datepicker</h2>
             <div class="jquery-ui-datepicker"></div>
             <p><a rel="external" href="https://jqueryui.com/datepicker/" title="Go to the jQuery UI documentation">Full documentation</a></p>
@@ -1723,28 +1750,6 @@
                 <li class="ui-state-default" title=".ui-extra-icon-twitter"><span class="ui-icon ui-extra-icon-twitter"></span></li>
                 <li class="ui-state-default" title=".ui-extra-icon-github"><span class="ui-icon ui-extra-icon-github"></span></li>
             </ul>
-
-            <h2 id="ui-doc-jquery-ui--overlay">Styles: Overlay and shadow</h2>
-            <p><span class="warning">Not currently used in jQuery UI widgets.</span></p>
-            <div style="position: relative; width: 70%; height: 200px; padding:1% 4%; overflow:hidden;" class="fakewindowcontain">
-                <p>Lorem ipsum dolor sit amet, Nulla nec tortor. Donec id elit quis purus consectetur consequat.</p>
-                <p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci.</p>
-                <p>Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat.</p>
-                <p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam.</p>
-                <p>Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante.</p>
-                <p>Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi.</p>
-
-                <!-- ui-dialog -->
-                <div class="ui-overlay">
-                    <div class="ui-widget-overlay"></div>
-                    <div class="ui-widget-shadow ui-corner-all" style="position:absolute; top:30px; left:50px; z-index:1002; width:302px; height:152px;"></div>
-                </div>
-                <div class="ui-widget ui-widget-content ui-corner-all" style="position:absolute; top:30px; left:50px; z-index:1003; padding:10px; width:280px; height:130px;">
-                    <div class="ui-dialog-content ui-widget-content" style="background:none; border:0;">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-            </div>
 
         </div>
 
