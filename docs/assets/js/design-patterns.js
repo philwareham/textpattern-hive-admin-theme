@@ -171,8 +171,17 @@ $(function ()
 
     // Checkboxradio.
 
-    $('.jquery-ui-checkboxradio-checkbox input').checkboxradio();
-    $('.jquery-ui-checkboxradio-radio input').checkboxradio();
+    $('#jquery-ui-checkboxradio-checkbox input').checkboxradio();
+
+    $('#jquery-ui-checkboxradio-checkbox-alt input').checkboxradio({
+        icon: false
+    });
+
+    $('#jquery-ui-checkboxradio-radio input').checkboxradio();
+
+    //$('#jquery-ui-checkboxradio-radio-alt input').checkboxradio({
+    //    icon: false
+    //});
 
     // Controlgroup.
 
