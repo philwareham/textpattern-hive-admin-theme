@@ -44,6 +44,11 @@
             font-size: 80%;
         }
     }
+
+    .ui-state-highlight {
+        border-color: $color-button-selected-gradient-to;
+        background-color: $color-button-selected-gradient-from;
+    }
 }
 
 .ui-controlgroup-horizontal {

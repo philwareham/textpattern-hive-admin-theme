@@ -3923,7 +3923,6 @@ a.ui-state-default:focus {
  * </p>
  */
 .ui-state-highlight .ui-icon,
-.ui-button .ui-state-highlight.ui-icon,
 .warning .ui-icon {
   background-image: url("../img/ui-icon-sprite-warning.svg");
 }
@@ -5108,7 +5107,6 @@ a.ui-button {
 .ui-button.ui-state-focus {
   /* 1 */
   border-color: #0066ff !important;
-  outline-width: 0;
 }
 
 /**
@@ -5398,6 +5396,11 @@ label.ui-state-active.ui-button:active {
 
 .ui-controlgroup .ui-controlgroup-label span {
   font-size: 80%;
+}
+
+.ui-controlgroup .ui-state-highlight {
+  border-color: #9dc8ef;
+  background-color: #9dc8ef;
 }
 
 .ui-controlgroup-horizontal .ui-controlgroup-label + .ui-controlgroup-item {

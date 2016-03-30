@@ -95,7 +95,6 @@ a.ui-button {
 .ui-button.ui-state-focus {
     /* 1 */
     border-color: $color-link-focus !important;
-    outline-width: 0;
     @if $flat-theme < 1 {
         box-shadow: $inset-highlighting;
     }
