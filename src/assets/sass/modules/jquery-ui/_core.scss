@@ -127,13 +127,25 @@ a.ui-state-default:focus {
 }
 
 /**
- * Hover/focus jQuery UI widget interaction states.
+ * Hover jQuery UI widget interaction states.
  */
 
-.ui-state-hover,
-.ui-state-focus {
+.ui-state-hover {
     border-color: darken($color-border, 13.5%);
     background-color: $color-background-box;
+}
+
+/**
+ * Focus jQuery UI widget interaction states.
+ */
+
+.ui-state-focus {
+    border-color: $color-link-focus;
+    outline-width: 0;
+
+    a {
+        outline-width: 0;
+    }
 }
 
 /**

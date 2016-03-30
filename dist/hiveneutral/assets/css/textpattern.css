@@ -3721,12 +3721,23 @@ a.ui-state-default:focus {
 }
 
 /**
- * Hover/focus jQuery UI widget interaction states.
+ * Hover jQuery UI widget interaction states.
  */
-.ui-state-hover,
-.ui-state-focus {
+.ui-state-hover {
   border-color: #aaaaaa;
   background-color: #f7f7f7;
+}
+
+/**
+ * Focus jQuery UI widget interaction states.
+ */
+.ui-state-focus {
+  border-color: #0066ff;
+  outline-width: 0;
+}
+
+.ui-state-focus a {
+  outline-width: 0;
 }
 
 /**
@@ -6462,7 +6473,7 @@ label.ui-state-active.ui-button:active {
 }
 
 .ui-tabs-vertical .ui-tabs-nav .ui-state-focus {
-  outline-width: 0;
+  border-width: 0;
 }
 
 .ui-tabs-vertical .ui-tabs-nav .ui-state-focus a {
