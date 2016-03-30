@@ -5240,73 +5240,6 @@ button.ui-button-icons-only {
   right: 0.5em;
 }
 
-/**
- * Button sets.
- *
- * Example HTML:
- *
- * <p class="ui-buttonset">
- *     <input id="check1" type="checkbox" class="ui-helper-hidden-accessible">
- *     <label for="check1" class="ui-button ui-button-text-only ui-corner-left">
- *         <span class="ui-button-text">A</span>
- *     </label>
- *     <input id="check2" type="checkbox" class="ui-helper-hidden-accessible">
- *     <label for="check2" class="ui-button ui-button-text-only ui-state-active" aria-pressed="true">
- *         <span class="ui-button-text">B</span>
- *     </label>
- *     <input id="check3" type="checkbox" class="ui-helper-hidden-accessible">
- *     <label for="check3" class="ui-button ui-button-text-only ui-corner-right">
- *         <span class="ui-button-text">C</span>
- *     </label>
- * </p>
- */
-.ui-buttonset {
-  margin-right: 0.28em;
-}
-
-.ui-buttonset .ui-button {
-  margin-right: -0.28em;
-}
-
-/**
- * Checkboxes as buttons - pressed state.
- *
- * Example HTML:
- *
- * <input class="ui-helper-hidden-accessible" id="check" type="checkbox">
- * <label for="check" class="ui-button ui-button-text-only ui-state-active">
- *     <span class="ui-button-text">Toggle</span>
- * </label>
- */
-label.ui-state-active.ui-button {
-  background-color: #9dc8ef;
-  border-color: #6faee7;
-}
-
-label.ui-state-active.ui-button:hover {
-  background-color: #a6cdf0;
-  background-image: linear-gradient(#aacff1, #a6cdf0);
-  border-color: #2d89dd;
-}
-
-label.ui-state-active.ui-button:active {
-  background-color: #87bceb;
-  border-color: #2d89dd;
-}
-
-/**
- * Button RTL support.
- */
-[dir="rtl"] .ui-buttonset {
-  margin-right: 0;
-  margin-left: 0.5em;
-}
-
-[dir="rtl"] .ui-buttonset .ui-button {
-  margin-right: 0;
-  margin-left: -0.28em;
-}
-
 /* Checkboxradio
    ========================================================================== */
 /**
@@ -5351,6 +5284,73 @@ label.ui-state-active.ui-button:active {
 
 .ui-checkboxradio-disabled {
   pointer-events: none;
+}
+
+/**
+ * Button sets.
+ *
+ * Example HTML:
+ *
+ * <p class="ui-buttonset">
+ *     <input id="check1" type="checkbox" class="ui-helper-hidden-accessible">
+ *     <label for="check1" class="ui-button ui-button-text-only ui-corner-left">
+ *         <span class="ui-button-text">A</span>
+ *     </label>
+ *     <input id="check2" type="checkbox" class="ui-helper-hidden-accessible">
+ *     <label for="check2" class="ui-button ui-button-text-only ui-state-active" aria-pressed="true">
+ *         <span class="ui-button-text">B</span>
+ *     </label>
+ *     <input id="check3" type="checkbox" class="ui-helper-hidden-accessible">
+ *     <label for="check3" class="ui-button ui-button-text-only ui-corner-right">
+ *         <span class="ui-button-text">C</span>
+ *     </label>
+ * </p>
+ */
+.ui-buttonset {
+  margin-right: 0.28em;
+}
+
+.ui-buttonset .ui-button {
+  margin-right: -0.28em;
+}
+
+/**
+ * Button set RTL support.
+ */
+[dir="rtl"] .ui-buttonset {
+  margin-right: 0;
+  margin-left: 0.5em;
+}
+
+[dir="rtl"] .ui-buttonset .ui-button {
+  margin-right: 0;
+  margin-left: -0.28em;
+}
+
+/**
+ * Checkboxes as buttons - pressed state.
+ *
+ * Example HTML:
+ *
+ * <input class="ui-helper-hidden-accessible" id="check" type="checkbox">
+ * <label for="check" class="ui-button ui-button-text-only ui-state-active">
+ *     <span class="ui-button-text">Toggle</span>
+ * </label>
+ */
+label.ui-state-active.ui-button {
+  background-color: #9dc8ef;
+  border-color: #6faee7;
+}
+
+label.ui-state-active.ui-button:hover {
+  background-color: #a6cdf0;
+  background-image: linear-gradient(#aacff1, #a6cdf0);
+  border-color: #2d89dd;
+}
+
+label.ui-state-active.ui-button:active {
+  background-color: #87bceb;
+  border-color: #2d89dd;
 }
 
 /* Controlgroup

@@ -62,10 +62,6 @@ $(function ()
 
     $('.jquery-ui-button').button();
 
-    // Button set.
-
-    $('.jquery-ui-buttonset').buttonset();
-
     // Icon button.
 
     $('.jquery-ui-button-icon-only').button({
@@ -175,7 +171,8 @@ $(function ()
 
     // Checkboxradio.
 
-    $('#jquery-ui-checkboxradio [type="radio"]').checkboxradio();
+    $('.jquery-ui-checkboxradio-checkbox input').checkboxradio();
+    $('.jquery-ui-checkboxradio-radio input').checkboxradio();
 
     // Controlgroup.
 
