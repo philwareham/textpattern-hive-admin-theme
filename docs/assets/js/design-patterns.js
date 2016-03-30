@@ -171,17 +171,19 @@ $(function ()
 
     // Checkboxradio.
 
-    $('#jquery-ui-checkboxradio-checkbox input').checkboxradio();
-
-    $('#jquery-ui-checkboxradio-checkbox-alt input').checkboxradio({
-        icon: false
+    $('.jquery-ui-checkboxradio-checkbox input').checkboxradio({
+        //icon: false
     });
 
     $('.jquery-ui-checkboxradio-radio input').checkboxradio();
 
     // Controlgroup.
 
-    $('#jquery-ui-controlgroup').controlgroup();
+    $('.jquery-ui-controlgroup').controlgroup();
+
+    $('.jquery-ui-controlgroup-vertical').controlgroup({
+        direction: 'vertical'
+    });
 
     // Datepicker.
 

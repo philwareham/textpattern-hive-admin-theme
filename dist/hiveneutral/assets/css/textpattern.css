@@ -5287,61 +5287,6 @@ button.ui-button-icons-only {
 }
 
 /**
- * Button sets.
- *
- * Example HTML:
- *
- * <p class="ui-buttonset">
- *     <input id="check1" type="checkbox" class="ui-helper-hidden-accessible">
- *     <label for="check1" class="ui-button ui-button-text-only ui-corner-left">A</label>
- *     <input id="check2" type="checkbox" class="ui-helper-hidden-accessible">
- *     <label for="check2" class="ui-button ui-button-text-only ui-state-active" aria-pressed="true">B</label>
- *     <input id="check3" type="checkbox" class="ui-helper-hidden-accessible">
- *     <label for="check3" class="ui-button ui-button-text-only ui-corner-right">C</label>
- * </p>
- */
-.ui-buttonset {
-  margin-right: 0.28em;
-}
-
-.ui-buttonset .ui-button {
-  margin-right: -0.28em;
-}
-
-.ui-buttonset .ui-button.ui-corner-all {
-  border-radius: 0;
-}
-
-.ui-buttonset > .ui-button:first-of-type {
-  border-radius: 0.3em 0 0 0.3em;
-}
-
-.ui-buttonset > .ui-button:last-of-type {
-  border-radius: 0 0.3em 0.3em 0;
-}
-
-/**
- * Button set RTL support.
- */
-[dir="rtl"] .ui-buttonset {
-  margin-right: 0;
-  margin-left: 0.5em;
-}
-
-[dir="rtl"] .ui-buttonset .ui-button {
-  margin-right: 0;
-  margin-left: -0.28em;
-}
-
-[dir="rtl"] .ui-buttonset > .ui-button:first-of-type {
-  border-radius: 0 0.3em 0.3em 0;
-}
-
-[dir="rtl"] .ui-buttonset > .ui-button:last-of-type {
-  border-radius: 0.3em 0 0 0.3em;
-}
-
-/**
  * Checkboxes as buttons - pressed state.
  *
  * Example HTML:
@@ -5394,13 +5339,13 @@ label.ui-state-active.ui-button:active {
   vertical-align: middle;
 }
 
-.ui-controlgroup > .ui-controlgroup-item {
+.ui-controlgroup .ui-controlgroup-item {
   margin-right: 0;
   margin-left: 0;
   float: left;
 }
 
-.ui-controlgroup > .ui-controlgroup-item:focus, .ui-controlgroup > .ui-controlgroup-item.ui-visual-focus {
+.ui-controlgroup .ui-controlgroup-item:focus, .ui-controlgroup .ui-controlgroup-item.ui-visual-focus {
   z-index: 9999;
 }
 
@@ -5425,16 +5370,13 @@ label.ui-state-active.ui-button:active {
   border-right: 0;
 }
 
-.ui-controlgroup-vertical > .ui-controlgroup-item {
+.ui-controlgroup-vertical .ui-controlgroup-item {
   display: block;
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
   float: none;
   text-align: left;
-}
-
-.ui-controlgroup-vertical .ui-controlgroup-item {
   box-sizing: border-box;
 }
 
