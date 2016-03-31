@@ -47,6 +47,7 @@ button,
     cursor: pointer;
     /* 2 */
     appearance: none;
+    user-select: none;
 
     &:hover {
         @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));

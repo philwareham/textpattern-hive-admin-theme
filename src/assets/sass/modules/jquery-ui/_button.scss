@@ -48,6 +48,7 @@
     box-sizing: border-box;
     /* 4 */
     appearance: none;
+    user-select: none;
 
     &:hover {
         @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
@@ -78,15 +79,6 @@
 }
 
 /**
- * Remove some styling from `a` links as buttons.
- */
-
-a.ui-button {
-    color: $color-text-button;
-    text-decoration: none;
-}
-
-/**
  * Focus styling for buttons.
  *
  * 1. `!important` required to override specificity.
@@ -114,44 +106,18 @@ a.ui-button {
  */
 
 .ui-button-icon-only {
-    width: 2.2em;
+    width: 2.1538462em; // 28px / 13px
     text-indent: -9999px;
     white-space: nowrap;
     box-sizing: border-box;
 }
 
 /**
- * Double-icon-only button.
- *
- * To make room for the icon, a width needs to be set here.
- *
- * Example HTML:
- *
- * <a class="ui-button ui-button-icons-only">
- *     <span class="ui-button-icon-primary ui-icon ui-icon-locked"></span>
- *     <span class="ui-button-text">Button two icons, no text</span>
- *     <span class="ui-button-icon-secondary ui-icon ui-icon-disk"></span>
- * </a>
+ * No icon support for input elements.
  */
 
-.ui-button-icons-only {
-    width: 3.4em;
-}
-
-/**
- * `button` elements seem to need a little more width.
- *
- * Example HTML:
- *
- * <button class="ui-button ui-button-icons-only">
- *     <span class="ui-button-icon-primary ui-icon ui-icon-locked"></span>
- *     <span class="ui-button-text">Button two icons, no text</span>
- *     <span class="ui-button-icon-secondary ui-icon ui-icon-disk"></span>
- * </button>
- */
-
-button.ui-button-icons-only {
-    width: 3.7em;
+input.ui-button.ui-button-icon-only {
+    text-indent: 0;
 }
 
 @if $border-radius > 0 {
@@ -171,60 +137,25 @@ button.ui-button-icons-only {
 }
 
 /**
- * Button text element.
- */
-
-.ui-button .ui-button-text {
-    display: block;
-}
-
-.ui-button-text-only .ui-button-text {
-    padding: 0;
-}
-
-.ui-button-icon-only .ui-button-text,
-.ui-button-icons-only .ui-button-text {
-    padding: 0;
-    text-indent: -9999px;
-}
-
-.ui-button-text-icon-primary .ui-button-text,
-.ui-button-text-icons .ui-button-text {
-    padding-left: 16px;
-}
-
-.ui-button-text-icon-secondary .ui-button-text,
-.ui-button-text-icons .ui-button-text {
-    padding-right: 16px;
-}
-
-/**
  * Button icon element(s).
  */
 
-.ui-button-icon-only .ui-icon,
-.ui-button-text-icon-primary .ui-icon,
-.ui-button-text-icon-secondary .ui-icon,
-.ui-button-text-icons .ui-icon,
-.ui-button-icons-only .ui-icon {
+.ui-button-icon-only .ui-icon {
     position: absolute;
     top: 50%;
-    margin-top: -8px;
-}
-
-.ui-button-icon-only .ui-icon {
     left: 50%;
+    margin-top: -8px;
     margin-left: -8px;
 }
 
-.ui-button-text-icon-primary .ui-button-icon-primary,
-.ui-button-text-icons .ui-button-icon-primary,
-.ui-button-icons-only .ui-button-icon-primary {
-    left: 0.5em;
+.ui-button.ui-icon-notext .ui-icon {
+    padding: 0;
+    text-indent: -9999px;
+    white-space: nowrap;
 }
 
-.ui-button-text-icon-secondary .ui-button-icon-secondary,
-.ui-button-text-icons .ui-button-icon-secondary,
-.ui-button-icons-only .ui-button-icon-secondary {
-    right: 0.5em;
+input.ui-button.ui-icon-notext .ui-icon {
+    padding: 0.4em 1em;
+    text-indent: 0;
+    white-space: normal;
 }

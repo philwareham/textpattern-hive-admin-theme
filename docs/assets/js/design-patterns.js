@@ -78,21 +78,6 @@ $(function ()
         iconPosition: 'end'
     });
 
-    $('.jquery-ui-button-icon-two').button({
-        icons: {
-            primary: 'ui-icon-locked',
-            secondary: 'ui-icon-disk'
-        }
-    });
-
-    $('.jquery-ui-button-icon-two-only').button({
-        icons: {
-            primary: 'ui-icon-locked',
-            secondary: 'ui-icon-disk'
-        },
-        showLabel: false
-    });
-
     // Split button.
 
     $('#split-rerun-example')
