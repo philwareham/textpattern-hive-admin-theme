@@ -1049,7 +1049,7 @@
                     <label for="test_checkbox_1">Test checkbox 1</label>
                     <input type="checkbox" id="test_checkbox_2" name="test_checkbox_2">
                     <label for="test_checkbox_2">Test checkbox 2</label>
-                    <input type="checkbox" id="test_checkbox_3" name="test_checkbox_3" disabled="disabled">
+                    <input type="checkbox" id="test_checkbox_3" name="test_checkbox_3" disabled>
                     <label for="test_checkbox_3">Test checkbox 3 (disabled)</label>
                 </div>
 
@@ -1063,7 +1063,7 @@
                     <label for="test_radio_1">Test radio 1</label>
                     <input type="radio" id="test_radio_2" name="test_radio_group">
                     <label for="test_radio_2">Test radio 2</label>
-                    <input type="radio" id="test_radio_3" name="test_radio_group" disabled="disabled">
+                    <input type="radio" id="test_radio_3" name="test_radio_group" disabled>
                     <label for="test_radio_3">Test radio 3 (disabled)</label>
                 </div>
 
@@ -1100,6 +1100,7 @@
                     <input class="input-medium" id="text_inline" name="text_inline" type="text" size="16">
                     <input type="button" value="Hello">
                 </div>
+
                 <h3>Multiple select</h3>
                 <p><strong>Code:</strong></p>
                 <pre dir="ltr"><code class="language-markup">&lt;select id="" name="" multiple="multiple" size="10"&gt;
@@ -1135,13 +1136,13 @@
 
                 <h2>Disabled form elements</h2>
                 <p><strong>Code:</strong></p>
-                <pre dir="ltr"><code class="language-markup">&lt;select disabled="disabled"&gt;
-&lt;input type="text" disabled="disabled"&gt;
-&lt;input type="button" disabled="disabled"&gt;</code></pre>
+                <pre dir="ltr"><code class="language-markup">&lt;select disabled&gt;
+&lt;input type="text" disabled&gt;
+&lt;input type="button" disabled&gt;</code></pre>
                 <p><strong>Example:</strong></p>
                 <div class="txp-form-field">
                     <label for="select_dd2">Select drop-down</label>
-                    <select id="select_dd2" name="select_dd2" disabled="disabled">
+                    <select id="select_dd2" name="select_dd2" disabled>
                         <optgroup label="Group 1">
                             <option value="1">Some text goes here</option>
                             <option value="2">Another choice could be here</option>
@@ -1158,8 +1159,8 @@
                             <option value="9">Yet another item to be chosen</option>
                         </optgroup>
                     </select>
-                    <input class="input-medium" id="text_inline2" name="text_inline2" type="text" size="16" disabled="disabled">
-                    <input type="button" value="Hello" disabled="disabled">
+                    <input class="input-medium" id="text_inline2" name="text_inline2" type="text" size="16" disabled>
+                    <input type="button" value="Hello" disabled>
                 </div>
 
             </div>
@@ -1227,7 +1228,7 @@
         &lt;div class="txp-form-field-label"&gt;&lt;label for="prefs_example_3"&gt;Select&lt;/label&gt;&lt;/div&gt;
         &lt;div class="txp-form-field-value"&gt;
             &lt;select id="prefs_example_3" name="prefs_example_3"&gt;
-                &lt;option value="" selected="selected"&gt;&#160;&lt;/option&gt;
+                &lt;option value="" selected&gt;&#160;&lt;/option&gt;
                 &lt;option value="option1"&gt;Option 1&lt;/option&gt;
                 &lt;option value="option2"&gt;Option 2&lt;/option&gt;
             &lt;/select&gt;
@@ -1236,7 +1237,7 @@
     &lt;div class="txp-form-field prefs-example-4"&gt;
         &lt;div class="txp-form-field-label"&gt;Radio buttons&lt;/div&gt;
         &lt;div class="txp-form-field-value"&gt;
-            &lt;input class="radio active" id="prefs_example_4_0" name="prefs_example_4" type="radio" value="0" checked="checked"&gt;
+            &lt;input class="radio active" id="prefs_example_4_0" name="prefs_example_4" type="radio" value="0" checked&gt;
             &lt;label for="prefs_example_4_0"&gt;No&lt;/label&gt;
             &lt;input class="radio" id="prefs_example_4_1" name="prefs_example_4" type="radio" value="1"&gt;
             &lt;label for="prefs_example_4_1"&gt;Yes&lt;/label&gt;
@@ -1265,7 +1266,7 @@
                     <div class="txp-form-field-label"><label for="prefs_example_3">Select</label></div>
                     <div class="txp-form-field-value">
                         <select id="prefs_example_3" name="prefs_example_3">
-                            <option value="" selected="selected">&#160;</option>
+                            <option value="" selected>&#160;</option>
                             <option value="option1">Option 1</option>
                             <option value="option2">Option 2</option>
                         </select>
@@ -1274,7 +1275,7 @@
                 <div class="txp-form-field prefs-example-4">
                     <div class="txp-form-field-label">Radio buttons</div>
                     <div class="txp-form-field-value">
-                        <input class="radio active" id="prefs_example_4_0" name="prefs_example_4" type="radio" value="0" checked="checked">
+                        <input class="radio active" id="prefs_example_4_0" name="prefs_example_4" type="radio" value="0" checked>
                         <label for="prefs_example_4_0">No</label>
                         <input class="radio" id="prefs_example_4_1" name="prefs_example_4" type="radio" value="1">
                         <label for="prefs_example_4_1">Yes</label>
@@ -1450,7 +1451,7 @@
 
             <h3>Radiobuttons</h3>
             <p class="jquery-ui-checkboxradio-radio">
-                <input id="radio1" name="radio1" type="radio" checked="checked">
+                <input id="radio1" name="radio1" type="radio" checked>
                 <label for="radio1">Yes</label>
                 <input id="radio2" name="radio1" type="radio">
                 <label for="radio2">Maybe</label>
@@ -1462,7 +1463,7 @@
 
             <h2 id="ui-doc-jquery-ui--controlgroup">Widgets: Controlgroup</h2>
 
-            <h3>Controlgroup horizontal (checkboxes)</h3>
+            <h3>Controlgroup horizontal (checkboxes and select)</h3>
             <p class="jquery-ui-controlgroup">
                 <input id="check4" type="checkbox">
                 <label for="check4">B</label>
@@ -1470,13 +1471,23 @@
                 <label for="check5">I</label>
                 <input id="check6" type="checkbox">
                 <label for="check6">U</label>
+                <select id="zoom">
+                    <option selected disabled>Zoom</option>
+                    <option>50%</option>
+                    <option>75%</option>
+                    <option>90%</option>
+                    <option>100%</option>
+                    <option>125%</option>
+                    <option>150%</option>
+                    <option>200%</option>
+                </select>
             </p>
 
             <h3>Controlgroup horizontal (radiobuttons)</h3>
             <p class="jquery-ui-controlgroup">
                 <input id="radio4" name="radio2" type="radio">
                 <label for="radio4">Off</label>
-                <input id="radio5" name="radio2" type="radio" checked="checked">
+                <input id="radio5" name="radio2" type="radio" checked>
                 <label for="radio5">On</label>
             </p>
 
@@ -1621,7 +1632,7 @@
                 <select class="jquery-ui-selectmenu" id="jquery-ui-selectmenu1" name="jquery-ui-selectmenu1">
                     <option>Slower</option>
                     <option>Slow</option>
-                    <option selected="selected">Medium</option>
+                    <option selected>Medium</option>
                     <option>Fast</option>
                     <option>Faster</option>
                 </select>
@@ -1649,20 +1660,20 @@
                 <label for="jquery-ui-selectmenu3">Select a number</label>
                 <select class="jquery-ui-selectmenu" id="jquery-ui-selectmenu3" name="jquery-ui-selectmenu3">
                     <option value="1">1</option>
-                    <option value="2" selected="selected">2</option>
+                    <option value="2" selected>2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
                     <option value="6">6</option>
-                    <option value="7" disabled="disabled">7</option>
-                    <option value="8" disabled="disabled">8</option>
+                    <option value="7" disabled>7</option>
+                    <option value="8" disabled>8</option>
                     <option value="9">9</option>
                     <option value="10">10</option>
                     <option value="11">11</option>
                     <option value="12">12</option>
                     <option value="13">13</option>
                     <option value="14">14</option>
-                    <option value="15" disabled="disabled">15</option>
+                    <option value="15" disabled>15</option>
                     <option value="16">16</option>
                     <option value="17">17</option>
                     <option value="18">18</option>
@@ -1674,7 +1685,7 @@
             <p>
                 <label for="jquery-ui-selectmenu4">Select a file 2</label>
                 <select class="jquery-ui-selectmenu" id="jquery-ui-selectmenu4" name="jquery-ui-selectmenu4">
-                    <optgroup label="Scripts" disabled="disabled">
+                    <optgroup label="Scripts" disabled>
                         <option value="jquery">jQuery.js</option>
                         <option value="jqueryui">ui.jQuery.js</option>
                     </optgroup>
