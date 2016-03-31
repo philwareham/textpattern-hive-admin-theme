@@ -65,33 +65,32 @@ $(function ()
     // Icon button.
 
     $('.jquery-ui-button-icon-only').button({
-        icons: {
-            primary: 'ui-icon-locked'
-        },
-        text: false
+        icon: 'ui-icon-gear',
+        showLabel: false
     });
+
     $('.jquery-ui-button-icon-left').button({
-        icons: {
-            primary: 'ui-icon-locked'
-        }
+        icon: 'ui-icon-locked'
     });
+
     $('.jquery-ui-button-icon-right').button({
-        icons: {
-            secondary: 'ui-icon-gear'
-        }
+        icon: 'ui-icon-disk',
+        iconPosition: 'end'
     });
+
     $('.jquery-ui-button-icon-two').button({
         icons: {
             primary: 'ui-icon-locked',
             secondary: 'ui-icon-disk'
         }
     });
+
     $('.jquery-ui-button-icon-two-only').button({
         icons: {
             primary: 'ui-icon-locked',
             secondary: 'ui-icon-disk'
         },
-        text: false
+        showLabel: false
     });
 
     // Split button.

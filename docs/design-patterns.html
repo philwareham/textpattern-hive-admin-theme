@@ -883,14 +883,14 @@
 
             <h2>Non-collapsible</h2>
             <p><strong>Code:</strong></p>
-            <pre dir="ltr"><code class="language-markup">&lt;section id="regionname1_group" class="txp-details" aria-labelledby="regionname1_group-label"&gt;
+            <pre dir="ltr"><code class="language-markup">&lt;section class="txp-details" id="regionname1_group" aria-labelledby="regionname1_group-label"&gt;
     &lt;h3 id="regionname1_group-label"&gt;Heading&lt;/h3&gt;
     &lt;div role="group"&gt;
         ...content...
     &lt;/div&gt;
 &lt;/section&gt;</code></pre>
             <p><strong>Example:</strong></p>
-            <section id="regionname2_group" class="txp-details" aria-labelledby="regionname2_group-label">
+            <section class="txp-details" id="regionname2_group" aria-labelledby="regionname2_group-label">
                 <h3 id="regionname2_group-label">Heading</h3>
                 <div role="group">
                     <form action="#">
@@ -1392,10 +1392,10 @@
 
             <h3>Default functionality buttons</h3>
             <p>
-                <a href="#" class="jquery-ui-button">&lt;a&gt; button</a>
                 <button class="jquery-ui-button">&lt;button&gt; button</button>
-                <input type="button" class="jquery-ui-button" value="Input button">
-                <input type="submit" class="jquery-ui-button" value="Submit button">
+                <input class="jquery-ui-button" type="button" value="Input button">
+                <input class="jquery-ui-button" type="submit" value="Submit button">
+                <a class="jquery-ui-button" href="#">&lt;a&gt; button</a>
             </p>
 
             <h3>Icon buttons</h3>
@@ -1403,13 +1403,13 @@
                 <button class="jquery-ui-button-icon-only">&lt;button&gt; icon only</button>
                 <button class="jquery-ui-button-icon-left">&lt;button&gt; icon on the left</button>
                 <button class="jquery-ui-button-icon-right">&lt;button&gt; icon on the right</button>
-                <button class="jquery-ui-button-icon-two">&lt;button&gt; two icons</button>
-                <button class="jquery-ui-button-icon-two-only">&lt;button&gt; two icons and no text</button>
+                <button class="jquery-ui-button-icon-left">&lt;button&gt; two icons <span class="ui-icon ui-icon-gear"></button>
             </p>
             <p>
-                <a href="#" class="jquery-ui-button-icon-only">&lt;a&gt; icon only</a>
-                <a href="#" class="jquery-ui-button-icon-left">&lt;a&gt; icon on the left</a>
-                <a href="#" class="jquery-ui-button-icon-two-only">&lt;a&gt; two icons and no text</a>
+                <a class="jquery-ui-button-icon-only" href="#">&lt;a&gt; icon only</a>
+                <a class="jquery-ui-button-icon-left" href="#">&lt;a&gt; icon on the left</a>
+                <a class="jquery-ui-button-icon-right">&lt;a&gt; icon on the right</a>
+                <a class="jquery-ui-button-icon-left" href="#">&lt;a&gt; two icons <span class="ui-icon ui-icon-gear"></a>
             </p>
 
             <h3>Split buttons</h3>
@@ -1424,6 +1424,15 @@
                     <li><a href="#">Delete</a></li>
                 </ul>
             </div>
+
+            <!-- <div class="controlgroup">
+                <button>Run last option</button>
+                <select>
+                    <option>Open...</option>
+                    <option>Save</option>
+                    <option>Delete</option>
+                </select>
+            </div> -->
 
             <p><a rel="external" href="https://jqueryui.com/button/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
