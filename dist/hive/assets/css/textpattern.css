@@ -5689,6 +5689,7 @@ label.ui-state-active.ui-button:active {
   top: 0;
   left: 0;
   padding: 0.2em;
+  outline: 0;
   box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   z-index: 1002;
 }
@@ -5739,54 +5740,6 @@ label.ui-state-active.ui-button:active {
 .ui-dialog .ui-dialog-buttonpane button {
   margin: 0.5em 0.4em 0.5em 0;
   cursor: pointer;
-}
-
-.ui-dialog .ui-resizable-n {
-  top: 0;
-  height: 2px;
-}
-
-.ui-dialog .ui-resizable-e {
-  right: 0;
-  width: 2px;
-}
-
-.ui-dialog .ui-resizable-s {
-  bottom: 0;
-  height: 2px;
-}
-
-.ui-dialog .ui-resizable-w {
-  left: 0;
-  width: 2px;
-}
-
-.ui-dialog .ui-resizable-se,
-.ui-dialog .ui-resizable-sw,
-.ui-dialog .ui-resizable-ne,
-.ui-dialog .ui-resizable-nw {
-  width: 7px;
-  height: 7px;
-}
-
-.ui-dialog .ui-resizable-se {
-  right: 0;
-  bottom: 0;
-}
-
-.ui-dialog .ui-resizable-sw {
-  bottom: 0;
-  left: 0;
-}
-
-.ui-dialog .ui-resizable-ne {
-  top: 0;
-  right: 0;
-}
-
-.ui-dialog .ui-resizable-nw {
-  top: 0;
-  left: 0;
 }
 
 /**
