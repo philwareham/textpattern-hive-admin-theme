@@ -6,6 +6,12 @@
 
 The default admin theme that ships as standard with [Textpattern CMS](http://textpattern.com).
 
+## Demos
+
+[Design Patterns documentation](http://design-patterns.textpattern.io/docs/).
+
+[Flat mockup of Textpattern admin area](http://design-patterns.textpattern.io/mockups/).
+
 ## Supported web browsers
 
 * Internet Explorer 11.
