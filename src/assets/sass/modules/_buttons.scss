@@ -14,6 +14,16 @@ button {
 }
 
 /**
+ * 1. Change font properties to `inherit` in Chrome and Safari.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+::-webkit-file-upload-button {
+    font: inherit; /* 1 */
+    -webkit-appearance: button; /* 2 */
+}
+
+/**
  * 1. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  * 2. Remove iOS Safari default styling.
