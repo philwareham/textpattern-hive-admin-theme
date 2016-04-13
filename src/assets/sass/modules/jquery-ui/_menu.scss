@@ -82,15 +82,18 @@
     }
 
     .ui-menu-item {
-        position: relative;
         margin: 0;
-        padding: 0.30769230769231em 1em 0.30769230769231em 0.30769230769231em; // 4px / 13px
         cursor: pointer;
 
         a {
             color: $color-text;
             text-decoration: none;
         }
+    }
+
+    .ui-menu-item-wrapper {
+        position: relative;
+        padding: 0.30769230769231em 1em 0.30769230769231em 0.30769230769231em; // 4px / 13px
     }
 
     .ui-menu-divider {

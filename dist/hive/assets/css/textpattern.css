@@ -1688,6 +1688,17 @@ button {
 }
 
 /**
+ * 1. Change font properties to `inherit` in Chrome and Safari.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+::-webkit-file-upload-button {
+  font: inherit;
+  /* 1 */
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
  * 1. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  * 2. Remove iOS Safari default styling.
@@ -5830,15 +5841,18 @@ label.ui-state-active.ui-button:active {
 }
 
 .ui-menu .ui-menu-item {
-  position: relative;
   margin: 0;
-  padding: 0.30769230769231em 1em 0.30769230769231em 0.30769230769231em;
   cursor: pointer;
 }
 
 .ui-menu .ui-menu-item a {
   color: #333333;
   text-decoration: none;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+  position: relative;
+  padding: 0.30769230769231em 1em 0.30769230769231em 0.30769230769231em;
 }
 
 .ui-menu .ui-menu-divider {
