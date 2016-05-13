@@ -156,7 +156,7 @@ $(function ()
     // Checkboxradio.
 
     $('.jquery-ui-checkboxradio-checkbox input').checkboxradio({
-        //icon: false
+        icon: false
     });
 
     $('.jquery-ui-checkboxradio-radio input').checkboxradio();
