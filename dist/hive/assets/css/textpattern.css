@@ -887,34 +887,23 @@ a:focus .content-image {
 /*
  * Flash the alert message using CSS animation.
  */
-@-webkit-keyframes messageflash {
-  0% {
-    opacity: 0;
-  }
-  50%,
-  100% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.5;
-  }
-}
 @keyframes messageflash {
   0% {
     opacity: 0;
   }
-  50%,
-  100% {
+  50% {
     opacity: 1;
   }
   75% {
     opacity: 0.5;
   }
+  100% {
+    opacity: 1;
+  }
 }
 
 .messageflash {
-  -webkit-animation: messageflash 1s;
-          animation: messageflash 1s;
+  animation: messageflash 1s;
 }
 
 /* Twisties
@@ -3319,12 +3308,10 @@ span.spinner {
 .txp-edit .txp-form-field:not(.txp-form-field-textarea),
 .txp-prefs-group .txp-form-field:not(.txp-form-field-textarea),
 .setup:not(.welcome) .txp-form-field:not(.txp-form-field-textarea) {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+      align-items: baseline;
 }
 
 .txp-edit .txp-form-field-label,
@@ -3333,9 +3320,8 @@ span.spinner {
 .txp-prefs-group .txp-form-field-value,
 .setup:not(.welcome) .txp-form-field-label,
 .setup:not(.welcome) .txp-form-field-value {
-  -webkit-flex: 1 1 0%;
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+      flex: 1 1 0%;
   min-height: 2.15384615384615em;
 }
 
@@ -3355,9 +3341,8 @@ span.spinner {
  */
 .txp-form-field-textarea .txp-form-field-label,
 .txp-form-field-textarea .txp-form-field-value {
-  -webkit-flex: none;
-      -ms-flex: none;
-          flex: none;
+  -ms-flex: none;
+      flex: none;
   max-width: inherit;
   min-height: inherit;
 }
@@ -6608,9 +6593,8 @@ label.ui-state-active.ui-button:active {
   .txp-edit .txp-form-field-value,
   .txp-prefs-group .txp-form-field-label,
   .txp-prefs-group .txp-form-field-value {
-    -webkit-flex: none;
-        -ms-flex: none;
-            flex: none;
+    -ms-flex: none;
+        flex: none;
     min-height: inherit;
   }
   /**

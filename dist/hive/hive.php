@@ -89,7 +89,7 @@ class hive_theme extends \Textpattern\Admin\Theme
 
         if ($txp_user) {
             $out[] = '<button class="txp-nav-toggle collapsed" type="button" data-toggle="collapse" data-target="#txp-nav" aria-expanded="false" aria-controls="txp-nav"><span class="txp-accessibility">'.gTxt('navigation').'</span></button>';
-            $out[] = '<nav class="txp-nav" aria-label="'.gTxt('navigation').'">';
+            $out[] = '<nav class="txp-nav" id="txp-nav" aria-label="'.gTxt('navigation').'">';
             $out[] = '<ul class="data-dropdown">';
             $txpnavdrop = 0;
 
