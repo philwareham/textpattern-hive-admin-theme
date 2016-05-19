@@ -6054,6 +6054,10 @@ label.ui-state-active.ui-button:active {
   overflow: hidden;
 }
 
+.ui-selectmenu-button.ui-button {
+  white-space: nowrap;
+}
+
 /**
  * Selectmenu RTL support (needs further improvements in upstream project).
  */
