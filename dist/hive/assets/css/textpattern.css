@@ -5892,12 +5892,12 @@ label.ui-state-active.ui-button:active {
   position: relative;
 }
 
-.ui-menu-icons .ui-menu-item {
+.ui-menu-icons .ui-menu-item-wrapper {
   padding-left: 2em;
 }
 
 /**
- * Menu RTL support (needs further improvements in upstream project).
+ * Menu RTL support.
  */
 [dir="rtl"] .ui-menu {
   padding: 0;

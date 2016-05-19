@@ -132,13 +132,13 @@
 .ui-menu-icons {
     position: relative;
 
-    .ui-menu-item {
+    .ui-menu-item-wrapper {
         padding-left: 2em;
     }
 }
 
 /**
- * Menu RTL support (needs further improvements in upstream project).
+ * Menu RTL support.
  */
 
 [dir="rtl"] .ui-menu {
