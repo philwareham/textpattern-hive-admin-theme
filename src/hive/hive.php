@@ -230,9 +230,9 @@ EOS;
             'title'       => 'Hive',
             'description' => 'Textpattern Hive admin theme (Classic Yellow)',
             'version'     => '4.6.0',
-            'author'      => 'Team Textpattern',
-            'author_uri'  => 'http://textpattern.com/',
-            'help'        => 'https://github.com/philwareham/txp-hive-admin-theme',
+            'author'      => 'Phil Wareham',
+            'author_uri'  => 'https://github.com/philwareham',
+            'help'        => 'https://github.com/philwareham/textpattern-hive-admin-theme',
         );
     }
 }

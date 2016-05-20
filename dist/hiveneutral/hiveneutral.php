@@ -230,9 +230,9 @@ EOS;
             'title'       => 'Hive (Flat Neutral)',
             'description' => 'Textpattern Hive (Flat Neutral) admin theme',
             'version'     => '4.6.0',
-            'author'      => 'Team Textpattern',
-            'author_uri'  => 'http://textpattern.com/',
-            'help'        => 'https://github.com/philwareham/txp-hive-admin-theme',
+            'author'      => 'Phil Wareham',
+            'author_uri'  => 'https://github.com/philwareham',
+            'help'        => 'https://github.com/philwareham/textpattern-hive-admin-theme',
         );
     }
 }
