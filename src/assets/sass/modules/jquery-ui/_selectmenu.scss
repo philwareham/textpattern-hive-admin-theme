@@ -20,7 +20,7 @@
  *         <option>Fast</option>
  *         <option>Faster</option>
  *     </select>
- *     <span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" style="width:87px;">
+ *     <span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all">
  *         <span class="ui-icon ui-icon-triangle-1-s"></span>
  *         <span class="ui-selectmenu-text">Medium</span>
  *     </span>
@@ -85,8 +85,20 @@
     white-space: nowrap;
 }
 
+.ui-selectmenu-button:not(.ui-controlgroup-item) {
+    border-radius: $border-radius;
+}
+
+.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
+    border-radius: 0 $border-radius $border-radius 0;
+}
+
+.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
+    border-radius: $border-radius 0 0 $border-radius;
+}
+
 /**
- * Selectmenu RTL support (needs further improvements in upstream project).
+ * Selectmenu RTL support.
  */
 
 [dir="rtl"] {
