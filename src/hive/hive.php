@@ -229,7 +229,7 @@ EOS;
         return array(
             'title'       => 'Hive',
             'description' => 'Textpattern Hive admin theme (Classic Yellow)',
-            'version'     => $prefs['version'],
+            'version'     => '4.6.0',
             'author'      => 'Team Textpattern',
             'author_uri'  => 'http://textpattern.com/',
             'help'        => 'https://github.com/philwareham/txp-hive-admin-theme',
