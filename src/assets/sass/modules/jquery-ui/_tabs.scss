@@ -124,11 +124,7 @@
         background: $color-selected;
     }
 
-    .ui-tabs-nav .ui-state-focus {
-        border-width: 0;
-
-        a {
-            outline: thin solid $color-link-focus;
-        }
+    .ui-tabs-nav .ui-state-focus a {
+        outline: thin solid $color-link-focus;
     }
 }
