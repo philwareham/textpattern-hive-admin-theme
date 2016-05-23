@@ -86,10 +86,6 @@ hr {
         z-index: 100;
     }
 
-    .ui-menu-item {
-        padding: 0 0 0 0.75em;
-    }
-
     .txp-dropdown {
         input {
             vertical-align: -0.38461538461538em; // 5px / 13px
@@ -98,8 +94,7 @@ hr {
         label {
             display: inline-block;
             width: 85%;
-            padding: 0.30769230769231em 0.5em;
-            cursor: pointer;
+            padding: 0.30769230769231em; // 5px / 13px
             vertical-align: text-top;
         }
     }
