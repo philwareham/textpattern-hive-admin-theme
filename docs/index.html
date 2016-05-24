@@ -1213,7 +1213,7 @@
         <div class="text-section" id="ui-doc-edit-panes">
             <h1>Edit panes <span class="warning">changed v4.6</span></h1>
             <p><strong>Code:</strong></p>
-            <pre dir="ltr"><code class="language-markup">&lt;form method="post" action="#" class="prefs-form"&gt;
+            <pre dir="ltr"><code class="language-markup">&lt;form class="txp-edit" method="post" action="#"&gt;
     &lt;h2&gt;Edit panel title&lt;/h2&gt;
 
     &lt;div class="txp-form-field prefs-example-1"&gt;
@@ -1234,18 +1234,31 @@
             &lt;/select&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class="txp-form-field prefs-example-4"&gt;
-        &lt;div class="txp-form-field-label"&gt;Radio buttons&lt;/div&gt;
+
+    &lt;div class="txp-form-field prefs-example-4">
+        &lt;div class="txp-form-field-label"&gt;&lt;label for="prefs_example_4"&gt;Select multiple&lt;/label&gt;&lt;/div&gt;
         &lt;div class="txp-form-field-value"&gt;
-            &lt;input class="radio active" id="prefs_example_4_0" name="prefs_example_4" type="radio" value="0" checked&gt;
-            &lt;label for="prefs_example_4_0"&gt;No&lt;/label&gt;
-            &lt;input class="radio" id="prefs_example_4_1" name="prefs_example_4" type="radio" value="1"&gt;
-            &lt;label for="prefs_example_4_1"&gt;Yes&lt;/label&gt;
+            &lt;select id="prefs_example_4" name="prefs_example_4" multiple="multiple" size="3"&gt;
+                &lt;option value="1"&gt;Some text goes here&lt;/option&gt;
+                &lt;option value="2"&gt;Another choice could be here&lt;/option&gt;
+                &lt;option value="3"&gt;Yet another item to be chosen&lt;/option&gt;
+                &lt;option value="4"&gt;Yep, another item here&lt;/option&gt;
+                &lt;option value="5"&gt;Finally, some text goes here&lt;/option&gt;
+            &lt;/select&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class="txp-form-field txp-form-field-textarea prefs-example-5"&gt;
-        &lt;div class="txp-form-field-label"&gt;&lt;label for="prefs_example_5"&gt;Textarea&lt;/label&gt;&lt;/div&gt;
-        &lt;div class="txp-form-field-value"&gt;&lt;textarea id="prefs_example_5" name="prefs_example_5" cols="64" rows="4"&gt;&lt;/textarea&gt;&lt;/div&gt;
+    &lt;div class="txp-form-field prefs-example-5"&gt;
+        &lt;div class="txp-form-field-label"&gt;Radio buttons&lt;/div&gt;
+        &lt;div class="txp-form-field-value"&gt;
+            &lt;input class="radio active" id="prefs_example_5_0" name="prefs_example_5" type="radio" value="0" checked&gt;
+            &lt;label for="prefs_example_5_0"&gt;No&lt;/label&gt;
+            &lt;input class="radio" id="prefs_example_5_1" name="prefs_example_5" type="radio" value="1"&gt;
+            &lt;label for="prefs_example_5_1"&gt;Yes&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="txp-form-field txp-form-field-textarea prefs-example-6"&gt;
+        &lt;div class="txp-form-field-label"&gt;&lt;label for="prefs_example_6"&gt;Textarea&lt;/label&gt;&lt;/div&gt;
+        &lt;div class="txp-form-field-value"&gt;&lt;textarea id="prefs_example_6" name="prefs_example_6" cols="64" rows="4"&gt;&lt;/textarea&gt;&lt;/div&gt;
     &lt;/div&gt;
     ...etc...
     &lt;p class="txp-edit-actions"&gt;
@@ -1255,7 +1268,7 @@
 
 &lt;/form&gt;</code></pre>
             <p><strong>Example:</strong></p>
-            <form method="post" action="#" class="prefs-form">
+            <form class="txp-edit" method="post" action="#">
                 <h2>Edit panel title</h2>
                 <div class="txp-form-field prefs-example-1">
                     <div class="txp-form-field-label"><label for="prefs_example_1">Long text</label></div>
@@ -1276,17 +1289,29 @@
                     </div>
                 </div>
                 <div class="txp-form-field prefs-example-4">
-                    <div class="txp-form-field-label">Radio buttons</div>
+                    <div class="txp-form-field-label"><label for="prefs_example_4">Select multiple</label></div>
                     <div class="txp-form-field-value">
-                        <input class="radio active" id="prefs_example_4_0" name="prefs_example_4" type="radio" value="0" checked>
-                        <label for="prefs_example_4_0">No</label>
-                        <input class="radio" id="prefs_example_4_1" name="prefs_example_4" type="radio" value="1">
-                        <label for="prefs_example_4_1">Yes</label>
+                        <select id="prefs_example_4" name="prefs_example_4" multiple="multiple" size="3">
+                            <option value="1">Some text goes here</option>
+                            <option value="2">Another choice could be here</option>
+                            <option value="3">Yet another item to be chosen</option>
+                            <option value="4">Yep, another item here</option>
+                            <option value="5">Finally, some text goes here</option>
+                        </select>
                     </div>
                 </div>
-                <div class="txp-form-field txp-form-field-textarea prefs-example-5">
-                    <div class="txp-form-field-label"><label for="prefs_example_5">Textarea</label></div>
-                    <div class="txp-form-field-value"><textarea id="prefs_example_5" name="prefs_example_5" cols="64" rows="4"></textarea></div>
+                <div class="txp-form-field prefs-example-5">
+                    <div class="txp-form-field-label">Radio buttons</div>
+                    <div class="txp-form-field-value">
+                        <input class="radio active" id="prefs_example_5_0" name="prefs_example_5" type="radio" value="0" checked>
+                        <label for="prefs_example_5_0">No</label>
+                        <input class="radio" id="prefs_example_5_1" name="prefs_example_5" type="radio" value="1">
+                        <label for="prefs_example_5_1">Yes</label>
+                    </div>
+                </div>
+                <div class="txp-form-field txp-form-field-textarea prefs-example-6">
+                    <div class="txp-form-field-label"><label for="prefs_example_6">Textarea</label></div>
+                    <div class="txp-form-field-value"><textarea id="prefs_example_6" name="prefs_example_6" cols="64" rows="4"></textarea></div>
                 </div>
                 <p class="txp-edit-actions">
                     <a class="txp-button" href="#">Cancel</a>

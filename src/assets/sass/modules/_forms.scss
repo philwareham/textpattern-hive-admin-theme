@@ -210,6 +210,7 @@ select[multiple] {
     height: auto;
     padding-right: 0.30769230769231em; // 4px / 13px
     background-image: none;
+    vertical-align: top;
 }
 
 /**
@@ -219,6 +220,7 @@ select[multiple] {
 select[size="0"],
 select[size="1"] {
     height: 2.15384615384615em; // 28px / 13px
+    vertical-align: baseline;
 }
 
 /**
