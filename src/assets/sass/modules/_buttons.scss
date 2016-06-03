@@ -132,8 +132,19 @@ button.destroy {
         box-shadow: none;
     }
 
+    &:hover,
+    &:active {
+        background: none;
+    }
+
     &:focus {
         outline: thin solid $color-link-focus;
+    }
+
+    &:hover .ui-icon,
+    &:active .ui-icon,
+    &:focus .ui-icon {
+        filter: brightness(0.66);
     }
 }
 
