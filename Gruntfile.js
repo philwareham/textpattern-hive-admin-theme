@@ -44,7 +44,6 @@ module.exports = function (grunt)
         concurrent: {
             dist: [
                 'css',
-                'copy',
                 'uglify:dist',
                 'devUpdate'
             ]
@@ -90,7 +89,9 @@ module.exports = function (grunt)
                         cwd: 'src/assets/img-hive-neutral/',
                         src: '**',
                         dest: '<%= paths.dest2.img %>'
-                    }
+                    },
+                    {'<%= paths.dest1.css %>custom.css': '<%= paths.src.sass %>custom.css'},
+                    {'<%= paths.dest2.css %>custom.css': '<%= paths.src.sass %>custom.css'}
                 ]
             }
         },
@@ -191,21 +192,7 @@ module.exports = function (grunt)
                 files: [
                     {'<%= paths.dest1.css %>textpattern.css': '<%= paths.src.sass %>hive-default.scss'},
                     {'<%= paths.dest2.css %>textpattern.css': '<%= paths.src.sass %>hive-neutral.scss'},
-                    {'<%= paths.docs.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'},
-                    {
-                        expand: true,
-                        cwd: '<%= paths.src.sass %>custom/',
-                        src: '*',
-                        dest: '<%= paths.dest1.css %>custom/',
-                        ext: '.css'
-                    },
-                    {
-                        expand: true,
-                        cwd: '<%= paths.src.sass %>custom/',
-                        src: '*',
-                        dest: '<%= paths.dest2.css %>custom/',
-                        ext: '.css'
-                    }
+                    {'<%= paths.docs.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'}
                 ]
             }
         },
@@ -284,7 +271,7 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['clean', 'concurrent', 'uglify:minify']);
+    grunt.registerTask('build', ['clean', 'concurrent', 'copy', 'uglify:minify']);
     grunt.registerTask('css', ['sasslint', 'sass', 'postcss', 'cssmin']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['jshint', 'build']);
