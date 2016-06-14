@@ -90,8 +90,8 @@ module.exports = function (grunt)
                         src: '**',
                         dest: '<%= paths.dest2.img %>'
                     },
-                    {'<%= paths.dest1.css %>custom.css': '<%= paths.src.sass %>custom.css'},
-                    {'<%= paths.dest2.css %>custom.css': '<%= paths.src.sass %>custom.css'}
+                    {'<%= paths.dest1.css %>custom-example.css': '<%= paths.src.sass %>custom-example.css'},
+                    {'<%= paths.dest2.css %>custom-example.css': '<%= paths.src.sass %>custom-example.css'}
                 ]
             }
         },
