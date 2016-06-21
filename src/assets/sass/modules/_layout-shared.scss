@@ -216,6 +216,10 @@ hr {
 .txp-actions a {
     display: inline-block;
     margin: 0.5em 1em 0 0;
+
+    &:last-child {
+        margin: 0.5em 0 0 0;
+    }
 }
 
 /**
@@ -224,6 +228,10 @@ hr {
 
 [dir="rtl"] .txp-actions a {
     margin: 0.5em 0 0 1em;
+
+    &:last-child {
+        margin: 0.5em 0 0 0;
+    }
 }
 
 /**
