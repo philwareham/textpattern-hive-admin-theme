@@ -432,7 +432,7 @@ span.spinner {
 }
 
 /**
- * Swap margin positions in RTL languages.
+ * Swap margin positions and arrow icons in RTL languages.
  */
 
 [dir="rtl"] {
@@ -442,6 +442,14 @@ span.spinner {
 
     .prev-next {
         float: left;
+
+        .ui-icon-arrowthick-1-w {
+            background-position: -32px -48px;
+        }
+
+        .ui-icon-arrowthick-1-e {
+            background-position: -96px -48px;
+        }
     }
 }
 
