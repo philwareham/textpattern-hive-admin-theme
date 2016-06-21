@@ -88,7 +88,7 @@ dd {
 
 .switcher-list {
     margin: 0 -1em;
-    padding-left: 0;
+    padding: 0;
     list-style: none;
 
     li {
@@ -116,6 +116,10 @@ dd {
             overflow: hidden;
         }
     }
+}
+
+[dir="rtl"] .switcher-list {
+    padding: 0;
 }
 
 /**

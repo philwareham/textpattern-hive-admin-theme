@@ -2039,7 +2039,7 @@ dd {
  */
 .switcher-list {
   margin: 0 -1em;
-  padding-left: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -2067,6 +2067,10 @@ dd {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+[dir="rtl"] .switcher-list {
+  padding: 0;
 }
 
 /**
