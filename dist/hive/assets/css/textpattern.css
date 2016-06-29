@@ -2073,6 +2073,10 @@ dd {
   padding: 0;
 }
 
+[dir="rtl"] .switcher-list a {
+  padding: 0.38461538461538em 1em 0.38461538461538em 2.5em;
+}
+
 /**
  * 'Destroy' buttons within switcher lists.
  */
@@ -2089,6 +2093,12 @@ dd {
 
 .switcher-list .destroy {
   top: 0.46153846153846em;
+}
+
+[dir="rtl"] .switcher-action,
+[dir="rtl"] .switcher-list .destroy {
+  right: auto;
+  left: 1em;
 }
 
 /* Tables
