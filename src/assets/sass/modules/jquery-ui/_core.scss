@@ -43,7 +43,7 @@
  * Clearfix jQuery UI elements.
  */
 
-.ui-helper-clearfix:after {
+.ui-helper-clearfix::after {
     display: table;
     clear: both;
     border-collapse: collapse;

@@ -156,7 +156,7 @@
         }
 
         // Indicator pointer.
-        &:before {
+        &::before {
             position: absolute;
             top: -0.5em; // 8px / 16px
             left: 4.28em; // 68px / 16px;
@@ -184,7 +184,7 @@
         > a {
             padding: 0 2em;
 
-            &.dropdown-toggle:after {
+            &.dropdown-toggle::after {
                 right: 1em;
             }
         }
@@ -210,7 +210,7 @@
         }
 
         // Remove indicator pointer.
-        &:before {
+        &::before {
             display: none;
         }
     }
@@ -289,7 +289,7 @@
             margin: 0;
             float: none;
 
-            &:after {
+            &::after {
                 display: none;
             }
         }
@@ -307,7 +307,7 @@
         li {
             margin: 0;
 
-            &:after {
+            &::after {
                 display: none;
             }
         }

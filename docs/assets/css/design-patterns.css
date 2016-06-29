@@ -23,7 +23,7 @@
   border: 1px solid #cccccc;
 }
 
-.design-patterns--color:after {
+.design-patterns--color::after {
   position: absolute;
   top: 0.69230769230769em;
   padding: 1px 0.23076923076923em;
@@ -35,7 +35,7 @@
   background: #333333;
 }
 
-.design-patterns--color-text:after {
+.design-patterns--color-text::after {
   content: "#333333";
 }
 
@@ -43,7 +43,7 @@
   background: #777777;
 }
 
-.design-patterns--color-text-footnote:after {
+.design-patterns--color-text-footnote::after {
   content: "#777777";
 }
 
@@ -51,7 +51,7 @@
   background: #eeeeee;
 }
 
-.design-patterns--color-gradient-from:after {
+.design-patterns--color-gradient-from::after {
   content: "#eeeeee";
 }
 
@@ -59,7 +59,7 @@
   background: #dddddd;
 }
 
-.design-patterns--color-gradient-to:after {
+.design-patterns--color-gradient-to::after {
   content: "#dddddd";
 }
 
@@ -67,7 +67,7 @@
   background: #cccccc;
 }
 
-.design-patterns--color-gradient-border:after {
+.design-patterns--color-gradient-border::after {
   content: "#cccccc";
 }
 
@@ -75,7 +75,7 @@
   background: #cccccc;
 }
 
-.design-patterns--color-border:after {
+.design-patterns--color-border::after {
   content: "#cccccc";
 }
 
@@ -83,7 +83,7 @@
   background: #004cbf;
 }
 
-.design-patterns--color-link:after {
+.design-patterns--color-link::after {
   content: "#004cbf";
 }
 
@@ -91,7 +91,7 @@
   background: #0066ff;
 }
 
-.design-patterns--color-link-hover:after {
+.design-patterns--color-link-hover::after {
   content: "#0066ff";
 }
 
@@ -99,7 +99,7 @@
   background: #0066ff;
 }
 
-.design-patterns--color-link-focus:after {
+.design-patterns--color-link-focus::after {
   content: "#0066ff";
 }
 
@@ -107,7 +107,7 @@
   background: #003380;
 }
 
-.design-patterns--color-link-visited:after {
+.design-patterns--color-link-visited::after {
   content: "#003380";
 }
 
@@ -115,7 +115,7 @@
   background: #cce0ff;
 }
 
-.design-patterns--color-link-selecting:after {
+.design-patterns--color-link-selecting::after {
   content: "#cce0ff";
 }
 
@@ -123,7 +123,7 @@
   background: #e6f0ff;
 }
 
-.design-patterns--color-link-selected:after {
+.design-patterns--color-link-selected::after {
   content: "#e6f0ff";
 }
 
@@ -131,7 +131,7 @@
   background: #ffffff;
 }
 
-.design-patterns--color-background:after {
+.design-patterns--color-background::after {
   content: "#ffffff";
 }
 
@@ -139,7 +139,7 @@
   background: #f7f7f7;
 }
 
-.design-patterns--color-background-box:after {
+.design-patterns--color-background-box::after {
   content: "#f7f7f7";
 }
 
@@ -147,7 +147,7 @@
   background: #fff9e1;
 }
 
-.design-patterns--color-highlight-box:after {
+.design-patterns--color-highlight-box::after {
   content: "#fff9e1";
 }
 
@@ -155,7 +155,7 @@
   background: #ffefaf;
 }
 
-.design-patterns--color-strong-highlight-box:after {
+.design-patterns--color-strong-highlight-box::after {
   content: "#ffefaf";
 }
 
@@ -163,7 +163,7 @@
   background: #ffda44;
 }
 
-.design-patterns--color-accent-gradient-from:after {
+.design-patterns--color-accent-gradient-from::after {
   content: "#ffda44";
 }
 
@@ -171,7 +171,7 @@
   background: #f7c600;
 }
 
-.design-patterns--color-accent-gradient-to:after {
+.design-patterns--color-accent-gradient-to::after {
   content: "#f7c600";
 }
 
@@ -179,7 +179,7 @@
   background: #238c23;
 }
 
-.design-patterns--color-success-text:after {
+.design-patterns--color-success-text::after {
   content: "#238c23";
 }
 
@@ -187,7 +187,7 @@
   background: #dff0d8;
 }
 
-.design-patterns--color-success-background:after {
+.design-patterns--color-success-background::after {
   content: "#dff0d8";
 }
 
@@ -195,7 +195,7 @@
   background: #cc8c00;
 }
 
-.design-patterns--color-warning-text:after {
+.design-patterns--color-warning-text::after {
   content: "#cc8c00";
 }
 
@@ -203,7 +203,7 @@
   background: #f7eedb;
 }
 
-.design-patterns--color-warning-background:after {
+.design-patterns--color-warning-background::after {
   content: "#f7eedb";
 }
 
@@ -211,7 +211,7 @@
   background: #9d261d;
 }
 
-.design-patterns--color-error-text:after {
+.design-patterns--color-error-text::after {
   content: "#9d261d";
 }
 
@@ -219,7 +219,7 @@
   background: #f2dede;
 }
 
-.design-patterns--color-error-background:after {
+.design-patterns--color-error-background::after {
   content: "#f2dede";
 }
 
@@ -227,7 +227,7 @@
   background: #3a87ad;
 }
 
-.design-patterns--color-info-text:after {
+.design-patterns--color-info-text::after {
   content: "#3a87ad";
 }
 
@@ -235,7 +235,7 @@
   background: #e7f6fc;
 }
 
-.design-patterns--color-info-background:after {
+.design-patterns--color-info-background::after {
   content: "#e7f6fc";
 }
 

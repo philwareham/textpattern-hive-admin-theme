@@ -130,7 +130,7 @@ button.txp-nav-toggle {
     position: relative;
     padding-right: 1.61538461538462em; // 21px / 13px
 
-    &:after {
+    &::after {
         @include hide-text;
 
         display: block;
@@ -148,8 +148,8 @@ button.txp-nav-toggle {
         z-index: 10;
     }
 
-    &:hover:after,
-    &:active:after {
+    &:hover::after,
+    &:active::after {
         opacity: 1;
     }
 }
@@ -158,7 +158,7 @@ button.txp-nav-toggle {
  * Indicator symbols on open dropdown toggle links.
  */
 
-.txp-nav > ul > li.open > a.dropdown-toggle:after {
+.txp-nav > ul > li.open > a.dropdown-toggle::after {
     border: 0 solid transparent;
     border-width: 0 0.25em 0.25em;
     border-bottom-color: $color-text;
@@ -257,7 +257,7 @@ button.txp-nav-toggle {
     }
 
     // Indicator pointer.
-    &:before {
+    &::before {
         position: absolute;
         top: -0.5em; // 8px / 16px
         left: 0.75em; // 12px / 16px;

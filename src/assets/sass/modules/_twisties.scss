@@ -94,7 +94,7 @@ h3.txp-summary a {
         text-decoration: none;
     }
 
-    &:after {
+    &::after {
         @include hide-text;
 
         display: block;
@@ -112,7 +112,7 @@ h3.txp-summary a {
         z-index: 10;
     }
 
-    &:hover:after {
+    &:hover::after {
         opacity: 1;
     }
 }
@@ -121,7 +121,7 @@ h3.txp-summary a {
  * Additonal styling for lever summary headings - expanded state.
  */
 
-h3.txp-summary.expanded a:after {
+h3.txp-summary.expanded a::after {
     top: 0.6875em; // 11px / 16px
     right: 0.5625em; // 9px / 16px
     border: 0 solid transparent;

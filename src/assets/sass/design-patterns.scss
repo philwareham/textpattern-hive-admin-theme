@@ -67,7 +67,7 @@ $colors: (
     margin: 1em 0;
     border: 1px solid $color-border;
 
-    &:after {
+    &::after {
         position: absolute;
         top: 0.69230769230769em; // 9px / 13px
         padding: 1px 0.23076923076923em; // 3px / 13px
@@ -80,7 +80,7 @@ $colors: (
     .design-patterns--color-#{$name} {
         background: $color;
 
-        &:after {
+        &::after {
             content: "#{$color}";
         }
     }

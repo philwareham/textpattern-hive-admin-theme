@@ -103,7 +103,7 @@
     font-size: $small-font-size;
     line-height: $small-line-height;
 
-    &:after {
+    &::after {
         display: table;
         clear: both;
         content: "";

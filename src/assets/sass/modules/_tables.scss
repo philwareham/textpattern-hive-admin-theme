@@ -169,7 +169,7 @@ td {
     &.desc {
         @include gradient-linear(darken($color-gradient-to, 4%), darken($color-gradient-from, 4%));
 
-        a:after {
+        a::after {
             @include hide-text;
 
             display: block;
@@ -188,19 +188,19 @@ td {
             }
         }
 
-        a:hover:after {
+        a:hover::after {
             opacity: 1;
         }
     }
 
-    &.desc a:after {
+    &.desc a::after {
         border: 0 solid transparent;
         border-width: 0.25em 0.25em 0;
         border-top-color: $color-text;
         content: "\2193";
     }
 
-    &.asc a:after {
+    &.asc a::after {
         border: 0 solid transparent;
         border-width: 0 0.25em 0.25em;
         border-bottom-color: $color-text;
