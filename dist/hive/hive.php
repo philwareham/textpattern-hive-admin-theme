@@ -71,7 +71,15 @@ class hive_theme extends \Textpattern\Admin\Theme
     function header()
     {
         global $txp_user;
-        $out[] = hed(htmlspecialchars($GLOBALS["prefs"]["sitename"]), 1);
+
+        $default_event = get_pref('default_event');
+        $homelink = htmlspecialchars($GLOBALS["prefs"]["sitename"]);
+
+        if (!empty($default_event) && has_privs($default_event)) {
+            $homelink = href($homelink, array('event' => $default_event));
+        }
+
+        $out[] = hed($homelink, 1);
 
         if ($txp_user) {
             $out[] = '<button class="txp-nav-toggle collapsed" type="button" data-toggle="collapse" data-target="#txp-nav" aria-expanded="false" aria-controls="txp-nav"><span class="txp-accessibility">'.gTxt('navigation').'</span></button>';
