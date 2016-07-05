@@ -54,12 +54,12 @@
  * Example HTML:
  *
  * <header class="txp-header">
- *     <h1><a>My site</a></h1>
+ *     <h1>
+ *         <a><span>My site</span></a>
+ *     </h1>
  */
 
 .txp-header h1 {
-    @include hide-text;
-
     width: 8em;
     height: 2em;
     margin: 0.0625em 0.5em 0 0; // 1px / 16px, 8px / 16px
@@ -67,6 +67,18 @@
     background: url("../img/sprite.svg") no-repeat;
     background-size: 13em 2em; // 208px / 16px + 32px / 16px
     font-size: 16px;
+
+    a {
+        display: block;
+        width: 8em;
+        height: 2em;
+
+        span {
+            @include hide-text;
+
+            display: block;
+        }
+    }
 }
 
 /**
@@ -75,20 +87,14 @@
  * Example HTML:
  *
  * <p class="txp-view-site">
- *      <a>
-            <span class="txp-view-site-name">My site</span>
-        </a>
+ *      <a>View site</a>
  * </p>
  */
 
 .txp-view-site {
-    max-width: 22%;
     margin: 0 1em;
     float: left;
     line-height: 2.69230769230769em; // 35px / 13px
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
 
     a {
         color: $color-text;

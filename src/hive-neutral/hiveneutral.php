@@ -76,7 +76,10 @@ class hiveNeutral_theme extends \Textpattern\Admin\Theme
         $homelink = htmlspecialchars($GLOBALS["prefs"]["sitename"]);
 
         if (!empty($default_event) && has_privs($default_event)) {
-            $homelink = href($homelink, array('event' => $default_event));
+            $homelink = href(span($homelink), array('event' => $default_event), array(
+                'title'      => 'test',
+                'aria-label' => 'test',
+            ));
         }
 
         $out[] = hed($homelink, 1);
@@ -113,8 +116,7 @@ class hiveNeutral_theme extends \Textpattern\Admin\Theme
             $out[] = '</ul>';
             $out[] = '</nav>';
             $out[] = graf(
-                href(span(htmlspecialchars($GLOBALS["prefs"]["sitename"]), array('class' => 'txp-view-site-name')), hu, array(
-                    'rel'    => 'external',
+                href(gTxt('tab_view_site'), hu, array(
                     'target' => '_blank',
                     'title'  => gTxt('tab_view_site'),
                 )), array('class' => 'txp-view-site'));
