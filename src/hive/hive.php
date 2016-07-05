@@ -76,10 +76,7 @@ class hive_theme extends \Textpattern\Admin\Theme
         $homelink = htmlspecialchars($GLOBALS["prefs"]["sitename"]);
 
         if (!empty($default_event) && has_privs($default_event)) {
-            $homelink = href(span($homelink), array('event' => $default_event), array(
-                'title'      => 'test',
-                'aria-label' => 'test',
-            ));
+            $homelink = href(span($homelink), array('event' => $default_event));
         }
 
         $out[] = hed($homelink, 1);
@@ -116,10 +113,8 @@ class hive_theme extends \Textpattern\Admin\Theme
             $out[] = '</ul>';
             $out[] = '</nav>';
             $out[] = graf(
-                href(gTxt('tab_view_site'), hu, array(
-                    'target' => '_blank',
-                    'title'  => gTxt('tab_view_site'),
-                )), array('class' => 'txp-view-site'));
+                href(gTxt('tab_view_site'), hu, array('target' => '_blank')),
+                array('class' => 'txp-view-site'));
             $out[] = graf(
                 href(gTxt('logout'), 'index.php?logout=1', ' onclick="return verify(\''.gTxt('are_you_sure').'\')"'), array('class' => 'txp-logout'));
         }
