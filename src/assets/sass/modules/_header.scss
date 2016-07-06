@@ -72,12 +72,12 @@
         display: block;
         width: 8em;
         height: 2em;
+    }
 
-        span {
-            @include hide-text;
+    span {
+        @include hide-text;
 
-            display: block;
-        }
+        display: block;
     }
 }
 
