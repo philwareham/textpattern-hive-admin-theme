@@ -2416,10 +2416,13 @@ body {
  * Example HTML:
  *
  * <p class="txp-view-site">
- *      <a>View site</a>
+ *     <a>
+ *         <span class="txp-view-site-name">My site</span>
+ *     </a>
  * </p>
  */
 .txp-view-site {
+  max-width: 22%;
   margin: 0 1em;
   float: left;
   line-height: 2.69230769230769em;
@@ -6447,7 +6450,9 @@ label.ui-state-active.ui-button:active {
      * Example HTML:
      *
      * <p class="txp-view-site">
-     *      <a>View site</a>
+     *     <a>
+     *         <span class="txp-view-site-name">My site</span>
+     *     </a>
      * </p>
      */
   .txp-view-site {
