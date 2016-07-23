@@ -2423,6 +2423,9 @@ body {
   margin: 0 1em;
   float: left;
   line-height: 2.69230769230769em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .txp-view-site a {

@@ -113,8 +113,10 @@ class hive_theme extends \Textpattern\Admin\Theme
             $out[] = '</ul>';
             $out[] = '</nav>';
             $out[] = graf(
-                href(gTxt('tab_view_site'), hu, array('target' => '_blank')),
-                array('class' => 'txp-view-site'));
+                href(span(htmlspecialchars($GLOBALS["prefs"]["sitename"]), array('class' => 'txp-view-site-name')), hu, array(
+                    'target' => '_blank',
+                    'title'  => gTxt('tab_view_site'),
+                )), array('class' => 'txp-view-site'));
             $out[] = graf(
                 href(gTxt('logout'), 'index.php?logout=1', ' onclick="return verify(\''.gTxt('are_you_sure').'\')"'), array('class' => 'txp-logout'));
         }
