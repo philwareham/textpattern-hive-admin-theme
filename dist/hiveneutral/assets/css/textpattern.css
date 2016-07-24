@@ -2352,6 +2352,8 @@ body {
  */
 .txp-header {
   background-color: #c7e0f6;
+  display: -ms-flexbox;
+  display: flex;
   position: fixed;
   top: 0;
   right: 0;
@@ -2387,10 +2389,11 @@ body {
  *     </h1>
  */
 .txp-header h1 {
-  width: 8em;
+  -ms-flex: none;
+      flex: none;
+  width: 8.125em;
   height: 2em;
   margin: 0.0625em 0.5em 0 0;
-  float: left;
   background: url("../img/sprite.svg") no-repeat;
   background-size: 13em 2em;
   font-size: 16px;
@@ -2398,7 +2401,7 @@ body {
 
 .txp-header h1 a {
   display: block;
-  width: 8em;
+  width: 8.125em;
   height: 2em;
 }
 
