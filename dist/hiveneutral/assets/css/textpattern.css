@@ -2425,9 +2425,8 @@ body {
  * </p>
  */
 .txp-view-site {
-  max-width: 22%;
   margin: 0 1em;
-  float: left;
+  background: #00ff00;
   line-height: 2.69230769230769em;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2447,9 +2446,11 @@ body {
  * <p class="txp-logout">
  */
 .txp-logout {
-  position: absolute;
+  position: relative;
   top: -0.76923076923077em;
-  right: 2.75%;
+  -ms-flex: none;
+      flex: none;
+  background: #ff0000;
 }
 
 /* Footer
@@ -2514,8 +2515,10 @@ button.txp-nav-toggle {
  * <nav class="txp-nav">
  */
 .txp-nav {
+  display: -ms-flexbox;
+  display: flex;
   margin: 0;
-  float: left;
+  background: #0000ff;
   list-style: none;
 }
 
@@ -6442,10 +6445,10 @@ label.ui-state-active.ui-button:active {
      * Smaller version of Textpattern logo.
      */
   .txp-header h1 {
-    width: 1.625em;
+    width: 1.75em;
   }
   .txp-header h1 a {
-    width: 1.625em;
+    width: 1.75em;
   }
   /**
      * 'View site' link.

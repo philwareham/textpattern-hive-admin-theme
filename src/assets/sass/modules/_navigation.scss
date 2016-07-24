@@ -22,8 +22,9 @@ button.txp-nav-toggle {
  */
 
 .txp-nav {
+    display: flex;
     margin: 0;
-    float: left;
+    background: #0000ff;
     list-style: none;
 
     ul {
