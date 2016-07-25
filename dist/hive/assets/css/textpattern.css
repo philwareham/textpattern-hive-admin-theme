@@ -2818,6 +2818,24 @@ button.txp-nav-toggle {
 }
 
 /**
+ * Secondary-level navigation menu in RTL languages.
+ */
+[dir="rtl"] .dropdown-menu {
+  right: 0;
+  left: auto;
+  border-radius: 0.5em 0 0.5em;
+}
+
+[dir="rtl"] .dropdown-menu li:first-child {
+  border-radius: 0.5em 0 0;
+}
+
+[dir="rtl"] .dropdown-menu::before {
+  right: 0.75em;
+  left: auto;
+}
+
+/**
  * Show drop-down menu when toggle clicked.
  *
  * Example HTML:

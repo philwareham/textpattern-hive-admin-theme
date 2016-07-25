@@ -302,6 +302,28 @@ button.txp-nav-toggle {
 }
 
 /**
+ * Secondary-level navigation menu in RTL languages.
+ */
+
+[dir="rtl"] .dropdown-menu {
+    right: 0;
+    left: auto;
+    @if $border-radius > 0 {
+        border-radius: $border-radius 0 $border-radius;
+
+        li:first-child {
+            border-radius: $border-radius 0 0;
+        }
+    }
+
+    // Indicator pointer.
+    &::before {
+        right: 0.75em; // 12px / 16px;
+        left: auto;
+    }
+}
+
+/**
  * Show drop-down menu when toggle clicked.
  *
  * Example HTML:
