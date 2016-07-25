@@ -126,12 +126,25 @@ button.txp-nav-toggle {
 }
 
 /**
+ * Reverse border in RTL languages.
+ */
+
+[dir="rtl"] .txp-nav > ul > li {
+    border-right: 0;
+    border-left: 1px solid $color-accent-gradient-to;
+
+    &:first-child {
+        border-right: 1px solid $color-accent-gradient-to;
+    }
+}
+
+/**
  * Indicator symbols on closed dropdown toggle links.
  */
 
 .txp-nav > ul > li > a.dropdown-toggle {
     position: relative;
-    padding-right: 1.61538461538462em; // 21px / 13px
+    padding: 0 1.61538461538462em 0 1em; // 21px / 13px
 
     &::after {
         @include hide-text;
@@ -154,6 +167,19 @@ button.txp-nav-toggle {
     &:hover::after,
     &:active::after {
         opacity: 1;
+    }
+}
+
+/**
+ * Indicator symbols in RTL languages.
+ */
+
+[dir="rtl"] .txp-nav > ul > li > a.dropdown-toggle {
+    padding: 0 1em 0 1.61538461538462em; // 21px / 13px
+
+    &::after {
+        right: auto;
+        left: 0.5625em; // 9px / 16px
     }
 }
 

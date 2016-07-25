@@ -2625,11 +2625,23 @@ button.txp-nav-toggle {
 }
 
 /**
+ * Reverse border in RTL languages.
+ */
+[dir="rtl"] .txp-nav > ul > li {
+  border-right: 0;
+  border-left: 1px solid #c7e0f6;
+}
+
+[dir="rtl"] .txp-nav > ul > li:first-child {
+  border-right: 1px solid #c7e0f6;
+}
+
+/**
  * Indicator symbols on closed dropdown toggle links.
  */
 .txp-nav > ul > li > a.dropdown-toggle {
   position: relative;
-  padding-right: 1.61538461538462em;
+  padding: 0 1.61538461538462em 0 1em;
 }
 
 .txp-nav > ul > li > a.dropdown-toggle::after {
@@ -2654,6 +2666,18 @@ button.txp-nav-toggle {
 
 .txp-nav > ul > li > a.dropdown-toggle:hover::after, .txp-nav > ul > li > a.dropdown-toggle:active::after {
   opacity: 1;
+}
+
+/**
+ * Indicator symbols in RTL languages.
+ */
+[dir="rtl"] .txp-nav > ul > li > a.dropdown-toggle {
+  padding: 0 1em 0 1.61538461538462em;
+}
+
+[dir="rtl"] .txp-nav > ul > li > a.dropdown-toggle::after {
+  right: auto;
+  left: 0.5625em;
 }
 
 /**
