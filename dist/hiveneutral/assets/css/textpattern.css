@@ -2414,6 +2414,13 @@ body {
 }
 
 /**
+ * Reverse Textpattern logo margin in RTL languages.
+ */
+[dir="rtl"] .txp-header h1 {
+  margin: 0.0625em 0 0 0.5em;
+}
+
+/**
  * 'View site' link.
  *
  * Example HTML:
@@ -2528,6 +2535,11 @@ button.txp-nav-toggle {
   list-style: none;
 }
 
+.txp-nav > ul {
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .txp-nav a {
   color: #333333;
 }
@@ -2584,7 +2596,6 @@ button.txp-nav-toggle {
 .txp-nav > ul > li {
   display: block;
   position: relative;
-  float: left;
   border-right: 1px solid #c7e0f6;
   background: rgba(255, 255, 255, 0.25);
 }
@@ -2705,6 +2716,8 @@ button.txp-nav-toggle {
   position: absolute;
   top: 3em;
   left: 0;
+  -ms-flex: none;
+      flex: none;
   min-width: 12em;
   border: 1px solid;
   border-radius: 0 0.3em 0.3em;

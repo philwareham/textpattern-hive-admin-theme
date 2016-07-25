@@ -32,6 +32,10 @@ button.txp-nav-toggle {
         list-style: none;
     }
 
+    > ul {
+        display: flex;
+    }
+
     a {
         color: $color-text;
 
@@ -90,7 +94,6 @@ button.txp-nav-toggle {
 .txp-nav > ul > li {
     display: block;
     position: relative;
-    float: left;
     border-right: 1px solid $color-accent-gradient-to;
     background: rgba($color-text-inverse, 0.25);
 
@@ -216,6 +219,7 @@ button.txp-nav-toggle {
     position: absolute;
     top: 3em;
     left: 0;
+    flex: none;
     min-width: 12em;
     border: 1px solid;
     @if $border-radius > 0 {
