@@ -39,10 +39,10 @@
      */
 
     .txp-header h1 {
-        width: 1.625em; // 26px / 16px
+        width: 1.75em; // 28px / 16px
 
         a {
-            width: 1.625em; // 26px / 16px
+            width: 1.75em; // 28px / 16px
         }
     }
 
@@ -52,13 +52,17 @@
      * Example HTML:
      *
      * <p class="txp-view-site">
-     *      <a>View site</a>
+     *     <a>
+     *         <span class="txp-view-site-name">My site</span>
+     *     </a>
      * </p>
      */
 
     .txp-view-site {
         margin: 0.0625em 0.375em 0; // 1px / 16px + 6px / 16px;
+        padding: 0;
         font-size: 16px;
+        overflow: inherit;
 
         a {
             @include hide-text;
@@ -69,14 +73,6 @@
             background: url("../img/sprite.svg") no-repeat -8em 0;
             background-size: 13em 2em; // 208px / 16px + 32px / 16px
         }
-    }
-
-    /**
-     * Adjust right absolute position of logout button.
-     */
-
-    .txp-logout {
-        right: 2em; // 26px
     }
 
 }
