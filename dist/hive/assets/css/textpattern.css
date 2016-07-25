@@ -2455,8 +2455,10 @@ body {
  * </p>
  */
 .txp-view-site {
+  -ms-flex: 1;
+      flex: 1;
   margin: 0 1em;
-  background: #00ff00;
+  padding: 0 1px;
   line-height: 2.69230769230769em;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2480,7 +2482,6 @@ body {
   top: -0.76923076923077em;
   -ms-flex: none;
       flex: none;
-  background: #ff0000;
 }
 
 /* Footer
@@ -2545,10 +2546,9 @@ button.txp-nav-toggle {
  * <nav class="txp-nav">
  */
 .txp-nav {
-  display: -ms-flexbox;
-  display: flex;
+  -ms-flex: none;
+      flex: none;
   margin: 0;
-  background: #0000ff;
   list-style: none;
 }
 
@@ -6517,7 +6517,9 @@ label.ui-state-active.ui-button:active {
      */
   .txp-view-site {
     margin: 0.0625em 0.375em 0;
+    padding: 0;
     font-size: 16px;
+    overflow: inherit;
   }
   .txp-view-site a {
     text-indent: 110%;
