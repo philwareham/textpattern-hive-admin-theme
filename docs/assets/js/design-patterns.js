@@ -65,8 +65,8 @@ $(function ()
     // Icon button.
 
     $('.jquery-ui-button-icon-only').button({
-        icon: 'ui-icon-gear',
-        showLabel: false
+        showLabel: false,
+        icon: 'ui-icon-gear'
     });
 
     $('.jquery-ui-button-icon-left').button({
@@ -88,10 +88,8 @@ $(function ()
         })
         .next()
         .button({
-            text: false,
-            icons: {
-                primary: 'ui-icon-triangle-1-s'
-            }
+            showLabel: false,
+            icon: 'ui-icon-triangle-1-s'
         })
         .click(function ()
         {
@@ -107,7 +105,7 @@ $(function ()
             return false;
         })
         .parent()
-        .buttonset()
+        .controlgroup()
         .next()
         .hide()
         .menu();
@@ -117,10 +115,8 @@ $(function ()
     var search = $('.txp-search');
 
     search.find('.txp-search-button').button({
-        text: false,
-        icons: {
-            primary: 'ui-icon-search'
-        }
+        showLabel: false,
+        icon: 'ui-icon-search'
     })
     .click(function ()
     {
@@ -128,10 +124,8 @@ $(function ()
     });
 
     search.find('.txp-search-options').button({
-        text: false,
-        icons: {
-            primary: 'ui-icon-triangle-1-s'
-        }
+        showLabel: false,
+        icon: 'ui-icon-triangle-1-s'
     })
     .click(function (e)
     {
@@ -147,7 +141,7 @@ $(function ()
         return false;
     });
 
-    search.find('.txp-search-buttons').buttonset();
+    search.find('.txp-search-buttons').controlgroup();
 
     search.find('.txp-dropdown').hide().menu().click(function(e) {
         e.stopPropagation();
