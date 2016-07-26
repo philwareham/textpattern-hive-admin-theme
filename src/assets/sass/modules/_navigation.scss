@@ -309,7 +309,7 @@ button.txp-nav-toggle {
     right: 0;
     left: auto;
     @if $border-radius > 0 {
-        border-radius: $border-radius 0 $border-radius;
+        border-radius: $border-radius 0;
 
         li:first-child {
             border-radius: $border-radius 0 0;
