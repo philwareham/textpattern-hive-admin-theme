@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Articles - My Site &#124; Textpattern CMS</title>
+    <script src="../docs/assets/js/jquery.js"></script>
+    <script src="../docs/assets/js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../dist/hive/assets/css/textpattern.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="generator" content="Textpattern CMS">
+    <meta name="application-name" content="My site">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="My site">
+    <script src="../dist/hive/assets/js/main.js"></script>
+
+    <script src="../docs/assets/js/design-patterns.js"></script>
+
+</head>
+<body class="content" id="page-list">
+
+    <header class="txp-header">
+        <h1>
+            <a href="#"><span>Textpattern</span></a>
+        </h1>
+
+        <button class="txp-nav-toggle collapsed" type="button" data-toggle="collapse" data-target="#txp-nav" aria-expanded="false" aria-controls="txp-nav">
+            <span class="txp-accessibility">Navigation</span>
+        </button>
+
+        <nav class="txp-nav" id="txp-nav" aria-label="Navigation">
+            <ul class="data-dropdown">
+                <li class="dropdown selected">
+                    <a class="dropdown-toggle" id="txp-nav-drop1" role="button" aria-controls="txp-nav-drop1-menu" data-toggle="dropdown" href="#">
+                        Content
+                    </a>
+                    <ul class="dropdown-menu" id="txp-nav-drop1-menu" role="menu" aria-labelledby="txp-nav-drop1">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="content-article.html">Write</a>
+                        </li>
+                        <li class="selected" role="presentation">
+                            <a role="menuitem" tabindex="-1" href="content-list.html">Articles</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="content-image.html">Images</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="content-file.html">Files</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="content-link.html">Links</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="content-category.html">Categories</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="content-discuss.html">Comments</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" id="txp-nav-drop2" role="button" aria-controls="txp-nav-drop2-menu" data-toggle="dropdown" href="#">
+                        Presentation
+                    </a>
+                    <ul class="dropdown-menu" id="txp-nav-drop2-menu" role="menu" aria-labelledby="txp-nav-drop2">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="presentation-section.html">Sections</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="presentation-page.html">Pages</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="presentation-form.html">Forms</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="presentation-css.html">Styles</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" id="txp-nav-drop3" role="button" aria-controls="txp-nav-drop3-menu" data-toggle="dropdown" href="#">
+                        Admin
+                    </a>
+                    <ul class="dropdown-menu" id="txp-nav-drop3-menu" role="menu" aria-labelledby="txp-nav-drop3">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="admin-diag.html">Diagnostics</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="admin-prefs.html">Preferences</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="admin-languages.html">Languages</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="admin-admin.html">Users</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="admin-log.html">Visitor logs</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="admin-plugin.html">Plugins</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" id="txp-nav-drop4" role="button" aria-controls="txp-nav-drop4-menu" data-toggle="dropdown" href="#">
+                        Extensions
+                    </a>
+                    <ul class="dropdown-menu" id="txp-nav-drop4-menu" role="menu" aria-labelledby="txp-nav-drop4">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Extension 1</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Extension 2</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Extension 3</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Extension 4</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Extension 5</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="txp-view-site"><a target="_blank" title="View site" href="#"><span class="txp-view-site-name">My site</span></a></p>
+        <p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Log out</a></p>
+
+    </header><!-- /txp-header -->
+
+    <main class="txp-body" aria-label="Main content">
+
+        <div id="messagepane"></div>
+
+        <div class="txp-layout-2col-cell-1">
+            <h1 class="txp-heading">Articles</h1>
+        </div>
+
+        <div class="txp-layout-2col-cell-2">
+            <form class="txp-search" role="search" method="get" action="#">
+                <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search articles…">
+                <span class="txp-search-buttons">
+                    <button class="txp-search-button">Search</button>
+                    <button class="txp-search-options">Search criteria</button>
+                </span>
+                <ul class="txp-dropdown">
+                    <li>
+                        <div>
+                            <input class="checkbox" id="search-all0" name="select_all" type="checkbox" value="all">
+                            <label for="search-all0">Search all</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <input class="checkbox active" id="search-id0" name="search_method[]" type="checkbox" value="id" checked="checked">
+                            <label for="search-id0">ID#</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <input class="checkbox" id="search-title_body_excerpt0" name="search_method[]" type="checkbox" value="title_body_excerpt">
+                            <label for="search-title_body_excerpt0">Title, body and excerpt plus extra text to test longer lines</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <input class="checkbox" id="search-section0" name="search_method[]" type="checkbox" value="section">
+                            <label for="search-section0">Section</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <input class="checkbox" id="search-keywords0" name="search_method[]" type="checkbox" value="keywords">
+                            <label for="search-keywords0">Keywords</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <input class="checkbox" id="search-categories0" name="search_method[]" type="checkbox" value="categories">
+                            <label for="search-categories0">Categories</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <input class="checkbox" id="search-status0" name="search_method[]" type="checkbox" value="status">
+                            <label for="search-status0">Status</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <input class="checkbox" id="search-author0" name="search_method[]" type="checkbox" value="author">
+                            <label for="search-author0">Author</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <input class="checkbox" id="search-article_image0" name="search_method[]" type="checkbox" value="article_image">
+                            <label for="search-article_image0">Article image</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <input class="checkbox" id="search-posted0" name="search_method[]" type="checkbox" value="posted">
+                            <label for="search-posted0">Posted</label>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <input class="checkbox" id="search-lastmod0" name="search_method[]" type="checkbox" value="lastmod">
+                            <label for="search-lastmod0">Modified</label>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        <div class="txp-layout-1col">
+            <div class="txp-control-panel">
+                <a class="txp-button" href="content-article.html">Create new article</a>
+            </div>
+            <div class="txp-list-options">
+                <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+            </div>
+
+            <form class="multi_edit_form" id="articles_form" name="longform" method="post" action="#">
+                <div class="txp-listtables">
+                    <table class="txp-list">
+
+                        <thead>
+                            <tr>
+                                <th class="txp-list-col-multi-edit" scope="col" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                                <th class="txp-list-col-id" scope="col"><a href="#">ID#</a></th>
+                                <th class="txp-list-col-title" scope="col"><a href="#">Title</a></th>
+                                <th class="txp-list-col-posted date created desc" scope="col"><a href="#">Posted</a></th>
+                                <th class="txp-list-col-lastmod date articles_detail" scope="col"><a href="#">Modified</a></th>
+                                <th class="txp-list-col-expires date articles_detail" scope="col"><a href="#">Expires</a></th>
+                                <th class="txp-list-col-section" scope="col"><a href="#">Section</a></th>
+                                <th class="txp-list-col-category1 category articles_detail" scope="col"><a href="#">Category 1</a></th>
+                                <th class="txp-list-col-category2 category articles_detail" scope="col"><a href="#">Category 2</a></th>
+                                <th class="txp-list-col-status" scope="col"><a href="#">Status</a></th>
+                                <th class="txp-list-col-author name" scope="col"><a href="#">Author</a></th>
+                                <th class="txp-list-col-comments articles_detail" scope="col"><a href="#">Comments</a></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="txp-list-col-multi-edit"><input type="checkbox" value="2" name="selected[]" class="checkbox"></td>
+                                <th class="txp-list-col-id" scope="row"><a href="#">2</a><span class="txp-option-link articles_detail">&#160;<span role="separator">|</span>&#160;<a href="#" title="View">View</a></span></th>
+                                <td class="txp-list-col-title"><a href="#">test article 2 title</a></td>
+                                <td class="txp-list-col-created date">03&#160;Jul&#160;2011 12:27:33</td>
+                                <td class="txp-list-col-lastmod date articles_detail">03&#160;Jul&#160;2011 12:27:33</td>
+                                <td class="txp-list-col-expires date articles_detail">&#160;</td>
+                                <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                <td class="txp-list-col-category1 category articles_detail">&#160;</td>
+                                <td class="txp-list-col-category2 category articles_detail">&#160;</td>
+                                <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                <td class="txp-list-col-comments articles_detail">
+                                    <span class="comments-status">On</span>
+                                    <span class="comments-manage"><a title="Manage" href="#">(1)</a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                <th class="txp-list-col-id" scope="row"><a href="#">1</a><span class="txp-option-link articles_detail">&#160;<span role="separator">|</span>&#160;<a href="#" title="View">View</a></span></th>
+                                <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                <td class="txp-list-col-lastmod date articles_detail">29&#160;Jun&#160;2011 19:07:55</td>
+                                <td class="txp-list-col-expires date articles_detail">&#160;</td>
+                                <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                <td class="txp-list-col-category1 category articles_detail"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                <td class="txp-list-col-category2 category articles_detail"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                <td class="txp-list-col-comments articles_detail">
+                                    <span class="comments-status">Expired</span>
+                                    <span class="comments-manage">(0)</span>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div><!-- /txp-listtables -->
+
+                <div class="multi-edit">
+                    <select name="edit_method">
+                        <option value="" selected="selected">With selected&#8230;</option>
+                        <option value="changesection">Change section</option>
+                        <option value="changecategory1">Change category1</option>
+                        <option value="changecategory2">Change category2</option>
+                        <option value="changestatus">Change status</option>
+                        <option value="changecomments">Change comments</option>
+                        <option value="changeauthor">Change author</option>
+                        <option value="delete">Delete</option>
+                    </select>
+                </div>
+
+            </form>
+
+            <div class="txp-navigation" id="list_navigation">
+                <div class="nav-tertiary pageby">
+                    <a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a>
+                </div>
+
+                <nav class="prev-next">
+                    <span class="disabled" aria-disabled="true" aria-label="Previous"><span class="ui-icon ui-icon-arrowthick-1-w">Previous</span></span>
+                    <form method="get" action="index.php">
+                        <label for="current-page">Page</label>
+                        <input class="current-page" id="current-page" name="page" type="text" size="4" inputmode="numeric" pattern="[0-9]+" value="1" />
+                        of <span class="total-pages">2</span>
+                    </form>
+                    <a rel="next" title="Next" aria-label="Next" href="#"><span class="ui-icon ui-icon-arrowthick-1-e">Next</span></a>
+                </nav>
+            </div>
+
+        </div><!-- /txp-layout-1col -->
+    </main><!-- /txp-body -->
+
+    <footer class="txp-footer">
+        <p class="mothership"><a href="http://textpattern.com" title="Go to the Textpattern website" rel="external" target="_blank">Textpattern CMS</a> (v4.6)</p>
+        <p class="pagejump"><a href="#">Back to top</a></p>
+    </footer><!-- /txp-footer -->
+
+</body>
+</html>
