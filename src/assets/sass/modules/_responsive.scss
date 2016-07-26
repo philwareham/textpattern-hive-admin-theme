@@ -186,11 +186,21 @@
             border-left: 0;
         }
 
-        > a {
+        > a,
+        > a.dropdown-toggle {
             padding: 0 2em;
 
-            &.dropdown-toggle::after {
-                right: 1em;
+            [dir="rtl"] & {
+                padding: 0 2em;
+            }
+        }
+
+        a.dropdown-toggle::after {
+            right: 1em;
+
+            [dir="rtl"] & {
+                right: auto;
+                left: 1em;
             }
         }
     }
@@ -212,6 +222,10 @@
 
         a {
             padding: 0.5em 2em 0.5em 3em;
+
+            [dir="rtl"] & {
+                padding: 0.5em 3em 0.5em 2em;
+            }
         }
 
         // Remove indicator pointer.

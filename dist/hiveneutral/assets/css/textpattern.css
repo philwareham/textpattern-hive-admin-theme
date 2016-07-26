@@ -6643,11 +6643,20 @@ label.ui-state-active.ui-button:active {
   .txp-nav > ul > li:first-child {
     border-left: 0;
   }
-  .txp-nav > ul > li > a {
+  .txp-nav > ul > li > a,
+  .txp-nav > ul > li > a.dropdown-toggle {
     padding: 0 2em;
   }
-  .txp-nav > ul > li > a.dropdown-toggle::after {
+  [dir="rtl"] .txp-nav > ul > li > a, [dir="rtl"]
+  .txp-nav > ul > li > a.dropdown-toggle {
+    padding: 0 2em;
+  }
+  .txp-nav > ul > li a.dropdown-toggle::after {
     right: 1em;
+  }
+  [dir="rtl"] .txp-nav > ul > li a.dropdown-toggle::after {
+    right: auto;
+    left: 1em;
   }
   /**
      * Secondary-level navigation menu items (submenus).
@@ -6660,6 +6669,9 @@ label.ui-state-active.ui-button:active {
   }
   .dropdown-menu a {
     padding: 0.5em 2em 0.5em 3em;
+  }
+  [dir="rtl"] .dropdown-menu a {
+    padding: 0.5em 3em 0.5em 2em;
   }
   .dropdown-menu::before {
     display: none;

@@ -144,7 +144,7 @@ button.txp-nav-toggle {
 
 .txp-nav > ul > li > a.dropdown-toggle {
     position: relative;
-    padding: 0 1.61538461538462em 0 1em; // 21px / 13px
+    padding: 0 1.61538461538462em 0 1em;
 
     &::after {
         @include hide-text;
@@ -175,7 +175,7 @@ button.txp-nav-toggle {
  */
 
 [dir="rtl"] .txp-nav > ul > li > a.dropdown-toggle {
-    padding: 0 1em 0 1.61538461538462em; // 21px / 13px
+    padding: 0 1em 0 1.61538461538462em;
 
     &::after {
         right: auto;
