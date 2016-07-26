@@ -6622,7 +6622,7 @@ label.ui-state-active.ui-button:active {
   .txp-nav.in .data-dropdown::before {
     position: absolute;
     top: -0.5em;
-    left: 4.28em;
+    left: 4.375em;
     width: 1em;
     height: 0.5em;
     background: url("../img/sprite.svg") no-repeat -12em 0;
@@ -6630,6 +6630,10 @@ label.ui-state-active.ui-button:active {
     font-size: 16px;
     content: "";
     z-index: 2;
+  }
+  [dir="rtl"] .txp-nav.in .data-dropdown::before {
+    right: 4.375em;
+    left: auto;
   }
   .txp-nav > ul > li {
     float: none;

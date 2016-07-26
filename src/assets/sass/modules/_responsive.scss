@@ -159,7 +159,7 @@
         &::before {
             position: absolute;
             top: -0.5em; // 8px / 16px
-            left: 4.28em; // 68px / 16px;
+            left: 4.375em; // 70px / 16px;
             width: 1em;
             height: 0.5em;
             background: url("../img/sprite.svg") no-repeat -12em 0;
@@ -167,6 +167,11 @@
             font-size: 16px;
             content: "";
             z-index: 2;
+
+            [dir="rtl"] & {
+                right: 4.375em; // 70px / 16px;
+                left: auto;
+            }
         }
     }
 
