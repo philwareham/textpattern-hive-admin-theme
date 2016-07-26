@@ -23,8 +23,8 @@
  */
 
 .ui-controlgroup {
-    display: inline-block;
-    vertical-align: top;
+    display: inline-flex;
+    flex-flow: row wrap;
 
     .ui-controlgroup-item {
         margin-right: 0;
@@ -64,6 +64,8 @@
 }
 
 .ui-controlgroup-vertical {
+    flex-flow: column;
+
     .ui-controlgroup-item {
         display: block;
         width: 100%;

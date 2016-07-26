@@ -2952,8 +2952,10 @@ hr {
  * </form>
  */
 .txp-search {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin: 1em 0;
-  float: right;
 }
 
 .txp-search .ui-menu {
@@ -5469,8 +5471,12 @@ label.ui-state-active.ui-button:active {
  * </fieldset>
  */
 .ui-controlgroup {
-  display: inline-block;
-  vertical-align: top;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .ui-controlgroup .ui-controlgroup-item {
@@ -5502,6 +5508,12 @@ label.ui-state-active.ui-button:active {
 
 .ui-controlgroup-horizontal .ui-controlgroup-label.ui-widget-content {
   border-right: 0;
+}
+
+.ui-controlgroup-vertical {
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
 }
 
 .ui-controlgroup-vertical .ui-controlgroup-item {
