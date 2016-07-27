@@ -1947,7 +1947,6 @@ ul.nav-tertiary li {
  * </form>
  */
 .txp-search button.txp-search-button {
-  margin-left: -0.28em;
   padding-right: 1.5em;
   padding-left: 1.5em;
   border-radius: 0;
@@ -2923,6 +2922,9 @@ hr {
   display: -ms-flexbox;
   display: flex;
   margin: 1em 0;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .txp-search .ui-menu {
