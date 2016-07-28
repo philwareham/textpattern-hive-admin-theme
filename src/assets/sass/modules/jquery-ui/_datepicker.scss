@@ -268,11 +268,19 @@
     .ui-datepicker-prev {
         right: 0.2em;
         left: auto;
+
+        span {
+            background-position: -48px -192px;
+        }
     }
 
     .ui-datepicker-next {
         right: auto;
         left: 0.2em;
+
+        span {
+            background-position: -80px -192px;
+        }
     }
 
     .ui-datepicker-buttonpane {

@@ -1480,14 +1480,14 @@ textarea:focus {
   padding: 0;
 }
 
-[type="checkbox"] + label,
-[type="radio"] + label {
+[type="checkbox"] + label:not(.ui-controlgroup-item),
+[type="radio"] + label:not(.ui-controlgroup-item) {
   /* 2 */
   margin: 0 0.5em 0 0;
 }
 
-[type="checkbox"] + label:last-of-type,
-[type="radio"] + label:last-of-type {
+[type="checkbox"] + label:not(.ui-controlgroup-item):last-of-type,
+[type="radio"] + label:not(.ui-controlgroup-item):last-of-type {
   /* 2 */
   margin: 0;
 }
@@ -1495,13 +1495,13 @@ textarea:focus {
 /**
  * Swap margin positions in RTL languages.
  */
-[dir="rtl"] [type="checkbox"] + label,
-[dir="rtl"] [type="radio"] + label {
+[dir="rtl"] [type="checkbox"] + label:not(.ui-controlgroup-item),
+[dir="rtl"] [type="radio"] + label:not(.ui-controlgroup-item) {
   margin: 0 0 0 0.5em;
 }
 
-[dir="rtl"] [type="checkbox"] + label:last-of-type,
-[dir="rtl"] [type="radio"] + label:last-of-type {
+[dir="rtl"] [type="checkbox"] + label:not(.ui-controlgroup-item):last-of-type,
+[dir="rtl"] [type="radio"] + label:not(.ui-controlgroup-item):last-of-type {
   margin: 0;
 }
 
@@ -5446,7 +5446,6 @@ label.ui-state-active.ui-button:active {
 .ui-controlgroup .ui-controlgroup-item {
   margin-right: 0;
   margin-left: 0;
-  float: left;
 }
 
 .ui-controlgroup .ui-controlgroup-item:focus, .ui-controlgroup .ui-controlgroup-item.ui-visual-focus {
@@ -5485,9 +5484,12 @@ label.ui-state-active.ui-button:active {
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  float: none;
   text-align: left;
   box-sizing: border-box;
+}
+
+[dir="rtl"] .ui-controlgroup-vertical .ui-controlgroup-item {
+  text-align: right;
 }
 
 .ui-controlgroup-vertical .ui-controlgroup-label + .ui-controlgroup-item {
@@ -5769,9 +5771,17 @@ label.ui-state-active.ui-button:active {
   left: auto;
 }
 
+[dir="rtl"] .ui-datepicker-prev span {
+  background-position: -48px -192px;
+}
+
 [dir="rtl"] .ui-datepicker-next {
   right: auto;
   left: 0.2em;
+}
+
+[dir="rtl"] .ui-datepicker-next span {
+  background-position: -80px -192px;
 }
 
 [dir="rtl"] .ui-datepicker-buttonpane {

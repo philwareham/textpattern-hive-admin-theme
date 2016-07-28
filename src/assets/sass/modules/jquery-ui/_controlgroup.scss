@@ -29,7 +29,6 @@
     .ui-controlgroup-item {
         margin-right: 0;
         margin-left: 0;
-        float: left;
 
         &:focus,
         &.ui-visual-focus {
@@ -71,9 +70,12 @@
         width: 100%;
         margin-top: 0;
         margin-bottom: 0;
-        float: none;
         text-align: left;
         box-sizing: border-box;
+
+        [dir="rtl"] & {
+            text-align: right;
+        }
     }
 
     .ui-controlgroup-label {

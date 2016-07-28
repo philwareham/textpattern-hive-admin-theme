@@ -154,7 +154,7 @@ textarea {
     /* 1 */
     padding: 0;
 
-    + label {
+    + label:not(.ui-controlgroup-item) {
         /* 2 */
         margin: 0 0.5em 0 0;
 
@@ -172,7 +172,7 @@ textarea {
 [dir="rtl"] {
     [type="checkbox"],
     [type="radio"] {
-        + label {
+        + label:not(.ui-controlgroup-item) {
             margin: 0 0 0 0.5em;
 
             &:last-of-type {
