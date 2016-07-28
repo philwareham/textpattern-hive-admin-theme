@@ -78,8 +78,8 @@ hr {
 
 .txp-search {
     display: flex;
-    margin: 1em 0;
     justify-content: flex-end;
+    margin: 1em 0;
 
     .ui-menu {
         position: absolute;
@@ -100,14 +100,6 @@ hr {
             vertical-align: text-top;
         }
     }
-}
-
-/**
- * Swap float position in RTL languages.
- */
-
-[dir="rtl"] .txp-search {
-    float: left;
 }
 
 /**

@@ -1961,6 +1961,8 @@ ul.nav-tertiary li {
 /**
  * Search widget 'search' button.
  *
+ * 1. Correct specificity for RTL languages.
+ *
  * Example HTML:
  *
  * <form class="txp-search">
@@ -1974,6 +1976,11 @@ ul.nav-tertiary li {
 .txp-search button.txp-search-button {
   padding-right: 1.5em;
   padding-left: 1.5em;
+  border-radius: 0;
+}
+
+[dir="rtl"] .txp-search button.txp-search-button {
+  /* 1 */
   border-radius: 0;
 }
 
@@ -2954,10 +2961,10 @@ hr {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 1em 0;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  margin: 1em 0;
 }
 
 .txp-search .ui-menu {
@@ -2976,13 +2983,6 @@ hr {
   padding: 0.23076923076923em 0.30769230769231em;
   cursor: pointer;
   vertical-align: text-top;
-}
-
-/**
- * Swap float position in RTL languages.
- */
-[dir="rtl"] .txp-search {
-  float: left;
 }
 
 /**
@@ -5339,8 +5339,16 @@ input.ui-button.ui-button-icon-only {
   border-radius: 0 0.5em 0.5em 0;
 }
 
+[dir="rtl"] .ui-button.ui-corner-right {
+  border-radius: 0.5em 0 0 0.5em;
+}
+
 .ui-button.ui-corner-left {
   border-radius: 0.5em 0 0 0.5em;
+}
+
+[dir="rtl"] .ui-button.ui-corner-left {
+  border-radius: 0 0.5em 0.5em 0;
 }
 
 /**

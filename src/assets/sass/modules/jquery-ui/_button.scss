@@ -128,10 +128,18 @@ input.ui-button.ui-button-icon-only {
 
     .ui-button.ui-corner-right {
         border-radius: 0 $border-radius $border-radius 0;
+
+        [dir="rtl"] & {
+            border-radius: $border-radius 0 0 $border-radius;
+        }
     }
 
     .ui-button.ui-corner-left {
         border-radius: $border-radius 0 0 $border-radius;
+
+        [dir="rtl"] & {
+            border-radius: 0 $border-radius $border-radius 0;
+        }
     }
 
 }
