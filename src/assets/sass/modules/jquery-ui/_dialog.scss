@@ -56,6 +56,10 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+
+        [dir="rtl"] & {
+            float: right;
+        }
     }
 
     .ui-dialog-titlebar-close {
@@ -65,6 +69,11 @@
         width: 20px;
         height: 20px;
         margin: -10px 0 0;
+
+        [dir="rtl"] & {
+            right: auto;
+            left: 0.3em;
+        }
     }
 
     .ui-dialog-content {
@@ -85,11 +94,19 @@
 
     .ui-dialog-buttonpane .ui-dialog-buttonset {
         float: right;
+
+        [dir="rtl"] & {
+            float: left;
+        }
     }
 
     .ui-dialog-buttonpane button {
         margin: 0.5em 0.4em 0.5em 0;
         cursor: pointer;
+
+        [dir="rtl"] & {
+            margin: 0.5em 0 0.5em 0.4em;
+        }
     }
 }
 
