@@ -1,6 +1,9 @@
 // This example file is used to demonstrate all available jQuery UI components
 // on the design patterns page.
 
+// Ascertain the page direction (LTR or RTL).
+var langdir = document.documentElement.dir;
+
 $(function ()
 {
     // Spoof RTL on English language `label` tags.
@@ -93,15 +96,25 @@ $(function ()
         })
         .click(function ()
         {
-            var menu = $(this).parent().next().show().position({
-                my: 'left top',
-                at: 'left bottom',
-                of: this
-            });
+            if (langdir === 'rtl') {
+                var menu = $(this).parent().next().show().position({
+                    my: 'right top',
+                    at: 'right bottom',
+                    of: this
+                });
+            } else {
+                var menu = $(this).parent().next().show().position({
+                    my: 'left top',
+                    at: 'left bottom',
+                    of: this
+                });
+            }
+
             $(document).one('click', function ()
             {
                 menu.hide();
             });
+
             return false;
         })
         .parent()
@@ -129,15 +142,25 @@ $(function ()
     })
     .click(function (e)
     {
-        var menu = search.find('.txp-dropdown').toggle().position({
-            my: 'right top',
-            at: 'right bottom',
-            of: this
-        });
+        if (langdir === 'rtl') {
+            var menu = search.find('.txp-dropdown').toggle().position({
+                my: 'left top',
+                at: 'left bottom',
+                of: this
+            });
+        } else {
+            var menu = search.find('.txp-dropdown').toggle().position({
+                my: 'right top',
+                at: 'right bottom',
+                of: this
+            });
+        };
+
         $(document).one('click blur', function ()
         {
             menu.hide();
         });
+
         return false;
     });
 
@@ -209,24 +232,23 @@ $(function ()
 
     // Menu.
 
-    $('.jquery-ui-menu').menu({
-        position: {
-            at: 'right top-1'
-        }
-    });
-
-    // Menu RTL.
-    // Flip positioning of submenus when in RTL langauges.
-
-    $('[dir="rtl"] .jquery-ui-menu').menu({
-        position: {
-            my: 'right top',
-            at: 'left top-1'
-        },
-        icons: {
-            submenu: 'ui-icon-caret-1-w'
-        }
-    });
+    if (langdir === 'rtl') {
+        $('.jquery-ui-menu').menu({
+            position: {
+                my: 'right top',
+                at: 'left top-1'
+            },
+            icons: {
+                submenu: 'ui-icon-caret-1-w'
+            }
+        });
+    } else {
+        $('.jquery-ui-menu').menu({
+            position: {
+                at: 'right top-1'
+            }
+        });
+    };
 
     // Progressbar.
 
@@ -251,17 +273,16 @@ $(function ()
 
     // Selectmenu.
 
-    $('.jquery-ui-selectmenu').selectmenu();
-
-    // Selectmenu RTL.
-    // Flip positioning of selectmenu dropdowns when in RTL langauges.
-
-    $('[dir="rtl"] .jquery-ui-selectmenu').selectmenu({
-        position: {
-            my: 'left top',
-            at: 'right bottom'
-        }
-    });
+    if (langdir === 'rtl') {
+        $('.jquery-ui-selectmenu').selectmenu({
+            position: {
+                my: 'left top',
+                at: 'right bottom'
+            }
+        });
+    } else {
+        $('.jquery-ui-selectmenu').selectmenu();
+    };
 
     // Slider - horizontal.
 
