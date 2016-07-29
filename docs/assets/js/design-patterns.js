@@ -21,9 +21,16 @@ $(function ()
 
     // Resizable.
 
-    $('.jquery-ui-resizable').resizable({
-        minWidth: 200
-    });
+    if (langdir === 'rtl') {
+        $('.jquery-ui-resizable').resizable({
+            handles: 'w, s, sw',
+            minWidth: 200
+        });
+    } else {
+        $('.jquery-ui-resizable').resizable({
+            minWidth: 200
+        });
+    };
 
     // Selectable.
 
