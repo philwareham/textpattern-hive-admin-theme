@@ -1,197 +1,43 @@
-/* Singularity Grid System
-   ========================================================================== */
-
-@include add-grid(12);
-@include add-gutter(0.3);
-
-/**
- * Generate sizes all for grid column cells.
- *
- * Because this is desktop first, all cells span variations are defined
- * initially (1 column full width, 2 column, 4 column). We will then
- * adjust them at various breakpoints listed below.
- *
- * Example HTML:
- *
- * <div class="txp-layout-1col"></div>
- *
- * <div class="txp-layout-2col-cell-1">
- * <div class="txp-layout-2col-cell-2">
- *
- * <div class="txp-layout-4col-cell-1-2-3"></div>
- * <div class="txp-layout-4col-cell-4alt"></div>
- */
-
-.txp-layout-1col {
-    @include grid-span(12, 1);
-
-    clear: both;
+main {
+    display: flex;
 }
 
 .txp-layout-2col-cell-1,
 .txp-layout-4col-cell-1-2 {
-    @include grid-span(6, 1);
-
-    clear: both;
+  width: 50%;
 }
 
 .txp-layout-2col-cell-2,
 .txp-layout-4col-cell-3-4 {
-    @include grid-span(6, 7);
+  width: 50%;
 }
 
 .txp-layout-4col-cell-1,
 .txp-layout-4col-cell-1alt {
-    @include grid-span(3, 1);
-
-    clear: both;
+  width: 25%;
 }
 
 .txp-layout-4col-cell-2 {
-    @include grid-span(3, 4);
+  width: 25%;
 }
 
 .txp-layout-4col-cell-3 {
-    @include grid-span(3, 7);
+  width: 25%;
 }
 
 .txp-layout-4col-cell-4,
 .txp-layout-4col-cell-4alt {
-    @include grid-span(3, 10);
+  width: 25%;
 }
 
 .txp-layout-4col-cell-2-3 {
-    @include grid-span(6, 4);
+  width: 50%;
 }
 
 .txp-layout-4col-cell-1-2-3 {
-    @include grid-span(9, 1);
-
-    clear: both;
+  width: 75%;
 }
 
 .txp-layout-4col-cell-2-3-4 {
-    @include grid-span(9, 4);
-}
-
-/**
- * Grid column cell changes at 1st breakpoint downwards.
- *
- * Cells for 4 column layout become 2 column layout.
- * Cells for 4 column span variations become 1 column layout.
- */
-
-@include breakpoint(max-width $break-large) {
-
-    .txp-layout-4col-cell-1,
-    .txp-layout-4col-cell-3 {
-        @include grid-span(6, 1);
-
-        clear: both;
-    }
-
-    .txp-layout-4col-cell-2,
-    .txp-layout-4col-cell-4 {
-        @include grid-span(6, 7);
-    }
-
-    .txp-layout-4col-cell-1-2,
-    .txp-layout-4col-cell-2-3,
-    .txp-layout-4col-cell-3-4,
-    .txp-layout-4col-cell-1alt,
-    .txp-layout-4col-cell-4alt,
-    .txp-layout-4col-cell-1-2-3,
-    .txp-layout-4col-cell-2-3-4 {
-        @include grid-span(12, 1);
-
-        clear: both;
-    }
-
-}
-
-/**
- * Grid column cell changes at 2nd breakpoint downwards.
- *
- * Cells for 2 column layout become 1 column layout.
- * Cells for 4 column layout become 1 column layout.
- */
-
-@include breakpoint(max-width $break-small) {
-
-    .txp-layout-2col-cell-1,
-    .txp-layout-2col-cell-2,
-    .txp-layout-4col-cell-1,
-    .txp-layout-4col-cell-2,
-    .txp-layout-4col-cell-3,
-    .txp-layout-4col-cell-4 {
-        @include grid-span(12, 1);
-
-        clear: both;
-    }
-
-}
-
-/**
- * Text columns (fixed proportion cell)
- *
- * Example HTML:
- *
- * <div class="txp-layout-textbox">
- */
-
-.txp-layout-textbox {
-    max-width: $text-column;
-    margin: 0 auto;
-    clear: both;
-}
-
-
-/* Inline grids
-   ========================================================================== */
-
-/**
- * Rudimentary inline grid type layouts.
- *
- * As this layout uses `inline-block`, you will need to collapse the white
- * space between each `.txp-grid-cell` to negate any unwanted margin between the
- * cells. Once CSS3 flexbox module is more settled and has improved browser
- * support, this layout type can be made more robust.
- *
- * TODO: use Flexbox for this.
- *
- * Example HTML:
- *
- * <div class="txp-grid">
- *     <div class="txp-grid-cell" style="width:10em;">
- *         Content
- *     </div><div class="txp-grid-cell" style="width:10em;">
- *         Content
- *     </div><div class="txp-grid-cell" style="width:10em;">
- *         Content
- *     </div>
- * </div>
- */
-
-.txp-grid {
-    margin-bottom: 0.6923077em; // 9px / 13px
-    text-align: center;
-}
-
-.txp-grid-cell {
-    display: inline-block;
-    max-width: 22.6153846em; // 294px / 13px
-    margin: 0 0.1538462em 0.3076923em; // 2px / 13px and 4px / 13px
-    padding: 0 1em;
-    border: 1px solid $color-border;
-    text-align: left;
-    vertical-align: top;
-    box-sizing: border-box;
-}
-
-/**
- * Align grid cells to right in RTL languages.
- */
-
-[dir="rtl"] .txp-grid-cell {
-    text-align: right;
+  width: 75%;
 }
