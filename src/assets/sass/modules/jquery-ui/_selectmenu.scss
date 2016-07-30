@@ -111,4 +111,12 @@
         margin-right: 0;
         margin-left: 1em;
     }
+
+    .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
+        border-radius: $border-radius 0 0 $border-radius;
+    }
+
+    .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
+        border-radius: 0 $border-radius $border-radius 0;
+    }
 }

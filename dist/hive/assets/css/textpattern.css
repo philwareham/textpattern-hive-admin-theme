@@ -6282,6 +6282,14 @@ label.ui-state-active.ui-button:active {
   margin-left: 1em;
 }
 
+[dir="rtl"] .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
+  border-radius: 0.5em 0 0 0.5em;
+}
+
+[dir="rtl"] .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
+  border-radius: 0 0.5em 0.5em 0;
+}
+
 /* Slider
    ========================================================================== */
 /**
