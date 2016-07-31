@@ -62,6 +62,8 @@ button {
   clear: both;
 }
 
+/* Layout grid
+   ========================================================================== */
 main {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -71,6 +73,23 @@ main {
           flex-wrap: wrap;
 }
 
+/**
+ * Generate sizes all for grid column cells.
+ *
+ * Because this is desktop first, all cells span variations are defined
+ * initially (1 column full width, 2 column, 4 column). We will then
+ * adjust them at various breakpoints listed below.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-layout-1col"></div>
+ *
+ * <div class="txp-layout-2col-cell-1">
+ * <div class="txp-layout-2col-cell-2">
+ *
+ * <div class="txp-layout-4col-cell-1-2-3"></div>
+ * <div class="txp-layout-4col-cell-4alt"></div>
+ */
 .txp-layout-1col {
   -webkit-flex: 1 0 100%;
       -ms-flex: 1 0 100%;
@@ -103,6 +122,112 @@ main {
   -webkit-flex: 1 0 75%;
       -ms-flex: 1 0 75%;
           flex: 1 0 75%;
+}
+
+/**
+ * Grid column cell changes at 1st breakpoint downwards.
+ *
+ * Cells for 4 column layout become 2 column layout.
+ * Cells for 4 column span variations become 1 column layout.
+ */
+@media (max-width: 60em) {
+  .txp-layout-4col-cell-1,
+  .txp-layout-4col-cell-2,
+  .txp-layout-4col-cell-3,
+  .txp-layout-4col-cell-4 {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+  }
+  .txp-layout-4col-cell-1-2,
+  .txp-layout-4col-cell-2-3,
+  .txp-layout-4col-cell-3-4,
+  .txp-layout-4col-cell-1alt,
+  .txp-layout-4col-cell-4alt,
+  .txp-layout-4col-cell-1-2-3,
+  .txp-layout-4col-cell-2-3-4 {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+}
+
+/**
+ * Grid column cell changes at 2nd breakpoint downwards.
+ *
+ * Cells for 2 column layout become 1 column layout.
+ * Cells for 4 column layout become 1 column layout.
+ */
+@media (max-width: 47em) {
+  .txp-layout-2col-cell-1,
+  .txp-layout-2col-cell-2,
+  .txp-layout-4col-cell-1,
+  .txp-layout-4col-cell-2,
+  .txp-layout-4col-cell-3,
+  .txp-layout-4col-cell-4 {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+}
+
+/**
+ * Text columns (fixed proportion cell)
+ *
+ * Example HTML:
+ *
+ * <div class="txp-layout-textbox">
+ */
+.txp-layout-textbox {
+  max-width: 57em;
+  margin: 0 auto;
+}
+
+/* Inline grids
+   ========================================================================== */
+/**
+ * Rudimentary inline grid type layouts.
+ *
+ * As this layout uses `inline-block`, you will need to collapse the white
+ * space between each `.txp-grid-cell` to negate any unwanted margin between the
+ * cells. Once CSS3 flexbox module is more settled and has improved browser
+ * support, this layout type can be made more robust.
+ *
+ * TODO: use Flexbox for this.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-grid">
+ *     <div class="txp-grid-cell" style="width:10em;">
+ *         Content
+ *     </div><div class="txp-grid-cell" style="width:10em;">
+ *         Content
+ *     </div><div class="txp-grid-cell" style="width:10em;">
+ *         Content
+ *     </div>
+ * </div>
+ */
+.txp-grid {
+  margin-bottom: 0.6923077em;
+  text-align: center;
+}
+
+.txp-grid-cell {
+  display: inline-block;
+  max-width: 22.6153846em;
+  margin: 0 0.1538462em 0.3076923em;
+  padding: 0 1em;
+  border: 1px solid #cccccc;
+  text-align: left;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+/**
+ * Align grid cells to right in RTL languages.
+ */
+[dir="rtl"] .txp-grid-cell {
+  text-align: right;
 }
 
 /* Links
@@ -2129,8 +2254,15 @@ td {
  * 2. Remove default margin.
  */
 body {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   /* 1 */
   position: relative;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
   /* 2 */
   margin: 0;
   padding: 4em 2.75% 0;
@@ -2153,22 +2285,12 @@ body {
  * </body>
  */
 .txp-body {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   width: 100%;
   max-width: 116em;
   margin: 0 auto;
-}
-
-@supports (display: flex) {
-  body {
-    /* autoprefixer: off */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  .txp-body {
-    /* autoprefixer: off */
-    flex: 1;
-  }
 }
 
 /* Header
