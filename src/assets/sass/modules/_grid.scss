@@ -1,43 +1,34 @@
 main {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.txp-layout-1col {
+    flex: 1 0 100%;
+    max-width: 100%;
 }
 
 .txp-layout-2col-cell-1,
-.txp-layout-4col-cell-1-2 {
-  width: 50%;
-}
-
+.txp-layout-4col-cell-1-2,
 .txp-layout-2col-cell-2,
-.txp-layout-4col-cell-3-4 {
-  width: 50%;
+.txp-layout-4col-cell-3-4,
+.txp-layout-4col-cell-2-3 {
+    flex: 1 0 50%;
+    max-width: 50%;
 }
 
 .txp-layout-4col-cell-1,
-.txp-layout-4col-cell-1alt {
-  width: 25%;
-}
-
-.txp-layout-4col-cell-2 {
-  width: 25%;
-}
-
-.txp-layout-4col-cell-3 {
-  width: 25%;
-}
-
+.txp-layout-4col-cell-1alt,
+.txp-layout-4col-cell-2,
+.txp-layout-4col-cell-3,
 .txp-layout-4col-cell-4,
 .txp-layout-4col-cell-4alt {
-  width: 25%;
+    flex: 1 0 25%;
+    max-width: 25%;
 }
 
-.txp-layout-4col-cell-2-3 {
-  width: 50%;
-}
-
-.txp-layout-4col-cell-1-2-3 {
-  width: 75%;
-}
-
+.txp-layout-4col-cell-1-2-3,
 .txp-layout-4col-cell-2-3-4 {
-  width: 75%;
+    flex: 1 0 75%;
+    max-width: 75%;
 }
