@@ -36,7 +36,9 @@ body {
  */
 
 .txp-body {
-    flex: 1;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
     width: 100%;
     max-width: $container-max-width;
     margin: 0 auto;
