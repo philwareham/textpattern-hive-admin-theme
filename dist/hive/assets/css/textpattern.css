@@ -69,7 +69,7 @@ button {
  *
  * Because this is desktop first, all cells span variations are defined
  * initially (1 column full width, 2 column, 4 column). We will then
- * adjust them at various breakpoints listed below.
+ * adjust them at various breakpoints.
  *
  * Example HTML:
  *
@@ -113,53 +113,6 @@ button {
   -webkit-flex: 1 0 75%;
       -ms-flex: 1 0 75%;
           flex: 1 0 75%;
-}
-
-/**
- * Grid column cell changes at 1st breakpoint downwards.
- *
- * Cells for 4 column layout become 2 column layout.
- * Cells for 4 column span variations become 1 column layout.
- */
-@media (max-width: 60em) {
-  .txp-layout-4col-cell-1,
-  .txp-layout-4col-cell-2,
-  .txp-layout-4col-cell-3,
-  .txp-layout-4col-cell-4 {
-    -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%;
-  }
-  .txp-layout-4col-cell-1-2,
-  .txp-layout-4col-cell-2-3,
-  .txp-layout-4col-cell-3-4,
-  .txp-layout-4col-cell-1alt,
-  .txp-layout-4col-cell-4alt,
-  .txp-layout-4col-cell-1-2-3,
-  .txp-layout-4col-cell-2-3-4 {
-    -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
-            flex-basis: 100%;
-  }
-}
-
-/**
- * Grid column cell changes at 2nd breakpoint downwards.
- *
- * Cells for 2 column layout become 1 column layout.
- * Cells for 4 column layout become 1 column layout.
- */
-@media (max-width: 47em) {
-  .txp-layout-2col-cell-1,
-  .txp-layout-2col-cell-2,
-  .txp-layout-4col-cell-1,
-  .txp-layout-4col-cell-2,
-  .txp-layout-4col-cell-3,
-  .txp-layout-4col-cell-4 {
-    -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
-            flex-basis: 100%;
-  }
 }
 
 /**
@@ -6530,8 +6483,6 @@ label.ui-state-active.ui-button:active {
    Additional layout for devices < 768px
    ========================================================================== */
 @media (max-width: 60em) {
-  /* Layout < 768px
-       ========================================================================== */
   /**
      * Adjust right/left padding of body.
      */
@@ -6542,8 +6493,31 @@ label.ui-state-active.ui-button:active {
   .login {
     padding: 1em 2em 0;
   }
-  /* Header < 768px
-       ========================================================================== */
+  /**
+     * Grid column cell changes at 1st breakpoint downwards.
+     *
+     * Cells for 4 column layout become 2 column layout.
+     * Cells for 4 column span variations become 1 column layout.
+     */
+  .txp-layout-4col-cell-1,
+  .txp-layout-4col-cell-2,
+  .txp-layout-4col-cell-3,
+  .txp-layout-4col-cell-4 {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+  }
+  .txp-layout-4col-cell-1-2,
+  .txp-layout-4col-cell-2-3,
+  .txp-layout-4col-cell-3-4,
+  .txp-layout-4col-cell-1alt,
+  .txp-layout-4col-cell-4alt,
+  .txp-layout-4col-cell-1-2-3,
+  .txp-layout-4col-cell-2-3-4 {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
   /**
      * Adjust right/left padding of header area.
      */
@@ -6593,6 +6567,22 @@ label.ui-state-active.ui-button:active {
    Additional layout for devices < 547px
    ========================================================================== */
 @media (max-width: 47em) {
+  /**
+     * Grid column cell changes at 2nd breakpoint downwards.
+     *
+     * Cells for 2 column layout become 1 column layout.
+     * Cells for 4 column layout become 1 column layout.
+     */
+  .txp-layout-2col-cell-1,
+  .txp-layout-2col-cell-2,
+  .txp-layout-4col-cell-1,
+  .txp-layout-4col-cell-2,
+  .txp-layout-4col-cell-3,
+  .txp-layout-4col-cell-4 {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
   /**
      * Non-fixed header on mobile layout (because mobile nav menu couldn't scroll otherwise).
      */

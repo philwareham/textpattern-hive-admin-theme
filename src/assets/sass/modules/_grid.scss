@@ -6,7 +6,7 @@
  *
  * Because this is desktop first, all cells span variations are defined
  * initially (1 column full width, 2 column, 4 column). We will then
- * adjust them at various breakpoints listed below.
+ * adjust them at various breakpoints.
  *
  * Example HTML:
  *
@@ -43,54 +43,6 @@
 .txp-layout-4col-cell-1-2-3,
 .txp-layout-4col-cell-2-3-4 {
     flex: 1 0 75%;
-}
-
-/**
- * Grid column cell changes at 1st breakpoint downwards.
- *
- * Cells for 4 column layout become 2 column layout.
- * Cells for 4 column span variations become 1 column layout.
- */
-
-@include breakpoint(max-width $break-large) {
-
-    .txp-layout-4col-cell-1,
-    .txp-layout-4col-cell-2,
-    .txp-layout-4col-cell-3,
-    .txp-layout-4col-cell-4 {
-        flex-basis: 50%;
-    }
-
-    .txp-layout-4col-cell-1-2,
-    .txp-layout-4col-cell-2-3,
-    .txp-layout-4col-cell-3-4,
-    .txp-layout-4col-cell-1alt,
-    .txp-layout-4col-cell-4alt,
-    .txp-layout-4col-cell-1-2-3,
-    .txp-layout-4col-cell-2-3-4 {
-        flex-basis: 100%;
-    }
-
-}
-
-/**
- * Grid column cell changes at 2nd breakpoint downwards.
- *
- * Cells for 2 column layout become 1 column layout.
- * Cells for 4 column layout become 1 column layout.
- */
-
-@include breakpoint(max-width $break-small) {
-
-    .txp-layout-2col-cell-1,
-    .txp-layout-2col-cell-2,
-    .txp-layout-4col-cell-1,
-    .txp-layout-4col-cell-2,
-    .txp-layout-4col-cell-3,
-    .txp-layout-4col-cell-4 {
-        flex-basis: 100%;
-    }
-
 }
 
 /**
