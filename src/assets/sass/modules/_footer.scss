@@ -2,25 +2,19 @@
    ========================================================================== */
 
 /**
- * Link to Textpattern official website.
+ * Footer content area.
  *
  * Example HTML:
  *
- * <p class="mothership">
+ * <body>
+ *     <header class="txp-header"></header>
+ *     <main class="txp-body"></main>
+ *     <footer class="txp-footer">
+ *         Content
+ *     </footer>
+ * </body>
  */
-
-.mothership {
-    float: left;
-}
-
-/**
- * Link back to top of page.
- *
- * Example HTML:
- *
- * <p class="pagejump">
- */
-
-.pagejump {
-    float: right;
+.txp-footer {
+    display: flex;
+    justify-content: space-between;
 }
