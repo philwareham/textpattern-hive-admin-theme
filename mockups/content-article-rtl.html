@@ -36,7 +36,7 @@
                     </a>
                     <ul class="dropdown-menu" id="txp-nav-drop1-menu" role="menu" aria-labelledby="txp-nav-drop1">
                         <li class="selected" role="presentation">
-                            <a role="menuitem" tabindex="-1" href="content-article.html">Write</a>
+                            <a role="menuitem" tabindex="-1" href="content-article-rtl.html">Write</a>
                         </li>
                         <li role="presentation">
                             <a role="menuitem" tabindex="-1" href="content-list-rtl.html">Articles</a>
@@ -143,29 +143,31 @@
 
         <form class="async busy" id="article_form" name="article_form" method="post" action="#">
 
-            <div class="txp-layout-4col-cell-1-2-3">
-                <h1 class="txp-heading">Write</h1>
+            <div class="txp-layout">
 
-                <div role="region" id="main_content">
+                <div class="txp-layout-4col-cell-1-2-3">
+                    <h1 class="txp-heading">Write</h1>
 
-                    <div id="view_modes">
-                        <ul>
-                            <li class="active" id="tab-text"><a role="button" aria-pressed="true" title="Edit article text" href="content-article.html">Text</a></li>
-                            <li id="tab-html"><a role="button" aria-pressed="false" title="View HTML markup" href="content-article-html.html">HTML</a></li>
-                            <li id="tab-preview"><a role="button" aria-pressed="false" title="Preview article" href="content-article-preview.html">Preview</a></li>
-                        </ul>
-                    </div>
+                    <div role="region" id="main_content">
 
-                    <div class="text">
-                        <div class="txp-form-field title">
-                            <div class="txp-form-field-label"><label for="title">Title&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
-                            <div class="txp-form-field-value">
-                                <input id="title" name="Title" type="text" size="64" spellcheck="true" value="Example article title">
-                            </div>
+                        <div id="view_modes">
+                            <ul>
+                                <li class="active" id="tab-text"><a role="button" aria-pressed="true" title="Edit article text" href="content-article.html">Text</a></li>
+                                <li id="tab-html"><a role="button" aria-pressed="false" title="View HTML markup" href="content-article-html.html">HTML</a></li>
+                                <li id="tab-preview"><a role="button" aria-pressed="false" title="Preview article" href="content-article-preview.html">Preview</a></li>
+                            </ul>
                         </div>
-                        <div class="txp-form-field txp-form-field-textarea body">
-                            <div class="txp-form-field-label"><label for="body">Body&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
-                            <div class="txp-form-field-value"><textarea id="body" name="Body" cols="64" rows="16" spellcheck="true">h3. What do you want to do next?
+
+                        <div class="text">
+                            <div class="txp-form-field title">
+                                <div class="txp-form-field-label"><label for="title">Title&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
+                                <div class="txp-form-field-value">
+                                    <input id="title" name="Title" type="text" size="64" spellcheck="true" value="Example article title">
+                                </div>
+                            </div>
+                            <div class="txp-form-field txp-form-field-textarea body">
+                                <div class="txp-form-field-label"><label for="body">Body&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
+                                <div class="txp-form-field-value"><textarea id="body" name="Body" cols="64" rows="16" spellcheck="true">h3. What do you want to do next?
 
 * Modify or even delete this article? The "article list":/textpattern/index.php?event=list is the place to start.
 * Change this site's name, or modify the style of the URLs? It's all up to your "preferences":/textpattern/index.php?event=prefs.
@@ -184,407 +186,408 @@ There are a host of "Frequently Asked Questions":http://textpattern.com/faq/ to 
 "Textpattern tags":http://textpattern.com/textpattern-tag-reference, their attributes and values are explained and sampled within the "Textpattern User Documentation":http://textpattern.net/, where you will also find valuable tips and tutorials.
 
 If all else fails, there's a whole crowd of friendly, helpful people over at the "Textpattern support forum":http://forum.textpattern.com/. Come and pay a visit!</textarea></div>
-                        </div>
-                        <div class="txp-form-field txp-form-field-textarea excerpt">
-                            <div class="txp-form-field-label"><label for="excerpt">Excerpt&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
-                            <div class="txp-form-field-instructions">
-                                <p>Optional excerpt used as a short summary of the article, and often displayed on landing pages.</p>
                             </div>
-                            <div class="txp-form-field-value"><textarea id="excerpt" name="Excerpt" cols="64" rows="4" spellcheck="true">Example of an article excerpt here.</textarea></div>
+                            <div class="txp-form-field txp-form-field-textarea excerpt">
+                                <div class="txp-form-field-label"><label for="excerpt">Excerpt&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
+                                <div class="txp-form-field-instructions">
+                                    <p>Optional excerpt used as a short summary of the article, and often displayed on landing pages.</p>
+                                </div>
+                                <div class="txp-form-field-value"><textarea id="excerpt" name="Excerpt" cols="64" rows="4" spellcheck="true">Example of an article excerpt here.</textarea></div>
+                            </div>
                         </div>
-                    </div>
 
-                    <p class="author">
-                        <small>Posted by: textpattern · 20 Apr 2014 · 16:43:39<br>
-                            Last modified by: textpattern · 08 Sep 2014 · 16:44:08</small>
+                        <p class="author">
+                            <small>Posted by: textpattern · 20 Apr 2014 · 16:43:39<br>
+                                Last modified by: textpattern · 08 Sep 2014 · 16:44:08</small>
+                        </p>
+
+                    </div><!-- /#main_content -->
+
+                </div><!-- /.txp-layout-4col-cell-1-2-3 -->
+
+                <div class="txp-layout-4col-cell-4alt">
+
+                    <p class="txp-save">
+                        <input type="submit" value="Publish" name="publish" class="publish" disabled="disabled">
+                        <span class="spinner"></span>
                     </p>
 
-                </div><!-- /#main_content -->
+                    <p class="txp-actions">
+                        <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new</a>
+                        <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
+                        <a class="txp-article-view" href="#"><span class="ui-icon ui-icon-notice"></span> View</a>
+                    </p>
 
-            </div><!-- /.txp-layout-4col-cell-1-2-3 -->
+                    <nav class="nav-tertiary">
+                        <a class="navlink" rel="prev" href="#">Previous</a><span class="navlink-disabled" aria-disabled="true">Next</span>
+                    </nav>
 
-            <div class="txp-layout-4col-cell-4alt">
+                    <div role="region" id="supporting_content">
 
-                <p class="txp-save">
-                    <input type="submit" value="Publish" name="publish" class="publish" disabled="disabled">
-                    <span class="spinner"></span>
-                </p>
-
-                <p class="txp-actions">
-                    <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new</a>
-                    <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
-                    <a class="txp-article-view" href="#"><span class="ui-icon ui-icon-notice"></span> View</a>
-                </p>
-
-                <nav class="nav-tertiary">
-                    <a class="navlink" rel="prev" href="#">Previous</a><span class="navlink-disabled" aria-disabled="true">Next</span>
-                </nav>
-
-                <div role="region" id="supporting_content">
-
-                    <section class="txp-details" id="txp-write-sort-group" aria-labelledby="txpwrite-sort-group-label">
-                        <h3 id="txp-write-sort-group-label">Sort and display</h3>
-                        <div role="group">
-                            <div class="txp-form-field status">
-                                <div class="txp-form-field-label"><label for="status">Status</label></div>
-                                <div class="txp-form-field-value">
-                                    <select id="status" name="Status">
-                                        <option value="1">Draft</option>
-                                        <option value="2">Hidden</option>
-                                        <option value="3">Pending</option>
-                                        <option value="4" selected="selected">Live</option>
-                                        <option value="5">Sticky</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="txp-form-field section">
-                                <div class="txp-form-field-label"><label for="section">Section</label></div>
-                                <div class="txp-form-field-value">
-                                    <select id="section" name="Section">
-                                        <option value="about">About</option>
-                                        <option value="articles" selected="selected">Articles</option>
-                                    </select>
-                                    <a class="txp-option-link" href="#">Edit</a>
-                                </div>
-                            </div>
-                            <div id="categories_group">
-                                <div class="txp-form-field category category-1">
-                                    <div class="txp-form-field-label"><label for="category-1">Category 1</label></div>
+                        <section class="txp-details" id="txp-write-sort-group" aria-labelledby="txpwrite-sort-group-label">
+                            <h3 id="txp-write-sort-group-label">Sort and display</h3>
+                            <div role="group">
+                                <div class="txp-form-field status">
+                                    <div class="txp-form-field-label"><label for="status">Status</label></div>
                                     <div class="txp-form-field-value">
-                                        <select id="category-1" name="Category1">
-                                            <option value="" selected="selected">&#160;</option>
-                                            <option value="hope-for-the-future" data-level="0">Hope for the future</option>
-                                            <option value="meaningful-labor" data-level="0">Meaningful labor</option>
-                                            <option value="reciprocal-affection" data-level="0">Reciprocal affection</option>
+                                        <select id="status" name="Status">
+                                            <option value="1">Draft</option>
+                                            <option value="2">Hidden</option>
+                                            <option value="3">Pending</option>
+                                            <option value="4" selected="selected">Live</option>
+                                            <option value="5">Sticky</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="txp-form-field section">
+                                    <div class="txp-form-field-label"><label for="section">Section</label></div>
+                                    <div class="txp-form-field-value">
+                                        <select id="section" name="Section">
+                                            <option value="about">About</option>
+                                            <option value="articles" selected="selected">Articles</option>
                                         </select>
                                         <a class="txp-option-link" href="#">Edit</a>
                                     </div>
                                 </div>
-                                <div class="txp-form-field category category-2">
-                                    <div class="txp-form-field-label"><label for="category-2">Category 2</label></div>
+                                <div id="categories_group">
+                                    <div class="txp-form-field category category-1">
+                                        <div class="txp-form-field-label"><label for="category-1">Category 1</label></div>
+                                        <div class="txp-form-field-value">
+                                            <select id="category-1" name="Category1">
+                                                <option value="" selected="selected">&#160;</option>
+                                                <option value="hope-for-the-future" data-level="0">Hope for the future</option>
+                                                <option value="meaningful-labor" data-level="0">Meaningful labor</option>
+                                                <option value="reciprocal-affection" data-level="0">Reciprocal affection</option>
+                                            </select>
+                                            <a class="txp-option-link" href="#">Edit</a>
+                                        </div>
+                                    </div>
+                                    <div class="txp-form-field category category-2">
+                                        <div class="txp-form-field-label"><label for="category-2">Category 2</label></div>
+                                        <div class="txp-form-field-value">
+                                            <select id="category-2" name="Category2">
+                                                <option value="" selected="selected">&#160;</option>
+                                                <option value="hope-for-the-future" data-level="0">Hope for the future</option>
+                                                <option value="meaningful-labor" data-level="0">Meaningful labor</option>
+                                                <option value="reciprocal-affection" data-level="0">Reciprocal affection</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="txp-details" id="txp-dates-group" aria-labelledby="txp-dates-group-label">
+                            <h3 class="txp-summary expanded" id="txp-dates-group-label">
+                                <a role="button" data-txp-pane="article_dates" href="#dates">Date and time</a>
+                            </h3>
+                            <div class="toggle" id="txp-dates-group-content" role="group">
+                                <div id="publish-datetime-group">
+                                    <div class="txp-form-field date posted">
+                                        <div class="txp-form-field-label"><label for="year">Publish date&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
+                                        <div class="txp-form-field-value">
+                                            <input class="input-year" id="year" name="year"
+                                                type="text"
+                                                size="4"
+                                                maxlength="4"
+                                                inputmode="numeric"
+                                                pattern="[0-9]{4}"
+                                                title="Year"
+                                                aria-label="Year"
+                                                placeholder="yyyy"
+                                                value="2014">
+                                            <span role="separator">/</span>
+                                            <input class="input-month" id="month" name="month"
+                                                type="text"
+                                                size="2"
+                                                maxlength="2"
+                                                inputmode="numeric"
+                                                pattern="(0[1-9]|1[012])"
+                                                title="Month"
+                                                aria-label="Month"
+                                                placeholder="mm"
+                                                value="09">
+                                            <span role="separator">/</span>
+                                            <input class="input-day" id="day" name="day"
+                                                type="text"
+                                                size="2"
+                                                maxlength="2"
+                                                inputmode="numeric"
+                                                pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])"
+                                                title="Day"
+                                                aria-label="Day"
+                                                placeholder="dd"
+                                                value="08">
+                                            <a class="txp-datepicker-button" href="#" title="Datepicker" aria-label="Datepicker"><span class="ui-icon ui-icon-calendar">Datepicker</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="txp-form-field time posted">
+                                        <div class="txp-form-field-label"><label for="hour">Publish time</label></div>
+                                        <div class="txp-form-field-value">
+                                            <input class="input-hour" id="hour" name="hour"
+                                                type="text"
+                                                size="2"
+                                                maxlength="2"
+                                                inputmode="numeric"
+                                                pattern="(0[0-9]|1[0-9]|2[0-3])"
+                                                title="Hour"
+                                                aria-label="Hour"
+                                                placeholder="hh"
+                                                value="15">
+                                            <span role="separator">:</span>
+                                            <input class="input-minute" id="minute" name="minute"
+                                                type="text"
+                                                size="2"
+                                                maxlength="2"
+                                                inputmode="numeric"
+                                                pattern="([0-5][0-9])"
+                                                title="Minute"
+                                                aria-label="Minute"
+                                                placeholder="mm"
+                                                value="20">
+                                            <span role="separator">:</span>
+                                            <input class="input-second" id="second" name="second"
+                                                type="text"
+                                                size="2"
+                                                maxlength="2"
+                                                inputmode="numeric"
+                                                pattern="([0-5][0-9])"
+                                                title="Second"
+                                                aria-label="Second"
+                                                placeholder="ss"
+                                                value="07">
+                                        </div>
+                                    </div>
+                                    <div class="posted-now">
+                                        <input class="checkbox" type="checkbox" name="publish_now" id="publish_now" value="1">
+                                        <label for="publish_now">Set timestamp to now</label>
+                                    </div>
+                                </div>
+                                <div id="expires-datetime-group">
+                                    <div class="txp-form-field date expires">
+                                        <div class="txp-form-field-label"><label for="exp_year">Expire date&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
+                                        <div class="txp-form-field-value">
+                                            <input class="input-year" id="exp_year" name="exp_year"
+                                                type="text"
+                                                size="4"
+                                                maxlength="4"
+                                                inputmode="numeric"
+                                                pattern="[0-9]{4}"
+                                                title="Year"
+                                                aria-label="Year"
+                                                placeholder="yyyy">
+                                            <span role="separator">/</span>
+                                            <input class="input-month" id="exp_month" name="exp_month"
+                                                type="text"
+                                                size="2"
+                                                maxlength="2"
+                                                inputmode="numeric"
+                                                pattern="(0[1-9]|1[012])"
+                                                title="Month"
+                                                aria-label="Month"
+                                                placeholder="mm">
+                                            <span role="separator">/</span>
+                                            <input class="input-day" id="exp_day" name="exp_day"
+                                                type="text"
+                                                size="2"
+                                                maxlength="2"
+                                                inputmode="numeric"
+                                                pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])"
+                                                title="Day"
+                                                aria-label="Day"
+                                                placeholder="dd">
+                                            <a class="txp-datepicker-button" href="#" title="Datepicker" aria-label="Datepicker"><span class="ui-icon ui-icon-calendar">Datepicker</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="txp-form-field time expires">
+                                        <div class="txp-form-field-label"><label for="exp_hour">Expire time</label></div>
+                                        <div class="txp-form-field-value">
+                                            <input class="input-hour" id="exp_hour" name="exp_hour"
+                                                type="text"
+                                                size="2"
+                                                maxlength="2"
+                                                inputmode="numeric"
+                                                pattern="(0[0-9]|1[0-9]|2[0-3])"
+                                                title="Hour"
+                                                aria-label="Hour"
+                                                placeholder="hh">
+                                            <span role="separator">:</span>
+                                            <input class="input-minute" id="exp_minute" name="exp_minute"
+                                                type="text"
+                                                size="2"
+                                                maxlength="2"
+                                                inputmode="numeric"
+                                                pattern="([0-5][0-9])"
+                                                title="Minute"
+                                                aria-label="Minute"
+                                                placeholder="mm">
+                                            <span role="separator">:</span>
+                                            <input class="input-second" id="exp_second" name="exp_second"
+                                                type="text"
+                                                size="2"
+                                                maxlength="2"
+                                                inputmode="numeric"
+                                                pattern="([0-5][0-9])"
+                                                title="Second"
+                                                aria-label="Second"
+                                                placeholder="ss">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="txp-details" id="txp-comments-group" aria-labelledby="txp-comments-group-label">
+                            <h3 class="txp-summary expanded" id="txp-comments-group-label">
+                                <a role="button" data-txp-pane="article_comments" href="#comments">Comment options</a>
+                            </h3>
+                            <div class="toggle" id="txp-comments-group-content" role="group">
+                                <div id="write-comments">
+                                    <div class="txp-form-field comment-annotate">
+                                        <input class="radio" id="Annotate-0" name="Annotate" type="radio" value="0" checked="checked">
+                                        <label for="Annotate-0">Off</label>
+                                        <input class="radio" id="Annotate-1" name="Annotate" type="radio" value="1">
+                                        <label for="Annotate-1">On</label>
+                                    </div>
+                                    <div class="txp-form-field comment-invite">
+                                        <div class="txp-form-field-label"><label for="comment-invite">Invitation</label></div>
+                                        <div class="txp-form-field-value"><input type="text" name="AnnotateInvite" size="32" id="comment-invite" value="Comment"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="txp-details" id="txp-advanced-group" aria-labelledby="txp-advanced-group-label">
+                            <h3 class="txp-summary expanded" id="txp-advanced-group-label">
+                                <a role="button" data-txp-pane="article_advanced" href="#advanced">Advanced options</a>
+                            </h3>
+                            <div class="toggle" id="txp-advanced-group-content" role="group">
+                                <div class="txp-form-field markup markup-body">
+                                    <div class="txp-form-field-label"><label for="markup-body">Article markup</label></div>
                                     <div class="txp-form-field-value">
-                                        <select id="category-2" name="Category2">
+                                        <select id="markup-body" name="textile_body">
+                                            <option value="0">Leave text untouched</option>
+                                            <option value="2">Convert linebreaks</option>
+                                            <option value="1" selected="selected">Use Textile</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="txp-form-field markup markup-excerpt">
+                                    <div class="txp-form-field-label"><label for="markup-excerpt">Excerpt markup</label></div>
+                                    <div class="txp-form-field-value">
+                                        <select id="markup-excerpt" name="textile_excerpt">
+                                            <option value="0">Leave text untouched</option>
+                                            <option value="2">Convert linebreaks</option>
+                                            <option value="1" selected="selected">Use Textile</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="txp-form-field override-form">
+                                    <div class="txp-form-field-label"><label for="override-form">Override form&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
+                                    <div class="txp-form-field-value">
+                                        <select id="override-form" name="override_form">
                                             <option value="" selected="selected">&#160;</option>
-                                            <option value="hope-for-the-future" data-level="0">Hope for the future</option>
-                                            <option value="meaningful-labor" data-level="0">Meaningful labor</option>
-                                            <option value="reciprocal-affection" data-level="0">Reciprocal affection</option>
+                                            <option value="article_listing">article_listing</option>
+                                            <option value="search_results">search_results</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
 
-                    <section class="txp-details" id="txp-dates-group" aria-labelledby="txp-dates-group-label">
-                        <h3 class="txp-summary expanded" id="txp-dates-group-label">
-                            <a role="button" data-txp-pane="article_dates" href="#dates">Date and time</a>
-                        </h3>
-                        <div class="toggle" id="txp-dates-group-content" role="group">
-                            <div id="publish-datetime-group">
-                                <div class="txp-form-field date posted">
-                                    <div class="txp-form-field-label"><label for="year">Publish date&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
-                                    <div class="txp-form-field-value">
-                                        <input class="input-year" id="year" name="year"
-                                            type="text"
-                                            size="4"
-                                            maxlength="4"
-                                            inputmode="numeric"
-                                            pattern="[0-9]{4}"
-                                            title="Year"
-                                            aria-label="Year"
-                                            placeholder="yyyy"
-                                            value="2014">
-                                        <span role="separator">/</span>
-                                        <input class="input-month" id="month" name="month"
-                                            type="text"
-                                            size="2"
-                                            maxlength="2"
-                                            inputmode="numeric"
-                                            pattern="(0[1-9]|1[012])"
-                                            title="Month"
-                                            aria-label="Month"
-                                            placeholder="mm"
-                                            value="09">
-                                        <span role="separator">/</span>
-                                        <input class="input-day" id="day" name="day"
-                                            type="text"
-                                            size="2"
-                                            maxlength="2"
-                                            inputmode="numeric"
-                                            pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])"
-                                            title="Day"
-                                            aria-label="Day"
-                                            placeholder="dd"
-                                            value="08">
-                                        <a class="txp-datepicker-button" href="#" title="Datepicker" aria-label="Datepicker"><span class="ui-icon ui-icon-calendar">Datepicker</span></a>
+                        <section class="txp-details" id="txp-meta-group" aria-labelledby="txp-meta-group-label">
+                            <h3 class="txp-summary expanded" id="txp-meta-group-label">
+                                <a role="button" data-txp-pane="article_meta" href="#meta">Meta</a>
+                            </h3>
+                            <div class="toggle" id="txp-meta-group-content" role="group">
+                                <div class="txp-form-field url-title">
+                                    <div class="txp-form-field-label"><label for="url-title">URL-only title&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
+                                    <div class="txp-form-field-instructions">
+                                        <p>Leave blank to have the article's permalink URL automatically generated from the Title.</p>
                                     </div>
+                                    <div class="txp-form-field-value"><input id="url-title" name="url_title" type="text" size="32"></div>
                                 </div>
-                                <div class="txp-form-field time posted">
-                                    <div class="txp-form-field-label"><label for="hour">Publish time</label></div>
-                                    <div class="txp-form-field-value">
-                                        <input class="input-hour" id="hour" name="hour"
-                                            type="text"
-                                            size="2"
-                                            maxlength="2"
-                                            inputmode="numeric"
-                                            pattern="(0[0-9]|1[0-9]|2[0-3])"
-                                            title="Hour"
-                                            aria-label="Hour"
-                                            placeholder="hh"
-                                            value="15">
-                                        <span role="separator">:</span>
-                                        <input class="input-minute" id="minute" name="minute"
-                                            type="text"
-                                            size="2"
-                                            maxlength="2"
-                                            inputmode="numeric"
-                                            pattern="([0-5][0-9])"
-                                            title="Minute"
-                                            aria-label="Minute"
-                                            placeholder="mm"
-                                            value="20">
-                                        <span role="separator">:</span>
-                                        <input class="input-second" id="second" name="second"
-                                            type="text"
-                                            size="2"
-                                            maxlength="2"
-                                            inputmode="numeric"
-                                            pattern="([0-5][0-9])"
-                                            title="Second"
-                                            aria-label="Second"
-                                            placeholder="ss"
-                                            value="07">
-                                    </div>
+                                <div class="txp-form-field txp-form-field-textarea description">
+                                    <div class="txp-form-field-label"><label for="description">Description&#160;<a class="pophelp" rel="help" target="_blank" title="Help" aria-label="Help" role="button" href="#">i</a></label></div>
+                                    <div class="txp-form-field-value"><textarea id="description" name="description" cols="16" rows="4"></textarea></div>
                                 </div>
-                                <div class="posted-now">
-                                    <input class="checkbox" type="checkbox" name="publish_now" id="publish_now" value="1">
-                                    <label for="publish_now">Set timestamp to now</label>
+                                <div class="txp-form-field txp-form-field-textarea keywords">
+                                    <div class="txp-form-field-label"><label for="keywords">Keywords&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
+                                    <div class="txp-form-field-value"><textarea id="keywords" name="Keywords" cols="16" rows="4"></textarea></div>
                                 </div>
                             </div>
-                            <div id="expires-datetime-group">
-                                <div class="txp-form-field date expires">
-                                    <div class="txp-form-field-label"><label for="exp_year">Expire date&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
-                                    <div class="txp-form-field-value">
-                                        <input class="input-year" id="exp_year" name="exp_year"
-                                            type="text"
-                                            size="4"
-                                            maxlength="4"
-                                            inputmode="numeric"
-                                            pattern="[0-9]{4}"
-                                            title="Year"
-                                            aria-label="Year"
-                                            placeholder="yyyy">
-                                        <span role="separator">/</span>
-                                        <input class="input-month" id="exp_month" name="exp_month"
-                                            type="text"
-                                            size="2"
-                                            maxlength="2"
-                                            inputmode="numeric"
-                                            pattern="(0[1-9]|1[012])"
-                                            title="Month"
-                                            aria-label="Month"
-                                            placeholder="mm">
-                                        <span role="separator">/</span>
-                                        <input class="input-day" id="exp_day" name="exp_day"
-                                            type="text"
-                                            size="2"
-                                            maxlength="2"
-                                            inputmode="numeric"
-                                            pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])"
-                                            title="Day"
-                                            aria-label="Day"
-                                            placeholder="dd">
-                                        <a class="txp-datepicker-button" href="#" title="Datepicker" aria-label="Datepicker"><span class="ui-icon ui-icon-calendar">Datepicker</span></a>
-                                    </div>
-                                </div>
-                                <div class="txp-form-field time expires">
-                                    <div class="txp-form-field-label"><label for="exp_hour">Expire time</label></div>
-                                    <div class="txp-form-field-value">
-                                        <input class="input-hour" id="exp_hour" name="exp_hour"
-                                            type="text"
-                                            size="2"
-                                            maxlength="2"
-                                            inputmode="numeric"
-                                            pattern="(0[0-9]|1[0-9]|2[0-3])"
-                                            title="Hour"
-                                            aria-label="Hour"
-                                            placeholder="hh">
-                                        <span role="separator">:</span>
-                                        <input class="input-minute" id="exp_minute" name="exp_minute"
-                                            type="text"
-                                            size="2"
-                                            maxlength="2"
-                                            inputmode="numeric"
-                                            pattern="([0-5][0-9])"
-                                            title="Minute"
-                                            aria-label="Minute"
-                                            placeholder="mm">
-                                        <span role="separator">:</span>
-                                        <input class="input-second" id="exp_second" name="exp_second"
-                                            type="text"
-                                            size="2"
-                                            maxlength="2"
-                                            inputmode="numeric"
-                                            pattern="([0-5][0-9])"
-                                            title="Second"
-                                            aria-label="Second"
-                                            placeholder="ss">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                        </section>
 
-                    <section class="txp-details" id="txp-comments-group" aria-labelledby="txp-comments-group-label">
-                        <h3 class="txp-summary expanded" id="txp-comments-group-label">
-                            <a role="button" data-txp-pane="article_comments" href="#comments">Comment options</a>
-                        </h3>
-                        <div class="toggle" id="txp-comments-group-content" role="group">
-                            <div id="write-comments">
-                                <div class="txp-form-field comment-annotate">
-                                    <input class="radio" id="Annotate-0" name="Annotate" type="radio" value="0" checked="checked">
-                                    <label for="Annotate-0">Off</label>
-                                    <input class="radio" id="Annotate-1" name="Annotate" type="radio" value="1">
-                                    <label for="Annotate-1">On</label>
-                                </div>
-                                <div class="txp-form-field comment-invite">
-                                    <div class="txp-form-field-label"><label for="comment-invite">Invitation</label></div>
-                                    <div class="txp-form-field-value"><input type="text" name="AnnotateInvite" size="32" id="comment-invite" value="Comment"></div>
+                        <section class="txp-details" id="txp-image-group" aria-labelledby="txp-image-group-label">
+                            <h3 class="txp-summary expanded" id="txp-image-group-label">
+                                <a role="button" data-txp-pane="article_image" href="#image">Article image</a>
+                            </h3>
+                            <div class="toggle" id="txp-image-group-content" role="group">
+                                <div class="txp-form-field article-image">
+                                    <div class="txp-form-field-label"><label for="article-image">Article image&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
+                                    <div class="txp-form-field-value"><input id="article-image" name="Image" type="text" size="32"></div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
 
-                    <section class="txp-details" id="txp-advanced-group" aria-labelledby="txp-advanced-group-label">
-                        <h3 class="txp-summary expanded" id="txp-advanced-group-label">
-                            <a role="button" data-txp-pane="article_advanced" href="#advanced">Advanced options</a>
-                        </h3>
-                        <div class="toggle" id="txp-advanced-group-content" role="group">
-                            <div class="txp-form-field markup markup-body">
-                                <div class="txp-form-field-label"><label for="markup-body">Article markup</label></div>
-                                <div class="txp-form-field-value">
-                                    <select id="markup-body" name="textile_body">
-                                        <option value="0">Leave text untouched</option>
-                                        <option value="2">Convert linebreaks</option>
-                                        <option value="1" selected="selected">Use Textile</option>
-                                    </select>
+                        <section class="txp-details" id="txp-custom-field-group" aria-labelledby="txp-custom-field-group-label">
+                            <h3 class="txp-summary expanded" id="txp-custom-field-group-label">
+                                <a role="button" data-txp-pane="article_custom_field" href="#custom_field">Custom fields</a>
+                            </h3>
+                            <div class="toggle" id="txp-custom-field-content" role="group">
+                                <div class="txp-form-field custom-field custom-1">
+                                    <div class="txp-form-field-label"><label for="custom-1">custom1</label></div>
+                                    <div class="txp-form-field-value"><input id="custom-1" name="custom_1" type="text" size="32"></div>
+                                </div>
+                                <div class="txp-form-field custom-field custom-2">
+                                    <div class="txp-form-field-label"><label for="custom-2">custom2</label></div>
+                                    <div class="txp-form-field-value"><input id="custom-2" name="custom_2" type="text" size="32"></div>
                                 </div>
                             </div>
-                            <div class="txp-form-field markup markup-excerpt">
-                                <div class="txp-form-field-label"><label for="markup-excerpt">Excerpt markup</label></div>
-                                <div class="txp-form-field-value">
-                                    <select id="markup-excerpt" name="textile_excerpt">
-                                        <option value="0">Leave text untouched</option>
-                                        <option value="2">Convert linebreaks</option>
-                                        <option value="1" selected="selected">Use Textile</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="txp-form-field override-form">
-                                <div class="txp-form-field-label"><label for="override-form">Override form&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
-                                <div class="txp-form-field-value">
-                                    <select id="override-form" name="override_form">
-                                        <option value="" selected="selected">&#160;</option>
-                                        <option value="article_listing">article_listing</option>
-                                        <option value="search_results">search_results</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="txp-details" id="txp-meta-group" aria-labelledby="txp-meta-group-label">
-                        <h3 class="txp-summary expanded" id="txp-meta-group-label">
-                            <a role="button" data-txp-pane="article_meta" href="#meta">Meta</a>
-                        </h3>
-                        <div class="toggle" id="txp-meta-group-content" role="group">
-                            <div class="txp-form-field url-title">
-                                <div class="txp-form-field-label"><label for="url-title">URL-only title&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
-                                <div class="txp-form-field-instructions">
-                                    <p>Leave blank to have the article's permalink URL automatically generated from the Title.</p>
-                                </div>
-                                <div class="txp-form-field-value"><input id="url-title" name="url_title" type="text" size="32"></div>
-                            </div>
-                            <div class="txp-form-field txp-form-field-textarea description">
-                                <div class="txp-form-field-label"><label for="description">Description&#160;<a class="pophelp" rel="help" target="_blank" title="Help" aria-label="Help" role="button" href="#">i</a></label></div>
-                                <div class="txp-form-field-value"><textarea id="description" name="description" cols="16" rows="4"></textarea></div>
-                            </div>
-                            <div class="txp-form-field txp-form-field-textarea keywords">
-                                <div class="txp-form-field-label"><label for="keywords">Keywords&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
-                                <div class="txp-form-field-value"><textarea id="keywords" name="Keywords" cols="16" rows="4"></textarea></div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="txp-details" id="txp-image-group" aria-labelledby="txp-image-group-label">
-                        <h3 class="txp-summary expanded" id="txp-image-group-label">
-                            <a role="button" data-txp-pane="article_image" href="#image">Article image</a>
-                        </h3>
-                        <div class="toggle" id="txp-image-group-content" role="group">
-                            <div class="txp-form-field article-image">
-                                <div class="txp-form-field-label"><label for="article-image">Article image&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" aria-label="Help" href="#">i</a></label></div>
-                                <div class="txp-form-field-value"><input id="article-image" name="Image" type="text" size="32"></div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="txp-details" id="txp-custom-field-group" aria-labelledby="txp-custom-field-group-label">
-                        <h3 class="txp-summary expanded" id="txp-custom-field-group-label">
-                            <a role="button" data-txp-pane="article_custom_field" href="#custom_field">Custom fields</a>
-                        </h3>
-                        <div class="toggle" id="txp-custom-field-content" role="group">
-                            <div class="txp-form-field custom-field custom-1">
-                                <div class="txp-form-field-label"><label for="custom-1">custom1</label></div>
-                                <div class="txp-form-field-value"><input id="custom-1" name="custom_1" type="text" size="32"></div>
-                            </div>
-                            <div class="txp-form-field custom-field custom-2">
-                                <div class="txp-form-field-label"><label for="custom-2">custom2</label></div>
-                                <div class="txp-form-field-value"><input id="custom-2" name="custom_2" type="text" size="32"></div>
-                            </div>
-                        </div>
-                    </section>
+                        </section>
 
 <!-- TEXTFILTER HELP NEEDS TO BECOME A MODAL
-                    <section class="txp-details" id="txp-textfilter-group" aria-labelledby="txp-textfilter-group-label">
-                        <h3 class="txp-summary" id="txp-textfilter-group-label">
-                            <a role="button" data-txp-pane="article_textfilter_help" href="#textfilter_help">Text formatting help</a>
-                        </h3>
-                        <div class="toggle" id="txp-textfilter-group-content" role="group" style="display:none;">
-                            <ul class="textile plain-list">
-                                <li>Heading: <strong>h<em>n</em>.</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>Blockquote: <strong>bq.</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>Numeric list: <strong>#</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#b">i</a></li>
-                                <li>Bulleted list: <strong>*</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>Definition list: <strong>; :</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>_<em>emphasis</em>_&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>*<strong>strong</strong>*&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>??<cite>citation</cite>??&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 500, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>-deleted text-&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>+inserted text+&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>^superscript^&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>~subscript~&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>"linktext":url&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 500); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                                <li>!imageurl!&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 500, 500); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
-                            </ul>
-                            <p><a id="textile-docs-link" rel="external" target="_blank" href="http://textpattern.com/textile-sandbox">More</a></p>
-                        </div>
-                    </section> -->
+                        <section class="txp-details" id="txp-textfilter-group" aria-labelledby="txp-textfilter-group-label">
+                            <h3 class="txp-summary" id="txp-textfilter-group-label">
+                                <a role="button" data-txp-pane="article_textfilter_help" href="#textfilter_help">Text formatting help</a>
+                            </h3>
+                            <div class="toggle" id="txp-textfilter-group-content" role="group" style="display:none;">
+                                <ul class="textile plain-list">
+                                    <li>Heading: <strong>h<em>n</em>.</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                    <li>Blockquote: <strong>bq.</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                    <li>Numeric list: <strong>#</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#b">i</a></li>
+                                    <li>Bulleted list: <strong>*</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                    <li>Definition list: <strong>; :</strong>&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                    <li>_<em>emphasis</em>_&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                    <li>*<strong>strong</strong>*&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                    <li>??<cite>citation</cite>??&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 500, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                    <li>-deleted text-&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                    <li>+inserted text+&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                    <li>^superscript^&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 300); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                    <li>~subscript~&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 400); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                    <li>"linktext":url&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 400, 500); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                    <li>!imageurl!&#160;<a role="button" rel="help" target="_blank" onclick="popWin(this.href, 500, 500); return false;" class="pophelpsubtle" title="Help" aria-label="Help" href="#">i</a></li>
+                                </ul>
+                                <p><a id="textile-docs-link" rel="external" target="_blank" href="http://textpattern.com/textile-sandbox">More</a></p>
+                            </div>
+                        </section> -->
 
-                    <section class="txp-details" id="txp-recent-group" aria-labelledby="txp-recent-group-label">
-                        <h3 class="txp-summary" id="txp-recent-group-label">
-                            <a role="button" data-txp-pane="article_recent" href="#recent">Recent articles</a>
-                        </h3>
-                        <div class="toggle" id="txp-recent-group-content" role="group" style="display:none;">
-                            <ol class="recent">
-                                <li class="recent-article"><a href="?event=article&#38;step=edit&#38;ID=2">Test article</a></li>
-                                <li class="recent-article"><a href="?event=article&#38;step=edit&#38;ID=1">Welcome to your site</a></li>
-                            </ol>
-                        </div>
-                    </section>
+                        <section class="txp-details" id="txp-recent-group" aria-labelledby="txp-recent-group-label">
+                            <h3 class="txp-summary" id="txp-recent-group-label">
+                                <a role="button" data-txp-pane="article_recent" href="#recent">Recent articles</a>
+                            </h3>
+                            <div class="toggle" id="txp-recent-group-content" role="group" style="display:none;">
+                                <ol class="recent">
+                                    <li class="recent-article"><a href="?event=article&#38;step=edit&#38;ID=2">Test article</a></li>
+                                    <li class="recent-article"><a href="?event=article&#38;step=edit&#38;ID=1">Welcome to your site</a></li>
+                                </ol>
+                            </div>
+                        </section>
 
-                </div><!-- /#supporting_content -->
+                    </div><!-- /#supporting_content -->
 
-            </div><!-- /.txp-layout-4col-cell-4alt -->
+                </div><!-- /.txp-layout-4col-cell-4alt -->
+            </div><!-- /.txp-layout -->
         </form>
     </main><!-- /txp-body -->
 
