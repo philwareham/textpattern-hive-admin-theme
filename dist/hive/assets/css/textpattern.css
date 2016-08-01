@@ -62,118 +62,6 @@ button {
   clear: both;
 }
 
-/* Layout grid
-   ========================================================================== */
-/**
- * Generate sizes all for grid column cells.
- *
- * Because this is desktop first, all cells span variations are defined
- * initially (1 column full width, 2 column, 4 column). We will then
- * adjust them at various breakpoints.
- *
- * Example HTML:
- *
- * <div class="txp-layout-1col"></div>
- *
- * <div class="txp-layout-2col-cell-1">
- * <div class="txp-layout-2col-cell-2">
- *
- * <div class="txp-layout-4col-cell-1-2-3"></div>
- * <div class="txp-layout-4col-cell-4alt"></div>
- */
-.txp-layout-1col {
-  -webkit-flex: 1 0 100%;
-      -ms-flex: 1 0 100%;
-          flex: 1 0 100%;
-}
-
-.txp-layout-2col-cell-1,
-.txp-layout-4col-cell-1-2,
-.txp-layout-2col-cell-2,
-.txp-layout-4col-cell-3-4,
-.txp-layout-4col-cell-2-3 {
-  -webkit-flex: 1 0 50%;
-      -ms-flex: 1 0 50%;
-          flex: 1 0 50%;
-}
-
-.txp-layout-4col-cell-1,
-.txp-layout-4col-cell-1alt,
-.txp-layout-4col-cell-2,
-.txp-layout-4col-cell-3,
-.txp-layout-4col-cell-4,
-.txp-layout-4col-cell-4alt {
-  -webkit-flex: 1 0 25%;
-      -ms-flex: 1 0 25%;
-          flex: 1 0 25%;
-}
-
-.txp-layout-4col-cell-1-2-3,
-.txp-layout-4col-cell-2-3-4 {
-  -webkit-flex: 1 0 75%;
-      -ms-flex: 1 0 75%;
-          flex: 1 0 75%;
-}
-
-/**
- * Text columns (fixed proportion cell)
- *
- * Example HTML:
- *
- * <div class="txp-layout-textbox">
- */
-.txp-layout-textbox {
-  max-width: 57em;
-  margin: 0 auto;
-}
-
-/* Inline grids
-   ========================================================================== */
-/**
- * Rudimentary inline grid type layouts.
- *
- * As this layout uses `inline-block`, you will need to collapse the white
- * space between each `.txp-grid-cell` to negate any unwanted margin between the
- * cells. Once CSS3 flexbox module is more settled and has improved browser
- * support, this layout type can be made more robust.
- *
- * TODO: use Flexbox for this.
- *
- * Example HTML:
- *
- * <div class="txp-grid">
- *     <div class="txp-grid-cell" style="width:10em;">
- *         Content
- *     </div><div class="txp-grid-cell" style="width:10em;">
- *         Content
- *     </div><div class="txp-grid-cell" style="width:10em;">
- *         Content
- *     </div>
- * </div>
- */
-.txp-grid {
-  margin-bottom: 0.6923077em;
-  text-align: center;
-}
-
-.txp-grid-cell {
-  display: inline-block;
-  max-width: 22.6153846em;
-  margin: 0 0.1538462em 0.3076923em;
-  padding: 0 1em;
-  border: 1px solid #cccccc;
-  text-align: left;
-  vertical-align: top;
-  box-sizing: border-box;
-}
-
-/**
- * Align grid cells to right in RTL languages.
- */
-[dir="rtl"] .txp-grid-cell {
-  text-align: right;
-}
-
 /* Links
    ========================================================================== */
 /**
@@ -2257,21 +2145,136 @@ body {
  * </body>
  */
 .txp-body {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-align-content: flex-start;
-      -ms-flex-line-pack: start;
-          align-content: flex-start;
   width: 100%;
   max-width: 116em;
   margin: 0 auto;
+}
+
+/* Layout grid
+   ========================================================================== */
+/**
+ * Flex container.
+ */
+.txp-layout {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+/**
+ * Generate sizes all for grid column cells.
+ *
+ * Because this is desktop first, all cells span variations are defined
+ * initially (1 column full width, 2 column, 4 column). We will then
+ * adjust them at various breakpoints.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-layout-1col"></div>
+ *
+ * <div class="txp-layout-2col-cell-1">
+ * <div class="txp-layout-2col-cell-2">
+ *
+ * <div class="txp-layout-4col-cell-1-2-3"></div>
+ * <div class="txp-layout-4col-cell-4alt"></div>
+ */
+.txp-layout-1col {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.txp-layout-2col-cell-1,
+.txp-layout-4col-cell-1-2,
+.txp-layout-2col-cell-2,
+.txp-layout-4col-cell-3-4,
+.txp-layout-4col-cell-2-3 {
+  -webkit-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.txp-layout-4col-cell-1,
+.txp-layout-4col-cell-1alt,
+.txp-layout-4col-cell-2,
+.txp-layout-4col-cell-3,
+.txp-layout-4col-cell-4,
+.txp-layout-4col-cell-4alt {
+  -webkit-flex: 0 0 25%;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+}
+
+.txp-layout-4col-cell-1-2-3,
+.txp-layout-4col-cell-2-3-4 {
+  -webkit-flex: 0 0 75%;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+}
+
+/**
+ * Text columns (fixed proportion cell)
+ *
+ * Example HTML:
+ *
+ * <div class="txp-layout-textbox">
+ */
+.txp-layout-textbox {
+  max-width: 57em;
+  margin: 0 auto;
+}
+
+/* Inline grids
+   ========================================================================== */
+/**
+ * Rudimentary inline grid type layouts.
+ *
+ * As this layout uses `inline-block`, you will need to collapse the white
+ * space between each `.txp-grid-cell` to negate any unwanted margin between the
+ * cells. Once CSS3 flexbox module is more settled and has improved browser
+ * support, this layout type can be made more robust.
+ *
+ * TODO: use Flexbox for this.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-grid">
+ *     <div class="txp-grid-cell" style="width:10em;">
+ *         Content
+ *     </div><div class="txp-grid-cell" style="width:10em;">
+ *         Content
+ *     </div><div class="txp-grid-cell" style="width:10em;">
+ *         Content
+ *     </div>
+ * </div>
+ */
+.txp-grid {
+  margin-bottom: 0.6923077em;
+  text-align: center;
+}
+
+.txp-grid-cell {
+  display: inline-block;
+  max-width: 22.6153846em;
+  margin: 0 0.1538462em 0.3076923em;
+  padding: 0 1em;
+  border: 1px solid #cccccc;
+  text-align: left;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+/**
+ * Align grid cells to right in RTL languages.
+ */
+[dir="rtl"] .txp-grid-cell {
+  text-align: right;
 }
 
 /* Header

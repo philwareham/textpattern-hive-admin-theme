@@ -2,6 +2,15 @@
    ========================================================================== */
 
 /**
+ * Flex container.
+ */
+
+.txp-layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/**
  * Generate sizes all for grid column cells.
  *
  * Because this is desktop first, all cells span variations are defined
@@ -20,7 +29,7 @@
  */
 
 .txp-layout-1col {
-    flex: 1 0 100%;
+    flex: 0 0 100%;
 }
 
 .txp-layout-2col-cell-1,
@@ -28,7 +37,7 @@
 .txp-layout-2col-cell-2,
 .txp-layout-4col-cell-3-4,
 .txp-layout-4col-cell-2-3 {
-    flex: 1 0 50%;
+    flex: 0 0 50%;
 }
 
 .txp-layout-4col-cell-1,
@@ -37,12 +46,12 @@
 .txp-layout-4col-cell-3,
 .txp-layout-4col-cell-4,
 .txp-layout-4col-cell-4alt {
-    flex: 1 0 25%;
+    flex: 0 0 25%;
 }
 
 .txp-layout-4col-cell-1-2-3,
 .txp-layout-4col-cell-2-3-4 {
-    flex: 1 0 75%;
+    flex: 0 0 75%;
 }
 
 /**
