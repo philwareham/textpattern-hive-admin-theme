@@ -90,6 +90,11 @@ $colors: (
 /* Layout grid examples.
    ========================================================================== */
 
+.design-patterns--flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .design-patterns--box {
     margin-top: 0;
     padding: 1em;
