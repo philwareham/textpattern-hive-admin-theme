@@ -32,13 +32,10 @@
         flex-basis: 50%;
     }
 
-    .txp-layout-4col-cell-1-2,
-    .txp-layout-4col-cell-2-3,
-    .txp-layout-4col-cell-3-4,
+    .txp-layout-4col-2span,
     .txp-layout-4col-cell-1alt,
     .txp-layout-4col-cell-4alt,
-    .txp-layout-4col-cell-1-2-3,
-    .txp-layout-4col-cell-2-3-4 {
+    .txp-layout-4col-3span {
         flex-basis: 100%;
     }
 
@@ -109,8 +106,7 @@
      * Cells for 4 column layout become 1 column layout.
      */
 
-    .txp-layout-2col-cell-1,
-    .txp-layout-2col-cell-2,
+    .txp-layout-2col,
     .txp-layout-4col-cell-1,
     .txp-layout-4col-cell-2,
     .txp-layout-4col-cell-3,

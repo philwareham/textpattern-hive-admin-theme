@@ -2179,11 +2179,11 @@ body {
  *
  * <div class="txp-layout-1col"></div>
  *
- * <div class="txp-layout-2col-cell-1">
- * <div class="txp-layout-2col-cell-2">
+ * <div class="txp-layout-2col">
+ * <div class="txp-layout-2col">
  *
- * <div class="txp-layout-4col-cell-1-2-3"></div>
- * <div class="txp-layout-4col-cell-4alt"></div>
+ * <div class="txp-layout-4col-3span"></div>
+ * <div class="txp-layout-4col"></div>
  */
 .txp-layout-1col {
   -webkit-flex: 0 0 100%;
@@ -2191,11 +2191,8 @@ body {
           flex: 0 0 100%;
 }
 
-.txp-layout-2col-cell-1,
-.txp-layout-4col-cell-1-2,
-.txp-layout-2col-cell-2,
-.txp-layout-4col-cell-3-4,
-.txp-layout-4col-cell-2-3 {
+.txp-layout-2col,
+.txp-layout-4col-2span {
   -webkit-flex: 0 0 50%;
       -ms-flex: 0 0 50%;
           flex: 0 0 50%;
@@ -2212,8 +2209,7 @@ body {
           flex: 0 0 25%;
 }
 
-.txp-layout-4col-cell-1-2-3,
-.txp-layout-4col-cell-2-3-4 {
+.txp-layout-4col-3span {
   -webkit-flex: 0 0 75%;
       -ms-flex: 0 0 75%;
           flex: 0 0 75%;
@@ -3360,10 +3356,8 @@ span.spinner {
 /**
  * Don't constrain form fields when in 3 column layout spans.
  */
-.txp-layout-4col-cell-1-2-3 .txp-form-field-label,
-.txp-layout-4col-cell-1-2-3 .txp-form-field-value,
-.txp-layout-4col-cell-2-3-4 .txp-form-field-label,
-.txp-layout-4col-cell-2-3-4 .txp-form-field-value {
+.txp-layout-4col-3span .txp-form-field-label,
+.txp-layout-4col-3span .txp-form-field-value {
   max-width: inherit;
 }
 
@@ -6517,13 +6511,10 @@ label.ui-state-active.ui-button:active {
         -ms-flex-preferred-size: 50%;
             flex-basis: 50%;
   }
-  .txp-layout-4col-cell-1-2,
-  .txp-layout-4col-cell-2-3,
-  .txp-layout-4col-cell-3-4,
+  .txp-layout-4col-2span,
   .txp-layout-4col-cell-1alt,
   .txp-layout-4col-cell-4alt,
-  .txp-layout-4col-cell-1-2-3,
-  .txp-layout-4col-cell-2-3-4 {
+  .txp-layout-4col-3span {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
@@ -6583,8 +6574,7 @@ label.ui-state-active.ui-button:active {
      * Cells for 2 column layout become 1 column layout.
      * Cells for 4 column layout become 1 column layout.
      */
-  .txp-layout-2col-cell-1,
-  .txp-layout-2col-cell-2,
+  .txp-layout-2col,
   .txp-layout-4col-cell-1,
   .txp-layout-4col-cell-2,
   .txp-layout-4col-cell-3,
