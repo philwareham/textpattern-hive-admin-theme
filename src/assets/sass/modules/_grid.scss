@@ -32,22 +32,18 @@
     flex: 0 0 100%;
 }
 
+.txp-layout-4col-3span {
+    flex: 0 0 75%;
+}
+
 .txp-layout-2col,
 .txp-layout-4col-2span {
     flex: 0 0 50%;
 }
 
-.txp-layout-4col-cell-1,
-.txp-layout-4col-cell-1alt,
-.txp-layout-4col-cell-2,
-.txp-layout-4col-cell-3,
-.txp-layout-4col-cell-4,
-.txp-layout-4col-cell-4alt {
+.txp-layout-4col,
+.txp-layout-4col-alt {
     flex: 0 0 25%;
-}
-
-.txp-layout-4col-3span {
-    flex: 0 0 75%;
 }
 
 /**

@@ -25,16 +25,12 @@
      * Cells for 4 column span variations become 1 column layout.
      */
 
-    .txp-layout-4col-cell-1,
-    .txp-layout-4col-cell-2,
-    .txp-layout-4col-cell-3,
-    .txp-layout-4col-cell-4 {
+    .txp-layout-4col {
         flex-basis: 50%;
     }
 
+    .txp-layout-4col-alt,
     .txp-layout-4col-2span,
-    .txp-layout-4col-cell-1alt,
-    .txp-layout-4col-cell-4alt,
     .txp-layout-4col-3span {
         flex-basis: 100%;
     }
@@ -107,10 +103,7 @@
      */
 
     .txp-layout-2col,
-    .txp-layout-4col-cell-1,
-    .txp-layout-4col-cell-2,
-    .txp-layout-4col-cell-3,
-    .txp-layout-4col-cell-4 {
+    .txp-layout-4col {
         flex-basis: 100%;
     }
 
