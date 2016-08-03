@@ -82,7 +82,8 @@ a {
   /* 3 */
   text-decoration: none;
   /* 4 */
-  text-decoration-skip: ink edges;
+  -webkit-text-decoration-skip: ink edges;
+          text-decoration-skip: ink edges;
 }
 
 a:hover, a:active {
