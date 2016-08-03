@@ -136,151 +136,154 @@
 
         <div id="messagepane"></div>
 
-        <div class="txp-layout-2col-cell-1">
-            <h1 class="txp-heading">Files</h1>
-        </div>
+        <div class="txp-layout">
 
-        <div class="txp-layout-2col-cell-2" id="file_control">
-            <form class="txp-search" role="search" method="get" action="#">
-                <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search files…">
-                <span class="txp-search-buttons">
-                    <button class="txp-search-button">Search</button>
-                    <button class="txp-search-options">Search criteria</button>
-                </span>
-                <ul class="txp-dropdown">
-                    <li>
-                        <div>
-                            <input id="search-crit1" name="search-crit1" type="checkbox">
-                            <label for="search-crit1">Search all</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <input id="search-crit2" name="search-crit2" type="checkbox">
-                            <label for="search-crit2">ID#</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <input id="search-crit3" name="search-crit3" type="checkbox">
-                            <label for="search-crit3">Name</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <input id="search-crit4" name="search-crit4" type="checkbox">
-                            <label for="search-crit4">Title</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <input id="search-crit5" name="search-crit5" type="checkbox">
-                            <label for="search-crit5">Description</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <input id="search-crit6" name="search-crit6" type="checkbox">
-                            <label for="search-crit6">Category</label>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <input id="search-crit7" name="search-crit7" type="checkbox">
-                            <label for="search-crit7">Author</label>
-                        </div>
-                    </li>
-                </ul>
-            </form>
-        </div>
+            <div class="txp-layout-2col">
+                <h1 class="txp-heading">Files</h1>
+            </div>
 
-        <div class="txp-layout-1col">
-            <div class="txp-control-panel">
-                <form class="upload-form" method="post" action="#">
-                    <div class="inline-file-uploader">
-                        <label for="file-upload">Upload file&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label>
-                        <input id="file-upload" name="thefile" type="file">
-                        <input type="submit" value="Upload">
+            <div class="txp-layout-2col" id="file_control">
+                <form class="txp-search" role="search" method="get" action="#">
+                    <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search files…">
+                    <span class="txp-search-buttons">
+                        <button class="txp-search-button">Search</button>
+                        <button class="txp-search-options">Search criteria</button>
+                    </span>
+                    <ul class="txp-dropdown">
+                        <li>
+                            <div>
+                                <input id="search-crit1" name="search-crit1" type="checkbox">
+                                <label for="search-crit1">Search all</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit2" name="search-crit2" type="checkbox">
+                                <label for="search-crit2">ID#</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit3" name="search-crit3" type="checkbox">
+                                <label for="search-crit3">Name</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit4" name="search-crit4" type="checkbox">
+                                <label for="search-crit4">Title</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit5" name="search-crit5" type="checkbox">
+                                <label for="search-crit5">Description</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit6" name="search-crit6" type="checkbox">
+                                <label for="search-crit6">Category</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit7" name="search-crit7" type="checkbox">
+                                <label for="search-crit7">Author</label>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+
+            <div class="txp-layout-1col">
+                <div class="txp-control-panel">
+                    <form class="upload-form" method="post" action="#">
+                        <div class="inline-file-uploader">
+                            <label for="file-upload">Upload file&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help">i</a></label>
+                            <input id="file-upload" name="thefile" type="file">
+                            <input type="submit" value="Upload">
+                        </div>
+                    </form>
+                    <form class="assign-existing-form" id="assign_file" method="post" action="#">
+                        <label for="file-existing">Existing file</label>
+                        <select id="file-existing" name="filename">
+                            <option value="" selected="selected">&nbsp;</option>
+                            <option value="bourbon.txt">quite-a-long-filename-for-testing-purposes.txt</option>
+                        </select>
+                        <input type="submit" value="Create">
+                    </form>
+                </div>
+                <div class="txp-list-options">
+                    <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+                </div>
+
+                <form class="multi_edit_form" id="files_form" name="longform" method="post" action="#">
+                    <div class="txp-listtables">
+                        <table class="txp-list">
+
+                            <thead>
+                                <tr>
+                                    <th class="txp-list-col-multi-edit" scope="col" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                                    <th class="txp-list-col-id" scope="col"><a href="#">ID#</a></th>
+                                    <th class="txp-list-col-filename asc" scope="col"><a href="#">Name</a></th>
+                                    <th class="txp-list-col-title" scope="col"><a href="#">Title</a></th>
+                                    <th class="txp-list-col-description files_detail" scope="col"><a href="#">Description</a></th>
+                                    <th class="txp-list-col-category category" scope="col"><a href="#">Category</a></th>
+                                    <th class="txp-list-col-tag-build files_detail" scope="col">Tags</th>
+                                    <th class="txp-list-col-status" scope="col">Status</th>
+                                    <th class="txp-list-col-condition" scope="col">Condition</th>
+                                    <th class="txp-list-col-downloads" scope="col"><a href="#">Downloads</a></th>
+                                    <th class="txp-list-col-author name" scope="col"><a href="#">Author</a></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="secondary/content-file_edit.html" title="Edit">1</a><span class="txp-option-link files_detail">&#160;<span role="separator">|</span>&#160;<a href="#" title="View">Download</a></span></th>
+                                    <td class="txp-list-col-filename"><a href="secondary/content-file_edit.html" title="Edit">test-file.zip</a></td>
+                                    <td class="txp-list-col-title">A Test File</td>
+                                    <td class="txp-list-col-description files_detail">This is a test file upload description</td>
+                                    <td class="txp-list-col-category category">&#160;</td>
+                                    <td class="txp-list-col-tag-build files_detail">
+                                        <a target="_blank" href="#">Textile</a>
+                                        <span role="separator">&#124;</span>
+                                        <a target="_blank" href="#">Textpattern</a>
+                                        <span role="separator">&#124;</span>
+                                        <a target="_blank" href="#">HTML</a>
+                                    </td>
+                                    <td class="txp-list-col-status">Live</td>
+                                    <td class="txp-list-col-condition"><span class="success">Ok</span></td>
+                                    <td class="txp-list-col-downloads"><a href="#" title="Download">2</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div><!-- /txp-listtables -->
+
+                    <div class="multi-edit">
+                        <select name="edit_method">
+                            <option value="" selected="selected">With selected&#8230;</option>
+                            <option value="changecategory">Change category</option>
+                            <option value="changeauthor">Change author</option>
+                            <option value="changestatus">Change status</option>
+                            <option value="changecount">Reset download count</option>
+                            <option value="delete">Delete</option>
+                        </select>
                     </div>
+
                 </form>
-                <form class="assign-existing-form" id="assign_file" method="post" action="#">
-                    <label for="file-existing">Existing file</label>
-                    <select id="file-existing" name="filename">
-                        <option value="" selected="selected">&nbsp;</option>
-                        <option value="bourbon.txt">quite-a-long-filename-for-testing-purposes.txt</option>
-                    </select>
-                    <input type="submit" value="Create">
-                </form>
-            </div>
-            <div class="txp-list-options">
-                <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
-            </div>
 
-            <form class="multi_edit_form" id="files_form" name="longform" method="post" action="#">
-                <div class="txp-listtables">
-                    <table class="txp-list">
-
-                        <thead>
-                            <tr>
-                                <th class="txp-list-col-multi-edit" scope="col" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
-                                <th class="txp-list-col-id" scope="col"><a href="#">ID#</a></th>
-                                <th class="txp-list-col-filename asc" scope="col"><a href="#">Name</a></th>
-                                <th class="txp-list-col-title" scope="col"><a href="#">Title</a></th>
-                                <th class="txp-list-col-description files_detail" scope="col"><a href="#">Description</a></th>
-                                <th class="txp-list-col-category category" scope="col"><a href="#">Category</a></th>
-                                <th class="txp-list-col-tag-build files_detail" scope="col">Tags</th>
-                                <th class="txp-list-col-status" scope="col">Status</th>
-                                <th class="txp-list-col-condition" scope="col">Condition</th>
-                                <th class="txp-list-col-downloads" scope="col"><a href="#">Downloads</a></th>
-                                <th class="txp-list-col-author name" scope="col"><a href="#">Author</a></th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]"></td>
-                                <th class="txp-list-col-id" scope="row"><a href="secondary/content-file_edit.html" title="Edit">1</a><span class="txp-option-link files_detail">&#160;<span role="separator">|</span>&#160;<a href="#" title="View">Download</a></span></th>
-                                <td class="txp-list-col-filename"><a href="secondary/content-file_edit.html" title="Edit">test-file.zip</a></td>
-                                <td class="txp-list-col-title">A Test File</td>
-                                <td class="txp-list-col-description files_detail">This is a test file upload description</td>
-                                <td class="txp-list-col-category category">&#160;</td>
-                                <td class="txp-list-col-tag-build files_detail">
-                                    <a target="_blank" href="#">Textile</a>
-                                    <span role="separator">&#124;</span>
-                                    <a target="_blank" href="#">Textpattern</a>
-                                    <span role="separator">&#124;</span>
-                                    <a target="_blank" href="#">HTML</a>
-                                </td>
-                                <td class="txp-list-col-status">Live</td>
-                                <td class="txp-list-col-condition"><span class="success">Ok</span></td>
-                                <td class="txp-list-col-downloads"><a href="#" title="Download">2</a></td>
-                                <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
-                            </tr>
-                        </tbody>
-
-                    </table>
-                </div><!-- /txp-listtables -->
-
-                <div class="multi-edit">
-                    <select name="edit_method">
-                        <option value="" selected="selected">With selected&#8230;</option>
-                        <option value="changecategory">Change category</option>
-                        <option value="changeauthor">Change author</option>
-                        <option value="changestatus">Change status</option>
-                        <option value="changecount">Reset download count</option>
-                        <option value="delete">Delete</option>
-                    </select>
+                <div class="txp-navigation" id="file_navigation">
+                    <div class="nav-tertiary pageby">
+                        <a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a>
+                    </div>
                 </div>
 
-            </form>
-
-            <div class="txp-navigation" id="file_navigation">
-                <div class="nav-tertiary pageby">
-                    <a class="navlink-active" title="View 15 per page" aria-pressed="true" role="button" href="#">15</a><a class="navlink" title="View 25 per page" aria-pressed="false" role="button" href="#">25</a><a class="navlink" title="View 50 per page" aria-pressed="false" role="button" href="#">50</a><a class="navlink" title="View 100 per page" aria-pressed="false" role="button" href="#">100</a>
-                </div>
-            </div>
-
-        </div><!-- /txp-layout-1col -->
+            </div><!-- /txp-layout-1col -->
+        </div><!-- /.txp-layout -->
     </main><!-- /txp-body -->
 
     <footer class="txp-footer">

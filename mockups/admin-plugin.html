@@ -142,87 +142,92 @@
             </span>
         </div>
 
-        <h1 class="txp-heading">Plugins</h1>
+        <div class="txp-layout">
 
-        <div class="txp-control-panel">
-            <form class="plugin-data" id="plugin_install_form" method="post" action="#">
-                <label for="plugin-install">Install plugin&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help" title="Help" aria-label="Help">i</a></label>
-                <textarea class="code" id="plugin-install" name="plugin" cols="64" rows="4" dir="ltr"></textarea>
-                <input name="install_new" type="submit" value="Upload">
-            </form>
-        </div>
-
-        <form class="multi_edit_form" id="plugin_form" name="longform" method="post" action="#">
-            <div class="txp-listtables">
-                <table class="txp-list">
-
-                    <thead>
-                        <tr>
-                            <th class="txp-list-col-multi-edit" scope="col" title="Toggle all/none selected"><input id="select_all" name="select_all" type="checkbox" value="0"></th>
-                            <th class="txp-list-col-name asc" scope="col"><a href="#">Plugin</a></th>
-                            <th class="txp-list-col-author" scope="col"><a href="#">Author</a></th>
-                            <th class="txp-list-col-version" scope="col"><a href="#">Version</a></th>
-                            <th class="txp-list-col-modified" scope="col"><a href="#">Modified</a></th>
-                            <th class="txp-list-col-description" scope="col">Description</th>
-                            <th class="txp-list-col-status" scope="col"><a href="#">Active</a></th>
-                            <th class="txp-list-col-load-order" scope="col"><a href="#">Order</a></th>
-                            <th class="txp-list-col-manage" scope="col">Manage</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr class="active">
-                            <td class="txp-list-col-multi-edit"><input type="checkbox" value="rah_external_output" name="selected[]"></td>
-                            <th class="txp-list-col-name" scope="row"><a href="secondary/admin-plugin_edit.html" title="Edit">rah_external_output</a></th>
-                            <td class="txp-list-col-author"><a href="http://rahforum.biz" rel="external">Jukka Svahn</a></td>
-                            <td class="txp-list-col-version">0.9</td>
-                            <td class="txp-list-col-modified">&#160;</td>
-                            <td class="txp-list-col-description">Output external content-type snippets</td>
-                            <td class="txp-list-col-status"><a href="#">Yes</a></td>
-                            <td class="txp-list-col-load-order">5</td>
-                            <td class="txp-list-col-manage"><a class="plugin-help" href="secondary/admin-plugin_help.html">Help</a>&#160;<span role="separator">&#124;</span>&#160;<a class="plugin-prefs" href="#">Options</a></td>
-                        </tr>
-                        <tr>
-                            <td class="txp-list-col-multi-edit"><input type="checkbox" value="smd_browse_by" name="selected[]"></td>
-                            <th class="txp-list-col-name" scope="row"><a href="secondary/admin-plugin_edit.html" title="Edit">smd_browse_by</a></th>
-                            <td class="txp-list-col-author"><a href="http://stefdawson.com/" rel="external">Stef Dawson</a></td>
-                            <td class="txp-list-col-version">0.10</td>
-                            <td class="txp-list-col-modified"><span class="warning">Yes</span></td>
-                            <td class="txp-list-col-description">Browse by Category (+article Section) in admin side</td>
-                            <td class="txp-list-col-status"><a href="#">No</a></td>
-                            <td class="txp-list-col-load-order">5</td>
-                            <td class="txp-list-col-manage"><a class="plugin-help" href="secondary/admin-plugin_help.html">Help</a></td>
-                        </tr>
-                    </tbody>
-
-                </table>
-            </div><!-- /txp-listtables -->
-
-            <div class="multi-edit">
-                <select name="edit_method">
-                    <option value="" selected="selected">With selected&#8230;</option>
-                    <option value="changestatus">Change status</option>
-                    <option value="changeorder">Change order</option>
-                    <option value="delete">Delete</option>
-                </select>
-                <div class="multi-option" id="multi-option-changeorder">
-                    <select name="order">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5" selected="selected">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-                </div>
-                <input type="submit" value="Go">
+            <div class="txp-layout-1col">
+                <h1 class="txp-heading">Plugins</h1>
             </div>
 
-        </form>
+            <div class="txp-control-panel">
+                <form class="plugin-data" id="plugin_install_form" method="post" action="#">
+                    <label for="plugin-install">Install plugin&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help" title="Help" aria-label="Help">i</a></label>
+                    <textarea class="code" id="plugin-install" name="plugin" cols="64" rows="4" dir="ltr"></textarea>
+                    <input name="install_new" type="submit" value="Upload">
+                </form>
+            </div>
 
+            <form class="multi_edit_form" id="plugin_form" name="longform" method="post" action="#">
+                <div class="txp-listtables">
+                    <table class="txp-list">
+
+                        <thead>
+                            <tr>
+                                <th class="txp-list-col-multi-edit" scope="col" title="Toggle all/none selected"><input id="select_all" name="select_all" type="checkbox" value="0"></th>
+                                <th class="txp-list-col-name asc" scope="col"><a href="#">Plugin</a></th>
+                                <th class="txp-list-col-author" scope="col"><a href="#">Author</a></th>
+                                <th class="txp-list-col-version" scope="col"><a href="#">Version</a></th>
+                                <th class="txp-list-col-modified" scope="col"><a href="#">Modified</a></th>
+                                <th class="txp-list-col-description" scope="col">Description</th>
+                                <th class="txp-list-col-status" scope="col"><a href="#">Active</a></th>
+                                <th class="txp-list-col-load-order" scope="col"><a href="#">Order</a></th>
+                                <th class="txp-list-col-manage" scope="col">Manage</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="active">
+                                <td class="txp-list-col-multi-edit"><input type="checkbox" value="rah_external_output" name="selected[]"></td>
+                                <th class="txp-list-col-name" scope="row"><a href="secondary/admin-plugin_edit.html" title="Edit">rah_external_output</a></th>
+                                <td class="txp-list-col-author"><a href="http://rahforum.biz" rel="external">Jukka Svahn</a></td>
+                                <td class="txp-list-col-version">0.9</td>
+                                <td class="txp-list-col-modified">&#160;</td>
+                                <td class="txp-list-col-description">Output external content-type snippets</td>
+                                <td class="txp-list-col-status"><a href="#">Yes</a></td>
+                                <td class="txp-list-col-load-order">5</td>
+                                <td class="txp-list-col-manage"><a class="plugin-help" href="secondary/admin-plugin_help.html">Help</a>&#160;<span role="separator">&#124;</span>&#160;<a class="plugin-prefs" href="#">Options</a></td>
+                            </tr>
+                            <tr>
+                                <td class="txp-list-col-multi-edit"><input type="checkbox" value="smd_browse_by" name="selected[]"></td>
+                                <th class="txp-list-col-name" scope="row"><a href="secondary/admin-plugin_edit.html" title="Edit">smd_browse_by</a></th>
+                                <td class="txp-list-col-author"><a href="http://stefdawson.com/" rel="external">Stef Dawson</a></td>
+                                <td class="txp-list-col-version">0.10</td>
+                                <td class="txp-list-col-modified"><span class="warning">Yes</span></td>
+                                <td class="txp-list-col-description">Browse by Category (+article Section) in admin side</td>
+                                <td class="txp-list-col-status"><a href="#">No</a></td>
+                                <td class="txp-list-col-load-order">5</td>
+                                <td class="txp-list-col-manage"><a class="plugin-help" href="secondary/admin-plugin_help.html">Help</a></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div><!-- /txp-listtables -->
+
+                <div class="multi-edit">
+                    <select name="edit_method">
+                        <option value="" selected="selected">With selected&#8230;</option>
+                        <option value="changestatus">Change status</option>
+                        <option value="changeorder">Change order</option>
+                        <option value="delete">Delete</option>
+                    </select>
+                    <div class="multi-option" id="multi-option-changeorder">
+                        <select name="order">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5" selected="selected">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Go">
+                </div>
+
+            </form>
+
+        </div><!-- /.txp-layout -->
     </main><!-- /txp-body -->
 
     <footer class="txp-footer">

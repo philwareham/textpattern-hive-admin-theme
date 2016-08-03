@@ -5,10 +5,6 @@
 
 @media (max-width: $break-large) {
 
-
-    /* Layout < 768px
-       ========================================================================== */
-
     /**
      * Adjust right/left padding of body.
      */
@@ -22,9 +18,22 @@
         padding: 1em 2em 0; // 13px + 26px
     }
 
+    /**
+     * Grid column cell changes at 1st breakpoint downwards.
+     *
+     * Cells for 4 column layout become 2 column layout.
+     * Cells for 4 column span variations become 1 column layout.
+     */
 
-    /* Header < 768px
-       ========================================================================== */
+    .txp-layout-4col {
+        flex-basis: 50%;
+    }
+
+    .txp-layout-4col-alt,
+    .txp-layout-4col-2span,
+    .txp-layout-4col-3span {
+        flex-basis: 100%;
+    }
 
     /**
      * Adjust right/left padding of header area.
@@ -85,6 +94,18 @@
 
 
 @media (max-width: $break-small) {
+
+    /**
+     * Grid column cell changes at 2nd breakpoint downwards.
+     *
+     * Cells for 2 column layout become 1 column layout.
+     * Cells for 4 column layout become 1 column layout.
+     */
+
+    .txp-layout-2col,
+    .txp-layout-4col {
+        flex-basis: 100%;
+    }
 
     /**
      * Non-fixed header on mobile layout (because mobile nav menu couldn't scroll otherwise).
@@ -174,8 +195,6 @@
             }
         }
     }
-
-
 
     .txp-nav > ul > li {
         float: none;

@@ -136,19 +136,21 @@
 
         <div id="messagepane"></div>
 
-        <div role="region" id="main_content" class="txp-layout-4col-cell-1-2-3">
-            <h1 class="txp-heading">Styles</h1>
-            <form id="style_form" method="post" action="#">
-                <div class="txp-form-field">
-                    <div class="txp-form-field-label"><label for="text">Style name</label></div>
-                    <div class="txp-form-field-value">
-                        <input class="input-medium" id="text" type="text" size="16" value="new_style">
+        <div class="txp-layout">
+
+            <div role="region" id="main_content" class="txp-layout-4col-3span">
+                <h1 class="txp-heading">Styles</h1>
+                <form id="style_form" method="post" action="#">
+                    <div class="txp-form-field">
+                        <div class="txp-form-field-label"><label for="text">Style name</label></div>
+                        <div class="txp-form-field-value">
+                            <input class="input-medium" id="text" type="text" size="16" value="new_style">
+                        </div>
                     </div>
-                </div>
-                <div class="txp-form-field">
-                    <div class="txp-form-field-label"><label for="css">Style code</label></div>
-                    <div class="txp-form-field-value">
-                        <textarea class="code" id="css" name="css" cols="64" rows="24" dir="ltr">body {
+                    <div class="txp-form-field">
+                        <div class="txp-form-field-label"><label for="css">Style code</label></div>
+                        <div class="txp-form-field-value">
+                            <textarea class="code" id="css" name="css" cols="64" rows="24" dir="ltr">body {
     color: #fff;
     background: #000;
 }
@@ -156,48 +158,49 @@
 h1 {
     font-weight: normal;
 }</textarea>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div><!-- /#main_content -->
+                </form>
+            </div><!-- /#main_content -->
 
-        <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
-            <p class="txp-save">
-                <input class="publish" type="submit" value="Save" form="style_form">
-            </p>
-            <p class="txp-actions">
-                <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new style</a>
-                <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
-            </p>
+            <div role="region" id="content_switcher" class="txp-layout-4col-alt">
+                <p class="txp-save">
+                    <input class="publish" type="submit" value="Save" form="style_form">
+                </p>
+                <p class="txp-actions">
+                    <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new style</a>
+                    <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
+                </p>
 
-            <section id="all_styles" class="txp-details" aria-labelledby="all_styles-label">
-                <h3 id="all_styles-label">All styles</h3>
-                <div role="group">
-                    <ul class="switcher-list">
-                        <li><a href="#">default</a></li>
-                        <li class="active">
-                            <a href="#">new_style</a>
-                            <form method="post" action="#" onsubmit="return confirm('Really delete?');">
-                                <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
-                            </form>
-                        </li>
-                        <li>
-                            <a href="#">new_style_copy</a>
-                            <form method="post" action="#" onsubmit="return confirm('Really delete?');">
-                                <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
-                            </form>
-                        </li>
-                        <li>
-                            <a href="#">new_style_copy_copy</a>
-                            <form method="post" action="#" onsubmit="return confirm('Really delete?');">
-                                <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </div><!-- /#content_switcher -->
+                <section id="all_styles" class="txp-details" aria-labelledby="all_styles-label">
+                    <h3 id="all_styles-label">All styles</h3>
+                    <div role="group">
+                        <ul class="switcher-list">
+                            <li><a href="#">default</a></li>
+                            <li class="active">
+                                <a href="#">new_style</a>
+                                <form method="post" action="#" onsubmit="return confirm('Really delete?');">
+                                    <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
+                                </form>
+                            </li>
+                            <li>
+                                <a href="#">new_style_copy</a>
+                                <form method="post" action="#" onsubmit="return confirm('Really delete?');">
+                                    <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
+                                </form>
+                            </li>
+                            <li>
+                                <a href="#">new_style_copy_copy</a>
+                                <form method="post" action="#" onsubmit="return confirm('Really delete?');">
+                                    <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div><!-- /#content_switcher -->
 
+        </div><!-- /.txp-layout -->
     </main><!-- /txp-body -->
 
     <footer class="txp-footer">

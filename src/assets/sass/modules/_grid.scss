@@ -1,134 +1,55 @@
-/* Singularity Grid System
+/* Layout grid
    ========================================================================== */
 
-@include add-grid(12);
-@include add-gutter(0.3);
+/**
+ * Flex container.
+ */
+
+.txp-layout {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1em;
+
+    > * {
+        padding: 0 1em;
+        box-sizing: border-box;
+    }
+}
 
 /**
  * Generate sizes all for grid column cells.
  *
  * Because this is desktop first, all cells span variations are defined
  * initially (1 column full width, 2 column, 4 column). We will then
- * adjust them at various breakpoints listed below.
+ * adjust them at various breakpoints.
  *
  * Example HTML:
  *
  * <div class="txp-layout-1col"></div>
  *
- * <div class="txp-layout-2col-cell-1">
- * <div class="txp-layout-2col-cell-2">
+ * <div class="txp-layout-2col">
+ * <div class="txp-layout-2col">
  *
- * <div class="txp-layout-4col-cell-1-2-3"></div>
- * <div class="txp-layout-4col-cell-4alt"></div>
+ * <div class="txp-layout-4col-3span"></div>
+ * <div class="txp-layout-4col"></div>
  */
 
 .txp-layout-1col {
-    @include grid-span(12, 1);
-
-    clear: both;
+    flex: 0 0 100%;
 }
 
-.txp-layout-2col-cell-1,
-.txp-layout-4col-cell-1-2 {
-    @include grid-span(6, 1);
-
-    clear: both;
+.txp-layout-4col-3span {
+    flex: 0 0 75%;
 }
 
-.txp-layout-2col-cell-2,
-.txp-layout-4col-cell-3-4 {
-    @include grid-span(6, 7);
+.txp-layout-2col,
+.txp-layout-4col-2span {
+    flex: 0 0 50%;
 }
 
-.txp-layout-4col-cell-1,
-.txp-layout-4col-cell-1alt {
-    @include grid-span(3, 1);
-
-    clear: both;
-}
-
-.txp-layout-4col-cell-2 {
-    @include grid-span(3, 4);
-}
-
-.txp-layout-4col-cell-3 {
-    @include grid-span(3, 7);
-}
-
-.txp-layout-4col-cell-4,
-.txp-layout-4col-cell-4alt {
-    @include grid-span(3, 10);
-}
-
-.txp-layout-4col-cell-2-3 {
-    @include grid-span(6, 4);
-}
-
-.txp-layout-4col-cell-1-2-3 {
-    @include grid-span(9, 1);
-
-    clear: both;
-}
-
-.txp-layout-4col-cell-2-3-4 {
-    @include grid-span(9, 4);
-}
-
-/**
- * Grid column cell changes at 1st breakpoint downwards.
- *
- * Cells for 4 column layout become 2 column layout.
- * Cells for 4 column span variations become 1 column layout.
- */
-
-@include breakpoint(max-width $break-large) {
-
-    .txp-layout-4col-cell-1,
-    .txp-layout-4col-cell-3 {
-        @include grid-span(6, 1);
-
-        clear: both;
-    }
-
-    .txp-layout-4col-cell-2,
-    .txp-layout-4col-cell-4 {
-        @include grid-span(6, 7);
-    }
-
-    .txp-layout-4col-cell-1-2,
-    .txp-layout-4col-cell-2-3,
-    .txp-layout-4col-cell-3-4,
-    .txp-layout-4col-cell-1alt,
-    .txp-layout-4col-cell-4alt,
-    .txp-layout-4col-cell-1-2-3,
-    .txp-layout-4col-cell-2-3-4 {
-        @include grid-span(12, 1);
-
-        clear: both;
-    }
-
-}
-
-/**
- * Grid column cell changes at 2nd breakpoint downwards.
- *
- * Cells for 2 column layout become 1 column layout.
- * Cells for 4 column layout become 1 column layout.
- */
-
-@include breakpoint(max-width $break-small) {
-
-    .txp-layout-2col-cell-1,
-    .txp-layout-2col-cell-2,
-    .txp-layout-4col-cell-1,
-    .txp-layout-4col-cell-2,
-    .txp-layout-4col-cell-3,
-    .txp-layout-4col-cell-4 {
-        @include grid-span(12, 1);
-
-        clear: both;
-    }
-
+.txp-layout-4col,
+.txp-layout-4col-alt {
+    flex: 0 0 25%;
 }
 
 /**
@@ -142,7 +63,6 @@
 .txp-layout-textbox {
     max-width: $text-column;
     margin: 0 auto;
-    clear: both;
 }
 
 

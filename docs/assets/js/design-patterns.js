@@ -88,48 +88,6 @@ $(function ()
         iconPosition: 'end'
     });
 
-    // Split button.
-
-    $('#split-rerun-example')
-        .button()
-        .click(function ()
-        {
-            alert('Running the last action');
-        })
-        .next()
-        .button({
-            showLabel: false,
-            icon: 'ui-icon-triangle-1-s'
-        })
-        .click(function ()
-        {
-            if (langdir === 'rtl') {
-                var menu = $(this).parent().next().show().position({
-                    my: 'right top',
-                    at: 'right bottom',
-                    of: this
-                });
-            } else {
-                var menu = $(this).parent().next().show().position({
-                    my: 'left top',
-                    at: 'left bottom',
-                    of: this
-                });
-            }
-
-            $(document).one('click', function ()
-            {
-                menu.hide();
-            });
-
-            return false;
-        })
-        .parent()
-        .controlgroup()
-        .next()
-        .hide()
-        .menu();
-
     // Split button search example.
 
     var search = $('.txp-search');

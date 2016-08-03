@@ -18,7 +18,7 @@
 
     <div class="txp-layout-textbox">
         <h1>Hive theme design patterns (RTL) <span class="information">4.6</span></h1>
-        <p>The purpose of this guide is to document UI elements used within this theme in order to streamline development, avoid conflicts and inconsistencies, and as a reference for admin theme authors and plugin authors. <strong>Note:</strong> minimum version of Internet Explorer supported will be IE8.</p>
+        <p>The purpose of this guide is to document UI elements used within this theme in order to streamline development, avoid conflicts and inconsistencies, and as a reference for admin theme authors and plugin authors.</p>
         <p><a href="index.html">Switch to <abbr title="Left To Right">LTR</abbr> layout</a></p>
 
         <ol>
@@ -69,9 +69,9 @@
         <div class="text-section" id="ui-doc-colours">
             <h1>Colourways</h1>
 
-            <div class="clearfix"><!-- this `div` is just for clearfix child elements in this design patterns doc -->
+            <div class="design-patterns--flexbox"><!-- this `div` is just for flexing child elements in this design patterns doc -->
 
-                <div class="txp-layout-4col-cell-1">
+                <div class="txp-layout-4col">
                     <h3>Neutral</h3>
 
                     <p><code>background</code></p>
@@ -99,7 +99,7 @@
                     <div class="design-patterns--color design-patterns--color-text"></div>
                 </div>
 
-                <div class="txp-layout-4col-cell-2">
+                <div class="txp-layout-4col">
                     <h3>Accent</h3>
 
                     <p><code>highlight-box</code></p>
@@ -115,7 +115,7 @@
                     <div class="design-patterns--color design-patterns--color-accent-gradient-to"></div>
                 </div>
 
-                <div class="txp-layout-4col-cell-3">
+                <div class="txp-layout-4col">
                     <h3>Interaction</h3>
 
                     <p><code>selected</code></p>
@@ -137,7 +137,7 @@
                     <div class="design-patterns--color design-patterns--color-link-visited"></div>
                 </div>
 
-                <div class="txp-layout-4col-cell-4">
+                <div class="txp-layout-4col">
                     <h3>State</h3>
 
                     <p><code>success-background</code></p>
@@ -165,7 +165,7 @@
                     <div class="design-patterns--color design-patterns--color-info-text"></div>
                 </div>
 
-            </div><!-- this `/div` is just for clearfix child elements in this design patterns doc -->
+            </div><!-- this `/div` is just for flexing child elements in this design patterns doc -->
 
         </div>
 
@@ -174,110 +174,112 @@
             <h1>Columns and grids</h1>
 
             <h2>Page layout columns <span class="information">new v4.6</span></h2>
-            <p>Responsive page layout grid system based on <a rel="external" href="https://github.com/Team-Sass/Singularity" title="Go to the Singularity GitHub project">Singularity</a>.</p>
+            <p>Responsive page layout grid.</p>
             <p><strong>Code:</strong></p>
             <pre dir="ltr"><code class="language-markup">&lt;div class="txp-layout-1col"&gt;...Opt1: 1col - content here...&lt;/div&gt;
 
-&lt;div class="txp-layout-2col-cell-1"&gt;...Opt2: 2col cell1 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-2col-cell-2"&gt;...Opt2: 2col cell2 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-2col"&gt;...Opt2: 2col cell1 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-2col"&gt;...Opt2: 2col cell2 - content here...&lt;/div&gt;
 
-&lt;div class="txp-layout-4col-cell-1"&gt;...Opt3: 4col cell1 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-cell-2"&gt;...Opt3: 4col cell2 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-cell-3"&gt;...Opt3: 4col cell3 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-cell-4"&gt;...Opt3: 4col cell4 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell1 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell2 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell3 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell4 - content here...&lt;/div&gt;
 
-&lt;div class="txp-layout-4col-cell-1-2"&gt;...Opt4: 4col cell1and2 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-cell-3"&gt;...Opt4: 4col cell3 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-cell-4"&gt;...Opt4: 4col cell4 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col-2span"&gt;...Opt4: 4col cell1and2 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col"&gt;...Opt4: 4col cell3 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col"&gt;...Opt4: 4col cell4 - content here...&lt;/div&gt;
 
-&lt;div class="txp-layout-4col-cell-1alt"&gt;...Opt5: 4col cell1 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-cell-2-3"&gt;...Opt5: 4col cell2and3 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-cell-4alt"&gt;...Opt5: 4col cell4 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col-alt"&gt;...Opt5: 4col cell1 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col-2span"&gt;...Opt5: 4col cell2and3 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col-alt"&gt;...Opt5: 4col cell4 - content here...&lt;/div&gt;
 
-&lt;div class="txp-layout-4col-cell-1"&gt;...Opt6: 4col cell1 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-cell-2"&gt;...Opt6: 4col cell2 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-cell-3-4"&gt;...Opt6: 4col cell3and4 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col"&gt;...Opt6: 4col cell1 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col"&gt;...Opt6: 4col cell2 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col-2span"&gt;...Opt6: 4col cell3and4 - content here...&lt;/div&gt;
 
-&lt;div class="txp-layout-4col-cell-1-2-3"&gt;...Opt7: 4col cell1and2and3 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-cell-4alt"&gt;...Opt7: 4col cell4 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col-3span"&gt;...Opt7: 4col cell1and2and3 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col-alt"&gt;...Opt7: 4col cell4 - content here...&lt;/div&gt;
 
-&lt;div class="txp-layout-4col-cell-1alt"&gt;...Opt8: 4col cell1 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-cell-2-3-4"&gt;...Opt8: 4col cell2and3and4 - content here...&lt;/div&gt;</code></pre>
+&lt;div class="txp-layout-4col-alt"&gt;...Opt8: 4col cell1 - content here...&lt;/div&gt;
+&lt;div class="txp-layout-4col-3span"&gt;...Opt8: 4col cell2and3and4 - content here...&lt;/div&gt;</code></pre>
             <p><strong>Example:</strong></p>
+
+            <div class="design-patterns--flexbox"><!-- this `div` is just for flexing child elements in this design patterns doc -->
+
+                <div class="txp-layout-1col">
+                    <p class="design-patterns--box">Opt1: 1col</p>
+                </div>
+
+                <div class="txp-layout-2col">
+                    <p class="design-patterns--box">Opt2: 2col cell1</p>
+                </div>
+                <div class="txp-layout-2col">
+                    <p class="design-patterns--box">Opt2: 2col cell2</p>
+                </div>
+
+                <div class="txp-layout-4col">
+                    <p class="design-patterns--box">Opt3: 4col cell1</p>
+                </div>
+                <div class="txp-layout-4col">
+                    <p class="design-patterns--box">Opt3: 5col cell2</p>
+                </div>
+                <div class="txp-layout-4col">
+                    <p class="design-patterns--box">Opt3: 6col cell3</p>
+                </div>
+                <div class="txp-layout-4col">
+                    <p class="design-patterns--box">Opt3: 7col cell4</p>
+                </div>
+
+                <div class="txp-layout-4col-2span">
+                    <p class="design-patterns--box">Opt4: 4col cell1and2</p>
+                </div>
+                <div class="txp-layout-4col">
+                    <p class="design-patterns--box">Opt4: 4col cell3</p>
+                </div>
+                <div class="txp-layout-4col">
+                    <p class="design-patterns--box">Opt4: 4col cell4</p>
+                </div>
+
+                <div class="txp-layout-4col-alt">
+                    <p class="design-patterns--box">Opt5: 4col cell1</p>
+                </div>
+                <div class="txp-layout-4col-2span">
+                    <p class="design-patterns--box">Opt5: 4col cell2and3</p>
+                </div>
+                <div class="txp-layout-4col-alt">
+                    <p class="design-patterns--box">Opt5: 4col cell4</p>
+                </div>
+
+                <div class="txp-layout-4col">
+                    <p class="design-patterns--box">Opt6: 4col cell1</p>
+                </div>
+                <div class="txp-layout-4col">
+                    <p class="design-patterns--box">Opt6: 4col cell2</p>
+                </div>
+                <div class="txp-layout-4col-2span">
+                    <p class="design-patterns--box">Opt6: 4col cell3and4</p>
+                </div>
+
+                <div class="txp-layout-4col-3span">
+                    <p class="design-patterns--box">Opt7: 4col cell1and2and3</p>
+                </div>
+                <div class="txp-layout-4col-alt">
+                    <p class="design-patterns--box">Opt7: 4col cell4</p>
+                </div>
+
+                <div class="txp-layout-4col-alt">
+                    <p class="design-patterns--box">Opt8: 4col cell1</p>
+                </div>
+                <div class="txp-layout-4col-3span">
+                    <p class="design-patterns--box">Opt8: 4col cell2and3and4</p>
+                </div>
+
+            </div><!-- this `/div` is just for flexing child elements in this design patterns doc -->
+
         </div>
-    </div><!-- /txp-layout-textbox (so we can demonstrate other grids, continues afterwards) -->
 
 
-    <div class="txp-layout-1col">
-        <p class="design-patterns--box">Opt1: 1col</p>
-    </div>
-
-    <div class="txp-layout-2col-cell-1">
-        <p class="design-patterns--box">Opt2: 2col cell1</p>
-    </div>
-    <div class="txp-layout-2col-cell-2">
-        <p class="design-patterns--box">Opt2: 2col cell2</p>
-    </div>
-
-    <div class="txp-layout-4col-cell-1">
-        <p class="design-patterns--box">Opt3: 4col cell1</p>
-    </div>
-    <div class="txp-layout-4col-cell-2">
-        <p class="design-patterns--box">Opt3: 5col cell2</p>
-    </div>
-    <div class="txp-layout-4col-cell-3">
-        <p class="design-patterns--box">Opt3: 6col cell3</p>
-    </div>
-    <div class="txp-layout-4col-cell-4">
-        <p class="design-patterns--box">Opt3: 7col cell4</p>
-    </div>
-
-    <div class="txp-layout-4col-cell-1-2">
-        <p class="design-patterns--box">Opt4: 4col cell1and2</p>
-    </div>
-    <div class="txp-layout-4col-cell-3">
-        <p class="design-patterns--box">Opt4: 4col cell3</p>
-    </div>
-    <div class="txp-layout-4col-cell-4">
-        <p class="design-patterns--box">Opt4: 4col cell4</p>
-    </div>
-
-    <div class="txp-layout-4col-cell-1alt">
-        <p class="design-patterns--box">Opt5: 4col cell1</p>
-    </div>
-    <div class="txp-layout-4col-cell-2-3">
-        <p class="design-patterns--box">Opt5: 4col cell2and3</p>
-    </div>
-    <div class="txp-layout-4col-cell-4alt">
-        <p class="design-patterns--box">Opt5: 4col cell4</p>
-    </div>
-
-    <div class="txp-layout-4col-cell-1">
-        <p class="design-patterns--box">Opt6: 4col cell1</p>
-    </div>
-    <div class="txp-layout-4col-cell-2">
-        <p class="design-patterns--box">Opt6: 4col cell2</p>
-    </div>
-    <div class="txp-layout-4col-cell-3-4">
-        <p class="design-patterns--box">Opt6: 4col cell3and4</p>
-    </div>
-
-    <div class="txp-layout-4col-cell-1-2-3">
-        <p class="design-patterns--box">Opt7: 4col cell1and2and3</p>
-    </div>
-    <div class="txp-layout-4col-cell-4alt">
-        <p class="design-patterns--box">Opt7: 4col cell4</p>
-    </div>
-
-    <div class="txp-layout-4col-cell-1alt">
-        <p class="design-patterns--box">Opt8: 4col cell1</p>
-    </div>
-    <div class="txp-layout-4col-cell-2-3-4">
-        <p class="design-patterns--box">Opt8: 4col cell2and3and4</p>
-    </div>
-
-
-    <div class="txp-layout-textbox"><!-- txp-layout-textbox continued -->
         <div>
             <h2>Text columns <span class="warning">changed v4.6</span></h2>
             <p>This is the standard column width for any text-based content in the admin-side, such as a plugin help page. Larger than the golden ratio at full width spans but a good trade-off between readability and economic use of screen estate. <strong>Please note</strong> this replaces the old <code dir="ltr">.plugin-help</code> <span class="information">4.4.x</span> and <code dir="ltr">.text-column</code> <span class="information">4.5</span> classes.</p>
@@ -1444,19 +1446,6 @@
                 <a class="jquery-ui-button-icon-right" href="#">&lt;a&gt; icon on the right</a>
                 <a class="jquery-ui-button-icon-left" href="#">&lt;a&gt; two icons <span class="ui-icon ui-icon-gear"></a>
             </p>
-
-            <h3>Split buttons</h3>
-            <div>
-                <p>
-                    <button id="split-rerun-example">Run last action</button>
-                    <button id="split-select-example">Select an action</button>
-                </p>
-                <ul>
-                    <li><div><a href="#">Open&hellip;</a></div></li>
-                    <li><div><a href="#">Save</a></div></li>
-                    <li><div><a href="#">Delete</a></div></li>
-                </ul>
-            </div>
 
             <p><a rel="external" href="https://jqueryui.com/button/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
