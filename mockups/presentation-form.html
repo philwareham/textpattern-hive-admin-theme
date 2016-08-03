@@ -136,34 +136,36 @@
 
         <div id="messagepane"></div>
 
-        <div role="region" id="main_content" class="txp-layout-4col-cell-1-2-3">
-            <h1 class="txp-heading">Forms</h1>
-            <form id="form_form" action="#" method="post">
-                <div class="txp-form-field">
-                    <div class="txp-form-field-label"><label for="text">Form name</label></div>
-                    <div class="txp-form-field-value">
-                        <input class="input-medium" id="text" type="text" size="16" disabled="disabled" value="default">
+        <div class="txp-layout">
+
+            <div role="region" id="main_content" class="txp-layout-4col-cell-1-2-3">
+                <h1 class="txp-heading">Forms</h1>
+                <form id="form_form" action="#" method="post">
+                    <div class="txp-form-field">
+                        <div class="txp-form-field-label"><label for="text">Form name</label></div>
+                        <div class="txp-form-field-value">
+                            <input class="input-medium" id="text" type="text" size="16" disabled="disabled" value="default">
+                        </div>
                     </div>
-                </div>
-                <div class="txp-form-field">
-                    <div class="txp-form-field-label"><label for="type">Form type</label></div>
-                    <div class="txp-form-field-value">
-                        <select id="type" name="type" disabled="disabled">
-                            <option value="">&#160;</option>
-                            <option value="article" selected="selected">article</option>
-                            <option value="category">category</option>
-                            <option value="comment">comment</option>
-                            <option value="file">file</option>
-                            <option value="link">link</option>
-                            <option value="misc">misc</option>
-                            <option value="section">section</option>
-                        </select>
+                    <div class="txp-form-field">
+                        <div class="txp-form-field-label"><label for="type">Form type</label></div>
+                        <div class="txp-form-field-value">
+                            <select id="type" name="type" disabled="disabled">
+                                <option value="">&#160;</option>
+                                <option value="article" selected="selected">article</option>
+                                <option value="category">category</option>
+                                <option value="comment">comment</option>
+                                <option value="file">file</option>
+                                <option value="link">link</option>
+                                <option value="misc">misc</option>
+                                <option value="section">section</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="txp-form-field">
-                    <div class="txp-form-field-label"><label for="form">Form code</label></div>
-                    <div class="txp-form-field-value">
-                        <textarea class="code" id="form" name="Form" cols="64" rows="24" dir="ltr">&lt;txp:if_individual_article&gt;
+                    <div class="txp-form-field">
+                        <div class="txp-form-field-label"><label for="form">Form code</label></div>
+                        <div class="txp-form-field-value">
+                            <textarea class="code" id="form" name="Form" cols="64" rows="24" dir="ltr">&lt;txp:if_individual_article&gt;
     &lt;h1 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h1&gt;
 &lt;txp:else /&gt;
     &lt;h3 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h3&gt;
@@ -182,197 +184,198 @@
 &lt;txp:comments_invite wraptag=&quot;p&quot; /&gt;
 
 &lt;div class=&quot;divider&quot;&gt;&lt;txp:image id=&quot;1&quot; /&gt;&lt;/div&gt;</textarea>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div><!-- /#main_content -->
+                </form>
+            </div><!-- /#main_content -->
 
-        <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
-            <p class="txp-save">
-                <input class="publish" type="submit" value="Save" name="save" form="form_form">
-            </p>
-            <p class="txp-actions">
-                <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new form</a>
-                <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
-            </p>
+            <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
+                <p class="txp-save">
+                    <input class="publish" type="submit" value="Save" name="save" form="form_form">
+                </p>
+                <p class="txp-actions">
+                    <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new form</a>
+                    <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
+                </p>
 
-            <form method="post" action="#" id="allforms_form">
-                <section id="article_forms_group" class="txp-details" aria-labelledby="article_forms_group-label">
-                    <h3 id="article_forms_group-label" class="txp-summary expanded"><a href="#article_forms" role="button" aria-controls="article_forms" aria-pressed="true">Article forms</a></h3>
-                    <div role="group" id="article_forms" class="toggle" aria-expanded="true">
-                        <ul class="switcher-list">
-                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="article_listing"></span><a href="#">article_listing</a></li>
-                            <li><a href="#">comments_display</a></li>
-                            <li class="active"><a href="#">default</a></li>
-                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="search_results"></span><a href="#">search_results</a></li>
-                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="single"></span><a href="#">single</a></li>
-                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="search_results"></span><a href="#">test_of_a_extremely_long_form_name_that_overflows_out_of_container</a></li>
-                        </ul>
+                <form method="post" action="#" id="allforms_form">
+                    <section id="article_forms_group" class="txp-details" aria-labelledby="article_forms_group-label">
+                        <h3 id="article_forms_group-label" class="txp-summary expanded"><a href="#article_forms" role="button" aria-controls="article_forms" aria-pressed="true">Article forms</a></h3>
+                        <div role="group" id="article_forms" class="toggle" aria-expanded="true">
+                            <ul class="switcher-list">
+                                <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="article_listing"></span><a href="#">article_listing</a></li>
+                                <li><a href="#">comments_display</a></li>
+                                <li class="active"><a href="#">default</a></li>
+                                <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="search_results"></span><a href="#">search_results</a></li>
+                                <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="single"></span><a href="#">single</a></li>
+                                <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="search_results"></span><a href="#">test_of_a_extremely_long_form_name_that_overflows_out_of_container</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="comment_forms_group" class="txp-details" aria-labelledby="comment_forms_group-label">
+                        <h3 id="comment_forms_group-label" class="txp-summary expanded"><a href="#comment_forms" role="button" aria-controls="comment_forms" aria-pressed="true">Comment forms</a></h3>
+                        <div role="group" id="comment_forms" class="toggle" aria-expanded="true">
+                            <ul class="switcher-list">
+                                <li><a href="#">comments</a></li>
+                                <li><a href="#">comment_form</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="file_forms_group" class="txp-details" aria-labelledby="file_forms_group-label">
+                        <h3 id="file_forms_group-label" class="txp-summary expanded"><a href="#file_forms" role="button" aria-controls="file_forms" aria-pressed="true">File forms</a></h3>
+                        <div role="group" id="file_forms" class="toggle" aria-expanded="true">
+                            <ul class="switcher-list">
+                                <li><a href="#">files</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="link_forms_group" class="txp-details" aria-labelledby="link_forms_group-label">
+                        <h3 id="link_forms_group-label" class="txp-summary expanded"><a href="#link_forms" role="button" aria-controls="link_forms" aria-pressed="true">Link forms</a></h3>
+                        <div role="group" id="link_forms" class="toggle" aria-expanded="true">
+                            <ul class="switcher-list">
+                                <li><a href="#">Links</a></li>
+                                <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="plainlinks"></span><a href="#">plainlinks</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <div class="multi-edit">
+                        <select name="edit_method">
+                            <option value="" selected="selected">With selected&#8230;</option>
+                            <option value="changetype">changetype</option>
+                            <option value="delete">Delete</option>
+                        </select>
                     </div>
-                </section>
-                <section id="comment_forms_group" class="txp-details" aria-labelledby="comment_forms_group-label">
-                    <h3 id="comment_forms_group-label" class="txp-summary expanded"><a href="#comment_forms" role="button" aria-controls="comment_forms" aria-pressed="true">Comment forms</a></h3>
-                    <div role="group" id="comment_forms" class="toggle" aria-expanded="true">
-                        <ul class="switcher-list">
-                            <li><a href="#">comments</a></li>
-                            <li><a href="#">comment_form</a></li>
-                        </ul>
-                    </div>
-                </section>
-                <section id="file_forms_group" class="txp-details" aria-labelledby="file_forms_group-label">
-                    <h3 id="file_forms_group-label" class="txp-summary expanded"><a href="#file_forms" role="button" aria-controls="file_forms" aria-pressed="true">File forms</a></h3>
-                    <div role="group" id="file_forms" class="toggle" aria-expanded="true">
-                        <ul class="switcher-list">
-                            <li><a href="#">files</a></li>
-                        </ul>
-                    </div>
-                </section>
-                <section id="link_forms_group" class="txp-details" aria-labelledby="link_forms_group-label">
-                    <h3 id="link_forms_group-label" class="txp-summary expanded"><a href="#link_forms" role="button" aria-controls="link_forms" aria-pressed="true">Link forms</a></h3>
-                    <div role="group" id="link_forms" class="toggle" aria-expanded="true">
-                        <ul class="switcher-list">
-                            <li><a href="#">Links</a></li>
-                            <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="plainlinks"></span><a href="#">plainlinks</a></li>
-                        </ul>
-                    </div>
-                </section>
-                <div class="multi-edit">
-                    <select name="edit_method">
-                        <option value="" selected="selected">With selected&#8230;</option>
-                        <option value="changetype">changetype</option>
-                        <option value="delete">Delete</option>
-                    </select>
-                </div>
-            </form>
-        </div><!-- /#content_switcher -->
+                </form>
+            </div><!-- /#content_switcher -->
 
 <!-- TAGBUILDER - TO BE REMOVED?
-        <div id="tagbuild_links">
-            <h2>Tag builder</h2>
+            <div id="tagbuild_links">
+                <h2>Tag builder</h2>
 
-            <section id="article-tags_group" class="txp-details" aria-labelledby="article-tags_group-label">
-                <h3 id="article-tags_group-label" class="txp-summary expanded"><a href="#article-tags" aria-controls="article-tags" role="button" aria-pressed="true">Articles</a></h3>
-                <div role="group" id="article-tags" class="toggle" aria-expanded="true">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">Permanent link</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Posted</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Title</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Body</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Excerpt</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Section</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Category 1</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Category 2</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Article image</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comments invite</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Author</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="article-tags_group" class="txp-details" aria-labelledby="article-tags_group-label">
+                    <h3 id="article-tags_group-label" class="txp-summary expanded"><a href="#article-tags" aria-controls="article-tags" role="button" aria-pressed="true">Articles</a></h3>
+                    <div role="group" id="article-tags" class="toggle" aria-expanded="true">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">Permanent link</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Posted</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Title</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Body</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Excerpt</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Section</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Category 1</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Category 2</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Article image</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comments invite</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Author</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section id="link-tags_group" class="txp-details" aria-labelledby="link-tags_group-label">
-                <h3 id="link-tags_group-label" class="txp-summary"><a href="#link-tags" role="button" aria-controls="link-tags" aria-pressed="false">Links</a></h3>
-                <div role="group" id="link-tags" class="toggle" style="display:none" aria-expanded="false">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">Link</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Link, title=description</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Link name</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Link description</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Link category</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Link date</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="link-tags_group" class="txp-details" aria-labelledby="link-tags_group-label">
+                    <h3 id="link-tags_group-label" class="txp-summary"><a href="#link-tags" role="button" aria-controls="link-tags" aria-pressed="false">Links</a></h3>
+                    <div role="group" id="link-tags" class="toggle" style="display:none" aria-expanded="false">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">Link</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Link, title=description</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Link name</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Link description</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Link category</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Link date</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section id="comment-tags_group" class="txp-details" aria-labelledby="comment-tags_group-label">
-                <h3 id="comment-tags_group-label" class="txp-summary"><a href="#comment-tags" role="button" aria-controls="comment-tags" aria-pressed="false">Comments</a></h3>
-                <div role="group" id="comment-tags" class="toggle" style="display:none" aria-expanded="false">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comments</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comments form</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comments preview</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="comment-tags_group" class="txp-details" aria-labelledby="comment-tags_group-label">
+                    <h3 id="comment-tags_group-label" class="txp-summary"><a href="#comment-tags" role="button" aria-controls="comment-tags" aria-pressed="false">Comments</a></h3>
+                    <div role="group" id="comment-tags" class="toggle" style="display:none" aria-expanded="false">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comments</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comments form</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comments preview</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section id="comment-detail-tags_group" class="txp-details" aria-labelledby="comment-detail-tags_group-label">
-                <h3 id="comment-detail-tags_group-label" class="txp-summary"><a href="#comment-detail-tags" role="button" aria-controls="comment-detail-tags" aria-pressed="false">Comment details</a></h3>
-                <div role="group" id="comment-detail-tags" class="toggle" style="display:none" aria-expanded="false">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comment permanent link</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comment name</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comment email</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comment website</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comment time</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comment message</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="comment-detail-tags_group" class="txp-details" aria-labelledby="comment-detail-tags_group-label">
+                    <h3 id="comment-detail-tags_group-label" class="txp-summary"><a href="#comment-detail-tags" role="button" aria-controls="comment-detail-tags" aria-pressed="false">Comment details</a></h3>
+                    <div role="group" id="comment-detail-tags" class="toggle" style="display:none" aria-expanded="false">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comment permanent link</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comment name</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comment email</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comment website</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comment time</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comment message</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section id="comment-form-tags_group" class="txp-details" aria-labelledby="comment-form-tags_group-label">
-                <h3 id="comment-form-tags_group-label" class="txp-summary"><a href="#comment-form-tags" role="button" aria-controls="comment-form-tags" aria-pressed="false">Comment form</a></h3>
-                <div role="group" id="comment-form-tags" class="toggle" style="display:none" aria-expanded="false">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comment name input</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comment email input</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comment web input</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comment message input</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Remember details checkbox</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comment preview button</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Comment submit button</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="comment-form-tags_group" class="txp-details" aria-labelledby="comment-form-tags_group-label">
+                    <h3 id="comment-form-tags_group-label" class="txp-summary"><a href="#comment-form-tags" role="button" aria-controls="comment-form-tags" aria-pressed="false">Comment form</a></h3>
+                    <div role="group" id="comment-form-tags" class="toggle" style="display:none" aria-expanded="false">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comment name input</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comment email input</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comment web input</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comment message input</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Remember details checkbox</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comment preview button</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Comment submit button</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section id="search-result-tags_group" class="txp-details" aria-labelledby="search-result-tags_group-label">
-                <h3 id="search-result-tags_group-label" class="txp-summary"><a href="#search-result-tags" role="button" aria-controls="search-result-tags" aria-pressed="false">Search results</a></h3>
-                <div role="group" id="search-result-tags" class="toggle" style="display:none" aria-expanded="false">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">Search result title</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Search result excerpt</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Search result date</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Search result URL</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="search-result-tags_group" class="txp-details" aria-labelledby="search-result-tags_group-label">
+                    <h3 id="search-result-tags_group-label" class="txp-summary"><a href="#search-result-tags" role="button" aria-controls="search-result-tags" aria-pressed="false">Search results</a></h3>
+                    <div role="group" id="search-result-tags" class="toggle" style="display:none" aria-expanded="false">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">Search result title</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Search result excerpt</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Search result date</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Search result URL</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section id="file-tags_group" class="txp-details" aria-labelledby="file-tags_group-label">
-                <h3 id="file-tags_group-label" class="txp-summary"><a href="#file-tags" role="button" aria-controls="file-tags" aria-pressed="false">File downloads</a></h3>
-                <div role="group" id="file-tags" class="toggle" style="display:none" aria-expanded="false">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">File download link</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">File name</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">File description</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">File category</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">File created time</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">File modified time</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">File size</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">File download count</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="file-tags_group" class="txp-details" aria-labelledby="file-tags_group-label">
+                    <h3 id="file-tags_group-label" class="txp-summary"><a href="#file-tags" role="button" aria-controls="file-tags" aria-pressed="false">File downloads</a></h3>
+                    <div role="group" id="file-tags" class="toggle" style="display:none" aria-expanded="false">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">File download link</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">File name</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">File description</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">File category</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">File created time</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">File modified time</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">File size</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">File download count</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section id="category-tags_group" class="txp-details" aria-labelledby="category-tags_group-label">
-                <h3 id="category-tags_group-label" class="txp-summary"><a href="#category-tags" role="button" aria-controls="category-tags" aria-pressed="false">Category</a></h3>
-                <div role="group" id="category-tags" class="toggle" style="display:none" aria-expanded="false">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">Category</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">If category</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="category-tags_group" class="txp-details" aria-labelledby="category-tags_group-label">
+                    <h3 id="category-tags_group-label" class="txp-summary"><a href="#category-tags" role="button" aria-controls="category-tags" aria-pressed="false">Category</a></h3>
+                    <div role="group" id="category-tags" class="toggle" style="display:none" aria-expanded="false">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">Category</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">If category</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section id="section-tags_group" class="txp-details" aria-labelledby="section-tags_group-label">
-                <h3 id="section-tags_group-label" class="txp-summary"><a href="#section-tags" role="button" aria-controls="section-tags" aria-pressed="false">Section</a></h3>
-                <div role="group" id="section-tags" class="toggle" style="display:none" aria-expanded="false">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">Section</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">If section</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="section-tags_group" class="txp-details" aria-labelledby="section-tags_group-label">
+                    <h3 id="section-tags_group-label" class="txp-summary"><a href="#section-tags" role="button" aria-controls="section-tags" aria-pressed="false">Section</a></h3>
+                    <div role="group" id="section-tags" class="toggle" style="display:none" aria-expanded="false">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">Section</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">If section</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-        </div> -->
+            </div> -->
 
+        </div><!-- /.txp-layout -->
     </main><!-- /txp-body -->
 
     <footer class="txp-footer">

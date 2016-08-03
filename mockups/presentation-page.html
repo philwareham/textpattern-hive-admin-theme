@@ -136,19 +136,21 @@
 
         <div id="messagepane"></div>
 
-        <div role="region" id="main_content" class="txp-layout-4col-cell-1-2-3">
-            <h1 class="txp-heading">Pages</h1>
-            <form id="page_form" method="post" action="#">
-                <div class="txp-form-field">
-                    <div class="txp-form-field-label"><label for="text">Page name</label></div>
-                    <div class="txp-form-field-value">
-                        <input class="input-medium" id="text" type="text" size="16" value="new_page">
+        <div class="txp-layout">
+
+            <div role="region" id="main_content" class="txp-layout-4col-cell-1-2-3">
+                <h1 class="txp-heading">Pages</h1>
+                <form id="page_form" method="post" action="#">
+                    <div class="txp-form-field">
+                        <div class="txp-form-field-label"><label for="text">Page name</label></div>
+                        <div class="txp-form-field-value">
+                            <input class="input-medium" id="text" type="text" size="16" value="new_page">
+                        </div>
                     </div>
-                </div>
-                <div class="txp-form-field">
-                    <div class="txp-form-field-label"><label for="html">Page code</label></div>
-                    <div class="txp-form-field-value">
-                        <textarea class="code" id="html" name="html" cols="64" rows="24" dir="ltr">&lt;!DOCTYPE html&gt;
+                    <div class="txp-form-field">
+                        <div class="txp-form-field-label"><label for="html">Page code</label></div>
+                        <div class="txp-form-field-value">
+                            <textarea class="code" id="html" name="html" cols="64" rows="24" dir="ltr">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;Amazing Website&lt;/title&gt;
@@ -158,124 +160,125 @@
         &lt;p&gt;Under construction. Please come back soon.&lt;/p&gt;
     &lt;/body&gt;
 &lt;/html&gt;</textarea>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div><!-- /#main_content -->
+                </form>
+            </div><!-- /#main_content -->
 
-        <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
-            <p class="txp-save">
-                <input class="publish" type="submit" value="Save" name="save" form="page_form">
-            </p>
-            <p class="txp-actions">
-                <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new page</a>
-                <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
-            </p>
+            <div role="region" id="content_switcher" class="txp-layout-4col-cell-4alt">
+                <p class="txp-save">
+                    <input class="publish" type="submit" value="Save" name="save" form="page_form">
+                </p>
+                <p class="txp-actions">
+                    <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new page</a>
+                    <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
+                </p>
 
-            <section id="all_pages" class="txp-details" aria-labelledby="all_pages-label">
-                <h3 id="all_pages-label">All pages</h3>
-                <div role="group">
-                    <ul class="switcher-list">
-                        <li><a href="#">archive</a></li>
-                        <li><a href="#">default</a></li>
-                        <li><a href="#">error_default</a></li>
-                        <li class="active">
-                            <a href="#">new_page</a>
-                            <form method="post" action="#" onsubmit="return confirm('Really delete?');">
-                                <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </div><!-- /#content_switcher -->
+                <section id="all_pages" class="txp-details" aria-labelledby="all_pages-label">
+                    <h3 id="all_pages-label">All pages</h3>
+                    <div role="group">
+                        <ul class="switcher-list">
+                            <li><a href="#">archive</a></li>
+                            <li><a href="#">default</a></li>
+                            <li><a href="#">error_default</a></li>
+                            <li class="active">
+                                <a href="#">new_page</a>
+                                <form method="post" action="#" onsubmit="return confirm('Really delete?');">
+                                    <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div><!-- /#content_switcher -->
 
 <!-- TAGBUILDER - TO BE REMOVED?
-        <div id="tagbuild_links">
-            <h2>Tag builder</h2>
+            <div id="tagbuild_links">
+                <h2>Tag builder</h2>
 
-            <section id="article-tags_group" class="txp-details" aria-labelledby="article-tags_group-label">
-                <h3 id="article-tags_group-label" class="txp-summary expanded"><a href="#article-tags" role="button" aria-controls="article-tags" aria-pressed="true">Article output</a></h3>
-                <div role="group" id="article-tags" class="toggle" aria-expanded="true">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">Articles (single or list)</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Articles (custom list)</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="article-tags_group" class="txp-details" aria-labelledby="article-tags_group-label">
+                    <h3 id="article-tags_group-label" class="txp-summary expanded"><a href="#article-tags" role="button" aria-controls="article-tags" aria-pressed="true">Article output</a></h3>
+                    <div role="group" id="article-tags" class="toggle" aria-expanded="true">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">Articles (single or list)</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Articles (custom list)</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section id="article-nav-tags_group" class="txp-details" aria-labelledby="article-nav-tags_group-label">
-                <h3 id="article-nav-tags_group-label" class="txp-summary expanded"><a href="#article-nav-tags" role="button" aria-controls="article-nav-tags" aria-pressed="true">Article navigation</a></h3>
-                <div role="group" id="article-nav-tags" class="toggle" aria-expanded="true">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">Previous article title</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Next article title</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Previous article link</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Next article link</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Older articles link</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Newer articles link</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="article-nav-tags_group" class="txp-details" aria-labelledby="article-nav-tags_group-label">
+                    <h3 id="article-nav-tags_group-label" class="txp-summary expanded"><a href="#article-nav-tags" role="button" aria-controls="article-nav-tags" aria-pressed="true">Article navigation</a></h3>
+                    <div role="group" id="article-nav-tags" class="toggle" aria-expanded="true">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">Previous article title</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Next article title</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Previous article link</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Next article link</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Older articles link</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Newer articles link</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section id="nav-tags_group" class="txp-details" aria-labelledby="nav-tags_group-label">
-                <h3 id="nav-tags_group-label" class="txp-summary"><a href="#nav-tags" role="button" aria-controls="nav-tags" aria-pressed="false">Site navigation</a></h3>
-                <div role="group" id="nav-tags" class="toggle" style="display:none" aria-expanded="false">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">Homepage link</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Section list</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Category list</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Popup list</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Recent articles</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Recent comments</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Related articles</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Search input form</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="nav-tags_group" class="txp-details" aria-labelledby="nav-tags_group-label">
+                    <h3 id="nav-tags_group-label" class="txp-summary"><a href="#nav-tags" role="button" aria-controls="nav-tags" aria-pressed="false">Site navigation</a></h3>
+                    <div role="group" id="nav-tags" class="toggle" style="display:none" aria-expanded="false">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">Homepage link</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Section list</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Category list</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Popup list</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Recent articles</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Recent comments</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Related articles</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Search input form</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section id="xml-tags_group" class="txp-details" aria-labelledby="xml-tags_group-label">
-                <h3 id="xml-tags_group-label" class="txp-summary"><a href="#xml-tags" role="button" aria-controls="xml-tags" aria-pressed="false">XML feeds</a></h3>
-                <div role="group" id="xml-tags" class="toggle" style="display:none" aria-expanded="false">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">Articles feed link</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Links feed link</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="xml-tags_group" class="txp-details" aria-labelledby="xml-tags_group-label">
+                    <h3 id="xml-tags_group-label" class="txp-summary"><a href="#xml-tags" role="button" aria-controls="xml-tags" aria-pressed="false">XML feeds</a></h3>
+                    <div role="group" id="xml-tags" class="toggle" style="display:none" aria-expanded="false">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">Articles feed link</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Links feed link</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section id="misc-tags_group" class="txp-details" aria-labelledby="misc-tags_group-label">
-                <h3 id="misc-tags_group-label" class="txp-summary"><a href="#misc-tags" role="button" aria-controls="misc-tags" aria-pressed="false">Miscellaneous</a></h3>
-                <div role="group" id="misc-tags" class="toggle" style="display:none" aria-expanded="false">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">Page title</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">CSS link (head)</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Site name</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Site slogan</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Breadcrumb</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Search input form</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">E-mail link (spam-proof)</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Links list</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Password protection</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Output form</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">Language</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="misc-tags_group" class="txp-details" aria-labelledby="misc-tags_group-label">
+                    <h3 id="misc-tags_group-label" class="txp-summary"><a href="#misc-tags" role="button" aria-controls="misc-tags" aria-pressed="false">Miscellaneous</a></h3>
+                    <div role="group" id="misc-tags" class="toggle" style="display:none" aria-expanded="false">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">Page title</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">CSS link (head)</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Site name</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Site slogan</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Breadcrumb</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Search input form</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">E-mail link (spam-proof)</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Links list</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Password protection</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Output form</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">Language</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-            <section id="file-tags_group" class="txp-details" aria-labelledby="file-tags_group-label">
-                <h3 id="file-tags_group-label" class="txp-summary"><a href="#file-tags" role="button" aria-controls="file-tags" aria-pressed="false">File downloads</a></h3>
-                <div role="group" id="file-tags" class="toggle" style="display:none" aria-expanded="false">
-                    <ul class="plain-list">
-                        <li><a target="_blank" href="secondary/tag-builder.html">File download list</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">File download</a></li>
-                        <li><a target="_blank" href="secondary/tag-builder.html">File download link</a></li>
-                    </ul>
-                </div>
-            </section>
+                <section id="file-tags_group" class="txp-details" aria-labelledby="file-tags_group-label">
+                    <h3 id="file-tags_group-label" class="txp-summary"><a href="#file-tags" role="button" aria-controls="file-tags" aria-pressed="false">File downloads</a></h3>
+                    <div role="group" id="file-tags" class="toggle" style="display:none" aria-expanded="false">
+                        <ul class="plain-list">
+                            <li><a target="_blank" href="secondary/tag-builder.html">File download list</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">File download</a></li>
+                            <li><a target="_blank" href="secondary/tag-builder.html">File download link</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-        </div> -->
+            </div> -->
 
+        </div><!-- /.txp-layout -->
     </main><!-- /txp-body -->
 
     <footer class="txp-footer">
