@@ -2166,6 +2166,12 @@ body {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  margin: 0 -1em;
+}
+
+.txp-layout > * {
+  padding: 0 1em;
+  box-sizing: border-box;
 }
 
 /**

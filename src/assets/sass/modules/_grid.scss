@@ -8,6 +8,12 @@
 .txp-layout {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -1em;
+
+    > * {
+        padding: 0 1em;
+        box-sizing: border-box;
+    }
 }
 
 /**

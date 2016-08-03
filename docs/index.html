@@ -69,7 +69,7 @@
         <div class="text-section" id="ui-doc-colours">
             <h1>Colourways</h1>
 
-            <div class="design-patterns--flexbox"><!-- this `div` is just for flexing child elements in this design patterns doc -->
+            <div class="txp-layout">
 
                 <div class="txp-layout-4col">
                     <h3>Neutral</h3>
@@ -165,7 +165,7 @@
                     <div class="design-patterns--color design-patterns--color-info-text"></div>
                 </div>
 
-            </div><!-- this `/div` is just for flexing child elements in this design patterns doc -->
+            </div>
 
         </div>
 
@@ -176,36 +176,40 @@
             <h2>Page layout columns <span class="information">new v4.6</span></h2>
             <p>Responsive page layout grid.</p>
             <p><strong>Code:</strong></p>
-            <pre dir="ltr"><code class="language-markup">&lt;div class="txp-layout-1col"&gt;...Opt1: 1col - content here...&lt;/div&gt;
+            <pre dir="ltr"><code class="language-markup">&lt;div class="txp-layout"&gt;
 
-&lt;div class="txp-layout-2col"&gt;...Opt2: 2col cell1 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-2col"&gt;...Opt2: 2col cell2 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-1col"&gt;...Opt1: 1col - content here...&lt;/div&gt;
 
-&lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell1 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell2 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell3 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell4 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-2col"&gt;...Opt2: 2col cell1 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-2col"&gt;...Opt2: 2col cell2 - content here...&lt;/div&gt;
 
-&lt;div class="txp-layout-4col-2span"&gt;...Opt4: 4col cell1and2 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col"&gt;...Opt4: 4col cell3 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col"&gt;...Opt4: 4col cell4 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell1 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell2 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell3 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell4 - content here...&lt;/div&gt;
 
-&lt;div class="txp-layout-4col-alt"&gt;...Opt5: 4col cell1 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-2span"&gt;...Opt5: 4col cell2and3 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-alt"&gt;...Opt5: 4col cell4 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col-2span"&gt;...Opt4: 4col cell1and2 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;...Opt4: 4col cell3 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;...Opt4: 4col cell4 - content here...&lt;/div&gt;
 
-&lt;div class="txp-layout-4col"&gt;...Opt6: 4col cell1 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col"&gt;...Opt6: 4col cell2 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-2span"&gt;...Opt6: 4col cell3and4 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col-alt"&gt;...Opt5: 4col cell1 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col-2span"&gt;...Opt5: 4col cell2and3 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col-alt"&gt;...Opt5: 4col cell4 - content here...&lt;/div&gt;
 
-&lt;div class="txp-layout-4col-3span"&gt;...Opt7: 4col cell1and2and3 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-alt"&gt;...Opt7: 4col cell4 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;...Opt6: 4col cell1 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;...Opt6: 4col cell2 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col-2span"&gt;...Opt6: 4col cell3and4 - content here...&lt;/div&gt;
 
-&lt;div class="txp-layout-4col-alt"&gt;...Opt8: 4col cell1 - content here...&lt;/div&gt;
-&lt;div class="txp-layout-4col-3span"&gt;...Opt8: 4col cell2and3and4 - content here...&lt;/div&gt;</code></pre>
+    &lt;div class="txp-layout-4col-3span"&gt;...Opt7: 4col cell1and2and3 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col-alt"&gt;...Opt7: 4col cell4 - content here...&lt;/div&gt;
+
+    &lt;div class="txp-layout-4col-alt"&gt;...Opt8: 4col cell1 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col-3span"&gt;...Opt8: 4col cell2and3and4 - content here...&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
             <p><strong>Example:</strong></p>
 
-            <div class="design-patterns--flexbox"><!-- this `div` is just for flexing child elements in this design patterns doc -->
+            <div class="txp-layout">
 
                 <div class="txp-layout-1col">
                     <p class="design-patterns--box">Opt1: 1col</p>
@@ -275,7 +279,7 @@
                     <p class="design-patterns--box">Opt8: 4col cell2and3and4</p>
                 </div>
 
-            </div><!-- this `/div` is just for flexing child elements in this design patterns doc -->
+            </div>
 
         </div>
 
