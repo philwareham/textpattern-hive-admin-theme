@@ -8,6 +8,7 @@
 .txp-layout {
     display: flex;
     flex-wrap: wrap;
+    min-width: 0;
     margin: 0 -1em;
 
     > * {
