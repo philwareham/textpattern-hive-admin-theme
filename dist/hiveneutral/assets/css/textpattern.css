@@ -2138,11 +2138,11 @@ body {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  min-width: 0;
   margin: 0 -1em;
 }
 
 .txp-layout > * {
+  min-width: 0;
   padding: 0 1em;
   box-sizing: border-box;
 }
