@@ -36,21 +36,21 @@
  */
 
 .txp-layout-1col {
-    flex: 0 0 100%;
+    width: 100%;
 }
 
 .txp-layout-4col-3span {
-    flex: 0 0 75%;
+    width: 75%;
 }
 
 .txp-layout-2col,
 .txp-layout-4col-2span {
-    flex: 0 0 50%;
+    width: 50%;
 }
 
 .txp-layout-4col,
 .txp-layout-4col-alt {
-    flex: 0 0 25%;
+    width: 25%;
 }
 
 /**

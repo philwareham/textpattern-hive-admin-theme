@@ -2165,29 +2165,21 @@ body {
  * <div class="txp-layout-4col"></div>
  */
 .txp-layout-1col {
-  -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  width: 100%;
 }
 
 .txp-layout-4col-3span {
-  -webkit-flex: 0 0 75%;
-      -ms-flex: 0 0 75%;
-          flex: 0 0 75%;
+  width: 75%;
 }
 
 .txp-layout-2col,
 .txp-layout-4col-2span {
-  -webkit-flex: 0 0 50%;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+  width: 50%;
 }
 
 .txp-layout-4col,
 .txp-layout-4col-alt {
-  -webkit-flex: 0 0 25%;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+  width: 25%;
 }
 
 /**
@@ -6453,16 +6445,12 @@ label.ui-state-active.ui-button:active {
      * Cells for 4 column span variations become 1 column layout.
      */
   .txp-layout-4col {
-    -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%;
+    width: 50%;
   }
   .txp-layout-4col-alt,
   .txp-layout-4col-2span,
   .txp-layout-4col-3span {
-    -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
-            flex-basis: 100%;
+    width: 100%;
   }
   /**
      * Adjust right/left padding of header area.
@@ -6521,9 +6509,7 @@ label.ui-state-active.ui-button:active {
      */
   .txp-layout-2col,
   .txp-layout-4col {
-    -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
-            flex-basis: 100%;
+    width: 100%;
   }
   /**
      * Non-fixed header on mobile layout (because mobile nav menu couldn't scroll otherwise).

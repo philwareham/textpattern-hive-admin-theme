@@ -26,13 +26,13 @@
      */
 
     .txp-layout-4col {
-        flex-basis: 50%;
+        width: 50%;
     }
 
     .txp-layout-4col-alt,
     .txp-layout-4col-2span,
     .txp-layout-4col-3span {
-        flex-basis: 100%;
+        width: 100%;
     }
 
     /**
@@ -104,7 +104,7 @@
 
     .txp-layout-2col,
     .txp-layout-4col {
-        flex-basis: 100%;
+        width: 100%;
     }
 
     /**
