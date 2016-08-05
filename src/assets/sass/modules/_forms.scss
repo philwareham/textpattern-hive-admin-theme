@@ -194,6 +194,18 @@ select {
 }
 
 /**
+ * Swap margin positions in RTL languages.
+ */
+
+[dir="rtl"] {
+    select {
+        padding-right: 0.30769230769231em; // 4px / 13px
+        padding-left: 1.30769230769231em; // 17px / 13px
+        background-position: 0.46153846153846em center; // 6px / 13px
+    }
+}
+
+/**
  * Remove browser-specific `select` UI in IE 11.
  */
 
