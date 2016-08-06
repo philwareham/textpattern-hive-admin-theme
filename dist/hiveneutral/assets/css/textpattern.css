@@ -190,6 +190,17 @@ h1 .pophelp {
 }
 
 /**
+ * Omit margin below heading on image edit, pages, forms, styles, prefs panels.
+ */
+#page-image .txp-heading,
+#page-form .txp-heading,
+#page-page .txp-heading,
+#page-css .txp-heading,
+#page-prefs .txp-heading {
+  margin-bottom: 0;
+}
+
+/**
  * `h2` headings.
  *
  * Example HTML:
@@ -3578,30 +3589,6 @@ span.spinner {
  */
 #page-discuss .txp-list tr.moderate {
   background: #f9f2e3;
-}
-
-/* Presentation -> Forms, Pages, Styles panels - additional layout
-   ========================================================================== */
-/**
- * Remove margin below heading.
- *
- * TODO: find a better solution.
- */
-#page-form .txp-heading,
-#page-page .txp-heading,
-#page-css .txp-heading {
-  margin-bottom: 0;
-}
-
-/* Admin -> Preferences panel - additional layout
-   ========================================================================== */
-/**
- * Remove margin below heading.
- *
- * TODO: find a better solution.
- */
-#page-prefs .txp-heading {
-  margin-bottom: 0;
 }
 
 /* Admin -> Languages panel - additional layout

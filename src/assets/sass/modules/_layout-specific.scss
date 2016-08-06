@@ -268,36 +268,6 @@
     background: lighten($color-warning-background, 2%);
 }
 
-/* Presentation -> Forms, Pages, Styles panels - additional layout
-   ========================================================================== */
-
-/**
- * Remove margin below heading.
- *
- * TODO: find a better solution.
- */
-
-#page-form,
-#page-page,
-#page-css {
-    .txp-heading {
-        margin-bottom: 0;
-    }
-}
-
-/* Admin -> Preferences panel - additional layout
-   ========================================================================== */
-
-/**
- * Remove margin below heading.
- *
- * TODO: find a better solution.
- */
-
-#page-prefs .txp-heading {
-    margin-bottom: 0;
-}
-
 
 /* Admin -> Languages panel - additional layout
    ========================================================================== */
