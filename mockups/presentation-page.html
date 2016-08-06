@@ -138,15 +138,11 @@
 
         <div class="txp-layout">
 
-            <div role="region" id="content_switcher" class="txp-layout-4col-alt">
-                <p class="txp-save">
-                    <input class="publish" type="submit" value="Save" name="save" form="page_form">
-                </p>
-                <p class="txp-actions">
-                    <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new page</a>
-                    <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
-                </p>
+            <div class="txp-layout-1col">
+                <h1 class="txp-heading">Pages</h1>
+            </div>
 
+            <div role="region" id="content_switcher" class="txp-layout-4col-alt">
                 <section id="all_pages" class="txp-details" aria-labelledby="all_pages-label">
                     <h3 id="all_pages-label">All pages</h3>
                     <div role="group">
@@ -163,6 +159,14 @@
                         </ul>
                     </div>
                 </section>
+
+                <p class="txp-save">
+                    <input class="publish" type="submit" value="Save" name="save" form="page_form">
+                </p>
+                <p class="txp-actions">
+                    <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new page</a>
+                    <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
+                </p>
             </div><!-- /#content_switcher -->
 
 <!-- TAGBUILDER - TO BE REMOVED?
@@ -252,7 +256,6 @@
             </div> -->
 
             <div role="region" id="main_content" class="txp-layout-4col-3span">
-                <h1 class="txp-heading">Pages</h1>
                 <form id="page_form" method="post" action="#">
                     <div class="txp-form-field">
                         <div class="txp-form-field-label"><label for="text">Page name</label></div>

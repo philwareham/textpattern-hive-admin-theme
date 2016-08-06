@@ -138,15 +138,11 @@
 
         <div class="txp-layout">
 
-            <div role="region" id="content_switcher" class="txp-layout-4col-alt">
-                <p class="txp-save">
-                    <input class="publish" type="submit" value="Save" name="save" form="form_form">
-                </p>
-                <p class="txp-actions">
-                    <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new form</a>
-                    <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
-                </p>
+            <div class="txp-layout-1col">
+                <h1 class="txp-heading">Forms</h1>
+            </div>
 
+            <div role="region" id="content_switcher" class="txp-layout-4col-alt">
                 <form method="post" action="#" id="allforms_form">
                     <section id="article_forms_group" class="txp-details" aria-labelledby="article_forms_group-label">
                         <h3 id="article_forms_group-label" class="txp-summary expanded"><a href="#article_forms" role="button" aria-controls="article_forms" aria-pressed="true">Article forms</a></h3>
@@ -195,6 +191,13 @@
                         </select>
                     </div>
                 </form>
+                <p class="txp-save">
+                    <input class="publish" type="submit" value="Save" name="save" form="form_form">
+                </p>
+                <p class="txp-actions">
+                    <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new form</a>
+                    <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
+                </p>
             </div><!-- /#content_switcher -->
 
 <!-- TAGBUILDER - TO BE REMOVED?
@@ -325,7 +328,6 @@
             </div> -->
 
             <div role="region" id="main_content" class="txp-layout-4col-3span">
-                <h1 class="txp-heading">Forms</h1>
                 <form id="form_form" action="#" method="post">
                     <div class="txp-form-field">
                         <div class="txp-form-field-label"><label for="text">Form name</label></div>
