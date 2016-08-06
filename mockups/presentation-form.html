@@ -138,57 +138,6 @@
 
         <div class="txp-layout">
 
-            <div role="region" id="main_content" class="txp-layout-4col-3span">
-                <h1 class="txp-heading">Forms</h1>
-                <form id="form_form" action="#" method="post">
-                    <div class="txp-form-field">
-                        <div class="txp-form-field-label"><label for="text">Form name</label></div>
-                        <div class="txp-form-field-value">
-                            <input class="input-medium" id="text" type="text" size="16" disabled="disabled" value="default">
-                        </div>
-                    </div>
-                    <div class="txp-form-field">
-                        <div class="txp-form-field-label"><label for="type">Form type</label></div>
-                        <div class="txp-form-field-value">
-                            <select id="type" name="type" disabled="disabled">
-                                <option value="">&#160;</option>
-                                <option value="article" selected="selected">article</option>
-                                <option value="category">category</option>
-                                <option value="comment">comment</option>
-                                <option value="file">file</option>
-                                <option value="link">link</option>
-                                <option value="misc">misc</option>
-                                <option value="section">section</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="txp-form-field">
-                        <div class="txp-form-field-label"><label for="form">Form code</label></div>
-                        <div class="txp-form-field-value">
-                            <textarea class="code" id="form" name="Form" cols="64" rows="24" dir="ltr">&lt;txp:if_individual_article&gt;
-    &lt;h1 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h1&gt;
-&lt;txp:else /&gt;
-    &lt;h3 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h3&gt;
-&lt;/txp:if_individual_article&gt;
-
-&lt;p class=&quot;published&quot;&gt;&lt;txp:posted /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;entry-content&quot;&gt;
-    &lt;txp:body /&gt;
-&lt;/div&gt;
-
-&lt;address class=&quot;vcard author&quot;&gt;&amp;#8212; &lt;span class=&quot;fn&quot;&gt;&lt;txp:author /&gt;&lt;/span&gt;&lt;/address&gt;
-
-&lt;p class=&quot;tags&quot;&gt;&lt;txp:category1 title=&quot;1&quot; link=&quot;1&quot; /&gt;, &lt;txp:category2 title=&quot;1&quot; link=&quot;1&quot; /&gt;&lt;/p&gt;
-
-&lt;txp:comments_invite wraptag=&quot;p&quot; /&gt;
-
-&lt;div class=&quot;divider&quot;&gt;&lt;txp:image id=&quot;1&quot; /&gt;&lt;/div&gt;</textarea>
-                        </div>
-                    </div>
-                </form>
-            </div><!-- /#main_content -->
-
             <div role="region" id="content_switcher" class="txp-layout-4col-alt">
                 <p class="txp-save">
                     <input class="publish" type="submit" value="Save" name="save" form="form_form">
@@ -374,6 +323,57 @@
                 </section>
 
             </div> -->
+
+            <div role="region" id="main_content" class="txp-layout-4col-3span">
+                <h1 class="txp-heading">Forms</h1>
+                <form id="form_form" action="#" method="post">
+                    <div class="txp-form-field">
+                        <div class="txp-form-field-label"><label for="text">Form name</label></div>
+                        <div class="txp-form-field-value">
+                            <input class="input-medium" id="text" type="text" size="16" disabled="disabled" value="default">
+                        </div>
+                    </div>
+                    <div class="txp-form-field">
+                        <div class="txp-form-field-label"><label for="type">Form type</label></div>
+                        <div class="txp-form-field-value">
+                            <select id="type" name="type" disabled="disabled">
+                                <option value="">&#160;</option>
+                                <option value="article" selected="selected">article</option>
+                                <option value="category">category</option>
+                                <option value="comment">comment</option>
+                                <option value="file">file</option>
+                                <option value="link">link</option>
+                                <option value="misc">misc</option>
+                                <option value="section">section</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="txp-form-field">
+                        <div class="txp-form-field-label"><label for="form">Form code</label></div>
+                        <div class="txp-form-field-value">
+                            <textarea class="code" id="form" name="Form" cols="64" rows="24" dir="ltr">&lt;txp:if_individual_article&gt;
+    &lt;h1 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h1&gt;
+&lt;txp:else /&gt;
+    &lt;h3 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h3&gt;
+&lt;/txp:if_individual_article&gt;
+
+&lt;p class=&quot;published&quot;&gt;&lt;txp:posted /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;entry-content&quot;&gt;
+    &lt;txp:body /&gt;
+&lt;/div&gt;
+
+&lt;address class=&quot;vcard author&quot;&gt;&amp;#8212; &lt;span class=&quot;fn&quot;&gt;&lt;txp:author /&gt;&lt;/span&gt;&lt;/address&gt;
+
+&lt;p class=&quot;tags&quot;&gt;&lt;txp:category1 title=&quot;1&quot; link=&quot;1&quot; /&gt;, &lt;txp:category2 title=&quot;1&quot; link=&quot;1&quot; /&gt;&lt;/p&gt;
+
+&lt;txp:comments_invite wraptag=&quot;p&quot; /&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;txp:image id=&quot;1&quot; /&gt;&lt;/div&gt;</textarea>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- /#main_content -->
 
         </div><!-- /.txp-layout -->
     </main><!-- /txp-body -->
