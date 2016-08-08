@@ -165,9 +165,9 @@ $(function ()
 
     // Dialog load HTML into pane.
 
-    $('.dialog-html-load-link').click(function(event, ui)
+    $('.dialog-html-load-link').click(function ()
         {
-            $('#dialog-html-load').load('secondary/tag-builder.html');
+            $('.ui-dialog-content').load('secondary/tag-builder.html');
             return false;
         }
     );
