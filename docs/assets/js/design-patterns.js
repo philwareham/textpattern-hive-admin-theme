@@ -158,8 +158,19 @@ $(function ()
     // Dialog (basic).
 
     $('#jquery-ui-dialog').dialog({
-        autoOpen: false
+        autoOpen: false,
+        minWidth: 300,
+        minHeight: 300
     });
+
+    // Dialog load HTML into pane.
+
+    $('.dialog-html-load-link').click(function(event, ui)
+        {
+            $('#dialog-html-load').load('secondary/tag-builder.html');
+            return false;
+        }
+    );
 
     // Dialog (modal) link.
 
