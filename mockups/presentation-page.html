@@ -199,91 +199,94 @@
             <div id="jquery-ui-dialog" title="Tag builder" aria-label="Tag builder">
 
                 <p class="txp-actions">
-                    <a class="txp-expand-all" href="#"><span class="ui-icon ui-icon-arrowthickstop-1-s"></span> Expand all</a>
-                    <a class="txp-collapse-all" href="#"><span class="ui-icon ui-icon-arrowthickstop-1-n"></span> Collapse all</a>
+                    <a class="txp-expand-all" href="#" aria-controls="alltags"><span class="ui-icon ui-icon-arrowthickstop-1-s"></span> Expand all</a>
+                    <a class="txp-collapse-all" href="#" aria-controls="alltags"><span class="ui-icon ui-icon-arrowthickstop-1-n"></span> Collapse all</a>
                 </p>
 
-                <section id="article-tags_group" class="txp-details" aria-labelledby="article-tags_group-label">
-                    <h3 id="article-tags_group-label" class="txp-summary expanded"><a href="#article-tags" role="button" aria-controls="article-tags" aria-pressed="true">Article output</a></h3>
-                    <div role="group" id="article-tags" class="toggle" aria-expanded="true">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">Articles (single or list)</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Articles (custom list)</a></li>
-                        </ul>
-                    </div>
-                </section>
+                <div id="alltags">
 
-                <section id="article-nav-tags_group" class="txp-details" aria-labelledby="article-nav-tags_group-label">
-                    <h3 id="article-nav-tags_group-label" class="txp-summary expanded"><a href="#article-nav-tags" role="button" aria-controls="article-nav-tags" aria-pressed="true">Article navigation</a></h3>
-                    <div role="group" id="article-nav-tags" class="toggle" aria-expanded="true">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">Previous article title</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Next article title</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Previous article link</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Next article link</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Older articles link</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Newer articles link</a></li>
-                        </ul>
-                    </div>
-                </section>
+                    <section id="article-tags_group" class="txp-details" aria-labelledby="article-tags_group-label">
+                        <h3 id="article-tags_group-label" class="txp-summary expanded"><a href="#article-tags" role="button" aria-controls="article-tags" aria-pressed="true">Article output</a></h3>
+                        <div role="group" id="article-tags" class="toggle" aria-expanded="true">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">Articles (single or list)</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Articles (custom list)</a></li>
+                            </ul>
+                        </div>
+                    </section>
 
-                <section id="nav-tags_group" class="txp-details" aria-labelledby="nav-tags_group-label">
-                    <h3 id="nav-tags_group-label" class="txp-summary"><a href="#nav-tags" role="button" aria-controls="nav-tags" aria-pressed="false">Site navigation</a></h3>
-                    <div role="group" id="nav-tags" class="toggle" style="display:none" aria-expanded="false">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">Homepage link</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Section list</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Category list</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Popup list</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Recent articles</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Recent comments</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Related articles</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Search input form</a></li>
-                        </ul>
-                    </div>
-                </section>
+                    <section id="article-nav-tags_group" class="txp-details" aria-labelledby="article-nav-tags_group-label">
+                        <h3 id="article-nav-tags_group-label" class="txp-summary expanded"><a href="#article-nav-tags" role="button" aria-controls="article-nav-tags" aria-pressed="true">Article navigation</a></h3>
+                        <div role="group" id="article-nav-tags" class="toggle" aria-expanded="true">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">Previous article title</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Next article title</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Previous article link</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Next article link</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Older articles link</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Newer articles link</a></li>
+                            </ul>
+                        </div>
+                    </section>
 
-                <section id="xml-tags_group" class="txp-details" aria-labelledby="xml-tags_group-label">
-                    <h3 id="xml-tags_group-label" class="txp-summary"><a href="#xml-tags" role="button" aria-controls="xml-tags" aria-pressed="false">XML feeds</a></h3>
-                    <div role="group" id="xml-tags" class="toggle" style="display:none" aria-expanded="false">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">Articles feed link</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Links feed link</a></li>
-                        </ul>
-                    </div>
-                </section>
+                    <section id="nav-tags_group" class="txp-details" aria-labelledby="nav-tags_group-label">
+                        <h3 id="nav-tags_group-label" class="txp-summary"><a href="#nav-tags" role="button" aria-controls="nav-tags" aria-pressed="false">Site navigation</a></h3>
+                        <div role="group" id="nav-tags" class="toggle" style="display:none" aria-expanded="false">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">Homepage link</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Section list</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Category list</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Popup list</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Recent articles</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Recent comments</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Related articles</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Search input form</a></li>
+                            </ul>
+                        </div>
+                    </section>
 
-                <section id="misc-tags_group" class="txp-details" aria-labelledby="misc-tags_group-label">
-                    <h3 id="misc-tags_group-label" class="txp-summary"><a href="#misc-tags" role="button" aria-controls="misc-tags" aria-pressed="false">Miscellaneous</a></h3>
-                    <div role="group" id="misc-tags" class="toggle" style="display:none" aria-expanded="false">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">Page title</a></li>
-                            <li><a class="dialog-html-load-link" href="#">CSS link (head)</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Site name</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Site slogan</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Breadcrumb</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Search input form</a></li>
-                            <li><a class="dialog-html-load-link" href="#">E-mail link (spam-proof)</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Links list</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Password protection</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Output form</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Language</a></li>
-                        </ul>
-                    </div>
-                </section>
+                    <section id="xml-tags_group" class="txp-details" aria-labelledby="xml-tags_group-label">
+                        <h3 id="xml-tags_group-label" class="txp-summary"><a href="#xml-tags" role="button" aria-controls="xml-tags" aria-pressed="false">XML feeds</a></h3>
+                        <div role="group" id="xml-tags" class="toggle" style="display:none" aria-expanded="false">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">Articles feed link</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Links feed link</a></li>
+                            </ul>
+                        </div>
+                    </section>
 
-                <section id="file-tags_group" class="txp-details" aria-labelledby="file-tags_group-label">
-                    <h3 id="file-tags_group-label" class="txp-summary"><a href="#file-tags" role="button" aria-controls="file-tags" aria-pressed="false">File downloads</a></h3>
-                    <div role="group" id="file-tags" class="toggle" style="display:none" aria-expanded="false">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">File download list</a></li>
-                            <li><a class="dialog-html-load-link" href="#">File download</a></li>
-                            <li><a class="dialog-html-load-link" href="#">File download link</a></li>
-                        </ul>
-                    </div>
-                </section>
+                    <section id="misc-tags_group" class="txp-details" aria-labelledby="misc-tags_group-label">
+                        <h3 id="misc-tags_group-label" class="txp-summary"><a href="#misc-tags" role="button" aria-controls="misc-tags" aria-pressed="false">Miscellaneous</a></h3>
+                        <div role="group" id="misc-tags" class="toggle" style="display:none" aria-expanded="false">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">Page title</a></li>
+                                <li><a class="dialog-html-load-link" href="#">CSS link (head)</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Site name</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Site slogan</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Breadcrumb</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Search input form</a></li>
+                                <li><a class="dialog-html-load-link" href="#">E-mail link (spam-proof)</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Links list</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Password protection</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Output form</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Language</a></li>
+                            </ul>
+                        </div>
+                    </section>
 
-            </div><!-- /Tag builder -->
+                    <section id="file-tags_group" class="txp-details" aria-labelledby="file-tags_group-label">
+                        <h3 id="file-tags_group-label" class="txp-summary"><a href="#file-tags" role="button" aria-controls="file-tags" aria-pressed="false">File downloads</a></h3>
+                        <div role="group" id="file-tags" class="toggle" style="display:none" aria-expanded="false">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">File download list</a></li>
+                                <li><a class="dialog-html-load-link" href="#">File download</a></li>
+                                <li><a class="dialog-html-load-link" href="#">File download link</a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div><!-- /#alltags -->
+            </div>
 
         </div><!-- /.txp-layout -->
     </main><!-- /txp-body -->

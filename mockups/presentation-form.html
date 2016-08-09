@@ -145,8 +145,8 @@
             <div role="region" id="content_switcher" class="txp-layout-4col-alt">
 
                 <p class="txp-actions">
-                    <a class="txp-expand-all" href="#"><span class="ui-icon ui-icon-arrowthickstop-1-s"></span> Expand all</a>
-                    <a class="txp-collapse-all" href="#"><span class="ui-icon ui-icon-arrowthickstop-1-n"></span> Collapse all</a>
+                    <a class="txp-expand-all" href="#" aria-controls="allforms_form"><span class="ui-icon ui-icon-arrowthickstop-1-s"></span> Expand all</a>
+                    <a class="txp-collapse-all" href="#" aria-controls="allforms_form"><span class="ui-icon ui-icon-arrowthickstop-1-n"></span> Collapse all</a>
                 </p>
                 <form method="post" action="#" id="allforms_form">
                     <section id="article_forms_group" class="txp-details" aria-labelledby="article_forms_group-label">
@@ -260,132 +260,135 @@
             <div id="jquery-ui-dialog" title="Tag builder" aria-label="Tag builder">
 
                 <p class="txp-actions">
-                    <a class="txp-expand-all" href="#"><span class="ui-icon ui-icon-arrowthickstop-1-s"></span> Expand all</a>
-                    <a class="txp-collapse-all" href="#"><span class="ui-icon ui-icon-arrowthickstop-1-n"></span> Collapse all</a>
+                    <a class="txp-expand-all" href="#" aria-controls="alltags"><span class="ui-icon ui-icon-arrowthickstop-1-s"></span> Expand all</a>
+                    <a class="txp-collapse-all" href="#" aria-controls="alltags"><span class="ui-icon ui-icon-arrowthickstop-1-n"></span> Collapse all</a>
                 </p>
 
-                <section id="article-tags_group" class="txp-details" aria-labelledby="article-tags_group-label">
-                    <h3 id="article-tags_group-label" class="txp-summary expanded"><a href="#article-tags" aria-controls="article-tags" role="button" aria-pressed="true">Articles</a></h3>
-                    <div role="group" id="article-tags" class="toggle" aria-expanded="true">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">Permanent link</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Posted</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Title</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Body</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Excerpt</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Section</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Category 1</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Category 2</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Article image</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Comments invite</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Author</a></li>
-                        </ul>
-                    </div>
-                </section>
+                <div id="alltags_div">
 
-                <section id="link-tags_group" class="txp-details" aria-labelledby="link-tags_group-label">
-                    <h3 id="link-tags_group-label" class="txp-summary"><a href="#link-tags" role="button" aria-controls="link-tags" aria-pressed="false">Links</a></h3>
-                    <div role="group" id="link-tags" class="toggle" style="display:none" aria-expanded="false">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">Link</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Link, title=description</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Link name</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Link description</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Link category</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Link date</a></li>
-                        </ul>
-                    </div>
-                </section>
+                    <section id="article-tags_group" class="txp-details" aria-labelledby="article-tags_group-label">
+                        <h3 id="article-tags_group-label" class="txp-summary expanded"><a href="#article-tags" aria-controls="article-tags" role="button" aria-pressed="true">Articles</a></h3>
+                        <div role="group" id="article-tags" class="toggle" aria-expanded="true">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">Permanent link</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Posted</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Title</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Body</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Excerpt</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Section</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Category 1</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Category 2</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Article image</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Comments invite</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Author</a></li>
+                            </ul>
+                        </div>
+                    </section>
 
-                <section id="comment-tags_group" class="txp-details" aria-labelledby="comment-tags_group-label">
-                    <h3 id="comment-tags_group-label" class="txp-summary"><a href="#comment-tags" role="button" aria-controls="comment-tags" aria-pressed="false">Comments</a></h3>
-                    <div role="group" id="comment-tags" class="toggle" style="display:none" aria-expanded="false">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">Comments</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Comments form</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Comments preview</a></li>
-                        </ul>
-                    </div>
-                </section>
+                    <section id="link-tags_group" class="txp-details" aria-labelledby="link-tags_group-label">
+                        <h3 id="link-tags_group-label" class="txp-summary"><a href="#link-tags" role="button" aria-controls="link-tags" aria-pressed="false">Links</a></h3>
+                        <div role="group" id="link-tags" class="toggle" style="display:none" aria-expanded="false">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">Link</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Link, title=description</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Link name</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Link description</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Link category</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Link date</a></li>
+                            </ul>
+                        </div>
+                    </section>
 
-                <section id="comment-detail-tags_group" class="txp-details" aria-labelledby="comment-detail-tags_group-label">
-                    <h3 id="comment-detail-tags_group-label" class="txp-summary"><a href="#comment-detail-tags" role="button" aria-controls="comment-detail-tags" aria-pressed="false">Comment details</a></h3>
-                    <div role="group" id="comment-detail-tags" class="toggle" style="display:none" aria-expanded="false">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">Comment permanent link</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Comment name</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Comment email</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Comment website</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Comment time</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Comment message</a></li>
-                        </ul>
-                    </div>
-                </section>
+                    <section id="comment-tags_group" class="txp-details" aria-labelledby="comment-tags_group-label">
+                        <h3 id="comment-tags_group-label" class="txp-summary"><a href="#comment-tags" role="button" aria-controls="comment-tags" aria-pressed="false">Comments</a></h3>
+                        <div role="group" id="comment-tags" class="toggle" style="display:none" aria-expanded="false">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">Comments</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Comments form</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Comments preview</a></li>
+                            </ul>
+                        </div>
+                    </section>
 
-                <section id="comment-form-tags_group" class="txp-details" aria-labelledby="comment-form-tags_group-label">
-                    <h3 id="comment-form-tags_group-label" class="txp-summary"><a href="#comment-form-tags" role="button" aria-controls="comment-form-tags" aria-pressed="false">Comment form</a></h3>
-                    <div role="group" id="comment-form-tags" class="toggle" style="display:none" aria-expanded="false">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">Comment name input</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Comment email input</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Comment web input</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Comment message input</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Remember details checkbox</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Comment preview button</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Comment submit button</a></li>
-                        </ul>
-                    </div>
-                </section>
+                    <section id="comment-detail-tags_group" class="txp-details" aria-labelledby="comment-detail-tags_group-label">
+                        <h3 id="comment-detail-tags_group-label" class="txp-summary"><a href="#comment-detail-tags" role="button" aria-controls="comment-detail-tags" aria-pressed="false">Comment details</a></h3>
+                        <div role="group" id="comment-detail-tags" class="toggle" style="display:none" aria-expanded="false">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">Comment permanent link</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Comment name</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Comment email</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Comment website</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Comment time</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Comment message</a></li>
+                            </ul>
+                        </div>
+                    </section>
 
-                <section id="search-result-tags_group" class="txp-details" aria-labelledby="search-result-tags_group-label">
-                    <h3 id="search-result-tags_group-label" class="txp-summary"><a href="#search-result-tags" role="button" aria-controls="search-result-tags" aria-pressed="false">Search results</a></h3>
-                    <div role="group" id="search-result-tags" class="toggle" style="display:none" aria-expanded="false">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">Search result title</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Search result excerpt</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Search result date</a></li>
-                            <li><a class="dialog-html-load-link" href="#">Search result URL</a></li>
-                        </ul>
-                    </div>
-                </section>
+                    <section id="comment-form-tags_group" class="txp-details" aria-labelledby="comment-form-tags_group-label">
+                        <h3 id="comment-form-tags_group-label" class="txp-summary"><a href="#comment-form-tags" role="button" aria-controls="comment-form-tags" aria-pressed="false">Comment form</a></h3>
+                        <div role="group" id="comment-form-tags" class="toggle" style="display:none" aria-expanded="false">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">Comment name input</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Comment email input</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Comment web input</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Comment message input</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Remember details checkbox</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Comment preview button</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Comment submit button</a></li>
+                            </ul>
+                        </div>
+                    </section>
 
-                <section id="file-tags_group" class="txp-details" aria-labelledby="file-tags_group-label">
-                    <h3 id="file-tags_group-label" class="txp-summary"><a href="#file-tags" role="button" aria-controls="file-tags" aria-pressed="false">File downloads</a></h3>
-                    <div role="group" id="file-tags" class="toggle" style="display:none" aria-expanded="false">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">File download link</a></li>
-                            <li><a class="dialog-html-load-link" href="#">File name</a></li>
-                            <li><a class="dialog-html-load-link" href="#">File description</a></li>
-                            <li><a class="dialog-html-load-link" href="#">File category</a></li>
-                            <li><a class="dialog-html-load-link" href="#">File created time</a></li>
-                            <li><a class="dialog-html-load-link" href="#">File modified time</a></li>
-                            <li><a class="dialog-html-load-link" href="#">File size</a></li>
-                            <li><a class="dialog-html-load-link" href="#">File download count</a></li>
-                        </ul>
-                    </div>
-                </section>
+                    <section id="search-result-tags_group" class="txp-details" aria-labelledby="search-result-tags_group-label">
+                        <h3 id="search-result-tags_group-label" class="txp-summary"><a href="#search-result-tags" role="button" aria-controls="search-result-tags" aria-pressed="false">Search results</a></h3>
+                        <div role="group" id="search-result-tags" class="toggle" style="display:none" aria-expanded="false">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">Search result title</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Search result excerpt</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Search result date</a></li>
+                                <li><a class="dialog-html-load-link" href="#">Search result URL</a></li>
+                            </ul>
+                        </div>
+                    </section>
 
-                <section id="category-tags_group" class="txp-details" aria-labelledby="category-tags_group-label">
-                    <h3 id="category-tags_group-label" class="txp-summary"><a href="#category-tags" role="button" aria-controls="category-tags" aria-pressed="false">Category</a></h3>
-                    <div role="group" id="category-tags" class="toggle" style="display:none" aria-expanded="false">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">Category</a></li>
-                            <li><a class="dialog-html-load-link" href="#">If category</a></li>
-                        </ul>
-                    </div>
-                </section>
+                    <section id="file-tags_group" class="txp-details" aria-labelledby="file-tags_group-label">
+                        <h3 id="file-tags_group-label" class="txp-summary"><a href="#file-tags" role="button" aria-controls="file-tags" aria-pressed="false">File downloads</a></h3>
+                        <div role="group" id="file-tags" class="toggle" style="display:none" aria-expanded="false">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">File download link</a></li>
+                                <li><a class="dialog-html-load-link" href="#">File name</a></li>
+                                <li><a class="dialog-html-load-link" href="#">File description</a></li>
+                                <li><a class="dialog-html-load-link" href="#">File category</a></li>
+                                <li><a class="dialog-html-load-link" href="#">File created time</a></li>
+                                <li><a class="dialog-html-load-link" href="#">File modified time</a></li>
+                                <li><a class="dialog-html-load-link" href="#">File size</a></li>
+                                <li><a class="dialog-html-load-link" href="#">File download count</a></li>
+                            </ul>
+                        </div>
+                    </section>
 
-                <section id="section-tags_group" class="txp-details" aria-labelledby="section-tags_group-label">
-                    <h3 id="section-tags_group-label" class="txp-summary"><a href="#section-tags" role="button" aria-controls="section-tags" aria-pressed="false">Section</a></h3>
-                    <div role="group" id="section-tags" class="toggle" style="display:none" aria-expanded="false">
-                        <ul class="plain-list">
-                            <li><a class="dialog-html-load-link" href="#">Section</a></li>
-                            <li><a class="dialog-html-load-link" href="#">If section</a></li>
-                        </ul>
-                    </div>
-                </section>
+                    <section id="category-tags_group" class="txp-details" aria-labelledby="category-tags_group-label">
+                        <h3 id="category-tags_group-label" class="txp-summary"><a href="#category-tags" role="button" aria-controls="category-tags" aria-pressed="false">Category</a></h3>
+                        <div role="group" id="category-tags" class="toggle" style="display:none" aria-expanded="false">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">Category</a></li>
+                                <li><a class="dialog-html-load-link" href="#">If category</a></li>
+                            </ul>
+                        </div>
+                    </section>
 
-            </div><!-- /Tag builder -->
+                    <section id="section-tags_group" class="txp-details" aria-labelledby="section-tags_group-label">
+                        <h3 id="section-tags_group-label" class="txp-summary"><a href="#section-tags" role="button" aria-controls="section-tags" aria-pressed="false">Section</a></h3>
+                        <div role="group" id="section-tags" class="toggle" style="display:none" aria-expanded="false">
+                            <ul class="plain-list">
+                                <li><a class="dialog-html-load-link" href="#">Section</a></li>
+                                <li><a class="dialog-html-load-link" href="#">If section</a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                </div><!-- /#alltags -->
+            </div>
 
         </div><!-- /.txp-layout -->
     </main><!-- /txp-body -->
