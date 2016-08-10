@@ -259,8 +259,18 @@
 
     .txp-search,
     [dir="rtl"] .txp-search {
+        flex-wrap: wrap;
         justify-content: flex-start;
         margin-top: 0;
+    }
+
+    /**
+     * Reposition search clearer.
+     */
+
+    .txp-search-clear {
+        position: static;
+        width: 100%;
     }
 
     /**
