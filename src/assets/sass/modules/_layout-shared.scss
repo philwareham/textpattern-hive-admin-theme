@@ -68,7 +68,7 @@ hr {
  * Example HTML:
  *
  * <form class="txp-search">
- *     <a class="txp-search-clear">Clear search</a>
+ *     <span class="txp-search-clear"><a>Clear search</a></span>
  *     <input class="txp-search-input" type="search" size="24">
  *     <span class="txp-search-buttons">
  *         <button class="txp-search-button">Search</button>
@@ -88,6 +88,11 @@ hr {
         z-index: 100;
     }
 
+    // Ensure the 2 buttons stay together.
+    .ui-controlgroup {
+        flex-wrap: nowrap;
+    }
+
     .txp-dropdown {
         input {
             vertical-align: -0.23076923076923em; // 3px / 13px
@@ -104,13 +109,12 @@ hr {
 }
 
 .txp-search-clear {
-    position: relative;
-    top: 0.30769230769231em; // 4px / 13px
-    right: 1em;
+    flex: 1;
+    margin: auto 0.5em;
+    text-align: right;
 
     [dir="rtl"] & {
-        right: auto;
-        left: 1em;
+        text-align: left;
     }
 }
 

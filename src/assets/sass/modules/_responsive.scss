@@ -84,6 +84,32 @@
         }
     }
 
+    /**
+     * Search widget at top of lists.
+     */
+
+    .txp-search,
+    [dir="rtl"] .txp-search {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+
+    /**
+     * Reposition search clearer.
+     */
+
+    .txp-search-clear {
+        flex: 1 0 auto;
+        width: 100%;
+        margin: 0 0 0.5em;
+        text-align: left;
+
+        [dir="rtl"] & {
+            text-align: right;
+        }
+    }
+
 }
 
 
@@ -251,26 +277,6 @@
         &::before {
             display: none;
         }
-    }
-
-    /**
-     * Search widget at top of lists.
-     */
-
-    .txp-search,
-    [dir="rtl"] .txp-search {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        margin-top: 0;
-    }
-
-    /**
-     * Reposition search clearer.
-     */
-
-    .txp-search-clear {
-        position: static;
-        width: 100%;
     }
 
     /**
