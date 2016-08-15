@@ -294,17 +294,11 @@
             <p><strong>Example:</strong></p>
             <div class="design-patterns--box">Text column (independent of grid columns)</div>
 
-            <h2>Inline grids <span class="information">new v4.5</span></h2>
-            <p>Rudimentary inline grid type layouts—works best if inner content is of equal quantity (such as a grid of images). If you want to utilise this layout then there are some prerequisites:</p>
-            <ol>
-                <li>You must define a specific width for each <code dir="ltr">.txp-grid-cell</code>, either as a <code dir="ltr">class</code> attribute or <code dir="ltr">style</code> attribute, otherwise the cell width fits to the block content within it.</li>
-                <li>The <code dir="ltr">.txp-grid-cell</code> should have a maximum width of no more than 294px (or its equivalent em measurement).</li>
-                <li>As this layout uses <code dir="ltr">inline-block</code>, you will need to collapse the white space between each <code dir="ltr">.txp-grid-cell</code> to negate any unwanted margin between the cells.</li>
-            </ol>
-            <p>Once CSS3 flexbox module is more settled and has improved browser support, this layout type can be made more robust.</p>
+            <h2>Inline grids <span class="warning">changed v4.6</span></h2>
+            <p>Flexbox inline grid content layouts.</p>
             <p><strong>Code:</strong></p>
             <pre dir="ltr"><code class="language-markup">&lt;div class="txp-grid"&gt;
-    &lt;div class="txp-grid-cell" [width, see below]&gt;
+    &lt;div class="txp-grid-cell" [width, see notes]&gt;
         &lt;p&gt;Grid item 1&lt;/p&gt;
     &lt;/div&gt;&lt;div class="txp-grid-cell" [width, see notes]&gt;
         &lt;p&gt;Grid item 2&lt;/p&gt;
@@ -317,26 +311,36 @@
 &lt;/div&gt;</code></pre>
             <p><strong>Example:</strong></p>
             <div class="txp-grid">
-                <div class="txp-grid-cell" style="width:10em;">
+                <div class="txp-grid-cell">
                     <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
-                </div><div class="txp-grid-cell" style="width:10em;">
+                </div>
+                <div class="txp-grid-cell" style="width:15em;">
+                    <p>Longer text item example to show how Flexbox stretches vertically to fill the addtional area</p>
+                </div>
+                <div class="txp-grid-cell" style="width:15em;">
                     <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
-                </div><div class="txp-grid-cell" style="width:10em;">
+                </div>
+                <div class="txp-grid-cell" style="width:15em;">
                     <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
-                </div><div class="txp-grid-cell" style="width:10em;">
+                </div>
+                <div class="txp-grid-cell highlight" style="width:15em;">
                     <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
-                </div><div class="txp-grid-cell highlight" style="width:10em;">
+                </div>
+                <div class="txp-grid-cell" style="width:15em;">
                     <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
-                </div><div class="txp-grid-cell" style="width:10em;">
+                </div>
+                <div class="txp-grid-cell" style="width:15em;">
                     <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
-                </div><div class="txp-grid-cell" style="width:10em;">
-                    <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
-                </div><div class="txp-grid-cell" style="width:10em;">
-                    <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
-                </div><div class="txp-grid-cell" style="width:10em;">
+                </div>
+                <div class="txp-grid-cell" style="width:15em;">
+                    <p>Short text item.</p>
+                </div>
+                <div class="txp-grid-cell" style="width:15em;">
                     <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
                 </div>
             </div>
+            <p><strong>Notes:</strong></p>
+            <p>You should define a specific width for each <code dir="ltr">.txp-grid-cell</code>, either as a <code dir="ltr">class</code> attribute or <code dir="ltr">style</code> attribute, otherwise the cell width stretches to the content within it.</p>
 
         </div>
 
