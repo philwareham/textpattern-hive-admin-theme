@@ -36,9 +36,33 @@
  * </div>
  */
 
-.ui-selectmenu-icon.ui-icon {
+.ui-selectmenu-button {
+    display: inline-flex;
+}
+
+.ui-selectmenu-button:not(.ui-controlgroup-item) {
+    border-radius: $border-radius;
+}
+
+.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
+    border-radius: 0 $border-radius $border-radius 0;
+}
+
+.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
+    border-radius: $border-radius 0 0 $border-radius;
+}
+
+.ui-selectmenu-icon {
+    flex: none;
+    order: 2;
     margin: 0 -0.25em 0 0.25em;
-    float: right;
+}
+
+.ui-selectmenu-text {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .ui-selectmenu-menu {
@@ -74,49 +98,20 @@
     display: block;
 }
 
-.ui-selectmenu-text {
-    display: block;
-    margin-right: 1em;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.ui-selectmenu-button.ui-button {
-    white-space: nowrap;
-}
-
-.ui-selectmenu-button:not(.ui-controlgroup-item) {
-    border-radius: $border-radius;
-}
-
-.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
-    border-radius: 0 $border-radius $border-radius 0;
-}
-
-.ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
-    border-radius: $border-radius 0 0 $border-radius;
-}
-
 /**
  * Selectmenu RTL support.
  */
 
 [dir="rtl"] {
-    .ui-selectmenu-icon.ui-icon {
-        margin: 0 0.25em 0 -0.25em;
-        float: left;
-    }
-
-    .ui-selectmenu-text {
-        margin-right: 0;
-        margin-left: 1em;
-    }
-
     .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
         border-radius: $border-radius 0 0 $border-radius;
     }
 
     .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
         border-radius: 0 $border-radius $border-radius 0;
+    }
+
+    .ui-selectmenu-icon {
+        margin: 0 0.25em 0 -0.25em;
     }
 }
