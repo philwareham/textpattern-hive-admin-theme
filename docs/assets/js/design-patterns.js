@@ -165,7 +165,7 @@ $(function ()
 
     // Dialog load HTML into pane.
 
-    $('.dialog-html-load-link').click(function ()
+    $('.txp-tagbuilder-link').click(function ()
         {
             $('.ui-dialog-content').load('secondary/tag-builder.html');
             return false;
