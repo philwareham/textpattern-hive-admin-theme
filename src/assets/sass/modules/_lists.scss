@@ -107,14 +107,14 @@ dd {
         &.active {
             background: $color-selected;
         }
+    }
 
-        a {
-            display: block;
-            padding: 0.38461538461538em 2.5em 0.38461538461538em 1em;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
+    a {
+        display: block;
+        padding: 0.38461538461538em 2.5em 0.38461538461538em 1em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 }
 
@@ -127,25 +127,42 @@ dd {
 }
 
 /**
+ * Multi-edit checkboxes within switcher lists.
+ */
+
+.switcher-action {
+    position: absolute;
+    top: 0.38461538461538em; // 5px / 13px
+    left: 1em;
+    z-index: 2;
+
+    & + a {
+        padding-right: 1em;
+        padding-left: 2.5em;
+    }
+}
+
+[dir="rtl"] .switcher-action {
+    right: 1em;
+    left: auto;
+
+    & + a {
+        padding-right: 2.5em;
+        padding-left: 1em;
+    }
+}
+
+/**
  * 'Destroy' buttons within switcher lists.
  */
 
-.switcher-action,
 .switcher-list .destroy {
     position: absolute;
+    top: 0.46153846153846em; // 6px / 13px
     right: 1em;
     z-index: 2;
 }
 
-.switcher-action {
-    top: 0.38461538461538em; // 5px / 13px
-}
-
-.switcher-list .destroy {
-    top: 0.46153846153846em; // 6px / 13px
-}
-
-[dir="rtl"] .switcher-action,
 [dir="rtl"] .switcher-list .destroy {
     right: auto;
     left: 1em;
