@@ -691,3 +691,23 @@ span.spinner {
 [dir="rtl"] .txp-tagbuilder-dialog {
     float: left;
 }
+
+/**
+ * Ensure Tag builder vertical footprint doesn't spill out of screen area.
+ */
+
+.txp-tagbuilder-container {
+	display: flex;
+    flex-flow: column;
+    max-height: 90vh;
+    overflow: hidden;
+
+    .ui-dialog-titlebar {
+        flex: none;
+    }
+}
+
+.txp-tagbuilder-content {
+    flex: 1 1 auto;
+    overflow: scroll;
+}
