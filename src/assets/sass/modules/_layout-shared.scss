@@ -252,6 +252,19 @@ hr {
 }
 
 /**
+ * Inline the action links.
+ *
+ * Appears on:
+ *
+ * Article pages panel, forms panel, styles panel.
+ */
+
+.txp-actions-inline {
+    float: right;
+    margin-top: 1.30769230769231em; // 17px / 13px
+}
+
+/**
  * AJAX spinners.
  *
  * Example HTML:
