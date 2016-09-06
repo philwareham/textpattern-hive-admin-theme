@@ -408,4 +408,14 @@
         border-top-width: 0;
     }
 
+    /**
+     * Remove float from inline the action links.
+     */
+
+    .txp-actions-inline,
+    [dir="rtl"] .txp-actions-inline {
+        margin-top: 0;
+        float: none;
+    }
+
 }

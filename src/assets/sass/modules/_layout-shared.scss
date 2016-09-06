@@ -260,8 +260,16 @@ hr {
  */
 
 .txp-actions-inline {
-    float: right;
     margin-top: 1.30769230769231em; // 17px / 13px
+    float: right;
+}
+
+/**
+ * Swap position in RTL languages.
+ */
+
+[dir="rtl"] .txp-actions-inline {
+    float: left;
 }
 
 /**
