@@ -714,9 +714,10 @@ span.spinner {
 }
 
 /**
- * Ensure Tag builder vertical footprint doesn't spill out of screen area.
+ * Ensure dialog box vertical footprint doesn't spill out of screen area.
  */
 
+.txp-dialog-container,
 .txp-tagbuilder-container {
     display: flex;
     flex-flow: column;
@@ -728,6 +729,7 @@ span.spinner {
     }
 }
 
+.txp-dialog-content,
 .txp-tagbuilder-content {
     flex: 1 1 auto;
     overflow: scroll;
