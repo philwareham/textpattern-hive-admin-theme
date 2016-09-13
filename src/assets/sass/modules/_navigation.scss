@@ -107,9 +107,6 @@ button.txp-nav-toggle {
         color: darken($color-text, 20%);
         line-height: 2.69230769230769em; // 35px / 13px
         text-decoration: none;
-        @if $flat-theme < 1 {
-            text-shadow: $text-shadow-light;
-        }
 
         &:hover {
             background: rgba($color-text-inverse, 0.25);

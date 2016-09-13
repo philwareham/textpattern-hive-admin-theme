@@ -36,10 +36,6 @@
     font-size: $base-font-size;
     line-height: 1.3846154em; // 18px / 13px
     text-align: center;
-    @if $flat-theme < 1 {
-        text-shadow: $text-shadow-light;
-        box-shadow: $inset-highlighting;
-    }
     /* 2 */
     cursor: pointer;
     /* 3 */
@@ -72,9 +68,6 @@
     &:focus {
         border-color: $color-link-focus;
         outline-width: 0;
-        @if $flat-theme < 1 {
-            box-shadow: $inset-highlighting;
-        }
     }
 }
 
@@ -87,9 +80,6 @@
 .ui-button.ui-state-focus {
     /* 1 */
     border-color: $color-link-focus !important;
-    @if $flat-theme < 1 {
-        box-shadow: $inset-highlighting;
-    }
 }
 
 /**
