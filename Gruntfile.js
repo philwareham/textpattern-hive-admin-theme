@@ -208,7 +208,7 @@ module.exports = function (grunt)
             target: ['<%= paths.src.sass %>**/*.scss']
         },
 
-        // Uglify and copy JavaScript files from `bower-components` and `node_modules`.
+        // Uglify and copy JavaScript files from `node_modules`.
         uglify: {
             dist: {
                 // Preserve all comments that start with a bang (!) or include a closure compiler style.
