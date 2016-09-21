@@ -174,14 +174,11 @@
         opacity: 0;
     }
 
-    50% { // TODO: consolidate with 100% rule below when Sass-lint bug is fixed https://github.com/sasstools/sass-lint/issues/642
-        opacity: 1;
-    }
-
     75% {
         opacity: 0.5;
     }
 
+    50%,
     100% {
         opacity: 1;
     }
