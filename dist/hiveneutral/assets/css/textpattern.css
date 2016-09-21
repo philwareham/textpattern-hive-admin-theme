@@ -673,12 +673,10 @@ a:focus .content-image {
   0% {
     opacity: 0;
   }
-  50% {
-    opacity: 1;
-  }
   75% {
     opacity: 0.5;
   }
+  50%,
   100% {
     opacity: 1;
   }
@@ -687,12 +685,10 @@ a:focus .content-image {
   0% {
     opacity: 0;
   }
-  50% {
-    opacity: 1;
-  }
   75% {
     opacity: 0.5;
   }
+  50%,
   100% {
     opacity: 1;
   }
