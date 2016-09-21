@@ -3577,55 +3577,44 @@ span.spinner {
   margin: 0;
   padding: 0;
   border-bottom: 1px solid #cccccc;
-  background: none;
   font-size: 11px;
   line-height: 16px;
 }
 
-#view_modes ul::after {
-  display: table;
-  clear: both;
-  content: "";
+#view_modes ul li {
+  display: inline-block;
 }
 
-#view_modes ul li {
+#view_modes ul a {
+  display: block;
   position: relative;
-  top: 0;
-  margin-right: 2px;
-  float: left;
+  bottom: -1px;
+  padding: 0.5em 1em;
   border: 1px solid #cccccc;
-  border-bottom-width: 0;
   background-color: #f2f2f2;
-  list-style: none;
-  white-space: nowrap;
+  color: #333333;
+  text-decoration: none;
   box-shadow: inset 0 -0.25em 0.5em rgba(102, 102, 102, 0.15);
 }
 
-#view_modes ul li:hover, #view_modes ul li:focus {
+#view_modes ul a:hover {
   border-color: #aaaaaa;
   background-color: #f7f7f7;
 }
 
-#view_modes ul li.active {
-  margin-bottom: -1px;
-  padding-bottom: 1px;
+#view_modes ul a:focus {
+  border-color: #0066ff;
+  outline: none;
+}
+
+#view_modes ul .active a {
+  border-bottom-color: #ffffff;
   background-color: white;
   box-shadow: none;
 }
 
-#view_modes ul a {
-  padding: 0.5em 1em;
-  float: left;
-  color: #333333;
-  text-decoration: none;
-}
-
-/**
- * View mode tabs RTL support.
- */
-[dir="rtl"] #view_modes ul li,
-[dir="rtl"] #view_modes ul a {
-  float: right;
+#view_modes ul .active a:focus {
+  border-color: #0066ff;
 }
 
 /**
