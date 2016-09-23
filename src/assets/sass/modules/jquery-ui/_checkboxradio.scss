@@ -26,17 +26,6 @@
         border-radius: 0.12em;
         box-shadow: inset 1px 1px 1px #cccccc;
     }
-
-    .ui-state-highlight {
-        border-color: $color-button-selected-gradient-to;
-        background-color: $color-button-selected-gradient-from;
-    }
-
-    // TODO: seems to be bug in Checkboxradio that puts ui-state-hover class on some radio button icons - this is a workaround.
-    .ui-state-hover {
-        border-color: inherit;
-        background-color: inherit;
-    }
 }
 
 .ui-checkboxradio-radio-label {
