@@ -253,6 +253,27 @@
 }
 
 
+/* Presentation -> Forms panel - additional layout
+   ========================================================================== */
+
+#page-form .name {
+    display: inline-block;
+    margin: 1em 1em 0 0;
+
+    input {
+        width: 14.46153846153846em; // 188px / 13px
+    }
+}
+
+[dir="rtl"] #page-form .name {
+    margin: 1em 0 0 1em;
+}
+
+#page-form .type {
+    display: inline-block;
+    margin: 1em 0 0;
+}
+
 /* Admin -> Languages panel - additional layout
    ========================================================================== */
 
