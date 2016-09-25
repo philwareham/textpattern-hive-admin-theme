@@ -96,7 +96,7 @@
 
     .ui-menu-item-wrapper {
         position: relative;
-        padding: 0.30769230769231em 1em 0.30769230769231em 0.30769230769231em; // 4px / 13px
+        padding: 0.30769230769231em 1em 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     }
 
     .ui-menu-divider {
@@ -148,7 +148,7 @@
     padding: 0;
 
     .ui-menu-item-wrapper {
-        padding: 0.30769230769231em 0.30769230769231em 0.30769230769231em 1em; // 4px / 13px
+        padding: 0.30769230769231em 0.61538461538462em 0.30769230769231em 1em; // 8px / 13px + 4px / 13px
     }
 
     // left-aligned (flipped to right)
