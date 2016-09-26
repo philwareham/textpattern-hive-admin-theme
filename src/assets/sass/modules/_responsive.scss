@@ -110,6 +110,20 @@
         }
     }
 
+    /**
+     * Reset Form panel 'name' and 'type' fields to blocks.
+     */
+
+    #page-form .name,
+    #page-form .type {
+        display: block;
+        margin: 1em 0;
+    }
+
+    #page-form .txp-actions a {
+        margin-top: 0.5em;
+    }
+
 }
 
 
