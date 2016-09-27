@@ -308,7 +308,12 @@ span.spinner {
  */
 
 .multi-edit {
+    position: sticky;
+    bottom: 0;
     margin: 1em 0 0;
+    padding: 0.3076923em 0; // 4px / 13px
+    background: $color-background;
+    box-shadow: 0 -1em 1em -0.5em $color-background;
 }
 
 /**
