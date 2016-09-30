@@ -33,6 +33,7 @@
             <li><a href="#ui-doc-media">Embedded content</a></li>
             <li><a href="#ui-doc-lists">Lists</a></li>
             <li><a href="#ui-doc-tables">Tables</a></li>
+            <li><a href="#ui-doc-listtables">List tables</a></li>
             <li><a href="#ui-doc-progress">Progress meters</a></li>
             <li><a href="#ui-doc-summarydetails">Summary/details boxes</a></li>
             <li><a href="#ui-doc-forms">Forms</a></li>
@@ -739,7 +740,69 @@
 
 
         <div class="text-section" id="ui-doc-tables">
-            <h1>Tables <span class="warning">changed v4.6</span></h1>
+            <h1>Tables <span class="warning">changed v4.6.1</span></h1>
+            <p><strong>Code:</strong></p>
+            <pre dir="ltr"><code class="language-markup">&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Primary&lt;/th&gt;
+            &lt;th scope="col"&gt;Secondary&lt;/th&gt;
+            &lt;th scope="col"&gt;Tertiary&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;Roast duck&lt;/th&gt;
+            &lt;td&gt;Seasonal vegetables&lt;/td&gt;
+            &lt;td&gt;New potatoes&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;Grilled lobster&lt;/th&gt;
+            &lt;td&gt;Mixed seafood&lt;/td&gt;
+            &lt;td&gt;Side salad&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;Chicken dinosaurs&lt;/th&gt;
+            &lt;td&gt;Baked beans&lt;/td&gt;
+            &lt;td&gt;Waffles&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            <p><strong>Example:</strong></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Primary</th>
+                        <th scope="col">Secondary</th>
+                        <th scope="col">Tertiary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Roast duck</th>
+                        <td>Seasonal vegetables</td>
+                        <td>New potatoes</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Grilled lobster</th>
+                        <td>Mixed seafood</td>
+                        <td>Side salad</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Chicken dinosaurs</th>
+                        <td>Baked beans</td>
+                        <td>Waffles</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>Notes:</strong></p>
+            <p><span class="information">Changed at 4.6.1:</span> Moved some listtable styling to basic tables.</p>
+
+        </div>
+
+
+        <div class="text-section" id="ui-doc-listtables">
+            <h1>List tables <span class="warning">changed v4.6</span></h1>
             <p><strong>Code:</strong></p>
             <pre dir="ltr"><code class="language-markup">&lt;div class="txp-listtables"&gt;
     &lt;table class="txp-list"&gt;

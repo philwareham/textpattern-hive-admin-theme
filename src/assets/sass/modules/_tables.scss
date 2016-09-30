@@ -46,12 +46,24 @@ caption {
 }
 
 /**
+ * Table row borders.
+ */
+
+tr {
+    border: 1px solid $color-gradient-to;
+}
+
+thead th {
+    background-color: $color-gradient-from;
+}
+
+/**
  * Make table cells align top and left by default.
  */
 
 th,
 td {
-    padding: 0;
+    padding: 0.38461538461538em 1em; // 5px / 13px + 13px
     text-align: left;
     vertical-align: top;
 }
@@ -103,11 +115,6 @@ td {
 .txp-list {
     width: 100%;
 
-    th,
-    td {
-        padding: 0.38461538461538em 1em; // 5px / 13px + 13px
-    }
-
     tbody {
         tr {
             border: 1px solid $color-gradient-to;
@@ -132,6 +139,7 @@ td {
         border-top: 1px solid $color-gradient-to;
         border-right: 1px solid darken($color-gradient-to, 5%);
         border-bottom: 1px solid $color-gradient-border;
+        border-left: 0;
         @if $flat-theme < 1 {
             text-shadow: $text-shadow-light;
         }
