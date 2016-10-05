@@ -187,10 +187,10 @@ module.exports = function (grunt)
 
         // Sass configuration.
         sass: {
-            options: require('eyeglass')({
+            options: {
                 outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
                 sourceMap: false
-            }),
+            },
             dist: {
                 files: [
                     {'<%= paths.dest1.css %>textpattern.css': '<%= paths.src.sass %>hive-default.scss'},
