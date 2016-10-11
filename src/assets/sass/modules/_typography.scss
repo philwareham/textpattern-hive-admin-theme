@@ -98,12 +98,12 @@ h6 {
 }
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari and Chrome.
+ * Add the correct font weight in Chrome, Edge, and Safari.
  */
 
 b,
 strong {
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 /**
@@ -125,13 +125,25 @@ blockquote {
 }
 
 /**
- * Address styling not present in Safari and Chrome.
+ * 1. Remove the bottom border in Firefox.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 
-abbr[title],
-dfn[title] {
-    text-decoration: dotted underline;
-    cursor: help;
+abbr[title] {
+    /* 1 */
+    border-bottom: 0;
+    /* 2 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+}
+
+/**
+ * Add the correct font style.
+ */
+
+dfn {
+    font-style: italic;
 }
 
 /**

@@ -11,15 +11,20 @@ html {
 }
 
 /**
- * Address differences between Firefox and other browsers.
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
  */
 
 hr {
+    /* 1 */
     height: 0;
     margin: 1.5em 0;
     clear: both; // make sure any floats above `hr` are cleared
     border: 0; // remove the default `hr` border
     border-bottom: 1px solid $color-border;
+    /* 2 */
+    overflow: visible;
+    /* 1 */
     box-sizing: content-box;
 }
 
