@@ -2,6 +2,15 @@
    ========================================================================== */
 
 /**
+ * Add the correct display in IE 11.
+ */
+
+audio,
+video {
+    display: inline-block;
+}
+
+/**
  * Make embedded elements responsive.
  */
 
@@ -70,7 +79,7 @@ figure {
 }
 
 /**
- * Correct overflow not hidden in IE 11.
+ * Hide the overflow in IE 11.
  */
 
 svg:not(:root) {
