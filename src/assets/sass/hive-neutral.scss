@@ -20,35 +20,39 @@ $border-radius:                       0.3em;
 // import the default Hive (Classic Yellow) theme
 @import "hive-default";
 
-.txp-list {
-    tbody tr,
-    thead th,
-    thead th:first-child {
-        border-color: $color-border;
-    }
-}
+@media screen {
 
-.ui-button .ui-icon {
-    background-image: url("../img/ui-icon-sprite-ffffff.svg");
-}
-
-.dropdown-menu {
-    border-radius: 0;
-    background: #ffffff;
-
-    li {
-        &:hover {
-            background: $color-selected;
-        }
-
-        &.selected {
-            background: $color-selecting;
+    .txp-list {
+        tbody tr,
+        thead th,
+        thead th:first-child {
+            border-color: $color-border;
         }
     }
-}
 
-table,
-.switcher-list,
-.ui-menu {
-    background: #ffffff;
+    .ui-button .ui-icon {
+        background-image: url("../img/ui-icon-sprite-ffffff.svg");
+    }
+
+    .dropdown-menu {
+        border-radius: 0;
+        background: #ffffff;
+
+        li {
+            &:hover {
+                background: $color-selected;
+            }
+
+            &.selected {
+                background: $color-selecting;
+            }
+        }
+    }
+
+    table,
+    .switcher-list,
+    .ui-menu {
+        background: #ffffff;
+    }
+
 }

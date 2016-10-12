@@ -464,8 +464,10 @@ span.spinner {
  * </div>
  */
 
-.txp-navigation {
-    @extend .clearfix;
+.txp-navigation::after {
+    display: table;
+    clear: both;
+    content: "";
 }
 
 .pageby {

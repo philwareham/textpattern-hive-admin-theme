@@ -1,0 +1,152 @@
+/**
+ * Remove unnecessary global styling from printed media.
+ */
+
+*,
+*::before,
+*::after,
+*::first-letter,
+p::first-line,
+div::first-line,
+blockquote::first-line,
+li::first-line {
+    background: transparent !important;
+    color: #000000 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+/**
+ * Use a print-friendly font and size.
+ */
+
+body {
+    font-family: sans-serif;
+    font-size: 8pt;
+    line-height: 1.5;
+}
+
+/**
+ * Hide unnecessary content from print.
+ */
+
+nav,
+audio,
+video,
+.txp-header,
+.txp-footer,
+.txp-search,
+.txp-navigation,
+.txp-actions,
+.txp-control-panel,
+.txp-list-options,
+.txp-list-col-multi-edit,
+.multi-edit,
+.pophelp,
+.pophelpsubtle,
+#messagepane,
+#content_switcher,
+#view_modes {
+    display: none;
+}
+
+/**
+ * Make sure links are not underlined.
+ */
+
+a {
+    text-decoration: none;
+}
+
+/**
+ * Ensure monospaced font is used.
+ */
+
+pre,
+code,
+kbd,
+samp,
+var,
+.code {
+    font-family: monospace;
+}
+
+/**
+ * Ensure pre blocks are wrapped when printed.
+ */
+
+pre {
+    white-space: pre-wrap;
+}
+
+/**
+ * Basic preformatted/blockquote styling.
+ */
+
+pre,
+blockquote {
+    border: 1px solid #000000;
+    page-break-inside: avoid;
+}
+
+/**
+ * Avoid images breaking across multiple pages.
+ */
+
+img {
+    page-break-inside: avoid;
+}
+
+/**
+ * Borders on various elements.
+ */
+
+table,
+input,
+textarea {
+    border: 1px solid #000000;
+}
+
+/**
+ * Display table head across multi-page tables.
+ */
+
+thead {
+    display: table-header-group;
+}
+
+/**
+ * Avoid table rows breaking across multiple pages.
+ */
+
+tr {
+    page-break-inside: avoid;
+}
+
+/**
+ * Avoid paragraph orphans and widows.
+ */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    orphans: 2;
+    widows: 2;
+}
+
+/**
+ * Avoid headings breaking across multiple pages.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    page-break-after: avoid;
+}
