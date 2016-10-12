@@ -6205,8 +6205,11 @@ button {
   .txp-list-options,
   .txp-list-col-multi-edit,
   .multi-edit,
+  .pophelp,
+  .pophelpsubtle,
   #messagepane,
-  #content_switcher {
+  #content_switcher,
+  #view_modes {
     display: none;
   }
   /**
@@ -6222,15 +6225,15 @@ button {
   code,
   kbd,
   samp,
-  var {
+  var,
+  .code {
     font-family: monospace;
   }
   /**
  * Ensure pre blocks are wrapped when printed.
  */
   pre {
-    white-space: pre-wrap !important;
-    /* 1 */
+    white-space: pre-wrap;
   }
   /**
  * Basic preformatted/blockquote styling.
@@ -6245,6 +6248,14 @@ button {
  */
   img {
     page-break-inside: avoid;
+  }
+  /**
+ * Borders on various elements.
+ */
+  table,
+  input,
+  textarea {
+    border: 1px solid #000000;
   }
   /**
  * Display table head across multi-page tables.
