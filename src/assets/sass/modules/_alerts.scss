@@ -169,21 +169,6 @@
  * Flash the alert message using CSS animation.
  */
 
-@keyframes messageflash {
-    0% {
-        opacity: 0;
-    }
-
-    75% {
-        opacity: 0.5;
-    }
-
-    50%,
-    100% {
-        opacity: 1;
-    }
-}
-
 .messageflash {
     animation: messageflash 1s;
 }
