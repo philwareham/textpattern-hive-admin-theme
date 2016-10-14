@@ -58,13 +58,11 @@
  *
  * Example HTML:
  *
- * <input class="ui-helper-hidden-accessible" id="check" type="checkbox">
- * <label for="check" class="ui-button ui-button-text-only ui-state-active">
- *     <span class="ui-button-text">Toggle</span>
- * </label>
+ * <input class="ui-checkboxradio ui-helper-hidden-accessible" id="check" type="checkbox">
+ * <label for="check" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget ui-checkboxradio-checked ui-state-active">Dogs</label>
  */
 
-label.ui-state-active {
+.ui-checkboxradio-checked {
     &.ui-button {
         @include gradient-linear($color-button-selected-gradient-from, $color-button-selected-gradient-to);
 
