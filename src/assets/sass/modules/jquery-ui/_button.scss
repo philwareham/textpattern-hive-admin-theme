@@ -15,9 +15,7 @@
  *
  * Example HTML:
  *
- * <a class="ui-button ui-button-text-only">
- *     <span class="ui-button-text">Button</span>
- * </a>
+ * <a class="ui-button ui-corner-all ui-widget">Button</a>
  */
 
 .ui-button {
@@ -99,9 +97,10 @@
  *
  * Example HTML:
  *
- * <a class="ui-button ui-button-icon-only">
- *     <span class="ui-button-icon-primary ui-icon ui-icon-locked"></span>
- *     <span class="ui-button-text">Button one icon, no text</span>
+ * <a class="ui-button ui-corner-all ui-widget ui-button-icon-only">
+ *     <span class="ui-button-icon ui-icon ui-icon-gear"></span>
+ *     <span class="ui-button-icon-space"> </span>
+ *     Button one icon, no text
  * </a>
  */
 
