@@ -69,7 +69,7 @@
 
     &:focus {
         border-color: $color-link-focus;
-        outline-width: 0;
+        outline: 0;
         @if $flat-theme < 1 {
             box-shadow: $inset-highlighting;
         }
