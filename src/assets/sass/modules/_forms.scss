@@ -393,7 +393,8 @@ input {
 input,
 select,
 textarea {
-    &:focus:invalid {
+    &:focus:invalid,
+    &:-moz-ui-invalid {
         border-color: $color-error-text;
         box-shadow: none; // Normalize Firefox styling
     }
