@@ -488,6 +488,13 @@ button {
   a:focus .content-image {
     border-color: #0066ff;
   }
+  .img-preview:focus {
+    outline: 0;
+  }
+  .img-preview img {
+    width: 120px;
+    height: 120px;
+  }
   /* Messages
    ========================================================================== */
   /**
@@ -1967,7 +1974,7 @@ button {
     -ms-flex-positive: 1;
         flex-grow: 1;
     width: 100%;
-    max-width: 116em;
+    max-width: 116.3076923em;
     margin: 0 auto;
   }
   /* Layout grid
@@ -3327,9 +3334,6 @@ button {
   }
   /* Content -> Images panel - additional layout
    ========================================================================== */
-  .has-thumbnail a:focus {
-    outline: 0;
-  }
   .thumbnail-alter input {
     margin: 0 0.30769230769231em 0 0;
   }

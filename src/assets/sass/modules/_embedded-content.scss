@@ -111,3 +111,14 @@ svg:not(:root) {
         border-color: $color-link-focus;
     }
 }
+
+.img-preview {
+    &:focus {
+        outline: 0;
+    }
+
+    img {
+        width: 120px;
+        height: 120px;
+    }
+}
