@@ -145,46 +145,48 @@
                     <a class="txp-expand-all" href="#" aria-controls="allforms_form"><span class="ui-icon ui-icon-arrowthickstop-1-s"></span> Expand all</a>
                     <a class="txp-collapse-all" href="#" aria-controls="allforms_form"><span class="ui-icon ui-icon-arrowthickstop-1-n"></span> Collapse all</a>
                 </p>
-                <form method="post" action="#" id="allforms_form">
-                    <section id="article_forms_group" class="txp-details" aria-labelledby="article_forms_group-label">
-                        <h3 id="article_forms_group-label" class="txp-summary expanded"><a href="#article_forms" role="button" aria-controls="article_forms" aria-pressed="true">Article forms</a></h3>
-                        <div role="group" id="article_forms" class="toggle" aria-expanded="true">
-                            <ul class="switcher-list">
-                                <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="article_listing"></span><a href="#">article_listing</a></li>
-                                <li><a href="#">comments_display</a></li>
-                                <li class="active"><a href="#">default</a></li>
-                                <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="search_results"></span><a href="#">search_results</a></li>
-                                <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="single"></span><a href="#">single</a></li>
-                                <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="search_results"></span><a href="#">test_of_a_extremely_long_form_name_that_overflows_out_of_container</a></li>
-                            </ul>
-                        </div>
-                    </section>
-                    <section id="comment_forms_group" class="txp-details" aria-labelledby="comment_forms_group-label">
-                        <h3 id="comment_forms_group-label" class="txp-summary expanded"><a href="#comment_forms" role="button" aria-controls="comment_forms" aria-pressed="true">Comment forms</a></h3>
-                        <div role="group" id="comment_forms" class="toggle" aria-expanded="true">
-                            <ul class="switcher-list">
-                                <li><a href="#">comments</a></li>
-                                <li><a href="#">comment_form</a></li>
-                            </ul>
-                        </div>
-                    </section>
-                    <section id="file_forms_group" class="txp-details" aria-labelledby="file_forms_group-label">
-                        <h3 id="file_forms_group-label" class="txp-summary expanded"><a href="#file_forms" role="button" aria-controls="file_forms" aria-pressed="true">File forms</a></h3>
-                        <div role="group" id="file_forms" class="toggle" aria-expanded="true">
-                            <ul class="switcher-list">
-                                <li><a href="#">files</a></li>
-                            </ul>
-                        </div>
-                    </section>
-                    <section id="link_forms_group" class="txp-details" aria-labelledby="link_forms_group-label">
-                        <h3 id="link_forms_group-label" class="txp-summary expanded"><a href="#link_forms" role="button" aria-controls="link_forms" aria-pressed="true">Link forms</a></h3>
-                        <div role="group" id="link_forms" class="toggle" aria-expanded="true">
-                            <ul class="switcher-list">
-                                <li><a href="#">Links</a></li>
-                                <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="plainlinks"></span><a href="#">plainlinks</a></li>
-                            </ul>
-                        </div>
-                    </section>
+                <form id="allforms_form" method="post" action="index.php">
+                    <div id="allforms_form_sections" role="region">
+                        <section id="article_forms_group" class="txp-details" aria-labelledby="article_forms_group-label">
+                            <h3 id="article_forms_group-label" class="txp-summary expanded"><a href="#article_forms" role="button" aria-controls="article_forms" aria-pressed="true">Article forms</a></h3>
+                            <div role="group" id="article_forms" class="toggle" aria-expanded="true">
+                                <ul class="switcher-list">
+                                    <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="article_listing"></span><a href="#">article_listing</a></li>
+                                    <li><a href="#">comments_display</a></li>
+                                    <li class="active"><a href="#">default</a></li>
+                                    <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="search_results"></span><a href="#">search_results</a></li>
+                                    <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="single"></span><a href="#">single</a></li>
+                                    <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="search_results"></span><a href="#">test_of_a_extremely_long_form_name_that_overflows_out_of_container</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section id="comment_forms_group" class="txp-details" aria-labelledby="comment_forms_group-label">
+                            <h3 id="comment_forms_group-label" class="txp-summary expanded"><a href="#comment_forms" role="button" aria-controls="comment_forms" aria-pressed="true">Comment forms</a></h3>
+                            <div role="group" id="comment_forms" class="toggle" aria-expanded="true">
+                                <ul class="switcher-list">
+                                    <li><a href="#">comments</a></li>
+                                    <li><a href="#">comment_form</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section id="file_forms_group" class="txp-details" aria-labelledby="file_forms_group-label">
+                            <h3 id="file_forms_group-label" class="txp-summary expanded"><a href="#file_forms" role="button" aria-controls="file_forms" aria-pressed="true">File forms</a></h3>
+                            <div role="group" id="file_forms" class="toggle" aria-expanded="true">
+                                <ul class="switcher-list">
+                                    <li><a href="#">files</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section id="link_forms_group" class="txp-details" aria-labelledby="link_forms_group-label">
+                            <h3 id="link_forms_group-label" class="txp-summary expanded"><a href="#link_forms" role="button" aria-controls="link_forms" aria-pressed="true">Link forms</a></h3>
+                            <div role="group" id="link_forms" class="toggle" aria-expanded="true">
+                                <ul class="switcher-list">
+                                    <li><a href="#">Links</a></li>
+                                    <li><span class="switcher-action"><input type="checkbox" name="selected_forms[]" value="plainlinks"></span><a href="#">plainlinks</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
                     <div class="multi-edit">
                         <select name="edit_method">
                             <option value="" selected="selected">With selected&#8230;</option>
