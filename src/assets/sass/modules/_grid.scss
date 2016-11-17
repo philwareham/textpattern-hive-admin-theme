@@ -90,6 +90,18 @@
  *         Content
  *     </div>
  * </div>
+ *
+ * <ul class="txp-grid">
+ *     <li>
+ *         Content
+ *     </li>
+ *     <li>
+ *         Content
+ *     </li>
+ *     <li>
+ *         Content
+ *     </li>
+ * </ul>
  */
 
 .txp-grid {
@@ -97,10 +109,15 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: -2px;
+    padding: 0;
+    list-style: none;
+
+    > * {
+        margin: 2px;
+    }
 }
 
 .txp-grid-cell {
-    margin: 2px;
     padding: 0 1em;
     border: 1px solid $color-border;
     box-sizing: border-box;
