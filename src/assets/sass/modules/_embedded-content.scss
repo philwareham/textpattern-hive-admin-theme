@@ -116,4 +116,9 @@ svg:not(:root) {
     &:focus {
         outline: 0;
     }
+
+    img {
+        width: 120px;
+        height: 120px;
+    }
 }
