@@ -12,10 +12,10 @@
  * <strong class="error">
  */
 
-.success,
-.warning,
-.error,
-.information {
+p.success,
+p.warning,
+p.error,
+p.information {
     padding: 1px 0.23076923076923em; // 3px / 13px
     @if $border-radius > 0 {
         border-radius: $border-radius / 2;
@@ -24,21 +24,33 @@
 
 .success {
     background: $color-success-background;
+}
+
+.success:not(li) {
     color: $color-success-text;
 }
 
 .warning {
     background: $color-warning-background;
+}
+
+.warning:not(li) {
     color: $color-warning-text;
 }
 
 .error {
     background: $color-error-background;
+}
+
+.error:not(li) {
     color: $color-error-text;
 }
 
 .information {
     background: $color-info-background;
+}
+
+.information:not(li) {
     color: $color-info-text;
 }
 
