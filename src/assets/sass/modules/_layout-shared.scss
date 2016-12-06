@@ -87,29 +87,9 @@ hr {
     justify-content: flex-end;
     margin: 1em 0;
 
-    .ui-menu {
-        position: absolute;
-        width: 18em; // 234px / 13px
-        z-index: 100;
-    }
-
     // Ensure the 2 buttons stay together.
     .ui-controlgroup {
         flex-wrap: nowrap;
-    }
-
-    .txp-dropdown {
-        input {
-            vertical-align: -0.23076923076923em; // 3px / 13px
-        }
-
-        label {
-            display: inline-block;
-            width: 85%;
-            padding: 0.23076923076923em 0.30769230769231em; // 3px / 13px + 4px / 13px
-            cursor: pointer;
-            vertical-align: text-top;
-        }
     }
 }
 
@@ -120,6 +100,24 @@ hr {
 
     [dir="rtl"] & {
         text-align: left;
+    }
+}
+
+.txp-dropdown {
+    position: absolute;
+    width: 18em; // 234px / 13px
+    z-index: 100;
+
+    input {
+        vertical-align: -0.23076923076923em; // 3px / 13px
+    }
+
+    label {
+        display: inline-block;
+        width: 85%;
+        padding: 0.23076923076923em 0.30769230769231em; // 3px / 13px + 4px / 13px
+        cursor: pointer;
+        vertical-align: text-top;
     }
 }
 
@@ -190,7 +188,7 @@ hr {
     margin: 0.46153846153846em 0 1em; // 6px / 13px, 13px
     float: right;
 
-    > * {
+    > *:not(ul) {
         margin: 0 0 0 1em;
     }
 
