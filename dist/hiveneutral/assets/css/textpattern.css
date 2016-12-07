@@ -2588,10 +2588,41 @@ button {
     left: auto;
   }
   /**
- * Ensure dropdowns are hidden at page load (prevents content 'jumping').
+ * Drop down lists.
+ *
+ * 1. Ensure dropdowns are hidden at page load (prevents content 'jumping').
+ *
+ * <ul class="txp-dropdown">
+ *     <li>
+ *         <div>
+ *             <input class="checkbox" type="checkbox">
+ *             <label>Search all</label>
+ *         </div>
+ *     </li>
+ *     <li>
+ *         <div>
+ *             <input class="checkbox active" type="checkbox">
+ *             <label>ID#</label>
+ *         </div>
+ *     </li>
+ * </ul>
  */
   .txp-dropdown {
+    /* 1 */
     display: none;
+    position: absolute;
+    width: 18em;
+    z-index: 100;
+  }
+  .txp-dropdown .checkbox {
+    vertical-align: -0.23076923076923em;
+  }
+  .txp-dropdown .checkbox + label {
+    display: inline-block;
+    width: 85%;
+    padding: 0.23076923076923em 0.30769230769231em;
+    cursor: pointer;
+    vertical-align: text-top;
   }
   /**
  * Search widget at top of lists.
@@ -2622,6 +2653,9 @@ button {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
+  .txp-search .txp-dropdown {
+    z-index: 101;
+  }
   .txp-search-clear {
     -ms-flex: 1;
         flex: 1;
@@ -2630,21 +2664,6 @@ button {
   }
   [dir="rtl"] .txp-search-clear {
     text-align: left;
-  }
-  .txp-dropdown {
-    position: absolute;
-    width: 18em;
-    z-index: 100;
-  }
-  .txp-dropdown input {
-    vertical-align: -0.23076923076923em;
-  }
-  .txp-dropdown label {
-    display: inline-block;
-    width: 85%;
-    padding: 0.23076923076923em 0.30769230769231em;
-    cursor: pointer;
-    vertical-align: text-top;
   }
   /**
  * Actions and upload forms at top of listings.
