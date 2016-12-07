@@ -24,7 +24,7 @@
     @include hires-graphic(ui-progressbar, gif, 16px, 16px);
 
     height: 16px;
-    background-color: $color-selecting;
+    background-color: $color-accent-gradient-to;
 }
 
 /**
@@ -40,7 +40,5 @@
  */
 
 .ui-progressbar-indeterminate .ui-progressbar-value {
-    @include hires-graphic(ui-progressbar-indeterminate, gif, 16px, 16px);
-
     background-color: $color-border;
 }
