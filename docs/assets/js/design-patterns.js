@@ -88,85 +88,6 @@ $(function ()
         iconPosition: 'end'
     });
 
-    // Split button search example.
-
-    var search = $('.txp-search');
-
-    search.find('.txp-search-button').button({
-        showLabel: false,
-        icon: 'ui-icon-search'
-    })
-    .click(function ()
-    {
-        alert('Running the last action');
-    });
-
-    search.find('.txp-search-options').button({
-        showLabel: false,
-        icon: 'ui-icon-triangle-1-s'
-    })
-    .click(function (e)
-    {
-        if (langdir === 'rtl') {
-            var menu = search.find('.txp-dropdown').toggle().position({
-                my: 'left top',
-                at: 'left bottom',
-                of: this
-            });
-        } else {
-            var menu = search.find('.txp-dropdown').toggle().position({
-                my: 'right top',
-                at: 'right bottom',
-                of: this
-            });
-        };
-
-        $(document).one('click blur', function ()
-        {
-            menu.hide();
-        });
-
-        return false;
-    });
-
-    search.find('.txp-search-buttons').controlgroup();
-
-    search.find('.txp-dropdown').hide().menu().click(function(e) {
-        e.stopPropagation();
-    });
-
-    // List options dropdown example.
-
-    var listoptions = $('.txp-list-options-button');
-
-    listoptions.click(function (e)
-    {
-        if (langdir === 'rtl') {
-            var menu = $('.txp-list-options-list').toggle().position({
-                my: 'left top',
-                at: 'left bottom',
-                of: this
-            });
-        } else {
-            var menu = $('.txp-list-options-list').toggle().position({
-                my: 'right top',
-                at: 'right bottom',
-                of: this
-            });
-        };
-
-        $(document).one('click blur', function ()
-        {
-            menu.hide();
-        });
-
-        return false;
-    });
-
-    $('.txp-list-options-list').hide().menu().click(function(e) {
-        e.stopPropagation();
-    });
-
     // Checkboxradio.
 
     $('.jquery-ui-checkboxradio-checkbox input').checkboxradio({
@@ -346,5 +267,84 @@ $(function ()
     // Tooltips.
 
     $('.jquery-ui-tooltip').tooltip();
+
+    // Split button search example.
+
+    var search = $('.txp-search');
+
+    search.find('.txp-search-button').button({
+        showLabel: false,
+        icon: 'ui-icon-search'
+    })
+    .click(function ()
+    {
+        alert('Running the last action');
+    });
+
+    search.find('.txp-search-options').button({
+        showLabel: false,
+        icon: 'ui-icon-triangle-1-s'
+    })
+    .click(function (e)
+    {
+        if (langdir === 'rtl') {
+            var menu = search.find('.txp-dropdown').toggle().position({
+                my: 'left top',
+                at: 'left bottom',
+                of: this
+            });
+        } else {
+            var menu = search.find('.txp-dropdown').toggle().position({
+                my: 'right top',
+                at: 'right bottom',
+                of: this
+            });
+        };
+
+        $(document).one('click blur', function ()
+        {
+            menu.hide();
+        });
+
+        return false;
+    });
+
+    search.find('.txp-search-buttons').controlgroup();
+
+    search.find('.txp-dropdown').hide().menu().click(function(e) {
+        e.stopPropagation();
+    });
+
+    // List options dropdown example.
+
+    var listoptions = $('.txp-list-options-button');
+
+    listoptions.click(function (e)
+    {
+        if (langdir === 'rtl') {
+            var menu = $('.txp-list-options-list').toggle().position({
+                my: 'left top',
+                at: 'left bottom',
+                of: this
+            });
+        } else {
+            var menu = $('.txp-list-options-list').toggle().position({
+                my: 'right top',
+                at: 'right bottom',
+                of: this
+            });
+        };
+
+        $(document).one('click blur', function ()
+        {
+            menu.hide();
+        });
+
+        return false;
+    });
+
+    $('.txp-list-options-list').hide().menu().click(function(e) {
+        e.stopPropagation();
+    });
 
 });
