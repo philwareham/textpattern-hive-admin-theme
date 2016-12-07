@@ -12,10 +12,10 @@
  * <strong class="error">
  */
 
-p.success,
-p.warning,
-p.error,
-p.information {
+.success:not(li),
+.warning:not(li),
+.error:not(li),
+.information:not(li) {
     padding: 1px 0.23076923076923em; // 3px / 13px
     @if $border-radius > 0 {
         border-radius: $border-radius / 2;
@@ -80,7 +80,7 @@ p.information {
  * <p class="alert-block error">
  */
 
-.alert-block {
+.alert-block:not(li) {
     padding: 0.53846153846154em 1em; // 7px / 13px
     clear: both;
     border: 1px solid;
