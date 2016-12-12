@@ -1177,7 +1177,7 @@ button {
  */
   select {
     padding-right: 1.30769230769231em;
-    background: #ffffff url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxM3B4JyBoZWlnaHQ9JzRweCcgdmlld0JveD0nMCAwIDEzIDQnPjxwb2x5Z29uIGZpbGw9JyMzMzMnIHBvaW50cz0nMy41LDQgMCwwIDcsMCcvPjwvc3ZnPg==") right center no-repeat;
+    background: #ffffff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='4' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23333' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E") right center no-repeat;
     background-size: 1em 0.30769230769231em;
     text-transform: none;
   }
@@ -1440,7 +1440,7 @@ button {
     background-color: #d6d6d6;
     background-image: linear-gradient(#e6e6e6, #d6d6d6);
     border-color: #aaaaaa;
-    color: #1a1a1a;
+    color: #1a1919;
     text-decoration: none;
     box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   }
@@ -2561,7 +2561,8 @@ button {
   /* Globally shared layout
    ========================================================================== */
   /**
- * 1. Prevent text size adjust after mobile device orientation change.
+ * 1. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
  */
   html {
     /* 1 */
@@ -4715,7 +4716,7 @@ button {
     background-color: #d6d6d6;
     background-image: linear-gradient(#e6e6e6, #d6d6d6);
     border-color: #aaaaaa;
-    color: #1a1a1a;
+    color: #1a1919;
     text-decoration: none;
     box-shadow: inset 0 0.2em 0.25em rgba(0, 0, 0, 0.15);
   }
