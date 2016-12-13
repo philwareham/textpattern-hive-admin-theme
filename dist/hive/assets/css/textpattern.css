@@ -1055,7 +1055,7 @@ button {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     /* 3 */
     font-size: 13px;
-    line-height: 1.38461538461538em;
+    line-height: 20px;
     vertical-align: baseline;
     box-sizing: border-box;
   }
@@ -1098,7 +1098,7 @@ button {
   [type="week"],
   select,
   textarea {
-    height: 2.15384615384615em;
+    height: 2.307692307692308em;
     padding: 0.30769230769231em;
     border: 1px solid #cccccc;
     border-radius: 0;
@@ -1217,7 +1217,7 @@ button {
  */
   select[size="0"],
   select[size="1"] {
-    height: 2.15384615384615em;
+    height: 2.307692307692308em;
     vertical-align: baseline;
   }
   /**
@@ -1396,7 +1396,7 @@ button {
     background-image: linear-gradient(#eeeeee, #dddddd);
     display: inline-block;
     width: auto;
-    height: 2.15384615384615em;
+    height: 2.307692307692308em;
     padding: 0.30769230769231em 0.61538461538462em;
     border: 1px solid #cccccc;
     border-radius: 0.5em;
@@ -1531,7 +1531,7 @@ button {
  */
   .navlink-disabled {
     display: inline-block;
-    height: 2.15384615384615em;
+    height: 2.307692307692308em;
     padding: 0.30769230769231em 0.61538461538462em;
     border: 1px solid;
     border-radius: 0.5em;
@@ -3149,7 +3149,7 @@ button {
   .setup:not(.welcome) .txp-form-field-value {
     -ms-flex: 1 1 0%;
         flex: 1 1 0%;
-    min-height: 2.15384615384615em;
+    min-height: 2.307692307692308em;
   }
   /**
  * Don't inline or constrain form fields for textareas.
@@ -4679,7 +4679,7 @@ button {
     background-image: linear-gradient(#eeeeee, #dddddd);
     display: inline-block;
     position: relative;
-    height: 2.1538462em;
+    height: 2.307692307692308em;
     margin: 0 0.1em 0 0;
     padding: 0.30769230769231em 0.61538461538462em;
     border: 1px solid #cccccc;
@@ -4688,7 +4688,7 @@ button {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     /* 1 */
     font-size: 13px;
-    line-height: 1.3846154em;
+    line-height: 20px;
     text-align: center;
     /* 2 */
     cursor: pointer;
@@ -5365,7 +5365,7 @@ button {
     outline: 0;
     /* 1 */
     font-size: 13px;
-    line-height: 1.38461538461538em;
+    line-height: 20px;
     list-style: none;
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
   }

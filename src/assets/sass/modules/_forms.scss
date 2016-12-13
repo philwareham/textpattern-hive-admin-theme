@@ -62,7 +62,7 @@ textarea,
     font-family: $font-form;
     /* 3 */
     font-size: $base-font-size;
-    line-height: 1.38461538461538em; // 18px / 13px
+    line-height: $base-line-height;
     vertical-align: baseline;
     box-sizing: border-box;
 }
@@ -111,7 +111,7 @@ button::-moz-focus-inner,
 [type="week"],
 select,
 textarea {
-    height: 2.15384615384615em; // 28px / 13px
+    height: 2.307692307692308em; // 30px / 13px
     padding: 0.30769230769231em; // 4px / 13px
     border: 1px solid $color-border;
     border-radius: 0;
@@ -240,7 +240,7 @@ select[multiple] {
 
 select[size="0"],
 select[size="1"] {
-    height: 2.15384615384615em; // 28px / 13px
+    height: 2.307692307692308em; // 30px / 13px
     vertical-align: baseline;
 }
 

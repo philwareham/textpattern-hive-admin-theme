@@ -72,7 +72,7 @@
     outline: 0;
     /* 1 */
     font-size: $base-font-size;
-    line-height: 1.38461538461538em; // 18px / 13px
+    line-height: $base-line-height;
     list-style: none;
     @if $flat-theme < 1 {
         box-shadow: $standard-shadow;
