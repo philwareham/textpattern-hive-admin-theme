@@ -624,6 +624,7 @@ span.spinner {
 
 .txp-form-field {
     margin: 1em 0;
+    vertical-align: top;
 }
 
 /**
@@ -646,7 +647,6 @@ span.spinner {
 .txp-form-field-label,
 .txp-form-field-value {
     max-width: 29em; // 377px / 13px
-    vertical-align: top;
 }
 
 /**
