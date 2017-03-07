@@ -1,10 +1,10 @@
 # Hive admin-side theme for Textpattern CMS
 
-[![Build Status](https://img.shields.io/travis/philwareham/textpattern-hive-admin-theme/master.svg)](https://travis-ci.org/philwareham/textpattern-hive-admin-theme)
-[![Dependency Status](http://img.shields.io/david/philwareham/textpattern-hive-admin-theme.svg)](https://david-dm.org/philwareham/textpattern-hive-admin-theme)
-[![devDependency Status](http://img.shields.io/david/dev/philwareham/textpattern-hive-admin-theme.svg)](https://david-dm.org/philwareham/textpattern-hive-admin-theme?type=dev)
+[![Build Status](https://img.shields.io/travis/philwareham/textpattern-hive-admin-theme.svg)](https://travis-ci.org/philwareham/textpattern-hive-admin-theme)
+[![Dependency Status](https://img.shields.io/david/philwareham/textpattern-hive-admin-theme.svg)](https://david-dm.org/philwareham/textpattern-hive-admin-theme)
+[![devDependency Status](https://img.shields.io/david/dev/philwareham/textpattern-hive-admin-theme.svg)](https://david-dm.org/philwareham/textpattern-hive-admin-theme?type=dev)
 
-The default admin theme that ships as standard with [Textpattern CMS](http://textpattern.com).
+The default admin theme that ships as standard with [Textpattern CMS](https://textpattern.io/).
 
 ## Demos
 
@@ -21,14 +21,14 @@ The default admin theme that ships as standard with [Textpattern CMS](http://tex
 
 Building this repository requires:
 
-* [Node.js](http://nodejs.org/) >=0.12.0
-* [Grunt](http://gruntjs.com/) >=0.4.0
+* [Node.js](https://nodejs.org/) >=4.0
+* [Grunt](https://gruntjs.com/) >=1.0
 
 ## Build setup
 
 ### Installing required tools
 
-The project uses [Grunt](http://gruntjs.com/) to run tasks and [Sass](http://sass-lang.com/) for CSS pre-processing. First make sure you have base dependencies installed: [Node.js](http://nodejs.org/) and [Grunt](http://gruntjs.com/). You can install Node using the [installer](https://nodejs.org) and Grunt with npm:
+The project uses [Grunt](https://gruntjs.com/) to run tasks and [Sass](http://sass-lang.com/) for CSS pre-processing. First make sure you have base dependencies installed: [Node.js](https://nodejs.org/) and [Grunt](https://gruntjs.com/). You can install Node using the [installer](https://nodejs.org/) and Grunt with npm:
 
 ```ShellSession
 $ npm install -g grunt-cli
