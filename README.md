@@ -1,10 +1,7 @@
 # Hive admin-side theme for Textpattern CMS
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/philwareham/textpattern-hive-admin-theme.svg)](https://greenkeeper.io/)
-
 [![Build Status](https://img.shields.io/travis/philwareham/textpattern-hive-admin-theme.svg)](https://travis-ci.org/philwareham/textpattern-hive-admin-theme)
-[![Dependency Status](https://img.shields.io/david/philwareham/textpattern-hive-admin-theme.svg)](https://david-dm.org/philwareham/textpattern-hive-admin-theme)
-[![devDependency Status](https://img.shields.io/david/dev/philwareham/textpattern-hive-admin-theme.svg)](https://david-dm.org/philwareham/textpattern-hive-admin-theme?type=dev)
 
 The default admin theme that ships as standard with [Textpattern CMS](https://textpattern.io/).
 
