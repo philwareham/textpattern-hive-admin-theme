@@ -382,9 +382,11 @@
      */
 
     .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
+        height: auto;
+
         li {
-            margin: 0;
-            float: none;
+            display: block;
+            height: auto;
             border-bottom-width: 1px;
             @if $flat-theme < 1 {
                 box-shadow: none;
@@ -394,19 +396,6 @@
                 margin-bottom: 0;
                 padding-bottom: 0;
             }
-
-            [dir="rtl"] & {
-                float: none;
-            }
-        }
-
-        .ui-tabs-anchor {
-            display: block;
-            float: none;
-
-            [dir="rtl"] & {
-                float: none;
-            }
         }
     }
 
@@ -414,7 +403,7 @@
      * Remove top border from jQuery UI tabs panel.
      */
 
-    .ui-tabs .ui-tabs-panel {
+    .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-panel {
         border-top-width: 0;
     }
 

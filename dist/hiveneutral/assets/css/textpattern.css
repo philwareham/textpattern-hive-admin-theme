@@ -5769,8 +5769,8 @@ button {
     cursor: text;
   }
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav .ui-tabs-anchor {
+    display: block;
     padding: 0.5em 1em;
-    float: left;
     color: #333333;
     text-decoration: none;
   }
@@ -5786,12 +5786,6 @@ button {
  */
   .ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
     cursor: pointer;
-  }
-  /**
- * Tabs RTL support.
- */
-  [dir="rtl"] .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-    float: right;
   }
   /**
  * Additonal styling for tabs vertical.
@@ -6128,29 +6122,22 @@ button {
   /**
      * Collapse jQuery UI tabs responsively.
      */
+  .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
+    height: auto;
+  }
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li {
-    margin: 0;
-    float: none;
+    display: block;
+    height: auto;
     border-bottom-width: 1px;
   }
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li.ui-tabs-active {
     margin-bottom: 0;
     padding-bottom: 0;
   }
-  [dir="rtl"] .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li {
-    float: none;
-  }
-  .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav .ui-tabs-anchor {
-    display: block;
-    float: none;
-  }
-  [dir="rtl"] .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav .ui-tabs-anchor {
-    float: none;
-  }
   /**
      * Remove top border from jQuery UI tabs panel.
      */
-  .ui-tabs .ui-tabs-panel {
+  .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-panel {
     border-top-width: 0;
   }
   /**
