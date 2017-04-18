@@ -347,4 +347,36 @@ $(function ()
         e.stopPropagation();
     });
 
+    // Text filter options dropdown example.
+
+    var textfilteroptions = $('.txp-textfilter-options-button');
+
+    textfilteroptions.click(function (e)
+    {
+        if (langdir === 'rtl') {
+            var menu = $('.txp-textfilter-options-list').toggle().position({
+                my: 'left top',
+                at: 'left bottom',
+                of: this
+            });
+        } else {
+            var menu = $('.txp-textfilter-options-list').toggle().position({
+                my: 'right top',
+                at: 'right bottom',
+                of: this
+            });
+        };
+
+        $(document).one('click blur', function ()
+        {
+            menu.hide();
+        });
+
+        return false;
+    });
+
+    $('.txp-textfilter-options-list').hide().menu().click(function(e) {
+        e.stopPropagation();
+    });
+
 });
