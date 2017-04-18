@@ -29,7 +29,7 @@
         @if $flat-theme < 1 {
             box-shadow: $standard-shadow;
         }
-        cursor: default;
+        cursor: pointer;
         z-index: 2;
         touch-action: none;
     }
