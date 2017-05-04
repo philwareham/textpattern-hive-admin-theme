@@ -168,8 +168,6 @@ button.destroy {
  *
  * Anchor elements kept to one line to prevent space between buttons.
  *
- * TODO: check if this would be better via flexbox instead?
- *
  * Example HTML:
  *
  * <p class="nav-tertiary">
@@ -235,7 +233,8 @@ ul.nav-tertiary {
  * </p>
  */
 
-.nav-tertiary .navlink-active {
+.nav-tertiary .navlink-active,
+.filtered button.ui-corner-right {
     @include gradient-linear($color-button-selected-gradient-from, $color-button-selected-gradient-to);
 
     border-color: $color-button-selected-border;
