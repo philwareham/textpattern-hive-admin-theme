@@ -5649,6 +5649,36 @@ button {
   [dir="rtl"] .ui-selectmenu-icon {
     margin: 0 0.25em 0 -0.25em;
   }
+  /**
+ * Selectmenu plain buttons.
+ */
+  .no-ui-button .ui-selectmenu-button {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #004cbf;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    cursor: hand;
+    -webkit-user-select: auto;
+       -moz-user-select: auto;
+        -ms-user-select: auto;
+            user-select: auto;
+  }
+  .no-ui-button .ui-selectmenu-button:hover, .no-ui-button .ui-selectmenu-button:active {
+    background: transparent;
+    color: #0066ff;
+    text-decoration: underline;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .no-ui-button .ui-selectmenu-button:focus {
+    outline: thin solid #0066ff;
+  }
+  .no-ui-button .ui-selectmenu-icon {
+    margin: 0;
+  }
   /* Slider
    ========================================================================== */
   /**
