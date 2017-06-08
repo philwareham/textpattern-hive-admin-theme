@@ -41,17 +41,12 @@ h1 {
 }
 
 /**
- * Omit margin below heading on image edit, pages, forms, styles, prefs panels.
+ * Omit margin below heading on some special panels (e.g. image edit, page, css,
+ * form, prefs).
  */
 
-#page-image,
-#page-form,
-#page-page,
-#page-css,
-#page-prefs {
-    .txp-heading {
-        margin-bottom: 0;
-    }
+.txp-heading-tight {
+    margin-bottom: 0;
 }
 
 /**
