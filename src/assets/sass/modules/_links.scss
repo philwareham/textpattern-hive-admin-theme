@@ -19,7 +19,7 @@ a {
 
     &:hover,
     &:active {
-        outline: 0;
+        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         color: $color-link-hover;
         text-decoration: underline;
     }
@@ -61,7 +61,7 @@ a {
 
     &:focus {
         border-color: $color-link-focus;
-        outline: 0;
+        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }
 

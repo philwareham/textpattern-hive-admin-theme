@@ -125,7 +125,7 @@
 
         &:focus {
             border-color: $color-link-focus;
-            outline: none;
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
     }
 

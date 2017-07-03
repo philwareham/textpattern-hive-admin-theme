@@ -127,7 +127,7 @@ svg:not(:root) {
 
 .img-preview {
     &:focus {
-        outline: 0;
+        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 
     img {
