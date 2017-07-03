@@ -87,7 +87,6 @@ button {
             text-decoration-skip: ink;
   }
   a:hover, a:active {
-    outline: 2px solid transparent;
     color: #0066ff;
     text-decoration: underline;
   }
@@ -3341,7 +3340,7 @@ button {
   }
   #view_modes ul a:focus {
     border-color: #0066ff;
-    outline: 2px solid transparent;
+    outline: 0;
   }
   #view_modes ul .active a {
     border-bottom-color: #f7f7f7;
