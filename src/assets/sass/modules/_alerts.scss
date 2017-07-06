@@ -12,17 +12,7 @@
  * <strong class="error">
  */
 
-.success:not(li),
-.warning:not(li),
-.error:not(li),
-.information:not(li) {
-    padding: 1px 0.23076923076923em; // 3px / 13px
-    @if $border-radius > 0 {
-        border-radius: $border-radius / 2;
-    }
-}
-
-.success {
+li.success {
     background: $color-success-background;
 }
 
@@ -30,7 +20,7 @@
     color: $color-success-text;
 }
 
-.warning {
+li.warning {
     background: $color-warning-background;
 }
 
@@ -38,7 +28,7 @@
     color: $color-warning-text;
 }
 
-.error {
+li.error {
     background: $color-error-background;
 }
 
@@ -46,7 +36,7 @@
     color: $color-error-text;
 }
 
-.information {
+li.information {
     background: $color-info-background;
 }
 
@@ -80,25 +70,32 @@
  * <p class="alert-block error">
  */
 
-.alert-block:not(li) {
+.alert-block {
     padding: 0.53846153846154em 1em; // 7px / 13px
     clear: both;
     border: 1px solid;
+    @if $border-radius > 0 {
+        border-radius: $border-radius / 2;
+    }
 
     &.success {
         border-color: $color-success-border;
+        background: $color-success-background;
     }
 
     &.warning {
         border-color: $color-warning-border;
+        background: $color-warning-background;
     }
 
     &.error {
         border-color: $color-error-border;
+        background: $color-error-background;
     }
 
     &.information {
         border-color: $color-info-border;
+        background: $color-info-background;
     }
 }
 
