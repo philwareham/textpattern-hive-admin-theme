@@ -257,7 +257,8 @@ button {
     /* 2 */
     text-decoration: underline;
     /* 2 */
-    text-decoration: underline dotted;
+    -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
   }
   /**
  * Consistent styling for `mark` and `var` tags.
@@ -4383,8 +4384,6 @@ button {
  *
  * <span class="ui-icon ui-extra-icon-code"></span>
  * <span class="ui-icon ui-extra-icon-download"></span>
- *
- * TODO: Use `mask` in future.
  */
   .ui-extra-icon-code {
     background-position: 0 -256px;
