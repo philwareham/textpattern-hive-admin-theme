@@ -127,6 +127,7 @@ button.destroy {
     &:hover,
     &:active {
         background: none;
+        box-shadow: none;
     }
 
     &:focus {
