@@ -113,7 +113,8 @@ td {
  * </table>
  */
 
-.txp-list {
+.txp-list,
+.txp-list--no-options {
     width: 100%;
 
     tbody {
@@ -168,47 +169,50 @@ td {
  * <th class="desc scope="col"><a></a></th>
  */
 
-.txp-list thead th {
-    &.asc,
-    &.desc {
-        @include gradient-linear(darken($color-gradient-to, 4%), darken($color-gradient-from, 4%));
+.txp-list,
+.txp-list--no-options {
+    thead th {
+        &.asc,
+        &.desc {
+            @include gradient-linear(darken($color-gradient-to, 4%), darken($color-gradient-from, 4%));
 
-        a::after {
-            @include hide-text;
+            a::after {
+                @include hide-text;
 
-            display: block;
-            position: absolute;
-            top: 45%;
-            right: 0.3125em; // 5px / 16px
-            width: 0;
-            height: 0;
-            font-size: 16px;
-            opacity: 0.5;
-            z-index: 10;
+                display: block;
+                position: absolute;
+                top: 45%;
+                right: 0.3125em; // 5px / 16px
+                width: 0;
+                height: 0;
+                font-size: 16px;
+                opacity: 0.5;
+                z-index: 10;
 
-            [dir="rtl"] & {
-                right: auto;
-                left: 0.3125em; // 5px / 16px
+                [dir="rtl"] & {
+                    right: auto;
+                    left: 0.3125em; // 5px / 16px
+                }
+            }
+
+            a:hover::after {
+                opacity: 1;
             }
         }
 
-        a:hover::after {
-            opacity: 1;
+        &.desc a::after {
+            border: 0 solid transparent;
+            border-width: 0.25em 0.25em 0;
+            border-top-color: $color-text;
+            content: "\2193";
         }
-    }
 
-    &.desc a::after {
-        border: 0 solid transparent;
-        border-width: 0.25em 0.25em 0;
-        border-top-color: $color-text;
-        content: "\2193";
-    }
-
-    &.asc a::after {
-        border: 0 solid transparent;
-        border-width: 0 0.25em 0.25em;
-        border-bottom-color: $color-text;
-        content: "\2191";
+        &.asc a::after {
+            border: 0 solid transparent;
+            border-width: 0 0.25em 0.25em;
+            border-bottom-color: $color-text;
+            content: "\2191";
+        }
     }
 }
 

@@ -135,3 +135,11 @@ h3.txp-summary.expanded a::after {
 .txp-details > div {
     padding: 0 1em;
 }
+
+/**
+ * Tables within summary/details boxes.
+ */
+
+.txp-details .txp-list--no-options {
+    margin: 1em 0;
+}
