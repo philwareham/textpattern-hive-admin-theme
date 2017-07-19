@@ -135,8 +135,14 @@ button.destroy {
     }
 
     &:hover .ui-icon,
-    &:active .ui-icon,
-    &:focus .ui-icon {
+    &:active .ui-icon {
+        filter: brightness(2) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(80%);
+    }
+}
+
+a.destroy {
+    &:hover,
+    &:active {
         filter: brightness(2) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(80%);
     }
 }
