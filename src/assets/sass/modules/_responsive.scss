@@ -124,6 +124,24 @@
         margin-top: 0.5em;
     }
 
+    /**
+     * Unsticky save button region.
+     */
+
+    .txp-save-zone {
+        position: inherit;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        @if $flat-theme < 1 {
+            box-shadow: none;
+        }
+
+        .txp-actions {
+            margin-bottom: 1em;
+        }
+    }
+
 }
 
 

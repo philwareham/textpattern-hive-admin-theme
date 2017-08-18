@@ -178,6 +178,35 @@
     }
 }
 
+/**
+ * Sticky save button region.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-save-zone">
+ *     <p class="txp-save"></p>
+ *     <p class="txp-actions"></p>
+ * </div>
+ */
+
+.txp-save-zone {
+    position: sticky;
+    top: 2.75em;
+    margin: -1.25em 0 1em;
+    padding: 1px 1em 0;
+    border: 1px solid $color-border-light;
+    border-top: 0;
+    background: $color-background;
+    @if $flat-theme < 1 {
+        box-shadow: 0 0.2em 0.25em rgba(#000000, 0.15);
+    }
+    z-index: 999;
+
+    .txp-actions {
+        margin-bottom: 0.5em;
+    }
+}
+
 
 /* Content -> Articles panel - additional layout
    ========================================================================== */
