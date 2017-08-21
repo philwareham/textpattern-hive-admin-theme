@@ -90,7 +90,9 @@ $(function ()
 
     // Checkboxradio.
 
-    $('.jquery-ui-checkboxradio-checkbox input').checkboxradio({
+    $('.jquery-ui-checkboxradio-checkbox1 input').checkboxradio();
+
+    $('.jquery-ui-checkboxradio-checkbox2 input').checkboxradio({
         icon: false
     });
 
@@ -251,9 +253,13 @@ $(function ()
         }
     });
 
-    // Tabs.
+    // Tabs - horizontal.
 
     $('.jquery-ui-tabs').tabs();
+
+    // Tabs - vertical.
+
+    $('.jquery-ui-tabs-vertical').tabs().addClass('ui-tabs-vertical ui-helper-clearfix');
 
     // Vertical tabs on preferences panel.
 
@@ -379,4 +385,9 @@ $(function ()
         e.stopPropagation();
     });
 
+    // Multiselect plugin testing.
+
+    $("#example").multiselect({
+        header: false
+    });
 });

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Articles - My Site &#124; Textpattern CMS</title>
+    <script src="../docs/assets/js/jquery.js"></script>
+    <script src="../docs/assets/js/jquery-ui.js"></script>
+    <script src="../docs/assets/js/jquery.multiselect.js"></script>
+    <link rel="stylesheet" href="../dist/hive/assets/css/textpattern.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="Textpattern CMS">
+    <script src="../dist/hive/assets/js/main.js"></script>
+
+    <script src="../docs/assets/js/design-patterns.js"></script>
+
+</head>
+<body class="content" id="page-list">
+
+    <header class="txp-header">
+        <h1>
+            <a href="#"><span>Textpattern</span></a>
+        </h1>
+
+        <button class="txp-nav-toggle collapsed" type="button" data-toggle="collapse" data-target="#txp-nav" aria-expanded="false" aria-controls="txp-nav">
+            <span class="txp-accessibility">Navigation</span>
+        </button>
+
+        <nav class="txp-nav" id="txp-nav" aria-label="Navigation">
+            <ul class="data-dropdown">
+                <li class="dropdown selected">
+                    <a class="dropdown-toggle" id="txp-nav-drop1" role="button" aria-controls="txp-nav-drop1-menu" data-toggle="dropdown" href="#">
+                        Content
+                    </a>
+                    <ul class="dropdown-menu" id="txp-nav-drop1-menu" role="menu" aria-labelledby="txp-nav-drop1">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="content-article.html">Write</a>
+                        </li>
+                        <li class="selected" role="presentation">
+                            <a role="menuitem" tabindex="-1" href="content-list.html">Articles</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="content-image.html">Images</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="content-file.html">Files</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="content-link.html">Links</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="content-category.html">Categories</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="content-discuss.html">Comments</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" id="txp-nav-drop2" role="button" aria-controls="txp-nav-drop2-menu" data-toggle="dropdown" href="#">
+                        Presentation
+                    </a>
+                    <ul class="dropdown-menu" id="txp-nav-drop2-menu" role="menu" aria-labelledby="txp-nav-drop2">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="presentation-section.html">Sections</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="presentation-page.html">Pages</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="presentation-form.html">Forms</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="presentation-css.html">Styles</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" id="txp-nav-drop3" role="button" aria-controls="txp-nav-drop3-menu" data-toggle="dropdown" href="#">
+                        Admin
+                    </a>
+                    <ul class="dropdown-menu" id="txp-nav-drop3-menu" role="menu" aria-labelledby="txp-nav-drop3">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="admin-diag.html">Diagnostics</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="admin-prefs.html">Preferences</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="admin-languages.html">Languages</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="admin-admin.html">Users</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="admin-log.html">Visitor logs</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="admin-plugin.html">Plugins</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" id="txp-nav-drop4" role="button" aria-controls="txp-nav-drop4-menu" data-toggle="dropdown" href="#">
+                        Extensions
+                    </a>
+                    <ul class="dropdown-menu" id="txp-nav-drop4-menu" role="menu" aria-labelledby="txp-nav-drop4">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Extension 1</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Extension 2</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Extension 3</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Extension 4</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Extension 5</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="txp-view-site"><a target="_blank" title="View site" href="#"><span class="txp-view-site-name">My site</span></a></p>
+        <p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Log out</a></p>
+
+    </header><!-- /txp-header -->
+
+    <main class="txp-body" aria-label="Main content">
+
+        <div id="messagepane"></div>
+
+        <div class="txp-layout">
+
+            <div class="txp-layout-4col-alt">
+                <h1 class="txp-heading">Articles</h1>
+            </div>
+
+            <div class="txp-layout-4col-3span">
+                <form class="txp-search filtered" role="search" method="get" action="#">
+                    <span class="txp-search-clear"><a href="#">Clear search</a></span>
+                    <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search articles…">
+                    <span class="txp-search-buttons">
+                        <button class="txp-search-button">Search</button>
+                        <!--<button class="txp-search-options">Search criteria</button>-->
+                    </span>
+
+
+                    <select id="example" name="example" multiple="multiple">
+                        <option value="0">Search all</option>
+                        <option value="1">ID#</option>
+                        <option value="2">Title, body and excerpt plus extra text to test longer lines</option>
+                        <option value="3">Section</option>
+                        <option value="4">Keywords</option>
+                        <option value="5">Categories</option>
+                        <option value="6">Status</option>
+                        <option value="7">Author</option>
+                        <option value="8">Article image</option>
+                        <option value="9">Posted</option>
+                        <option value="10">Modified</option>
+                    </select>
+
+
+                </form>
+            </div>
+
+            <div class="txp-layout-1col" id="list_container">
+                <div class="txp-control-panel">
+                    <a class="txp-button" href="content-article.html">Create new article</a>
+                </div>
+                <div class="txp-list-options">
+                    <a class="txp-list-options-button" href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+                    <ul class="txp-list-options-list txp-dropdown">
+                        <li>
+                            <div>
+                                <input class="checkbox" id="txp-list-col-title" type="checkbox">
+                                <label for="txp-list-col-title">Title</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox" id="txp-list-col-posted" type="checkbox">
+                                <label for="txp-list-col-posted">Posted</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox" id="txp-list-col-lastmod" type="checkbox">
+                                <label for="txp-list-col-lastmod">Modified</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox" id="txp-list-col-expires" type="checkbox">
+                                <label for="txp-list-col-expires">Expires</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox" id="txp-list-col-section" type="checkbox">
+                                <label for="txp-list-col-section">Section</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox" id="txp-list-col-category1" type="checkbox">
+                                <label for="txp-list-col-category1">Category 1</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox" id="txp-list-col-category2" type="checkbox">
+                                <label for="txp-list-col-category2">Category 2</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox" id="txp-list-col-status" type="checkbox">
+                                <label for="txp-list-col-status">Status</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox" id="txp-list-col-author" type="checkbox">
+                                <label for="txp-list-col-author">Author</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox" id="txp-list-col-comments" type="checkbox">
+                                <label for="txp-list-col-comments">Comments</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="multi_edit_form" id="articles_form" name="longform" method="post" action="#">
+                    <div class="txp-listtables">
+                        <table class="txp-list">
+
+                            <thead>
+                                <tr>
+                                    <th class="txp-list-col-multi-edit" scope="col" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                                    <th class="txp-list-col-id" scope="col"><a href="#">ID#</a></th>
+                                    <th class="txp-list-col-title" scope="col"><a href="#">Title</a></th>
+                                    <th class="txp-list-col-posted date created desc" scope="col"><a href="#">Posted</a></th>
+                                    <th class="txp-list-col-lastmod date" scope="col"><a href="#">Modified</a></th>
+                                    <th class="txp-list-col-expires date" scope="col"><a href="#">Expires</a></th>
+                                    <th class="txp-list-col-section" scope="col"><a href="#">Section</a></th>
+                                    <th class="txp-list-col-category1 category" scope="col"><a href="#">Category 1</a></th>
+                                    <th class="txp-list-col-category2 category" scope="col"><a href="#">Category 2</a></th>
+                                    <th class="txp-list-col-status" scope="col"><a href="#">Status</a></th>
+                                    <th class="txp-list-col-author name" scope="col"><a href="#">Author</a></th>
+                                    <th class="txp-list-col-comments" scope="col"><a href="#">Comments</a></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="2" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">2</a></th>
+                                    <td class="txp-list-col-title"><a href="#">test article 2 title</a></td>
+                                    <td class="txp-list-col-created date">03&#160;Jul&#160;2011 12:27:33</td>
+                                    <td class="txp-list-col-lastmod date">03&#160;Jul&#160;2011 12:27:33</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category">&#160;</td>
+                                    <td class="txp-list-col-category2 category">&#160;</td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">On</span>
+                                        <span class="comments-manage"><a title="Manage" href="#">(1)</a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div><!-- /txp-listtables -->
+
+                    <div class="multi-edit">
+                        <select name="edit_method">
+                            <option value="" selected="selected">With selected&#8230;</option>
+                            <option value="changesection">Change section</option>
+                            <option value="changecategory1">Change category1</option>
+                            <option value="changecategory2">Change category2</option>
+                            <option value="changestatus">Change status</option>
+                            <option value="changecomments">Change comments</option>
+                            <option value="changeauthor">Change author</option>
+                            <option value="delete">Delete</option>
+                        </select>
+                    </div>
+
+                </form>
+
+                <div class="txp-navigation" id="list_navigation">
+                    <div class="nav-tertiary pageby">
+                        <a class="navlink-active" title="View 12 per page" aria-pressed="true" role="button" href="#">12</a><a class="navlink" title="View 24 per page" aria-pressed="false" role="button" href="#">24</a><a class="navlink" title="View 48 per page" aria-pressed="false" role="button" href="#">48</a><a class="navlink" title="View 96 per page" aria-pressed="false" role="button" href="#">96</a>
+                    </div>
+
+                    <nav class="prev-next">
+                        <span class="disabled" aria-disabled="true" aria-label="Previous"><span class="ui-icon ui-icon-arrowthick-1-w">Previous</span></span>
+                        <form method="get" action="index.php">
+                            <label for="current-page">Page</label>
+                            <input class="current-page" id="current-page" name="page" type="text" size="4" inputmode="numeric" pattern="[0-9]+" value="1" />
+                            of <span class="total-pages">2</span>
+                        </form>
+                        <a rel="next" title="Next" aria-label="Next" href="#"><span class="ui-icon ui-icon-arrowthick-1-e">Next</span></a>
+                    </nav>
+                </div>
+
+            </div><!-- /txp-layout-1col -->
+
+        </div><!-- /.txp-layout -->
+    </main><!-- /txp-body -->
+
+    <footer class="txp-footer">
+        <p class="mothership"><a href="http://textpattern.com" rel="external" target="_blank">Textpattern CMS <span class="ui-icon ui-icon-extlink">(opens an external link in a new window)</span></a> (v4.7)</p>
+        <p class="pagejump"><a href="#">Back to top</a></p>
+    </footer><!-- /txp-footer -->
+
+</body>
+</html>

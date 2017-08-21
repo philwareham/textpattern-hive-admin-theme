@@ -9,6 +9,7 @@
     <script src="assets/js/jquery.js"></script>
     <script>$.uiBackCompat = false;</script>
     <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/jquery.multiselect.js"></script>
     <script src="assets/js/prism.js"></script>
     <script src="assets/js/design-patterns.js"></script>
 </head>
@@ -1260,14 +1261,18 @@
                 </p>
 
                 <h2>Delete buttons <span class="warning">changed v4.6</span></h2>
-                <p><strong>Code:</strong></p>
+                <p><strong>Code (button version):</strong></p>
                 <pre dir="ltr"><code class="language-markup">&lt;button class="destroy" type="submit" title="Delete"&gt;
     &lt;span class="ui-icon ui-icon-close"&gt;Delete&lt;/span&gt;
 &lt;/button&gt;</code></pre>
-                <p><strong>Example:</strong></p>
+                <p><strong>Example (button verson):</strong></p>
                 <p><button class="destroy" type="submit" title="Delete"><span class="ui-icon ui-icon-close">Delete</span></button></p>
+                <p><strong>Code (link version):</strong></p>
+                <pre dir="ltr"><code class="language-markup">&lt;a class="destroy ui-icon ui-icon-close" title="Delete" href="#"&gt;Delete&lt;/a&gt;</code></pre>
+                <p><strong>Example (link verson):</strong></p>
+                <p><a class="destroy ui-icon ui-icon-close" title="Delete" href="#">Delete</a></p>
                 <p><strong>Notes:</strong></p>
-                <p><span class="information">Changed at 4.6:</span> Using <code dir="ltr">button</code> tag.</p>
+                <p><span class="information">Changed at 4.6:</span> Using <code dir="ltr">button</code> tag primarily.</p>
 
                 <h2>Button sets</h2>
                 <p><strong>Code:</strong></p>
@@ -1522,14 +1527,24 @@
 
             <h2 id="ui-doc-jquery-ui--checkboxradio">Widgets: Checkboxradio</h2>
 
-            <h3>Checkboxes (and without icons)</h3>
-            <p class="jquery-ui-checkboxradio-checkbox">
+            <h3>Checkboxes</h3>
+            <p class="jquery-ui-checkboxradio-checkbox1">
                 <input id="check1" type="checkbox">
                 <label for="check1">Dogs</label>
-                <input id="check2" type="checkbox">
+                <input id="check2" type="checkbox" checked>
                 <label for="check2">Cats</label>
                 <input id="check3" type="checkbox">
                 <label for="check3">Ferrets</label>
+            </p>
+
+            <h3>Checkboxes (without icons)</h3>
+            <p class="jquery-ui-checkboxradio-checkbox2">
+                <input id="check4" type="checkbox">
+                <label for="check4">Women</label>
+                <input id="check5" type="checkbox">
+                <label for="check5">Men</label>
+                <input id="check6" type="checkbox">
+                <label for="check6">Children</label>
             </p>
 
             <h3>Radiobuttons</h3>
@@ -1548,12 +1563,12 @@
 
             <h3>Controlgroup horizontal (checkboxes and select)</h3>
             <p class="jquery-ui-controlgroup">
-                <input id="check4" type="checkbox">
-                <label for="check4">B</label>
-                <input id="check5" type="checkbox">
-                <label for="check5">I</label>
-                <input id="check6" type="checkbox">
-                <label for="check6">U</label>
+                <input id="check7" type="checkbox">
+                <label for="check7">B</label>
+                <input id="check8" type="checkbox">
+                <label for="check8">I</label>
+                <input id="check9" type="checkbox">
+                <label for="check9">U</label>
                 <select class="jquery-ui-selectmenu" id="zoom">
                     <option selected disabled>Zoom</option>
                     <option>50%</option>
@@ -1586,12 +1601,12 @@
                     <label for="tequila">Tequila</label>
                 </p>
                 <p>
-                    <input id="check7" type="checkbox">
-                    <label for="check7">Add milk</label>
-                    <input id="check8" type="checkbox">
-                    <label for="check8">Add ice</label>
-                    <input id="check9" type="checkbox">
-                    <label for="check9">Add vodka</label>
+                    <input id="check10" type="checkbox">
+                    <label for="check10">Add milk</label>
+                    <input id="check11" type="checkbox">
+                    <label for="check11">Add ice</label>
+                    <input id="check12" type="checkbox">
+                    <label for="check12">Add vodka</label>
                 </p>
             </fieldset>
 
@@ -1803,6 +1818,7 @@
             <p><a rel="external" href="https://jqueryui.com/spinner/" title="Go to the jQuery UI documentation">Full documentation</a></p>
 
             <h2 id="ui-doc-jquery-ui--tabs">Widgets: Tabs</h2>
+            <h3>Tabs - horizontal</h3>
             <div class="jquery-ui-tabs">
                 <ul>
                     <li><a href="#tabgroup1-tab1">First</a></li>
@@ -1817,6 +1833,24 @@
                     <p>Donec porta malesuada massa, at fermentum nunc tincidunt ac. Integer nisi ligula, sodales bibendum interdum id, sodales sit amet orci. In rhoncus libero in purus vestibulum consequat. Aenean vel purus molestie leo pharetra sagittis. In hac habitasse platea dictumst. Quisque bibendum, metus a egestas convallis, est orci dapibus odio, vel pretium ante erat quis ipsum. Praesent at est in odio rhoncus cursus in sollicitudin velit. Aenean auctor molestie hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec volutpat nisl eget nisi consequat pretium. Nullam dui purus, commodo a vestibulum nec, semper varius nulla.</p>
                 </div>
                 <div id="tabgroup1-tab3">
+                    <p>Mauris tempor urna non quam tincidunt aliquam. Proin venenatis metus eu purus interdum a vehicula ipsum sollicitudin. Mauris sed dignissim odio. Nam id odio sed diam dapibus dignissim. Nulla vestibulum nisl ac magna scelerisque adipiscing. Nam pellentesque sapien vulputate nisi scelerisque ut vehicula orci luctus. Sed rhoncus tempor metus vitae egestas. Proin pharetra tristique justo ac rutrum. Vestibulum ac pharetra dolor. Cras nibh arcu, bibendum eget luctus id, rhoncus nec augue. Integer ornare rhoncus nulla, eu aliquam mi ornare ullamcorper. Praesent egestas auctor orci, non rhoncus sapien eleifend at. Quisque eget purus sem, ut dignissim ligula. Etiam sollicitudin dui libero, id ullamcorper metus.</p>
+                </div>
+            </div>
+            <h3>Tabs - vertical</h3>
+            <div class="jquery-ui-tabs-vertical">
+                <ul>
+                    <li><a href="#tabgroup2-tab1">First</a></li>
+                    <li><a href="#tabgroup2-tab2">Second</a></li>
+                    <li><a href="#tabgroup2-tab3">Third</a></li>
+                </ul>
+                <div id="tabgroup2-tab1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget diam nec urna hendrerit tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum aliquam ligula non nulla cursus volutpat.</p>
+                    <p>Aliquam malesuada felis nec turpis auctor interdum. Cras et lobortis dolor. Nam sodales, dolor eu cursus faucibus, justo leo vestibulum turpis, id malesuada erat ipsum et leo. Integer id aliquam augue. Proin quis risus magna. Vivamus eget accumsan mauris. Vivamus justo ligula, blandit et consequat nec, vulputate a elit. Morbi feugiat metus in ante scelerisque a pulvinar quam condimentum. Suspendisse potenti. Pellentesque convallis scelerisque nunc eget dapibus. Pellentesque ut enim justo. Fusce egestas urna sed nulla placerat iaculis. Cras dignissim tincidunt molestie. Suspendisse rutrum dignissim tortor quis mollis. Sed tempor feugiat ligula in imperdiet. Quisque molestie viverra erat in adipiscing.</p>
+                </div>
+                <div id="tabgroup2-tab2">
+                    <p>Donec porta malesuada massa, at fermentum nunc tincidunt ac. Integer nisi ligula, sodales bibendum interdum id, sodales sit amet orci. In rhoncus libero in purus vestibulum consequat. Aenean vel purus molestie leo pharetra sagittis. In hac habitasse platea dictumst. Quisque bibendum, metus a egestas convallis, est orci dapibus odio, vel pretium ante erat quis ipsum. Praesent at est in odio rhoncus cursus in sollicitudin velit. Aenean auctor molestie hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec volutpat nisl eget nisi consequat pretium. Nullam dui purus, commodo a vestibulum nec, semper varius nulla.</p>
+                </div>
+                <div id="tabgroup2-tab3">
                     <p>Mauris tempor urna non quam tincidunt aliquam. Proin venenatis metus eu purus interdum a vehicula ipsum sollicitudin. Mauris sed dignissim odio. Nam id odio sed diam dapibus dignissim. Nulla vestibulum nisl ac magna scelerisque adipiscing. Nam pellentesque sapien vulputate nisi scelerisque ut vehicula orci luctus. Sed rhoncus tempor metus vitae egestas. Proin pharetra tristique justo ac rutrum. Vestibulum ac pharetra dolor. Cras nibh arcu, bibendum eget luctus id, rhoncus nec augue. Integer ornare rhoncus nulla, eu aliquam mi ornare ullamcorper. Praesent egestas auctor orci, non rhoncus sapien eleifend at. Quisque eget purus sem, ut dignissim ligula. Etiam sollicitudin dui libero, id ullamcorper metus.</p>
                 </div>
             </div>
