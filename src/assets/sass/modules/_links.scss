@@ -44,11 +44,11 @@ a {
 .pophelp,
 .pophelpsubtle {
     display: inline-block;
-    width: 1.230769230769231em; // 16px / 13px
+    width: 1em;
     border: 1px solid lighten($color-border, 8%);
     border-radius: 50%;
     font-weight: normal;
-    line-height: 1.230769230769231em; // 16px / 13px
+    line-height: 1em;
     text-align: center;
 
     &:hover,
