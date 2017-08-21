@@ -58,14 +58,12 @@
 
     // jQuery UI icons
 
-    // comment out any components that are not required
     @import "modules/jquery-ui/icons";
     @import "modules/jquery-ui/icons-additions"; // requires icons module
 
 
     // jQuery UI interactions
 
-    // comment out any components that are not required
     @import "modules/jquery-ui/draggable";
     @import "modules/jquery-ui/resizable";
     @import "modules/jquery-ui/selectable";
@@ -74,7 +72,6 @@
 
     // jQuery UI widgets
 
-    // comment out any components that are not required
     @import "modules/jquery-ui/accordion";
     @import "modules/jquery-ui/autocomplete";
     @import "modules/jquery-ui/button";
@@ -89,6 +86,9 @@
     @import "modules/jquery-ui/spinner";
     @import "modules/jquery-ui/tabs";
     @import "modules/jquery-ui/tooltip";
+
+    // jQuery UI additional plugins
+    @import "modules/jquery-ui/multiselect-menu";
 
 }
 
