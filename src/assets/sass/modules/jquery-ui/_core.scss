@@ -10,7 +10,7 @@
 }
 
 /**
- * Hide jQuery UI  text but still allow screen reader access.
+ * Hide jQuery UI text but still allow screen reader access.
  */
 
 .ui-helper-hidden-accessible {
@@ -20,8 +20,10 @@
     margin: -1px;
     padding: 0;
     border: 0;
+    white-space: nowrap;
     overflow: hidden;
     clip: rect(0 0 0 0);
+    clip-path: inset(50%);
 }
 
 /**

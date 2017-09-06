@@ -39,21 +39,15 @@ hr {
 
 .txp-accessibility {
     position: absolute;
-    left: -1000em;
     width: 1px;
     height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
     overflow: hidden;
-}
-
-/**
- * Swap absolute positions in RTL languages.
- *
- * This avoids browser scrollbar displaying incorrectly.
- */
-
-[dir="rtl"] .txp-accessibility {
-    right: -1000em;
-    left: auto;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
 }
 
 /**
