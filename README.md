@@ -3,7 +3,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/philwareham/textpattern-hive-admin-theme.svg)](https://greenkeeper.io/)
 [![Build Status](https://img.shields.io/travis/philwareham/textpattern-hive-admin-theme.svg)](https://travis-ci.org/philwareham/textpattern-hive-admin-theme)
 
-The default admin theme that ships as standard with [Textpattern CMS](https://textpattern.io/).
+The default admin theme that ships as standard with [Textpattern CMS](https://textpattern.com/).
 
 ## Demos
 
