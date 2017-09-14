@@ -165,7 +165,6 @@
 
         a.ui-state-active {
             border-color: lighten($color-link, 42%);
-            background-color: $color-selected;
         }
 
         a.ui-state-highlight:hover {
@@ -179,6 +178,14 @@
         &.ui-datepicker-week-col {
             padding: 0.32em 0;
             text-align: center;
+        }
+
+        &.ui-datepicker-today a {
+            background-color: $color-warning-background;
+        }
+
+        &.ui-datepicker-current-day a {
+            background-color: $color-selected;
         }
     }
 
