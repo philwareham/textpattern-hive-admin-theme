@@ -32,6 +32,20 @@
     margin-left: -8px;
 }
 
+a.ui-icon,
+a .ui-icon {
+    opacity: 0.66;
+}
+
+a:hover.ui-icon,
+a:hover .ui-icon,
+a:active.ui-icon,
+a:active .ui-icon,
+a:focus.ui-icon,
+a:focus .ui-icon {
+    opacity: 1;
+}
+
 /**
  * Default state icons.
  */
