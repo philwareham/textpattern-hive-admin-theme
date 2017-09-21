@@ -1497,14 +1497,12 @@ button {
   button.destroy:focus {
     outline: thin solid #0066ff;
   }
+  button.destroy .ui-icon {
+    opacity: 0.66;
+  }
   button.destroy:hover .ui-icon,
   button.destroy:active .ui-icon {
-    -webkit-filter: brightness(2) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(80%);
-            filter: brightness(2) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(80%);
-  }
-  a.destroy:hover, a.destroy:active {
-    -webkit-filter: brightness(2) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(80%);
-            filter: brightness(2) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(80%);
+    opacity: 1;
   }
   /**
  * Grey-out disabled navlinks (but keep them in button style).

@@ -134,16 +134,13 @@ button.destroy {
         outline: thin solid $color-link-focus;
     }
 
+    .ui-icon {
+        opacity: 0.66;
+    }
+
     &:hover .ui-icon,
     &:active .ui-icon {
-        filter: brightness(2) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(80%);
-    }
-}
-
-a.destroy {
-    &:hover,
-    &:active {
-        filter: brightness(2) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(80%);
+        opacity: 1;
     }
 }
 
