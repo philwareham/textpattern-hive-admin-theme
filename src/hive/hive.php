@@ -224,7 +224,7 @@ EOS;
 
         return array(
             'title'       => 'Hive',
-            'description' => 'Textpattern Hive admin theme (Classic Yellow)',
+            'description' => 'Textpattern CMS Hive admin theme (Classic Yellow)',
             'version'     => '4.7.0-dev',
             'author'      => 'Phil Wareham',
             'author_uri'  => 'https://github.com/philwareham',

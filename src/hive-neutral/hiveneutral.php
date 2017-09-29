@@ -224,7 +224,7 @@ EOS;
 
         return array(
             'title'       => 'Hive (Flat Neutral)',
-            'description' => 'Textpattern Hive (Flat Neutral) admin theme',
+            'description' => 'Textpattern CMS Hive admin theme (Flat Neutral)',
             'version'     => '4.7.0-dev',
             'author'      => 'Phil Wareham',
             'author_uri'  => 'https://github.com/philwareham',
