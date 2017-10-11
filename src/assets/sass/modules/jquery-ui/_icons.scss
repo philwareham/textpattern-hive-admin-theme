@@ -18,9 +18,7 @@
     position: relative;
     width: 16px;
     height: 16px;
-    background-image: url("../img/ui-icon-sprite-333333.svg");
-    background-repeat: no-repeat;
-    background-size: 256px 272px;
+    background-size: 16px 16px;
     text-indent: -9999px;
     overflow: hidden;
     vertical-align: text-bottom;
@@ -136,11 +134,12 @@ a:focus .ui-icon {
 }
 
 /**
- * Icons within Textpattern system message panes.
+ * 'White out' (inversed) icons.
  */
 
+.ui-icon-inversed,
 #messagepane .ui-icon {
-    background-image: url("../img/ui-icon-sprite-ffffff.svg");
+    filter: none;
 }
 
 /**

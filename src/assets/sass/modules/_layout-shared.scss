@@ -295,21 +295,10 @@ hr {
  *
  * Example HTML:
  *
- * <span class="spinner"></span>
+ * <span class="spinner ui-icon ui-icon-refresh"></span>
  */
 
 span.spinner {
-    display: inline-block;
-    position: relative;
-    top: 50%;
-    width: 1em;
-    height: 1em;
-    margin: -0.5em auto 0;
-    border: 0.25em solid transparent;
-    border-radius: 50%;
-    border-top-color: $color-text;
-    border-bottom-color: $color-text;
-    vertical-align: middle;
     animation: spinning linear 1s infinite;
 }
 
