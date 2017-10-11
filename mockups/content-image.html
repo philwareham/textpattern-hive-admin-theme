@@ -195,130 +195,19 @@
 
             <div class="txp-layout-1col" id="image_container">
                 <div class="txp-control-panel">
-                    <a class="txp-button" href="#">Upload images</a>
+                    <form class="upload-form" method="post" action="#">
+                        <div class="inline-file-uploader">
+                            <label for="image-upload">Upload image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label>
+                            <input id="image-upload" name="thefile" type="file">
+                            <input type="submit" value="Upload">
+                        </div>
+                    </form>
                 </div>
                 <div class="txp-list-options">
                     <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
                     <a href="content-image.html"><span class="ui-icon ui-extra-icon-list"></span> List view</a>
                     <a href="content-image-grid.html"><span class="ui-icon ui-extra-icon-grid"></span> Grid view</a>
                 </div>
-
-                <form class="upload-form dropzone dz-clickable" method="post" enctype="multipart/form-data" action="#">
-                    <div class="dz-default dz-message">
-                        <span>Drop files here to upload</span>
-                    </div>
-
-
-<div class="dz-preview dz-file-preview">
-    <div class="dz-details">
-        <div class="dz-filename"><span data-dz-name></span></div>
-        <div class="dz-size" data-dz-size></div>
-        <img data-dz-thumbnail />
-    </div>
-    <div class="dz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-        <span class="dz-upload" data-dz-uploadprogress></span>
-    </div>
-    <div class="dz-success-mark"><span>✔</span></div>
-    <div class="dz-error-mark"><span>✘</span></div>
-    <div class="dz-error-message"><span data-dz-errormessage></span></div>
-</div>
-
-
-
-<div class="dz-preview dz-file-preview dz-processing dz-success dz-complete">
-    <div class="dz-image"><img data-dz-thumbnail=""></div>
-
-      <div class="dz-details">
-        <div class="dz-size"><span data-dz-size=""><strong>0.4</strong> MB</span></div>
-        <div class="dz-filename"><span data-dz-name="">staff-simon-tucker.psd</span></div>
-      </div>
-      <div class="dz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
-        <span class="dz-upload" data-dz-uploadprogress style="width:100%;"></span>
-    </div>
-      <div class="dz-error-message"><span data-dz-errormessage=""></span></div>
-
-
-
-      <div class="dz-success-mark">
-
-        <svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-          <!-- Generator: Sketch 3.2.1 (9971) - http://www.bohemiancoding.com/sketch -->
-          <title>Check</title>
-          <desc>Created with Sketch.</desc>
-          <defs></defs>
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-              <path d="M23.5,31.8431458 L17.5852419,25.9283877 C16.0248253,24.3679711 13.4910294,24.366835 11.9289322,25.9289322 C10.3700136,27.4878508 10.3665912,30.0234455 11.9283877,31.5852419 L20.4147581,40.0716123 C20.5133999,40.1702541 20.6159315,40.2626649 20.7218615,40.3488435 C22.2835669,41.8725651 24.794234,41.8626202 26.3461564,40.3106978 L43.3106978,23.3461564 C44.8771021,21.7797521 44.8758057,19.2483887 43.3137085,17.6862915 C41.7547899,16.1273729 39.2176035,16.1255422 37.6538436,17.6893022 L23.5,31.8431458 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z" id="Oval-2" stroke-opacity="0.198794158" stroke="#747474" fill-opacity="0.816519475" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
-          </g>
-        </svg>
-
-      </div>
-      <div class="dz-error-mark">
-
-        <svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-            <!-- Generator: Sketch 3.2.1 (9971) - http://www.bohemiancoding.com/sketch -->
-            <title>error</title>
-            <desc>Created with Sketch.</desc>
-            <defs></defs>
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                <g id="Check-+-Oval-2" sketch:type="MSLayerGroup" stroke="#747474" stroke-opacity="0.198794158" fill="#FFFFFF" fill-opacity="0.816519475">
-                    <path d="M32.6568542,29 L38.3106978,23.3461564 C39.8771021,21.7797521 39.8758057,19.2483887 38.3137085,17.6862915 C36.7547899,16.1273729 34.2176035,16.1255422 32.6538436,17.6893022 L27,23.3431458 L21.3461564,17.6893022 C19.7823965,16.1255422 17.2452101,16.1273729 15.6862915,17.6862915 C14.1241943,19.2483887 14.1228979,21.7797521 15.6893022,23.3461564 L21.3431458,29 L15.6893022,34.6538436 C14.1228979,36.2202479 14.1241943,38.7516113 15.6862915,40.3137085 C17.2452101,41.8726271 19.7823965,41.8744578 21.3461564,40.3106978 L27,34.6568542 L32.6538436,40.3106978 C34.2176035,41.8744578 36.7547899,41.8726271 38.3137085,40.3137085 C39.8758057,38.7516113 39.8771021,36.2202479 38.3106978,34.6538436 L32.6568542,29 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z" id="Oval-2" sketch:type="MSShapeGroup"></path>
-                </g>
-            </g>
-        </svg>
-
-    </div>
-</div>
-
-
-
-
-
-<div class="dz-preview dz-processing dz-image-preview dz-success dz-complete">
-    <div class="dz-image"><img data-dz-thumbnail="" alt="B00J086QTM.PT04.jpg" src="data:image/png;base64,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"></div>
-
-      <div class="dz-details">
-        <div class="dz-size"><span data-dz-size=""><strong>0.3</strong> MB</span></div>
-        <div class="dz-filename"><span data-dz-name="">B00J086QTM.PT04.jpg</span></div>
-      </div>
-      <div class="dz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60">
-        <span class="dz-upload" data-dz-uploadprogress style="width:60%;"></span>
-    </div>
-      <div class="dz-error-message"><span data-dz-errormessage=""></span></div>
-
-
-
-      <div class="dz-success-mark">
-
-        <svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-          <!-- Generator: Sketch 3.2.1 (9971) - http://www.bohemiancoding.com/sketch -->
-          <title>Check</title>
-          <desc>Created with Sketch.</desc>
-          <defs></defs>
-          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-              <path d="M23.5,31.8431458 L17.5852419,25.9283877 C16.0248253,24.3679711 13.4910294,24.366835 11.9289322,25.9289322 C10.3700136,27.4878508 10.3665912,30.0234455 11.9283877,31.5852419 L20.4147581,40.0716123 C20.5133999,40.1702541 20.6159315,40.2626649 20.7218615,40.3488435 C22.2835669,41.8725651 24.794234,41.8626202 26.3461564,40.3106978 L43.3106978,23.3461564 C44.8771021,21.7797521 44.8758057,19.2483887 43.3137085,17.6862915 C41.7547899,16.1273729 39.2176035,16.1255422 37.6538436,17.6893022 L23.5,31.8431458 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z" id="Oval-2" stroke-opacity="0.198794158" stroke="#747474" fill-opacity="0.816519475" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
-          </g>
-        </svg>
-
-      </div>
-      <div class="dz-error-mark">
-
-        <svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-            <!-- Generator: Sketch 3.2.1 (9971) - http://www.bohemiancoding.com/sketch -->
-            <title>error</title>
-            <desc>Created with Sketch.</desc>
-            <defs></defs>
-            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                <g id="Check-+-Oval-2" sketch:type="MSLayerGroup" stroke="#747474" stroke-opacity="0.198794158" fill="#FFFFFF" fill-opacity="0.816519475">
-                    <path d="M32.6568542,29 L38.3106978,23.3461564 C39.8771021,21.7797521 39.8758057,19.2483887 38.3137085,17.6862915 C36.7547899,16.1273729 34.2176035,16.1255422 32.6538436,17.6893022 L27,23.3431458 L21.3461564,17.6893022 C19.7823965,16.1255422 17.2452101,16.1273729 15.6862915,17.6862915 C14.1241943,19.2483887 14.1228979,21.7797521 15.6893022,23.3461564 L21.3431458,29 L15.6893022,34.6538436 C14.1228979,36.2202479 14.1241943,38.7516113 15.6862915,40.3137085 C17.2452101,41.8726271 19.7823965,41.8744578 21.3461564,40.3106978 L27,34.6568542 L32.6538436,40.3106978 C34.2176035,41.8744578 36.7547899,41.8726271 38.3137085,40.3137085 C39.8758057,38.7516113 39.8771021,36.2202479 38.3106978,34.6538436 L32.6568542,29 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z" id="Oval-2" sketch:type="MSShapeGroup"></path>
-                </g>
-            </g>
-        </svg>
-
-      </div>
-</div>
-
-
-                </form>
 
                 <form class="multi_edit_form" id="images_form" name="longform" method="post" action="#">
                     <div class="txp-listtables">

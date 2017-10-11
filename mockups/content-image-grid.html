@@ -195,7 +195,13 @@
 
             <div class="txp-layout-1col">
                 <div class="txp-control-panel">
-                    <a class="txp-button" href="#">Upload images</a>
+                    <form class="upload-form" method="post" action="#">
+                        <div class="inline-file-uploader">
+                            <label for="image-upload">Upload image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" aria-label="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label>
+                            <input id="image-upload" name="thefile" type="file">
+                            <input type="submit" value="Upload">
+                        </div>
+                    </form>
                 </div>
                 <div class="txp-list-options">
                     <span>
@@ -205,29 +211,6 @@
                     <a href="content-image.html"><span class="ui-icon ui-extra-icon-list"></span> List view</a>
                     <a href="content-image-grid.html"><span class="ui-icon ui-extra-icon-grid"></span> Grid view</a>
                 </div>
-
-                <form class="upload-form dropzone dz-clickable" method="post" enctype="multipart/form-data" action="#">
-                    <div class="dz-default dz-message">
-                        <span>Drop files here to upload</span>
-                    </div>
-
-
-<div class="dz-preview dz-file-preview">
-    <div class="dz-details">
-        <div class="dz-filename"><span data-dz-name></span></div>
-        <div class="dz-size" data-dz-size></div>
-        <img data-dz-thumbnail />
-    </div>
-    <div class="dz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-        <span class="dz-upload" data-dz-uploadprogress></span>
-    </div>
-    <div class="dz-success-mark"><span>✔</span></div>
-    <div class="dz-error-mark"><span>✘</span></div>
-    <div class="dz-error-message"><span data-dz-errormessage></span></div>
-</div>
-
-
-                </form>
 
                 <form class="multi_edit_form" id="images_form" name="longform" method="post" action="#">
 
