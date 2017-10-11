@@ -5798,18 +5798,29 @@ button {
  *     </div>
  * </div>
  */
-  .ui-tabs:not(.ui-tabs-vertical) {
+  .ui-tabs {
     border: 0;
   }
-  .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
-    height: 34px;
-    margin: 0;
-    padding: 0;
+  .ui-tabs .ui-tabs-nav {
     background: none;
+  }
+  .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    display: block;
+    padding: 0.38461538461538em 1em;
+  }
+  .ui-tabs .ui-tabs-panel {
+    display: block;
+    margin: 0 0 1em;
+    padding: 1px 0;
+    border-width: 1px 0;
+    background: none;
+  }
+  .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
+    height: 31px;
   }
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li {
     display: inline-block;
-    height: 33px;
+    height: 30px;
     border-bottom-width: 0;
     list-style: none;
     white-space: nowrap;
@@ -5824,17 +5835,8 @@ button {
     cursor: text;
   }
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav .ui-tabs-anchor {
-    display: block;
-    padding: 0.5em 1em;
     color: #333333;
     text-decoration: none;
-  }
-  .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-panel {
-    display: block;
-    margin: 0 0 1em;
-    padding: 1px 0;
-    border-width: 1px 0;
-    background: none;
   }
   /**
  * Maintain cursor style when collapsing a collapsible tab.
@@ -5845,11 +5847,35 @@ button {
   /**
  * Additonal styling for tabs vertical.
  */
+  .ui-tabs-vertical .ui-tabs-nav {
+    border-bottom: 1px solid #eeeeee;
+  }
+  .ui-tabs-vertical .ui-tabs-nav li {
+    display: block;
+    border: 1px solid #eeeeee;
+    border-bottom: 1px solid transparent;
+  }
+  .ui-tabs-vertical .ui-tabs-nav .ui-tabs-anchor {
+    font-weight: normal;
+  }
   .ui-tabs-vertical .ui-tabs-nav .ui-tabs-active {
     background: #fff9e1;
   }
   .ui-tabs-vertical .ui-tabs-nav .ui-state-focus a {
     outline: thin solid #0066ff;
+  }
+  .ui-tabs-vertical .ui-tabs-panel {
+    border-top-width: 0;
+  }
+  .txp-details .ui-tabs-nav {
+    border-bottom: 0;
+  }
+  .txp-details .ui-tabs-nav li {
+    border-right: 0;
+    border-left: 0;
+  }
+  .txp-details .ui-tabs-nav li:first-child {
+    border-top: 0;
   }
   /* Tooltip
    ========================================================================== */
@@ -6269,7 +6295,7 @@ button {
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li {
     display: block;
     height: auto;
-    border-bottom-width: 1px;
+    border-bottom: 1px solid transparent;
   }
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li.ui-tabs-active {
     margin-bottom: 0;

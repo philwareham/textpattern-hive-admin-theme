@@ -405,7 +405,7 @@
         li {
             display: block;
             height: auto;
-            border-bottom-width: 1px;
+            border-bottom: 1px solid transparent;
             @if $flat-theme < 1 {
                 box-shadow: none;
             }
