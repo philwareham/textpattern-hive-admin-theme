@@ -49,20 +49,22 @@ class hive_theme extends \Textpattern\Admin\Theme
         $out[] = '<link rel="icon" href="'.$this->url.'assets/img/favicon.ico">';
         $out[] = '<meta name="generator" content="Textpattern CMS">';
         $out[] = '<script src="'.$this->url.'assets/js/main.min.js"></script>'.n;
-        $out[] = script_js('vendors/enyo/dropzone/dropzone.js', TEXTPATTERN_SCRIPT_URL).n;
 
-        $js = <<< EOS
-$(document).ready(function ()
-{
-    var dropform = $('.upload-form');
-    dropform.find('.inline-file-uploader').remove();
-    dropform.addClass('dropzone').dropzone({
-        paramName: 'thefile',
-        queuecomplete: function() {dropform.submit()}
-    });
+        // Dropzone
+        global $file_max_upload_size;
+
+        $out[] = '<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.19.1/js/jquery.fileupload.min.js" integrity="sha256-xoEL7+UoSsbauvpImf1v+EkJclYUX+cLu3rKHjnJaOU=" crossorigin="anonymous"></script>'.n.
+            '<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js" integrity="sha256-J9IhvkIJb0diRVJOyu+Ndtg41RibFkF8eaA60jdjtB8=" crossorigin="anonymous"></script>'.n.
+            script_js('vendors/enyo/dropzone/txpFileupload.js', TEXTPATTERN_SCRIPT_URL).n/*.
+            script_js(
+<<< EOS
+textpattern.Route.add('file', function() {
+    if ($('#txp-list-container').length) {
+        jQuery('.upload-form').txpFileupload({maxChunkSize: $file_max_upload_size});
+    }
 });
-EOS;
-        $out[] = script_js($js);
+EOS
+)*/;
 
         // Custom JavaScript (see theme README for usage instructions).
         if (defined('admin_custom_js')) {
