@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow">
-    <title>Plugins - My Site &#124; Textpattern CMS</title>
+    <title>Themes - My Site &#124; Textpattern CMS</title>
     <script src="../docs/assets/js/jquery.js"></script>
     <script src="../docs/assets/js/jquery-ui.js"></script>
     <link rel="stylesheet" href="../dist/hive/assets/css/textpattern.css">
@@ -14,7 +14,7 @@
     <script src="../docs/assets/js/design-patterns.js"></script>
 
 </head>
-<body class="admin" id="page-plugin">
+<body class="presentation" id="page-skin">
 
     <header class="txp-header">
         <h1>
@@ -55,12 +55,12 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown selected">
                     <a class="dropdown-toggle" id="txp-nav-drop2" role="button" aria-controls="txp-nav-drop2-menu" data-toggle="dropdown" href="#">
                         Presentation
                     </a>
                     <ul class="dropdown-menu" id="txp-nav-drop2-menu" role="menu" aria-labelledby="txp-nav-drop2">
-                        <li role="presentation">
+                        <li class="selected" role="presentation">
                             <a role="menuitem" tabindex="-1" href="presentation-skin.html">Themes</a>
                         </li>
                         <li role="presentation">
@@ -77,7 +77,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown selected">
+                <li class="dropdown">
                     <a class="dropdown-toggle" id="txp-nav-drop3" role="button" aria-controls="txp-nav-drop3-menu" data-toggle="dropdown" href="#">
                         Admin
                     </a>
@@ -97,7 +97,7 @@
                         <li role="presentation">
                             <a role="menuitem" tabindex="-1" href="admin-log.html">Visitor logs</a>
                         </li>
-                        <li class="selected" role="presentation">
+                        <li role="presentation">
                             <a role="menuitem" tabindex="-1" href="admin-plugin.html">Plugins</a>
                         </li>
                     </ul>
@@ -134,69 +134,106 @@
 
     <main class="txp-body" aria-label="Main content">
 
-        <div id="messagepane" role="alert" aria-live="assertive">
-            <span class="messageflash success">
-                <span class="ui-icon ui-icon-check"></span>
-                Plugin <strong>smd_browse_by</strong> updated.
-                <a role="button" class="close" title="Close" aria-label="Close">&times;</a>
-            </span>
-        </div>
+        <div id="messagepane"></div>
 
         <div class="txp-layout">
 
-            <div class="txp-layout-1col">
-                <h1 class="txp-heading">Plugins</h1>
+            <div class="txp-layout-4col-alt">
+                <h1 class="txp-heading">Themes&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help"><span class="ui-icon ui-icon-help">Help</span></a></h1>
             </div>
 
-            <div class="txp-layout-1col" id="plugin_container">
+            <div class="txp-layout-4col-3span">
+                <form class="txp-search" role="search" method="get" action="#">
+                    <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search sections…">
+                    <span class="txp-search-buttons">
+                        <button class="txp-search-button">Search</button>
+                        <button class="txp-search-options">Search criteria</button>
+                    </span>
+                    <ul class="txp-dropdown">
+                        <li>
+                            <div>
+                                <input id="search-all0" name="search-all0" type="checkbox">
+                                <label for="search-all0">Search all</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox active" id="search-name0" name="search-name0" type="checkbox" value="name">
+                                <label for="search-name0">Name</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox active" id="search-title0" name="search-title0" type="checkbox" value="title">
+                                <label for="search-title0">Title</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox active" id="search-author0" name="search-author0" type="checkbox" value="author">
+                                <label for="search-author0">Author</label>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+
+            <div class="txp-layout-1col" id="skin_container">
                 <div class="txp-control-panel">
-                    <form class="plugin-data" id="plugin_install_form" method="post" action="#">
-                        <label for="plugin-install">Install plugin&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help" title="Help" aria-label="Help"><span class="ui-icon ui-icon-help">Help</span></a></label>
-                        <textarea class="code" id="plugin-install" name="plugin" cols="64" rows="4" dir="ltr"></textarea>
-                        <input name="install_new" type="submit" value="Upload">
+                    <a class="txp-button" href="secondary/presentation-section_edit.html">Create new theme</a>
+
+                    <form id="default_section_form" name="default_section_form" method="post" action="#">
+                        <label for="default_section">Default publishing section&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" aria-label="Help"><span class="ui-icon ui-icon-help">Help</span></a></label>
+                        <select id="default_section" name="default_section">
+                            <option value="about">About</option>
+                            <option value="articles" selected="selected">Articles</option>
+                        </select>
                     </form>
                 </div>
+                <div class="txp-list-options">
+                    <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+                </div>
 
-                <form class="multi_edit_form" id="plugin_form" name="longform" method="post" action="#">
+                <form class="multi_edit_form" id="section_form" name="longform" method="post" action="#">
                     <div class="txp-listtables">
                         <table class="txp-list">
 
                             <thead>
                                 <tr>
-                                    <th class="txp-list-col-multi-edit" scope="col" title="Toggle all/none selected"><input id="select_all" name="select_all" type="checkbox" value="0"></th>
-                                    <th class="txp-list-col-name asc" scope="col"><a href="#">Plugin</a></th>
-                                    <th class="txp-list-col-author" scope="col"><a href="#">Author</a></th>
+                                    <th class="txp-list-col-multi-edit" scope="col" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                                    <th class="desc txp-list-col-name" scope="col"><a href="#">Name</a></th>
+                                    <th class="txp-list-col-title" scope="col"><a href="#">Title</a></th>
                                     <th class="txp-list-col-version" scope="col"><a href="#">Version</a></th>
-                                    <th class="txp-list-col-modified" scope="col"><a href="#">Modified</a></th>
-                                    <th class="txp-list-col-description" scope="col">Description</th>
-                                    <th class="txp-list-col-status" scope="col"><a href="#">Active</a></th>
-                                    <th class="txp-list-col-load-order" scope="col"><a href="#">Order</a></th>
-                                    <th class="txp-list-col-manage" scope="col">Manage</th>
+                                    <th class="txp-list-col-author" scope="col"><a href="#">Author</a></th>
+                                    <th class="txp-list-col-section_count skin_detail" scope="col"><a href="#">Sections</a></th>
+                                    <th class="txp-list-col-page_count skin_detail" scope="col"><a href="#">Pages</a></th>
+                                    <th class="txp-list-col-form_count skin_detail" scope="col"><a href="#">Forms</a></th>
+                                    <th class="txp-list-col-css_count skin_detail" scope="col"><a href="#">Styles</a></th></tr>
                                 </tr>
                             </thead>
 
                             <tbody>
-                                <tr class="active">
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="rah_external_output" name="selected[]"></td>
-                                    <th class="txp-list-col-name" scope="row"><a href="secondary/admin-plugin_edit.html" title="Edit">rah_external_output</a></th>
-                                    <td class="txp-list-col-author"><a href="http://rahforum.biz" rel="external">Jukka Svahn</a></td>
-                                    <td class="txp-list-col-version">0.9</td>
-                                    <td class="txp-list-col-modified">&#160;</td>
-                                    <td class="txp-list-col-description">Output external content-type snippets</td>
-                                    <td class="txp-list-col-status"><a href="#">Yes</a></td>
-                                    <td class="txp-list-col-load-order">5</td>
-                                    <td class="txp-list-col-manage"><a class="plugin-help" href="secondary/admin-plugin_help.html">Help</a>&#160;<span role="separator">&#124;</span>&#160;<a class="plugin-prefs" href="#">Options</a></td>
+                                <tr id="txp_skin_boostrap-blog">
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="articles" name="selected[]"></td>
+                                    <th class="txp-list-col-name" scope="row"><a href="secondary/presentation-section_skin.html" title="Edit">bootstrap-blog</a></th>
+                                    <td class="txp-list-col-title">Bootstrap blog theme</td>
+                                    <td class="txp-list-col-version">1.0.0-beta.2</td>
+                                    <td class="txp-list-col-author">Phil Wareham</td>
+                                    <td class="txp-list-col-section_count">3</td>
+                                    <td class="txp-list-col-page_count"><a title="Page templates in this theme: 3" href="#">4</a></td>
+                                    <td class="txp-list-col-form_count"><a title="Form templates in this theme: 11" href="#">15</a></td>
+                                    <td class="txp-list-col-css_count"><a title="Styles (CSS files) in this theme: 1" href="#">1</a></td>
                                 </tr>
-                                <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="smd_browse_by" name="selected[]"></td>
-                                    <th class="txp-list-col-name" scope="row"><a href="secondary/admin-plugin_edit.html" title="Edit">smd_browse_by</a></th>
-                                    <td class="txp-list-col-author"><a href="http://stefdawson.com/" rel="external">Stef Dawson</a></td>
-                                    <td class="txp-list-col-version">0.10</td>
-                                    <td class="txp-list-col-modified"><span class="warning">Yes</span></td>
-                                    <td class="txp-list-col-description">Browse by Category (+article Section) in admin side</td>
-                                    <td class="txp-list-col-status"><a href="#">No</a></td>
-                                    <td class="txp-list-col-load-order">5</td>
-                                    <td class="txp-list-col-manage"><a class="plugin-help" href="secondary/admin-plugin_help.html">Help</a></td>
+                                <tr id="txp_skin_default">
+                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="articles" name="selected[]"></td>
+                                    <th class="txp-list-col-name" scope="row"><a href="secondary/presentation-section_skin.html" title="Edit">default</a></th>
+                                    <td class="txp-list-col-title">Textpattern default theme</td>
+                                    <td class="txp-list-col-version">4.7.0</td>
+                                    <td class="txp-list-col-author">Team Textpattern</td>
+                                    <td class="txp-list-col-section_count">2</td>
+                                    <td class="txp-list-col-page_count"><a title="Page templates in this theme: 3" href="#">3</a></td>
+                                    <td class="txp-list-col-form_count"><a title="Form templates in this theme: 11" href="#">11</a></td>
+                                    <td class="txp-list-col-css_count"><a title="Styles (CSS files) in this theme: 1" href="#">1</a></td>
                                 </tr>
                             </tbody>
 
@@ -206,27 +243,23 @@
                     <div class="multi-edit">
                         <select name="edit_method">
                             <option value="" selected="selected">With selected&#8230;</option>
-                            <option value="changestatus">Change status</option>
-                            <option value="changeorder">Change order</option>
+                            <option value="update">Update</option>
+                            <option value="export">Export</option>
+                            <option value="export_copy">export a copy</option>
                             <option value="delete">Delete</option>
                         </select>
-                        <div class="multi-option" id="multi-option-changeorder">
-                            <select name="order">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5" selected="selected">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                            </select>
+                        <div class="multi-option" id="multi-option-changeonfrontpage">
+                            <input class="radio" id="on_front_page-0" name="on_front_page" type="radio" value="0"><label for="on_front_page-0">No</label>
+                            <input class="radio active" id="on_front_page-1" name="on_front_page" type="radio" value="1" checked="checked"><label for="on_front_page-1">Yes</label>
                         </div>
                         <input type="submit" value="Go">
                     </div>
 
                 </form>
+
+                <div class="txp-navigation" id="section_navigation">
+                    <p class="nav-tertiary pageby"><a class="navlink-active" title="View 12 per page" aria-pressed="true" role="button" href="#">12</a><a class="navlink" title="View 24 per page" aria-pressed="false" role="button" href="#">24</a><a class="navlink" title="View 48 per page" aria-pressed="false" role="button" href="#">48</a><a class="navlink" title="View 96 per page" aria-pressed="false" role="button" href="#">96</a></p>
+                </div>
 
             </div><!-- /txp-layout-1col -->
         </div><!-- /.txp-layout -->

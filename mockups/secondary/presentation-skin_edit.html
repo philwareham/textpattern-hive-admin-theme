@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="robots" content="noindex, nofollow">
-    <title>Edit category - My Site &#124; Textpattern CMS</title>
+    <title>Edit theme - My Site &#124; Textpattern CMS</title>
     <script src="../../docs/assets/js/jquery.js"></script>
     <script src="../../docs/assets/js/jquery-ui.js"></script>
     <link rel="stylesheet" href="../../dist/hive/assets/css/textpattern.css">
@@ -12,7 +12,7 @@
     <script src="../../dist/hive/assets/js/main.js"></script>
     <script src="../../docs/assets/js/design-patterns.js"></script>
 </head>
-<body class="content" id="page-category">
+<body class="content" id="page-skin">
 
     <header class="txp-header">
         <h1>
@@ -25,7 +25,7 @@
 
         <nav class="txp-nav" id="txp-nav" aria-label="Navigation">
             <ul class="data-dropdown">
-                <li class="dropdown selected">
+                <li class="dropdown">
                     <a class="dropdown-toggle" id="txp-nav-drop1" role="button" aria-controls="txp-nav-drop1-menu" data-toggle="dropdown" href="#">
                         Content
                     </a>
@@ -45,7 +45,7 @@
                         <li role="presentation">
                             <a role="menuitem" tabindex="-1" href="../content-link.html">Links</a>
                         </li>
-                        <li class="selected" role="presentation">
+                        <li role="presentation">
                             <a role="menuitem" tabindex="-1" href="../content-category.html">Categories</a>
                         </li>
                         <li role="presentation">
@@ -53,12 +53,12 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown selected">
                     <a class="dropdown-toggle" id="txp-nav-drop2" role="button" aria-controls="txp-nav-drop2-menu" data-toggle="dropdown" href="#">
                         Presentation
                     </a>
                     <ul class="dropdown-menu" id="txp-nav-drop2-menu" role="menu" aria-labelledby="txp-nav-drop2">
-                        <li role="presentation">
+                        <li class="selected" role="presentation">
                             <a role="menuitem" tabindex="-1" href="../presentation-skin.html">Themes</a>
                         </li>
                         <li role="presentation">
@@ -134,32 +134,35 @@
 
         <div id="messagepane"></div>
 
-        <form class="txp-edit" method="post" action="#">
-            <h2>Edit category</h2>
-            <div class="txp-form-field edit-category-name">
-                <div class="txp-form-field-label"><label for="category_name">Article category name</label></div>
-                <div class="txp-form-field-value"><input id="category_name" name="name" type="text" size="32" value="hope-for-the-future"></div>
+        <form class="txp-edit" id="skin_details" method="post" action="index.php">
+            <h2>Edit theme</h2>
+            <div class="txp-form-field edit-skin-name">
+                <div class="txp-form-field-label"><label for="skin_name">Theme name</label></div>
+                <div class="txp-form-field-value"><input id="skin_name" name="name" type="text" size="32" required="required" value="default" /></div>
             </div>
-            <div class="txp-form-field edit-category-parent">
-                <div class="txp-form-field-label"><label for="category_parent">Parent</label></div>
-                <div class="txp-form-field-value">
-                    <select id="category_parent" name="parent">
-                        <option value="" selected="selected">&#160;</option>
-                        <option value="meaningful-labor">Meaningful Labor</option>
-                        <option value="reciprocal-affection">Reciprocal Affection</option>
-                    </select>
-                </div>
+            <div class="txp-form-field edit-skin-title">
+                <div class="txp-form-field-label"><label for="skin_title">Theme title</label></div>
+                <div class="txp-form-field-value"><input id="skin_title" name="title" type="text" size="32" value="Default" /></div>
             </div>
-            <div class="txp-form-field edit-category-title">
-                <div class="txp-form-field-label"><label for="category_title">Article category title</label></div>
-                <div class="txp-form-field-value"><input id="category_title" name="title" type="text" size="32" value="Hope for the Future"></div>
+            <div class="txp-form-field edit-skin-version">
+                <div class="txp-form-field-label"><label for="skin_version">Theme version</label></div>
+                <div class="txp-form-field-value"><input id="skin_version" name="version" type="text" size="32" value="4.7.0" /></div>
             </div>
-            <div class="txp-form-field txp-form-field-textarea edit-category-description">
-                <div class="txp-form-field-label"><label for="category_description">Article category description&nbsp;<a class="pophelp" rel="help" target="_blank" title="Help" aria-label="Help" role="button" href="#"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
-                <div class="txp-form-field-value"><textarea name="description" id="category_description" rows="4" cols="64"></textarea></div>
+            <div class="txp-form-field edit-skin-description">
+                <div class="txp-form-field-label"><label for="skin_description">skin_description</label></div>
+                <div class="txp-form-field-value"><textarea id="skin_description" name="description" rows="5" cols="40">Textpattern default theme.</textarea></div>
+            </div>
+            <div class="txp-form-field edit-skin-author">
+                <div class="txp-form-field-label"><label for="skin_author">Theme author</label></div>
+                <div class="txp-form-field-value"><input id="skin_author" name="author" type="text" size="32" value="Team Textpattern" /></div>
+            </div>
+            <div class="txp-form-field edit-skin-website">
+                <div class="txp-form-field-label"><label for="skin_website">Theme website</label></div>
+                <div class="txp-form-field-value"><input id="skin_website" name="website" type="url" size="32" value="https://textpattern.com/" /></div>
             </div>
             <p class="txp-edit-actions">
-                <a class="txp-button" href="../content-category.html">Cancel</a>
+                <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
+                <a class="txp-button" href="../presentation-skin.html">Cancel</a>
                 <input class="publish" type="submit" value="Save">
             </p>
         </form>
@@ -167,7 +170,7 @@
     </main><!-- /txp-body -->
 
     <footer class="txp-footer">
-        <p class="mothership"><a href="https://textpattern.com" rel="external" target="_blank">Textpattern CMS <span class="ui-icon ui-icon-extlink">(opens an external link in a new window)</span></a> (v4.7)</p>
+        <p class="mothership"><a href="https://textpattern.com" title="Go to the Textpattern website" rel="external">Textpattern CMS</a> (v4.7)</p>
         <p class="pagejump"><a href="#">Back to top</a></p>
     </footer><!-- /txp-footer -->
 
