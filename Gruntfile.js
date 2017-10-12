@@ -168,6 +168,7 @@ module.exports = function (grunt)
         // Sass configuration.
         sass: {
             options: {
+                //includePaths: ['node_modules/textpattern-jquery-ui-theme/scss'],
                 outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
                 sourceMap: false
             },
