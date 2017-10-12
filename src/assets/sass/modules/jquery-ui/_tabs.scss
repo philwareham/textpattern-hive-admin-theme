@@ -39,9 +39,26 @@
     .ui-tabs-nav {
         background: none;
 
+        &:not(.switcher-list) .ui-tabs-anchor {
+            color: $color-text;
+            text-decoration: none;
+        }
+
         .ui-tabs-anchor {
             display: block;
             padding: 0.38461538461538em 1em;
+        }
+
+        li {
+            &.ui-tabs-active .ui-tabs-anchor,
+            &.ui-state-disabled .ui-tabs-anchor,
+            &.ui-tabs-loading .ui-tabs-anchor {
+                cursor: text;
+            }
+        }
+
+        .ui-state-focus a {
+            outline: thin solid $color-link-focus;
         }
     }
 
@@ -74,17 +91,6 @@
                 box-shadow: none;
             }
         }
-
-        &.ui-tabs-active .ui-tabs-anchor,
-        &.ui-state-disabled .ui-tabs-anchor,
-        &.ui-tabs-loading .ui-tabs-anchor {
-            cursor: text;
-        }
-    }
-
-    .ui-tabs-anchor {
-        color: $color-text;
-        text-decoration: none;
     }
 }
 
@@ -108,18 +114,6 @@
             display: block;
             border: 1px solid $color-gradient-to;
             border-bottom: 1px solid transparent;
-        }
-
-        .ui-tabs-anchor {
-            font-weight: normal;
-        }
-
-        .ui-tabs-active {
-            background: $color-highlight-box;
-        }
-
-        .ui-state-focus a {
-            outline: thin solid $color-link-focus;
         }
     }
 

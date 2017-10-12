@@ -1705,7 +1705,7 @@ button {
   .switcher-list li:first-child {
     border-top: 0;
   }
-  .switcher-list li.active {
+  .switcher-list li.active, .switcher-list li.ui-tabs-active {
     background: #fff9e1;
   }
   .switcher-list li.selected {
@@ -1714,6 +1714,7 @@ button {
   .switcher-list a {
     display: block;
     padding: 0.38461538461538em 2.5em 0.38461538461538em 1em;
+    font-weight: normal;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -5818,9 +5819,21 @@ button {
   .ui-tabs .ui-tabs-nav {
     background: none;
   }
+  .ui-tabs .ui-tabs-nav:not(.switcher-list) .ui-tabs-anchor {
+    color: #333333;
+    text-decoration: none;
+  }
   .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
     display: block;
     padding: 0.38461538461538em 1em;
+  }
+  .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+  .ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+  .ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+    cursor: text;
+  }
+  .ui-tabs .ui-tabs-nav .ui-state-focus a {
+    outline: thin solid #0066ff;
   }
   .ui-tabs .ui-tabs-panel {
     display: block;
@@ -5843,15 +5856,6 @@ button {
     margin-bottom: -1px;
     padding-bottom: 1px;
   }
-  .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
-  .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
-  .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
-    cursor: text;
-  }
-  .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav .ui-tabs-anchor {
-    color: #333333;
-    text-decoration: none;
-  }
   /**
  * Maintain cursor style when collapsing a collapsible tab.
  */
@@ -5868,15 +5872,6 @@ button {
     display: block;
     border: 1px solid #eeeeee;
     border-bottom: 1px solid transparent;
-  }
-  .ui-tabs-vertical .ui-tabs-nav .ui-tabs-anchor {
-    font-weight: normal;
-  }
-  .ui-tabs-vertical .ui-tabs-nav .ui-tabs-active {
-    background: #fff9e1;
-  }
-  .ui-tabs-vertical .ui-tabs-nav .ui-state-focus a {
-    outline: thin solid #0066ff;
   }
   .ui-tabs-vertical .ui-tabs-panel {
     border-top-width: 0;
@@ -6305,10 +6300,12 @@ button {
      */
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
     height: auto;
+    border-bottom: 1px solid #eeeeee;
   }
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li {
     display: block;
     height: auto;
+    border: 1px solid #eeeeee;
     border-bottom: 1px solid transparent;
   }
   .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li.ui-tabs-active {

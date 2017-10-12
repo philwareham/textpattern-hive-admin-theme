@@ -104,7 +104,8 @@ dd {
             border-top: 0;
         }
 
-        &.active {
+        &.active,
+        &.ui-tabs-active {
             background: $color-highlight-box;
         }
 
@@ -116,6 +117,7 @@ dd {
     a {
         display: block;
         padding: 0.38461538461538em 2.5em 0.38461538461538em 1em;
+        font-weight: normal;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
