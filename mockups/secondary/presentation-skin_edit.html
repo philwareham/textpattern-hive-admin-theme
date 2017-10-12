@@ -136,6 +136,9 @@
 
         <form class="txp-edit" id="skin_details" method="post" action="index.php">
             <h2>Edit theme</h2>
+            <p class="txp-actions txp-actions-inline">
+                <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
+            </p>
             <div class="txp-form-field edit-skin-name">
                 <div class="txp-form-field-label"><label for="skin_name">Theme name</label></div>
                 <div class="txp-form-field-value"><input id="skin_name" name="name" type="text" size="32" required="required" value="default" /></div>
@@ -161,7 +164,6 @@
                 <div class="txp-form-field-value"><input id="skin_website" name="website" type="url" size="32" value="https://textpattern.com/" /></div>
             </div>
             <p class="txp-edit-actions">
-                <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
                 <a class="txp-button" href="../presentation-skin.html">Cancel</a>
                 <input class="publish" type="submit" value="Save">
             </p>

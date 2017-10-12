@@ -277,9 +277,20 @@ hr {
  * Article pages panel, forms panel, styles panel.
  */
 
-.txp-actions-inline {
+:not(.txp-edit) .txp-actions-inline {
     margin-top: 1.30769230769231em; // 17px / 13px
     float: right;
+}
+
+.txp-edit .txp-actions-inline {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    margin-top: 0;
+
+    a {
+        margin-top: 0;
+    }
 }
 
 /**
@@ -288,6 +299,11 @@ hr {
 
 [dir="rtl"] .txp-actions-inline {
     float: left;
+}
+
+[dir="rtl"] .txp-edit .txp-actions-inline {
+    right: auto;
+    left: 1em;
 }
 
 /**
@@ -533,6 +549,7 @@ span.spinner {
  */
 
 .txp-edit {
+    position: relative;
     max-width: ($text-column - 2em);
     margin: 0 auto 1em;
     padding: 1em 1em 1px;

@@ -2842,15 +2842,28 @@ button {
  *
  * Article pages panel, forms panel, styles panel.
  */
-  .txp-actions-inline {
+  :not(.txp-edit) .txp-actions-inline {
     margin-top: 1.30769230769231em;
     float: right;
+  }
+  .txp-edit .txp-actions-inline {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    margin-top: 0;
+  }
+  .txp-edit .txp-actions-inline a {
+    margin-top: 0;
   }
   /**
  * Swap position in RTL languages.
  */
   [dir="rtl"] .txp-actions-inline {
     float: left;
+  }
+  [dir="rtl"] .txp-edit .txp-actions-inline {
+    right: auto;
+    left: 1em;
   }
   /**
  * AJAX spinners.
@@ -3066,6 +3079,7 @@ button {
  * 2. Remove margin above `h2` within panels.
  */
   .txp-edit {
+    position: relative;
     max-width: 60em;
     margin: 0 auto 1em;
     padding: 1em 1em 1px;
@@ -6397,7 +6411,10 @@ button {
      * Remove float from inline the action links.
      */
   .txp-actions-inline,
-  [dir="rtl"] .txp-actions-inline {
+  .txp-edit .txp-actions-inline,
+  [dir="rtl"] .txp-actions-inline,
+  [dir="rtl"] .txp-edit .txp-actions-inline {
+    position: static;
     margin-top: 0;
     float: none;
   }

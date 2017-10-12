@@ -430,7 +430,10 @@
      */
 
     .txp-actions-inline,
-    [dir="rtl"] .txp-actions-inline {
+    .txp-edit .txp-actions-inline,
+    [dir="rtl"] .txp-actions-inline,
+    [dir="rtl"] .txp-edit .txp-actions-inline {
+        position: static;
         margin-top: 0;
         float: none;
     }
