@@ -229,8 +229,7 @@ EOS;
             'description' => 'Textpattern CMS Hive admin theme (Flat Neutral)',
             'version'     => '4.7.0-dev',
             'author'      => 'Phil Wareham',
-            'author_uri'  => 'https://github.com/philwareham',
-            'help'        => 'https://github.com/philwareham/textpattern-hive-admin-theme',
+            'author_uri'  => 'https://github.com/philwareham/textpattern-hive-admin-theme',
         );
     }
 }
