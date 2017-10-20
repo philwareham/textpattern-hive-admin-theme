@@ -188,7 +188,7 @@ textarea {
 
 select {
     padding-right: 1.30769230769231em; // 17px / 13px
-    background: $color-background-form url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='4' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23333' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E") right center no-repeat;
+    background: $color-background-form url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23333' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E") right center no-repeat;
     background-size: 1em 0.30769230769231em;
     text-transform: none;
 }
