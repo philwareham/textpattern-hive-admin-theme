@@ -1255,6 +1255,7 @@ button {
   [disabled],
   [disabled] option,
   [disabled] optgroup,
+  .txp-button.disabled,
   .navlink-disabled {
     border-color: #d4d4d4 !important;
     background: #eeeeee !important;
@@ -3009,12 +3010,12 @@ button {
   /**
  * Visually disabled text and anchors.
  */
-  .disabled {
+  .disabled:not(.txp-button) {
     background-image: none;
     cursor: default !important;
     opacity: 0.33;
   }
-  .disabled a {
+  .disabled:not(.txp-button) a {
     text-decoration: none;
     cursor: default;
   }

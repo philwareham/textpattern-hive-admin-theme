@@ -461,7 +461,7 @@ span.spinner {
  * Visually disabled text and anchors.
  */
 
-.disabled {
+.disabled:not(.txp-button) {
     background-image: none;
     cursor: default !important;
     opacity: 0.33;
