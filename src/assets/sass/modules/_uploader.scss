@@ -1,0 +1,19 @@
+/* File uploader (via https://github.com/blueimp/jQuery-File-Upload/)
+   ========================================================================== */
+
+.fileinput-button {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.fileinput-button input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    font-size: 200px !important;
+    cursor: pointer;
+    opacity: 0;
+    direction: ltr;
+}
