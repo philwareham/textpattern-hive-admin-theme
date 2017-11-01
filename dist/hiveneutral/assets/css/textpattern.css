@@ -6336,6 +6336,22 @@ button {
 }
 
 /* ==========================================================================
+   Additonal accessibility for screen media
+   ========================================================================== */
+@media (-ms-high-contrast: active) {
+  .ui-icon {
+    -ms-high-contrast-adjust: none;
+  }
+}
+
+@media (-ms-high-contrast: white-on-black) {
+  .ui-icon {
+    -webkit-filter: invert(1) brightness(1.2);
+            filter: invert(1) brightness(1.2);
+  }
+}
+
+/* ==========================================================================
    Animation `keyframes` need to appear outside of `screen` rules
    ========================================================================== */
 @-webkit-keyframes spinning {
