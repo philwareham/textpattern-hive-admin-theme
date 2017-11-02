@@ -40,7 +40,21 @@
  */
 
 .ui-multiselect {
-    width: 2em;
+    position: relative;
+    width: 2.1538462em !important; // 28px / 13px
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: 0 0.5em 0.5em 0;
+    white-space: nowrap;
+    box-sizing: border-box;
+
+    .ui-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -8px;
+        margin-left: -8px;
+    }
 
     span:not(.ui-icon) {
         display: none;

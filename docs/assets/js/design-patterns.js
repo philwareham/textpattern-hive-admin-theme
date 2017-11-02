@@ -404,21 +404,40 @@ $(function ()
 
     // Multiselect plugin testing.
 
-    $(".txp-search-dropdown-new").multiselect({
-        appendTo: '.txp-search-new',
-        height: 'auto',
-        //menuWidth: '234',
-        header: false,
-        showCheckAll: false,
-        showUncheckAll: false,
-        selectedText: 'Search options',
-        noneSelectedText: 'Search options',
-        //position: {
-        //    my: 'right top',
-        //    at: 'right bottom',
-        //    of: this
-        //}
-    });
+    if (langdir === 'rtl') {
+        $(".txp-search-dropdown-new").multiselect({
+            appendTo: '.txp-search-new',
+            height: 'auto',
+            minWidth: null,
+            menuWidth: 234,
+            header: false,
+            showCheckAll: false,
+            showUncheckAll: false,
+            selectedText: 'Search options',
+            noneSelectedText: 'Search options',
+            position: {
+                my: 'left top',
+                at: 'left bottom'
+            }
+        });
+    } else {
+        $(".txp-search-dropdown-new").multiselect({
+            appendTo: '.txp-search-new',
+            height: 'auto',
+            minWidth: null,
+            menuWidth: 234,
+            header: false,
+            showCheckAll: false,
+            showUncheckAll: false,
+            selectedText: 'Search options',
+            noneSelectedText: 'Search options',
+            position: {
+                my: 'right top',
+                at: 'right bottom'
+            }
+        });
+    };
+
 
 
 });

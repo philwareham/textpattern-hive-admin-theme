@@ -6032,7 +6032,21 @@ button {
  * </div>
  */
   .ui-multiselect {
-    width: 2em;
+    position: relative;
+    width: 2.1538462em !important;
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: 0 0.5em 0.5em 0;
+    white-space: nowrap;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .ui-multiselect .ui-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -8px;
   }
   .ui-multiselect span:not(.ui-icon) {
     display: none;
