@@ -274,53 +274,6 @@ $(function ()
 
     $('.jquery-ui-tooltip').tooltip();
 
-    // Split button search example.
-
-    var search = $('.txp-search');
-
-    search.find('.txp-search-button').button({
-        showLabel: false,
-        icon: 'ui-icon-search'
-    })
-    .click(function ()
-    {
-        alert('Running the last action');
-    });
-
-    search.find('.txp-search-options').button({
-        showLabel: false,
-        icon: 'ui-icon-triangle-1-s'
-    })
-    .click(function (e)
-    {
-        if (langdir === 'rtl') {
-            var menu = search.find('.txp-dropdown').toggle().position({
-                my: 'left top',
-                at: 'left bottom',
-                of: this
-            });
-        } else {
-            var menu = search.find('.txp-dropdown').toggle().position({
-                my: 'right top',
-                at: 'right bottom',
-                of: this
-            });
-        };
-
-        $(document).one('click blur', function ()
-        {
-            menu.hide();
-        });
-
-        return false;
-    });
-
-    search.find('.txp-search-buttons').controlgroup();
-
-    search.find('.txp-dropdown').hide().menu().click(function(e) {
-        e.stopPropagation();
-    });
-
     // List options dropdown example.
 
     var listoptions = $('.txp-list-options-button');
@@ -385,11 +338,9 @@ $(function ()
         e.stopPropagation();
     });
 
+    // Split button search example.
 
-
-    // Split button search example NEW.
-
-    var search = $('.txp-search-new');
+    var search = $('.txp-search');
 
     search.find('.txp-search-button').button({
         showLabel: false,
@@ -400,63 +351,71 @@ $(function ()
         alert('Running the last action');
     });
 
-    //search.find('.txp-search-options').button({
-    //    showLabel: false,
-    //    icon: 'ui-icon-triangle-1-s'
-    //})
-    //.click(function (e)
-    //{
-    //    if (langdir === 'rtl') {
-    //        var menu = search.find('.txp-dropdown').toggle().position({
-    //            my: 'left top',
-    //            at: 'left bottom',
-    //            of: this
-    //        });
-    //    } else {
-    //        var menu = search.find('.txp-dropdown').toggle().position({
-    //            my: 'right top',
-    //            at: 'right bottom',
-    //            of: this
-    //        });
-    //    };
-    //
-    //    $(document).one('click blur', function ()
-    //    {
-    //        menu.hide();
-    //    });
-    //
-    //    return false;
-    //});
+    search.find('.txp-search-options').button({
+        showLabel: false,
+        icon: 'ui-icon-triangle-1-s'
+    })
+    .click(function (e)
+    {
+        if (langdir === 'rtl') {
+            var menu = search.find('.txp-dropdown').toggle().position({
+                my: 'left top',
+                at: 'left bottom',
+                of: this
+            });
+        } else {
+            var menu = search.find('.txp-dropdown').toggle().position({
+                my: 'right top',
+                at: 'right bottom',
+                of: this
+            });
+        };
 
-    //search.find('.txp-search-buttons').controlgroup();
+        $(document).one('click blur', function ()
+        {
+            menu.hide();
+        });
+
+        return false;
+    });
+
+    search.find('.txp-search-buttons').controlgroup();
 
     search.find('.txp-dropdown').hide().menu().click(function(e) {
         e.stopPropagation();
     });
 
+
+
+    // Split button search example NEW.
+
+    var searchNew = $('.txp-search-new');
+
+    searchNew.find('.txp-search-button').button({
+        showLabel: false,
+        icon: 'ui-icon-search'
+    })
+    .click(function ()
+    {
+        alert('Running the last action');
+    });
+
+
+
     // Multiselect plugin testing.
 
-    if (langdir === 'rtl') {
-        $(".txp-search-dropdown-new").multiselect({
-            header: false,
-            height: 'auto',
-            position: {
-                my: 'left top',
-                at: 'left bottom',
-                of: this
-           }
-        });
-    } else {
-        $(".txp-search-dropdown-new").multiselect({
-            header: false,
-            height: 'auto',
-            position: {
-                my: 'right top',
-                at: 'right bottom',
-                of: this
-           }
-        });
-    };
+    $(".txp-search-dropdown-new").multiselect({
+        appendTo: '.txp-search-new',
+        header: false,
+        height: 'auto',
+        menuWidth: '225',
+        noneSelectedText: "Search options"
+        //position: {
+        //    my: 'right top',
+        //    at: 'right bottom',
+        //    of: this
+        //}
+    });
 
 
 });

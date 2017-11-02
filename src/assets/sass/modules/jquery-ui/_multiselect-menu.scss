@@ -7,38 +7,63 @@
  * Some classes and HTML elements generally added via JavaScript, more info -
  * https://github.com/ehynds/jquery-ui-multiselect-widget
  *
+ * 1. Correct font size not being inherited in all browsers.
+ *
  * Example HTML:
  *
- * TODO
+ * <button type="button" class="ui-multiselect">
+ *     <span class="ui-icon ui-icon-triangle-1-s"></span>
+ *     <span>Search options</span>
+ * </button>
+ * <ul class="ui-multiselect-checkboxes ui-helper-reset">
+ *     <li>
+ *         <label class="ui-corner-all ui-state-hover">
+ *             <input type="checkbox">
+ *             <span>Search all</span>
+ *         </label>
+ *     </li>
+ *     <li>
+ *         <label class="ui-corner-all">
+ *             <input type="checkbox">
+ *             <span>Option 1</span>
+ *         </label>
+ *     </li>
+ *     <li>
+ *         <label class="ui-corner-all">
+ *             <input type="checkbox">
+ *             <span>Option 2</span>
+ *         </label>
+ *     </li>
+ * </ul>
  */
 
 .ui-multiselect {
-    padding: 2px 0 2px 4px;
-    text-align: left;
-
     span.ui-icon {
         float: right;
     }
 
-}
-
-.ui-multiselect-single .ui-multiselect-checkboxes {
-    input {
-        position: absolute !important;
-        top: auto !important;
-        left: -9999px;
-    }
-
-    label {
-        padding: 5px !important;
+    span:not(.ui-icon) {
+        display: none;
     }
 }
 
 .ui-multiselect-menu {
     display: none;
     position: absolute;
-    padding: 3px;
-    text-align: left;
+    margin: 0;
+    padding: 0;
+    @if $flat-theme < 1 {
+        border-color: $color-border-light;
+    }
+    outline: 0;
+    /* 1 */
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    list-style: none;
+    @if $flat-theme < 1 {
+        box-shadow: $standard-shadow;
+    }
+    z-index: 100;
 }
 
 .ui-multiselect-checkboxes {

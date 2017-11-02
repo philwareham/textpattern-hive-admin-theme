@@ -149,23 +149,27 @@
                     <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search articles…">
                     <span class="txp-search-buttons">
                         <button class="txp-search-button">Search</button>
-                        <!--<button class="txp-search-options">Search criteria</button>-->
+
+
+                        <select class="txp-search-dropdown-new" name="example" multiple="multiple">
+                            <option value="0" selected="">Search all</option>
+                            <option value="1">ID#</option>
+                            <option value="2">Title, body and excerpt plus extra text to test longer lines</option>
+                            <option value="3">Section</option>
+                            <option value="4">Keywords</option>
+                            <option value="5">Categories</option>
+                            <option value="6">Status</option>
+                            <option value="7">Author</option>
+                            <option value="8">Article image</option>
+                            <option value="9">Posted</option>
+                            <option value="10">Modified</option>
+                        </select>
+
+
                     </span>
 
 
-                    <select class="txp-search-dropdown-new" name="example" multiple="multiple">
-                        <option value="0">Search all</option>
-                        <option value="1">ID#</option>
-                        <option value="2">Title, body and excerpt plus extra text to test longer lines</option>
-                        <option value="3">Section</option>
-                        <option value="4">Keywords</option>
-                        <option value="5">Categories</option>
-                        <option value="6">Status</option>
-                        <option value="7">Author</option>
-                        <option value="8">Article image</option>
-                        <option value="9">Posted</option>
-                        <option value="10">Modified</option>
-                    </select>
+
 
 
                 </form>
