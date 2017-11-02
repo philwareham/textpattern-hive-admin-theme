@@ -406,10 +406,13 @@ $(function ()
 
     $(".txp-search-dropdown-new").multiselect({
         appendTo: '.txp-search-new',
-        header: false,
         height: 'auto',
-        menuWidth: '225',
-        noneSelectedText: "Search options"
+        //menuWidth: '234',
+        header: false,
+        showCheckAll: false,
+        showUncheckAll: false,
+        selectedText: 'Search options',
+        noneSelectedText: 'Search options',
         //position: {
         //    my: 'right top',
         //    at: 'right bottom',

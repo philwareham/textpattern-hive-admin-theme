@@ -7,40 +7,40 @@
  * Some classes and HTML elements generally added via JavaScript, more info -
  * https://github.com/ehynds/jquery-ui-multiselect-widget
  *
- * 1. Correct font size not being inherited in all browsers.
+ * 1. Workaround for IE 11 and Edge incorrectly displaying a list marker.
  *
  * Example HTML:
  *
- * <button type="button" class="ui-multiselect">
+ * <button class="ui-multiselect">
  *     <span class="ui-icon ui-icon-triangle-1-s"></span>
  *     <span>Search options</span>
  * </button>
- * <ul class="ui-multiselect-checkboxes ui-helper-reset">
- *     <li>
- *         <label class="ui-corner-all ui-state-hover">
- *             <input type="checkbox">
- *             <span>Search all</span>
- *         </label>
- *     </li>
- *     <li>
- *         <label class="ui-corner-all">
- *             <input type="checkbox">
- *             <span>Option 1</span>
- *         </label>
- *     </li>
- *     <li>
- *         <label class="ui-corner-all">
- *             <input type="checkbox">
- *             <span>Option 2</span>
- *         </label>
- *     </li>
- * </ul>
+ * <div class="ui-multiselect-menu ui-widget ui-widget-content">
+ *     <ul class="ui-multiselect-checkboxes ui-helper-reset">
+ *         <li>
+ *             <label class="ui-state-hover">
+ *                 <input type="checkbox">
+ *                 <span>Search all</span>
+ *             </label>
+ *         </li>
+ *         <li>
+ *             <label>
+ *                 <input type="checkbox">
+ *                 <span>Option 1</span>
+ *             </label>
+ *         </li>
+ *         <li>
+ *             <label>
+ *                 <input type="checkbox">
+ *                 <span>Option 2</span>
+ *             </label>
+ *         </li>
+ *     </ul>
+ * </div>
  */
 
 .ui-multiselect {
-    span.ui-icon {
-        float: right;
-    }
+    width: 2em;
 
     span:not(.ui-icon) {
         display: none;
@@ -50,68 +50,58 @@
 .ui-multiselect-menu {
     display: none;
     position: absolute;
-    margin: 0;
-    padding: 0;
+    width: 18em;
     @if $flat-theme < 1 {
         border-color: $color-border-light;
     }
     outline: 0;
-    /* 1 */
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    list-style: none;
     @if $flat-theme < 1 {
         box-shadow: $standard-shadow;
     }
     z-index: 100;
-}
 
-.ui-multiselect-checkboxes {
-    position: relative;
-    overflow-y: auto;
+    ul {
+        list-style: none;
+    }
+
+    li {
+        display: block;
+        margin: 0;
+        cursor: pointer;
+        /* 1 */
+        list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+    }
 
     label {
         display: block;
-        padding: 3px 1px;
-        border: 1px solid transparent;
-        cursor: default;
+        position: relative;
+        padding: 0.30769230769231em 1em 0.30769230769231em 2em; // 4px / 13px + 13px + 4px / 13px + 26px
 
-        input {
-            position: relative;
-            top: 1px;
+        &.ui-state-hover {
+            background-color: $color-selected;
         }
+    }
 
-        img {
-            height: 30px;
-            padding-right: 3px;
-            vertical-align: middle;
-        }
+    input {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0.615384615384615em; // 8px / 13px
+        margin: auto 0;
     }
 }
 
-.ui-multiselect-checkboxes li {
-    padding-right: 3px;
-    clear: both;
-    font-size: 0.9em;
-    list-style: none;
-}
+/**
+ * MultiSelect Widget RTL support.
+ */
 
-.ui-multiselect-checkboxes .ui-multiselect-optgroup {
-    padding: 3px;
-}
+[dir="rtl"] .ui-multiselect-menu {
+    label {
+        padding: 0.30769230769231em 2em 0.30769230769231em 1em; // 4px / 13px + 26px + 4px / 13px + 13px
+    }
 
-.ui-multiselect-columns {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.ui-multiselect-checkboxes .ui-multiselect-optgroup a {
-    display: block;
-    margin: 1px 0;
-    padding: 3px;
-    border-bottom: 1px solid;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
+    input {
+        right: 0.615384615384615em; // 8px / 13px
+        left: auto;
+    }
 }
