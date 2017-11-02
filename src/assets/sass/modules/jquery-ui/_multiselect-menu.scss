@@ -41,10 +41,11 @@
 
 .ui-multiselect {
     position: relative;
-    width: 2.1538462em !important; // 28px / 13px
+    width: 2.1538462em !important; // 28px / 13px (`!important` overrides inline `style` attribute content).
     margin-right: 0;
     margin-left: 0;
     border-radius: 0 0.5em 0.5em 0;
+    text-indent: -9999px;
     white-space: nowrap;
     box-sizing: border-box;
 
@@ -55,16 +56,12 @@
         margin-top: -8px;
         margin-left: -8px;
     }
-
-    span:not(.ui-icon) {
-        display: none;
-    }
 }
 
 .ui-multiselect-menu {
     display: none;
     position: absolute;
-    width: 18em;
+    width: 18em !important; // 234px / 13px (`!important` overrides inline `style` attribute content).
     @if $flat-theme < 1 {
         border-color: $color-border-light;
     }

@@ -238,7 +238,7 @@ ul.nav-tertiary {
  */
 
 .nav-tertiary .navlink-active,
-.filtered button.ui-corner-right {
+.filtered .ui-multiselect {
     @include gradient-linear($color-button-selected-gradient-from, $color-button-selected-gradient-to);
 
     border-color: $color-button-selected-border;

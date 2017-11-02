@@ -51,7 +51,7 @@ hr {
 }
 
 /**
- * Drop down lists.
+ * Drop down lists. TODO
  *
  * 1. Ensure dropdowns are hidden at page load (prevents content 'jumping').
  *
@@ -77,18 +77,6 @@ hr {
     position: absolute;
     width: 18em; // 234px / 13px
     z-index: 100;
-
-    .checkbox {
-        vertical-align: -0.23076923076923em; // 3px / 13px
-
-        & + label {
-            display: inline-block;
-            width: 85%;
-            padding: 0.23076923076923em 0.30769230769231em; // 3px / 13px + 4px / 13px
-            cursor: pointer;
-            vertical-align: text-top;
-        }
-    }
 }
 
 /**

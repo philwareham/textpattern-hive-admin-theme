@@ -1580,22 +1580,22 @@ button {
  * </p>
  */
   .nav-tertiary .navlink-active,
-  .filtered button.ui-corner-right {
+  .filtered .ui-multiselect {
     background-color: #9dc8ef;
     border-color: #6faee7;
   }
   .nav-tertiary .navlink-active:hover,
-  .filtered button.ui-corner-right:hover {
+  .filtered .ui-multiselect:hover {
     background-color: #a6cdf0;
     border-color: #2d89dd;
   }
   .nav-tertiary .navlink-active:active,
-  .filtered button.ui-corner-right:active {
+  .filtered .ui-multiselect:active {
     background-color: #87bceb;
     border-color: #2d89dd;
   }
   .nav-tertiary .navlink-active:focus,
-  .filtered button.ui-corner-right:focus {
+  .filtered .ui-multiselect:focus {
     border-color: #0066ff;
   }
   /**
@@ -2611,7 +2611,7 @@ button {
             clip-path: inset(50%);
   }
   /**
- * Drop down lists.
+ * Drop down lists. TODO
  *
  * 1. Ensure dropdowns are hidden at page load (prevents content 'jumping').
  *
@@ -2636,16 +2636,6 @@ button {
     position: absolute;
     width: 18em;
     z-index: 100;
-  }
-  .txp-dropdown .checkbox {
-    vertical-align: -0.23076923076923em;
-  }
-  .txp-dropdown .checkbox + label {
-    display: inline-block;
-    width: 85%;
-    padding: 0.23076923076923em 0.30769230769231em;
-    cursor: pointer;
-    vertical-align: text-top;
   }
   /**
  * Search widget at top of lists.
@@ -5959,6 +5949,7 @@ button {
     margin-right: 0;
     margin-left: 0;
     border-radius: 0 0.5em 0.5em 0;
+    text-indent: -9999px;
     white-space: nowrap;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -5970,13 +5961,10 @@ button {
     margin-top: -8px;
     margin-left: -8px;
   }
-  .ui-multiselect span:not(.ui-icon) {
-    display: none;
-  }
   .ui-multiselect-menu {
     display: none;
     position: absolute;
-    width: 18em;
+    width: 18em !important;
     outline: 0;
     z-index: 100;
   }
