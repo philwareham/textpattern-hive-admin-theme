@@ -32,3 +32,15 @@ html[lang="zh-cn"] {
 html[lang="zh-tw"] {
     font-family: PMingLiU, sans-serif;
 }
+
+/**
+ * Suppress `text-decoration` in some RTL languages for better legibility.
+ */
+
+[lang|="ar"],
+[lang|="fa"],
+[lang|="ur"] {
+    a:hover {
+        text-decoration: none;
+    }
+}
