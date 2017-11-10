@@ -347,6 +347,19 @@ button {
   /* Support for non-latin languages
    ========================================================================== */
   /**
+ * Bidirectional (bidi) text support.
+ * See: https://www.w3.org/International/articles/inline-bidi-markup/#cssshim
+ */
+  [dir="ltr"],
+  [dir="rtl"] {
+    unicode-bidi: -webkit-isolate;
+    unicode-bidi: isolate;
+  }
+  bdo[dir="ltr"],
+  bdo[dir="rtl"] {
+    unicode-bidi: isolate-override;
+  }
+  /**
  * Preferred font for Japanese language.
  */
   html[lang="ja-jp"] {
