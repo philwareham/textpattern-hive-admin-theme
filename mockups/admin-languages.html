@@ -139,303 +139,223 @@
         <div class="txp-layout">
 
             <div class="txp-layout-1col">
-                <h1 class="txp-heading">Languages</h1>
+                <h1 class="txp-heading">Languages&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></h1>
             </div>
 
             <div class="txp-layout-1col" id="language_container">
                 <div class="txp-control-panel">
                     <form method="post" action="#">
-                        <label for="language">Currently active language</label>
+                        <label for="language">Site language</label>
                         <select id="language" name="language" data-submit-on="change">
+                            <option value="en" selected="selected">English</option>
+                            <option value="en-gb">English (British)</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </form>
+                    <form method="post" action="#">
+                        <label for="language-user">User language</label>
+                        <select id="language-user" name="language-user" data-submit-on="change">
+                            <option value="en">English</option>
                             <option value="en-gb" selected="selected">English (British)</option>
+                            <option value="fr">Français</option>
                         </select>
                     </form>
                 </div>
-                <div class="txp-list-options">
-                    <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
-                </div>
 
-                <div class="txp-listtables">
-                    <table class="txp-list">
-
-                        <thead>
-                            <tr>
-                                <th scope="col">Language</th>
-                                <th scope="col">Install from remote server <a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></th>
-                                <th class="lang-value" scope="col">Install from file <a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></th>
-                                <th class="lang-value" scope="col">remove_lang <a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <th class="lang-label" scope="row">عربي</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">български</th>
-                                <td class="lang-value"><strong> <a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Bosanski (Bosna i Hercegovina)</th>
-                                <td class="lang-value"><strong> <a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Català</th>
-                                <td class="lang-value"><strong> <a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Čeština</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Dansk</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Deutsch</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Ελληνικά</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <td class="highlight lang-label" scope="row">English (British)</th>
-                                <td class="highlight lang-value"><strong><a href="#">Update</a></strong> <span class="date modified">07 Jun 2012 15:27:30</span></td>
-                                <td class="highlight lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">18/06/11 06:46 AM</span></td>
-                                <td class="highlight lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">English (American)</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Español</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Eesti</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">فارسی</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Suomi</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Français</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Galego</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">עברית</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Hrvatski</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Magyar</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Bahasa Indonesia</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Íslenska</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Italiano</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">日本語</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">한국말 (대한민국)</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Lietuvių</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Latviešu</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Nederlands</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Norsk</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Polski</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Português (Brasil)</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Português (Portugal)</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Română</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Русский</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Slovenčina</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Srpski</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Српски</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Svenska</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">ภาษาไทย</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Türkçe</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Українська</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">اردو (بھارت</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">Tiếng Việt (Việt Nam)</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">中文(简体)</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                            <tr>
-                                <th class="lang-label" scope="row">中文(繁體)</th>
-                                <td class="lang-value"><strong><a href="#">Install</a></strong> <span class="date modified">14 May 2012 09:28:02</span></td>
-                                <td class="lang-value">-</td>
-                                <td class="lang-value">-</td>
-                            </tr>
-                        </tbody>
-
-                    </table>
-                </div><!-- /txp-listtables -->
+                <ul class="txp-grid">
+                    <li class="txp-grid-cell success">
+                        <p><span class="ui-icon ui-icon-check"></span> <strong>English</strong></p>
+                        <p>
+                            <span class="txp-button disabled">Update</span>
+                        </p>
+                    </li>
+                    <li class="txp-grid-cell success">
+                        <p><span class="ui-icon ui-icon-check"></span> <strong>English (British)</strong></p>
+                        <p>
+                            <span class="txp-button disabled">Update</span>
+                            <a class="txp-button" href="#">Remove</a>
+                        </p>
+                    </li>
+                    <li class="txp-grid-cell warning">
+                        <p><span class="ui-icon ui-icon-alert"></span> <strong>Français</strong>
+                        <p>
+                            <a class="txp-button" href="#">Update</a>
+                            <a class="txp-button" href="#">Remove</a>
+                        </p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>عربي</strong></p>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>български</strong></p>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Bosanski</strong></p>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Català</strong></p>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Čeština</strong></p>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Dansk</strong></p>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Deutsch</strong></p>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Ελληνικά</strong></p>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>English (American)</strong></p>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Español</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Eesti</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>فارسی</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Suomi</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Galego</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>עברית</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>हिन्दी</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Hrvatski</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Magyar</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Bahasa Indonesia</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Íslenska</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Italiano</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>日本語</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>한국말 (대한민국)</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Lietuvių</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Latviešu</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Nederlands</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Norsk</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Polski</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Português</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Português (Brasil)</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Română</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Русский</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Slovenčina</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Srpski</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Српски</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Svenska</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>ภาษาไทย</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Türkçe</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Українська</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>اردو (بھارت</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>Tiếng Việt</strong>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>中文(简体)</strong></p>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                    <li class="txp-grid-cell">
+                        <p><strong>中文(繁體)</strong></p>
+                        <p><a class="txp-button" href="#">Install</a></p>
+                    </li>
+                </ul>
 
                 <h3>Install from Textpack</h3>
 
