@@ -6,6 +6,7 @@
     <title>Articles - My Site &#124; Textpattern CMS</title>
     <script src="../docs/assets/js/jquery.js"></script>
     <script src="../docs/assets/js/jquery-ui.js"></script>
+    <script src="../docs/assets/js/jquery.multiselect.js"></script>
     <link rel="stylesheet" href="../dist/hive/assets/css/textpattern.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="generator" content="Textpattern CMS">
@@ -147,77 +148,20 @@
                     <span class="txp-search-clear"><a href="#">Clear search</a></span>
                     <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search articles…">
                     <span class="txp-search-buttons">
-                        <button class="txp-search-button">Search</button>
-                        <button class="txp-search-options">Search criteria</button>
+                        <button class="txp-search-button">Search</button><select class="txp-search-dropdown" name="example" multiple="multiple">
+                            <option value="0" selected="">Search all</option>
+                            <option value="1">ID#</option>
+                            <option value="2">Title, body and excerpt plus extra text to test longer lines</option>
+                            <option value="3">Section</option>
+                            <option value="4">Keywords</option>
+                            <option value="5">Categories</option>
+                            <option value="6">Status</option>
+                            <option value="7">Author</option>
+                            <option value="8">Article image</option>
+                            <option value="9">Posted</option>
+                            <option value="10">Modified</option>
+                        </select>
                     </span>
-                    <ul class="txp-dropdown">
-                        <li>
-                            <div>
-                                <input class="checkbox" id="search-all0" name="select_all" type="checkbox" value="all">
-                                <label for="search-all0">Search all</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox active" id="search-id0" name="search_method[]" type="checkbox" value="id" checked="checked">
-                                <label for="search-id0">ID#</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="search-title_body_excerpt0" name="search_method[]" type="checkbox" value="title_body_excerpt">
-                                <label for="search-title_body_excerpt0">Title, body and excerpt plus extra text to test longer lines</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="search-section0" name="search_method[]" type="checkbox" value="section">
-                                <label for="search-section0">Section</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="search-keywords0" name="search_method[]" type="checkbox" value="keywords">
-                                <label for="search-keywords0">Keywords</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="search-categories0" name="search_method[]" type="checkbox" value="categories">
-                                <label for="search-categories0">Categories</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="search-status0" name="search_method[]" type="checkbox" value="status">
-                                <label for="search-status0">Status</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="search-author0" name="search_method[]" type="checkbox" value="author">
-                                <label for="search-author0">Author</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="search-article_image0" name="search_method[]" type="checkbox" value="article_image">
-                                <label for="search-article_image0">Article image</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="search-posted0" name="search_method[]" type="checkbox" value="posted">
-                                <label for="search-posted0">Posted</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="search-lastmod0" name="search_method[]" type="checkbox" value="lastmod">
-                                <label for="search-lastmod0">Modified</label>
-                            </div>
-                        </li>
-                    </ul>
                 </form>
             </div>
 

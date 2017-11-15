@@ -106,6 +106,10 @@
  * MultiSelect Widget RTL support.
  */
 
+[dir="rtl"] .ui-multiselect {
+    border-radius: 0.5em 0 0 0.5em;
+}
+
 [dir="rtl"] .ui-multiselect-menu {
     label {
         padding: 0.30769230769231em 2em 0.30769230769231em 1em; // 4px / 13px + 26px + 4px / 13px + 13px
@@ -115,4 +119,8 @@
         right: 0.615384615384615em; // 8px / 13px
         left: auto;
     }
+}
+
+[dir="rtl"] .ui-multiselect-checkboxes {
+    padding: 0;
 }

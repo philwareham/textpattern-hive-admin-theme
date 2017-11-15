@@ -1598,11 +1598,12 @@ button {
  *     <input class="txp-search-input" type="search" size="24">
  *     <span class="txp-search-buttons">
  *         <button class="txp-search-button">Search</button>
- *         <button class="txp-search-options">Search criteria</button>
+ *         <button class="txp-search-dropdown">Search options</button>
  *     </span>
  * </form>
  */
   .txp-search button.txp-search-button {
+    margin: 0;
     padding-right: 1.5em;
     padding-left: 1.5em;
     border-radius: 0;
@@ -6036,12 +6037,18 @@ button {
   /**
  * MultiSelect Widget RTL support.
  */
+  [dir="rtl"] .ui-multiselect {
+    border-radius: 0.5em 0 0 0.5em;
+  }
   [dir="rtl"] .ui-multiselect-menu label {
     padding: 0.30769230769231em 2em 0.30769230769231em 1em;
   }
   [dir="rtl"] .ui-multiselect-menu input {
     right: 0.615384615384615em;
     left: auto;
+  }
+  [dir="rtl"] .ui-multiselect-checkboxes {
+    padding: 0;
   }
 }
 
