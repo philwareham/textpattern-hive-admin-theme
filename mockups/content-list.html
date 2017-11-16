@@ -148,18 +148,18 @@
                     <span class="txp-search-clear"><a href="#">Clear search</a></span>
                     <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search articles…">
                     <span class="txp-split-buttons">
-                        <button class="txp-search-button">Search</button><select class="txp-search-dropdown" name="example" multiple="multiple">
-                            <option value="0" selected="">Search all</option>
-                            <option value="1">ID#</option>
-                            <option value="2">Title, body and excerpt plus extra text to test longer lines</option>
-                            <option value="3">Section</option>
-                            <option value="4">Keywords</option>
-                            <option value="5">Categories</option>
-                            <option value="6">Status</option>
-                            <option value="7">Author</option>
-                            <option value="8">Article image</option>
-                            <option value="9">Posted</option>
-                            <option value="10">Modified</option>
+                        <button class="txp-search-button">Search</button><select class="txp-search-dropdown" name="search-crit" multiple="multiple">
+                            <option value="search-crit1">Search all</option>
+                            <option value="search-crit2" selected>ID#</option>
+                            <option value="search-crit3" selected>Title, body and excerpt plus extra text to test longer lines</option>
+                            <option value="search-crit4" selected>Section</option>
+                            <option value="search-crit5" selected>Keywords</option>
+                            <option value="search-crit6" selected>Categories</option>
+                            <option value="search-crit7" selected>Status</option>
+                            <option value="search-crit8">Author</option>
+                            <option value="search-crit9" selected>Article image</option>
+                            <option value="search-crit10" selected>Posted</option>
+                            <option value="search-crit11">Modified</option>
                         </select>
                     </span>
                 </form>
@@ -171,68 +171,18 @@
                 </div>
                 <div class="txp-list-options">
                     <a class="txp-list-options-button" href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
-                    <ul class="txp-list-options-list txp-dropdown">
-                        <li>
-                            <div>
-                                <input class="checkbox" id="txp-list-col-title" type="checkbox">
-                                <label for="txp-list-col-title">Title</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="txp-list-col-posted" type="checkbox">
-                                <label for="txp-list-col-posted">Posted</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="txp-list-col-lastmod" type="checkbox">
-                                <label for="txp-list-col-lastmod">Modified</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="txp-list-col-expires" type="checkbox">
-                                <label for="txp-list-col-expires">Expires</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="txp-list-col-section" type="checkbox">
-                                <label for="txp-list-col-section">Section</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="txp-list-col-category1" type="checkbox">
-                                <label for="txp-list-col-category1">Category 1</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="txp-list-col-category2" type="checkbox">
-                                <label for="txp-list-col-category2">Category 2</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="txp-list-col-status" type="checkbox">
-                                <label for="txp-list-col-status">Status</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="txp-list-col-author" type="checkbox">
-                                <label for="txp-list-col-author">Author</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input class="checkbox" id="txp-list-col-comments" type="checkbox">
-                                <label for="txp-list-col-comments">Comments</label>
-                            </div>
-                        </li>
-                    </ul>
+                    <select class="txp-search-dropdown" name="list-col-options" multiple="multiple">
+                        <option value="txp-list-col-title" selected>Title</option>
+                        <option value="txp-list-col-posted">Posted</option>
+                        <option value="txp-list-col-lastmod" selected>Modified</option>
+                        <option value="txp-list-col-expires" selected>Expires</option>
+                        <option value="txp-list-col-section">Section</option>
+                        <option value="txp-list-col-category1">Category 1</option>
+                        <option value="txp-list-col-category2">Category 2</option>
+                        <option value="txp-list-col-status">Status</option>
+                        <option value="txp-list-col-author">Author</option>
+                        <option value="txp-list-col-comments">Comments</option>
+                    </select>
                 </div>
 
                 <form class="multi_edit_form" id="articles_form" name="longform" method="post" action="#">
