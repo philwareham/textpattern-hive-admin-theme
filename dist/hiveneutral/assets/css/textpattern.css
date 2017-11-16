@@ -1527,12 +1527,18 @@ button {
   }
   [dir="rtl"] .nav-tertiary > :first-child,
   [dir="rtl"] .nav-tertiary > :first-child > a,
-  [dir="rtl"] .nav-tertiary > :first-child > span {
+  [dir="rtl"] .nav-tertiary > :first-child > span,
+  [dir="rtl"] .txp-split-buttons > :first-child,
+  [dir="rtl"] .txp-split-buttons > :first-child > a,
+  [dir="rtl"] .txp-split-buttons > :first-child > span {
     border-radius: 0 0.3em 0.3em 0;
   }
   [dir="rtl"] .nav-tertiary > :last-child,
   [dir="rtl"] .nav-tertiary > :last-child > a,
-  [dir="rtl"] .nav-tertiary > :last-child > span {
+  [dir="rtl"] .nav-tertiary > :last-child > span,
+  [dir="rtl"] .txp-split-buttons > :last-child,
+  [dir="rtl"] .txp-split-buttons > :last-child > a,
+  [dir="rtl"] .txp-split-buttons > :last-child > span {
     border-radius: 0.3em 0 0 0.3em;
   }
   /**

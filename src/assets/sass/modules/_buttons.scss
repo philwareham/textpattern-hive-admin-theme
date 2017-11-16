@@ -212,7 +212,8 @@ ul.nav-tertiary {
         }
     }
 
-    [dir="rtl"] .nav-tertiary {
+    [dir="rtl"] .nav-tertiary,
+    [dir="rtl"] .txp-split-buttons {
         > :first-child,
         > :first-child > a,
         > :first-child > span {
