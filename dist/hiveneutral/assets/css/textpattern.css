@@ -1505,18 +1505,24 @@ button {
   [dir="rtl"] ul.nav-tertiary {
     padding: 0;
   }
-  .nav-tertiary a,
-  .nav-tertiary .navlink-disabled {
+  .nav-tertiary > *,
+  .txp-split-buttons > * {
     border-radius: 0;
   }
   .nav-tertiary > :first-child,
   .nav-tertiary > :first-child > a,
-  .nav-tertiary > :first-child > span {
+  .nav-tertiary > :first-child > span,
+  .txp-split-buttons > :first-child,
+  .txp-split-buttons > :first-child > a,
+  .txp-split-buttons > :first-child > span {
     border-radius: 0.3em 0 0 0.3em;
   }
   .nav-tertiary > :last-child,
   .nav-tertiary > :last-child > a,
-  .nav-tertiary > :last-child > span {
+  .nav-tertiary > :last-child > span,
+  .txp-split-buttons > :last-child,
+  .txp-split-buttons > :last-child > a,
+  .txp-split-buttons > :last-child > span {
     border-radius: 0 0.3em 0.3em 0;
   }
   [dir="rtl"] .nav-tertiary > :first-child,
@@ -1566,14 +1572,13 @@ button {
  *
  * <form class="txp-search">
  *     <input class="txp-search-input" type="search" size="24">
- *     <span class="txp-search-buttons">
+ *     <span class="txp-split-buttons">
  *         <button class="txp-search-button">Search</button>
- *         <button class="txp-search-dropdown">Search options</button>
+ *         ...
  *     </span>
  * </form>
  */
   .txp-search button.txp-search-button {
-    margin: 0;
     padding-right: 1.5em;
     padding-left: 1.5em;
     border-radius: 0;
@@ -2571,33 +2576,6 @@ button {
             clip-path: inset(50%);
   }
   /**
- * Drop down lists. TODO
- *
- * 1. Ensure dropdowns are hidden at page load (prevents content 'jumping').
- *
- * <ul class="txp-dropdown">
- *     <li>
- *         <div>
- *             <input class="checkbox" type="checkbox">
- *             <label>Search all</label>
- *         </div>
- *     </li>
- *     <li>
- *         <div>
- *             <input class="checkbox active" type="checkbox">
- *             <label>ID#</label>
- *         </div>
- *     </li>
- * </ul>
- */
-  .txp-dropdown {
-    /* 1 */
-    display: none;
-    position: absolute;
-    width: 18em;
-    z-index: 100;
-  }
-  /**
  * Search widget at top of lists.
  *
  * Appears on:
@@ -2609,9 +2587,12 @@ button {
  * <form class="txp-search">
  *     <span class="txp-search-clear"><a>Clear search</a></span>
  *     <input class="txp-search-input" type="search" size="24">
- *     <span class="txp-search-buttons">
+ *     <span class="txp-split-buttons">
  *         <button class="txp-search-button">Search</button>
- *         <button class="txp-search-options">Search criteria</button>
+ *         <button class="ui-multiselect">
+ *             <span class="ui-icon ui-icon-triangle-1-s"></span>
+ *             <span>Search options</span>
+ *         </button>
  *     </span>
  * </form>
  */
@@ -2621,12 +2602,6 @@ button {
     -webkit-box-pack: end;
             justify-content: flex-end;
     margin: 1em 0;
-  }
-  .txp-search .ui-controlgroup {
-    flex-wrap: nowrap;
-  }
-  .txp-search .txp-dropdown {
-    z-index: 101;
   }
   .txp-search-clear {
     -webkit-box-flex: 1;
@@ -4653,7 +4628,7 @@ button {
     display: inline-block;
     position: relative;
     height: 2.307692307692308em;
-    margin: 0 0.1em 0 0;
+    margin: 0;
     padding: 0.30769230769231em 0.61538461538462em;
     border: 1px solid #3c93e0;
     background-clip: padding-box;
@@ -5908,7 +5883,6 @@ button {
     width: 2.1538462em !important;
     margin-right: 0;
     margin-left: 0;
-    border-radius: 0 0.5em 0.5em 0;
     text-indent: -9999px;
     white-space: nowrap;
     -webkit-box-sizing: border-box;
@@ -5956,9 +5930,6 @@ button {
   /**
  * MultiSelect Widget RTL support.
  */
-  [dir="rtl"] .ui-multiselect {
-    border-radius: 0.5em 0 0 0.5em;
-  }
   [dir="rtl"] .ui-multiselect-menu label {
     padding: 0.30769230769231em 2em 0.30769230769231em 1em;
   }
