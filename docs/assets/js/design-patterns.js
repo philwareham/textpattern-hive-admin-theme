@@ -274,38 +274,6 @@ $(function ()
 
     $('.jquery-ui-tooltip').tooltip();
 
-    // List options dropdown example.
-
-    var listoptions = $('.txp-list-options-button');
-
-    listoptions.click(function (e)
-    {
-        if (langdir === 'rtl') {
-            var menu = $('.txp-list-options-list').toggle().position({
-                my: 'left top',
-                at: 'left bottom',
-                of: this
-            });
-        } else {
-            var menu = $('.txp-list-options-list').toggle().position({
-                my: 'right top',
-                at: 'right bottom',
-                of: this
-            });
-        };
-
-        $(document).one('click blur', function ()
-        {
-            menu.hide();
-        });
-
-        return false;
-    });
-
-    $('.txp-list-options-list').hide().menu().click(function(e) {
-        e.stopPropagation();
-    });
-
     // Text filter options dropdown example.
 
     var textfilteroptions = $('.txp-textfilter-options-button');
@@ -338,7 +306,7 @@ $(function ()
         e.stopPropagation();
     });
 
-    // Split button search example.
+    // Split search button example.
 
     var search = $('.txp-search');
 
@@ -348,7 +316,7 @@ $(function ()
     })
     .click(function ()
     {
-        alert('Running the last action');
+        alert('Running the search action');
     });
 
     if (langdir === 'rtl') {
@@ -384,5 +352,73 @@ $(function ()
             }
         });
     };
+
+    // List options dropdown example.
+
+    if (langdir === 'rtl') {
+        $('.txp-list-options-dropdown').multiselect({
+            appendTo: '.txp-list-options',
+            height: 'auto',
+            minWidth: null,
+            menuWidth: 234,
+            header: false,
+            showCheckAll: false,
+            showUncheckAll: false,
+            selectedText: 'List options',
+            noneSelectedText: 'List options',
+            classes: 'no-ui-button',
+            position: {
+                my: 'left top',
+                at: 'left bottom'
+            }
+        });
+    } else {
+        $('.txp-list-options-dropdown').multiselect({
+            appendTo: '.txp-list-options',
+            height: 'auto',
+            minWidth: null,
+            menuWidth: 234,
+            header: false,
+            showCheckAll: false,
+            showUncheckAll: false,
+            selectedText: 'List options',
+            noneSelectedText: 'List options',
+            classes: 'no-ui-button',
+            position: {
+                my: 'right top',
+                at: 'right bottom'
+            }
+        });
+    };
+
+//    var listoptions = $('.txp-list-options-button');
+//
+//    listoptions.click(function (e)
+//    {
+//        if (langdir === 'rtl') {
+//            var menu = $('.txp-list-options-list').toggle().position({
+//                my: 'left top',
+//                at: 'left bottom',
+//                of: this
+//            });
+//        } else {
+//            var menu = $('.txp-list-options-list').toggle().position({
+//                my: 'right top',
+//                at: 'right bottom',
+//                of: this
+//            });
+//        };
+//
+//        $(document).one('click blur', function ()
+//        {
+//            menu.hide();
+//        });
+//
+//        return false;
+//    });
+//
+//    $('.txp-list-options-list').hide().menu().click(function(e) {
+//        e.stopPropagation();
+//    });
 
 });

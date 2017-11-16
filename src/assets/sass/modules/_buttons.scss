@@ -14,12 +14,33 @@ button {
 }
 
 /**
+ * Allow override of standard `button` UI.
+ *
+ * Example HTML:
+ *
+ * <button type="button" class="ui-multiselect no-ui-button">
+ *     <span class="ui-icon ui-icon-triangle-1-s"></span>
+ *     <span>List options</span>
+ * </button>
+ */
+
+.no-ui-button,
+.no-ui-button.ui-state-default {
+    display: inline-block;
+    border: 0;
+    background: $color-background;
+    background-clip: padding-box;
+    appearance: none;
+    user-select: none;
+}
+
+/**
  * 1. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  * 2. Remove iOS Safari default styling.
  */
 
-button,
+button:not(.no-ui-button),
 [type="reset"],
 [type="submit"],
 input[type="button"],

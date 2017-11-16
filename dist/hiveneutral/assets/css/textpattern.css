@@ -1329,11 +1329,35 @@ button {
     overflow: visible;
   }
   /**
+ * Allow override of standard `button` UI.
+ *
+ * Example HTML:
+ *
+ * <button type="button" class="ui-multiselect no-ui-button">
+ *     <span class="ui-icon ui-icon-triangle-1-s"></span>
+ *     <span>List options</span>
+ * </button>
+ */
+  .no-ui-button,
+  .no-ui-button.ui-state-default {
+    display: inline-block;
+    border: 0;
+    background: #f7f7f7;
+    background-clip: padding-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  /**
  * 1. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  * 2. Remove iOS Safari default styling.
  */
-  button,
+  button:not(.no-ui-button),
   [type="reset"],
   [type="submit"],
   input[type="button"],
@@ -1363,7 +1387,7 @@ button {
         -ms-user-select: none;
             user-select: none;
   }
-  button:hover,
+  button:not(.no-ui-button):hover,
   [type="reset"]:hover,
   [type="submit"]:hover,
   input[type="button"]:hover,
@@ -1376,7 +1400,7 @@ button {
     color: #ffffff;
     text-decoration: none;
   }
-  button:active,
+  button:not(.no-ui-button):active,
   [type="reset"]:active,
   [type="submit"]:active,
   input[type="button"]:active,
@@ -1389,7 +1413,7 @@ button {
     color: #e6e5e5;
     text-decoration: none;
   }
-  button:focus,
+  button:not(.no-ui-button):focus,
   [type="reset"]:focus,
   [type="submit"]:focus,
   input[type="button"]:focus,
@@ -2672,6 +2696,7 @@ button {
  * </div>
  */
   .txp-list-options {
+    position: relative;
     margin: 0.46153846153846em 0 1em;
     float: right;
   }
@@ -5886,20 +5911,21 @@ button {
  */
   .ui-multiselect {
     position: relative;
+  }
+  .ui-multiselect:not(.no-ui-button) {
     width: 2.1538462em !important;
-    margin-right: 0;
-    margin-left: 0;
     text-indent: -9999px;
     white-space: nowrap;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
   }
-  .ui-multiselect .ui-icon {
+  .ui-multiselect:not(.no-ui-button) .ui-icon {
     position: absolute;
     top: 50%;
     left: 50%;
     margin-top: -8px;
     margin-left: -8px;
+  }
+  .ui-multiselect.no-ui-button {
+    width: auto !important;
   }
   .ui-multiselect-menu {
     display: none;
