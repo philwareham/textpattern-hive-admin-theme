@@ -24,14 +24,40 @@ button {
  * </button>
  */
 
-.no-ui-button,
-.no-ui-button.ui-state-default {
-    display: inline-block;
+button.no-ui-button {
+    height: auto;
+    margin: 0;
+    padding: 0;
     border: 0;
-    background: $color-background;
-    background-clip: padding-box;
-    appearance: none;
-    user-select: none;
+    background: transparent;
+    color: $color-link;
+    font-family: $font-body;
+    cursor: hand;
+    user-select: auto;
+
+    &:hover,
+    &:active {
+        background: transparent;
+        color: $color-link-hover;
+        text-decoration: underline;
+        @if $flat-theme < 1 {
+            box-shadow: none;
+        }
+    }
+
+    &:focus {
+        outline: thin solid $color-link-focus;
+    }
+
+    .ui-icon {
+        opacity: 0.66;
+    }
+
+    &:hover .ui-icon,
+    &:active .ui-icon,
+    &:focus .ui-icon {
+        opacity: 1;
+    }
 }
 
 /**

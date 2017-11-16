@@ -1338,19 +1338,35 @@ button {
  *     <span>List options</span>
  * </button>
  */
-  .no-ui-button,
-  .no-ui-button.ui-state-default {
-    display: inline-block;
+  button.no-ui-button {
+    height: auto;
+    margin: 0;
+    padding: 0;
     border: 0;
-    background: #f7f7f7;
-    background-clip: padding-box;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    background: transparent;
+    color: #004cbf;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    cursor: hand;
+    -webkit-user-select: auto;
+       -moz-user-select: auto;
+        -ms-user-select: auto;
+            user-select: auto;
+  }
+  button.no-ui-button:hover, button.no-ui-button:active {
+    background: transparent;
+    color: #0066ff;
+    text-decoration: underline;
+  }
+  button.no-ui-button:focus {
+    outline: thin solid #0066ff;
+  }
+  button.no-ui-button .ui-icon {
+    opacity: 0.66;
+  }
+  button.no-ui-button:hover .ui-icon,
+  button.no-ui-button:active .ui-icon,
+  button.no-ui-button:focus .ui-icon {
+    opacity: 1;
   }
   /**
  * 1. Improve usability and consistency of cursor style between image-type
