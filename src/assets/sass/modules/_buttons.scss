@@ -45,7 +45,8 @@ button.no-ui-button {
         }
     }
 
-    &:focus {
+    &:focus,
+    &.ui-state-active {
         outline: thin solid $color-link-focus;
     }
 

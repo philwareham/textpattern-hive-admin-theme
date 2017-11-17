@@ -46,14 +46,21 @@
     .ui-icon {
         flex: none;
         order: 2;
-        margin: 0 -0.25em 0 0.25em;
     }
 }
 
 .ui-multiselect:not(.no-ui-button) {
+    white-space: nowrap;
+
+    &.ui-state-active {
+        border-color: $color-link-focus;
+        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+    }
+}
+
+.txp-split-buttons .ui-multiselect:not(.no-ui-button) {
     width: 2.1538462em !important; // 28px / 13px `!important` overrides inline `style` attribute content.
     text-indent: -9999px;
-    white-space: nowrap;
 
     .ui-icon {
         position: absolute;

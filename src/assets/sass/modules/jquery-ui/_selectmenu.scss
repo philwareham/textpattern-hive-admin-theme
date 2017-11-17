@@ -55,7 +55,7 @@
 .ui-selectmenu-icon {
     flex: none;
     order: 2;
-    margin: 0 -0.25em 0 0.25em;
+    margin: 0.15em -0.25em 0 0.25em;
 }
 
 .ui-selectmenu-text {
@@ -112,7 +112,7 @@
     }
 
     .ui-selectmenu-icon {
-        margin: 0 0.25em 0 -0.25em;
+        margin: 0.15em 0.25em 0 -0.25em;
     }
 }
 
@@ -145,9 +145,16 @@
         &:focus {
             outline: thin solid $color-link-focus;
         }
-    }
 
-    .ui-selectmenu-icon {
-        margin: 0;
+        .ui-selectmenu-icon {
+            margin: 0;
+            opacity: 0.66;
+        }
+
+        &:hover .ui-selectmenu-icon,
+        &:active .ui-selectmenu-icon,
+        &:focus .ui-selectmenu-icon {
+            opacity: 1;
+        }
     }
 }

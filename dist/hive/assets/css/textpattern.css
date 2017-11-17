@@ -1369,7 +1369,7 @@ button {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  button.no-ui-button:focus {
+  button.no-ui-button:focus, button.no-ui-button.ui-state-active {
     outline: thin solid #0066ff;
   }
   button.no-ui-button .ui-icon {
@@ -5599,7 +5599,7 @@ button {
             flex: none;
     -webkit-box-ordinal-group: 3;
             order: 2;
-    margin: 0 -0.25em 0 0.25em;
+    margin: 0.15em -0.25em 0 0.25em;
   }
   .ui-selectmenu-text {
     display: block;
@@ -5645,7 +5645,7 @@ button {
     border-radius: 0 0.5em 0.5em 0;
   }
   [dir="rtl"] .ui-selectmenu-icon {
-    margin: 0 0.25em 0 -0.25em;
+    margin: 0.15em 0.25em 0 -0.25em;
   }
   /**
  * Selectmenu plain buttons.
@@ -5674,8 +5674,14 @@ button {
   .no-ui-button .ui-selectmenu-button:focus {
     outline: thin solid #0066ff;
   }
-  .no-ui-button .ui-selectmenu-icon {
+  .no-ui-button .ui-selectmenu-button .ui-selectmenu-icon {
     margin: 0;
+    opacity: 0.66;
+  }
+  .no-ui-button .ui-selectmenu-button:hover .ui-selectmenu-icon,
+  .no-ui-button .ui-selectmenu-button:active .ui-selectmenu-icon,
+  .no-ui-button .ui-selectmenu-button:focus .ui-selectmenu-icon {
+    opacity: 1;
   }
   /* Slider
    ========================================================================== */
@@ -6015,14 +6021,19 @@ button {
             flex: none;
     -webkit-box-ordinal-group: 3;
             order: 2;
-    margin: 0 -0.25em 0 0.25em;
   }
   .ui-multiselect:not(.no-ui-button) {
-    width: 2.1538462em !important;
-    text-indent: -9999px;
     white-space: nowrap;
   }
-  .ui-multiselect:not(.no-ui-button) .ui-icon {
+  .ui-multiselect:not(.no-ui-button).ui-state-active {
+    border-color: #0066ff;
+    outline: 2px solid transparent;
+  }
+  .txp-split-buttons .ui-multiselect:not(.no-ui-button) {
+    width: 2.1538462em !important;
+    text-indent: -9999px;
+  }
+  .txp-split-buttons .ui-multiselect:not(.no-ui-button) .ui-icon {
     position: absolute;
     top: 50%;
     left: 50%;
