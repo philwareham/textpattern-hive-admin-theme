@@ -101,6 +101,7 @@
         display: block;
         position: relative;
         padding: 0.30769230769231em 1em 0.30769230769231em 2em; // 4px / 13px + 13px + 4px / 13px + 26px
+        cursor: pointer;
 
         &.ui-state-hover {
             background-color: $color-selected;

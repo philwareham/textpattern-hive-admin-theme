@@ -1356,7 +1356,7 @@ button {
     background: transparent;
     color: #004cbf;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    cursor: hand;
+    cursor: pointer;
     -webkit-user-select: auto;
        -moz-user-select: auto;
         -ms-user-select: auto;
@@ -5658,7 +5658,7 @@ button {
     background: transparent;
     color: #004cbf;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    cursor: hand;
+    cursor: pointer;
     -webkit-user-select: auto;
        -moz-user-select: auto;
         -ms-user-select: auto;
@@ -6059,6 +6059,7 @@ button {
     display: block;
     position: relative;
     padding: 0.30769230769231em 1em 0.30769230769231em 2em;
+    cursor: pointer;
   }
   .ui-multiselect-menu label.ui-state-hover {
     background-color: #e6f0ff;
