@@ -5909,6 +5909,16 @@ button {
  *     <span>Search options</span>
  * </button>
  * <div class="ui-multiselect-menu ui-widget ui-widget-content">
+ *     <div class="ui-widget-header ui-corner-all ui-multiselect-header ui-helper-clearfix">
+ *         <ul class="ui-helper-reset">
+ *             <li>
+ *                 <a class="ui-multiselect-all"><span class="ui-icon ui-icon-check"></span><span>Search all</span></a>
+ *             </li>
+ *             <li class="ui-multiselect-close">
+ *                 <a class="ui-multiselect-close"><span class="ui-icon ui-icon-circle-close"></span></a>
+ *             </li>
+ *         </ul>
+ *     </div>
  *     <ul class="ui-multiselect-checkboxes ui-helper-reset">
  *         <li>
  *             <label class="ui-state-hover">
@@ -5962,6 +5972,13 @@ button {
   }
   .ui-multiselect.no-ui-button {
     width: auto !important;
+  }
+  .ui-multiselect-header {
+    padding: 0.30769230769231em;
+    font-weight: normal;
+  }
+  .ui-multiselect-header .ui-icon {
+    margin: 0 0.230769230769231em;
   }
   .ui-multiselect-close {
     display: none;
