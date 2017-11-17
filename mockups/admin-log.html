@@ -143,63 +143,32 @@
                 <h1 class="txp-heading">Visitor logs</h1>
             </div>
 
-            <div class="txp-layout-4col-3span" id="log_control">
+            <div class="txp-layout-4col-3span">
                 <form class="txp-search" role="search" method="get" action="#">
                     <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search visitor logs…">
-                    <span class="txp-search-buttons">
-                        <button class="txp-search-button">Search</button>
-                        <button class="txp-search-options">Search criteria</button>
+                    <span class="txp-split-buttons">
+                        <button class="txp-search-button">Search</button><select class="txp-search-dropdown" name="search-crit" multiple="multiple">
+                            <option value="search-crit1" selected>IP</option>
+                            <option value="search-crit2" selected>Host</option>
+                            <option value="search-crit3" selected>Page</option>
+                            <option value="search-crit4" selected>Referrer</option>
+                            <option value="search-crit5" selected>Method</option>
+                            <option value="search-crit6" selected>Status</option>
+                        </select>
                     </span>
-                    <ul class="txp-dropdown">
-                        <li>
-                            <div>
-                                <input id="search-crit1" name="search-crit1" type="checkbox">
-                                <label for="search-crit1">Search all</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input id="search-crit2" name="search-crit2" type="checkbox">
-                                <label for="search-crit2">IP</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input id="search-crit3" name="search-crit3" type="checkbox">
-                                <label for="search-crit3">Host</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input id="search-crit4" name="search-crit4" type="checkbox">
-                                <label for="search-crit4">Page</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input id="search-crit5" name="search-crit5" type="checkbox">
-                                <label for="search-crit5">Referrer</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input id="search-crit6" name="search-crit6" type="checkbox">
-                                <label for="search-crit6">Method</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input id="search-crit7" name="search-crit7" type="checkbox">
-                                <label for="search-crit7">Status</label>
-                            </div>
-                        </li>
-                    </ul>
                 </form>
             </div>
 
             <div class="txp-layout-1col" id="log_container">
                 <div class="txp-list-options">
-                    <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+                    <select class="txp-list-options-dropdown" name="list-col-options" multiple="multiple">
+                        <option value="txp-list-col-ip" selected>IP</option>
+                        <option value="txp-list-col-host" selected>Host</option>
+                        <option value="txp-list-col-page" selected>Page</option>
+                        <option value="txp-list-col-refer" selected>Referrer</option>
+                        <option value="txp-list-col-method" selected>Method</option>
+                        <option value="txp-list-col-status" selected>Status</option>
+                    </select>
                 </div>
 
                 <form class="multi_edit_form" id="log_form" name="longform" method="post" action="#">

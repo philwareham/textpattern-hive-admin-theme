@@ -145,6 +145,7 @@
 
             <div class="txp-layout-4col-3span">
                 <form class="txp-search filtered" role="search" method="get" action="#">
+                    <span class="txp-search-clear"><a href="#">Clear search</a></span>
                     <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search links…">
                     <span class="txp-split-buttons">
                         <button class="txp-search-button">Search</button><select class="txp-search-dropdown" name="search-crit" multiple="multiple">
@@ -163,8 +164,16 @@
                 <div class="txp-control-panel">
                     <a class="txp-button" href="secondary/content-link_edit.html">Create new link</a>
                 </div>
+
                 <div class="txp-list-options">
-                    <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+                    <select class="txp-list-options-dropdown" name="list-col-options" multiple="multiple">
+                        <option value="txp-list-col-name" selected>Name</option>
+                        <option value="txp-list-col-description" selected>Description</option>
+                        <option value="txp-list-col-category" selected>Category</option>
+                        <option value="txp-list-col-url" selected>URL</option>
+                        <option value="txp-list-col-created" selected>Date</option>
+                        <option value="txp-list-col-author" selected>Author</option>
+                    </select>
                 </div>
 
                 <form class="multi_edit_form" id="links_form" name="longform" method="post" action="#">
