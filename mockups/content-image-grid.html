@@ -6,6 +6,7 @@
     <title>Images - My Site &#124; Textpattern CMS</title>
     <script src="../docs/assets/js/jquery.js"></script>
     <script src="../docs/assets/js/jquery-ui.js"></script>
+    <script src="../docs/assets/js/jquery.multiselect.js"></script>
     <link rel="stylesheet" href="../dist/hive/assets/css/textpattern.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="generator" content="Textpattern CMS">
@@ -142,57 +143,19 @@
                 <h1 class="txp-heading">Images</h1>
             </div>
 
-            <div class="txp-layout-4col-3span" id="image_control">
-                <form class="txp-search" role="search" method="get" action="#">
-                    <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search images…">
-                    <span class="txp-search-buttons">
-                        <button class="txp-search-button">Search</button>
-                        <button class="txp-search-options">Search criteria</button>
+            <div class="txp-layout-4col-3span">
+                <form class="txp-search filtered" role="search" method="get" action="#">
+                    <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search links…">
+                    <span class="txp-split-buttons">
+                        <button class="txp-search-button">Search</button><select class="txp-search-dropdown" name="search-crit" multiple="multiple">
+                            <option value="search-crit1" selected>ID#</option>
+                            <option value="search-crit2" selected>Name</option>
+                            <option value="search-crit3" selected>Description</option>
+                            <option value="search-crit4" selected>URL</option>
+                            <option value="search-crit5">Category</option>
+                            <option value="search-crit6">Author</option>
+                        </select>
                     </span>
-                    <ul class="txp-dropdown">
-                        <li>
-                            <div>
-                                <input id="search-crit1" name="search-crit1" type="checkbox">
-                                <label for="search-crit1">Search all</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input id="search-crit2" name="search-crit2" type="checkbox">
-                                <label for="search-crit2">ID#</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input id="search-crit3" name="search-crit3" type="checkbox">
-                                <label for="search-crit3">Name</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input id="search-crit4" name="search-crit4" type="checkbox">
-                                <label for="search-crit4">Category</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input id="search-crit5" name="search-crit5" type="checkbox">
-                                <label for="search-crit5">Author</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input id="search-crit6" name="search-crit6" type="checkbox">
-                                <label for="search-crit6">Alternate text</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <input id="search-crit7" name="search-crit7" type="checkbox">
-                                <label for="search-crit7">Caption</label>
-                            </div>
-                        </li>
-                    </ul>
                 </form>
             </div>
 

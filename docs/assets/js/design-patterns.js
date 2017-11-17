@@ -274,7 +274,11 @@ $(function ()
 
     $('.jquery-ui-tooltip').tooltip();
 
-    // Split search button example.
+    // MultiSelect plugin
+
+    $('.jquery-ui-multiselect').multiselect();
+
+    // MultiSelect plugin - Split search button example.
 
     var search = $('.txp-search');
 
@@ -293,8 +297,7 @@ $(function ()
             height: 'auto',
             minWidth: null,
             menuWidth: 234,
-            header: false,
-            showCheckAll: false,
+            checkAllText: 'Search all',
             showUncheckAll: false,
             selectedText: 'Search options',
             noneSelectedText: 'Search options',
@@ -309,8 +312,7 @@ $(function ()
             height: 'auto',
             minWidth: null,
             menuWidth: 234,
-            header: false,
-            showCheckAll: false,
+            checkAllText: 'Search all',
             showUncheckAll: false,
             selectedText: 'Search options',
             noneSelectedText: 'Search options',
@@ -321,7 +323,7 @@ $(function ()
         });
     };
 
-    // List options dropdown example.
+    // MultiSelect plugin - List options dropdown example.
 
     if (langdir === 'rtl') {
         $('.txp-list-options-dropdown').multiselect({

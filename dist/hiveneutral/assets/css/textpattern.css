@@ -5926,7 +5926,16 @@ button {
  * </div>
  */
   .ui-multiselect {
+    display: -webkit-inline-box;
+    display: inline-flex;
     position: relative;
+  }
+  .ui-multiselect .ui-icon {
+    -webkit-box-flex: 0;
+            flex: none;
+    -webkit-box-ordinal-group: 3;
+            order: 2;
+    margin: 0 -0.25em 0 0.25em;
   }
   .ui-multiselect:not(.no-ui-button) {
     width: 2.1538462em !important;
@@ -5942,6 +5951,9 @@ button {
   }
   .ui-multiselect.no-ui-button {
     width: auto !important;
+  }
+  .ui-multiselect-close {
+    display: none;
   }
   .ui-multiselect-menu {
     display: none;
