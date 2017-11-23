@@ -144,14 +144,37 @@
 
             <div class="txp-layout-4col-3span">
                 <form class="txp-search" role="search" method="get" action="#">
-                    <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search themes…">
-                    <span class="txp-split-buttons">
-                        <button class="txp-search-button">Search</button><select class="txp-search-dropdown" name="search-crit" multiple="multiple">
-                            <option value="search-crit1" selected>Name</option>
-                            <option value="search-crit2" selected>Title</option>
-                            <option value="search-crit3" selected>Author</option>
-                        </select>
+                    <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search sections…">
+                    <span class="txp-search-buttons">
+                        <button class="txp-search-button">Search</button>
+                        <button class="txp-search-options">Search options</button>
                     </span>
+                    <ul class="txp-dropdown">
+                        <li>
+                            <div>
+                                <input id="search-all0" name="search-all0" type="checkbox">
+                                <label for="search-all0">Search all</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox active" id="search-name0" name="search-name0" type="checkbox" value="name">
+                                <label for="search-name0">Name</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox active" id="search-title0" name="search-title0" type="checkbox" value="title">
+                                <label for="search-title0">Title</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input class="checkbox active" id="search-author0" name="search-author0" type="checkbox" value="author">
+                                <label for="search-author0">Author</label>
+                            </div>
+                        </li>
+                    </ul>
                 </form>
             </div>
 
@@ -159,18 +182,8 @@
                 <div class="txp-control-panel">
                     <a class="txp-button" href="secondary/presentation-skin_edit.html">Create new theme</a>
                 </div>
-
                 <div class="txp-list-options">
-                    <select class="txp-list-options-dropdown" name="list-col-options" multiple="multiple">
-                        <option value="txp-list-col-name" selected>Name</option>
-                        <option value="txp-list-col-title" selected>Title</option>
-                        <option value="txp-list-col-version" selected>Version</option>
-                        <option value="txp-list-col-author" selected>Author</option>
-                        <option value="txp-list-col-section_count" selected>Sections</option>
-                        <option value="txp-list-col-page_count" selected>Pages</option>
-                        <option value="txp-list-col-form_count" selected>Forms</option>
-                        <option value="txp-list-col-css_count" selected>Styles</option>
-                    </select>
+                    <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
                 </div>
 
                 <form class="multi_edit_form" id="section_form" name="longform" method="post" action="#">

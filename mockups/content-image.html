@@ -142,19 +142,57 @@
                 <h1 class="txp-heading">Images</h1>
             </div>
 
-            <div class="txp-layout-4col-3span">
+            <div class="txp-layout-4col-3span" id="image_control">
                 <form class="txp-search" role="search" method="get" action="#">
                     <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search images…">
-                    <span class="txp-split-buttons">
-                        <button class="txp-search-button">Search</button><select class="txp-search-dropdown" name="search-crit" multiple="multiple">
-                            <option value="search-crit1" selected>ID#</option>
-                            <option value="search-crit2" selected>Name</option>
-                            <option value="search-crit3" selected>Category</option>
-                            <option value="search-crit4" selected>Author</option>
-                            <option value="search-crit5" selected>Alternate text</option>
-                            <option value="search-crit6" selected>Caption</option>
-                        </select>
+                    <span class="txp-search-buttons">
+                        <button class="txp-search-button">Search</button>
+                        <button class="txp-search-options">Search options</button>
                     </span>
+                    <ul class="txp-dropdown">
+                        <li>
+                            <div>
+                                <input id="search-crit1" name="search-crit1" type="checkbox">
+                                <label for="search-crit1">Search all</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit2" name="search-crit2" type="checkbox">
+                                <label for="search-crit2">ID#</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit3" name="search-crit3" type="checkbox">
+                                <label for="search-crit3">Name</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit4" name="search-crit4" type="checkbox">
+                                <label for="search-crit4">Category</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit5" name="search-crit5" type="checkbox">
+                                <label for="search-crit5">Author</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit6" name="search-crit6" type="checkbox">
+                                <label for="search-crit6">Alternate text</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit7" name="search-crit7" type="checkbox">
+                                <label for="search-crit7">Caption</label>
+                            </div>
+                        </li>
+                    </ul>
                 </form>
             </div>
 
@@ -168,17 +206,8 @@
                         </div>
                     </form>
                 </div>
-
                 <div class="txp-list-options">
-                    <select class="txp-list-options-dropdown" name="list-col-options" multiple="multiple">
-                        <option value="txp-list-col-preview" selected>Preview</option>
-                        <option value="txp-list-col-name" selected>Name</option>
-                        <option value="txp-list-col-created" selected>Date</option>
-                        <option value="txp-list-col-thumbnail" selected>Thumbnail</option>
-                        <option value="txp-list-col-tag-build" selected>Tags</option>
-                        <option value="txp-list-col-category" selected>Category</option>
-                        <option value="txp-list-col-author" selected>Author</option>
-                    </select>
+                    <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
                     <a href="content-image.html"><span class="ui-icon ui-extra-icon-list"></span> List view</a>
                     <a href="content-image-grid.html"><span class="ui-icon ui-extra-icon-grid"></span> Grid view</a>
                 </div>

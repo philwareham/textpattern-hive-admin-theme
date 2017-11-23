@@ -274,11 +274,7 @@ $(function ()
 
     $('.jquery-ui-tooltip').tooltip();
 
-    // MultiSelect plugin
-
-    $('.jquery-ui-multiselect').multiselect();
-
-    // MultiSelect plugin - Split search button example.
+    // Split button search example.
 
     var search = $('.txp-search');
 
@@ -291,74 +287,102 @@ $(function ()
         alert('Running the search action');
     });
 
-    if (langdir === 'rtl') {
-        $('.txp-search-dropdown').multiselect({
-            appendTo: '.txp-search',
-            height: 'auto',
-            minWidth: null,
-            menuWidth: 234,
-            checkAllText: 'Search all',
-            showUncheckAll: false,
-            selectedText: 'Search options',
-            noneSelectedText: 'Search options',
-            position: {
+    search.find('.txp-search-options-button').button({
+        showLabel: false,
+        icon: 'ui-icon-triangle-1-s'
+    })
+    .click(function (e)
+    {
+        if (langdir === 'rtl') {
+            var menu = search.find('.txp-dropdown').toggle().position({
                 my: 'left top',
-                at: 'left bottom'
-            }
-        });
-    } else {
-        $('.txp-search-dropdown').multiselect({
-            appendTo: '.txp-search',
-            height: 'auto',
-            minWidth: null,
-            menuWidth: 234,
-            checkAllText: 'Search all',
-            showUncheckAll: false,
-            selectedText: 'Search options',
-            noneSelectedText: 'Search options',
-            position: {
+                at: 'left bottom',
+                of: this
+            });
+        } else {
+            var menu = search.find('.txp-dropdown').toggle().position({
                 my: 'right top',
-                at: 'right bottom'
-            }
+                at: 'right bottom',
+                of: this
+            });
+        };
+
+        $(document).one('click blur', function ()
+        {
+            menu.hide();
         });
-    };
 
-    // MultiSelect plugin - List options dropdown example.
+        return false;
+    });
 
-    if (langdir === 'rtl') {
-        $('.txp-list-options-dropdown').multiselect({
-            appendTo: '.txp-list-options',
-            height: 'auto',
-            minWidth: null,
-            menuWidth: 234,
-            header: false,
-            showCheckAll: false,
-            showUncheckAll: false,
-            selectedText: 'List options',
-            noneSelectedText: 'List options',
-            classes: 'no-ui-button',
-            position: {
+    search.find('.txp-search-buttons').controlgroup();
+
+    search.find('.txp-dropdown').hide().menu().click(function(e) {
+        e.stopPropagation();
+    });
+
+    // List options dropdown example.
+
+    var listoptions = $('.txp-list-options-button');
+
+    listoptions.click(function (e)
+    {
+        if (langdir === 'rtl') {
+            var menu = $('.txp-list-options-list').toggle().position({
                 my: 'left top',
-                at: 'left bottom'
-            }
-        });
-    } else {
-        $('.txp-list-options-dropdown').multiselect({
-            appendTo: '.txp-list-options',
-            height: 'auto',
-            minWidth: null,
-            menuWidth: 234,
-            header: false,
-            showCheckAll: false,
-            showUncheckAll: false,
-            selectedText: 'List options',
-            noneSelectedText: 'List options',
-            classes: 'no-ui-button',
-            position: {
+                at: 'left bottom',
+                of: this
+            });
+        } else {
+            var menu = $('.txp-list-options-list').toggle().position({
                 my: 'right top',
-                at: 'right bottom'
-            }
+                at: 'right bottom',
+                of: this
+            });
+        };
+
+        $(document).one('click blur', function ()
+        {
+            menu.hide();
         });
-    };
+
+        return false;
+    });
+
+    $('.txp-list-options-list').hide().menu().click(function(e) {
+        e.stopPropagation();
+    });
+
+    // Text filter options dropdown example.
+
+    var textfilteroptions = $('.txp-textfilter-options-button');
+
+    textfilteroptions.click(function (e)
+    {
+        if (langdir === 'rtl') {
+            var menu = $('.txp-textfilter-options-list').toggle().position({
+                my: 'left top',
+                at: 'left bottom',
+                of: this
+            });
+        } else {
+            var menu = $('.txp-textfilter-options-list').toggle().position({
+                my: 'right top',
+                at: 'right bottom',
+                of: this
+            });
+        };
+
+        $(document).one('click blur', function ()
+        {
+            menu.hide();
+        });
+
+        return false;
+    });
+
+    $('.txp-textfilter-options-list').hide().menu().click(function(e) {
+        e.stopPropagation();
+    });
 
 });

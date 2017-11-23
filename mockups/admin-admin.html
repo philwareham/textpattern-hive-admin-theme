@@ -148,18 +148,51 @@
                 <h1 class="txp-heading">Users</h1>
             </div>
 
-            <div class="txp-layout-4col-3span">
+            <div class="txp-layout-4col-3span" id="users_control">
                 <form class="txp-search" role="search" method="get" action="#">
                     <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search users…">
-                    <span class="txp-split-buttons">
-                        <button class="txp-search-button">Search</button><select class="txp-search-dropdown" name="search-crit" multiple="multiple">
-                            <option value="search-crit1" selected>ID#</option>
-                            <option value="search-crit2" selected>Login</option>
-                            <option value="search-crit3" selected>Real name</option>
-                            <option value="search-crit4" selected>Email</option>
-                            <option value="search-crit5" selected>Privileges</option>
-                        </select>
+                    <span class="txp-search-buttons">
+                        <button class="txp-search-button">Search</button>
+                        <button class="txp-search-options">Search options</button>
                     </span>
+                    <ul class="txp-dropdown">
+                        <li>
+                            <div>
+                                <input id="search-crit1" name="search-crit1" type="checkbox">
+                                <label for="search-crit1">Search all</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit2" name="search-crit2" type="checkbox">
+                                <label for="search-crit2">ID#</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit3" name="search-crit3" type="checkbox">
+                                <label for="search-crit3">Login</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit4" name="search-crit4" type="checkbox">
+                                <label for="search-crit4">Real name</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit5" name="search-crit5" type="checkbox">
+                                <label for="search-crit5">Email</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit6" name="search-crit6" type="checkbox">
+                                <label for="search-crit6">Privileges</label>
+                            </div>
+                        </li>
+                    </ul>
                 </form>
             </div>
 
@@ -168,14 +201,8 @@
                     <a class="txp-button" href="secondary/admin-admin_edit.html">Add new author</a>
                     <a class="txp-button" href="secondary/admin-password_edit.html">Change your password</a>
                 </div>
-
                 <div class="txp-list-options">
-                    <select class="txp-list-options-dropdown" name="list-col-options" multiple="multiple">
-                        <option value="txp-list-col-real-name" selected>Real name</option>
-                        <option value="txp-list-col-email" selected>Email</option>
-                        <option value="txp-list-col-privs" selected>Privileges</option>
-                        <option value="txp-list-col-ast-login" selected>Last login</option>
-                    </select>
+                    <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
                 </div>
 
                 <form class="multi_edit_form" id="users_form" name="longform" method="post" action="#">

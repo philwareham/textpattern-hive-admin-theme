@@ -143,20 +143,62 @@
             </div>
 
             <div class="txp-layout-4col-3span">
-                <form class="txp-search filtered" role="search" method="get" action="#">
-                    <span class="txp-search-clear"><a href="#">Clear search</a></span>
+                <form class="txp-search" role="search" method="get" action="#">
                     <input class="txp-search-input" name="crit" type="search" size="24" placeholder="Search sections…">
-                    <span class="txp-split-buttons">
-                        <button class="txp-search-button">Search</button><select class="txp-search-dropdown" name="search-crit" multiple="multiple">
-                            <option value="search-crit1" selected>Name</option>
-                            <option value="search-crit2">Title</option>
-                            <option value="search-crit3">Page</option>
-                            <option value="search-crit4">Style</option>
-                            <option value="search-crit5">On front page</option>
-                            <option value="search-crit6">Syndicate</option>
-                            <option value="search-crit7">Include in site search</option>
-                        </select>
+                    <span class="txp-search-buttons">
+                        <button class="txp-search-button">Search</button>
+                        <button class="txp-search-options">Search options</button>
                     </span>
+                    <ul class="txp-dropdown">
+                        <li>
+                            <div>
+                                <input id="search-crit1" name="search-crit1" type="checkbox">
+                                <label for="search-crit1">Search all</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit2" name="search-crit2" type="checkbox">
+                                <label for="search-crit2">Name</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit3" name="search-crit3" type="checkbox">
+                                <label for="search-crit3">Title</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit4" name="search-crit4" type="checkbox">
+                                <label for="search-crit4">Page</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit5" name="search-crit5" type="checkbox">
+                                <label for="search-crit5">Style</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit6" name="search-crit6" type="checkbox">
+                                <label for="search-crit6">On front page</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit7" name="search-crit7" type="checkbox">
+                                <label for="search-crit7">Syndicate</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <input id="search-crit8" name="search-crit8" type="checkbox">
+                                <label for="search-crit8">Include in site search</label>
+                            </div>
+                        </li>
+                    </ul>
                 </form>
             </div>
 
@@ -172,18 +214,8 @@
                         </select>
                     </form>
                 </div>
-
                 <div class="txp-list-options">
-                    <select class="txp-list-options-dropdown" name="list-col-options" multiple="multiple">
-                        <option value="txp-list-col-name" selected>Name</option>
-                        <option value="txp-list-col-title" selected>Title</option>
-                        <option value="txp-list-col-page" selected>Page</option>
-                        <option value="txp-list-col-style" selected>Style</option>
-                        <option value="txp-list-col-frontpage" selected>On front page</option>
-                        <option value="txp-list-col-syndicate" selected>Syndicate</option>
-                        <option value="txp-list-col-searchable" selected>Include in site search</option>
-                        <option value="txp-list-col-article_count" selected>Articles</option>
-                    </select>
+                    <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
                 </div>
 
                 <form class="multi_edit_form" id="section_form" name="longform" method="post" action="#">

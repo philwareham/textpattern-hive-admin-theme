@@ -193,8 +193,7 @@ ul.nav-tertiary {
 }
 
 @if $border-radius > 0 {
-    .nav-tertiary,
-    .txp-split-buttons {
+    .nav-tertiary {
         > * {
             border-radius: 0;
         }
@@ -212,8 +211,7 @@ ul.nav-tertiary {
         }
     }
 
-    [dir="rtl"] .nav-tertiary,
-    [dir="rtl"] .txp-split-buttons {
+    [dir="rtl"] .nav-tertiary {
         > :first-child,
         > :first-child > a,
         > :first-child > span {
@@ -270,7 +268,7 @@ ul.nav-tertiary {
  *
  * <form class="txp-search">
  *     <input class="txp-search-input" type="search" size="24">
- *     <span class="txp-split-buttons">
+ *     <span class="txp-search-buttons">
  *         <button class="txp-search-button">Search</button>
  *         ...
  *     </span>
