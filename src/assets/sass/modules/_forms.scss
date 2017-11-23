@@ -59,7 +59,7 @@ textarea,
     /* 2 */
     margin: 0;
     color: $color-text-form;
-    font-family: $font-form;
+    font-family: inherit;
     /* 3 */
     font-size: $base-font-size;
     line-height: $base-line-height;
@@ -424,4 +424,12 @@ progress {
     display: inline-block;
     /* 2 */
     vertical-align: baseline;
+}
+
+/**
+ * Reverse the progress direction in RTL languages.
+ */
+
+[dir="rtl"] progress {
+    animation-direction: reverse;
 }

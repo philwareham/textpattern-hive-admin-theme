@@ -362,17 +362,17 @@ button {
   /**
  * Preferred font for Japanese language.
  */
-  html[lang="ja-jp"] {
+  html[lang="ja"] {
     font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
   }
   /**
  * Preferred font for Korean language.
  */
-  html[lang="ko-kr"] {
+  html[lang="ko"] {
     font-family: GulimChe, Gulim, sans-serif;
   }
   /**
- * Preferred font for Chinese (PRC) language.
+ * Preferred font for simplified Chinese (PRC) language.
  */
   html[lang="zh-cn"] {
     font-family: SimHei, sans-serif;
@@ -1006,7 +1006,7 @@ button {
     /* 2 */
     margin: 0;
     color: #000000;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: inherit;
     /* 3 */
     font-size: 13px;
     line-height: 20px;
@@ -1326,6 +1326,13 @@ button {
     /* 2 */
     vertical-align: baseline;
   }
+  /**
+ * Reverse the progress direction in RTL languages.
+ */
+  [dir="rtl"] progress {
+    -webkit-animation-direction: reverse;
+            animation-direction: reverse;
+  }
   /* Buttons
    ========================================================================== */
   /**
@@ -1355,7 +1362,7 @@ button {
     border: 0;
     background: transparent;
     color: #004cbf;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: inherit;
     cursor: pointer;
     -webkit-user-select: auto;
        -moz-user-select: auto;
@@ -4733,7 +4740,7 @@ button {
     border: 1px solid #cccccc;
     background-clip: padding-box;
     color: #333333;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: inherit;
     /* 1 */
     font-size: 13px;
     line-height: 20px;
@@ -5545,6 +5552,13 @@ button {
   .ui-progressbar-indeterminate .ui-progressbar-value {
     background-color: #cccccc;
   }
+  /**
+ * Reverse the progressbar direction in RTL languages.
+ */
+  [dir="rtl"] .ui-progressbar-value {
+    -webkit-animation-direction: reverse;
+            animation-direction: reverse;
+  }
   /* Selectmenu
    ========================================================================== */
   /**
@@ -5657,7 +5671,7 @@ button {
     border: 0;
     background: transparent;
     color: #004cbf;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: inherit;
     cursor: pointer;
     -webkit-user-select: auto;
        -moz-user-select: auto;
