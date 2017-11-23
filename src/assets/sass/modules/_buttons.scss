@@ -14,60 +14,12 @@ button {
 }
 
 /**
- * Allow override of standard `button` UI.
- *
- * Example HTML:
- *
- * <button type="button" class="ui-multiselect no-ui-button">
- *     <span class="ui-icon ui-icon-triangle-1-s"></span>
- *     <span>List options</span>
- * </button>
- */
-
-button.no-ui-button {
-    height: auto;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    color: $color-link;
-    font-family: inherit;
-    cursor: pointer;
-    user-select: auto;
-
-    &:hover,
-    &:active {
-        background: transparent;
-        color: $color-link-hover;
-        text-decoration: underline;
-        @if $flat-theme < 1 {
-            box-shadow: none;
-        }
-    }
-
-    &:focus,
-    &.ui-state-active {
-        outline: thin solid $color-link-focus;
-    }
-
-    .ui-icon {
-        opacity: 0.66;
-    }
-
-    &:hover .ui-icon,
-    &:active .ui-icon,
-    &:focus .ui-icon {
-        opacity: 1;
-    }
-}
-
-/**
  * 1. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  * 2. Remove iOS Safari default styling.
  */
 
-button:not(.no-ui-button),
+button,
 [type="reset"],
 [type="submit"],
 input[type="button"],
@@ -287,7 +239,7 @@ ul.nav-tertiary {
  */
 
 .nav-tertiary .navlink-active,
-.filtered .ui-multiselect {
+.filtered button.ui-corner-right {
     @include gradient-linear($color-button-selected-gradient-from, $color-button-selected-gradient-to);
 
     border-color: $color-button-selected-border;

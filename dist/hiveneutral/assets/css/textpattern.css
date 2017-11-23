@@ -1337,51 +1337,11 @@ button {
     overflow: visible;
   }
   /**
- * Allow override of standard `button` UI.
- *
- * Example HTML:
- *
- * <button type="button" class="ui-multiselect no-ui-button">
- *     <span class="ui-icon ui-icon-triangle-1-s"></span>
- *     <span>List options</span>
- * </button>
- */
-  button.no-ui-button {
-    height: auto;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    color: #004cbf;
-    font-family: inherit;
-    cursor: pointer;
-    -webkit-user-select: auto;
-       -moz-user-select: auto;
-        -ms-user-select: auto;
-            user-select: auto;
-  }
-  button.no-ui-button:hover, button.no-ui-button:active {
-    background: transparent;
-    color: #0066ff;
-    text-decoration: underline;
-  }
-  button.no-ui-button:focus, button.no-ui-button.ui-state-active {
-    outline: thin solid #0066ff;
-  }
-  button.no-ui-button .ui-icon {
-    opacity: 0.66;
-  }
-  button.no-ui-button:hover .ui-icon,
-  button.no-ui-button:active .ui-icon,
-  button.no-ui-button:focus .ui-icon {
-    opacity: 1;
-  }
-  /**
  * 1. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  * 2. Remove iOS Safari default styling.
  */
-  button:not(.no-ui-button),
+  button,
   [type="reset"],
   [type="submit"],
   input[type="button"],
@@ -1411,7 +1371,7 @@ button {
         -ms-user-select: none;
             user-select: none;
   }
-  button:not(.no-ui-button):hover,
+  button:hover,
   [type="reset"]:hover,
   [type="submit"]:hover,
   input[type="button"]:hover,
@@ -1424,7 +1384,7 @@ button {
     color: #ffffff;
     text-decoration: none;
   }
-  button:not(.no-ui-button):active,
+  button:active,
   [type="reset"]:active,
   [type="submit"]:active,
   input[type="button"]:active,
@@ -1437,7 +1397,7 @@ button {
     color: #e6e5e5;
     text-decoration: none;
   }
-  button:not(.no-ui-button):focus,
+  button:focus,
   [type="reset"]:focus,
   [type="submit"]:focus,
   input[type="button"]:focus,
@@ -1599,22 +1559,22 @@ button {
  * </p>
  */
   .nav-tertiary .navlink-active,
-  .filtered .ui-multiselect {
+  .filtered button.ui-corner-right {
     background-color: #9dc8ef;
     border-color: #6faee7;
   }
   .nav-tertiary .navlink-active:hover,
-  .filtered .ui-multiselect:hover {
+  .filtered button.ui-corner-right:hover {
     background-color: #a6cdf0;
     border-color: #2d89dd;
   }
   .nav-tertiary .navlink-active:active,
-  .filtered .ui-multiselect:active {
+  .filtered button.ui-corner-right:active {
     background-color: #87bceb;
     border-color: #2d89dd;
   }
   .nav-tertiary .navlink-active:focus,
-  .filtered .ui-multiselect:focus {
+  .filtered button.ui-corner-right:focus {
     border-color: #0066ff;
   }
   /**
@@ -2630,6 +2590,43 @@ button {
             clip-path: inset(50%);
   }
   /**
+ * Drop down lists.
+ *
+ * 1. Ensure dropdowns are hidden at page load (prevents content 'jumping').
+ *
+ * <ul class="txp-dropdown">
+ *     <li>
+ *         <div>
+ *             <input class="checkbox" type="checkbox">
+ *             <label>Search all</label>
+ *         </div>
+ *     </li>
+ *     <li>
+ *         <div>
+ *             <input class="checkbox active" type="checkbox">
+ *             <label>ID#</label>
+ *         </div>
+ *     </li>
+ * </ul>
+ */
+  .txp-dropdown {
+    /* 1 */
+    display: none;
+    position: absolute;
+    width: 18em;
+    z-index: 100;
+  }
+  .txp-dropdown .checkbox {
+    vertical-align: -0.23076923076923em;
+  }
+  .txp-dropdown .checkbox + label {
+    display: inline-block;
+    width: 85%;
+    padding: 0.23076923076923em 0.30769230769231em;
+    cursor: pointer;
+    vertical-align: text-top;
+  }
+  /**
  * Search widget at top of lists.
  *
  * Appears on:
@@ -2643,10 +2640,7 @@ button {
  *     <input class="txp-search-input" type="search" size="24">
  *     <span class="txp-split-buttons">
  *         <button class="txp-search-button">Search</button>
- *         <button class="ui-multiselect">
- *             <span class="ui-icon ui-icon-triangle-1-s"></span>
- *             <span>Search options</span>
- *         </button>
+ *         <button class="txp-search-options">Search options</button>
  *     </span>
  * </form>
  */
@@ -2656,6 +2650,12 @@ button {
     -webkit-box-pack: end;
             justify-content: flex-end;
     margin: 1em 0;
+  }
+  .txp-search .ui-controlgroup {
+    flex-wrap: nowrap;
+  }
+  .txp-search .txp-dropdown {
+    z-index: 101;
   }
   .txp-search-clear {
     -webkit-box-flex: 1;
@@ -5907,143 +5907,6 @@ button {
     padding: 0.5em 1em;
     z-index: 9999;
   }
-  /* Multi-select menu
-   ========================================================================== */
-  /**
- * jQuery UI MultiSelect Widget (a jQuery UI plugin)
- *
- * Some classes and HTML elements generally added via JavaScript, more info -
- * https://github.com/ehynds/jquery-ui-multiselect-widget
- *
- * 1. Workaround for IE 11 and Edge incorrectly displaying a list marker.
- *
- * Example HTML:
- *
- * <button class="ui-multiselect">
- *     <span class="ui-icon ui-icon-triangle-1-s"></span>
- *     <span>Search options</span>
- * </button>
- * <div class="ui-multiselect-menu ui-widget ui-widget-content">
- *     <div class="ui-widget-header ui-corner-all ui-multiselect-header ui-helper-clearfix">
- *         <ul class="ui-helper-reset">
- *             <li>
- *                 <a class="ui-multiselect-all"><span class="ui-icon ui-icon-check"></span><span>Search all</span></a>
- *             </li>
- *             <li class="ui-multiselect-close">
- *                 <a class="ui-multiselect-close"><span class="ui-icon ui-icon-circle-close"></span></a>
- *             </li>
- *         </ul>
- *     </div>
- *     <ul class="ui-multiselect-checkboxes ui-helper-reset">
- *         <li>
- *             <label class="ui-state-hover">
- *                 <input type="checkbox">
- *                 <span>Search all</span>
- *             </label>
- *         </li>
- *         <li>
- *             <label>
- *                 <input type="checkbox">
- *                 <span>Option 1</span>
- *             </label>
- *         </li>
- *         <li>
- *             <label>
- *                 <input type="checkbox">
- *                 <span>Option 2</span>
- *             </label>
- *         </li>
- *     </ul>
- * </div>
- */
-  .ui-multiselect {
-    display: -webkit-inline-box;
-    display: inline-flex;
-    position: relative;
-  }
-  .ui-multiselect .ui-icon {
-    -webkit-box-flex: 0;
-            flex: none;
-    -webkit-box-ordinal-group: 3;
-            order: 2;
-  }
-  .ui-multiselect:not(.no-ui-button) {
-    white-space: nowrap;
-  }
-  .ui-multiselect:not(.no-ui-button).ui-state-active {
-    border-color: #0066ff;
-    outline: 2px solid transparent;
-  }
-  .txp-split-buttons .ui-multiselect:not(.no-ui-button) {
-    width: 2.1538462em !important;
-    text-indent: -9999px;
-  }
-  .txp-split-buttons .ui-multiselect:not(.no-ui-button) .ui-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -8px;
-    margin-left: -8px;
-  }
-  .ui-multiselect.no-ui-button {
-    width: auto !important;
-  }
-  .ui-multiselect-header {
-    padding: 0.30769230769231em;
-    font-weight: normal;
-  }
-  .ui-multiselect-header .ui-icon {
-    margin: 0 0.230769230769231em;
-  }
-  .ui-multiselect-close {
-    display: none;
-  }
-  .ui-multiselect-menu {
-    display: none;
-    position: absolute;
-    width: 18em !important;
-    outline: 0;
-    z-index: 100;
-  }
-  .ui-multiselect-menu ul {
-    list-style: none;
-  }
-  .ui-multiselect-menu li {
-    display: block;
-    margin: 0;
-    cursor: pointer;
-    /* 1 */
-    list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
-  }
-  .ui-multiselect-menu label {
-    display: block;
-    position: relative;
-    padding: 0.30769230769231em 1em 0.30769230769231em 2em;
-    cursor: pointer;
-  }
-  .ui-multiselect-menu label.ui-state-hover {
-    background-color: #eaf3fc;
-  }
-  .ui-multiselect-menu input {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0.615384615384615em;
-    margin: auto 0;
-  }
-  /**
- * MultiSelect Widget RTL support.
- */
-  [dir="rtl"] .ui-multiselect-menu label {
-    padding: 0.30769230769231em 2em 0.30769230769231em 1em;
-  }
-  [dir="rtl"] .ui-multiselect-menu input {
-    right: 0.615384615384615em;
-    left: auto;
-  }
-  [dir="rtl"] .ui-multiselect-checkboxes {
-    padding: 0;
-  }
 }
 
 /* ==========================================================================
@@ -6607,12 +6470,6 @@ button {
  */
   .txp-prefs-group.ui-tabs-panel {
     display: block !important;
-  }
-  /**
- * Don't print jQuery UI multi-select menus.
- */
-  .ui-multiselect-menu {
-    display: none;
   }
 }
 

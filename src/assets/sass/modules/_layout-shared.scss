@@ -51,6 +51,47 @@ hr {
 }
 
 /**
+ * Drop down lists.
+ *
+ * 1. Ensure dropdowns are hidden at page load (prevents content 'jumping').
+ *
+ * <ul class="txp-dropdown">
+ *     <li>
+ *         <div>
+ *             <input class="checkbox" type="checkbox">
+ *             <label>Search all</label>
+ *         </div>
+ *     </li>
+ *     <li>
+ *         <div>
+ *             <input class="checkbox active" type="checkbox">
+ *             <label>ID#</label>
+ *         </div>
+ *     </li>
+ * </ul>
+ */
+
+.txp-dropdown {
+    /* 1 */
+    display: none;
+    position: absolute;
+    width: 18em; // 234px / 13px
+    z-index: 100;
+
+    .checkbox {
+        vertical-align: -0.23076923076923em; // 3px / 13px
+
+        & + label {
+            display: inline-block;
+            width: 85%;
+            padding: 0.23076923076923em 0.30769230769231em; // 3px / 13px + 4px / 13px
+            cursor: pointer;
+            vertical-align: text-top;
+        }
+    }
+}
+
+/**
  * Search widget at top of lists.
  *
  * Appears on:
@@ -64,10 +105,7 @@ hr {
  *     <input class="txp-search-input" type="search" size="24">
  *     <span class="txp-split-buttons">
  *         <button class="txp-search-button">Search</button>
- *         <button class="ui-multiselect">
- *             <span class="ui-icon ui-icon-triangle-1-s"></span>
- *             <span>Search options</span>
- *         </button>
+ *         <button class="txp-search-options">Search options</button>
  *     </span>
  * </form>
  */
@@ -76,6 +114,16 @@ hr {
     display: flex;
     justify-content: flex-end;
     margin: 1em 0;
+
+    // Ensure the 2 buttons stay together.
+    .ui-controlgroup {
+        flex-wrap: nowrap;
+    }
+
+    // Ensure search dropdown lays above list options dropdown.
+    .txp-dropdown {
+        z-index: 101;
+    }
 }
 
 .txp-search-clear {
