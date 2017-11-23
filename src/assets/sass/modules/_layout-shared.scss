@@ -79,12 +79,12 @@ hr {
     z-index: 100;
 
     .checkbox {
-        vertical-align: -0.23076923076923em; // 3px / 13px
+        vertical-align: -0.076923076923077em; // 1px / 13px
 
         & + label {
             display: inline-block;
             width: 85%;
-            padding: 0.23076923076923em 0.30769230769231em; // 3px / 13px + 4px / 13px
+            padding: 0 0.30769230769231em; // 4px / 13px
             cursor: pointer;
             vertical-align: text-top;
         }

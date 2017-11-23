@@ -287,7 +287,7 @@ $(function ()
         alert('Running the search action');
     });
 
-    search.find('.txp-search-options-button').button({
+    search.find('.txp-search-options').button({
         showLabel: false,
         icon: 'ui-icon-triangle-1-s'
     })
