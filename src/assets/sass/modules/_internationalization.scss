@@ -20,15 +20,16 @@ bdo[dir="rtl"] {
  * Preferred font for Japanese language.
  */
 
-html[lang="ja"] {
-    font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+:lang(ja) {
+    font-family: "Hiragino  Sans", "Hiragino Kaku Gothic Pro", "Meiryo UI", sans-serif;
+    font-weight: 300;
 }
 
 /**
  * Preferred font for Korean language.
  */
 
-html[lang="ko"] {
+:lang(ko) {
     font-family: GulimChe, Gulim, sans-serif;
 }
 
@@ -36,16 +37,16 @@ html[lang="ko"] {
  * Preferred font for simplified Chinese (PRC) language.
  */
 
-html[lang="zh-cn"] {
-    font-family: SimHei, sans-serif;
+:lang(zh-cn) {
+    font-family: "PingFang SC", SimHei, sans-serif;
 }
 
 /**
- * Preferred font for Chinese (Taiwan) language.
+ * Preferred font for traditional Chinese (Taiwan, Hong Kong) language.
  */
 
-html[lang="zh-tw"] {
-    font-family: PMingLiU, sans-serif;
+:lang(zh-tw) {
+    font-family: "PingFang TC", PMingLiU, sans-serif;
 }
 
 /**
