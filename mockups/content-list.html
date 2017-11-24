@@ -151,70 +151,59 @@
                         <button class="txp-search-options">Search options</button>
                     </span>
                     <ul class="txp-dropdown">
-                        <li>
+                        <li class="txp-dropdown-toggle-all">
                             <div>
-                                <input class="checkbox" id="search-all0" name="select_all" type="checkbox" value="all">
-                                <label for="search-all0">Search all</label>
+                                <label><input class="checkbox active" type="checkbox" checked="checked" tabindex="-1" value="all" />&nbsp;Toggle all/none selected</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox active" id="search-id0" name="search_method[]" type="checkbox" value="id" checked="checked">
-                                <label for="search-id0">ID#</label>
+                                <label><input class="checkbox active" type="checkbox" checked="checked" tabindex="-1" value="id" />&nbsp;ID#</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="search-title_body_excerpt0" name="search_method[]" type="checkbox" value="title_body_excerpt">
-                                <label for="search-title_body_excerpt0">Title, body and excerpt plus extra text to test longer lines</label>
+                                <label><input class="checkbox active" type="checkbox" checked="checked" tabindex="-1" value="title_body_excerpt" />&nbsp;Title, body and excerpt</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="search-section0" name="search_method[]" type="checkbox" value="section">
-                                <label for="search-section0">Section</label>
+                                <label><input class="checkbox active" type="checkbox" checked="checked" tabindex="-1" value="section" />&nbsp;Section</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="search-keywords0" name="search_method[]" type="checkbox" value="keywords">
-                                <label for="search-keywords0">Keywords</label>
+                                <label><input class="checkbox active" type="checkbox" checked="checked" tabindex="-1" value="keywords" />&nbsp;Keywords</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="search-categories0" name="search_method[]" type="checkbox" value="categories">
-                                <label for="search-categories0">Categories</label>
+                                <label><input class="checkbox" type="checkbox" tabindex="-1" value="categories" />&nbsp;Categories</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="search-status0" name="search_method[]" type="checkbox" value="status">
-                                <label for="search-status0">Status</label>
+                                <label><input class="checkbox" type="checkbox" tabindex="-1" value="status" />&nbsp;Status</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="search-author0" name="search_method[]" type="checkbox" value="author">
-                                <label for="search-author0">Author</label>
+                                <label><input class="checkbox active" type="checkbox" checked="checked" tabindex="-1" value="author" />&nbsp;Author</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="search-article_image0" name="search_method[]" type="checkbox" value="article_image">
-                                <label for="search-article_image0">Article image</label>
+                                <label><input class="checkbox active" type="checkbox" checked="checked" tabindex="-1" value="article_image" />&nbsp;Article image</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="search-posted0" name="search_method[]" type="checkbox" value="posted">
-                                <label for="search-posted0">Posted</label>
+                                <label><input class="checkbox" type="checkbox" tabindex="-1" value="posted" />&nbsp;Posted</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="search-lastmod0" name="search_method[]" type="checkbox" value="lastmod">
-                                <label for="search-lastmod0">Modified</label>
+                                <label><input class="checkbox active" type="checkbox" checked="checked" tabindex="-1" value="lastmod" />&nbsp;Modified</label>
                             </div>
                         </li>
                     </ul>
@@ -228,64 +217,59 @@
                 <div class="txp-list-options">
                     <a class="txp-list-options-button" href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
                     <ul class="txp-list-options-list txp-dropdown">
-                        <li>
+                        <li class="txp-dropdown-toggle-all">
                             <div>
-                                <input class="checkbox" id="txp-list-col-title" type="checkbox">
-                                <label for="txp-list-col-title">Title</label>
+                                <label><input tabindex="-1" class="checkbox active" type="checkbox" checked="checked">&nbsp;Toggle all/none selected</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="txp-list-col-posted" type="checkbox">
-                                <label for="txp-list-col-posted">Posted</label>
+                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="id" type="checkbox">&nbsp;ID#</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="txp-list-col-lastmod" type="checkbox">
-                                <label for="txp-list-col-lastmod">Modified</label>
+                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="title" type="checkbox">&nbsp;Title</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="txp-list-col-expires" type="checkbox">
-                                <label for="txp-list-col-expires">Expires</label>
+                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="posted" type="checkbox" disabled="disabled">&nbsp;Posted</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="txp-list-col-section" type="checkbox">
-                                <label for="txp-list-col-section">Section</label>
+                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="lastmod" type="checkbox">&nbsp;Modified</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="txp-list-col-category1" type="checkbox">
-                                <label for="txp-list-col-category1">Category 1</label>
+                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="expires" type="checkbox">&nbsp;Expires</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="txp-list-col-category2" type="checkbox">
-                                <label for="txp-list-col-category2">Category 2</label>
+                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="section" type="checkbox">&nbsp;Section</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="txp-list-col-status" type="checkbox">
-                                <label for="txp-list-col-status">Status</label>
+                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="category1" type="checkbox">&nbsp;Category 1</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="txp-list-col-author" type="checkbox">
-                                <label for="txp-list-col-author">Author</label>
+                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="category2" type="checkbox">&nbsp;Category 2</label>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <input class="checkbox" id="txp-list-col-comments" type="checkbox">
-                                <label for="txp-list-col-comments">Comments</label>
+                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="status" type="checkbox">&nbsp;Status</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="comments" type="checkbox">&nbsp;Comments</label>
                             </div>
                         </li>
                     </ul>

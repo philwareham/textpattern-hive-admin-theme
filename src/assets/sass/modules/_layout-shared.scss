@@ -56,16 +56,14 @@ hr {
  * 1. Ensure dropdowns are hidden at page load (prevents content 'jumping').
  *
  * <ul class="txp-dropdown">
- *     <li>
+ *     <li class="txp-dropdown-toggle-all">
  *         <div>
- *             <input class="checkbox" type="checkbox">
- *             <label>Search all</label>
+ *             <label><input class="checkbox" type="checkbox">&nbsp;Toggle all/none selected</label>
  *         </div>
  *     </li>
  *     <li>
  *         <div>
- *             <input class="checkbox active" type="checkbox">
- *             <label>ID#</label>
+ *             <label><input class="checkbox active" type="checkbox">&nbsp;ID#</label>
  *         </div>
  *     </li>
  * </ul>
@@ -79,16 +77,12 @@ hr {
     z-index: 100;
 
     .checkbox {
-        vertical-align: -0.076923076923077em; // 1px / 13px
-
-        & + label {
-            display: inline-block;
-            width: 85%;
-            padding: 0 0.30769230769231em; // 4px / 13px
-            cursor: pointer;
-            vertical-align: text-top;
-        }
+        margin: 0.153846153846154em; // 2px / 13px
     }
+}
+
+.txp-dropdown-toggle-all {
+    border-bottom: 1px solid $color-border-light;
 }
 
 /**
