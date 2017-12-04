@@ -1307,22 +1307,6 @@ button {
     border-color: #9d261d;
     box-shadow: none;
   }
-  /**
- * 1. Add the correct display in IE 11.
- * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-  progress {
-    /* 1 */
-    display: inline-block;
-    /* 2 */
-    vertical-align: baseline;
-  }
-  /**
- * Reverse the progress direction in RTL languages.
- */
-  [dir="rtl"] progress {
-    animation-direction: reverse;
-  }
   /* Buttons
    ========================================================================== */
   /**
@@ -2555,6 +2539,29 @@ button {
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
   }
+  /**
+ * 1. Add the correct display in IE 11.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+  progress {
+    /* 1 */
+    display: inline-block;
+    /* 2 */
+    vertical-align: baseline;
+  }
+  /**
+ * Reverse the progress direction in RTL languages.
+ */
+  [dir="rtl"] progress {
+    animation-direction: reverse;
+  }
+  /**
+ * Styled progress indicators.
+ *
+ * Example HTML:
+ *
+ * <progress class="txp-progress"></progress>
+ */
   /**
  * Hide text but still allow screen reader access.
  *
