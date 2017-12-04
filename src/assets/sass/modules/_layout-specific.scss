@@ -198,7 +198,7 @@
     border-top: 0;
     background: $color-background;
     @if $flat-theme < 1 {
-        box-shadow: 0 0.2em 0.25em rgba(#000000, 0.15);
+        box-shadow: 0 0.1em 0.125em rgba(#000000, 0.15);
     }
     z-index: 999;
 
