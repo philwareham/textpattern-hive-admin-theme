@@ -35,10 +35,76 @@ hr {
  */
 
 progress {
-    /* 1 */
-    display: inline-block;
-    /* 2 */
-    vertical-align: baseline;
+    display: inline-block; /* 1 */
+    vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Styled progress indicators.
+ *
+ * Example HTML:
+ *
+ * <progress class="txp-upload-progress"></progress>
+ */
+
+.txp-upload-progress {
+    width: 100%;
+    height: 8px;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    appearance: none;
+}
+
+.txp-upload-progress::-webkit-progress-value {
+    background-color: $color-accent-gradient-to;
+    background-image: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.25) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.25) 50%,
+        rgba(255, 255, 255, 0.25) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 24px 24px;
+    animation: progressbar-stripes linear 4s infinite;
+}
+
+.txp-upload-progress::-webkit-progress-bar {
+    background-color: #e7e7e7;
+}
+
+.txp-upload-progress:not([value])::-webkit-progress-bar {
+    background-color: $color-border;
+    background-image: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.25) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.25) 50%,
+        rgba(255, 255, 255, 0.25) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 24px 24px;
+    animation: progressbar-stripes linear 4s infinite;
+}
+
+.txp-upload-progress::-moz-progress-bar {
+    background-color: $color-accent-gradient-to;
+    background-image: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.25) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.25) 50%,
+        rgba(255, 255, 255, 0.25) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 24px 24px;
+    animation: progressbar-stripes linear 4s infinite;
 }
 
 /**
@@ -47,18 +113,6 @@ progress {
 
 [dir="rtl"] progress {
     animation-direction: reverse;
-}
-
-/**
- * Styled progress indicators.
- *
- * Example HTML:
- *
- * <progress class="txp-progress"></progress>
- */
-
-.txp-progress {
-
 }
 
 /**

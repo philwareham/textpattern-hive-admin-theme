@@ -620,6 +620,9 @@ button {
   #messagepane span.error {
     background: #9d261d;
   }
+  #messagepane a {
+    color: #ffffff;
+  }
   /*
  * Message close icon.
  *
@@ -631,15 +634,15 @@ button {
     position: absolute;
     top: 0.27777777777778em;
     right: 0.72222222222222em;
-    color: rgba(255, 255, 255, 0.6);
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
+    opacity: 0.66;
   }
   .close:hover {
-    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     cursor: pointer;
+    opacity: 1;
   }
   /*
  * Flash the alert message using CSS animation.
@@ -2585,10 +2588,49 @@ button {
  * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
   progress {
-    /* 1 */
     display: inline-block;
-    /* 2 */
+    /* 1 */
     vertical-align: baseline;
+    /* 2 */
+  }
+  /**
+ * Styled progress indicators.
+ *
+ * Example HTML:
+ *
+ * <progress class="txp-upload-progress"></progress>
+ */
+  .txp-upload-progress {
+    width: 100%;
+    height: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  .txp-upload-progress::-webkit-progress-value {
+    background-color: #f7c600;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+    background-size: 24px 24px;
+    -webkit-animation: progressbar-stripes linear 4s infinite;
+            animation: progressbar-stripes linear 4s infinite;
+  }
+  .txp-upload-progress::-webkit-progress-bar {
+    background-color: #e7e7e7;
+  }
+  .txp-upload-progress:not([value])::-webkit-progress-bar {
+    background-color: #cccccc;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+    background-size: 24px 24px;
+    -webkit-animation: progressbar-stripes linear 4s infinite;
+            animation: progressbar-stripes linear 4s infinite;
+  }
+  .txp-upload-progress::-moz-progress-bar {
+    background-color: #f7c600;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+    background-size: 24px 24px;
+    animation: progressbar-stripes linear 4s infinite;
   }
   /**
  * Reverse the progress direction in RTL languages.
@@ -2596,13 +2638,6 @@ button {
   [dir="rtl"] progress {
     animation-direction: reverse;
   }
-  /**
- * Styled progress indicators.
- *
- * Example HTML:
- *
- * <progress class="txp-progress"></progress>
- */
   /**
  * Hide text but still allow screen reader access.
  *
@@ -5513,11 +5548,12 @@ button {
   .ui-progressbar {
     margin-bottom: 1em;
     border-radius: 4px;
+    background-color: #e7e7e7;
     text-align: left;
     overflow: hidden;
   }
   .ui-progressbar-value {
-    height: 8px;
+    height: 6px;
     background-color: #f7c600;
     background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
     background-size: 24px 24px;

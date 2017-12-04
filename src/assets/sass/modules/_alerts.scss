@@ -148,6 +148,10 @@ li.information {
             background: $color-error-text;
         }
     }
+
+    a {
+        color: $color-text-inverse;
+    }
 }
 
 /*
@@ -162,15 +166,15 @@ li.information {
     position: absolute;
     top: 0.27777777777778em; // 5px / 18px
     right: 0.72222222222222em; // 13px / 18px
-    color: transparentize($color-text-inverse, 0.4);
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
+    opacity: 0.66;
 
     &:hover {
-        color: transparentize($color-text-inverse, 0.2);
         text-decoration: none;
         cursor: pointer;
+        opacity: 1;
     }
 }
 
