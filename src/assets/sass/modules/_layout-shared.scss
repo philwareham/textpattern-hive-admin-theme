@@ -120,6 +120,10 @@ hr {
     }
 }
 
+.txp-search-input {
+    max-width: calc(100% - 5.5rem);
+}
+
 .txp-search-clear {
     flex: 1;
     margin: auto 0.5em;
