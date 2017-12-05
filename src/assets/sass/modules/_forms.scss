@@ -244,6 +244,13 @@ select[multiple] {
     }
 }
 
+[dir="rtl"] {
+    select[size],
+    select[multiple] {
+        padding-left: 0.30769230769231em; // 4px / 13px
+    }
+}
+
 /**
  * Override height set in rule above and restrict to one line field.
  */
