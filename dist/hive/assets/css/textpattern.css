@@ -2620,6 +2620,8 @@ button {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .txp-upload-progress::-webkit-progress-value {
     background-color: #f7c600;

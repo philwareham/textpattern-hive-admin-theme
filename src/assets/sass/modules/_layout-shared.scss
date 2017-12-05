@@ -53,6 +53,7 @@ progress {
     border: 1px solid $color-border;
     border-radius: 4px;
     appearance: none;
+    box-sizing: border-box;
 }
 
 .txp-upload-progress::-webkit-progress-value {
