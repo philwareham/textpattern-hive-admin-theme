@@ -228,10 +228,20 @@ select:-moz-focusring {
 
 select[size],
 select[multiple] {
+    max-width: 22em; // 286px / 13px
     height: auto;
     padding-right: 0.30769230769231em; // 4px / 13px
     background-image: none;
     vertical-align: top;
+    box-sizing: border-box;
+
+    option {
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
 }
 
 /**

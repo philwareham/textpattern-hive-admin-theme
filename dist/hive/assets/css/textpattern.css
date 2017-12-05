@@ -1166,10 +1166,22 @@ button {
  */
   select[size],
   select[multiple] {
+    max-width: 22em;
     height: auto;
     padding-right: 0.30769230769231em;
     background-image: none;
     vertical-align: top;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  select[size] option,
+  select[multiple] option {
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   /**
  * Override height set in rule above and restrict to one line field.
