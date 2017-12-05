@@ -140,6 +140,17 @@ progress {
 }
 
 /**
+ * Contain width of user-definable content, to avoid potential layout breakage.
+ */
+
+.txp-contain {
+    max-width: 30em; // 390px / 13px
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/**
  * Drop down lists.
  *
  * 1. Ensure dropdowns are hidden at page load (prevents content 'jumping').
