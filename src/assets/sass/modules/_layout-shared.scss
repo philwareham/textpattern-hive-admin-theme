@@ -206,8 +206,10 @@ progress {
 
 .txp-search {
     display: flex;
+    position: relative;
     justify-content: flex-end;
     margin: 1em 0;
+    float: right;
 
     // Ensure the 2 buttons stay together.
     .ui-controlgroup {

@@ -2686,9 +2686,11 @@ button {
   .txp-search {
     display: -webkit-box;
     display: flex;
+    position: relative;
     -webkit-box-pack: end;
             justify-content: flex-end;
     margin: 1em 0;
+    float: right;
   }
   .txp-search .ui-controlgroup {
     flex-wrap: nowrap;
@@ -6031,6 +6033,7 @@ button {
     -webkit-box-pack: start;
             justify-content: flex-start;
     margin-top: 0;
+    float: none;
   }
   /**
      * Reposition search clearer.
