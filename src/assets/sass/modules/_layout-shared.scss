@@ -220,6 +220,10 @@ progress {
     .txp-dropdown {
         z-index: 101;
     }
+
+    [dir="rtl"] & {
+        float: left;
+    }
 }
 
 .txp-search-input {

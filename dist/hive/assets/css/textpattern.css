@@ -2739,6 +2739,9 @@ button {
   .txp-search .txp-dropdown {
     z-index: 101;
   }
+  [dir="rtl"] .txp-search {
+    float: left;
+  }
   .txp-search-input {
     max-width: calc(100% - 5.5rem);
   }
