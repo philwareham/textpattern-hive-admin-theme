@@ -1,6 +1,3 @@
-/*! ========================================================================
- * Appended after third-party JavaScript. */
-
 $(function ()
 {
     'use strict';

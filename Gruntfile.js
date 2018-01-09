@@ -44,7 +44,7 @@ module.exports = function (grunt)
         concurrent: {
             dist: [
                 'css',
-                'uglify:dist'
+                'uglify'
             ]
         },
 
@@ -95,24 +95,6 @@ module.exports = function (grunt)
             }
         },
 
-        // Minified versions of CSS files.
-        cssmin: {
-            dest1: {
-                expand: true,
-                cwd: '<%= paths.dest1.css %>',
-                src: '*.css',
-                dest: '<%= paths.dest1.css %>',
-                ext: '.min.css'
-            },
-            dest2: {
-                expand: true,
-                cwd: '<%= paths.dest2.css %>',
-                src: '*.css',
-                dest: '<%= paths.dest2.css %>',
-                ext: '.min.css'
-            }
-        },
-
         // Check code quality of Gruntfile.js and theme-specific JavaScript using JSHint.
         jshint: {
             options: {
@@ -153,7 +135,8 @@ module.exports = function (grunt)
         postcss: {
             options: {
                 processors: [
-                    require('autoprefixer')
+                    require('autoprefixer'),
+                    require('cssnano')
                 ]
             },
             dist: {
@@ -219,24 +202,6 @@ module.exports = function (grunt)
                         ]
                     }
                 ]
-            },
-            minify: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= paths.dest1.js %>',
-                        src: ['*.js', '!*.min.js'],
-                        dest: '<%= paths.dest1.js %>',
-                        ext: '.min.js'
-                    },
-                    {
-                        expand: true,
-                        cwd: '<%= paths.dest2.js %>',
-                        src: ['*.js', '!*.min.js'],
-                        dest: '<%= paths.dest2.js %>',
-                        ext: '.min.js'
-                    }
-                ]
             }
         },
 
@@ -255,8 +220,8 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['clean', 'concurrent', 'copy', 'uglify:minify']);
-    grunt.registerTask('css', ['sasslint', 'sass', 'postcss', 'cssmin']);
+    grunt.registerTask('build', ['clean', 'concurrent', 'copy']);
+    grunt.registerTask('css', ['sasslint', 'sass', 'postcss']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['jshint', 'build']);
 };
