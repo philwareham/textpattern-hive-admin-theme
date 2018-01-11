@@ -310,6 +310,7 @@ progress {
 
     > *:not(ul) {
         margin: 0 0 0 1em;
+        user-select: none;
     }
 
     form {

@@ -93,6 +93,10 @@
             color: $color-text;
             text-decoration: none;
         }
+
+        label {
+            cursor: pointer;
+        }
     }
 
     .ui-menu-item-wrapper {
