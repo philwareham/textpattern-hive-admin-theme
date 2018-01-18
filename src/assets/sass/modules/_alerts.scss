@@ -104,9 +104,11 @@ li.information {
  *
  * Example HTML:
  *
- * <div id="messagepane">
- *     <span role="alert" class="error">
- *         Content
+ * <div id="messagepane" role="alert" aria-live="assertive">
+ *     <span class="messageflash error">
+ *         <span class="ui-icon ui-icon-alert"></span>
+ *         Username not found.
+ *         <a class="close"><span class="ui-icon ui-icon-close">Close</span></a>
  *     </span>
  * </div>
  */
@@ -126,7 +128,7 @@ li.information {
             display: inline-block;
             max-width: ($text-column - 3.84615384615385em);
             margin: 0 auto;
-            padding: 0.53846153846154em 2.84615384615385em 0.53846153846154em 1em;
+            padding: 0.53846153846154em 3.53846153846154em 0.53846153846154em 1em;
             @if $border-radius > 0 {
                 border-radius: $border-radius $border-radius 0 0;
             }
@@ -156,25 +158,26 @@ li.information {
 
 /*
  * Message close icon.
- *
- * Example HTML:
- *
- * <a role="button" class="close" aria-label="Close">&times;</a>
  */
 
 .close {
     position: absolute;
-    top: 0.27777777777778em; // 5px / 18px
-    right: 0.72222222222222em; // 13px / 18px
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    opacity: 0.66;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 2.53846153846154em;
+    border-left: 1px solid rgba(255, 255, 255, 0.66);
 
-    &:hover {
-        text-decoration: none;
-        cursor: pointer;
-        opacity: 1;
+    span {
+        position: absolute;
+        top: 50%;
+        right: 0.692307692307692em; // 9px / 13px
+        margin-top: -8px;
+        opacity: 0.66;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 
