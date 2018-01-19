@@ -104,8 +104,8 @@ li.information {
  *
  * Example HTML:
  *
- * <div id="messagepane" role="alert" aria-live="assertive">
- *     <span class="messageflash error">
+ * <div id="messagepane">
+ *     <span class="messageflash error" role="alert" aria-live="assertive">
  *         <span class="ui-icon ui-icon-alert"></span>
  *         Username not found.
  *         <a class="close"><span class="ui-icon ui-icon-close">Close</span></a>
@@ -117,26 +117,27 @@ li.information {
     position: fixed;
     bottom: 0;
     left: 50%;
+    max-width: 100%;
     transform: translateX(-50%);
     text-align: center;
     z-index: 1000;
 
-    span {
-        &.success,
-        &.warning,
-        &.error {
-            display: inline-block;
-            max-width: ($text-column - 3.84615384615385em);
-            margin: 0 auto;
-            padding: 0.53846153846154em 3.53846153846154em 0.53846153846154em 1em;
-            @if $border-radius > 0 {
-                border-radius: $border-radius $border-radius 0 0;
-            }
-            color: $color-text-inverse;
-            @if $flat-theme < 1 {
-                box-shadow: $standard-shadow;
-            }
+    .messageflash {
+        display: inline-block;
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0.53846153846154em 3.53846153846154em 0.53846153846154em 0.75em;
+        @if $border-radius > 0 {
+            border-radius: $border-radius $border-radius 0 0;
         }
+        color: $color-text-inverse;
+        @if $flat-theme < 1 {
+            box-shadow: $standard-shadow;
+        }
+        text-align: left;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
 
         &.success {
             background: $color-success-text;
@@ -157,7 +158,7 @@ li.information {
 }
 
 /*
- * Message close icon.
+ * System message close icon.
  */
 
 .close {
@@ -178,6 +179,27 @@ li.information {
         &:hover {
             opacity: 1;
         }
+    }
+}
+
+/*
+ * System message flipped layout for RTL languages.
+ */
+
+[dir="rtl"] #messagepane .messageflash {
+    padding: 0.53846153846154em 0.75em 0.53846153846154em 3.53846153846154em;
+    text-align: right;
+}
+
+[dir="rtl"] .close {
+    right: auto;
+    left: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.66);
+    border-left: 0;
+
+    span {
+        right: auto;
+        left: 0.692307692307692em; // 9px / 13px
     }
 }
 
