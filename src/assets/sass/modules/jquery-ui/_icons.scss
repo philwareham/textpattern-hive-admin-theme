@@ -75,7 +75,7 @@ a:focus .ui-icon {
  * </p>
  */
 
-.success .ui-icon,
+.success .ui-icon:not(.txp-button .ui-icon),
 .success.ui-icon {
     filter: brightness(2) sepia(1) hue-rotate(82deg) saturate(250%) brightness(90%);
 }
@@ -92,7 +92,7 @@ a:focus .ui-icon {
  */
 
 .ui-state-highlight .ui-icon,
-.warning .ui-icon,
+.warning .ui-icon:not(.txp-button .ui-icon),
 .warning.ui-icon {
     filter: brightness(2) sepia(1) hue-rotate(4deg) saturate(500%) brightness(112%);
 }
@@ -110,7 +110,7 @@ a:focus .ui-icon {
 
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon,
-.error .ui-icon,
+.error .ui-icon:not(.txp-button .ui-icon),
 .error.ui-icon,
 .destroy .ui-icon,
 .destroy.ui-icon {
