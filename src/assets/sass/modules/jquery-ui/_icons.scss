@@ -53,18 +53,6 @@ a:focus .ui-icon {
 }
 
 /**
- * Weighted content icons and interaction state icons.
- */
-
-.ui-widget-content .ui-icon,
-.ui-widget-header .ui-icon,
-.ui-state-hover .ui-icon,
-.ui-state-focus .ui-icon,
-.ui-state-active .ui-icon {
-    filter: none;
-}
-
-/**
  * 'Succes' state icons.
  *
  * Example HTML:
@@ -75,7 +63,7 @@ a:focus .ui-icon {
  * </p>
  */
 
-.success .ui-icon:not(.txp-button .ui-icon),
+.success .ui-icon,
 .success.ui-icon {
     filter: brightness(2) sepia(1) hue-rotate(82deg) saturate(250%) brightness(90%);
 }
@@ -92,7 +80,7 @@ a:focus .ui-icon {
  */
 
 .ui-state-highlight .ui-icon,
-.warning .ui-icon:not(.txp-button .ui-icon),
+.warning .ui-icon,
 .warning.ui-icon {
     filter: brightness(2) sepia(1) hue-rotate(4deg) saturate(500%) brightness(112%);
 }
@@ -110,7 +98,7 @@ a:focus .ui-icon {
 
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon,
-.error .ui-icon:not(.txp-button .ui-icon),
+.error .ui-icon,
 .error.ui-icon,
 .destroy .ui-icon,
 .destroy.ui-icon {
@@ -140,6 +128,25 @@ a:focus .ui-icon {
 .ui-icon-inversed,
 #messagepane .ui-icon {
     filter: brightness(5);
+}
+
+/**
+ * Weighted content icons and interaction state icons.
+ */
+
+button,
+[type="reset"],
+[type="submit"],
+input[type="button"],
+.txp-button,
+.ui-widget-content .ui-icon,
+.ui-widget-header .ui-icon,
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon,
+.ui-state-active .ui-icon {
+    .ui-icon {
+        filter: none;
+    }
 }
 
 /* Icon set.
