@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Setup &#124; Textpattern CMS</title>
+    <script src="../../docs/assets/js/jquery.js"></script>
+    <script src="../../docs/assets/js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../dist/hive/assets/css/textpattern.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="Textpattern CMS">
+</head>
+<body class="setup" id="page-setup">
+
+    <main class="txp-body" aria-label="Main content">
+
+        <div class="txp-setup">
+
+            <form class="prefs-form" method="post" action="{$self_url}">
+                <p class="alert-block warning"><span class="ui-icon ui-icon-alert"></span> Textpattern root directory not found!</p>
+                <p>Your symlinks may be missing, or your <code>sites</code> folder is in a non-standard location.</p>
+                <p>Your <code>sites</code> directory is: <code>{$sites_dir}</code></p>
+                <p>Please enter the full path to the root directory of your textpattern installation.</p>
+                <label for="txp-root-path">Path to your base textpattern directory:</label><br>
+                <input type="text" id="txp-root-path" name="txp-root-path" size="50" placeholder="{$txp_root_suggestion}">
+                <button>Submit</button>
+
+                <p><input class="publish" name="Submit" type="submit" value="Next"></p>
+
+            </form>
+
+
+
+            <form class="prefs-form" method="post" action="{$self_url}">
+                <p class="alert-block warning"><span class="ui-icon ui-icon-alert"></span> Textpattern root directory details incorrect!</p>
+                <p>The location <code>{$multisite_txp_root_path}</code> you specified does not appear to be the correct textpattern root path.</p>
+                <p>Please check your path and try again.</p>
+                <button>Go back</button>
+            </form>
+
+
+
+            <form class="prefs-form" method="post" action="{$self_url}">
+                <p class="alert-block success"><span class="ui-icon ui-icon-check"></span> Textpattern root directory found. Thank you!</p>
+                <p>Path to sites directory: <code>{$sites_dir}</code></p>
+                <p>Path to Textpattern directory: <code>{$multisite_txp_root_path}</code></p>
+                <h3>Creating symlinks</h3>
+                <p>Symlink created: <code>symlink_example_1 &#8594; symlink_example_2</code></p>
+                <p class="alert-block error"><span class="ui-icon ui-icon-alert"></span> Symlink(s) could not be created.</p>
+                <p>Please create symlink(s) manually:</p>
+                <pre dir="ltr"><code>EXAMPLE TODO
+EXAMPLE TODO
+EXAMPLE TODO
+EXAMPLE TODO</code></pre>
+                <p><input class="publish" name="Submit" type="submit" value="Proceed"></p>
+            </form>
+
+        </div><!-- /txp-setup -->
+
+    </main><!-- /txp-body -->
+
+</body>
+</html>
+
+
+
+
+
+
