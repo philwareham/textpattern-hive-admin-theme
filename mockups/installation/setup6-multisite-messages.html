@@ -17,41 +17,39 @@
         <div class="txp-setup">
 
             <form class="prefs-form" method="post" action="{$self_url}">
-                <p class="alert-block warning"><span class="ui-icon ui-icon-alert"></span> Textpattern root directory not found!</p>
-                <p>Your symlinks may be missing, or your <code>sites</code> folder is in a non-standard location.</p>
-                <p>Your <code>sites</code> directory is: <code>{$sites_dir}</code></p>
-                <p>Please enter the full path to the root directory of your textpattern installation.</p>
-                <label for="txp-root-path">Path to your base textpattern directory:</label><br>
-                <input type="text" id="txp-root-path" name="txp-root-path" size="50" placeholder="{$txp_root_suggestion}">
-                <button>Submit</button>
+                <p class="alert-block error"><span class="ui-icon ui-icon-alert"></span> Textpattern root directory not found!</p>
+                <p>Your symbolic links (symlinks) may be missing, or your <code>sites</code> folder is in a non-standard location.</p>
+                <p>Your <code>sites</code> directory is: <code>/Users/example/Sites/mutlisite-example/sites</code></p>
+                <p>Please enter the full path to the root directory of your Textpattern installation.</p>
 
-                <p><input class="publish" name="Submit" type="submit" value="Next"></p>
+                <p>
+                    <label for="txp-root-path">Path to Textpattern root directory</label><br>
+                    <input class="input-large" id="txp-root-path" name="txp-root-path" type="text" size="48" placeholder="/Users/example/Sites/mutlisite-example" required="required">
+                </p>
 
+                <p><input class="publish" name="Submit" type="submit" value="Submit"></p>
             </form>
 
-
-
-            <form class="prefs-form" method="post" action="{$self_url}">
-                <p class="alert-block warning"><span class="ui-icon ui-icon-alert"></span> Textpattern root directory details incorrect!</p>
-                <p>The location <code>{$multisite_txp_root_path}</code> you specified does not appear to be the correct textpattern root path.</p>
-                <p>Please check your path and try again.</p>
-                <button>Go back</button>
-            </form>
-
-
+            <p class="alert-block error"><span class="ui-icon ui-icon-alert"></span> Textpattern root directory details incorrect!</p>
+            <p>The location <code>/Users/example/Sites/mutlisite-example/sites</code> you specified does not appear to be the correct Textpattern root path.</p>
+            <p>Please go back, check your path and try again.</p>
+            <p><a class="navlink publish" href="{$self_url}">Go back</a></p>
 
             <form class="prefs-form" method="post" action="{$self_url}">
                 <p class="alert-block success"><span class="ui-icon ui-icon-check"></span> Textpattern root directory found. Thank you!</p>
-                <p>Path to sites directory: <code>{$sites_dir}</code></p>
-                <p>Path to Textpattern directory: <code>{$multisite_txp_root_path}</code></p>
+                <p>Path to sites directory: <code>/Users/example/Sites/mutlisite-example/sites</code></p>
+                <p>Path to Textpattern directory: <code>/Users/example/Sites/mutlisite-example</code></p>
                 <h3>Creating symlinks</h3>
-                <p>Symlink created: <code>symlink_example_1 &#8594; symlink_example_2</code></p>
-                <p class="alert-block error"><span class="ui-icon ui-icon-alert"></span> Symlink(s) could not be created.</p>
-                <p>Please create symlink(s) manually:</p>
-                <pre dir="ltr"><code>EXAMPLE TODO
-EXAMPLE TODO
-EXAMPLE TODO
-EXAMPLE TODO</code></pre>
+                <p>Symlinks created:</p>
+                <pre dir="ltr"><code>admin/admin-themes <span class="success">&#8594;</span> ../../../textpattern/admin-themes
+admin/textpattern.js <span class="success">&#8594;</span> ../../../textpattern/textpattern.js
+admin/vendors <span class="success">&#8594;</span> ../../../textpattern/vendors</code></code></pre>
+                <p class="alert-block error"><span class="ui-icon ui-icon-alert"></span> Symlinks could not be created.</p>
+                <p>Please create symlinks manually:</p>
+                <pre dir="ltr"><code>cd /Users/example/Sites/mutlisite-example/sites/multisite-example
+ln -sf ../../../textpattern/admin-themes admin/admin-themes
+ln -sf ../../../textpattern/textpattern.js admin/textpattern.js
+ln -sf ../../../textpattern/vendors admin/vendors</code></pre>
                 <p><input class="publish" name="Submit" type="submit" value="Proceed"></p>
             </form>
 
