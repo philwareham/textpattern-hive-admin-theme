@@ -31,6 +31,9 @@ module.exports = function (grunt)
                 css: 'dist/hiveneutral/assets/css/',
                 img: 'dist/hiveneutral/assets/img/',
                 js: 'dist/hiveneutral/assets/js/'
+            },
+            dest3: { // Subsite of theme CSS for multisite setup.
+                dir: 'dist/'
             }
         },
 
@@ -143,6 +146,7 @@ module.exports = function (grunt)
                 files: [
                     {'<%= paths.dest1.css %>textpattern.css': '<%= paths.dest1.css %>textpattern.css'},
                     {'<%= paths.dest2.css %>textpattern.css': '<%= paths.dest2.css %>textpattern.css'},
+                    {'<%= paths.dest3.dir %>setup-multisite.css': '<%= paths.dest3.dir %>setup-multisite.css'},
                     {'<%= paths.docs.css %>design-patterns.css': '<%= paths.docs.css %>design-patterns.css'}
                 ]
             }
@@ -159,6 +163,7 @@ module.exports = function (grunt)
                 files: [
                     {'<%= paths.dest1.css %>textpattern.css': '<%= paths.src.sass %>hive-default.scss'},
                     {'<%= paths.dest2.css %>textpattern.css': '<%= paths.src.sass %>hive-neutral.scss'},
+                    {'<%= paths.dest3.dir %>setup-multisite.css': '<%= paths.src.sass %>setup-multisite.scss'},
                     {'<%= paths.docs.css %>design-patterns.css': '<%= paths.src.sass %>design-patterns.scss'}
                 ]
             }
