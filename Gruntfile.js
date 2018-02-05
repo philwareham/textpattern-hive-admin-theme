@@ -107,8 +107,11 @@ module.exports = function (grunt)
                 esversion: 5,
                 forin: true,
                 globals: {
+                    jQuery: false,
+                    $: false,
                     module: true,
-                    require: true
+                    require: true,
+                    autosize: true
                 },
                 latedef: true,
                 noarg: true,
