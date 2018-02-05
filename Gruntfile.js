@@ -102,31 +102,22 @@ module.exports = function (grunt)
         jshint: {
             options: {
                 bitwise: true,
-                camelcase: true,
                 curly: true,
                 eqeqeq: true,
-                es3: true,
+                esversion: 5,
                 forin: true,
-                immed: true,
-                indent: 4,
+                globals: {
+                    module: true,
+                    require: true
+                },
                 latedef: true,
                 noarg: true,
-                noempty: true,
                 nonew: true,
                 quotmark: 'single',
                 undef: true,
-                unused: true,
-                strict: true,
-                trailing: true,
-                browser: true,
-                globals: {
-                    jQuery: false,
-                    $: false,
-                    module: true,
-                    autosize: true,
-                    prettyPrint: true,
-                    require: true
-                }
+                unused: false,
+                strict: false,
+                browser: true
             },
             files: [
                 'Gruntfile.js',
