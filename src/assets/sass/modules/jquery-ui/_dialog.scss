@@ -34,9 +34,15 @@
  */
 
 .ui-dialog {
-    position: absolute;
+    display: flex;
+    position: fixed;
     top: 0;
     left: 0;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 95%;
+    max-height: 95%;
+    margin: auto;
     padding: 0.2em;
     outline: 0;
     @if $flat-theme < 1 {
@@ -78,6 +84,7 @@
 
     .ui-dialog-content {
         position: relative;
+        flex: 1;
         padding: 0.5em 1em;
         border: 0;
         background: none;
