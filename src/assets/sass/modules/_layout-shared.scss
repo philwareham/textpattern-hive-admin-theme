@@ -727,6 +727,11 @@ span.spinner {
 .txp-form-field {
     margin: 1em 0;
     vertical-align: top;
+
+    .txp-prefs-group &,
+    .txp-edit & {
+        flex-flow: row wrap;
+    }
 }
 
 /**
@@ -834,6 +839,13 @@ span.spinner {
 .txp-form-field-instructions {
     /* 1 */
     max-width: 56em; // 616px / 11px
+
+    .txp-prefs-group &,
+    .txp-edit & {
+        flex: 0 0 100%;
+        order: 3;
+        max-width: 100%;
+    }
 }
 
 /**
