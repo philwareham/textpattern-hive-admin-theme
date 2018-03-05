@@ -876,7 +876,7 @@ span.spinner {
 
 .txp-prefs-group, // TODO: Deprecated 4.7
 .txp-tabs-vertical-group {
-    max-width: 62em; // 806px / 13px
+    max-width: $text-column;
 }
 
 /**
