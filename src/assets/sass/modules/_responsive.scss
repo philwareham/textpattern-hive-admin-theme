@@ -330,7 +330,8 @@
      */
 
     .txp-edit,
-    .txp-prefs-group {
+    .txp-prefs-group, // TODO: Deprecated 4.7
+    .txp-tabs-vertical-group {
         .txp-form-field:not(.txp-form-field-textarea) {
             display: block;
         }
@@ -343,7 +344,8 @@
      */
 
     .txp-edit,
-    .txp-prefs-group {
+    .txp-prefs-group, // TODO: Deprecated 4.7
+    .txp-tabs-vertical-group {
         .txp-form-field-label,
         .txp-form-field-value {
             flex: none;

@@ -150,6 +150,7 @@ h6 {
  * Make pref panels printable.
  */
 
-.txp-prefs-group.ui-tabs-panel {
+.txp-prefs-group.ui-tabs-panel, // TODO: Deprecated 4.7
+.txp-tabs-vertical-group.ui-tabs-panel {
     display: block !important;
 }
