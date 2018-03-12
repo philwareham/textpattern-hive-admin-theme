@@ -565,12 +565,15 @@ span.spinner {
 
 .disabled:not(.txp-button) {
     background-image: none;
+    text-decoration: none;
     cursor: default !important;
     opacity: 0.33;
+    pointer-events: none;
 
     a {
         text-decoration: none;
         cursor: default;
+        pointer-events: none;
     }
 }
 
