@@ -31,16 +31,20 @@
 }
 
 a.ui-icon,
-a:not(.ui-button) .ui-icon {
+a:not(.ui-button) .ui-icon,
+button:not(.ui-button) .ui-icon {
     opacity: 0.66;
 }
 
 a:hover.ui-icon,
 a:hover .ui-icon,
+button:not(.ui-button):hover .ui-icon,
 a:active.ui-icon,
 a:active .ui-icon,
+button:not(.ui-button):active .ui-icon,
 a:focus.ui-icon,
-a:focus .ui-icon {
+a:focus .ui-icon,
+button:not(.ui-button):focus .ui-icon {
     opacity: 1;
 }
 
@@ -145,7 +149,7 @@ input[type="button"],
 .ui-state-focus .ui-icon,
 .ui-state-active .ui-icon {
     .ui-icon {
-        filter: none;
+        filter: none !important;
     }
 }
 
