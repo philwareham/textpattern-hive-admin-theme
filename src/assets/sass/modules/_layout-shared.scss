@@ -255,7 +255,7 @@ progress {
     float: left;
 
     > * {
-        margin: 0 1em 0 0;
+        margin: 0.5em 0.5em 0.5em 0;
 
         &:last-child {
             margin-right: 0;
@@ -271,6 +271,18 @@ progress {
     }
 }
 
+.inline-file-uploader {
+    margin-bottom: -0.5em;
+
+    > * {
+        margin-bottom: 0.5em;
+    }
+}
+
+.inline-file-uploader-actions {
+    display: inline-block;
+}
+
 /**
  * Swap float/margin positions in RTL languages.
  */
@@ -279,7 +291,7 @@ progress {
     float: right;
 
     > * {
-        margin: 0 0 0 1em;
+        margin: 0.5em 0 0.5em 0.5em;
     }
 }
 
@@ -301,7 +313,7 @@ progress {
 
 .txp-list-options {
     position: relative;
-    margin: 0.46153846153846em 0 1em; // 6px / 13px, 13px
+    margin: 1em 0;
     float: right;
 
     > *:not(ul) {
@@ -321,7 +333,7 @@ progress {
 [dir="rtl"] .txp-list-options {
     float: left;
 
-    > * {
+    > *:not(ul) {
         margin: 0 1em 0 0;
     }
 }
