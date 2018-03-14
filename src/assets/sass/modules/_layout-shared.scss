@@ -898,20 +898,9 @@ span.spinner {
  * Ensure dialog box vertical footprint doesn't spill out of screen area.
  */
 
-.txp-dialog-container,
-.txp-tagbuilder-container {
-    display: flex;
-    flex-flow: column;
-    max-height: 90vh;
-    overflow: hidden;
-
-    .ui-dialog-titlebar {
-        flex: none;
-    }
-}
-
-.txp-dialog-content,
-.txp-tagbuilder-content {
-    flex: 1 1 auto;
-    overflow: scroll;
+.ui-dialog.txp-dialog-container {
+    position: fixed;
+    flex-direction: column;
+    align-items: stretch;
+    margin: auto;
 }
