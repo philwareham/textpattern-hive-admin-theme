@@ -155,6 +155,11 @@ li.information {
     a {
         color: $color-text-inverse;
     }
+
+    code {
+        border-color: rgba(255, 255, 255, 0.66);
+        background: transparent;
+    }
 }
 
 /*
