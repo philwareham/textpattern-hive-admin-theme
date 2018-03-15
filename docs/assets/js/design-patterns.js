@@ -114,8 +114,7 @@ $(function ()
 
     $('#jquery-ui-dialog').dialog({
         autoOpen: false,
-        minWidth: 300,
-        minHeight: 300
+        minWidth: 300
     });
 
     // Dialog load HTML into pane.
