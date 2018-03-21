@@ -203,7 +203,15 @@
                             <label for="image-upload">Upload image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label>
                             <input id="image-upload" name="thefile" type="file">
                             <span class="inline-file-uploader-actions">
-                                <input type="submit" value="Upload">
+                                <label for="image_category">Category</label>
+                                <select id="image_category" name="category">
+                                    <option value="" selected="selected">&nbsp;</option>
+                                    <option value="image-example-category" data-level="0" dir="auto">Image example category</option>
+                                </select>
+                            </span>
+                            <span class="inline-file-uploader-actions">
+                                <input type="reset" value="Reset">
+                                <input type="submit" value="Upload"></span>
                             </span>
                         </div>
                     </form>

@@ -211,6 +211,13 @@
                             <label for="file-upload">Upload file&nbsp;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label>
                             <input name="thefile[]" type="file" required="required" id="file-upload" multiple="multiple">
                             <span class="inline-file-uploader-actions">
+                                <label for="file_category">Category</label>
+                                <select id="file_category" name="category">
+                                    <option value="" selected="selected">&nbsp;</option>
+                                    <option value="file-example-category" data-level="0" dir="auto">File example category</option>
+                                </select>
+                            </span>
+                            <span class="inline-file-uploader-actions">
                                 <input type="reset" value="Reset">
                                 <input type="submit" value="Upload">
                             </span>
