@@ -234,17 +234,15 @@
 
                     <div class="multi-edit">
                         <select name="edit_method">
-                            <option value="" selected="selected">With selected&#8230;</option>
-                            <option value="update">Update</option>
+                            <option value="">With selected&#8230;</option>
+                            <option value="import" selected="selected">Update from disk</option>
+                            <option value="export">Export to disk</option>
                             <option value="duplicate">Duplicate</option>
-                            <option value="export">Export</option>
-                            <option value="export_copy">export a copy</option>
                             <option value="delete">Delete</option>
                         </select>
-                        <div class="multi-option" id="multi-option-changeonfrontpage">
-                            <input class="radio" id="on_front_page-0" name="on_front_page" type="radio" value="0"><label for="on_front_page-0">No</label>
-                            <input class="radio active" id="on_front_page-1" name="on_front_page" type="radio" value="1" checked="checked"><label for="on_front_page-1">Yes</label>
-                        </div>
+                        <div class="multi-step multi-option">
+                            <input class="checkbox" id="sync" name="sync" type="checkbox" value="1">
+                            <label for="sync">Delete unused templates from database on import</label>&nbsp;<a rel="help" target="_blank" title="Help" role="button" class="pophelp" href="#"><span class="ui-icon ui-icon-help">Help</span></a></div>
                         <input type="submit" value="Go">
                     </div>
 
