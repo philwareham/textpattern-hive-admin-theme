@@ -281,6 +281,10 @@ progress {
 
 .inline-file-uploader-actions {
     display: inline-block;
+
+    .txp-edit & {
+        margin: 1em 0 0;
+    }
 }
 
 /**

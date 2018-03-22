@@ -189,8 +189,11 @@
                     <div class="txp-form-field file-uploader">
                         <div class="txp-form-field-label"><label for="image-upload">Replace image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
                         <div class="txp-form-field-value">
-                            <input id="image-upload" name="thefile" type="file">
-                            <input type="submit" value="Upload">
+                            <input name="thefile" type="file" required="required" id="image-upload">
+                            <span class="inline-file-uploader-actions">
+                                <input type="reset" value="Reset">
+                                <input type="submit" value="Upload">
+                            </span>
                         </div>
                     </div>
                 </form>
@@ -208,8 +211,11 @@
                         <div class="txp-form-field file-uploader">
                             <div class="txp-form-field-label"><label for="thumbnail-upload">Upload thumbnail&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
                             <div class="txp-form-field-value">
-                                <input id="thumbnail-upload" name="thefile" type="file">
-                                <input type="submit" value="Upload">
+                                <input name="thefile" type="file" required="required" id="thumbnail-upload">
+                                <span class="inline-file-uploader-actions">
+                                    <input type="reset" value="Reset">
+                                    <input type="submit" value="Upload">
+                                </span>
                             </div>
                         </div>
                     </form>
@@ -218,6 +224,7 @@
                         <p class="edit-alter-thumbnail">
                             <label for="width">Width</label>
                             <input class="input-xsmall" id="width" name="width" type="text" size="4" value="100">
+                            <a class="thumbnail-swap-size ui-button ui-corner-all ui-button-icon-only" role="button" title="Swap values"><span class="ui-button-icon ui-icon ui-icon-transfer-e-w"></span><span class="ui-button-icon-space"> </span>Swap values</a>
                             <label for="height">Height</label>
                             <input class="input-xsmall" id="height" name="height" type="text" size="4" value="67">
                             <label for="crop">Crop</label>
