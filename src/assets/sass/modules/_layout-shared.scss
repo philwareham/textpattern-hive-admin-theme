@@ -237,7 +237,7 @@ progress {
 }
 
 /**
- * Actions and upload forms at top of listings.
+ * Actions at top of listings.
  *
  * Appears on:
  *
@@ -271,6 +271,43 @@ progress {
     }
 }
 
+/**
+ * Upload forms inline and as part of a `.txp-form-field` group.
+ *
+ * Appears on:
+ *
+ * List panels (inline) and edit panels.
+ *
+ * Example HTML:
+ *
+ * <div class="inline-file-uploader">
+ *     <label>Upload file</label>
+ *     <input type="file" multiple="multiple">
+ *     <span class="inline-file-uploader-actions">
+ *         <label for="file_category">Category</label>
+ *         <select id="file_category" name="category">
+ *             <option>&nbsp;</option>
+ *             <option>File example category</option>
+ *         </select>
+ *     </span>
+ *     <span class="inline-file-uploader-actions">
+ *         <input type="reset" value="Reset">
+ *         <input type="submit" value="Upload">
+ *     </span>
+ * </div>
+ *
+ * <div class="txp-form-field file-uploader">
+ *     <div class="txp-form-field-label"><label>Upload file</label></div>
+ *     <div class="txp-form-field-value">
+ *         <input type="file">
+ *         <span class="inline-file-uploader-actions">
+ *             <input type="reset" value="Reset">
+ *             <input type="submit" value="Upload">
+ *         </span>
+ *     </div>
+ * </div>
+ */
+
 .inline-file-uploader {
     margin-bottom: -0.5em;
 
@@ -279,12 +316,16 @@ progress {
     }
 }
 
+.txp-form-field.file-uploader .txp-form-field-value {
+    margin-bottom: -0.5em;
+
+    > * {
+        margin-bottom: 1em;
+    }
+}
+
 .inline-file-uploader-actions {
     display: inline-block;
-
-    .txp-edit & {
-        margin: 1em 0 0;
-    }
 }
 
 /**
