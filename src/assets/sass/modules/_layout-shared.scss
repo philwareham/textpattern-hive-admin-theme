@@ -317,10 +317,10 @@ progress {
     }
 }
 
-.txp-form-field.file-uploader .txp-form-field-value {
+.txp-form-field.file-uploader {
     margin-bottom: -0.5em;
 
-    > * {
+    .txp-form-field-value > * {
         margin-bottom: 1em;
     }
 }
