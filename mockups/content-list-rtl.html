@@ -211,68 +211,70 @@
             </div>
 
             <div class="txp-layout-1col" id="list_container">
-                <div class="txp-control-panel">
-                    <a class="txp-button" href="content-article.html">Create new article</a>
-                </div>
-                <div class="txp-list-options">
-                    <a class="txp-list-options-button" href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
-                    <ul class="txp-list-options-list txp-dropdown">
-                        <li class="txp-dropdown-toggle-all">
-                            <div>
-                                <label><input tabindex="-1" class="checkbox active" type="checkbox" checked="checked"> Toggle all/none selected</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="id" type="checkbox"> ID#</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="title" type="checkbox"> Title</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="posted" type="checkbox" disabled="disabled"> Longer message that forces the label to wrap onto next line</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="lastmod" type="checkbox"> Modified</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="expires" type="checkbox"> Expires</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="section" type="checkbox"> Section</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="category1" type="checkbox"> Category 1</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="category2" type="checkbox"> Category 2</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="status" type="checkbox"> Status</label>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <label><input tabindex="-1" class="checkbox active" checked="checked" value="comments" type="checkbox"> Comments</label>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="txp-layout-cell-row txp-list-head">
+                    <div class="txp-control-panel">
+                        <a class="txp-button" href="content-article.html">Create new article</a>
+                    </div>
+                    <div class="txp-list-options">
+                        <a class="txp-list-options-button" href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+                        <ul class="txp-list-options-list txp-dropdown">
+                            <li class="txp-dropdown-toggle-all">
+                                <div>
+                                    <label><input tabindex="-1" class="checkbox active" type="checkbox" checked="checked"> Toggle all/none selected</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label><input tabindex="-1" class="checkbox active" checked="checked" value="id" type="checkbox"> ID#</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label><input tabindex="-1" class="checkbox active" checked="checked" value="title" type="checkbox"> Title</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label><input tabindex="-1" class="checkbox active" checked="checked" value="posted" type="checkbox" disabled="disabled"> Longer message that forces the label to wrap onto next line</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label><input tabindex="-1" class="checkbox active" checked="checked" value="lastmod" type="checkbox"> Modified</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label><input tabindex="-1" class="checkbox active" checked="checked" value="expires" type="checkbox"> Expires</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label><input tabindex="-1" class="checkbox active" checked="checked" value="section" type="checkbox"> Section</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label><input tabindex="-1" class="checkbox active" checked="checked" value="category1" type="checkbox"> Category 1</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label><input tabindex="-1" class="checkbox active" checked="checked" value="category2" type="checkbox"> Category 2</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label><input tabindex="-1" class="checkbox active" checked="checked" value="status" type="checkbox"> Status</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label><input tabindex="-1" class="checkbox active" checked="checked" value="comments" type="checkbox"> Comments</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <form class="multi_edit_form" id="articles_form" name="longform" method="post" action="#">
@@ -572,7 +574,7 @@
 
                 </form>
 
-                <div class="txp-navigation" id="list_navigation">
+                <div class="txp-layout-cell-row txp-navigation" id="list_navigation">
                     <div class="nav-tertiary pageby">
                         <a class="navlink-active" title="View 12 per page" aria-pressed="true" role="button" href="#">12</a><a class="navlink" title="View 24 per page" aria-pressed="false" role="button" href="#">24</a><a class="navlink" title="View 48 per page" aria-pressed="false" role="button" href="#">48</a><a class="navlink" title="View 96 per page" aria-pressed="false" role="button" href="#">96</a>
                     </div>

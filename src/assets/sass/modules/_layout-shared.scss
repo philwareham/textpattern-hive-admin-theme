@@ -253,7 +253,6 @@ progress {
 
 .txp-control-panel {
     margin-bottom: 1em;
-    float: left;
 
     > * {
         margin: 0.5em 0.5em 0.5em 0;
@@ -333,12 +332,8 @@ progress {
  * Swap float/margin positions in RTL languages.
  */
 
-[dir="rtl"] .txp-control-panel {
-    float: right;
-
-    > * {
-        margin: 0.5em 0 0.5em 0.5em;
-    }
+[dir="rtl"] .txp-control-panel > * {
+    margin: 0.5em 0 0.5em 0.5em;
 }
 
 /**
@@ -359,11 +354,17 @@ progress {
 
 .txp-list-options {
     position: relative;
+    flex-grow: 1;
     margin: 1em 0;
-    float: right;
+    text-align: right;
+
+    > ul {
+        text-align: start;
+    }
 
     > *:not(ul) {
         margin: 0 0 0 1em;
+        white-space: nowrap;
         user-select: none;
     }
 
@@ -377,7 +378,11 @@ progress {
  */
 
 [dir="rtl"] .txp-list-options {
-    float: left;
+    text-align: left;
+
+    > ul {
+        text-align: start;
+    }
 
     > *:not(ul) {
         margin: 0 1em 0 0;
@@ -642,7 +647,7 @@ span.spinner {
  *
  * Example HTML:
  *
- * <div class="txp-navigation" id="image_navigation">
+ * <div class="txp-layout-cell-row txp-navigation" id="image_navigation">
  *     <p class="nav-tertiary pageby">
  *         <a class="navlink-active">15</a><a class="navlink">25</a><a class="navlink">50</a>
  *     </p>
@@ -658,20 +663,12 @@ span.spinner {
  * </div>
  */
 
-.txp-navigation::after {
-    display: table;
-    clear: both;
-    content: "";
-}
-
 .pageby {
     margin: 1em 0;
-    float: left;
 }
 
 .prev-next {
     margin: 1em 0;
-    float: right;
 
     form {
         display: inline-block;
@@ -682,21 +679,13 @@ span.spinner {
  * Swap margin positions and arrow icons in RTL languages.
  */
 
-[dir="rtl"] {
-    .pageby {
-        float: right;
+[dir="rtl"] .prev-next {
+    .ui-icon-arrowthick-1-w {
+        transform: rotate(180deg);
     }
 
-    .prev-next {
-        float: left;
-
-        .ui-icon-arrowthick-1-w {
-            transform: rotate(180deg);
-        }
-
-        .ui-icon-arrowthick-1-e {
-            transform: rotate(180deg);
-        }
+    .ui-icon-arrowthick-1-e {
+        transform: rotate(180deg);
     }
 }
 

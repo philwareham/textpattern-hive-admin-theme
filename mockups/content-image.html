@@ -197,29 +197,31 @@
             </div>
 
             <div class="txp-layout-1col" id="image_container">
-                <div class="txp-control-panel">
-                    <form class="upload-form" method="post" action="#">
-                        <div class="inline-file-uploader">
-                            <label for="image-upload">Upload image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label>
-                            <input id="image-upload" name="thefile" type="file">
-                            <span class="inline-file-uploader-actions">
-                                <label for="image_category">Category</label>
-                                <select id="image_category" name="category">
-                                    <option value="" selected="selected">&nbsp;</option>
-                                    <option value="image-example-category" data-level="0" dir="auto">Image example category</option>
-                                </select>
-                            </span>
-                            <span class="inline-file-uploader-actions">
-                                <input type="reset" value="Reset">
-                                <input type="submit" value="Upload"></span>
-                            </span>
-                        </div>
-                    </form>
-                </div>
-                <div class="txp-list-options">
-                    <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
-                    <a href="content-image.html"><span class="ui-icon ui-extra-icon-list"></span> List view</a>
-                    <a href="content-image-grid.html"><span class="ui-icon ui-extra-icon-grid"></span> Grid view</a>
+                <div class="txp-layout-cell-row txp-list-head">
+                    <div class="txp-control-panel">
+                        <form class="upload-form" method="post" action="#">
+                            <div class="inline-file-uploader">
+                                <label for="image-upload">Upload image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label>
+                                <input id="image-upload" name="thefile" type="file">
+                                <span class="inline-file-uploader-actions">
+                                    <label for="image_category">Category</label>
+                                    <select id="image_category" name="category">
+                                        <option value="" selected="selected">&nbsp;</option>
+                                        <option value="image-example-category" data-level="0" dir="auto">Image example category</option>
+                                    </select>
+                                </span>
+                                <span class="inline-file-uploader-actions">
+                                    <input type="reset" value="Reset">
+                                    <input type="submit" value="Upload"></span>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="txp-list-options">
+                        <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+                        <a href="content-image.html"><span class="ui-icon ui-extra-icon-list"></span> List view</a>
+                        <a href="content-image-grid.html"><span class="ui-icon ui-extra-icon-grid"></span> Grid view</a>
+                    </div>
                 </div>
 
                 <form class="multi_edit_form" id="images_form" name="longform" method="post" action="#">
@@ -308,7 +310,7 @@
 
                 </form>
 
-                <div class="txp-navigation" id="image_navigation">
+                <div class="txp-layout-cell-row txp-navigation" id="image_navigation">
                     <div class="nav-tertiary pageby">
                         <a class="navlink" title="View 12 per page" aria-pressed="true" role="button" href="#">12</a><a class="navlink-active" title="View 24 per page" aria-pressed="false" role="button" href="#">24</a><a class="navlink" title="View 48 per page" aria-pressed="false" role="button" href="#">48</a><a class="navlink" title="View 96 per page" aria-pressed="false" role="button" href="#">96</a>
                     </div>

@@ -53,6 +53,12 @@
     width: 25%;
 }
 
+.txp-layout-cell-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
 /**
  * Text columns (fixed proportion cell)
  *

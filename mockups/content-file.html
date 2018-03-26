@@ -205,41 +205,43 @@
             </div>
 
             <div class="txp-layout-1col" id="file_container">
-                <div class="txp-control-panel">
-                    <form class="upload-form async" method="post" enctype="multipart/form-data" action="index.php?event=file&amp;step=file_insert" style="position: relative">
-                        <div class="inline-file-uploader">
-                            <label for="file-upload">Upload file&nbsp;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label>
-                            <input name="thefile[]" type="file" required="required" id="file-upload" multiple="multiple">
-                            <span class="inline-file-uploader-actions">
-                                <label for="file_category">Category</label>
-                                <select id="file_category" name="category">
-                                    <option value="" selected="selected">&nbsp;</option>
-                                    <option value="file-example-category" data-level="0" dir="auto">File example category</option>
-                                </select>
-                            </span>
-                            <span class="inline-file-uploader-actions">
-                                <input type="reset" value="Reset">
-                                <input type="submit" value="Upload">
-                            </span>
-                        </div>
-                        <progress class="txp-upload-progress" value="0.66"></progress>
-                    </form>
+                <div class="txp-layout-cell-row txp-list-head">
+                    <div class="txp-control-panel">
+                        <form class="upload-form async" method="post" enctype="multipart/form-data" action="index.php?event=file&amp;step=file_insert" style="position: relative">
+                            <div class="inline-file-uploader">
+                                <label for="file-upload">Upload file&nbsp;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label>
+                                <input name="thefile[]" type="file" required="required" id="file-upload" multiple="multiple">
+                                <span class="inline-file-uploader-actions">
+                                    <label for="file_category">Category</label>
+                                    <select id="file_category" name="category">
+                                        <option value="" selected="selected">&nbsp;</option>
+                                        <option value="file-example-category" data-level="0" dir="auto">File example category</option>
+                                    </select>
+                                </span>
+                                <span class="inline-file-uploader-actions">
+                                    <input type="reset" value="Reset">
+                                    <input type="submit" value="Upload">
+                                </span>
+                            </div>
+                            <progress class="txp-upload-progress" value="0.66"></progress>
+                        </form>
 
-                    <form class="assign-existing-form" id="assign_file" method="post" action="index.php">
-                        <label for="file-existing">Existing file</label>
-                        <select id="file-existing" name="filename[]" multiple="multiple">
-                            <option value="example1" dir="auto">IMG_0564.JPEG</option>
-                            <option value="example2" dir="auto">example-of-quite-an-unrealistically-long-filename-solely-for-testing-purposes.txt</option>
-                            <option value="example3" dir="auto">IMG_0565.JPEG</option>
-                            <option value="example4" dir="auto">IMG_0566.JPEG</option>
-                            <option value="example5" dir="auto">IMG_0567.JPEG</option>
-                            <option value="example6" dir="auto">IMG_0568.JPEG</option>
-                        </select>
-                        <input type="submit" value="Create">
-                    </form>
-                </div>
-                <div class="txp-list-options">
-                    <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+                        <form class="assign-existing-form" id="assign_file" method="post" action="index.php">
+                            <label for="file-existing">Existing file</label>
+                            <select id="file-existing" name="filename[]" multiple="multiple">
+                                <option value="example1" dir="auto">IMG_0564.JPEG</option>
+                                <option value="example2" dir="auto">example-of-quite-an-unrealistically-long-filename-solely-for-testing-purposes.txt</option>
+                                <option value="example3" dir="auto">IMG_0565.JPEG</option>
+                                <option value="example4" dir="auto">IMG_0566.JPEG</option>
+                                <option value="example5" dir="auto">IMG_0567.JPEG</option>
+                                <option value="example6" dir="auto">IMG_0568.JPEG</option>
+                            </select>
+                            <input type="submit" value="Create">
+                        </form>
+                    </div>
+                    <div class="txp-list-options">
+                        <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+                    </div>
                 </div>
 
                 <form class="multi_edit_form" id="files_form" name="longform" method="post" action="#">
@@ -319,7 +321,7 @@
 
                 </form>
 
-                <div class="txp-navigation" id="file_navigation">
+                <div class="txp-layout-cell-row txp-navigation" id="file_navigation">
                     <div class="nav-tertiary pageby">
                         <a class="navlink-active" title="View 12 per page" aria-pressed="true" role="button" href="#">12</a><a class="navlink" title="View 24 per page" aria-pressed="false" role="button" href="#">24</a><a class="navlink" title="View 48 per page" aria-pressed="false" role="button" href="#">48</a><a class="navlink" title="View 96 per page" aria-pressed="false" role="button" href="#">96</a>
                     </div>

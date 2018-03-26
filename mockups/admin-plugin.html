@@ -149,15 +149,17 @@
             </div>
 
             <div class="txp-layout-1col" id="plugin_container">
-                <div class="txp-control-panel">
-                    <form class="plugin-data" id="plugin_install_form" method="post" action="secondary/admin-plugin_install.html">
-                        <label for="plugin-install">Install plugin&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></label>
-                        <textarea class="code" id="plugin-install" name="plugin" cols="64" rows="4" dir="ltr"></textarea>
-                        <input name="install_new" type="submit" value="Upload">
-                    </form>
-                </div>
-                <div class="txp-list-options">
-                    <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+                <div class="txp-layout-cell-row txp-list-head">
+                    <div class="txp-control-panel">
+                        <form class="plugin-data" id="plugin_install_form" method="post" action="secondary/admin-plugin_install.html">
+                            <label for="plugin-install">Install plugin&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></label>
+                            <textarea class="code" id="plugin-install" name="plugin" cols="64" rows="4" dir="ltr"></textarea>
+                            <input name="install_new" type="submit" value="Upload">
+                        </form>
+                    </div>
+                    <div class="txp-list-options">
+                        <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+                    </div>
                 </div>
 
                 <form class="multi_edit_form" id="plugin_form" name="longform" method="post" action="#">

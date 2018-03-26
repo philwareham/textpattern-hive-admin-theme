@@ -197,22 +197,24 @@
             </div>
 
             <div class="txp-layout-1col">
-                <div class="txp-control-panel">
-                    <form class="upload-form" method="post" action="#">
-                        <div class="inline-file-uploader">
-                            <label for="image-upload">Upload image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label>
-                            <input id="image-upload" name="thefile" type="file">
-                            <input type="submit" value="Upload">
-                        </div>
-                    </form>
-                </div>
-                <div class="txp-list-options">
-                    <span>
-                        <input class="checkbox" id="cb_toggle_multiedit_all" name="cb_toggle_multiedit_all" type="checkbox" value="1">
-                        <label for="cb_toggle_multiedit_all">Select all</label>
-                    </span>
-                    <a href="content-image.html"><span class="ui-icon ui-extra-icon-list"></span> List view</a>
-                    <a href="content-image-grid.html"><span class="ui-icon ui-extra-icon-grid"></span> Grid view</a>
+                <div class="txp-layout-cell-row txp-list-head">
+                    <div class="txp-control-panel">
+                        <form class="upload-form" method="post" action="#">
+                            <div class="inline-file-uploader">
+                                <label for="image-upload">Upload image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label>
+                                <input id="image-upload" name="thefile" type="file">
+                                <input type="submit" value="Upload">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="txp-list-options">
+                        <span>
+                            <input class="checkbox" id="cb_toggle_multiedit_all" name="cb_toggle_multiedit_all" type="checkbox" value="1">
+                            <label for="cb_toggle_multiedit_all">Select all</label>
+                        </span>
+                        <a href="content-image.html"><span class="ui-icon ui-extra-icon-list"></span> List view</a>
+                        <a href="content-image-grid.html"><span class="ui-icon ui-extra-icon-grid"></span> Grid view</a>
+                    </div>
                 </div>
 
                 <form class="multi_edit_form" id="images_form" name="longform" method="post" action="#">
@@ -376,7 +378,7 @@
 
                 </form>
 
-                <div class="txp-navigation" id="image_navigation">
+                <div class="txp-layout-cell-row txp-navigation" id="image_navigation">
                     <div class="nav-tertiary pageby">
                         <a class="navlink" title="View 12 per page" aria-pressed="true" role="button" href="#">12</a><a class="navlink-active" title="View 24 per page" aria-pressed="false" role="button" href="#">24</a><a class="navlink" title="View 48 per page" aria-pressed="false" role="button" href="#">48</a><a class="navlink" title="View 96 per page" aria-pressed="false" role="button" href="#">96</a>
                     </div>

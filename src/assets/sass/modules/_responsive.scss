@@ -183,6 +183,10 @@
         width: 100%;
     }
 
+    .txp-layout-cell-row {
+        display: block;
+    }
+
     /**
      * Non-fixed header on mobile layout (because mobile nav menu couldn't scroll otherwise).
      */
@@ -364,15 +368,6 @@
         .jquery-ui-controlgroup {
             margin: 0;
         }
-    }
-
-    /**
-     * Remove float from list navigators on list panels.
-     */
-
-    .pageby,
-    .prev-next {
-        float: none;
     }
 
     /**
