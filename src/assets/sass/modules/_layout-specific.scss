@@ -355,11 +355,9 @@ tr.active {
     }
 }
 
-div.code {
-    height: 21em;
-    margin-bottom: 1em;
-    padding: 0.15384615384615em 0.38461538461538em;
-    border: 1px solid $color-border;
+#preview-plugin,
+#preview-help,
+#preview-textpack {
+    max-height: 21em;
     overflow: auto;
-    box-sizing: border-box;
 }
