@@ -136,19 +136,18 @@
 
         <div id="messagepane"></div>
 
-        <form class="plugin-info" id="plugin_preview" method="post" action="#">
+        <form class="plugin-info" id="plugin_preview" method="post" action="../admin-plugin.html">
             <h2>Plugin preview</h2>
-            <div class="code" id="preview-plugin" dir="ltr" spellcheck="false">
-                <code>The plugin code displays here</code>
-            </div>
+            <pre id="preview-help" class="language-php"><code class="language-php" dir="ltr">&lt;?php
+The plugin PHP code displays here.
+?&gt;</code></pre>
             <h2>Plugin help</h2>
-            <div class="code" id="preview-help" dir="ltr" spellcheck="false">
-                <code>The plugin help displays here</code>
-            </div>
+            <pre id="preview-help" class="language-markup"><code class="language-markup" dir="ltr">&lt;h1&gt;Example heading&lt;/h1&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;
+&lt;p&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</code></pre>
             <h2><bdi dir="ltr">Textpack</bdi></h2>
-            <div class="code" id="preview-textpack" dir="ltr" spellcheck="false">
-                <code>The plugin Textpack displays here</code>
-            </div>
+            <pre id="preview-textpack"><code>The plugin Textpack displays here</code></pre>
             <p class="txp-edit-actions">
                 <a class="txp-button" href="../admin-plugin.html">Cancel</a>
                 <input class="publish" type="submit" value="Install">
@@ -161,6 +160,8 @@
         <p class="mothership"><a href="https://textpattern.com" rel="external" target="_blank">Textpattern CMS <span class="ui-icon ui-icon-extlink">(opens an external link in a new window)</span></a> (v4.7)</p>
         <p class="pagejump"><a href="#">Back to top</a></p>
     </footer><!-- /txp-footer -->
+
+    <script src="../../docs/assets/js/prism.js"></script>
 
 </body>
 </html>
