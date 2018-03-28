@@ -147,10 +147,10 @@ textarea {
  * 2. Correct margins for inline checkbox/radio labels.
  */
 
-[type="checkbox"],
-[type="radio"] {
+[type="checkbox"]:not(.ui-checkboxradio),
+[type="radio"]:not(.ui-checkboxradio) {
     position: relative;
-    bottom: -0.1em;
+    bottom: -0.15em;
     width: 16px;
     height: 16px;
     /* 1 */
@@ -181,7 +181,7 @@ textarea {
     }
 }
 
-[type="checkbox"] {
+[type="checkbox"]:not(.ui-checkboxradio) {
     border-radius: 0.2em;
 
     &:checked {
@@ -195,7 +195,7 @@ textarea {
     }
 }
 
-[type="radio"] {
+[type="radio"]:not(.ui-checkboxradio) {
     border-radius: 100%;
 
     &:checked {
