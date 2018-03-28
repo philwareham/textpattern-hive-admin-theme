@@ -149,8 +149,16 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
+    position: relative;
+    bottom: -0.1em;
+    width: 16px;
+    height: 16px;
     /* 1 */
     padding: 0;
+    border: 1px solid $color-button-border;
+    background: $color-background-form;
+    appearance: none;
+    box-sizing: border-box;
 
     + label:not(.ui-controlgroup-item) {
         /* 2 */
@@ -159,6 +167,43 @@ textarea {
         &:last-of-type {
             /* 2 */
             margin: 0;
+        }
+    }
+
+    &:hover {
+        border-color: darken($color-button-border, 13%);
+        cursor: pointer;
+    }
+
+    &:focus {
+        border-color: $color-link-focus;
+        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+    }
+}
+
+[type="checkbox"] {
+    border-radius: 0.2em;
+
+    &:checked {
+        border: 0;
+        background-color: $color-text;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2l-8 8-2-2-2 2 4 4L15 4z'/%3E%3C/svg%3E");
+
+        &:focus {
+            background-color: $color-link-focus;
+        }
+    }
+}
+
+[type="radio"] {
+    border-radius: 100%;
+
+    &:checked {
+        border: 0.33em solid $color-text;
+        border-radius: 100%;
+
+        &:focus {
+            border-color: $color-link-focus;
         }
     }
 }
