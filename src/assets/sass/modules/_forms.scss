@@ -199,7 +199,7 @@ textarea {
     border-radius: 100%;
 
     &:checked {
-        border: 0.33em solid $color-text;
+        border: 0.384615384615385em solid $color-text; // 5px / 13px
         border-radius: 100%;
 
         &:focus {
@@ -222,6 +222,25 @@ textarea {
                 margin: 0;
             }
         }
+    }
+}
+
+/**
+ * Reset to OS-native UI for Firefox <54.
+ *
+ * TODO: Remove when Firefox ESR 54 available.
+ */
+
+@supports (unicode-bidi: -moz-isolate) {
+    [type="checkbox"]:not(.ui-checkboxradio) {
+        bottom: -0.1em;
+        -moz-appearance: checkbox;
+
+    }
+
+    [type="radio"]:not(.ui-checkboxradio) {
+        bottom: -0.1em;
+        -moz-appearance: radio;
     }
 }
 

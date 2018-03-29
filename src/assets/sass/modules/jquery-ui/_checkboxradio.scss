@@ -50,7 +50,7 @@
     &.ui-checkboxradio-checked,
     &.ui-checkboxradio-checked:hover {
         .ui-icon {
-            border: 0.33em solid $color-text;
+            border: 0.384615384615385em solid $color-text; // 5px / 13px
             border-radius: 100%;
             background: $color-background-form;
         }
