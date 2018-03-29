@@ -40,6 +40,25 @@ body {
     color: $color-text;
 }
 
+/**
+ * ScrollSpy indicators.
+ */
+
+.is-inview {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        left: -2em;
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 0.25em;
+        background: rgba($color-link-focus, 0.25);
+        content: "";
+        z-index: 2001;
+    }
+}
+
 
 /* Colour palette.
    ========================================================================== */
