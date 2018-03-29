@@ -18,17 +18,17 @@ body {
     padding: 0 2em 1em;
 }
 
-.section {
+.design-patterns--section {
     padding-top: 0.25em;
 }
 
-.docs-menu {
+.design-patterns--menu {
     max-width: 62em;
     margin: 0 auto;
     padding: 2em 0;
 }
 
-.docs--heading {
+.design-patterns--heading {
     padding-top: 1em;
 }
 
@@ -184,7 +184,7 @@ $colors: (
  * <h2>Title <span>new v4.7</span></h2>
  */
 
-.section h1 span,
+.design-patterns--section h1 span,
 h2 span {
     font-size: $base-font-size;
     font-weight: normal;
@@ -225,7 +225,7 @@ div.prism-show-language > div.prism-show-language-label {
      * Fixed sidebar.
      */
 
-    .docs-menu {
+    .design-patterns--menu {
         position: fixed;
         top: 0;
         bottom: 0;
