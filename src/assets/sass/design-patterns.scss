@@ -26,6 +26,11 @@ body {
     max-width: 62em;
     margin: 0 auto;
     padding: 2em 0;
+
+    // Enforce LTR behaviour in nav list.
+    ol {
+        padding: 0 0 0 2em;
+    }
 }
 
 .design-patterns--heading {
@@ -232,11 +237,6 @@ h2 span {
         overflow-x: hidden;
         overflow-y: auto;
         box-sizing: border-box;
-
-        // Enforce LTR behaviour in nav list.
-        ol {
-            padding: 0 0 0 2em;
-        }
     }
 
     .design-patterns--content {
