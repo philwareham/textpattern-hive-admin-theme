@@ -239,6 +239,11 @@ div.prism-show-language > div.prism-show-language-label {
         overflow-x: hidden;
         overflow-y: auto;
         box-sizing: border-box;
+
+        // Enforce LTR behaviour in nav list.
+        ol {
+            padding: 0 0 0 2em;
+        }
     }
 
     .docs-content {
