@@ -11,18 +11,6 @@ $(function ()
 
     $('[dir="rtl"] label').attr('dir', 'rtl');
 
-    // ScrollSpy.
-
-    var spy = new ScrollSpy('main', {
-        nav: '.design-patterns--menu ol > li > a',
-        className: 'is-inview'
-    });
-
-    var subSpy = new ScrollSpy('main', {
-    	nav: '.design-patterns--menu ol > li > ol > li > a',
-    	className: 'is-inview'
-    });
-
     // jQuery UI interactions.
 
     // Draggable.
