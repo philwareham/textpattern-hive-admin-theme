@@ -26,12 +26,14 @@
      */
 
     .txp-layout-4col {
+        //grid-column: span 6;
         width: 50%;
     }
 
     .txp-layout-4col-alt,
     .txp-layout-4col-2span,
     .txp-layout-4col-3span {
+        //grid-column: span 12;
         width: 100%;
     }
 
@@ -180,6 +182,7 @@
 
     .txp-layout-2col,
     .txp-layout-4col {
+        //grid-column: span 12;
         width: 100%;
     }
 
