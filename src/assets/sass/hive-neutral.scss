@@ -30,8 +30,29 @@ $border-radius:                       0.3em;
         }
     }
 
-    .ui-button .ui-icon {
-        filter: brightness(5);
+    button:not(.destroy),
+    [type="reset"],
+    [type="submit"]:not(.destroy),
+    input[type="button"],
+    .txp-button,
+    .ui-widget-content .ui-icon,
+    .ui-widget-header .ui-icon,
+    .ui-state-hover .ui-icon,
+    .ui-state-focus .ui-icon,
+    .ui-state-active .ui-icon {
+        .ui-icon {
+            filter: brightness(5) !important;
+        }
+    }
+
+    button[disabled]:not(.destroy),
+    [type="reset"][disabled],
+    [type="submit"][disabled]:not(.destroy),
+    input[type="button"][disabled],
+    .txp-button.disabled {
+        .ui-icon {
+            filter: none !important;
+        }
     }
 
     .no-ui-button .ui-button .ui-icon {
