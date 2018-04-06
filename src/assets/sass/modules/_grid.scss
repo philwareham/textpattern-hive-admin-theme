@@ -159,9 +159,16 @@
 }
 
 .txp-grid-cell {
+    width: 9.384615384615385em; // 122px / 13px
     padding: 0 1em;
     border: 1px solid $color-border;
     box-sizing: border-box;
+}
+
+@supports (display: grid) {
+    .txp-grid-cell {
+        width: auto;
+    }
 }
 
 .txp-grid-cell-2span {
