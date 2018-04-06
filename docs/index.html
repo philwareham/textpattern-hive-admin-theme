@@ -306,17 +306,17 @@
                     <p><strong>Example:</strong></p>
                     <div class="design-patterns--box">Text column (independent of grid columns)</div>
 
-                    <h2 class="design-patterns--heading">Inline grids <span class="warning">changed v4.6</span></h2>
-                    <p>Flexbox inline grid content layouts.</p>
+                    <h2 class="design-patterns--heading">Inline grids <span class="warning">changed v4.7</span></h2>
+                    <p>Flexible inline grid content layouts.</p>
                     <p><strong>Code:</strong></p>
                     <pre dir="ltr"><code class="language-markup">&lt;div class="txp-grid"&gt;
-    &lt;div class="txp-grid-cell" [width, see notes]&gt;
+    &lt;div class="txp-grid-cell"&gt;
         &lt;p&gt;Grid item 1&lt;/p&gt;
-    &lt;/div&gt;&lt;div class="txp-grid-cell" [width, see notes]&gt;
+    &lt;/div&gt;&lt;div class="txp-grid-cell"&gt;
         &lt;p&gt;Grid item 2&lt;/p&gt;
-    &lt;/div&gt;&lt;div class="txp-grid-cell highlight" [width, see notes]&gt;
+    &lt;/div&gt;&lt;div class="txp-grid-cell txp-grid-cell-2span"&gt;
         &lt;p&gt;Grid item 3&lt;/p&gt;
-    &lt;/div&gt;&lt;div class="txp-grid-cell" [width, see notes]&gt;
+    &lt;/div&gt;&lt;div class="txp-grid-cell highlight"&gt;
         &lt;p&gt;Grid item 4&lt;/p&gt;
     &lt;/div&gt;
     ...etc...
@@ -326,33 +326,36 @@
                         <div class="txp-grid-cell">
                             <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
                         </div>
-                        <div class="txp-grid-cell" style="width:15em;">
+                        <div class="txp-grid-cell">
                             <p>Longer text item example to show how Flexbox stretches vertically to fill the addtional area</p>
                         </div>
-                        <div class="txp-grid-cell" style="width:15em;">
+                        <div class="txp-grid-cell txp-grid-cell-2span">
                             <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
                         </div>
-                        <div class="txp-grid-cell" style="width:15em;">
+                        <div class="txp-grid-cell highlight">
                             <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
                         </div>
-                        <div class="txp-grid-cell highlight" style="width:15em;">
+                        <div class="txp-grid-cell">
                             <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
                         </div>
-                        <div class="txp-grid-cell" style="width:15em;">
+                        <div class="txp-grid-cell">
                             <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
                         </div>
-                        <div class="txp-grid-cell" style="width:15em;">
-                            <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
-                        </div>
-                        <div class="txp-grid-cell" style="width:15em;">
+                        <div class="txp-grid-cell">
                             <p>Short text item.</p>
                         </div>
-                        <div class="txp-grid-cell" style="width:15em;">
+                        <div class="txp-grid-cell">
+                            <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+                        </div>
+                        <div class="txp-grid-cell txp-grid-cell-3span">
+                            <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
+                        </div>
+                        <div class="txp-grid-cell txp-grid-cell-4span">
                             <p>Lorem ipsum dolor sit amet, quo epicuri volutpat no.</p>
                         </div>
                     </div>
                     <p><strong>Notes:</strong></p>
-                    <p>You should define a specific width for each <code dir="ltr">.txp-grid-cell</code>, either as a <code dir="ltr">class</code> attribute or <code dir="ltr">style</code> attribute, otherwise the cell width stretches to the content within it.</p>
+                    <p>You should define a specific width for any <code dir="ltr">.txp-grid-cell</code> which you want to span more than one standard cell width, using an additonal classname of <code dir="ltr">.txp-grid-cell-Xspan</code>, where <code>X</code> can be <code>2</code> to <code>4</code> (corresponding to a span of 2 to 4 standard cell widths).</p>
 
                 </div>
 
