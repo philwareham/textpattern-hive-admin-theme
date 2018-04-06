@@ -22,7 +22,7 @@
 
 .ui-checkboxradio-label {
     .ui-icon-background {
-        border: 1px solid $color-border;
+        border: 1px solid darken($color-border, 13%);
         border-radius: 0.2em;
         background-color: $color-background-box;
         box-sizing: border-box;

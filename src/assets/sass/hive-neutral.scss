@@ -6,9 +6,10 @@ $color-gradient-from:                 #eeeeee;
 $color-gradient-to:                   #eeeeee; // nullify gradient (use flat colours)
 $color-accent-gradient-from:          #c7e0f6;
 $color-accent-gradient-to:            #c7e0f6; // nullify gradient (use flat colours)
-$color-selecting:                     lighten($color-accent-gradient-from, 3%);
-$color-selected:                      lighten($color-accent-gradient-from, 8%);
+$color-selecting:                     #c7e0f6;
+$color-selected:                      lighten($color-selecting, 6%);
 $color-background:                    #f7f7f7;
+$color-background-box:                #ffffff;
 $color-button-gradient-from:          #5ba4e5;
 $color-button-gradient-to:            #5ba4e5; // nullify gradient (use flat colours)
 $color-button-primary-gradient-from:  #9fc158;
@@ -22,6 +23,10 @@ $border-radius:                       0.3em;
 
 @media screen {
 
+    tr {
+        border-color: $color-border;
+    }
+
     .txp-list {
         tbody tr,
         thead th,
@@ -30,11 +35,17 @@ $border-radius:                       0.3em;
         }
     }
 
+    .txp-edit,
+    .txp-details {
+        background: $color-background;
+    }
+
     button:not(.destroy),
     [type="reset"],
     [type="submit"]:not(.destroy),
     input[type="button"],
     .txp-button,
+    .ui-button:not(.ui-checkboxradio-label),
     .ui-widget-content .ui-icon,
     .ui-widget-header .ui-icon,
     .ui-state-hover .ui-icon,
@@ -78,6 +89,57 @@ $border-radius:                       0.3em;
     .switcher-list li.active,
     .ui-tabs-vertical .ui-tabs-nav .ui-tabs-active {
         background: #ffffff;
+    }
+
+    .txp-upload-progress::-webkit-progress-value {
+        background-color: $color-button-primary-gradient-to;
+    }
+
+    .txp-upload-progress::-moz-progress-bar {
+        background-color: $color-button-primary-gradient-to;
+    }
+
+    .txp-upload-progress::-ms-fill {
+        background-color: $color-button-primary-gradient-to;
+    }
+
+    .ui-progressbar-value {
+        background-color: $color-button-primary-gradient-to;
+    }
+
+    .ui-tabs-vertical {
+        .ui-tabs-nav {
+            border-bottom-color: $color-border;
+        }
+
+        .ui-tabs-nav li {
+            border-color: $color-border;
+            border-bottom-color: transparent;
+        }
+    }
+
+}
+
+
+
+/* ==========================================================================
+   Additional layout for devices < 547px
+   ========================================================================== */
+
+
+@media (max-width: $break-small) {
+
+    /**
+     * Collapse jQuery UI tabs responsively.
+     */
+
+    .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
+        border-bottom-color: $color-border;
+
+        li {
+            border-color: $color-border;
+            border-bottom-color: transparent;
+        }
     }
 
 }
