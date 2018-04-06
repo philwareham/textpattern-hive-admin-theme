@@ -203,7 +203,7 @@ textarea {
     }
 
     &[disabled]:checked {
-        background-color: $color-border-light !important;
+        background: $color-border-light url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
     }
 }
 
@@ -380,7 +380,7 @@ textarea.code {
 .navlink-disabled,
 .ui-checkboxradio-disabled {
     border-color: $color-border-light !important;
-    background-color: $color-background-form-disabled !important;
+    background: $color-background-form-disabled !important;
     color: $color-text-form-disabled !important;
     box-shadow: none !important;
     /* 1 */
