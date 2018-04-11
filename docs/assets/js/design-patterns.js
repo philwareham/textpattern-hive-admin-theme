@@ -267,7 +267,7 @@ $(function ()
     prefsGroup.tabs().removeClass('ui-widget ui-widget-content ui-corner-all').addClass('ui-tabs-vertical');
     prefsGroup.find('.switcher-list').removeClass('ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all');
     prefsGroup.find('.switcher-list li').removeClass('ui-state-default ui-corner-top');
-    prefsGroup.find('.txp-prefs-group').removeClass('ui-widget-content ui-corner-bottom');
+    prefsGroup.find('.txp-tabs-vertical-group').removeClass('ui-widget-content ui-corner-bottom');
 
     // Tooltips.
 
