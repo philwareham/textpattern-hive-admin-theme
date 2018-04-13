@@ -192,17 +192,6 @@
     }
 }
 
-.txp-grid-cell-4span {
-    min-width: 38.461538461538462em; // 500px / 13px
-}
-
-@supports (display: grid) {
-    .txp-grid-cell-4span {
-        min-width: unset;
-        grid-column: span 4;
-    }
-}
-
 .txp-grid-multi-edit {
     position: absolute;
     top: 1px;
