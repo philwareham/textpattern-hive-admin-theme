@@ -154,7 +154,7 @@ textarea {
 [type="checkbox"]:not(.ui-checkboxradio),
 [type="radio"]:not(.ui-checkboxradio) {
     position: relative;
-    bottom: -0.2em;
+    bottom: -2px; // 2px / 13px
     width: 16px;
     height: 16px;
     /* 1 */

@@ -182,6 +182,28 @@
     }
 
     /**
+     * Adjust right/left padding of body.
+     */
+
+    body {
+        padding: 4em 1em 0; // 64px + 16px
+    }
+
+    .setup,
+    .login {
+        padding: 1em 1em 0; // 16px
+    }
+
+    /**
+     * Adjust right/left padding of header area.
+     */
+
+    .txp-header {
+        height: 2.625em; // 42px / 16px
+        padding: 0 1em; // 16px
+    }
+
+    /**
      * Grid column cell changes at 2nd breakpoint downwards.
      *
      * Cells for 2 column layout become 1 column layout.
@@ -206,6 +228,11 @@
         position: absolute;
     }
 
+    .txp-header h1,
+    .txp-view-site {
+        margin-top: 0.25em;
+    }
+
     /**
      * Show the navigation menu toggle button on mobile layout.
      *
@@ -220,7 +247,7 @@
         display: block;
         width: 2em;
         height: 2em;
-        margin: 0.0625em 0 0;
+        margin: 0.25em 0 0;
         padding: 0;
         float: left;
         border: 0;
@@ -229,7 +256,6 @@
         }
         background: transparent url("../img/sprite.svg") -10em 0;
         background-size: 13em 2em; // 208px / 16px + 32px / 16px
-        font-size: 16px;
 
         &:focus {
             outline: thin solid $color-link-focus;
@@ -255,7 +281,7 @@
     .txp-nav.in .data-dropdown {
         display: block;
         position: absolute;
-        top: 3em;
+        top: 2.75em;
         right: 0;
         left: 0;
         background: $color-highlight-box;
@@ -267,17 +293,16 @@
         &::before {
             position: absolute;
             top: -0.5em; // 8px / 16px
-            left: 4.375em; // 70px / 16px;
+            left: 3.875em; // 62px / 16px;
             width: 1em;
             height: 0.5em;
             background: url("../img/sprite.svg") no-repeat -12em 0;
             background-size: 13em 2em; // 208px / 16px + 32px / 16px
-            font-size: 16px;
             content: "";
             z-index: 2;
 
             [dir="rtl"] & {
-                right: 4.375em; // 70px / 16px;
+                right: 3.875em; // 62px / 16px;
                 left: auto;
             }
         }
@@ -294,14 +319,15 @@
 
         > a,
         > a.dropdown-toggle {
-            padding: 0 2em;
+            padding: 0 1em;
 
             [dir="rtl"] & {
-                padding: 0 2em;
+                padding: 0 1em;
             }
         }
 
         a.dropdown-toggle::after {
+            top: 1.25em;
             right: 1em;
 
             [dir="rtl"] & {
@@ -327,11 +353,11 @@
         }
 
         a {
-            padding: 0.5em 2em 0.5em 3em;
+            padding: 0.5em 1em 0.5em 2em;
             white-space: normal;
 
             [dir="rtl"] & {
-                padding: 0.5em 3em 0.5em 2em;
+                padding: 0.5em 2em 0.5em 1em;
             }
         }
 
@@ -465,6 +491,18 @@
         position: static;
         margin-top: 0;
         float: none;
+    }
+
+    /**
+     * Reset font size/weight/colour for elements in write -> main content area.
+     */
+
+    #main_content .text {
+        input,
+        textarea,
+        .title input {
+            font-size: 1rem;
+        }
     }
 
 }

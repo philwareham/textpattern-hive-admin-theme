@@ -148,7 +148,7 @@
     .txp-grid {
         display: grid;
         margin: 0;
-        grid-template-columns: repeat(auto-fit, minmax(9.2307692em, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         grid-gap: 4px;
 
         > * {

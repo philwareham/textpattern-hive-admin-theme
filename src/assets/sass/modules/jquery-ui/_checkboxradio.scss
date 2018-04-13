@@ -51,7 +51,7 @@
 
     &.ui-checkboxradio-checked {
         .ui-icon {
-            border: 0.384615384615385em solid $color-text-footnote; // 5px / 13px
+            border: 5px solid $color-text-footnote;
             border-radius: 100%;
             background: $color-background-form;
         }

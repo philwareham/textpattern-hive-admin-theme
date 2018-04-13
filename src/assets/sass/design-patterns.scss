@@ -15,7 +15,7 @@
 
 body {
     display: block;
-    padding: 0 2em 1em;
+    padding: 0 1em 1em;
 }
 
 .design-patterns--section {
@@ -212,6 +212,12 @@ $colors: (
 h2 span {
     font-size: 1rem;
     font-weight: normal;
+}
+
+@media (min-width: $break-small) {
+    body {
+        padding: 0 2em 1em;
+    }
 }
 
 @media (min-width: $break-large) {
