@@ -57,7 +57,7 @@
             border: 1px solid $color-background;
             border-radius: 50%;
             background: $color-border;
-            font-size: 16px;
+            font-size: 1.230769230769231rem; // 16px / 13px
             font-weight: bold;
             text-align: center;
             content: counter(step); // write out value of the increment

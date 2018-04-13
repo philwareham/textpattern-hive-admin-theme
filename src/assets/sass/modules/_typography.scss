@@ -32,7 +32,7 @@ body {
 
 h1 {
     margin: 0.26923076923077em 0 0.5em; // 7px / 26px, 13px / 26px
-    font-size: 26px;
+    font-size: 2rem; // 26px / 13px
     line-height: 1.23076923076923; // 32px / 26px
 
     .pophelp {
@@ -54,7 +54,7 @@ h1 {
 
 h2 {
     margin: 0.5em 0 0.72222222222222em; // 9px / 18px + 13px / 18px
-    font-size: 18px;
+    font-size: 1.384615384615385rem; // 18px / 13px
     line-height: 1.33333333333333; // 24px / 18px
 
     .pophelp {
@@ -68,7 +68,7 @@ h2 {
 
 h3 {
     margin: 0.86666666666667em 0; // 13px / 15px
-    font-size: 15px;
+    font-size: 1.153846153846154rem; // 15px / 13px
     line-height: 1.4; // 21px / 15px
 }
 
@@ -218,7 +218,7 @@ sub,
 sup.footnote,
 sup {
     position: relative;
-    font-size: 0.69230769230769em; // 9px / 13px
+    font-size: 0.69230769230769rem; // 9px / 13px
     line-height: 0;
     vertical-align: baseline;
 }

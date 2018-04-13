@@ -215,7 +215,7 @@ textarea {
     border-radius: 100%;
 
     &:checked {
-        border: 0.384615384615385em solid $color-text-footnote; // 5px / 13px
+        border: 5px solid $color-text-footnote;
 
         &:hover,
         &:active {
