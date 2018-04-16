@@ -293,7 +293,7 @@
         &::before {
             position: absolute;
             top: -0.5em; // 8px / 16px
-            left: 3.875em; // 62px / 16px;
+            left: 4.375em; // 62px / 16px;
             width: 1em;
             height: 0.5em;
             background: url("../img/sprite.svg") no-repeat -12em 0;
@@ -302,7 +302,7 @@
             z-index: 2;
 
             [dir="rtl"] & {
-                right: 3.875em; // 62px / 16px;
+                right: 4.375em; // 62px / 16px;
                 left: auto;
             }
         }
