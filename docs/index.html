@@ -2196,6 +2196,25 @@
                         <li class="ui-state-default" title=".ui-extra-icon-github"><span class="ui-icon ui-extra-icon-github"></span></li>
                     </ul>
 
+                    <h3>Icons inline with text</h3>
+                    <p>Lorem ipsum dolor sit amet, <span class="ui-icon ui-icon-search">Search</span> consectetuer adipiscing elit.</p>
+
+                    <h3>Icons in a (plain) list</h3>
+                    <ul class="plain-list">
+                        <li><span class="ui-icon ui-icon-clock"></span> List item 1</li>
+                        <li><span class="ui-icon ui-icon-star"></span> List item 2</li>
+                        <li><span class="ui-icon ui-extra-icon-list"></span> List item 3</li>
+                        <li><span class="ui-icon ui-extra-icon-grid"></span> List item 4</li>
+                        <li><span class="ui-icon ui-icon-notice"></span> List item 5</li>
+                    </ul>
+
+                    <h3>Icon colour states</h3>
+                    <p class="success"><span class="ui-icon ui-icon-check"></span> Success text.</p>
+                    <p class="warning"><span class="ui-icon ui-icon-alert"></span> Warning text.</p>
+                    <p class="error"><span class="ui-icon ui-icon-closethick"></span> Error text.</p>
+                    <p class="information"><span class="ui-icon ui-icon-info"></span> Information text.</p>
+                    <p><span style="color:#fff;background:#333;"><span class="ui-icon ui-icon-inversed ui-icon-lightbulb"></span> Inversed text.</span></p>
+
                 </div>
 
 
@@ -2209,10 +2228,16 @@
                     <p>Accessibility text is hidden from the page but available to screen readers as an aid to those with visual impairments. This is accomplished via CSS <code dir="ltr">visibility: hidden;</code> <strong>not</strong> via <code dir="ltr">display: hidden;</code> (which would hide the text from most screen readers too).</p>
 
                     <h2 class="design-patterns--heading">AJAX spinner <span class="information">new v4.5</span></h2>
+                    <h3>Loading spinner (for light backgrounds)</h3>
                     <p><strong>Code:</strong></p>
                     <p><code class="language-markup" dir="ltr">&lt;span class="spinner ui-icon ui-icon-refresh"&gt;&lt;/span&gt;</code></p>
                     <p><strong>Example:</strong></p>
                     <p><span class="spinner ui-icon ui-icon-refresh"></span></p>
+                    <h3>Loading spinner (for dark backgrounds)</h3>
+                    <p><strong>Code:</strong></p>
+                    <p><code class="language-markup" dir="ltr">&lt;span class="spinner ui-icon-inversed ui-icon ui-icon-refresh"&gt;&lt;/span&gt;</code></p>
+                    <p><strong>Example:</strong></p>
+                    <p><span style="color:#fff;background:#333;"><span class="spinner ui-icon-inversed ui-icon ui-icon-refresh"></span></span></p>
 
                     <h2 class="design-patterns--heading">Disabled non-form elements <span class="information">new v4.5</span></h2>
                     <p><strong>Code:</strong></p>
