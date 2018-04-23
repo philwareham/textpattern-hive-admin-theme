@@ -409,6 +409,19 @@
     }
 
     /**
+     * Prevent over-expansion of contents.
+     */
+
+    .inline-file-uploader-actions {
+        display: block;
+    }
+
+    [type="file"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /**
      * Collapse progress meters responsively.
      */
 
