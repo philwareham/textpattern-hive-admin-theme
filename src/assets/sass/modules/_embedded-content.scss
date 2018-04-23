@@ -101,18 +101,3 @@ img {
     max-height: 85vh;
     object-fit: contain;
 }
-
-/**
- * Admin-side image preview thumbnails.
- */
-
-.img-preview {
-    &:focus {
-        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-    }
-
-    img {
-        width: 120px;
-        height: 120px;
-    }
-}
