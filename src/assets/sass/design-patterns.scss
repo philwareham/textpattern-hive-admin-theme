@@ -18,11 +18,11 @@ body {
     padding: 0 1em 1em;
 }
 
-.design-patterns--section {
+.design-patterns-section {
     padding-top: 0.25em;
 }
 
-.design-patterns--menu {
+.design-patterns-menu {
     max-width: 62em;
     margin: 0 auto;
     padding: 2em 0;
@@ -33,7 +33,7 @@ body {
     }
 }
 
-.design-patterns--heading {
+.design-patterns-heading {
     padding-top: 1em;
 }
 
@@ -103,7 +103,7 @@ $colors: (
     "info-background":      $color-info-background
 );
 
-.design-patterns--color {
+.design-patterns-color {
     display: block;
     position: relative;
     height: 3em; // 39px / 13px
@@ -120,7 +120,7 @@ $colors: (
 }
 
 @each $name, $color in $colors {
-    .design-patterns--color-#{$name} {
+    .design-patterns-color-#{$name} {
         background: $color;
 
         &::after {
@@ -133,7 +133,7 @@ $colors: (
 /* Layout grid examples.
    ========================================================================== */
 
-.design-patterns--box {
+.design-patterns-box {
     margin-top: 0;
     padding: 1em;
     background: #aaaaaa;
@@ -208,7 +208,7 @@ $colors: (
  * <h2>Title <span>new v4.7</span></h2>
  */
 
-.design-patterns--section h1 span,
+.design-patterns-section h1 span,
 h2 span {
     font-size: 1rem;
     font-weight: normal;
@@ -229,7 +229,7 @@ h2 span {
      * Fixed sidebar.
      */
 
-    .design-patterns--menu {
+    .design-patterns-menu {
         position: fixed;
         top: 0;
         bottom: 0;
@@ -245,11 +245,11 @@ h2 span {
         box-sizing: border-box;
     }
 
-    .design-patterns--content {
+    .design-patterns-content {
         margin-left: 28%;
     }
 
-    .design-patterns--content-container {
+    .design-patterns-content-container {
         max-width: 80em;
         margin: 0 auto;
     }
