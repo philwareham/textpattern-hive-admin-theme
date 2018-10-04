@@ -35,17 +35,11 @@
 
 /**
  * Hide header content area on login panels.
- *
- * Move offscreen - don't `display:none` as we need to show #messagepane content.
  */
 
 .login {
     .txp-header {
-        position: absolute;
-        right: auto;
-        left: -1000em;
-        width: 1px;
-        height: 1px;
+        display: none;
     }
 }
 

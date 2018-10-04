@@ -57,6 +57,19 @@
 }
 
 /**
+ * Additional styling for 'view site' link on login panel.
+ */
+
+.login-view-site {
+    position: relative;
+    bottom: -0.5em;
+    padding: 1em 0;
+    border-top: 1px solid $color-border;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/**
  * Welcome page `select` spans entire column width.
  */
 
