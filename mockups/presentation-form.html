@@ -253,7 +253,12 @@
                         </div>
                     </div>
                     <p class="txp-save">
-                        <input class="publish" type="submit" value="Save" name="save">
+                        <span class="txp-save-export">
+                            <input class="checkbox" id="export" name="export" type="checkbox" value="1">
+                            <label for="export">Export to disk</label>
+                        </span>
+                        <input class="publish" type="submit" value="Save">
+                        <span class="spinner ui-icon ui-icon-refresh"></span>
                     </p>
                 </form>
             </div><!-- /#main_content -->
