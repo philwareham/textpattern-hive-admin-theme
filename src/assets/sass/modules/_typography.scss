@@ -83,6 +83,17 @@ h6 {
     font-size: 1rem;
 }
 
+@media (prefers-color-scheme: dark) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $dark-color-text-heading;
+    }
+}
+
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
@@ -108,6 +119,12 @@ blockquote {
     margin: 1em 0;
     padding: 0 0 0 1em;
     border-left: 3px solid $color-border;
+}
+
+@media (prefers-color-scheme: dark) {
+    blockquote {
+        border-left-color: $dark-color-border;
+    }
 }
 
 /**
@@ -136,6 +153,14 @@ var {
     }
     background: $color-selected;
     color: $color-text;
+}
+
+@media (prefers-color-scheme: dark) {
+    mark,
+    var {
+        background: $dark-color-selected;
+        color: $dark-color-text;
+    }
 }
 
 /**
@@ -183,6 +208,16 @@ pre {
     overflow-x: auto;
     /* 3 */
     tab-size: 4;
+}
+
+@media (prefers-color-scheme: dark) {
+    pre,
+    code,
+    kbd,
+    samp {
+        border-color: $dark-color-border-light;
+        background-color: $dark-color-background-box;
+    }
 }
 
 /**
@@ -250,6 +285,15 @@ tfoot,
 .footnote,
 .txp-form-field-instructions {
     color: $color-text-footnote;
+}
+
+@media (prefers-color-scheme: dark) {
+    figcaption,
+    tfoot,
+    .footnote,
+    .txp-form-field-instructionse {
+        color: $dark-color-text-footnote;
+    }
 }
 
 figcaption {

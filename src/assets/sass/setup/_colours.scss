@@ -19,19 +19,32 @@ $color-text-form-disabled:            #aaaaaa !default;
 $color-text-footnote:                 #585858 !default;
 $color-text-inverse:                  #ffffff !default;
 
+$dark-color-text:                     #ced4da !default;
+$dark-color-text-heading:             #ffffff !default;
+$dark-color-text-form:                #ffffff !default;
+$dark-color-text-footnote:            #9ca3aa !default;
+
 // interaction colours
 
 $color-link:                          #004cbf !default;
 $color-link-hover:                    #0066ff !default;
 $color-link-focus:                    $color-link-hover !default;
-$color-link-visited:                  shade($color-link, 33%) !default;
 $color-selecting:                     tint($color-link-hover, 80%) !default;
 $color-selected:                      tint($color-link-hover, 90%) !default;
+
+$dark-color-link:                     tint(#0066ff, 50%) !default;
+$dark-color-link-hover:               tint($dark-color-link, 25%) !default;
+$dark-color-link-focus:               #ff9900 !default;
+$dark-color-selecting:                #1b2f48 !default;
+$dark-color-selected:                 #1c3456 !default;
 
 // borders
 
 $color-border:                        #cccccc !default;
 $color-border-light:                  #d4d4d4 !default;
+
+$dark-color-border:                   shade($dark-color-text, 40%) !default;
+$dark-color-border-light:             shade($dark-color-border, 20%) !default;
 
 // neutral colours
 
@@ -42,6 +55,10 @@ $color-background-form-disabled:      #eeeeee !default;
 $color-gradient-from:                 #eeeeee !default;
 $color-gradient-to:                   darken($color-gradient-from, 6.5%) !default;
 $color-gradient-border:               darken($color-gradient-to, 7%) !default;
+
+$dark-color-background:               #373e45 !default;
+$dark-color-background-box:           shade($dark-color-background, 14%) !default;
+$dark-color-background-form:          shade($dark-color-background, 28%) !default;
 
 // accent colours
 
@@ -76,3 +93,16 @@ $color-error-border:                  darken($color-error-background, 12%) !defa
 $color-info-text:                     #3a87ad !default;
 $color-info-background:               #e7f6fc !default;
 $color-info-border:                   darken($color-info-background, 12%) !default;
+
+$dark-color-success-text:             #66cc33 !default;
+$dark-color-success-background:       #2a4125 !default;
+$dark-color-success-border:           rgba($dark-color-success-text, 0.33) !default;
+$dark-color-warning-text:             #ffbe3c !default;
+$dark-color-warning-background:       #484123 !default;
+$dark-color-warning-border:           rgba($dark-color-warning-text, 0.33) !default;
+$dark-color-error-text:               #ff3382 !default;
+$dark-color-error-background:         #47232a !default;
+$dark-color-error-border:             rgba($dark-color-error-text, 0.44) !default;
+$dark-color-info-text:                #44aaff !default;
+$dark-color-info-background:          #0e304a !default;
+$dark-color-info-border:              rgba($dark-color-info-text, 0.38) !default;

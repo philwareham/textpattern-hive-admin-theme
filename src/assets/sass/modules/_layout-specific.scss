@@ -221,6 +221,12 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .txp-save-zone {
+        background: $dark-color-background;
+    }
+}
+
 
 /* Content -> Articles panel - additional layout
    ========================================================================== */

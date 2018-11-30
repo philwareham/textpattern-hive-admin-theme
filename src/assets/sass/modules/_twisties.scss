@@ -44,6 +44,12 @@
     background: $color-background-box;
 }
 
+@media (prefers-color-scheme: dark) {
+    .txp-details {
+        background: $dark-color-background-box;
+    }
+}
+
 /**
  * Styling for summary headings.
  */

@@ -15,6 +15,12 @@ fieldset {
     border: 1px solid $color-border;
 }
 
+@media (prefers-color-scheme: dark) {
+    fieldset {
+        border-color: $dark-color-border;
+    }
+}
+
 /**
  * Normalize styling of `legend`.
  *
@@ -65,6 +71,17 @@ textarea,
     line-height: $base-line-height;
     vertical-align: baseline;
     box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+    input:not([type="button"]),
+    input:not([type="reset"]),
+    input:not([type="submit"]),
+    select,
+    optgroup,
+    textarea {
+        color: $dark-color-text-form;
+    }
 }
 
 /**
@@ -118,12 +135,42 @@ textarea {
     appearance: none;
 
     &:hover {
-        border-color: darken($color-border, 13%);
+        border-color: shade($color-border, 15%);
     }
 
     &:focus {
         border-color: $color-link-focus;
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    [type="color"],
+    [type="date"],
+    [type="datetime"],
+    [type="datetime-local"],
+    [type="email"],
+    [type="month"],
+    [type="number"],
+    [type="password"],
+    [type="search"],
+    [type="tel"],
+    [type="text"],
+    [type="time"],
+    [type="url"],
+    [type="week"],
+    select,
+    textarea {
+        border-color: $dark-color-border;
+        background-color: $dark-color-background-form;
+
+        &:hover {
+            border-color: tint($dark-color-border, 15%);
+        }
+
+        &:focus {
+            border-color: $dark-color-link-focus;
+        }
     }
 }
 
@@ -292,6 +339,13 @@ select {
     background: $color-background-form url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23333' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E") right center no-repeat;
     background-size: 1em 0.30769230769231em;
     text-transform: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    select {
+        background-color: $dark-color-background-form;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23788591' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E");
+    }
 }
 
 /**

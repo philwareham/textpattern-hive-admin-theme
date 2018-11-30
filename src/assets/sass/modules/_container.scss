@@ -21,6 +21,13 @@ body {
     box-sizing: border-box;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background: $dark-color-background;
+        color: $dark-color-text;
+    }
+}
+
 /**
  * Main content area.
  *
