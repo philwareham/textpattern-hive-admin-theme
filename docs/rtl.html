@@ -1221,24 +1221,35 @@
 
                         <h2 class="design-patterns-heading">File uploads</h2>
                         <p><strong>Code:</strong></p>
-                        <pre dir="ltr"><code class="language-markup">&lt;TODO&gt;</code></pre>
+                        <pre dir="ltr"><code class="language-markup">&lt;div class="inline-file-uploader"&gt;
+    &lt;label for="file-upload"&gt;Upload file&lt;/label&gt;
+    &lt;input type="file" multiple&gt;
+    &lt;span class="inline-file-uploader-actions"&gt;
+        &lt;label for="file_example_category"&gt;Category&lt;/label&gt;
+        &lt;select id="file_example_category"&gt;
+            &lt;option value="" selected&gt;&nbsp;&lt;/option&gt;
+            &lt;option value="file-example-category"&gt;Example category&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/span&gt;
+    &lt;span class="inline-file-uploader-actions"&gt;
+        &lt;input type="submit" value="Upload"&gt;
+    &lt;/span&gt;
+&lt;/div&gt;</code></pre>
                         <p><strong>Example:</strong></p>
                         <div class="inline-file-uploader">
-                            <label for="file-upload">Upload file&nbsp;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label>
-                            <input type="file" multiple required>
+                            <label for="file-upload">Upload file</label>
+                            <input type="file" multiple>
                             <span class="inline-file-uploader-actions">
-                                <label for="file_category">Category</label>
-                                <select id="file_category" name="category">
-                                    <option value="" selected="selected">&nbsp;</option>
-                                    <option value="file-example-category" dir="auto">Example category</option>
+                                <label for="file_example_category">Category</label>
+                                <select id="file_example_category">
+                                    <option value="" selected>&nbsp;</option>
+                                    <option value="file-example-category">Example category</option>
                                 </select>
                             </span>
                             <span class="inline-file-uploader-actions">
-                                <input type="reset" value="Reset">
                                 <input type="submit" value="Upload">
                             </span>
                         </div>
-                        <progress class="txp-upload-progress" value="0.66"></progress>
 
                         <h2 class="design-patterns-heading">Checkboxes</h2>
                         <p><strong>Code:</strong></p>
