@@ -1219,6 +1219,27 @@
                             </div>
                         </div>
 
+                        <h2 class="design-patterns-heading">File uploads</h2>
+                        <p><strong>Code:</strong></p>
+                        <pre dir="ltr"><code class="language-markup">&lt;TODO&gt;</code></pre>
+                        <p><strong>Example:</strong></p>
+                        <div class="inline-file-uploader">
+                            <label for="file-upload">Upload file&nbsp;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label>
+                            <input type="file" multiple required>
+                            <span class="inline-file-uploader-actions">
+                                <label for="file_category">Category</label>
+                                <select id="file_category" name="category">
+                                    <option value="" selected="selected">&nbsp;</option>
+                                    <option value="file-example-category" dir="auto">Example category</option>
+                                </select>
+                            </span>
+                            <span class="inline-file-uploader-actions">
+                                <input type="reset" value="Reset">
+                                <input type="submit" value="Upload">
+                            </span>
+                        </div>
+                        <progress class="txp-upload-progress" value="0.66"></progress>
+
                         <h2 class="design-patterns-heading">Checkboxes</h2>
                         <p><strong>Code:</strong></p>
                         <pre dir="ltr"><code class="language-markup">&lt;input type="checkbox" id="test_checkbox_1" name="test_checkbox_1"&gt;
