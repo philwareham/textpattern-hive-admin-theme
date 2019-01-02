@@ -1,7 +1,7 @@
 {
   "name": "textpattern-hive-admin-theme",
   "description": "The default admin theme that ships as standard with Textpattern CMS.",
-  "version": "4.7.2",
+  "version": "4.7.3",
   "keywords": [
     "admin",
     "theme",
@@ -25,8 +25,8 @@
     "url": "https://github.com/philwareham/textpattern-hive-admin-theme/issues"
   },
   "devDependencies": {
-    "autoprefixer": "9.4.1",
-    "cssnano": "4.1.7",
+    "autoprefixer": "9.4.3",
+    "cssnano": "4.1.8",
     "dart-sass": "1.15.2",
     "fibers": "3.1.1",
     "grunt": "~1",
@@ -46,7 +46,9 @@
   },
   "dependencies": {
     "autosize": "4.0.2",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.4.0",
+    "jquery": "3.3.1",
+    "jquery-ui-dist": "1.12.1",
     "prismjs": "1.15.0",
     "scrollspy-js": "0.1.3"
   },

@@ -98,7 +98,9 @@ module.exports = function (grunt)
                         dest: '<%= paths.dest2.img %>'
                     },
                     {'<%= paths.dest1.css %>custom-example.css': '<%= paths.src.sass %>custom-example.css'},
-                    {'<%= paths.dest2.css %>custom-example.css': '<%= paths.src.sass %>custom-example.css'}
+                    {'<%= paths.dest2.css %>custom-example.css': '<%= paths.src.sass %>custom-example.css'},
+                    {'<%= paths.docs.js %>jquery.js': 'node_modules/jquery/dist/jquery.min.js'},
+                    {'<%= paths.docs.js %>jquery-ui.js': 'node_modules/jquery-ui-dist/jquery-ui.min.js'}
                 ]
             }
         },
