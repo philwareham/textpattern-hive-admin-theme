@@ -113,8 +113,18 @@ $colors: (
         position: absolute;
         top: 0.69230769230769em; // 9px / 13px
         padding: 1px 0.23076923076923em; // 3px / 13px
-        background-color: rgba(#ffffff, 0.66);
+        background-color: rgba(255, 255, 255, 0.66);
         font-family: $font-code;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .design-patterns-color {
+        border-color: $dark-color-border;
+
+        &::after {
+            background-color: rgba(0, 0, 0, 0.66);
+        }
     }
 }
 
@@ -135,7 +145,7 @@ $colors: (
 .design-patterns-box {
     margin-top: 0;
     padding: 1em;
-    background: #aaaaaa;
+    background: rgba(0, 0, 0, 0.33);
 }
 
 
