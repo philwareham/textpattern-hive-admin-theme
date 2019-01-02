@@ -102,6 +102,34 @@ $colors: (
     "info-background":      $color-info-background
 );
 
+$dark-colors: (
+    "text":                 $dark-color-text,
+    "text-footnote":        $dark-color-text-footnote,
+    "gradient-from":        $color-gradient-from,
+    "gradient-to":          $color-gradient-to,
+    "gradient-border":      $color-gradient-border,
+    "border":               $dark-color-border,
+    "link":                 $dark-color-link,
+    "link-hover":           $dark-color-link-hover,
+    "link-focus":           $dark-color-link-focus,
+    "link-selecting":       $dark-color-selecting,
+    "link-selected":        $dark-color-selected,
+    "background":           $dark-color-background,
+    "background-box":       $dark-color-background-box,
+    "highlight-box":        $color-highlight-box,
+    "strong-highlight-box": $color-strong-highlight-box,
+    "accent-gradient-from": $color-accent-gradient-from,
+    "accent-gradient-to":   $color-accent-gradient-to,
+    "success-text":         $dark-color-success-text,
+    "success-background":   $dark-color-success-background,
+    "warning-text":         $dark-color-warning-text,
+    "warning-background":   $dark-color-warning-background,
+    "error-text":           $dark-color-error-text,
+    "error-background":     $dark-color-error-background,
+    "info-text":            $dark-color-info-text,
+    "info-background":      $dark-color-info-background
+);
+
 .design-patterns-color {
     display: block;
     position: relative;
@@ -134,6 +162,18 @@ $colors: (
 
         &::after {
             content: "#{$color}";
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    @each $name, $color in $dark-colors {
+        .design-patterns-color-#{$name} {
+            background: $color;
+
+            &::after {
+                content: "#{$color}";
+            }
         }
     }
 }
