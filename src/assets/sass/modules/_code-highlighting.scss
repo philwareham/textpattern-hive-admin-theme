@@ -96,13 +96,6 @@ pre[class*="language-"] {
 }
 
 @media (prefers-color-scheme: dark) {
-    token.comment,
-    .token.prolog,
-    .token.doctype,
-    .token.cdata {
-        color: #708090;
-    }
-
     .token.punctuation {
         color: #ffffff;
     }
@@ -140,13 +133,11 @@ pre[class*="language-"] {
         color: $dark-color-info-text;
     }
 
-    .token.function {
-        color: #dd4a68;
+    .line-numbers .line-numbers-rows {
+        border-right-color: $dark-color-text-footnote;
     }
 
-    .token.regex,
-    .token.important,
-    .token.variable {
-        color: #ee9900;
+    .line-numbers-rows > span::before {
+        color: $dark-color-text-footnote;
     }
 }

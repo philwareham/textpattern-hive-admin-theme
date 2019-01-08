@@ -93,6 +93,21 @@ img {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .content-image {
+        border-color: $dark-color-border;
+        background-color: $dark-color-background;
+
+        a:hover & {
+            border-color: $dark-color-link-hover;
+        }
+
+        a:focus & {
+            border-color: $dark-color-link-focus;
+        }
+    }
+}
+
 /**
  * Limit vertical height of fullsize images.
  */
