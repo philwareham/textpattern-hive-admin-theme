@@ -19,6 +19,7 @@ body {
     background: $color-background;
     color: $color-text;
     box-sizing: border-box;
+    overscroll-behavior: none;
 }
 
 @media (prefers-color-scheme: dark) {
