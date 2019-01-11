@@ -601,3 +601,18 @@ textarea {
         box-shadow: none;
     }
 }
+
+/**
+ * Normalize form placeholder style across browsers.
+ */
+
+::placeholder {
+    color: $color-text-form-placeholder;
+    opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+    ::placeholder {
+        color: $dark-color-text-form-placeholder;
+    }
+}
