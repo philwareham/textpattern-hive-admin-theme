@@ -215,6 +215,7 @@
         box-shadow: 0 0.1em 0.125em rgba(#000000, 0.15);
     }
     z-index: 999;
+    overscroll-behavior: none;
 
     .txp-actions {
         margin-bottom: 0.5em;

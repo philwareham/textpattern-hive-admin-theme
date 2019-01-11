@@ -7,12 +7,10 @@
  */
 
 fieldset {
-    /* 1 */
-    min-width: 0;
-    /* 2 */
-    margin: 1em 0;
-    padding: 1px 1em;
-    border: 1px solid $color-border;
+    min-width: 0; /* 1 */
+    margin: 1em 0; /* 2 */
+    padding: 1px 1em; /* 2 */
+    border: 1px solid $color-border; /* 2 */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,18 +28,12 @@ fieldset {
  */
 
 legend {
-    /* 1 */
-    display: table;
-    /* 1 */
-    max-width: 100%;
-    /* 2 */
-    padding: 0;
-    /* 3 */
-    color: inherit;
-    /* 1 */
-    white-space: normal;
-    /* 1 */
-    box-sizing: border-box;
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 2 */
+    color: inherit; /* 3 */
+    white-space: normal; /* 1 */
+    box-sizing: border-box; /* 1 */
 }
 
 /**
@@ -60,14 +52,11 @@ textarea,
 .navlink,
 .navlink-active,
 .navlink-disabled {
-    /* 1 */
-    max-width: 100%;
-    /* 2 */
-    margin: 0;
+    max-width: 100%; /* 1 */
+    margin: 0; /* 2 */
     color: $color-text-form;
     font-family: inherit;
-    /* 3 */
-    font-size: 1rem;
+    font-size: 1rem; /* 3 */
     line-height: $base-line-height;
     vertical-align: baseline;
     box-sizing: border-box;
@@ -82,18 +71,6 @@ textarea,
     textarea {
         color: $dark-color-text-form;
     }
-}
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-    padding: 0;
-    border-style: none;
 }
 
 /**
@@ -131,11 +108,10 @@ textarea {
     border: 1px solid $color-border;
     border-radius: 0;
     background: $color-background-form;
-    /* 1 */
-    appearance: none;
+    appearance: none; /* 1 */
 
     &:hover {
-        border-color: shade($color-border, 15%);
+        border-color: shade($color-border, 14%);
     }
 
     &:focus {
@@ -185,20 +161,17 @@ textarea {
     bottom: -2px;
     width: 16px;
     height: 16px;
-    /* 1 */
-    padding: 0;
+    padding: 0; /* 1 */
     border: 1px solid darken($color-border, 13%);
     background: $color-background-form;
     appearance: none;
     box-sizing: border-box;
 
     + label:not(.ui-controlgroup-item) {
-        /* 2 */
-        margin: 0 0.5em 0 0;
+        margin: 0 0.5em 0 0; /* 2 */
 
         &:last-of-type {
-            /* 2 */
-            margin: 0;
+            margin: 0; /* 2 */
         }
     }
 
@@ -217,9 +190,23 @@ textarea {
     }
 }
 
-[type="checkbox"]:not(.ui-checkboxradio) {
-    border-radius: 0.2em;
+@media (prefers-color-scheme: dark) {
+    [type="checkbox"]:not(.ui-checkboxradio),
+    [type="radio"]:not(.ui-checkboxradio) {
+        border-color: tint($dark-color-border, 15%);
+        background-color: $dark-color-background-form;
 
+        &:hover {
+            border-color: tint($dark-color-border, 30%);
+        }
+
+        &:focus {
+            border-color: $dark-color-link-focus;
+        }
+    }
+}
+
+[type="checkbox"]:not(.ui-checkboxradio) {
     &:checked {
         border: 0;
         background: $color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
@@ -239,6 +226,27 @@ textarea {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    [type="checkbox"]:not(.ui-checkboxradio) {
+        &:checked {
+            background: $dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+
+            &:hover,
+            &:active {
+                background-color: $dark-color-text-heading;
+            }
+
+            &:focus {
+                background-color: $dark-color-link-focus;
+            }
+        }
+
+        &[disabled]:checked {
+            background: $color-border-light url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+        }
+    }
+}
+
 [type="radio"]:not(.ui-checkboxradio) {
     border-radius: 100%;
 
@@ -252,6 +260,21 @@ textarea {
 
         &:focus {
             border-color: $color-link-focus;
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    [type="radio"]:not(.ui-checkboxradio):checked {
+        border-color: $dark-color-text;
+
+        &:hover,
+        &:active {
+            border-color: $dark-color-text-heading;
+        }
+
+        &:focus {
+            border-color: $dark-color-link-focus;
         }
     }
 }
@@ -294,7 +317,7 @@ textarea {
 
     &:focus {
         border-color: $color-link-focus;
-        outline: 1px solid transparent; // Allows for repainting in high contrast modes.
+        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }
 

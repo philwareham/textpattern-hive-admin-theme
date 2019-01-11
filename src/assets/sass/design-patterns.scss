@@ -58,9 +58,15 @@ body {
         width: 1.5em;
         height: 1.5em;
         border-radius: 0.25em;
-        background: rgba($color-link-focus, 0.25);
+        background-color: rgba($color-link-focus, 0.25);
         content: "";
         z-index: 2001;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .is-inview::before {
+        background-color: rgba($dark-color-link-focus, 0.25);
     }
 }
 
@@ -301,5 +307,12 @@ h2 span {
     .design-patterns-content-container {
         max-width: 80em;
         margin: 0 auto;
+    }
+}
+
+@media (prefers-color-scheme: dark) and (min-width: $break-large) {
+    .design-patterns-menu {
+        border-right-color: $dark-color-border;
+        background-color: $dark-color-background-box;
     }
 }
