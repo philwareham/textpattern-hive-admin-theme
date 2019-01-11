@@ -138,6 +138,29 @@ dd {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .switcher-list li {
+        border-top: 1px solid $dark-color-gradient-to;
+
+        &:nth-child(odd) {
+            background: $dark-color-background;
+        }
+
+        &:first-child {
+            border-top: 0;
+        }
+
+        &.active,
+        &.ui-tabs-active {
+            background: $dark-color-highlight-box;
+        }
+
+        &.selected {
+            background: $dark-color-selected;
+        }
+    }
+}
+
 [dir="rtl"] .switcher-list {
     padding: 0;
 

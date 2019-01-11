@@ -29,6 +29,12 @@ table {
     border-spacing: 0;
 }
 
+@media (prefers-color-scheme: dark) {
+    table {
+        background-color: $dark-color-background;
+    }
+}
+
 /**
  * Styling of table captions.
  */
@@ -155,6 +161,23 @@ td {
             &:hover {
                 color: $color-text;
                 text-decoration: none;
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .txp-list,
+    .txp-list--no-options {
+        tbody {
+            tr {
+                &:nth-child(even) {
+                    background: $dark-color-background-box;
+                }
+
+                &.selected {
+                    background: $dark-color-selected;
+                }
             }
         }
     }
