@@ -654,6 +654,12 @@ span.spinner {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .txp-edit {
+        background: $dark-color-background-box;
+    }
+}
+
 /**
  * Styling of edit panel cancel/submit button combinations.
  */
@@ -670,6 +676,12 @@ span.spinner {
     margin: 1em -1em;
     padding: 1em 1em 0;
     border-top: 2px solid $color-background;
+}
+
+@media (prefers-color-scheme: dark) {
+    .txp-edit .txp-edit-actions {
+        border-top-color: $dark-color-background;
+    }
 }
 
 /**
