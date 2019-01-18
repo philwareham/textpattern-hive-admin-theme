@@ -69,6 +69,12 @@
     overflow: hidden;
 }
 
+@media (prefers-color-scheme: dark) {
+    .login-view-site {
+        border-top-color: $dark-color-border;
+    }
+}
+
 /**
  * Welcome page `select` spans entire column width.
  */
@@ -192,6 +198,12 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    #main_content .author small {
+        color: $dark-color-text-footnote;
+    }
+}
+
 /**
  * Sticky save button region.
  *
@@ -223,6 +235,7 @@
 
 @media (prefers-color-scheme: dark) {
     .txp-save-zone {
+        border-color: $dark-color-border-light;
         background: $dark-color-background;
     }
 }
@@ -238,6 +251,13 @@
 .unpublished,
 .not-modified {
     color: $color-text-footnote;
+}
+
+@media (prefers-color-scheme: dark) {
+    .unpublished,
+    .not-modified {
+        color: $dark-color-text-footnote;
+    }
 }
 
 

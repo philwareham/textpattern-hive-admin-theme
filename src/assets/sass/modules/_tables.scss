@@ -64,6 +64,16 @@ thead th {
     background-color: $color-gradient-from;
 }
 
+@media (prefers-color-scheme: dark) {
+    tr {
+        border-color: $dark-color-gradient-to;
+    }
+
+    thead th {
+        background-color: $dark-color-gradient-from;
+    }
+}
+
 /**
  * Make table cells align centred and left by default.
  */

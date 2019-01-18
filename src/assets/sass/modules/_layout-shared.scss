@@ -29,6 +29,12 @@ hr {
     box-sizing: content-box;
 }
 
+@media (prefers-color-scheme: dark) {
+    hr {
+        border-bottom-color: $dark-color-border;
+    }
+}
+
 /**
  * Hide text but still allow screen reader access.
  *
@@ -94,6 +100,12 @@ hr {
 
 .txp-dropdown-toggle-all {
     border-bottom: 1px solid $color-border-light;
+}
+
+@media (prefers-color-scheme: dark) {
+    .txp-dropdown-toggle-all {
+        border-bottom-color: $dark-color-border-light;
+    }
 }
 
 /**
@@ -426,6 +438,13 @@ span.spinner {
     z-index: 20;
 }
 
+@media (prefers-color-scheme: dark) {
+    .multi-edit {
+        background: $dark-color-background;
+        box-shadow: 0 -1em 1em -0.5em $dark-color-background;
+    }
+}
+
 /**
  * Hide secondary `select` element on multi-edit `select` widget.
  *
@@ -525,6 +544,12 @@ span.spinner {
     margin-top: 3em;
     padding-top: 3em;
     border-top: 2px solid $color-border;
+}
+
+@media (prefers-color-scheme: dark) {
+    .text-section {
+        border-top-color: $dark-color-border;
+    }
 }
 
 /**

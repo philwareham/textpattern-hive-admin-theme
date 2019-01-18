@@ -95,6 +95,12 @@ li.information {
     background: $color-highlight-box;
 }
 
+@media (prefers-color-scheme: dark) {
+    .highlight {
+        background: $dark-color-highlight-box;
+    }
+}
+
 /**
  * Alert boxes.
  *
