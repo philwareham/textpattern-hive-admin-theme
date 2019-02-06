@@ -37,6 +37,7 @@
         cursor: pointer;
 
         a {
+            outline: 0;
             color: $color-text;
             text-decoration: none;
         }
@@ -75,5 +76,11 @@
     .ui-accordion-icons .ui-accordion-icons {
         padding-right: 2em;
         padding-left: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-accordion .ui-accordion-header a {
+        color: $dark-color-text;
     }
 }
