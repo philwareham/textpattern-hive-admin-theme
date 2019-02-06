@@ -136,6 +136,28 @@ progress {
     background-image: none;
 }
 
+@media (prefers-color-scheme: dark) {
+    .txp-upload-progress {
+        border-color: $dark-color-border;
+    }
+
+    // WebKit/Blink.
+
+    progress::-webkit-progress-bar {
+        background-color: $dark-color-background-box;
+    }
+
+    progress:indeterminate::-webkit-progress-bar {
+        background-color: $dark-color-border;
+    }
+
+    // Gecko/Quantum.
+
+    progress:indeterminate::-moz-progress-bar {
+        background-color: $dark-color-border;
+    }
+}
+
 /**
  * Reverse the progress direction in RTL languages.
  */
