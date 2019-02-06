@@ -94,6 +94,13 @@
     background-color: $color-background;
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-widget-content {
+        border-color: $dark-color-border;
+        background-color: $dark-color-background;
+    }
+}
+
 /**
  * General style for jQuery widget headers.
  */
@@ -102,6 +109,12 @@
     @include gradient-linear($color-gradient-from, $color-gradient-to);
 
     font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-widget-header {
+        @include gradient-linear($dark-color-gradient-to, $dark-color-gradient-from);
+    }
 }
 
 
@@ -114,8 +127,16 @@
 
 .ui-state-default {
     border: 1px solid $color-border;
-    background-color: darken($color-background-box, 2%);
+    background-color: $color-gradient-from;
     color: $color-text;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-state-default {
+        border-color: $dark-color-border;
+        background-color: $dark-color-background-box;
+        color: $dark-color-text;
+    }
 }
 
 /**
@@ -128,13 +149,27 @@ a.ui-state-default:focus {
     text-decoration: none;
 }
 
+@media (prefers-color-scheme: dark) {
+    a.ui-state-default:hover,
+    a.ui-state-default:focus {
+        color: $dark-color-text;
+    }
+}
+
 /**
  * Hover jQuery UI widget interaction states.
  */
 
 .ui-state-hover {
-    border-color: darken($color-border, 13.5%);
+    border-color: shade($color-border, 15%);
     background-color: $color-background-box;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-state-hover {
+        border-color: tint($dark-color-border, 15%);
+        background-color: tint($dark-color-background-box, 5%);
+    }
 }
 
 /**
@@ -150,12 +185,24 @@ a.ui-state-default:focus {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-state-focus {
+        border-color: $dark-color-link-focus;
+    }
+}
+
 /**
  * Active jQuery UI widget interaction state.
  */
 
 .ui-state-active {
-    background-color: lighten($color-background-box, 3%);
+    background-color: $color-background;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-state-active {
+        background-color: $dark-color-gradient-from;
+    }
 }
 
 /**
@@ -166,12 +213,24 @@ a.ui-state-default:focus {
     background-color: $color-selecting;
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-selecting {
+        background-color: $dark-color-selecting;
+    }
+}
+
 /**
  * Highlight colour for jQuery UI widgets currently in 'selected' state.
  */
 
 .ui-selected {
     background-color: $color-selected;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-selected {
+        background-color: $dark-color-selected;
+    }
 }
 
 
@@ -187,6 +246,13 @@ a.ui-state-default:focus {
     background-color: $color-warning-background;
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-state-highlight {
+        border-color: $dark-color-warning-border;
+        background-color: $dark-color-warning-background;
+    }
+}
+
 /**
  * jQuery UI error cue colouring.
  */
@@ -195,6 +261,14 @@ a.ui-state-default:focus {
     border: 1px solid $color-error-border;
     background-color: $color-error-background;
     color: $color-error-text;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-state-error {
+        border-color: $dark-color-error-border;
+        background-color: $dark-color-error-background;
+        color: $dark-color-error-text;
+    }
 }
 
 /**
@@ -230,6 +304,12 @@ a.ui-state-default:focus {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-state-disabled:not(.ui-button) {
+        opacity: 0.25;
+    }
+}
+
 
 /* Overlays
    ========================================================================== */
@@ -251,6 +331,12 @@ a.ui-state-default:focus {
     background: rgba(#000000, 0.75);
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-widget-overlay {
+        background: rgba(#000000, 0.66);
+    }
+}
+
 
 /* Shadows
    ========================================================================== */
@@ -264,5 +350,11 @@ a.ui-state-default:focus {
  */
 
 .ui-widget-shadow {
-    box-shadow: 0 0 5px #666666;
+    box-shadow: $standard-shadow;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-widget-shadow {
+        box-shadow: $dark-standard-shadow;
+    }
 }
