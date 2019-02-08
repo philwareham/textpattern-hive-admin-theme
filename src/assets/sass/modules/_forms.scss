@@ -72,22 +72,12 @@ textarea,
 }
 
 @media (prefers-color-scheme: dark) {
-    input:not([type="button"]),
-    input:not([type="reset"]),
-    input:not([type="submit"]),
+    input,
     select,
     optgroup,
     textarea {
         color: $dark-color-text-form;
     }
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
-[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
 }
 
 /**
@@ -171,7 +161,7 @@ textarea {
     width: 16px;
     height: 16px;
     padding: 0; /* 1 */
-    border: 1px solid darken($color-border, 13%);
+    border: 1px solid shade($color-border, 15%);
     background: $color-background-form;
     appearance: none;
     box-sizing: border-box;
@@ -185,7 +175,7 @@ textarea {
     }
 
     &:hover {
-        border-color: darken($color-border, 26%);
+        border-color: shade($color-border, 30%);
         cursor: pointer;
     }
 
@@ -231,7 +221,7 @@ textarea {
     }
 
     &[disabled]:checked {
-        background: $color-border-light url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+        background: $color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
     }
 }
 
@@ -251,7 +241,7 @@ textarea {
         }
 
         &[disabled]:checked {
-            background: $color-border-light url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+            background: $dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
         }
     }
 }
@@ -321,12 +311,27 @@ textarea {
     appearance: none;
 
     &:hover {
-        border-color: darken($color-border, 13%);
+        border-color: shade($color-border, 15%);
     }
 
     &:focus {
         border-color: $color-link-focus;
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    [type="file"] {
+        border-color: $dark-color-border;
+        background-color: $dark-color-background-form;
+
+        &:hover {
+            border-color: tint($dark-color-border, 15%);
+        }
+
+        &:focus {
+            border-color: $dark-color-link-focus;
+        }
     }
 }
 
@@ -336,11 +341,9 @@ textarea {
     padding: 0 0.25em;
     border: 0;
     color: $color-text-button;
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: inherit;
+    font: inherit;
     cursor: pointer;
+    /* autoprefixer: off */
     appearance: none;
 }
 
@@ -350,11 +353,25 @@ textarea {
     padding: 0 0.25em;
     border: 0;
     color: $color-text-button;
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: inherit;
     cursor: pointer;
+    /* autoprefixer: off */
+    appearance: none;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
     /* autoprefixer: off */
     appearance: none;
 }
@@ -403,7 +420,7 @@ select::-ms-expand {
 
 select:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 $color-text-form;
+    text-shadow: none;
 }
 
 /**
@@ -433,7 +450,6 @@ select[multiple] {
 select[size="0"],
 select[size="1"] {
     height: 2.307692307692308em; // 30px / 13px
-    vertical-align: baseline;
 }
 
 /**
@@ -446,6 +462,12 @@ optgroup {
     font-weight: bold;
 }
 
+@media (prefers-color-scheme: dark) {
+    optgroup {
+        color: $dark-color-text-form;
+    }
+}
+
 /**
  * 1. Remove default vertical scrollbar in IE 11.
  * 2. Remove unwanted space below `textarea` in Safari, Chrome, Opera.
@@ -456,12 +478,9 @@ textarea {
     width: 100%;
     height: auto;
     min-height: 3em;
-    /* 1 */
-    overflow: auto;
-    /* 2 */
-    vertical-align: top;
-    /* 3 */
-    resize: vertical;
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+    resize: vertical; /* 3 */
 }
 
 /**
@@ -598,6 +617,16 @@ textarea {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    input,
+    select,
+    textarea {
+        &:focus:invalid {
+            border-color: $dark-color-error-text;
+        }
+    }
+}
+
 /**
  * Styling for Firefox-specfic form field validation.
  */
@@ -608,6 +637,16 @@ textarea {
     &:-moz-ui-invalid {
         border-color: $color-error-text;
         box-shadow: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    input,
+    select,
+    textarea {
+        &:-moz-ui-invalid {
+            border-color: $dark-color-error-text;
+        }
     }
 }
 
