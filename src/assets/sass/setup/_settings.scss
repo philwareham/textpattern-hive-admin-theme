@@ -4,8 +4,7 @@ $flat-theme:           0 !default; // 0 = no, 1 = yes
 
 // font families
 
-$font-body:            "Inter", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-body-variable:   "Inter var", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-body:            system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-code:            Menlo, Consolas, Monaco, monospace !default;
 
 // typography grid
