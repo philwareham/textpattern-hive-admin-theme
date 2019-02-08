@@ -17,6 +17,7 @@ module.exports = function (grunt)
             src: {
                 dir: 'src/',
                 sass: 'src/assets/sass/',
+                fonts: 'src/assets/fonts/',
                 img: 'src/assets/img-global/',
                 js: 'src/assets/js/'
             },
@@ -27,12 +28,14 @@ module.exports = function (grunt)
             dest1: { // Classic Yellow theme
                 dir: 'dist/hive/',
                 css: 'dist/hive/assets/css/',
+                fonts: 'dist/hive/assets/fonts/',
                 img: 'dist/hive/assets/img/',
                 js: 'dist/hive/assets/js/'
             },
             dest2: { // Neutral theme
                 dir: 'dist/hiveneutral/',
                 css: 'dist/hiveneutral/assets/css/',
+                fonts: 'dist/hiveneutral/assets/fonts/',
                 img: 'dist/hiveneutral/assets/img/',
                 js: 'dist/hiveneutral/assets/js/'
             },
@@ -69,6 +72,12 @@ module.exports = function (grunt)
                     },
                     {
                         expand: true,
+                        cwd: '<%= paths.src.fonts %>',
+                        src: '**',
+                        dest: '<%= paths.dest1.fonts %>'
+                    },
+                    {
+                        expand: true,
                         cwd: '<%= paths.src.img %>',
                         src: '**',
                         dest: '<%= paths.dest1.img %>'
@@ -84,6 +93,12 @@ module.exports = function (grunt)
                         src: '**',
                         dest: '<%= paths.dest2.dir %>',
                         filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.fonts %>',
+                        src: '**',
+                        dest: '<%= paths.dest2.fonts %>'
                     },
                     {
                         expand: true,
