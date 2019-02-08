@@ -314,7 +314,7 @@ h2 span {
 
 @media (prefers-color-scheme: dark) and (min-width: $break-large) {
     .design-patterns-menu {
-        border-right-color: $dark-color-border;
+        border-right-color: shade($dark-color-background-form, 15%);
         background-color: $dark-color-background-box;
     }
 }
