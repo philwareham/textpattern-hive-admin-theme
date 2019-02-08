@@ -464,12 +464,12 @@
 
     .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
         height: auto;
-        border-bottom: 1px solid $color-gradient-to;
+        border-bottom: 1px solid $color-border-light;
 
         li {
             display: block;
             height: auto;
-            border: 1px solid $color-gradient-to;
+            border: 1px solid $color-border-light;
             border-bottom: 1px solid transparent;
             @if $flat-theme < 1 {
                 box-shadow: none;

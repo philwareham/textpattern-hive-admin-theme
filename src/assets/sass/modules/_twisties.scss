@@ -77,7 +77,7 @@ h3.txp-summary,
     height: 2em; // 26px / 13px
     margin: 0;
     @if $flat-theme < 1 {
-        border-top: 1px solid $color-gradient-to;
+        border-top: 1px solid $color-border-light;
         border-bottom: 1px solid $color-gradient-border;
     } @else {
         border-top: 1px solid $color-border;

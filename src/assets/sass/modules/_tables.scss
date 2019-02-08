@@ -57,7 +57,7 @@ caption {
  */
 
 tr {
-    border: 1px solid $color-gradient-to;
+    border: 1px solid $color-border-light;
 }
 
 thead th {
@@ -152,13 +152,13 @@ td {
     thead th {
         @include gradient-linear($color-gradient-from, $color-gradient-to);
 
-        border-top: 1px solid $color-gradient-to;
-        border-right: 1px solid darken($color-gradient-to, 5%);
+        border-top: 1px solid $color-border-light;
+        border-right: 1px solid $color-border;
         border-bottom: 1px solid $color-gradient-border;
         border-left: 0;
 
         &:first-child {
-            border-left: 1px solid $color-gradient-to;
+            border-left: 1px solid $color-border-light;
         }
 
         a {
