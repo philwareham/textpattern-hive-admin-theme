@@ -39,6 +39,15 @@ legend {
 }
 
 /**
+ * Show the overflow in Edge.
+ */
+
+button,
+input {
+    overflow: visible;
+}
+
+/**
  * 1. Prevent elements from spilling out of their parent.
  * 2. Address margins set differently in Firefox 4+, Safari, and Chrome.
  * 3. Correct font properties not being inherited.
@@ -65,26 +74,6 @@ textarea,
     line-height: $base-line-height;
     vertical-align: baseline;
     box-sizing: border-box;
-}
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-    padding: 0;
-    border-style: none;
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
-[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
 }
 
 /**
@@ -276,6 +265,24 @@ textarea {
     font-weight: normal;
     line-height: inherit;
     cursor: pointer;
+    /* autoprefixer: off */
+    appearance: none;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
     /* autoprefixer: off */
     appearance: none;
 }
