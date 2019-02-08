@@ -68,9 +68,11 @@ $dark-color-gradient-border:               darken($color-gradient-from, 13.5%) !
 
 $color-border:                             #cccccc !default;
 $color-border-light:                       #d4d4d4 !default;
+$color-border-extra-light:                 lighten($color-border, 10%) !default;
 
 $dark-color-border:                        tint($dark-color-background, 36%) !default;
 $dark-color-border-light:                  tint($dark-color-background, 24%) !default;
+$dark-color-border-extra-light:            tint($dark-color-background, 12%) !default;
 
 // accent colours
 

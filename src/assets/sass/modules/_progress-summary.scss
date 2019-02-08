@@ -35,9 +35,9 @@
         margin: 0 1em 1em 0;
         padding: 1em 1em 1em 4em;
         border-top: 1px solid $color-gradient-to;
-        border-right: 1px solid lighten($color-border, 9%);
+        border-right: 1px solid $color-border-extra-light;
         border-bottom: 1px solid $color-gradient-border;
-        border-left: 1px solid lighten($color-border, 9%);
+        border-left: 1px solid $color-border-extra-light;
 
         // highlight the currently active step
         &.active {
@@ -92,9 +92,9 @@
 @media (prefers-color-scheme: dark) {
     .progress-meter li {
         border-top: 1px solid $color-gradient-to;
-        border-right: 1px solid shade($dark-color-border, 14%);
+        border-right: 1px solid $dark-color-border-extra-light;
         border-bottom: 1px solid $color-gradient-border;
-        border-left: 1px solid shade($dark-color-border, 14%);
+        border-left: 1px solid $dark-color-border-extra-light;
         color: $dark-color-text-inverse;
 
         // numerical indication of step
