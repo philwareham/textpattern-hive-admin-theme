@@ -166,6 +166,7 @@
 
         a.ui-state-active {
             border-color: lighten($color-link, 42%);
+            background-color: $color-selected;
         }
 
         a.ui-state-highlight:hover {
@@ -179,14 +180,6 @@
         &.ui-datepicker-week-col {
             padding: 0.32em 0;
             text-align: center;
-        }
-
-        &.ui-datepicker-today a {
-            background-color: $color-warning-background;
-        }
-
-        &.ui-datepicker-current-day a {
-            background-color: $color-selected;
         }
     }
 
@@ -216,6 +209,32 @@
         display: block;
         top: 0.3em;
         left: 0.5em;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .ui-datepicker {
+        box-shadow: $dark-standard-shadow;
+
+        .ui-datepicker-prev-hover,
+        .ui-datepicker-next-hover {
+            background-color: $dark-color-background-box;
+        }
+
+        td {
+            a.ui-state-highlight {
+                border-color: $color-warning-text;
+            }
+
+            a.ui-state-active {
+                border-color: $dark-color-link;
+                background-color: $dark-color-selected;
+            }
+
+            a.ui-state-active:hover {
+                border-color: $dark-color-link-hover;
+            }
+        }
     }
 }
 
