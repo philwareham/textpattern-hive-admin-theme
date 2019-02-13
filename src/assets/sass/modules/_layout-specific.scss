@@ -161,6 +161,42 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    #view_modes ul {
+        border-bottom-color: $dark-color-border;
+
+        a {
+            border-color: $dark-color-border;
+            background-color: darken($color-background-box, 2%);
+            color: $dark-color-text;
+            @if $flat-theme < 1 {
+                box-shadow: inset 0 -0.25em 0.5em rgba(#666666, 0.15);
+            }
+
+            &:hover {
+                border-color: darken($color-border, 13.5%);
+                background-color: $color-background-box;
+            }
+
+            &:focus {
+                border-color: $dark-color-link-focus;
+            }
+        }
+
+        .active a {
+            border-bottom-color: $dark-color-background;
+            background-color: lighten($color-background-box, 3%);
+            @if $flat-theme < 1 {
+                box-shadow: none;
+            }
+
+            &:focus {
+                border-color: $dark-color-link-focus;
+            }
+        }
+    }
+}
+
 /**
  * Write page excerpt field when in HTML preview.
  */
