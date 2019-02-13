@@ -656,7 +656,8 @@ span.spinner {
 
 @media (prefers-color-scheme: dark) {
     .txp-edit {
-        background: $dark-color-background-box;
+        border: 1px solid $dark-color-border-extra-light;
+        background: $dark-color-background;
     }
 }
 
@@ -680,7 +681,7 @@ span.spinner {
 
 @media (prefers-color-scheme: dark) {
     .txp-edit .txp-edit-actions {
-        border-top-color: $dark-color-background;
+        border-top-color: $dark-color-background-box;
     }
 }
 
