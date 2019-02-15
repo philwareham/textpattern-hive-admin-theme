@@ -56,6 +56,15 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .welcome,
+    .login {
+        h1 {
+            background-image: url("../img/textpattern-dark.svg");
+        }
+    }
+}
+
 /**
  * Additional styling for 'view site' link on login panel.
  */
