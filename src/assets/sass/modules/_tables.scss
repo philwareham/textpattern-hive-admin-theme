@@ -195,11 +195,15 @@ td {
             @include gradient-linear($dark-color-gradient-to, $dark-color-gradient-from);
 
             border-top-color: $dark-color-border-extra-light;
-            border-right-color: $dark-color-border-extra-light;
-            border-bottom-color: $dark-color-border-extra-light;
+            border-right-color: $dark-color-border-extra-dark;
+            border-bottom-color: $dark-color-border-dark;
 
             &:first-child {
                 border-left-color: $dark-color-border-extra-light;
+            }
+
+            &:last-child {
+                border-right-color: $dark-color-border-extra-light;
             }
 
             a {
@@ -265,6 +269,34 @@ td {
             border-width: 0 0.25em 0.25em;
             border-bottom-color: $color-text;
             content: "\2191";
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .txp-list,
+    .txp-list--no-options {
+        thead th {
+            &.asc,
+            &.desc {
+                @include gradient-linear(darken($dark-color-gradient-from, 4%), darken($dark-color-gradient-to, 4%));
+
+                a::after {
+                    opacity: 0.6;
+                }
+
+                a:hover::after {
+                    opacity: 1;
+                }
+            }
+
+            &.desc a::after {
+                border-top-color: $dark-color-text;
+            }
+
+            &.asc a::after {
+                border-bottom-color: $dark-color-text;
+            }
         }
     }
 }
