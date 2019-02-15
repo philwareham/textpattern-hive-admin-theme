@@ -78,6 +78,21 @@ input[type="button"],
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    button,
+    [type="reset"],
+    [type="submit"],
+    input[type="button"],
+    .txp-button,
+    .navlink,
+    .navlink-active {
+        &:focus {
+            border-color: $dark-color-link-focus;
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+        }
+    }
+}
+
 /**
  * Additional styling for primary buttons.
  *

@@ -45,6 +45,12 @@ button.txp-nav-toggle {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .txp-nav a {
+        color: $color-text;
+    }
+}
+
 /**
  * Primary-level navigation menu items (dropdown toggles).
  *

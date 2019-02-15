@@ -195,7 +195,7 @@ td {
             @include gradient-linear($dark-color-gradient-to, $dark-color-gradient-from);
 
             border-top-color: $dark-color-border-light;
-            border-right-color: $dark-color-border-extra-dark;
+            border-right-color: $dark-color-border-dark;
             border-bottom-color: $dark-color-border-extra-light;
 
             &:first-child {

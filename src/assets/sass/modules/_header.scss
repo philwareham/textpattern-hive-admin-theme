@@ -33,6 +33,16 @@
     z-index: 1000;
 }
 
+@media (prefers-color-scheme: dark) {
+    .txp-header a {
+        color: $color-text;
+
+        &:focus {
+            outline: thin solid $color-link-focus;
+        }
+    }
+}
+
 /**
  * Hide header content area on login panels.
  */
@@ -123,4 +133,11 @@
     position: relative;
     top: -0.846153846153846em; // 11px / 13px
     flex: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    .txp-logout a:focus {
+        border-color: $color-link-focus;
+        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+    }
 }
