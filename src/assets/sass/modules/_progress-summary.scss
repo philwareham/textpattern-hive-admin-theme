@@ -36,7 +36,7 @@
         padding: 1em 1em 1em 4em;
         border-top: 1px solid $color-border-light;
         border-right: 1px solid $color-border-extra-light;
-        border-bottom: 1px solid $color-gradient-border;
+        border-bottom: 1px solid $color-border-dark;
         border-left: 1px solid $color-border-extra-light;
 
         // highlight the currently active step
@@ -93,7 +93,7 @@
     .progress-meter li {
         border-top: 1px solid $color-border-light;
         border-right: 1px solid $dark-color-border-extra-light;
-        border-bottom: 1px solid $color-gradient-border;
+        border-bottom: 1px solid $color-border-dark;
         border-left: 1px solid $dark-color-border-extra-light;
         color: $dark-color-text-inverse;
 

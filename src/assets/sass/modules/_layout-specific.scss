@@ -138,7 +138,7 @@
         }
 
         &:hover {
-            border-color: shade($color-border, 14%);
+            border-color: $color-border-extra-dark;
             background-color: $color-background-box;
         }
 

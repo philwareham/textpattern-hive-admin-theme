@@ -54,7 +54,6 @@ $color-background-form:                    #ffffff !default;
 $color-background-form-disabled:           #e4e4e4 !default;
 $color-gradient-from:                      #eeeeee !default;
 $color-gradient-to:                        darken($color-gradient-from, 6.5%) !default;
-$color-gradient-border:                    darken($color-gradient-to, 7%) !default;
 
 $dark-color-background:                    #373e45 !default;
 $dark-color-background-box:                shade($dark-color-background, 14%) !default;
@@ -67,8 +66,10 @@ $dark-color-gradient-border:               darken($color-gradient-from, 13.5%) !
 // borders
 
 $color-border:                             #cccccc !default;
-$color-border-light:                       #d4d4d4 !default;
-$color-border-extra-light:                 lighten($color-border, 10%) !default;
+$color-border-light:                       tint($color-border, 7%) !default;
+$color-border-extra-light:                 tint($color-border, 14%) !default;
+$color-border-dark:                        shade($color-border, 7%) !default;
+$color-border-extra-dark:                  shade($color-border, 14%) !default;
 
 $dark-color-border:                        tint($dark-color-background, 36%) !default;
 $dark-color-border-light:                  tint($dark-color-background, 24%) !default;
