@@ -94,8 +94,8 @@ h3.txp-summary,
         @include gradient-linear($dark-color-gradient-to, $dark-color-gradient-from);
 
         @if $flat-theme < 1 {
-            border-top-color: $dark-color-gradient-from;
-            border-bottom-color: $dark-color-gradient-border;
+            border-top-color: $dark-color-border-light;
+            border-bottom-color: $dark-color-border-extra-light;
         } @else {
             border-top-color: $dark-color-border;
             border-bottom-color: $dark-color-border;
@@ -160,6 +160,11 @@ h3.txp-summary a {
 
         &::after {
             border-left-color: $dark-color-text;
+            opacity: 0.6;
+        }
+
+        &:hover::after {
+            opacity: 1;
         }
     }
 }
