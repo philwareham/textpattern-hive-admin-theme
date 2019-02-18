@@ -30,7 +30,7 @@
         filter: brightness(3) sepia(1) hue-rotate(168deg) saturate(33%);
     }
 
-    .ui-button .ui-icon {
+    .ui-button:not(.ui-selectmenu-button) .ui-icon {
         filter: none;
     }
 }
