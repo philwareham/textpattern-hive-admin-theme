@@ -167,6 +167,34 @@ button.destroy {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    button.destroy {
+        &:focus {
+            outline: thin solid $dark-color-link-focus;
+        }
+
+        .ui-icon {
+            opacity: 1;
+        }
+
+        &:hover .ui-icon,
+        &:active .ui-icon,
+        &:hover .ui-icon,
+        &:active .ui-icon {
+            filter: brightness(2.5) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(100%);
+        }
+    }
+
+    a.destroy.ui-icon {
+        opacity: 1;
+
+        &:hover,
+        &:active {
+            filter: brightness(2.5) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(100%);
+        }
+    }
+}
+
 /**
  * Grey-out disabled navlinks (but keep them in button style).
  *
