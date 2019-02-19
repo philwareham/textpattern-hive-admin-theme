@@ -226,6 +226,22 @@ li.information {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    #messagepane .messageflash {
+        &.success {
+            background: $dark-color-success-background;
+        }
+
+        &.warning {
+            background: $dark-color-warning-background;
+        }
+
+        &.error {
+            background: $dark-color-error-background;
+        }
+    }
+}
+
 /*
  * System message close icon.
  */
