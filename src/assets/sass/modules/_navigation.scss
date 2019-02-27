@@ -305,6 +305,14 @@ button.txp-nav-toggle {
     }
 }
 
+@if $flat-theme < 1 {
+    @media (prefers-color-scheme: dark) {
+        .dropdown-menu {
+            box-shadow: $dark-standard-shadow;
+        }
+    }
+}
+
 /**
  * Secondary-level navigation menu in RTL languages.
  */
