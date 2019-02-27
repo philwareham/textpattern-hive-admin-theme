@@ -310,6 +310,15 @@ ul.nav-tertiary {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .nav-tertiary .navlink-active,
+    .filtered button.ui-corner-right {
+        &:focus {
+            border-color: $dark-color-link-focus;
+        }
+    }
+}
+
 /**
  * Search widget 'search' button.
  *
