@@ -71,6 +71,7 @@ thead th {
 
     thead th {
         background-color: $dark-color-gradient-from;
+        color: $dark-color-text-heading;
     }
 }
 
@@ -207,10 +208,10 @@ td {
             }
 
             a {
-                color: $dark-color-text;
+                color: $dark-color-text-heading;
 
                 &:hover {
-                    color: $dark-color-text;
+                    color: $dark-color-text-heading;
                 }
             }
         }
