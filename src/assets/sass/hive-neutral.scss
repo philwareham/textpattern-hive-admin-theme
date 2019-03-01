@@ -1,6 +1,17 @@
+// slightly lighten a colour
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+// slightly darken a colour
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
 // Neutral Grey colourscheme (overrides Classic Yellow defaults)
 
 $flat-theme:                          1;
+
 $color-text-button:                   #ffffff;
 $color-gradient-from:                 #eeeeee;
 $color-gradient-to:                   #eeeeee; // nullify gradient (use flat colours)
@@ -16,6 +27,11 @@ $color-button-primary-gradient-from:  #9fc158;
 $color-button-primary-gradient-to:    #9fc158; // nullify gradient (use flat colours)
 $color-button-selected-gradient-from: #9dc8ef;
 $color-button-selected-gradient-to:   #9dc8ef; // nullify gradient (use flat colours)
+
+$dark-color-background:               #373e45;
+$dark-color-gradient-from:            shade($dark-color-background, 16%);
+$dark-color-gradient-to:              shade($dark-color-background, 16%); // nullify gradient (use flat colours)
+
 $border-radius:                       0.3em;
 
 // import the default Hive (Classic Yellow) theme
@@ -27,11 +43,27 @@ $border-radius:                       0.3em;
         border-color: $color-border;
     }
 
+    @media (prefers-color-scheme: dark) {
+        tr {
+            border-color: $dark-color-border-extra-light;
+        }
+    }
+
     .txp-list {
         tbody tr,
         thead th,
         thead th:first-child {
             border-color: $color-border;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .txp-list {
+            tbody tr,
+            thead th,
+            thead th:first-child {
+                border-color: $dark-color-border-extra-light;
+            }
         }
     }
 
