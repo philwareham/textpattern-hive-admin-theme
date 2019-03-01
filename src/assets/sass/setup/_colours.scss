@@ -14,7 +14,7 @@ $color-text:                          #333333 !default;
 $color-text-heading:                  #000000 !default;
 $color-text-button:                   $color-text !default;
 $color-text-button-hover:             $color-text-button !default;
-$color-text-button-active:            shade($color-text-button, 15%) !default;
+$color-text-button-active:            #000000 !default;
 $color-text-form:                     #000000 !default;
 $color-text-form-placeholder:         #999999 !default;
 $color-text-footnote:                 #585858 !default;
@@ -77,7 +77,8 @@ $color-selected:                      tint($color-link-hover, 90%) !default;
 
 $dark-color-link:                     tint(#0066ff, 50%) !default;
 $dark-color-link-hover:               tint($dark-color-link, 25%) !default;
-$dark-color-link-focus:               darken($color-accent-gradient-from, 15%) !default;
+$dark-color-link-focus:               darken($color-accent-gradient-from, 16%) !default;
+$dark-color-link-focus-alt:           #ff9900 !default;
 $dark-color-selecting:                #1b2f48 !default;
 $dark-color-selected:                 #1c3456 !default;
 

@@ -75,6 +75,7 @@ input[type="button"],
     &:focus {
         border-color: $color-link-focus;
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+        color: $color-text-button-active;
     }
 }
 
@@ -125,6 +126,17 @@ a.publish {
 
     &:focus {
         border-color: $color-link-focus;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    [type="submit"].publish,
+    button.publish,
+    a.publish {
+        &:focus {
+            border-color: $dark-color-link-focus-alt;
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+        }
     }
 }
 
