@@ -514,7 +514,8 @@ textarea.code {
     [disabled],
     [disabled] option,
     [disabled] optgroup,
-    span.disabled,
+    .txp-button.disabled,
+    .navlink-disabled,
     .ui-checkboxradio-disabled {
         border: 1px solid $dark-color-border !important;
         background-color: $dark-color-background-form-disabled !important;
