@@ -22,6 +22,7 @@ progress {
     max-width: 30em; // 390px / 13px
     height: 8px;
     border: 1px solid $color-border;
+    background-color: $color-gradient-to;
     appearance: none;
     box-sizing: border-box;
 }
@@ -138,6 +139,7 @@ progress {
 @media (prefers-color-scheme: dark) {
     .txp-upload-progress {
         border-color: $dark-color-border;
+        background-color: $dark-color-background-box;
     }
 
     // WebKit/Blink.
