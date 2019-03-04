@@ -177,14 +177,17 @@ li.information {
  * </div>
  */
 
-.messagepane {
+#messagepane {
     position: fixed;
     bottom: 0;
     left: 50%;
-    max-width: 100%;
     transform: translateX(-50%);
     text-align: center;
     z-index: 1000;
+}
+
+.messagepane {
+    max-width: 100%;
 
     .messageflash {
         display: inline-block;
@@ -227,7 +230,7 @@ li.information {
 }
 
 @media (prefers-color-scheme: dark) {
-    #messagepane .messageflash {
+    .messagepane .messageflash {
         &.success {
             background: $dark-color-success-text;
         }
@@ -271,7 +274,7 @@ li.information {
  * System message flipped layout for RTL languages.
  */
 
-[dir="rtl"] #messagepane .messageflash {
+[dir="rtl"] .messagepane .messageflash {
     padding: 0.53846153846154em 0.75em 0.53846153846154em 3.53846153846154em;
     text-align: right;
 }
@@ -292,6 +295,6 @@ li.information {
  * Flash the alert message using CSS animation.
  */
 
-.messageflash {
+#messagepane .messageflash {
     animation: messageflash 1s;
 }
