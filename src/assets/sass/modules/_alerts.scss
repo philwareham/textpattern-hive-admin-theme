@@ -232,15 +232,15 @@ li.information {
 @media (prefers-color-scheme: dark) {
     .messagepane .messageflash {
         &.success {
-            background: $dark-color-success-text;
+            background: $dark-color-success-border;
         }
 
         &.warning {
-            background: $dark-color-warning-text;
+            background: $dark-color-warning-border;
         }
 
         &.error {
-            background: $dark-color-error-text;
+            background: $dark-color-error-border;
         }
     }
 }
