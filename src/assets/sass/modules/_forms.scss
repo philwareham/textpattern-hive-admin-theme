@@ -322,11 +322,11 @@ textarea {
 
 @media (prefers-color-scheme: dark) {
     [type="file"] {
-        border-color: $dark-color-border;
+        border-color: $dark-color-border-extra-dark;
         background-color: $dark-color-background-form;
 
         &:hover {
-            border-color: tint($dark-color-border, 15%);
+            border-color: $dark-color-border-extra-light;
         }
 
         &:focus {

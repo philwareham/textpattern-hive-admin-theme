@@ -230,6 +230,12 @@ button.destroy {
     box-sizing: border-box;
 }
 
+@media (prefers-color-scheme: dark) {
+    .navlink-disabled {
+        @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+    }
+}
+
 /**
  * Tertiary button sets.
  *
