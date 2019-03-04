@@ -229,15 +229,15 @@ li.information {
 @media (prefers-color-scheme: dark) {
     #messagepane .messageflash {
         &.success {
-            background: $dark-color-success-background;
+            background: $dark-color-success-text;
         }
 
         &.warning {
-            background: $dark-color-warning-background;
+            background: $dark-color-warning-text;
         }
 
         &.error {
-            background: $dark-color-error-background;
+            background: $dark-color-error-text;
         }
     }
 }
