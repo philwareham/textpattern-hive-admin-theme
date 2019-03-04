@@ -168,7 +168,7 @@ li.information {
  *
  * Example HTML:
  *
- * <div id="messagepane">
+ * <div class="messagepane" id="messagepane">
  *     <span class="messageflash error" role="alert" aria-live="assertive">
  *         <span class="ui-icon ui-icon-alert"></span>
  *         Username not found.
@@ -177,7 +177,7 @@ li.information {
  * </div>
  */
 
-#messagepane {
+.messagepane {
     position: fixed;
     bottom: 0;
     left: 50%;
