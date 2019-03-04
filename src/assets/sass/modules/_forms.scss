@@ -136,11 +136,11 @@ textarea {
     [type="week"],
     select,
     textarea {
-        border-color: $dark-color-border;
+        border-color: $dark-color-border-extra-dark;
         background-color: $dark-color-background-form;
 
         &:hover {
-            border-color: tint($dark-color-border, 15%);
+            border-color: $dark-color-border-extra-light;
         }
 
         &:focus {
@@ -192,11 +192,11 @@ textarea {
 @media (prefers-color-scheme: dark) {
     [type="checkbox"]:not(.ui-checkboxradio),
     [type="radio"]:not(.ui-checkboxradio) {
-        border-color: tint($dark-color-border, 15%);
+        border-color: $dark-color-border-extra-dark;
         background-color: $dark-color-background-form;
 
         &:hover {
-            border-color: tint($dark-color-border, 30%);
+            border-color: $dark-color-border-extra-light;
         }
 
         &:focus {
