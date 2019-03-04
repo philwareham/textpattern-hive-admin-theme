@@ -178,6 +178,13 @@ button:not(.ui-button):focus .ui-icon {
     filter: brightness(5);
 }
 
+@media (prefers-color-scheme: dark) {
+    .ui-icon-inversed,
+    .messagepane .ui-icon {
+        filter: brightness(5);
+    }
+}
+
 /**
  * Weighted content icons and interaction state icons.
  */
