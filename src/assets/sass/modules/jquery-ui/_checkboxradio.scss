@@ -28,6 +28,10 @@
         box-sizing: border-box;
     }
 
+    &:hover .ui-icon-background {
+        border-color: $color-border-extra-dark;
+    }
+
     &.ui-checkboxradio-checked {
         .ui-icon {
             border: 0;

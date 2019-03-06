@@ -161,7 +161,7 @@ textarea {
     width: 16px;
     height: 16px;
     padding: 0; /* 1 */
-    border: 1px solid shade($color-border, 15%);
+    border: 1px solid $color-border-extra-dark;
     background: $color-background-form;
     appearance: none;
     box-sizing: border-box;
@@ -175,7 +175,7 @@ textarea {
     }
 
     &:hover {
-        border-color: shade($color-border, 30%);
+        border-color: $color-border-extra-dark;
         cursor: pointer;
     }
 
@@ -311,7 +311,7 @@ textarea {
     appearance: none;
 
     &:hover {
-        border-color: shade($color-border, 15%);
+        border-color: $color-border-extra-dark;
     }
 
     &:focus {
@@ -353,6 +353,10 @@ textarea {
     padding: 0 0.25em;
     border: 0;
     color: $color-text-button;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: inherit;
     cursor: pointer;
     /* autoprefixer: off */
     appearance: none;

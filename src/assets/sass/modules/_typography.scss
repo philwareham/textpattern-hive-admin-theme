@@ -231,6 +231,7 @@ pre {
     samp {
         border-color: $dark-color-border-extra-light;
         background-color: $dark-color-background-box;
+        color: $dark-color-text;
     }
 }
 
@@ -248,7 +249,7 @@ code.excerpt {
     @if $border-radius > 0 {
         border-radius: 0;
     }
-    background: none;
+    background-color: transparent;
     text-align: left;
     white-space: pre;
     word-spacing: normal;

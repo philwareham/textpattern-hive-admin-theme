@@ -183,7 +183,7 @@
             }
 
             &:hover {
-                border-color: tint($dark-color-border, 15%);
+                border-color: $dark-color-border-extra-light;
                 background-color: tint($dark-color-background-box, 5%);
             }
 
