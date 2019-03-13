@@ -153,7 +153,7 @@
 
         &:focus {
             border-color: $color-link-focus;
-            outline: 0;
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
     }
 
@@ -179,7 +179,7 @@
             background-color: $dark-color-background-box;
             color: $dark-color-text;
             @if $flat-theme < 1 {
-                box-shadow: inset 0 -0.25em 0.5em rgba(#000000, 0.4);
+                box-shadow: inset 0 -0.25em 0.5em rgba(#000000, 0.2);
             }
 
             &:hover {
@@ -247,6 +247,14 @@
     #main_content .author small {
         color: $dark-color-text-footnote;
     }
+}
+
+/**
+ * Reduce space above expires date/time region.
+ */
+
+#expires-datetime-group {
+    margin-top: 0;
 }
 
 /**

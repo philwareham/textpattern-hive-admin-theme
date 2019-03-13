@@ -204,3 +204,28 @@ h3.txp-summary.expanded a::after {
 .txp-details .txp-listtables {
     margin: 1em 0;
 }
+
+/**
+ * Inline date and time form fields within summary/details boxes.
+ */
+
+.txp-details .txp-form-field {
+    &.date,
+    &.time {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+
+    &.date {
+        margin-right: 1.5em;
+    }
+
+    &.posted-now {
+        margin-bottom: 0;
+    }
+}
+
+[dir="rtl"] .txp-details .txp-form-field.date {
+    margin-right: 0;
+    margin-left: 1.5em;
+}
