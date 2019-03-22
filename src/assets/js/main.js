@@ -21,6 +21,7 @@ function detectColorScheme() {
         if (!matches) { // Not matching anymore = not interesting
             return
         }
+
         if (media === DARK) {
             changeWebsiteTheme('dark')
         } else if (media === LIGHT) {
