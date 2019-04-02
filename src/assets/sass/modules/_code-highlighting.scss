@@ -95,7 +95,7 @@ pre[class*="language-"] {
     cursor: help;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .token.punctuation {
         color: #ffffff;
     }

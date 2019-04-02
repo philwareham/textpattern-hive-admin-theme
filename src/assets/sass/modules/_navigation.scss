@@ -45,7 +45,7 @@ button.txp-nav-toggle {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .txp-nav a {
         color: $color-text;
     }
@@ -306,7 +306,7 @@ button.txp-nav-toggle {
 }
 
 @if $flat-theme < 1 {
-    @media (prefers-color-scheme: dark) {
+    @include dark-mode {
         .dropdown-menu {
             box-shadow: $dark-standard-shadow;
         }

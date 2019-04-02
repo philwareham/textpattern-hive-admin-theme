@@ -93,7 +93,7 @@ img {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .content-image {
         border-color: $dark-color-border;
         background-color: $dark-color-background;

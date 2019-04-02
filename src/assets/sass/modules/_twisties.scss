@@ -44,7 +44,7 @@
     background: $color-background-box;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .txp-details {
         @if $flat-theme < 1 {
             border-right: 1px solid $dark-color-border-extra-light;
@@ -88,7 +88,7 @@ h3.txp-summary,
     line-height: 2; // 26px / 13px
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     h3.txp-summary,
     .txp-details > h3 {
         @include gradient-linear($dark-color-gradient-to, $dark-color-gradient-from);
@@ -150,7 +150,7 @@ h3.txp-summary a {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     h3.txp-summary a {
         color: $dark-color-text-heading;
 
@@ -182,7 +182,7 @@ h3.txp-summary.expanded a::after {
     content: "\2191";
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     h3.txp-summary.expanded a::after {
         border-top-color: $dark-color-text;
     }

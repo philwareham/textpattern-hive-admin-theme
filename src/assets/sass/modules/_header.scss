@@ -33,7 +33,7 @@
     z-index: 1000;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .txp-header a {
         color: $color-text;
 
@@ -135,7 +135,7 @@
     flex: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .txp-logout a:focus {
         border-color: $color-link-focus;
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.

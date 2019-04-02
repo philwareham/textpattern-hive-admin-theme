@@ -97,7 +97,7 @@ h6 {
     font-size: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     h1,
     h2,
     h3,
@@ -135,7 +135,7 @@ blockquote {
     border-left: 3px solid $color-border;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     blockquote {
         border-left-color: $dark-color-border;
     }
@@ -169,7 +169,7 @@ var {
     color: $color-text;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     mark,
     var {
         background: $dark-color-selected;
@@ -224,7 +224,7 @@ pre {
     tab-size: 4;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     pre,
     code,
     kbd,
@@ -302,7 +302,7 @@ tfoot,
     color: $color-text-footnote;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     figcaption,
     tfoot,
     .footnote,

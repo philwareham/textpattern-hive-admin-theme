@@ -56,7 +56,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .welcome,
     .login {
         h1 {
@@ -78,7 +78,7 @@
     overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .login-view-site {
         border-top-color: $dark-color-border;
     }
@@ -170,7 +170,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     #view_modes ul {
         border-bottom-color: $dark-color-border;
 
@@ -243,7 +243,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     #main_content .author small {
         color: $dark-color-text-footnote;
     }
@@ -286,7 +286,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .txp-save-zone {
         border-color: $dark-color-border-light;
         background: $dark-color-background-box;
@@ -306,7 +306,7 @@
     color: $color-text-footnote;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .unpublished,
     .not-modified {
         color: $dark-color-text-footnote;

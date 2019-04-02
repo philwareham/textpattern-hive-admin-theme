@@ -13,7 +13,7 @@ fieldset {
     border: 1px solid $color-border; /* 2 */
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     fieldset {
         border-color: $dark-color-border;
     }
@@ -71,7 +71,7 @@ textarea,
     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     input,
     select,
     optgroup,
@@ -119,7 +119,7 @@ textarea {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     [type="color"],
     [type="date"],
     [type="datetime"],
@@ -189,7 +189,7 @@ textarea {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     [type="checkbox"]:not(.ui-checkboxradio),
     [type="radio"]:not(.ui-checkboxradio) {
         border-color: $dark-color-border-extra-dark;
@@ -225,7 +225,7 @@ textarea {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     [type="checkbox"]:not(.ui-checkboxradio) {
         &:checked {
             background: $dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
@@ -263,7 +263,7 @@ textarea {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     [type="radio"]:not(.ui-checkboxradio):checked {
         border-color: $dark-color-text;
 
@@ -320,7 +320,7 @@ textarea {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     [type="file"] {
         border-color: $dark-color-border-extra-dark;
         background-color: $dark-color-background-form;
@@ -391,7 +391,7 @@ select {
     text-transform: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     select {
         background-color: $dark-color-background-form;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23788591' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E");
@@ -452,15 +452,8 @@ select[size="1"] {
  */
 
 optgroup {
-    color: $color-text-form;
     font-style: normal;
     font-weight: bold;
-}
-
-@media (prefers-color-scheme: dark) {
-    optgroup {
-        color: $dark-color-text-form;
-    }
 }
 
 /**
@@ -505,7 +498,7 @@ textarea.code {
     opacity: 0.33 !important;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     [disabled],
     [disabled] option,
     [disabled] optgroup,
@@ -617,7 +610,7 @@ textarea {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     input,
     select,
     textarea {
@@ -640,7 +633,7 @@ textarea {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     input,
     select,
     textarea {
@@ -662,7 +655,7 @@ textarea {
     opacity: 1;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     ::placeholder {
         color: $dark-color-text-form-placeholder;
     }

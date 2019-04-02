@@ -168,7 +168,7 @@
     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .txp-grid-cell {
         border-color: $dark-color-border;
     }
@@ -214,7 +214,7 @@
     z-index: 2;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .txp-grid-multi-edit {
         border-color: $dark-color-border-light;
     }

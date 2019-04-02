@@ -29,7 +29,7 @@ hr {
     box-sizing: content-box;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     hr {
         border-bottom-color: $dark-color-border;
     }
@@ -102,7 +102,7 @@ hr {
     border-bottom: 1px solid $color-border-light;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .txp-dropdown-toggle-all {
         border-bottom-color: $dark-color-border-light;
     }
@@ -438,7 +438,7 @@ span.spinner {
     z-index: 20;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .multi-edit {
         background: $dark-color-background;
         box-shadow: 0 -1em 1em -0.5em $dark-color-background;
@@ -546,7 +546,7 @@ span.spinner {
     border-top: 2px solid $color-border;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .text-section {
         border-top-color: $dark-color-border;
     }
@@ -654,7 +654,7 @@ span.spinner {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .txp-edit {
         border: 1px solid $dark-color-border-extra-light;
         background: $dark-color-background;
@@ -679,7 +679,7 @@ span.spinner {
     border-top: 2px solid $color-background;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .txp-edit .txp-edit-actions {
         border-top-color: $dark-color-background-box;
     }

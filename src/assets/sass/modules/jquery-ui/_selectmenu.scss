@@ -98,7 +98,7 @@
     display: block;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .ui-selectmenu-optgroup {
         border-top-color: $dark-color-border;
     }
@@ -164,7 +164,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .no-ui-button {
         .ui-selectmenu-button {
             color: $dark-color-link;

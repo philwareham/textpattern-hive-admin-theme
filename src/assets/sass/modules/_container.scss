@@ -22,7 +22,7 @@ body {
     overscroll-behavior: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     body {
         background: $dark-color-background;
         color: $dark-color-text;

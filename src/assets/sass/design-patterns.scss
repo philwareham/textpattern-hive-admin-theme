@@ -64,7 +64,7 @@ body {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .is-inview::before {
         background-color: rgba($dark-color-link-focus, 0.25);
     }
@@ -158,7 +158,7 @@ $dark-colors: (
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .design-patterns-color {
         border-color: $dark-color-border;
 
@@ -178,7 +178,7 @@ $dark-colors: (
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     @each $name, $color in $dark-colors {
         .design-patterns-color-#{$name} {
             background: $color;
@@ -318,7 +318,7 @@ h2 span {
 
 @media (prefers-color-scheme: dark) and (min-width: $break-large) {
     .design-patterns-menu {
-        border-right-color: shade($dark-color-background-form, 15%);
+        border-right-color: $dark-color-border-extra-dark;
         background-color: $dark-color-background-box;
     }
 }

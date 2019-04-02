@@ -42,7 +42,7 @@ li::marker {
     color: color-text-heading;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     li::marker {
         color: $dark-color-text-heading;
     }
@@ -138,7 +138,7 @@ dd {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .switcher-list li {
         border-top: 1px solid $dark-color-gradient-to;
 

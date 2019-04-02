@@ -136,7 +136,7 @@ progress {
     background-image: none;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .txp-upload-progress {
         border-color: $dark-color-border;
         background-color: $dark-color-background-box;

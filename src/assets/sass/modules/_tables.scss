@@ -29,7 +29,7 @@ table {
     border-spacing: 0;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     table {
         background-color: $dark-color-background;
     }
@@ -64,7 +64,7 @@ thead th {
     background-color: $color-gradient-from;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     tr {
         border-color: $dark-color-border-extra-light;
     }
@@ -177,7 +177,7 @@ td {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .txp-list,
     .txp-list--no-options {
         tbody {
@@ -274,7 +274,7 @@ td {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .txp-list,
     .txp-list--no-options {
         thead th {

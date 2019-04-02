@@ -28,7 +28,7 @@
 }
 
 @if $flat-theme < 1 {
-    @media (prefers-color-scheme: dark) {
+    @include dark-mode {
         .ui-tooltip {
             box-shadow: $dark-standard-shadow;
         }

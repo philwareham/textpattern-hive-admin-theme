@@ -44,7 +44,7 @@ li.information {
     color: $color-info-text;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     li.success {
         background: $dark-color-success-background;
     }
@@ -95,7 +95,7 @@ li.information {
     background: $color-highlight-box;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .highlight {
         background: $dark-color-highlight-box;
     }
@@ -139,7 +139,7 @@ li.information {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .alert-block {
         &.success {
             border-color: $dark-color-success-border;
@@ -229,7 +229,7 @@ li.information {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .messagepane .messageflash {
         &.success {
             background: $dark-color-success-border;

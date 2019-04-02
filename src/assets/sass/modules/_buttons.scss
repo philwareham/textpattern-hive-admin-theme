@@ -79,7 +79,7 @@ input[type="button"],
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     button,
     [type="reset"],
     [type="submit"],
@@ -129,7 +129,7 @@ a.publish {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     [type="submit"].publish,
     button.publish,
     a.publish {
@@ -179,7 +179,7 @@ button.destroy {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     button.destroy {
         &:focus {
             outline: thin solid $dark-color-link-focus;
@@ -230,7 +230,7 @@ button.destroy {
     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .navlink-disabled {
         @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
     }
@@ -328,7 +328,7 @@ ul.nav-tertiary {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .nav-tertiary .navlink-active,
     .filtered button.ui-corner-right {
         &:focus {

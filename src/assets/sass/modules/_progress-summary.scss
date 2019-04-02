@@ -89,7 +89,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     .progress-meter li {
         border-top: 1px solid $color-border-light;
         border-right: 1px solid $dark-color-border-extra-light;
@@ -140,7 +140,7 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-mode {
     [dir="rtl"] .progress-meter li::after {
         border-right-color: $dark-color-border;
     }
