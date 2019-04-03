@@ -205,6 +205,12 @@ module.exports = function (grunt)
                             'node_modules/autosize/dist/autosize.js',
                             '<%= paths.src.js %>main.js'
                         ],
+                        '<%= paths.dest1.js %>darkmode.js': [
+                            '<%= paths.src.js %>darkmode.js'
+                        ],
+                        '<%= paths.dest2.js %>darkmode.js': [
+                            '<%= paths.src.js %>darkmode.js'
+                        ],
                         '<%= paths.docs.js %>prism.js': [
                             'node_modules/prismjs/prism.js'
                         ]

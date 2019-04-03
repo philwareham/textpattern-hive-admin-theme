@@ -141,3 +141,12 @@
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }
+
+/**
+ * Switch between Dark Mode/Light Mode manually.
+ */
+
+#lightswitch {
+    width: 24px;
+    height: 24px;
+}

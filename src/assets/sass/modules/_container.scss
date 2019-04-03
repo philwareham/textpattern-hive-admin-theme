@@ -23,10 +23,10 @@ body {
 }
 
 @include dark-mode {
-    body {
-        background: $dark-color-background;
-        color: $dark-color-text;
-    }
+    //body {
+    background: $dark-color-background;
+    color: $dark-color-text;
+    //}
 }
 
 /**
