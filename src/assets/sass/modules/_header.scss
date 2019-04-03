@@ -169,26 +169,35 @@
         transform: translateY(-50%);
         border: 1px solid darken($color-accent-gradient-to, 6%);
         border-radius: 0.75em;
-        background: lighten($color-accent-gradient-from, 14%);
+        background: rgba($color-text-inverse, 0.6);
         text-align: center;
 
         &:hover {
-            background: lighten($color-accent-gradient-from, 21%);
+            background: rgba($color-text-inverse, 0.8);
+        }
+
+        &:focus {
+            border-color: $color-link-focus;
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
     }
 }
 
 @include dark-mode {
     .txp-lightswitch a {
-        background-color: $color-text;
+        background: transparent;
 
-        .ui-icon {
-            opacity: 1;
+        &:hover {
+            background: rgba($color-text-inverse, 0.25);
         }
 
-        &:hover .ui-icon,
-        &:focus .ui-icon {
-            filter: brightness(5);
+        &:focus {
+            border-color: $color-link-focus;
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+        }
+
+        .ui-icon {
+            filter: none;
         }
     }
 }
