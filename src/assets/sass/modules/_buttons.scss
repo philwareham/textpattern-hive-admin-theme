@@ -376,3 +376,29 @@ ul.nav-tertiary {
         }
     }
 }
+
+/**
+ * Disbaled button additional styling.
+ */
+
+button[disabled],
+[type="button"][disabled],
+[type="reset"][disabled],
+[type="submit"][disabled],
+.txp-button.disabled,
+.navlink-disabled {
+    background: $color-background-form-disabled !important;
+    color: $color-text-button !important;
+}
+
+@include dark-mode {
+    button[disabled],
+    [type="button"][disabled],
+    [type="reset"][disabled],
+    [type="submit"][disabled],
+    .txp-button.disabled,
+    .navlink-disabled {
+        background: $color-background-form-disabled !important;
+        color: $color-text-button !important;
+    }
+}
