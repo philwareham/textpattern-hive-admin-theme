@@ -6,6 +6,24 @@ var langdir = document.documentElement.dir;
 
 $(function ()
 {
+    // Switch between Dark Mode/Light Mode manually.
+
+    var bodyClass = document.querySelector('body'),
+        lightSwitch = document.getElementById('lightswitch');
+
+    lightSwitch.addEventListener('click', function(e)
+    {
+        if (bodyClass.classList.contains('darkmode')) {
+            bodyClass.classList.remove('darkmode');
+            localStorage.setItem('prefers-color-scheme', 'light');
+        } else {
+            bodyClass.classList.add('darkmode');
+            localStorage.setItem('prefers-color-scheme', 'dark');
+        }
+
+        e.preventDefault();
+    });
+
     // Spoof RTL on English language `label` tags.
     // This isn't needed when viewing in proper RTL languages.
 
