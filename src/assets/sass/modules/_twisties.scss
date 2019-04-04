@@ -159,6 +159,8 @@ h3.txp-summary a {
         }
 
         &::after {
+            border: 0 solid transparent;
+            border-width: 0.25em 0 0.25em 0.25em;
             border-left-color: $dark-color-text;
             opacity: 0.6;
         }
@@ -184,6 +186,8 @@ h3.txp-summary.expanded a::after {
 
 @include dark-mode {
     h3.txp-summary.expanded a::after {
+        border: 0 solid transparent;
+        border-width: 0.25em 0.25em 0;
         border-top-color: $dark-color-text;
     }
 }

@@ -74,6 +74,8 @@
 @include dark-mode {
     .ui-tabs {
         .ui-tabs-nav {
+            background: $dark-color-background;
+
             &:not(.switcher-list) .ui-tabs-anchor {
                 color: $dark-color-text;
             }
