@@ -15,6 +15,7 @@ $color-text-heading:                  #000000 !default;
 $color-text-button:                   $color-text !default;
 $color-text-button-hover:             $color-text-button !default;
 $color-text-button-active:            #000000 !default;
+$color-text-button-disabled:          $color-text-button !default;
 $color-text-form:                     #000000 !default;
 $color-text-form-placeholder:         #999999 !default;
 $color-text-footnote:                 #585858 !default;
@@ -22,6 +23,10 @@ $color-text-inverse:                  #ffffff !default;
 
 $dark-color-text:                     #ced4da !default;
 $dark-color-text-heading:             #ffffff !default;
+$dark-color-text-button:              $color-text !default;
+$dark-color-text-button-hover:        $color-text-button !default;
+$dark-color-text-button-active:       #000000 !default;
+$dark-color-text-button-disabled:     $dark-color-text-button !default;
 $dark-color-text-form:                #ffffff !default;
 $dark-color-text-form-placeholder:    #747b82 !default;
 $dark-color-text-footnote:            #c9d1d9 !default;

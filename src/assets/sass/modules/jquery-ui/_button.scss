@@ -72,10 +72,19 @@
 
 @include dark-mode {
     .ui-button {
-        color: $color-text-button;
+        color: $dark-color-text-button;
+
+        &:hover {
+            color: $dark-color-text-button-hover;
+        }
+
+        &:active {
+            color: $dark-color-text-button-active;
+        }
 
         &:focus {
             border-color: $dark-color-link-focus;
+            color: $dark-color-text-button-active;
         }
     }
 }

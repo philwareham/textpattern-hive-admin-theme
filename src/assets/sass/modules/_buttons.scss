@@ -87,20 +87,20 @@ input[type="button"],
     .txp-button,
     .navlink,
     .navlink-active {
-        color: $color-text-button;
+        color: $dark-color-text-button;
 
         &:hover {
-            color: $color-text-button-hover;
+            color: $dark-color-text-button-hover;
         }
 
         &:active {
-            color: $color-text-button-active;
+            color: $dark-color-text-button-active;
         }
 
         &:focus {
             border-color: $dark-color-link-focus;
             outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-            color: $color-text-button-active;
+            color: $dark-color-text-button-active;
         }
     }
 }
@@ -388,7 +388,7 @@ button[disabled],
 .txp-button.disabled,
 .navlink-disabled {
     background: $color-background-form-disabled !important;
-    color: $color-text-button !important;
+    color: $color-text-button-disabled !important;
 }
 
 @include dark-mode {
@@ -399,6 +399,6 @@ button[disabled],
     .txp-button.disabled,
     .navlink-disabled {
         background: $color-background-form-disabled !important;
-        color: $color-text-button !important;
+        color: $dark-color-text-button-disabled !important;
     }
 }

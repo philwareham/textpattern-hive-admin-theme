@@ -13,6 +13,9 @@
 $flat-theme:                          1;
 
 $color-text-button:                   #ffffff;
+$color-text-button-hover:             #ffffff;
+$color-text-button-active:            #ffffff;
+$color-text-button-disabled:          #000000;
 $color-gradient-from:                 #eeeeee;
 $color-gradient-to:                   #eeeeee; // nullify gradient (use flat colours)
 $color-accent-gradient-from:          #c7e0f6;
@@ -21,13 +24,17 @@ $color-selecting:                     #c7e0f6;
 $color-selected:                      lighten($color-selecting, 6%);
 $color-background:                    #f7f7f7;
 $color-background-box:                #ffffff;
-$color-button-gradient-from:          #5ba4e5;
-$color-button-gradient-to:            #5ba4e5; // nullify gradient (use flat colours)
+$color-button-gradient-from:          #5baced;
+$color-button-gradient-to:            #5baced; // nullify gradient (use flat colours)
 $color-button-primary-gradient-from:  #9fc158;
 $color-button-primary-gradient-to:    #9fc158; // nullify gradient (use flat colours)
 $color-button-selected-gradient-from: #9dc8ef;
 $color-button-selected-gradient-to:   #9dc8ef; // nullify gradient (use flat colours)
 
+$dark-color-text-button:              #000000;
+$dark-color-text-button-hover:        #000000;
+$dark-color-text-button-active:       #000000;
+$dark-color-text-button-disabled:     #000000;
 $dark-color-background:               #373e45;
 $dark-color-gradient-from:            shade($dark-color-background, 24%);
 $dark-color-gradient-to:              shade($dark-color-background, 24%); // nullify gradient (use flat colours)
