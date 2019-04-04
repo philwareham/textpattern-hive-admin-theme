@@ -12,7 +12,7 @@
     <script src="assets/js/jquery-ui.js"></script>
     <script src="assets/js/prism.js"></script>
     <script src="assets/js/scrollspy.js"></script>
-    <script src="assets/js/design-patterns.js"></script>
+    <script defer src="assets/js/design-patterns.js"></script>
 </head>
 <body>
     <script src="../dist/hive/assets/js/darkmode.js"></script>
@@ -2326,19 +2326,6 @@
             </div><!-- /design-patterns-content-container -->
         </div><!-- /design-patterns-content -->
     </main>
-<script>
-$(function ()
-{
-    // ScrollSpy.
-    var spy = new ScrollSpy('main', {
-        nav: '.design-patterns-menu ol > li > a',
-        className: 'is-inview'
-    });
-    var subSpy = new ScrollSpy('main', {
-    	nav: '.design-patterns-menu ol > li > ol > li > a',
-    	className: 'is-inview'
-    });
-});
-</script>
+    <script src="assets/js/docs-extras.js"></script>
 </body>
 </html>

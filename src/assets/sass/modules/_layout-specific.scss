@@ -56,12 +56,10 @@
     }
 }
 
-@include dark-mode {
-    .welcome,
-    .login {
-        h1 {
-            background-image: url("../img/textpattern-dark.svg");
-        }
+body.darkmode.welcome,
+body.darkmode.login {
+    h1 {
+        background-image: url("../img/textpattern-dark.svg");
     }
 }
 
