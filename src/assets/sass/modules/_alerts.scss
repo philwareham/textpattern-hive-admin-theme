@@ -231,16 +231,22 @@ li.information {
 
 @include dark-mode {
     .messagepane .messageflash {
+        border: 1px solid $dark-color-border-extra-dark;
+        border-bottom: 0;
+        @if $flat-theme < 1 {
+            box-shadow: $dark-standard-shadow;
+        }
+
         &.success {
-            background: $dark-color-success-border;
+            background: $dark-color-success-background;
         }
 
         &.warning {
-            background: $dark-color-warning-border;
+            background: $dark-color-warning-background;
         }
 
         &.error {
-            background: $dark-color-error-border;
+            background: $dark-color-error-background;
         }
     }
 }
@@ -266,6 +272,20 @@ li.information {
 
         &:hover {
             opacity: 1;
+        }
+    }
+}
+
+@include dark-mode {
+    .close {
+        border-color: rgba(0, 0, 0, 0.4);
+
+        span {
+            opacity: 0.75;
+
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 }

@@ -26,11 +26,12 @@
 }
 
 @include dark-mode {
-    .ui-icon {
+    .ui-icon,
+    .no-ui-button .ui-button .ui-icon {
         filter: brightness(3) sepia(1) hue-rotate(168deg) saturate(33%);
     }
 
-    .ui-button:not(.ui-selectmenu-button) .ui-icon {
+    .ui-button .ui-icon {
         filter: none;
     }
 }
@@ -179,8 +180,7 @@ button:not(.ui-button):focus .ui-icon {
 }
 
 @include dark-mode {
-    .ui-icon-inversed,
-    .messagepane .ui-icon {
+    .ui-icon-inversed {
         filter: brightness(5);
     }
 }

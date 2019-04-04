@@ -411,14 +411,6 @@ select {
 }
 
 /**
- * Remove browser-specific `select` UI in IE 11.
- */
-
-select::-ms-expand {
-    opacity: 0;
-}
-
-/**
  * Override height and background set in a previous rule and allow auto height.
  */
 
@@ -429,6 +421,13 @@ select[multiple] {
     background-image: none;
     vertical-align: top;
     box-sizing: border-box;
+}
+
+@include dark-mode {
+    select[size],
+    select[multiple] {
+        background-image: none;
+    }
 }
 
 [dir="rtl"] {
@@ -445,6 +444,14 @@ select[multiple] {
 select[size="0"],
 select[size="1"] {
     height: 2.307692307692308em; // 30px / 13px
+}
+
+/**
+ * Remove browser-specific `select` UI in IE 11.
+ */
+
+select::-ms-expand {
+    opacity: 0;
 }
 
 /**

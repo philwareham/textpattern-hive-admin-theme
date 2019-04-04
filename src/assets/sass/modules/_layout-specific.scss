@@ -173,7 +173,7 @@ body.darkmode.login {
         border-bottom-color: $dark-color-border;
 
         a {
-            border-color: $dark-color-border;
+            border-color: $dark-color-border-light;
             background-color: $dark-color-background-box;
             color: $dark-color-text;
             @if $flat-theme < 1 {
@@ -181,7 +181,7 @@ body.darkmode.login {
             }
 
             &:hover {
-                border-color: $dark-color-border-extra-light;
+                border-color: $dark-color-border;
                 background-color: tint($dark-color-background-box, 5%);
             }
 
@@ -191,6 +191,7 @@ body.darkmode.login {
         }
 
         .active a {
+            border-color: $dark-color-border;
             border-bottom-color: $dark-color-background;
             background-color: $dark-color-background;
             @if $flat-theme < 1 {
