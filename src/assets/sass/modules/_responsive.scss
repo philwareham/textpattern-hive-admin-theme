@@ -367,6 +367,14 @@
         }
     }
 
+    @if $flat-theme < 1 {
+        @include dark-mode {
+            .dropdown-menu {
+                box-shadow: none;
+            }
+        }
+    }
+
     /**
      * Collapse 2 column form fields to 1 column (remove flexbox).
      */
