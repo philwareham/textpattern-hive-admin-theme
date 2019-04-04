@@ -40,6 +40,8 @@ class hive_theme extends \Textpattern\Admin\Theme
 
     function header()
     {
+        $out[] = '<script src="'.$this->url.'assets/js/darkmode.js"></script>'.n;
+
         global $txp_user;
 
         $default_event = get_pref('default_event');
@@ -89,6 +91,11 @@ class hive_theme extends \Textpattern\Admin\Theme
                     'target' => '_blank',
                     'title'  => gTxt('tab_view_site'),
                 )), array('class' => 'txp-view-site'));
+            $out[] = graf(
+                href(span(gTxt('lightswitch'), array('class' => 'ui-icon ui-icon-lightbulb')), '#', array(
+                    'id'     => 'lightswitch',
+                    'title'  => gTxt('lightswitch'),
+                )), array('class' => 'txp-lightswitch'));
             $out[] = graf(
                 href(gTxt('logout'), 'index.php?logout=1', ' onclick="return verify(\''.gTxt('are_you_sure').'\')"'), array('class' => 'txp-logout'));
         }
