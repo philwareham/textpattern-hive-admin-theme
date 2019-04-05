@@ -195,13 +195,13 @@ a.ui-state-default:focus {
  * Active jQuery UI widget interaction state.
  */
 
-.ui-state-active {
+.ui-state-active:not(.ui-button) {
     border-color: $color-border;
     background-color: $color-background;
 }
 
 @include dark-mode {
-    .ui-state-active {
+    .ui-state-active:not(.ui-button) {
         border-color: $dark-color-border;
         background-color: $dark-color-gradient-from;
     }

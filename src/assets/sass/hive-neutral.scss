@@ -12,9 +12,9 @@
 
 $flat-theme:                          1;
 
-$color-text-button:                   #ffffff;
-$color-text-button-hover:             #ffffff;
-$color-text-button-active:            #ffffff;
+$color-text-button:                   #000000;
+$color-text-button-hover:             #000000;
+$color-text-button-active:            #000000;
 $color-text-button-disabled:          #000000;
 $color-gradient-from:                 #eeeeee;
 $color-gradient-to:                   #eeeeee; // nullify gradient (use flat colours)
@@ -24,12 +24,12 @@ $color-selecting:                     #c7e0f6;
 $color-selected:                      lighten($color-selecting, 6%);
 $color-background:                    #f7f7f7;
 $color-background-box:                #ffffff;
-$color-button-gradient-from:          #5baced;
-$color-button-gradient-to:            #5baced; // nullify gradient (use flat colours)
-$color-button-primary-gradient-from:  #9fc158;
-$color-button-primary-gradient-to:    #9fc158; // nullify gradient (use flat colours)
-$color-button-selected-gradient-from: #9dc8ef;
-$color-button-selected-gradient-to:   #9dc8ef; // nullify gradient (use flat colours)
+$color-button-gradient-from:          #9dc8ef;
+$color-button-gradient-to:            #9dc8ef; // nullify gradient (use flat colours)
+$color-button-primary-gradient-from:  #9ccc66;
+$color-button-primary-gradient-to:    #9ccc66; // nullify gradient (use flat colours)
+$color-button-selected-gradient-from: tint($color-button-gradient-from, 33%);
+$color-button-selected-gradient-to:   tint($color-button-gradient-to, 33%); // nullify gradient (use flat colours)
 
 $dark-color-text-button:              #000000;
 $dark-color-text-button-hover:        #000000;
@@ -45,6 +45,29 @@ $border-radius:                       0.3em;
 @import "hive-default";
 
 @media screen {
+
+    .txp-nav > ul > li {
+        border-right-color: shade($color-accent-gradient-to, 16%);
+        background: $color-accent-gradient-to;
+
+        &:first-child {
+            border-left-color: shade($color-accent-gradient-to, 16%);
+        }
+
+        > a {
+            &:hover {
+                background: rgba($color-text-inverse, 0.4);
+            }
+        }
+
+        &.selected > a {
+            background: rgba($color-text-inverse, 0.4);
+
+            &:hover {
+                background: rgba($color-text-inverse, 0.6);
+            }
+        }
+    }
 
     tr {
         border-color: $color-border;
@@ -79,36 +102,6 @@ $border-radius:                       0.3em;
         background: $color-background;
     }
 
-    button:not(.destroy),
-    [type="reset"],
-    [type="submit"]:not(.destroy),
-    input[type="button"],
-    .txp-button,
-    .ui-button:not(.ui-checkboxradio-label),
-    .ui-widget-content .ui-icon,
-    .ui-widget-header .ui-icon,
-    .ui-state-hover .ui-icon,
-    .ui-state-focus .ui-icon,
-    .ui-state-active .ui-icon {
-        .ui-icon {
-            filter: brightness(5) !important;
-        }
-    }
-
-    button[disabled]:not(.destroy),
-    [type="reset"][disabled],
-    [type="submit"][disabled]:not(.destroy),
-    input[type="button"][disabled],
-    .txp-button.disabled {
-        .ui-icon {
-            filter: none !important;
-        }
-    }
-
-    .no-ui-button .ui-button .ui-icon {
-        filter: none;
-    }
-
     .dropdown-menu {
         border-radius: 0;
         background: #ffffff;
@@ -126,8 +119,17 @@ $border-radius:                       0.3em;
 
     .ui-menu,
     .switcher-list li.active,
+    .switcher-list li:nth-child(odd):hover,
+    .ui-tabs-nav .ui-tabs-active,
     .ui-tabs-vertical .ui-tabs-nav .ui-tabs-active {
         background: #ffffff;
+    }
+
+    @include dark-mode {
+        .switcher-list li.active,
+        .ui-tabs-vertical .ui-tabs-nav .ui-tabs-active {
+            background: $dark-color-highlight-box;
+        }
     }
 
     .txp-upload-progress::-webkit-progress-value {
@@ -178,6 +180,12 @@ $border-radius:                       0.3em;
         li {
             border-color: $color-border;
             border-bottom-color: transparent;
+        }
+    }
+
+    @include dark-mode {
+        .ui-tabs-nav .ui-tabs-active {
+            background: $dark-color-highlight-box;
         }
     }
 

@@ -386,7 +386,8 @@ button[disabled],
 [type="reset"][disabled],
 [type="submit"][disabled],
 .txp-button.disabled,
-.navlink-disabled {
+.navlink-disabled,
+.ui-checkboxradio-disabled {
     background: $color-background-form-disabled !important;
     color: $color-text-button-disabled !important;
 }
@@ -397,7 +398,8 @@ button[disabled],
     [type="reset"][disabled],
     [type="submit"][disabled],
     .txp-button.disabled,
-    .navlink-disabled {
+    .navlink-disabled,
+    .ui-checkboxradio-disabled {
         background: $color-background-form-disabled !important;
         color: $dark-color-text-button-disabled !important;
     }
