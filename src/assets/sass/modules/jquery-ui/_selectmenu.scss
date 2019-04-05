@@ -98,6 +98,12 @@
     display: block;
 }
 
+@include dark-mode {
+    .ui-selectmenu-optgroup {
+        border-top-color: $dark-color-border;
+    }
+}
+
 /**
  * Selectmenu RTL support.
  */
@@ -154,6 +160,23 @@
         &:active .ui-selectmenu-icon,
         &:focus .ui-selectmenu-icon {
             opacity: 1;
+        }
+    }
+}
+
+@include dark-mode {
+    .no-ui-button {
+        .ui-selectmenu-button {
+            color: $dark-color-link;
+
+            &:hover,
+            &:active {
+                color: $dark-color-link-hover;
+            }
+
+            &:focus {
+                outline: thin solid $dark-color-link-focus;
+            }
         }
     }
 }

@@ -26,3 +26,11 @@
     }
     z-index: 9999;
 }
+
+@if $flat-theme < 1 {
+    @include dark-mode {
+        .ui-tooltip {
+            box-shadow: $dark-standard-shadow;
+        }
+    }
+}

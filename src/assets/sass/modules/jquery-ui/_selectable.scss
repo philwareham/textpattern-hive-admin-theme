@@ -30,3 +30,9 @@
     border: 1px dotted $color-link;
     z-index: 100;
 }
+
+@include dark-mode {
+    .ui-selectable-helper {
+        border-color: $dark-color-link;
+    }
+}

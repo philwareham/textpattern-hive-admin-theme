@@ -45,6 +45,12 @@ button.txp-nav-toggle {
     }
 }
 
+@include dark-mode {
+    .txp-nav a {
+        color: $color-text;
+    }
+}
+
 /**
  * Primary-level navigation menu items (dropdown toggles).
  *
@@ -296,6 +302,14 @@ button.txp-nav-toggle {
         font-size: 16px;
         content: "";
         z-index: 2;
+    }
+}
+
+@if $flat-theme < 1 {
+    @include dark-mode {
+        .dropdown-menu {
+            box-shadow: $dark-standard-shadow;
+        }
     }
 }
 

@@ -75,6 +75,33 @@ input[type="button"],
     &:focus {
         border-color: $color-link-focus;
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+        color: $color-text-button-active;
+    }
+}
+
+@include dark-mode {
+    button,
+    [type="reset"],
+    [type="submit"],
+    input[type="button"],
+    .txp-button,
+    .navlink,
+    .navlink-active {
+        color: $dark-color-text-button;
+
+        &:hover {
+            color: $dark-color-text-button-hover;
+        }
+
+        &:active {
+            color: $dark-color-text-button-active;
+        }
+
+        &:focus {
+            border-color: $dark-color-link-focus;
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+            color: $dark-color-text-button-active;
+        }
     }
 }
 
@@ -110,6 +137,17 @@ a.publish {
 
     &:focus {
         border-color: $color-link-focus;
+    }
+}
+
+@include dark-mode {
+    [type="submit"].publish,
+    button.publish,
+    a.publish {
+        &:focus {
+            border-color: $dark-color-link-focus-alt;
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+        }
     }
 }
 
@@ -152,6 +190,34 @@ button.destroy {
     }
 }
 
+@include dark-mode {
+    button.destroy {
+        &:focus {
+            outline: thin solid $dark-color-link-focus;
+        }
+
+        .ui-icon {
+            opacity: 1;
+        }
+
+        &:hover .ui-icon,
+        &:active .ui-icon,
+        &:hover .ui-icon,
+        &:active .ui-icon {
+            filter: brightness(2.5) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(100%);
+        }
+    }
+
+    a.destroy.ui-icon {
+        opacity: 1;
+
+        &:hover,
+        &:active {
+            filter: brightness(2.5) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(100%);
+        }
+    }
+}
+
 /**
  * Grey-out disabled navlinks (but keep them in button style).
  *
@@ -173,6 +239,12 @@ button.destroy {
     }
     background-clip: padding-box;
     box-sizing: border-box;
+}
+
+@include dark-mode {
+    .navlink-disabled {
+        @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+    }
 }
 
 /**
@@ -267,6 +339,15 @@ ul.nav-tertiary {
     }
 }
 
+@include dark-mode {
+    .nav-tertiary .navlink-active,
+    .filtered button.ui-corner-right {
+        &:focus {
+            border-color: $dark-color-link-focus;
+        }
+    }
+}
+
 /**
  * Search widget 'search' button.
  *
@@ -293,5 +374,31 @@ ul.nav-tertiary {
             /* 1 */
             border-radius: 0;
         }
+    }
+}
+
+/**
+ * Disbaled button additional styling.
+ */
+
+button[disabled],
+[type="button"][disabled],
+[type="reset"][disabled],
+[type="submit"][disabled],
+.txp-button.disabled,
+.navlink-disabled {
+    background: $color-background-form-disabled !important;
+    color: $color-text-button-disabled !important;
+}
+
+@include dark-mode {
+    button[disabled],
+    [type="button"][disabled],
+    [type="reset"][disabled],
+    [type="submit"][disabled],
+    .txp-button.disabled,
+    .navlink-disabled {
+        background: $color-background-form-disabled !important;
+        color: $dark-color-text-button-disabled !important;
     }
 }

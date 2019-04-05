@@ -33,6 +33,16 @@
     z-index: 1000;
 }
 
+@include dark-mode {
+    .txp-header a {
+        color: $color-text;
+
+        &:focus {
+            outline: thin solid $color-link-focus;
+        }
+    }
+}
+
 /**
  * Hide header content area on login panels.
  */
@@ -123,4 +133,71 @@
     position: relative;
     top: -0.846153846153846em; // 11px / 13px
     flex: none;
+}
+
+@include dark-mode {
+    .txp-logout a:focus {
+        border-color: $color-link-focus;
+        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+    }
+}
+
+/**
+ * Switch between Dark Mode/Light Mode manually.
+ *
+ * Example HTML:
+ *
+ * <p class="txp-lightswitch">
+ *     <a id="lightswitch">
+ *         <span class="ui-icon ui-icon-lightbulb">Switch light/dark mode</span>
+ *     </a>
+ * </p>
+ */
+
+.txp-lightswitch {
+    margin: 0 0.75em; // 12px / 16px;
+    padding: 0;
+    font-size: 16px;
+    overflow: inherit;
+
+    a {
+        display: block;
+        position: relative;
+        top: 50%;
+        width: 1.5em;
+        height: 1.5em;
+        transform: translateY(-50%);
+        border: 1px solid darken($color-accent-gradient-to, 6%);
+        border-radius: 0.75em;
+        background: rgba($color-text-inverse, 0.6);
+        text-align: center;
+
+        &:hover {
+            background: rgba($color-text-inverse, 0.8);
+        }
+
+        &:focus {
+            border-color: $color-link-focus;
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+        }
+    }
+}
+
+@include dark-mode {
+    .txp-lightswitch a {
+        background: transparent;
+
+        &:hover {
+            background: rgba($color-text-inverse, 0.25);
+        }
+
+        &:focus {
+            border-color: $color-link-focus;
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+        }
+
+        .ui-icon {
+            filter: none;
+        }
+    }
 }

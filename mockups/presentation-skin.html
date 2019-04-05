@@ -10,12 +10,13 @@
     <link rel="alternate stylesheet" title="Hive (Flat Neutral)" href="../dist/hiveneutral/assets/css/textpattern.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="generator" content="Textpattern CMS">
-    <script src="../dist/hive/assets/js/main.js"></script>
+    <script defer src="../dist/hive/assets/js/main.js"></script>
 
     <script src="../docs/assets/js/design-patterns.js"></script>
 
 </head>
 <body class="presentation" id="page-skin">
+    <script src="../dist/hive/assets/js/darkmode.js"></script>
 
     <header class="txp-header">
         <h1>
@@ -129,13 +130,14 @@
         </nav>
 
         <p class="txp-view-site"><a rel="noopener" target="_blank" title="View site" href="#"><span class="txp-view-site-name">My site</span></a></p>
+        <p class="txp-lightswitch"><a id="lightswitch" title="Switch light/dark mode" href="#"><span class="ui-icon ui-icon-lightbulb">Switch light/dark mode</span></a></p>
         <p class="txp-logout"><a href="login.html" onclick="return verify('Are you sure?')">Log out</a></p>
 
     </header><!-- /txp-header -->
 
     <main class="txp-body" aria-label="Main content">
 
-        <div id="messagepane"></div>
+        <div class="messagepane" id="messagepane"></div>
 
         <div class="txp-layout">
 
@@ -223,7 +225,7 @@
                                     <td class="txp-list-col-multi-edit"><input type="checkbox" value="articles" name="selected[]"></td>
                                     <th class="txp-list-col-name" scope="row"><a href="secondary/presentation-section_skin.html" title="Edit">default</a></th>
                                     <td class="txp-list-col-title">Textpattern default theme</td>
-                                    <td class="txp-list-col-version">4.7.0</td>
+                                    <td class="txp-list-col-version">4.8.0</td>
                                     <td class="txp-list-col-author">Team Textpattern</td>
                                     <td class="txp-list-col-section_count">2</td>
                                     <td class="txp-list-col-page_count"><a title="Page templates in this theme: 3" href="#">3</a></td>

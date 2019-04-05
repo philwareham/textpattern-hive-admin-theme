@@ -2,15 +2,6 @@
 {
     'use strict';
 
-    // Auto-growing textareas, via 'Autosize'.
-    // More info - https://github.com/jackmoore/autosize.
-
-    var fields = document.querySelectorAll('textarea:not(.code)');
-
-    if (fields.length) {
-        autosize(fields);
-    }
-
     // Switch between Dark Mode/Light Mode manually.
 
     var bodyClass = document.querySelector('body'),
@@ -27,6 +18,18 @@
         }
 
         e.preventDefault();
+    });
+
+    // ScrollSpy.
+
+    var spy = new ScrollSpy('main', {
+        nav: '.design-patterns-menu ol > li > a',
+        className: 'is-inview'
+    });
+
+    var subSpy = new ScrollSpy('main', {
+    	nav: '.design-patterns-menu ol > li > ol > li > a',
+    	className: 'is-inview'
     });
 
 })();

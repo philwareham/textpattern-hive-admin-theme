@@ -18,7 +18,17 @@
 
 .ui-slider {
     position: relative;
+    background-color: $color-gradient-to;
     text-align: left;
+    box-sizing: border-box;
+
+    &:hover {
+        border-color: shade($color-border, 15%);
+
+        .ui-slider-handle {
+            border-color: shade($color-border, 15%);
+        }
+    }
 
     .ui-slider-handle {
         position: absolute;
@@ -31,6 +41,7 @@
         }
         cursor: pointer;
         z-index: 2;
+        box-sizing: border-box;
         touch-action: manipulation;
     }
 
@@ -38,8 +49,38 @@
         display: block;
         position: absolute;
         border: 0;
+        background: $color-background-box;
         font-size: 10px;
         z-index: 1;
+    }
+}
+
+@include dark-mode {
+    .ui-slider {
+        border-color: $dark-color-border-extra-dark;
+        background-color: $dark-color-background-form;
+
+        &:hover {
+            border-color: $dark-color-border-extra-light;
+
+            .ui-slider-handle {
+                border-color: $dark-color-border-extra-light;
+            }
+        }
+
+        .ui-slider-handle {
+            @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+
+            box-shadow: $dark-standard-shadow;
+
+            &:hover {
+                @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
+            }
+        }
+
+        .ui-slider-range {
+            background: $dark-color-gradient-from;
+        }
     }
 }
 

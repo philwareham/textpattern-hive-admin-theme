@@ -71,6 +71,22 @@
     }
 }
 
+@include dark-mode {
+    .ui-tabs {
+        .ui-tabs-nav {
+            background: $dark-color-background;
+
+            &:not(.switcher-list) .ui-tabs-anchor {
+                color: $dark-color-text;
+            }
+
+            .ui-state-focus a {
+                outline: thin solid $dark-color-link-focus;
+            }
+        }
+    }
+}
+
 .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
     height: 31px;
 
@@ -94,6 +110,18 @@
     }
 }
 
+@if $flat-theme < 1 {
+    @include dark-mode {
+        .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li {
+            box-shadow: inset 0 -0.25em 0.5em rgba(#000000, 0.4);
+
+            &.ui-tabs-active {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
 /**
  * Maintain cursor style when collapsing a collapsible tab.
  */
@@ -108,17 +136,28 @@
 
 .ui-tabs-vertical {
     .ui-tabs-nav {
-        border-bottom: 1px solid $color-gradient-to;
+        border-bottom: 1px solid $color-border-light;
 
         li {
             display: block;
-            border: 1px solid $color-gradient-to;
+            border: 1px solid $color-border-light;
             border-bottom: 1px solid transparent;
         }
     }
 
     .ui-tabs-panel {
         border-top-width: 0;
+    }
+}
+
+@include dark-mode {
+    .ui-tabs-vertical .ui-tabs-nav {
+        border-bottom-color: $dark-color-border-light;
+
+        li {
+            border-color: $dark-color-border-light;
+            border-bottom-color: transparent;
+        }
     }
 }
 

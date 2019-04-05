@@ -40,12 +40,12 @@ img {
 
     &.align-left {
         margin: 1em 1em 1em 0;
-        float: left;
+        float: left; // TODO: use CSS Text Module Level 3 `start` value when browser support is widespread.
     }
 
     &.align-right {
         margin: 1em 0 1em 1em;
-        float: right;
+        float: right; // TODO: use CSS Text Module Level 3 `end` value when browser support is widespread.
     }
 
     &.align-center {
@@ -90,6 +90,21 @@ img {
 
     a:focus & {
         border-color: $color-link-focus;
+    }
+}
+
+@include dark-mode {
+    .content-image {
+        border-color: $dark-color-border;
+        background-color: $dark-color-background;
+
+        a:hover & {
+            border-color: $dark-color-link-hover;
+        }
+
+        a:focus & {
+            border-color: $dark-color-link-focus;
+        }
     }
 }
 

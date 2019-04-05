@@ -117,6 +117,12 @@
     }
 }
 
+@include dark-mode {
+    .ui-dialog {
+        box-shadow: $dark-standard-shadow;
+    }
+}
+
 /**
  * Change cursor when window is being dragged.
  */

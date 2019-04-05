@@ -35,6 +35,20 @@ li {
 }
 
 /**
+ * CSS Lists and Counters Module Level 3 list marker styling.
+ */
+
+li::marker {
+    color: color-text-heading;
+}
+
+@include dark-mode {
+    li::marker {
+        color: $dark-color-text-heading;
+    }
+}
+
+/**
  * Address margins set differently.
  */
 
@@ -93,7 +107,7 @@ dd {
 
     li {
         position: relative;
-        border-top: 1px solid $color-gradient-to;
+        border-top: 1px solid $color-border-light;
         border-bottom: 1px solid transparent;
 
         &:nth-child(odd) {
@@ -121,6 +135,29 @@ dd {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+    }
+}
+
+@include dark-mode {
+    .switcher-list li {
+        border-top: 1px solid $dark-color-gradient-to;
+
+        &:nth-child(odd) {
+            background: $dark-color-background;
+        }
+
+        &:first-child {
+            border-top: 0;
+        }
+
+        &.active,
+        &.ui-tabs-active {
+            background: $dark-color-highlight-box;
+        }
+
+        &.selected {
+            background: $dark-color-selected;
+        }
     }
 }
 

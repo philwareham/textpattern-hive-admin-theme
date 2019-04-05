@@ -22,7 +22,7 @@ progress {
     max-width: 30em; // 390px / 13px
     height: 8px;
     border: 1px solid $color-border;
-    border-radius: 4px;
+    background-color: $color-gradient-to;
     appearance: none;
     box-sizing: border-box;
 }
@@ -30,18 +30,18 @@ progress {
 // WebKit/Blink.
 
 .txp-upload-progress::-webkit-progress-bar {
-    background-color: #e7e7e7;
+    background-color: $color-gradient-to;
 }
 
 .txp-upload-progress::-webkit-progress-value {
     background-color: $color-accent-gradient-to;
     background-image: linear-gradient(
         135deg,
-        rgba(255, 255, 255, 0.25) 25%,
+        rgba(255, 255, 255, 0.33) 25%,
         transparent 25%,
         transparent 50%,
-        rgba(255, 255, 255, 0.25) 50%,
-        rgba(255, 255, 255, 0.25) 75%,
+        rgba(255, 255, 255, 0.33) 50%,
+        rgba(255, 255, 255, 0.33) 75%,
         transparent 75%,
         transparent
     );
@@ -76,11 +76,11 @@ progress {
     background-color: $color-accent-gradient-to;
     background-image: linear-gradient(
         135deg,
-        rgba(255, 255, 255, 0.25) 25%,
+        rgba(255, 255, 255, 0.33) 25%,
         transparent 25%,
         transparent 50%,
-        rgba(255, 255, 255, 0.25) 50%,
-        rgba(255, 255, 255, 0.25) 75%,
+        rgba(255, 255, 255, 0.33) 50%,
+        rgba(255, 255, 255, 0.33) 75%,
         transparent 75%,
         transparent
     );
@@ -118,11 +118,11 @@ progress {
     background-color: $color-accent-gradient-to;
     background-image: linear-gradient(
         135deg,
-        rgba(255, 255, 255, 0.25) 25%,
+        rgba(255, 255, 255, 0.33) 25%,
         transparent 25%,
         transparent 50%,
-        rgba(255, 255, 255, 0.25) 50%,
-        rgba(255, 255, 255, 0.25) 75%,
+        rgba(255, 255, 255, 0.33) 50%,
+        rgba(255, 255, 255, 0.33) 75%,
         transparent 75%,
         transparent
     );
@@ -134,6 +134,29 @@ progress {
 // Stop animation at 100% progress.
 .txp-upload-progress[value="1"]::-ms-fill {
     background-image: none;
+}
+
+@include dark-mode {
+    .txp-upload-progress {
+        border-color: $dark-color-border;
+        background-color: $dark-color-background-box;
+    }
+
+    // WebKit/Blink.
+
+    .txp-upload-progress::-webkit-progress-bar {
+        background-color: $dark-color-background-box;
+    }
+
+    .txp-upload-progress:indeterminate::-webkit-progress-bar {
+        background-color: $dark-color-border;
+    }
+
+    // Gecko/Quantum.
+
+    .txp-upload-progress:indeterminate::-moz-progress-bar {
+        background-color: $dark-color-border;
+    }
 }
 
 /**

@@ -29,6 +29,12 @@ hr {
     box-sizing: content-box;
 }
 
+@include dark-mode {
+    hr {
+        border-bottom-color: $dark-color-border;
+    }
+}
+
 /**
  * Hide text but still allow screen reader access.
  *
@@ -94,6 +100,12 @@ hr {
 
 .txp-dropdown-toggle-all {
     border-bottom: 1px solid $color-border-light;
+}
+
+@include dark-mode {
+    .txp-dropdown-toggle-all {
+        border-bottom-color: $dark-color-border-light;
+    }
 }
 
 /**
@@ -426,6 +438,13 @@ span.spinner {
     z-index: 20;
 }
 
+@include dark-mode {
+    .multi-edit {
+        background: $dark-color-background;
+        box-shadow: 0 -1em 1em -0.5em $dark-color-background;
+    }
+}
+
 /**
  * Hide secondary `select` element on multi-edit `select` widget.
  *
@@ -525,6 +544,12 @@ span.spinner {
     margin-top: 3em;
     padding-top: 3em;
     border-top: 2px solid $color-border;
+}
+
+@include dark-mode {
+    .text-section {
+        border-top-color: $dark-color-border;
+    }
 }
 
 /**
@@ -629,6 +654,13 @@ span.spinner {
     }
 }
 
+@include dark-mode {
+    .txp-edit {
+        border: 1px solid $dark-color-border-extra-light;
+        background: $dark-color-background;
+    }
+}
+
 /**
  * Styling of edit panel cancel/submit button combinations.
  */
@@ -645,6 +677,12 @@ span.spinner {
     margin: 1em -1em;
     padding: 1em 1em 0;
     border-top: 2px solid $color-background;
+}
+
+@include dark-mode {
+    .txp-edit .txp-edit-actions {
+        border-top-color: $dark-color-background-box;
+    }
 }
 
 /**
@@ -697,7 +735,6 @@ span.spinner {
     vertical-align: top;
 
     .txp-edit &,
-    .txp-prefs-group &, // TODO: Deprecated 4.7
     .txp-tabs-vertical-group & {
         flex-flow: row wrap;
     }
@@ -740,7 +777,6 @@ span.spinner {
  */
 
 .txp-edit,
-.txp-prefs-group, // TODO: Deprecated 4.7
 .txp-tabs-vertical-group,
 .setup:not(.welcome) {
     .txp-form-field:not(.txp-form-field-textarea) {
@@ -811,7 +847,6 @@ span.spinner {
     max-width: 56em; // 616px / 11px
 
     .txp-edit &,
-    .txp-prefs-group &, // TODO: Deprecated 4.7
     .txp-tabs-vertical-group & {
         flex: 0 0 100%;
         order: 3;
@@ -842,7 +877,6 @@ span.spinner {
  * Constrain the width of vertical tab column 2 groups.
  */
 
-.txp-prefs-group, // TODO: Deprecated 4.7
 .txp-tabs-vertical-group {
     max-width: $text-column;
 }

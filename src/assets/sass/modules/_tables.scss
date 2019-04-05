@@ -29,6 +29,12 @@ table {
     border-spacing: 0;
 }
 
+@include dark-mode {
+    table {
+        background-color: $dark-color-background;
+    }
+}
+
 /**
  * Styling of table captions.
  */
@@ -51,11 +57,22 @@ caption {
  */
 
 tr {
-    border: 1px solid $color-gradient-to;
+    border: 1px solid $color-border-light;
 }
 
 thead th {
     background-color: $color-gradient-from;
+}
+
+@include dark-mode {
+    tr {
+        border-color: $dark-color-border-extra-light;
+    }
+
+    thead th {
+        background-color: $dark-color-gradient-from;
+        color: $dark-color-text-heading;
+    }
 }
 
 /**
@@ -136,13 +153,13 @@ td {
     thead th {
         @include gradient-linear($color-gradient-from, $color-gradient-to);
 
-        border-top: 1px solid $color-gradient-to;
-        border-right: 1px solid darken($color-gradient-to, 5%);
-        border-bottom: 1px solid $color-gradient-border;
+        border-top: 1px solid $color-border-light;
+        border-right: 1px solid $color-border;
+        border-bottom: 1px solid $color-border-dark;
         border-left: 0;
 
         &:first-child {
-            border-left: 1px solid $color-gradient-to;
+            border-left: 1px solid $color-border;
         }
 
         a {
@@ -155,6 +172,47 @@ td {
             &:hover {
                 color: $color-text;
                 text-decoration: none;
+            }
+        }
+    }
+}
+
+@include dark-mode {
+    .txp-list,
+    .txp-list--no-options {
+        tbody {
+            tr {
+                &:nth-child(even) {
+                    background: $dark-color-background-box;
+                }
+
+                &.selected {
+                    background: $dark-color-selected;
+                }
+            }
+        }
+
+        thead th {
+            @include gradient-linear($dark-color-gradient-to, $dark-color-gradient-from);
+
+            border-top-color: $dark-color-border-light;
+            border-right-color: $dark-color-border-dark;
+            border-bottom-color: $dark-color-border-extra-light;
+
+            &:first-child {
+                border-left-color: $dark-color-border-extra-light;
+            }
+
+            &:last-child {
+                border-right-color: $dark-color-border-extra-light;
+            }
+
+            a {
+                color: $dark-color-text-heading;
+
+                &:hover {
+                    color: $dark-color-text-heading;
+                }
             }
         }
     }
@@ -212,6 +270,34 @@ td {
             border-width: 0 0.25em 0.25em;
             border-bottom-color: $color-text;
             content: "\2191";
+        }
+    }
+}
+
+@include dark-mode {
+    .txp-list,
+    .txp-list--no-options {
+        thead th {
+            &.asc,
+            &.desc {
+                @include gradient-linear(darken($dark-color-gradient-from, 4%), darken($dark-color-gradient-to, 4%));
+
+                a::after {
+                    opacity: 0.6;
+                }
+
+                a:hover::after {
+                    opacity: 1;
+                }
+            }
+
+            &.desc a::after {
+                border-top-color: $dark-color-text;
+            }
+
+            &.asc a::after {
+                border-bottom-color: $dark-color-text;
+            }
         }
     }
 }

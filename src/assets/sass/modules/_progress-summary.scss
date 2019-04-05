@@ -34,10 +34,10 @@
         position: relative;
         margin: 0 1em 1em 0;
         padding: 1em 1em 1em 4em;
-        border-top: 1px solid $color-gradient-to;
-        border-right: 1px solid lighten($color-border, 9%);
-        border-bottom: 1px solid $color-gradient-border;
-        border-left: 1px solid lighten($color-border, 9%);
+        border-top: 1px solid $color-border-light;
+        border-right: 1px solid $color-border-extra-light;
+        border-bottom: 1px solid $color-border-dark;
+        border-left: 1px solid $color-border-extra-light;
 
         // highlight the currently active step
         &.active {
@@ -56,7 +56,7 @@
             padding: 0.25em; // 4px / 16px
             border: 1px solid $color-background;
             border-radius: 50%;
-            background: $color-border;
+            background-color: $color-border;
             font-size: 1.230769230769231rem; // 16px / 13px
             font-weight: bold;
             text-align: center;
@@ -89,6 +89,28 @@
     }
 }
 
+@include dark-mode {
+    .progress-meter li {
+        border-top: 1px solid $dark-color-border-light;
+        border-right: 1px solid $dark-color-border-extra-light;
+        border-bottom: 1px solid $dark-color-border-dark;
+        border-left: 1px solid $dark-color-border-extra-light;
+        color: $dark-color-text-inverse;
+
+        // numerical indication of step
+        &::before {
+            border: 1px solid $dark-color-background;
+            background: $dark-color-border;
+            color: $dark-color-text;
+        }
+
+        // arrows at right-hand side of boxes
+        &::after {
+            border-left-color: $dark-color-border;
+        }
+    }
+}
+
 /**
  * Swap margin/padding/numerical/arrow positions in RTL languages.
  */
@@ -115,5 +137,11 @@
             border-right-color: $color-border;
             content: "\2190";
         }
+    }
+}
+
+@include dark-mode {
+    [dir="rtl"] .progress-meter li::after {
+        border-right-color: $dark-color-border;
     }
 }

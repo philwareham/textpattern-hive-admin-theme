@@ -58,9 +58,15 @@ body {
         width: 1.5em;
         height: 1.5em;
         border-radius: 0.25em;
-        background: rgba($color-link-focus, 0.25);
+        background-color: rgba($color-link-focus, 0.25);
         content: "";
         z-index: 2001;
+    }
+}
+
+@include dark-mode {
+    .is-inview::before {
+        background-color: rgba($dark-color-link-focus, 0.25);
     }
 }
 
@@ -79,12 +85,14 @@ $colors: (
     "text-footnote":        $color-text-footnote,
     "gradient-from":        $color-gradient-from,
     "gradient-to":          $color-gradient-to,
-    "gradient-border":      $color-gradient-border,
+    "border-extra-dark":    $color-border-extra-dark,
+    "border-dark":          $color-border-dark,
     "border":               $color-border,
+    "border-light":         $color-border-light,
+    "border-extra-light":   $color-border-extra-light,
     "link":                 $color-link,
     "link-hover":           $color-link-hover,
     "link-focus":           $color-link-focus,
-    "link-visited":         $color-link-visited,
     "link-selecting":       $color-selecting,
     "link-selected":        $color-selected,
     "background":           $color-background,
@@ -103,6 +111,37 @@ $colors: (
     "info-background":      $color-info-background
 );
 
+$dark-colors: (
+    "text":                 $dark-color-text,
+    "text-footnote":        $dark-color-text-footnote,
+    "gradient-from":        $dark-color-gradient-from,
+    "gradient-to":          $dark-color-gradient-to,
+    "border-extra-dark":    $dark-color-border-extra-dark,
+    "border-dark":          $dark-color-border-dark,
+    "border":               $dark-color-border,
+    "border-light":         $dark-color-border-light,
+    "border-extra-light":   $dark-color-border-extra-light,
+    "link":                 $dark-color-link,
+    "link-hover":           $dark-color-link-hover,
+    "link-focus":           $dark-color-link-focus,
+    "link-selecting":       $dark-color-selecting,
+    "link-selected":        $dark-color-selected,
+    "background":           $dark-color-background,
+    "background-box":       $dark-color-background-box,
+    "highlight-box":        $dark-color-highlight-box,
+    "strong-highlight-box": $dark-color-strong-highlight-box,
+    "accent-gradient-from": $color-accent-gradient-from,
+    "accent-gradient-to":   $color-accent-gradient-to,
+    "success-text":         $dark-color-success-text,
+    "success-background":   $dark-color-success-background,
+    "warning-text":         $dark-color-warning-text,
+    "warning-background":   $dark-color-warning-background,
+    "error-text":           $dark-color-error-text,
+    "error-background":     $dark-color-error-background,
+    "info-text":            $dark-color-info-text,
+    "info-background":      $dark-color-info-background
+);
+
 .design-patterns-color {
     display: block;
     position: relative;
@@ -114,8 +153,18 @@ $colors: (
         position: absolute;
         top: 0.69230769230769em; // 9px / 13px
         padding: 1px 0.23076923076923em; // 3px / 13px
-        background-color: rgba(#ffffff, 0.66);
+        background-color: rgba(255, 255, 255, 0.66);
         font-family: $font-code;
+    }
+}
+
+@include dark-mode {
+    .design-patterns-color {
+        border-color: $dark-color-border;
+
+        &::after {
+            background-color: rgba(0, 0, 0, 0.66);
+        }
     }
 }
 
@@ -129,6 +178,18 @@ $colors: (
     }
 }
 
+@include dark-mode {
+    @each $name, $color in $dark-colors {
+        .design-patterns-color-#{$name} {
+            background: $color;
+
+            &::after {
+                content: "#{$color}";
+            }
+        }
+    }
+}
+
 
 /* Layout grid examples.
    ========================================================================== */
@@ -136,7 +197,7 @@ $colors: (
 .design-patterns-box {
     margin-top: 0;
     padding: 1em;
-    background: #aaaaaa;
+    background: rgba(0, 0, 0, 0.33);
 }
 
 
@@ -243,6 +304,11 @@ h2 span {
         overflow-x: hidden;
         overflow-y: auto;
         box-sizing: border-box;
+    }
+
+    body.darkmode .design-patterns-menu {
+        border-right-color: $dark-color-border-extra-dark;
+        background-color: $dark-color-background-box;
     }
 
     .design-patterns-content {

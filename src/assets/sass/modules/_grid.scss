@@ -29,6 +29,10 @@
 //    display: grid;
 //    grid-template-columns: repeat(12, 1fr);
 //    grid-gap: 2em;
+//
+//    > * {
+//        overflow: auto; // Avoid content spillage.
+//    }
 //}
 
 /**
@@ -164,6 +168,12 @@
     box-sizing: border-box;
 }
 
+@include dark-mode {
+    .txp-grid-cell {
+        border-color: $dark-color-border;
+    }
+}
+
 @supports (display: grid) {
     .txp-grid-cell {
         width: auto;
@@ -202,4 +212,10 @@
     border-left: 0;
     background-color: rgba(255, 255, 255, 0.5);
     z-index: 2;
+}
+
+@include dark-mode {
+    .txp-grid-multi-edit {
+        border-color: $dark-color-border-light;
+    }
 }

@@ -19,6 +19,14 @@ body {
     background: $color-background;
     color: $color-text;
     box-sizing: border-box;
+    overscroll-behavior: none;
+}
+
+@include dark-mode {
+    //body {
+    background: $dark-color-background;
+    color: $dark-color-text;
+    //}
 }
 
 /**

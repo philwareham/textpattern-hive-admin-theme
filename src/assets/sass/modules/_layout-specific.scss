@@ -56,6 +56,13 @@
     }
 }
 
+body.darkmode.welcome,
+body.darkmode.login {
+    h1 {
+        background-image: url("../img/textpattern-dark.svg");
+    }
+}
+
 /**
  * Additional styling for 'view site' link on login panel.
  */
@@ -67,6 +74,12 @@
     border-top: 1px solid $color-border;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+@include dark-mode {
+    .login-view-site {
+        border-top-color: $dark-color-border;
+    }
 }
 
 /**
@@ -128,17 +141,17 @@
         color: $color-text;
         text-decoration: none;
         @if $flat-theme < 1 {
-            box-shadow: inset 0 -0.25em 0.5em rgba(#666666, 0.15);
+            box-shadow: inset 0 -0.25em 0.5em rgba(#666666, 0.2);
         }
 
         &:hover {
-            border-color: darken($color-border, 13.5%);
+            border-color: $color-border-extra-dark;
             background-color: $color-background-box;
         }
 
         &:focus {
             border-color: $color-link-focus;
-            outline: 0;
+            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
     }
 
@@ -151,6 +164,43 @@
 
         &:focus {
             border-color: $color-link-focus;
+        }
+    }
+}
+
+@include dark-mode {
+    #view_modes ul {
+        border-bottom-color: $dark-color-border;
+
+        a {
+            border-color: $dark-color-border-light;
+            background-color: $dark-color-background-box;
+            color: $dark-color-text;
+            @if $flat-theme < 1 {
+                box-shadow: inset 0 -0.25em 0.5em rgba(#000000, 0.2);
+            }
+
+            &:hover {
+                border-color: $dark-color-border;
+                background-color: tint($dark-color-background-box, 5%);
+            }
+
+            &:focus {
+                border-color: $dark-color-link-focus;
+            }
+        }
+
+        .active a {
+            border-color: $dark-color-border;
+            border-bottom-color: $dark-color-background;
+            background-color: $dark-color-background;
+            @if $flat-theme < 1 {
+                box-shadow: none;
+            }
+
+            &:focus {
+                border-color: $dark-color-link-focus;
+            }
         }
     }
 }
@@ -192,6 +242,20 @@
     }
 }
 
+@include dark-mode {
+    #main_content .author small {
+        color: $dark-color-text-footnote;
+    }
+}
+
+/**
+ * Reduce space above expires date/time region.
+ */
+
+#expires-datetime-group {
+    margin-top: 0;
+}
+
 /**
  * Sticky save button region.
  *
@@ -221,6 +285,13 @@
     }
 }
 
+@include dark-mode {
+    .txp-save-zone {
+        border-color: $dark-color-border-light;
+        background: $dark-color-background-box;
+    }
+}
+
 
 /* Content -> Articles panel - additional layout
    ========================================================================== */
@@ -232,6 +303,13 @@
 .unpublished,
 .not-modified {
     color: $color-text-footnote;
+}
+
+@include dark-mode {
+    .unpublished,
+    .not-modified {
+        color: $dark-color-text-footnote;
+    }
 }
 
 

@@ -44,6 +44,40 @@ li.information {
     color: $color-info-text;
 }
 
+@include dark-mode {
+    li.success {
+        background: $dark-color-success-background;
+    }
+
+    .success:not(li) {
+        color: $dark-color-success-text;
+    }
+
+    li.warning {
+        background: $dark-color-warning-background;
+    }
+
+    .warning:not(li) {
+        color: $dark-color-warning-text;
+    }
+
+    li.error {
+        background: $dark-color-error-background;
+    }
+
+    .error:not(li) {
+        color: $dark-color-error-text;
+    }
+
+    li.information {
+        background: $dark-color-info-background;
+    }
+
+    .information:not(li) {
+        color: $dark-color-info-text;
+    }
+}
+
 /**
  * Highlight background.
  *
@@ -59,6 +93,12 @@ li.information {
 
 .highlight {
     background: $color-highlight-box;
+}
+
+@include dark-mode {
+    .highlight {
+        background: $dark-color-highlight-box;
+    }
 }
 
 /**
@@ -99,12 +139,36 @@ li.information {
     }
 }
 
+@include dark-mode {
+    .alert-block {
+        &.success {
+            border-color: $dark-color-success-border;
+            background: $dark-color-success-background;
+        }
+
+        &.warning {
+            border-color: $dark-color-warning-border;
+            background: $dark-color-warning-background;
+        }
+
+        &.error {
+            border-color: $dark-color-error-border;
+            background: $dark-color-error-background;
+        }
+
+        &.information {
+            border-color: $dark-color-info-border;
+            background: $dark-color-info-background;
+        }
+    }
+}
+
 /**
  * System messages.
  *
  * Example HTML:
  *
- * <div id="messagepane">
+ * <div class="messagepane" id="messagepane">
  *     <span class="messageflash error" role="alert" aria-live="assertive">
  *         <span class="ui-icon ui-icon-alert"></span>
  *         Username not found.
@@ -117,10 +181,13 @@ li.information {
     position: fixed;
     bottom: 0;
     left: 50%;
-    max-width: 100%;
     transform: translateX(-50%);
     text-align: center;
     z-index: 1000;
+}
+
+.messagepane {
+    max-width: 100%;
 
     .messageflash {
         display: inline-block;
@@ -162,6 +229,28 @@ li.information {
     }
 }
 
+@include dark-mode {
+    .messagepane .messageflash {
+        border: 1px solid $dark-color-border-extra-dark;
+        border-bottom: 0;
+        @if $flat-theme < 1 {
+            box-shadow: $dark-standard-shadow;
+        }
+
+        &.success {
+            background: $dark-color-success-background;
+        }
+
+        &.warning {
+            background: $dark-color-warning-background;
+        }
+
+        &.error {
+            background: $dark-color-error-background;
+        }
+    }
+}
+
 /*
  * System message close icon.
  */
@@ -187,11 +276,25 @@ li.information {
     }
 }
 
+@include dark-mode {
+    .close {
+        border-color: rgba(0, 0, 0, 0.4);
+
+        span {
+            opacity: 0.75;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
 /*
  * System message flipped layout for RTL languages.
  */
 
-[dir="rtl"] #messagepane .messageflash {
+[dir="rtl"] .messagepane .messageflash {
     padding: 0.53846153846154em 0.75em 0.53846153846154em 3.53846153846154em;
     text-align: right;
 }
@@ -212,6 +315,6 @@ li.information {
  * Flash the alert message using CSS animation.
  */
 
-.messageflash {
+#messagepane .messageflash {
     animation: messageflash 1s;
 }
