@@ -119,8 +119,17 @@ $border-radius:                       0.3em;
 
     .ui-menu,
     .switcher-list li.active,
+    .switcher-list li:nth-child(odd):hover,
+    .ui-tabs-nav .ui-tabs-active,
     .ui-tabs-vertical .ui-tabs-nav .ui-tabs-active {
         background: #ffffff;
+    }
+
+    @include dark-mode {
+        .switcher-list li.active,
+        .ui-tabs-vertical .ui-tabs-nav .ui-tabs-active {
+            background: $dark-color-highlight-box;
+        }
     }
 
     .txp-upload-progress::-webkit-progress-value {
@@ -171,6 +180,12 @@ $border-radius:                       0.3em;
         li {
             border-color: $color-border;
             border-bottom-color: transparent;
+        }
+    }
+
+    @include dark-mode {
+        .ui-tabs-nav .ui-tabs-active {
+            background: $dark-color-highlight-box;
         }
     }
 
