@@ -13,16 +13,16 @@
 
     // Switch between Dark Mode/Light Mode manually.
 
-    var bodyClass = document.querySelector('body'),
+    var bodyClass = document.body.classList,
         lightSwitch = document.getElementById('lightswitch');
 
     lightSwitch.addEventListener('click', function(e)
     {
-        if (bodyClass.classList.contains('darkmode')) {
-            bodyClass.classList.remove('darkmode');
+        if (bodyClass.contains('darkmode')) {
+            bodyClass.remove('darkmode');
             localStorage.setItem('prefers-color-scheme', 'light');
         } else {
-            bodyClass.classList.add('darkmode');
+            bodyClass.add('darkmode');
             localStorage.setItem('prefers-color-scheme', 'dark');
         }
 

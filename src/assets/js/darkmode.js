@@ -2,13 +2,13 @@
 {
     'use strict';
 
-    var bodyClass = document.querySelector('body'),
+    var bodyClass = document.body.classList,
         isDark = window.matchMedia('screen and (prefers-color-scheme: dark)');
 
     // Check localStorage for Dark Mode/Light Mode preference.
 
     if (localStorage.getItem('prefers-color-scheme') === 'dark') {
-        bodyClass.classList.add('darkmode');
+        bodyClass.add('darkmode');
     }
 
     // Detect and change Dark Mode/Light Mode (but only if no localStorage preference).
@@ -17,10 +17,10 @@
     {
         if (localStorage.getItem('prefers-color-scheme') === null) {
             if (isDark.matches) {
-                bodyClass.classList.add('darkmode');
+                bodyClass.add('darkmode');
             } else {
-                if (bodyClass.classList.contains('darkmode')) {
-                    bodyClass.classList.remove('darkmode');
+                if (bodyClass.contains('darkmode')) {
+                    bodyClass.remove('darkmode');
                 }
             }
         }
