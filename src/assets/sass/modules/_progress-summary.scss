@@ -40,6 +40,7 @@
         border-left: 1px solid $color-border-extra-light;
 
         // highlight the currently active step
+
         &.active {
             @include gradient-linear($color-accent-gradient-from, $color-accent-gradient-to);
 
@@ -48,8 +49,11 @@
         }
 
         // numerical indication of step
+
         &::before {
+            content: counter(step); // write out value of the increment
             position: absolute;
+            z-index: 2;
             top: 0.4375em; // 7px / 16px
             left: 0.6875em; // 12px / 16px
             width: 1.375em; // 22px / 16px
@@ -60,17 +64,18 @@
             font-size: 1.230769230769231rem; // 16px / 13px
             font-weight: bold;
             text-align: center;
-            content: counter(step); // write out value of the increment
-            z-index: 2;
             counter-increment: step; // increment the step on each occurance of this (pseudo) element
         }
 
         // arrows at right-hand side of boxes
+
         &::after {
             @include hide-text;
 
+            content: "\2192";
             display: block;
             position: absolute;
+            z-index: 2;
             top: -1px;
             left: 100%;
             width: 0;
@@ -79,8 +84,6 @@
             border-width: 1.5em 0 1.5em 0.75em;
             border-left-color: $color-border;
             font-size: 16px;
-            content: "\2192";
-            z-index: 2;
         }
     }
 
@@ -98,6 +101,7 @@
         color: $dark-color-text-inverse;
 
         // numerical indication of step
+
         &::before {
             border: 1px solid $dark-color-background;
             background: $dark-color-border;
@@ -105,6 +109,7 @@
         }
 
         // arrows at right-hand side of boxes
+
         &::after {
             border-left-color: $dark-color-border;
         }
@@ -130,12 +135,12 @@
         }
 
         &::after {
+            content: "\2190";
             right: 100%;
             left: auto;
             border: 0 solid transparent;
             border-width: 1.5em 0.75em 1.5em 0;
             border-right-color: $color-border;
-            content: "\2190";
         }
     }
 }

@@ -18,9 +18,9 @@
 
 .ui-slider {
     position: relative;
+    box-sizing: border-box;
     background-color: $color-gradient-to;
     text-align: left;
-    box-sizing: border-box;
 
     &:hover {
         border-color: shade($color-border, 15%);
@@ -32,26 +32,28 @@
 
     .ui-slider-handle {
         position: absolute;
+        z-index: 2;
+        box-sizing: border-box;
         width: 20px;
         height: 20px;
         border-radius: 50%;
         background-color: $color-background;
+
         @if $flat-theme < 1 {
             box-shadow: $standard-shadow;
         }
+
         cursor: pointer;
-        z-index: 2;
-        box-sizing: border-box;
         touch-action: manipulation;
     }
 
     .ui-slider-range {
         display: block;
         position: absolute;
+        z-index: 1;
         border: 0;
         background: $color-background-box;
         font-size: 10px;
-        z-index: 1;
     }
 }
 

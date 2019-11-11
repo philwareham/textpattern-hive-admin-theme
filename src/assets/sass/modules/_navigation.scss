@@ -152,8 +152,10 @@ button.txp-nav-toggle {
     &::after {
         @include hide-text;
 
+        content: "\2193";
         display: block;
         position: absolute;
+        z-index: 10;
         top: 1em;
         right: 0.5625em; // 9px / 16px
         width: 0;
@@ -161,10 +163,8 @@ button.txp-nav-toggle {
         border: 0 solid transparent;
         border-width: 0.25em 0.25em 0;
         border-top-color: $color-text;
-        font-size: 16px;
-        content: "\2193";
         opacity: 0.5;
-        z-index: 10;
+        font-size: 16px;
     }
 
     &:hover::after,
@@ -191,10 +191,10 @@ button.txp-nav-toggle {
  */
 
 .txp-nav > ul > li.open > a.dropdown-toggle::after {
+    content: "\2191";
     border: 0 solid transparent;
     border-width: 0 0.25em 0.25em;
     border-bottom-color: $color-text;
-    content: "\2191";
 }
 
 /**
@@ -246,23 +246,26 @@ button.txp-nav-toggle {
 .dropdown-menu {
     display: none;
     position: absolute;
+    z-index: 20000;
     top: 3em;
     left: 0;
     flex: none;
     min-width: 12em;
     border: 1px solid;
+
     @if $border-radius > 0 {
         border-radius: 0 $border-radius $border-radius;
     }
+
     background: $color-highlight-box;
+
     @if $flat-theme < 1 {
-        border-top: 0;
         border-color: $color-border-light;
+        border-top: 0;
         box-shadow: $standard-shadow;
     } @else {
         border-color: $color-border;
     }
-    z-index: 20000;
 
     li {
         @if $border-radius > 0 {
@@ -291,8 +294,11 @@ button.txp-nav-toggle {
     }
 
     // Indicator pointer.
+
     &::before {
+        content: "";
         position: absolute;
+        z-index: 2;
         top: -0.5em; // 8px / 16px
         left: 0.75em; // 12px / 16px;
         width: 1em;
@@ -300,8 +306,6 @@ button.txp-nav-toggle {
         background: url("../img/sprite.svg") no-repeat -12em 0;
         background-size: 13em 2em; // 208px / 16px + 32px / 16px
         font-size: 16px;
-        content: "";
-        z-index: 2;
     }
 }
 
@@ -320,6 +324,7 @@ button.txp-nav-toggle {
 [dir="rtl"] .dropdown-menu {
     right: 0;
     left: auto;
+
     @if $border-radius > 0 {
         border-radius: $border-radius 0;
 
@@ -329,6 +334,7 @@ button.txp-nav-toggle {
     }
 
     // Indicator pointer.
+
     &::before {
         right: 0.75em; // 12px / 16px;
         left: auto;

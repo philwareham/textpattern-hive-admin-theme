@@ -143,14 +143,12 @@ blockquote {
 
 /**
  * 1. Remove the bottom border in Chrome 57+.
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ * 2. Add the correct text decoration.
  */
 
 abbr[title] {
     /* 1 */
     border-bottom: 0;
-    /* 2 */
-    text-decoration: underline;
     /* 2 */
     text-decoration: underline dotted;
 }
@@ -162,9 +160,11 @@ abbr[title] {
 mark,
 var {
     padding: 1px 0.23076923076923em; // 3px / 13px
+
     @if $border-radius > 0 {
         border-radius: $border-radius / 2;
     }
+
     background: $color-selected;
     color: $color-text;
 }
@@ -194,32 +194,36 @@ kbd,
 samp {
     padding: 1px 0.23076923076923em; // 3px / 13px
     border: 1px solid $color-border-extra-light;
+
     @if $border-radius > 0 {
         border-radius: $border-radius / 2;
     }
+
     background: $color-background-box;
 }
 
 /**
  * Additional stylng for preformatted text/code.
  *
- * 1. Don't wrap long words.
- * 2. Contain overflow in all browsers.
+ * 1. Contain overflow in all browsers.
+ * 2. Don't wrap long words.
  * 3. Set tab size to 4 spaces.
  */
 
 pre {
     margin: 1em 0;
     padding: 1em; // 13px
+    /* 1 */
+    overflow-x: auto;
     border: 1px solid $color-border-extra-light;
+
     @if $border-radius > 0 {
         border-radius: $border-radius / 2;
     }
+
     background: $color-background-box;
-    /* 1 */
-    word-wrap: normal;
     /* 2 */
-    overflow-x: auto;
+    word-wrap: normal;
     /* 3 */
     tab-size: 4;
 }
@@ -246,17 +250,19 @@ code.body,
 code.excerpt {
     padding: 0;
     border: 0;
+
     @if $border-radius > 0 {
         border-radius: 0;
     }
+
     background-color: transparent;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
     direction: ltr;
     hyphens: none;
+    text-align: left;
+    word-wrap: normal;
+    word-break: normal;
+    word-spacing: normal;
+    white-space: pre;
 }
 
 /**

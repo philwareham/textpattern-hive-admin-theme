@@ -82,6 +82,7 @@
     display: none;
     width: 17em;
     padding: 0.2em 0.2em 0;
+
     @if $flat-theme < 1 {
         box-shadow: $standard-shadow;
     }
@@ -98,9 +99,11 @@
         width: 1.8em;
         height: 1.8em;
         margin-top: -0.9em;
+
         @if $border-radius > 0 {
             border-radius: $border-radius;
         }
+
         background-color: transparent;
     }
 
@@ -196,8 +199,8 @@
             margin: 0.5em 0.2em 0.4em;
             padding: 0.2em 0.6em 0.3em;
             float: right;
-            cursor: pointer;
             overflow: visible;
+            cursor: pointer;
 
             &.ui-datepicker-current {
                 float: left;

@@ -60,9 +60,9 @@
 
 .ui-selectmenu-text {
     display: block;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
 }
 
 .ui-selectmenu-menu {
@@ -143,6 +143,7 @@
             background: transparent;
             color: $color-link-hover;
             text-decoration: underline;
+
             @if $flat-theme < 1 {
                 box-shadow: none;
             }

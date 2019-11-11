@@ -18,13 +18,13 @@ progress {
  */
 
 .txp-upload-progress {
+    box-sizing: border-box;
     width: 100%;
     max-width: 30em; // 390px / 13px
     height: 8px;
     border: 1px solid $color-border;
     background-color: $color-gradient-to;
     appearance: none;
-    box-sizing: border-box;
 }
 
 // WebKit/Blink.
@@ -34,38 +34,41 @@ progress {
 }
 
 .txp-upload-progress::-webkit-progress-value {
-    background-color: $color-accent-gradient-to;
-    background-image: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.33) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.33) 50%,
-        rgba(255, 255, 255, 0.33) 75%,
-        transparent 75%,
-        transparent
-    );
-    background-size: 24px 24px;
     animation: progressbar-stripes linear 4s infinite;
+    background-color: $color-accent-gradient-to;
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.33) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.33) 50%,
+            rgba(255, 255, 255, 0.33) 75%,
+            transparent 75%,
+            transparent
+        );
+    background-size: 24px 24px;
 }
 
 .txp-upload-progress:indeterminate::-webkit-progress-bar {
-    background-color: $color-border;
-    background-image: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.25) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.25) 50%,
-        rgba(255, 255, 255, 0.25) 75%,
-        transparent 75%,
-        transparent
-    );
-    background-size: 24px 24px;
     animation: progressbar-stripes linear 4s infinite;
+    background-color: $color-border;
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.25) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.25) 50%,
+            rgba(255, 255, 255, 0.25) 75%,
+            transparent 75%,
+            transparent
+        );
+    background-size: 24px 24px;
 }
 
 // Stop animation at 100% progress.
+
 .txp-upload-progress[value="1"]::-webkit-progress-value {
     background-image: none;
 }
@@ -73,40 +76,43 @@ progress {
 // Gecko/Quantum.
 
 .txp-upload-progress::-moz-progress-bar {
-    background-color: $color-accent-gradient-to;
-    background-image: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.33) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.33) 50%,
-        rgba(255, 255, 255, 0.33) 75%,
-        transparent 75%,
-        transparent
-    );
-    background-size: 24px 24px;
     /* autoprefixer: off */
     animation: progressbar-stripes linear 4s infinite;
+    background-color: $color-accent-gradient-to;
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.33) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.33) 50%,
+            rgba(255, 255, 255, 0.33) 75%,
+            transparent 75%,
+            transparent
+        );
+    background-size: 24px 24px;
 }
 
 .txp-upload-progress:indeterminate::-moz-progress-bar {
-    background-color: $color-border;
-    background-image: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.25) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.25) 50%,
-        rgba(255, 255, 255, 0.25) 75%,
-        transparent 75%,
-        transparent
-    );
-    background-size: 24px 24px;
     /* autoprefixer: off */
     animation: progressbar-stripes linear 4s infinite;
+    background-color: $color-border;
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.25) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.25) 50%,
+            rgba(255, 255, 255, 0.25) 75%,
+            transparent 75%,
+            transparent
+        );
+    background-size: 24px 24px;
 }
 
 // Stop animation at 100% progress.
+
 .txp-upload-progress[value="1"]::-moz-progress-bar {
     background-image: none;
 }
@@ -114,24 +120,26 @@ progress {
 // Trident/EdgeHTML.
 
 .txp-upload-progress::-ms-fill {
-    border: 0;
-    background-color: $color-accent-gradient-to;
-    background-image: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.33) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.33) 50%,
-        rgba(255, 255, 255, 0.33) 75%,
-        transparent 75%,
-        transparent
-    );
-    background-size: 24px 24px;
     /* autoprefixer: off */
     animation: progressbar-stripes linear 4s infinite;
+    border: 0;
+    background-color: $color-accent-gradient-to;
+    background-image:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.33) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.33) 50%,
+            rgba(255, 255, 255, 0.33) 75%,
+            transparent 75%,
+            transparent
+        );
+    background-size: 24px 24px;
 }
 
 // Stop animation at 100% progress.
+
 .txp-upload-progress[value="1"]::-ms-fill {
     background-image: none;
 }

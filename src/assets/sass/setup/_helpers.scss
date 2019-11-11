@@ -1,8 +1,7 @@
 // Dark Mode shorthand.
 
 @mixin dark-mode {
-    //@media (prefers-color-scheme: dark) {
-    body.darkmode {
+    body.darkmode { //@media (prefers-color-scheme: dark)
         @content;
     }
 }
@@ -14,13 +13,15 @@
     $hdfilename: $hdfile + "@2x." + $hdtype !default;
     background-image: url("../img/" + $filename);
     background-size: $hdwidth $hdheight;
-    @media (min-resolution: 1.25dppx), (min-resolution: 120dpi) {background-image: url("../img/" + $hdfilename);}
+
+    @media (min-resolution: 1.25dppx), (min-resolution: 120dpi) { background-image: url("../img/" + $hdfilename); }
 }
 
 // standard gradients
 
 @mixin gradient-linear($color-gradient-from, $color-gradient-to) {
     background-color: $color-gradient-to;
+
     @if $color-gradient-from != $color-gradient-to { // only render gradient if colours are not equal
         background-image: linear-gradient($color-gradient-from, $color-gradient-to);
     }
@@ -28,6 +29,7 @@
 
 @mixin gradient-radial($color-gradient-from, $color-gradient-to) {
     background-color: $color-gradient-to;
+
     @if $color-gradient-from != $color-gradient-to { // only render gradient if colours are not equal
         background-image: radial-gradient($color-gradient-from, $color-gradient-to);
     }
@@ -36,8 +38,8 @@
 // hide text
 
 @mixin hide-text {
+    overflow: hidden;
     text-indent: 110%;
     text-transform: capitalize;
     white-space: nowrap;
-    overflow: hidden;
 }

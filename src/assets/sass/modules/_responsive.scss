@@ -72,8 +72,8 @@
     .txp-view-site {
         margin: 0.0625em 0.375em 0; // 1px / 16px + 6px / 16px;
         padding: 0;
-        font-size: 16px;
         overflow: inherit;
+        font-size: 16px;
 
         a {
             @include hide-text;
@@ -136,6 +136,7 @@
         margin: 0;
         padding: 0;
         border: 0;
+
         @if $flat-theme < 1 {
             box-shadow: none;
         }
@@ -154,14 +155,13 @@
         max-width: 22em; // 286px / 13px
 
         option {
+            box-sizing: border-box;
             width: 100%;
+            overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            overflow: hidden;
-            box-sizing: border-box;
         }
     }
-
 }
 
 
@@ -251,9 +251,11 @@
         padding: 0;
         float: left;
         border: 0;
+
         @if $border-radius > 0 {
             border-radius: 0;
         }
+
         background: transparent url("../img/sprite.svg") -10em 0;
         background-size: 13em 2em; // 208px / 16px + 32px / 16px
 
@@ -285,21 +287,23 @@
         right: 0;
         left: 0;
         background: $color-highlight-box;
+
         @if $flat-theme < 1 {
             box-shadow: $standard-shadow;
         }
 
         // Indicator pointer.
+
         &::before {
+            content: "";
             position: absolute;
+            z-index: 2;
             top: -0.5em; // 8px / 16px
             left: 4.375em; // 62px / 16px;
             width: 1em;
             height: 0.5em;
             background: url("../img/sprite.svg") no-repeat -12em 0;
             background-size: 13em 2em; // 208px / 16px + 32px / 16px
-            content: "";
-            z-index: 2;
 
             [dir="rtl"] & {
                 right: 4.375em; // 62px / 16px;
@@ -345,9 +349,11 @@
         position: static;
         min-width: 0;
         border: 0;
+
         @if $border-radius > 0 {
             border-radius: 0;
         }
+
         @if $flat-theme < 1 {
             box-shadow: none;
         }
@@ -362,6 +368,7 @@
         }
 
         // Remove indicator pointer.
+
         &::before {
             display: none;
         }
@@ -479,6 +486,7 @@
             height: auto;
             border: 1px solid $color-border-light;
             border-bottom: 1px solid transparent;
+
             @if $flat-theme < 1 {
                 box-shadow: none;
             }
@@ -522,5 +530,4 @@
             font-size: 1rem;
         }
     }
-
 }
