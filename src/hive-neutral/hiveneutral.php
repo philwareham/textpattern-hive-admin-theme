@@ -88,18 +88,20 @@ class hiveNeutral_theme extends \Textpattern\Admin\Theme
 
             if (get_pref('sitename')) {
                 $out[] = graf(
-                    href(span(htmlspecialchars(get_pref('sitename')), array('class' => 'txp-view-site-name')), hu, array(
+                    span(href(htmlspecialchars(get_pref('sitename')), hu, array(
                         'rel'        => 'noopener',
                         'target'     => '_blank',
                         'title'      => gTxt('tab_view_site'),
                         'aria-label' => gTxt('tab_view_site'),
-                    )), array('class' => 'txp-view-site'));
+                    )), array('class' => 'txp-view-site-name'))
+                , array('class' => 'txp-view-site'));
             } else {
                 $out[] = graf(
-                    href(span(gTxt('tab_view_site'), array('class' => 'txp-view-site-name')), hu, array(
+                    span(href(gTxt('tab_view_site'), hu, array(
                         'rel'        => 'noopener',
                         'target'     => '_blank',
-                    )), array('class' => 'txp-view-site'));
+                    )), array('class' => 'txp-view-site-name'))
+                , array('class' => 'txp-view-site'));
             }
 
             $out[] = graf(

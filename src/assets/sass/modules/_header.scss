@@ -113,8 +113,14 @@
     padding: 0 1px;
     overflow: hidden;
     line-height: 2.69230769230769; // 35px / 13px
-    text-overflow: ellipsis;
     white-space: nowrap;
+
+    span {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $color-text;
+    }
 
     a {
         color: $color-text;
