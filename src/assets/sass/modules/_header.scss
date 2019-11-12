@@ -123,27 +123,6 @@
 }
 
 /**
- * Positioning of logout button.
- *
- * Example HTML:
- *
- * <p class="txp-logout">
- */
-
-.txp-logout {
-    position: relative;
-    top: -0.846153846153846em; // 11px / 13px
-    flex: none;
-}
-
-@include dark-mode {
-    .txp-logout a:focus {
-        border-color: $color-link-focus;
-        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-    }
-}
-
-/**
  * Switch between Dark Mode/Light Mode manually.
  *
  * Example HTML:
@@ -156,6 +135,7 @@
  */
 
 .txp-lightswitch {
+    flex: none;
     margin: 0 0.75em; // 12px / 16px;
     padding: 0;
     overflow: inherit;
@@ -200,5 +180,26 @@
         .ui-icon {
             filter: none;
         }
+    }
+}
+
+/**
+ * Positioning of logout button.
+ *
+ * Example HTML:
+ *
+ * <p class="txp-logout">
+ */
+
+.txp-logout {
+    position: relative;
+    top: -0.846153846153846em; // 11px / 13px
+    flex: none;
+}
+
+@include dark-mode {
+    .txp-logout a:focus {
+        border-color: $color-link-focus;
+        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }

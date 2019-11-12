@@ -85,13 +85,23 @@ class hive_theme extends \Textpattern\Admin\Theme
 
             $out[] = '</ul>';
             $out[] = '</nav>';
-            $out[] = graf(
-                href(span(htmlspecialchars(get_pref('sitename')), array('class' => 'txp-view-site-name')), hu, array(
-                    'rel'        => 'noopener',
-                    'target'     => '_blank',
-                    'title'      => gTxt('tab_view_site'),
-                    'aria-label' => gTxt('tab_view_site'),
-                )), array('class' => 'txp-view-site'));
+
+            if (get_pref('sitename')) {
+                $out[] = graf(
+                    href(span(htmlspecialchars(get_pref('sitename')), array('class' => 'txp-view-site-name')), hu, array(
+                        'rel'        => 'noopener',
+                        'target'     => '_blank',
+                        'title'      => gTxt('tab_view_site'),
+                        'aria-label' => gTxt('tab_view_site'),
+                    )), array('class' => 'txp-view-site'));
+            } else {
+                $out[] = graf(
+                    href(span(gTxt('tab_view_site'), array('class' => 'txp-view-site-name')), hu, array(
+                        'rel'        => 'noopener',
+                        'target'     => '_blank',
+                    )), array('class' => 'txp-view-site'));
+            }
+
             $out[] = graf(
                 href(span(gTxt('lightswitch'), array('class' => 'ui-icon ui-icon-lightbulb')), '#', array(
                     'id'         => 'lightswitch',
