@@ -13,9 +13,9 @@
     margin: 0 -1em;
 
     > * {
+        box-sizing: border-box;
         min-width: 0;
         padding: 0 1em;
-        box-sizing: border-box;
     }
 }
 
@@ -151,9 +151,9 @@
 @supports (display: grid) {
     .txp-grid {
         display: grid;
-        margin: 0;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         gap: 4px;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        margin: 0;
 
         > * {
             margin: 0;
@@ -162,10 +162,10 @@
 }
 
 .txp-grid-cell {
+    box-sizing: border-box;
     width: 9.384615384615385em; // 122px / 13px
     padding: 0 1em;
     border: 1px solid $color-border;
-    box-sizing: border-box;
 }
 
 @include dark-mode {
@@ -186,8 +186,8 @@
 
 @supports (display: grid) {
     .txp-grid-cell-2span {
-        min-width: unset;
         grid-column: span 2;
+        min-width: unset;
     }
 }
 
@@ -197,13 +197,14 @@
 
 @supports (display: grid) {
     .txp-grid-cell-3span {
-        min-width: unset;
         grid-column: span 3;
+        min-width: unset;
     }
 }
 
 .txp-grid-multi-edit {
     position: absolute;
+    z-index: 2;
     top: 1px;
     left: 1px;
     padding: 3px 6px;
@@ -211,7 +212,6 @@
     border-top: 0;
     border-left: 0;
     background-color: rgba(255, 255, 255, 0.5);
-    z-index: 2;
 }
 
 @include dark-mode {

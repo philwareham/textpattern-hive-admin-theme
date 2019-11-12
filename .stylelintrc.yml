@@ -39,6 +39,7 @@ rules:
     - true
     -
       ignoreAtRules:
+        - each
         - else
         - function
         - if
@@ -457,7 +458,7 @@ rules:
   selector-max-id: 1
 
   # Limit the number of pseudo-classes in a selector.
-  selector-max-pseudo-class: 2
+  selector-max-pseudo-class: 3
 
   # Limit the specificity of selectors.
   selector-max-specificity: 1,2,1
@@ -1032,9 +1033,6 @@ rules:
 
   # Require a single space or disallow whitespace before the colon in `$`-variable declarations.
   scss/dollar-variable-colon-space-before: never
-
-  # Require `!default` flag for `$`-variable declarations.
-  scss/dollar-variable-default: true
 
   # Disallow Sass variables that are used without interpolation with CSS features that use custom identifiers.
   scss/dollar-variable-no-missing-interpolation: true

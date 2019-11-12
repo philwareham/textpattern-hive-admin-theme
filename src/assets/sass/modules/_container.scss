@@ -11,6 +11,7 @@ body {
     display: flex;
     /* 1 */
     position: relative;
+    box-sizing: border-box;
     flex-direction: column;
     min-height: 100vh;
     /* 2 */
@@ -18,7 +19,6 @@ body {
     padding: 4em 4% 0;
     background: $color-background;
     color: $color-text;
-    box-sizing: border-box;
     overscroll-behavior: none;
 }
 

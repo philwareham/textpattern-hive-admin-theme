@@ -18,15 +18,14 @@ html {
 
 hr {
     /* 1 */
+    box-sizing: content-box;
     height: 0;
     margin: 1.5em 0;
     clear: both; // make sure any floats above `hr` are cleared
-    border: 0; // remove the default `hr` border
-    border-bottom: 1px solid $color-border;
     /* 2 */
     overflow: visible;
-    /* 1 */
-    box-sizing: content-box;
+    border: 0; // remove the default `hr` border
+    border-bottom: 1px solid $color-border;
 }
 
 @include dark-mode {
@@ -49,11 +48,11 @@ hr {
     height: 1px;
     margin: -1px;
     padding: 0;
-    border: 0;
-    white-space: nowrap;
     overflow: hidden;
     clip: rect(0 0 0 0); // TODO: Deprecated - use `clip-path` when browser support is better.
     //clip-path: inset(50%); // TODO: Currently causes severe performance issues in Chrome.
+    border: 0;
+    white-space: nowrap;
 }
 
 /**
@@ -62,9 +61,9 @@ hr {
 
 .txp-contain {
     max-width: 30em; // 390px / 13px
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
 }
 
 /**
@@ -90,8 +89,8 @@ hr {
     /* 1 */
     display: none;
     position: absolute;
-    width: 18em; // 234px / 13px
     z-index: 100;
+    width: 18em; // 234px / 13px
 
     .checkbox {
         margin: 0.153846153846154em; // 2px / 13px
@@ -135,11 +134,13 @@ hr {
     float: right;
 
     // Ensure the 2 buttons stay together.
+
     .ui-controlgroup {
         flex-wrap: nowrap;
     }
 
     // Ensure search dropdown lays above list options dropdown.
+
     .txp-dropdown {
         z-index: 101;
     }
@@ -430,12 +431,12 @@ span.spinner {
 
 .multi-edit {
     position: sticky;
+    z-index: 20;
     bottom: 0;
     margin: 1em 0 0;
     padding: 0.3076923em 0; // 4px / 13px
     background: $color-background;
     box-shadow: 0 -1em 1em -0.5em $color-background;
-    z-index: 20;
 }
 
 @include dark-mode {
@@ -566,10 +567,10 @@ span.spinner {
  */
 
 .disabled:not(.txp-button) {
+    opacity: 0.33;
     background-image: none;
     text-decoration: none;
     cursor: default !important;
-    opacity: 0.33;
     pointer-events: none;
 
     a {
@@ -860,9 +861,9 @@ span.spinner {
 
 .txp-textarea-options {
     position: relative;
+    z-index: 2;
     margin: 0 1px;
     float: right;
-    z-index: 2;
 }
 
 /**

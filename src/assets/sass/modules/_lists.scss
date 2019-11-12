@@ -131,10 +131,10 @@ dd {
     a {
         display: block;
         padding: 0.38461538461538em 2.5em 0.38461538461538em 1em;
+        overflow: hidden;
         font-weight: normal;
         text-overflow: ellipsis;
         white-space: nowrap;
-        overflow: hidden;
     }
 }
 
@@ -175,11 +175,11 @@ dd {
 
 .switcher-action {
     position: absolute;
+    z-index: 2;
     top: 0.38461538461538em; // 5px / 13px
     left: 1em;
-    z-index: 2;
 
-    & + a {
+    + a {
         padding-right: 1em;
         padding-left: 2.5em;
     }
@@ -189,7 +189,7 @@ dd {
     right: 1em;
     left: auto;
 
-    & + a {
+    + a {
         padding-right: 2.5em;
         padding-left: 1em;
     }
@@ -201,9 +201,9 @@ dd {
 
 .switcher-list .destroy {
     position: absolute;
+    z-index: 2;
     top: 0.46153846153846em; // 6px / 13px
     right: 1em;
-    z-index: 2;
 }
 
 [dir="rtl"] .switcher-list .destroy {

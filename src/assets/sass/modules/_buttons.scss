@@ -22,9 +22,9 @@ button::-moz-focus-inner,
 }
 
 /**
- * 1. Improve usability and consistency of cursor style between image-type
+ * 1. Remove iOS Safari default styling.
+ * 2. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
- * 2. Remove iOS Safari default styling.
  */
 
 button,
@@ -48,9 +48,9 @@ input[type="button"],
     font-weight: normal;
     text-align: center;
     /* 1 */
-    cursor: pointer;
-    /* 2 */
     appearance: none;
+    /* 2 */
+    cursor: pointer;
     user-select: none;
 
     &:hover {
@@ -67,6 +67,7 @@ input[type="button"],
         border-color: darken($color-button-border, 13%);
         color: $color-text-button-active;
         text-decoration: none;
+
         @if $flat-theme < 1 {
             box-shadow: $inset-lowlighting;
         }
@@ -165,9 +166,11 @@ button.destroy {
     height: auto;
     padding: 0.07692307692308em 0 0; // 1px / 13px
     border: 0;
+
     @if $border-radius > 0 {
         border-radius: 0;
     }
+
     background: none;
 
     &:hover,
@@ -231,14 +234,16 @@ button.destroy {
 
 .navlink-disabled {
     display: inline-block;
+    box-sizing: border-box;
     height: 2.307692307692308em; // 30px / 13px
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     border: 1px solid;
+
     @if $border-radius > 0 {
         border-radius: $border-radius;
     }
+
     background-clip: padding-box;
-    box-sizing: border-box;
 }
 
 @include dark-mode {
@@ -367,6 +372,7 @@ ul.nav-tertiary {
 .txp-search button.txp-search-button {
     padding-right: 1.5em;
     padding-left: 1.5em;
+
     @if $border-radius > 0 {
         border-radius: 0;
 

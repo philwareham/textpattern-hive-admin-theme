@@ -45,7 +45,6 @@ $border-radius:                       0.3em;
 @import "hive-default";
 
 @media screen {
-
     .txp-nav > ul > li {
         border-right-color: shade($color-accent-gradient-to, 16%);
         background: $color-accent-gradient-to;
@@ -158,7 +157,6 @@ $border-radius:                       0.3em;
             border-bottom-color: transparent;
         }
     }
-
 }
 
 
@@ -188,5 +186,4 @@ $border-radius:                       0.3em;
             background: $dark-color-highlight-box;
         }
     }
-
 }

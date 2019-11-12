@@ -24,6 +24,7 @@
     margin: 1em auto;
 
     // Column width of 'welcome' setup panel.
+
     .welcome & {
         max-width: 20.30769230769231em; // 264px / 13px
     }
@@ -71,9 +72,9 @@ body.darkmode.login {
     position: relative;
     bottom: -0.5em;
     padding: 1em 0;
+    overflow: hidden;
     border-top: 1px solid $color-border;
     text-overflow: ellipsis;
-    overflow: hidden;
 }
 
 @include dark-mode {
@@ -120,12 +121,14 @@ body.darkmode.login {
  * </div>
  */
 
-#view_modes ul {
-    margin: 2em 0 0;
-    padding: 0;
-    border-bottom: 1px solid $color-border;
-    font-size: $small-font-size;
-    line-height: $small-line-height;
+#view_modes {
+    ul {
+        margin: 2em 0 0;
+        padding: 0;
+        border-bottom: 1px solid $color-border;
+        font-size: $small-font-size;
+        line-height: $small-line-height;
+    }
 
     li {
         display: inline-block;
@@ -140,6 +143,7 @@ body.darkmode.login {
         background-color: darken($color-background-box, 2%);
         color: $color-text;
         text-decoration: none;
+
         @if $flat-theme < 1 {
             box-shadow: inset 0 -0.25em 0.5em rgba(#666666, 0.2);
         }
@@ -158,6 +162,7 @@ body.darkmode.login {
     .active a {
         border-bottom-color: $color-background;
         background-color: lighten($color-background-box, 3%);
+
         @if $flat-theme < 1 {
             box-shadow: none;
         }
@@ -169,13 +174,16 @@ body.darkmode.login {
 }
 
 @include dark-mode {
-    #view_modes ul {
-        border-bottom-color: $dark-color-border;
+    #view_modes {
+        ul {
+            border-bottom-color: $dark-color-border;
+        }
 
         a {
             border-color: $dark-color-border-light;
             background-color: $dark-color-background-box;
             color: $dark-color-text;
+
             @if $flat-theme < 1 {
                 box-shadow: inset 0 -0.25em 0.5em rgba(#000000, 0.2);
             }
@@ -194,6 +202,7 @@ body.darkmode.login {
             border-color: $dark-color-border;
             border-bottom-color: $dark-color-background;
             background-color: $dark-color-background;
+
             @if $flat-theme < 1 {
                 box-shadow: none;
             }
@@ -269,16 +278,17 @@ body.darkmode.login {
 
 .txp-save-zone {
     position: sticky;
+    z-index: 999;
     top: 2.75em;
     margin: -1.25em 0 1.75em;
     padding: 1px 1em 0;
     border: 1px solid $color-border-light;
     border-top: 0;
     background: $color-background;
+
     @if $flat-theme < 1 {
         box-shadow: 0 0.1em 0.125em rgba(#000000, 0.15);
     }
-    z-index: 999;
 
     .txp-actions {
         margin-bottom: 0.5em;

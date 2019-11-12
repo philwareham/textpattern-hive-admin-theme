@@ -29,11 +29,11 @@ fieldset {
 
 legend {
     display: table; /* 1 */
+    box-sizing: border-box; /* 1 */
     max-width: 100%; /* 1 */
     padding: 0; /* 2 */
     color: inherit; /* 3 */
     white-space: normal; /* 1 */
-    box-sizing: border-box; /* 1 */
 }
 
 /**
@@ -61,6 +61,7 @@ textarea,
 .navlink,
 .navlink-active,
 .navlink-disabled {
+    box-sizing: border-box;
     max-width: 100%; /* 1 */
     margin: 0; /* 2 */
     color: $color-text-form;
@@ -68,7 +69,6 @@ textarea,
     font-size: 1rem; /* 3 */
     line-height: $base-line-height;
     vertical-align: baseline;
-    box-sizing: border-box;
 }
 
 @include dark-mode {
@@ -158,13 +158,13 @@ textarea {
 [type="radio"]:not(.ui-checkboxradio) {
     position: relative;
     bottom: -2px;
+    box-sizing: border-box;
     width: 16px;
     height: 16px;
     padding: 0; /* 1 */
     border: 1px solid $color-border-extra-dark;
     background: $color-background-form;
     appearance: none;
-    box-sizing: border-box;
 
     + label:not(.ui-controlgroup-item) {
         margin: 0 0.5em 0 0; /* 2 */
@@ -300,15 +300,15 @@ textarea {
  */
 
 [type="file"] {
+    box-sizing: border-box;
     height: auto;
     min-height: 2.307692307692308em; // 30px / 13px
     padding: 0.30769230769231em; // 4px / 13px
     border: 1px solid $color-border;
     border-radius: 0;
     background: $color-background-form;
-    cursor: pointer;
-    box-sizing: border-box;
     appearance: none;
+    cursor: pointer;
 
     &:hover {
         border-color: $color-border-extra-dark;
@@ -342,9 +342,9 @@ textarea {
     border: 0;
     color: $color-text-button;
     font: inherit;
-    cursor: pointer;
     /* autoprefixer: off */
     appearance: none;
+    cursor: pointer;
 }
 
 ::-ms-browse {
@@ -357,9 +357,9 @@ textarea {
     font-size: 1rem;
     font-weight: normal;
     line-height: inherit;
-    cursor: pointer;
     /* autoprefixer: off */
     appearance: none;
+    cursor: pointer;
 }
 
 /**
@@ -416,11 +416,11 @@ select {
 
 select[size],
 select[multiple] {
+    box-sizing: border-box;
     height: auto;
     padding-right: 0.30769230769231em; // 4px / 13px
     background-image: none;
     vertical-align: top;
-    box-sizing: border-box;
 }
 
 @include dark-mode {
@@ -499,10 +499,10 @@ textarea.code {
 .navlink-disabled,
 .ui-checkboxradio-disabled {
     border: 1px solid $color-border !important;
+    opacity: 0.33 !important;
     background-color: $color-background-form-disabled !important;
     box-shadow: none !important;
     cursor: default !important; /* 1 */
-    opacity: 0.33 !important;
 }
 
 @include dark-mode {
@@ -513,8 +513,8 @@ textarea.code {
     .navlink-disabled,
     .ui-checkboxradio-disabled {
         border: 1px solid $dark-color-border !important;
-        background-color: $dark-color-background-form-disabled !important;
         opacity: 0.25 !important;
+        background-color: $dark-color-background-form-disabled !important;
     }
 }
 
@@ -657,9 +657,9 @@ textarea {
  */
 
 ::placeholder {
+    opacity: 1;
     color: $color-text-form-placeholder;
     font: inherit; /* 1 */
-    opacity: 1;
 }
 
 @include dark-mode {
