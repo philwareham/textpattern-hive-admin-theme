@@ -189,15 +189,23 @@ module.exports = function (grunt)
                         [
                             'node_modules/bootstrap/js/dropdown.js',
                             'node_modules/bootstrap/js/collapse.js',
-                            'node_modules/autosize/dist/autosize.js',
                             '<%= paths.src.js %>main.js'
                         ],
                         '<%= paths.dest2.js %>main.js':
                         [
                             'node_modules/bootstrap/js/dropdown.js',
                             'node_modules/bootstrap/js/collapse.js',
-                            'node_modules/autosize/dist/autosize.js',
                             '<%= paths.src.js %>main.js'
+                        ],
+                        '<%= paths.dest1.js %>autosize.js':
+                        [
+                            'node_modules/autosize/dist/autosize.js',
+                            '<%= paths.src.js %>autosize.js'
+                        ],
+                        '<%= paths.dest2.js %>autosize.js':
+                        [
+                            'node_modules/autosize/dist/autosize.js',
+                            '<%= paths.src.js %>autosize.js'
                         ],
                         '<%= paths.dest1.js %>darkmode.js': [
                             '<%= paths.src.js %>darkmode.js'

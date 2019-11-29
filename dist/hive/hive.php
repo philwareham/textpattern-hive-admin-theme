@@ -34,6 +34,7 @@ class hive_theme extends \Textpattern\Admin\Theme
         $out[] = '<link rel="icon" href="'.$this->url.'assets/img/favicon.ico">';
         $out[] = '<meta name="generator" content="Textpattern CMS">';
         $out[] = '<script defer src="'.$this->url.'assets/js/main.js"></script>'.n;
+        $out[] = '<script defer src="'.$this->url.'assets/js/autosize.js"></script>'.n;
 
         return join(n, $out);
     }
