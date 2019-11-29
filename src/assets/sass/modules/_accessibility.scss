@@ -1,9 +1,6 @@
 @media screen and (prefers-reduced-motion: reduce), (update: slow) {
-    .messageflash {
-        animation: none;
-    }
-
-    .spin {
+    .messageflash,
+    span.spinner {
         animation: none;
     }
 
