@@ -155,14 +155,20 @@
             <div class="txp-layout-1col" id="plugin_container">
                 <div class="txp-layout-cell-row txp-list-head">
                     <div class="txp-control-panel">
+                        <form class="plugin-data" id="plugin_upload_form" method="post" action="secondary/admin-plugin_install.html">
+                            <label for="plugin-upload">Upload plugin</label>&nbsp;<a rel="help" title="Help" role="button" class="pophelp" href="#"><span class="ui-icon ui-icon-help">Help</span></a>
+                            <input type="file" id="plugin-upload" name="theplugin" accept="application/x-zip-compressed, application/zip, .php">
+                            <input name="install_new" type="submit" value="Upload">
+                        </form>
+                        <br>
                         <form class="plugin-data" id="plugin_install_form" method="post" action="secondary/admin-plugin_install.html">
-                            <label for="plugin-install">Install plugin&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></label>
-                            <textarea class="code" id="plugin-install" name="plugin" cols="64" rows="4" dir="ltr"></textarea>
+                            <label for="plugin-install">Install plugin</label>&nbsp;<a rel="help" title="Help" role="button" class="pophelp" href="#"><span class="ui-icon ui-icon-help">Help</span></a>
+                            <textarea class="code" id="plugin-install" name="plugin" cols="64" rows="4" dir="ltr" required="required" spellcheck="false"></textarea>
                             <input name="install_new" type="submit" value="Upload">
                         </form>
                     </div>
                     <div class="txp-list-options">
-                        <a href="#"><span class="ui-icon ui-icon-gear"></span> List options</a>
+                        <a href="#"><span class="ui-icon ui-icon-gear"></span> Column display options</a>
                     </div>
                 </div>
 

@@ -320,7 +320,7 @@ $(function ()
         e.stopPropagation();
     });
 
-    // List options dropdown example.
+    // Column display options dropdown example.
 
     var listoptions = $('.txp-list-options-button');
 
