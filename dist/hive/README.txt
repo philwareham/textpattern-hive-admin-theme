@@ -13,7 +13,7 @@ supporting files as long as licences are respected (see below).
 # Select 'Hive' from the 'Admin-side theme' dropdown list. Save the preferences.
 
 
-== Optional custom files for advanced users ==
+== Optional customizations for advanced users ==
 
 We provide an optional user-defined custom CSS and JavaScript file for
 customization of the admin-side theme. By default, these are located at:
