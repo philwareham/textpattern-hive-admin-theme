@@ -605,6 +605,25 @@ input {
 }
 
 /**
+ * Styling for required field indicators.
+ *
+ * Example HTML:
+ *
+ * <abbr class="required" title="Required">*</abbr>
+ */
+
+abbr.required {
+    color: $color-error-text;
+    text-decoration: none;
+}
+
+@include dark-mode {
+    abbr.required {
+        color: $dark-color-error-text;
+    }
+}
+
+/**
  * Styling for form field validation.
  */
 
