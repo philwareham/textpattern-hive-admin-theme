@@ -609,12 +609,11 @@ input {
  *
  * Example HTML:
  *
- * <abbr class="required" title="Required">*</abbr>
+ * <b class="required" title="Required">*</b>
  */
 
 .required {
     color: $color-error-text;
-    text-decoration: none;
 }
 
 @include dark-mode {
