@@ -374,7 +374,6 @@ body.darkmode.login {
 
 .txp-control-panel .assign-existing-form {
     display: block;
-    margin-top: 1em;
 }
 
 
@@ -434,6 +433,10 @@ body.darkmode.login {
 
 /* Admin -> Plugins panel - additional layout
    ========================================================================== */
+
+.plugin-data {
+    display: block;
+}
 
 tr {
     .manage span,

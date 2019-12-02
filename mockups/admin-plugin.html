@@ -160,7 +160,13 @@
                             <input type="file" id="plugin-upload" name="theplugin" accept="application/x-zip-compressed, application/zip, .php">
                             <input name="install_new" type="submit" value="Upload">
                         </form>
-                        <br>
+                        <form class="assign-existing-form" id="assign_file" method="post" action="secondary/admin-plugin_install.html">
+                            <label for="file-existing">Import from disk</label>
+                            <select name="filename" id="file-existing">
+                                <option value="abc_test" dir="auto">abc_test</option>
+                            </select>
+                            <input type="submit" value="Import">
+                        </form>
                         <form class="plugin-data" id="plugin_install_form" method="post" action="secondary/admin-plugin_install.html">
                             <label for="plugin-install">Install plugin</label>&nbsp;<a rel="help" title="Help" role="button" class="pophelp" href="#"><span class="ui-icon ui-icon-help">Help</span></a>
                             <textarea class="code" id="plugin-install" name="plugin" cols="64" rows="4" dir="ltr" required="required" spellcheck="false"></textarea>
