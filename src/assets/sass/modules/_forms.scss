@@ -655,6 +655,7 @@ textarea {
     opacity: 1;
     color: $color-text-form-placeholder;
     font: inherit; /* 1 */
+    font-weight: normal;
 }
 
 @include dark-mode {
