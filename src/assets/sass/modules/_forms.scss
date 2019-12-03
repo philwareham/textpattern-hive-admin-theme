@@ -605,65 +605,42 @@ input {
 }
 
 /**
- * Styling for required field indicators.
- *
- * Example HTML:
- *
- * <b class="required" title="Required">*</b>
- */
-
-.required {
-    color: $color-error-text;
-}
-
-@include dark-mode {
-    abbr.required {
-        color: $dark-color-error-text;
-    }
-}
-
-/**
  * Styling for form field validation.
  */
 
-input,
+input:not([type="file"]),
 select,
 textarea {
+    &:invalid,
     &:focus:invalid {
         border-color: $color-error-text;
         box-shadow: none; // Normalize Firefox styling
     }
 }
 
+input:not([type="file"]),
+select,
+textarea {
+    &:hover:invalid {
+        border-color: shade($color-error-border, 30%);
+    }
+}
+
 @include dark-mode {
-    input,
+    input:not([type="file"]),
     select,
     textarea {
+        &:invalid,
         &:focus:invalid {
             border-color: $dark-color-error-text;
         }
     }
-}
 
-/**
- * Styling for Firefox-specfic form field validation.
- */
-
-input,
-select,
-textarea {
-    &:-moz-ui-invalid {
-        border-color: $color-error-text;
-        box-shadow: none;
-    }
-}
-
-@include dark-mode {
-    input,
+    input:not([type="file"]),
     select,
     textarea {
-        &:-moz-ui-invalid {
-            border-color: $dark-color-error-text;
+        &:hover:invalid {
+            border-color: tint($dark-color-error-text, 30%);
         }
     }
 }
