@@ -628,6 +628,39 @@ textarea {
 }
 
 /**
+ * Styling for Firefox-specfic form field validation.
+ *
+ * TODO: move to `:user-invalid` pseudo-class if/when has browser support.
+ */
+
+input,
+select,
+textarea {
+    &:-moz-ui-invalid {
+        border-color: $color-error-text;
+        box-shadow: none;
+    }
+
+    &:hover:-moz-ui-invalid {
+        border-color: shade($color-error-border, 30%);
+    }
+}
+
+@include dark-mode {
+    input,
+    select,
+    textarea {
+        &:-moz-ui-invalid {
+            border-color: $dark-color-error-text;
+        }
+
+        &:hover:-moz-ui-invalid {
+            border-color: tint($dark-color-error-text, 30%);
+        }
+    }
+}
+
+/**
  * Normalize form placeholder style across browsers.
  *
  * 1. Fix placeholder font properties inheritance.
