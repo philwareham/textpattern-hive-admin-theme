@@ -608,39 +608,21 @@ input {
  * Styling for form field validation.
  */
 
-input:not([type="file"]),
+input,
 select,
 textarea {
-    &:invalid,
     &:focus:invalid {
         border-color: $color-error-text;
         box-shadow: none; // Normalize Firefox styling
     }
 }
 
-input:not([type="file"]),
-select,
-textarea {
-    &:hover:invalid {
-        border-color: shade($color-error-border, 30%);
-    }
-}
-
 @include dark-mode {
-    input:not([type="file"]),
+    input,
     select,
     textarea {
-        &:invalid,
         &:focus:invalid {
             border-color: $dark-color-error-text;
-        }
-    }
-
-    input:not([type="file"]),
-    select,
-    textarea {
-        &:hover:invalid {
-            border-color: tint($dark-color-error-text, 30%);
         }
     }
 }
