@@ -165,6 +165,20 @@ li.information {
 }
 
 /**
+ * Alert pills.
+ *
+ * Example HTML:
+ *
+ * <span class="alert-block alert-pill warning">
+ */
+
+.alert-pill {
+    display: inline-block;
+    padding: 0 0.33em;
+    font-weight: normal;
+}
+
+/**
  * System messages.
  *
  * Example HTML:
