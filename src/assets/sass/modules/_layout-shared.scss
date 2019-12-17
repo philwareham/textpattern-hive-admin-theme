@@ -898,10 +898,17 @@ span.spinner {
 
 .ui-dialog.txp-dialog-container,
 .ui-dialog.txp-preview-container {
-    position: fixed;
     flex-direction: column;
     align-items: stretch;
     margin: auto;
+}
+
+/**
+ * Override position for the tag builder dialog.
+ */
+
+.txp-tagbuilder-container {
+    position: absolute !important;
 }
 
 /**
