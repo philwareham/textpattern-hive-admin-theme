@@ -896,7 +896,8 @@ span.spinner {
  * Ensure dialog box vertical footprint doesn't spill out of screen area.
  */
 
-.ui-dialog.txp-dialog-container {
+.ui-dialog.txp-dialog-container,
+.ui-dialog.txp-preview-container {
     position: fixed;
     flex-direction: column;
     align-items: stretch;
