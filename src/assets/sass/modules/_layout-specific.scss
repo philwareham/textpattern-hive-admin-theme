@@ -381,19 +381,29 @@ body.darkmode.login {
    ========================================================================== */
 
 /**
- * Red background highlight for spam comment rows in the list.
+ * Background highlight for spam comment/unmoderated comment rows in the list.
  */
 
-#page-discuss .txp-list tr.spam {
-    background: lighten($color-error-background, 2%);
+.txp-list tbody tr {
+    &.spam {
+        background: lighten($color-error-background, 2%);
+    }
+
+    &.moderate {
+        background: lighten($color-warning-background, 3%);
+    }
 }
 
-/**
- * Yellow background highlight for unmoderated comment rows in the list.
- */
+@include dark-mode {
+    .txp-list tbody tr {
+        &.spam {
+            background: darken($dark-color-error-background, 2%);
+        }
 
-#page-discuss .txp-list tr.moderate {
-    background: lighten($color-warning-background, 2%);
+        &.moderate {
+            background: darken($dark-color-warning-background, 3%);
+        }
+    }
 }
 
 
