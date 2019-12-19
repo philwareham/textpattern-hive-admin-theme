@@ -26,6 +26,11 @@ hr {
     overflow: visible;
     border: 0; // remove the default `hr` border
     border-bottom: 1px solid $color-border;
+
+    &.secondary {
+        margin: 0.33em 0;
+        border-style: dashed;
+    }
 }
 
 @include dark-mode {
