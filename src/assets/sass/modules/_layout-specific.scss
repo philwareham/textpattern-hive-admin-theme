@@ -155,7 +155,7 @@ body.darkmode.login {
 
         &:focus {
             border-color: $color-link-focus;
-            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+            outline: 0;
         }
     }
 
@@ -169,6 +169,7 @@ body.darkmode.login {
 
         &:focus {
             border-color: $color-link-focus;
+            border-bottom-color: $color-background;
         }
     }
 }
@@ -209,17 +210,10 @@ body.darkmode.login {
 
             &:focus {
                 border-color: $dark-color-link-focus;
+                border-bottom-color: $dark-color-background;
             }
         }
     }
-}
-
-/**
- * Write page excerpt field when in HTML preview.
- */
-
-.html .excerpt {
-    margin-bottom: 1em;
 }
 
 /**
