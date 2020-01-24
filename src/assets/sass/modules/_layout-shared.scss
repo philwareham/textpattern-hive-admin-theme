@@ -898,6 +898,14 @@ span.spinner {
 }
 
 /**
+ * Better alignment of 'Set timestamp to now' within edit panes.
+ */
+
+.txp-edit .posted-now {
+    margin-left: 50%;
+}
+
+/**
  * Constrain the width of vertical tab column 2 groups.
  */
 

@@ -417,6 +417,14 @@
     }
 
     /**
+     * Remove forced alignment of 'Set timestamp to now' within edit panes.
+     */
+
+    .txp-edit .posted-now {
+        margin-left: 0;
+    }
+
+    /**
      * Label/value one-column layouts within panes.
      *
      * Collapsed from two-column format on desktop layout (remove flexbox).
