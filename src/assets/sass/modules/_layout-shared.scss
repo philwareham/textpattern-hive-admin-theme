@@ -777,6 +777,21 @@ span.spinner {
 }
 
 /**
+ * Allow a 'shim' to move non-regular form fields 50% across panels.
+ */
+
+.txp-form-field-shim {
+    margin-left: 50%;
+}
+
+[dir="rtl"] {
+    .txp-form-field-shim {
+        margin-right: 50%;
+        margin-left: 0;
+    }
+}
+
+/**
  * Inline form field pairings on edit panels, preferences group panels and
  * setup panels.
  *
@@ -895,14 +910,6 @@ span.spinner {
     .txp-textarea-preview {
         margin: 0 1em 0 0;
     }
-}
-
-/**
- * Better alignment of 'Set timestamp to now' within edit panes.
- */
-
-.txp-edit .posted-now {
-    margin-left: 50%;
 }
 
 /**

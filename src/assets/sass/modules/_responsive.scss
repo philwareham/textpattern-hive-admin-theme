@@ -417,11 +417,18 @@
     }
 
     /**
-     * Remove forced alignment of 'Set timestamp to now' within edit panes.
+     * Remove forced 'shim' alignments.
      */
 
-    .txp-edit .posted-now {
+    .txp-form-field-shim {
         margin-left: 0;
+    }
+
+    [dir="rtl"] {
+        .txp-form-field-shim {
+            margin-right: 0;
+            margin-left: 0;
+        }
     }
 
     /**
