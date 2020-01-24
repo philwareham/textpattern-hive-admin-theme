@@ -199,37 +199,47 @@
                     <h1 class="design-patterns-heading">Columns and grids</h1>
 
                     <h2 class="design-patterns-heading">Page layout columns <span class="information">new v4.6</span></h2>
-                    <p>Responsive page layout grid.</p>
+                    <p>Responsive page layout grid. As of Textpattern v4.8, additional 3 column layouts are also supported.</p>
                     <p><strong>Code:</strong></p>
                     <pre dir="ltr"><code class="language-markup">&lt;div class="txp-layout"&gt;
 
-    &lt;div class="txp-layout-1col"&gt;...Opt1: 1col - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-1col"&gt;Opt1: 1col&lt;/div&gt;
 
-    &lt;div class="txp-layout-2col"&gt;...Opt2: 2col cell1 - content here...&lt;/div&gt;
-    &lt;div class="txp-layout-2col"&gt;...Opt2: 2col cell2 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-2col"&gt;Opt2: 2col cell1&lt;/div&gt;
+    &lt;div class="txp-layout-2col"&gt;Opt2: 2col cell2&lt;/div&gt;
 
-    &lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell1 - content here...&lt;/div&gt;
-    &lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell2 - content here...&lt;/div&gt;
-    &lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell3 - content here...&lt;/div&gt;
-    &lt;div class="txp-layout-4col"&gt;...Opt3: 4col cell4 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-3col"&gt;Opt3: 3col cell1&lt;/div&gt;
+    &lt;div class="txp-layout-3col"&gt;Opt3: 3col cell2&lt;/div&gt;
+    &lt;div class="txp-layout-3col"&gt;Opt3: 3col cell3&lt;/div&gt;
 
-    &lt;div class="txp-layout-4col-2span"&gt;...Opt4: 4col cell1and2 - content here...&lt;/div&gt;
-    &lt;div class="txp-layout-4col"&gt;...Opt4: 4col cell3 - content here...&lt;/div&gt;
-    &lt;div class="txp-layout-4col"&gt;...Opt4: 4col cell4 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-3col-2span"&gt;Opt4: 3col cell1and2&lt;/div&gt;
+    &lt;div class="txp-layout-3col"&gt;Opt4: 3col cell3&lt;/div&gt;
 
-    &lt;div class="txp-layout-4col-alt"&gt;...Opt5: 4col cell1 - content here...&lt;/div&gt;
-    &lt;div class="txp-layout-4col-2span"&gt;...Opt5: 4col cell2and3 - content here...&lt;/div&gt;
-    &lt;div class="txp-layout-4col-alt"&gt;...Opt5: 4col cell4 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-3col"&gt;Opt5: 3col cell1&lt;/div&gt;
+    &lt;div class="txp-layout-3col-2span"&gt;Opt5: 3col cell2and3&lt;/div&gt;
 
-    &lt;div class="txp-layout-4col"&gt;...Opt6: 4col cell1 - content here...&lt;/div&gt;
-    &lt;div class="txp-layout-4col"&gt;...Opt6: 4col cell2 - content here...&lt;/div&gt;
-    &lt;div class="txp-layout-4col-2span"&gt;...Opt6: 4col cell3and4 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;Opt6: 4col cell1&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;Opt6: 4col cell2&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;Opt6: 4col cell3&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;Opt6: 4col cell4&lt;/div&gt;
 
-    &lt;div class="txp-layout-4col-3span"&gt;...Opt7: 4col cell1and2and3 - content here...&lt;/div&gt;
-    &lt;div class="txp-layout-4col-alt"&gt;...Opt7: 4col cell4 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col-2span"&gt;Opt7: 4col cell1and2&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;Opt7: 4col cell3&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;Opt7: 4col cell4&lt;/div&gt;
 
-    &lt;div class="txp-layout-4col-alt"&gt;...Opt8: 4col cell1 - content here...&lt;/div&gt;
-    &lt;div class="txp-layout-4col-3span"&gt;...Opt8: 4col cell2and3and4 - content here...&lt;/div&gt;
+    &lt;div class="txp-layout-4col-alt"&gt;Opt8: 4col cell1&lt;/div&gt;
+    &lt;div class="txp-layout-4col-2span"&gt;Opt8: 4col cell2and3&lt;/div&gt;
+    &lt;div class="txp-layout-4col-alt"&gt;Opt8: 4col cell4&lt;/div&gt;
+
+    &lt;div class="txp-layout-4col"&gt;Opt9: 4col cell1&lt;/div&gt;
+    &lt;div class="txp-layout-4col"&gt;Opt9: 4col cell2&lt;/div&gt;
+    &lt;div class="txp-layout-4col-2span"&gt;Opt9: 4col cell3and4&lt;/div&gt;
+
+    &lt;div class="txp-layout-4col-3span"&gt;Opt10: 4col cell1and2and3&lt;/div&gt;
+    &lt;div class="txp-layout-4col-alt"&gt;Opt10: 4col cell4&lt;/div&gt;
+
+    &lt;div class="txp-layout-4col-alt"&gt;Opt11: 4col cell1&lt;/div&gt;
+    &lt;div class="txp-layout-4col-3span"&gt;Opt11: 4col cell2and3and4&lt;/div&gt;
 
 &lt;/div&gt;</code></pre>
                     <p><strong>Example:</strong></p>
@@ -237,71 +247,95 @@
                     <div class="txp-layout">
 
                         <div class="txp-layout-1col">
-                            <p class="design-patterns-box">Opt1: 1col</p>
+                            <p class="design-patterns-box">Opt1: 1col</h6>
                         </div>
 
                         <div class="txp-layout-2col">
-                            <p class="design-patterns-box">Opt2: 2col cell1</p>
+                            <p class="design-patterns-box">Opt2: 2col cell1</h6>
                         </div>
                         <div class="txp-layout-2col">
-                            <p class="design-patterns-box">Opt2: 2col cell2</p>
+                            <p class="design-patterns-box">Opt2: 2col cell2</h6>
+                        </div>
+
+                        <div class="txp-layout-3col">
+                            <p class="design-patterns-box">Opt3: 3col cell1</h6>
+                        </div>
+                        <div class="txp-layout-3col">
+                            <p class="design-patterns-box">Opt3: 3col cell2</h6>
+                        </div>
+                        <div class="txp-layout-3col">
+                            <p class="design-patterns-box">Opt3: 3col cell3</h6>
+                        </div>
+
+                        <div class="txp-layout-3col-2span">
+                            <p class="design-patterns-box">Opt4: 3col cell1and2</h6>
+                        </div>
+                        <div class="txp-layout-3col">
+                            <p class="design-patterns-box">Opt4: 3col cell3</h6>
+                        </div>
+
+                        <div class="txp-layout-3col">
+                            <p class="design-patterns-box">Opt5: 3col cell1</h6>
+                        </div>
+                        <div class="txp-layout-3col-2span">
+                            <p class="design-patterns-box">Opt5: 3col cell2and3</h6>
                         </div>
 
                         <div class="txp-layout-4col">
-                            <p class="design-patterns-box">Opt3: 4col cell1</p>
+                            <p class="design-patterns-box">Opt6: 4col cell1</h6>
                         </div>
                         <div class="txp-layout-4col">
-                            <p class="design-patterns-box">Opt3: 5col cell2</p>
+                            <p class="design-patterns-box">Opt6: 4col cell2</h6>
                         </div>
                         <div class="txp-layout-4col">
-                            <p class="design-patterns-box">Opt3: 6col cell3</p>
+                            <p class="design-patterns-box">Opt6: 4col cell3</h6>
                         </div>
                         <div class="txp-layout-4col">
-                            <p class="design-patterns-box">Opt3: 7col cell4</p>
+                            <p class="design-patterns-box">Opt6: 4col cell4</h6>
                         </div>
 
                         <div class="txp-layout-4col-2span">
-                            <p class="design-patterns-box">Opt4: 4col cell1and2</p>
+                            <p class="design-patterns-box">Opt7: 4col cell1and2</h6>
                         </div>
                         <div class="txp-layout-4col">
-                            <p class="design-patterns-box">Opt4: 4col cell3</p>
+                            <p class="design-patterns-box">Opt7: 4col cell3</h6>
                         </div>
                         <div class="txp-layout-4col">
-                            <p class="design-patterns-box">Opt4: 4col cell4</p>
+                            <p class="design-patterns-box">Opt7: 4col cell4</h6>
                         </div>
 
                         <div class="txp-layout-4col-alt">
-                            <p class="design-patterns-box">Opt5: 4col cell1</p>
+                            <p class="design-patterns-box">Opt8: 4col cell1</h6>
                         </div>
                         <div class="txp-layout-4col-2span">
-                            <p class="design-patterns-box">Opt5: 4col cell2and3</p>
+                            <p class="design-patterns-box">Opt8: 4col cell2and3</h6>
                         </div>
                         <div class="txp-layout-4col-alt">
-                            <p class="design-patterns-box">Opt5: 4col cell4</p>
+                            <p class="design-patterns-box">Opt8: 4col cell4</h6>
                         </div>
 
                         <div class="txp-layout-4col">
-                            <p class="design-patterns-box">Opt6: 4col cell1</p>
+                            <p class="design-patterns-box">Opt9: 4col cell1</h6>
                         </div>
                         <div class="txp-layout-4col">
-                            <p class="design-patterns-box">Opt6: 4col cell2</p>
+                            <p class="design-patterns-box">Opt9: 4col cell2</h6>
                         </div>
                         <div class="txp-layout-4col-2span">
-                            <p class="design-patterns-box">Opt6: 4col cell3and4</p>
+                            <p class="design-patterns-box">Opt9: 4col cell3and4</h6>
                         </div>
 
                         <div class="txp-layout-4col-3span">
-                            <p class="design-patterns-box">Opt7: 4col cell1and2and3</p>
+                            <p class="design-patterns-box">Opt10: 4col cell1and2and3</h6>
                         </div>
                         <div class="txp-layout-4col-alt">
-                            <p class="design-patterns-box">Opt7: 4col cell4</p>
+                            <p class="design-patterns-box">Opt10: 4col cell4</h6>
                         </div>
 
                         <div class="txp-layout-4col-alt">
-                            <p class="design-patterns-box">Opt8: 4col cell1</p>
+                            <p class="design-patterns-box">Opt11: 4col cell1</h6>
                         </div>
                         <div class="txp-layout-4col-3span">
-                            <p class="design-patterns-box">Opt8: 4col cell2and3and4</p>
+                            <p class="design-patterns-box">Opt11: 4col cell2and3and4</h6>
                         </div>
 
                     </div>

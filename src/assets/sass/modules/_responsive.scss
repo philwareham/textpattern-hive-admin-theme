@@ -26,15 +26,25 @@
      */
 
     .txp-layout-4col {
-        //grid-column: span 6;
-        width: 50%;
+        grid-column: span 6;
+        width: 50%; // Flexbox fallback.
     }
 
     .txp-layout-4col-alt,
     .txp-layout-4col-2span,
     .txp-layout-4col-3span {
-        //grid-column: span 12;
-        width: 100%;
+        grid-column: span 12;
+        width: 100%; // Flexbox fallback.
+    }
+
+    // Override Flexbox fallback for browsers with CSS Grid support.
+    @supports (display: grid) {
+        .txp-layout-4col,
+        .txp-layout-4col-alt,
+        .txp-layout-4col-2span,
+        .txp-layout-4col-3span {
+            width: auto;
+        }
     }
 
     /**
@@ -207,13 +217,26 @@
      * Grid column cell changes at 2nd breakpoint downwards.
      *
      * Cells for 2 column layout become 1 column layout.
+     * Cells for 3 column layout become 1 column layout.
      * Cells for 4 column layout become 1 column layout.
      */
 
     .txp-layout-2col,
+    .txp-layout-3col,
+    .txp-layout-3col-2span,
     .txp-layout-4col {
-        //grid-column: span 12;
-        width: 100%;
+        grid-column: span 12;
+        width: 100%; // Flexbox fallback.
+    }
+
+    // Override Flexbox fallback for browsers with CSS Grid support.
+    @supports (display: grid) {
+        .txp-layout-2col,
+        .txp-layout-3col,
+        .txp-layout-3col-2span,
+        .txp-layout-4col {
+            width: auto;
+        }
     }
 
     .txp-layout-cell-row {

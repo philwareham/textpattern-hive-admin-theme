@@ -2,38 +2,26 @@
    ========================================================================== */
 
 /**
- * Flexbox container.
+ * Flexbox/grid container.
  *
- * TODO: remove this when we drop IE11 and browser CSS Grid support is widespread.
+ * TODO: revise this when we drop IE11 and browser CSS Grid support is widespread.
  */
 
 .txp-layout {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -1em;
+    display: flex; // Flexbox fallback for browsers without CSS Grid support.
+    display: grid;
+    gap: 0 2em;
+    grid-template-columns: repeat(12, 1fr);
+    flex-wrap: wrap; // Flexbox fallback for browsers without CSS Grid support.
+    margin: 0 -1em; // Flexbox fallback for browsers without CSS Grid support.
 
     > * {
-        box-sizing: border-box;
-        min-width: 0;
-        padding: 0 1em;
+        box-sizing: border-box; // Flexbox fallback.
+        min-width: 0; // Fix Firefox `pre` overflow issues.
+        padding: 0 1em; // Flexbox fallback.
+        overflow: hidden; // Avoid content spillage?
     }
 }
-
-/**
- * Grid container.
- *
- * TODO: use this when we drop IE11 and browser CSS Grid support is widespread.
- */
-
-//.txp-layout {
-//    display: grid;
-//    grid-template-columns: repeat(12, 1fr);
-//    gap: 2em;
-//
-//    > * {
-//        overflow: auto; // Avoid content spillage.
-//    }
-//}
 
 /**
  * Generate sizes all for grid column cells.
@@ -42,8 +30,6 @@
  * initially (1 column full width, 2 column, 4 column). We will then
  * adjust them at various breakpoints.
  *
- * TODO: remove `width` and use `grid-column` for `.layout-x` when we move to CSS Grid.
- *
  * Example HTML:
  *
  * <div class="txp-layout-1col"></div>
@@ -51,30 +37,62 @@
  * <div class="txp-layout-2col">
  * <div class="txp-layout-2col">
  *
+ * <div class="txp-layout-3col">
+ * <div class="txp-layout-3col-2span">
+ *
  * <div class="txp-layout-4col-3span"></div>
  * <div class="txp-layout-4col"></div>
  */
 
 .txp-layout-1col {
-    //grid-column: span 12;
-    width: 100%;
+    grid-column: span 12;
+    width: 100%; // Flexbox fallback.
+}
+
+.txp-layout-3col {
+    grid-column: span 4;
+    width: 33.333%; // Flexbox fallback.
+}
+
+.txp-layout-3col-2span {
+    grid-column: span 8;
+    width: 66.666%; // Flexbox fallback.
 }
 
 .txp-layout-4col-3span {
-    //grid-column: span 9;
-    width: 75%;
+    grid-column: span 9;
+    width: 75%; // Flexbox fallback.
 }
 
 .txp-layout-2col,
 .txp-layout-4col-2span {
-    //grid-column: span 6;
-    width: 50%;
+    grid-column: span 6;
+    width: 50%; // Flexbox fallback.
 }
 
 .txp-layout-4col,
 .txp-layout-4col-alt {
-    //grid-column: span 3;
-    width: 25%;
+    grid-column: span 3;
+    width: 25%; // Flexbox fallback.
+}
+
+// Override Flexbox fallback for browsers with CSS Grid support.
+@supports (display: grid) {
+    .txp-layout {
+        margin: 0;
+    }
+
+    .txp-layout-1col,
+    .txp-layout-2col,
+    .txp-layout-3col,
+    .txp-layout-3col-2span,
+    .txp-layout-4col,
+    .txp-layout-4col-alt,
+    .txp-layout-4col-2span,
+    .txp-layout-4col-3span {
+        width: auto;
+        padding: 0;
+    }
 }
 
 .txp-layout-cell-row {
