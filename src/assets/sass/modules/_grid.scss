@@ -19,7 +19,6 @@
         box-sizing: border-box; // Flexbox fallback.
         min-width: 0; // Fix Firefox `pre` overflow issues.
         padding: 0 1em; // Flexbox fallback.
-        overflow: hidden; // Avoid content spillage?
     }
 }
 
