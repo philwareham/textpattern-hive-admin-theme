@@ -221,6 +221,10 @@
      * Cells for 4 column layout become 1 column layout.
      */
 
+    .txp-layout {
+        gap: 0; // Prevent content overflow.
+    }
+
     .txp-layout-2col,
     .txp-layout-3col,
     .txp-layout-3col-2span,
