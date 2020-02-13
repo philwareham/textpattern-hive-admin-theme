@@ -74,3 +74,38 @@ a {
 [dir="rtl"] a {
     unicode-bidi: embed;
 }
+
+/**
+ * Visually hide unfocussed/inactive ‘skip links’.
+ *
+ * Example HTML:
+ *
+ * <a class="txp-skip-link">
+ */
+
+.txp-skip-link {
+    position: absolute;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    padding: 0.25em 0.5em;
+    transform: translateY(-5em);
+    transition: transform 0.2s ease-in-out;
+    background-color: $color-background-box;
+
+    &:focus,
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+@include dark-mode {
+    .txp-skip-link {
+        background-color: $dark-color-background-box;
+    }
+}
+
+[dir="rtl"] .txp-skip-link {
+    right: 1px;
+    left: auto;
+}
