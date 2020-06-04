@@ -16,13 +16,6 @@ The default admin theme that ships as standard with [Textpattern CMS](https://te
 * Internet Explorer 11.
 * Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases.
 
-## Requirements
-
-Building this repository requires:
-
-* [Node.js](https://nodejs.org/) >=4.0
-* [Grunt](https://gruntjs.com/) >=1.0
-
 ## Build setup
 
 ### Installing required tools
