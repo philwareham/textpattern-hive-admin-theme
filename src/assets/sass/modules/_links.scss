@@ -1,3 +1,6 @@
+@use "../setup/colours";
+@use "../setup/helpers";
+
 /* Links
    ========================================================================== */
 
@@ -10,18 +13,18 @@
  */
 
 a {
-    color: $color-link; /* 1 */
+    color: colours.$color-link; /* 1 */
     text-decoration: none; /* 2 */
     text-decoration-skip-ink: auto; /* 3 */
 
     &:hover,
     &:active {
-        color: $color-link-hover;
+        color: colours.$color-link-hover;
         text-decoration: underline;
     }
 
     &:focus {
-        outline: thin solid $color-link-focus;
+        outline: thin solid colours.$color-link-focus;
     }
 
     &.busy {
@@ -29,17 +32,17 @@ a {
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     a {
-        color: $dark-color-link;
+        color: colours.$dark-color-link;
 
         &:hover,
         &:active {
-            color: $dark-color-link-hover;
+            color: colours.$dark-color-link-hover;
         }
 
         &:focus {
-            outline: thin solid $dark-color-link-focus;
+            outline: thin solid colours.$dark-color-link-focus;
         }
     }
 }
@@ -91,7 +94,7 @@ a {
     padding: 0.25em 0.5em;
     transform: translateY(-5em);
     transition: transform 0.2s ease-in-out;
-    background-color: $color-background-box;
+    background-color: colours.$color-background-box;
 
     &:focus,
     &:active {
@@ -99,9 +102,9 @@ a {
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .txp-skip-link {
-        background-color: $dark-color-background-box;
+        background-color: colours.$dark-color-background-box;
     }
 }
 

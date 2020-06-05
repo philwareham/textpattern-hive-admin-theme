@@ -1,11 +1,11 @@
 // import global variables
-@import "setup/settings";
+@use "setup/settings";
 
 // import any additional mixins
-@import "setup/helpers";
+@use "setup/helpers";
 
 // import colourscheme
-@import "setup/colours";
+@use "setup/colours";
 
 
 
@@ -43,7 +43,7 @@ body {
  */
 
 .information code {
-    color: $color-text;
+    color: colours.$color-text;
 }
 
 /**
@@ -61,13 +61,13 @@ body {
         width: 1.5em;
         height: 1.5em;
         border-radius: 0.25em;
-        background-color: rgba($color-link-focus, 0.25);
+        background-color: rgba(colours.$color-link-focus, 0.25);
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .is-inview::before {
-        background-color: rgba($dark-color-link-focus, 0.25);
+        background-color: rgba(colours.$dark-color-link-focus, 0.25);
     }
 }
 
@@ -82,65 +82,65 @@ body {
  */
 
 $colors: (
-    "text":                 $color-text,
-    "text-footnote":        $color-text-footnote,
-    "gradient-from":        $color-gradient-from,
-    "gradient-to":          $color-gradient-to,
-    "border-extra-dark":    $color-border-extra-dark,
-    "border-dark":          $color-border-dark,
-    "border":               $color-border,
-    "border-light":         $color-border-light,
-    "border-extra-light":   $color-border-extra-light,
-    "link":                 $color-link,
-    "link-hover":           $color-link-hover,
-    "link-focus":           $color-link-focus,
-    "link-selecting":       $color-selecting,
-    "link-selected":        $color-selected,
-    "background":           $color-background,
-    "background-box":       $color-background-box,
-    "highlight-box":        $color-highlight-box,
-    "strong-highlight-box": $color-strong-highlight-box,
-    "accent-gradient-from": $color-accent-gradient-from,
-    "accent-gradient-to":   $color-accent-gradient-to,
-    "success-text":         $color-success-text,
-    "success-background":   $color-success-background,
-    "warning-text":         $color-warning-text,
-    "warning-background":   $color-warning-background,
-    "error-text":           $color-error-text,
-    "error-background":     $color-error-background,
-    "info-text":            $color-info-text,
-    "info-background":      $color-info-background
+    "text":                 colours.$color-text,
+    "text-footnote":        colours.$color-text-footnote,
+    "gradient-from":        colours.$color-gradient-from,
+    "gradient-to":          colours.$color-gradient-to,
+    "border-extra-dark":    colours.$color-border-extra-dark,
+    "border-dark":          colours.$color-border-dark,
+    "border":               colours.$color-border,
+    "border-light":         colours.$color-border-light,
+    "border-extra-light":   colours.$color-border-extra-light,
+    "link":                 colours.$color-link,
+    "link-hover":           colours.$color-link-hover,
+    "link-focus":           colours.$color-link-focus,
+    "link-selecting":       colours.$color-selecting,
+    "link-selected":        colours.$color-selected,
+    "background":           colours.$color-background,
+    "background-box":       colours.$color-background-box,
+    "highlight-box":        colours.$color-highlight-box,
+    "strong-highlight-box": colours.$color-strong-highlight-box,
+    "accent-gradient-from": colours.$color-accent-gradient-from,
+    "accent-gradient-to":   colours.$color-accent-gradient-to,
+    "success-text":         colours.$color-success-text,
+    "success-background":   colours.$color-success-background,
+    "warning-text":         colours.$color-warning-text,
+    "warning-background":   colours.$color-warning-background,
+    "error-text":           colours.$color-error-text,
+    "error-background":     colours.$color-error-background,
+    "info-text":            colours.$color-info-text,
+    "info-background":      colours.$color-info-background
 );
 
 $dark-colors: (
-    "text":                 $dark-color-text,
-    "text-footnote":        $dark-color-text-footnote,
-    "gradient-from":        $dark-color-gradient-from,
-    "gradient-to":          $dark-color-gradient-to,
-    "border-extra-dark":    $dark-color-border-extra-dark,
-    "border-dark":          $dark-color-border-dark,
-    "border":               $dark-color-border,
-    "border-light":         $dark-color-border-light,
-    "border-extra-light":   $dark-color-border-extra-light,
-    "link":                 $dark-color-link,
-    "link-hover":           $dark-color-link-hover,
-    "link-focus":           $dark-color-link-focus,
-    "link-selecting":       $dark-color-selecting,
-    "link-selected":        $dark-color-selected,
-    "background":           $dark-color-background,
-    "background-box":       $dark-color-background-box,
-    "highlight-box":        $dark-color-highlight-box,
-    "strong-highlight-box": $dark-color-strong-highlight-box,
-    "accent-gradient-from": $color-accent-gradient-from,
-    "accent-gradient-to":   $color-accent-gradient-to,
-    "success-text":         $dark-color-success-text,
-    "success-background":   $dark-color-success-background,
-    "warning-text":         $dark-color-warning-text,
-    "warning-background":   $dark-color-warning-background,
-    "error-text":           $dark-color-error-text,
-    "error-background":     $dark-color-error-background,
-    "info-text":            $dark-color-info-text,
-    "info-background":      $dark-color-info-background
+    "text":                 colours.$dark-color-text,
+    "text-footnote":        colours.$dark-color-text-footnote,
+    "gradient-from":        colours.$dark-color-gradient-from,
+    "gradient-to":          colours.$dark-color-gradient-to,
+    "border-extra-dark":    colours.$dark-color-border-extra-dark,
+    "border-dark":          colours.$dark-color-border-dark,
+    "border":               colours.$dark-color-border,
+    "border-light":         colours.$dark-color-border-light,
+    "border-extra-light":   colours.$dark-color-border-extra-light,
+    "link":                 colours.$dark-color-link,
+    "link-hover":           colours.$dark-color-link-hover,
+    "link-focus":           colours.$dark-color-link-focus,
+    "link-selecting":       colours.$dark-color-selecting,
+    "link-selected":        colours.$dark-color-selected,
+    "background":           colours.$dark-color-background,
+    "background-box":       colours.$dark-color-background-box,
+    "highlight-box":        colours.$dark-color-highlight-box,
+    "strong-highlight-box": colours.$dark-color-strong-highlight-box,
+    "accent-gradient-from": colours.$color-accent-gradient-from,
+    "accent-gradient-to":   colours.$color-accent-gradient-to,
+    "success-text":         colours.$dark-color-success-text,
+    "success-background":   colours.$dark-color-success-background,
+    "warning-text":         colours.$dark-color-warning-text,
+    "warning-background":   colours.$dark-color-warning-background,
+    "error-text":           colours.$dark-color-error-text,
+    "error-background":     colours.$dark-color-error-background,
+    "info-text":            colours.$dark-color-info-text,
+    "info-background":      colours.$dark-color-info-background
 );
 
 .design-patterns-color {
@@ -148,20 +148,20 @@ $dark-colors: (
     position: relative;
     height: 3em; // 39px / 13px
     margin: 1em 0;
-    border: 1px solid $color-border;
+    border: 1px solid colours.$color-border;
 
     &::after {
         position: absolute;
         top: 0.69230769230769em; // 9px / 13px
         padding: 1px 0.23076923076923em; // 3px / 13px
         background-color: rgba(255, 255, 255, 0.66);
-        font-family: $font-code;
+        font-family: settings.$font-code;
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .design-patterns-color {
-        border-color: $dark-color-border;
+        border-color: colours.$dark-color-border;
 
         &::after {
             background-color: rgba(0, 0, 0, 0.66);
@@ -179,7 +179,7 @@ $dark-colors: (
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     @each $name, $color in $dark-colors {
         .design-patterns-color-#{$name} {
             background: $color;
@@ -276,13 +276,13 @@ h2 span {
     font-weight: normal;
 }
 
-@media (min-width: $break-small) {
+@media (min-width: settings.$break-small) {
     body {
         padding: 0 2em 1em;
     }
 }
 
-@media (min-width: $break-large) {
+@media (min-width: settings.$break-large) {
     body {
         padding: 0 4% 1em;
     }
@@ -302,14 +302,14 @@ h2 span {
         padding: 2em 2%;
         overflow-x: hidden;
         overflow-y: auto;
-        border-right: 1px solid $color-border;
-        background-color: $color-background-box;
+        border-right: 1px solid colours.$color-border;
+        background-color: colours.$color-background-box;
         box-shadow: inset -0.25em 0 0.25em -0.25em rgba(0, 0, 0, 0.2);
     }
 
     body.darkmode .design-patterns-menu {
-        border-right-color: $dark-color-border-extra-dark;
-        background-color: $dark-color-background-box;
+        border-right-color: colours.$dark-color-border-extra-dark;
+        background-color: colours.$dark-color-background-box;
     }
 
     .design-patterns-content {

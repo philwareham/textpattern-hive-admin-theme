@@ -1,3 +1,7 @@
+@use "../../setup/colours";
+@use "../../setup/helpers";
+@use "../../setup/settings";
+
 /* Tabs
    ========================================================================== */
 
@@ -41,7 +45,7 @@
         background: none;
 
         &:not(.switcher-list) .ui-tabs-anchor {
-            color: $color-text;
+            color: colours.$color-text;
             text-decoration: none;
         }
 
@@ -58,7 +62,7 @@
         }
 
         .ui-state-focus a {
-            outline: thin solid $color-link-focus;
+            outline: thin solid colours.$color-link-focus;
         }
     }
 
@@ -71,17 +75,17 @@
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-tabs {
         .ui-tabs-nav {
-            background: $dark-color-background;
+            background: colours.$dark-color-background;
 
             &:not(.switcher-list) .ui-tabs-anchor {
-                color: $dark-color-text;
+                color: colours.$dark-color-text;
             }
 
             .ui-state-focus a {
-                outline: thin solid $dark-color-link-focus;
+                outline: thin solid colours.$dark-color-link-focus;
             }
         }
     }
@@ -97,7 +101,7 @@
         list-style: none;
         white-space: nowrap;
 
-        @if $flat-theme < 1 {
+        @if settings.$flat-theme < 1 {
             box-shadow: inset 0 -0.2em 0.4em rgba(#666666, 0.15);
         }
 
@@ -105,15 +109,15 @@
             margin-bottom: -1px;
             padding-bottom: 1px;
 
-            @if $flat-theme < 1 {
+            @if settings.$flat-theme < 1 {
                 box-shadow: none;
             }
         }
     }
 }
 
-@if $flat-theme < 1 {
-    @include dark-mode {
+@if settings.$flat-theme < 1 {
+    @include helpers.dark-mode {
         .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li {
             box-shadow: inset 0 -0.25em 0.5em rgba(#000000, 0.4);
 
@@ -138,11 +142,11 @@
 
 .ui-tabs-vertical {
     .ui-tabs-nav {
-        border-bottom: 1px solid $color-border-light;
+        border-bottom: 1px solid colours.$color-border-light;
 
         li {
             display: block;
-            border: 1px solid $color-border-light;
+            border: 1px solid colours.$color-border-light;
             border-bottom: 1px solid transparent;
         }
     }
@@ -152,12 +156,12 @@
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-tabs-vertical .ui-tabs-nav {
-        border-bottom-color: $dark-color-border-light;
+        border-bottom-color: colours.$dark-color-border-light;
 
         li {
-            border-color: $dark-color-border-light;
+            border-color: colours.$dark-color-border-light;
             border-bottom-color: transparent;
         }
     }

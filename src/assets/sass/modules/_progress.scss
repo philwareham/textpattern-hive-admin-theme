@@ -1,3 +1,6 @@
+@use "../setup/colours";
+@use "../setup/helpers";
+
 /* Progress indicators
    ========================================================================== */
 
@@ -22,20 +25,20 @@ progress {
     width: 100%;
     max-width: 30em; // 390px / 13px
     height: 8px;
-    border: 1px solid $color-border;
-    background-color: $color-gradient-to;
+    border: 1px solid colours.$color-border;
+    background-color: colours.$color-gradient-to;
     appearance: none;
 }
 
 // WebKit/Blink.
 
 .txp-upload-progress::-webkit-progress-bar {
-    background-color: $color-gradient-to;
+    background-color: colours.$color-gradient-to;
 }
 
 .txp-upload-progress::-webkit-progress-value {
     animation: progressbar-stripes linear 4s infinite;
-    background-color: $color-accent-gradient-to;
+    background-color: colours.$color-accent-gradient-to;
     background-image:
         linear-gradient(
             135deg,
@@ -52,7 +55,7 @@ progress {
 
 .txp-upload-progress:indeterminate::-webkit-progress-bar {
     animation: progressbar-stripes linear 4s infinite;
-    background-color: $color-border;
+    background-color: colours.$color-border;
     background-image:
         linear-gradient(
             135deg,
@@ -78,7 +81,7 @@ progress {
 .txp-upload-progress::-moz-progress-bar {
     /* autoprefixer: off */
     animation: progressbar-stripes linear 4s infinite;
-    background-color: $color-accent-gradient-to;
+    background-color: colours.$color-accent-gradient-to;
     background-image:
         linear-gradient(
             135deg,
@@ -96,7 +99,7 @@ progress {
 .txp-upload-progress:indeterminate::-moz-progress-bar {
     /* autoprefixer: off */
     animation: progressbar-stripes linear 4s infinite;
-    background-color: $color-border;
+    background-color: colours.$color-border;
     background-image:
         linear-gradient(
             135deg,
@@ -123,7 +126,7 @@ progress {
     /* autoprefixer: off */
     animation: progressbar-stripes linear 4s infinite;
     border: 0;
-    background-color: $color-accent-gradient-to;
+    background-color: colours.$color-accent-gradient-to;
     background-image:
         linear-gradient(
             135deg,
@@ -144,26 +147,26 @@ progress {
     background-image: none;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .txp-upload-progress {
-        border-color: $dark-color-border;
-        background-color: $dark-color-background-box;
+        border-color: colours.$dark-color-border;
+        background-color: colours.$dark-color-background-box;
     }
 
     // WebKit/Blink.
 
     .txp-upload-progress::-webkit-progress-bar {
-        background-color: $dark-color-background-box;
+        background-color: colours.$dark-color-background-box;
     }
 
     .txp-upload-progress:indeterminate::-webkit-progress-bar {
-        background-color: $dark-color-border;
+        background-color: colours.$dark-color-border;
     }
 
     // Gecko/Quantum.
 
     .txp-upload-progress:indeterminate::-moz-progress-bar {
-        background-color: $dark-color-border;
+        background-color: colours.$dark-color-border;
     }
 }
 

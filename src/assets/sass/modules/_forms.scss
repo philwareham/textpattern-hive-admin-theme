@@ -1,3 +1,7 @@
+@use "../setup/colours";
+@use "../setup/helpers";
+@use "../setup/settings";
+
 /* Forms
    ========================================================================== */
 
@@ -10,12 +14,12 @@ fieldset {
     min-width: 0; /* 1 */
     margin: 1em 0; /* 2 */
     padding: 1px 1em; /* 2 */
-    border: 1px solid $color-border; /* 2 */
+    border: 1px solid colours.$color-border; /* 2 */
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     fieldset {
-        border-color: $dark-color-border;
+        border-color: colours.$dark-color-border;
     }
 }
 
@@ -64,19 +68,19 @@ textarea,
     box-sizing: border-box;
     max-width: 100%; /* 1 */
     margin: 0; /* 2 */
-    color: $color-text-form;
+    color: colours.$color-text-form;
     font-family: inherit;
     font-size: 1rem; /* 3 */
-    line-height: $base-line-height;
+    line-height: settings.$base-line-height;
     vertical-align: baseline;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     input,
     select,
     optgroup,
     textarea {
-        color: $dark-color-text-form;
+        color: colours.$dark-color-text-form;
     }
 }
 
@@ -104,22 +108,22 @@ select,
 textarea {
     height: 2.307692307692308em; // 30px / 13px
     padding: 0.30769230769231em; // 4px / 13px
-    border: 1px solid $color-border;
+    border: 1px solid colours.$color-border;
     border-radius: 0;
-    background: $color-background-form;
+    background: colours.$color-background-form;
     appearance: none; /* 1 */
 
     &:hover {
-        border-color: $color-border-extra-dark;
+        border-color: colours.$color-border-extra-dark;
     }
 
     &:focus {
-        border-color: $color-link-focus;
+        border-color: colours.$color-link-focus;
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     [type="color"],
     [type="date"],
     [type="datetime"],
@@ -136,15 +140,15 @@ textarea {
     [type="week"],
     select,
     textarea {
-        border-color: $dark-color-border-extra-dark;
-        background-color: $dark-color-background-form;
+        border-color: colours.$dark-color-border-extra-dark;
+        background-color: colours.$dark-color-background-form;
 
         &:hover {
-            border-color: $dark-color-border-extra-light;
+            border-color: colours.$dark-color-border-extra-light;
         }
 
         &:focus {
-            border-color: $dark-color-link-focus;
+            border-color: colours.$dark-color-link-focus;
         }
     }
 }
@@ -162,8 +166,8 @@ textarea {
     width: 16px;
     height: 16px;
     padding: 0; /* 1 */
-    border: 1px solid $color-border-extra-dark;
-    background: $color-background-form;
+    border: 1px solid colours.$color-border-extra-dark;
+    background: colours.$color-background-form;
     appearance: none;
 
     + label:not(.ui-controlgroup-item) {
@@ -175,12 +179,12 @@ textarea {
     }
 
     &:hover {
-        border-color: shade($color-border-extra-dark, 15%);
+        border-color: colours.shade(colours.$color-border-extra-dark, 15%);
         cursor: pointer;
     }
 
     &:focus {
-        border-color: $color-link-focus;
+        border-color: colours.$color-link-focus;
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 
@@ -189,18 +193,18 @@ textarea {
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     [type="checkbox"]:not(.ui-checkboxradio),
     [type="radio"]:not(.ui-checkboxradio) {
-        border-color: $dark-color-border-extra-dark;
-        background-color: $dark-color-background-form;
+        border-color: colours.$dark-color-border-extra-dark;
+        background-color: colours.$dark-color-background-form;
 
         &:hover {
-            border-color: $dark-color-border-extra-light;
+            border-color: colours.$dark-color-border-extra-light;
         }
 
         &:focus {
-            border-color: $dark-color-link-focus;
+            border-color: colours.$dark-color-link-focus;
         }
     }
 }
@@ -208,40 +212,40 @@ textarea {
 [type="checkbox"]:not(.ui-checkboxradio) {
     &:checked {
         border: 0;
-        background: $color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+        background: colours.$color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
 
         &:hover,
         &:active {
-            background-color: $color-text;
+            background-color: colours.$color-text;
         }
 
         &:focus {
-            background-color: $color-link-focus;
+            background-color: colours.$color-link-focus;
         }
     }
 
     &[disabled]:checked {
-        background: $color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+        background: colours.$color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     [type="checkbox"]:not(.ui-checkboxradio) {
         &:checked {
-            background: $dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+            background: colours.$dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
 
             &:hover,
             &:active {
-                background-color: $dark-color-text-heading;
+                background-color: colours.$dark-color-text-heading;
             }
 
             &:focus {
-                background-color: $dark-color-link-focus;
+                background-color: colours.$dark-color-link-focus;
             }
         }
 
         &[disabled]:checked {
-            background: $dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+            background: colours.$dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
         }
     }
 }
@@ -250,30 +254,30 @@ textarea {
     border-radius: 100%;
 
     &:checked {
-        border: 5px solid $color-text-footnote;
+        border: 5px solid colours.$color-text-footnote;
 
         &:hover,
         &:active {
-            border-color: $color-text;
+            border-color: colours.$color-text;
         }
 
         &:focus {
-            border-color: $color-link-focus;
+            border-color: colours.$color-link-focus;
         }
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     [type="radio"]:not(.ui-checkboxradio):checked {
-        border-color: $dark-color-text;
+        border-color: colours.$dark-color-text;
 
         &:hover,
         &:active {
-            border-color: $dark-color-text-heading;
+            border-color: colours.$dark-color-text-heading;
         }
 
         &:focus {
-            border-color: $dark-color-link-focus;
+            border-color: colours.$dark-color-link-focus;
         }
     }
 }
@@ -304,43 +308,43 @@ textarea {
     height: auto;
     min-height: 2.307692307692308em; // 30px / 13px
     padding: 0.30769230769231em; // 4px / 13px
-    border: 1px solid $color-border;
+    border: 1px solid colours.$color-border;
     border-radius: 0;
-    background: $color-background-form;
+    background: colours.$color-background-form;
     appearance: none;
     cursor: pointer;
 
     &:hover {
-        border-color: $color-border-extra-dark;
+        border-color: colours.$color-border-extra-dark;
     }
 
     &:focus {
-        border-color: $color-link-focus;
+        border-color: colours.$color-link-focus;
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     [type="file"] {
-        border-color: $dark-color-border-extra-dark;
-        background-color: $dark-color-background-form;
+        border-color: colours.$dark-color-border-extra-dark;
+        background-color: colours.$dark-color-background-form;
 
         &:hover {
-            border-color: $dark-color-border-extra-light;
+            border-color: colours.$dark-color-border-extra-light;
         }
 
         &:focus {
-            border-color: $dark-color-link-focus;
+            border-color: colours.$dark-color-link-focus;
         }
     }
 }
 
 ::-webkit-file-upload-button {
-    @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+    @include helpers.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
 
     padding: 0 0.25em;
     border: 0;
-    color: $color-text-button;
+    color: colours.$color-text-button;
     font: inherit;
     /* autoprefixer: off */
     appearance: none;
@@ -348,11 +352,11 @@ textarea {
 }
 
 ::-ms-browse {
-    @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+    @include helpers.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
 
     padding: 0 0.25em;
     border: 0;
-    color: $color-text-button;
+    color: colours.$color-text-button;
     font-family: inherit;
     font-size: 1rem;
     font-weight: normal;
@@ -386,14 +390,14 @@ textarea {
 
 select {
     padding-right: 1.30769230769231em; // 17px / 13px
-    background: $color-background-form url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23333' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E") right center no-repeat;
+    background: colours.$color-background-form url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23333' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E") right center no-repeat;
     background-size: 1em 0.30769230769231em;
     text-transform: none;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     select {
-        background-color: $dark-color-background-form;
+        background-color: colours.$dark-color-background-form;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23788591' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E");
     }
 }
@@ -423,7 +427,7 @@ select[multiple] {
     vertical-align: top;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     select[size],
     select[multiple] {
         background-image: none;
@@ -498,23 +502,23 @@ textarea.code {
 .txp-button.disabled,
 .navlink-disabled,
 .ui-checkboxradio-disabled {
-    border: 1px solid $color-border !important;
+    border: 1px solid colours.$color-border !important;
     opacity: 0.33 !important;
-    background-color: $color-background-form-disabled !important;
+    background-color: colours.$color-background-form-disabled !important;
     box-shadow: none !important;
     cursor: default !important; /* 1 */
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     [disabled],
     [disabled] option,
     [disabled] optgroup,
     .txp-button.disabled,
     .navlink-disabled,
     .ui-checkboxradio-disabled {
-        border: 1px solid $dark-color-border !important;
+        border: 1px solid colours.$dark-color-border !important;
         opacity: 0.25 !important;
-        background-color: $dark-color-background-form-disabled !important;
+        background-color: colours.$dark-color-background-form-disabled !important;
     }
 }
 
@@ -612,17 +616,17 @@ input,
 select,
 textarea {
     &:focus:invalid {
-        border-color: $color-error-text;
+        border-color: colours.$color-error-text;
         box-shadow: none; // Normalize Firefox styling
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     input,
     select,
     textarea {
         &:focus:invalid {
-            border-color: $dark-color-error-text;
+            border-color: colours.$dark-color-error-text;
         }
     }
 }
@@ -637,25 +641,25 @@ input,
 select,
 textarea {
     &:-moz-ui-invalid {
-        border-color: $color-error-text;
+        border-color: colours.$color-error-text;
         box-shadow: none;
     }
 
     &:hover:-moz-ui-invalid {
-        border-color: shade($color-error-border, 30%);
+        border-color: colours.shade(colours.$color-error-border, 30%);
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     input,
     select,
     textarea {
         &:-moz-ui-invalid {
-            border-color: $dark-color-error-text;
+            border-color: colours.$dark-color-error-text;
         }
 
         &:hover:-moz-ui-invalid {
-            border-color: tint($dark-color-error-text, 30%);
+            border-color: colours.tint(colours.$dark-color-error-text, 30%);
         }
     }
 }
@@ -668,13 +672,13 @@ textarea {
 
 ::placeholder {
     opacity: 1;
-    color: $color-text-form-placeholder;
+    color: colours.$color-text-form-placeholder;
     font: inherit; /* 1 */
     font-weight: normal;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     ::placeholder {
-        color: $dark-color-text-form-placeholder;
+        color: colours.$dark-color-text-form-placeholder;
     }
 }

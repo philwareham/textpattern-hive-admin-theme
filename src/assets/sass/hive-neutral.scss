@@ -1,11 +1,13 @@
+@use "sass:color";
+@use "sass:meta";
 // slightly lighten a colour
 @function tint($color, $percentage) {
-    @return mix(white, $color, $percentage);
+    @return color.mix(white, $color, $percentage);
 }
 
 // slightly darken a colour
 @function shade($color, $percentage) {
-    @return mix(black, $color, $percentage);
+    @return color.mix(black, $color, $percentage);
 }
 
 // Neutral Grey colourscheme (overrides Classic Yellow defaults)
@@ -21,7 +23,7 @@ $color-gradient-to:                   #eeeeee; // nullify gradient (use flat col
 $color-accent-gradient-from:          #c7e0f6;
 $color-accent-gradient-to:            #c7e0f6; // nullify gradient (use flat colours)
 $color-selecting:                     #c7e0f6;
-$color-selected:                      lighten($color-selecting, 6%);
+$color-selected:                      color.adjust($color-selecting, $lightness: 6%);
 $color-background:                    #f7f7f7;
 $color-background-box:                #ffffff;
 $color-button-gradient-from:          #9dc8ef;
@@ -42,7 +44,7 @@ $dark-color-gradient-to:              shade($dark-color-background, 24%); // nul
 $border-radius:                       0.3em;
 
 // import the default Hive (Classic Yellow) theme
-@import "hive-default";
+@include meta.load-css("hive-default");
 
 @media screen {
     .txp-nav > ul > li {

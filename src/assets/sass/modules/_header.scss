@@ -1,3 +1,8 @@
+@use "sass:color";
+@use "../setup/colours";
+@use "../setup/helpers";
+@use "../setup/settings";
+
 /* Header
    ========================================================================== */
 
@@ -16,7 +21,7 @@
  */
 
 .txp-header {
-    @include gradient-linear($color-accent-gradient-from, $color-accent-gradient-to);
+    @include helpers.gradient-linear(colours.$color-accent-gradient-from, colours.$color-accent-gradient-to);
 
     display: flex;
     position: fixed;
@@ -26,20 +31,20 @@
     left: 0;
     height: 2.69230769230769em; // 35px / 13px
     padding: 0 4%;
-    border-top: 1px solid $color-accent-gradient-to;
-    border-bottom: 1px solid darken($color-accent-gradient-to, 6%);
+    border-top: 1px solid colours.$color-accent-gradient-to;
+    border-bottom: 1px solid color.adjust(colours.$color-accent-gradient-to, $lightness: -6%);
 
-    @if $flat-theme < 1 {
+    @if settings.$flat-theme < 1 {
         box-shadow: 0 0.2em 0.25em rgba(#000000, 0.15);
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .txp-header a {
-        color: $color-text;
+        color: colours.$color-text;
 
         &:focus {
-            outline: thin solid $color-link-focus;
+            outline: thin solid colours.$color-link-focus;
         }
     }
 }
@@ -81,7 +86,7 @@
     }
 
     span {
-        @include hide-text;
+        @include helpers.hide-text;
 
         display: block;
     }
@@ -118,12 +123,12 @@
     span {
         display: block;
         overflow: hidden;
-        color: $color-text;
+        color: colours.$color-text;
         text-overflow: ellipsis;
     }
 
     a {
-        color: $color-text;
+        color: colours.$color-text;
         font-weight: bold;
     }
 }
@@ -154,32 +159,32 @@
         width: 1.5em;
         height: 1.5em;
         transform: translateY(-50%);
-        border: 1px solid darken($color-accent-gradient-to, 6%);
+        border: 1px solid color.adjust(colours.$color-accent-gradient-to, $lightness: -6%);
         border-radius: 0.75em;
-        background: rgba($color-text-inverse, 0.6);
+        background: rgba(colours.$color-text-inverse, 0.6);
         text-align: center;
 
         &:hover {
-            background: rgba($color-text-inverse, 0.8);
+            background: rgba(colours.$color-text-inverse, 0.8);
         }
 
         &:focus {
-            border-color: $color-link-focus;
+            border-color: colours.$color-link-focus;
             outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .txp-lightswitch a {
         background: transparent;
 
         &:hover {
-            background: rgba($color-text-inverse, 0.25);
+            background: rgba(colours.$color-text-inverse, 0.25);
         }
 
         &:focus {
-            border-color: $color-link-focus;
+            border-color: colours.$color-link-focus;
             outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
 
@@ -203,9 +208,9 @@
     flex: none;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .txp-logout a:focus {
-        border-color: $color-link-focus;
+        border-color: colours.$color-link-focus;
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }

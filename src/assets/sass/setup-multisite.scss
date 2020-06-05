@@ -1,11 +1,12 @@
 // import global variables
-@import "setup/settings";
+@use "sass:meta";
+@use "setup/settings";
 
 // import any additional mixins
-@import "setup/helpers";
+@use "setup/helpers";
 
 // import colourscheme
-@import "setup/colours";
+@use "setup/colours";
 
 
 
@@ -13,7 +14,7 @@
    Styling and layout for all media
    ========================================================================== */
 
-@import "modules/base";
+@use "modules/base";
 
 
 
@@ -24,14 +25,14 @@
 @media screen {
 
     // Global
-    @import "modules/links";
-    @import "modules/typography";
-    @import "modules/alerts";
-    @import "modules/forms";
-    @import "modules/buttons";
+    @include meta.load-css("modules/links");
+    @include meta.load-css("modules/typography");
+    @include meta.load-css("modules/alerts");
+    @include meta.load-css("modules/forms");
+    @include meta.load-css("modules/buttons");
 
     // Layout modules
-    @import "modules/container";
+    @include meta.load-css("modules/container");
 
     html {
         text-size-adjust: 100%;
@@ -42,7 +43,7 @@
     }
 
     .txp-setup {
-        max-width: $setup-column;
+        max-width: settings.$setup-column;
         margin: 1em auto;
     }
 
@@ -76,7 +77,7 @@
    ========================================================================== */
 
 
-@media (max-width: $break-large) {
+@media (max-width: settings.$break-large) {
     .setup {
         padding: 1em 2em 0; // 13px + 26px
     }
@@ -89,7 +90,7 @@
    ========================================================================== */
 
 
-@media (max-width: $break-small) {
+@media (max-width: settings.$break-small) {
 
     /**
      * Prevent zoom upon form element focus.

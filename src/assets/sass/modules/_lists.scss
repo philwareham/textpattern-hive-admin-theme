@@ -1,3 +1,6 @@
+@use "../setup/colours";
+@use "../setup/helpers";
+
 /* Lists
    ========================================================================== */
 
@@ -42,9 +45,9 @@ li::marker {
     color: color-text-heading;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     li::marker {
-        color: $dark-color-text-heading;
+        color: colours.$dark-color-text-heading;
     }
 }
 
@@ -107,11 +110,11 @@ dd {
 
     li {
         position: relative;
-        border-top: 1px solid $color-border-light;
+        border-top: 1px solid colours.$color-border-light;
         border-bottom: 1px solid transparent;
 
         &:nth-child(odd) {
-            background: $color-background;
+            background: colours.$color-background;
         }
 
         &:first-child {
@@ -120,11 +123,11 @@ dd {
 
         &.active,
         &.ui-tabs-active {
-            background: $color-highlight-box;
+            background: colours.$color-highlight-box;
         }
 
         &.selected {
-            background: $color-selected;
+            background: colours.$color-selected;
         }
     }
 
@@ -138,12 +141,12 @@ dd {
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .switcher-list li {
-        border-top: 1px solid $dark-color-gradient-to;
+        border-top: 1px solid colours.$dark-color-gradient-to;
 
         &:nth-child(odd) {
-            background: $dark-color-background;
+            background: colours.$dark-color-background;
         }
 
         &:first-child {
@@ -152,11 +155,11 @@ dd {
 
         &.active,
         &.ui-tabs-active {
-            background: $dark-color-highlight-box;
+            background: colours.$dark-color-highlight-box;
         }
 
         &.selected {
-            background: $dark-color-selected;
+            background: colours.$dark-color-selected;
         }
     }
 }

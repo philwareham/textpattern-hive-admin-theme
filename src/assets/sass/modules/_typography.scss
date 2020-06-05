@@ -1,3 +1,7 @@
+@use "../setup/colours";
+@use "../setup/helpers";
+@use "../setup/settings";
+
 /* Typography
    ========================================================================== */
 
@@ -6,8 +10,8 @@
  */
 
 html {
-    font-size: $base-font-size;
-    line-height: $base-line-height;
+    font-size: settings.$base-font-size;
+    line-height: settings.$base-line-height;
 }
 
 /**
@@ -15,7 +19,7 @@ html {
  */
 
 body {
-    font-family: $font-body;
+    font-family: settings.$font-body;
 }
 
 /**
@@ -29,7 +33,7 @@ h4,
 h5,
 h6 {
     clear: both;
-    color: $color-text-heading;
+    color: colours.$color-text-heading;
 }
 
 /**
@@ -97,14 +101,14 @@ h6 {
     font-size: 1rem;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        color: $dark-color-text-heading;
+        color: colours.$dark-color-text-heading;
     }
 }
 
@@ -132,12 +136,12 @@ address {
 blockquote {
     margin: 1em 0;
     padding: 0 0 0 1em;
-    border-left: 3px solid $color-border;
+    border-left: 3px solid colours.$color-border;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     blockquote {
-        border-left-color: $dark-color-border;
+        border-left-color: colours.$dark-color-border;
     }
 }
 
@@ -161,19 +165,19 @@ mark,
 var {
     padding: 1px 0.23076923076923em; // 3px / 13px
 
-    @if $border-radius > 0 {
-        border-radius: $border-radius / 2;
+    @if settings.$border-radius > 0 {
+        border-radius: settings.$border-radius / 2;
     }
 
-    background: $color-selected;
-    color: $color-text;
+    background: colours.$color-selected;
+    color: colours.$color-text;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     mark,
     var {
-        background: $dark-color-selected;
-        color: $dark-color-text;
+        background: colours.$dark-color-selected;
+        color: colours.$dark-color-text;
     }
 }
 
@@ -186,20 +190,20 @@ code,
 kbd,
 samp,
 .code {
-    font-family: $font-code;
+    font-family: settings.$font-code;
 }
 
 code,
 kbd,
 samp {
     padding: 1px 0.23076923076923em; // 3px / 13px
-    border: 1px solid $color-border-extra-light;
+    border: 1px solid colours.$color-border-extra-light;
 
-    @if $border-radius > 0 {
-        border-radius: $border-radius / 2;
+    @if settings.$border-radius > 0 {
+        border-radius: settings.$border-radius / 2;
     }
 
-    background: $color-background-box;
+    background: colours.$color-background-box;
 }
 
 /**
@@ -215,27 +219,27 @@ pre {
     padding: 1em; // 13px
     /* 1 */
     overflow-x: auto;
-    border: 1px solid $color-border-extra-light;
+    border: 1px solid colours.$color-border-extra-light;
 
-    @if $border-radius > 0 {
-        border-radius: $border-radius / 2;
+    @if settings.$border-radius > 0 {
+        border-radius: settings.$border-radius / 2;
     }
 
-    background: $color-background-box;
+    background: colours.$color-background-box;
     /* 2 */
     word-wrap: normal;
     /* 3 */
     tab-size: 4;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     pre,
     code,
     kbd,
     samp {
-        border-color: $dark-color-border-extra-light;
-        background-color: $dark-color-background-box;
-        color: $dark-color-text;
+        border-color: colours.$dark-color-border-extra-light;
+        background-color: colours.$dark-color-background-box;
+        color: colours.$dark-color-text;
     }
 }
 
@@ -251,7 +255,7 @@ code.excerpt {
     padding: 0;
     border: 0;
 
-    @if $border-radius > 0 {
+    @if settings.$border-radius > 0 {
         border-radius: 0;
     }
 
@@ -297,23 +301,23 @@ tfoot,
 .footnote,
 .txp-form-field-instructions,
 .txp-footer {
-    font-size: $small-font-size;
-    line-height: $small-line-height;
+    font-size: settings.$small-font-size;
+    line-height: settings.$small-line-height;
 }
 
 figcaption,
 tfoot,
 .footnote,
 .txp-form-field-instructions {
-    color: $color-text-footnote;
+    color: colours.$color-text-footnote;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     figcaption,
     tfoot,
     .footnote,
     .txp-form-field-instructions {
-        color: $dark-color-text-footnote;
+        color: colours.$dark-color-text-footnote;
     }
 }
 

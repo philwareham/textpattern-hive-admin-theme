@@ -1,3 +1,7 @@
+@use "../../setup/colours";
+@use "../../setup/helpers";
+@use "../../setup/settings";
+
 /* Layout helpers
    ========================================================================== */
 
@@ -37,7 +41,7 @@
     outline: 0;
     list-style: none;
     font-size: 1rem;
-    line-height: $base-line-height;
+    line-height: settings.$base-line-height;
     text-decoration: none;
 }
 
@@ -90,14 +94,14 @@
  */
 
 .ui-widget-content {
-    border: 1px solid $color-border;
-    background-color: $color-background;
+    border: 1px solid colours.$color-border;
+    background-color: colours.$color-background;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-widget-content {
-        border-color: $dark-color-border;
-        background-color: $dark-color-background;
+        border-color: colours.$dark-color-border;
+        background-color: colours.$dark-color-background;
     }
 }
 
@@ -106,14 +110,14 @@
  */
 
 .ui-widget-header {
-    @include gradient-linear($color-gradient-from, $color-gradient-to);
+    @include helpers.gradient-linear(colours.$color-gradient-from, colours.$color-gradient-to);
 
     font-weight: bold;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-widget-header {
-        @include gradient-linear($dark-color-gradient-to, $dark-color-gradient-from);
+        @include helpers.gradient-linear(colours.$dark-color-gradient-to, colours.$dark-color-gradient-from);
     }
 }
 
@@ -126,16 +130,16 @@
  */
 
 .ui-state-default {
-    border: 1px solid $color-border;
-    background-color: $color-gradient-from;
-    color: $color-text;
+    border: 1px solid colours.$color-border;
+    background-color: colours.$color-gradient-from;
+    color: colours.$color-text;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-state-default {
-        border-color: $dark-color-border-light;
-        background-color: $dark-color-background-box;
-        color: $dark-color-text;
+        border-color: colours.$dark-color-border-light;
+        background-color: colours.$dark-color-background-box;
+        color: colours.$dark-color-text;
     }
 }
 
@@ -145,14 +149,14 @@
 
 a.ui-state-default:hover,
 a.ui-state-default:focus {
-    color: $color-text;
+    color: colours.$color-text;
     text-decoration: none;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     a.ui-state-default:hover,
     a.ui-state-default:focus {
-        color: $dark-color-text;
+        color: colours.$dark-color-text;
     }
 }
 
@@ -161,14 +165,14 @@ a.ui-state-default:focus {
  */
 
 .ui-state-hover {
-    border-color: $color-border-extra-dark;
-    background-color: $color-background-box;
+    border-color: colours.$color-border-extra-dark;
+    background-color: colours.$color-background-box;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-state-hover {
-        border-color: $dark-color-border;
-        background-color: tint($dark-color-background-box, 5%);
+        border-color: colours.$dark-color-border;
+        background-color: colours.tint(colours.$dark-color-background-box, 5%);
     }
 }
 
@@ -177,7 +181,7 @@ a.ui-state-default:focus {
  */
 
 .ui-state-focus {
-    border-color: $color-link-focus;
+    border-color: colours.$color-link-focus;
     outline: 0;
 
     a {
@@ -185,9 +189,9 @@ a.ui-state-default:focus {
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-state-focus {
-        border-color: $dark-color-link-focus;
+        border-color: colours.$dark-color-link-focus;
     }
 }
 
@@ -196,14 +200,14 @@ a.ui-state-default:focus {
  */
 
 .ui-state-active:not(.ui-button) {
-    border-color: $color-border;
-    background-color: $color-background;
+    border-color: colours.$color-border;
+    background-color: colours.$color-background;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-state-active:not(.ui-button) {
-        border-color: $dark-color-border;
-        background-color: $dark-color-gradient-from;
+        border-color: colours.$dark-color-border;
+        background-color: colours.$dark-color-gradient-from;
     }
 }
 
@@ -212,12 +216,12 @@ a.ui-state-default:focus {
  */
 
 .ui-selecting {
-    background-color: $color-selecting;
+    background-color: colours.$color-selecting;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-selecting {
-        background-color: $dark-color-selecting;
+        background-color: colours.$dark-color-selecting;
     }
 }
 
@@ -226,12 +230,12 @@ a.ui-state-default:focus {
  */
 
 .ui-selected {
-    background-color: $color-selected;
+    background-color: colours.$color-selected;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-selected {
-        background-color: $dark-color-selected;
+        background-color: colours.$dark-color-selected;
     }
 }
 
@@ -244,14 +248,14 @@ a.ui-state-default:focus {
  */
 
 .ui-state-highlight {
-    border: 1px solid $color-warning-border;
-    background-color: $color-warning-background;
+    border: 1px solid colours.$color-warning-border;
+    background-color: colours.$color-warning-background;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-state-highlight {
-        border-color: $dark-color-warning-border;
-        background-color: $dark-color-warning-background;
+        border-color: colours.$dark-color-warning-border;
+        background-color: colours.$dark-color-warning-background;
     }
 }
 
@@ -260,16 +264,16 @@ a.ui-state-default:focus {
  */
 
 .ui-state-error {
-    border: 1px solid $color-error-border;
-    background-color: $color-error-background;
-    color: $color-error-text;
+    border: 1px solid colours.$color-error-border;
+    background-color: colours.$color-error-background;
+    color: colours.$color-error-text;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-state-error {
-        border-color: $dark-color-error-border;
-        background-color: $dark-color-error-background;
-        color: $dark-color-error-text;
+        border-color: colours.$dark-color-error-border;
+        background-color: colours.$dark-color-error-background;
+        color: colours.$dark-color-error-text;
     }
 }
 
@@ -306,7 +310,7 @@ a.ui-state-default:focus {
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-state-disabled:not(.ui-button) {
         opacity: 0.25;
     }
@@ -333,7 +337,7 @@ a.ui-state-default:focus {
     background: rgba(#000000, 0.75);
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-widget-overlay {
         background: rgba(#000000, 0.66);
     }
@@ -352,11 +356,11 @@ a.ui-state-default:focus {
  */
 
 .ui-widget-shadow {
-    box-shadow: $standard-shadow;
+    box-shadow: settings.$standard-shadow;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-widget-shadow {
-        box-shadow: $dark-standard-shadow;
+        box-shadow: settings.$dark-standard-shadow;
     }
 }

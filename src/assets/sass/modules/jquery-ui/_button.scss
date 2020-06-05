@@ -1,3 +1,8 @@
+@use "sass:color";
+@use "../../setup/colours";
+@use "../../setup/helpers";
+@use "../../setup/settings";
+
 /* Button
    ========================================================================== */
 
@@ -19,7 +24,7 @@
  */
 
 .ui-button {
-    @include gradient-linear($color-button-gradient-from, $color-button-gradient-to);
+    @include helpers.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
 
     display: inline-block;
     position: relative;
@@ -29,13 +34,13 @@
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     /* 1 */
     overflow: visible;
-    border: 1px solid $color-button-border;
+    border: 1px solid colours.$color-button-border;
     background-clip: padding-box;
-    color: $color-text-button;
+    color: colours.$color-text-button;
     font-family: inherit;
     /* 2 */
     font-size: 1rem;
-    line-height: $base-line-height;
+    line-height: settings.$base-line-height;
     vertical-align: baseline;
     text-align: center;
     /* 3 */
@@ -45,38 +50,38 @@
     user-select: none;
 
     &:hover {
-        @include gradient-linear(lighten($color-button-gradient-from, 4%), lighten($color-button-gradient-to, 4%));
+        @include helpers.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: 4%), color.adjust(colours.$color-button-gradient-to, $lightness: 4%));
 
-        border-color: darken($color-button-border, 13%);
-        color: $color-text-button-hover;
+        border-color: color.adjust(colours.$color-button-border, $lightness: -13%);
+        color: colours.$color-text-button-hover;
         text-decoration: none;
     }
 
     &:active {
-        @include gradient-linear(darken($color-button-gradient-from, 3%), darken($color-button-gradient-to, 3%));
+        @include helpers.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: -3%), color.adjust(colours.$color-button-gradient-to, $lightness: -3%));
 
-        border-color: darken($color-button-border, 13%);
-        color: $color-text-button-active;
+        border-color: color.adjust(colours.$color-button-border, $lightness: -13%);
+        color: colours.$color-text-button-active;
         text-decoration: none;
 
-        @if $flat-theme < 1 {
-            box-shadow: $inset-lowlighting;
+        @if settings.$flat-theme < 1 {
+            box-shadow: settings.$inset-lowlighting;
         }
     }
 
     &:focus {
-        border-color: $color-link-focus;
+        border-color: colours.$color-link-focus;
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-        color: $color-text-button-active;
+        color: colours.$color-text-button-active;
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-button {
-        color: $dark-color-text-button;
+        color: colours.$dark-color-text-button;
 
         &:focus {
-            border-color: $dark-color-link-focus;
+            border-color: colours.$dark-color-link-focus;
         }
     }
 }
@@ -88,12 +93,12 @@
  */
 
 .ui-button.ui-state-focus {
-    border-color: $color-link-focus !important; /* 1 */
+    border-color: colours.$color-link-focus !important; /* 1 */
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-button.ui-state-focus {
-        border-color: $dark-color-link-focus !important; /* 1 */
+        border-color: colours.$dark-color-link-focus !important; /* 1 */
     }
 }
 
@@ -126,24 +131,24 @@ input.ui-button.ui-button-icon-only {
     text-indent: 0;
 }
 
-@if $border-radius > 0 {
+@if settings.$border-radius > 0 {
     .ui-button.ui-corner-all {
-        border-radius: $border-radius;
+        border-radius: settings.$border-radius;
     }
 
     .ui-button.ui-corner-right {
-        border-radius: 0 $border-radius $border-radius 0;
+        border-radius: 0 settings.$border-radius settings.$border-radius 0;
 
         [dir="rtl"] & {
-            border-radius: $border-radius 0 0 $border-radius;
+            border-radius: settings.$border-radius 0 0 settings.$border-radius;
         }
     }
 
     .ui-button.ui-corner-left {
-        border-radius: $border-radius 0 0 $border-radius;
+        border-radius: settings.$border-radius 0 0 settings.$border-radius;
 
         [dir="rtl"] & {
-            border-radius: 0 $border-radius $border-radius 0;
+            border-radius: 0 settings.$border-radius settings.$border-radius 0;
         }
     }
 }

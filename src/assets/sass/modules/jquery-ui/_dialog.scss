@@ -1,3 +1,6 @@
+@use "../../setup/helpers";
+@use "../../setup/settings";
+
 /* Dialog
    ========================================================================== */
 
@@ -46,8 +49,8 @@
     overflow: hidden;
     outline: 0;
 
-    @if $flat-theme < 1 {
-        box-shadow: $standard-shadow;
+    @if settings.$flat-theme < 1 {
+        box-shadow: settings.$standard-shadow;
     }
 
     .ui-dialog-titlebar {
@@ -118,9 +121,9 @@
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-dialog {
-        box-shadow: $dark-standard-shadow;
+        box-shadow: settings.$dark-standard-shadow;
     }
 }
 

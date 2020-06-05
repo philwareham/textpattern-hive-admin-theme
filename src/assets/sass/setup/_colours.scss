@@ -1,11 +1,12 @@
+@use "sass:color";
 // slightly lighten a colour
 @function tint($color, $percentage) {
-    @return mix(white, $color, $percentage);
+    @return color.mix(white, $color, $percentage);
 }
 
 // slightly darken a colour
 @function shade($color, $percentage) {
-    @return mix(black, $color, $percentage);
+    @return color.mix(black, $color, $percentage);
 }
 
 // text colours
@@ -51,7 +52,7 @@ $dark-color-gradient-to:              tint($dark-color-background, 16%) !default
 // accent colours
 
 $color-accent-gradient-from:          #ffda44 !default;
-$color-accent-gradient-to:            darken($color-accent-gradient-from, 15%) !default;
+$color-accent-gradient-to:            color.adjust($color-accent-gradient-from, $lightness: -15%) !default;
 $color-highlight-box:                 #fff9e1 !default;
 $color-strong-highlight-box:          #ffefaf !default;
 
@@ -90,29 +91,29 @@ $dark-color-selected:                 #1c3456 !default;
 // button colours
 
 $color-button-gradient-from:          $color-gradient-from !default;
-$color-button-gradient-to:            darken($color-button-gradient-from, 6.5%) !default;
-$color-button-border:                 darken($color-button-gradient-to, 7%) !default;
-$color-button-primary-gradient-from:  lighten($color-accent-gradient-from, 7%) !default;
-$color-button-primary-gradient-to:    darken($color-button-primary-gradient-from, 15%) !default;
-$color-button-primary-border:         darken($color-button-primary-gradient-to, 7%) !default;
+$color-button-gradient-to:            color.adjust($color-button-gradient-from, $lightness: -6.5%) !default;
+$color-button-border:                 color.adjust($color-button-gradient-to, $lightness: -7%) !default;
+$color-button-primary-gradient-from:  color.adjust($color-accent-gradient-from, $lightness: 7%) !default;
+$color-button-primary-gradient-to:    color.adjust($color-button-primary-gradient-from, $lightness: -15%) !default;
+$color-button-primary-border:         color.adjust($color-button-primary-gradient-to, $lightness: -7%) !default;
 $color-button-selected-gradient-from: tint($color-link-hover, 90%) !default;
 $color-button-selected-gradient-to:   tint($color-link-hover, 80%) !default;
-$color-button-selected-border:        darken($color-button-selected-gradient-to, 10.5%) !default;
+$color-button-selected-border:        color.adjust($color-button-selected-gradient-to, $lightness: -10.5%) !default;
 
 // alert colours
 
 $color-success-text:                  #238c23 !default;
 $color-success-background:            #dff0d8 !default;
-$color-success-border:                darken($color-success-background, 20%) !default;
+$color-success-border:                color.adjust($color-success-background, $lightness: -20%) !default;
 $color-warning-text:                  #c88800 !default;
 $color-warning-background:            #f8eedc !default;
-$color-warning-border:                darken($color-warning-background, 20%) !default;
+$color-warning-border:                color.adjust($color-warning-background, $lightness: -20%) !default;
 $color-error-text:                    #ac261d !default;
 $color-error-background:              #f2dede !default;
-$color-error-border:                  darken($color-error-background, 12%) !default;
+$color-error-border:                  color.adjust($color-error-background, $lightness: -12%) !default;
 $color-info-text:                     #3a87ad !default;
 $color-info-background:               #e7f6fc !default;
-$color-info-border:                   darken($color-info-background, 12%) !default;
+$color-info-border:                   color.adjust($color-info-background, $lightness: -12%) !default;
 
 $dark-color-success-text:             #66cc33 !default;
 $dark-color-success-background:       #2a4125 !default;

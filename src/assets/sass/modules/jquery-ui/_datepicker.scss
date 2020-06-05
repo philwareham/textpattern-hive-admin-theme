@@ -1,3 +1,8 @@
+@use "sass:color";
+@use "../../setup/colours";
+@use "../../setup/helpers";
+@use "../../setup/settings";
+
 /* Datepicker
    ========================================================================== */
 
@@ -83,8 +88,8 @@
     width: 17em;
     padding: 0.2em 0.2em 0;
 
-    @if $flat-theme < 1 {
-        box-shadow: $standard-shadow;
+    @if settings.$flat-theme < 1 {
+        box-shadow: settings.$standard-shadow;
     }
 
     .ui-datepicker-header {
@@ -100,8 +105,8 @@
         height: 1.8em;
         margin-top: -0.9em;
 
-        @if $border-radius > 0 {
-            border-radius: $border-radius;
+        @if settings.$border-radius > 0 {
+            border-radius: settings.$border-radius;
         }
 
         background-color: transparent;
@@ -127,7 +132,7 @@
 
     .ui-datepicker-prev-hover,
     .ui-datepicker-next-hover {
-        background-color: $color-background-box;
+        background-color: colours.$color-background-box;
     }
 
     .ui-datepicker-title {
@@ -168,16 +173,16 @@
         }
 
         a.ui-state-active {
-            border-color: lighten($color-link, 42%);
-            background-color: $color-selected;
+            border-color: color.adjust(colours.$color-link, $lightness: 42%);
+            background-color: colours.$color-selected;
         }
 
         a.ui-state-highlight:hover {
-            border-color: lighten($color-warning-text, 8%);
+            border-color: color.adjust(colours.$color-warning-text, $lightness: 8%);
         }
 
         a.ui-state-active:hover {
-            border-color: lighten($color-link, 27%);
+            border-color: color.adjust(colours.$color-link, $lightness: 27%);
         }
 
         &.ui-datepicker-week-col {
@@ -215,27 +220,27 @@
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-datepicker {
-        box-shadow: $dark-standard-shadow;
+        box-shadow: settings.$dark-standard-shadow;
 
         .ui-datepicker-prev-hover,
         .ui-datepicker-next-hover {
-            background-color: $dark-color-background-box;
+            background-color: colours.$dark-color-background-box;
         }
 
         td {
             a.ui-state-highlight {
-                border-color: $color-warning-text;
+                border-color: colours.$color-warning-text;
             }
 
             a.ui-state-active {
-                border-color: $dark-color-link;
-                background-color: $dark-color-selected;
+                border-color: colours.$dark-color-link;
+                background-color: colours.$dark-color-selected;
             }
 
             a.ui-state-active:hover {
-                border-color: $dark-color-link-hover;
+                border-color: colours.$dark-color-link-hover;
             }
         }
     }

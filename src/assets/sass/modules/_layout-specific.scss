@@ -1,3 +1,8 @@
+@use "sass:color";
+@use "../setup/colours";
+@use "../setup/helpers";
+@use "../setup/settings";
+
 /* Setup and login panels - additional layout
    ========================================================================== */
 
@@ -20,7 +25,7 @@
  */
 
 .txp-setup {
-    max-width: $setup-column;
+    max-width: settings.$setup-column;
     margin: 1em auto;
 
     // Column width of 'welcome' setup panel.
@@ -47,7 +52,7 @@
 .login {
     h1 {
         /* 2 */
-        @include hide-text;
+        @include helpers.hide-text;
 
         width: 16.5em; // 264px / 16px
         height: 3.375em; // 54px / 16px
@@ -73,13 +78,13 @@ body.darkmode.login {
     bottom: -0.5em;
     padding: 1em 0;
     overflow: hidden;
-    border-top: 1px solid $color-border;
+    border-top: 1px solid colours.$color-border;
     text-overflow: ellipsis;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .login-view-site {
-        border-top-color: $dark-color-border;
+        border-top-color: colours.$dark-color-border;
     }
 }
 
@@ -125,9 +130,9 @@ body.darkmode.login {
     ul {
         margin: 2em 0 0;
         padding: 0;
-        border-bottom: 1px solid $color-border;
-        font-size: $small-font-size;
-        line-height: $small-line-height;
+        border-bottom: 1px solid colours.$color-border;
+        font-size: settings.$small-font-size;
+        line-height: settings.$small-line-height;
     }
 
     li {
@@ -140,78 +145,78 @@ body.darkmode.login {
         position: relative;
         bottom: -1px;
         padding: 0.5em 1em;
-        border: 1px solid $color-border;
-        background-color: darken($color-background-box, 2%);
-        color: $color-text;
+        border: 1px solid colours.$color-border;
+        background-color: color.adjust(colours.$color-background-box, $lightness: -2%);
+        color: colours.$color-text;
         text-decoration: none;
 
-        @if $flat-theme < 1 {
+        @if settings.$flat-theme < 1 {
             box-shadow: inset 0 -0.25em 0.5em rgba(#666666, 0.2);
         }
 
         &:hover {
-            border-color: $color-border-extra-dark;
-            background-color: $color-background-box;
+            border-color: colours.$color-border-extra-dark;
+            background-color: colours.$color-background-box;
         }
 
         &:focus {
-            border-color: $color-link-focus;
+            border-color: colours.$color-link-focus;
             outline: 0;
         }
     }
 
     .active a {
-        border-bottom-color: $color-background;
-        background-color: lighten($color-background-box, 3%);
+        border-bottom-color: colours.$color-background;
+        background-color: color.adjust(colours.$color-background-box, $lightness: 3%);
 
-        @if $flat-theme < 1 {
+        @if settings.$flat-theme < 1 {
             box-shadow: none;
         }
 
         &:focus {
-            border-color: $color-link-focus;
-            border-bottom-color: $color-background;
+            border-color: colours.$color-link-focus;
+            border-bottom-color: colours.$color-background;
         }
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     #view_modes {
         ul {
-            border-bottom-color: $dark-color-border;
+            border-bottom-color: colours.$dark-color-border;
         }
 
         a {
-            border-color: $dark-color-border-light;
-            background-color: $dark-color-background-box;
-            color: $dark-color-text;
+            border-color: colours.$dark-color-border-light;
+            background-color: colours.$dark-color-background-box;
+            color: colours.$dark-color-text;
 
-            @if $flat-theme < 1 {
+            @if settings.$flat-theme < 1 {
                 box-shadow: inset 0 -0.25em 0.5em rgba(#000000, 0.2);
             }
 
             &:hover {
-                border-color: $dark-color-border;
-                background-color: tint($dark-color-background-box, 5%);
+                border-color: colours.$dark-color-border;
+                background-color: colours.tint(colours.$dark-color-background-box, 5%);
             }
 
             &:focus {
-                border-color: $dark-color-link-focus;
+                border-color: colours.$dark-color-link-focus;
             }
         }
 
         .active a {
-            border-color: $dark-color-border;
-            border-bottom-color: $dark-color-background;
-            background-color: $dark-color-background;
+            border-color: colours.$dark-color-border;
+            border-bottom-color: colours.$dark-color-background;
+            background-color: colours.$dark-color-background;
 
-            @if $flat-theme < 1 {
+            @if settings.$flat-theme < 1 {
                 box-shadow: none;
             }
 
             &:focus {
-                border-color: $dark-color-link-focus;
-                border-bottom-color: $dark-color-background;
+                border-color: colours.$dark-color-link-focus;
+                border-bottom-color: colours.$dark-color-background;
             }
         }
     }
@@ -242,13 +247,13 @@ body.darkmode.login {
     .author small {
         display: block;
         margin-top: -1em;
-        color: $color-text-footnote;
+        color: colours.$color-text-footnote;
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     #main_content .author small {
-        color: $dark-color-text-footnote;
+        color: colours.$dark-color-text-footnote;
     }
 }
 
@@ -277,11 +282,11 @@ body.darkmode.login {
     top: 2.75em;
     margin: -1.25em 0 1.75em;
     padding: 1px 1em 0;
-    border: 1px solid $color-border-light;
+    border: 1px solid colours.$color-border-light;
     border-top: 0;
-    background: $color-background;
+    background: colours.$color-background;
 
-    @if $flat-theme < 1 {
+    @if settings.$flat-theme < 1 {
         box-shadow: 0 0.1em 0.125em rgba(#000000, 0.15);
     }
 
@@ -290,10 +295,10 @@ body.darkmode.login {
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .txp-save-zone {
-        border-color: $dark-color-border-light;
-        background: $dark-color-background-box;
+        border-color: colours.$dark-color-border-light;
+        background: colours.$dark-color-background-box;
     }
 }
 
@@ -307,13 +312,13 @@ body.darkmode.login {
 
 .unpublished,
 .not-modified {
-    color: $color-text-footnote;
+    color: colours.$color-text-footnote;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .unpublished,
     .not-modified {
-        color: $dark-color-text-footnote;
+        color: colours.$dark-color-text-footnote;
     }
 }
 
@@ -381,22 +386,22 @@ body.darkmode.login {
 
 .txp-list tbody tr {
     &.spam {
-        background: lighten($color-error-background, 2%);
+        background: color.adjust(colours.$color-error-background, $lightness: 2%);
     }
 
     &.moderate {
-        background: lighten($color-warning-background, 3%);
+        background: color.adjust(colours.$color-warning-background, $lightness: 3%);
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .txp-list tbody tr {
         &.spam {
-            background: darken($dark-color-error-background, 2%);
+            background: color.adjust(colours.$dark-color-error-background, $lightness: -2%);
         }
 
         &.moderate {
-            background: darken($dark-color-warning-background, 3%);
+            background: color.adjust(colours.$dark-color-warning-background, $lightness: -3%);
         }
     }
 }

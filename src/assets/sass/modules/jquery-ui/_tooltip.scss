@@ -1,3 +1,6 @@
+@use "../../setup/helpers";
+@use "../../setup/settings";
+
 /* Tooltip
    ========================================================================== */
 
@@ -23,15 +26,15 @@
     max-width: 22em;
     padding: 0.5em 1em;
 
-    @if $flat-theme < 1 {
-        box-shadow: $standard-shadow;
+    @if settings.$flat-theme < 1 {
+        box-shadow: settings.$standard-shadow;
     }
 }
 
-@if $flat-theme < 1 {
-    @include dark-mode {
+@if settings.$flat-theme < 1 {
+    @include helpers.dark-mode {
         .ui-tooltip {
-            box-shadow: $dark-standard-shadow;
+            box-shadow: settings.$dark-standard-shadow;
         }
     }
 }

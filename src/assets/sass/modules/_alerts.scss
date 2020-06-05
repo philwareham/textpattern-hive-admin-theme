@@ -1,3 +1,7 @@
+@use "../setup/colours";
+@use "../setup/helpers";
+@use "../setup/settings";
+
 /* Messages
    ========================================================================== */
 
@@ -13,68 +17,68 @@
  */
 
 li.success {
-    background: $color-success-background;
+    background: colours.$color-success-background;
 }
 
 .success:not(li) {
-    color: $color-success-text;
+    color: colours.$color-success-text;
 }
 
 li.warning {
-    background: $color-warning-background;
+    background: colours.$color-warning-background;
 }
 
 .warning:not(li) {
-    color: $color-warning-text;
+    color: colours.$color-warning-text;
 }
 
 li.error {
-    background: $color-error-background;
+    background: colours.$color-error-background;
 }
 
 .error:not(li) {
-    color: $color-error-text;
+    color: colours.$color-error-text;
 }
 
 li.information {
-    background: $color-info-background;
+    background: colours.$color-info-background;
 }
 
 .information:not(li) {
-    color: $color-info-text;
+    color: colours.$color-info-text;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     li.success {
-        background: $dark-color-success-background;
+        background: colours.$dark-color-success-background;
     }
 
     .success:not(li) {
-        color: $dark-color-success-text;
+        color: colours.$dark-color-success-text;
     }
 
     li.warning {
-        background: $dark-color-warning-background;
+        background: colours.$dark-color-warning-background;
     }
 
     .warning:not(li) {
-        color: $dark-color-warning-text;
+        color: colours.$dark-color-warning-text;
     }
 
     li.error {
-        background: $dark-color-error-background;
+        background: colours.$dark-color-error-background;
     }
 
     .error:not(li) {
-        color: $dark-color-error-text;
+        color: colours.$dark-color-error-text;
     }
 
     li.information {
-        background: $dark-color-info-background;
+        background: colours.$dark-color-info-background;
     }
 
     .information:not(li) {
-        color: $dark-color-info-text;
+        color: colours.$dark-color-info-text;
     }
 }
 
@@ -92,12 +96,12 @@ li.information {
  */
 
 .highlight {
-    background: $color-highlight-box;
+    background: colours.$color-highlight-box;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .highlight {
-        background: $dark-color-highlight-box;
+        background: colours.$dark-color-highlight-box;
     }
 }
 
@@ -115,51 +119,51 @@ li.information {
     clear: both;
     border: 1px solid;
 
-    @if $border-radius > 0 {
-        border-radius: $border-radius / 2;
+    @if settings.$border-radius > 0 {
+        border-radius: settings.$border-radius / 2;
     }
 
     &.success {
-        border-color: $color-success-border;
-        background: $color-success-background;
+        border-color: colours.$color-success-border;
+        background: colours.$color-success-background;
     }
 
     &.warning {
-        border-color: $color-warning-border;
-        background: $color-warning-background;
+        border-color: colours.$color-warning-border;
+        background: colours.$color-warning-background;
     }
 
     &.error {
-        border-color: $color-error-border;
-        background: $color-error-background;
+        border-color: colours.$color-error-border;
+        background: colours.$color-error-background;
     }
 
     &.information {
-        border-color: $color-info-border;
-        background: $color-info-background;
+        border-color: colours.$color-info-border;
+        background: colours.$color-info-background;
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .alert-block {
         &.success {
-            border-color: $dark-color-success-border;
-            background: $dark-color-success-background;
+            border-color: colours.$dark-color-success-border;
+            background: colours.$dark-color-success-background;
         }
 
         &.warning {
-            border-color: $dark-color-warning-border;
-            background: $dark-color-warning-background;
+            border-color: colours.$dark-color-warning-border;
+            background: colours.$dark-color-warning-background;
         }
 
         &.error {
-            border-color: $dark-color-error-border;
-            background: $dark-color-error-background;
+            border-color: colours.$dark-color-error-border;
+            background: colours.$dark-color-error-background;
         }
 
         &.information {
-            border-color: $dark-color-info-border;
-            background: $dark-color-info-background;
+            border-color: colours.$dark-color-info-border;
+            background: colours.$dark-color-info-background;
         }
     }
 }
@@ -212,34 +216,34 @@ li.information {
         margin: 0 auto;
         padding: 0.53846153846154em 3.53846153846154em 0.53846153846154em 0.75em;
 
-        @if $border-radius > 0 {
-            border-radius: $border-radius $border-radius 0 0;
+        @if settings.$border-radius > 0 {
+            border-radius: settings.$border-radius settings.$border-radius 0 0;
         }
 
         overflow-wrap: break-word;
-        color: $color-text-inverse;
+        color: colours.$color-text-inverse;
 
-        @if $flat-theme < 1 {
-            box-shadow: $standard-shadow;
+        @if settings.$flat-theme < 1 {
+            box-shadow: settings.$standard-shadow;
         }
 
         text-align: left;
 
         &.success {
-            background: $color-success-text;
+            background: colours.$color-success-text;
         }
 
         &.warning {
-            background: $color-warning-text;
+            background: colours.$color-warning-text;
         }
 
         &.error {
-            background: $color-error-text;
+            background: colours.$color-error-text;
         }
     }
 
     a {
-        color: $color-text-inverse;
+        color: colours.$color-text-inverse;
     }
 
     code {
@@ -248,25 +252,25 @@ li.information {
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .messagepane .messageflash {
-        border: 1px solid $dark-color-border-extra-dark;
+        border: 1px solid colours.$dark-color-border-extra-dark;
         border-bottom: 0;
 
-        @if $flat-theme < 1 {
-            box-shadow: $dark-standard-shadow;
+        @if settings.$flat-theme < 1 {
+            box-shadow: settings.$dark-standard-shadow;
         }
 
         &.success {
-            background: $dark-color-success-background;
+            background: colours.$dark-color-success-background;
         }
 
         &.warning {
-            background: $dark-color-warning-background;
+            background: colours.$dark-color-warning-background;
         }
 
         &.error {
-            background: $dark-color-error-background;
+            background: colours.$dark-color-error-background;
         }
     }
 }
@@ -296,7 +300,7 @@ li.information {
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .close {
         border-color: rgba(0, 0, 0, 0.4);
 

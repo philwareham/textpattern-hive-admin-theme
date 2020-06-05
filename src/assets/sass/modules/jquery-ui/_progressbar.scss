@@ -1,3 +1,6 @@
+@use "../../setup/colours";
+@use "../../setup/helpers";
+
 /* Progressbar
    ========================================================================== */
 
@@ -17,14 +20,14 @@
 .ui-progressbar {
     margin-bottom: 1em;
     overflow: hidden;
-    background-color: $color-gradient-to;
+    background-color: colours.$color-gradient-to;
     text-align: left;
 }
 
 .ui-progressbar-value {
     height: 6px;
     animation: progressbar-stripes linear 4s infinite;
-    background-color: $color-accent-gradient-to;
+    background-color: colours.$color-accent-gradient-to;
     background-image:
         linear-gradient(
             135deg,
@@ -52,7 +55,7 @@
  */
 
 .ui-progressbar-indeterminate .ui-progressbar-value {
-    background-color: $color-border;
+    background-color: colours.$color-border;
     background-image:
         linear-gradient(
             135deg,
@@ -66,13 +69,13 @@
         );
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-progressbar {
-        background-color: $dark-color-background-box;
+        background-color: colours.$dark-color-background-box;
     }
 
     .ui-progressbar-value {
-        background-color: $color-accent-gradient-to;
+        background-color: colours.$color-accent-gradient-to;
         background-image:
             linear-gradient(
                 135deg,
@@ -87,7 +90,7 @@
     }
 
     .ui-progressbar-indeterminate .ui-progressbar-value {
-        background-color: $dark-color-border;
+        background-color: colours.$dark-color-border;
         background-image:
             linear-gradient(
                 135deg,

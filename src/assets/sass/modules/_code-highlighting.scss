@@ -1,3 +1,6 @@
+@use "../setup/colours";
+@use "../setup/helpers";
+
 /* Code highlighting (via Prism.js)
    ========================================================================== */
 
@@ -95,7 +98,7 @@ pre[class*="language-"] {
     cursor: help;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .token.punctuation {
         color: #ffffff;
     }
@@ -107,7 +110,7 @@ pre[class*="language-"] {
     .token.constant,
     .token.symbol,
     .token.deleted {
-        color: $dark-color-error-text;
+        color: colours.$dark-color-error-text;
     }
 
     .token.selector,
@@ -116,7 +119,7 @@ pre[class*="language-"] {
     .token.char,
     .token.builtin,
     .token.inserted {
-        color: $dark-color-success-text;
+        color: colours.$dark-color-success-text;
     }
 
     .token.operator,
@@ -124,20 +127,20 @@ pre[class*="language-"] {
     .token.url,
     .language-css .token.string,
     .style .token.string {
-        color: $dark-color-warning-text;
+        color: colours.$dark-color-warning-text;
     }
 
     .token.atrule,
     .token.attr-value,
     .token.keyword {
-        color: $dark-color-info-text;
+        color: colours.$dark-color-info-text;
     }
 
     .line-numbers .line-numbers-rows {
-        border-right-color: $dark-color-text-footnote;
+        border-right-color: colours.$dark-color-text-footnote;
     }
 
     .line-numbers-rows > span::before {
-        color: $dark-color-text-footnote;
+        color: colours.$dark-color-text-footnote;
     }
 }

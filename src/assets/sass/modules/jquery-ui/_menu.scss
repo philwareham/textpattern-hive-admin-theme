@@ -1,3 +1,7 @@
+@use "../../setup/colours";
+@use "../../setup/helpers";
+@use "../../setup/settings";
+
 /* Menu
    ========================================================================== */
 
@@ -67,18 +71,18 @@
     margin: 0;
     padding: 0;
 
-    @if $flat-theme < 1 {
-        border-color: $color-border-light;
+    @if settings.$flat-theme < 1 {
+        border-color: colours.$color-border-light;
     }
 
     outline: 0;
     list-style: none;
     /* 1 */
     font-size: 1rem;
-    line-height: $base-line-height;
+    line-height: settings.$base-line-height;
 
-    @if $flat-theme < 1 {
-        box-shadow: $standard-shadow;
+    @if settings.$flat-theme < 1 {
+        box-shadow: settings.$standard-shadow;
     }
 
     .ui-menu {
@@ -93,7 +97,7 @@
         cursor: pointer;
 
         a {
-            color: $color-text;
+            color: colours.$color-text;
             text-decoration: none;
         }
 
@@ -127,7 +131,7 @@
 
     .ui-state-focus,
     .ui-state-active {
-        background-color: $color-selected;
+        background-color: colours.$color-selected;
     }
 
     // left-aligned
@@ -148,20 +152,20 @@
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-menu {
-        @if $flat-theme < 1 {
-            border-color: $dark-color-border-light;
-            box-shadow: $dark-standard-shadow;
+        @if settings.$flat-theme < 1 {
+            border-color: colours.$dark-color-border-light;
+            box-shadow: settings.$dark-standard-shadow;
         }
 
         .ui-menu-item a {
-            color: $dark-color-text;
+            color: colours.$dark-color-text;
         }
 
         .ui-state-focus,
         .ui-state-active {
-            background-color: $dark-color-selected;
+            background-color: colours.$dark-color-selected;
         }
     }
 }

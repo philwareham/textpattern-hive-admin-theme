@@ -1,3 +1,7 @@
+@use "../setup/colours";
+@use "../setup/helpers";
+@use "../setup/settings";
+
 /* Globally shared layout
    ========================================================================== */
 
@@ -25,7 +29,7 @@ hr {
     /* 2 */
     overflow: visible;
     border: 0; // remove the default `hr` border
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid colours.$color-border;
 
     &.secondary {
         margin: 0.33em 0;
@@ -33,9 +37,9 @@ hr {
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     hr {
-        border-bottom-color: $dark-color-border;
+        border-bottom-color: colours.$dark-color-border;
     }
 }
 
@@ -103,12 +107,12 @@ hr {
 }
 
 .txp-dropdown-toggle-all {
-    border-bottom: 1px solid $color-border-light;
+    border-bottom: 1px solid colours.$color-border-light;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .txp-dropdown-toggle-all {
-        border-bottom-color: $dark-color-border-light;
+        border-bottom-color: colours.$dark-color-border-light;
     }
 }
 
@@ -440,14 +444,14 @@ span.spinner {
     bottom: 0;
     margin: 1em 0 0;
     padding: 0.3076923em 0; // 4px / 13px
-    background: $color-background;
-    box-shadow: 0 -1em 1em -0.5em $color-background;
+    background: colours.$color-background;
+    box-shadow: 0 -1em 1em -0.5em colours.$color-background;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .multi-edit {
-        background: $dark-color-background;
-        box-shadow: 0 -1em 1em -0.5em $dark-color-background;
+        background: colours.$dark-color-background;
+        box-shadow: 0 -1em 1em -0.5em colours.$dark-color-background;
     }
 }
 
@@ -549,12 +553,12 @@ span.spinner {
 .text-section {
     margin-top: 3em;
     padding-top: 3em;
-    border-top: 2px solid $color-border;
+    border-top: 2px solid colours.$color-border;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .text-section {
-        border-top-color: $dark-color-border;
+        border-top-color: colours.$dark-color-border;
     }
 }
 
@@ -655,12 +659,12 @@ span.spinner {
 
 .txp-edit {
     position: relative;
-    max-width: ($text-column - 2em);
+    max-width: (settings.$text-column - 2em);
     margin: 0 auto 1em;
     padding: 1em 1em 1px;
     clear: both;
     /* 1 */
-    background: $color-background-box;
+    background: colours.$color-background-box;
 
     h2 {
         /* 2 */
@@ -668,10 +672,10 @@ span.spinner {
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .txp-edit {
-        border: 1px solid $dark-color-border-extra-light;
-        background: $dark-color-background;
+        border: 1px solid colours.$dark-color-border-extra-light;
+        background: colours.$dark-color-background;
     }
 }
 
@@ -690,12 +694,12 @@ span.spinner {
 .txp-edit .txp-edit-actions {
     margin: 1em -1em;
     padding: 1em 1em 0;
-    border-top: 2px solid $color-background;
+    border-top: 2px solid colours.$color-background;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .txp-edit .txp-edit-actions {
-        border-top-color: $dark-color-background-box;
+        border-top-color: colours.$dark-color-background-box;
     }
 }
 
@@ -917,7 +921,7 @@ span.spinner {
  */
 
 .txp-tabs-vertical-group {
-    max-width: $text-column;
+    max-width: settings.$text-column;
 }
 
 /**

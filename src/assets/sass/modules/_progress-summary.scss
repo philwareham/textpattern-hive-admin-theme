@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../setup/colours";
+@use "../setup/helpers";
+
 /* Progress meter (only used in core for setup panels)
    ========================================================================== */
 
@@ -28,24 +32,24 @@
     }
 
     li {
-        @include gradient-linear($color-gradient-from, $color-gradient-to);
+        @include helpers.gradient-linear(colours.$color-gradient-from, colours.$color-gradient-to);
 
         display: inline-block;
         position: relative;
         margin: 0 1em 1em 0;
         padding: 1em 1em 1em 4em;
-        border-top: 1px solid $color-border-light;
-        border-right: 1px solid $color-border-extra-light;
-        border-bottom: 1px solid $color-border-dark;
-        border-left: 1px solid $color-border-extra-light;
+        border-top: 1px solid colours.$color-border-light;
+        border-right: 1px solid colours.$color-border-extra-light;
+        border-bottom: 1px solid colours.$color-border-dark;
+        border-left: 1px solid colours.$color-border-extra-light;
 
         // highlight the currently active step
 
         &.active {
-            @include gradient-linear($color-accent-gradient-from, $color-accent-gradient-to);
+            @include helpers.gradient-linear(colours.$color-accent-gradient-from, colours.$color-accent-gradient-to);
 
-            border: 1px solid $color-accent-gradient-to;
-            border-bottom-color: darken($color-accent-gradient-to, 6%);
+            border: 1px solid colours.$color-accent-gradient-to;
+            border-bottom-color: color.adjust(colours.$color-accent-gradient-to, $lightness: -6%);
         }
 
         // numerical indication of step
@@ -58,9 +62,9 @@
             left: 0.6875em; // 12px / 16px
             width: 1.375em; // 22px / 16px
             padding: 0.25em; // 4px / 16px
-            border: 1px solid $color-background;
+            border: 1px solid colours.$color-background;
             border-radius: 50%;
-            background-color: $color-border;
+            background-color: colours.$color-border;
             font-size: 1.230769230769231rem; // 16px / 13px
             font-weight: bold;
             text-align: center;
@@ -70,7 +74,7 @@
         // arrows at right-hand side of boxes
 
         &::after {
-            @include hide-text;
+            @include helpers.hide-text;
 
             content: "\2192";
             display: block;
@@ -82,7 +86,7 @@
             height: 0;
             border: 0 solid transparent;
             border-width: 1.5em 0 1.5em 0.75em;
-            border-left-color: $color-border;
+            border-left-color: colours.$color-border;
             font-size: 16px;
         }
     }
@@ -92,26 +96,26 @@
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .progress-meter li {
-        border-top: 1px solid $dark-color-border-light;
-        border-right: 1px solid $dark-color-border-extra-light;
-        border-bottom: 1px solid $dark-color-border-dark;
-        border-left: 1px solid $dark-color-border-extra-light;
-        color: $dark-color-text-inverse;
+        border-top: 1px solid colours.$dark-color-border-light;
+        border-right: 1px solid colours.$dark-color-border-extra-light;
+        border-bottom: 1px solid colours.$dark-color-border-dark;
+        border-left: 1px solid colours.$dark-color-border-extra-light;
+        color: colours.$dark-color-text-inverse;
 
         // numerical indication of step
 
         &::before {
-            border: 1px solid $dark-color-background;
-            background: $dark-color-border;
-            color: $dark-color-text;
+            border: 1px solid colours.$dark-color-background;
+            background: colours.$dark-color-border;
+            color: colours.$dark-color-text;
         }
 
         // arrows at right-hand side of boxes
 
         &::after {
-            border-left-color: $dark-color-border;
+            border-left-color: colours.$dark-color-border;
         }
     }
 }
@@ -140,13 +144,13 @@
             left: auto;
             border: 0 solid transparent;
             border-width: 1.5em 0.75em 1.5em 0;
-            border-right-color: $color-border;
+            border-right-color: colours.$color-border;
         }
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     [dir="rtl"] .progress-meter li::after {
-        border-right-color: $dark-color-border;
+        border-right-color: colours.$dark-color-border;
     }
 }

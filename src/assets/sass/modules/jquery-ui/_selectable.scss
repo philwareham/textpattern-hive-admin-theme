@@ -1,3 +1,6 @@
+@use "../../setup/colours";
+@use "../../setup/helpers";
+
 /* Selectable
    ========================================================================== */
 
@@ -28,11 +31,11 @@
 .ui-selectable-helper {
     position: absolute;
     z-index: 100;
-    border: 1px dotted $color-link;
+    border: 1px dotted colours.$color-link;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-selectable-helper {
-        border-color: $dark-color-link;
+        border-color: colours.$dark-color-link;
     }
 }

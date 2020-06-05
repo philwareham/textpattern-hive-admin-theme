@@ -1,3 +1,7 @@
+@use "../../setup/colours";
+@use "../../setup/helpers";
+@use "../../setup/settings";
+
 /* Sortable
  ========================================================================== */
 
@@ -24,7 +28,7 @@
  */
 
 .ui-sortable-helper {
-    box-shadow: $standard-shadow;
+    box-shadow: settings.$standard-shadow;
 }
 
 .ui-sortable-handle {
@@ -32,15 +36,15 @@
 }
 
 .ui-sortable-placeholder {
-    border: 1px dotted $color-link;
+    border: 1px dotted colours.$color-link;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-sortable-helper {
-        box-shadow: $dark-standard-shadow;
+        box-shadow: settings.$dark-standard-shadow;
     }
 
     .ui-sortable-placeholder {
-        border-color: $dark-color-link;
+        border-color: colours.$dark-color-link;
     }
 }

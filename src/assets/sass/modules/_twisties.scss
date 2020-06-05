@@ -1,3 +1,7 @@
+@use "../setup/colours";
+@use "../setup/helpers";
+@use "../setup/settings";
+
 /* Twisties
    ========================================================================== */
 
@@ -26,45 +30,45 @@
 .txp-details {
     margin: 1em 0;
 
-    @if $flat-theme < 1 {
-        border-right: 1px solid $color-border-extra-light;
-        border-left: 1px solid $color-border-extra-light;
+    @if settings.$flat-theme < 1 {
+        border-right: 1px solid colours.$color-border-extra-light;
+        border-left: 1px solid colours.$color-border-extra-light;
 
         > div {
-            border-bottom: 1px solid $color-border-extra-light;
+            border-bottom: 1px solid colours.$color-border-extra-light;
         }
     } @else {
-        border-right: 1px solid $color-border;
-        border-left: 1px solid $color-border;
+        border-right: 1px solid colours.$color-border;
+        border-left: 1px solid colours.$color-border;
 
         > div {
-            border-bottom: 1px solid $color-border;
+            border-bottom: 1px solid colours.$color-border;
         }
     }
 
     clear: both;
-    background: $color-background-box;
+    background: colours.$color-background-box;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .txp-details {
-        @if $flat-theme < 1 {
-            border-right: 1px solid $dark-color-border-extra-light;
-            border-left: 1px solid $dark-color-border-extra-light;
+        @if settings.$flat-theme < 1 {
+            border-right: 1px solid colours.$dark-color-border-extra-light;
+            border-left: 1px solid colours.$dark-color-border-extra-light;
 
             > div {
-                border-bottom: 1px solid $dark-color-border-extra-light;
+                border-bottom: 1px solid colours.$dark-color-border-extra-light;
             }
         } @else {
-            border-right-color: $dark-color-border;
-            border-left-color: $dark-color-border;
+            border-right-color: colours.$dark-color-border;
+            border-left-color: colours.$dark-color-border;
 
             > div {
-                border-bottom-color: $dark-color-border;
+                border-bottom-color: colours.$dark-color-border;
             }
         }
 
-        background: $dark-color-background;
+        background: colours.$dark-color-background;
     }
 }
 
@@ -74,18 +78,18 @@
 
 h3.txp-summary,
 .txp-details > h3 {
-    @include gradient-linear($color-gradient-from, $color-gradient-to);
+    @include helpers.gradient-linear(colours.$color-gradient-from, colours.$color-gradient-to);
 
     position: relative;
     height: 2em; // 26px / 13px
     margin: 0;
 
-    @if $flat-theme < 1 {
-        border-top: 1px solid $color-border-light;
-        border-bottom: 1px solid $color-border-dark;
+    @if settings.$flat-theme < 1 {
+        border-top: 1px solid colours.$color-border-light;
+        border-bottom: 1px solid colours.$color-border-dark;
     } @else {
-        border-top: 1px solid $color-border;
-        border-bottom: 1px solid $color-border;
+        border-top: 1px solid colours.$color-border;
+        border-bottom: 1px solid colours.$color-border;
     }
 
     font-size: 1rem;
@@ -93,17 +97,17 @@ h3.txp-summary,
     line-height: 2; // 26px / 13px
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     h3.txp-summary,
     .txp-details > h3 {
-        @include gradient-linear($dark-color-gradient-to, $dark-color-gradient-from);
+        @include helpers.gradient-linear(colours.$dark-color-gradient-to, colours.$dark-color-gradient-from);
 
-        @if $flat-theme < 1 {
-            border-top-color: $dark-color-border-light;
-            border-bottom-color: $dark-color-border-extra-light;
+        @if settings.$flat-theme < 1 {
+            border-top-color: colours.$dark-color-border-light;
+            border-bottom-color: colours.$dark-color-border-extra-light;
         } @else {
-            border-top-color: $dark-color-border;
-            border-bottom-color: $dark-color-border;
+            border-top-color: colours.$dark-color-border;
+            border-bottom-color: colours.$dark-color-border;
         }
     }
 }
@@ -125,15 +129,15 @@ h3.txp-summary,
 h3.txp-summary a {
     display: block;
     padding: 0 2em 0 1em;
-    color: $color-text-heading;
+    color: colours.$color-text-heading;
 
     &:hover {
-        color: $color-text-heading;
+        color: colours.$color-text-heading;
         text-decoration: none;
     }
 
     &::after {
-        @include hide-text;
+        @include helpers.hide-text;
 
         content: "\2193";
         display: block;
@@ -145,7 +149,7 @@ h3.txp-summary a {
         height: 0;
         border: 0 solid transparent;
         border-width: 0.25em 0 0.25em 0.25em;
-        border-left-color: $color-text;
+        border-left-color: colours.$color-text;
         opacity: 0.5;
         font-size: 16px;
     }
@@ -155,18 +159,18 @@ h3.txp-summary a {
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     h3.txp-summary a {
-        color: $dark-color-text-heading;
+        color: colours.$dark-color-text-heading;
 
         &:hover {
-            color: $dark-color-text-heading;
+            color: colours.$dark-color-text-heading;
         }
 
         &::after {
             border: 0 solid transparent;
             border-width: 0.25em 0 0.25em 0.25em;
-            border-left-color: $dark-color-text;
+            border-left-color: colours.$dark-color-text;
             opacity: 0.6;
         }
 
@@ -186,14 +190,14 @@ h3.txp-summary.expanded a::after {
     right: 0.5625em; // 9px / 16px
     border: 0 solid transparent;
     border-width: 0.25em 0.25em 0;
-    border-top-color: $color-text;
+    border-top-color: colours.$color-text;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     h3.txp-summary.expanded a::after {
         border: 0 solid transparent;
         border-width: 0.25em 0.25em 0;
-        border-top-color: $dark-color-text;
+        border-top-color: colours.$dark-color-text;
     }
 }
 

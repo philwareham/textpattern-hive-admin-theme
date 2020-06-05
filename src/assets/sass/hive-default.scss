@@ -1,11 +1,12 @@
 // import global variables
-@import "setup/settings";
+@use "sass:meta";
+@use "setup/settings";
 
 // import any additional mixins
-@import "setup/helpers";
+@use "setup/helpers";
 
 // import colourscheme
-@import "setup/colours";
+@use "setup/colours";
 
 
 
@@ -13,7 +14,7 @@
    Styling and layout for all media
    ========================================================================== */
 
-@import "modules/base";
+@use "modules/base";
 
 
 
@@ -25,67 +26,67 @@
 
     // Global
 
-    @import "modules/links";
-    @import "modules/typography";
-    @import "modules/internationalization";
-    @import "modules/embedded-content";
-    @import "modules/alerts";
-    @import "modules/twisties";
-    @import "modules/progress-summary";
-    @import "modules/code-highlighting";
-    @import "modules/forms";
-    @import "modules/buttons";
-    @import "modules/progress";
-    @import "modules/lists";
-    @import "modules/tables";
+    @include meta.load-css("modules/links");
+    @include meta.load-css("modules/typography");
+    @include meta.load-css("modules/internationalization");
+    @include meta.load-css("modules/embedded-content");
+    @include meta.load-css("modules/alerts");
+    @include meta.load-css("modules/twisties");
+    @include meta.load-css("modules/progress-summary");
+    @include meta.load-css("modules/code-highlighting");
+    @include meta.load-css("modules/forms");
+    @include meta.load-css("modules/buttons");
+    @include meta.load-css("modules/progress");
+    @include meta.load-css("modules/lists");
+    @include meta.load-css("modules/tables");
     //@import "modules/uploader";
 
 
     // Layout modules
 
-    @import "modules/container";
-    @import "modules/grid";
-    @import "modules/header";
-    @import "modules/footer";
-    @import "modules/navigation";
-    @import "modules/layout-shared";
-    @import "modules/layout-specific";
+    @include meta.load-css("modules/container");
+    @include meta.load-css("modules/grid");
+    @include meta.load-css("modules/header");
+    @include meta.load-css("modules/footer");
+    @include meta.load-css("modules/navigation");
+    @include meta.load-css("modules/layout-shared");
+    @include meta.load-css("modules/layout-specific");
 
 
     // jQuery UI core
 
-    @import "modules/jquery-ui/core";
+    @include meta.load-css("modules/jquery-ui/core");
 
 
     // jQuery UI icons
 
-    @import "modules/jquery-ui/icons";
+    @include meta.load-css("modules/jquery-ui/icons");
 
 
     // jQuery UI interactions
 
-    @import "modules/jquery-ui/draggable";
-    @import "modules/jquery-ui/resizable";
-    @import "modules/jquery-ui/selectable";
-    @import "modules/jquery-ui/sortable";
+    @include meta.load-css("modules/jquery-ui/draggable");
+    @include meta.load-css("modules/jquery-ui/resizable");
+    @include meta.load-css("modules/jquery-ui/selectable");
+    @include meta.load-css("modules/jquery-ui/sortable");
 
 
     // jQuery UI widgets
 
-    @import "modules/jquery-ui/accordion";
-    @import "modules/jquery-ui/autocomplete";
-    @import "modules/jquery-ui/button";
-    @import "modules/jquery-ui/checkboxradio";
-    @import "modules/jquery-ui/controlgroup";
-    @import "modules/jquery-ui/datepicker";
-    @import "modules/jquery-ui/dialog";
-    @import "modules/jquery-ui/menu";
-    @import "modules/jquery-ui/progressbar";
-    @import "modules/jquery-ui/selectmenu";
-    @import "modules/jquery-ui/slider";
-    @import "modules/jquery-ui/spinner";
-    @import "modules/jquery-ui/tabs";
-    @import "modules/jquery-ui/tooltip";
+    @include meta.load-css("modules/jquery-ui/accordion");
+    @include meta.load-css("modules/jquery-ui/autocomplete");
+    @include meta.load-css("modules/jquery-ui/button");
+    @include meta.load-css("modules/jquery-ui/checkboxradio");
+    @include meta.load-css("modules/jquery-ui/controlgroup");
+    @include meta.load-css("modules/jquery-ui/datepicker");
+    @include meta.load-css("modules/jquery-ui/dialog");
+    @include meta.load-css("modules/jquery-ui/menu");
+    @include meta.load-css("modules/jquery-ui/progressbar");
+    @include meta.load-css("modules/jquery-ui/selectmenu");
+    @include meta.load-css("modules/jquery-ui/slider");
+    @include meta.load-css("modules/jquery-ui/spinner");
+    @include meta.load-css("modules/jquery-ui/tabs");
+    @include meta.load-css("modules/jquery-ui/tooltip");
 }
 
 
@@ -94,7 +95,7 @@
    Responsive layout for screen media
    ========================================================================== */
 
-@import "modules/responsive";
+@include meta.load-css("modules/responsive");
 
 
 
@@ -102,7 +103,7 @@
    Additional accessibility for screen media
    ========================================================================== */
 
-@import "modules/accessibility";
+@include meta.load-css("modules/accessibility");
 
 
 
@@ -110,7 +111,7 @@
    Animation `keyframes` need to appear outside of `screen` rules
    ========================================================================== */
 
-@import "modules/animation-keyframes";
+@include meta.load-css("modules/animation-keyframes");
 
 
 
@@ -119,5 +120,5 @@
    ========================================================================== */
 
 @media print {
-    @import "modules/print";
+    @include meta.load-css("modules/print");
 }

@@ -1,3 +1,6 @@
+@use "../setup/colours";
+@use "../setup/helpers";
+
 /* Embedded content
    ========================================================================== */
 
@@ -81,29 +84,29 @@ img {
  */
 
 .content-image {
-    border: solid 1px $color-border;
-    background: $color-background;
+    border: solid 1px colours.$color-border;
+    background: colours.$color-background;
 
     a:hover & {
-        border-color: $color-link-hover;
+        border-color: colours.$color-link-hover;
     }
 
     a:focus & {
-        border-color: $color-link-focus;
+        border-color: colours.$color-link-focus;
     }
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .content-image {
-        border-color: $dark-color-border;
-        background-color: $dark-color-background;
+        border-color: colours.$dark-color-border;
+        background-color: colours.$dark-color-background;
 
         a:hover & {
-            border-color: $dark-color-link-hover;
+            border-color: colours.$dark-color-link-hover;
         }
 
         a:focus & {
-            border-color: $dark-color-link-focus;
+            border-color: colours.$dark-color-link-focus;
         }
     }
 }

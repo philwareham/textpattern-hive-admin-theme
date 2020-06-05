@@ -1,3 +1,6 @@
+@use "../../setup/helpers";
+@use "../../setup/settings";
+
 /* Draggable
  ========================================================================== */
 
@@ -29,11 +32,11 @@
 .ui-draggable-dragging {
     z-index: 1000;
     opacity: 0.66;
-    box-shadow: $standard-shadow;
+    box-shadow: settings.$standard-shadow;
 }
 
-@include dark-mode {
+@include helpers.dark-mode {
     .ui-draggable-dragging {
-        box-shadow: $dark-standard-shadow;
+        box-shadow: settings.$dark-standard-shadow;
     }
 }
