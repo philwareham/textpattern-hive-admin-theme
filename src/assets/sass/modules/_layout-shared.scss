@@ -1,6 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
-@use "../setup/settings";
 
 /* Globally shared layout
    ========================================================================== */
@@ -37,7 +39,7 @@ hr {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     hr {
         border-bottom-color: colours.$dark-color-border;
     }
@@ -110,7 +112,7 @@ hr {
     border-bottom: 1px solid colours.$color-border-light;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-dropdown-toggle-all {
         border-bottom-color: colours.$dark-color-border-light;
     }
@@ -448,7 +450,7 @@ span.spinner {
     box-shadow: 0 -1em 1em -0.5em colours.$color-background;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .multi-edit {
         background: colours.$dark-color-background;
         box-shadow: 0 -1em 1em -0.5em colours.$dark-color-background;
@@ -556,7 +558,7 @@ span.spinner {
     border-top: 2px solid colours.$color-border;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .text-section {
         border-top-color: colours.$dark-color-border;
     }
@@ -659,7 +661,7 @@ span.spinner {
 
 .txp-edit {
     position: relative;
-    max-width: (settings.$text-column - 2em);
+    max-width: (setup.$text-column - 2em);
     margin: 0 auto 1em;
     padding: 1em 1em 1px;
     clear: both;
@@ -672,7 +674,7 @@ span.spinner {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-edit {
         border: 1px solid colours.$dark-color-border-extra-light;
         background: colours.$dark-color-background;
@@ -697,7 +699,7 @@ span.spinner {
     border-top: 2px solid colours.$color-background;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-edit .txp-edit-actions {
         border-top-color: colours.$dark-color-background-box;
     }
@@ -921,7 +923,7 @@ span.spinner {
  */
 
 .txp-tabs-vertical-group {
-    max-width: settings.$text-column;
+    max-width: setup.$text-column;
 }
 
 /**

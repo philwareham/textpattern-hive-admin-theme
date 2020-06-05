@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
 
 /* Links
    ========================================================================== */
@@ -32,7 +35,7 @@ a {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     a {
         color: colours.$dark-color-link;
 
@@ -102,7 +105,7 @@ a {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-skip-link {
         background-color: colours.$dark-color-background-box;
     }

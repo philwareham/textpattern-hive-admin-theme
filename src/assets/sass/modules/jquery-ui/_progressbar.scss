@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/helpers";
 
 /* Progressbar
    ========================================================================== */
@@ -69,7 +72,7 @@
         );
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-progressbar {
         background-color: colours.$dark-color-background-box;
     }

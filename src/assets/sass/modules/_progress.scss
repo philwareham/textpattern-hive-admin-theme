@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
 
 /* Progress indicators
    ========================================================================== */
@@ -147,7 +150,7 @@ progress {
     background-image: none;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-upload-progress {
         border-color: colours.$dark-color-border;
         background-color: colours.$dark-color-background-box;

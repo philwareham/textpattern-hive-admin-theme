@@ -1,7 +1,8 @@
-@use "sass:color";
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
-@use "../setup/settings";
 
 /* Setup and login panels - additional layout
    ========================================================================== */
@@ -25,7 +26,7 @@
  */
 
 .txp-setup {
-    max-width: settings.$setup-column;
+    max-width: setup.$setup-column;
     margin: 1em auto;
 
     // Column width of 'welcome' setup panel.
@@ -52,7 +53,7 @@
 .login {
     h1 {
         /* 2 */
-        @include helpers.hide-text;
+        @include setup.hide-text;
 
         width: 16.5em; // 264px / 16px
         height: 3.375em; // 54px / 16px
@@ -82,7 +83,7 @@ body.darkmode.login {
     text-overflow: ellipsis;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .login-view-site {
         border-top-color: colours.$dark-color-border;
     }
@@ -131,8 +132,8 @@ body.darkmode.login {
         margin: 2em 0 0;
         padding: 0;
         border-bottom: 1px solid colours.$color-border;
-        font-size: settings.$small-font-size;
-        line-height: settings.$small-line-height;
+        font-size: setup.$small-font-size;
+        line-height: setup.$small-line-height;
     }
 
     li {
@@ -150,7 +151,7 @@ body.darkmode.login {
         color: colours.$color-text;
         text-decoration: none;
 
-        @if settings.$flat-theme < 1 {
+        @if setup.$flat-theme < 1 {
             box-shadow: inset 0 -0.25em 0.5em rgba(#666666, 0.2);
         }
 
@@ -169,7 +170,7 @@ body.darkmode.login {
         border-bottom-color: colours.$color-background;
         background-color: color.adjust(colours.$color-background-box, $lightness: 3%);
 
-        @if settings.$flat-theme < 1 {
+        @if setup.$flat-theme < 1 {
             box-shadow: none;
         }
 
@@ -180,7 +181,7 @@ body.darkmode.login {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     #view_modes {
         ul {
             border-bottom-color: colours.$dark-color-border;
@@ -191,7 +192,7 @@ body.darkmode.login {
             background-color: colours.$dark-color-background-box;
             color: colours.$dark-color-text;
 
-            @if settings.$flat-theme < 1 {
+            @if setup.$flat-theme < 1 {
                 box-shadow: inset 0 -0.25em 0.5em rgba(#000000, 0.2);
             }
 
@@ -210,7 +211,7 @@ body.darkmode.login {
             border-bottom-color: colours.$dark-color-background;
             background-color: colours.$dark-color-background;
 
-            @if settings.$flat-theme < 1 {
+            @if setup.$flat-theme < 1 {
                 box-shadow: none;
             }
 
@@ -251,7 +252,7 @@ body.darkmode.login {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     #main_content .author small {
         color: colours.$dark-color-text-footnote;
     }
@@ -286,7 +287,7 @@ body.darkmode.login {
     border-top: 0;
     background: colours.$color-background;
 
-    @if settings.$flat-theme < 1 {
+    @if setup.$flat-theme < 1 {
         box-shadow: 0 0.1em 0.125em rgba(#000000, 0.15);
     }
 
@@ -295,7 +296,7 @@ body.darkmode.login {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-save-zone {
         border-color: colours.$dark-color-border-light;
         background: colours.$dark-color-background-box;
@@ -315,7 +316,7 @@ body.darkmode.login {
     color: colours.$color-text-footnote;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .unpublished,
     .not-modified {
         color: colours.$dark-color-text-footnote;
@@ -394,7 +395,7 @@ body.darkmode.login {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-list tbody tr {
         &.spam {
             background: color.adjust(colours.$dark-color-error-background, $lightness: -2%);

@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
 
 /* Code highlighting (via Prism.js)
    ========================================================================== */
@@ -98,7 +101,7 @@ pre[class*="language-"] {
     cursor: help;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .token.punctuation {
         color: #ffffff;
     }

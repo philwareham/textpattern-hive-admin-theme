@@ -1,14 +1,5 @@
-// import global variables
 @use "sass:meta";
-@use "setup/settings";
-
-// import any additional mixins
-@use "setup/helpers";
-
-// import colourscheme
-@use "setup/colours";
-
-
+@use "setup";
 
 /* ==========================================================================
    Styling and layout for all media
@@ -43,7 +34,7 @@
     }
 
     .txp-setup {
-        max-width: settings.$setup-column;
+        max-width: setup.$setup-column;
         margin: 1em auto;
     }
 
@@ -77,7 +68,7 @@
    ========================================================================== */
 
 
-@media (max-width: settings.$break-large) {
+@media (max-width: setup.$break-large) {
     .setup {
         padding: 1em 2em 0; // 13px + 26px
     }
@@ -90,7 +81,7 @@
    ========================================================================== */
 
 
-@media (max-width: settings.$break-small) {
+@media (max-width: setup.$break-small) {
 
     /**
      * Prevent zoom upon form element focus.

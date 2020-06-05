@@ -1,7 +1,8 @@
-@use "sass:color";
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
-@use "../setup/settings";
 
 /* Buttons
    ========================================================================== */
@@ -40,14 +41,14 @@ input[type="button"],
 .txp-logout a,
 .navlink,
 .navlink-active {
-    @include helpers.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
+    @include setup.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
 
     display: inline-block;
     width: auto;
     height: 2.307692307692308em; // 30px / 13px
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     border: 1px solid colours.$color-button-border;
-    border-radius: settings.$border-radius;
+    border-radius: setup.$border-radius;
     background-clip: padding-box;
     color: colours.$color-text-button;
     font-weight: normal;
@@ -59,7 +60,7 @@ input[type="button"],
     user-select: none;
 
     &:hover {
-        @include helpers.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: 4%), color.adjust(colours.$color-button-gradient-to, $lightness: 4%));
+        @include setup.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: 4%), color.adjust(colours.$color-button-gradient-to, $lightness: 4%));
 
         border-color: color.adjust(colours.$color-button-border, $lightness: -13%);
         color: colours.$color-text-button-hover;
@@ -67,14 +68,14 @@ input[type="button"],
     }
 
     &:active {
-        @include helpers.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: -3%), color.adjust(colours.$color-button-gradient-to, $lightness: -3%));
+        @include setup.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: -3%), color.adjust(colours.$color-button-gradient-to, $lightness: -3%));
 
         border-color: color.adjust(colours.$color-button-border, $lightness: -13%);
         color: colours.$color-text-button-active;
         text-decoration: none;
 
-        @if settings.$flat-theme < 1 {
-            box-shadow: settings.$inset-lowlighting;
+        @if setup.$flat-theme < 1 {
+            box-shadow: setup.$inset-lowlighting;
         }
     }
 
@@ -85,7 +86,7 @@ input[type="button"],
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     button,
     [type="reset"],
     [type="submit"],
@@ -122,7 +123,7 @@ input[type="button"],
 [type="submit"].publish,
 button.publish,
 a.publish {
-    @include helpers.gradient-linear(colours.$color-button-primary-gradient-from, colours.$color-button-primary-gradient-to);
+    @include setup.gradient-linear(colours.$color-button-primary-gradient-from, colours.$color-button-primary-gradient-to);
 
     height: 2.76923076923077em; // 36px / 13px
     padding: 0.61538461538462em 1em; // 8px / 13px + 13px
@@ -130,13 +131,13 @@ a.publish {
     font-weight: bold;
 
     &:hover {
-        @include helpers.gradient-linear(color.adjust(colours.$color-button-primary-gradient-from, $lightness: 7%), color.adjust(colours.$color-button-primary-gradient-to, $lightness: 7%));
+        @include setup.gradient-linear(color.adjust(colours.$color-button-primary-gradient-from, $lightness: 7%), color.adjust(colours.$color-button-primary-gradient-to, $lightness: 7%));
 
         border: 1px solid color.adjust(colours.$color-button-primary-border, $lightness: -10%);
     }
 
     &:active {
-        @include helpers.gradient-linear(color.adjust(colours.$color-button-primary-gradient-from, $lightness: -5%), color.adjust(colours.$color-button-primary-gradient-to, $lightness: -5%));
+        @include setup.gradient-linear(color.adjust(colours.$color-button-primary-gradient-from, $lightness: -5%), color.adjust(colours.$color-button-primary-gradient-to, $lightness: -5%));
 
         border: 1px solid color.adjust(colours.$color-button-primary-border, $lightness: -10%);
     }
@@ -146,7 +147,7 @@ a.publish {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     [type="submit"].publish,
     button.publish,
     a.publish {
@@ -172,7 +173,7 @@ button.destroy {
     padding: 0.07692307692308em 0 0; // 1px / 13px
     border: 0;
 
-    @if settings.$border-radius > 0 {
+    @if setup.$border-radius > 0 {
         border-radius: 0;
     }
 
@@ -198,7 +199,7 @@ button.destroy {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     button.destroy {
         &:focus {
             outline: thin solid colours.$dark-color-link-focus;
@@ -244,16 +245,16 @@ button.destroy {
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     border: 1px solid;
 
-    @if settings.$border-radius > 0 {
-        border-radius: settings.$border-radius;
+    @if setup.$border-radius > 0 {
+        border-radius: setup.$border-radius;
     }
 
     background-clip: padding-box;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .navlink-disabled {
-        @include helpers.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
+        @include setup.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
     }
 }
 
@@ -282,7 +283,7 @@ ul.nav-tertiary {
     padding: 0;
 }
 
-@if settings.$border-radius > 0 {
+@if setup.$border-radius > 0 {
     .nav-tertiary {
         > * {
             border-radius: 0;
@@ -291,13 +292,13 @@ ul.nav-tertiary {
         > :first-child,
         > :first-child > a,
         > :first-child > span {
-            border-radius: settings.$border-radius 0 0 settings.$border-radius;
+            border-radius: setup.$border-radius 0 0 setup.$border-radius;
         }
 
         > :last-child,
         > :last-child > a,
         > :last-child > span {
-            border-radius: 0 settings.$border-radius settings.$border-radius 0;
+            border-radius: 0 setup.$border-radius setup.$border-radius 0;
         }
     }
 
@@ -305,13 +306,13 @@ ul.nav-tertiary {
         > :first-child,
         > :first-child > a,
         > :first-child > span {
-            border-radius: 0 settings.$border-radius settings.$border-radius 0;
+            border-radius: 0 setup.$border-radius setup.$border-radius 0;
         }
 
         > :last-child,
         > :last-child > a,
         > :last-child > span {
-            border-radius: settings.$border-radius 0 0 settings.$border-radius;
+            border-radius: setup.$border-radius 0 0 setup.$border-radius;
         }
     }
 }
@@ -328,18 +329,18 @@ ul.nav-tertiary {
 
 .nav-tertiary .navlink-active,
 .filtered button.ui-corner-right {
-    @include helpers.gradient-linear(colours.$color-button-selected-gradient-from, colours.$color-button-selected-gradient-to);
+    @include setup.gradient-linear(colours.$color-button-selected-gradient-from, colours.$color-button-selected-gradient-to);
 
     border-color: colours.$color-button-selected-border;
 
     &:hover {
-        @include helpers.gradient-linear(color.adjust(colours.$color-button-selected-gradient-from, $lightness: 2%), color.adjust(colours.$color-button-selected-gradient-to, $lightness: 2%));
+        @include setup.gradient-linear(color.adjust(colours.$color-button-selected-gradient-from, $lightness: 2%), color.adjust(colours.$color-button-selected-gradient-to, $lightness: 2%));
 
         border-color: color.adjust(colours.$color-button-selected-border, $lightness: -15%);
     }
 
     &:active {
-        @include helpers.gradient-linear(color.adjust(colours.$color-button-selected-gradient-from, $lightness: -5%), color.adjust(colours.$color-button-selected-gradient-to, $lightness: -5%));
+        @include setup.gradient-linear(color.adjust(colours.$color-button-selected-gradient-from, $lightness: -5%), color.adjust(colours.$color-button-selected-gradient-to, $lightness: -5%));
 
         border-color: color.adjust(colours.$color-button-selected-border, $lightness: -15%);
     }
@@ -349,7 +350,7 @@ ul.nav-tertiary {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .nav-tertiary .navlink-active,
     .filtered button.ui-corner-right {
         &:focus {
@@ -378,7 +379,7 @@ ul.nav-tertiary {
     padding-right: 1.5em;
     padding-left: 1.5em;
 
-    @if settings.$border-radius > 0 {
+    @if setup.$border-radius > 0 {
         border-radius: 0;
 
         [dir="rtl"] & {
@@ -403,7 +404,7 @@ button[disabled],
     color: colours.$color-text-button-disabled !important;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     button[disabled],
     [type="button"][disabled],
     [type="reset"][disabled],

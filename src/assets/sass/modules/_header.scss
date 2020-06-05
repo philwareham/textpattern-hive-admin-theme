@@ -1,7 +1,8 @@
-@use "sass:color";
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
-@use "../setup/settings";
 
 /* Header
    ========================================================================== */
@@ -21,7 +22,7 @@
  */
 
 .txp-header {
-    @include helpers.gradient-linear(colours.$color-accent-gradient-from, colours.$color-accent-gradient-to);
+    @include setup.gradient-linear(colours.$color-accent-gradient-from, colours.$color-accent-gradient-to);
 
     display: flex;
     position: fixed;
@@ -34,12 +35,12 @@
     border-top: 1px solid colours.$color-accent-gradient-to;
     border-bottom: 1px solid color.adjust(colours.$color-accent-gradient-to, $lightness: -6%);
 
-    @if settings.$flat-theme < 1 {
+    @if setup.$flat-theme < 1 {
         box-shadow: 0 0.2em 0.25em rgba(#000000, 0.15);
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-header a {
         color: colours.$color-text;
 
@@ -86,7 +87,7 @@
     }
 
     span {
-        @include helpers.hide-text;
+        @include setup.hide-text;
 
         display: block;
     }
@@ -175,7 +176,7 @@
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-lightswitch a {
         background: transparent;
 
@@ -208,7 +209,7 @@
     flex: none;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-logout a:focus {
         border-color: colours.$color-link-focus;
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.

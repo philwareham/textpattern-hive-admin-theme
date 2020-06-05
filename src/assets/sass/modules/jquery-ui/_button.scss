@@ -1,7 +1,8 @@
-@use "sass:color";
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/helpers";
-@use "../../setup/settings";
 
 /* Button
    ========================================================================== */
@@ -24,7 +25,7 @@
  */
 
 .ui-button {
-    @include helpers.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
+    @include setup.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
 
     display: inline-block;
     position: relative;
@@ -40,7 +41,7 @@
     font-family: inherit;
     /* 2 */
     font-size: 1rem;
-    line-height: settings.$base-line-height;
+    line-height: setup.$base-line-height;
     vertical-align: baseline;
     text-align: center;
     /* 3 */
@@ -50,7 +51,7 @@
     user-select: none;
 
     &:hover {
-        @include helpers.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: 4%), color.adjust(colours.$color-button-gradient-to, $lightness: 4%));
+        @include setup.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: 4%), color.adjust(colours.$color-button-gradient-to, $lightness: 4%));
 
         border-color: color.adjust(colours.$color-button-border, $lightness: -13%);
         color: colours.$color-text-button-hover;
@@ -58,14 +59,14 @@
     }
 
     &:active {
-        @include helpers.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: -3%), color.adjust(colours.$color-button-gradient-to, $lightness: -3%));
+        @include setup.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: -3%), color.adjust(colours.$color-button-gradient-to, $lightness: -3%));
 
         border-color: color.adjust(colours.$color-button-border, $lightness: -13%);
         color: colours.$color-text-button-active;
         text-decoration: none;
 
-        @if settings.$flat-theme < 1 {
-            box-shadow: settings.$inset-lowlighting;
+        @if setup.$flat-theme < 1 {
+            box-shadow: setup.$inset-lowlighting;
         }
     }
 
@@ -76,7 +77,7 @@
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-button {
         color: colours.$dark-color-text-button;
 
@@ -96,7 +97,7 @@
     border-color: colours.$color-link-focus !important; /* 1 */
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-button.ui-state-focus {
         border-color: colours.$dark-color-link-focus !important; /* 1 */
     }
@@ -131,24 +132,24 @@ input.ui-button.ui-button-icon-only {
     text-indent: 0;
 }
 
-@if settings.$border-radius > 0 {
+@if setup.$border-radius > 0 {
     .ui-button.ui-corner-all {
-        border-radius: settings.$border-radius;
+        border-radius: setup.$border-radius;
     }
 
     .ui-button.ui-corner-right {
-        border-radius: 0 settings.$border-radius settings.$border-radius 0;
+        border-radius: 0 setup.$border-radius setup.$border-radius 0;
 
         [dir="rtl"] & {
-            border-radius: settings.$border-radius 0 0 settings.$border-radius;
+            border-radius: setup.$border-radius 0 0 setup.$border-radius;
         }
     }
 
     .ui-button.ui-corner-left {
-        border-radius: settings.$border-radius 0 0 settings.$border-radius;
+        border-radius: setup.$border-radius 0 0 setup.$border-radius;
 
         [dir="rtl"] & {
-            border-radius: 0 settings.$border-radius settings.$border-radius 0;
+            border-radius: 0 setup.$border-radius setup.$border-radius 0;
         }
     }
 }

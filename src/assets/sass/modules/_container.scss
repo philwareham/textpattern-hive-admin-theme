@@ -1,6 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
-@use "../setup/settings";
 
 /* Container
    ========================================================================== */
@@ -26,7 +28,7 @@ body {
     overscroll-behavior: none;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     //body {
     background: colours.$dark-color-background;
     color: colours.$dark-color-text;
@@ -50,6 +52,6 @@ body {
 .txp-body {
     flex-grow: 1;
     width: 100%;
-    max-width: settings.$container-max-width;
+    max-width: setup.$container-max-width;
     margin: 0 auto;
 }

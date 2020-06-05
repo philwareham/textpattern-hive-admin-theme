@@ -1,5 +1,8 @@
-@use "../../setup/helpers";
-@use "../../setup/settings";
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
+@use "../../setup/colours";
 
 /* Draggable
  ========================================================================== */
@@ -32,11 +35,11 @@
 .ui-draggable-dragging {
     z-index: 1000;
     opacity: 0.66;
-    box-shadow: settings.$standard-shadow;
+    box-shadow: setup.$standard-shadow;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-draggable-dragging {
-        box-shadow: settings.$dark-standard-shadow;
+        box-shadow: setup.$dark-standard-shadow;
     }
 }

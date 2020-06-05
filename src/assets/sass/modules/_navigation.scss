@@ -1,7 +1,8 @@
-@use "sass:color";
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
-@use "../setup/settings";
 
 /* Navigation
    ========================================================================== */
@@ -50,7 +51,7 @@ button.txp-nav-toggle {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-nav a {
         color: colours.$color-text;
     }
@@ -155,7 +156,7 @@ button.txp-nav-toggle {
     padding: 0 1.61538461538462em 0 1em;
 
     &::after {
-        @include helpers.hide-text;
+        @include setup.hide-text;
 
         content: "\2193";
         display: block;
@@ -258,28 +259,28 @@ button.txp-nav-toggle {
     min-width: 12em;
     border: 1px solid;
 
-    @if settings.$border-radius > 0 {
-        border-radius: 0 settings.$border-radius settings.$border-radius;
+    @if setup.$border-radius > 0 {
+        border-radius: 0 setup.$border-radius setup.$border-radius;
     }
 
     background: colours.$color-highlight-box;
 
-    @if settings.$flat-theme < 1 {
+    @if setup.$flat-theme < 1 {
         border-color: colours.$color-border-light;
         border-top: 0;
-        box-shadow: settings.$standard-shadow;
+        box-shadow: setup.$standard-shadow;
     } @else {
         border-color: colours.$color-border;
     }
 
     li {
-        @if settings.$border-radius > 0 {
+        @if setup.$border-radius > 0 {
             &:first-child {
-                border-radius: 0 settings.$border-radius 0 0;
+                border-radius: 0 setup.$border-radius 0 0;
             }
 
             &:last-child {
-                border-radius: 0 0 settings.$border-radius settings.$border-radius;
+                border-radius: 0 0 setup.$border-radius setup.$border-radius;
             }
         }
 
@@ -314,10 +315,10 @@ button.txp-nav-toggle {
     }
 }
 
-@if settings.$flat-theme < 1 {
-    @include helpers.dark-mode {
+@if setup.$flat-theme < 1 {
+    @include setup.dark-mode {
         .dropdown-menu {
-            box-shadow: settings.$dark-standard-shadow;
+            box-shadow: setup.$dark-standard-shadow;
         }
     }
 }
@@ -330,11 +331,11 @@ button.txp-nav-toggle {
     right: 0;
     left: auto;
 
-    @if settings.$border-radius > 0 {
-        border-radius: settings.$border-radius 0;
+    @if setup.$border-radius > 0 {
+        border-radius: setup.$border-radius 0;
 
         li:first-child {
-            border-radius: settings.$border-radius 0 0;
+            border-radius: setup.$border-radius 0 0;
         }
     }
 

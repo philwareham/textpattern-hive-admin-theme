@@ -1,6 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
-@use "../setup/settings";
 
 /* Typography
    ========================================================================== */
@@ -10,8 +12,8 @@
  */
 
 html {
-    font-size: settings.$base-font-size;
-    line-height: settings.$base-line-height;
+    font-size: setup.$base-font-size;
+    line-height: setup.$base-line-height;
 }
 
 /**
@@ -19,7 +21,7 @@ html {
  */
 
 body {
-    font-family: settings.$font-body;
+    font-family: setup.$font-body;
 }
 
 /**
@@ -101,7 +103,7 @@ h6 {
     font-size: 1rem;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     h1,
     h2,
     h3,
@@ -139,7 +141,7 @@ blockquote {
     border-left: 3px solid colours.$color-border;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     blockquote {
         border-left-color: colours.$dark-color-border;
     }
@@ -165,15 +167,15 @@ mark,
 var {
     padding: 1px 0.23076923076923em; // 3px / 13px
 
-    @if settings.$border-radius > 0 {
-        border-radius: settings.$border-radius / 2;
+    @if setup.$border-radius > 0 {
+        border-radius: setup.$border-radius / 2;
     }
 
     background: colours.$color-selected;
     color: colours.$color-text;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     mark,
     var {
         background: colours.$dark-color-selected;
@@ -190,7 +192,7 @@ code,
 kbd,
 samp,
 .code {
-    font-family: settings.$font-code;
+    font-family: setup.$font-code;
 }
 
 code,
@@ -199,8 +201,8 @@ samp {
     padding: 1px 0.23076923076923em; // 3px / 13px
     border: 1px solid colours.$color-border-extra-light;
 
-    @if settings.$border-radius > 0 {
-        border-radius: settings.$border-radius / 2;
+    @if setup.$border-radius > 0 {
+        border-radius: setup.$border-radius / 2;
     }
 
     background: colours.$color-background-box;
@@ -221,8 +223,8 @@ pre {
     overflow-x: auto;
     border: 1px solid colours.$color-border-extra-light;
 
-    @if settings.$border-radius > 0 {
-        border-radius: settings.$border-radius / 2;
+    @if setup.$border-radius > 0 {
+        border-radius: setup.$border-radius / 2;
     }
 
     background: colours.$color-background-box;
@@ -232,7 +234,7 @@ pre {
     tab-size: 4;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     pre,
     code,
     kbd,
@@ -255,7 +257,7 @@ code.excerpt {
     padding: 0;
     border: 0;
 
-    @if settings.$border-radius > 0 {
+    @if setup.$border-radius > 0 {
         border-radius: 0;
     }
 
@@ -301,8 +303,8 @@ tfoot,
 .footnote,
 .txp-form-field-instructions,
 .txp-footer {
-    font-size: settings.$small-font-size;
-    line-height: settings.$small-line-height;
+    font-size: setup.$small-font-size;
+    line-height: setup.$small-line-height;
 }
 
 figcaption,
@@ -312,7 +314,7 @@ tfoot,
     color: colours.$color-text-footnote;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     figcaption,
     tfoot,
     .footnote,

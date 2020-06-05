@@ -1,6 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/helpers";
-@use "../../setup/settings";
 
 /* Layout helpers
    ========================================================================== */
@@ -41,7 +43,7 @@
     outline: 0;
     list-style: none;
     font-size: 1rem;
-    line-height: settings.$base-line-height;
+    line-height: setup.$base-line-height;
     text-decoration: none;
 }
 
@@ -98,7 +100,7 @@
     background-color: colours.$color-background;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-widget-content {
         border-color: colours.$dark-color-border;
         background-color: colours.$dark-color-background;
@@ -110,14 +112,14 @@
  */
 
 .ui-widget-header {
-    @include helpers.gradient-linear(colours.$color-gradient-from, colours.$color-gradient-to);
+    @include setup.gradient-linear(colours.$color-gradient-from, colours.$color-gradient-to);
 
     font-weight: bold;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-widget-header {
-        @include helpers.gradient-linear(colours.$dark-color-gradient-to, colours.$dark-color-gradient-from);
+        @include setup.gradient-linear(colours.$dark-color-gradient-to, colours.$dark-color-gradient-from);
     }
 }
 
@@ -135,7 +137,7 @@
     color: colours.$color-text;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-state-default {
         border-color: colours.$dark-color-border-light;
         background-color: colours.$dark-color-background-box;
@@ -153,7 +155,7 @@ a.ui-state-default:focus {
     text-decoration: none;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     a.ui-state-default:hover,
     a.ui-state-default:focus {
         color: colours.$dark-color-text;
@@ -169,7 +171,7 @@ a.ui-state-default:focus {
     background-color: colours.$color-background-box;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-state-hover {
         border-color: colours.$dark-color-border;
         background-color: colours.tint(colours.$dark-color-background-box, 5%);
@@ -189,7 +191,7 @@ a.ui-state-default:focus {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-state-focus {
         border-color: colours.$dark-color-link-focus;
     }
@@ -204,7 +206,7 @@ a.ui-state-default:focus {
     background-color: colours.$color-background;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-state-active:not(.ui-button) {
         border-color: colours.$dark-color-border;
         background-color: colours.$dark-color-gradient-from;
@@ -219,7 +221,7 @@ a.ui-state-default:focus {
     background-color: colours.$color-selecting;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-selecting {
         background-color: colours.$dark-color-selecting;
     }
@@ -233,7 +235,7 @@ a.ui-state-default:focus {
     background-color: colours.$color-selected;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-selected {
         background-color: colours.$dark-color-selected;
     }
@@ -252,7 +254,7 @@ a.ui-state-default:focus {
     background-color: colours.$color-warning-background;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-state-highlight {
         border-color: colours.$dark-color-warning-border;
         background-color: colours.$dark-color-warning-background;
@@ -269,7 +271,7 @@ a.ui-state-default:focus {
     color: colours.$color-error-text;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-state-error {
         border-color: colours.$dark-color-error-border;
         background-color: colours.$dark-color-error-background;
@@ -310,7 +312,7 @@ a.ui-state-default:focus {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-state-disabled:not(.ui-button) {
         opacity: 0.25;
     }
@@ -337,7 +339,7 @@ a.ui-state-default:focus {
     background: rgba(#000000, 0.75);
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-widget-overlay {
         background: rgba(#000000, 0.66);
     }
@@ -356,11 +358,11 @@ a.ui-state-default:focus {
  */
 
 .ui-widget-shadow {
-    box-shadow: settings.$standard-shadow;
+    box-shadow: setup.$standard-shadow;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-widget-shadow {
-        box-shadow: settings.$dark-standard-shadow;
+        box-shadow: setup.$dark-standard-shadow;
     }
 }

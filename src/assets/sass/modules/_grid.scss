@@ -1,6 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
-@use "../setup/settings";
 
 /* Layout grid
    ========================================================================== */
@@ -113,7 +115,7 @@
  */
 
 .txp-layout-textbox {
-    max-width: settings.$text-column;
+    max-width: setup.$text-column;
 }
 
 
@@ -189,7 +191,7 @@
     border: 1px solid colours.$color-border;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-grid-cell {
         border-color: colours.$dark-color-border;
     }
@@ -235,7 +237,7 @@
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-grid-multi-edit {
         border-color: colours.$dark-color-border-light;
     }

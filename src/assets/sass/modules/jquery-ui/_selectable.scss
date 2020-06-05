@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/helpers";
 
 /* Selectable
    ========================================================================== */
@@ -34,7 +37,7 @@
     border: 1px dotted colours.$color-link;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-selectable-helper {
         border-color: colours.$dark-color-link;
     }

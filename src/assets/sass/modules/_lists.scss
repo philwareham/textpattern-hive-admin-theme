@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
 
 /* Lists
    ========================================================================== */
@@ -45,7 +48,7 @@ li::marker {
     color: color-text-heading;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     li::marker {
         color: colours.$dark-color-text-heading;
     }
@@ -141,7 +144,7 @@ dd {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .switcher-list li {
         border-top: 1px solid colours.$dark-color-gradient-to;
 

@@ -1,6 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
-@use "../setup/settings";
 
 /* Forms
    ========================================================================== */
@@ -17,7 +19,7 @@ fieldset {
     border: 1px solid colours.$color-border; /* 2 */
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     fieldset {
         border-color: colours.$dark-color-border;
     }
@@ -71,11 +73,11 @@ textarea,
     color: colours.$color-text-form;
     font-family: inherit;
     font-size: 1rem; /* 3 */
-    line-height: settings.$base-line-height;
+    line-height: setup.$base-line-height;
     vertical-align: baseline;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     input,
     select,
     optgroup,
@@ -123,7 +125,7 @@ textarea {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     [type="color"],
     [type="date"],
     [type="datetime"],
@@ -193,7 +195,7 @@ textarea {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     [type="checkbox"]:not(.ui-checkboxradio),
     [type="radio"]:not(.ui-checkboxradio) {
         border-color: colours.$dark-color-border-extra-dark;
@@ -229,7 +231,7 @@ textarea {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     [type="checkbox"]:not(.ui-checkboxradio) {
         &:checked {
             background: colours.$dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
@@ -267,7 +269,7 @@ textarea {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     [type="radio"]:not(.ui-checkboxradio):checked {
         border-color: colours.$dark-color-text;
 
@@ -324,7 +326,7 @@ textarea {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     [type="file"] {
         border-color: colours.$dark-color-border-extra-dark;
         background-color: colours.$dark-color-background-form;
@@ -340,7 +342,7 @@ textarea {
 }
 
 ::-webkit-file-upload-button {
-    @include helpers.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
+    @include setup.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
 
     padding: 0 0.25em;
     border: 0;
@@ -352,7 +354,7 @@ textarea {
 }
 
 ::-ms-browse {
-    @include helpers.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
+    @include setup.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
 
     padding: 0 0.25em;
     border: 0;
@@ -395,7 +397,7 @@ select {
     text-transform: none;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     select {
         background-color: colours.$dark-color-background-form;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23788591' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E");
@@ -427,7 +429,7 @@ select[multiple] {
     vertical-align: top;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     select[size],
     select[multiple] {
         background-image: none;
@@ -509,7 +511,7 @@ textarea.code {
     cursor: default !important; /* 1 */
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     [disabled],
     [disabled] option,
     [disabled] optgroup,
@@ -621,7 +623,7 @@ textarea {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     input,
     select,
     textarea {
@@ -650,7 +652,7 @@ textarea {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     input,
     select,
     textarea {
@@ -677,7 +679,7 @@ textarea {
     font-weight: normal;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     ::placeholder {
         color: colours.$dark-color-text-form-placeholder;
     }

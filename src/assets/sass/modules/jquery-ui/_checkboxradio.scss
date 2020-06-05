@@ -1,6 +1,8 @@
-@use "sass:color";
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/helpers";
 
 /* Checkboxradio
    ========================================================================== */
@@ -91,19 +93,19 @@
 
 .ui-checkboxradio-checked {
     &.ui-button {
-        @include helpers.gradient-linear(colours.$color-button-selected-gradient-from, colours.$color-button-selected-gradient-to);
+        @include setup.gradient-linear(colours.$color-button-selected-gradient-from, colours.$color-button-selected-gradient-to);
 
         border-color: colours.$color-button-selected-border;
     }
 
     &.ui-button:hover {
-        @include helpers.gradient-linear(color.adjust(colours.$color-button-selected-gradient-from, $lightness: 3%), color.adjust(colours.$color-button-selected-gradient-to, $lightness: 2%));
+        @include setup.gradient-linear(color.adjust(colours.$color-button-selected-gradient-from, $lightness: 3%), color.adjust(colours.$color-button-selected-gradient-to, $lightness: 2%));
 
         border-color: color.adjust(colours.$color-button-selected-border, $lightness: -15%);
     }
 
     &.ui-button:active {
-        @include helpers.gradient-linear(color.adjust(colours.$color-button-selected-gradient-from, $lightness: -5%), color.adjust(colours.$color-button-selected-gradient-to, $lightness: -5%));
+        @include setup.gradient-linear(color.adjust(colours.$color-button-selected-gradient-from, $lightness: -5%), color.adjust(colours.$color-button-selected-gradient-to, $lightness: -5%));
 
         border-color: color.adjust(colours.$color-button-selected-border, $lightness: -15%);
     }

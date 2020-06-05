@@ -1,6 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
-@use "../setup/settings";
 
 /* Twisties
    ========================================================================== */
@@ -30,7 +32,7 @@
 .txp-details {
     margin: 1em 0;
 
-    @if settings.$flat-theme < 1 {
+    @if setup.$flat-theme < 1 {
         border-right: 1px solid colours.$color-border-extra-light;
         border-left: 1px solid colours.$color-border-extra-light;
 
@@ -50,9 +52,9 @@
     background: colours.$color-background-box;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-details {
-        @if settings.$flat-theme < 1 {
+        @if setup.$flat-theme < 1 {
             border-right: 1px solid colours.$dark-color-border-extra-light;
             border-left: 1px solid colours.$dark-color-border-extra-light;
 
@@ -78,13 +80,13 @@
 
 h3.txp-summary,
 .txp-details > h3 {
-    @include helpers.gradient-linear(colours.$color-gradient-from, colours.$color-gradient-to);
+    @include setup.gradient-linear(colours.$color-gradient-from, colours.$color-gradient-to);
 
     position: relative;
     height: 2em; // 26px / 13px
     margin: 0;
 
-    @if settings.$flat-theme < 1 {
+    @if setup.$flat-theme < 1 {
         border-top: 1px solid colours.$color-border-light;
         border-bottom: 1px solid colours.$color-border-dark;
     } @else {
@@ -97,12 +99,12 @@ h3.txp-summary,
     line-height: 2; // 26px / 13px
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     h3.txp-summary,
     .txp-details > h3 {
-        @include helpers.gradient-linear(colours.$dark-color-gradient-to, colours.$dark-color-gradient-from);
+        @include setup.gradient-linear(colours.$dark-color-gradient-to, colours.$dark-color-gradient-from);
 
-        @if settings.$flat-theme < 1 {
+        @if setup.$flat-theme < 1 {
             border-top-color: colours.$dark-color-border-light;
             border-bottom-color: colours.$dark-color-border-extra-light;
         } @else {
@@ -137,7 +139,7 @@ h3.txp-summary a {
     }
 
     &::after {
-        @include helpers.hide-text;
+        @include setup.hide-text;
 
         content: "\2193";
         display: block;
@@ -159,7 +161,7 @@ h3.txp-summary a {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     h3.txp-summary a {
         color: colours.$dark-color-text-heading;
 
@@ -193,7 +195,7 @@ h3.txp-summary.expanded a::after {
     border-top-color: colours.$color-text;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     h3.txp-summary.expanded a::after {
         border: 0 solid transparent;
         border-width: 0.25em 0.25em 0;

@@ -1,10 +1,6 @@
-// import global variables
-@use "setup/settings";
+@use "setup";
 
-// import any additional mixins
-@use "setup/helpers";
-
-// import colourscheme
+// import colourscheme TEMP
 @use "setup/colours";
 
 
@@ -65,7 +61,7 @@ body {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .is-inview::before {
         background-color: rgba(colours.$dark-color-link-focus, 0.25);
     }
@@ -155,11 +151,11 @@ $dark-colors: (
         top: 0.69230769230769em; // 9px / 13px
         padding: 1px 0.23076923076923em; // 3px / 13px
         background-color: rgba(255, 255, 255, 0.66);
-        font-family: settings.$font-code;
+        font-family: setup.$font-code;
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .design-patterns-color {
         border-color: colours.$dark-color-border;
 
@@ -179,7 +175,7 @@ $dark-colors: (
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     @each $name, $color in $dark-colors {
         .design-patterns-color-#{$name} {
             background: $color;
@@ -276,13 +272,13 @@ h2 span {
     font-weight: normal;
 }
 
-@media (min-width: settings.$break-small) {
+@media (min-width: setup.$break-small) {
     body {
         padding: 0 2em 1em;
     }
 }
 
-@media (min-width: settings.$break-large) {
+@media (min-width: setup.$break-large) {
     body {
         padding: 0 4% 1em;
     }

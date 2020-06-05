@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
 
 /* Embedded content
    ========================================================================== */
@@ -96,7 +99,7 @@ img {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .content-image {
         border-color: colours.$dark-color-border;
         background-color: colours.$dark-color-background;

@@ -1,6 +1,8 @@
-@use "sass:color";
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
 
 /* Tables
    ========================================================================== */
@@ -33,7 +35,7 @@ table {
     background-color: colours.$color-background;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     table {
         background-color: colours.$dark-color-background;
     }
@@ -68,7 +70,7 @@ thead th {
     background-color: colours.$color-gradient-from;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     tr {
         border-color: colours.$dark-color-border-extra-light;
     }
@@ -155,7 +157,7 @@ td {
     }
 
     thead th {
-        @include helpers.gradient-linear(colours.$color-gradient-from, colours.$color-gradient-to);
+        @include setup.gradient-linear(colours.$color-gradient-from, colours.$color-gradient-to);
 
         border-top: 1px solid colours.$color-border-light;
         border-right: 1px solid colours.$color-border;
@@ -181,7 +183,7 @@ td {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-list,
     .txp-list--no-options {
         tbody {
@@ -197,7 +199,7 @@ td {
         }
 
         thead th {
-            @include helpers.gradient-linear(colours.$dark-color-gradient-to, colours.$dark-color-gradient-from);
+            @include setup.gradient-linear(colours.$dark-color-gradient-to, colours.$dark-color-gradient-from);
 
             border-top-color: colours.$dark-color-border-light;
             border-right-color: colours.$dark-color-border-dark;
@@ -236,10 +238,10 @@ td {
     thead th {
         &.asc,
         &.desc {
-            @include helpers.gradient-linear(color.adjust(colours.$color-gradient-to, $lightness: -4%), color.adjust(colours.$color-gradient-from, $lightness: -4%));
+            @include setup.gradient-linear(color.adjust(colours.$color-gradient-to, $lightness: -4%), color.adjust(colours.$color-gradient-from, $lightness: -4%));
 
             a::after {
-                @include helpers.hide-text;
+                @include setup.hide-text;
 
                 display: block;
                 position: absolute;
@@ -278,13 +280,13 @@ td {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .txp-list,
     .txp-list--no-options {
         thead th {
             &.asc,
             &.desc {
-                @include helpers.gradient-linear(color.adjust(colours.$dark-color-gradient-from, $lightness: -4%), color.adjust(colours.$dark-color-gradient-to, $lightness: -4%));
+                @include setup.gradient-linear(color.adjust(colours.$dark-color-gradient-from, $lightness: -4%), color.adjust(colours.$dark-color-gradient-to, $lightness: -4%));
 
                 a::after {
                     opacity: 0.6;

@@ -1,7 +1,8 @@
-@use "sass:color";
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/helpers";
-@use "../../setup/settings";
 
 /* Slider
    ========================================================================== */
@@ -44,8 +45,8 @@
         border-radius: 50%;
         background-color: colours.$color-background;
 
-        @if settings.$flat-theme < 1 {
-            box-shadow: settings.$standard-shadow;
+        @if setup.$flat-theme < 1 {
+            box-shadow: setup.$standard-shadow;
         }
 
         cursor: pointer;
@@ -62,7 +63,7 @@
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-slider {
         border-color: colours.$dark-color-border-extra-dark;
         background-color: colours.$dark-color-background-form;
@@ -76,12 +77,12 @@
         }
 
         .ui-slider-handle {
-            @include helpers.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
+            @include setup.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
 
-            box-shadow: settings.$dark-standard-shadow;
+            box-shadow: setup.$dark-standard-shadow;
 
             &:hover {
-                @include helpers.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: 4%), color.adjust(colours.$color-button-gradient-to, $lightness: 4%));
+                @include setup.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: 4%), color.adjust(colours.$color-button-gradient-to, $lightness: 4%));
             }
         }
 

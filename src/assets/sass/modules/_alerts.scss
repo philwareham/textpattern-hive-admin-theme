@@ -1,6 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../setup";
+
+// import colourscheme TEMP
 @use "../setup/colours";
-@use "../setup/helpers";
-@use "../setup/settings";
 
 /* Messages
    ========================================================================== */
@@ -48,7 +50,7 @@ li.information {
     color: colours.$color-info-text;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     li.success {
         background: colours.$dark-color-success-background;
     }
@@ -99,7 +101,7 @@ li.information {
     background: colours.$color-highlight-box;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .highlight {
         background: colours.$dark-color-highlight-box;
     }
@@ -119,8 +121,8 @@ li.information {
     clear: both;
     border: 1px solid;
 
-    @if settings.$border-radius > 0 {
-        border-radius: settings.$border-radius / 2;
+    @if setup.$border-radius > 0 {
+        border-radius: setup.$border-radius / 2;
     }
 
     &.success {
@@ -144,7 +146,7 @@ li.information {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .alert-block {
         &.success {
             border-color: colours.$dark-color-success-border;
@@ -216,15 +218,15 @@ li.information {
         margin: 0 auto;
         padding: 0.53846153846154em 3.53846153846154em 0.53846153846154em 0.75em;
 
-        @if settings.$border-radius > 0 {
-            border-radius: settings.$border-radius settings.$border-radius 0 0;
+        @if setup.$border-radius > 0 {
+            border-radius: setup.$border-radius setup.$border-radius 0 0;
         }
 
         overflow-wrap: break-word;
         color: colours.$color-text-inverse;
 
-        @if settings.$flat-theme < 1 {
-            box-shadow: settings.$standard-shadow;
+        @if setup.$flat-theme < 1 {
+            box-shadow: setup.$standard-shadow;
         }
 
         text-align: left;
@@ -252,13 +254,13 @@ li.information {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .messagepane .messageflash {
         border: 1px solid colours.$dark-color-border-extra-dark;
         border-bottom: 0;
 
-        @if settings.$flat-theme < 1 {
-            box-shadow: settings.$dark-standard-shadow;
+        @if setup.$flat-theme < 1 {
+            box-shadow: setup.$dark-standard-shadow;
         }
 
         &.success {
@@ -300,7 +302,7 @@ li.information {
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .close {
         border-color: rgba(0, 0, 0, 0.4);
 

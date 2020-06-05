@@ -1,5 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/settings";
 
 /* Controlgroup
    ========================================================================== */
@@ -43,7 +46,7 @@
         padding: 0.4em 1em;
 
         span {
-            font-size: settings.$small-font-size;
+            font-size: setup.$small-font-size;
         }
     }
 

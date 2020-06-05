@@ -1,6 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/helpers";
-@use "../../setup/settings";
 
 /* Sortable
  ========================================================================== */
@@ -28,7 +30,7 @@
  */
 
 .ui-sortable-helper {
-    box-shadow: settings.$standard-shadow;
+    box-shadow: setup.$standard-shadow;
 }
 
 .ui-sortable-handle {
@@ -39,9 +41,9 @@
     border: 1px dotted colours.$color-link;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-sortable-helper {
-        box-shadow: settings.$dark-standard-shadow;
+        box-shadow: setup.$dark-standard-shadow;
     }
 
     .ui-sortable-placeholder {

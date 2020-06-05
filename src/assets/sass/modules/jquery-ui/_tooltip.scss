@@ -1,5 +1,8 @@
-@use "../../setup/helpers";
-@use "../../setup/settings";
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
+@use "../../setup/colours";
 
 /* Tooltip
    ========================================================================== */
@@ -26,15 +29,15 @@
     max-width: 22em;
     padding: 0.5em 1em;
 
-    @if settings.$flat-theme < 1 {
-        box-shadow: settings.$standard-shadow;
+    @if setup.$flat-theme < 1 {
+        box-shadow: setup.$standard-shadow;
     }
 }
 
-@if settings.$flat-theme < 1 {
-    @include helpers.dark-mode {
+@if setup.$flat-theme < 1 {
+    @include setup.dark-mode {
         .ui-tooltip {
-            box-shadow: settings.$dark-standard-shadow;
+            box-shadow: setup.$dark-standard-shadow;
         }
     }
 }

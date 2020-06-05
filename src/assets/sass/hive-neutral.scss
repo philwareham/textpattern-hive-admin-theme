@@ -1,5 +1,10 @@
-@use "sass:color";
 @use "sass:meta";
+@use "sass:color"; // TEMP
+@use "setup";
+
+// import colourscheme TEMP
+@use "setup/colours";
+
 // slightly lighten a colour
 @function tint($color, $percentage) {
     @return color.mix(white, $color, $percentage);
@@ -57,26 +62,26 @@ $border-radius:                       0.3em;
 
         > a {
             &:hover {
-                background: rgba($color-text-inverse, 0.4);
+                background: rgba(colours.$color-text-inverse, 0.4);
             }
         }
 
         &.selected > a {
-            background: rgba($color-text-inverse, 0.4);
+            background: rgba(colours.$color-text-inverse, 0.4);
 
             &:hover {
-                background: rgba($color-text-inverse, 0.6);
+                background: rgba(colours.$color-text-inverse, 0.6);
             }
         }
     }
 
     tr {
-        border-color: $color-border;
+        border-color: colours.$color-border;
     }
 
-    @include dark-mode {
+    @include setup.dark-mode {
         tr {
-            border-color: $dark-color-border-extra-light;
+            border-color: colours.$dark-color-border-extra-light;
         }
     }
 
@@ -84,16 +89,16 @@ $border-radius:                       0.3em;
         tbody tr,
         thead th,
         thead th:first-child {
-            border-color: $color-border;
+            border-color: colours.$color-border;
         }
     }
 
-    @include dark-mode {
+    @include setup.dark-mode {
         .txp-list {
             tbody tr,
             thead th,
             thead th:first-child {
-                border-color: $dark-color-border-extra-light;
+                border-color: colours.$dark-color-border-extra-light;
             }
         }
     }
@@ -126,10 +131,10 @@ $border-radius:                       0.3em;
         background: #ffffff;
     }
 
-    @include dark-mode {
+    @include setup.dark-mode {
         .switcher-list li.active,
         .ui-tabs-vertical .ui-tabs-nav .ui-tabs-active {
-            background: $dark-color-highlight-box;
+            background: colours.$dark-color-highlight-box;
         }
     }
 
@@ -151,11 +156,11 @@ $border-radius:                       0.3em;
 
     .ui-tabs-vertical {
         .ui-tabs-nav {
-            border-bottom-color: $color-border;
+            border-bottom-color: colours.$color-border;
         }
 
         .ui-tabs-nav li {
-            border-color: $color-border;
+            border-color: colours.$color-border;
             border-bottom-color: transparent;
         }
     }
@@ -168,24 +173,24 @@ $border-radius:                       0.3em;
    ========================================================================== */
 
 
-@media (max-width: $break-small) {
+@media (max-width: setup.$break-small) {
 
     /**
      * Collapse jQuery UI tabs responsively.
      */
 
     .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
-        border-bottom-color: $color-border;
+        border-bottom-color: colours.$color-border;
 
         li {
-            border-color: $color-border;
+            border-color: colours.$color-border;
             border-bottom-color: transparent;
         }
     }
 
-    @include dark-mode {
+    @include setup.dark-mode {
         .ui-tabs-nav .ui-tabs-active {
-            background: $dark-color-highlight-box;
+            background: colours.$dark-color-highlight-box;
         }
     }
 }

@@ -1,6 +1,8 @@
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/helpers";
-@use "../../setup/settings";
 
 /* Selectmenu
    ========================================================================== */
@@ -45,15 +47,15 @@
 }
 
 .ui-selectmenu-button:not(.ui-controlgroup-item) {
-    border-radius: settings.$border-radius;
+    border-radius: setup.$border-radius;
 }
 
 .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
-    border-radius: 0 settings.$border-radius settings.$border-radius 0;
+    border-radius: 0 setup.$border-radius setup.$border-radius 0;
 }
 
 .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
-    border-radius: settings.$border-radius 0 0 settings.$border-radius;
+    border-radius: setup.$border-radius 0 0 setup.$border-radius;
 }
 
 .ui-selectmenu-icon {
@@ -88,7 +90,7 @@
             border-top: 1px solid colours.$color-border;
             font-size: 1rem;
             font-weight: bold;
-            line-height: settings.$base-line-height;
+            line-height: setup.$base-line-height;
 
             &:first-child {
                 margin: 0;
@@ -102,7 +104,7 @@
     display: block;
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-selectmenu-optgroup {
         border-top-color: colours.$dark-color-border;
     }
@@ -114,11 +116,11 @@
 
 [dir="rtl"] {
     .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
-        border-radius: settings.$border-radius 0 0 settings.$border-radius;
+        border-radius: setup.$border-radius 0 0 setup.$border-radius;
     }
 
     .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
-        border-radius: 0 settings.$border-radius settings.$border-radius 0;
+        border-radius: 0 setup.$border-radius setup.$border-radius 0;
     }
 
     .ui-selectmenu-icon {
@@ -148,7 +150,7 @@
             color: colours.$color-link-hover;
             text-decoration: underline;
 
-            @if settings.$flat-theme < 1 {
+            @if setup.$flat-theme < 1 {
                 box-shadow: none;
             }
         }
@@ -169,7 +171,7 @@
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .no-ui-button {
         .ui-selectmenu-button {
             color: colours.$dark-color-link;

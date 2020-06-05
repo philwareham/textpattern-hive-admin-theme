@@ -1,7 +1,8 @@
-@use "sass:color";
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
 @use "../../setup/colours";
-@use "../../setup/helpers";
-@use "../../setup/settings";
 
 /* Datepicker
    ========================================================================== */
@@ -88,8 +89,8 @@
     width: 17em;
     padding: 0.2em 0.2em 0;
 
-    @if settings.$flat-theme < 1 {
-        box-shadow: settings.$standard-shadow;
+    @if setup.$flat-theme < 1 {
+        box-shadow: setup.$standard-shadow;
     }
 
     .ui-datepicker-header {
@@ -105,8 +106,8 @@
         height: 1.8em;
         margin-top: -0.9em;
 
-        @if settings.$border-radius > 0 {
-            border-radius: settings.$border-radius;
+        @if setup.$border-radius > 0 {
+            border-radius: setup.$border-radius;
         }
 
         background-color: transparent;
@@ -220,9 +221,9 @@
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-datepicker {
-        box-shadow: settings.$dark-standard-shadow;
+        box-shadow: setup.$dark-standard-shadow;
 
         .ui-datepicker-prev-hover,
         .ui-datepicker-next-hover {

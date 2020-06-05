@@ -1,5 +1,8 @@
-@use "../../setup/helpers";
-@use "../../setup/settings";
+@use "sass:color"; // TEMP
+@use "../../setup";
+
+// import colourscheme TEMP
+@use "../../setup/colours";
 
 /* Dialog
    ========================================================================== */
@@ -49,8 +52,8 @@
     overflow: hidden;
     outline: 0;
 
-    @if settings.$flat-theme < 1 {
-        box-shadow: settings.$standard-shadow;
+    @if setup.$flat-theme < 1 {
+        box-shadow: setup.$standard-shadow;
     }
 
     .ui-dialog-titlebar {
@@ -121,9 +124,9 @@
     }
 }
 
-@include helpers.dark-mode {
+@include setup.dark-mode {
     .ui-dialog {
-        box-shadow: settings.$dark-standard-shadow;
+        box-shadow: setup.$dark-standard-shadow;
     }
 }
 
