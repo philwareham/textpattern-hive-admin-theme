@@ -19,69 +19,35 @@
  */
 
 li.success {
-    background: colours.$color-success-background;
+    background: var(--color-success-background);
 }
 
 .success:not(li) {
-    color: colours.$color-success-text;
+    color: var(--color-success-text);
 }
 
 li.warning {
-    background: colours.$color-warning-background;
+    background: var(--color-warning-background);
 }
 
 .warning:not(li) {
-    color: colours.$color-warning-text;
+    color: var(--color-warning-text);
 }
 
 li.error {
-    background: colours.$color-error-background;
+    background: var(--color-error-background);
 }
 
 .error:not(li) {
-    color: colours.$color-error-text;
+    color: var(--color-error-text);
 }
 
 li.information {
-    background: colours.$color-info-background;
+    background: var(--color-info-background);
 }
 
 .information:not(li) {
-    color: colours.$color-info-text;
-}
-
-@include setup.dark-mode {
-    li.success {
-        background: colours.$dark-color-success-background;
-    }
-
-    .success:not(li) {
-        color: colours.$dark-color-success-text;
-    }
-
-    li.warning {
-        background: colours.$dark-color-warning-background;
-    }
-
-    .warning:not(li) {
-        color: colours.$dark-color-warning-text;
-    }
-
-    li.error {
-        background: colours.$dark-color-error-background;
-    }
-
-    .error:not(li) {
-        color: colours.$dark-color-error-text;
-    }
-
-    li.information {
-        background: colours.$dark-color-info-background;
-    }
-
-    .information:not(li) {
-        color: colours.$dark-color-info-text;
-    }
+    color: var(--color-info-text);
 }
 
 /**
@@ -98,13 +64,7 @@ li.information {
  */
 
 .highlight {
-    background: colours.$color-highlight-box;
-}
-
-@include setup.dark-mode {
-    .highlight {
-        background: colours.$dark-color-highlight-box;
-    }
+    background: var(--color-highlight-box);
 }
 
 /**
@@ -126,47 +86,23 @@ li.information {
     }
 
     &.success {
-        border-color: colours.$color-success-border;
-        background: colours.$color-success-background;
+        border-color: var(--color-success-border);
+        background: var(--color-success-background);
     }
 
     &.warning {
-        border-color: colours.$color-warning-border;
-        background: colours.$color-warning-background;
+        border-color: var(--color-warning-border);
+        background: var(--color-warning-background);
     }
 
     &.error {
-        border-color: colours.$color-error-border;
-        background: colours.$color-error-background;
+        border-color: var(--color-error-border);
+        background: var(--color-error-background);
     }
 
     &.information {
-        border-color: colours.$color-info-border;
-        background: colours.$color-info-background;
-    }
-}
-
-@include setup.dark-mode {
-    .alert-block {
-        &.success {
-            border-color: colours.$dark-color-success-border;
-            background: colours.$dark-color-success-background;
-        }
-
-        &.warning {
-            border-color: colours.$dark-color-warning-border;
-            background: colours.$dark-color-warning-background;
-        }
-
-        &.error {
-            border-color: colours.$dark-color-error-border;
-            background: colours.$dark-color-error-background;
-        }
-
-        &.information {
-            border-color: colours.$dark-color-info-border;
-            background: colours.$dark-color-info-background;
-        }
+        border-color: var(--color-info-border);
+        background: var(--color-info-background);
     }
 }
 

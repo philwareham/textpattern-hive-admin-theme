@@ -4,6 +4,7 @@
    Styling and layout for all media
    ========================================================================== */
 
+@include meta.load-css("modules/colours");
 @include meta.load-css("modules/base");
 
 
@@ -13,9 +14,7 @@
    ========================================================================== */
 
 @media screen {
-
     // Global
-
     @include meta.load-css("modules/links");
     @include meta.load-css("modules/typography");
     @include meta.load-css("modules/internationalization");
@@ -31,9 +30,7 @@
     @include meta.load-css("modules/tables");
     //@import "modules/uploader";
 
-
     // Layout modules
-
     @include meta.load-css("modules/container");
     @include meta.load-css("modules/grid");
     @include meta.load-css("modules/header");
@@ -42,27 +39,19 @@
     @include meta.load-css("modules/layout-shared");
     @include meta.load-css("modules/layout-specific");
 
-
     // jQuery UI core
-
     @include meta.load-css("modules/jquery-ui/core");
 
-
     // jQuery UI icons
-
     @include meta.load-css("modules/jquery-ui/icons");
 
-
     // jQuery UI interactions
-
     @include meta.load-css("modules/jquery-ui/draggable");
     @include meta.load-css("modules/jquery-ui/resizable");
     @include meta.load-css("modules/jquery-ui/selectable");
     @include meta.load-css("modules/jquery-ui/sortable");
 
-
     // jQuery UI widgets
-
     @include meta.load-css("modules/jquery-ui/accordion");
     @include meta.load-css("modules/jquery-ui/autocomplete");
     @include meta.load-css("modules/jquery-ui/button");

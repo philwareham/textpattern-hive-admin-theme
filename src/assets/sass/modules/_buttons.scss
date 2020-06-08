@@ -152,7 +152,7 @@ a.publish {
     button.publish,
     a.publish {
         &:focus {
-            border-color: colours.$dark-color-link-focus-alt;
+            border-color: colours.$dark-color-link-focus;
             outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
     }
