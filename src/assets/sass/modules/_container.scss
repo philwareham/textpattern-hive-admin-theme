@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Container
    ========================================================================== */
@@ -23,16 +19,9 @@ body {
     /* 2 */
     margin: 0;
     padding: 4em 4% 0;
-    background: colours.$color-background;
-    color: colours.$color-text;
+    background: var(--color-background);
+    color: var(--color-text);
     overscroll-behavior: none;
-}
-
-@include setup.dark-mode {
-    //body {
-    background: colours.$dark-color-background;
-    color: colours.$dark-color-text;
-    //}
 }
 
 /**

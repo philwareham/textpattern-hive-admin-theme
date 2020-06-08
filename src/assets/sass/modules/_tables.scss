@@ -32,13 +32,7 @@
 table {
     border-spacing: 0;
     border-collapse: collapse;
-    background-color: colours.$color-background;
-}
-
-@include setup.dark-mode {
-    table {
-        background-color: colours.$dark-color-background;
-    }
+    background-color: var(--color-background);
 }
 
 /**
@@ -77,7 +71,7 @@ thead th {
 
     thead th {
         background-color: colours.$dark-color-gradient-from;
-        color: colours.$dark-color-text-heading;
+        color: var(--color-text-heading);
     }
 }
 
@@ -268,14 +262,14 @@ td {
             content: "\2193";
             border: 0 solid transparent;
             border-width: 0.25em 0.25em 0;
-            border-top-color: colours.$color-text;
+            border-top-color: var(--color-text);
         }
 
         &.asc a::after {
             content: "\2191";
             border: 0 solid transparent;
             border-width: 0 0.25em 0.25em;
-            border-bottom-color: colours.$color-text;
+            border-bottom-color: var(--color-text);
         }
     }
 }
@@ -295,14 +289,6 @@ td {
                 a:hover::after {
                     opacity: 1;
                 }
-            }
-
-            &.desc a::after {
-                border-top-color: colours.$dark-color-text;
-            }
-
-            &.asc a::after {
-                border-bottom-color: colours.$dark-color-text;
             }
         }
     }

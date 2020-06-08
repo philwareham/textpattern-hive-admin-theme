@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Code highlighting (via Prism.js)
    ========================================================================== */
@@ -103,7 +99,7 @@ pre[class*="language-"] {
 
 @include setup.dark-mode {
     .token.punctuation {
-        color: #ffffff;
+        color: var(--color-text-white-out);
     }
 
     .token.property,
@@ -113,7 +109,7 @@ pre[class*="language-"] {
     .token.constant,
     .token.symbol,
     .token.deleted {
-        color: colours.$dark-color-error-text;
+        color: var(--color-error-text);
     }
 
     .token.selector,
@@ -122,7 +118,7 @@ pre[class*="language-"] {
     .token.char,
     .token.builtin,
     .token.inserted {
-        color: colours.$dark-color-success-text;
+        color: var(--color-success-text);
     }
 
     .token.operator,
@@ -130,20 +126,12 @@ pre[class*="language-"] {
     .token.url,
     .language-css .token.string,
     .style .token.string {
-        color: colours.$dark-color-warning-text;
+        color: var(--color-warning-text);
     }
 
     .token.atrule,
     .token.attr-value,
     .token.keyword {
-        color: colours.$dark-color-info-text;
-    }
-
-    .line-numbers .line-numbers-rows {
-        border-right-color: colours.$dark-color-text-footnote;
-    }
-
-    .line-numbers-rows > span::before {
-        color: colours.$dark-color-text-footnote;
+        color: var(--color-info-text);
     }
 }

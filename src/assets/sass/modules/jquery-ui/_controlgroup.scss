@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Controlgroup
    ========================================================================== */
@@ -51,8 +47,8 @@
     }
 
     .ui-state-highlight {
-        border-color: colours.$color-button-selected-gradient-to;
-        background-color: colours.$color-button-selected-gradient-from;
+        border-color: var(--color-button-selected-gradient-to);
+        background-color: var(--color-button-selected-gradient-from);
     }
 }
 

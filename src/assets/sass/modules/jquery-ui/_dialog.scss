@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Dialog
    ========================================================================== */
@@ -53,7 +49,7 @@
     outline: 0;
 
     @if setup.$flat-theme < 1 {
-        box-shadow: setup.$standard-shadow;
+        box-shadow: var(--standard-shadow);
     }
 
     .ui-dialog-titlebar {
@@ -121,12 +117,6 @@
         [dir="rtl"] & {
             margin: 0.5em 0 0.5em 0.4em;
         }
-    }
-}
-
-@include setup.dark-mode {
-    .ui-dialog {
-        box-shadow: setup.$dark-standard-shadow;
     }
 }
 

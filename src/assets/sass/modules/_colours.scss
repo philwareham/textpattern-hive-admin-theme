@@ -16,6 +16,7 @@
     --color-text-form:                     hsl(0, 0%, 0%);
     --color-text-form-placeholder:         hsl(0, 0%, 60%);
     --color-text-footnote:                 hsl(0, 0%, 35%);
+    --color-text-white-out:                hsl(0, 0%, 100%);
     --color-text-inverse:                  hsl(0, 0%, 100%);
     // neutral colours
     --color-background:                    hsl(0, 0%, 100%);
@@ -64,6 +65,9 @@
     --color-info-text:                     hsl(200, 50%, 45%);
     --color-info-background:               hsl(200, 78%, 95%);
     --color-info-border:                   hsl(200, 78%, 82%);
+    // shadows
+    --standard-shadow:                     0 0 0.5em hsla(0, 0%, 0%, 0.2);
+    --inset-lowlighting:                   inset 0 0.2em 0.25em hsla(0, 0%, 0%, 0.15);
 }
 
 @include setup.dark-mode {
@@ -109,4 +113,6 @@
     --color-info-text:                     hsl(207, 100%, 63%);
     --color-info-background:               hsl(207, 68%, 17%);
     --color-info-border:                   hsla(207, 100%, 63%, 0.38);
+    // shadows
+    --standard-shadow:                     0 0 0.5em hsla(0, 0%, 0%, 0.75);
 }

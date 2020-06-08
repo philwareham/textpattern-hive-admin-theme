@@ -1,20 +1,7 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Embedded content
    ========================================================================== */
-
-/**
- * Add the correct display in IE 11.
- */
-
-audio,
-video {
-    display: inline-block;
-}
 
 /**
  * Make embedded elements responsive.
@@ -87,30 +74,15 @@ img {
  */
 
 .content-image {
-    border: solid 1px colours.$color-border;
-    background: colours.$color-background;
+    border: solid 1px var(--color-border);
+    background: var(--color-background);
 
     a:hover & {
-        border-color: colours.$color-link-hover;
+        border-color: var(--color-link-hover);
     }
 
     a:focus & {
-        border-color: colours.$color-link-focus;
-    }
-}
-
-@include setup.dark-mode {
-    .content-image {
-        border-color: colours.$dark-color-border;
-        background-color: colours.$dark-color-background;
-
-        a:hover & {
-            border-color: colours.$dark-color-link-hover;
-        }
-
-        a:focus & {
-            border-color: colours.$dark-color-link-focus;
-        }
+        border-color: var(--color-link-focus);
     }
 }
 

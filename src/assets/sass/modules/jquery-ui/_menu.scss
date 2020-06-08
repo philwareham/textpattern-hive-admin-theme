@@ -99,7 +99,7 @@
         cursor: pointer;
 
         a {
-            color: colours.$color-text;
+            color: var(--color-text);
             text-decoration: none;
         }
 
@@ -133,7 +133,7 @@
 
     .ui-state-focus,
     .ui-state-active {
-        background-color: colours.$color-selected;
+        background-color: var(--color-selected);
     }
 
     // left-aligned
@@ -154,20 +154,11 @@
     }
 }
 
-@include setup.dark-mode {
-    .ui-menu {
-        @if setup.$flat-theme < 1 {
+@if setup.$flat-theme < 1 {
+    @include setup.dark-mode {
+        .ui-menu {
             border-color: colours.$dark-color-border-light;
             box-shadow: setup.$dark-standard-shadow;
-        }
-
-        .ui-menu-item a {
-            color: colours.$dark-color-text;
-        }
-
-        .ui-state-focus,
-        .ui-state-active {
-            background-color: colours.$dark-color-selected;
         }
     }
 }

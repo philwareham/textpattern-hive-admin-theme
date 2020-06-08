@@ -79,14 +79,8 @@ body.darkmode.login {
     bottom: -0.5em;
     padding: 1em 0;
     overflow: hidden;
-    border-top: 1px solid colours.$color-border;
+    border-top: 1px solid var(--color-border);
     text-overflow: ellipsis;
-}
-
-@include setup.dark-mode {
-    .login-view-site {
-        border-top-color: colours.$dark-color-border;
-    }
 }
 
 /**
@@ -131,7 +125,7 @@ body.darkmode.login {
     ul {
         margin: 2em 0 0;
         padding: 0;
-        border-bottom: 1px solid colours.$color-border;
+        border-bottom: 1px solid var(--color-border);
         font-size: setup.$small-font-size;
         line-height: setup.$small-line-height;
     }
@@ -148,7 +142,7 @@ body.darkmode.login {
         padding: 0.5em 1em;
         border: 1px solid colours.$color-border;
         background-color: color.adjust(colours.$color-background-box, $lightness: -2%);
-        color: colours.$color-text;
+        color: var(--color-text);
         text-decoration: none;
 
         @if setup.$flat-theme < 1 {
@@ -161,7 +155,7 @@ body.darkmode.login {
         }
 
         &:focus {
-            border-color: colours.$color-link-focus;
+            border-color: var(--color-link-focus);
             outline: 0;
         }
     }
@@ -175,22 +169,17 @@ body.darkmode.login {
         }
 
         &:focus {
-            border-color: colours.$color-link-focus;
-            border-bottom-color: colours.$color-background;
+            border-color: var(--color-link-focus);
+            border-bottom-color: var(--color-background);
         }
     }
 }
 
 @include setup.dark-mode {
     #view_modes {
-        ul {
-            border-bottom-color: colours.$dark-color-border;
-        }
-
         a {
             border-color: colours.$dark-color-border-light;
             background-color: colours.$dark-color-background-box;
-            color: colours.$dark-color-text;
 
             @if setup.$flat-theme < 1 {
                 box-shadow: inset 0 -0.25em 0.5em rgba(#000000, 0.2);
@@ -202,7 +191,7 @@ body.darkmode.login {
             }
 
             &:focus {
-                border-color: colours.$dark-color-link-focus;
+                border-color: var(--color-link-focus);
             }
         }
 
@@ -216,8 +205,8 @@ body.darkmode.login {
             }
 
             &:focus {
-                border-color: colours.$dark-color-link-focus;
-                border-bottom-color: colours.$dark-color-background;
+                border-color: var(--color-link-focus);
+                border-bottom-color: var(--color-background);
             }
         }
     }

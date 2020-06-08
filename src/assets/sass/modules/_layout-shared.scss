@@ -31,17 +31,11 @@ hr {
     /* 2 */
     overflow: visible;
     border: 0; // remove the default `hr` border
-    border-bottom: 1px solid colours.$color-border;
+    border-bottom: 1px solid var(--color-border);
 
     &.secondary {
         margin: 0.33em 0;
         border-style: dashed;
-    }
-}
-
-@include setup.dark-mode {
-    hr {
-        border-bottom-color: colours.$dark-color-border;
     }
 }
 
@@ -109,13 +103,7 @@ hr {
 }
 
 .txp-dropdown-toggle-all {
-    border-bottom: 1px solid colours.$color-border-light;
-}
-
-@include setup.dark-mode {
-    .txp-dropdown-toggle-all {
-        border-bottom-color: colours.$dark-color-border-light;
-    }
+    border-bottom: 1px solid var(--color-border-light);
 }
 
 /**
@@ -446,15 +434,8 @@ span.spinner {
     bottom: 0;
     margin: 1em 0 0;
     padding: 0.3076923em 0; // 4px / 13px
-    background: colours.$color-background;
-    box-shadow: 0 -1em 1em -0.5em colours.$color-background;
-}
-
-@include setup.dark-mode {
-    .multi-edit {
-        background: colours.$dark-color-background;
-        box-shadow: 0 -1em 1em -0.5em colours.$dark-color-background;
-    }
+    background: var(--color-background);
+    box-shadow: 0 -1em 1em -0.5em var(--color-background);
 }
 
 /**
@@ -555,13 +536,7 @@ span.spinner {
 .text-section {
     margin-top: 3em;
     padding-top: 3em;
-    border-top: 2px solid colours.$color-border;
-}
-
-@include setup.dark-mode {
-    .text-section {
-        border-top-color: colours.$dark-color-border;
-    }
+    border-top: 2px solid var(--color-border);
 }
 
 /**
