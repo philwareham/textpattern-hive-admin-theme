@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Messages
    ========================================================================== */
@@ -159,56 +155,52 @@ li.information {
         }
 
         overflow-wrap: break-word;
-        color: colours.$color-text-inverse;
+        color: var(--color-text-inverse);
 
         @if setup.$flat-theme < 1 {
-            box-shadow: setup.$standard-shadow;
+            box-shadow: var(--standard-shadow);
         }
 
         text-align: left;
 
         &.success {
-            background: colours.$color-success-text;
+            background: var(--color-success-text);
         }
 
         &.warning {
-            background: colours.$color-warning-text;
+            background: var(--color-warning-text);
         }
 
         &.error {
-            background: colours.$color-error-text;
+            background: var(--color-error-text);
         }
     }
 
     a {
-        color: colours.$color-text-inverse;
+        color: var(--color-text-inverse);
     }
 
     code {
-        border-color: rgba(255, 255, 255, 0.66);
+        border-color: hsla(0, 0%, 100%, 0.66);
         background: transparent;
     }
 }
 
 @include setup.dark-mode {
     .messagepane .messageflash {
-        border: 1px solid colours.$dark-color-border-extra-dark;
+        border: 1px solid var(--color-border-extra-dark);
         border-bottom: 0;
 
-        @if setup.$flat-theme < 1 {
-            box-shadow: setup.$dark-standard-shadow;
-        }
-
         &.success {
-            background: colours.$dark-color-success-background;
+            background: var(--color-success-background);
         }
 
         &.warning {
-            background: colours.$dark-color-warning-background;
+            background: var(--color-warning-background);
         }
 
         &.error {
-            background: colours.$dark-color-error-background;
+            background: var(--color-error-background);
         }
     }
 }
@@ -223,7 +215,7 @@ li.information {
     right: 0;
     bottom: 0;
     width: 2.53846153846154em;
-    border-left: 1px solid rgba(255, 255, 255, 0.66);
+    border-left: 1px solid hsla(0, 0%, 100%, 0.66);
 
     span {
         position: absolute;
@@ -240,7 +232,7 @@ li.information {
 
 @include setup.dark-mode {
     .close {
-        border-color: rgba(0, 0, 0, 0.4);
+        border-color: hsla(0, 0%, 0%, 0.4);
 
         span {
             opacity: 0.75;

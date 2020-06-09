@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Button
    ========================================================================== */
@@ -25,7 +21,7 @@
  */
 
 .ui-button {
-    @include setup.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
+    @include setup.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
 
     display: inline-block;
     position: relative;
@@ -35,9 +31,9 @@
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
     /* 1 */
     overflow: visible;
-    border: 1px solid colours.$color-button-border;
+    border: 1px solid var(--color-button-border);
     background-clip: padding-box;
-    color: colours.$color-text-button;
+    color: var(--color-text-button);
     font-family: inherit;
     /* 2 */
     font-size: 1rem;
@@ -51,40 +47,35 @@
     user-select: none;
 
     &:hover {
-        @include setup.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: 4%), color.adjust(colours.$color-button-gradient-to, $lightness: 4%));
-
-        border-color: color.adjust(colours.$color-button-border, $lightness: -13%);
-        color: colours.$color-text-button-hover;
+        filter: brightness(1.05);
+        color: var(--color-text-button-hover);
         text-decoration: none;
     }
 
     &:active {
-        @include setup.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: -3%), color.adjust(colours.$color-button-gradient-to, $lightness: -3%));
-
-        border-color: color.adjust(colours.$color-button-border, $lightness: -13%);
-        color: colours.$color-text-button-active;
+        filter: brightness(0.95);
+        color: var(--color-text-button-active);
         text-decoration: none;
 
         @if setup.$flat-theme < 1 {
-            box-shadow: setup.$inset-lowlighting;
+            box-shadow: var(--inset-lowlighting);
         }
     }
 
     &:focus {
-        border-color: colours.$color-link-focus;
+        border-color: var(--color-link-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-        color: colours.$color-text-button-active;
+        color: var(--color-text-button-active);
     }
 }
 
-@include setup.dark-mode {
-    .ui-button {
-        color: colours.$dark-color-text-button;
+/**
+ * Remove some styling from `a` links as buttons.
+ */
 
-        &:focus {
-            border-color: colours.$dark-color-link-focus;
-        }
-    }
+a.ui-button {
+    color: var(--color-text-button);
+    text-decoration: none;
 }
 
 /**
@@ -94,13 +85,7 @@
  */
 
 .ui-button.ui-state-focus {
-    border-color: colours.$color-link-focus !important; /* 1 */
-}
-
-@include setup.dark-mode {
-    .ui-button.ui-state-focus {
-        border-color: colours.$dark-color-link-focus !important; /* 1 */
-    }
+    border-color: var(--color-link-focus) !important; /* 1 */
 }
 
 /**

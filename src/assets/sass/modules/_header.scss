@@ -22,7 +22,7 @@
  */
 
 .txp-header {
-    @include setup.gradient-linear(colours.$color-accent-gradient-from, colours.$color-accent-gradient-to);
+    @include setup.gradient-linear(var(--color-accent-gradient-from), var(--color-accent-gradient-to));
 
     display: flex;
     position: fixed;
@@ -124,12 +124,12 @@
     span {
         display: block;
         overflow: hidden;
-        color: colours.$color-text;
+        color: var(--color-text);
         text-overflow: ellipsis;
     }
 
     a {
-        color: colours.$color-text;
+        color: var(--color-text);
         font-weight: bold;
     }
 }
@@ -170,7 +170,7 @@
         }
 
         &:focus {
-            border-color: colours.$color-link-focus;
+            border-color: var(--color-link-focus);
             outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
     }
@@ -182,11 +182,6 @@
 
         &:hover {
             background: rgba(colours.$color-text-inverse, 0.25);
-        }
-
-        &:focus {
-            border-color: colours.$color-link-focus;
-            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
 
         .ui-icon {
@@ -207,11 +202,4 @@
     position: relative;
     top: -0.846153846153846em; // 11px / 13px
     flex: none;
-}
-
-@include setup.dark-mode {
-    .txp-logout a:focus {
-        border-color: colours.$color-link-focus;
-        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-    }
 }

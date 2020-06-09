@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Globally shared layout
    ========================================================================== */
@@ -641,7 +637,7 @@ span.spinner {
     padding: 1em 1em 1px;
     clear: both;
     /* 1 */
-    background: colours.$color-background-box;
+    background: var(--color-background-box);
 
     h2 {
         /* 2 */
@@ -651,8 +647,8 @@ span.spinner {
 
 @include setup.dark-mode {
     .txp-edit {
-        border: 1px solid colours.$dark-color-border-extra-light;
-        background: colours.$dark-color-background;
+        border: 1px solid var(--color-border-extra-light);
+        background: var(--color-background);
     }
 }
 
@@ -671,12 +667,12 @@ span.spinner {
 .txp-edit .txp-edit-actions {
     margin: 1em -1em;
     padding: 1em 1em 0;
-    border-top: 2px solid colours.$color-background;
+    border-top: 2px solid var(--color-background);
 }
 
 @include setup.dark-mode {
     .txp-edit .txp-edit-actions {
-        border-top-color: colours.$dark-color-background-box;
+        border-top-color: var(--color-background-box);
     }
 }
 

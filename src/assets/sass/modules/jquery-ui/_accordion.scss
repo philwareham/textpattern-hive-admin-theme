@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Accordion
    ========================================================================== */
@@ -44,7 +40,7 @@
 
         a {
             outline: 0;
-            color: colours.$color-text;
+            color: var(--color-text);
             text-decoration: none;
         }
 
@@ -82,11 +78,5 @@
     .ui-accordion-icons .ui-accordion-icons {
         padding-right: 2em;
         padding-left: 0;
-    }
-}
-
-@include setup.dark-mode {
-    .ui-accordion .ui-accordion-header a {
-        color: colours.$dark-color-text;
     }
 }

@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Buttons
    ========================================================================== */
@@ -41,16 +37,16 @@ input[type="button"],
 .txp-logout a,
 .navlink,
 .navlink-active {
-    @include setup.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
+    @include setup.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
 
     display: inline-block;
     width: auto;
     height: 2.307692307692308em; // 30px / 13px
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
-    border: 1px solid colours.$color-button-border;
+    border: 1px solid var(--color-button-border);
     border-radius: setup.$border-radius;
     background-clip: padding-box;
-    color: colours.$color-text-button;
+    color: var(--color-text-button);
     font-weight: normal;
     text-align: center;
     /* 1 */
@@ -60,55 +56,25 @@ input[type="button"],
     user-select: none;
 
     &:hover {
-        @include setup.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: 4%), color.adjust(colours.$color-button-gradient-to, $lightness: 4%));
-
-        border-color: color.adjust(colours.$color-button-border, $lightness: -13%);
-        color: colours.$color-text-button-hover;
+        filter: brightness(1.05);
+        color: var(--color-text-button-hover);
         text-decoration: none;
     }
 
     &:active {
-        @include setup.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: -3%), color.adjust(colours.$color-button-gradient-to, $lightness: -3%));
-
-        border-color: color.adjust(colours.$color-button-border, $lightness: -13%);
-        color: colours.$color-text-button-active;
+        filter: brightness(0.95);
+        color: var(--color-text-button-active);
         text-decoration: none;
 
         @if setup.$flat-theme < 1 {
-            box-shadow: setup.$inset-lowlighting;
+            box-shadow: var(--inset-lowlighting);
         }
     }
 
     &:focus {
-        border-color: colours.$color-link-focus;
+        border-color: var(--color-link-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-        color: colours.$color-text-button-active;
-    }
-}
-
-@include setup.dark-mode {
-    button,
-    [type="reset"],
-    [type="submit"],
-    input[type="button"],
-    .txp-button,
-    .navlink,
-    .navlink-active {
-        color: colours.$dark-color-text-button;
-
-        &:hover {
-            color: colours.$dark-color-text-button-hover;
-        }
-
-        &:active {
-            color: colours.$dark-color-text-button-active;
-        }
-
-        &:focus {
-            border-color: colours.$dark-color-link-focus;
-            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-            color: colours.$dark-color-text-button-active;
-        }
+        color: var(--color-text-button-active);
     }
 }
 
@@ -123,39 +89,12 @@ input[type="button"],
 [type="submit"].publish,
 button.publish,
 a.publish {
-    @include setup.gradient-linear(colours.$color-button-primary-gradient-from, colours.$color-button-primary-gradient-to);
+    @include setup.gradient-linear(var(--color-button-primary-gradient-from), var(--color-button-primary-gradient-to));
 
     height: 2.76923076923077em; // 36px / 13px
     padding: 0.61538461538462em 1em; // 8px / 13px + 13px
-    border: 1px solid colours.$color-button-primary-border;
+    border: 1px solid var(--color-button-primary-border);
     font-weight: bold;
-
-    &:hover {
-        @include setup.gradient-linear(color.adjust(colours.$color-button-primary-gradient-from, $lightness: 7%), color.adjust(colours.$color-button-primary-gradient-to, $lightness: 7%));
-
-        border: 1px solid color.adjust(colours.$color-button-primary-border, $lightness: -10%);
-    }
-
-    &:active {
-        @include setup.gradient-linear(color.adjust(colours.$color-button-primary-gradient-from, $lightness: -5%), color.adjust(colours.$color-button-primary-gradient-to, $lightness: -5%));
-
-        border: 1px solid color.adjust(colours.$color-button-primary-border, $lightness: -10%);
-    }
-
-    &:focus {
-        border-color: colours.$color-link-focus;
-    }
-}
-
-@include setup.dark-mode {
-    [type="submit"].publish,
-    button.publish,
-    a.publish {
-        &:focus {
-            border-color: colours.$dark-color-link-focus;
-            outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-        }
-    }
 }
 
 /**
@@ -186,7 +125,7 @@ button.destroy {
     }
 
     &:focus {
-        outline: thin solid colours.$color-link-focus;
+        outline: thin solid var(--color-link-focus);
     }
 
     .ui-icon {
@@ -201,10 +140,6 @@ button.destroy {
 
 @include setup.dark-mode {
     button.destroy {
-        &:focus {
-            outline: thin solid colours.$dark-color-link-focus;
-        }
-
         .ui-icon {
             opacity: 1;
         }
@@ -250,12 +185,6 @@ button.destroy {
     }
 
     background-clip: padding-box;
-}
-
-@include setup.dark-mode {
-    .navlink-disabled {
-        @include setup.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
-    }
 }
 
 /**
@@ -329,33 +258,20 @@ ul.nav-tertiary {
 
 .nav-tertiary .navlink-active,
 .filtered button.ui-corner-right {
-    @include setup.gradient-linear(colours.$color-button-selected-gradient-from, colours.$color-button-selected-gradient-to);
+    @include setup.gradient-linear(var(--color-button-selected-gradient-from), var(--color-button-selected-gradient-to));
 
-    border-color: colours.$color-button-selected-border;
+    border-color: var(--color-button-selected-border);
 
     &:hover {
-        @include setup.gradient-linear(color.adjust(colours.$color-button-selected-gradient-from, $lightness: 2%), color.adjust(colours.$color-button-selected-gradient-to, $lightness: 2%));
-
-        border-color: color.adjust(colours.$color-button-selected-border, $lightness: -15%);
+        filter: brightness(1.05);
     }
 
     &:active {
-        @include setup.gradient-linear(color.adjust(colours.$color-button-selected-gradient-from, $lightness: -5%), color.adjust(colours.$color-button-selected-gradient-to, $lightness: -5%));
-
-        border-color: color.adjust(colours.$color-button-selected-border, $lightness: -15%);
+        filter: brightness(0.95);
     }
 
     &:focus {
-        border-color: colours.$color-link-focus;
-    }
-}
-
-@include setup.dark-mode {
-    .nav-tertiary .navlink-active,
-    .filtered button.ui-corner-right {
-        &:focus {
-            border-color: colours.$dark-color-link-focus;
-        }
+        border-color: var(--color-link-focus);
     }
 }
 
@@ -400,19 +316,6 @@ button[disabled],
 .txp-button.disabled,
 .navlink-disabled,
 .ui-checkboxradio-disabled {
-    background: colours.$color-background-form-disabled !important;
-    color: colours.$color-text-button-disabled !important;
-}
-
-@include setup.dark-mode {
-    button[disabled],
-    [type="button"][disabled],
-    [type="reset"][disabled],
-    [type="submit"][disabled],
-    .txp-button.disabled,
-    .navlink-disabled,
-    .ui-checkboxradio-disabled {
-        background: colours.$color-background-form-disabled !important;
-        color: colours.$dark-color-text-button-disabled !important;
-    }
+    background: var(--color-background-form-disabled) !important;
+    color: var(--color-text-button-disabled) !important;
 }

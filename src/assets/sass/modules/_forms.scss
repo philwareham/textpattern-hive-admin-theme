@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Forms
    ========================================================================== */
@@ -152,8 +148,8 @@ textarea {
     width: 16px;
     height: 16px;
     padding: 0; /* 1 */
-    border: 1px solid colours.$color-border-extra-dark;
-    background: colours.$color-background-form;
+    border: 1px solid var(--color-border-extra-dark);
+    background: var(--color-background-form);
     appearance: none;
 
     + label:not(.ui-controlgroup-item) {
@@ -165,12 +161,16 @@ textarea {
     }
 
     &:hover {
-        border-color: colours.shade(colours.$color-border-extra-dark, 15%);
+        filter: brightness(1.05);
         cursor: pointer;
     }
 
+    &:active {
+        filter: brightness(0.95);
+    }
+
     &:focus {
-        border-color: colours.$color-link-focus;
+        border-color: var(--color-link-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 
@@ -182,15 +182,8 @@ textarea {
 @include setup.dark-mode {
     [type="checkbox"]:not(.ui-checkboxradio),
     [type="radio"]:not(.ui-checkboxradio) {
-        border-color: colours.$dark-color-border-extra-dark;
-        background-color: colours.$dark-color-background-form;
-
         &:hover {
-            border-color: colours.$dark-color-border-extra-light;
-        }
-
-        &:focus {
-            border-color: colours.$dark-color-link-focus;
+            border-color: var(--color-border-extra-light);
         }
     }
 }
@@ -198,40 +191,40 @@ textarea {
 [type="checkbox"]:not(.ui-checkboxradio) {
     &:checked {
         border: 0;
-        background: colours.$color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+        background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
 
         &:hover,
         &:active {
-            background-color: colours.$color-text;
+            background-color: var(--color-text);
         }
 
         &:focus {
-            background-color: colours.$color-link-focus;
+            background-color: var(--color-link-focus);
         }
     }
 
     &[disabled]:checked {
-        background: colours.$color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+        background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
     }
 }
 
 @include setup.dark-mode {
     [type="checkbox"]:not(.ui-checkboxradio) {
         &:checked {
-            background: colours.$dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+            background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
 
             &:hover,
             &:active {
-                background-color: colours.$dark-color-text-heading;
+                background-color: var(--color-text-heading);
             }
 
             &:focus {
-                background-color: colours.$dark-color-link-focus;
+                background-color: var(--color-link-focus);
             }
         }
 
         &[disabled]:checked {
-            background: colours.$dark-color-text url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
+            background: var(--color-text) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282d32' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E") !important;
         }
     }
 }
@@ -240,30 +233,28 @@ textarea {
     border-radius: 100%;
 
     &:checked {
-        border: 5px solid colours.$color-text-footnote;
+        border: 5px solid var(--color-text-footnote);
 
         &:hover,
         &:active {
-            border-color: colours.$color-text;
+            border-color: var(--color-text);
         }
 
         &:focus {
-            border-color: colours.$color-link-focus;
+            border-color: var(--color-link-focus);
         }
     }
 }
 
 @include setup.dark-mode {
     [type="radio"]:not(.ui-checkboxradio):checked {
-        border-color: colours.$dark-color-text;
-
         &:hover,
         &:active {
-            border-color: colours.$dark-color-text-heading;
+            border-color: var(--color-text-heading);
         }
 
         &:focus {
-            border-color: colours.$dark-color-link-focus;
+            border-color: var(--color-link-focus);
         }
     }
 }
@@ -294,47 +285,54 @@ textarea {
     height: auto;
     min-height: 2.307692307692308em; // 30px / 13px
     padding: 0.30769230769231em; // 4px / 13px
-    border: 1px solid colours.$color-border;
+    border: 1px solid var(--color-border);
     border-radius: 0;
-    background: colours.$color-background-form;
+    background: var(--color-background-form);
     appearance: none;
     cursor: pointer;
 
     &:hover {
-        border-color: colours.$color-border-extra-dark;
+        border-color: var(--color-border-extra-dark);
     }
 
     &:focus {
-        border-color: colours.$color-link-focus;
+        border-color: var(--color-link-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
     }
 }
 
 @include setup.dark-mode {
     [type="file"] {
-        border-color: colours.$dark-color-border-extra-dark;
-        background-color: colours.$dark-color-background-form;
+        border-color: var(--color-border-extra-dark);
 
         &:hover {
-            border-color: colours.$dark-color-border-extra-light;
+            border-color: var(--color-border-extra-light);
         }
 
         &:focus {
-            border-color: colours.$dark-color-link-focus;
+            border-color: var(--color-link-focus);
         }
     }
 }
 
 ::-webkit-file-upload-button {
-    @include setup.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
+    @include setup.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
 
     padding: 0 0.25em;
     border: 0;
-    color: colours.$color-text-button;
+    color: var(--color-text-button);
     font: inherit;
     /* autoprefixer: off */
     appearance: none;
     cursor: pointer;
+}
+
+[type="file"]:hover::-webkit-file-upload-button {
+    filter: brightness(1.05);
+}
+
+[type="file"]:active::-webkit-file-upload-button {
+    filter: brightness(0.95);
 }
 
 /**
@@ -593,20 +591,6 @@ textarea {
     &:-moz-ui-invalid {
         border-color: var(--color-error-text);
         box-shadow: none;
-    }
-
-    &:hover:-moz-ui-invalid {
-        border-color: colours.shade(colours.$color-error-border, 30%);
-    }
-}
-
-@include setup.dark-mode {
-    input,
-    select,
-    textarea {
-        &:hover:-moz-ui-invalid {
-            border-color: colours.tint(colours.$dark-color-error-text, 30%);
-        }
     }
 }
 
