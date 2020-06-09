@@ -57,20 +57,20 @@ caption {
  */
 
 tr {
-    border: 1px solid colours.$color-border-light;
+    border: 1px solid var(--color-border-light);
 }
 
 thead th {
-    background-color: colours.$color-gradient-from;
+    background-color: var(--color-gradient-from);
 }
 
 @include setup.dark-mode {
     tr {
-        border-color: colours.$dark-color-border-extra-light;
+        border-color: var(--color-border-extra-light);
     }
 
     thead th {
-        background-color: colours.$dark-color-gradient-from;
+        background-color: var(--color-gradient-to);
         color: var(--color-text-heading);
     }
 }
@@ -137,11 +137,11 @@ td {
     tbody {
         tr {
             &:nth-child(even) {
-                background: colours.$color-background-box;
+                background: var(--color-background-box);
             }
 
             &.selected {
-                background: colours.$color-selected;
+                background: var(--color-selected);
             }
         }
 
@@ -151,15 +151,15 @@ td {
     }
 
     thead th {
-        @include setup.gradient-linear(colours.$color-gradient-from, colours.$color-gradient-to);
+        @include setup.gradient-linear(var(--color-gradient-from), var(--color-gradient-to));
 
-        border-top: 1px solid colours.$color-border-light;
-        border-right: 1px solid colours.$color-border;
-        border-bottom: 1px solid colours.$color-border-dark;
+        border-top: 1px solid var(--color-border-light);
+        border-right: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border-dark);
         border-left: 0;
 
         &:first-child {
-            border-left: 1px solid colours.$color-border;
+            border-left: 1px solid var(--color-border);
         }
 
         a {
@@ -167,10 +167,10 @@ td {
             position: relative;
             margin: -0.38461538461538em -1em; // improved click area
             padding: 0.38461538461538em 1em; // 5px / 13px + 13px
-            color: colours.$color-text;
+            color: var(--color-text);
 
             &:hover {
-                color: colours.$color-text;
+                color: var(--color-text);
                 text-decoration: none;
             }
         }
@@ -180,38 +180,23 @@ td {
 @include setup.dark-mode {
     .txp-list,
     .txp-list--no-options {
-        tbody {
-            tr {
-                &:nth-child(even) {
-                    background: colours.$dark-color-background-box;
-                }
-
-                &.selected {
-                    background: colours.$dark-color-selected;
-                }
-            }
-        }
-
         thead th {
-            @include setup.gradient-linear(colours.$dark-color-gradient-to, colours.$dark-color-gradient-from);
-
-            border-top-color: colours.$dark-color-border-light;
-            border-right-color: colours.$dark-color-border-dark;
-            border-bottom-color: colours.$dark-color-border-extra-light;
+            border-right-color: var(--color-border-dark);
+            border-bottom-color: var(--color-border-extra-light);
 
             &:first-child {
-                border-left-color: colours.$dark-color-border-extra-light;
+                border-left-color: var(--color-border-extra-light);
             }
 
             &:last-child {
-                border-right-color: colours.$dark-color-border-extra-light;
+                border-right-color: var(--color-border-extra-light);
             }
 
             a {
-                color: colours.$dark-color-text-heading;
+                color: var(--color-text-heading);
 
                 &:hover {
-                    color: colours.$dark-color-text-heading;
+                    color: var(--color-text-heading);
                 }
             }
         }

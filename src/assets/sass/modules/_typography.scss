@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Typography
    ========================================================================== */
@@ -35,7 +31,7 @@ h4,
 h5,
 h6 {
     clear: both;
-    color: colours.$color-text-heading;
+    color: var(--color-text-heading);
 }
 
 /**
@@ -103,17 +99,6 @@ h6 {
     font-size: 1rem;
 }
 
-@include setup.dark-mode {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: colours.$dark-color-text-heading;
-    }
-}
-
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
@@ -138,13 +123,7 @@ address {
 blockquote {
     margin: 1em 0;
     padding: 0 0 0 1em;
-    border-left: 3px solid colours.$color-border;
-}
-
-@include setup.dark-mode {
-    blockquote {
-        border-left-color: colours.$dark-color-border;
-    }
+    border-left: 3px solid var(--color-border);
 }
 
 /**
@@ -171,16 +150,8 @@ var {
         border-radius: setup.$border-radius / 2;
     }
 
-    background: colours.$color-selected;
-    color: colours.$color-text;
-}
-
-@include setup.dark-mode {
-    mark,
-    var {
-        background: colours.$dark-color-selected;
-        color: colours.$dark-color-text;
-    }
+    background: var(--color-selected);
+    color: var(--color-text);
 }
 
 /**
@@ -199,13 +170,13 @@ code,
 kbd,
 samp {
     padding: 1px 0.23076923076923em; // 3px / 13px
-    border: 1px solid colours.$color-border-extra-light;
+    border: 1px solid var(--color-border-extra-light);
 
     @if setup.$border-radius > 0 {
         border-radius: setup.$border-radius / 2;
     }
 
-    background: colours.$color-background-box;
+    background: var(--color-background-box);
 }
 
 /**
@@ -221,28 +192,17 @@ pre {
     padding: 1em; // 13px
     /* 1 */
     overflow-x: auto;
-    border: 1px solid colours.$color-border-extra-light;
+    border: 1px solid var(--color-border-extra-light);
 
     @if setup.$border-radius > 0 {
         border-radius: setup.$border-radius / 2;
     }
 
-    background: colours.$color-background-box;
+    background: var(--color-background-box);
     /* 2 */
     word-wrap: normal;
     /* 3 */
     tab-size: 4;
-}
-
-@include setup.dark-mode {
-    pre,
-    code,
-    kbd,
-    samp {
-        border-color: colours.$dark-color-border-extra-light;
-        background-color: colours.$dark-color-background-box;
-        color: colours.$dark-color-text;
-    }
 }
 
 /**
@@ -311,16 +271,7 @@ figcaption,
 tfoot,
 .footnote,
 .txp-form-field-instructions {
-    color: colours.$color-text-footnote;
-}
-
-@include setup.dark-mode {
-    figcaption,
-    tfoot,
-    .footnote,
-    .txp-form-field-instructions {
-        color: colours.$dark-color-text-footnote;
-    }
+    color: var(--color-text-footnote);
 }
 
 figcaption {

@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Twisties
    ========================================================================== */
@@ -33,44 +29,28 @@
     margin: 1em 0;
 
     @if setup.$flat-theme < 1 {
-        border-right: 1px solid colours.$color-border-extra-light;
-        border-left: 1px solid colours.$color-border-extra-light;
+        border-right: 1px solid var(--color-border-extra-light);
+        border-left: 1px solid var(--color-border-extra-light);
 
         > div {
-            border-bottom: 1px solid colours.$color-border-extra-light;
+            border-bottom: 1px solid var(--color-border-extra-light);
         }
     } @else {
-        border-right: 1px solid colours.$color-border;
-        border-left: 1px solid colours.$color-border;
+        border-right: 1px solid var(--color-border);
+        border-left: 1px solid var(--color-border);
 
         > div {
-            border-bottom: 1px solid colours.$color-border;
+            border-bottom: 1px solid var(--color-border);
         }
     }
 
     clear: both;
-    background: colours.$color-background-box;
+    background: var(--color-background-box);
 }
 
 @include setup.dark-mode {
     .txp-details {
-        @if setup.$flat-theme < 1 {
-            border-right: 1px solid colours.$dark-color-border-extra-light;
-            border-left: 1px solid colours.$dark-color-border-extra-light;
-
-            > div {
-                border-bottom: 1px solid colours.$dark-color-border-extra-light;
-            }
-        } @else {
-            border-right-color: colours.$dark-color-border;
-            border-left-color: colours.$dark-color-border;
-
-            > div {
-                border-bottom-color: colours.$dark-color-border;
-            }
-        }
-
-        background: colours.$dark-color-background;
+        background: var(--color-background-box);
     }
 }
 
@@ -80,18 +60,18 @@
 
 h3.txp-summary,
 .txp-details > h3 {
-    @include setup.gradient-linear(colours.$color-gradient-from, colours.$color-gradient-to);
+    @include setup.gradient-linear(var(--color-gradient-from), var(--color-gradient-to));
 
     position: relative;
     height: 2em; // 26px / 13px
     margin: 0;
 
     @if setup.$flat-theme < 1 {
-        border-top: 1px solid colours.$color-border-light;
-        border-bottom: 1px solid colours.$color-border-dark;
+        border-top: 1px solid var(--color-border-light);
+        border-bottom: 1px solid var(--color-border-dark);
     } @else {
-        border-top: 1px solid colours.$color-border;
-        border-bottom: 1px solid colours.$color-border;
+        border-top: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
     }
 
     font-size: 1rem;
@@ -99,17 +79,11 @@ h3.txp-summary,
     line-height: 2; // 26px / 13px
 }
 
-@include setup.dark-mode {
-    h3.txp-summary,
-    .txp-details > h3 {
-        @include setup.gradient-linear(colours.$dark-color-gradient-to, colours.$dark-color-gradient-from);
-
-        @if setup.$flat-theme < 1 {
-            border-top-color: colours.$dark-color-border-light;
-            border-bottom-color: colours.$dark-color-border-extra-light;
-        } @else {
-            border-top-color: colours.$dark-color-border;
-            border-bottom-color: colours.$dark-color-border;
+@if setup.$flat-theme < 1 {
+    @include setup.dark-mode {
+        h3.txp-summary,
+        .txp-details > h3 {
+            border-bottom-color: var(--color-border-extra-light);
         }
     }
 }
@@ -131,10 +105,10 @@ h3.txp-summary,
 h3.txp-summary a {
     display: block;
     padding: 0 2em 0 1em;
-    color: colours.$color-text-heading;
+    color: var(--color-text-heading);
 
     &:hover {
-        color: colours.$color-text-heading;
+        color: var(--color-text-heading);
         text-decoration: none;
     }
 
@@ -151,34 +125,13 @@ h3.txp-summary a {
         height: 0;
         border: 0 solid transparent;
         border-width: 0.25em 0 0.25em 0.25em;
-        border-left-color: colours.$color-text;
-        opacity: 0.5;
+        border-left-color: var(--color-text);
+        opacity: 0.6;
         font-size: 16px;
     }
 
     &:hover::after {
         opacity: 1;
-    }
-}
-
-@include setup.dark-mode {
-    h3.txp-summary a {
-        color: colours.$dark-color-text-heading;
-
-        &:hover {
-            color: colours.$dark-color-text-heading;
-        }
-
-        &::after {
-            border: 0 solid transparent;
-            border-width: 0.25em 0 0.25em 0.25em;
-            border-left-color: colours.$dark-color-text;
-            opacity: 0.6;
-        }
-
-        &:hover::after {
-            opacity: 1;
-        }
     }
 }
 
@@ -192,15 +145,7 @@ h3.txp-summary.expanded a::after {
     right: 0.5625em; // 9px / 16px
     border: 0 solid transparent;
     border-width: 0.25em 0.25em 0;
-    border-top-color: colours.$color-text;
-}
-
-@include setup.dark-mode {
-    h3.txp-summary.expanded a::after {
-        border: 0 solid transparent;
-        border-width: 0.25em 0.25em 0;
-        border-top-color: colours.$dark-color-text;
-    }
+    border-top-color: var(--color-text);
 }
 
 /**

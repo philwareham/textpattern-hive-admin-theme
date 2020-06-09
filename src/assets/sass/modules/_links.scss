@@ -1,52 +1,32 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Links
    ========================================================================== */
 
 /**
- * 1. Specify link colour.
- * 2. Remove default underline style from non-hover state links.
- * 3. Interrupt the decoration line to let the shape of the text show through
+ * 1. Remove default underline style from non-hover state links.
+ * 2. Interrupt the decoration line to let the shape of the text show through
  *    in supported browsers.
- * 4. Hide `.busy` class links when processing AJAX.
+ * 3. Hide `.busy` class links when processing AJAX.
  */
 
 a {
-    color: colours.$color-link; /* 1 */
-    text-decoration: none; /* 2 */
-    text-decoration-skip-ink: auto; /* 3 */
+    color: var(--color-link);
+    text-decoration: none; /* 1 */
+    text-decoration-skip-ink: auto; /* 2 */
 
     &:hover,
     &:active {
-        color: colours.$color-link-hover;
+        color: var(--color-link-hover);
         text-decoration: underline;
     }
 
     &:focus {
-        outline: thin solid colours.$color-link-focus;
+        outline: thin solid var(--color-link-focus);
     }
 
     &.busy {
-        visibility: hidden; /* 4 */
-    }
-}
-
-@include setup.dark-mode {
-    a {
-        color: colours.$dark-color-link;
-
-        &:hover,
-        &:active {
-            color: colours.$dark-color-link-hover;
-        }
-
-        &:focus {
-            outline: thin solid colours.$dark-color-link-focus;
-        }
+        visibility: hidden; /* 3 */
     }
 }
 
@@ -97,17 +77,11 @@ a {
     padding: 0.25em 0.5em;
     transform: translateY(-5em);
     transition: transform 0.2s ease-in-out;
-    background-color: colours.$color-background-box;
+    background-color: var(--color-background-box);
 
     &:focus,
     &:active {
         transform: translateY(0);
-    }
-}
-
-@include setup.dark-mode {
-    .txp-skip-link {
-        background-color: colours.$dark-color-background-box;
     }
 }
 

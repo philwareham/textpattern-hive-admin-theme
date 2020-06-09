@@ -302,14 +302,7 @@ body.darkmode.login {
 
 .unpublished,
 .not-modified {
-    color: colours.$color-text-footnote;
-}
-
-@include setup.dark-mode {
-    .unpublished,
-    .not-modified {
-        color: colours.$dark-color-text-footnote;
-    }
+    color: var(--color-text-footnote);
 }
 
 
