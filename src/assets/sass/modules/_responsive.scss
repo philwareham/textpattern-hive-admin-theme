@@ -293,7 +293,7 @@
         background-size: 13em 2em; // 208px / 16px + 32px / 16px
 
         &:focus {
-            outline: thin solid colours.$color-link-focus;
+            outline: thin solid var(--color-link-focus);
         }
 
         &:not(.collapsed) {

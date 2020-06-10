@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Tables
    ========================================================================== */
@@ -217,7 +213,9 @@ td {
     thead th {
         &.asc,
         &.desc {
-            @include setup.gradient-linear(color.adjust(colours.$color-gradient-to, $lightness: -4%), color.adjust(colours.$color-gradient-from, $lightness: -4%));
+            @include setup.gradient-linear(var(--color-gradient-to), var(--color-gradient-from));
+
+            filter: brightness(0.95);
 
             a::after {
                 @include setup.hide-text;
@@ -229,7 +227,7 @@ td {
                 right: 0.3125em; // 5px / 16px
                 width: 0;
                 height: 0;
-                opacity: 0.5;
+                opacity: 0.6;
                 font-size: 16px;
 
                 [dir="rtl"] & {
@@ -255,26 +253,6 @@ td {
             border: 0 solid transparent;
             border-width: 0 0.25em 0.25em;
             border-bottom-color: var(--color-text);
-        }
-    }
-}
-
-@include setup.dark-mode {
-    .txp-list,
-    .txp-list--no-options {
-        thead th {
-            &.asc,
-            &.desc {
-                @include setup.gradient-linear(color.adjust(colours.$dark-color-gradient-from, $lightness: -4%), color.adjust(colours.$dark-color-gradient-to, $lightness: -4%));
-
-                a::after {
-                    opacity: 0.6;
-                }
-
-                a:hover::after {
-                    opacity: 1;
-                }
-            }
         }
     }
 }

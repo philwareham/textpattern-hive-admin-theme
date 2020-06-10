@@ -193,14 +193,17 @@ li.information {
 
         &.success {
             background: var(--color-success-background);
+            color: var(--color-success-text);
         }
 
         &.warning {
             background: var(--color-warning-background);
+            color: var(--color-warning-text);
         }
 
         &.error {
             background: var(--color-error-background);
+            color: var(--color-error-text);
         }
     }
 }

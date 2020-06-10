@@ -43,17 +43,11 @@ button.txp-nav-toggle {
     }
 
     a {
-        color: colours.$color-text;
+        color: var(--color-text);
 
         &:hover {
             text-decoration: none;
         }
-    }
-}
-
-@include setup.dark-mode {
-    .txp-nav a {
-        color: colours.$color-text;
     }
 }
 

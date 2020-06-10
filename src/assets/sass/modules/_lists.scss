@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Lists
    ========================================================================== */
@@ -45,13 +41,7 @@ li {
  */
 
 li::marker {
-    color: color-text-heading;
-}
-
-@include setup.dark-mode {
-    li::marker {
-        color: colours.$dark-color-text-heading;
-    }
+    color: var(--text-heading);
 }
 
 /**
@@ -113,11 +103,11 @@ dd {
 
     li {
         position: relative;
-        border-top: 1px solid colours.$color-border-light;
+        border-top: 1px solid var(--color-border-light);
         border-bottom: 1px solid transparent;
 
         &:nth-child(odd) {
-            background: colours.$color-background;
+            background: var(--color-background);
         }
 
         &:first-child {
@@ -126,11 +116,11 @@ dd {
 
         &.active,
         &.ui-tabs-active {
-            background: colours.$color-highlight-box;
+            background: var(--color-highlight-box);
         }
 
         &.selected {
-            background: colours.$color-selected;
+            background: var(--color-selected);
         }
     }
 
@@ -146,24 +136,7 @@ dd {
 
 @include setup.dark-mode {
     .switcher-list li {
-        border-top: 1px solid colours.$dark-color-gradient-to;
-
-        &:nth-child(odd) {
-            background: colours.$dark-color-background;
-        }
-
-        &:first-child {
-            border-top: 0;
-        }
-
-        &.active,
-        &.ui-tabs-active {
-            background: colours.$dark-color-highlight-box;
-        }
-
-        &.selected {
-            background: colours.$dark-color-selected;
-        }
+        border-top-color: var(--color-border-extra-light);
     }
 }
 

@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Progress meter (only used in core for setup panels)
    ========================================================================== */
@@ -34,7 +30,7 @@
     }
 
     li {
-        @include setup.gradient-linear(var(--color-gradient-from), var(--color-gradient-to));
+        @include setup.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
 
         display: inline-block;
         position: relative;
@@ -44,14 +40,15 @@
         border-right: 1px solid var(--color-border-extra-light);
         border-bottom: 1px solid var(--color-border-dark);
         border-left: 1px solid var(--color-border-extra-light);
+        color: var(--color-text-button);
 
         // highlight the currently active step
 
         &.active {
             @include setup.gradient-linear(var(--color-accent-gradient-from), var(--color-accent-gradient-to));
 
-            border: 1px solid colours.$color-accent-gradient-to;
-            border-bottom-color: color.adjust(colours.$color-accent-gradient-to, $lightness: -6%);
+            border: 1px solid var(--color-accent-gradient-to);
+            border-bottom-color: var(--color-accent-gradient-to-dark);
         }
 
         // numerical indication of step
@@ -99,8 +96,8 @@
 }
 
 @include setup.dark-mode {
-    .progress-meter li {
-        color: var(--color-text-inverse);
+    .progress-meter li::before {
+        color: var(--color-text-white-out);
     }
 }
 

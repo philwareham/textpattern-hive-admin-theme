@@ -9,10 +9,10 @@
     // text colours
     --color-text:                          hsl(0, 0%, 20%);
     --color-text-heading:                  hsl(0, 0%, 0%);
-    --color-text-button:                   hsl(0, 0%, 20%);
-    --color-text-button-hover:             hsl(0, 0%, 20%);
+    --color-text-button:                   hsl(0, 0%, 0%);
+    --color-text-button-hover:             hsl(0, 0%, 0%);
     --color-text-button-active:            hsl(0, 0%, 0%);
-    --color-text-button-disabled:          hsl(0, 0%, 20%);
+    --color-text-button-disabled:          hsl(0, 0%, 0%);
     --color-text-form:                     hsl(0, 0%, 0%);
     --color-text-form-placeholder:         hsl(0, 0%, 60%);
     --color-text-footnote:                 hsl(0, 0%, 35%);
@@ -28,6 +28,7 @@
     // accent colours
     --color-accent-gradient-from:          hsl(48, 100%, 63%);
     --color-accent-gradient-to:            hsl(48, 100%, 48%);
+    --color-accent-gradient-to-dark:       hsl(48, 100%, 42%);
     --color-highlight-box:                 hsl(48, 100%, 94%);
     --color-strong-highlight-box:          hsl(48, 100%, 76%);
     // border colours
