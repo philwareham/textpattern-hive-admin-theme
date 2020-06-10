@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Selectmenu
    ========================================================================== */
@@ -87,7 +83,7 @@
             height: auto;
             margin: 0.5em 0 0;
             padding: 2px 0.61538461538462em; // 8px / 13px
-            border-top: 1px solid colours.$color-border;
+            border-top: 1px solid var(--color-border);
             font-size: 1rem;
             font-weight: bold;
             line-height: setup.$base-line-height;
@@ -102,12 +98,6 @@
 
 .ui-selectmenu-open {
     display: block;
-}
-
-@include setup.dark-mode {
-    .ui-selectmenu-optgroup {
-        border-top-color: colours.$dark-color-border;
-    }
 }
 
 /**
@@ -139,7 +129,7 @@
         padding: 0;
         border: 0;
         background: transparent;
-        color: colours.$color-link;
+        color: var(--color-link);
         font-family: inherit;
         cursor: pointer;
         user-select: auto;
@@ -147,7 +137,7 @@
         &:hover,
         &:active {
             background: transparent;
-            color: colours.$color-link-hover;
+            color: var(--color-link-hover);
             text-decoration: underline;
 
             @if setup.$flat-theme < 1 {
@@ -156,7 +146,7 @@
         }
 
         &:focus {
-            outline: thin solid colours.$color-link-focus;
+            outline: thin solid var(--color-link-focus);
         }
 
         .ui-selectmenu-icon {
@@ -167,23 +157,6 @@
         &:active .ui-selectmenu-icon,
         &:focus .ui-selectmenu-icon {
             opacity: 1;
-        }
-    }
-}
-
-@include setup.dark-mode {
-    .no-ui-button {
-        .ui-selectmenu-button {
-            color: colours.$dark-color-link;
-
-            &:hover,
-            &:active {
-                color: colours.$dark-color-link-hover;
-            }
-
-            &:focus {
-                outline: thin solid colours.$dark-color-link-focus;
-            }
         }
     }
 }

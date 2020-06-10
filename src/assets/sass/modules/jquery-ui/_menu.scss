@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Menu
    ========================================================================== */
@@ -74,7 +70,7 @@
     padding: 0;
 
     @if setup.$flat-theme < 1 {
-        border-color: colours.$color-border-light;
+        border-color: var(--color-border-light);
     }
 
     outline: 0;
@@ -84,7 +80,7 @@
     line-height: setup.$base-line-height;
 
     @if setup.$flat-theme < 1 {
-        box-shadow: setup.$standard-shadow;
+        box-shadow: var(--standard-shadow);
     }
 
     .ui-menu {
@@ -151,15 +147,6 @@
     .ui-menu-icon {
         right: 0;
         left: auto;
-    }
-}
-
-@if setup.$flat-theme < 1 {
-    @include setup.dark-mode {
-        .ui-menu {
-            border-color: colours.$dark-color-border-light;
-            box-shadow: setup.$dark-standard-shadow;
-        }
     }
 }
 

@@ -29,28 +29,24 @@
 .ui-checkboxradio-label {
     .ui-icon-background {
         box-sizing: border-box;
-        border: 1px solid colours.$color-border-extra-dark;
+        border: 1px solid var(--color-border-extra-dark);
         border-radius: 0.2em;
-        background-color: colours.$color-background-box;
-    }
-
-    &:hover .ui-icon-background {
-        border-color: colours.shade(colours.$color-border-extra-dark, 15%);
+        background-color: var(--color-background-form);
     }
 
     &.ui-checkboxradio-checked {
         .ui-icon {
             border: 0;
-            background: colours.$color-text-footnote url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
+            background: var(--color-text-footnote) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23fff' d='M13 2.5l-7 7-2-2-2 2 4 4L15 4.5z'/%3E%3C/svg%3E");
         }
 
         &.ui-state-focus .ui-icon {
-            background-color: colours.$color-link-focus;
+            background-color: var(--color-link-focus);
         }
     }
 
     &.ui-checkboxradio-checked:hover .ui-icon {
-        background-color: colours.$color-text;
+        background-color: var(--color-text);
     }
 }
 

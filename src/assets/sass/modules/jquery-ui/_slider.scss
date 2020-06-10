@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Slider
    ========================================================================== */
@@ -25,32 +21,40 @@
 .ui-slider {
     position: relative;
     box-sizing: border-box;
-    background-color: colours.$color-gradient-to;
+    border-color: var(--color-border);
+    background-color: var(--color-background-box);
     text-align: left;
 
     &:hover {
-        border-color: colours.shade(colours.$color-border, 15%);
-
-        .ui-slider-handle {
-            border-color: colours.shade(colours.$color-border, 15%);
-        }
+        border-color: var(--color-border-extra-dark);
     }
 
     .ui-slider-handle {
+        @include setup.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
+
         position: absolute;
         z-index: 2;
         box-sizing: border-box;
         width: 20px;
         height: 20px;
+        border: 1px solid var(--color-border-dark);
         border-radius: 50%;
-        background-color: colours.$color-background;
 
         @if setup.$flat-theme < 1 {
-            box-shadow: setup.$standard-shadow;
+            box-shadow: var(--standard-shadow);
         }
 
         cursor: pointer;
         touch-action: manipulation;
+
+        &:hover {
+            border-color: var(--color-border-extra-dark);
+            filter: brightness(1.05);
+        }
+
+        &:active {
+            filter: brightness(0.95);
+        }
     }
 
     .ui-slider-range {
@@ -58,36 +62,21 @@
         position: absolute;
         z-index: 1;
         border: 0;
-        background: colours.$color-background-box;
+        background: var(--color-gradient-to);
         font-size: 10px;
     }
 }
 
 @include setup.dark-mode {
     .ui-slider {
-        border-color: colours.$dark-color-border-extra-dark;
-        background-color: colours.$dark-color-background-form;
+        border-color: var(--color-border-extra-dark);
 
         &:hover {
-            border-color: colours.$dark-color-border-extra-light;
-
-            .ui-slider-handle {
-                border-color: colours.$dark-color-border-extra-light;
-            }
+            border-color: var(--color-border-extra-light);
         }
 
         .ui-slider-handle {
-            @include setup.gradient-linear(colours.$color-button-gradient-from, colours.$color-button-gradient-to);
-
-            box-shadow: setup.$dark-standard-shadow;
-
-            &:hover {
-                @include setup.gradient-linear(color.adjust(colours.$color-button-gradient-from, $lightness: 4%), color.adjust(colours.$color-button-gradient-to, $lightness: 4%));
-            }
-        }
-
-        .ui-slider-range {
-            background: colours.$dark-color-gradient-from;
+            border-color: var(--color-border-extra-light);
         }
     }
 }

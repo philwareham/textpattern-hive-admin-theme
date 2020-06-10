@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Datepicker
    ========================================================================== */
@@ -90,7 +86,7 @@
     padding: 0.2em 0.2em 0;
 
     @if setup.$flat-theme < 1 {
-        box-shadow: setup.$standard-shadow;
+        box-shadow: var(--standard-shadow);
     }
 
     .ui-datepicker-header {
@@ -133,7 +129,7 @@
 
     .ui-datepicker-prev-hover,
     .ui-datepicker-next-hover {
-        background-color: colours.$color-background-box;
+        background-color: var(--color-background-box);
     }
 
     .ui-datepicker-title {
@@ -173,19 +169,6 @@
             text-align: center;
         }
 
-        a.ui-state-active {
-            border-color: color.adjust(colours.$color-link, $lightness: 42%);
-            background-color: colours.$color-selected;
-        }
-
-        a.ui-state-highlight:hover {
-            border-color: color.adjust(colours.$color-warning-text, $lightness: 8%);
-        }
-
-        a.ui-state-active:hover {
-            border-color: color.adjust(colours.$color-link, $lightness: 27%);
-        }
-
         &.ui-datepicker-week-col {
             padding: 0.32em 0;
             text-align: center;
@@ -218,32 +201,6 @@
         display: block;
         top: 0.3em;
         left: 0.5em;
-    }
-}
-
-@include setup.dark-mode {
-    .ui-datepicker {
-        box-shadow: setup.$dark-standard-shadow;
-
-        .ui-datepicker-prev-hover,
-        .ui-datepicker-next-hover {
-            background-color: colours.$dark-color-background-box;
-        }
-
-        td {
-            a.ui-state-highlight {
-                border-color: colours.$color-warning-text;
-            }
-
-            a.ui-state-active {
-                border-color: colours.$dark-color-link;
-                background-color: colours.$dark-color-selected;
-            }
-
-            a.ui-state-active:hover {
-                border-color: colours.$dark-color-link-hover;
-            }
-        }
     }
 }
 

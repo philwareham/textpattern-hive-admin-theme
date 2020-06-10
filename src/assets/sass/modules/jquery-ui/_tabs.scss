@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Tabs
    ========================================================================== */
@@ -47,7 +43,7 @@
         background: none;
 
         &:not(.switcher-list) .ui-tabs-anchor {
-            color: colours.$color-text;
+            color: var(--color-text);
             text-decoration: none;
         }
 
@@ -64,7 +60,7 @@
         }
 
         .ui-state-focus a {
-            outline: thin solid colours.$color-link-focus;
+            outline: thin solid var(--color-link-focus);
         }
     }
 
@@ -74,22 +70,6 @@
         padding: 1px 0;
         border-width: 1px 0;
         background: none;
-    }
-}
-
-@include setup.dark-mode {
-    .ui-tabs {
-        .ui-tabs-nav {
-            background: colours.$dark-color-background;
-
-            &:not(.switcher-list) .ui-tabs-anchor {
-                color: colours.$dark-color-text;
-            }
-
-            .ui-state-focus a {
-                outline: thin solid colours.$dark-color-link-focus;
-            }
-        }
     }
 }
 
@@ -104,7 +84,7 @@
         white-space: nowrap;
 
         @if setup.$flat-theme < 1 {
-            box-shadow: inset 0 -0.2em 0.4em rgba(#666666, 0.15);
+            box-shadow: inset 0 -0.2em 0.4em hsla(0, 0%, 40%, 0.15);
         }
 
         &.ui-tabs-active {
@@ -121,7 +101,7 @@
 @if setup.$flat-theme < 1 {
     @include setup.dark-mode {
         .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav li {
-            box-shadow: inset 0 -0.25em 0.5em rgba(#000000, 0.4);
+            box-shadow: inset 0 -0.25em 0.5em hsla(0, 0%, 0%, 0.4);
 
             &.ui-tabs-active {
                 box-shadow: none;
@@ -144,28 +124,17 @@
 
 .ui-tabs-vertical {
     .ui-tabs-nav {
-        border-bottom: 1px solid colours.$color-border-light;
+        border-bottom: 1px solid var(--color-border-light);
 
         li {
             display: block;
-            border: 1px solid colours.$color-border-light;
+            border: 1px solid var(--color-border-light);
             border-bottom: 1px solid transparent;
         }
     }
 
     .ui-tabs-panel {
         border-top-width: 0;
-    }
-}
-
-@include setup.dark-mode {
-    .ui-tabs-vertical .ui-tabs-nav {
-        border-bottom-color: colours.$dark-color-border-light;
-
-        li {
-            border-color: colours.$dark-color-border-light;
-            border-bottom-color: transparent;
-        }
     }
 }
 
