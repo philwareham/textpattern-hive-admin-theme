@@ -32,21 +32,11 @@
     left: 0;
     height: 2.69230769230769em; // 35px / 13px
     padding: 0 4%;
-    border-top: 1px solid colours.$color-accent-gradient-to;
-    border-bottom: 1px solid color.adjust(colours.$color-accent-gradient-to, $lightness: -6%);
+    border-top: 1px solid var(--color-accent-gradient-to);
+    border-bottom: 1px solid var(--color-accent-gradient-to-dark);
 
     @if setup.$flat-theme < 1 {
         box-shadow: 0 0.2em 0.25em rgba(#000000, 0.15);
-    }
-}
-
-@include setup.dark-mode {
-    .txp-header a {
-        color: colours.$color-text;
-
-        &:focus {
-            outline: thin solid colours.$color-link-focus;
-        }
     }
 }
 
@@ -160,7 +150,7 @@
         width: 1.5em;
         height: 1.5em;
         transform: translateY(-50%);
-        border: 1px solid color.adjust(colours.$color-accent-gradient-to, $lightness: -6%);
+        border: 1px solid var(--color-accent-gradient-to-dark);
         border-radius: 0.75em;
         background: rgba(colours.$color-text-inverse, 0.6);
         text-align: center;

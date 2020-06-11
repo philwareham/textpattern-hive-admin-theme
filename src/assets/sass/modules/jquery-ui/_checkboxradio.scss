@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../../setup";
-
-// import colourscheme TEMP
-@use "../../setup/colours";
 
 /* Checkboxradio
    ========================================================================== */
@@ -50,6 +46,33 @@
     }
 }
 
+@include setup.dark-mode {
+    .ui-checkboxradio-label {
+        .ui-icon-background {
+            border-color: var(--color-text-footnote);
+            background-color: var(--color-text-white-out);
+        }
+
+        &.ui-checkboxradio-checked {
+            .ui-icon {
+                background-color: var(--color-background);
+            }
+
+            &.ui-button:hover .ui-icon {
+                background-color: var(--color-border-extra-dark);
+            }
+
+            &.ui-state-focus .ui-icon {
+                background-color: var(--color-link-focus);
+            }
+        }
+
+        &.ui-checkboxradio-checked:hover .ui-icon {
+            background-color: var(--color-text);
+        }
+    }
+}
+
 .ui-checkboxradio-radio-label {
     .ui-icon-background {
         border-radius: 100%;
@@ -57,20 +80,45 @@
 
     &.ui-checkboxradio-checked {
         .ui-icon {
-            border: 5px solid colours.$color-text-footnote;
+            border: 5px solid var(--color-text-footnote);
             border-radius: 100%;
-            background: colours.$color-background-form;
+            background: var(--color-background-form);
         }
 
         &.ui-state-focus .ui-icon {
-            border-color: colours.$color-link-focus;
-            background-color: colours.$color-background-form;
+            border-color: var(--color-link-focus);
+            background-color: var(--color-background-form);
         }
     }
 
     &.ui-checkboxradio-checked:hover .ui-icon {
-        border-color: colours.$color-text;
-        background: colours.$color-background-form;
+        border-color: var(--color-text);
+        background-color: var(--color-background-form);
+    }
+}
+
+@include setup.dark-mode {
+    .ui-checkboxradio-radio-label {
+        &.ui-checkboxradio-checked {
+            .ui-icon {
+                border-color: var(--color-background);
+                background-color: var(--color-text-white-out);
+            }
+
+            &.ui-button:hover .ui-icon {
+                background-color: var(--color-text-white-out);
+            }
+
+            &.ui-state-focus .ui-icon {
+                border-color: var(--color-link-focus);
+                background-color: var(--color-text-white-out);
+            }
+        }
+
+        &.ui-checkboxradio-checked:hover .ui-icon {
+            border-color: var(--color-border-extra-dark);
+            background-color: var(--color-text-white-out);
+        }
     }
 }
 
@@ -89,20 +137,8 @@
 
 .ui-checkboxradio-checked {
     &.ui-button {
-        @include setup.gradient-linear(colours.$color-button-selected-gradient-from, colours.$color-button-selected-gradient-to);
+        @include setup.gradient-linear(var(--color-button-selected-gradient-from), var(--color-button-selected-gradient-to));
 
-        border-color: colours.$color-button-selected-border;
-    }
-
-    &.ui-button:hover {
-        @include setup.gradient-linear(color.adjust(colours.$color-button-selected-gradient-from, $lightness: 3%), color.adjust(colours.$color-button-selected-gradient-to, $lightness: 2%));
-
-        border-color: color.adjust(colours.$color-button-selected-border, $lightness: -15%);
-    }
-
-    &.ui-button:active {
-        @include setup.gradient-linear(color.adjust(colours.$color-button-selected-gradient-from, $lightness: -5%), color.adjust(colours.$color-button-selected-gradient-to, $lightness: -5%));
-
-        border-color: color.adjust(colours.$color-button-selected-border, $lightness: -15%);
+        border-color: var(--color-button-selected-border);
     }
 }

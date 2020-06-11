@@ -319,10 +319,10 @@
         top: 2.75em;
         right: 0;
         left: 0;
-        background: colours.$color-highlight-box;
+        background: var(--color-highlight-box);
 
         @if setup.$flat-theme < 1 {
-            box-shadow: setup.$standard-shadow;
+            box-shadow: var(--standard-shadow);
         }
 
         // Indicator pointer.
@@ -348,7 +348,7 @@
     .txp-nav > ul > li {
         float: none;
         border: 0;
-        border-bottom: 1px solid colours.$color-border-light;
+        border-bottom: 1px solid var(--color-border-light);
 
         &:first-child {
             border-left: 0;
@@ -527,12 +527,12 @@
 
     .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
         height: auto;
-        border-bottom: 1px solid colours.$color-border-light;
+        border-bottom: 1px solid var(--color-border-light);
 
         li {
             display: block;
             height: auto;
-            border: 1px solid colours.$color-border-light;
+            border: 1px solid var(--color-border-light);
             border-bottom: 1px solid transparent;
 
             @if setup.$flat-theme < 1 {

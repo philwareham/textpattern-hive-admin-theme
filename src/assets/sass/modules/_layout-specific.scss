@@ -140,7 +140,7 @@ body.darkmode.login {
         position: relative;
         bottom: -1px;
         padding: 0.5em 1em;
-        border: 1px solid colours.$color-border;
+        border: 1px solid var(--color-border);
         background-color: color.adjust(colours.$color-background-box, $lightness: -2%);
         color: var(--color-text);
         text-decoration: none;
@@ -150,7 +150,7 @@ body.darkmode.login {
         }
 
         &:hover {
-            border-color: colours.$color-border-extra-dark;
+            border-color: var(--color-border-extra-dark);
             background-color: colours.$color-background-box;
         }
 
@@ -237,13 +237,7 @@ body.darkmode.login {
     .author small {
         display: block;
         margin-top: -1em;
-        color: colours.$color-text-footnote;
-    }
-}
-
-@include setup.dark-mode {
-    #main_content .author small {
-        color: colours.$dark-color-text-footnote;
+        color: var(--color-text-footnote);
     }
 }
 
@@ -272,12 +266,12 @@ body.darkmode.login {
     top: 2.75em;
     margin: -1.25em 0 1.75em;
     padding: 1px 1em 0;
-    border: 1px solid colours.$color-border-light;
+    border: 1px solid var(--color-border-light);
     border-top: 0;
-    background: colours.$color-background;
+    background: var(--color-background);
 
     @if setup.$flat-theme < 1 {
-        box-shadow: 0 0.1em 0.125em rgba(#000000, 0.15);
+        box-shadow: 0 0.1em 0.125em hsla(0, 0%, 0%, 0.15);
     }
 
     .txp-actions {
@@ -287,8 +281,7 @@ body.darkmode.login {
 
 @include setup.dark-mode {
     .txp-save-zone {
-        border-color: colours.$dark-color-border-light;
-        background: colours.$dark-color-background-box;
+        background: var(--color-background-box);
     }
 }
 
@@ -369,23 +362,11 @@ body.darkmode.login {
 
 .txp-list tbody tr {
     &.spam {
-        background: color.adjust(colours.$color-error-background, $lightness: 2%);
+        background: var(--color-error-background);
     }
 
     &.moderate {
-        background: color.adjust(colours.$color-warning-background, $lightness: 3%);
-    }
-}
-
-@include setup.dark-mode {
-    .txp-list tbody tr {
-        &.spam {
-            background: color.adjust(colours.$dark-color-error-background, $lightness: -2%);
-        }
-
-        &.moderate {
-            background: color.adjust(colours.$dark-color-warning-background, $lightness: -3%);
-        }
+        background: var(--color-warning-background);
     }
 }
 

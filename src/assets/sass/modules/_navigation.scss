@@ -100,11 +100,11 @@ button.txp-nav-toggle {
 .txp-nav > ul > li {
     display: block;
     position: relative;
-    border-right: 1px solid colours.$color-accent-gradient-to;
+    border-right: 1px solid var(--color-accent-gradient-to);
     background: rgba(colours.$color-text-inverse, 0.25);
 
     &:first-child {
-        border-left: 1px solid colours.$color-accent-gradient-to;
+        border-left: 1px solid var(--color-accent-gradient-to);
     }
 
     > a {
@@ -134,10 +134,10 @@ button.txp-nav-toggle {
 
 [dir="rtl"] .txp-nav > ul > li {
     border-right: 0;
-    border-left: 1px solid colours.$color-accent-gradient-to;
+    border-left: 1px solid var(--color-accent-gradient-to);
 
     &:first-child {
-        border-right: 1px solid colours.$color-accent-gradient-to;
+        border-right: 1px solid var(--color-accent-gradient-to);
     }
 }
 
@@ -162,7 +162,7 @@ button.txp-nav-toggle {
         height: 0;
         border: 0 solid transparent;
         border-width: 0.25em 0.25em 0;
-        border-top-color: colours.$color-text;
+        border-top-color: var(--color-text);
         opacity: 0.5;
         font-size: 16px;
     }
@@ -194,7 +194,7 @@ button.txp-nav-toggle {
     content: "\2191";
     border: 0 solid transparent;
     border-width: 0 0.25em 0.25em;
-    border-bottom-color: colours.$color-text;
+    border-bottom-color: var(--color-text);
 }
 
 /**
@@ -262,7 +262,7 @@ button.txp-nav-toggle {
     @if setup.$flat-theme < 1 {
         border-color: colours.$color-border-light;
         border-top: 0;
-        box-shadow: setup.$standard-shadow;
+        box-shadow: var(--standard-shadow);
     } @else {
         border-color: colours.$color-border;
     }
@@ -306,14 +306,6 @@ button.txp-nav-toggle {
         background: url("../img/sprite.svg") no-repeat -12em 0;
         background-size: 13em 2em; // 208px / 16px + 32px / 16px
         font-size: 16px;
-    }
-}
-
-@if setup.$flat-theme < 1 {
-    @include setup.dark-mode {
-        .dropdown-menu {
-            box-shadow: setup.$dark-standard-shadow;
-        }
     }
 }
 
