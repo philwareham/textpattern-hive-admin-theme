@@ -114,12 +114,12 @@
     span {
         display: block;
         overflow: hidden;
-        color: var(--color-text);
+        color: var(--color-text-button);
         text-overflow: ellipsis;
     }
 
     a {
-        color: var(--color-text);
+        color: var(--color-text-button);
         font-weight: bold;
     }
 }

@@ -50,7 +50,7 @@
     .ui-checkboxradio-label {
         .ui-icon-background {
             border-color: var(--color-text-footnote);
-            background-color: var(--color-text-white-out);
+            background-color: var(--color-text-enforced-white);
         }
 
         &.ui-checkboxradio-checked {
@@ -102,22 +102,22 @@
         &.ui-checkboxradio-checked {
             .ui-icon {
                 border-color: var(--color-background);
-                background-color: var(--color-text-white-out);
+                background-color: var(--color-text-enforced-white);
             }
 
             &.ui-button:hover .ui-icon {
-                background-color: var(--color-text-white-out);
+                background-color: var(--color-text-enforced-white);
             }
 
             &.ui-state-focus .ui-icon {
                 border-color: var(--color-link-focus);
-                background-color: var(--color-text-white-out);
+                background-color: var(--color-text-enforced-white);
             }
         }
 
         &.ui-checkboxradio-checked:hover .ui-icon {
             border-color: var(--color-border-extra-dark);
-            background-color: var(--color-text-white-out);
+            background-color: var(--color-text-enforced-white);
         }
     }
 }

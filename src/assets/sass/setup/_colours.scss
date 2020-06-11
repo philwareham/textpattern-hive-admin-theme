@@ -14,10 +14,9 @@
 
 $color-text:                          hsl(0, 0%, 20%) !default;
 $color-text-heading:                  hsl(0, 0%, 0%) !default;
-$color-text-button:                   hsl(0, 0%, 20%) !default;
-$color-text-button-hover:             hsl(0, 0%, 20%) !default;
+$color-text-button:                   hsl(0, 0%, 0%) !default;
+$color-text-button-hover:             hsl(0, 0%, 0%) !default;
 $color-text-button-active:            hsl(0, 0%, 0%) !default;
-$color-text-button-disabled:          hsl(0, 0%, 20%) !default;
 $color-text-form:                     hsl(0, 0%, 0%) !default;
 $color-text-form-placeholder:         hsl(0, 0%, 60%) !default;
 $color-text-footnote:                 hsl(0, 0%, 35%) !default;
@@ -54,11 +53,11 @@ $dark-color-gradient-to:              hsl(210, 9%, 30%) !default;
 
 $color-accent-gradient-from:          hsl(48, 100%, 63%) !default;
 $color-accent-gradient-to:            hsl(48, 100%, 48%) !default;
-$color-highlight-box:                 hsl(48, 100%, 94%) !default;
-$color-strong-highlight-box:          hsl(48, 100%, 76%) !default;
+$color-highlight-box:                 hsla(48, 100%, 63%, 0.2) !default;
+$color-strong-highlight-box:          hsla(48, 100%, 63%, 0.66) !default;
 
-$dark-color-highlight-box:            hsl(48, 20%, 30%) !default;
-$dark-color-strong-highlight-box:     hsl(48, 42%, 47%) !default;
+$dark-color-highlight-box:            hsla(48, 100%, 63%, 0.2) !default;
+$dark-color-strong-highlight-box:     hsla(48, 100%, 63%, 0.66) !default;
 
 // border colours
 

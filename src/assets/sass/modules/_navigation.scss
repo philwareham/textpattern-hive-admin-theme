@@ -43,7 +43,7 @@ button.txp-nav-toggle {
     }
 
     a {
-        color: var(--color-text);
+        color: var(--color-text-button);
 
         &:hover {
             text-decoration: none;
@@ -101,7 +101,7 @@ button.txp-nav-toggle {
     display: block;
     position: relative;
     border-right: 1px solid var(--color-accent-gradient-to);
-    background: rgba(colours.$color-text-inverse, 0.25);
+    background: hsla(0, 0%, 100%, 0.25);
 
     &:first-child {
         border-left: 1px solid var(--color-accent-gradient-to);
@@ -110,20 +110,20 @@ button.txp-nav-toggle {
     > a {
         display: block;
         padding: 0 1em;
-        color: color.adjust(colours.$color-text, $lightness: -20%);
+        color: var(--color-text-button);
         line-height: 2.69230769230769; // 35px / 13px
         text-decoration: none;
 
         &:hover {
-            background: rgba(colours.$color-text-inverse, 0.25);
+            background: hsla(0, 0%, 100%, 0.25);
         }
     }
 
     &.selected > a {
-        background: rgba(colours.$color-text-inverse, 0.25);
+        background: hsla(0, 0%, 100%, 0.25);
 
         &:hover {
-            background: rgba(colours.$color-text-inverse, 0.4);
+            background: hsla(0, 0%, 100%, 0.4);
         }
     }
 }
@@ -162,14 +162,14 @@ button.txp-nav-toggle {
         height: 0;
         border: 0 solid transparent;
         border-width: 0.25em 0.25em 0;
-        border-top-color: var(--color-text);
-        opacity: 0.5;
+        border-top-color: var(--color-text-button);
+        opacity: 0.4;
         font-size: 16px;
     }
 
     &:hover::after,
     &:active::after {
-        opacity: 1;
+        opacity: 0.8;
     }
 }
 

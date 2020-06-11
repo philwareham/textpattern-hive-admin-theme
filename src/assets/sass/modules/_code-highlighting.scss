@@ -99,7 +99,7 @@ pre[class*="language-"] {
 
 @include setup.dark-mode {
     .token.punctuation {
-        color: var(--color-text-white-out);
+        color: var(--color-text-enforced-white);
     }
 
     .token.property,

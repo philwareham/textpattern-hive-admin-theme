@@ -9,17 +9,17 @@
     // text colours
     --color-text:                          hsl(0, 0%, 20%);
     --color-text-heading:                  hsl(0, 0%, 0%);
+    --color-text-footnote:                 hsl(0, 0%, 35%);
+    --color-text-inversed:                 hsl(0, 0%, 100%);
+    --color-text-enforced-white:           hsl(0, 0%, 100%);
+    --color-text-form:                     hsl(0, 0%, 0%);
+    --color-text-form-placeholder:         hsl(0, 0%, 60%);
     --color-text-button:                   hsl(0, 0%, 0%);
     --color-text-button-hover:             hsl(0, 0%, 0%);
     --color-text-button-active:            hsl(0, 0%, 0%);
-    --color-text-button-disabled:          hsl(0, 0%, 0%);
-    --color-text-form:                     hsl(0, 0%, 0%);
-    --color-text-form-placeholder:         hsl(0, 0%, 60%);
-    --color-text-footnote:                 hsl(0, 0%, 35%);
-    --color-text-white-out:                hsl(0, 0%, 100%);
-    --color-text-inverse:                  hsl(0, 0%, 100%);
     // neutral colours
     --color-background:                    hsl(0, 0%, 100%);
+    --color-background-enforced-white:     hsl(0, 0%, 100%);
     --color-background-box:                hsl(0, 0%, 97%);
     --color-background-form:               hsl(0, 0%, 100%);
     --color-background-form-disabled:      hsl(0, 0%, 89%);
@@ -29,8 +29,8 @@
     --color-accent-gradient-from:          hsl(48, 100%, 63%);
     --color-accent-gradient-to:            hsl(48, 100%, 48%);
     --color-accent-gradient-to-dark:       hsl(48, 100%, 42%);
-    --color-highlight-box:                 hsl(48, 100%, 94%);
-    --color-strong-highlight-box:          hsl(48, 100%, 76%);
+    --color-highlight-box:                 hsla(48, 100%, 63%, 0.2);
+    --color-strong-highlight-box:          hsla(48, 100%, 63%, 0.66);
     // border colours
     --color-border:                        hsl(0, 0%, 80%);
     --color-border-light:                  hsl(0, 0%, 82%);
@@ -75,10 +75,10 @@
     // text colours
     --color-text:                          hsl(210, 14%, 83%);
     --color-text-heading:                  hsl(0, 0%, 100%);
+    --color-text-footnote:                 hsl(210, 14%, 70%);
+    --color-text-inversed:                 hsl(210, 11%, 24%);
     --color-text-form:                     hsl(0, 0%, 100%);
     --color-text-form-placeholder:         hsl(210, 6%, 48%);
-    --color-text-footnote:                 hsl(210, 14%, 70%);
-    --color-text-inverse:                  hsl(210, 11%, 24%);
     // neutral colours
     --color-background:                    hsl(210, 11%, 24%);
     --color-background-box:                hsl(210, 11%, 20%);
@@ -86,9 +86,6 @@
     --color-background-form-disabled:      hsl(210, 11%, 17%);
     --color-gradient-from:                 hsl(210, 7%, 36%);
     --color-gradient-to:                   hsl(210, 9%, 30%);
-    // accent colours
-    --color-highlight-box:                 hsl(48, 20%, 30%);
-    --color-strong-highlight-box:          hsl(48, 42%, 47%);
     // border colours
     --color-border:                        hsl(210, 7%, 53%);
     --color-border-light:                  hsl(210, 7%, 43%);
