@@ -163,27 +163,6 @@ a.ui-state-default:focus {
 }
 
 /**
- * Active jQuery UI widget interaction state.
- */
-
-.ui-state-active {
-    border-color: var(--color-link);
-    background-color: var(--color-selected);
-
-    &.ui-state-hover {
-        border-color: var(--color-link-hover);
-    }
-}
-
-@include setup.dark-mode {
-    .ui-state-active.ui-state-hover {
-        --color-link-hover-dark: hsl(210, 100%, 60%);
-
-        border-color: var(--color-link-hover-dark);
-    }
-}
-
-/**
  * Highlight colour for jQuery UI widgets currently in 'selecting' state.
  */
 
@@ -221,6 +200,27 @@ a.ui-state-default:focus {
         --color-warning-text-dark: hsl(40, 100%, 40%);
 
         border-color: var(--color-warning-text-dark);
+    }
+}
+
+/**
+ * Active jQuery UI widget interaction state.
+ */
+
+.ui-state-active {
+    border-color: var(--color-link);
+    background-color: var(--color-selected);
+
+    &.ui-state-hover {
+        border-color: var(--color-link-hover);
+    }
+}
+
+@include setup.dark-mode {
+    .ui-state-active.ui-state-hover {
+        --color-link-hover-dark: hsl(210, 100%, 60%);
+
+        border-color: var(--color-link-hover-dark);
     }
 }
 

@@ -487,6 +487,14 @@ textarea.code {
     .navlink-disabled,
     .ui-checkboxradio-disabled {
         opacity: 0.25 !important;
+
+        .ui-icon {
+            filter: brightness(3) !important;
+        }
+
+        .ui-icon-background {
+            background-color: var(--color-background-form-disabled) !important;
+        }
     }
 }
 
