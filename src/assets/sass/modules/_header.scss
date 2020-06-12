@@ -1,6 +1,5 @@
 @use "../setup";
 
-@use "../setup/colours";
 /* Header
    ========================================================================== */
 
@@ -30,7 +29,7 @@
     height: 2.69230769230769em; // 35px / 13px
     padding: 0 4%;
     border-top: 1px solid var(--color-accent-gradient-to);
-    border-bottom: 1px solid var(--color-accent-gradient-to-dark);
+    border-bottom: 1px solid var(--color-accent-dark);
 
     @if setup.$flat-theme < 1 {
         box-shadow: 0 0.2em 0.25em hsla(0, 0%, 0%, 0.15);
@@ -147,7 +146,7 @@
         width: 1.5em;
         height: 1.5em;
         transform: translateY(-50%);
-        border: 1px solid var(--color-accent-gradient-to-dark);
+        border: 1px solid var(--color-accent-dark);
         border-radius: 0.75em;
         background: hsla(0, 0%, 100%, 0.6);
         text-align: center;

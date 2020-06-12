@@ -48,7 +48,7 @@
             @include setup.gradient-linear(var(--color-accent-gradient-from), var(--color-accent-gradient-to));
 
             border: 1px solid var(--color-accent-gradient-to);
-            border-bottom-color: var(--color-accent-gradient-to-dark);
+            border-bottom-color: var(--color-accent-dark);
         }
 
         // numerical indication of step
