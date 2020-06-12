@@ -1,6 +1,7 @@
 @use "sass:meta";
 @use "sass:color"; // TEMP
 @use "setup";
+@forward "modules";
 
 // import colourscheme TEMP
 @use "setup/colours";
@@ -15,7 +16,10 @@
     @return color.mix(black, $color, $percentage);
 }
 
-// Neutral Grey colourscheme (overrides Classic Yellow defaults)
+/* Colourscheme
+   ========================================================================== */
+
+/* stylelint-disable declaration-colon-space-after */
 
 $flat-theme:                          1;
 
