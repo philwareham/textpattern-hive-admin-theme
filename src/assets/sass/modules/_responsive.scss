@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* ==========================================================================
    Additional layout for devices < 768px
@@ -297,7 +293,7 @@
         }
 
         &:not(.collapsed) {
-            background-color: rgba(255, 255, 255, 0.33);
+            background-color: hsla(0, 0%, 100%, 0.4);
         }
     }
 
@@ -319,7 +315,7 @@
         top: 2.75em;
         right: 0;
         left: 0;
-        background: var(--color-highlight-box);
+        background: var(--color-accent-background);
 
         @if setup.$flat-theme < 1 {
             box-shadow: var(--standard-shadow);
@@ -348,7 +344,7 @@
     .txp-nav > ul > li {
         float: none;
         border: 0;
-        border-bottom: 1px solid var(--color-border-light);
+        border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
 
         &:first-child {
             border-left: 0;
@@ -404,14 +400,6 @@
 
         &::before {
             display: none;
-        }
-    }
-
-    @if setup.$flat-theme < 1 {
-        @include setup.dark-mode {
-            .dropdown-menu {
-                box-shadow: none;
-            }
         }
     }
 

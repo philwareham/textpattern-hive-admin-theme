@@ -1,8 +1,4 @@
-@use "sass:color"; // TEMP
 @use "../setup";
-
-// import colourscheme TEMP
-@use "../setup/colours";
 
 /* Navigation
    ========================================================================== */
@@ -194,7 +190,7 @@ button.txp-nav-toggle {
     content: "\2191";
     border: 0 solid transparent;
     border-width: 0 0.25em 0.25em;
-    border-bottom-color: var(--color-text);
+    border-bottom-color: var(--color-text-button);
 }
 
 /**
@@ -257,14 +253,14 @@ button.txp-nav-toggle {
         border-radius: 0 setup.$border-radius setup.$border-radius;
     }
 
-    background: colours.$color-highlight-box;
+    background: var(--color-accent-background);
 
     @if setup.$flat-theme < 1 {
-        border-color: colours.$color-border-light;
+        border-color: var(--color-border-light);
         border-top: 0;
         box-shadow: var(--standard-shadow);
     } @else {
-        border-color: colours.$color-border;
+        border-color: var(--color-border);
     }
 
     li {
@@ -279,11 +275,11 @@ button.txp-nav-toggle {
         }
 
         &:hover {
-            background: color.adjust(colours.$color-accent-gradient-from, $lightness: 21%);
+            background: var(--color-highlight-box);
         }
 
         &.selected {
-            background: color.adjust(colours.$color-accent-gradient-from, $lightness: 14%);
+            background: var(--color-strong-highlight-box);
         }
     }
 
