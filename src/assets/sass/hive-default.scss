@@ -1,5 +1,5 @@
 @use "sass:meta";
-@use "setup" with ($flat-theme: 0, $border-radius: 0.5em);
+@use "setup";
 @forward "modules";
 
 /* Colourscheme
