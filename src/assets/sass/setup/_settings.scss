@@ -1,37 +1,31 @@
 // flatten the theme effects (boolean value)
 
-$flat-theme:           0 !default; // 0 = no, 1 = yes
+$flat-theme:          0 !default; // 0 = no, 1 = yes
 
 // font families
 
-$font-body:            system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-code:            Menlo, Consolas, Monaco, monospace !default;
+$font-body:           system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-code:           Menlo, Consolas, Monaco, monospace !default;
 
 // typography grid
 
-$base-font-size:       13px !default;
-$base-line-height:     1.538461538461538 !default; // 20px / 13px
-$small-font-size:      11px !default;
 $small-line-height:    1.454545454545455 !default; // 16px / 11px
+$base-font-size:      13px !default;
+$base-line-height:    1.538461538461538 !default; // 20px / 13px
+$small-font-size:     11px !default;
+$small-line-height:   1.454545454545455 !default; // 16px / 11px
 
 // layout grid
 
-$setup-column:         50em !default; // 650px / 13px
-$text-column:          62em !default; // 806px / 13px
+$setup-column:        50em !default; // 650px / 13px
+$text-column:         62em !default; // 806px / 13px
 
 // layout grid (using desktop first in this project)
 
-$container-max-width:  116.3076923em !default; // 1512px / 13px
-$break-large:          61.25em !default; // 980px / 16px (breakpoints are 16px = 1em measurements)
-$break-small:          47em !default; // 752px / 16px (breakpoints are 16px = 1em measurements)
+$container-max-width: 116.3076923em !default; // 1512px / 13px
+$break-large:         61.25em !default; // 980px / 16px (breakpoints are 16px = 1em measurements)
+$break-small:         47em !default; // 752px / 16px (breakpoints are 16px = 1em measurements)
 
 // borders
 
-$border-radius:              0.5em !default;
-
-// shadows
-
-$standard-shadow:      0 0 0.5em rgba(#000000, 0.2) !default;
-$inset-lowlighting:    inset 0 0.2em 0.25em rgba(#000000, 0.15) !default;
-
-$dark-standard-shadow: 0 0 0.5em rgba(#000000, 0.75) !default;
+$border-radius:       0.5em !default;

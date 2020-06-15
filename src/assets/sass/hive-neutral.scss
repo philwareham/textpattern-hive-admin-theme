@@ -1,20 +1,6 @@
 @use "sass:meta";
-@use "sass:color"; // TEMP
-@use "setup";
+@use "setup" with ($flat-theme: 1, $border-radius: 0.25em);
 @forward "modules";
-
-// This is a flat theme
-$flat-theme: 1;
-
-// slightly lighten a colour
-@function tint($color, $percentage) {
-    @return color.mix(white, $color, $percentage);
-}
-
-// slightly darken a colour
-@function shade($color, $percentage) {
-    @return color.mix(black, $color, $percentage);
-}
 
 /* Colourscheme
    ========================================================================== */
@@ -44,10 +30,10 @@ $flat-theme: 1;
     // accent colours
     --color-accent-gradient-from:          hsl(208, 72%, 87%);
     --color-accent-gradient-to:            hsl(208, 72%, 87%); // nullify gradient (use flat colours)
-    --color-accent-dark:                   hsl(48, 100%, 42%);
-    --color-accent-background:             hsl(48, 100%, 94%);
-    --color-highlight-box:                 hsla(48, 100%, 63%, 0.25);
-    --color-strong-highlight-box:          hsla(48, 100%, 63%, 0.66);
+    --color-accent-dark:                   hsl(208, 72%, 67%);
+    --color-accent-background:             hsl(208, 72%, 93%);
+    --color-highlight-box:                 hsla(208, 100%, 77%, 0.25);
+    --color-strong-highlight-box:          hsla(208, 100%, 77%, 0.66);
     // border colours
     --color-border:                        hsl(0, 0%, 80%);
     --color-border-light:                  hsl(0, 0%, 82%);
@@ -58,17 +44,17 @@ $flat-theme: 1;
     --color-link:                          hsl(216, 100%, 37%);
     --color-link-hover:                    hsl(216, 100%, 50%);
     --color-link-focus:                    hsl(216, 100%, 50%);
-    --color-selecting:                     hsl(216, 100%, 87%);
-    --color-selected:                      hsl(216, 100%, 92%);
+    --color-selecting:                     hsl(48, 100%, 90%);
+    --color-selected:                      hsl(48, 100%, 93%);
     // button colours
-    --color-button-gradient-from:          hsl(0, 0%, 93%);
-    --color-button-gradient-to:            hsl(0, 0%, 87%);
-    --color-button-border:                 hsl(0, 0%, 80%);
-    --color-button-primary-gradient-from:  hsl(48, 100%, 70%);
-    --color-button-primary-gradient-to:    hsl(48, 100%, 55%);
-    --color-button-primary-border:         hsl(48, 100%, 48%);
-    --color-button-selected-gradient-from: hsl(216, 100%, 95%);
-    --color-button-selected-gradient-to:   hsl(216, 100%, 90%);
+    --color-button-gradient-from:          hsl(208, 72%, 80%);
+    --color-button-gradient-to:            hsl(208, 72%, 80%); // nullify gradient (use flat colours)
+    --color-button-border:                 hsl(208, 72%, 66%);
+    --color-button-primary-gradient-from:  hsl(88, 50%, 68%);
+    --color-button-primary-gradient-to:    hsl(88, 50%, 68%); // nullify gradient (use flat colours)
+    --color-button-primary-border:         hsl(88, 50%, 48%);
+    --color-button-selected-gradient-from: hsl(216, 100%, 90%);
+    --color-button-selected-gradient-to:   hsl(216, 100%, 90%); // nullify gradient (use flat colours)
     --color-button-selected-border:        hsl(216, 100%, 79%);
     // alert colours
     --color-success-text:                  hsl(120, 60%, 34%);
@@ -83,9 +69,6 @@ $flat-theme: 1;
     --color-info-text:                     hsl(200, 50%, 45%);
     --color-info-background:               hsl(200, 78%, 95%);
     --color-info-border:                   hsl(200, 78%, 82%);
-    // shadows
-    --standard-shadow:                     0 0 0.5em hsla(0, 0%, 0%, 0.2);
-    --inset-lowlighting:                   inset 0 0.2em 0.25em hsla(0, 0%, 0%, 0.15);
 }
 
 @include setup.dark-mode {
@@ -128,147 +111,4 @@ $flat-theme: 1;
     --color-info-text:                     hsl(207, 100%, 63%);
     --color-info-background:               hsl(207, 68%, 17%);
     --color-info-border:                   hsla(207, 100%, 63%, 0.38);
-    // shadows
-    --standard-shadow:                     0 0 0.5em hsla(0, 0%, 0%, 0.75);
-}
-
-$color-button-gradient-from:          #9dc8ef;
-$color-button-gradient-to:            #9dc8ef; // nullify gradient (use flat colours)
-$color-button-primary-gradient-from:  #9ccc66;
-$color-button-primary-gradient-to:    #9ccc66; // nullify gradient (use flat colours)
-$color-button-selected-gradient-from: tint($color-button-gradient-from, 33%);
-$color-button-selected-gradient-to:   tint($color-button-gradient-to, 33%); // nullify gradient (use flat colours)
-
-$dark-color-text-button:              #000000;
-$dark-color-text-button-hover:        #000000;
-$dark-color-text-button-active:       #000000;
-$dark-color-text-button-disabled:     #000000;
-$dark-color-background:               #373e45;
-$dark-color-gradient-from:            shade($dark-color-background, 24%);
-$dark-color-gradient-to:              shade($dark-color-background, 24%); // nullify gradient (use flat colours)
-
-$border-radius:                       0.3em;
-
-// import the default Hive (Classic Yellow) theme
-@include meta.load-css("hive-default");
-
-@media screen {
-    tr {
-        border-color: var(--color-border);
-    }
-
-    @include setup.dark-mode {
-        tr {
-            border-color: var(--color-border-extra-light);
-        }
-    }
-
-    .txp-list {
-        tbody tr,
-        thead th,
-        thead th:first-child {
-            border-color: var(--color-border);
-        }
-    }
-
-    @include setup.dark-mode {
-        .txp-list {
-            tbody tr,
-            thead th,
-            thead th:first-child {
-                border-color: var(--color-border-extra-light);
-            }
-        }
-    }
-
-    .txp-edit,
-    .txp-details {
-        background: var(--color-background);
-    }
-
-    .dropdown-menu {
-        border-radius: 0;
-        background: #ffffff;
-
-        li {
-            &:hover {
-                background: var(--color-selected);
-            }
-
-            &.selected {
-                background: var(--color-selecting);
-            }
-        }
-    }
-
-    .ui-menu,
-    .switcher-list li.active,
-    .switcher-list li:nth-child(odd):hover,
-    .ui-tabs-nav .ui-tabs-active,
-    .ui-tabs-vertical .ui-tabs-nav .ui-tabs-active {
-        background: #ffffff;
-    }
-
-    @include setup.dark-mode {
-        .switcher-list li.active,
-        .ui-tabs-vertical .ui-tabs-nav .ui-tabs-active {
-            background: var(--color-highlight-box);
-        }
-    }
-
-    .txp-upload-progress::-webkit-progress-value {
-        background-color: var(--color-button-primary-gradient-to);
-    }
-
-    .txp-upload-progress::-moz-progress-bar {
-        background-color: var(--color-button-primary-gradient-to);
-    }
-
-    .txp-upload-progress::-ms-fill {
-        background-color: var(--color-button-primary-gradient-to);
-    }
-
-    .ui-progressbar-value {
-        background-color: var(--color-button-primary-gradient-to);
-    }
-
-    .ui-tabs-vertical {
-        .ui-tabs-nav {
-            border-bottom-color: var(--color-border);
-        }
-
-        .ui-tabs-nav li {
-            border-color: var(--color-border);
-            border-bottom-color: transparent;
-        }
-    }
-}
-
-
-
-/* ==========================================================================
-   Additional layout for devices < 547px
-   ========================================================================== */
-
-
-@media (max-width: setup.$break-small) {
-
-    /**
-     * Collapse jQuery UI tabs responsively.
-     */
-
-    .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
-        border-bottom-color: var(--color-border);
-
-        li {
-            border-color: var(--color-border);
-            border-bottom-color: transparent;
-        }
-    }
-
-    @include setup.dark-mode {
-        .ui-tabs-nav .ui-tabs-active {
-            background: var(--color-highlight-box);
-        }
-    }
 }
