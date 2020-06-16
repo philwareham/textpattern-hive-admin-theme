@@ -95,6 +95,10 @@ a.publish {
     padding: 0.61538461538462em 1em; // 8px / 13px + 13px
     border: 1px solid var(--color-button-primary-border);
     font-weight: bold;
+
+    &:focus {
+        border-color: var(--color-link-focus);
+    }
 }
 
 /**
@@ -317,4 +321,6 @@ button[disabled],
 .navlink-disabled,
 .ui-checkboxradio-disabled {
     background: var(--color-background-form-disabled) !important;
+    filter: none !important;
+    color: var(--color-text-form) !important;
 }
