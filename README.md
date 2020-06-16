@@ -13,7 +13,6 @@ The default admin theme that ships as standard with [Textpattern CMS](https://te
 
 ## Supported web browsers
 
-* Internet Explorer 11.
 * Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases.
 
 ## Build setup
