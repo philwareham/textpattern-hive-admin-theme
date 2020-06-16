@@ -1,5 +1,4 @@
-@use "setup" with ($flat-theme: 1, $border-radius: 0.25em);
-@forward "modules";
+@use "setup";
 
 /* CSS variables
    ========================================================================== */
@@ -23,20 +22,20 @@
     --color-text-button-hover:             hsl(0, 0%, 0%);
     --color-text-button-active:            hsl(0, 0%, 0%);
     // neutral colours
-    --color-background:                    hsl(0, 0%, 97%);
+    --color-background:                    hsl(0, 0%, 100%);
     --color-background-enforced-white:     hsl(0, 0%, 100%);
-    --color-background-box:                hsl(0, 0%, 100%);
+    --color-background-box:                hsl(0, 0%, 97%);
     --color-background-form:               hsl(0, 0%, 100%);
     --color-background-form-disabled:      hsl(0, 0%, 89%);
     --color-gradient-from:                 hsl(0, 0%, 93%);
-    --color-gradient-to:                   hsl(0, 0%, 93%); // nullify gradient (use flat colours)
+    --color-gradient-to:                   hsl(0, 0%, 87%);
     // accent colours
-    --color-accent-gradient-from:          hsl(208, 72%, 87%);
-    --color-accent-gradient-to:            hsl(208, 72%, 87%); // nullify gradient (use flat colours)
-    --color-accent-dark:                   hsl(208, 72%, 67%);
-    --color-accent-background:             hsl(208, 72%, 93%);
-    --color-highlight-box:                 hsla(208, 100%, 77%, 0.25);
-    --color-strong-highlight-box:          hsla(208, 100%, 77%, 0.66);
+    --color-accent-gradient-from:          hsl(48, 100%, 63%);
+    --color-accent-gradient-to:            hsl(48, 100%, 48%);
+    --color-accent-dark:                   hsl(48, 100%, 42%);
+    --color-accent-background:             hsl(48, 100%, 94%);
+    --color-highlight-box:                 hsla(48, 100%, 63%, 0.25);
+    --color-strong-highlight-box:          hsla(48, 100%, 63%, 0.66);
     // border colours
     --color-border:                        hsl(0, 0%, 80%);
     --color-border-light:                  hsl(0, 0%, 82%);
@@ -47,17 +46,17 @@
     --color-link:                          hsl(216, 100%, 37%);
     --color-link-hover:                    hsl(216, 100%, 50%);
     --color-link-focus:                    hsl(216, 100%, 50%);
-    --color-selecting:                     hsl(48, 100%, 90%);
-    --color-selected:                      hsl(48, 100%, 93%);
+    --color-selecting:                     hsl(216, 100%, 90%);
+    --color-selected:                      hsl(216, 100%, 95%);
     // button colours
-    --color-button-gradient-from:          hsl(208, 72%, 80%);
-    --color-button-gradient-to:            hsl(208, 72%, 80%); // nullify gradient (use flat colours)
-    --color-button-border:                 hsl(208, 72%, 66%);
-    --color-button-primary-gradient-from:  hsl(88, 50%, 68%);
-    --color-button-primary-gradient-to:    hsl(88, 50%, 68%); // nullify gradient (use flat colours)
-    --color-button-primary-border:         hsl(88, 50%, 48%);
-    --color-button-selected-gradient-from: hsl(216, 100%, 90%);
-    --color-button-selected-gradient-to:   hsl(216, 100%, 90%); // nullify gradient (use flat colours)
+    --color-button-gradient-from:          hsl(0, 0%, 93%);
+    --color-button-gradient-to:            hsl(0, 0%, 87%);
+    --color-button-border:                 hsl(0, 0%, 80%);
+    --color-button-primary-gradient-from:  hsl(48, 100%, 70%);
+    --color-button-primary-gradient-to:    hsl(48, 100%, 55%);
+    --color-button-primary-border:         hsl(48, 100%, 48%);
+    --color-button-selected-gradient-from: hsl(216, 100%, 95%);
+    --color-button-selected-gradient-to:   hsl(216, 100%, 90%);
     --color-button-selected-border:        hsl(216, 100%, 79%);
     // alert colours
     --color-success-text:                  hsl(120, 60%, 34%);
@@ -72,6 +71,9 @@
     --color-info-text:                     hsl(200, 50%, 45%);
     --color-info-background:               hsl(200, 78%, 95%);
     --color-info-border:                   hsl(200, 78%, 82%);
+    // shadows
+    --standard-shadow:                     0 0 0.5em hsla(0, 0%, 0%, 0.2);
+    --inset-lowlighting:                   inset 0 0.2em 0.25em hsla(0, 0%, 0%, 0.15);
 }
 
 @include setup.dark-mode {
@@ -87,8 +89,8 @@
     --color-background-box:                hsl(210, 11%, 20%);
     --color-background-form:               hsl(210, 11%, 17%);
     --color-background-form-disabled:      hsl(210, 11%, 17%);
-    --color-gradient-from:                 hsl(210, 9%, 30%);
-    --color-gradient-to:                   hsl(210, 9%, 30%); // nullify gradient (use flat colours)
+    --color-gradient-from:                 hsl(210, 7%, 36%);
+    --color-gradient-to:                   hsl(210, 9%, 30%);
     // border colours
     --color-border:                        hsl(210, 7%, 53%);
     --color-border-light:                  hsl(210, 7%, 43%);
@@ -114,4 +116,6 @@
     --color-info-text:                     hsl(207, 100%, 63%);
     --color-info-background:               hsl(207, 68%, 17%);
     --color-info-border:                   hsla(207, 100%, 63%, 0.38);
+    // shadows
+    --standard-shadow:                     0 0 0.5em hsla(0, 0%, 0%, 0.75);
 }

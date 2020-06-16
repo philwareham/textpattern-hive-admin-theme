@@ -17,7 +17,7 @@ html {
  */
 
 body {
-    font-family: setup.$font-body;
+    font-family: var(--font-body);
 }
 
 /**
@@ -163,7 +163,7 @@ code,
 kbd,
 samp,
 .code {
-    font-family: setup.$font-code;
+    font-family: var(--font-code);
 }
 
 code,
