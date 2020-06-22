@@ -391,10 +391,36 @@ select {
     text-transform: none;
 }
 
+.txp-reduced-ui select {
+    border-color: $color-background;
+    background-color: $color-background;
+
+    &:hover {
+        border-color: $color-border-extra-dark;
+    }
+
+    &:focus {
+        border-color: $color-link-focus;
+    }
+}
+
 @include dark-mode {
     select {
         background-color: $dark-color-background-form;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23788591' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E");
+    }
+
+    .txp-reduced-ui select {
+        border-color: $dark-color-background;
+        background-color: $dark-color-background;
+
+        &:hover {
+            border-color: $dark-color-border-extra-light;
+        }
+
+        &:focus {
+            border-color: $dark-color-link-focus;
+        }
     }
 }
 
