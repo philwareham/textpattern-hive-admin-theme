@@ -1,3 +1,5 @@
+$.uiBackCompat = false;
+
 // This example file is used to demonstrate all available jQuery UI components
 // on the design patterns page.
 
