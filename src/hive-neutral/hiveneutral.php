@@ -115,7 +115,7 @@ class hiveNeutral_theme extends \Textpattern\Admin\Theme
                     'aria-label' => gTxt('lightswitch'),
                 )), array('class' => 'txp-lightswitch'));
             $out[] = graf(
-                href(gTxt('logout'), 'index.php?logout=1', ' onclick="return verify(\''.gTxt('are_you_sure').'\')"'), array(
+                href(gTxt('logout'), 'index.php?logout=1'), array(
                     'id' => 'txp-logout',
                     'class' => 'txp-logout',
                 ));
