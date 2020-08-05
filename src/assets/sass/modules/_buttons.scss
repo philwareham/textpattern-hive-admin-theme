@@ -76,6 +76,10 @@ input[type="button"],
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         color: var(--color-text-button-active);
     }
+
+    .ui-icon {
+        top: 1px; // Nicer vertical alignment of icons within buttons.
+    }
 }
 
 /**
