@@ -1,0 +1,56 @@
+@use "../setup";
+
+/* Meter
+   ========================================================================== */
+
+/**
+ * 1. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+meter {
+    box-sizing: border-box;
+    height: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background: var(--color-background-box);
+    vertical-align: -0.0625em;
+    appearance: none;
+}
+
+@include setup.dark-mode {
+    meter {
+        border-color: var(--color-border-extra-dark);
+    }
+}
+
+// WebKit/Blink.
+
+meter::-webkit-meter-bar {
+    background: var(--color-background-box);
+}
+
+meter::-webkit-meter-optimum-value {
+    background: var(--color-success-text);
+}
+
+meter::-webkit-meter-suboptimum-value {
+    background: var(--color-warning-text);
+}
+
+meter::-webkit-meter-even-less-good-value {
+    background: var(--color-error-text);
+}
+
+// Gecko/Quantum.
+
+meter:-moz-meter-optimum::-moz-meter-bar {
+    background: var(--color-success-text);
+}
+
+meter:-moz-meter-sub-optimum::-moz-meter-bar {
+    background: var(--color-warning-text);
+}
+
+meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+    background: var(--color-error-text);
+}
