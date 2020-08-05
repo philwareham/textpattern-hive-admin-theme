@@ -25,7 +25,7 @@
     @include meta.load-css("forms-base");
     @include meta.load-css("forms-input-checkboxradio");
     @include meta.load-css("forms-input-file");
-    //@include meta.load-css("forms-input-range");
+    @include meta.load-css("forms-input-range");
     @include meta.load-css("forms-disabled");
     @include meta.load-css("buttons");
     @include meta.load-css("meter");
