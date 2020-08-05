@@ -149,6 +149,46 @@
             </div>
 
             <div class="txp-layout-4col-3span">
+                <form method="post" action="#">
+                    <p>
+                        <button name="img_crop"><span class="ui-icon ui-extra-icon-crop"></span> Crop</button>
+                        <button name="img_rotate_l"><span class="ui-icon ui-icon-arrowreturn-1-s"></span> Rotate left</button>
+                        <button name="img_rotate_r"><span class="ui-icon ui-extra-icon-arrowreturn-1-s-reversed"></span> Rotate right</button>
+                        <button name="img_flip_h"><span class="ui-icon ui-extra-icon-flip-horizontal"></span> Flip horizontally</button>
+                        <button name="img_flip_v"><span class="ui-icon ui-extra-icon-flip-vertical"></span> Flip vertically</button>
+                    </p>
+                    <p>
+                        <button name="img_undo"><span class="ui-icon ui-icon-arrowrefresh-1-w"></span> Undo</button>
+                        <button name="img_redo" disabled><span class="ui-icon ui-icon-arrowrefresh-1-e"></span> Redo</button>
+                    </p>
+                    <div class="txp-layout">
+                        <p class="txp-layout-4col">
+                            <label for="img_brightness">Brightness</label>
+                            <br>
+                            <input style="margin-right:0.5em;" id="img_brightness_range" type="range" min="0" max="100" value="80" /> <input class="" id="img_brightness" type="number" min="0" max="100" value="80" />
+                        </p>
+                        <p class="txp-layout-4col">
+                            <label for="img_contrast">Contrast</label>
+                            <br>
+                            <input style="margin-right:0.5em;" id="img_contrast_range" type="range" min="0" max="100" value="66" /> <input class="" id="img_contrast" type="number" min="0" max="100" value="66" />
+                        </p>
+                        <p class="txp-layout-4col">
+                            <label for="img_greyscale">Greyscale</label>
+                            <br>
+                            <input style="margin-right:0.5em;" id="img_greyscale_range" type="range" min="0" max="100" value="0" /> <input class="" id="img_greyscale" type="number" min="0" max="100" value="0" />
+                        </p>
+                        <p class="txp-layout-4col">
+                            <label for="img_colorize">Colorize</label>
+                            <br>
+                            <input style="margin-right:0.5em;" id="img_colorize_range" type="range" min="0" max="100" value="0" /> <input class="" id="img_colorize" type="number" min="0" max="100" value="0" />
+                        </p>
+                    </div>
+                </form>
+
+                <div class="fullsize-image">
+                    <img class="content-image" src="../img/1200x800.png" alt="1200×800px placeholder" title="1.jpg (1200 &#215; 800)">
+                </div>
+
                 <form class="upload-form image-replace" method="post" action="#">
                     <div class="txp-form-field file-uploader">
                         <div class="txp-form-field-label"><label for="image-upload">Replace image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
@@ -162,55 +202,6 @@
                     </div>
                     <progress class="txp-upload-progress" value="0.75"></progress>
                 </form>
-
-                <p>
-                    Greyscale
-                </p>
-
-                <div class="fullsize-image">
-                    <img class="content-image" src="../img/600x400.png" alt="600×400px placeholder" title="1.jpg (600 &#215; 400)">
-                </div>
-
-                <hr>
-
-                <section class="thumbnail-alter">
-                    <h3>Create thumbnail&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></h3>
-
-                    <form class="upload-form thumbnail-upload" method="post" action="#">
-                        <div class="txp-form-field file-uploader">
-                            <div class="txp-form-field-label"><label for="thumbnail-upload">Upload thumbnail&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
-                            <div class="txp-form-field-value">
-                                <input name="thefile" type="file" required="required" id="thumbnail-upload">
-                                <span class="inline-file-uploader-actions">
-                                    <input type="reset" value="Reset">
-                                    <input type="submit" value="Upload">
-                                </span>
-                            </div>
-                        </div>
-                        <progress class="txp-upload-progress"></progress>
-                    </form>
-
-                    <form id="thumbnail_alter_form" method="post" action="#">
-                        <p class="edit-alter-thumbnail">
-                            <label for="width">Width</label>
-                            <input class="input-xsmall" id="width" name="width" type="text" size="4" value="100">
-                            <a class="thumbnail-swap-size ui-button ui-corner-all ui-button-icon-only" role="button" title="Swap values"><span class="ui-button-icon ui-icon ui-icon-transfer-e-w"></span><span class="ui-button-icon-space"> </span>Swap values</a>
-                            <label for="height">Height</label>
-                            <input class="input-xsmall" id="height" name="height" type="text" size="4" value="67">
-                            <label for="crop">Crop</label>
-                            <input class="checkbox" id="crop" name="crop" type="checkbox" value="1">
-                            <input type="submit" value="Create">
-                        </p>
-                    </form>
-
-                    <div class="thumbnail-image">
-                        <img class="content-image" src="../img/240x160.png" alt="240×160px placeholder" title="1t.jpg (240 &#215; 160)">
-                        <form method="post" action="#" onsubmit="return confirm('Really delete?');">
-                            <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
-                        </form>
-                    </div>
-
-                </section>
 
             </div><!-- /.txp-layout-4col-3span -->
 
@@ -246,6 +237,20 @@
                                 <div class="txp-form-field-label"><label for="image_caption">Caption</label></div>
                                 <div class="txp-form-field-value"><textarea id="image_caption" name="caption" cols="64" rows="4">Example image with thumbnail</textarea></div>
                             </div>
+
+
+                        <p class="edit-alter-thumbnail">
+                            <label for="width">Width</label>
+                            <input class="input-xsmall" id="width" name="width" type="text" size="4" value="100">
+                            <a class="thumbnail-swap-size ui-button ui-corner-all ui-button-icon-only" role="button" title="Swap values"><span class="ui-button-icon ui-icon ui-icon-transfer-e-w"></span><span class="ui-button-icon-space"> </span>Swap values</a>
+                            <label for="height">Height</label>
+                            <input class="input-xsmall" id="height" name="height" type="text" size="4" value="67">
+                            <label for="crop">Crop</label>
+                            <input class="checkbox" id="crop" name="crop" type="checkbox" value="1">
+                            <input type="submit" value="Create">
+                        </p>
+
+
                             <p class="txp-edit-actions">
                                 <a class="txp-button" href="../content-image.html">Go back</a>
                                 <input class="publish" type="submit" value="Save">
