@@ -148,48 +148,6 @@
                 <h1 class="txp-heading">Edit image</h1>
             </div>
 
-            <div class="txp-layout-4col-alt">
-
-                <form id="image_details_form" method="post" action="#">
-                    <section class="txp-details" id="image-details" aria-labelledby="image-details-label">
-                        <h3 id="image-details-label">Image details</h3>
-                        <div role="group">
-                            <div class="txp-form-field edit-image-id">
-                                <div class="txp-form-field-label">ID#</div>
-                                <div class="txp-form-field-value">1</div>
-                            </div>
-                            <div class="txp-form-field edit-image-name">
-                                <div class="txp-form-field-label"><label for="image_name">Image name</label></div>
-                                <div class="txp-form-field-value"><input id="image_name" name="name" type="text" size="32" value="child-with-carrots.jpg"></div>
-                            </div>
-                            <div class="txp-form-field edit-image-category">
-                                <div class="txp-form-field-label"><label for="image_category">Category</label></div>
-                                <div class="txp-form-field-value">
-                                    <select id="image_category" name="category">
-                                        <option value="">&#160;</option>
-                                        <option value="site-design" selected="selected">Site Design</option>
-                                    </select>
-                                    <a class="txp-option-link" href="#">Edit</a>
-                                </div>
-                            </div>
-                            <div class="txp-form-field edit-image-alt-text">
-                                <div class="txp-form-field-label"><label for="image_alt_text">Alternate text</label></div>
-                                <div class="txp-form-field-value"><input id="image_alt_text" name="alt" type="text" size="32" value="Child with carrots"></div>
-                            </div>
-                            <div class="txp-form-field txp-form-field-textarea edit-image-caption">
-                                <div class="txp-form-field-label"><label for="image_caption">Caption</label></div>
-                                <div class="txp-form-field-value"><textarea id="image_caption" name="caption" cols="64" rows="4">Example image with thumbnail</textarea></div>
-                            </div>
-                            <p class="txp-edit-actions">
-                                <a class="txp-button" href="../content-image.html">Go back</a>
-                                <input class="publish" type="submit" value="Save">
-                            </p>
-                        </div>
-                    </section>
-                </form>
-
-            </div><!-- /.txp-layout-4col-alt -->
-
             <div class="txp-layout-4col-3span">
                 <form class="upload-form image-replace" method="post" action="#">
                     <div class="txp-form-field file-uploader">
@@ -204,6 +162,10 @@
                     </div>
                     <progress class="txp-upload-progress" value="0.75"></progress>
                 </form>
+
+                <p>
+                    Greyscale
+                </p>
 
                 <div class="fullsize-image">
                     <img class="content-image" src="../img/600x400.png" alt="600×400px placeholder" title="1.jpg (600 &#215; 400)">
@@ -251,6 +213,49 @@
                 </section>
 
             </div><!-- /.txp-layout-4col-3span -->
+
+            <div class="txp-layout-4col">
+
+                <form id="image_details_form" method="post" action="#">
+                    <section class="txp-details" id="image-details" aria-labelledby="image-details-label">
+                        <h3 id="image-details-label">Image details</h3>
+                        <div role="group">
+                            <div class="txp-form-field edit-image-id">
+                                <div class="txp-form-field-label">ID#</div>
+                                <div class="txp-form-field-value">1</div>
+                            </div>
+                            <div class="txp-form-field edit-image-name">
+                                <div class="txp-form-field-label"><label for="image_name">Image name</label></div>
+                                <div class="txp-form-field-value"><input id="image_name" name="name" type="text" size="32" value="child-with-carrots.jpg"></div>
+                            </div>
+                            <div class="txp-form-field edit-image-category">
+                                <div class="txp-form-field-label"><label for="image_category">Category</label></div>
+                                <div class="txp-form-field-value">
+                                    <select id="image_category" name="category">
+                                        <option value="">&#160;</option>
+                                        <option value="site-design" selected="selected">Site Design</option>
+                                    </select>
+                                    <a class="txp-option-link" href="#">Edit</a>
+                                </div>
+                            </div>
+                            <div class="txp-form-field edit-image-alt-text">
+                                <div class="txp-form-field-label"><label for="image_alt_text">Alternate text</label></div>
+                                <div class="txp-form-field-value"><input id="image_alt_text" name="alt" type="text" size="32" value="Child with carrots"></div>
+                            </div>
+                            <div class="txp-form-field txp-form-field-textarea edit-image-caption">
+                                <div class="txp-form-field-label"><label for="image_caption">Caption</label></div>
+                                <div class="txp-form-field-value"><textarea id="image_caption" name="caption" cols="64" rows="4">Example image with thumbnail</textarea></div>
+                            </div>
+                            <p class="txp-edit-actions">
+                                <a class="txp-button" href="../content-image.html">Go back</a>
+                                <input class="publish" type="submit" value="Save">
+                            </p>
+                        </div>
+                    </section>
+                </form>
+
+            </div><!-- /.txp-layout-4col-alt -->
+
         </div><!-- /.txp-layout -->
     </main><!-- /txp-body -->
 
