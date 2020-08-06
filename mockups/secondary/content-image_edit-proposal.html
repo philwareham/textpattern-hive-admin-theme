@@ -241,20 +241,24 @@
                                 <div class="txp-form-field-label"><label for="image_caption">Caption</label></div>
                                 <div class="txp-form-field-value"><textarea id="image_caption" name="caption" cols="64" rows="4">Example image with thumbnail</textarea></div>
                             </div>
-
-
-                        <p class="edit-alter-thumbnail">
-                            <label for="width">Width</label>
-                            <input class="input-xsmall" id="width" name="width" type="text" size="4" value="100">
-                            <a class="thumbnail-swap-size ui-button ui-corner-all ui-button-icon-only" role="button" title="Swap values"><span class="ui-button-icon ui-icon ui-icon-transfer-e-w"></span><span class="ui-button-icon-space"> </span>Swap values</a>
-                            <label for="height">Height</label>
-                            <input class="input-xsmall" id="height" name="height" type="text" size="4" value="67">
-                            <label for="crop">Crop</label>
-                            <input class="checkbox" id="crop" name="crop" type="checkbox" value="1">
-                            <input type="submit" value="Create">
-                        </p>
-
-
+                            <div class="txp-form-field edit-image-scale">
+                                <div class="txp-form-field-label"><label for="scale_width">Image scale</label></div>
+                                <div class="txp-form-field-value">
+                                    <input class="input-small" id="scale_width" name="width" type="number" size="4" min="1" max="2560" title="Width" aria-title="Width" value="1200">
+                                    ×
+                                    <input class="input-small" id="scale_height" name="height" type="number" size="4" min="1" max="2560" title="Height" aria-title="Height" value="800">
+                                    <input type="submit" value="Scale">
+                                </div>
+                            </div>
+                            <div class="txp-form-field edit-image-crop">
+                                <div class="txp-form-field-label"><label for="crop_width">Image crop</label></div>
+                                <div class="txp-form-field-value">
+                                    <input class="input-small" id="crop_width" name="width" type="number" size="4" min="1" max="2560" title="Width" aria-title="Width">
+                                    ×
+                                    <input class="input-small" id="crop_height" name="height" type="number" size="4" min="1" max="2560" title="Height" aria-title="Height">
+                                    <input type="submit" value="Crop">
+                                </div>
+                            </div>
                             <p class="txp-edit-actions">
                                 <a class="txp-button" href="../content-image.html">Go back</a>
                                 <input class="publish" type="submit" value="Save">
