@@ -161,36 +161,43 @@
                         <h3 class="txp-summary expanded" id="txp-dates-group-label">
                             <a role="button" data-txp-pane="article_dates" href="#dates">Image effects</a>
                         </h3>
+                        <datalist id="range-list">
+                            <option>0</option>
+                            <option>25</option>
+                            <option>50</option>
+                            <option>75</option>
+                            <option>100</option>
+                        </datalist>
                         <div class="toggle txp-layout" id="txp-dates-group-content" role="group">
                             <p class="txp-layout-4col">
                                 <label for="img_brightness">Brightness</label>
                                 <br>
-                                <input style="margin-right:0.5em;" id="img_brightness_range" type="range" min="0" max="100" value="80" oninput="this.form.img_brightness.value=this.value" />
-                                <input id="img_brightness" type="number" min="0" max="100" value="80" oninput="this.form.img_brightness_range.value=this.value" />
+                                <input style="margin-right:0.5em;" id="img_brightness_range" type="range" list="range-list" min="0" max="100" value="80">
+                                <input id="img_brightness" type="number" min="0" max="100" value="80">
                             </p>
                             <p class="txp-layout-4col">
                                 <label for="img_contrast">Contrast</label>
                                 <br>
-                                <input style="margin-right:0.5em;" id="img_contrast_range" type="range" min="0" max="100" value="66" oninput="this.form.img_contrast.value=this.value" />
-                                <input id="img_contrast" type="number" min="0" max="100" value="66" oninput="this.form.img_contrast_range.value=this.value" />
+                                <input style="margin-right:0.5em;" id="img_contrast_range" type="range" list="range-list" min="0" max="100" value="66">
+                                <input id="img_contrast" type="number" min="0" max="100" value="66">
                             </p>
                             <p class="txp-layout-4col">
                                 <label for="img_gamma">Gamma</label>
                                 <br>
-                                <input style="margin-right:0.5em;" id="img_gamma_range" type="range" min="0" max="100" value="0" oninput="this.form.img_gamma.value=this.value" />
-                                <input id="img_gamma" type="number" min="0" max="100" value="0" oninput="this.form.img_gamma_range.value=this.value" />
+                                <input style="margin-right:0.5em;" id="img_gamma_range" type="range" list="range-list" min="0" max="100" value="0">
+                                <input id="img_gamma" type="number" min="0" max="100" value="0">
                             </p>
                             <p class="txp-layout-4col">
                                 <label for="img_sharpen">Sharpen</label>
                                 <br>
-                                <input style="margin-right:0.5em;" id="img_sharpen_range" type="range" min="0" max="100" value="0" oninput="this.form.img_sharpen.value=this.value" />
-                                <input id="img_sharpen" type="number" min="0" max="100" value="0" oninput="this.form.img_sharpen_range.value=this.value" />
+                                <input style="margin-right:0.5em;" id="img_sharpen_range" type="range" list="range-list" min="0" max="100" value="0">
+                                <input id="img_sharpen" type="number" min="0" max="100" value="0">
                             </p>
                             <p class="txp-layout-4col">
                                 <label for="img_blur">Blur</label>
                                 <br>
-                                <input style="margin-right:0.5em;" id="img_blur_range" type="range" min="0" max="100" value="0" oninput="this.form.img_blur.value=this.value" />
-                                <input id="img_blur" type="number" min="0" max="100" value="0" oninput="this.form.img_blur_range.value=this.value" />
+                                <input style="margin-right:0.5em;" id="img_blur_range" type="range" list="range-list" min="0" max="100" value="0">
+                                <input id="img_blur" type="number" min="0" max="100" value="0">
                             </p>
                             <p class="txp-layout-2col">
                                 Filter<br>

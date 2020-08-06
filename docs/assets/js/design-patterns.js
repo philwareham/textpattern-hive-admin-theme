@@ -386,4 +386,56 @@ $(function ()
         e.stopPropagation();
     });
 
+    // Input range slider values.
+
+    var imgBrightnessRange = document.getElementById('img_brightness_range'),
+        imgBrightness = document.getElementById('img_brightness'),
+        imgContrastRange = document.getElementById('img_contrast_range'),
+        imgContrast = document.getElementById('img_contrast'),
+        imgGammaRange = document.getElementById('img_gamma_range'),
+        imgGamma = document.getElementById('img_gamma'),
+        imgSharpenRange = document.getElementById('img_sharpen_range'),
+        imgSharpen = document.getElementById('img_sharpen'),
+        imgBlurRange = document.getElementById('img_blur_range'),
+        imgBlur = document.getElementById('img_blur');
+
+    imgBrightnessRange.oninput = function () {
+        imgBrightness.value = this.value;
+    }
+
+    imgBrightness.oninput = function () {
+        imgBrightnessRange.value = this.value;
+    }
+
+    imgContrastRange.oninput = function () {
+        imgContrast.value = this.value;
+    }
+
+    imgContrast.oninput = function () {
+        imgContrastRange.value = this.value;
+    }
+
+    imgGammaRange.oninput = function () {
+        imgGamma.value = this.value;
+    }
+
+    imgGamma.oninput = function () {
+        imgGammaRange.value = this.value;
+    }
+
+    imgSharpenRange.oninput = function () {
+        imgSharpen.value = this.value;
+    }
+
+    imgSharpen.oninput = function () {
+        imgSharpenRange.value = this.value;
+    }
+
+    imgBlurRange.oninput = function () {
+        imgBlur.value = this.value;
+    }
+
+    imgBlur.oninput = function () {
+        imgBlurRange.value = this.value;
+    }
 });
