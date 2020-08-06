@@ -165,22 +165,26 @@
                         <p class="txp-layout-4col">
                             <label for="img_brightness">Brightness</label>
                             <br>
-                            <input style="margin-right:0.5em;" id="img_brightness_range" type="range" min="0" max="100" value="80" /> <input class="" id="img_brightness" type="number" min="0" max="100" value="80" />
+                            <input style="margin-right:0.5em;" id="img_brightness_range" type="range" min="0" max="100" value="80" oninput="this.form.img_brightness.value=this.value" />
+                            <input id="img_brightness" type="number" min="0" max="100" value="80" oninput="this.form.img_brightness_range.value=this.value" />
                         </p>
                         <p class="txp-layout-4col">
                             <label for="img_contrast">Contrast</label>
                             <br>
-                            <input style="margin-right:0.5em;" id="img_contrast_range" type="range" min="0" max="100" value="66" /> <input class="" id="img_contrast" type="number" min="0" max="100" value="66" />
+                            <input style="margin-right:0.5em;" id="img_contrast_range" type="range" min="0" max="100" value="66" oninput="this.form.img_contrast.value=this.value" />
+                            <input id="img_contrast" type="number" min="0" max="100" value="66" oninput="this.form.img_contrast_range.value=this.value" />
                         </p>
                         <p class="txp-layout-4col">
                             <label for="img_greyscale">Greyscale</label>
                             <br>
-                            <input style="margin-right:0.5em;" id="img_greyscale_range" type="range" min="0" max="100" value="0" /> <input class="" id="img_greyscale" type="number" min="0" max="100" value="0" />
+                            <input style="margin-right:0.5em;" id="img_greyscale_range" type="range" min="0" max="100" value="0" oninput="this.form.img_greyscale.value=this.value" />
+                            <input id="img_greyscale" type="number" min="0" max="100" value="0" oninput="this.form.img_greyscale_range.value=this.value" />
                         </p>
                         <p class="txp-layout-4col">
                             <label for="img_colorize">Colorize</label>
                             <br>
-                            <input style="margin-right:0.5em;" id="img_colorize_range" type="range" min="0" max="100" value="0" /> <input class="" id="img_colorize" type="number" min="0" max="100" value="0" />
+                            <input style="margin-right:0.5em;" id="img_colorize_range" type="range" min="0" max="100" value="0" oninput="this.form.img_colorize.value=this.value" />
+                            <input id="img_colorize" type="number" min="0" max="100" value="0" oninput="this.form.img_colorize_range.value=this.value" />
                         </p>
                     </div>
                 </form>
