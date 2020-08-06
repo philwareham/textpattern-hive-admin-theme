@@ -223,6 +223,19 @@
                     <img class="content-image" src="../img/1200x800.png" alt="1200×800px placeholder" title="1.jpg (1200 &#215; 800)">
                 </div>
 
+                <form class="upload-form image-replace" method="post" action="#">
+                    <div class="txp-form-field file-uploader">
+                        <div class="txp-form-field-label"><label for="image-upload">Replace image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
+                        <div class="txp-form-field-value">
+                            <input name="thefile" type="file" required="required" id="image-upload">
+                            <span class="inline-file-uploader-actions">
+                                <input type="reset" value="Reset">
+                                <input type="submit" value="Upload">
+                            </span>
+                        </div>
+                    </div>
+                </form>
+
             </div><!-- /.txp-layout-4col-3span -->
 
             <div class="txp-layout-4col">
@@ -278,21 +291,6 @@
                         </div>
                     </section>
                 </form>
-
-                <form class="upload-form image-replace" method="post" action="#">
-                    <div class="txp-form-field file-uploader">
-                        <div class="txp-form-field-label"><label for="image-upload">Replace image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
-                        <div class="txp-form-field-value">
-                            <input name="thefile" type="file" required="required" id="image-upload">
-                            <span class="inline-file-uploader-actions">
-                                <input type="reset" value="Reset">
-                                <input type="submit" value="Upload">
-                            </span>
-                        </div>
-                    </div>
-                    <progress class="txp-upload-progress" value="0.75"></progress>
-                </form>
-
             </div><!-- /.txp-layout-4col-alt -->
 
         </div><!-- /.txp-layout -->
