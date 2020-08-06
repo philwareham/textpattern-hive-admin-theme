@@ -189,23 +189,17 @@
                     </div>
                 </form>
 
+                <p class="txp-image-metadata"><small>
+                    ID# 1 <span role="separator">·</span>
+                    Uploaded on 03 Jul 2020 12:27:33 <span role="separator">·</span>
+                    Image format JPEG <span role="separator">·</span>
+                    File size 261KB <span role="separator">·</span>
+                    Current dimensions 1200×800 pixels
+                </small></p>
+
                 <div class="fullsize-image">
                     <img class="content-image" src="../img/1200x800.png" alt="1200×800px placeholder" title="1.jpg (1200 &#215; 800)">
                 </div>
-
-                <form class="upload-form image-replace" method="post" action="#">
-                    <div class="txp-form-field file-uploader">
-                        <div class="txp-form-field-label"><label for="image-upload">Replace image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
-                        <div class="txp-form-field-value">
-                            <input name="thefile" type="file" required="required" id="image-upload">
-                            <span class="inline-file-uploader-actions">
-                                <input type="reset" value="Reset">
-                                <input type="submit" value="Upload">
-                            </span>
-                        </div>
-                    </div>
-                    <progress class="txp-upload-progress" value="0.75"></progress>
-                </form>
 
             </div><!-- /.txp-layout-4col-3span -->
 
@@ -215,10 +209,6 @@
                     <section class="txp-details" id="image-details" aria-labelledby="image-details-label">
                         <h3 id="image-details-label">Image details</h3>
                         <div role="group">
-                            <div class="txp-form-field edit-image-id">
-                                <div class="txp-form-field-label">ID#</div>
-                                <div class="txp-form-field-value">1</div>
-                            </div>
                             <div class="txp-form-field edit-image-name">
                                 <div class="txp-form-field-label"><label for="image_name">Image name</label></div>
                                 <div class="txp-form-field-value"><input id="image_name" name="name" type="text" size="32" value="child-with-carrots.jpg"></div>
@@ -265,6 +255,20 @@
                             </p>
                         </div>
                     </section>
+                </form>
+
+                <form class="upload-form image-replace" method="post" action="#">
+                    <div class="txp-form-field file-uploader">
+                        <div class="txp-form-field-label"><label for="image-upload">Replace image&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
+                        <div class="txp-form-field-value">
+                            <input name="thefile" type="file" required="required" id="image-upload">
+                            <span class="inline-file-uploader-actions">
+                                <input type="reset" value="Reset">
+                                <input type="submit" value="Upload">
+                            </span>
+                        </div>
+                    </div>
+                    <progress class="txp-upload-progress" value="0.75"></progress>
                 </form>
 
             </div><!-- /.txp-layout-4col-alt -->
