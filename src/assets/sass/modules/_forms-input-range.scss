@@ -27,7 +27,7 @@
     width: 20px;
     height: 20px;
     margin-top: -5px;
-    border: 1px solid var(--color-button-border);
+    border: 1px solid var(--color-border-dark);
     border-radius: 50%;
     box-shadow: var(--standard-shadow);
     appearance: none;
@@ -72,6 +72,11 @@
     [type="range"]:hover::-webkit-slider-runnable-track {
         border-color: var(--color-border-extra-light);
     }
+
+    [type="range"]:active::-webkit-slider-runnable-track,
+    [type="range"]:focus::-webkit-slider-runnable-track {
+        border-color: var(--color-link-focus);
+    }
 }
 
 // Gecko/Quantum.
@@ -81,7 +86,7 @@
 
     width: 20px;
     height: 20px;
-    border: 1px solid var(--color-button-border);
+    border: 1px solid var(--color-border-dark);
     border-radius: 50%;
     box-shadow: var(--standard-shadow);
     /* autoprefixer: off */
@@ -129,5 +134,9 @@
 
     [type="range"]:hover::-moz-range-track {
         border-color: var(--color-border-extra-light);
+    }
+
+    [type="range"]:focus::-moz-range-track {
+        border-color: var(--color-link-focus);
     }
 }
