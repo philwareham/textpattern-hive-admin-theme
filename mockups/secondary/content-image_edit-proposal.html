@@ -161,32 +161,55 @@
                         <button name="img_undo"><span class="ui-icon ui-icon-arrowrefresh-1-w"></span> Undo</button>
                         <button name="img_redo" disabled><span class="ui-icon ui-icon-arrowrefresh-1-e"></span> Redo</button>
                     </p>
-                    <div class="txp-layout">
-                        <p class="txp-layout-4col">
-                            <label for="img_brightness">Brightness</label>
-                            <br>
-                            <input style="margin-right:0.5em;" id="img_brightness_range" type="range" min="0" max="100" value="80" oninput="this.form.img_brightness.value=this.value" />
-                            <input id="img_brightness" type="number" min="0" max="100" value="80" oninput="this.form.img_brightness_range.value=this.value" />
-                        </p>
-                        <p class="txp-layout-4col">
-                            <label for="img_contrast">Contrast</label>
-                            <br>
-                            <input style="margin-right:0.5em;" id="img_contrast_range" type="range" min="0" max="100" value="66" oninput="this.form.img_contrast.value=this.value" />
-                            <input id="img_contrast" type="number" min="0" max="100" value="66" oninput="this.form.img_contrast_range.value=this.value" />
-                        </p>
-                        <p class="txp-layout-4col">
-                            <label for="img_greyscale">Greyscale</label>
-                            <br>
-                            <input style="margin-right:0.5em;" id="img_greyscale_range" type="range" min="0" max="100" value="0" oninput="this.form.img_greyscale.value=this.value" />
-                            <input id="img_greyscale" type="number" min="0" max="100" value="0" oninput="this.form.img_greyscale_range.value=this.value" />
-                        </p>
-                        <p class="txp-layout-4col">
-                            <label for="img_colorize">Colorize</label>
-                            <br>
-                            <input style="margin-right:0.5em;" id="img_colorize_range" type="range" min="0" max="100" value="0" oninput="this.form.img_colorize.value=this.value" />
-                            <input id="img_colorize" type="number" min="0" max="100" value="0" oninput="this.form.img_colorize_range.value=this.value" />
-                        </p>
-                    </div>
+
+                    <section class="txp-details" id="txp-dates-group" aria-labelledby="txp-dates-group-label">
+                        <h3 class="txp-summary expanded" id="txp-dates-group-label">
+                            <a role="button" data-txp-pane="article_dates" href="#dates">Image effects</a>
+                        </h3>
+                        <div class="toggle txp-layout" id="txp-dates-group-content" role="group">
+                            <p class="txp-layout-4col">
+                                <label for="img_brightness">Brightness</label>
+                                <br>
+                                <input style="margin-right:0.5em;" id="img_brightness_range" type="range" min="0" max="100" value="80" oninput="this.form.img_brightness.value=this.value" />
+                                <input id="img_brightness" type="number" min="0" max="100" value="80" oninput="this.form.img_brightness_range.value=this.value" />
+                            </p>
+                            <p class="txp-layout-4col">
+                                <label for="img_contrast">Contrast</label>
+                                <br>
+                                <input style="margin-right:0.5em;" id="img_contrast_range" type="range" min="0" max="100" value="66" oninput="this.form.img_contrast.value=this.value" />
+                                <input id="img_contrast" type="number" min="0" max="100" value="66" oninput="this.form.img_contrast_range.value=this.value" />
+                            </p>
+                            <p class="txp-layout-4col">
+                                <label for="img_gamma">Gamma</label>
+                                <br>
+                                <input style="margin-right:0.5em;" id="img_gamma_range" type="range" min="0" max="100" value="0" oninput="this.form.img_gamma.value=this.value" />
+                                <input id="img_gamma" type="number" min="0" max="100" value="0" oninput="this.form.img_gamma_range.value=this.value" />
+                            </p>
+                            <p class="txp-layout-4col">
+                                <label for="img_sharpen">Sharpen</label>
+                                <br>
+                                <input style="margin-right:0.5em;" id="img_sharpen_range" type="range" min="0" max="100" value="0" oninput="this.form.img_sharpen.value=this.value" />
+                                <input id="img_sharpen" type="number" min="0" max="100" value="0" oninput="this.form.img_sharpen_range.value=this.value" />
+                            </p>
+                            <p class="txp-layout-4col">
+                                <label for="img_blur">Blur</label>
+                                <br>
+                                <input style="margin-right:0.5em;" id="img_blur_range" type="range" min="0" max="100" value="0" oninput="this.form.img_blur.value=this.value" />
+                                <input id="img_blur" type="number" min="0" max="100" value="0" oninput="this.form.img_blur_range.value=this.value" />
+                            </p>
+                            <p class="txp-layout-4col">
+                                Filter<br>
+                                <span style="display:inline-block;margin-top:0.4em;">
+                                    <input class="radio active" id="img_filter-0" name="img_filter" type="radio" value="0" checked="checked">
+                                    <label for="img_filter-0">None</label>
+                                    <input class="radio" id="img_filter-1" name="img_filter" type="radio" value="1">
+                                    <label for="img_filter-1">Greyscale</label>
+                                    <input class="radio" id="img_filter-2" name="img_filter" type="radio" value="1">
+                                    <label for="img_filter-2">Sepia</label>
+                                </span>
+                            </p>
+                        </div>
+                    </section>
                 </form>
 
                 <p class="txp-image-metadata"><small>
