@@ -4,12 +4,38 @@
    ========================================================================== */
 
 /**
+ * Range and number input combination.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-input-range">
+ *     <input type="range">
+ *     <input class="input-number-max100" type="number">
+ * </div>
+ */
+
+.txp-input-range {
+    display: flex;
+}
+
+[type="range"] + input.input-number-max100 {
+    margin-left: 0.5em;
+}
+
+[dir="rtl"] {
+    [type="range"] + input.input-number-max100 {
+        margin-right: 0.5em;
+        margin-left: 0;
+    }
+}
+
+/**
  * 1. Correct background colour in Firefox.
  */
 
 [type="range"] {
     width: 100%;
-    max-width: 13em; // 260px / 13px
+    max-width: 30em; // 390px / 13px
     background-color: transparent; /* 1 */
     vertical-align: baseline;
     appearance: none;

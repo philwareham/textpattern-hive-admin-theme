@@ -151,48 +151,57 @@
             <div class="txp-layout-4col-3span">
                 <form method="post" action="#">
                     <p>
-                        <button name="img_crop"><span class="ui-icon ui-extra-icon-crop"></span> Crop</button>
-                        <button name="img_rotate_l"><span class="ui-icon ui-icon-arrowreturn-1-s"></span> Rotate left</button>
-                        <button name="img_rotate_r"><span class="ui-icon ui-extra-icon-arrowreturn-1-s-reversed"></span> Rotate right</button>
-                        <button name="img_flip_h"><span class="ui-icon ui-extra-icon-flip-horizontal"></span> Flip horizontally</button>
-                        <button name="img_flip_v"><span class="ui-icon ui-extra-icon-flip-vertical"></span> Flip vertically</button>
+                        <button style="margin-bottom:0.33em;" name="img_crop"><span class="ui-icon ui-extra-icon-crop"></span> Crop</button>
+                        <button style="margin-bottom:0.33em;" name="img_rotate_l"><span class="ui-icon ui-icon-arrowreturn-1-s"></span> Rotate left</button>
+                        <button style="margin-bottom:0.33em;" name="img_rotate_r"><span class="ui-icon ui-extra-icon-arrowreturn-1-s-reversed"></span> Rotate right</button>
+                        <button style="margin-bottom:0.33em;" name="img_flip_h"><span class="ui-icon ui-extra-icon-flip-horizontal"></span> Flip horizontally</button>
+                        <button style="margin-bottom:0.33em;margin-right:1em;" name="img_flip_v"><span class="ui-icon ui-extra-icon-flip-vertical"></span> Flip vertically</button>
+                        <span style="display:inline-block;">
+                            <button style="margin-bottom:0.33em;" name="img_undo"><span class="ui-icon ui-icon-arrowrefresh-1-w"></span> Undo</button>
+                            <button style="margin-bottom:0.33em;" name="img_redo" disabled><span class="ui-icon ui-icon-arrowrefresh-1-e"></span> Redo</button>
+                        </span>
                     </p>
-                    <section class="txp-details" id="txp-dates-group" aria-labelledby="txp-dates-group-label">
-                        <h3 class="txp-summary expanded" id="txp-dates-group-label">
-                            <a role="button" data-txp-pane="article_dates" href="#dates">Image effects</a>
+                    <section class="txp-details" id="txp-img-effects-group" aria-labelledby="txp-img-effects-group-label">
+                        <h3 class="txp-summary expanded" id="txp-img-effects-group-label">
+                            <a role="button" data-txp-pane="img_effects" href="#effects">Image effects</a>
                         </h3>
-                        <div class="toggle txp-layout" id="txp-dates-group-content" role="group">
-                            <p class="txp-layout-4col">
+                        <div class="toggle txp-layout" id="txp-img-effects-group-content" role="group" style="padding-top:0.5em;padding-bottom:0.5em;">
+                            <div style="margin-top:0.5em;margin-bottom:0.5em;" class="txp-layout-4col">
                                 <label for="img_brightness">Brightness</label>
-                                <br>
-                                <input style="margin-right:0.5em;" id="img_brightness_range" type="range" min="0" max="100" value="80">
-                                <input id="img_brightness" type="number" min="0" max="100" value="80" size="3">
-                            </p>
-                            <p class="txp-layout-4col">
+                                <div class="txp-input-range">
+                                    <input id="img_brightness_range" type="range" min="0" max="100" value="80">
+                                    <input class="input-number-max100" id="img_brightness" type="number" min="0" max="100" value="80">
+                                </div>
+                            </div>
+                            <div style="margin-top:0.5em;margin-bottom:0.5em;" class="txp-layout-4col">
                                 <label for="img_contrast">Contrast</label>
-                                <br>
-                                <input style="margin-right:0.5em;" id="img_contrast_range" type="range" min="0" max="100" value="66">
-                                <input id="img_contrast" type="number" min="0" max="100" value="66" size="3">
-                            </p>
-                            <p class="txp-layout-4col">
+                                <div class="txp-input-range">
+                                    <input id="img_contrast_range" type="range" min="0" max="100" value="66">
+                                    <input class="input-number-max100" id="img_contrast" type="number" min="0" max="100" value="66">
+                                </div>
+                            </div>
+                            <div style="margin-top:0.5em;margin-bottom:0.5em;" class="txp-layout-4col">
                                 <label for="img_gamma">Gamma</label>
-                                <br>
-                                <input style="margin-right:0.5em;" id="img_gamma_range" type="range" min="0" max="100" value="0">
-                                <input id="img_gamma" type="number" min="0" max="100" value="0" size="3">
-                            </p>
-                            <p class="txp-layout-4col">
+                                <div class="txp-input-range">
+                                    <input id="img_gamma_range" type="range" min="0" max="100" value="0">
+                                    <input class="input-number-max100" id="img_gamma" type="number" min="0" max="100" value="0">
+                                </div>
+                            </div>
+                            <div style="margin-top:0.5em;margin-bottom:0.5em;" class="txp-layout-4col">
                                 <label for="img_sharpen">Sharpen</label>
-                                <br>
-                                <input style="margin-right:0.5em;" id="img_sharpen_range" type="range" min="0" max="100" value="0">
-                                <input id="img_sharpen" type="number" min="0" max="100" value="0" size="3">
-                            </p>
-                            <p class="txp-layout-4col">
+                                <div class="txp-input-range">
+                                    <input id="img_sharpen_range" type="range" min="0" max="100" value="0">
+                                    <input class="input-number-max100" id="img_sharpen" type="number" min="0" max="100" value="0">
+                                </div>
+                            </div>
+                            <div style="margin-top:0.5em;margin-bottom:0.5em;" class="txp-layout-4col">
                                 <label for="img_blur">Blur</label>
-                                <br>
-                                <input style="margin-right:0.5em;" id="img_blur_range" type="range" min="0" max="100" value="0">
-                                <input id="img_blur" type="number" min="0" max="100" value="0" size="3">
-                            </p>
-                            <p class="txp-layout-2col">
+                                <div class="txp-input-range">
+                                    <input id="img_blur_range" type="range" min="0" max="100" value="0">
+                                    <input class="input-number-max100" id="img_blur" type="number" min="0" max="100" value="0">
+                                </div>
+                            </div>
+                            <div style="margin-top:0.5em;margin-bottom:0.5em;" class="txp-layout-2col">
                                 Filter<br>
                                 <span style="display:inline-block;margin-top:0.4em;">
                                     <input class="radio active" id="img_filter-0" name="img_filter" type="radio" value="0" checked="checked">
@@ -202,14 +211,14 @@
                                     <input class="radio" id="img_filter-2" name="img_filter" type="radio" value="1">
                                     <label for="img_filter-2">Sepia</label>
                                 </span>
-                            </p>
+                            </div>
                         </div>
                     </section>
-                    <p>
-                        <button name="img_undo"><span class="ui-icon ui-icon-arrowrefresh-1-w"></span> Undo</button>
-                        <button name="img_redo" disabled><span class="ui-icon ui-icon-arrowrefresh-1-e"></span> Redo</button>
-                    </p>
                 </form>
+
+                <div class="fullsize-image">
+                    <img class="content-image" src="../img/1200x800.png" alt="1200×800px placeholder">
+                </div>
 
                 <p class="txp-image-metadata"><small>
                     ID# 1 <span role="separator">·</span>
@@ -218,10 +227,6 @@
                     File size 261KB <span role="separator">·</span>
                     Current dimensions 1200×800 pixels
                 </small></p>
-
-                <div class="fullsize-image">
-                    <img class="content-image" src="../img/1200x800.png" alt="1200×800px placeholder">
-                </div>
 
                 <form class="upload-form image-replace" method="post" action="#">
                     <div class="txp-form-field file-uploader">
