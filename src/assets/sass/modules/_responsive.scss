@@ -430,6 +430,18 @@
     }
 
     /**
+     * Adjust centre alignment of twisties.
+     */
+
+    h3.txp-summary a::after {
+        top: 0.75em; // 12px / 16px
+    }
+
+    h3.txp-summary.expanded a::after {
+        top: 0.875em; // 14px / 16px
+    }
+
+    /**
      * Label/value one-column layouts within panes.
      *
      * Collapsed from two-column format on desktop layout (remove flexbox).
