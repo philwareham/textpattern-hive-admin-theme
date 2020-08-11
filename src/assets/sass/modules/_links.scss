@@ -7,13 +7,18 @@
  * 1. Remove default underline style from non-hover state links.
  * 2. Interrupt the decoration line to let the shape of the text show through
  *    in supported browsers.
- * 3. Hide `.busy` class links when processing AJAX.
+ * 3. Remove tap delay in modern browsers.
+ * 4. Hide `.busy` class links when processing AJAX.
  */
 
 a {
     color: var(--color-link);
-    text-decoration: none; /* 1 */
-    text-decoration-skip-ink: auto; /* 2 */
+    /* 1 */
+    text-decoration: none;
+    /* 2 */
+    text-decoration-skip-ink: auto;
+    /* 3 */
+    touch-action: manipulation;
 
     &:hover,
     &:active {
@@ -26,7 +31,8 @@ a {
     }
 
     &.busy {
-        visibility: hidden; /* 3 */
+        /* 4 */
+        visibility: hidden;
     }
 }
 

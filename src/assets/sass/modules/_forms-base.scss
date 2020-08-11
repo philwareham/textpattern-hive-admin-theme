@@ -9,10 +9,14 @@
  */
 
 fieldset {
-    min-width: 0; /* 1 */
-    margin: 1em 0; /* 2 */
-    padding: 1px 1em; /* 2 */
-    border: 1px solid var(--color-border); /* 2 */
+    /* 1 */
+    min-width: 0;
+    /* 2 */
+    margin: 1em 0;
+    /* 2 */
+    padding: 1px 1em;
+    /* 2 */
+    border: 1px solid var(--color-border);
 }
 
 /**
@@ -23,20 +27,29 @@ fieldset {
  */
 
 legend {
-    display: table; /* 1 */
-    box-sizing: border-box; /* 1 */
-    max-width: 100%; /* 1 */
-    padding: 0; /* 2 */
-    white-space: normal; /* 1 */
+    /* 1 */
+    display: table;
+    /* 1 */
+    box-sizing: border-box;
+    /* 1 */
+    max-width: 100%;
+    /* 2 */
+    padding: 0;
+    /* 1 */
+    white-space: normal;
 }
 
 /**
- * Show the overflow in Edge.
+ * 1. Show the overflow in Edge.
+ * 2. Remove tap delay in modern browsers.
  */
 
 button,
 input {
+    /* 1 */
     overflow: visible;
+    /* 2 */
+    touch-action: manipulation;
 }
 
 /**
@@ -56,11 +69,14 @@ textarea,
 .navlink-active,
 .navlink-disabled {
     box-sizing: border-box;
-    max-width: 100%; /* 1 */
-    margin: 0; /* 2 */
+    /* 1 */
+    max-width: 100%;
+    /* 2 */
+    margin: 0;
     color: var(--color-text-form);
     font-family: inherit;
-    font-size: 1rem; /* 3 */
+    /* 3 */
+    font-size: 1rem;
     line-height: setup.$base-line-height;
     vertical-align: baseline;
 }
@@ -92,7 +108,8 @@ textarea {
     border: 1px solid var(--color-border);
     border-radius: 0;
     background: var(--color-background-form);
-    appearance: none; /* 1 */
+    /* 1 */
+    appearance: none;
 
     &:hover {
         border-color: var(--color-border-extra-dark);
@@ -267,8 +284,10 @@ textarea {
     width: 100%;
     height: auto;
     min-height: 3em;
-    vertical-align: top; /* 1 */
-    resize: vertical; /* 2 */
+    /* 1 */
+    vertical-align: top;
+    /* 2 */
+    resize: vertical;
 }
 
 /**
@@ -406,6 +425,7 @@ textarea {
 ::placeholder {
     opacity: 1;
     color: var(--color-text-form-placeholder);
-    font: inherit; /* 1 */
+    /* 1 */
+    font: inherit;
     font-weight: normal;
 }

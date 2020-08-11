@@ -1,5 +1,28 @@
 @use "../setup";
 
+/* Float clearing
+   ========================================================================== */
+
+/**
+ * Clearfix using the 'A new micro clearfix hack' method.
+ */
+
+.clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/**
+ * Basic float clearer.
+ */
+
+.clear {
+    clear: both;
+}
+
 /* Globally shared layout
    ========================================================================== */
 
