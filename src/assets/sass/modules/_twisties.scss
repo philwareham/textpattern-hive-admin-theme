@@ -32,11 +32,21 @@
  * </section>
  */
 
+/**
+ * 1. Add the correct display in Edge and Firefox.
+ */
+
 details {
+    /* 1 */
     display: block;
 }
 
+/**
+ * 1. Add the correct display in all browsers.
+ */
+
 summary {
+    /* 1 */
     display: list-item;
     cursor: pointer;
 
