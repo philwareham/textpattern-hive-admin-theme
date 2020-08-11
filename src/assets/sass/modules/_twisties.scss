@@ -8,6 +8,13 @@
  *
  * Example HTML:
  *
+ * <details class="txp-details">
+ *     <summary="txp-summary">Heading (lever)</summary>
+ *     <div>
+ *         Content
+ *     </div>
+ * </details>
+ *
  * <section class="txp-details">
  *     <h3 class="txp-summary expanded">
  *         <a>Heading (lever)</a>
@@ -24,6 +31,19 @@
  *     </div>
  * </section>
  */
+
+details {
+    display: block;
+}
+
+summary {
+    display: list-item;
+    cursor: pointer;
+
+    &:focus {
+        outline: 1px solid var(--color-link-focus);
+    }
+}
 
 .txp-details {
     margin: 1em 0;
@@ -58,7 +78,7 @@
  * Styling for summary headings.
  */
 
-h3.txp-summary,
+.txp-summary,
 .txp-details > h3 {
     @include setup.gradient-linear(var(--color-gradient-from), var(--color-gradient-to));
 
@@ -81,7 +101,7 @@ h3.txp-summary,
 
 @if setup.$flat-theme < 1 {
     @include setup.dark-mode {
-        h3.txp-summary,
+        .txp-summary,
         .txp-details > h3 {
             border-bottom-color: var(--color-border-extra-light);
         }
@@ -101,6 +121,11 @@ h3.txp-summary,
 /**
  * Additonal styling for lever summary headings.
  */
+
+summary.txp-summary {
+    padding: 0 1em;
+    color: var(--color-text-heading);
+}
 
 h3.txp-summary a {
     display: block;
