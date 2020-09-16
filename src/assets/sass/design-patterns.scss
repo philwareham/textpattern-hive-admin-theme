@@ -17,12 +17,6 @@ body {
     max-width: 62em;
     margin: 0 auto;
     padding: 2em 0;
-
-    // Enforce LTR behaviour in nav list.
-
-    ol {
-        padding: 0 0 0 2em;
-    }
 }
 
 .design-patterns-heading {
@@ -140,39 +134,23 @@ $colors: (
  */
 
 .jquery-ui-icons li {
-    position: relative;
-    margin: 2px;
-    padding: 4px 0;
-    float: left;
+    display: inline-block;
+    padding: 0.25em;
     list-style: none;
-    cursor: pointer;
-}
-
-[dir="rtl"] .jquery-ui-icons li {
-    float: right;
-}
-
-.jquery-ui-icons .ui-icon {
-    margin: 0 4px;
-    float: left;
-}
-
-[dir="rtl"] .jquery-ui-icons .ui-icon {
-    float: right;
 }
 
 /**
  * The vertical slider example.
  */
 
-.jquery-ui-slider-vertical span {
-    height: 120px;
-    margin: 15px;
-    float: left;
-}
+.jquery-ui-slider-vertical {
+    display: flex;
 
-[dir="rtl"] .jquery-ui-slider-vertical span {
-    float: right;
+    span {
+        display: block;
+        height: 120px;
+        margin: 0 1rem;
+    }
 }
 
 /**
