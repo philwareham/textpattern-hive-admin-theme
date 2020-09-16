@@ -100,7 +100,8 @@ summary {
         border-top: 1px solid var(--color-border-light);
         border-bottom: 1px solid var(--color-border-dark);
     } @else {
-        border-block: 1px solid var(--color-border);
+        border-top: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
     }
 
     font-size: 1rem;
