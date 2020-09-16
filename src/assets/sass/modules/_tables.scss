@@ -37,15 +37,7 @@ table {
 
 caption {
     margin-bottom: 0.5em;
-    text-align: left;
-}
-
-/**
- * Swap caption alignment in RTL languages.
- */
-
-[dir="rtl"] caption {
-    text-align: right;
+    text-align: start;
 }
 
 /**
@@ -79,18 +71,7 @@ th,
 td {
     padding: 0.38461538461538em 1em; // 5px / 13px + 13px
     vertical-align: middle;
-    text-align: left;
-}
-
-/**
- * Swap table cell text alignments in RTL languages.
- */
-
-[dir="rtl"] {
-    th,
-    td {
-        text-align: right;
-    }
+    text-align: start;
 }
 
 /**

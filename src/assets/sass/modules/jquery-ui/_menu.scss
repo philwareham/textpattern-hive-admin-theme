@@ -102,7 +102,8 @@
         label {
             display: block;
             margin: -0.3076923em -0.6153846em; // 4px / 13px + 8px / 13px
-            padding: 0.3076923em 0.6153846em 0.3076923em 2em; // 4px / 13px + 8px / 13px
+            padding: 0.3076923em 0.6153846em; // 4px / 13px + 8px / 13px
+            padding-inline-start: 2em; // 26px / 13px
             cursor: pointer;
 
             [type="checkbox"],
@@ -167,11 +168,7 @@
  */
 
 [dir="rtl"] .ui-menu {
-    padding: 0;
-
     .ui-menu-item label {
-        padding: 0.3076923em 2em 0.3076923em 0.6153846em; // 4px / 13px + 8px / 13px
-
         [type="checkbox"],
         [type="radio"] {
             right: 0.3076923em;

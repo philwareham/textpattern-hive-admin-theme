@@ -59,15 +59,13 @@ summary {
     margin: 1em 0;
 
     @if setup.$flat-theme < 1 {
-        border-right: 1px solid var(--color-border-extra-light);
-        border-left: 1px solid var(--color-border-extra-light);
+        border-inline: 1px solid var(--color-border-extra-light);
 
         > div {
             border-bottom: 1px solid var(--color-border-extra-light);
         }
     } @else {
-        border-right: 1px solid var(--color-border);
-        border-left: 1px solid var(--color-border);
+        border-inline: 1px solid var(--color-border);
 
         > div {
             border-bottom: 1px solid var(--color-border);
@@ -100,8 +98,7 @@ summary {
         border-top: 1px solid var(--color-border-light);
         border-bottom: 1px solid var(--color-border-dark);
     } @else {
-        border-top: 1px solid var(--color-border);
-        border-bottom: 1px solid var(--color-border);
+        border-block: 1px solid var(--color-border);
     }
 
     font-size: 1rem;
@@ -139,7 +136,8 @@ summary.txp-summary {
 
 h3.txp-summary a {
     display: block;
-    padding: 0 2em 0 1em;
+    padding: 0 1em;
+    padding-inline-end: 2em;
     color: var(--color-text-heading);
 
     &:hover {
@@ -170,6 +168,11 @@ h3.txp-summary a {
     }
 }
 
+[dir="rtl"] h3.txp-summary a::after {
+    right: auto;
+    left: 0.625em; // 10px / 16px
+}
+
 /**
  * Additonal styling for lever summary headings - expanded state.
  */
@@ -181,6 +184,11 @@ h3.txp-summary.expanded a::after {
     border: 0 solid transparent;
     border-width: 0.25em 0.25em 0;
     border-top-color: var(--color-text);
+}
+
+[dir="rtl"] h3.txp-summary.expanded a::after {
+    right: auto;
+    left: 0.5625em; // 9px / 16px
 }
 
 /**
@@ -212,15 +220,10 @@ h3.txp-summary.expanded a::after {
     }
 
     &.date {
-        margin-right: 1em;
+        margin-inline-end: 1em;
     }
 
     &.posted-now {
         margin-bottom: 0;
     }
-}
-
-[dir="rtl"] .txp-details .txp-form-field.date {
-    margin-right: 0;
-    margin-left: 1em;
 }

@@ -216,10 +216,6 @@ ul.nav-tertiary {
     }
 }
 
-[dir="rtl"] ul.nav-tertiary {
-    padding: 0;
-}
-
 @if setup.$border-radius > 0 {
     .nav-tertiary {
         > * {
@@ -300,8 +296,7 @@ ul.nav-tertiary {
  */
 
 .txp-search button.txp-search-button {
-    padding-right: 1.5em;
-    padding-left: 1.5em;
+    padding-inline: 1.5em;
 
     @if setup.$border-radius > 0 {
         border-radius: 0;

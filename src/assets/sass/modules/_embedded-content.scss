@@ -32,12 +32,14 @@ img {
     vertical-align: middle;
 
     &.align-left {
-        margin: 1em 1em 1em 0;
+        margin: 1em;
+        margin-inline-start: 0;
         float: left; // TODO: use CSS Text Module Level 3 `start` value when browser support is widespread.
     }
 
     &.align-right {
-        margin: 1em 0 1em 1em;
+        margin: 1em;
+        margin-inline-end: 0;
         float: right; // TODO: use CSS Text Module Level 3 `end` value when browser support is widespread.
     }
 
@@ -53,12 +55,10 @@ img {
 
 [dir="rtl"] img {
     &.align-left {
-        margin: 1em 0 1em 1em;
         float: right;
     }
 
     &.align-right {
-        margin: 1em 1em 1em 0;
         float: left;
     }
 }

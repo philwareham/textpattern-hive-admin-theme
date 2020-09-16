@@ -173,7 +173,7 @@ textarea {
  */
 
 select {
-    padding-right: 1.30769230769231em; // 17px / 13px
+    padding-inline-end: 1.30769230769231em; // 17px / 13px
     background: var(--color-background-form) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23777' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E") right center no-repeat;
     background-size: 1em 0.30769230769231em;
     text-transform: none;
@@ -224,8 +224,6 @@ select {
 
 [dir="rtl"] {
     select {
-        padding-right: 0.30769230769231em; // 4px / 13px
-        padding-left: 1.30769230769231em; // 17px / 13px
         background-position: 0.46153846153846em center; // 6px / 13px
     }
 }
@@ -238,7 +236,7 @@ select[size],
 select[multiple] {
     box-sizing: border-box;
     height: auto;
-    padding-right: 0.30769230769231em; // 4px / 13px
+    padding-inline-end: 0.30769230769231em; // 4px / 13px
     background-image: none;
     vertical-align: top;
 }
@@ -247,13 +245,6 @@ select[multiple] {
     select[size],
     select[multiple] {
         background-image: none;
-    }
-}
-
-[dir="rtl"] {
-    select[size],
-    select[multiple] {
-        padding-left: 0.30769230769231em; // 4px / 13px
     }
 }
 

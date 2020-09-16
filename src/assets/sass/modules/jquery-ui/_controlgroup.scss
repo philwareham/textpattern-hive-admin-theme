@@ -29,8 +29,7 @@
     flex-flow: row wrap;
 
     .ui-controlgroup-item {
-        margin-right: 0;
-        margin-left: 0;
+        margin-inline: 0;
 
         &:focus,
         &.ui-visual-focus {
@@ -71,13 +70,8 @@
         display: block;
         box-sizing: border-box;
         width: 100%;
-        margin-top: 0;
-        margin-bottom: 0;
-        text-align: left;
-
-        [dir="rtl"] & {
-            text-align: right;
-        }
+        margin-block: 0;
+        text-align: start;
     }
 
     .ui-controlgroup-label {

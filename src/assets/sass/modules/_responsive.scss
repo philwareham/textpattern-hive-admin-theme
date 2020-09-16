@@ -102,11 +102,14 @@
      * Search widget at top of lists.
      */
 
-    .txp-search,
-    [dir="rtl"] .txp-search {
+    .txp-search {
         flex-wrap: wrap;
         justify-content: flex-start;
         margin-top: 0;
+        float: none;
+    }
+
+    [dir="rtl"] .txp-search {
         float: none;
     }
 
@@ -118,11 +121,7 @@
         flex: 1 0 auto;
         width: 100%;
         margin: 0 0 0.5em;
-        text-align: left;
-
-        [dir="rtl"] & {
-            text-align: right;
-        }
+        text-align: start;
     }
 
     /**
@@ -297,6 +296,10 @@
         }
     }
 
+    [dir="rtl"] button.txp-nav-toggle {
+        float: right;
+    }
+
     /**
      * Hide the navigation menu by default on mobile layout.
      */
@@ -388,12 +391,9 @@
         }
 
         a {
-            padding: 0.5em 1em 0.5em 2em;
+            padding: 0.5em 1em;
+            padding-inline-start: 2em;
             white-space: normal;
-
-            [dir="rtl"] & {
-                padding: 0.5em 2em 0.5em 1em;
-            }
         }
 
         // Remove indicator pointer.
@@ -419,14 +419,7 @@
      */
 
     .txp-form-field-shim {
-        margin-left: 0;
-    }
-
-    [dir="rtl"] {
-        .txp-form-field-shim {
-            margin-right: 0;
-            margin-left: 0;
-        }
+        margin-inline-start: 0;
     }
 
     /**
@@ -489,31 +482,13 @@
         ol {
             display: block;
             margin-bottom: 1em;
-            text-align: left;
+            text-align: start;
         }
 
         li {
             display: block;
             margin: 0;
             float: none;
-
-            &::after {
-                display: none;
-            }
-        }
-    }
-
-    /**
-     * Override specifity on collapsed progress meters in RTL languages.
-     */
-
-    [dir="rtl"] .progress-meter {
-        ol {
-            text-align: right;
-        }
-
-        li {
-            margin: 0;
 
             &::after {
                 display: none;

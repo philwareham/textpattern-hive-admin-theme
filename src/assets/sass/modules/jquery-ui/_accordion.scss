@@ -60,7 +60,7 @@
 
     .ui-accordion-icons,
     .ui-accordion-icons .ui-accordion-icons {
-        padding-left: 2em;
+        padding-inline-start: 2em;
     }
 }
 
@@ -72,11 +72,5 @@
     .ui-accordion-header .ui-accordion-header-icon {
         right: 0.5em;
         left: auto;
-    }
-
-    .ui-accordion-icons,
-    .ui-accordion-icons .ui-accordion-icons {
-        padding-right: 2em;
-        padding-left: 0;
     }
 }

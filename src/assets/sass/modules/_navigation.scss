@@ -96,11 +96,11 @@ button.txp-nav-toggle {
 .txp-nav > ul > li {
     display: block;
     position: relative;
-    border-right: 1px solid var(--color-accent-gradient-to);
+    border-inline-end: 1px solid var(--color-accent-gradient-to);
     background: hsla(0, 0%, 100%, 0.25);
 
     &:first-child {
-        border-left: 1px solid var(--color-accent-gradient-to);
+        border-inline-start: 1px solid var(--color-accent-gradient-to);
     }
 
     > a {
@@ -125,25 +125,13 @@ button.txp-nav-toggle {
 }
 
 /**
- * Reverse border in RTL languages.
- */
-
-[dir="rtl"] .txp-nav > ul > li {
-    border-right: 0;
-    border-left: 1px solid var(--color-accent-gradient-to);
-
-    &:first-child {
-        border-right: 1px solid var(--color-accent-gradient-to);
-    }
-}
-
-/**
  * Indicator symbols on closed dropdown toggle links.
  */
 
 .txp-nav > ul > li > a.dropdown-toggle {
     position: relative;
-    padding: 0 1.61538461538462em 0 1em;
+    padding: 0 1em;
+    padding-inline-end: 1.61538461538462em;
 
     &::after {
         @include setup.hide-text;
@@ -173,13 +161,9 @@ button.txp-nav-toggle {
  * Indicator symbols in RTL languages.
  */
 
-[dir="rtl"] .txp-nav > ul > li > a.dropdown-toggle {
-    padding: 0 1em 0 1.61538461538462em;
-
-    &::after {
-        right: auto;
-        left: 0.5625em; // 9px / 16px
-    }
+[dir="rtl"] .txp-nav > ul > li > a.dropdown-toggle::after {
+    right: auto;
+    left: 0.5625em; // 9px / 16px
 }
 
 /**

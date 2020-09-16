@@ -61,7 +61,8 @@
     flex: none;
     width: 8.125em; // 130px / 16px
     height: 2em; // 32px / 16px
-    margin: 0.0625em 0.5em 0 0; // 1px / 16px, 6px / 16px
+    margin: 0.0625em 0 0; // 1px / 16px, 8px / 16px
+    margin-inline-end: 0.5em; // 8px / 16px
     background: url("../img/sprite.svg") no-repeat;
     background-size: 13em 2em; // 208px / 16px + 32px / 16px
     font-size: 16px;
@@ -77,14 +78,6 @@
 
         display: block;
     }
-}
-
-/**
- * Reverse Textpattern logo margin in RTL languages.
- */
-
-[dir="rtl"] .txp-header h1 {
-    margin: 0.0625em 0 0 0.5em; // 1px / 16px, 6px / 16px
 }
 
 /**

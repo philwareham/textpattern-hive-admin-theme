@@ -57,7 +57,8 @@
 .ui-selectmenu-icon {
     flex: none;
     order: 2;
-    margin: 0.2em -0.230769230769231em 0 0.230769230769231em;
+    margin: 0.2em 0.230769230769231em 0;
+    margin-inline-end: -0.230769230769231em;
 }
 
 .ui-selectmenu-text {
@@ -111,10 +112,6 @@
 
     .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
         border-radius: 0 setup.$border-radius setup.$border-radius 0;
-    }
-
-    .ui-selectmenu-icon {
-        margin: 0.2em 0.230769230769231em 0 -0.230769230769231em;
     }
 }
 
