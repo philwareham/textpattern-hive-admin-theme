@@ -122,7 +122,8 @@ dd {
     left: 1em;
 
     + a {
-        padding-inline: 2.5em 1em;
+        padding-inline-start: 2.5em;
+        padding-inline-end: 1em;
     }
 }
 

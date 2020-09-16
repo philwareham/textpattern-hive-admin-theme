@@ -39,8 +39,9 @@
         padding: 1em;
         padding-inline-start: 4em;
         border-top: 1px solid var(--color-border-light);
+        border-right: 1px solid var(--color-border-extra-light);
         border-bottom: 1px solid var(--color-border-dark);
-        border-inline: 1px solid var(--color-border-extra-light);
+        border-left: 1px solid var(--color-border-extra-light);
         color: var(--color-text-button);
 
         // highlight the currently active step

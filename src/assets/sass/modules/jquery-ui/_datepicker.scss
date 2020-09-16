@@ -178,8 +178,9 @@
     .ui-datepicker-buttonpane {
         margin: 0.7em 0 0;
         padding: 0 0.2em;
+        border-right: 0;
         border-bottom: 0;
-        border-inline: 0;
+        border-left: 0;
         background-image: none;
 
         button {

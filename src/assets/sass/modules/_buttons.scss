@@ -296,7 +296,8 @@ ul.nav-tertiary {
  */
 
 .txp-search button.txp-search-button {
-    padding-inline: 1.5em;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
 
     @if setup.$border-radius > 0 {
         border-radius: 0;
