@@ -316,7 +316,7 @@ hr {
 }
 
 /**
- * Additonal action links ('Duplicate', 'View', etc.) on some panels.
+ * Additional action links ('Duplicate', 'View', etc.) on some panels.
  *
  * Appears on:
  *
@@ -841,10 +841,8 @@ span.spinner {
  * Swap alignment of textarea options in RTL languages.
  */
 
-[dir="rtl"] {
-    .txp-textarea-options {
-        float: left;
-    }
+[dir="rtl"] .txp-textarea-options {
+    float: left;
 }
 
 /**

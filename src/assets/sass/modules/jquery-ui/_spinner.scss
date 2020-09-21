@@ -64,9 +64,7 @@
  * Spinner RTL support.
  */
 
-[dir="rtl"] {
-    .ui-spinner-button {
-        right: auto;
-        left: 0;
-    }
+[dir="rtl"] .ui-spinner-button {
+    right: auto;
+    left: 0;
 }

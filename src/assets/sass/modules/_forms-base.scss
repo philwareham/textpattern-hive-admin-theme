@@ -222,10 +222,8 @@ select {
  * Swap `select` icon position in RTL languages.
  */
 
-[dir="rtl"] {
-    select {
-        background-position: 0.46153846153846em center; // 6px / 13px
-    }
+[dir="rtl"] select {
+    background-position: 0.46153846153846em center; // 6px / 13px
 }
 
 /**
