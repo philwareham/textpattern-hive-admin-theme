@@ -157,7 +157,7 @@ li.information {
         overflow-wrap: break-word;
         color: var(--color-text-inversed);
 
-        @if setup.$flat-theme < 1 {
+        @if not setup.$flat-theme {
             box-shadow: var(--standard-shadow);
         }
 

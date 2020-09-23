@@ -1,4 +1,4 @@
-@use "setup" with ($flat-theme: 1, $border-radius: 0.25em);
+@use "setup" with ($flat-theme: true, $border-radius: 0.25em);
 @forward "modules";
 
 /* CSS variables

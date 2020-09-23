@@ -58,7 +58,7 @@ summary {
 .txp-details {
     margin: 1em 0;
 
-    @if setup.$flat-theme < 1 {
+    @if not setup.$flat-theme {
         border-right: 1px solid var(--color-border-extra-light);
         border-left: 1px solid var(--color-border-extra-light);
 
@@ -96,7 +96,7 @@ summary {
     height: 2em; // 26px / 13px
     margin: 0;
 
-    @if setup.$flat-theme < 1 {
+    @if not setup.$flat-theme {
         border-top: 1px solid var(--color-border-light);
         border-bottom: 1px solid var(--color-border-dark);
     } @else {
@@ -109,7 +109,7 @@ summary {
     line-height: 2; // 26px / 13px
 }
 
-@if setup.$flat-theme < 1 {
+@if not setup.$flat-theme {
     @include setup.dark-mode {
         .txp-summary,
         .txp-details > h3 {

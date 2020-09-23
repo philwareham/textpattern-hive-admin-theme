@@ -69,7 +69,7 @@
     margin: 0;
     padding: 0;
 
-    @if setup.$flat-theme < 1 {
+    @if not setup.$flat-theme {
         border-color: var(--color-border-light);
     }
 
@@ -79,7 +79,7 @@
     font-size: 1rem;
     line-height: setup.$base-line-height;
 
-    @if setup.$flat-theme < 1 {
+    @if not setup.$flat-theme {
         box-shadow: var(--standard-shadow);
     }
 

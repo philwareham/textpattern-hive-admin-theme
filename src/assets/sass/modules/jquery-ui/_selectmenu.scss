@@ -137,7 +137,7 @@
             color: var(--color-link-hover);
             text-decoration: underline;
 
-            @if setup.$flat-theme < 1 {
+            @if not setup.$flat-theme {
                 box-shadow: none;
             }
         }

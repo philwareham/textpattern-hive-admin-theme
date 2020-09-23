@@ -25,7 +25,7 @@
     max-width: 22em;
     padding: 0.5em 1em;
 
-    @if setup.$flat-theme < 1 {
+    @if not setup.$flat-theme {
         box-shadow: var(--standard-shadow);
     }
 }

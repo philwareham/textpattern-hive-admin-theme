@@ -148,7 +148,7 @@
         padding: 0;
         border: 0;
 
-        @if setup.$flat-theme < 1 {
+        @if not setup.$flat-theme {
             box-shadow: none;
         }
 
@@ -320,7 +320,7 @@
         left: 0;
         background: var(--color-accent-background);
 
-        @if setup.$flat-theme < 1 {
+        @if not setup.$flat-theme {
             box-shadow: var(--standard-shadow);
         }
 
@@ -386,7 +386,7 @@
             border-radius: 0;
         }
 
-        @if setup.$flat-theme < 1 {
+        @if not setup.$flat-theme {
             box-shadow: none;
         }
 
@@ -510,7 +510,7 @@
             border: 1px solid var(--color-border-light);
             border-bottom: 1px solid transparent;
 
-            @if setup.$flat-theme < 1 {
+            @if not setup.$flat-theme {
                 box-shadow: none;
             }
 

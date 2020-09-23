@@ -40,7 +40,7 @@
         border: 1px solid var(--color-border-extra-dark);
         border-radius: 50%;
 
-        @if setup.$flat-theme < 1 {
+        @if not setup.$flat-theme {
             box-shadow: var(--standard-shadow);
         }
 

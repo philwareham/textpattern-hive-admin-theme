@@ -239,7 +239,7 @@ button.txp-nav-toggle {
 
     background: var(--color-accent-background);
 
-    @if setup.$flat-theme < 1 {
+    @if not setup.$flat-theme {
         border-color: var(--color-border-light);
         border-top: 0;
         box-shadow: var(--standard-shadow);

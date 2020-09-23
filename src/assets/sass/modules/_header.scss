@@ -31,7 +31,7 @@
     border-top: 1px solid var(--color-accent-gradient-to);
     border-bottom: 1px solid var(--color-accent-dark);
 
-    @if setup.$flat-theme < 1 {
+    @if not setup.$flat-theme {
         box-shadow: 0 0.2em 0.25em hsla(0, 0%, 0%, 0.15);
     }
 }
