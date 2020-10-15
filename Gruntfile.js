@@ -48,6 +48,7 @@ module.exports = function (grunt)
             dist: [
                 'css',
                 'jshint',
+                'replace',
                 'uglify'
             ]
         },
@@ -59,7 +60,7 @@ module.exports = function (grunt)
                     {
                         expand: true,
                         cwd: '<%= paths.src.dir %>hive',
-                        src: '**',
+                        src: ['**', '!manifest.json'],
                         dest: '<%= paths.dest1.dir %>',
                         filter: 'isFile'
                     },
@@ -77,7 +78,7 @@ module.exports = function (grunt)
                     {
                         expand: true,
                         cwd: '<%= paths.src.dir %>hive-neutral',
-                        src: '**',
+                        src: ['**', '!manifest.json'],
                         dest: '<%= paths.dest2.dir %>',
                         filter: 'isFile'
                     },
@@ -144,6 +145,24 @@ module.exports = function (grunt)
                     {'<%= paths.dest2.css %>textpattern.css': '<%= paths.dest2.css %>textpattern.css'},
                     {'<%= paths.dest3.dir %>setup-multisite.css': '<%= paths.dest3.dir %>setup-multisite.css'},
                     {'<%= paths.docs.css %>design-patterns.css': '<%= paths.docs.css %>design-patterns.css'}
+                ]
+            }
+        },
+
+        // Generate version number automatically in theme manifest.json file.
+        replace: {
+            theme: {
+                options: {
+                    patterns: [
+                        {
+                            match: 'version',
+                            replacement: '<%= pkg.version %>'
+                        }
+                    ]
+                },
+                files: [
+                    {'<%= paths.dest1.dir %>manifest.json': '<%= paths.src.dir %>hive/manifest.json'},
+                    {'<%= paths.dest2.dir %>manifest.json': '<%= paths.src.dir %>hive-neutral/manifest.json'}
                 ]
             }
         },
