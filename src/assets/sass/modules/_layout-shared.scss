@@ -1,8 +1,5 @@
 @use "../setup";
 
-/* Float clearing
-   ========================================================================== */
-
 /**
  * Clearfix using the 'A new micro clearfix hack' method.
  */
@@ -21,6 +18,14 @@
 
 .clear {
     clear: both;
+}
+
+/**
+ * Hide elements.
+ */
+
+.hidden {
+    display: none !important;
 }
 
 /* Globally shared layout
