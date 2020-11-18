@@ -19,6 +19,10 @@
     clear: both;
     /* 2 */
     overflow-x: auto;
+
+    &:focus {
+        outline: thin solid var(--color-link-focus);
+    }
 }
 
 /**
