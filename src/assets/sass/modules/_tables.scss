@@ -17,6 +17,16 @@
     clear: both;
     /* 2 */
     overflow-x: auto;
+
+    &:focus {
+        outline: thin solid $color-link-focus;
+    }
+}
+
+@include dark-mode {
+    .txp-listtables:focus {
+        outline: thin solid $dark-color-link-focus;
+    }
 }
 
 /**
