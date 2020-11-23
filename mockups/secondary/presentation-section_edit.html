@@ -146,62 +146,90 @@
             <h2>Edit section</h2>
             <div class="txp-form-field edit-section-name">
                 <div class="txp-form-field-label"><label for="section_name">Section name</label></div>
-                <div class="txp-form-field-value"><input id="section_name" name="name" type="text" size="32" value="about"></div>
+                <div class="txp-form-field-value"><input name="name" id="section_name" type="text" size="32" required placeholder="Required" value="contact"></div>
             </div>
             <div class="txp-form-field edit-section-longtitle">
                 <div class="txp-form-field-label"><label for="section_title">Section title</label></div>
-                <div class="txp-form-field-value"><input id="section_title" name="title" type="text" size="32" value="About"></div>
+                <div class="txp-form-field-value"><input name="title" id="section_title" type="text" size="32" value="Contact"></div>
             </div>
-            <div class="txp-form-field txp-form-field-textarea edit-section-description">
-                <div class="txp-form-field-label"><label for="section_description">Section description&nbsp;<a class="pophelp" rel="help" target="_blank" title="Help" role="button" href="#"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
-                <div class="txp-form-field-value"><textarea name="description" id="section_description" rows="4" cols="64"></textarea></div>
+            <div class="txp-form-field edit-section-uses-skin">
+                <div class="txp-form-field-label"><label for="section_skin">Uses theme&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
+                <div class="txp-form-field-value">
+                    <select name="skin" id="section_skin">
+                        <option value="four-point-eight" dir="auto">Four Point Eight</option>
+                        <option value="bootstrap-blog-theme" dir="auto" selected>Bootstrap Blog Theme</option>
+                    </select>
+                </div>
             </div>
             <div class="txp-form-field edit-section-uses-page">
                 <div class="txp-form-field-label"><label for="section_page">Uses page&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
                 <div class="txp-form-field-value">
-                    <select id="section_page" name="section_page">
-                        <option value="archive">archive</option>
-                        <option value="default" selected="selected">default</option>
-                        <option value="error_default">error_default</option>
-                        <option value="test page">test page</option>
+                    <select name="section_page" id="section_page">
+                        <option></option>
+                        <option>archive</option>
+                        <option>article-non-blog</option>
+                        <option selected>contact</option>
+                        <option>default</option>
+                        <option>error_default</option>
+                        <option>sitemap</option>
                     </select>
                 </div>
             </div>
             <div class="txp-form-field edit-section-uses-css">
                 <div class="txp-form-field-label"><label for="section_css">Uses style&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
                 <div class="txp-form-field-value">
-                    <select id="section_css" name="css">
-                        <option value="default" selected="selected">default</option>
-                        <option value="new_style">new_style</option>
+                    <select name="css" id="section_css">
+                        <option></option>
+                        <option>default</option>
+                    </select>
+                </div>
+            </div>
+            <div class="txp-form-field edit-section-permlink-mode">
+                <div class="txp-form-field-label">Article URL pattern&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
+                <div class="txp-form-field-value">
+                    <select name="permlink_mode" id="permlink_mode">
+                        <option value="" dir="auto" selected>Default</option>
+                        <option value="messy" dir="auto">?=messy</option>
+                        <option value="id_title" dir="auto">/id/title</option>
+                        <option value="section_id_title" dir="auto">/section/id/title</option>
+                        <option value="section_category_title" dir="auto">/section/category/title</option>
+                        <option value="year_month_day_title" dir="auto">/year/month/day/title</option>
+                        <option value="breadcrumb_title" dir="auto">/breadcrumb/title</option>
+                        <option value="section_title" dir="auto">/section/title</option>
+                        <option value="title_only" dir="auto">/title</option>
                     </select>
                 </div>
             </div>
             <div class="txp-form-field edit-section-on-frontpage">
-                <div class="txp-form-field-label">Section appears on front page?&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></div>
+                <div class="txp-form-field-label">On default page?&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
                 <div class="txp-form-field-value">
-                    <input class="radio active" id="about-on_front_page-0" name="on_front_page" type="radio" value="0" checked="checked">
-                    <label for="about-on_front_page-0">No</label>
-                    <input class="radio" id="about-on_front_page-1" name="on_front_page" type="radio" value="1">
-                    <label for="about-on_front_page-1">Yes</label>
+                    <input class="radio active" id="contact-on_frontpage-0" name="on_frontpage" type="radio" checked="checked" value="0">
+                    <label for="contact-on_frontpage-0">No</label>
+                    <input class="radio" id="contact-on_frontpage-1" name="on_frontpage" type="radio" value="1">
+                    <label for="contact-on_frontpage-1">Yes</label>
                 </div>
             </div>
             <div class="txp-form-field edit-section-syndicate">
-                <div class="txp-form-field-label">Syndicate articles in this section?&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></div>
+                <div class="txp-form-field-label">Syndicate articles?&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
                 <div class="txp-form-field-value">
-                    <input class="radio active" id="about-in_rss-0" name="in_rss" type="radio" value="0" checked="checked">
-                    <label for="about-in_rss-0">No</label>
-                    <input class="radio" id="about-in_rss-1" name="in_rss" type="radio" value="1">
-                    <label for="about-in_rss-1">Yes</label>
+                    <input class="radio active" id="contact-in_rss-0" name="in_rss" type="radio" checked="checked" value="0">
+                    <label for="contact-in_rss-0">No</label>
+                    <input class="radio" id="contact-in_rss-1" name="in_rss" type="radio" value="1">
+                    <label for="contact-in_rss-1">Yes</label>
                 </div>
             </div>
             <div class="txp-form-field edit-section-searchable">
-                <div class="txp-form-field-label">Include this section in site search?&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></div>
+                <div class="txp-form-field-label">Searchable?&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
                 <div class="txp-form-field-value">
-                    <input class="radio" id="about-searchable-0" name="searchable" type="radio" value="0">
-                    <label for="about-searchable-0">No</label>
-                    <input class="radio active" id="about-searchable-1" name="searchable" type="radio" value="1" checked="checked">
-                    <label for="about-searchable-1">Yes</label>
+                    <input class="radio active" id="contact-searchable-0" name="searchable" type="radio" checked="checked" value="0">
+                    <label for="contact-searchable-0">No</label>
+                    <input class="radio" id="contact-searchable-1" name="searchable" type="radio" value="1">
+                    <label for="contact-searchable-1">Yes</label>
                 </div>
+            </div>
+            <div class="txp-form-field txp-form-field-textarea edit-section-description">
+                <div class="txp-form-field-label"><label for="section_description">Description&#160;<a class="pophelp" rel="help" target="_blank" href="#" role="button" title="Help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
+                <div class="txp-form-field-value"><textarea id="section_description" name="description" cols="64" rows="4" style="overflow: hidden; word-wrap: break-word; resize: none; height: 90px;"></textarea></div>
             </div>
             <p class="txp-edit-actions">
                 <a class="txp-button" href="../presentation-section.html">Cancel</a>
