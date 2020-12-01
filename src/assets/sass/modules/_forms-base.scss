@@ -106,7 +106,13 @@ textarea {
     height: 2.307692307692308em; // 30px / 13px
     padding: 0.30769230769231em; // 4px / 13px
     border: 1px solid var(--color-border);
-    border-radius: 0;
+
+    @if setup.$border-radius > 0 {
+        border-radius: setup.$border-radius;
+    } @else {
+        border-radius: 0;
+    }
+
     background: var(--color-background-form);
     /* 1 */
     appearance: none;

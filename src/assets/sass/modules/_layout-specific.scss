@@ -257,6 +257,11 @@ body.darkmode.login {
     padding: 1px 1em 0;
     border: 1px solid var(--color-border-light);
     border-top: 0;
+
+    @if setup.$border-radius > 0 {
+        border-radius: 0 0 setup.$border-radius setup.$border-radius;
+    }
+
     background: var(--color-background);
 
     @if not setup.$flat-theme {
