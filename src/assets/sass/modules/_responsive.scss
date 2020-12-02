@@ -143,18 +143,25 @@
      */
 
     .txp-save-zone {
-        position: inherit;
+        display: flex;
+        position: fixed;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        justify-content: space-between;
         margin: 0;
-        padding: 0;
+        padding: 1px 3em;
         border: 0;
+        border-top: 1px solid var(--color-border-light);
 
         @if not setup.$flat-theme {
-            box-shadow: none;
+            box-shadow: 0 -0.2em 0.25em hsla(0, 0%, 0%, 0.15);
         }
+    }
 
-        .txp-actions {
-            margin-bottom: 1em;
-        }
+    #page-article {
+        padding-bottom: 5em;
     }
 
     /**
@@ -552,5 +559,9 @@
         .title input {
             font-size: 1rem;
         }
+    }
+
+    .txp-save-zone {
+        padding: 1px 1em;
     }
 }
