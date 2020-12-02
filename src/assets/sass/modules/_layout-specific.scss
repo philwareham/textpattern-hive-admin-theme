@@ -39,6 +39,17 @@
 .txp-login {
     max-width: 20.30769230769231em; // 264px / 13px
     margin: 1em auto;
+    padding: 1em 2em 1px;
+
+    @if setup.$border-radius > 0 {
+        border-radius: 1em;
+    }
+
+    @if not setup.$flat-theme {
+        box-shadow: 0 0 1em hsla(0, 0%, 0%, 0.3);
+    }
+
+    text-align: center;
 }
 
 /**
@@ -56,6 +67,10 @@
         background: url("../img/textpattern.svg") no-repeat;
         background-size: 16.5em 3.375em;
         font-size: 16px;
+    }
+
+    [type="submit"] {
+        width: 100%;
     }
 }
 
