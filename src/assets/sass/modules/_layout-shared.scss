@@ -182,6 +182,14 @@ hr {
 
 .txp-search-input {
     max-width: calc(100% - 5.5rem);
+
+    @if setup.$border-radius > 0 {
+        border-radius: setup.$border-radius 0 0 setup.$border-radius;
+
+        [dir="rtl"] & {
+            border-radius: 0 setup.$border-radius setup.$border-radius 0;
+        }
+    }
 }
 
 .txp-search-clear {
