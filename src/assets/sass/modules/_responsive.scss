@@ -149,14 +149,19 @@
         right: 0;
         bottom: 0;
         left: 0;
+        align-items: center;
         justify-content: space-between;
         margin: 0;
-        padding: 1px 3em;
+        padding: 0.25em 3em;
         border: 0;
         border-top: 1px solid var(--color-border-light);
 
         @if not setup.$flat-theme {
             box-shadow: 0 -0.2em 0.25em hsla(0, 0%, 0%, 0.15);
+        }
+
+        > * {
+            margin: 0;
         }
     }
 
@@ -562,6 +567,6 @@
     }
 
     .txp-save-zone {
-        padding: 1px 1em;
+        padding: 0.25em 1em;
     }
 }
