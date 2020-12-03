@@ -264,7 +264,7 @@ body.darkmode.login {
  * </div>
  */
 
-.txp-save {
+.txp-save-button {
     position: relative;
 
     .spinner {
@@ -275,7 +275,7 @@ body.darkmode.login {
         border: 2px solid var(--color-button-gradient-from);
         border-radius: 50%;
         background-color: var(--color-button-gradient-from);
-        box-shadow: 0 0 0.5rem rgba(51, 51, 51, 0.5);
+        box-shadow: 0 0 0.5rem hsla(0, 0%, 0%, 0.3);
     }
 }
 
