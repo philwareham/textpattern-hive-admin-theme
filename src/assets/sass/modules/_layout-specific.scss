@@ -300,6 +300,7 @@ body.darkmode.login {
 
 .spinner-sticker {
     position: absolute;
+    z-index: 2;
     top: 50%;
     left: 50%;
     width: 16px;
@@ -308,6 +309,7 @@ body.darkmode.login {
     border: 2px solid var(--color-background);
     border-radius: 50%;
     background-color: var(--color-background);
+    font-size: 13px;
 
     .ui-icon {
         margin: 0;
