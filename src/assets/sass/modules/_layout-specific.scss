@@ -264,21 +264,6 @@ body.darkmode.login {
  * </div>
  */
 
-.txp-save-button {
-    position: relative;
-
-    .spinner {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -10px 0 0 -10px;
-        border: 2px solid var(--color-button-gradient-from);
-        border-radius: 50%;
-        background-color: var(--color-button-gradient-from);
-        box-shadow: 0 0 0.5rem hsla(0, 0%, 0%, 0.3);
-    }
-}
-
 .txp-save-zone {
     position: sticky;
     z-index: 999;
@@ -306,6 +291,30 @@ body.darkmode.login {
 @include setup.dark-mode {
     .txp-save-zone {
         background: var(--color-background-box);
+    }
+}
+
+.txp-save-button {
+    position: relative;
+}
+
+.spinner-sticker {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--color-background);
+    border-radius: 50%;
+    background-color: var(--color-background);
+
+    .ui-icon {
+        margin: 0;
+    }
+
+    @if not setup.$flat-theme {
+        box-shadow: 0 0 0.5em hsla(0, 0%, 0%, 0.5);
     }
 }
 
