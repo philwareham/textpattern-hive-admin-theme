@@ -260,14 +260,6 @@
         display: block;
     }
 
-    /**
-     * Non-fixed header on mobile layout (because mobile nav menu couldn't scroll otherwise).
-     */
-
-    .txp-header {
-        position: absolute;
-    }
-
     .txp-header h1,
     .txp-view-site {
         margin-top: 0.25em;
@@ -330,6 +322,7 @@
         top: 2.75em;
         right: 0;
         left: 0;
+        overflow-y: auto;
         background: var(--color-accent-background);
 
         @if not setup.$flat-theme {

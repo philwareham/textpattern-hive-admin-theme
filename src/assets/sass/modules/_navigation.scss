@@ -231,6 +231,7 @@ button.txp-nav-toggle {
     left: 0;
     flex: none;
     min-width: 12em;
+    overflow-y: auto;
     border: 1px solid;
 
     @if setup.$border-radius > 0 {
