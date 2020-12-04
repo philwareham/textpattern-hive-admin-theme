@@ -144,11 +144,51 @@
 
         <div class="txp-layout">
 
-            <div class="txp-layout-1col">
+            <div role="region" id="main_content" class="txp-layout-4col-3span">
                 <h1 class="txp-heading">Styles</h1>
-            </div>
+
+                <form id="style_form" method="post" action="#">
+                    <div class="txp-form-field name">
+                        <div class="txp-form-field-label"><label for="text">Style name</label></div>
+                        <div class="txp-form-field-value">
+                            <input class="input-medium" id="text" type="text" size="16" value="new_style">
+                        </div>
+                    </div>
+                    <div class="txp-form-field">
+                        <div class="txp-form-field-label"><label for="css">Style code</label></div>
+                        <div class="txp-form-field-value">
+                            <textarea class="code" id="css" name="css" cols="64" rows="24" dir="ltr">body {
+    color: #fff;
+    background: #000;
+}
+
+h1 {
+    font-weight: normal;
+}</textarea>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- /#main_content -->
 
             <div role="region" id="content_switcher" class="txp-layout-4col-alt">
+
+                <div class="txp-save-zone">
+                    <p class="txp-save">
+                        <span class="txp-save-button">
+                            <input class="publish" name="save" type="submit" value="Save" form="style_form">
+                        </span>
+                        <span class="txp-save-export">
+                            <input class="checkbox" id="export" name="export" type="checkbox" value="1">
+                            <label for="export">Export to disk</label>
+                        </span>
+                    </p>
+
+                    <p class="txp-actions">
+                        <a class="txp-new" href="#">Create new style</a>
+                        <a class="txp-clone" id="txp_clone" href="#">Duplicate</a>
+                    </p>
+                </div>
+
                 <section id="all_styles" class="txp-details" aria-labelledby="all_styles-label">
                     <h3 id="all_styles-label">All styles</h3>
                     <div role="group">
@@ -176,41 +216,6 @@
                     </div>
                 </section>
             </div><!-- /#content_switcher -->
-
-            <div role="region" id="main_content" class="txp-layout-4col-3span">
-                <form id="style_form" method="post" action="#">
-                    <p class="txp-actions txp-actions-inline">
-                        <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new style</a>
-                        <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
-                    </p>
-                    <div class="txp-form-field name">
-                        <div class="txp-form-field-label"><label for="text">Style name</label></div>
-                        <div class="txp-form-field-value">
-                            <input class="input-medium" id="text" type="text" size="16" value="new_style">
-                        </div>
-                    </div>
-                    <div class="txp-form-field">
-                        <div class="txp-form-field-label"><label for="css">Style code</label></div>
-                        <div class="txp-form-field-value">
-                            <textarea class="code" id="css" name="css" cols="64" rows="24" dir="ltr">body {
-    color: #fff;
-    background: #000;
-}
-
-h1 {
-    font-weight: normal;
-}</textarea>
-                        </div>
-                    </div>
-                    <p class="txp-save">
-                        <span class="txp-save-export">
-                            <input class="checkbox" id="export" name="export" type="checkbox" value="1">
-                            <label for="export">Export to disk</label>
-                        </span>
-                        <input class="publish" type="submit" value="Save">
-                    </p>
-                </form>
-            </div><!-- /#main_content -->
 
         </div><!-- /.txp-layout -->
     </main><!-- /txp-body -->
