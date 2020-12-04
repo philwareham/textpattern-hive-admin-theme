@@ -1,5 +1,13 @@
 @use "../setup";
 
+/**
+ * Screen size-specific elements.
+ */
+
+.screen-small {
+    display: none;
+}
+
 /* ==========================================================================
    Additional layout for devices < 768px
    ========================================================================== */
@@ -210,6 +218,18 @@
 
     body {
         padding: 4em 1em 0; // 64px + 16px
+    }
+
+    /**
+     * Screen size-specific elements.
+     */
+
+    .screen-small {
+        display: block; // TODO: use `display: revert` when browser support is widespread.
+    }
+
+    .screen-large {
+        display: none;
     }
 
     .setup,
