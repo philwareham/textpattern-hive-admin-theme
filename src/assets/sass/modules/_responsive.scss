@@ -143,7 +143,7 @@
     }
 
     /**
-     * Unsticky save button region.
+     * Bottom-affixed save button region.
      */
 
     .txp-save-zone {
@@ -170,10 +170,21 @@
         }
     }
 
+    .txp-save {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .txp-save-export {
+        margin-top: 0;
+    }
+
     #page-article,
     #page-page,
     #page-form,
-    #page-css {
+    #page-css,
+    #page-image-edit {
         padding-bottom: 4.25em;
     }
 

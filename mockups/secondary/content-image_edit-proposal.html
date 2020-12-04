@@ -16,7 +16,7 @@
     <script src="../../docs/assets/js/design-patterns.js"></script>
 
 </head>
-<body class="content" id="page-image">
+<body class="content" id="page-image-edit">
     <noscript>Please enable JavaScript in your browser to use this application.</noscript>
     <a class="txp-skip-link" href="#txp-main">Go to content</a>
     <script src="../../dist/hive/assets/js/darkmode.js"></script>
@@ -144,11 +144,9 @@
 
         <div class="txp-layout">
 
-            <div class="txp-layout-1col">
-                <h1 class="txp-heading">Edit image</h1>
-            </div>
-
             <div class="txp-layout-4col-3span">
+                <h1 class="txp-heading">Edit image</h1>
+
                 <form method="post" action="#">
                     <p>
                         <button style="margin-bottom:0.33em;" name="img_crop"><span class="ui-icon ui-extra-icon-crop"></span> Crop</button>
@@ -244,8 +242,21 @@
             </div><!-- /.txp-layout-4col-3span -->
 
             <div class="txp-layout-4col">
-
                 <form id="image_details_form" method="post" action="#">
+
+                    <div class="txp-save-zone">
+                        <p class="txp-save">
+                            <span class="txp-save-button">
+                                <input class="publish" name="save" type="submit" value="Save">
+                            </span>
+                        </p>
+
+                        <p class="txp-actions">
+                            <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-medium ui-icon-copy screen-small" title="Duplicate">Duplicate</span> <span class="screen-large">Duplicate</span></a>
+                            <a class="txp-clone error" id="txp_clone" href="#"><span class="ui-icon ui-icon-medium ui-icon-trash screen-small" title="Delete permanently">Delete permanently</span> <span class="screen-large">Delete permanently</span></a>
+                        </p>
+                    </div>
+
                     <section class="txp-details" id="image-details" aria-labelledby="image-details-label">
                         <h3 id="image-details-label">Image details</h3>
                         <div role="group">
@@ -289,10 +300,6 @@
                                     <input type="submit" value="Crop">
                                 </div>
                             </div>
-                            <p class="txp-edit-actions">
-                                <a class="txp-button" href="../content-image.html">Go back</a>
-                                <input class="publish" type="submit" value="Save">
-                            </p>
                         </div>
                     </section>
                 </form>

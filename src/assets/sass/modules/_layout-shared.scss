@@ -886,10 +886,91 @@ span.spinner {
 }
 
 /**
+ * Sticky save button region.
+ *
+ * Example HTML:
+ *
+ * <div class="txp-save-zone">
+ *     <p class="txp-save">
+ *         <span class="txp-save-button">
+ *             <input class="publish" type="submit">
+ *             <span class="spinner-sticker"><span class="spinner ui-icon ui-icon-refresh"></span></span>
+ *         </span>
+ *         <span class="txp-save-export">
+ *             <input class="checkbox" type="checkbox">
+ *             <label>Export to disk</label>
+ *         </span>
+ *     </p>
+ *     <p class="txp-actions">
+ *         <a class="txp-new"></a>
+ *         <a class="txp-clone"></a>
+ *     </p>
+ * </div>
+ */
+
+.txp-save-zone {
+    position: sticky;
+    z-index: 999;
+    top: 2.75em;
+    margin: -1.25em 0 1.75em;
+    padding: 1px 1em 0;
+    border: 1px solid var(--color-border-light);
+    border-top: 0;
+
+    @if setup.$border-radius > 0 {
+        border-radius: 0 0 setup.$border-radius setup.$border-radius;
+    }
+
+    background: var(--color-background);
+
+    @if not setup.$flat-theme {
+        box-shadow: 0 0.1em 0.125em hsla(0, 0%, 0%, 0.15);
+    }
+
+    .txp-actions {
+        margin-bottom: 0.5em;
+    }
+}
+
+@include setup.dark-mode {
+    .txp-save-zone {
+        background: var(--color-background-box);
+    }
+}
+
+.txp-save-button {
+    position: relative;
+    margin-inline-end: 1em;
+}
+
+.spinner-sticker {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--color-background);
+    border-radius: 50%;
+    background-color: var(--color-background);
+    font-size: 13px;
+
+    .ui-icon {
+        margin: 0;
+    }
+
+    @if not setup.$flat-theme {
+        box-shadow: 0 0 0.5em hsla(0, 0%, 0%, 0.5);
+    }
+}
+
+/**
  * Save export checkbox region on certain presentation panels.
  */
 
 .txp-save-export {
     display: inline-block;
-    margin: 0 1em;
+    margin-top: 0.5em;
+    margin-inline-end: 1em;
 }
