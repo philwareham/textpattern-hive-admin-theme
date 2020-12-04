@@ -149,6 +149,7 @@
         right: 0;
         bottom: 0;
         left: 0;
+        flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
         margin: 0;
@@ -166,7 +167,7 @@
     }
 
     #page-article {
-        padding-bottom: 4em;
+        padding-bottom: 4.25em;
     }
 
     /**
