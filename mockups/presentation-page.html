@@ -147,6 +147,18 @@
             <div role="region" id="main_content" class="txp-layout-4col-3span">
                 <h1 class="txp-heading">Pages</h1>
 
+                <form method="post" action="index.php">
+                    <div class="txp-form-field edit-skin">
+                        <div class="txp-form-field-label"><label for="skin">Theme</label></div>
+                        <div class="txp-form-field-value">
+                            <select name="skin" id="skin" data-submit-on="change">
+                                <option value="hive-framework-0.0.8" dir="auto" selected="selected">Bootstrap blog theme (1.0.0-beta.2)</option>
+                                <option value="four-point-nine" dir="auto">Four Point Nine (4.9.0)</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+
                 <form id="page_form" method="post" action="#">
                     <div class="txp-form-field name">
                         <div class="txp-form-field-label"><label for="text">Page name</label></div>
@@ -178,6 +190,10 @@
                     <p class="txp-save">
                         <span class="txp-save-button">
                             <input class="publish" name="save" type="submit" value="Save">
+                        </span>
+                        <span class="txp-save-export">
+                            <input class="checkbox" id="export" name="export" type="checkbox" value="1">
+                            <label for="export">Export to disk</label>
                         </span>
                     </p>
 

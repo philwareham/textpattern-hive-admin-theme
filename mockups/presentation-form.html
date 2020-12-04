@@ -144,11 +144,76 @@
 
         <div class="txp-layout">
 
-            <div class="txp-layout-1col">
+            <div role="region" id="main_content" class="txp-layout-4col-3span">
                 <h1 class="txp-heading">Forms</h1>
-            </div>
+
+                <form id="form_form" action="#" method="post">
+                    <div class="txp-form-field name">
+                        <div class="txp-form-field-label"><label for="text">Form name</label></div>
+                        <div class="txp-form-field-value">
+                            <input class="input-medium" id="text" type="text" size="16" disabled="disabled" value="default">
+                        </div>
+                    </div>
+                    <div class="txp-form-field type">
+                        <div class="txp-form-field-label"><label for="type">Form type</label></div>
+                        <div class="txp-form-field-value">
+                            <select id="type" name="type" disabled="disabled">
+                                <option value="">&#160;</option>
+                                <option value="article" selected="selected">article</option>
+                                <option value="category">category</option>
+                                <option value="comment">comment</option>
+                                <option value="file">file</option>
+                                <option value="link">link</option>
+                                <option value="misc">misc</option>
+                                <option value="section">section</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="txp-form-field">
+                        <div class="txp-form-field-label"><label for="form">Form code</label> <span class="txp-textarea-options"><a class="txp-tagbuilder-dialog" id="jquery-ui-dialog-link" href="#"><span class="ui-icon ui-extra-icon-code"></span> Tag builder</a></span></div>
+                        <div class="txp-form-field-value">
+                            <textarea class="code" id="form" name="Form" cols="64" rows="24" dir="ltr">&lt;txp:if_individual_article&gt;
+    &lt;h1 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h1&gt;
+&lt;txp:else /&gt;
+    &lt;h3 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h3&gt;
+&lt;/txp:if_individual_article&gt;
+
+&lt;p class=&quot;published&quot;&gt;&lt;txp:posted /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;entry-content&quot;&gt;
+    &lt;txp:body /&gt;
+&lt;/div&gt;
+
+&lt;address class=&quot;vcard author&quot;&gt;&amp;#8212; &lt;span class=&quot;fn&quot;&gt;&lt;txp:author /&gt;&lt;/span&gt;&lt;/address&gt;
+
+&lt;p class=&quot;tags&quot;&gt;&lt;txp:category1 title=&quot;1&quot; link=&quot;1&quot; /&gt;, &lt;txp:category2 title=&quot;1&quot; link=&quot;1&quot; /&gt;&lt;/p&gt;
+
+&lt;txp:comments_invite wraptag=&quot;p&quot; /&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;txp:image id=&quot;1&quot; /&gt;&lt;/div&gt;</textarea>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- /#main_content -->
 
             <div role="region" id="content_switcher" class="txp-layout-4col-alt">
+
+                <div class="txp-save-zone">
+                    <p class="txp-save">
+                        <span class="txp-save-button">
+                            <input class="publish" name="save" type="submit" value="Save">
+                        </span>
+                        <span class="txp-save-export">
+                            <input class="checkbox" id="export" name="export" type="checkbox" value="1">
+                            <label for="export">Export to disk</label>
+                        </span>
+                    </p>
+
+                    <p class="txp-actions">
+                        <a class="txp-new" href="#">Create new form</a>
+                        <a class="txp-clone" id="txp_clone" href="#">Duplicate</a>
+                    </p>
+                </div>
 
                 <p class="txp-actions">
                     <a class="txp-expand-all" href="#" aria-controls="allforms_form"><span class="ui-icon ui-icon-arrowthickstop-1-s"></span> Expand all</a>
@@ -205,68 +270,6 @@
                     </div>
                 </form>
             </div><!-- /#content_switcher -->
-
-            <div role="region" id="main_content" class="txp-layout-4col-3span">
-                <form id="form_form" action="#" method="post">
-                    <p class="txp-actions txp-actions-inline">
-                        <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new form</a>
-                        <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
-                    </p>
-                    <div class="txp-form-field name">
-                        <div class="txp-form-field-label"><label for="text">Form name</label></div>
-                        <div class="txp-form-field-value">
-                            <input class="input-medium" id="text" type="text" size="16" disabled="disabled" value="default">
-                        </div>
-                    </div>
-                    <div class="txp-form-field type">
-                        <div class="txp-form-field-label"><label for="type">Form type</label></div>
-                        <div class="txp-form-field-value">
-                            <select id="type" name="type" disabled="disabled">
-                                <option value="">&#160;</option>
-                                <option value="article" selected="selected">article</option>
-                                <option value="category">category</option>
-                                <option value="comment">comment</option>
-                                <option value="file">file</option>
-                                <option value="link">link</option>
-                                <option value="misc">misc</option>
-                                <option value="section">section</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="txp-form-field">
-                        <div class="txp-form-field-label"><label for="form">Form code</label> <span class="txp-textarea-options"><a class="txp-tagbuilder-dialog" id="jquery-ui-dialog-link" href="#"><span class="ui-icon ui-extra-icon-code"></span> Tag builder</a></span></div>
-                        <div class="txp-form-field-value">
-                            <textarea class="code" id="form" name="Form" cols="64" rows="24" dir="ltr">&lt;txp:if_individual_article&gt;
-    &lt;h1 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h1&gt;
-&lt;txp:else /&gt;
-    &lt;h3 class=&quot;entry-title&quot;&gt;&lt;txp:permlink&gt;&lt;txp:title /&gt;&lt;/txp:permlink&gt;&lt;/h3&gt;
-&lt;/txp:if_individual_article&gt;
-
-&lt;p class=&quot;published&quot;&gt;&lt;txp:posted /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;entry-content&quot;&gt;
-    &lt;txp:body /&gt;
-&lt;/div&gt;
-
-&lt;address class=&quot;vcard author&quot;&gt;&amp;#8212; &lt;span class=&quot;fn&quot;&gt;&lt;txp:author /&gt;&lt;/span&gt;&lt;/address&gt;
-
-&lt;p class=&quot;tags&quot;&gt;&lt;txp:category1 title=&quot;1&quot; link=&quot;1&quot; /&gt;, &lt;txp:category2 title=&quot;1&quot; link=&quot;1&quot; /&gt;&lt;/p&gt;
-
-&lt;txp:comments_invite wraptag=&quot;p&quot; /&gt;
-
-&lt;div class=&quot;divider&quot;&gt;&lt;txp:image id=&quot;1&quot; /&gt;&lt;/div&gt;</textarea>
-                        </div>
-                    </div>
-                    <p class="txp-save">
-                        <span class="txp-save-export">
-                            <input class="checkbox" id="export" name="export" type="checkbox" value="1">
-                            <label for="export">Export to disk</label>
-                        </span>
-                        <input class="publish" type="submit" value="Save">
-                        <span class="spinner ui-icon ui-icon-refresh"></span>
-                    </p>
-                </form>
-            </div><!-- /#main_content -->
 
             <!-- Tag builder (via jQuery UI dialog panel) -->
             <div class="txp-tagbuilder-container" id="jquery-ui-dialog" title="Tag builder" aria-label="Tag builder">
