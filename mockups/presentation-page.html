@@ -144,35 +144,10 @@
 
         <div class="txp-layout">
 
-            <div class="txp-layout-1col">
-                <h1 class="txp-heading">Pages</h1>
-            </div>
-
-            <div role="region" id="content_switcher" class="txp-layout-4col-alt">
-                <section id="all_pages" class="txp-details" aria-labelledby="all_pages-label">
-                    <h3 id="all_pages-label">All pages</h3>
-                    <div role="group">
-                        <ul class="switcher-list">
-                            <li><a href="#">archive</a></li>
-                            <li><a href="#">default</a></li>
-                            <li><a href="#">error_default</a></li>
-                            <li class="active">
-                                <a href="#">new_page</a>
-                                <form method="post" action="#" onsubmit="return confirm('Really delete?');">
-                                    <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </div><!-- /#content_switcher -->
-
             <div role="region" id="main_content" class="txp-layout-4col-3span">
+                <h1 class="txp-heading">Pages</h1>
+
                 <form id="page_form" method="post" action="#">
-                    <p class="txp-actions txp-actions-inline">
-                        <a class="txp-new" href="#"><span class="ui-icon ui-extra-icon-new-document"></span> Create new page</a>
-                        <a class="txp-clone" id="txp_clone" href="#"><span class="ui-icon ui-icon-copy"></span> Duplicate</a>
-                    </p>
                     <div class="txp-form-field name">
                         <div class="txp-form-field-label"><label for="text">Page name</label></div>
                         <div class="txp-form-field-value">
@@ -194,11 +169,42 @@
 &lt;/html&gt;</textarea>
                         </div>
                     </div>
-                    <p class="txp-save">
-                        <input class="publish" type="submit" value="Save" name="save">
-                    </p>
+
                 </form>
             </div><!-- /#main_content -->
+
+            <div role="region" id="content_switcher" class="txp-layout-4col-alt">
+                <div class="txp-save-zone">
+                    <p class="txp-save">
+                        <span class="txp-save-button">
+                            <input class="publish" name="save" type="submit" value="Save">
+                        </span>
+                    </p>
+
+                    <p class="txp-actions">
+                        <a class="txp-new" href="#">Create new page</a>
+                        <a class="txp-clone" id="txp_clone" href="#">Duplicate</a>
+                    </p>
+                </div>
+
+                <section id="all_pages" class="txp-details" aria-labelledby="all_pages-label">
+                    <h3 id="all_pages-label">All pages</h3>
+                    <div role="group">
+                        <ul class="switcher-list">
+                            <li><a href="#">archive</a></li>
+                            <li><a href="#">default</a></li>
+                            <li><a href="#">error_default</a></li>
+                            <li class="active">
+                                <a href="#">new_page</a>
+                                <form method="post" action="#" onsubmit="return confirm('Really delete?');">
+                                    <button class="destroy" type="submit" title="Delete" aria-label="Delete"><span class="ui-icon ui-icon-close">Delete</span></button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div><!-- /#content_switcher -->
+
 
             <!-- Tag builder (via jQuery UI dialog panel) -->
             <div class="txp-tagbuilder-container" id="jquery-ui-dialog" title="Tag builder" aria-label="Tag builder">
