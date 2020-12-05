@@ -176,8 +176,13 @@
         align-items: center;
     }
 
+    .txp-save-button {
+        margin-inline-end: 0;
+    }
+
     .txp-save-export {
         margin-top: 0;
+        margin-inline-end: 1em;
     }
 
     #page-article,

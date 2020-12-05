@@ -400,18 +400,6 @@ hr {
 }
 
 /**
- * AJAX spinners.
- *
- * Example HTML:
- *
- * <span class="spinner ui-icon ui-icon-refresh"></span>
- */
-
-span.spinner {
-    animation: spinning linear 1s infinite;
-}
-
-/**
  * Parent container for multi-edit `select` widget at bottom of listings.
  *
  * Appears on:
@@ -972,5 +960,16 @@ span.spinner {
 .txp-save-export {
     display: inline-block;
     margin-top: 0.5em;
-    margin-inline-end: 1em;
+}
+
+/**
+ * AJAX spinners.
+ *
+ * Example HTML:
+ *
+ * <span class="spinner ui-icon ui-icon-refresh"></span>
+ */
+
+span.spinner {
+    animation: spinning linear 1s infinite;
 }
