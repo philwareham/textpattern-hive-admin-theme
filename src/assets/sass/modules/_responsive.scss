@@ -250,7 +250,16 @@
 
     .setup,
     .login {
-        padding: 1em 1em 0; // 16px
+        padding: 0 1em; // 16px
+    }
+
+    .txp-login {
+        margin: 1em auto;
+        padding: 1px 0;
+
+        @if not setup.$flat-theme {
+            box-shadow: none;
+        }
     }
 
     /**
