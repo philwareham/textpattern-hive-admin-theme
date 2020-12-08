@@ -479,13 +479,13 @@ rules:
   selector-max-empty-lines: 0
 
   # Limit the number of id selectors in a selector.
-  selector-max-id: 1
+  selector-max-id: 2
 
   # Limit the number of pseudo-classes in a selector.
   selector-max-pseudo-class: 3
 
   # Limit the specificity of selectors.
-  selector-max-specificity: 1,2,1
+  selector-max-specificity: 2,2,1
 
   # Limit the number of type in a selector.
   selector-max-type: 3
@@ -1072,9 +1072,6 @@ rules:
 
   # Disallow duplicate mixins within a stylesheet.
   scss/no-duplicate-mixins: true
-
-  # Disallows the use of global function names, as these global functions are now located inside built-in Sass modules.
-  scss/no-global-function-names: true
 
   # Disallow linebreaks after Sass operators.
   scss/operator-no-newline-after: true
