@@ -28,6 +28,11 @@
         padding: 1em 3em 0; // 13px + 39px
     }
 
+    #messagepane {
+        right: 3em;
+        left: 3em;
+    }
+
     /**
      * Grid column cell changes at 1st breakpoint downwards.
      *
@@ -157,8 +162,7 @@
         flex-direction: row-reverse;
         align-items: flex-start;
         justify-content: space-between;
-        height: 8vh;
-        min-height: 5rem;
+        height: 4.5rem;
         margin: 0;
         padding: 0.25em 3em;
         border: 0;
@@ -179,10 +183,6 @@
         align-items: center;
     }
 
-    .txp-save-button {
-        margin-inline-end: 0;
-    }
-
     .txp-save-export {
         margin-top: 0;
         margin-inline-end: 1em;
@@ -192,10 +192,10 @@
     #page-page,
     #page-form,
     #page-css {
-        padding-bottom: max(8vh, 5rem);
+        padding-bottom: 4.5rem;
 
         #messagepane {
-            bottom: max(8vh, 5rem);
+            bottom: 4.5rem;
         }
     }
 
@@ -242,6 +242,16 @@
         padding: 4em 1em 0; // 64px + 16px
     }
 
+    .setup,
+    .login {
+        padding: 0 1em; // 16px
+    }
+
+    #messagepane {
+        right: 1em;
+        left: 1em;
+    }
+
     /**
      * Screen size-specific elements.
      */
@@ -252,11 +262,6 @@
 
     .screen-large {
         display: none;
-    }
-
-    .setup,
-    .login {
-        padding: 0 1em; // 16px
     }
 
     .txp-login {

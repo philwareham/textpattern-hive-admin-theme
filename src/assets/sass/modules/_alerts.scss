@@ -121,7 +121,7 @@ li.information {
  *
  * Example HTML:
  *
- * <div class="messagepane" id="messagepane">
+ * <div id="messagepane">
  *     <span class="messageflash error" role="alert" aria-live="assertive">
  *         <span class="ui-icon ui-icon-alert"></span>
  *         Username not found.
@@ -133,14 +133,9 @@ li.information {
 #messagepane {
     position: fixed;
     z-index: 1000;
+    right: 4%;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-
-.messagepane {
-    max-width: 100%;
+    left: 4%;
 
     .messageflash {
         display: inline-block;
@@ -187,7 +182,7 @@ li.information {
 }
 
 @include setup.dark-mode {
-    .messagepane .messageflash {
+    #messagepane .messageflash {
         border: 1px solid var(--color-border-extra-dark);
         border-bottom: 0;
 
@@ -251,7 +246,7 @@ li.information {
  * System message flipped layout for RTL languages.
  */
 
-[dir="rtl"] .messagepane .messageflash {
+[dir="rtl"] #messagepane .messageflash {
     padding: 0.53846153846154em 0.75em 0.53846153846154em 3.53846153846154em;
     text-align: right;
 }
