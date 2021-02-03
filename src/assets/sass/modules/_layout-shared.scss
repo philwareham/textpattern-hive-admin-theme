@@ -926,6 +926,25 @@ hr {
     }
 }
 
+/**
+ * Save export checkbox region on certain presentation panels.
+ */
+
+.txp-save {
+    display: flex;
+    align-items: center;
+}
+
+.txp-save-export {
+    display: inline-block;
+    order: 2;
+    margin-inline-start: 1em;
+}
+
+/**
+ * Save buttons with AJAX spinners.
+ */
+
 .txp-save-button {
     position: relative;
 }
@@ -951,29 +970,6 @@ hr {
         box-shadow: 0 0 0.5em hsla(0, 0%, 0%, 0.5);
     }
 }
-
-/**
- * Save export checkbox region on certain presentation panels.
- */
-
-.txp-save {
-    display: flex;
-    align-items: center;
-}
-
-.txp-save-export {
-    display: inline-block;
-    order: 2;
-    margin-inline-start: 1em;
-}
-
-/**
- * AJAX spinners.
- *
- * Example HTML:
- *
- * <span class="spinner ui-icon ui-icon-refresh"></span>
- */
 
 span.spinner {
     animation: spinning linear 1s infinite;
