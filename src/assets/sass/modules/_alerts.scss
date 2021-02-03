@@ -73,7 +73,7 @@ li.information {
  */
 
 .alert-block {
-    padding: 0.30769230769231em 1em; // 4px / 13px
+    padding: 0.30769230769231em 0.615384615384615em; // 4px / 13px + 8px / 13px
     clear: both;
     border: 1px solid;
 
@@ -143,7 +143,7 @@ li.information {
         box-sizing: border-box;
         max-width: 100%;
         margin: 0 auto;
-        padding: 0.53846153846154em 3.53846153846154em 0.53846153846154em 0.75em;
+        padding: 0.30769230769231em 3.53846153846154em 0.30769230769231em 0.615384615384615em;
 
         @if setup.$border-radius > 0 {
             border-radius: setup.$border-radius setup.$border-radius 0 0;
