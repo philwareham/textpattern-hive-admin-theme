@@ -70,7 +70,7 @@
     padding: 0;
 
     @if not setup.$flat-theme {
-        border-color: var(--color-border-light);
+        border-color: var(--clr-brdr-lite);
     }
 
     outline: 0;
@@ -95,7 +95,7 @@
         cursor: pointer;
 
         a {
-            color: var(--color-text);
+            color: var(--clr-text);
             text-decoration: none;
         }
 
@@ -130,7 +130,7 @@
 
     .ui-state-focus,
     .ui-state-active {
-        background-color: var(--color-selected);
+        background-color: var(--clr-selected);
     }
 
     // left-aligned

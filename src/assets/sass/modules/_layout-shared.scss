@@ -62,7 +62,7 @@ hr {
     /* 2 */
     overflow: visible;
     border: 0; // remove the default `hr` border
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--clr-brdr);
 
     &.secondary {
         margin: 0.33em 0;
@@ -134,7 +134,7 @@ hr {
 }
 
 .txp-dropdown-toggle-all {
-    border-bottom: 1px solid var(--color-border-light);
+    border-bottom: 1px solid var(--clr-brdr-lite);
 }
 
 /**
@@ -424,8 +424,8 @@ hr {
     bottom: 0;
     margin: 1em 0 0;
     padding: 0.3076923em 0; // 4px / 13px
-    background: var(--color-background);
-    box-shadow: 0 -1em 1em -0.5em var(--color-background);
+    background: var(--clr-bkgd);
+    box-shadow: 0 -1em 1em -0.5em var(--clr-bkgd);
 }
 
 /**
@@ -526,7 +526,7 @@ hr {
 .text-section {
     margin-top: 3em;
     padding-top: 3em;
-    border-top: 2px solid var(--color-border);
+    border-top: 2px solid var(--clr-brdr);
 }
 
 /**
@@ -631,7 +631,7 @@ hr {
     padding: 1em 1em 1px;
     clear: both;
     /* 1 */
-    background: var(--color-background-box);
+    background: var(--clr-bkgd-box);
 
     h2 {
         /* 2 */
@@ -655,7 +655,7 @@ hr {
 .txp-details .txp-edit-actions {
     margin: 1em -1em;
     padding: 1em 1em 0;
-    border-top: 2px solid var(--color-background);
+    border-top: 2px solid var(--clr-bkgd);
 }
 
 
@@ -902,14 +902,14 @@ hr {
     top: 2.75em;
     margin: -1.25em 0 1.75em;
     padding: 1px 1em 0;
-    border: 1px solid var(--color-border-light);
+    border: 1px solid var(--clr-brdr-lite);
     border-top: 0;
 
     @if setup.$border-radius > 0 {
         border-radius: 0 0 setup.$border-radius setup.$border-radius;
     }
 
-    background: var(--color-background);
+    background: var(--clr-bkgd);
 
     @if not setup.$flat-theme {
         box-shadow: 0 0.1em 0.125em hsla(0, 0%, 0%, 0.15);
@@ -922,7 +922,7 @@ hr {
 
 @include setup.dark-mode {
     .txp-save-zone {
-        background: var(--color-background-box);
+        background: var(--clr-bkgd-box);
     }
 }
 
@@ -957,9 +957,9 @@ hr {
     width: 16px;
     height: 16px;
     margin: -10px 0 0 -10px;
-    border: 2px solid var(--color-background);
+    border: 2px solid var(--clr-bkgd);
     border-radius: 50%;
-    background-color: var(--color-background);
+    background-color: var(--clr-bkgd);
     font-size: 13px;
 
     .ui-icon {

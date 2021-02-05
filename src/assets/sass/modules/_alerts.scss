@@ -15,35 +15,35 @@
  */
 
 li.success {
-    background: var(--color-success-background);
+    background: var(--clr-success-bkgd);
 }
 
 .success:not(li) {
-    color: var(--color-success-text);
+    color: var(--clr-success-text);
 }
 
 li.warning {
-    background: var(--color-warning-background);
+    background: var(--clr-warning-bkgd);
 }
 
 .warning:not(li) {
-    color: var(--color-warning-text);
+    color: var(--clr-warning-text);
 }
 
 li.error {
-    background: var(--color-error-background);
+    background: var(--clr-error-bkgd);
 }
 
 .error:not(li) {
-    color: var(--color-error-text);
+    color: var(--clr-error-text);
 }
 
 li.information {
-    background: var(--color-info-background);
+    background: var(--clr-info-bkgd);
 }
 
 .information:not(li) {
-    color: var(--color-info-text);
+    color: var(--clr-info-text);
 }
 
 /**
@@ -60,7 +60,7 @@ li.information {
  */
 
 .highlight {
-    background: var(--color-highlight-box);
+    background: var(--clr-hilite-box);
 }
 
 /**
@@ -82,23 +82,23 @@ li.information {
     }
 
     &.success {
-        border-color: var(--color-success-border);
-        background: var(--color-success-background);
+        border-color: var(--clr-success-brdr);
+        background: var(--clr-success-bkgd);
     }
 
     &.warning {
-        border-color: var(--color-warning-border);
-        background: var(--color-warning-background);
+        border-color: var(--clr-warning-brdr);
+        background: var(--clr-warning-bkgd);
     }
 
     &.error {
-        border-color: var(--color-error-border);
-        background: var(--color-error-background);
+        border-color: var(--clr-error-brdr);
+        background: var(--clr-error-bkgd);
     }
 
     &.information {
-        border-color: var(--color-info-border);
-        background: var(--color-info-background);
+        border-color: var(--clr-info-brdr);
+        background: var(--clr-info-bkgd);
     }
 }
 
@@ -150,7 +150,7 @@ li.information {
         }
 
         overflow-wrap: break-word;
-        color: var(--color-text-inversed);
+        color: var(--clr-text-inversed);
 
         @if not setup.$flat-theme {
             box-shadow: var(--standard-shadow);
@@ -159,20 +159,20 @@ li.information {
         text-align: left;
 
         &.success {
-            background: var(--color-success-text);
+            background: var(--clr-success-text);
         }
 
         &.warning {
-            background: var(--color-warning-text);
+            background: var(--clr-warning-text);
         }
 
         &.error {
-            background: var(--color-error-text);
+            background: var(--clr-error-text);
         }
     }
 
     a {
-        color: var(--color-text-inversed);
+        color: var(--clr-text-inversed);
     }
 
     code {
@@ -183,22 +183,22 @@ li.information {
 
 @include setup.dark-mode {
     #messagepane .messageflash {
-        border: 1px solid var(--color-border-extra-dark);
+        border: 1px solid var(--clr-brdr-x-dark);
         border-bottom: 0;
 
         &.success {
-            background: var(--color-success-background);
-            color: var(--color-success-text);
+            background: var(--clr-success-bkgd);
+            color: var(--clr-success-text);
         }
 
         &.warning {
-            background: var(--color-warning-background);
-            color: var(--color-warning-text);
+            background: var(--clr-warning-bkgd);
+            color: var(--clr-warning-text);
         }
 
         &.error {
-            background: var(--color-error-background);
-            color: var(--color-error-text);
+            background: var(--clr-error-bkgd);
+            color: var(--clr-error-text);
         }
     }
 }

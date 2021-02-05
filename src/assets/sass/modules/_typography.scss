@@ -35,7 +35,7 @@ h4,
 h5,
 h6 {
     clear: both;
-    color: var(--color-text-heading);
+    color: var(--clr-text-heading);
 }
 
 /**
@@ -128,7 +128,7 @@ blockquote {
     margin: 1em 0;
     padding: 0;
     padding-inline-start: 1em;
-    border-inline-start: 3px solid var(--color-border);
+    border-inline-start: 3px solid var(--clr-brdr);
 }
 
 /**
@@ -155,8 +155,8 @@ var {
         border-radius: setup.$border-radius / 2;
     }
 
-    background: var(--color-selected);
-    color: var(--color-text);
+    background: var(--clr-selected);
+    color: var(--clr-text);
 }
 
 /**
@@ -178,13 +178,13 @@ code,
 kbd,
 samp {
     padding: 1px 0.23076923076923em; // 3px / 13px
-    border: 1px solid var(--color-border-extra-light);
+    border: 1px solid var(--clr-brdr-x-lite);
 
     @if setup.$border-radius > 0 {
         border-radius: setup.$border-radius / 2;
     }
 
-    background: var(--color-background-box);
+    background: var(--clr-bkgd-box);
 }
 
 /**
@@ -200,13 +200,13 @@ pre {
     padding: 1em; // 13px
     /* 1 */
     overflow-x: auto;
-    border: 1px solid var(--color-border-extra-light);
+    border: 1px solid var(--clr-brdr-x-lite);
 
     @if setup.$border-radius > 0 {
         border-radius: setup.$border-radius / 2;
     }
 
-    background: var(--color-background-box);
+    background: var(--clr-bkgd-box);
     /* 2 */
     word-wrap: normal;
     /* 3 */
@@ -278,7 +278,7 @@ figcaption,
 tfoot,
 .footnote,
 .txp-form-field-instructions {
-    color: var(--color-text-footnote);
+    color: var(--clr-text-footnote);
 }
 
 figcaption {

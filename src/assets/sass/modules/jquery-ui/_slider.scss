@@ -21,23 +21,23 @@
 .ui-slider {
     position: relative;
     box-sizing: border-box;
-    border-color: var(--color-border);
-    background-color: var(--color-background-box);
+    border-color: var(--clr-brdr);
+    background-color: var(--clr-bkgd-box);
     text-align: start;
 
     &:hover {
-        border-color: var(--color-border-extra-dark);
+        border-color: var(--clr-brdr-x-dark);
     }
 
     .ui-slider-handle {
-        @include setup.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
+        @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
 
         position: absolute;
         z-index: 2;
         box-sizing: border-box;
         width: 20px;
         height: 20px;
-        border: 1px solid var(--color-border-extra-dark);
+        border: 1px solid var(--clr-brdr-x-dark);
         border-radius: 50%;
 
         @if not setup.$flat-theme {
@@ -48,7 +48,7 @@
         touch-action: manipulation;
 
         &:hover {
-            border-color: var(--color-border-extra-dark);
+            border-color: var(--clr-brdr-x-dark);
             filter: brightness(1.05);
         }
 
@@ -62,21 +62,21 @@
         position: absolute;
         z-index: 1;
         border: 0;
-        background: var(--color-gradient-to);
+        background: var(--clr-grad-to);
         font-size: 10px;
     }
 }
 
 @include setup.dark-mode {
     .ui-slider {
-        border-color: var(--color-border-extra-dark);
+        border-color: var(--clr-brdr-x-dark);
 
         &:hover {
-            border-color: var(--color-border-extra-light);
+            border-color: var(--clr-brdr-x-lite);
         }
 
         .ui-slider-handle {
-            border-color: var(--color-border-extra-light);
+            border-color: var(--clr-brdr-x-lite);
         }
     }
 }

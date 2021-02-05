@@ -18,7 +18,7 @@
  */
 
 .txp-header {
-    @include setup.gradient-linear(var(--color-accent-gradient-from), var(--color-accent-gradient-to));
+    @include setup.gradient-linear(var(--clr-accent-grad-from), var(--clr-accent-grad-to));
 
     display: flex;
     position: fixed;
@@ -28,8 +28,8 @@
     left: 0;
     height: 2.69230769230769em; // 35px / 13px
     padding: 0 4%;
-    border-top: 1px solid var(--color-accent-gradient-to);
-    border-bottom: 1px solid var(--color-accent-dark);
+    border-top: 1px solid var(--clr-accent-grad-to);
+    border-bottom: 1px solid var(--clr-accent-dark);
 
     @if not setup.$flat-theme {
         box-shadow: 0 0.2em 0.25em hsla(0, 0%, 0%, 0.15);
@@ -103,12 +103,12 @@
     span {
         display: block;
         overflow: hidden;
-        color: var(--color-text-button);
+        color: var(--clr-text-button);
         text-overflow: ellipsis;
     }
 
     a {
-        color: var(--color-text-button);
+        color: var(--clr-text-button);
         font-weight: bold;
     }
 }
@@ -139,7 +139,7 @@
         width: 1.5em;
         height: 1.5em;
         transform: translateY(-50%);
-        border: 1px solid var(--color-accent-dark);
+        border: 1px solid var(--clr-accent-dark);
         border-radius: 0.75em;
         background: hsla(0, 0%, 100%, 0.6);
         text-align: center;
@@ -149,7 +149,7 @@
         }
 
         &:focus {
-            border-color: var(--color-link-focus);
+            border-color: var(--clr-link-focus);
             outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
     }

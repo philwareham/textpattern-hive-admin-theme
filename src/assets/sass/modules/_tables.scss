@@ -21,7 +21,7 @@
     overflow-x: auto;
 
     &:focus {
-        outline: thin solid var(--color-link-focus);
+        outline: thin solid var(--clr-link-focus);
     }
 }
 
@@ -32,7 +32,7 @@
 table {
     border-spacing: 0;
     border-collapse: collapse;
-    background-color: var(--color-background);
+    background-color: var(--clr-bkgd);
 }
 
 /**
@@ -49,21 +49,21 @@ caption {
  */
 
 tr {
-    border: 1px solid var(--color-border-light);
+    border: 1px solid var(--clr-brdr-lite);
 }
 
 thead th {
-    background-color: var(--color-gradient-from);
+    background-color: var(--clr-grad-from);
 }
 
 @include setup.dark-mode {
     tr {
-        border-color: var(--color-border-extra-light);
+        border-color: var(--clr-brdr-x-lite);
     }
 
     thead th {
-        background-color: var(--color-gradient-to);
-        color: var(--color-text-heading);
+        background-color: var(--clr-grad-to);
+        color: var(--clr-text-heading);
     }
 }
 
@@ -118,11 +118,11 @@ td {
     tbody {
         tr {
             &:nth-child(even) {
-                background: var(--color-background-box);
+                background: var(--clr-bkgd-box);
             }
 
             &.selected {
-                background: var(--color-selected);
+                background: var(--clr-selected);
             }
         }
 
@@ -132,15 +132,15 @@ td {
     }
 
     thead th {
-        @include setup.gradient-linear(var(--color-gradient-from), var(--color-gradient-to));
+        @include setup.gradient-linear(var(--clr-grad-from), var(--clr-grad-to));
 
-        border-top: 1px solid var(--color-border-light);
-        border-right: 1px solid var(--color-border);
-        border-bottom: 1px solid var(--color-border-dark);
+        border-top: 1px solid var(--clr-brdr-lite);
+        border-right: 1px solid var(--clr-brdr);
+        border-bottom: 1px solid var(--clr-brdr-dark);
         border-left: 0;
 
         &:first-child {
-            border-left: 1px solid var(--color-border);
+            border-left: 1px solid var(--clr-brdr);
         }
 
         a {
@@ -148,10 +148,10 @@ td {
             position: relative;
             margin: -0.38461538461538em -1em; // improved click area
             padding: 0.38461538461538em 1em; // 5px / 13px + 13px
-            color: var(--color-text);
+            color: var(--clr-text);
 
             &:hover {
-                color: var(--color-text);
+                color: var(--clr-text);
                 text-decoration: none;
             }
         }
@@ -162,22 +162,22 @@ td {
     .txp-list,
     .txp-list--no-options {
         thead th {
-            border-right-color: var(--color-border-dark);
-            border-bottom-color: var(--color-border-extra-light);
+            border-right-color: var(--clr-brdr-dark);
+            border-bottom-color: var(--clr-brdr-x-lite);
 
             &:first-child {
-                border-left-color: var(--color-border-extra-light);
+                border-left-color: var(--clr-brdr-x-lite);
             }
 
             &:last-child {
-                border-right-color: var(--color-border-extra-light);
+                border-right-color: var(--clr-brdr-x-lite);
             }
 
             a {
-                color: var(--color-text-heading);
+                color: var(--clr-text-heading);
 
                 &:hover {
-                    color: var(--color-text-heading);
+                    color: var(--clr-text-heading);
                 }
             }
         }
@@ -198,7 +198,7 @@ td {
     thead th {
         &.asc,
         &.desc {
-            @include setup.gradient-linear(var(--color-gradient-to), var(--color-gradient-from));
+            @include setup.gradient-linear(var(--clr-grad-to), var(--clr-grad-from));
 
             filter: brightness(0.95);
 
@@ -230,14 +230,14 @@ td {
             content: "\2193";
             border: 0 solid transparent;
             border-width: 0.25em 0.25em 0;
-            border-top-color: var(--color-text);
+            border-top-color: var(--clr-text);
         }
 
         &.asc a::after {
             content: "\2191";
             border: 0 solid transparent;
             border-width: 0 0.25em 0.25em;
-            border-bottom-color: var(--color-text);
+            border-bottom-color: var(--clr-text);
         }
     }
 }

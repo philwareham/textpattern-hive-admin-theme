@@ -51,7 +51,7 @@ summary {
     cursor: pointer;
 
     &:focus {
-        outline: 1px solid var(--color-link-focus);
+        outline: 1px solid var(--clr-link-focus);
     }
 }
 
@@ -59,28 +59,28 @@ summary {
     margin: 1em 0;
 
     @if not setup.$flat-theme {
-        border-right: 1px solid var(--color-border-extra-light);
-        border-left: 1px solid var(--color-border-extra-light);
+        border-right: 1px solid var(--clr-brdr-x-lite);
+        border-left: 1px solid var(--clr-brdr-x-lite);
 
         > div {
-            border-bottom: 1px solid var(--color-border-extra-light);
+            border-bottom: 1px solid var(--clr-brdr-x-lite);
         }
     } @else {
-        border-right: 1px solid var(--color-border);
-        border-left: 1px solid var(--color-border);
+        border-right: 1px solid var(--clr-brdr);
+        border-left: 1px solid var(--clr-brdr);
 
         > div {
-            border-bottom: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--clr-brdr);
         }
     }
 
     clear: both;
-    background: var(--color-background-box);
+    background: var(--clr-bkgd-box);
 }
 
 @include setup.dark-mode {
     .txp-details {
-        background: var(--color-background-box);
+        background: var(--clr-bkgd-box);
     }
 }
 
@@ -90,18 +90,18 @@ summary {
 
 .txp-summary,
 .txp-details > h3 {
-    @include setup.gradient-linear(var(--color-gradient-from), var(--color-gradient-to));
+    @include setup.gradient-linear(var(--clr-grad-from), var(--clr-grad-to));
 
     position: relative;
     height: 2em; // 26px / 13px
     margin: 0;
 
     @if not setup.$flat-theme {
-        border-top: 1px solid var(--color-border-light);
-        border-bottom: 1px solid var(--color-border-dark);
+        border-top: 1px solid var(--clr-brdr-lite);
+        border-bottom: 1px solid var(--clr-brdr-dark);
     } @else {
-        border-top: 1px solid var(--color-border);
-        border-bottom: 1px solid var(--color-border);
+        border-top: 1px solid var(--clr-brdr);
+        border-bottom: 1px solid var(--clr-brdr);
     }
 
     font-size: 1rem;
@@ -113,7 +113,7 @@ summary {
     @include setup.dark-mode {
         .txp-summary,
         .txp-details > h3 {
-            border-bottom-color: var(--color-border-extra-light);
+            border-bottom-color: var(--clr-brdr-x-lite);
         }
     }
 }
@@ -134,17 +134,17 @@ summary {
 
 summary.txp-summary {
     padding: 0 1em;
-    color: var(--color-text-heading);
+    color: var(--clr-text-heading);
 }
 
 h3.txp-summary a {
     display: block;
     padding: 0 1em;
     padding-inline-end: 2em;
-    color: var(--color-text-heading);
+    color: var(--clr-text-heading);
 
     &:hover {
-        color: var(--color-text-heading);
+        color: var(--clr-text-heading);
         text-decoration: none;
     }
 
@@ -161,7 +161,7 @@ h3.txp-summary a {
         height: 0;
         border: 0 solid transparent;
         border-width: 0.25em 0 0.25em 0.25em;
-        border-left-color: var(--color-text);
+        border-left-color: var(--clr-text);
         opacity: 0.6;
         font-size: 16px;
     }
@@ -186,7 +186,7 @@ h3.txp-summary.expanded a::after {
     right: 0.5625em; // 9px / 16px
     border: 0 solid transparent;
     border-width: 0.25em 0.25em 0;
-    border-top-color: var(--color-text);
+    border-top-color: var(--clr-text);
 }
 
 [dir="rtl"] h3.txp-summary.expanded a::after {

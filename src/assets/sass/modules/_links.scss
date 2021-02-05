@@ -12,7 +12,7 @@
  */
 
 a {
-    color: var(--color-link);
+    color: var(--clr-link);
     /* 1 */
     text-decoration: none;
     /* 2 */
@@ -22,12 +22,12 @@ a {
 
     &:hover,
     &:active {
-        color: var(--color-link-hover);
+        color: var(--clr-link-hover);
         text-decoration: underline;
     }
 
     &:focus {
-        outline: thin solid var(--color-link-focus);
+        outline: thin solid var(--clr-link-focus);
     }
 
     &.busy {
@@ -83,7 +83,7 @@ a {
     padding: 0.25em 0.5em;
     transform: translateY(-5em);
     transition: transform 0.2s ease-in-out;
-    background-color: var(--color-background-box);
+    background-color: var(--clr-bkgd-box);
 
     &:focus,
     &:active {

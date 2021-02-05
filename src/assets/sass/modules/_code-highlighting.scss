@@ -99,7 +99,7 @@ pre[class*="language-"] {
 
 @include setup.dark-mode {
     .token.punctuation {
-        color: var(--color-text-enforced-white);
+        color: var(--clr-text-enforced-white);
     }
 
     .token.property,
@@ -109,7 +109,7 @@ pre[class*="language-"] {
     .token.constant,
     .token.symbol,
     .token.deleted {
-        color: var(--color-error-text);
+        color: var(--clr-error-text);
     }
 
     .token.selector,
@@ -118,7 +118,7 @@ pre[class*="language-"] {
     .token.char,
     .token.builtin,
     .token.inserted {
-        color: var(--color-success-text);
+        color: var(--clr-success-text);
     }
 
     .token.operator,
@@ -126,12 +126,12 @@ pre[class*="language-"] {
     .token.url,
     .language-css .token.string,
     .style .token.string {
-        color: var(--color-warning-text);
+        color: var(--clr-warning-text);
     }
 
     .token.atrule,
     .token.attr-value,
     .token.keyword {
-        color: var(--color-info-text);
+        color: var(--clr-info-text);
     }
 }

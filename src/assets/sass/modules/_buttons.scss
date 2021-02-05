@@ -37,16 +37,16 @@ input[type="button"],
 .txp-logout a,
 .navlink,
 .navlink-active {
-    @include setup.gradient-linear(var(--color-button-gradient-from), var(--color-button-gradient-to));
+    @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
 
     display: inline-block;
     width: auto;
     height: auto;
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
-    border: 1px solid var(--color-button-border);
+    border: 1px solid var(--clr-btn-brdr);
     border-radius: setup.$border-radius;
     background-clip: padding-box;
-    color: var(--color-text-button);
+    color: var(--clr-text-button);
     font-weight: normal;
     text-align: center;
     /* 1 */
@@ -57,24 +57,24 @@ input[type="button"],
 
     &:hover {
         filter: brightness(1.05);
-        color: var(--color-text-button-hover);
+        color: var(--clr-text-button-hover);
         text-decoration: none;
     }
 
     &:active {
         filter: brightness(0.95);
-        color: var(--color-text-button-active);
+        color: var(--clr-text-button-active);
         text-decoration: none;
 
         @if not setup.$flat-theme {
-            box-shadow: var(--inset-lowlighting);
+            box-shadow: var(--inset-lolite);
         }
     }
 
     &:focus {
-        border-color: var(--color-link-focus);
+        border-color: var(--clr-link-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-        color: var(--color-text-button-active);
+        color: var(--clr-text-button-active);
     }
 
     .ui-icon {
@@ -93,14 +93,14 @@ input[type="button"],
 [type="submit"].publish,
 button.publish,
 a.publish {
-    @include setup.gradient-linear(var(--color-button-primary-gradient-from), var(--color-button-primary-gradient-to));
+    @include setup.gradient-linear(var(--clr-btn-primary-grad-from), var(--clr-btn-primary-grad-to));
 
     padding: 0.61538461538462em 1em; // 8px / 13px + 13px
-    border: 1px solid var(--color-button-primary-border);
+    border: 1px solid var(--clr-btn-primary-brdr);
     font-weight: bold;
 
     &:focus {
-        border-color: var(--color-link-focus);
+        border-color: var(--clr-link-focus);
     }
 }
 
@@ -131,7 +131,7 @@ button.destroy {
     }
 
     &:focus {
-        outline: thin solid var(--color-link-focus);
+        outline: thin solid var(--clr-link-focus);
     }
 
     .ui-icon {
@@ -259,9 +259,9 @@ ul.nav-tertiary {
 
 .nav-tertiary .navlink-active,
 .filtered button.ui-corner-right {
-    @include setup.gradient-linear(var(--color-button-selected-gradient-from), var(--color-button-selected-gradient-to));
+    @include setup.gradient-linear(var(--clr-btn-selected-grad-from), var(--clr-btn-selected-grad-to));
 
-    border-color: var(--color-button-selected-border);
+    border-color: var(--clr-btn-selected-brdr);
 
     &:hover {
         filter: brightness(1.05);
@@ -272,7 +272,7 @@ ul.nav-tertiary {
     }
 
     &:focus {
-        border-color: var(--color-link-focus);
+        border-color: var(--clr-link-focus);
     }
 }
 
@@ -317,7 +317,7 @@ button[disabled],
 .txp-button.disabled,
 .navlink-disabled,
 .ui-checkboxradio-disabled {
-    background: var(--color-background-form-disabled) !important;
+    background: var(--clr-bkgd-form-disabled) !important;
     filter: none !important;
-    color: var(--color-text-form) !important;
+    color: var(--clr-text-form) !important;
 }

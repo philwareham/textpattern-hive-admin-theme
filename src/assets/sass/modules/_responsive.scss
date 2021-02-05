@@ -166,7 +166,7 @@
         margin: 0;
         padding: 0.25em 3em;
         border: 0;
-        border-top: 1px solid var(--color-border-light);
+        border-top: 1px solid var(--clr-brdr-lite);
 
         @if not setup.$flat-theme {
             box-shadow: 0 -0.2em 0.25em hsla(0, 0%, 0%, 0.15);
@@ -353,7 +353,7 @@
         background-size: 13em 2em; // 208px / 16px + 32px / 16px
 
         &:focus {
-            outline: thin solid var(--color-link-focus);
+            outline: thin solid var(--clr-link-focus);
         }
 
         &:not(.collapsed) {
@@ -383,7 +383,7 @@
         top: 2.75em;
         right: 0;
         left: 0;
-        background: var(--color-accent-background);
+        background: var(--clr-accent-bkgd);
 
         @if not setup.$flat-theme {
             box-shadow: var(--standard-shadow);
@@ -567,12 +567,12 @@
 
     .ui-tabs:not(.ui-tabs-vertical) .ui-tabs-nav {
         height: auto;
-        border-bottom: 1px solid var(--color-border-light);
+        border-bottom: 1px solid var(--clr-brdr-lite);
 
         li {
             display: block;
             height: auto;
-            border: 1px solid var(--color-border-light);
+            border: 1px solid var(--clr-brdr-lite);
             border-bottom: 1px solid transparent;
 
             @if not setup.$flat-theme {

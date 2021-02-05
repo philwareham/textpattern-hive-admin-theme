@@ -15,9 +15,9 @@
 .txp-button.disabled,
 .navlink-disabled,
 .ui-checkboxradio-disabled {
-    border: 1px solid var(--color-border) !important;
+    border: 1px solid var(--clr-brdr) !important;
     opacity: 0.33 !important;
-    background-color: var(--color-background-form-disabled) !important;
+    background-color: var(--clr-bkgd-form-disabled) !important;
     box-shadow: none !important;
     /* 1 */
     cursor: default !important;
@@ -37,7 +37,7 @@
         }
 
         .ui-icon-background {
-            background-color: var(--color-background-form-disabled) !important;
+            background-color: var(--clr-bkgd-form-disabled) !important;
         }
     }
 }

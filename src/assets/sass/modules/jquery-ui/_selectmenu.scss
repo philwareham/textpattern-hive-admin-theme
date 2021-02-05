@@ -84,7 +84,7 @@
             height: auto;
             margin: 0.5em 0 0;
             padding: 2px 0.61538461538462em; // 8px / 13px
-            border-top: 1px solid var(--color-border);
+            border-top: 1px solid var(--clr-brdr);
             font-size: 1rem;
             font-weight: bold;
             line-height: setup.$base-line-height;
@@ -126,7 +126,7 @@
         padding: 0;
         border: 0;
         background: transparent;
-        color: var(--color-link);
+        color: var(--clr-link);
         font-family: inherit;
         cursor: pointer;
         user-select: auto;
@@ -134,7 +134,7 @@
         &:hover,
         &:active {
             background: transparent;
-            color: var(--color-link-hover);
+            color: var(--clr-link-hover);
             text-decoration: underline;
 
             @if not setup.$flat-theme {
@@ -143,7 +143,7 @@
         }
 
         &:focus {
-            outline: thin solid var(--color-link-focus);
+            outline: thin solid var(--clr-link-focus);
         }
 
         .ui-selectmenu-icon {

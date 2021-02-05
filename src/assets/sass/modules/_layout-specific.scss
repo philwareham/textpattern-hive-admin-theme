@@ -96,7 +96,7 @@ body.darkmode.login {
     bottom: -0.5em;
     padding: 1em 0;
     overflow: hidden;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid var(--clr-brdr);
     text-overflow: ellipsis;
 }
 
@@ -142,7 +142,7 @@ body.darkmode.login {
     ul {
         margin: 2em 0 0;
         padding: 0;
-        border-bottom: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--clr-brdr);
         font-size: setup.$small-font-size;
         line-height: setup.$small-line-height;
     }
@@ -157,9 +157,9 @@ body.darkmode.login {
         position: relative;
         bottom: -1px;
         padding: 0.5em 1em;
-        border: 1px solid var(--color-border);
-        background-color: var(--color-background-box);
-        color: var(--color-text);
+        border: 1px solid var(--clr-brdr);
+        background-color: var(--clr-bkgd-box);
+        color: var(--clr-text);
         text-decoration: none;
 
         @if not setup.$flat-theme {
@@ -167,27 +167,27 @@ body.darkmode.login {
         }
 
         &:hover {
-            border-color: var(--color-border-extra-dark);
+            border-color: var(--clr-brdr-x-dark);
             filter: brightness(1.05);
         }
 
         &:focus {
-            border-color: var(--color-link-focus);
+            border-color: var(--clr-link-focus);
             outline: 0;
         }
     }
 
     .active a {
-        border-bottom-color: var(--color-background);
-        background-color: var(--color-background);
+        border-bottom-color: var(--clr-bkgd);
+        background-color: var(--clr-bkgd);
 
         @if not setup.$flat-theme {
             box-shadow: none;
         }
 
         &:focus {
-            border-color: var(--color-link-focus);
-            border-bottom-color: var(--color-background);
+            border-color: var(--clr-link-focus);
+            border-bottom-color: var(--clr-bkgd);
         }
     }
 }
@@ -200,12 +200,12 @@ body.darkmode.login {
             }
 
             &:hover {
-                border-color: var(--color-border-extra-light);
+                border-color: var(--clr-brdr-x-lite);
                 filter: brightness(1.1);
             }
 
             &:focus {
-                border-color: var(--color-link-focus);
+                border-color: var(--clr-link-focus);
             }
         }
 
@@ -215,8 +215,8 @@ body.darkmode.login {
             }
 
             &:focus {
-                border-color: var(--color-link-focus);
-                border-bottom-color: var(--color-background);
+                border-color: var(--clr-link-focus);
+                border-bottom-color: var(--clr-bkgd);
             }
         }
     }
@@ -247,7 +247,7 @@ body.darkmode.login {
     .author small {
         display: block;
         margin-top: -1em;
-        color: var(--color-text-footnote);
+        color: var(--clr-text-footnote);
     }
 }
 
@@ -269,7 +269,7 @@ body.darkmode.login {
 
 .unpublished,
 .not-modified {
-    color: var(--color-text-footnote);
+    color: var(--clr-text-footnote);
 }
 
 
@@ -326,11 +326,11 @@ body.darkmode.login {
 
 .txp-list tbody tr {
     &.spam {
-        background: var(--color-error-background);
+        background: var(--clr-error-bkgd);
     }
 
     &.moderate {
-        background: var(--color-warning-background);
+        background: var(--clr-warning-bkgd);
     }
 }
 
