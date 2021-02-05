@@ -134,7 +134,7 @@
         &:hover,
         &:active {
             background: transparent;
-            color: var(--clr-a-hover);
+            color: var(--clr-a-interact);
             text-decoration: underline;
 
             @if not setup.$flat-theme {
