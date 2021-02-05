@@ -103,12 +103,12 @@
     span {
         display: block;
         overflow: hidden;
-        color: var(--clr-text-button);
+        color: var(--clr-text-btn);
         text-overflow: ellipsis;
     }
 
     a {
-        color: var(--clr-text-button);
+        color: var(--clr-text-btn);
         font-weight: bold;
     }
 }
@@ -149,7 +149,7 @@
         }
 
         &:focus {
-            border-color: var(--clr-link-focus);
+            border-color: var(--clr-focus);
             outline: 2px solid transparent; // Allows for repainting in high contrast modes.
         }
     }

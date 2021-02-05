@@ -172,7 +172,7 @@ body.darkmode.login {
         }
 
         &:focus {
-            border-color: var(--clr-link-focus);
+            border-color: var(--clr-focus);
             outline: 0;
         }
     }
@@ -186,7 +186,7 @@ body.darkmode.login {
         }
 
         &:focus {
-            border-color: var(--clr-link-focus);
+            border-color: var(--clr-focus);
             border-bottom-color: var(--clr-bkgd);
         }
     }
@@ -205,7 +205,7 @@ body.darkmode.login {
             }
 
             &:focus {
-                border-color: var(--clr-link-focus);
+                border-color: var(--clr-focus);
             }
         }
 
@@ -215,7 +215,7 @@ body.darkmode.login {
             }
 
             &:focus {
-                border-color: var(--clr-link-focus);
+                border-color: var(--clr-focus);
                 border-bottom-color: var(--clr-bkgd);
             }
         }
@@ -247,7 +247,7 @@ body.darkmode.login {
     .author small {
         display: block;
         margin-top: -1em;
-        color: var(--clr-text-footnote);
+        color: var(--clr-text-demoted);
     }
 }
 
@@ -269,7 +269,7 @@ body.darkmode.login {
 
 .unpublished,
 .not-modified {
-    color: var(--clr-text-footnote);
+    color: var(--clr-text-demoted);
 }
 
 

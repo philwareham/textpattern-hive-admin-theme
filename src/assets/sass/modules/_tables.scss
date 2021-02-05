@@ -21,7 +21,7 @@
     overflow-x: auto;
 
     &:focus {
-        outline: thin solid var(--clr-link-focus);
+        outline: thin solid var(--clr-focus);
     }
 }
 
@@ -63,7 +63,7 @@ thead th {
 
     thead th {
         background-color: var(--clr-grad-to);
-        color: var(--clr-text-heading);
+        color: var(--clr-text-promoted);
     }
 }
 
@@ -174,10 +174,10 @@ td {
             }
 
             a {
-                color: var(--clr-text-heading);
+                color: var(--clr-text-promoted);
 
                 &:hover {
-                    color: var(--clr-text-heading);
+                    color: var(--clr-text-promoted);
                 }
             }
         }

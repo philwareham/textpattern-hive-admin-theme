@@ -46,7 +46,7 @@ input[type="button"],
     border: 1px solid var(--clr-btn-brdr);
     border-radius: setup.$border-radius;
     background-clip: padding-box;
-    color: var(--clr-text-button);
+    color: var(--clr-text-btn);
     font-weight: normal;
     text-align: center;
     /* 1 */
@@ -57,13 +57,13 @@ input[type="button"],
 
     &:hover {
         filter: brightness(1.05);
-        color: var(--clr-text-button-hover);
+        color: var(--clr-text-btn-hover);
         text-decoration: none;
     }
 
     &:active {
         filter: brightness(0.95);
-        color: var(--clr-text-button-active);
+        color: var(--clr-text-btn-active);
         text-decoration: none;
 
         @if not setup.$flat-theme {
@@ -72,9 +72,9 @@ input[type="button"],
     }
 
     &:focus {
-        border-color: var(--clr-link-focus);
+        border-color: var(--clr-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-        color: var(--clr-text-button-active);
+        color: var(--clr-text-btn-active);
     }
 
     .ui-icon {
@@ -100,7 +100,7 @@ a.publish {
     font-weight: bold;
 
     &:focus {
-        border-color: var(--clr-link-focus);
+        border-color: var(--clr-focus);
     }
 }
 
@@ -131,7 +131,7 @@ button.destroy {
     }
 
     &:focus {
-        outline: thin solid var(--clr-link-focus);
+        outline: thin solid var(--clr-focus);
     }
 
     .ui-icon {
@@ -272,7 +272,7 @@ ul.nav-tertiary {
     }
 
     &:focus {
-        border-color: var(--clr-link-focus);
+        border-color: var(--clr-focus);
     }
 }
 

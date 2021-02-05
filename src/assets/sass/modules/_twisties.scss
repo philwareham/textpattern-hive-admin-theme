@@ -51,7 +51,7 @@ summary {
     cursor: pointer;
 
     &:focus {
-        outline: 1px solid var(--clr-link-focus);
+        outline: 1px solid var(--clr-focus);
     }
 }
 
@@ -134,17 +134,17 @@ summary {
 
 summary.txp-summary {
     padding: 0 1em;
-    color: var(--clr-text-heading);
+    color: var(--clr-text-promoted);
 }
 
 h3.txp-summary a {
     display: block;
     padding: 0 1em;
     padding-inline-end: 2em;
-    color: var(--clr-text-heading);
+    color: var(--clr-text-promoted);
 
     &:hover {
-        color: var(--clr-text-heading);
+        color: var(--clr-text-promoted);
         text-decoration: none;
     }
 

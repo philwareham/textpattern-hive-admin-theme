@@ -78,15 +78,15 @@ img {
     background: var(--clr-bkgd);
 
     a & {
-        border-color: var(--clr-link);
+        border-color: var(--clr-a);
     }
 
     a:hover & {
-        border-color: var(--clr-link-hover);
+        border-color: var(--clr-a-hover);
     }
 
     a:focus & {
-        border-color: var(--clr-link-focus);
+        border-color: var(--clr-focus);
     }
 }
 

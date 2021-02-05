@@ -39,7 +39,7 @@ button.txp-nav-toggle {
     }
 
     a {
-        color: var(--clr-text-button);
+        color: var(--clr-text-btn);
 
         &:hover {
             text-decoration: none;
@@ -106,7 +106,7 @@ button.txp-nav-toggle {
     > a {
         display: block;
         padding: 0 1em;
-        color: var(--clr-text-button);
+        color: var(--clr-text-btn);
         line-height: 2.69230769230769; // 35px / 13px
         text-decoration: none;
 
@@ -146,7 +146,7 @@ button.txp-nav-toggle {
         height: 0;
         border: 0 solid transparent;
         border-width: 0.25em 0.25em 0;
-        border-top-color: var(--clr-text-button);
+        border-top-color: var(--clr-text-btn);
         opacity: 0.4;
         font-size: 16px;
     }
@@ -174,7 +174,7 @@ button.txp-nav-toggle {
     content: "\2191";
     border: 0 solid transparent;
     border-width: 0 0.25em 0.25em;
-    border-bottom-color: var(--clr-text-button);
+    border-bottom-color: var(--clr-text-btn);
 }
 
 /**

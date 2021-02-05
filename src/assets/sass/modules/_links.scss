@@ -12,7 +12,7 @@
  */
 
 a {
-    color: var(--clr-link);
+    color: var(--clr-a);
     /* 1 */
     text-decoration: none;
     /* 2 */
@@ -22,12 +22,12 @@ a {
 
     &:hover,
     &:active {
-        color: var(--clr-link-hover);
+        color: var(--clr-a-hover);
         text-decoration: underline;
     }
 
     &:focus {
-        outline: thin solid var(--clr-link-focus);
+        outline: thin solid var(--clr-focus);
     }
 
     &.busy {

@@ -32,7 +32,7 @@
     overflow: visible;
     border: 1px solid var(--clr-btn-brdr);
     background-clip: padding-box;
-    color: var(--clr-text-button);
+    color: var(--clr-text-btn);
     font-family: inherit;
     /* 2 */
     font-size: 1rem;
@@ -47,13 +47,13 @@
 
     &:hover {
         filter: brightness(1.05);
-        color: var(--clr-text-button-hover);
+        color: var(--clr-text-btn-hover);
         text-decoration: none;
     }
 
     &:active {
         filter: brightness(0.95);
-        color: var(--clr-text-button-active);
+        color: var(--clr-text-btn-active);
         text-decoration: none;
 
         @if not setup.$flat-theme {
@@ -62,9 +62,9 @@
     }
 
     &:focus {
-        border-color: var(--clr-link-focus);
+        border-color: var(--clr-focus);
         outline: 2px solid transparent; // Allows for repainting in high contrast modes.
-        color: var(--clr-text-button-active);
+        color: var(--clr-text-btn-active);
     }
 }
 
@@ -73,7 +73,7 @@
  */
 
 a.ui-button {
-    color: var(--clr-text-button);
+    color: var(--clr-text-btn);
     text-decoration: none;
 }
 
@@ -84,7 +84,7 @@ a.ui-button {
  */
 
 .ui-button.ui-state-focus {
-    border-color: var(--clr-link-focus) !important; /* 1 */
+    border-color: var(--clr-focus) !important; /* 1 */
 }
 
 /**

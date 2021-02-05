@@ -35,7 +35,7 @@ h4,
 h5,
 h6 {
     clear: both;
-    color: var(--clr-text-heading);
+    color: var(--clr-text-promoted);
 }
 
 /**
@@ -278,7 +278,7 @@ figcaption,
 tfoot,
 .footnote,
 .txp-form-field-instructions {
-    color: var(--clr-text-footnote);
+    color: var(--clr-text-demoted);
 }
 
 figcaption {

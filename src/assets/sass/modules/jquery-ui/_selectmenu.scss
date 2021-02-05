@@ -126,7 +126,7 @@
         padding: 0;
         border: 0;
         background: transparent;
-        color: var(--clr-link);
+        color: var(--clr-a);
         font-family: inherit;
         cursor: pointer;
         user-select: auto;
@@ -134,7 +134,7 @@
         &:hover,
         &:active {
             background: transparent;
-            color: var(--clr-link-hover);
+            color: var(--clr-a-hover);
             text-decoration: underline;
 
             @if not setup.$flat-theme {
@@ -143,7 +143,7 @@
         }
 
         &:focus {
-            outline: thin solid var(--clr-link-focus);
+            outline: thin solid var(--clr-focus);
         }
 
         .ui-selectmenu-icon {

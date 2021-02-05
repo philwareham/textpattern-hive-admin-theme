@@ -67,8 +67,9 @@ body {
  */
 
 $colors: (
+    "text-promoted":     var(--clr-text-promoted),
     "text":              var(--clr-text),
-    "text-footnote":     var(--clr-text-footnote),
+    "text-demoted":      var(--clr-text-demoted),
     "text-form":         var(--clr-text-form),
     "grad-from":         var(--clr-grad-from),
     "grad-to":           var(--clr-grad-to),
@@ -77,11 +78,11 @@ $colors: (
     "brdr-x-lite":       var(--clr-brdr-x-lite),
     "brdr-dark":         var(--clr-brdr-dark),
     "brdr-x-dark":       var(--clr-brdr-x-dark),
-    "link":              var(--clr-link),
-    "link-hover":        var(--clr-link-hover),
-    "link-focus":        var(--clr-link-focus),
-    "link-selecting":    var(--clr-selecting),
-    "link-selected":     var(--clr-selected),
+    "a":                 var(--clr-a),
+    "a-hover":           var(--clr-a-hover),
+    "focus":             var(--clr-focus),
+    "selecting":         var(--clr-selecting),
+    "selected":          var(--clr-selected),
     "bkgd":              var(--clr-bkgd),
     "bkgd-box":          var(--clr-bkgd-box),
     "bkgd-form":         var(--clr-bkgd-form),
