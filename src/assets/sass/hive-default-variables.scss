@@ -71,8 +71,8 @@
     --clr-info-bkgd:              hsl(200, 78%, 95%);
     --clr-info-brdr:              hsl(200, 78%, 82%);
     // shadows
-    --standard-shadow:            0 0 0.5em hsla(0, 0%, 0%, 0.2);
-    --inset-lolite:               inset 0 0.2em 0.25em hsla(0, 0%, 0%, 0.15);
+    --standard-shadow: 0 0 0.5em hsla(0, 0%, 0%, 0.2);
+    --inset-lolite:    inset 0 0.2em 0.25em hsla(0, 0%, 0%, 0.15);
 }
 
 @include setup.dark-mode {
@@ -116,5 +116,5 @@
     --clr-info-bkgd:          hsl(207, 68%, 17%);
     --clr-info-brdr:          hsla(207, 100%, 63%, 0.38);
     // shadows
-    --standard-shadow:        0 0 0.5em hsla(0, 0%, 0%, 0.75);
+    --standard-shadow: 0 0 0.5em hsla(0, 0%, 0%, 0.75);
 }
