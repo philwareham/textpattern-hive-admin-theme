@@ -15,6 +15,9 @@ trim_trailing_whitespace = true
 [*.md]
 trim_trailing_whitespace = false
 
+[*.svg]
+insert_final_newline = false
+
 [{*.yml,*.json}]
 indent_size = 2
 indent_style = space
