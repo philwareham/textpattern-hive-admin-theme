@@ -18,7 +18,7 @@ The default admin theme that ships as standard with [Textpattern CMS](https://te
 
 ### Installing required tools
 
-The project uses [Grunt](https://gruntjs.com/) to run tasks and [Sass](http://sass-lang.com/) for CSS pre-processing. First make sure you have base dependencies installed: [Node.js](https://nodejs.org/) and [Grunt](https://gruntjs.com/). You can install Node using the [installer](https://nodejs.org/) and Grunt with npm:
+The project uses [Grunt](https://gruntjs.com/) to run tasks and [Sass](https://sass-lang.com/) for CSS pre-processing. First make sure you have base dependencies installed: [Node.js](https://nodejs.org/) and [Grunt](https://gruntjs.com/). You can install Node using the [installer](https://nodejs.org/) and Grunt with npm:
 
 ```ShellSession
 $ npm install -g grunt-cli
@@ -56,4 +56,4 @@ We provide a pre-built version of the theme files within the `dist` directory in
 
 ## License
 
-Licensed under the [GPLv2 license](https://github.com/philwareham/textpattern-hive-admin-theme/blob/master/LICENSE).
+Licensed under the [GPLv2 license](https://github.com/philwareham/textpattern-hive-admin-theme/blob/main/LICENSE).
