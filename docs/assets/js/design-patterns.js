@@ -399,43 +399,53 @@ $(function ()
         imgBlurRange = document.getElementById('img_blur_range'),
         imgBlur = document.getElementById('img_blur');
 
-    imgBrightnessRange.oninput = function () {
-        imgBrightness.value = this.value;
+    if (imgBrightness !== null) {
+        imgBrightnessRange.oninput = function () {
+            imgBrightness.value = this.value;
+        }
+
+        imgBrightness.oninput = function () {
+            imgBrightnessRange.value = this.value;
+        }
     }
 
-    imgBrightness.oninput = function () {
-        imgBrightnessRange.value = this.value;
+    if (imgContrast !== null) {
+        imgContrastRange.oninput = function () {
+            imgContrast.value = this.value;
+        }
+
+        imgContrast.oninput = function () {
+            imgContrastRange.value = this.value;
+        }
     }
 
-    imgContrastRange.oninput = function () {
-        imgContrast.value = this.value;
+    if (imgGamma !== null) {
+        imgGammaRange.oninput = function () {
+            imgGamma.value = this.value;
+        }
+
+        imgGamma.oninput = function () {
+            imgGammaRange.value = this.value;
+        }
     }
 
-    imgContrast.oninput = function () {
-        imgContrastRange.value = this.value;
+    if (imgSharpen !== null) {
+        imgSharpenRange.oninput = function () {
+            imgSharpen.value = this.value;
+        }
+
+        imgSharpen.oninput = function () {
+            imgSharpenRange.value = this.value;
+        }
     }
 
-    imgGammaRange.oninput = function () {
-        imgGamma.value = this.value;
-    }
+    if (imgBlur !== null) {
+        imgBlurRange.oninput = function () {
+            imgBlur.value = this.value;
+        }
 
-    imgGamma.oninput = function () {
-        imgGammaRange.value = this.value;
-    }
-
-    imgSharpenRange.oninput = function () {
-        imgSharpen.value = this.value;
-    }
-
-    imgSharpen.oninput = function () {
-        imgSharpenRange.value = this.value;
-    }
-
-    imgBlurRange.oninput = function () {
-        imgBlur.value = this.value;
-    }
-
-    imgBlur.oninput = function () {
-        imgBlurRange.value = this.value;
+        imgBlur.oninput = function () {
+            imgBlurRange.value = this.value;
+        }
     }
 });
