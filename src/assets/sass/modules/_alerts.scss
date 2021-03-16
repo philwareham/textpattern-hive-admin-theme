@@ -176,7 +176,7 @@ li.information {
     }
 
     code {
-        border-color: hsla(0, 0%, 100%, 0.66);
+        border-color: hsl(0 0% 100% / 0.66);
         background: transparent;
     }
 }
@@ -213,7 +213,7 @@ li.information {
     right: 0;
     bottom: 0;
     width: 2.53846153846154em;
-    border-left: 1px solid hsla(0, 0%, 100%, 0.66);
+    border-left: 1px solid hsl(0 0% 100% / 0.66);
 
     span {
         position: absolute;
@@ -230,7 +230,7 @@ li.information {
 
 @include setup.dark-mode {
     .close {
-        border-color: hsla(0, 0%, 0%, 0.4);
+        border-color: hsl(0 0% 0% / 0.4);
 
         span {
             opacity: 0.75;
@@ -254,7 +254,7 @@ li.information {
 [dir="rtl"] .close {
     right: auto;
     left: 0;
-    border-right: 1px solid rgba(255, 255, 255, 0.66);
+    border-right: 1px solid hsl(0 0% 100% / 0.66);
     border-left: 0;
 
     span {

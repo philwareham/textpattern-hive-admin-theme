@@ -169,7 +169,7 @@
         border-top: 1px solid var(--clr-brdr-lite);
 
         @if not setup.$flat-theme {
-            box-shadow: 0 -0.2em 0.25em hsla(0, 0%, 0%, 0.15);
+            box-shadow: 0 -0.2em 0.25em hsl(0 0% 0% / 0.15);
         }
 
         > * {
@@ -357,7 +357,7 @@
         }
 
         &:not(.collapsed) {
-            background-color: hsla(0, 0%, 100%, 0.4);
+            background-color: hsl(0 0% 100% / 0.4);
         }
     }
 
@@ -412,7 +412,7 @@
     .txp-nav > ul > li {
         float: none;
         border: 0;
-        border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
+        border-bottom: 1px solid hsl(0 0% 0% / 0.2);
 
         &:first-child {
             border-left: 0;

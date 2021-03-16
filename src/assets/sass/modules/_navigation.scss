@@ -97,7 +97,7 @@ button.txp-nav-toggle {
     display: block;
     position: relative;
     border-inline-end: 1px solid var(--clr-accent-grad-to);
-    background: hsla(0, 0%, 100%, 0.25);
+    background: hsl(0 0% 100% / 0.25);
 
     &:first-child {
         border-inline-start: 1px solid var(--clr-accent-grad-to);
@@ -111,15 +111,15 @@ button.txp-nav-toggle {
         text-decoration: none;
 
         &:hover {
-            background: hsla(0, 0%, 100%, 0.25);
+            background: hsl(0 0% 100% / 0.25);
         }
     }
 
     &.selected > a {
-        background: hsla(0, 0%, 100%, 0.25);
+        background: hsl(0 0% 100% / 0.25);
 
         &:hover {
-            background: hsla(0, 0%, 100%, 0.4);
+            background: hsl(0 0% 100% / 0.4);
         }
     }
 }

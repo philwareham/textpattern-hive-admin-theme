@@ -912,7 +912,7 @@ hr {
     background: var(--clr-bkgd);
 
     @if not setup.$flat-theme {
-        box-shadow: 0 0.1em 0.125em hsla(0, 0%, 0%, 0.15);
+        box-shadow: 0 0.1em 0.125em hsl(0 0% 0% / 0.15);
     }
 
     .txp-actions {
@@ -967,7 +967,7 @@ hr {
     }
 
     @if not setup.$flat-theme {
-        box-shadow: 0 0 0.5em hsla(0, 0%, 0%, 0.5);
+        box-shadow: 0 0 0.5em hsl(0 0% 0% / 0.5);
     }
 }
 

@@ -32,7 +32,7 @@
     border-bottom: 1px solid var(--clr-accent-dark);
 
     @if not setup.$flat-theme {
-        box-shadow: 0 0.2em 0.25em hsla(0, 0%, 0%, 0.15);
+        box-shadow: 0 0.2em 0.25em hsl(0 0% 0% / 0.15);
     }
 }
 
@@ -141,11 +141,11 @@
         transform: translateY(-50%);
         border: 1px solid var(--clr-accent-dark);
         border-radius: 0.75em;
-        background: hsla(0, 0%, 100%, 0.6);
+        background: hsl(0 0% 100% / 0.6);
         text-align: center;
 
         &:hover {
-            background: hsla(0, 0%, 100%, 0.8);
+            background: hsl(0 0% 100% / 0.8);
         }
 
         &:focus {
@@ -160,7 +160,7 @@
         background: transparent;
 
         &:hover {
-            background: hsla(0, 0%, 100%, 0.25);
+            background: hsl(0 0% 100% / 0.25);
         }
 
         .ui-icon {
