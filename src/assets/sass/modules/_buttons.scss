@@ -73,7 +73,8 @@ input[type="button"],
 
     &:focus {
         border-color: var(--clr-focus);
-        outline: 2px solid transparent; // Allows for repainting in high contrast modes.
+        outline: 0;
+        box-shadow: 0 0 0 1px var(--clr-focus-a50);
         color: var(--clr-text-btn-active);
     }
 
@@ -115,24 +116,8 @@ a.publish {
  */
 
 button.destroy {
-    padding: 0.07692307692308em 0 0; // 1px / 13px
-    border: 0;
-
-    @if setup.$border-radius > 0 {
-        border-radius: 0;
-    }
-
-    background: none;
-
-    &:hover,
-    &:active {
-        background: none;
-        box-shadow: none;
-    }
-
-    &:focus {
-        outline: thin solid var(--clr-focus);
-    }
+    padding: 0.07692307692308em 0.230769230769231em; // 1px / 13px + 3px / 13px
+    border-radius: 50%;
 
     .ui-icon {
         opacity: 0.66;
