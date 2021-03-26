@@ -47,6 +47,14 @@ a {
 .pophelp,
 .pophelpsubtle {
     display: inline-block;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.no-ui-button [rel="help"]:focus {
+    outline: 0;
 }
 
 /**
