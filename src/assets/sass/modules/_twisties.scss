@@ -116,6 +116,9 @@ h3.txp-summary,
 
 .txp-details > h3:not(.txp-summary) {
     padding: 0 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /**
@@ -125,7 +128,10 @@ h3.txp-summary,
 h3.txp-summary a {
     display: block;
     padding: 0 2em 0 1em;
+    overflow: hidden;
     color: $color-text-heading;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     &:hover {
         color: $color-text-heading;
