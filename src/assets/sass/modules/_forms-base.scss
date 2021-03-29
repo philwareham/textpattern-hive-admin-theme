@@ -393,8 +393,8 @@ input,
 select,
 textarea {
     &:focus:invalid {
-        border-color: var(--clr-error-text);
-        box-shadow: 0 0 0 1px var(--clr-error-text-a50);
+        border-color: var(--clr-error-text) !important;
+        box-shadow: 0 0 0 1px var(--clr-error-text-a50) !important;
     }
 }
 
@@ -408,8 +408,8 @@ input,
 select,
 textarea {
     &:-moz-ui-invalid {
-        border-color: var(--clr-error-text);
-        box-shadow: 0 0 0 1px var(--clr-error-text-a50);
+        border-color: var(--clr-error-text) !important;
+        box-shadow: 0 0 0 1px var(--clr-error-text-a50) !important;
     }
 }
 
