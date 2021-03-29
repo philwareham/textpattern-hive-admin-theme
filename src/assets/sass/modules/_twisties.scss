@@ -126,6 +126,9 @@ summary {
 
 .txp-details > h3:not(.txp-summary) {
     padding: 0 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /**
@@ -141,12 +144,16 @@ h3.txp-summary a {
     display: block;
     padding: 0 1em;
     padding-inline-end: 2em;
+    overflow: hidden;
     color: var(--clr-text-promoted);
 
     &:hover {
         color: var(--clr-text-promoted);
         text-decoration: none;
     }
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     &::after {
         @include setup.hide-text;
