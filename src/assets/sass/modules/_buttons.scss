@@ -47,7 +47,7 @@ input[type="button"],
     border-radius: setup.$border-radius;
     background-clip: padding-box;
     color: var(--clr-text-btn);
-    font-weight: normal;
+    font-weight: 400;
     text-align: center;
     /* 1 */
     appearance: none;
@@ -98,7 +98,7 @@ a.publish {
 
     padding: 0.61538461538462em 1em; // 8px / 13px + 13px
     border: 1px solid var(--clr-btn-primary-brdr);
-    font-weight: bold;
+    font-weight: 700;
 
     &:focus {
         border-color: var(--clr-focus);

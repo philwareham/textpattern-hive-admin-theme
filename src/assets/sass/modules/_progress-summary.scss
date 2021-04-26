@@ -67,7 +67,7 @@
             border-radius: 50%;
             background-color: var(--clr-brdr);
             font-size: 1.230769230769231rem; // 16px / 13px
-            font-weight: bold;
+            font-weight: 700;
             text-align: center;
             counter-increment: step; // increment the step on each occurance of this (pseudo) element
         }
@@ -93,7 +93,7 @@
     }
 
     strong {
-        font-weight: normal;
+        font-weight: 400;
     }
 }
 
