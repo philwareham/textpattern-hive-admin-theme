@@ -162,7 +162,7 @@ var {
     padding: 1px 0.23076923076923em; // 3px / 13px
 
     @if $border-radius > 0 {
-        border-radius: $border-radius / 2;
+        border-radius: math.div($border-radius, 2);
     }
 
     background: $color-selected;
@@ -196,7 +196,7 @@ samp {
     border: 1px solid $color-border-extra-light;
 
     @if $border-radius > 0 {
-        border-radius: $border-radius / 2;
+        border-radius: math.div($border-radius, 2);
     }
 
     background: $color-background-box;
@@ -218,7 +218,7 @@ pre {
     border: 1px solid $color-border-extra-light;
 
     @if $border-radius > 0 {
-        border-radius: $border-radius / 2;
+        border-radius: math.div($border-radius, 2);
     }
 
     background: $color-background-box;

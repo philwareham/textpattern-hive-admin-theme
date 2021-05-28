@@ -9,7 +9,7 @@ plugins:
 
 rules:
 
- # Specify percentage or number notation for alpha-values.
+  # Specify percentage or number notation for alpha-values.
   alpha-value-notation: number
 
   # Specify a list of disallowed at-rules.
@@ -42,13 +42,22 @@ rules:
     - true
     -
       ignoreAtRules:
+        - at-root
         - each
         - else
+        - debug
+        - error
+        - extend
+        - for
+        - forward
         - function
         - if
         - include
         - mixin
         - return
+        - use
+        - warn
+        - while
 
   # Disallow vendor prefixes for at-rules.
   at-rule-no-vendor-prefix: true
@@ -116,6 +125,9 @@ rules:
   # Disallow empty comments.
   comment-no-empty: true
 
+  # Specify a pattern for comments.
+  #comment-pattern:
+
   # Require or disallow whitespace on the inside of comment markers.
   comment-whitespace-inside: always
 
@@ -136,6 +148,9 @@ rules:
 
   # Require a single space or disallow whitespace before the bang of declarations.
   declaration-bang-space-before: always
+
+  # Disallow duplicate custom properties within declaration blocks.
+  declaration-block-no-duplicate-custom-properties: true
 
   # Disallow duplicate properties within declaration blocks.
   #declaration-block-no-duplicate-properties:
@@ -332,6 +347,9 @@ rules:
   # Require a single space or disallow whitespace before the commas of media query lists.
   media-query-list-comma-space-before: never
 
+  # Disallow invalid named grid areas.
+  named-grid-areas-no-invalid: true
+
   # Disallow selectors of lower specificity from coming after overriding selectors of higher specificity.
   #no-descending-specificity: true
 
@@ -355,6 +373,12 @@ rules:
 
   # Disallow double-slash comments (`//`) which are not supported by CSS.
   no-invalid-double-slash-comments: true
+
+  # Disallow invalid position `@import` rules within a stylesheet.
+  #no-invalid-position-at-import-rule:
+
+  # Disallow irregular whitespaces.
+  no-irregular-whitespace: true
 
   # Disallow missing end-of-source newlines.
   no-missing-end-of-source-newline: true
@@ -400,6 +424,9 @@ rules:
   # Require a single space or disallow whitespace on the inside of the brackets within attribute selectors.
   selector-attribute-brackets-space-inside: never
 
+  # Specify a list of disallowed attribute names.
+  #selector-attribute-name-disallowed-list:
+
   # Specify a blacklist of disallowed attribute operators.
   #selector-attribute-operator-blacklist:
 
@@ -432,6 +459,9 @@ rules:
 
   # Disallow non-space characters for descendant combinators of selectors.
   selector-descendant-combinator-no-non-space: true
+
+  # Specify a list of disallowed selectors.
+  #selector-disallowed-list:
 
   # Specify a pattern for ID selectors.
   #selector-id-pattern:
@@ -1057,9 +1087,6 @@ rules:
 
   # Disallow duplicate mixins within a stylesheet.
   scss/no-duplicate-mixins: true
-
-  # Disallows the use of global function names, as these global functions are now located inside built-in Sass modules.
-  scss/no-global-function-names: true
 
   # Disallow linebreaks after Sass operators.
   scss/operator-no-newline-after: true

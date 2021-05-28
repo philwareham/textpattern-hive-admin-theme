@@ -116,7 +116,7 @@ li.information {
     border: 1px solid;
 
     @if $border-radius > 0 {
-        border-radius: $border-radius / 2;
+        border-radius: math.div($border-radius, 2);
     }
 
     &.success {
