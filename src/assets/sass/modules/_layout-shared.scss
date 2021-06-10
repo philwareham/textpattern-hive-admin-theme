@@ -36,8 +36,7 @@
  */
 
 html {
-    /* 1 */
-    scroll-padding-top: 1rem;
+    scroll-padding-top: 1rem; /* 1 */
 }
 
 /**
@@ -54,13 +53,11 @@ html {
  */
 
 hr {
-    /* 1 */
-    box-sizing: content-box;
+    box-sizing: content-box; /* 1 */
     height: 0;
     margin: 1.5em 0;
     clear: both; // make sure any floats above `hr` are cleared
-    /* 2 */
-    overflow: visible;
+    overflow: visible; /* 2 */
     border: 0; // remove the default `hr` border
     border-bottom: 1px solid var(--clr-brdr);
 
@@ -630,12 +627,10 @@ hr {
     margin: 0 auto 1em;
     padding: 1em 1em 1px;
     clear: both;
-    /* 1 */
-    background: var(--clr-bkgd-box);
+    background: var(--clr-bkgd-box); /* 1 */
 
     h2 {
-        /* 2 */
-        margin-top: 0;
+        margin-top: 0; /* 2 */
     }
 }
 
@@ -798,8 +793,6 @@ hr {
 /**
  * Form field inline help texts.
  *
- * 1. Limit maximum width of instructions, for legibility.
- *
  * Example HTML:
  *
  * <div class="txp-form-field>
@@ -812,7 +805,6 @@ hr {
  */
 
 .txp-form-field-instructions {
-    /* 1 */
     max-width: 56em; // 616px / 11px
 
     .txp-edit &,

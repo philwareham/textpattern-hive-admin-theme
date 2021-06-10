@@ -33,12 +33,11 @@
  */
 
 /**
- * 1. Add the correct display in Edge and Firefox.
+ * 1. Add the correct display in Firefox.
  */
 
 details {
-    /* 1 */
-    display: block;
+    display: block; /* 1 */
 }
 
 /**
@@ -46,8 +45,7 @@ details {
  */
 
 summary {
-    /* 1 */
-    display: list-item;
+    display: list-item; /* 1 */
     cursor: pointer;
 
     &:focus {

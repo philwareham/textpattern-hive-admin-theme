@@ -42,24 +42,12 @@
 
     .txp-layout-4col {
         grid-column: span 6;
-        width: 50%; // Flexbox fallback.
     }
 
     .txp-layout-4col-alt,
     .txp-layout-4col-2span,
     .txp-layout-4col-3span {
         grid-column: span 12;
-        width: 100%; // Flexbox fallback.
-    }
-
-    // Override Flexbox fallback for browsers with CSS Grid support.
-    @supports (display: grid) {
-        .txp-layout-4col,
-        .txp-layout-4col-alt,
-        .txp-layout-4col-2span,
-        .txp-layout-4col-3span {
-            width: auto;
-        }
     }
 
     /**
@@ -296,17 +284,6 @@
     .txp-layout-3col-2span,
     .txp-layout-4col {
         grid-column: span 12;
-        width: 100%; // Flexbox fallback.
-    }
-
-    // Override Flexbox fallback for browsers with CSS Grid support.
-    @supports (display: grid) {
-        .txp-layout-2col,
-        .txp-layout-3col,
-        .txp-layout-3col-2span,
-        .txp-layout-4col {
-            width: auto;
-        }
     }
 
     .txp-layout-cell-row {

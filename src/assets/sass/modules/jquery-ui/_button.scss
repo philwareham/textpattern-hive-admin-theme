@@ -28,21 +28,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
-    /* 1 */
-    overflow: visible;
+    overflow: visible; /* 1 */
     border: 1px solid var(--clr-btn-brdr);
     background-clip: padding-box;
     color: var(--clr-text-btn);
     font-family: inherit;
-    /* 2 */
-    font-size: 1rem;
+    font-size: 1rem; /* 2 */
     line-height: setup.$base-line-height;
     vertical-align: baseline;
     text-align: center;
-    /* 3 */
-    appearance: none;
-    /* 4 */
-    cursor: pointer;
+    appearance: none; /* 3 */
+    cursor: pointer; /* 4 */
     user-select: none;
 
     &:hover {

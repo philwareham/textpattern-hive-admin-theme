@@ -75,8 +75,7 @@
 
     outline: 0;
     list-style: none;
-    /* 1 */
-    font-size: 1rem;
+    font-size: 1rem; /* 1 */
     line-height: setup.$base-line-height;
 
     @if not setup.$flat-theme {

@@ -13,12 +13,9 @@
 
 a {
     color: var(--clr-a);
-    /* 1 */
-    text-decoration: none;
-    /* 2 */
-    text-decoration-skip-ink: auto;
-    /* 3 */
-    touch-action: manipulation;
+    text-decoration: none; /* 1 */
+    text-decoration-skip-ink: auto; /* 2 */
+    touch-action: manipulation; /* 3 */
 
     &:hover,
     &:active {

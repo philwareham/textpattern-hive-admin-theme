@@ -9,14 +9,10 @@
  */
 
 fieldset {
-    /* 1 */
-    min-width: 0;
-    /* 2 */
-    margin: 1em 0;
-    /* 2 */
-    padding: 1px 1em;
-    /* 2 */
-    border: 1px solid var(--clr-brdr);
+    min-width: 0; /* 1 */
+    margin: 1em 0; /* 2 */
+    padding: 1px 1em; /* 2 */
+    border: 1px solid var(--clr-brdr); /* 2 */
 }
 
 /**
@@ -27,16 +23,11 @@ fieldset {
  */
 
 legend {
-    /* 1 */
-    display: table;
-    /* 1 */
-    box-sizing: border-box;
-    /* 1 */
-    max-width: 100%;
-    /* 2 */
-    padding: 0;
-    /* 1 */
-    white-space: normal;
+    display: table; /* 1 */
+    box-sizing: border-box; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 2 */
+    white-space: normal; /* 1 */
 }
 
 /**
@@ -46,10 +37,8 @@ legend {
 
 button,
 input {
-    /* 1 */
-    overflow: visible;
-    /* 2 */
-    touch-action: manipulation;
+    overflow: visible; /* 1 */
+    touch-action: manipulation; /* 2 */
 }
 
 /**
@@ -69,14 +58,11 @@ textarea,
 .navlink-active,
 .navlink-disabled {
     box-sizing: border-box;
-    /* 1 */
-    max-width: 100%;
-    /* 2 */
-    margin: 0;
+    max-width: 100%; /* 1 */
+    margin: 0; /* 2 */
     color: var(--clr-text-form);
     font-family: inherit;
-    /* 3 */
-    font-size: 1rem;
+    font-size: 1rem; /* 3 */
     line-height: setup.$base-line-height;
     vertical-align: baseline;
 }
@@ -114,8 +100,7 @@ textarea {
     }
 
     background: var(--clr-bkgd-form);
-    /* 1 */
-    appearance: none;
+    appearance: none;  /* 1 */
 
     &:hover {
         border-color: var(--clr-brdr-x-dark);
@@ -281,10 +266,8 @@ textarea {
     width: 100%;
     height: auto;
     min-height: 3em;
-    /* 1 */
-    vertical-align: top;
-    /* 2 */
-    resize: vertical;
+    vertical-align: top; /* 1 */
+    resize: vertical; /* 2 */
 }
 
 /**
@@ -422,7 +405,6 @@ textarea {
 ::placeholder {
     opacity: 1;
     color: var(--clr-text-placeholder);
-    /* 1 */
-    font: inherit;
+    font: inherit; /* 1 */
     font-weight: 400;
 }

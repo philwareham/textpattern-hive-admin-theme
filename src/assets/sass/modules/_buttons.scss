@@ -49,10 +49,8 @@ input[type="button"],
     color: var(--clr-text-btn);
     font-weight: 400;
     text-align: center;
-    /* 1 */
-    appearance: none;
-    /* 2 */
-    cursor: pointer;
+    appearance: none; /* 1 */
+    cursor: pointer; /* 2 */
     user-select: none;
 
     &:hover {
@@ -285,8 +283,7 @@ ul.nav-tertiary {
         border-radius: 0;
 
         [dir="rtl"] & {
-            /* 1 */
-            border-radius: 0;
+            border-radius: 0; /* 1 */
         }
     }
 }

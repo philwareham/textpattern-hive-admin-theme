@@ -8,18 +8,9 @@
  */
 
 .txp-layout {
-    display: flex; // Flexbox fallback for browsers without CSS Grid support.
     display: grid;
     gap: 0 2em;
     grid-template-columns: repeat(12, 1fr);
-    flex-wrap: wrap; // Flexbox fallback for browsers without CSS Grid support.
-    margin: 0 -1em; // Flexbox fallback for browsers without CSS Grid support.
-
-    > * {
-        box-sizing: border-box; // Flexbox fallback.
-        min-width: 0; // Fix Firefox `pre` overflow issues.
-        padding: 0 1em; // Flexbox fallback.
-    }
 }
 
 /**
@@ -45,53 +36,28 @@
 
 .txp-layout-1col {
     grid-column: span 12;
-    width: 100%; // Flexbox fallback.
 }
 
 .txp-layout-3col {
     grid-column: span 4;
-    width: 33.333%; // Flexbox fallback.
 }
 
 .txp-layout-3col-2span {
     grid-column: span 8;
-    width: 66.666%; // Flexbox fallback.
 }
 
 .txp-layout-4col-3span {
     grid-column: span 9;
-    width: 75%; // Flexbox fallback.
 }
 
 .txp-layout-2col,
 .txp-layout-4col-2span {
     grid-column: span 6;
-    width: 50%; // Flexbox fallback.
 }
 
 .txp-layout-4col,
 .txp-layout-4col-alt {
     grid-column: span 3;
-    width: 25%; // Flexbox fallback.
-}
-
-// Override Flexbox fallback for browsers with CSS Grid support.
-@supports (display: grid) {
-    .txp-layout {
-        margin: 0;
-    }
-
-    .txp-layout-1col,
-    .txp-layout-2col,
-    .txp-layout-3col,
-    .txp-layout-3col-2span,
-    .txp-layout-4col,
-    .txp-layout-4col-alt,
-    .txp-layout-4col-2span,
-    .txp-layout-4col-3span {
-        width: auto;
-        padding: 0;
-    }
 }
 
 .txp-layout-cell-row {
@@ -151,66 +117,28 @@
  */
 
 .txp-grid {
-    display: inline-flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: -2px;
+    display: grid;
+    gap: 4px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    margin: 0;
     padding: 0;
     clear: both;
     list-style: none;
-
-    > * {
-        position: relative;
-        margin: 2px;
-    }
-}
-
-@supports (display: grid) {
-    .txp-grid {
-        display: grid;
-        gap: 4px;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        margin: 0;
-
-        > * {
-            margin: 0;
-        }
-    }
 }
 
 .txp-grid-cell {
+    position: relative;
     box-sizing: border-box;
-    width: 9.384615384615385em; // 122px / 13px
     padding: 0 1em;
     border: 1px solid var(--clr-brdr);
 }
 
-@supports (display: grid) {
-    .txp-grid-cell {
-        width: auto;
-    }
-}
-
 .txp-grid-cell-2span {
-    min-width: 19.076923076923077em; // 248px / 13px
-}
-
-@supports (display: grid) {
-    .txp-grid-cell-2span {
-        grid-column: span 2;
-        min-width: unset;
-    }
+    grid-column: span 2;
 }
 
 .txp-grid-cell-3span {
-    min-width: 28.769230769230769em; // 374px / 13px
-}
-
-@supports (display: grid) {
-    .txp-grid-cell-3span {
-        grid-column: span 3;
-        min-width: unset;
-    }
+    grid-column: span 3;
 }
 
 .txp-grid-multi-edit {
