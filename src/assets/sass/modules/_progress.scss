@@ -29,7 +29,7 @@ progress {
     appearance: none;
 }
 
-@include setup.dark-mode {
+body.darkmode {
     .txp-upload-progress {
         border-color: var(--clr-brdr-x-dark);
     }

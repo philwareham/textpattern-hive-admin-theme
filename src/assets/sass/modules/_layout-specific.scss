@@ -192,7 +192,7 @@ body.darkmode.login {
     }
 }
 
-@include setup.dark-mode {
+body.darkmode {
     #view_modes {
         a {
             @if not setup.$flat-theme {

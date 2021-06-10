@@ -75,7 +75,7 @@
     --clr-info-brdr:              hsl(200 78% 82%);
 }
 
-@include setup.dark-mode {
+body.darkmode {
     // text colours
     --clr-text:               hsl(210 14% 83%);
     --clr-text-promoted:      hsl(0 0% 100%);

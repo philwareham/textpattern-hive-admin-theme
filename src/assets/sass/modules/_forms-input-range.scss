@@ -83,7 +83,7 @@
     border-color: var(--clr-focus);
 }
 
-@include setup.dark-mode {
+body.darkmode {
     [type="range"]::-webkit-slider-runnable-track {
         border-color: var(--clr-brdr-x-dark);
     }
@@ -146,7 +146,7 @@
     border-style: none;
 }
 
-@include setup.dark-mode {
+body.darkmode {
     [type="range"]::-moz-range-track {
         border-color: var(--clr-brdr-x-dark);
     }

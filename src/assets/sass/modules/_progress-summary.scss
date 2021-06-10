@@ -97,7 +97,7 @@
     }
 }
 
-@include setup.dark-mode {
+body.darkmode {
     .progress-meter li::before {
         color: var(--clr-text-enforced-white);
     }

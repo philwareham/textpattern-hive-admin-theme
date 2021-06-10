@@ -67,7 +67,7 @@
     }
 }
 
-@include setup.dark-mode {
+body.darkmode {
     .ui-slider {
         border-color: var(--clr-brdr-x-dark);
 

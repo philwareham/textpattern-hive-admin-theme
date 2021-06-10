@@ -46,7 +46,7 @@
     }
 }
 
-@include setup.dark-mode {
+body.darkmode {
     .ui-checkboxradio-label {
         .ui-icon-background {
             border-color: var(--clr-text-demoted);
@@ -97,7 +97,7 @@
     }
 }
 
-@include setup.dark-mode {
+body.darkmode {
     .ui-checkboxradio-radio-label {
         &.ui-checkboxradio-checked {
             .ui-icon {

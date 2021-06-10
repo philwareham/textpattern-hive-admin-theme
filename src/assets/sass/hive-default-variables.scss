@@ -77,7 +77,7 @@
     --inset-lolite:    inset 0 0.2em 0.25em hsl(0 0% 0% / 0.15);
 }
 
-@include setup.dark-mode {
+body.darkmode {
     // text colours
     --clr-text:               hsl(210 14% 83%);
     --clr-text-promoted:      hsl(0 0% 100%);
