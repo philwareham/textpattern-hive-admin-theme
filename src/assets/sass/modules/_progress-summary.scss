@@ -85,7 +85,7 @@
             left: 100%;
             width: 0;
             height: 0;
-            border: 0 solid transparent;
+            border: solid transparent;
             border-width: 1.5em 0 1.5em 0.75em;
             border-left-color: var(--clr-brdr);
             font-size: 16px;
@@ -118,7 +118,7 @@
             content: "\2190";
             right: 100%;
             left: auto;
-            border: 0 solid transparent;
+            border: solid transparent;
             border-width: 1.5em 0.75em 1.5em 0;
             border-right-color: var(--clr-brdr);
         }

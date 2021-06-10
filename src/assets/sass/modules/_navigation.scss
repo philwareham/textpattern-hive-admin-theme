@@ -144,7 +144,7 @@ button.txp-nav-toggle {
         right: 0.5625em; // 9px / 16px
         width: 0;
         height: 0;
-        border: 0 solid transparent;
+        border: solid transparent;
         border-width: 0.25em 0.25em 0;
         border-top-color: var(--clr-text-btn);
         opacity: 0.4;
@@ -172,7 +172,7 @@ button.txp-nav-toggle {
 
 .txp-nav > ul > li.open > a.dropdown-toggle::after {
     content: "\2191";
-    border: 0 solid transparent;
+    border: solid transparent;
     border-width: 0 0.25em 0.25em;
     border-bottom-color: var(--clr-text-btn);
 }
