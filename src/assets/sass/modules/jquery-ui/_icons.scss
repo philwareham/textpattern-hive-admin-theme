@@ -39,7 +39,7 @@
     background-size: 32px 32px;
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .ui-icon,
     .no-ui-button .ui-button .ui-icon {
         filter: invert(100%);
@@ -80,7 +80,7 @@ button:not(.ui-button):focus .ui-icon {
     filter: invert(32%) sepia(81%) saturate(5962%) hue-rotate(212deg) brightness(104%) contrast(105%);
 }
 
-body.darkmode {
+@include setup.dark-mode {
     a:focus.ui-icon,
     a:focus .ui-icon,
     button:not(.ui-button):focus .ui-icon {
@@ -112,7 +112,7 @@ body.darkmode {
     filter: invert(36%) sepia(80%) saturate(582%) hue-rotate(72deg) brightness(97%) contrast(86%);
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .success .ui-icon,
     .success.ui-icon {
         filter: invert(71%) sepia(8%) saturate(3303%) hue-rotate(56deg) brightness(93%) contrast(100%);
@@ -136,7 +136,7 @@ body.darkmode {
     filter: invert(50%) sepia(75%) saturate(651%) hue-rotate(7deg) brightness(94%) contrast(101%);
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .ui-state-highlight .ui-icon,
     .warning .ui-icon,
     .warning.ui-icon {
@@ -164,7 +164,7 @@ body.darkmode {
     filter: invert(20%) sepia(42%) saturate(3280%) hue-rotate(343deg) brightness(93%) contrast(97%);
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .ui-state-error .ui-icon,
     .ui-state-error-text .ui-icon,
     .error .ui-icon,
@@ -191,7 +191,7 @@ body.darkmode {
     filter: invert(45%) sepia(70%) saturate(438%) hue-rotate(155deg) brightness(90%) contrast(83%);
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .information .ui-icon,
     .information.ui-icon {
         filter: invert(79%) sepia(45%) saturate(6724%) hue-rotate(182deg) brightness(101%) contrast(101%);
@@ -207,7 +207,7 @@ body.darkmode {
     filter: invert(100%);
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .ui-icon-inversed {
         filter: invert(100%);
     }

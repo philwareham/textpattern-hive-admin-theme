@@ -181,7 +181,7 @@ li.information {
     }
 }
 
-body.darkmode {
+@include setup.dark-mode {
     #messagepane .messageflash {
         border: 1px solid var(--clr-brdr-x-dark);
         border-bottom: 0;
@@ -228,7 +228,7 @@ body.darkmode {
     }
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .close {
         border-color: hsl(0 0% 0% / 0.4);
 

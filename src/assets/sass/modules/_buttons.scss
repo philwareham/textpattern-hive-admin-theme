@@ -127,7 +127,7 @@ button.destroy {
     }
 }
 
-body.darkmode {
+@include setup.dark-mode {
     button.destroy {
         .ui-icon {
             opacity: 1;

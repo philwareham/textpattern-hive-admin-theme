@@ -17,7 +17,7 @@ meter {
     appearance: none;
 }
 
-body.darkmode {
+@include setup.dark-mode {
     meter {
         border-color: var(--clr-brdr-x-dark);
     }

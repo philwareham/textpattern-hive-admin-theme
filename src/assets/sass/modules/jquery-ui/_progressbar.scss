@@ -23,7 +23,7 @@
     text-align: left;
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .ui-progressbar {
         border-color: var(--clr-brdr-x-dark);
     }
@@ -74,7 +74,7 @@ body.darkmode {
         );
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .ui-progressbar-value {
         background-image:
             linear-gradient(

@@ -31,7 +31,7 @@
     }
 }
 
-body.darkmode {
+@include setup.dark-mode {
     [type="file"] {
         border-color: var(--clr-brdr-x-dark);
 

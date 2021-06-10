@@ -50,7 +50,7 @@ body {
     }
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .is-inview::before {
         background-color: hsl(312 100% 50% / 0.25);
     }

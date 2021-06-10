@@ -23,7 +23,7 @@
     cursor: default !important;
 }
 
-body.darkmode {
+@include setup.dark-mode {
     [disabled],
     [disabled] option,
     [disabled] optgroup,

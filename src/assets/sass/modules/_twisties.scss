@@ -76,7 +76,7 @@ summary {
     background: var(--clr-bkgd-box);
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .txp-details {
         background: var(--clr-bkgd-box);
     }
@@ -108,7 +108,7 @@ body.darkmode {
 }
 
 @if not setup.$flat-theme {
-    body.darkmode {
+    @include setup.dark-mode {
         .txp-summary,
         .txp-details > h3 {
             border-bottom-color: var(--clr-brdr-x-lite);

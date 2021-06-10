@@ -97,7 +97,7 @@ pre[class*="language-"] {
     cursor: help;
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .token.punctuation {
         color: var(--clr-text-enforced-white);
     }

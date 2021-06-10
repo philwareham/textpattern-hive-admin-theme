@@ -105,7 +105,7 @@ dd {
     }
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .switcher-list li {
         border-top-color: var(--clr-brdr-x-lite);
     }

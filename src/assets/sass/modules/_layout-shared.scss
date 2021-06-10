@@ -910,7 +910,7 @@ hr {
     }
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .txp-save-zone {
         background: var(--clr-bkgd-box);
     }

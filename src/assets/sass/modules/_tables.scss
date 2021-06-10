@@ -54,7 +54,7 @@ thead th {
     background-color: var(--clr-grad-from);
 }
 
-body.darkmode {
+@include setup.dark-mode {
     tr {
         border-color: var(--clr-brdr-x-lite);
     }
@@ -156,7 +156,7 @@ td {
     }
 }
 
-body.darkmode {
+@include setup.dark-mode {
     .txp-list,
     .txp-list--no-options {
         thead th {
