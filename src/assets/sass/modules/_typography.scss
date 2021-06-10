@@ -104,7 +104,7 @@ h6 {
 }
 
 /**
- * Add the correct font weight in Chrome, Edge, and Safari.
+ * Ensure consistent font weight in all browsers.
  */
 
 b,
@@ -137,10 +137,8 @@ blockquote {
  */
 
 abbr[title] {
-    /* 1 */
-    border-bottom: 0;
-    /* 2 */
-    text-decoration: underline dotted;
+    border-bottom: 0; /* 1 */
+    text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -198,8 +196,7 @@ samp {
 pre {
     margin: 1em 0;
     padding: 1em; // 13px
-    /* 1 */
-    overflow-x: auto;
+    overflow-x: auto; /* 1 */
     border: 1px solid var(--clr-brdr-x-lite);
 
     @if setup.$border-radius > 0 {
@@ -207,14 +204,12 @@ pre {
     }
 
     background: var(--clr-bkgd-box);
-    /* 2 */
-    word-wrap: normal;
-    /* 3 */
-    tab-size: 4;
+    word-wrap: normal; /* 2 */
+    tab-size: 4; /* 3 */
 }
 
 /**
- * Override `code` styling for code display within preformatted text areas and
+ * Override `code` styling for code display within pre-formatted text areas and
  * form text areas.
  */
 

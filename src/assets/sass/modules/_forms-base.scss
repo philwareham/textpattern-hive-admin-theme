@@ -4,7 +4,7 @@
    ========================================================================== */
 
 /**
- * 1. Address width being affected by wide descendants in Chrome, Firefox.
+ * 1. Address width being affected by wide descendants in Chrome, Edge, Firefox.
  * 2. Define consistent fieldset border, margin, and padding.
  */
 
@@ -18,33 +18,25 @@ fieldset {
 /**
  * Normalize styling of `legend`.
  *
- * 1. Correct wrapping not present in Edge 12/13.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 1. Remove padding so people aren't caught out if they zero out fieldsets.
  */
 
 legend {
-    display: table; /* 1 */
-    box-sizing: border-box; /* 1 */
-    max-width: 100%; /* 1 */
-    padding: 0; /* 2 */
-    white-space: normal; /* 1 */
+    padding: 0; /* 1 */
 }
 
 /**
- * 1. Show the overflow in Edge.
- * 2. Remove tap delay in modern browsers.
+ * Remove tap delay in modern browsers.
  */
 
 button,
 input {
-    overflow: visible; /* 1 */
-    touch-action: manipulation; /* 2 */
+    touch-action: manipulation;
 }
 
 /**
  * 1. Prevent elements from spilling out of their parent.
- * 2. Address margins set differently in Firefox 4+, Safari, and Chrome.
- * 3. Correct font properties not being inherited.
+ * 2. Correct font properties not being inherited.
  */
 
 button,
@@ -59,10 +51,10 @@ textarea,
 .navlink-disabled {
     box-sizing: border-box;
     max-width: 100%; /* 1 */
-    margin: 0; /* 2 */
+    margin: 0;
     color: var(--clr-text-form);
     font-family: inherit;
-    font-size: 1rem; /* 3 */
+    font-size: 1rem; /* 2 */
     line-height: setup.$base-line-height;
     vertical-align: baseline;
 }
@@ -258,7 +250,7 @@ optgroup {
 }
 
 /**
- * 1. Remove unwanted space below `textarea` in Safari, Chrome, Opera.
+ * 1. Remove unwanted space below `textarea` in Safari, Chrome, Edge, Opera.
  * 2. Restrict to vertical resizing to prevent layout breakage.
  */
 

@@ -13,7 +13,6 @@
  * https://jqueryui.com/menu/
  *
  * 1. Correct font size not being inherited in all browsers.
- * 2. Workaround for Edge 12/13 incorrectly displaying a list marker.
  *
  * Example HTML:
  *
@@ -89,8 +88,6 @@
     .ui-menu-item {
         display: block;
         margin: 0;
-        /* 2 */
-        list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
         cursor: pointer;
 
         a {
