@@ -1,98 +1,65 @@
-@use "sass:meta";
+// Global
+@import "links";
+@import "typography";
+@import "internationalization";
+@import "embedded-content";
+@import "alerts";
+@import "twisties";
+@import "progress-summary";
+@import "code-highlighting";
+@import "forms-base";
+@import "forms-input-checkboxradio";
+@import "forms-input-file";
+@import "forms-input-range";
+@import "forms-disabled";
+@import "buttons";
+@import "meter";
+@import "progress";
+@import "lists";
+@import "tables";
+@import "accessibility";
+@import "animation-keyframes";
 
-/* ==========================================================================
-   Styling and layout for screen media
-   ========================================================================== */
+// Layout modules
+@import "container";
+@import "grid";
+@import "header";
+@import "footer";
+@import "navigation";
+@import "layout-shared";
+@import "layout-specific";
 
-@media screen {
-    // Global
-    @include meta.load-css("links");
-    @include meta.load-css("typography");
-    @include meta.load-css("internationalization");
-    @include meta.load-css("embedded-content");
-    @include meta.load-css("alerts");
-    @include meta.load-css("twisties");
-    @include meta.load-css("progress-summary");
-    @include meta.load-css("code-highlighting");
-    @include meta.load-css("forms-base");
-    @include meta.load-css("forms-input-checkboxradio");
-    @include meta.load-css("forms-input-file");
-    @include meta.load-css("forms-input-range");
-    @include meta.load-css("forms-disabled");
-    @include meta.load-css("buttons");
-    @include meta.load-css("meter");
-    @include meta.load-css("progress");
-    @include meta.load-css("lists");
-    @include meta.load-css("tables");
+// jQuery UI core
+@import "jquery-ui/core";
 
-    // Layout modules
-    @include meta.load-css("container");
-    @include meta.load-css("grid");
-    @include meta.load-css("header");
-    @include meta.load-css("footer");
-    @include meta.load-css("navigation");
-    @include meta.load-css("layout-shared");
-    @include meta.load-css("layout-specific");
+// jQuery UI icons
+@import "jquery-ui/icons";
 
-    // jQuery UI core
-    @include meta.load-css("jquery-ui/core");
+// jQuery UI interactions
+@import "jquery-ui/draggable";
+@import "jquery-ui/resizable";
+@import "jquery-ui/selectable";
+@import "jquery-ui/sortable";
 
-    // jQuery UI icons
-    @include meta.load-css("jquery-ui/icons");
-
-    // jQuery UI interactions
-    @include meta.load-css("jquery-ui/draggable");
-    @include meta.load-css("jquery-ui/resizable");
-    @include meta.load-css("jquery-ui/selectable");
-    @include meta.load-css("jquery-ui/sortable");
-
-    // jQuery UI widgets
-    @include meta.load-css("jquery-ui/accordion");
-    @include meta.load-css("jquery-ui/autocomplete");
-    @include meta.load-css("jquery-ui/button");
-    @include meta.load-css("jquery-ui/checkboxradio");
-    @include meta.load-css("jquery-ui/controlgroup");
-    @include meta.load-css("jquery-ui/datepicker");
-    @include meta.load-css("jquery-ui/dialog");
-    @include meta.load-css("jquery-ui/menu");
-    @include meta.load-css("jquery-ui/progressbar");
-    @include meta.load-css("jquery-ui/selectmenu");
-    @include meta.load-css("jquery-ui/slider");
-    @include meta.load-css("jquery-ui/spinner");
-    @include meta.load-css("jquery-ui/tabs");
-    @include meta.load-css("jquery-ui/tooltip");
-}
-
+// jQuery UI widgets
+@import "jquery-ui/accordion";
+@import "jquery-ui/autocomplete";
+@import "jquery-ui/button";
+@import "jquery-ui/checkboxradio";
+@import "jquery-ui/controlgroup";
+@import "jquery-ui/datepicker";
+@import "jquery-ui/dialog";
+@import "jquery-ui/menu";
+@import "jquery-ui/progressbar";
+@import "jquery-ui/selectmenu";
+@import "jquery-ui/slider";
+@import "jquery-ui/spinner";
+@import "jquery-ui/tabs";
+@import "jquery-ui/tooltip";
 
 
 /* ==========================================================================
-   Responsive layout for screen media
-   ========================================================================== */
+Responsive layout
+========================================================================== */
 
-@include meta.load-css("responsive");
-
-
-
-/* ==========================================================================
-   Additional accessibility for screen media
-   ========================================================================== */
-
-@include meta.load-css("accessibility");
-
-
-
-/* ==========================================================================
-   Animation `keyframes` need to appear outside of `screen` rules
-   ========================================================================== */
-
-@include meta.load-css("animation-keyframes");
-
-
-
-/* ==========================================================================
-   Styling and layout for print media
-   ========================================================================== */
-
-@media print {
-    @include meta.load-css("print");
-}
+@import "responsive";

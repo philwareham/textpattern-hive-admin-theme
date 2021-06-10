@@ -1,4 +1,5 @@
 @use "../setup";
+@use "sass:math";
 
 /* Typography
    ========================================================================== */
@@ -12,8 +13,7 @@
 html {
     font-size: setup.$base-font-size;
     line-height: setup.$base-line-height;
-    /* 1 */
-    text-size-adjust: 100%;
+    text-size-adjust: 100%; /* 1 */
 }
 
 /**
@@ -150,7 +150,7 @@ var {
     padding: 1px 0.23076923076923em; // 3px / 13px
 
     @if setup.$border-radius > 0 {
-        border-radius: setup.$border-radius / 2;
+        border-radius: math.div(setup.$border-radius, 2);
     }
 
     background: var(--clr-selected);
@@ -179,7 +179,7 @@ samp {
     border: 1px solid var(--clr-brdr-x-lite);
 
     @if setup.$border-radius > 0 {
-        border-radius: setup.$border-radius / 2;
+        border-radius: math.div(setup.$border-radius, 2);
     }
 
     background: var(--clr-bkgd-box);
@@ -200,7 +200,7 @@ pre {
     border: 1px solid var(--clr-brdr-x-lite);
 
     @if setup.$border-radius > 0 {
-        border-radius: setup.$border-radius / 2;
+        border-radius: math.div(setup.$border-radius, 2);
     }
 
     background: var(--clr-bkgd-box);
