@@ -1,65 +1,61 @@
 // Global
-@import "links";
-@import "typography";
-@import "internationalization";
-@import "embedded-content";
-@import "alerts";
-@import "twisties";
-@import "progress-summary";
-@import "code-highlighting";
-@import "forms-base";
-@import "forms-input-checkboxradio";
-@import "forms-input-file";
-@import "forms-input-range";
-@import "forms-disabled";
-@import "buttons";
-@import "meter";
-@import "progress";
-@import "lists";
-@import "tables";
-@import "accessibility";
-@import "animation-keyframes";
+@use "links";
+@use "typography";
+@use "internationalization";
+@use "embedded-content";
+@use "alerts";
+@use "twisties";
+@use "progress-summary";
+@use "code-highlighting";
+@use "forms-base";
+@use "forms-input-checkboxradio";
+@use "forms-input-file";
+@use "forms-input-range";
+@use "forms-disabled";
+@use "buttons";
+@use "meter";
+@use "progress";
+@use "lists";
+@use "tables";
+@use "accessibility";
+@use "animation-keyframes";
 
 // Layout modules
-@import "container";
-@import "grid";
-@import "header";
-@import "footer";
-@import "navigation";
-@import "layout-shared";
-@import "layout-specific";
+@use "container";
+@use "grid";
+@use "header";
+@use "footer";
+@use "navigation";
+@use "layout-shared";
+@use "layout-specific";
 
 // jQuery UI core
-@import "jquery-ui/core";
+@use "jquery-ui/core";
 
 // jQuery UI icons
-@import "jquery-ui/icons";
+@use "jquery-ui/icons";
 
 // jQuery UI interactions
-@import "jquery-ui/draggable";
-@import "jquery-ui/resizable";
-@import "jquery-ui/selectable";
-@import "jquery-ui/sortable";
+@use "jquery-ui/draggable";
+@use "jquery-ui/resizable";
+@use "jquery-ui/selectable";
+@use "jquery-ui/sortable";
 
 // jQuery UI widgets
-@import "jquery-ui/accordion";
-@import "jquery-ui/autocomplete";
-@import "jquery-ui/button";
-@import "jquery-ui/checkboxradio";
-@import "jquery-ui/controlgroup";
-@import "jquery-ui/datepicker";
-@import "jquery-ui/dialog";
-@import "jquery-ui/menu";
-@import "jquery-ui/progressbar";
-@import "jquery-ui/selectmenu";
-@import "jquery-ui/slider";
-@import "jquery-ui/spinner";
-@import "jquery-ui/tabs";
-@import "jquery-ui/tooltip";
+@use "jquery-ui/accordion";
+@use "jquery-ui/autocomplete";
+@use "jquery-ui/button";
+@use "jquery-ui/checkboxradio";
+@use "jquery-ui/controlgroup";
+@use "jquery-ui/datepicker";
+@use "jquery-ui/dialog";
+@use "jquery-ui/menu";
+@use "jquery-ui/progressbar";
+@use "jquery-ui/selectmenu";
+@use "jquery-ui/slider";
+@use "jquery-ui/spinner";
+@use "jquery-ui/tabs";
+@use "jquery-ui/tooltip";
 
-
-/* ==========================================================================
-Responsive layout
-========================================================================== */
-
-@import "responsive";
+// Responsive layout
+@use "responsive";
