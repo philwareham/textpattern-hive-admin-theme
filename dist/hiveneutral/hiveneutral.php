@@ -135,7 +135,11 @@ class hiveNeutral_theme extends \Textpattern\Admin\Theme
                 'rel'    => 'external noopener',
                 'target' => '_blank',
             )).
-            ' (v'.txp_version.')', array('class' => 'mothership'));
+            ' (v'.txp_version.')'.
+            n.span('|', array('role' => 'separator')).
+            n.gTxt('logged_in_as').
+            n.span(txpspecialchars($txp_user), array('class' => 'txp-username'))
+        , array('class' => 'mothership'));
 
         return join(n, $out);
     }
