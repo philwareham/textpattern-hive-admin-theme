@@ -262,5 +262,4 @@ module.exports = function (grunt)
     grunt.registerTask('build', ['clean', 'concurrent', 'copy']);
     grunt.registerTask('css', ['stylelint', 'sass', 'postcss']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('travis', ['build']);
 };
