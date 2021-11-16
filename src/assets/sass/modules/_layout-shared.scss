@@ -15,8 +15,10 @@ html {
  * Hide content during 'not ready'.
  */
 
-.not-ready main {
-    opacity: 0;
+@supports (display: flex) { // workaround for IE 11 (see https://github.com/textpattern/textpattern/issues/1701).
+    .not-ready main {
+        opacity: 0;
+    }
 }
 
 /**
