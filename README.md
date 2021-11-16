@@ -1,11 +1,5 @@
 # Hive admin-side theme for Textpattern CMS
 
-[![Build Status](https://travis-ci.org/philwareham/textpattern-hive-admin-theme.svg?branch=master)](https://travis-ci.org/philwareham/textpattern-hive-admin-theme)
-[![Known Vulnerabilities](https://snyk.io/test/github/philwareham/textpattern-hive-admin-theme/badge.svg?targetFile=package.json)](https://snyk.io/test/github/philwareham/textpattern-hive-admin-theme?targetFile=package.json)
-[![Dependencies Status](https://david-dm.org/philwareham/textpattern-hive-admin-theme/status.svg)](https://david-dm.org/philwareham/textpattern-hive-admin-theme)
-[![devDependencies Status](https://david-dm.org/philwareham/textpattern-hive-admin-theme/dev-status.svg)](https://david-dm.org/philwareham/textpattern-hive-admin-theme?type=dev)
-[![optionalDependencies Status](https://david-dm.org/philwareham/textpattern-hive-admin-theme/optional-status.svg)](https://david-dm.org/philwareham/textpattern-hive-admin-theme?type=optional)
-
 The default admin theme that ships as standard with [Textpattern CMS](https://textpattern.com/).
 
 ## Demos
