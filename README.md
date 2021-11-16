@@ -1,7 +1,5 @@
 # Hive admin-side theme for Textpattern CMS
 
-[![Build Status](https://travis-ci.com/philwareham/textpattern-hive-admin-theme.svg)](https://travis-ci.com/philwareham/textpattern-hive-admin-theme)
-
 The default admin theme that ships as standard with [Textpattern CMS](https://textpattern.com/).
 
 ## Demos
