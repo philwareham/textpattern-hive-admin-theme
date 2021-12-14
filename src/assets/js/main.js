@@ -1,3 +1,5 @@
+/** global: localStorage */
+
 (function()
 {
     'use strict';
