@@ -342,6 +342,9 @@ body.darkmode.login {
     height: 64vh;
 }
 
+.txp-form-field-set {
+    display: inline-block;
+}
 
 /* Presentation -> Forms panel - additional layout
    ========================================================================== */
@@ -373,18 +376,8 @@ body.darkmode.login {
     display: block;
 }
 
-tr {
-    .manage span,
-    .plugin-prefs {
-        visibility: hidden;
-    }
-}
-
-tr.active {
-    .manage span,
-    .plugin-prefs {
-        visibility: visible;
-    }
+tr:not(.active) .plugin-prefs {
+    display: none;
 }
 
 #preview-plugin,
