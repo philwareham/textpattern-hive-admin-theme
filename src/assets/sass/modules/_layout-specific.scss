@@ -376,8 +376,10 @@ body.darkmode.login {
     display: block;
 }
 
-tr:not(.active) .plugin-prefs {
-    display: none;
+tr:not(.active) {
+    .plugin-prefs {
+        display: none;
+    }
 }
 
 #preview-plugin,
