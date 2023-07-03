@@ -293,9 +293,13 @@ ul.nav-tertiary {
  */
 
 button[disabled],
+button[inert],
 [type="button"][disabled],
+[type="button"][inert],
 [type="reset"][disabled],
+[type="reset"][inert],
 [type="submit"][disabled],
+[type="submit"][inert],
 .txp-button.disabled,
 .navlink-disabled,
 .ui-checkboxradio-disabled {
