@@ -33,10 +33,12 @@
 
 /**
  * 1. Add some breathing space above page anchors.
+ * 2. Avoid content shift when scrollbars appear.
  */
 
 html {
     scroll-padding-top: 1rem; /* 1 */
+    scrollbar-gutter: stable both-edges; /* 2 */
 }
 
 /**
