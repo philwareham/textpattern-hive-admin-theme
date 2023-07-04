@@ -28,7 +28,7 @@
     // Column width of 'welcome' setup panel.
 
     .welcome & {
-        max-width: 20.30769230769231em; // 264px / 13px
+        max-width: 20.3076923em; // 264px / 13px
     }
 }
 
@@ -37,7 +37,7 @@
  */
 
 .txp-login {
-    max-width: 20.30769230769231em; // 264px / 13px
+    max-width: 20.3076923em; // 264px / 13px
     margin: 1em auto;
     padding: 1em 2em 1px;
 
@@ -108,7 +108,6 @@ body.darkmode.login {
     width: 100%;
 }
 
-
 /* Content -> Categories panel - additional layout
    ========================================================================== */
 
@@ -119,7 +118,6 @@ body.darkmode.login {
 #page-category .multi-edit {
     margin-bottom: 1em;
 }
-
 
 /* Content -> Write panel - additional layout
    ========================================================================== */
@@ -149,7 +147,7 @@ body.darkmode.login {
 
     li {
         display: inline-block;
-        height: 2.636363636363636em; // 29px / 11px
+        height: 2.6363636em; // 29px / 11px
     }
 
     a {
@@ -229,17 +227,17 @@ body.darkmode.login {
 #main_content {
     .text {
         input {
-            font-size: 1.230769230769231rem; // 16px / 13px
+            font-size: 1.2307692rem; // 16px / 13px
         }
 
         textarea {
-            font-size: 1.230769230769231rem; // 16px / 13px
+            font-size: 1.2307692rem; // 16px / 13px
             line-height: 1.5; // 24px / 16px
         }
 
         .title input {
             width: 100%;
-            font-size: 1.538461538461538rem; // 20px / 13px
+            font-size: 1.5384615rem; // 20px / 13px
             font-weight: 700;
         }
     }
@@ -259,7 +257,6 @@ body.darkmode.login {
     margin-top: 0;
 }
 
-
 /* Content -> Articles panel - additional layout
    ========================================================================== */
 
@@ -271,7 +268,6 @@ body.darkmode.login {
 .not-modified {
     color: var(--clr-text-demoted);
 }
-
 
 /* Content -> Images panel - additional layout
    ========================================================================== */
@@ -286,7 +282,7 @@ body.darkmode.login {
 
 .edit-alter-thumbnail input {
     margin: 0;
-    margin-inline-end: 0.30769230769231em;
+    margin-inline-end: 0.3076923em;
 
     &:last-child {
         margin-inline-end: 0;
@@ -295,7 +291,7 @@ body.darkmode.login {
 
 .ui-button.thumbnail-swap-size {
     margin: 0;
-    margin-inline-end: 0.30769230769231em;
+    margin-inline-end: 0.3076923em;
 }
 
 .thumbnail-image form {
@@ -303,7 +299,6 @@ body.darkmode.login {
     margin-top: 5px;
     vertical-align: top;
 }
-
 
 /* Content -> Files panel - additional layout
    ========================================================================== */
@@ -315,7 +310,6 @@ body.darkmode.login {
 .txp-control-panel .assign-existing-form {
     display: block;
 }
-
 
 /* Content -> Comments panel - additional layout
    ========================================================================== */
@@ -334,14 +328,12 @@ body.darkmode.login {
     }
 }
 
-
 /* Presentation -> all panels - additional layout
    ========================================================================== */
 
 .presentation textarea.code {
     height: 64vh;
 }
-
 
 /* Presentation -> Forms panel - additional layout
    ========================================================================== */
@@ -352,7 +344,7 @@ body.darkmode.login {
     margin-inline-end: 1em;
 
     input {
-        width: 14.46153846153846em; // 188px / 13px
+        width: 14.4615385em; // 188px / 13px
     }
 }
 
@@ -364,7 +356,6 @@ body.darkmode.login {
 #page-form .txp-layout-4col-3span .txp-actions a {
     margin-top: 1.5em;
 }
-
 
 /* Admin -> Plugins panel - additional layout
    ========================================================================== */

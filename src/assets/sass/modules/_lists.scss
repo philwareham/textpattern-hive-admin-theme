@@ -96,7 +96,7 @@ dd {
 
     a {
         display: block;
-        padding: 0.38461538461538em 1em;
+        padding: 0.3846154em 1em;
         padding-inline-end: 2.75em;
         overflow: hidden;
         font-weight: 400;
@@ -118,7 +118,7 @@ dd {
 .switcher-action {
     position: absolute;
     z-index: 2;
-    top: 0.38461538461538em; // 5px / 13px
+    top: 0.3846154em; // 5px / 13px
     left: 1em;
 
     + a {
@@ -139,7 +139,7 @@ dd {
 .switcher-list .destroy {
     position: absolute;
     z-index: 2;
-    top: 0.307692307692308em; // 4px / 13px
+    top: 0.3076923em; // 4px / 13px
     right: 1em;
 }
 

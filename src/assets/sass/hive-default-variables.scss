@@ -7,118 +7,119 @@
 
 :root {
     // font families
-    --font-body: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-body: system-ui, -apple-system, "Segoe UI", Helvetica, Arial,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-code: Menlo, Consolas, Monaco, monospace;
     // text colours
-    --clr-text:                   hsl(0 0% 20%);
-    --clr-text-promoted:          hsl(0 0% 0%);
-    --clr-text-demoted:           hsl(0 0% 35%);
-    --clr-text-inversed:          hsl(0 0% 100%);
-    --clr-text-enforced-white:    hsl(0 0% 100%);
-    --clr-text-form:              hsl(0 0% 0%);
-    --clr-text-placeholder:       hsl(0 0% 60%);
-    --clr-text-btn:               hsl(0 0% 0%);
-    --clr-text-btn-hover:         hsl(0 0% 0%);
-    --clr-text-btn-active:        hsl(0 0% 0%);
+    --clr-text: hsl(0 0% 20%);
+    --clr-text-promoted: hsl(0 0% 0%);
+    --clr-text-demoted: hsl(0 0% 35%);
+    --clr-text-inversed: hsl(0 0% 100%);
+    --clr-text-enforced-white: hsl(0 0% 100%);
+    --clr-text-form: hsl(0 0% 0%);
+    --clr-text-placeholder: hsl(0 0% 60%);
+    --clr-text-btn: hsl(0 0% 0%);
+    --clr-text-btn-hover: hsl(0 0% 0%);
+    --clr-text-btn-active: hsl(0 0% 0%);
     // neutral colours
-    --clr-bkgd:                   hsl(0 0% 97%);
-    --clr-bkgd-enforced-white:    hsl(0 0% 100%);
-    --clr-bkgd-box:               hsl(0 0% 94%);
-    --clr-bkgd-form:              hsl(0 0% 100%);
-    --clr-bkgd-form-disabled:     hsl(0 0% 89%);
-    --clr-grad-from:              hsl(0 0% 93%);
-    --clr-grad-to:                hsl(0 0% 87%);
+    --clr-bkgd: hsl(0 0% 97%);
+    --clr-bkgd-enforced-white: hsl(0 0% 100%);
+    --clr-bkgd-box: hsl(0 0% 94%);
+    --clr-bkgd-form: hsl(0 0% 100%);
+    --clr-bkgd-form-disabled: hsl(0 0% 89%);
+    --clr-grad-from: hsl(0 0% 93%);
+    --clr-grad-to: hsl(0 0% 87%);
     // accent colours
-    --clr-accent-grad-from:       hsl(48 100% 63%);
-    --clr-accent-grad-to:         hsl(48 100% 48%);
-    --clr-accent-dark:            hsl(48 100% 42%);
-    --clr-accent-bkgd:            hsl(48 100% 94%);
-    --clr-hilite-box:             hsl(48 100% 63% / 0.25);
-    --clr-strong-hilite-box:      hsl(48 100% 63% / 0.66);
+    --clr-accent-grad-from: hsl(48 100% 63%);
+    --clr-accent-grad-to: hsl(48 100% 48%);
+    --clr-accent-dark: hsl(48 100% 42%);
+    --clr-accent-bkgd: hsl(48 100% 94%);
+    --clr-hilite-box: hsl(48 100% 63% / 0.25);
+    --clr-strong-hilite-box: hsl(48 100% 63% / 0.66);
     // border colours
-    --clr-brdr:                   hsl(0 0% 80%);
-    --clr-brdr-lite:              hsl(0 0% 82%);
-    --clr-brdr-x-lite:            hsl(0 0% 84%);
-    --clr-brdr-dark:              hsl(0 0% 75%);
-    --clr-brdr-x-dark:            hsl(0 0% 70%);
+    --clr-brdr: hsl(0 0% 80%);
+    --clr-brdr-lite: hsl(0 0% 82%);
+    --clr-brdr-x-lite: hsl(0 0% 84%);
+    --clr-brdr-dark: hsl(0 0% 75%);
+    --clr-brdr-x-dark: hsl(0 0% 70%);
     // interaction colours
-    --clr-a:                      hsl(216 100% 37%);
-    --clr-a-interact:             hsl(216 100% 50%);
-    --clr-focus:                  hsl(216 100% 50%);
-    --clr-focus-a50:              hsl(216 100% 50% / 0.5);
-    --clr-selecting:              hsl(216 100% 90%);
-    --clr-selected:               hsl(216 100% 95%);
+    --clr-a: hsl(216 100% 37%);
+    --clr-a-interact: hsl(216 100% 50%);
+    --clr-focus: hsl(216 100% 50%);
+    --clr-focus-a50: hsl(216 100% 50% / 0.5);
+    --clr-selecting: hsl(216 100% 90%);
+    --clr-selected: hsl(216 100% 95%);
     // button colours
-    --clr-btn-grad-from:          hsl(0 0% 93%);
-    --clr-btn-grad-to:            hsl(0 0% 87%);
-    --clr-btn-brdr:               hsl(0 0% 80%);
-    --clr-btn-primary-grad-from:  hsl(48 100% 70%);
-    --clr-btn-primary-grad-to:    hsl(48 100% 55%);
-    --clr-btn-primary-brdr:       hsl(48 100% 48%);
+    --clr-btn-grad-from: hsl(0 0% 93%);
+    --clr-btn-grad-to: hsl(0 0% 87%);
+    --clr-btn-brdr: hsl(0 0% 80%);
+    --clr-btn-primary-grad-from: hsl(48 100% 70%);
+    --clr-btn-primary-grad-to: hsl(48 100% 55%);
+    --clr-btn-primary-brdr: hsl(48 100% 48%);
     --clr-btn-selected-grad-from: hsl(216 100% 95%);
-    --clr-btn-selected-grad-to:   hsl(216 100% 90%);
-    --clr-btn-selected-brdr:      hsl(216 100% 79%);
+    --clr-btn-selected-grad-to: hsl(216 100% 90%);
+    --clr-btn-selected-brdr: hsl(216 100% 79%);
     // alert colours
-    --clr-success-text:           hsl(120 60% 34%);
-    --clr-success-bkgd:           hsl(120 40% 90%);
-    --clr-success-brdr:           hsl(102 40% 68%);
-    --clr-warning-text:           hsl(41 100% 40%);
-    --clr-warning-bkgd:           hsl(41 64% 91%);
-    --clr-warning-brdr:           hsl(41 64% 71%);
-    --clr-error-text:             hsl(4 69% 36%);
-    --clr-error-text-a50:         hsl(4 69% 36% / 0.5);
-    --clr-error-bkgd:             hsl(4 43% 91%);
-    --clr-error-brdr:             hsl(4 43% 78%);
-    --clr-info-text:              hsl(200 50% 45%);
-    --clr-info-bkgd:              hsl(200 78% 95%);
-    --clr-info-brdr:              hsl(200 78% 82%);
+    --clr-success-text: hsl(120 60% 34%);
+    --clr-success-bkgd: hsl(120 40% 90%);
+    --clr-success-brdr: hsl(102 40% 68%);
+    --clr-warning-text: hsl(41 100% 40%);
+    --clr-warning-bkgd: hsl(41 64% 91%);
+    --clr-warning-brdr: hsl(41 64% 71%);
+    --clr-error-text: hsl(4 69% 36%);
+    --clr-error-text-a50: hsl(4 69% 36% / 0.5);
+    --clr-error-bkgd: hsl(4 43% 91%);
+    --clr-error-brdr: hsl(4 43% 78%);
+    --clr-info-text: hsl(200 50% 45%);
+    --clr-info-bkgd: hsl(200 78% 95%);
+    --clr-info-brdr: hsl(200 78% 82%);
     // shadows
     --standard-shadow: 0 0 0.5em hsl(0 0% 0% / 0.2);
-    --inset-lolite:    inset 0 0.2em 0.25em hsl(0 0% 0% / 0.15);
+    --inset-lolite: inset 0 0.2em 0.25em hsl(0 0% 0% / 0.15);
 }
 
 @include setup.dark-mode {
     // text colours
-    --clr-text:               hsl(210 14% 83%);
-    --clr-text-promoted:      hsl(0 0% 100%);
-    --clr-text-demoted:       hsl(210 14% 70%);
-    --clr-text-inversed:      hsl(210 11% 24%);
-    --clr-text-form:          hsl(0 0% 100%);
-    --clr-text-placeholder:   hsl(210 6% 48%);
+    --clr-text: hsl(210 14% 83%);
+    --clr-text-promoted: hsl(0 0% 100%);
+    --clr-text-demoted: hsl(210 14% 70%);
+    --clr-text-inversed: hsl(210 11% 24%);
+    --clr-text-form: hsl(0 0% 100%);
+    --clr-text-placeholder: hsl(210 6% 48%);
     // neutral colours
-    --clr-bkgd:               hsl(210 11% 23%);
-    --clr-bkgd-box:           hsl(210 11% 20%);
-    --clr-bkgd-form:          hsl(210 11% 17%);
+    --clr-bkgd: hsl(210 11% 23%);
+    --clr-bkgd-box: hsl(210 11% 20%);
+    --clr-bkgd-form: hsl(210 11% 17%);
     --clr-bkgd-form-disabled: hsl(210 11% 17%);
-    --clr-grad-from:          hsl(210 7% 34%);
-    --clr-grad-to:            hsl(210 9% 28%);
+    --clr-grad-from: hsl(210 7% 34%);
+    --clr-grad-to: hsl(210 9% 28%);
     // border colours
-    --clr-brdr:               hsl(210 7% 50%);
-    --clr-brdr-lite:          hsl(210 7% 40%);
-    --clr-brdr-x-lite:        hsl(210 7% 30%);
-    --clr-brdr-dark:          hsl(210 7% 20%);
-    --clr-brdr-x-dark:        hsl(210 7% 5%);
+    --clr-brdr: hsl(210 7% 50%);
+    --clr-brdr-lite: hsl(210 7% 40%);
+    --clr-brdr-x-lite: hsl(210 7% 30%);
+    --clr-brdr-dark: hsl(210 7% 20%);
+    --clr-brdr-x-dark: hsl(210 7% 5%);
     // interaction colours
-    --clr-a:                  hsl(210 100% 81%);
-    --clr-a-interact:         hsl(210 100% 87%);
-    --clr-focus:              hsl(312 100% 50%);
-    --clr-focus-a50:          hsl(312 100% 50% / 0.5);
-    --clr-selecting:          hsl(210 50% 18%);
-    --clr-selected:           hsl(210 50% 21%);
+    --clr-a: hsl(210 100% 81%);
+    --clr-a-interact: hsl(210 100% 87%);
+    --clr-focus: hsl(312 100% 50%);
+    --clr-focus-a50: hsl(312 100% 50% / 0.5);
+    --clr-selecting: hsl(210 50% 18%);
+    --clr-selected: hsl(210 50% 21%);
     // alert colours
-    --clr-success-text:       hsl(100 60% 50%);
-    --clr-success-bkgd:       hsl(109 27% 20%);
-    --clr-success-brdr:       hsl(100 60% 50% / 0.33);
-    --clr-warning-text:       hsl(40 100% 62%);
-    --clr-warning-bkgd:       hsl(49 35% 21%);
-    --clr-warning-brdr:       hsl(40 100% 62% / 0.33);
-    --clr-error-text:         hsl(337 100% 60%);
-    --clr-error-text-a50:     hsl(337 100% 60% / 0.5);
-    --clr-error-bkgd:         hsl(348 34% 21%);
-    --clr-error-brdr:         hsl(337 100% 60% / 0.43);
-    --clr-info-text:          hsl(207 100% 63%);
-    --clr-info-bkgd:          hsl(207 68% 17%);
-    --clr-info-brdr:          hsl(207 100% 63% / 0.38);
+    --clr-success-text: hsl(100 60% 50%);
+    --clr-success-bkgd: hsl(109 27% 20%);
+    --clr-success-brdr: hsl(100 60% 50% / 0.33);
+    --clr-warning-text: hsl(40 100% 62%);
+    --clr-warning-bkgd: hsl(49 35% 21%);
+    --clr-warning-brdr: hsl(40 100% 62% / 0.33);
+    --clr-error-text: hsl(337 100% 60%);
+    --clr-error-text-a50: hsl(337 100% 60% / 0.5);
+    --clr-error-bkgd: hsl(348 34% 21%);
+    --clr-error-brdr: hsl(337 100% 60% / 0.43);
+    --clr-info-text: hsl(207 100% 63%);
+    --clr-info-bkgd: hsl(207 68% 17%);
+    --clr-info-brdr: hsl(207 100% 63% / 0.38);
     // shadows
     --standard-shadow: 0 0 0.5em hsl(0 0% 0% / 0.75);
 }

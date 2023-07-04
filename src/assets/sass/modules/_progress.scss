@@ -44,34 +44,32 @@ progress {
 .txp-upload-progress::-webkit-progress-value {
     animation: progressbar-stripes linear 4s infinite;
     background-color: var(--clr-accent-grad-to);
-    background-image:
-        linear-gradient(
-            135deg,
-            hsl(0 0% 100% / 0.33) 25%,
-            transparent 25%,
-            transparent 50%,
-            hsl(0 0% 100% / 0.33) 50%,
-            hsl(0 0% 100% / 0.33) 75%,
-            transparent 75%,
-            transparent
-        );
+    background-image: linear-gradient(
+        135deg,
+        hsl(0 0% 100% / 0.33) 25%,
+        transparent 25%,
+        transparent 50%,
+        hsl(0 0% 100% / 0.33) 50%,
+        hsl(0 0% 100% / 0.33) 75%,
+        transparent 75%,
+        transparent
+    );
     background-size: 24px 24px;
 }
 
 .txp-upload-progress:indeterminate::-webkit-progress-bar {
     animation: progressbar-stripes linear 4s infinite;
     background-color: var(--clr-brdr);
-    background-image:
-        linear-gradient(
-            135deg,
-            hsl(0 0% 100% / 0.25) 25%,
-            transparent 25%,
-            transparent 50%,
-            hsl(0 0% 100% / 0.25) 50%,
-            hsl(0 0% 100% / 0.25) 75%,
-            transparent 75%,
-            transparent
-        );
+    background-image: linear-gradient(
+        135deg,
+        hsl(0 0% 100% / 0.25) 25%,
+        transparent 25%,
+        transparent 50%,
+        hsl(0 0% 100% / 0.25) 50%,
+        hsl(0 0% 100% / 0.25) 75%,
+        transparent 75%,
+        transparent
+    );
     background-size: 24px 24px;
 }
 
@@ -87,17 +85,16 @@ progress {
     /* autoprefixer: off */
     animation: progressbar-stripes linear 4s infinite;
     background-color: var(--clr-accent-grad-to);
-    background-image:
-        linear-gradient(
-            135deg,
-            hsl(0 0% 100% / 0.33) 25%,
-            transparent 25%,
-            transparent 50%,
-            hsl(0 0% 100% / 0.33) 50%,
-            hsl(0 0% 100% / 0.33) 75%,
-            transparent 75%,
-            transparent
-        );
+    background-image: linear-gradient(
+        135deg,
+        hsl(0 0% 100% / 0.33) 25%,
+        transparent 25%,
+        transparent 50%,
+        hsl(0 0% 100% / 0.33) 50%,
+        hsl(0 0% 100% / 0.33) 75%,
+        transparent 75%,
+        transparent
+    );
     background-size: 24px 24px;
 }
 
@@ -105,17 +102,16 @@ progress {
     /* autoprefixer: off */
     animation: progressbar-stripes linear 4s infinite;
     background-color: var(--clr-brdr);
-    background-image:
-        linear-gradient(
-            135deg,
-            hsl(0 0% 100% / 0.25) 25%,
-            transparent 25%,
-            transparent 50%,
-            hsl(0 0% 100% / 0.25) 50%,
-            hsl(0 0% 100% / 0.25) 75%,
-            transparent 75%,
-            transparent
-        );
+    background-image: linear-gradient(
+        135deg,
+        hsl(0 0% 100% / 0.25) 25%,
+        transparent 25%,
+        transparent 50%,
+        hsl(0 0% 100% / 0.25) 50%,
+        hsl(0 0% 100% / 0.25) 75%,
+        transparent 75%,
+        transparent
+    );
     background-size: 24px 24px;
 }
 

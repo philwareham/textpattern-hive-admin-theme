@@ -71,7 +71,7 @@ thead th {
 
 th,
 td {
-    padding: 0.38461538461538em 1em; // 5px / 13px + 13px
+    padding: 0.3846154em 1em; // 5px / 13px + 13px
     vertical-align: middle;
     text-align: start;
 }
@@ -130,7 +130,10 @@ td {
     }
 
     thead th {
-        @include setup.gradient-linear(var(--clr-grad-from), var(--clr-grad-to));
+        @include setup.gradient-linear(
+            var(--clr-grad-from),
+            var(--clr-grad-to)
+        );
 
         border-top: 1px solid var(--clr-brdr-lite);
         border-right: 1px solid var(--clr-brdr);
@@ -144,8 +147,8 @@ td {
         a {
             display: block;
             position: relative;
-            margin: -0.38461538461538em -1em; // improved click area
-            padding: 0.38461538461538em 1em; // 5px / 13px + 13px
+            margin: -0.3846154em -1em; // improved click area
+            padding: 0.3846154em 1em; // 5px / 13px + 13px
             color: var(--clr-text);
 
             &:hover {
@@ -196,7 +199,10 @@ td {
     thead th {
         &.asc,
         &.desc {
-            @include setup.gradient-linear(var(--clr-grad-to), var(--clr-grad-from));
+            @include setup.gradient-linear(
+                var(--clr-grad-to),
+                var(--clr-grad-from)
+            );
 
             filter: brightness(0.95);
 

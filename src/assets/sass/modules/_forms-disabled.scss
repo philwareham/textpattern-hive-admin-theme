@@ -20,8 +20,7 @@
     opacity: 0.33 !important;
     background-color: var(--clr-bkgd-form-disabled) !important;
     box-shadow: none !important;
-    /* 1 */
-    cursor: default !important;
+    cursor: default !important; /* 1 */
 }
 
 @include setup.dark-mode {

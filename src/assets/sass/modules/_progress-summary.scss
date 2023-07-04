@@ -30,7 +30,10 @@
     }
 
     li {
-        @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
+        @include setup.gradient-linear(
+            var(--clr-btn-grad-from),
+            var(--clr-btn-grad-to)
+        );
 
         display: inline-block;
         position: relative;
@@ -47,7 +50,10 @@
         // highlight the currently active step
 
         &.active {
-            @include setup.gradient-linear(var(--clr-accent-grad-from), var(--clr-accent-grad-to));
+            @include setup.gradient-linear(
+                var(--clr-accent-grad-from),
+                var(--clr-accent-grad-to)
+            );
 
             border: 1px solid var(--clr-accent-grad-to);
             border-bottom-color: var(--clr-accent-dark);
@@ -66,7 +72,7 @@
             border: 1px solid var(--clr-bkgd);
             border-radius: 50%;
             background-color: var(--clr-brdr);
-            font-size: 1.230769230769231rem; // 16px / 13px
+            font-size: 1.2307692rem; // 16px / 13px
             font-weight: 700;
             text-align: center;
             counter-increment: step; // increment the step on each occurance of this (pseudo) element

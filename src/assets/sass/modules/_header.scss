@@ -18,7 +18,10 @@
  */
 
 .txp-header {
-    @include setup.gradient-linear(var(--clr-accent-grad-from), var(--clr-accent-grad-to));
+    @include setup.gradient-linear(
+        var(--clr-accent-grad-from),
+        var(--clr-accent-grad-to)
+    );
 
     display: flex;
     position: fixed;
@@ -26,7 +29,7 @@
     top: 0;
     right: 0;
     left: 0;
-    height: 2.69230769230769em; // 35px / 13px
+    height: 2.6923077em; // 35px / 13px
     padding: 0 4%;
     border-top: 1px solid var(--clr-accent-grad-to);
     border-bottom: 1px solid var(--clr-accent-dark);
@@ -97,7 +100,7 @@
     margin: 0 1em;
     padding: 0 1px;
     overflow: hidden;
-    line-height: 2.69230769230769; // 35px / 13px
+    line-height: 2.6923077; // 35px / 13px
     white-space: nowrap;
 
     span {
@@ -180,6 +183,6 @@
 
 .txp-logout {
     position: relative;
-    top: -0.846153846153846em; // 11px / 13px
+    top: -0.8461538em; // 11px / 13px
     flex: none;
 }

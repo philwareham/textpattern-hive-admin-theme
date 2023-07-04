@@ -51,9 +51,9 @@ h6 {
  */
 
 h1 {
-    margin: 0.26923076923077em 0 0.5em; // 7px / 26px, 13px / 26px
+    margin: 0.2692308em 0 0.5em; // 7px / 26px, 13px / 26px
     font-size: 2rem; // 26px / 13px
-    line-height: 1.23076923076923; // 32px / 26px
+    line-height: 1.2307692; // 32px / 26px
 
     .pophelp {
         font-size: 1rem;
@@ -73,9 +73,9 @@ h1 {
  */
 
 h2 {
-    margin: 0.5em 0 0.72222222222222em; // 9px / 18px + 13px / 18px
-    font-size: 1.384615384615385rem; // 18px / 13px
-    line-height: 1.33333333333333; // 24px / 18px
+    margin: 0.5em 0 0.7222222em; // 9px / 18px + 13px / 18px
+    font-size: 1.3846154rem; // 18px / 13px
+    line-height: 1.3333333; // 24px / 18px
 
     .pophelp {
         font-size: 1rem;
@@ -87,8 +87,8 @@ h2 {
  */
 
 h3 {
-    margin: 0.86666666666667em 0; // 13px / 15px
-    font-size: 1.153846153846154rem; // 15px / 13px
+    margin: 0.8666667em 0; // 13px / 15px
+    font-size: 1.1538462rem; // 15px / 13px
     line-height: 1.4; // 21px / 15px
 }
 
@@ -147,7 +147,7 @@ abbr[title] {
 
 mark,
 var {
-    padding: 1px 0.23076923076923em; // 3px / 13px
+    padding: 1px 0.2307692em; // 3px / 13px
 
     @if setup.$border-radius > 0 {
         border-radius: math.div(setup.$border-radius, 2);
@@ -175,7 +175,7 @@ samp,
 code,
 kbd,
 samp {
-    padding: 1px 0.23076923076923em; // 3px / 13px
+    padding: 1px 0.2307692em; // 3px / 13px
     border: 1px solid var(--clr-brdr-x-lite);
 
     @if setup.$border-radius > 0 {
@@ -252,7 +252,7 @@ sup {
 }
 
 sub {
-    bottom: -0.33333333333333em;
+    bottom: -0.3333333em;
 }
 
 /**

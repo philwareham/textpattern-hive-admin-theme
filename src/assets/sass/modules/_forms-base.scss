@@ -81,8 +81,8 @@ textarea,
 [type="week"],
 select,
 textarea {
-    height: 2.307692307692308em; // 30px / 13px
-    padding: 0.30769230769231em; // 4px / 13px
+    height: 2.3076923em; // 30px / 13px
+    padding: 0.3076923em; // 4px / 13px
     border: 1px solid var(--clr-brdr);
 
     @if setup.$border-radius > 0 {
@@ -92,7 +92,7 @@ textarea {
     }
 
     background: var(--clr-bkgd-form);
-    appearance: none;  /* 1 */
+    appearance: none; /* 1 */
 
     &:hover {
         border-color: var(--clr-brdr-x-dark);
@@ -157,9 +157,11 @@ textarea {
  */
 
 select {
-    padding-inline-end: 1.30769230769231em; // 17px / 13px
-    background: var(--clr-bkgd-form) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23777' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E") right center no-repeat;
-    background-size: 1em 0.30769230769231em;
+    padding-inline-end: 1.3076923em; // 17px / 13px
+    background: var(--clr-bkgd-form)
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23777' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E")
+        right center no-repeat;
+    background-size: 1em 0.3076923em;
     text-overflow: ellipsis;
     text-transform: none;
 
@@ -208,7 +210,7 @@ select {
  */
 
 [dir="rtl"] select {
-    background-position: 0.46153846153846em center; // 6px / 13px
+    background-position: 0.4615385em center; // 6px / 13px
 }
 
 /**
@@ -219,7 +221,7 @@ select[size],
 select[multiple] {
     box-sizing: border-box;
     height: auto;
-    padding-inline-end: 0.30769230769231em; // 4px / 13px
+    padding-inline-end: 0.3076923em; // 4px / 13px
     background-image: none;
     vertical-align: top;
 }
@@ -237,7 +239,7 @@ select[multiple] {
 
 select[size="0"],
 select[size="1"] {
-    height: 2.307692307692308em; // 30px / 13px
+    height: 2.3076923em; // 30px / 13px
 }
 
 /**
@@ -293,17 +295,17 @@ input.input-large {
 
 input.input-medium {
     width: 50%;
-    max-width: 14.46153846153846em; // 188px / 13px
+    max-width: 14.4615385em; // 188px / 13px
 }
 
 input.input-small {
     width: 25%;
-    max-width: 7.61538461538462em; // 99px / 13px
+    max-width: 7.6153846em; // 99px / 13px
 }
 
 input.input-xsmall {
     width: 16%;
-    max-width: 4.23076923076923em; // 55px / 13px
+    max-width: 4.2307692em; // 55px / 13px
 }
 
 input.input-number-max100 {
@@ -346,7 +348,7 @@ input.input-number-max100 {
 
 input {
     &.input-year {
-        width: 4.07692307692308em; // 53px / 13px
+        width: 4.0769231em; // 53px / 13px
         text-align: center;
     }
 
@@ -355,7 +357,7 @@ input {
     &.input-hour,
     &.input-minute,
     &.input-second {
-        width: 2.46153846153846em; // 32px / 13px
+        width: 2.4615385em; // 32px / 13px
         text-align: center;
     }
 }

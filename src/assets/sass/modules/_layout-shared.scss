@@ -82,7 +82,9 @@ hr {
     margin: -1px;
     padding: 0;
     overflow: hidden;
-    clip: rect(0 0 0 0); // TODO: Deprecated - use `clip-path` when browser support is better.
+    clip: rect(
+        0 0 0 0
+    ); // TODO: Deprecated - use `clip-path` when browser support is better.
     //clip-path: inset(50%); // TODO: Currently causes severe performance issues in Chrome.
     border: 0;
     white-space: nowrap;
@@ -126,7 +128,7 @@ hr {
     width: 18em; // 234px / 13px
 
     .checkbox {
-        margin: 0.153846153846154em; // 2px / 13px
+        margin: 0.1538462em; // 2px / 13px
     }
 }
 
@@ -368,7 +370,7 @@ hr {
  */
 
 :not(.txp-edit) .txp-actions-inline {
-    margin-top: 1.30769230769231em; // 17px / 13px
+    margin-top: 1.3076923em; // 17px / 13px
     float: right; // TODO: Use `float: inline-end` when browser support is better.
 }
 
@@ -491,7 +493,7 @@ hr {
 
 .multi-option.multi-step {
     display: inline-block;
-    margin-inline-start: 0.30769230769231em; // 4px / 13px
+    margin-inline-start: 0.3076923em; // 4px / 13px
 }
 
 /**
@@ -610,7 +612,6 @@ hr {
     }
 }
 
-
 /* Panes
    ========================================================================== */
 
@@ -652,7 +653,6 @@ hr {
     padding: 1em 1em 0;
     border-top: 2px solid var(--clr-bkgd);
 }
-
 
 /* Form fields.
    ========================================================================== */
@@ -751,7 +751,7 @@ hr {
     .txp-form-field-label,
     .txp-form-field-value {
         flex: 1 1 0%;
-        min-height: 2.307692307692308em; // 30px / 13px
+        min-height: 2.3076923em; // 30px / 13px
     }
 }
 

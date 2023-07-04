@@ -22,7 +22,9 @@
     margin: -1px;
     padding: 0;
     overflow: hidden;
-    clip: rect(0 0 0 0); // TODO: Deprecated - use `clip-path` when browser support is better.
+    clip: rect(
+        0 0 0 0
+    ); // TODO: Deprecated - use `clip-path` when browser support is better.
     //clip-path: inset(50%); // TODO: Currently causes severe performance issues in Chrome.
     border: 0;
     white-space: nowrap;
@@ -75,7 +77,6 @@
     z-index: 100;
 }
 
-
 /* Component containers
    ========================================================================== */
 
@@ -105,7 +106,6 @@
 
     font-weight: 700;
 }
-
 
 /* Interaction states
    ========================================================================== */
@@ -177,7 +177,6 @@ a.ui-state-default:focus {
 .ui-selected {
     background-color: var(--clr-selected);
 }
-
 
 /* Interaction cues
    ========================================================================== */
@@ -285,7 +284,6 @@ a.ui-state-default:focus {
     }
 }
 
-
 /* Overlays
    ========================================================================== */
 
@@ -305,7 +303,6 @@ a.ui-state-default:focus {
     height: 100%;
     background: hsl(0 0% 0% / 0.66);
 }
-
 
 /* Shadows
    ========================================================================== */

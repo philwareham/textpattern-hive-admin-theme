@@ -37,12 +37,15 @@ input[type="button"],
 .txp-logout a,
 .navlink,
 .navlink-active {
-    @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
+    @include setup.gradient-linear(
+        var(--clr-btn-grad-from),
+        var(--clr-btn-grad-to)
+    );
 
     display: inline-block;
     width: auto;
     height: auto;
-    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
+    padding: 0.3076923em 0.6153846em; // 4px / 13px + 8px / 13px
     border: 1px solid var(--clr-btn-brdr);
     border-radius: setup.$border-radius;
     background-clip: padding-box;
@@ -92,9 +95,12 @@ input[type="button"],
 [type="submit"].publish,
 button.publish,
 a.publish {
-    @include setup.gradient-linear(var(--clr-btn-primary-grad-from), var(--clr-btn-primary-grad-to));
+    @include setup.gradient-linear(
+        var(--clr-btn-primary-grad-from),
+        var(--clr-btn-primary-grad-to)
+    );
 
-    padding: 0.61538461538462em 1em; // 8px / 13px + 13px
+    padding: 0.6153846em 1em; // 8px / 13px + 13px
     border: 1px solid var(--clr-btn-primary-brdr);
     font-weight: 700;
 
@@ -114,7 +120,7 @@ a.publish {
  */
 
 button.destroy {
-    padding: 0.07692307692308em 0.230769230769231em; // 1px / 13px + 3px / 13px
+    padding: 0.0769231em 0.2307692em; // 1px / 13px + 3px / 13px
     border-radius: 50%;
 
     .ui-icon {
@@ -137,7 +143,8 @@ button.destroy {
         &:active .ui-icon,
         &:hover .ui-icon,
         &:active .ui-icon {
-            filter: brightness(2.5) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(100%);
+            filter: brightness(2.5) sepia(1) hue-rotate(-62deg) saturate(750%)
+                brightness(100%);
         }
     }
 
@@ -146,7 +153,8 @@ button.destroy {
 
         &:hover,
         &:active {
-            filter: brightness(2.5) sepia(1) hue-rotate(-62deg) saturate(750%) brightness(100%);
+            filter: brightness(2.5) sepia(1) hue-rotate(-62deg) saturate(750%)
+                brightness(100%);
         }
     }
 }
@@ -165,7 +173,7 @@ button.destroy {
 .navlink-disabled {
     display: inline-block;
     box-sizing: border-box;
-    padding: 0.30769230769231em 0.61538461538462em; // 4px / 13px + 8px / 13px
+    padding: 0.3076923em 0.6153846em; // 4px / 13px + 8px / 13px
     border: 1px solid;
 
     @if setup.$border-radius > 0 {
@@ -242,7 +250,10 @@ ul.nav-tertiary {
 
 .nav-tertiary .navlink-active,
 .filtered button.ui-corner-right {
-    @include setup.gradient-linear(var(--clr-btn-selected-grad-from), var(--clr-btn-selected-grad-to));
+    @include setup.gradient-linear(
+        var(--clr-btn-selected-grad-from),
+        var(--clr-btn-selected-grad-to)
+    );
 
     border-color: var(--clr-btn-selected-brdr);
 

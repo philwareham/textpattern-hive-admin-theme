@@ -41,7 +41,10 @@
 // WebKit/Blink.
 
 [type="range"]::-webkit-slider-thumb {
-    @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
+    @include setup.gradient-linear(
+        var(--clr-btn-grad-from),
+        var(--clr-btn-grad-to)
+    );
 
     width: 20px;
     height: 20px;
@@ -101,13 +104,17 @@
 // Gecko/Quantum.
 
 [type="range"]::-moz-range-thumb {
-    @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
+    @include setup.gradient-linear(
+        var(--clr-btn-grad-from),
+        var(--clr-btn-grad-to)
+    );
 
     width: 20px;
     height: 20px;
     border: 1px solid var(--clr-brdr-x-dark);
     border-radius: 50%;
     box-shadow: var(--standard-shadow);
+
     /* autoprefixer: off */
     appearance: none;
     cursor: pointer;

@@ -30,7 +30,10 @@
     }
 
     .ui-slider-handle {
-        @include setup.gradient-linear(var(--clr-btn-grad-from), var(--clr-btn-grad-to));
+        @include setup.gradient-linear(
+            var(--clr-btn-grad-from),
+            var(--clr-btn-grad-to)
+        );
 
         position: absolute;
         z-index: 2;
