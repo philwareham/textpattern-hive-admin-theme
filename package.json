@@ -38,13 +38,13 @@
     "grunt-contrib-watch": "1.1.0",
     "grunt-replace-regex": "1.0.3",
     "grunt-sass": "3.1.0",
-    "grunt-stylelint": "0.16.0",
+    "grunt-stylelint": "0.18.0",
     "load-grunt-tasks": "5.1.0",
     "postcss": "8.4.24",
     "sass": "1.63.6",
-    "stylelint": "13.13.1",
+    "stylelint": "15.9.0",
+    "stylelint-config-standard-scss": "10.0.0",
     "stylelint-order": "6.0.3",
-    "stylelint-scss": "5.0.1",
     "uglify-save-license": "0.4.1"
   },
   "dependencies": {
@@ -57,6 +57,11 @@
   },
   "optionalDependencies": {
     "fibers": "5.0.3"
+  },
+  "overrides": {
+    "grunt-stylelint": {
+      "stylelint": "14.x || 15.x"
+    }
   },
   "browserslist": [
     "> 0.5%",

@@ -3,12 +3,12 @@ ignoreFiles:
 
 defaultSeverity: warning
 
+extends: stylelint-config-standard-scss
+
 plugins:
-  - stylelint-scss
   - stylelint-order
 
 rules:
-
   # Specify percentage or number notation for alpha-values.
   alpha-value-notation: number
 
@@ -19,8 +19,7 @@ rules:
   # Require or disallow an empty line before at-rules.
   at-rule-empty-line-before:
     - always
-    -
-      except:
+    - except:
         - blockless-after-blockless
         - first-nested
       ignore:
@@ -40,8 +39,7 @@ rules:
   # Disallow unknown at-rules.
   at-rule-no-unknown:
     - true
-    -
-      ignoreAtRules:
+    - ignoreAtRules:
         - at-root
         - each
         - else
@@ -407,8 +405,7 @@ rules:
   # Disallow vendor prefixes for properties.
   property-no-vendor-prefix:
     - true
-    -
-      ignoreProperties:
+    - ignoreProperties:
         - appearance
 
   # Specify a whitelist of allowed properties.
@@ -417,8 +414,7 @@ rules:
   # Require or disallow an empty line before rules.
   rule-empty-line-before:
     - always-multi-line
-    -
-      except:
+    - except:
         - first-nested
 
   # Require a single space or disallow whitespace on the inside of the brackets within attribute selectors.
@@ -601,10 +597,8 @@ rules:
   # Disallow vendor prefixes for values.
   value-no-vendor-prefix: true
 
-
- # SMACSS-like property order rules (stylelint-order plugin).
+  # SMACSS-like property order rules (stylelint-order plugin).
   order/properties-order:
-
     # Heading.
 
     - content
@@ -1047,55 +1041,24 @@ rules:
     - size
     - marks
 
- # Additional SCSS rules (stylelint-scss plugin).
+  # Additional SCSS rules (stylelint-scss plugin).
 
-  # Disallow `@extend` with missing placeholders.
-  scss/at-extend-no-missing-placeholder: true
+  # Require or disallow whitespace after the colon in `$`-variable declarations.
+  scss/dollar-variable-colon-space-after: null
 
-  # Check for equality to null is unnecessarily explicit since `null` is falsey in Sass.
-  scss/at-if-no-null: true
+  # Require an empty line or disallow empty lines before `$`-variable declarations.
+  scss/dollar-variable-empty-line-before:
+    - always
+    - except:
+        - first-nested
+        - after-comment
+        - after-dollar-variable
 
-  # Since leading underscores are not needed, they can be omitted.
-  scss/at-import-no-partial-leading-underscore: true
+  # Require or disallow an empty line before `//`-comments.
+  scss/double-slash-comment-empty-line-before: null
 
-  # Require or disallow extension in `@import` commands.
-  scss/at-import-partial-extension: never
-
-  # Disallow parentheses in conditional @ rules (if, elsif, while).
-  scss/at-rule-conditional-no-parentheses: true
-
-  # Disallow unknown at-rules. Should be used instead of stylelint's `at-rule-no-unknown`.
-  scss/at-rule-no-unknown: true
-
-  # Disallow empty comments.
-  scss/comment-no-empty: true
-
-  # Require a newline after the colon in `$`-variable declarations.
-  scss/dollar-variable-colon-newline-after: always-multi-line
-
-  # Require a single space or disallow whitespace before the colon in `$`-variable declarations.
-  scss/dollar-variable-colon-space-before: never
-
-  # Disallow Sass variables that are used without interpolation with CSS features that use custom identifiers.
-  scss/dollar-variable-no-missing-interpolation: true
-
-  # Disallow quoted strings inside the quote function.
-  scss/function-quote-no-quoted-strings-inside: true
-
-  # Disallow duplicate dollar variables within a stylesheet.
-  scss/no-duplicate-dollar-variables: true
-
-  # Disallow duplicate mixins within a stylesheet.
-  scss/no-duplicate-mixins: true
-
-  # Disallow linebreaks after Sass operators.
-  scss/operator-no-newline-after: true
-
-  # Disallow linebreaks before Sass operators.
-  scss/operator-no-newline-before: true
+  # Require or disallow whitespace after the `//` in `//`-comments
+  scss/double-slash-comment-whitespace-inside: null
 
   # Disallow unspaced operators in Sass operations.
-  scss/operator-no-unspaced: true
-
-  # Prevents unneeded nesting selectors.
-  scss/selector-no-redundant-nesting-selector: true
+  scss/operator-no-unspaced: null
