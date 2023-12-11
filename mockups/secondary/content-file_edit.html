@@ -146,8 +146,6 @@
         <div class="txp-edit">
             <h2 class="txp-heading">Edit file</h2>
 
-            <form id="delete-file" method="post" action="#"></form>
-
             <form class="upload-form async replace-file" method="post" action="#">
                 <div class="txp-form-field file-uploader">
                     <div class="txp-form-field-label"><label for="file_replace">Replace file&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
@@ -162,7 +160,17 @@
                 <progress class="txp-upload-progress" value="0.33"></progress>
             </form>
 
+            <form id="delete-file" method="post" action="#"></form>
+
             <form class="file-detail exists" id="file_details" method="post" action="#">
+                <div class="txp-form-field edit-file-condition">
+                    <div class="txp-form-field-label">Condition</div>
+                    <div class="txp-form-field-value"><span class="alert-block alert-pill success">OK</span></div>
+                </div>
+                <div class="txp-form-field edit-file-id">
+                    <div class="txp-form-field-label">ID#</div>
+                    <div class="txp-form-field-value">1</div>
+                </div>
                 <div class="txp-form-field edit-file-name">
                     <div class="txp-form-field-label">Name</div>
                     <div class="txp-form-field-value"><input name="filename" type="text" id="filename" size="32" maxlength="255" value="test-file.zip"><input name="old_filename" type="hidden" value="untitled.zip"></div>
@@ -194,13 +202,6 @@
                 <div class="txp-form-field txp-form-field-textarea edit-file-description">
                     <div class="txp-form-field-label"><label for="file_description">Description</label></div>
                     <div class="txp-form-field-value"><textarea id="file_description" name="description" cols="64" rows="4"></textarea></div>
-                </div>
-                <div class="txp-form-field edit-file-download-count">
-                    <div class="txp-form-field-label">Download count</div>
-                    <div class="txp-form-field-value">
-                        <input class="input-small" id="downloads" name="downloads" type="number" value="2" min="0">
-                        <a class="txp-option-link" href="#">Download</a>
-                    </div>
                 </div>
                 <div class="txp-form-field date posted">
                     <div class="txp-form-field-label"><label for="year">Publish date&#160;<a role="button" rel="help" target="_blank" class="pophelp" title="Help" href="#"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
@@ -280,24 +281,23 @@
                     <input class="checkbox" id="publish_now" name="publish_now" type="checkbox" value="1">
                     <label for="publish_now">Set timestamp to now</label>
                 </div>
-                <div class="txp-form-field edit-file-id">
-                    <div class="txp-form-field-label">ID#</div>
-                    <div class="txp-form-field-value">1</div>
+                <div class="txp-form-field edit-file-modified">
+                    <div class="txp-form-field-label"><label for="modified">Modified</label></div>
+                    <div class="txp-form-field-value">11&nbsp;Dec&nbsp;2023 11:16 AM</div>
                 </div>
                 <div class="txp-form-field edit-file-size">
                     <div class="txp-form-field-label">size</div>
                     <div class="txp-form-field-value">2.07&nbsp;kB</div>
                 </div>
-                <div class="txp-form-field edit-file-modified">
-                    <div class="txp-form-field-label"><label for="modified">Modified</label></div>
-                    <div class="txp-form-field-value">11&nbsp;Dec&nbsp;2023 11:16 AM</div>
-                </div>
-                <div class="txp-form-field edit-file-condition">
-                    <div class="txp-form-field-label">Condition</div>
-                    <div class="txp-form-field-value"><span class="alert-block alert-pill success">OK</span></div>
+                <div class="txp-form-field edit-file-download-count">
+                    <div class="txp-form-field-label">Download count</div>
+                    <div class="txp-form-field-value">
+                        <input class="input-small" id="downloads" name="downloads" type="number" value="2" min="0">
+                        <a class="txp-option-link" href="#">Download</a>
+                    </div>
                 </div>
                 <p class="txp-edit-actions">
-                    <input form="filedelete" class="caution" type="submit" value="Delete" onclick="return verify('Really delete?')">
+                    <input form="delete-file" class="caution" type="submit" value="Delete" onclick="return verify('Really delete?')">
                     <a class="txp-button" href="../content-file.html">Go back</a>
                     <input class="publish" type="submit" value="Save">
                 </p>
