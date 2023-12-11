@@ -59,6 +59,8 @@
     --clr-btn-selected-grad-from: hsl(216 100% 90%);
     --clr-btn-selected-grad-to:   hsl(216 100% 90%); // nullify gradient (use flat colours)
     --clr-btn-selected-brdr:      hsl(216 100% 79%);
+    --clr-btn-caution-grad-from:  hsl(4 43% 90%);
+    --clr-btn-caution-grad-to:    hsl(4 43% 90%);
     // alert colours
     --clr-success-text:           hsl(120 60% 34%);
     --clr-success-bkgd:           hsl(120 40% 90%);
@@ -77,44 +79,47 @@
 
 @include setup.dark-mode {
     // text colours
-    --clr-text:               hsl(210 14% 83%);
-    --clr-text-promoted:      hsl(0 0% 100%);
-    --clr-text-demoted:       hsl(210 14% 70%);
-    --clr-text-inversed:      hsl(210 11% 24%);
-    --clr-text-form:          hsl(0 0% 100%);
-    --clr-text-placeholder:   hsl(210 6% 48%);
+    --clr-text:                  hsl(210 14% 83%);
+    --clr-text-promoted:         hsl(0 0% 100%);
+    --clr-text-demoted:          hsl(210 14% 70%);
+    --clr-text-inversed:         hsl(210 11% 24%);
+    --clr-text-form:             hsl(0 0% 100%);
+    --clr-text-placeholder:      hsl(210 6% 48%);
     // neutral colours
-    --clr-bkgd:               hsl(210 11% 23%);
-    --clr-bkgd-box:           hsl(210 11% 20%);
-    --clr-bkgd-form:          hsl(210 11% 17%);
-    --clr-bkgd-form-disabled: hsl(210 11% 17%);
-    --clr-grad-from:          hsl(210 7% 34%);
-    --clr-grad-to:            hsl(210 9% 28%);
+    --clr-bkgd:                  hsl(210 11% 23%);
+    --clr-bkgd-box:              hsl(210 11% 20%);
+    --clr-bkgd-form:             hsl(210 11% 17%);
+    --clr-bkgd-form-disabled:    hsl(210 11% 17%);
+    --clr-grad-from:             hsl(210 7% 34%);
+    --clr-grad-to:               hsl(210 9% 28%);
     // border colours
-    --clr-brdr:               hsl(210 7% 50%);
-    --clr-brdr-lite:          hsl(210 7% 40%);
-    --clr-brdr-x-lite:        hsl(210 7% 30%);
-    --clr-brdr-dark:          hsl(210 7% 20%);
-    --clr-brdr-x-dark:        hsl(210 7% 5%);
+    --clr-brdr:                  hsl(210 7% 50%);
+    --clr-brdr-lite:             hsl(210 7% 40%);
+    --clr-brdr-x-lite:           hsl(210 7% 30%);
+    --clr-brdr-dark:             hsl(210 7% 20%);
+    --clr-brdr-x-dark:           hsl(210 7% 5%);
     // interaction colours
-    --clr-a:                  hsl(210 100% 81%);
-    --clr-a-interact:         hsl(210 100% 87%);
-    --clr-focus:              hsl(312 100% 50%);
-    --clr-focus-a50:          hsl(312 100% 50% / 0.5);
-    --clr-selecting:          hsl(210 50% 18%);
-    --clr-selected:           hsl(210 50% 21%);
+    --clr-a:                     hsl(210 100% 81%);
+    --clr-a-interact:            hsl(210 100% 87%);
+    --clr-focus:                 hsl(312 100% 50%);
+    --clr-focus-a50:             hsl(312 100% 50% / 0.5);
+    --clr-selecting:             hsl(210 50% 18%);
+    --clr-selected:              hsl(210 50% 21%);
+    // button colours
+    --clr-btn-caution-grad-from: hsl(348 34% 21%);
+    --clr-btn-caution-grad-to:   hsl(348 34% 21%);
     // alert colours
-    --clr-success-text:       hsl(100 60% 50%);
-    --clr-success-bkgd:       hsl(109 27% 20%);
-    --clr-success-brdr:       hsl(100 60% 50% / 0.33);
-    --clr-warning-text:       hsl(40 100% 62%);
-    --clr-warning-bkgd:       hsl(49 35% 21%);
-    --clr-warning-brdr:       hsl(40 100% 62% / 0.33);
-    --clr-error-text:         hsl(337 100% 60%);
-    --clr-error-text-a50:     hsl(337 100% 60% / 0.5);
-    --clr-error-bkgd:         hsl(348 34% 21%);
-    --clr-error-brdr:         hsl(337 100% 60% / 0.43);
-    --clr-info-text:          hsl(207 100% 63%);
-    --clr-info-bkgd:          hsl(207 68% 17%);
-    --clr-info-brdr:          hsl(207 100% 63% / 0.38);
+    --clr-success-text:          hsl(100 60% 50%);
+    --clr-success-bkgd:          hsl(109 27% 20%);
+    --clr-success-brdr:          hsl(100 60% 50% / 0.33);
+    --clr-warning-text:          hsl(40 100% 62%);
+    --clr-warning-bkgd:          hsl(49 35% 21%);
+    --clr-warning-brdr:          hsl(40 100% 62% / 0.33);
+    --clr-error-text:            hsl(337 100% 60%);
+    --clr-error-text-a50:        hsl(337 100% 60% / 0.5);
+    --clr-error-bkgd:            hsl(348 34% 21%);
+    --clr-error-brdr:            hsl(337 100% 60% / 0.43);
+    --clr-info-text:             hsl(207 100% 63%);
+    --clr-info-bkgd:             hsl(207 68% 17%);
+    --clr-info-brdr:             hsl(207 100% 63% / 0.38);
 }

@@ -93,8 +93,7 @@ input[type="button"],
  */
 
 [type="submit"].publish,
-button.publish,
-a.publish {
+button.publish {
     @include setup.gradient-linear(
         var(--clr-btn-primary-grad-from),
         var(--clr-btn-primary-grad-to)
@@ -108,6 +107,30 @@ a.publish {
         border-color: var(--clr-focus);
     }
 }
+
+/**
+ * Additional styling for buttons that have impactful results.
+ *
+ * Example HTML:
+ *
+ * <input type="submit" class="caution">
+ */
+
+[type="submit"].caution,
+ button.caution {
+     @include setup.gradient-linear(
+         var(--clr-btn-caution-grad-from),
+         var(--clr-btn-caution-grad-to)
+     );
+
+     border: 1px solid var(--clr-error-brdr);
+     color: var(--clr-error-text);
+     font-weight: 700;
+
+     &:focus {
+         border-color: var(--clr-focus);
+     }
+ }
 
 /**
  * Additional styling for delete (destroy) buttons.
