@@ -639,10 +639,8 @@ hr {
  * Styling of edit panel cancel/submit button combinations.
  */
 
-.txp-edit-actions {
-    > * {
-        margin-inline-start: 1em;
-    }
+.txp-edit-actions > * {
+    margin-inline-start: 1em;
 }
 
 .txp-edit .txp-edit-actions,
