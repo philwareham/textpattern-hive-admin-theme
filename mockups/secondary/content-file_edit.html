@@ -144,9 +144,11 @@
         <div id="messagepane"></div>
 
         <div class="txp-edit">
-            <h2>Edit file</h2>
+            <h2 class="txp-heading">Edit file</h2>
 
-            <form class="upload-form replace-file" method="post" action="#">
+            <form id="delete-file" method="post" action="#"></form>
+
+            <form class="upload-form async replace-file" method="post" action="#">
                 <div class="txp-form-field file-uploader">
                     <div class="txp-form-field-label"><label for="file_replace">Replace file&#160;<a class="pophelp" target="_blank" href="#" role="button" title="Help" rel="help"><span class="ui-icon ui-icon-help">Help</span></a></label></div>
                     <div class="txp-form-field-value">
@@ -160,32 +162,44 @@
                 <progress class="txp-upload-progress" value="0.33"></progress>
             </form>
 
-            <div class="txp-form-field edit-file-condition">
-                <div class="txp-form-field-label">Condition</div>
-                <div class="txp-form-field-value"><span class="success">Ok</span></div>
-            </div>
-            <div class="txp-form-field edit-file-id">
-                <div class="txp-form-field-label">ID#</div>
-                <div class="txp-form-field-value">1</div>
-            </div>
-            <div class="txp-form-field edit-file-name">
-                <div class="txp-form-field-label">Name</div>
-                <div class="txp-form-field-value"><a href="#" title="Download" download>test-file.zip</a></div>
-            </div>
-            <div class="txp-form-field edit-file-download-count">
-                <div class="txp-form-field-label">Download count</div>
-                <div class="txp-form-field-value">2</div>
-            </div>
-
-            <form class="file-detail exists" id="file_details" method="post" action="#">
+            <form class="txp-edit file-detail exists" id="file_details" method="post" action="#">
+                <div class="txp-form-field edit-file-name">
+                    <div class="txp-form-field-label">Name</div>
+                    <div class="txp-form-field-value"><input name="filename" type="text" id="filename" size="32" maxlength="255" value="test-file.zip"><input name="old_filename" type="hidden" value="untitled.zip"></div>
+                </div>
                 <div class="txp-form-field edit-file-status">
                     <div class="txp-form-field-label"><label for="file_status">File status</label></div>
                     <div class="txp-form-field-value">
                         <select name="status" id="file_status">
-                            <option value="2">Hidden</option>
-                            <option value="3">Pending</option>
-                            <option value="4" selected="selected">Live</option>
+                            <option value="2" dir="auto">Hidden</option>
+                            <option value="3" dir="auto">Pending</option>
+                            <option value="4" dir="auto" selected="selected">Live</option>
                         </select>
+                    </div>
+                </div>
+                <div class="txp-form-field edit-file-category">
+                    <div class="txp-form-field-label"><label for="file_category">Category</label></div>
+                    <div class="txp-form-field-value">
+                        <select id="file_category" name="category">
+                            <option value="">&nbsp;</option>
+                            <option value="file-category-test" data-level="0" dir="auto" selected="selected">File category test</option>
+                        </select>
+                        <a class="txp-option-link" href="#">Edit</a>
+                    </div>
+                </div>
+                <div class="txp-form-field edit-file-title">
+                    <div class="txp-form-field-label"><label for="file_title">Title</label></div>
+                    <div class="txp-form-field-value"><input name="title" type="text" id="file_title" size="32" maxlength="255" value=""></div>
+                </div>
+                <div class="txp-form-field txp-form-field-textarea edit-file-description">
+                    <div class="txp-form-field-label"><label for="file_description">Description</label></div>
+                    <div class="txp-form-field-value"><textarea id="file_description" name="description" cols="64" rows="4"></textarea></div>
+                </div>
+                <div class="txp-form-field edit-file-download-count">
+                    <div class="txp-form-field-label">Download count</div>
+                    <div class="txp-form-field-value">
+                        <input class="input-small" id="downloads" name="downloads" type="number" value="2" min="0">
+                        <a class="txp-option-link" href="#">Download</a>
                     </div>
                 </div>
                 <div class="txp-form-field date posted">
@@ -266,25 +280,25 @@
                     <input class="checkbox" id="publish_now" name="publish_now" type="checkbox" value="1">
                     <label for="publish_now">Set timestamp to now</label>
                 </div>
-                <div class="txp-form-field edit-file-title">
-                    <div class="txp-form-field-label"><label for="file_title">Title</label></div>
-                    <div class="txp-form-field-value"><input id="file_title" name="file_title" type="text" size="32"></div>
+                <div class="txp-form-field edit-file-id">
+                    <div class="txp-form-field-label">ID#</div>
+                    <div class="txp-form-field-value">1</div>
                 </div>
-                <div class="txp-form-field edit-file-category">
-                    <div class="txp-form-field-label"><label for="file_category">Category</label></div>
-                    <div class="txp-form-field-value">
-                        <select id="file_category" name="file_category">
-                            <option value="" selected="selected">&#160;</option>
-                        </select>
-                        <a class="txp-option-link" href="#">Edit</a>
-                    </div>
+                <div class="txp-form-field edit-file-size">
+                    <div class="txp-form-field-label">size</div>
+                    <div class="txp-form-field-value">2.07&nbsp;kB</div>
                 </div>
-                <div class="txp-form-field txp-form-field-textarea edit-file-description">
-                    <div class="txp-form-field-label"><label for="file_description">Description</label></div>
-                    <div class="txp-form-field-label"><textarea id="file_description" name="file_description" cols="64" rows="4"></textarea></div>
+                <div class="txp-form-field edit-file-modified">
+                    <div class="txp-form-field-label"><label for="modified">Modified</label></div>
+                    <div class="txp-form-field-value">11&nbsp;Dec&nbsp;2023 11:16 AM</div>
+                </div>
+                <div class="txp-form-field edit-file-condition">
+                    <div class="txp-form-field-label">Condition</div>
+                    <div class="txp-form-field-value"><span class="alert-block alert-pill success">OK</span></div>
                 </div>
                 <p class="txp-edit-actions">
-                    <a class="txp-button" href="../content-file.html">Cancel</a>
+                    <input form="filedelete" class="caution" type="submit" value="Delete" onclick="return verify('Really delete?')">
+                    <a class="txp-button" href="../content-file.html">Go back</a>
                     <input class="publish" type="submit" value="Save">
                 </p>
             </form>

@@ -625,7 +625,7 @@ hr {
 .txp-edit {
     position: relative;
     max-width: (setup.$text-column - 2em);
-    margin: 0 auto 1em;
+    margin: 0 auto;
     padding: 1em 1em 1px;
     clear: both;
     background: var(--clr-bkgd-box); /* 1 */
@@ -640,8 +640,6 @@ hr {
  */
 
 .txp-edit-actions {
-    text-align: end;
-
     > * {
         margin-inline-start: 1em;
     }
@@ -649,9 +647,16 @@ hr {
 
 .txp-edit .txp-edit-actions,
 .txp-details .txp-edit-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     margin: 1em -1em;
     padding: 1em 1em 0;
     border-top: 2px solid var(--clr-bkgd);
+
+    .caution {
+        margin-inline: 0 auto;
+    }
 }
 
 /* Form fields.
