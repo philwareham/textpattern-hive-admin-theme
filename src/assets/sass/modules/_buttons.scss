@@ -84,6 +84,22 @@ input[type="button"],
     }
 }
 
+button.txp-reduced-ui {
+    border: none;
+    background: none;
+    color: var(--clr-a);
+
+    &:hover,
+    &:active {
+        color: var(--clr-a-interact);
+        text-decoration: underline;
+    }
+
+    &:focus {
+        outline: thin solid var(--clr-focus);
+    }
+}
+
 /**
  * Additional styling for primary buttons.
  *
