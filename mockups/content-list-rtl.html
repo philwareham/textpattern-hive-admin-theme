@@ -39,10 +39,10 @@
                     </a>
                     <ul class="dropdown-menu" id="txp-nav-drop1-menu" role="menu" aria-labelledby="txp-nav-drop1">
                         <li role="presentation">
-                            <a role="menuitem" tabindex="-1" href="content-article-rtl.html">Write</a>
+                            <a role="menuitem" tabindex="-1" href="content-article.html">Write</a>
                         </li>
                         <li class="selected" role="presentation">
-                            <a role="menuitem" tabindex="-1" href="content-list-rtl.html" aria-current="page">Articles</a>
+                            <a role="menuitem" tabindex="-1" href="content-list.html" aria-current="page">Articles</a>
                         </li>
                         <li role="presentation">
                             <a role="menuitem" tabindex="-1" href="content-image.html">Images</a>
@@ -290,7 +290,10 @@
 
                             <thead>
                                 <tr>
-                                    <th class="txp-list-col-multi-edit" scope="col" title="Toggle all/none selected"><input type="checkbox" value="0" name="select_all" id="select_all"></th>
+                                    <th class="txp-list-col-multi-edit" scope="col">
+                                        <label for="select_all" class="txp-accessibility">Bulk select all/none</label>
+                                        <input type="checkbox" value="0" name="select_all" id="select_all" aria-description="Currently 2 items selected" aria-live="assertive">
+                                    </th>
                                     <th class="txp-list-col-id" scope="col"><a href="#">ID#</a></th>
                                     <th class="txp-list-col-title" scope="col"><a href="#">Title</a></th>
                                     <th class="txp-list-col-posted date created desc" scope="col"><a href="#">Posted</a></th>
@@ -307,7 +310,10 @@
 
                             <tbody>
                                 <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="2" name="selected[]" class="checkbox"></td>
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-1" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-1" type="checkbox" class="checkbox" value="1">
+                                    </td>
                                     <th class="txp-list-col-id" scope="row"><a href="#">2</a></th>
                                     <td class="txp-list-col-title"><a href="#">test article 2 title</a></td>
                                     <td class="txp-list-col-created date">03&#160;Jul&#160;2011 12:27:33</td>
@@ -323,8 +329,31 @@
                                         <span class="comments-manage"><a title="Manage" href="#">(1)</a></span>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                <tr class="selected" aria-selected="true">
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-2" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-2" type="checkbox" class="checkbox" value="2" checked="checked">
+                                    </td>
+                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
+                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
+                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
+                                    <td class="txp-list-col-expires date">&#160;</td>
+                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
+                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
+                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
+                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
+                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
+                                    <td class="txp-list-col-comments">
+                                        <span class="comments-status">Expired</span>
+                                        <span class="comments-manage">(0)</span>
+                                    </td>
+                                </tr>
+                                <tr class="selected" aria-selected="true">
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-3" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-3" type="checkbox" class="checkbox" value="3" checked="checked">
+                                    </td>
                                     <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
                                     <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
                                     <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
@@ -341,7 +370,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-4" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-4" type="checkbox" class="checkbox" value="4">
+                                    </td>
                                     <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
                                     <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
                                     <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
@@ -358,7 +390,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-5" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-5" type="checkbox" class="checkbox" value="5">
+                                    </td>
                                     <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
                                     <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
                                     <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
@@ -375,7 +410,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-6" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-6" type="checkbox" class="checkbox" value="6">
+                                    </td>
                                     <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
                                     <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
                                     <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
@@ -392,7 +430,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-7" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-7" type="checkbox" class="checkbox" value="7">
+                                    </td>
                                     <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
                                     <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
                                     <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
@@ -409,7 +450,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-8" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-8" type="checkbox" class="checkbox" value="8">
+                                    </td>
                                     <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
                                     <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
                                     <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
@@ -426,7 +470,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-9" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-9" type="checkbox" class="checkbox" value="9">
+                                    </td>
                                     <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
                                     <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
                                     <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
@@ -443,7 +490,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-10" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-10" type="checkbox" class="checkbox" value="10">
+                                    </td>
                                     <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
                                     <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
                                     <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
@@ -460,7 +510,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-11" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-11" type="checkbox" class="checkbox" value="11">
+                                    </td>
                                     <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
                                     <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
                                     <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
@@ -477,7 +530,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-12" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-12" type="checkbox" class="checkbox" value="12">
+                                    </td>
                                     <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
                                     <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
                                     <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
@@ -494,7 +550,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-13" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-13" type="checkbox" class="checkbox" value="13">
+                                    </td>
                                     <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
                                     <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
                                     <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
@@ -511,7 +570,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-14" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-14" type="checkbox" class="checkbox" value="14">
+                                    </td>
                                     <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
                                     <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
                                     <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
@@ -528,24 +590,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
-                                    <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
-                                    <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
-                                    <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
-                                    <td class="txp-list-col-lastmod date">29&#160;Jun&#160;2011 19:07:55</td>
-                                    <td class="txp-list-col-expires date">&#160;</td>
-                                    <td class="txp-list-col-section"><span title="Articles">articles</span></td>
-                                    <td class="txp-list-col-category1 category"><span title="Hope for the Future">hope-for-the-future</span></td>
-                                    <td class="txp-list-col-category2 category"><span title="Meaningful Labor">meaningful-labor</span></td>
-                                    <td class="txp-list-col-status"><a href="#" title="View">Live</a></td>
-                                    <td class="txp-list-col-author name"><span title="Phil Wareham">admin</span></td>
-                                    <td class="txp-list-col-comments">
-                                        <span class="comments-status">Expired</span>
-                                        <span class="comments-manage">(0)</span>
+                                    <td class="txp-list-col-multi-edit">
+                                        <label for="bulk_select-15" class="txp-accessibility">Bulk select</label>
+                                        <input id="bulk_select-15" type="checkbox" class="checkbox" value="15">
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td class="txp-list-col-multi-edit"><input type="checkbox" value="1" name="selected[]" class="checkbox"></td>
                                     <th class="txp-list-col-id" scope="row"><a href="#">1</a></th>
                                     <td class="txp-list-col-title"><a href="#">Welcome to Your Site!</a></td>
                                     <td class="txp-list-col-created date">29&#160;Jun&#160;2011 19:07:55</td>
@@ -567,7 +615,8 @@
                     </div><!-- /txp-listtables -->
 
                     <div class="multi-edit">
-                        <select name="edit_method">
+                        <label class="txp-accessibility" for="bulk_edit">Bulk edit</label>
+                        <select id="bulk_edit" name="edit_method">
                             <option value="" selected="selected">With selected&#8230;</option>
                             <option value="changesection">Change section</option>
                             <option value="changecategory1">Change category1</option>
