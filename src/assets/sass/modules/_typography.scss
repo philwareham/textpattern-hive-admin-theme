@@ -190,7 +190,7 @@ samp {
  *
  * 1. Contain overflow in all browsers.
  * 2. Don't wrap long words.
- * 3. Set tab size to 2 spaces.
+ * 3. Set tab size to 4 spaces.
  */
 
 pre {
@@ -205,7 +205,7 @@ pre {
 
     background: var(--clr-bkgd-box);
     word-wrap: normal; /* 2 */
-    tab-size: 2; /* 3 */
+    tab-size: 4; /* 3 */
 }
 
 /**
