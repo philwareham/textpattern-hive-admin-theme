@@ -195,6 +195,15 @@
             white-space: nowrap;
         }
     }
+
+    /**
+     * Reduce tab character length in code editor/text areas.
+     */
+
+    textarea,
+    pre {
+        tab-size: 2;
+    }
 }
 
 /* ==========================================================================
