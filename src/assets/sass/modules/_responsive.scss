@@ -1,13 +1,5 @@
 @use "../setup";
 
-/**
- * Screen size-specific elements.
- */
-
-.screen-small {
-    display: none;
-}
-
 /* ==========================================================================
    Additional layout for devices < 768px
    ========================================================================== */
@@ -235,18 +227,6 @@
     #messagepane {
         right: 1em;
         left: 1em;
-    }
-
-    /**
-     * Screen size-specific elements.
-     */
-
-    .screen-small {
-        display: block; // TODO: use `display: revert` when browser support is widespread.
-    }
-
-    .screen-large {
-        display: none;
     }
 
     .txp-login {
