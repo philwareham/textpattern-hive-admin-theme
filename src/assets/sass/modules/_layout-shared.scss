@@ -730,6 +730,14 @@ hr {
 }
 
 /**
+ * Ensure field sets stay together and don't wrap unexpectedly.
+ */
+
+.txp-form-field-set {
+    display: inline-block;
+}
+
+/**
  * Inline form field pairings on edit panels, preferences group panels and
  * setup panels.
  *
