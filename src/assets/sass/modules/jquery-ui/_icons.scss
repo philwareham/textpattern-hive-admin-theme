@@ -214,13 +214,7 @@ button:not(.ui-button):focus .ui-icon {
 
 .ui-icon-inversed,
 #messagepane .ui-icon {
-    filter: invert(100%);
-}
-
-@include setup.dark-mode {
-    .ui-icon-inversed {
-        filter: invert(100%);
-    }
+    filter: invert(100%) !important;
 }
 
 /**
