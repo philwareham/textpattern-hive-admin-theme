@@ -4,9 +4,9 @@ The default admin theme that ships as standard with [Textpattern CMS](https://te
 
 ## Demos
 
-[Design patterns documentation](http://design-patterns.textpattern.com/docs/).
+[Design patterns documentation](http://design-patterns.textpattern.com/stable/docs/).
 
-[Flat mockup of Textpattern admin area](http://design-patterns.textpattern.com/mockups/).
+[Flat mockup of Textpattern admin area](http://design-patterns.textpattern.com/stable/mockups/).
 
 ## Supported web browsers
 
