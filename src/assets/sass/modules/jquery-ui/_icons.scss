@@ -221,7 +221,7 @@ button:not(.ui-button):focus .ui-icon {
  * Weighted content icons and interaction state icons.
  */
 
-button:not(.destroy),
+button:not(.destroy, .txp-reduced-ui-button),
 [type="reset"],
 [type="submit"]:not(.destroy),
 input[type="button"],
