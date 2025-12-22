@@ -2,13 +2,13 @@
 
 The default admin theme that ships as standard with [Textpattern CMS](https://textpattern.com/).
 
-## Demos - v 4.8.8
+## Demos - v 4.9.0
 
 [Design patterns documentation](http://design-patterns.textpattern.com/stable/docs/).
 
 [Flat mockup of Textpattern admin area](http://design-patterns.textpattern.com/stable/mockups/).
 
-## Demos - v 4.9 dev
+## Demos - v 4.9.x dev
 
 [Design patterns documentation](http://design-patterns.textpattern.com/dev/docs/).
 
