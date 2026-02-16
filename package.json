@@ -1,7 +1,7 @@
 {
   "name": "textpattern-hive-admin-theme",
   "description": "The default admin theme that ships as standard with Textpattern CMS.",
-  "version": "4.9.1-dev",
+  "version": "4.9.2-dev",
   "keywords": [
     "admin",
     "theme",
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@lodder/grunt-postcss": "3.1.1",
-    "autoprefixer": "10.4.23",
+    "autoprefixer": "10.4.24",
     "cssnano": "7.1.2",
     "grunt": "1.6.1",
     "grunt-cli": "1.5.0",
@@ -37,14 +37,14 @@
     "grunt-contrib-uglify": "5.2.2",
     "grunt-contrib-watch": "1.1.0",
     "grunt-replace-regex": "1.0.3",
-    "grunt-sass": "4.0.1",
+    "grunt-sass": "4.1.0",
     "grunt-stylelint": "0.20.1",
     "load-grunt-tasks": "5.1.0",
     "postcss": "8.5.6",
-    "sass": "1.97.1",
-    "stylelint": "16.26.1",
+    "sass": "1.97.3",
+    "stylelint": "17.3.0",
     "stylelint-config-standard-scss": "17.0.0",
-    "stylelint-order": "7.0.0",
+    "stylelint-order": "7.0.1",
     "uglify-save-license": "0.4.1"
   },
   "dependencies": {
