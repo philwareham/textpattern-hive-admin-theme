@@ -6,15 +6,15 @@
    ========================================================================== */
 
 // Global
-@import "modules/links";
-@import "modules/typography";
-@import "modules/alerts";
-@import "modules/forms-base";
-@import "modules/forms-input-checkboxradio";
-@import "modules/buttons";
+@use "modules/links";
+@use "modules/typography";
+@use "modules/alerts";
+@use "modules/forms-base";
+@use "modules/forms-input-checkboxradio";
+@use "modules/buttons";
 
 // Layout modules
-@import "modules/container";
+@use "modules/container";
 
 html {
     text-size-adjust: 100%;
