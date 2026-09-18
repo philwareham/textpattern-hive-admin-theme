@@ -196,16 +196,15 @@ samp {
 pre {
     margin: 1em 0;
     padding: 1em; // 13px
+    overflow-wrap: normal; /* 2 */
     overflow-x: auto; /* 1 */
     border: 1px solid var(--clr-brdr-x-lite);
+    background: var(--clr-bkgd-box);
+    tab-size: 4; /* 3 */
 
     @if setup.$border-radius > 0 {
         border-radius: math.div(setup.$border-radius, 2);
     }
-
-    background: var(--clr-bkgd-box);
-    word-wrap: normal; /* 2 */
-    tab-size: 4; /* 3 */
 }
 
 /**
@@ -218,19 +217,18 @@ pre code,
 code.body,
 code.excerpt {
     padding: 0;
+    overflow-wrap: normal;
     border: 0;
+    background-color: transparent;
+    hyphens: none;
+    text-align: left;
+    word-break: normal;
+    word-spacing: normal;
+    white-space: pre;
 
     @if setup.$border-radius > 0 {
         border-radius: 0;
     }
-
-    background-color: transparent;
-    hyphens: none;
-    text-align: left;
-    word-wrap: normal;
-    word-break: normal;
-    word-spacing: normal;
-    white-space: pre;
 }
 
 /**

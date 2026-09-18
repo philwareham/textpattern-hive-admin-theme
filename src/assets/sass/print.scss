@@ -90,7 +90,7 @@ pre {
 pre,
 blockquote {
     border: 1px solid black;
-    page-break-inside: avoid;
+    break-inside: avoid;
 }
 
 /**
@@ -98,7 +98,7 @@ blockquote {
  */
 
 img {
-    page-break-inside: avoid;
+    break-inside: avoid;
 }
 
 /**
@@ -124,7 +124,7 @@ thead {
  */
 
 tr {
-    page-break-inside: avoid;
+    break-inside: avoid;
 }
 
 /**
@@ -152,7 +152,7 @@ h3,
 h4,
 h5,
 h6 {
-    page-break-after: avoid;
+    break-after: avoid;
 }
 
 /**
