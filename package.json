@@ -25,18 +25,15 @@
     "url": "https://github.com/philwareham/textpattern-hive-admin-theme/issues"
   },
   "devDependencies": {
-    "@lodder/grunt-postcss": "3.1.1",
     "autoprefixer": "10.6.1",
     "cssnano": "9.1.1",
     "grunt": "1.6.3",
     "grunt-cli": "1.5.0",
     "grunt-contrib-copy": "1.0.0",
     "grunt-contrib-jshint": "3.2.0",
-    "grunt-contrib-watch": "1.1.0",
     "grunt-replace-regex": "1.0.3",
     "grunt-sass": "4.1.0",
     "grunt-stylelint": "0.21.0",
-    "load-grunt-tasks": "5.1.0",
     "postcss": "8.5.28",
     "sass": "1.105.0",
     "stylelint": "17.15.0",
@@ -54,8 +51,7 @@
   },
   "browserslist": [
     "> 0.5%",
-    "Firefox ESR",
-    "not IE 11"
+    "Firefox ESR"
   ],
   "license": "GPL-2.0"
 }
