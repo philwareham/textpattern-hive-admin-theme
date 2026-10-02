@@ -15,7 +15,7 @@ module.exports = function (grunt) {
     [
         'grunt-contrib-copy',
         'grunt-contrib-jshint',
-        'grunt-contrib-regex',
+        'grunt-replace-regex',
         'grunt-sass',
         'grunt-stylelint'
     ].forEach(grunt.loadNpmTasks);

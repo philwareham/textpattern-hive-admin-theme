@@ -48,7 +48,7 @@ summary {
     display: list-item; /* 1 */
     cursor: pointer;
 
-    &:fovus-visible {
+    &:focus-visible {
         outline: 1px solid var(--clr-focus);
     }
 }

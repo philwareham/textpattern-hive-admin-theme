@@ -84,7 +84,7 @@ img {
         border-color: var(--clr-a-interact);
     }
 
-    a:fovus-visible & {
+    a:focus-visible & {
         border-color: var(--clr-focus);
     }
 }

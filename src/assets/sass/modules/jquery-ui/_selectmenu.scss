@@ -142,7 +142,7 @@
             }
         }
 
-        &:fovus-visible {
+        &:focus-visible {
             outline: thin solid var(--clr-focus);
         }
 
@@ -152,7 +152,7 @@
 
         &:hover .ui-selectmenu-icon,
         &:active .ui-selectmenu-icon,
-        &:fovus-visible .ui-selectmenu-icon {
+        &:focus-visible .ui-selectmenu-icon {
             opacity: 1;
         }
     }
