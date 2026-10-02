@@ -309,7 +309,7 @@
         background: transparent url("../img/sprite.svg") -10em 0;
         background-size: 13em 2em; // 208px / 16px + 32px / 16px
 
-        &:focus {
+        &:fovus-visible {
             outline: thin solid var(--clr-focus);
         }
 

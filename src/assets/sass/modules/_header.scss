@@ -151,7 +151,7 @@
             background: hsl(0 0% 100% / 0.8);
         }
 
-        &:focus {
+        &:fovus-visible {
             border-color: var(--clr-focus);
             outline: 0;
             box-shadow: 0 0 0 1px var(--clr-focus-a50);

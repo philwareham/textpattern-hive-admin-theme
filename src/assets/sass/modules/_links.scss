@@ -23,7 +23,7 @@ a {
         text-decoration: underline;
     }
 
-    &:focus {
+    &:fovus-visible {
         outline: thin solid var(--clr-focus);
     }
 
@@ -45,12 +45,12 @@ a {
 .pophelpsubtle {
     display: inline-block;
 
-    &:focus {
+    &:fovus-visible {
         outline: 0;
     }
 }
 
-.no-ui-button [rel="help"]:focus {
+.no-ui-button [rel="help"]:fovus-visible {
     outline: 0;
 }
 
@@ -90,7 +90,7 @@ a {
     transition: transform 0.2s ease-in-out;
     background-color: var(--clr-bkgd-box);
 
-    &:focus,
+    &:fovus-visible,
     &:active {
         transform: translateY(0);
     }

@@ -169,7 +169,7 @@ body.darkmode.login {
             filter: brightness(1.05);
         }
 
-        &:focus {
+        &:fovus-visible {
             border-color: var(--clr-focus);
             outline: 0;
         }
@@ -183,7 +183,7 @@ body.darkmode.login {
             box-shadow: none;
         }
 
-        &:focus {
+        &:fovus-visible {
             border-color: var(--clr-focus);
             border-bottom-color: var(--clr-bkgd);
         }
@@ -202,7 +202,7 @@ body.darkmode.login {
                 filter: brightness(1.1);
             }
 
-            &:focus {
+            &:fovus-visible {
                 border-color: var(--clr-focus);
             }
         }
@@ -212,7 +212,7 @@ body.darkmode.login {
                 box-shadow: none;
             }
 
-            &:focus {
+            &:fovus-visible {
                 border-color: var(--clr-focus);
                 border-bottom-color: var(--clr-bkgd);
             }

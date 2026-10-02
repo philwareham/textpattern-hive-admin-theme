@@ -60,7 +60,7 @@ input[type="button"],
         }
     }
 
-    &:focus {
+    &:fovus-visible {
         border-color: var(--clr-focus);
         outline: 0;
         box-shadow: 0 0 0 1px var(--clr-focus-a50);
@@ -83,7 +83,7 @@ button.txp-reduced-ui-button {
         text-decoration: underline;
     }
 
-    &:focus {
+    &:fovus-visible {
         outline: thin solid var(--clr-focus);
     }
 }
@@ -107,7 +107,7 @@ button.publish {
     border: 1px solid var(--clr-btn-primary-brdr);
     font-weight: 700;
 
-    &:focus {
+    &:fovus-visible {
         border-color: var(--clr-focus);
     }
 }
@@ -131,7 +131,7 @@ button.publish {
      color: var(--clr-error-text);
      font-weight: 700;
 
-     &:focus {
+     &:fovus-visible {
          border-color: var(--clr-focus);
      }
  }
@@ -292,7 +292,7 @@ ul.nav-tertiary {
         filter: brightness(0.95);
     }
 
-    &:focus {
+    &:fovus-visible {
         border-color: var(--clr-focus);
     }
 }

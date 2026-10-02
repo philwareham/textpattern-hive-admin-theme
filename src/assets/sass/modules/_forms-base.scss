@@ -97,7 +97,7 @@ textarea {
         border-color: var(--clr-brdr-x-dark);
     }
 
-    &:focus {
+    &:fovus-visible {
         border-color: var(--clr-focus);
         outline: 0;
         box-shadow: 0 0 0 1px var(--clr-focus-a50);
@@ -126,7 +126,7 @@ textarea {
             border-color: var(--clr-brdr-x-lite);
         }
 
-        &:focus {
+        &:fovus-visible {
             border-color: var(--clr-focus);
         }
     }
@@ -167,7 +167,7 @@ select {
         border-color: var(--clr-brdr-x-dark);
     }
 
-    &:focus {
+    &:fovus-visible {
         border-color: var(--clr-focus);
     }
 }
@@ -188,7 +188,7 @@ select {
             border-color: var(--clr-brdr-x-lite);
         }
 
-        &:focus {
+        &:fovus-visible {
             border-color: var(--clr-focus);
         }
     }
