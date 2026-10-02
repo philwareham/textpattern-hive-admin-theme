@@ -1,8 +1,12 @@
 module.exports = function (grunt) {
     'use strict';
 
-    // Load all Grunt tasks automatically.
-    require('load-grunt-tasks')(grunt);
+    // Load Grunt tasks.
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-replace-regex');
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-stylelint');
 
     const fs = require('fs');
     const path = require('path');
