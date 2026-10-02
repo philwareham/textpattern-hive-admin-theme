@@ -6,6 +6,9 @@ module.exports = function (grunt) {
 
     const fs = require('fs');
     const path = require('path');
+    const postcss = require('postcss');
+    const autoprefixer = require('autoprefixer');
+    const cssnano = require('cssnano');
     const terser = require('terser');
 
     grunt.initConfig({
@@ -109,40 +112,6 @@ module.exports = function (grunt) {
 
                     '<%= paths.docs.css %>design-patterns.css':
                         '<%= paths.src.sass %>design-patterns.scss'
-                }
-            }
-        },
-
-        // ---------------------------------------------------------------------
-        // CSS post-processing
-        // ---------------------------------------------------------------------
-
-        postcss: {
-            options: {
-                processors: [
-                    require('autoprefixer'),
-                    require('cssnano')
-                ]
-            },
-            dist: {
-                files: {
-                    '<%= paths.themes.hive.css %>textpattern.css':
-                        '<%= paths.themes.hive.css %>textpattern.css',
-
-                    '<%= paths.themes.hive.css %>print.css':
-                        '<%= paths.themes.hive.css %>print.css',
-
-                    '<%= paths.themes.neutral.css %>textpattern.css':
-                        '<%= paths.themes.neutral.css %>textpattern.css',
-
-                    '<%= paths.themes.neutral.css %>print.css':
-                        '<%= paths.themes.neutral.css %>print.css',
-
-                    '<%= paths.dist.dir %>setup-multisite.css':
-                        '<%= paths.dist.dir %>setup-multisite.css',
-
-                    '<%= paths.docs.css %>design-patterns.css':
-                        '<%= paths.docs.css %>design-patterns.css'
                 }
             }
         },
@@ -254,6 +223,46 @@ module.exports = function (grunt) {
                         '<%= paths.src.dir %>hive-neutral/manifest.json'
                 }
             }
+        }
+    });
+
+    // -------------------------------------------------------------------------
+    // CSS post-processing
+    // -------------------------------------------------------------------------
+
+    grunt.registerTask('postcss', 'Autoprefix and minify CSS.', async function () {
+        const done = this.async();
+
+        try {
+            const files = [
+                'dist/hive/assets/css/textpattern.css',
+                'dist/hive/assets/css/print.css',
+                'dist/hiveneutral/assets/css/textpattern.css',
+                'dist/hiveneutral/assets/css/print.css',
+                'dist/setup-multisite.css',
+                'docs/assets/css/design-patterns.css'
+            ];
+
+            for (const file of files) {
+                const css = fs.readFileSync(file, 'utf8');
+
+                const result = await postcss([
+                    autoprefixer(),
+                    cssnano()
+                ]).process(css, {
+                    from: file,
+                    to: file
+                });
+
+                fs.writeFileSync(file, result.css);
+
+                grunt.log.ok(`Processed ${file}`);
+            }
+
+            done();
+        } catch (error) {
+            grunt.log.error(error);
+            done(false);
         }
     });
 
