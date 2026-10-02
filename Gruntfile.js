@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     // Load all Grunt tasks automatically.
     require('load-grunt-tasks')(grunt);
 
-    var fs = require('fs');
+    const fs = require('fs');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -56,7 +56,7 @@ module.exports = function (grunt) {
                 browser: true,
                 curly: true,
                 eqeqeq: true,
-                esversion: 6,
+                esversion: 8,
                 forin: true,
                 globals: {
                     $: false,
@@ -337,7 +337,7 @@ module.exports = function (grunt) {
     // -------------------------------------------------------------------------
 
     grunt.registerTask('clean', 'Remove generated files.', function () {
-        var paths = [
+        const paths = [
             grunt.config.get('paths.dist.dir'),
             grunt.config.get('paths.docs.css')
         ];
