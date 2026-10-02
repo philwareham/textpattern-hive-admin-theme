@@ -5,6 +5,8 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     const fs = require('fs');
+    const path = require('path');
+    const terser = require('terser');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -255,53 +257,6 @@ module.exports = function (grunt) {
         },
 
         // ---------------------------------------------------------------------
-        // JavaScript bundling/minification
-        // ---------------------------------------------------------------------
-
-        uglify: {
-            options: {
-                output: {
-                    comments: require('uglify-save-license')
-                }
-            },
-
-            dist: {
-                files: {
-                    '<%= paths.themes.hive.js %>main.js': [
-                        'node_modules/bootstrap/js/dropdown.js',
-                        'node_modules/bootstrap/js/collapse.js',
-                        '<%= paths.src.js %>main.js'
-                    ],
-
-                    '<%= paths.themes.neutral.js %>main.js': [
-                        'node_modules/bootstrap/js/dropdown.js',
-                        'node_modules/bootstrap/js/collapse.js',
-                        '<%= paths.src.js %>main.js'
-                    ],
-
-                    '<%= paths.themes.hive.js %>autosize.js': [
-                        'node_modules/autosize/dist/autosize.js',
-                        '<%= paths.src.js %>autosize.js'
-                    ],
-
-                    '<%= paths.themes.neutral.js %>autosize.js': [
-                        'node_modules/autosize/dist/autosize.js',
-                        '<%= paths.src.js %>autosize.js'
-                    ],
-
-                    '<%= paths.themes.hive.js %>darkmode.js':
-                        '<%= paths.src.js %>darkmode.js',
-
-                    '<%= paths.themes.neutral.js %>darkmode.js':
-                        '<%= paths.src.js %>darkmode.js',
-
-                    '<%= paths.docs.js %>prism.js':
-                        'node_modules/prismjs/prism.js'
-                }
-            }
-        },
-
-        // ---------------------------------------------------------------------
         // Watch
         // ---------------------------------------------------------------------
 
@@ -316,7 +271,7 @@ module.exports = function (grunt) {
                     '<%= paths.src.js %>**/*.js',
                     'Gruntfile.js'
                 ],
-                tasks: ['jshint', 'uglify']
+                tasks: ['jshint', 'js:build']
             },
 
             assets: {
@@ -329,6 +284,80 @@ module.exports = function (grunt) {
                 ],
                 tasks: ['copy']
             }
+        }
+    });
+
+    // -------------------------------------------------------------------------
+    // JavaScript bundling/minification
+    // -------------------------------------------------------------------------
+
+    const jsBundles = {
+        'dist/hive/assets/js/main.js': [
+            'node_modules/bootstrap/js/dropdown.js',
+            'node_modules/bootstrap/js/collapse.js',
+            'src/assets/js/main.js'
+        ],
+
+        'dist/hiveneutral/assets/js/main.js': [
+            'node_modules/bootstrap/js/dropdown.js',
+            'node_modules/bootstrap/js/collapse.js',
+            'src/assets/js/main.js'
+        ],
+
+        'dist/hive/assets/js/autosize.js': [
+            'node_modules/autosize/dist/autosize.js',
+            'src/assets/js/autosize.js'
+        ],
+
+        'dist/hiveneutral/assets/js/autosize.js': [
+            'node_modules/autosize/dist/autosize.js',
+            'src/assets/js/autosize.js'
+        ],
+
+        'dist/hive/assets/js/darkmode.js': [
+            'src/assets/js/darkmode.js'
+        ],
+
+        'dist/hiveneutral/assets/js/darkmode.js': [
+            'src/assets/js/darkmode.js'
+        ],
+
+        'docs/assets/js/prism.js': [
+            'node_modules/prismjs/prism.js'
+        ]
+    };
+
+    grunt.registerTask('js:build', 'Bundle and minify JavaScript.', async function () {
+        const done = this.async();
+
+        try {
+            for (const [output, inputs] of Object.entries(jsBundles)) {
+                const source = inputs
+                    .map(function (file) {
+                        return fs.readFileSync(file, 'utf8');
+                    })
+                    .join('\n;\n');
+
+                const result = await terser.minify(source, {
+                    format: {
+                        comments: /^!/
+                    }
+                });
+
+                if (result.error) {
+                    throw result.error;
+                }
+
+                grunt.file.mkdir(path.dirname(output));
+                fs.writeFileSync(output, result.code + '\n');
+
+                grunt.log.ok(`Created ${output}`);
+            }
+
+            done();
+        } catch (error) {
+            grunt.log.error(error);
+            done(false);
         }
     });
 
@@ -362,7 +391,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('js', [
         'jshint',
-        'uglify'
+        'js:build'
     ]);
 
     grunt.registerTask('build', [
