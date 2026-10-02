@@ -67,7 +67,6 @@ textarea,
 
 [type="color"],
 [type="date"],
-[type="datetime"],
 [type="datetime-local"],
 [type="email"],
 [type="month"],
@@ -108,7 +107,6 @@ textarea {
 @include setup.dark-mode {
     [type="color"],
     [type="date"],
-    [type="datetime"],
     [type="datetime-local"],
     [type="email"],
     [type="month"],
@@ -141,15 +139,6 @@ textarea {
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
     height: auto;
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
-[type="search"]::-webkit-search-decoration {
-    /* autoprefixer: off */
-    appearance: none;
 }
 
 /**

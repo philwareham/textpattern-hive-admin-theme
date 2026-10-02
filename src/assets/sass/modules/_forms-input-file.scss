@@ -45,7 +45,7 @@
     }
 }
 
-::-webkit-file-upload-button {
+::file-selector-button {
     @include setup.gradient-linear(
         var(--clr-btn-grad-from),
         var(--clr-btn-grad-to)
@@ -68,10 +68,10 @@
     cursor: pointer;
 }
 
-[type="file"]:hover::-webkit-file-upload-button {
+[type="file"]:hover::file-selector-button {
     filter: brightness(1.05);
 }
 
-[type="file"]:active::-webkit-file-upload-button {
+[type="file"]:active::file-selector-button {
     filter: brightness(0.95);
 }
