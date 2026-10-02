@@ -254,36 +254,6 @@ module.exports = function (grunt) {
                         '<%= paths.src.dir %>hive-neutral/manifest.json'
                 }
             }
-        },
-
-        // ---------------------------------------------------------------------
-        // Watch
-        // ---------------------------------------------------------------------
-
-        watch: {
-            sass: {
-                files: '<%= paths.src.sass %>**/*.scss',
-                tasks: ['css']
-            },
-
-            js: {
-                files: [
-                    '<%= paths.src.js %>**/*.js',
-                    'Gruntfile.js'
-                ],
-                tasks: ['jshint', 'js:build']
-            },
-
-            assets: {
-                files: [
-                    '<%= paths.src.dir %>hive/**/*',
-                    '<%= paths.src.dir %>hive-neutral/**/*',
-                    '<%= paths.src.img %>**/*',
-                    'src/assets/img-hive/**/*',
-                    'src/assets/img-hive-neutral/**/*'
-                ],
-                tasks: ['copy']
-            }
         }
     });
 
@@ -400,9 +370,5 @@ module.exports = function (grunt) {
         'js',
         'replace',
         'copy'
-    ]);
-
-    grunt.registerTask('default', [
-        'watch'
     ]);
 };
