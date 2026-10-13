@@ -1,19 +1,28 @@
 module.exports = function (grunt) {
     'use strict';
 
-    // Load Grunt tasks.
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-replace-regex');
-    grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-stylelint');
-
     const fs = require('fs');
     const path = require('path');
     const postcss = require('postcss');
     const autoprefixer = require('autoprefixer');
     const cssnano = require('cssnano');
     const terser = require('terser');
+
+    // -------------------------------------------------------------------------
+    // Load Grunt tasks
+    // -------------------------------------------------------------------------
+
+    [
+        'grunt-contrib-copy',
+        'grunt-contrib-jshint',
+        'grunt-replace-regex',
+        'grunt-sass',
+        'grunt-stylelint'
+    ].forEach(grunt.loadNpmTasks);
+
+    // -------------------------------------------------------------------------
+    // Configuration
+    // -------------------------------------------------------------------------
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -88,7 +97,7 @@ module.exports = function (grunt) {
         },
 
         // ---------------------------------------------------------------------
-        // Sass
+        // Sass compilation
         // ---------------------------------------------------------------------
 
         sass: {
@@ -363,7 +372,7 @@ module.exports = function (grunt) {
     });
 
     // -------------------------------------------------------------------------
-    // Registered tasks
+    // Composite tasks
     // -------------------------------------------------------------------------
 
     grunt.registerTask('css', [
@@ -383,5 +392,9 @@ module.exports = function (grunt) {
         'js',
         'replace',
         'copy'
+    ]);
+
+    grunt.registerTask('default', [
+        'build'
     ]);
 };

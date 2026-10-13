@@ -19,6 +19,10 @@
     overflow-x: auto; /* 2 */
 
     &:focus {
+        outline: 0;
+    }
+
+    &:focus-visible {
         outline: thin solid var(--clr-focus);
     }
 }
