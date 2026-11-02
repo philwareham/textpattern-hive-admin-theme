@@ -143,6 +143,8 @@ textarea {
 
 /**
  * Use indicator icon to signify the drop-down ability of `select`.
+ *
+ * 1. Fix for Firefox not focussing the cursor when you click a label associated with a `select` field.
  */
 
 select {
@@ -156,6 +158,12 @@ select {
 
     &:hover {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 4'%3E%3Cpolygon fill='%23000' points='3.5,4 0,0 7,0'/%3E%3C/svg%3E");
+    }
+
+    &:focus {
+        border-color: var(--clr-focus);
+        outline: 0;
+        box-shadow: 0 0 0 1px var(--clr-focus-a50);
     }
 }
 
