@@ -57,15 +57,13 @@ summary {
     margin: 1em 0;
 
     @if not setup.$flat-theme {
-        border-right: 1px solid var(--clr-brdr-x-lite);
-        border-left: 1px solid var(--clr-brdr-x-lite);
+        border-inline: 1px solid var(--clr-brdr-x-lite);
 
         > div {
             border-bottom: 1px solid var(--clr-brdr-x-lite);
         }
     } @else {
-        border-right: 1px solid var(--clr-brdr);
-        border-left: 1px solid var(--clr-brdr);
+        border-inline: 1px solid var(--clr-brdr);
 
         > div {
             border-bottom: 1px solid var(--clr-brdr);
@@ -98,8 +96,7 @@ summary {
         border-top: 1px solid var(--clr-brdr-lite);
         border-bottom: 1px solid var(--clr-brdr-dark);
     } @else {
-        border-top: 1px solid var(--clr-brdr);
-        border-bottom: 1px solid var(--clr-brdr);
+        border-block: 1px solid var(--clr-brdr);
     }
 
     font-size: 1rem;
