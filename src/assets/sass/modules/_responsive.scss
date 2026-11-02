@@ -299,7 +299,7 @@
         height: 2em;
         margin: 0.25em 0.5em 0;
         padding: 0;
-        float: left;
+        float: inline-start;
         border: 0;
 
         @if setup.$border-radius > 0 {
@@ -316,10 +316,6 @@
         &:not(.collapsed) {
             background-color: hsl(0 0% 100% / 0.4);
         }
-    }
-
-    [dir="rtl"] button.txp-nav-toggle {
-        float: right;
     }
 
     /**

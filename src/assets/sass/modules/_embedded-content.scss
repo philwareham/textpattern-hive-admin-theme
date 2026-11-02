@@ -33,32 +33,18 @@ img {
     &.align-left {
         margin: 1em;
         margin-inline-start: 0;
-        float: left; // TODO: use CSS Text Module Level 3 `start` value when browser support is widespread.
+        float: inline-start;
     }
 
     &.align-right {
         margin: 1em;
         margin-inline-end: 0;
-        float: right; // TODO: use CSS Text Module Level 3 `end` value when browser support is widespread.
+        float: inline-end;
     }
 
     &.align-center {
         display: block;
         margin: 1em auto;
-    }
-}
-
-/**
- * Swap image alignment right/left positions in RTL languages.
- */
-
-[dir="rtl"] img {
-    &.align-left {
-        float: right;
-    }
-
-    &.align-right {
-        float: left;
     }
 }
 

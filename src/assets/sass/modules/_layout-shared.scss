@@ -157,7 +157,7 @@ hr {
     position: relative;
     justify-content: flex-end;
     margin: 1em 0;
-    float: right; // TODO: Use `float: inline-end` when browser support is better.
+    float: inline-end;
 
     // Ensure the 2 buttons stay together.
 
@@ -169,10 +169,6 @@ hr {
 
     .txp-dropdown {
         z-index: 101;
-    }
-
-    [dir="rtl"] & {
-        float: left;
     }
 }
 
@@ -379,7 +375,7 @@ hr {
 
 :not(.txp-edit) .txp-actions-inline {
     margin-top: 1.3076923em; // 17px / 13px
-    float: right; // TODO: Use `float: inline-end` when browser support is better.
+    float: inline-end;
 }
 
 .txp-edit .txp-actions-inline {
@@ -396,10 +392,6 @@ hr {
 /**
  * Swap position in RTL languages.
  */
-
-[dir="rtl"] .txp-actions-inline {
-    float: left;
-}
 
 [dir="rtl"] .txp-edit .txp-actions-inline {
     right: auto;
@@ -842,19 +834,11 @@ hr {
     position: relative;
     z-index: 2;
     margin: 0 1px;
-    float: right; // TODO: Use `float: inline-end` when browser support is better.
+    float: inline-end;
 }
 
 .txp-textarea-preview {
     margin-inline-start: 1em;
-}
-
-/**
- * Swap alignment of textarea options in RTL languages.
- */
-
-[dir="rtl"] .txp-textarea-options {
-    float: left;
 }
 
 /**

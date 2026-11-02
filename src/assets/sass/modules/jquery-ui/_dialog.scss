@@ -62,14 +62,10 @@
     .ui-dialog-title {
         width: 90%;
         margin: 0.1em 0;
-        float: left; // TODO: Use `float: inline-start` when browser support is better.
+        float: inline-start;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-
-        [dir="rtl"] & {
-            float: right; // TODO: Use `float: inline-end` when browser support is better.
-        }
     }
 
     .ui-dialog-titlebar-close {
@@ -106,11 +102,7 @@
     }
 
     .ui-dialog-buttonpane .ui-dialog-buttonset {
-        float: right; // TODO: Use `float: inline-end` when browser support is better.
-
-        [dir="rtl"] & {
-            float: left; // TODO: Use `float: inline-start` when browser support is better.
-        }
+        float: inline-end;
     }
 
     .ui-dialog-buttonpane button {
