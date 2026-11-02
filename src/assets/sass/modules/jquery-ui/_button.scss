@@ -122,19 +122,13 @@ input.ui-button.ui-button-icon-only {
     }
 
     .ui-button.ui-corner-right {
-        border-radius: 0 setup.$border-radius setup.$border-radius 0;
-
-        [dir="rtl"] & {
-            border-radius: setup.$border-radius 0 0 setup.$border-radius;
-        }
+        border-start-end-radius: setup.$border-radius;
+        border-end-end-radius: setup.$border-radius;
     }
 
     .ui-button.ui-corner-left {
-        border-radius: setup.$border-radius 0 0 setup.$border-radius;
-
-        [dir="rtl"] & {
-            border-radius: 0 setup.$border-radius setup.$border-radius 0;
-        }
+        border-start-start-radius: setup.$border-radius;
+        border-end-start-radius: setup.$border-radius;
     }
 }
 

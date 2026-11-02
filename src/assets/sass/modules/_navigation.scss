@@ -234,7 +234,8 @@ button.txp-nav-toggle {
     border: 1px solid;
 
     @if setup.$border-radius > 0 {
-        border-radius: 0 setup.$border-radius setup.$border-radius;
+        border-radius: setup.$border-radius;
+        border-start-start-radius: 0;
     }
 
     background: var(--clr-accent-bkgd);
@@ -250,11 +251,12 @@ button.txp-nav-toggle {
     li {
         @if setup.$border-radius > 0 {
             &:first-child {
-                border-radius: 0 setup.$border-radius 0 0;
+                border-start-end-radius: setup.$border-radius;
             }
 
             &:last-child {
-                border-radius: 0 0 setup.$border-radius setup.$border-radius;
+                border-end-start-radius: setup.$border-radius;
+                border-end-end-radius: setup.$border-radius;
             }
         }
 
@@ -296,14 +298,6 @@ button.txp-nav-toggle {
 [dir="rtl"] .dropdown-menu {
     right: 0;
     left: auto;
-
-    @if setup.$border-radius > 0 {
-        border-radius: setup.$border-radius 0;
-
-        li:first-child {
-            border-radius: setup.$border-radius 0 0;
-        }
-    }
 
     // Indicator pointer.
 

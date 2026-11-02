@@ -176,11 +176,8 @@ hr {
     max-width: calc(100% - 5.5rem);
 
     @if setup.$border-radius > 0 {
-        border-radius: setup.$border-radius 0 0 setup.$border-radius;
-
-        [dir="rtl"] & {
-            border-radius: 0 setup.$border-radius setup.$border-radius 0;
-        }
+        border-start-start-radius: setup.$border-radius;
+        border-end-start-radius: setup.$border-radius;
     }
 }
 
