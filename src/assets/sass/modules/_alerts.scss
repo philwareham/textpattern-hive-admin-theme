@@ -131,19 +131,20 @@ li.information {
  */
 
 #messagepane {
+    display: flex;
     position: fixed;
     z-index: 998;
     right: 4%;
     bottom: 0;
     left: 4%;
+    justify-content: center;
 
     .messageflash {
-        display: inline-block;
         position: relative;
         box-sizing: border-box;
         max-width: 100%;
-        margin: 0 auto;
-        padding: 0.3076923em 3.5384615em 0.3076923em 0.6153846em;
+        padding-block: 0.3076923em;
+        padding-inline: 0.6153846em 3.5384615em;
 
         @if setup.$border-radius > 0 {
             border-radius: setup.$border-radius setup.$border-radius 0 0;
@@ -155,8 +156,6 @@ li.information {
         @if not setup.$flat-theme {
             box-shadow: var(--standard-shadow);
         }
-
-        text-align: left;
 
         &.success {
             background: var(--clr-success-text);
@@ -209,10 +208,11 @@ li.information {
 
 .close {
     position: absolute;
+    top: 0;
     right: 0;
-    bottom: 0.5em;
     width: 2.5384615em;
-    border-left: 1px solid hsl(0 0% 100% / 0.66);
+    height: 100%;
+    border-inline-start: 1px solid hsl(0 0% 100% / 0.33);
 
     span {
         position: absolute;
@@ -228,15 +228,11 @@ li.information {
 }
 
 @include setup.dark-mode {
-    .close {
-        border-color: hsl(0 0% 0% / 0.4);
+    .close span {
+        opacity: 0.75;
 
-        span {
-            opacity: 0.75;
-
-            &:hover {
-                opacity: 1;
-            }
+        &:hover {
+            opacity: 1;
         }
     }
 }
@@ -245,16 +241,9 @@ li.information {
  * System message flipped layout for RTL languages.
  */
 
-[dir="rtl"] #messagepane .messageflash {
-    padding: 0.5384615em 0.75em 0.5384615em 3.5384615em;
-    text-align: right;
-}
-
 [dir="rtl"] .close {
     right: auto;
     left: 0;
-    border-right: 1px solid hsl(0 0% 100% / 0.66);
-    border-left: 0;
 
     span {
         right: auto;
