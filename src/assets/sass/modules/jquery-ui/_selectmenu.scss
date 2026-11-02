@@ -47,11 +47,13 @@
 }
 
 .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
-    border-radius: 0 setup.$border-radius setup.$border-radius 0;
+    border-start-end-radius: setup.$border-radius;
+    border-end-end-radius: setup.$border-radius;
 }
 
 .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
-    border-radius: setup.$border-radius 0 0 setup.$border-radius;
+    border-start-start-radius: setup.$border-radius;
+    border-end-start-radius: setup.$border-radius;
 }
 
 .ui-selectmenu-icon {
@@ -104,16 +106,6 @@
 /**
  * Selectmenu RTL support.
  */
-
-[dir="rtl"] {
-    .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tr {
-        border-radius: setup.$border-radius 0 0 setup.$border-radius;
-    }
-
-    .ui-selectmenu-button.ui-controlgroup-item.ui-corner-tl {
-        border-radius: 0 setup.$border-radius setup.$border-radius 0;
-    }
-}
 
 /**
  * Selectmenu plain buttons.

@@ -240,27 +240,15 @@ ul.nav-tertiary {
         > :first-child,
         > :first-child > a,
         > :first-child > span {
-            border-radius: setup.$border-radius 0 0 setup.$border-radius;
+            border-start-start-radius: setup.$border-radius;
+            border-end-start-radius: setup.$border-radius;
         }
 
         > :last-child,
         > :last-child > a,
         > :last-child > span {
-            border-radius: 0 setup.$border-radius setup.$border-radius 0;
-        }
-    }
-
-    [dir="rtl"] .nav-tertiary {
-        > :first-child,
-        > :first-child > a,
-        > :first-child > span {
-            border-radius: 0 setup.$border-radius setup.$border-radius 0;
-        }
-
-        > :last-child,
-        > :last-child > a,
-        > :last-child > span {
-            border-radius: setup.$border-radius 0 0 setup.$border-radius;
+            border-start-end-radius: setup.$border-radius;
+            border-end-ens-radius: setup.$border-radius;
         }
     }
 }
@@ -318,10 +306,6 @@ ul.nav-tertiary {
 
     @if setup.$border-radius > 0 {
         border-radius: 0;
-
-        [dir="rtl"] & {
-            border-radius: 0; /* 1 */
-        }
     }
 }
 
